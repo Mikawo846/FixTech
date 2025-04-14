@@ -722,41 +722,44 @@ body[data-theme="dark"] .theme-toggle:hover {
 
 /* Пагинация */
 .pagination {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px; /* расстояние между элементами */
-    justify-content: center;
-    align-items: center;
-    margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 40px;
+  padding: 10px;
 }
 
 .pagination__link {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 8px 12px;
-    background-color: #f6f7ec;
-    color: #0d7d91;
-    border-radius: 6px;
-    text-decoration: none;
-    font-weight: 500;
-    transition: all 0.3s ease;
-    border: 1px solid #a9ccca; /* граница */
+  padding: 10px 16px;
+  background-color: #e0f5ec; /* светло-мятный фон */
+  color: #064f43; /* насыщенный тёмно-зелёный текст */
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  border: 1px solid transparent;
 }
 
 .pagination__link:hover {
-    background-color: #0d7d91; /* подсветка */
+  background: linear-gradient(135deg, #a9ccca, #bdf2cd); /* градиент в твоём стиле */
+  color: #064f43;
+  border-color: #a9ccca;
 }
 
 .pagination__link--active {
-    background-color: #0d7d91; /* активная страница */
-    color: #f6f7ec;
-    font-weight: bold;
+  background-color: #0d7d91; /* морской акцент */
+  color: white;
+  font-weight: bold;
+  border: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .pagination__link--next,
 .pagination__link--prev {
-    min-width: 100px; /* кнопки не сжимаются */
+  min-width: 90px;
 }
 
 /* Темная тема для пагинации */
