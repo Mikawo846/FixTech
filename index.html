@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechFix – Ремонт электроники в Казахстане</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <a href="index.html" class="logo">
+                    <span class="logo__icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 15L7 10H17L12 15Z" fill="currentColor"/>
+                            <path d="M12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3ZM12 19C8.13401 19 5 15.866 5 12C5 8.13401 8.13401 5 12 5C15.866 5 19 8.13401 19 12C19 15.866 15.866 19 12 19Z" fill="currentColor"/>
+                        </svg>
+                    </span>
+                    <span class="logo__text">TechFix</span>
+                </a>
+                <nav class="nav">
+                    <ul class="nav__list">
+                        <li><a href="tv.html" class="nav__link">Телевизоры</a></li>
+                        <li><a href="cameras.html" class="nav__link">Фотоаппараты</a></li>
+                        <li><a href="consoles.html" class="nav__link">Приставки</a></li>
+                        <li><a href="laptops.html" class="nav__link">Ноутбуки</a></li>
+                        <li><a href="smartphones.html" class="nav__link">Смартфоны</a></li>
+                    </ul>
+                </nav>
+                <div class="header__actions">
+                    <button class="theme-toggle" aria-label="Переключить тему">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="search-section">
+        <div class="container">
+            <div class="search-wrapper">
+                <h1 class="search-title">Найдите нужный гайд по ремонту</h1>
+                <div class="search">
+                    <input type="text" placeholder="Например: замена экрана iPhone..." class="search__input">
+                    <button class="search__button">
+                        <i class="fas fa-search"></i>
+                        <span>Поиск</span>
+                    </button>
+                </div>
+                <div class="search-tags">
+                    <span>Популярные запросы:</span>
+                    <a href="#">чистка ноутбука</a>
+                    <a href="#">замена батареи</a>
+                    <a href="#">ремонт HDMI</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <section id="categories" class="categories">
+            <div class="container">
+                <div class="section__header">
+                <h2 class="section__title">Категории ремонта</h2>
+                <p class="section__subtitle">Выберите категорию устройства, которое нужно починить</p>
+                <div class="categories__grid">
+                    <a href="tv.html" class="category-card">
+                        <div class="category-card__icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="7" width="20" height="15" rx="2" ry="2"></rect>
+                                <polyline points="17 2 12 7 7 2"></polyline>
+                            </svg>
+                        </div>
+                        <h3 class="category-card__title">Телевизоры</h3>
+                        <p class="category-card__count">24 гайда</p>
+                    </a>
+                    <a href="cameras.html" class="category-card">
+                        <div class="category-card__icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
+                                <circle cx="12" cy="13" r="4"></circle>
+                            </svg>
+                        </div>
+                        <h3 class="category-card__title">Фотоаппараты</h3>
+                        <p class="category-card__count">18 гайдов</p>
+                    </a>
+                    <a href="consoles.html" class="category-card">
+                        <div class="category-card__icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="6" y="3" width="12" height="18" rx="2"></rect>
+                                <path d="M8 7h8m-8 5h8m-8 5h8"></path>
+                            </svg>
+                        </div>
+                        <h3 class="category-card__title">Игровые приставки</h3>
+                        <p class="category-card__count">15 гайдов</p>
+                    </a>
+                    <a href="laptops.html" class="category-card">
+                        <div class="category-card__icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                                <line x1="2" y1="20" x2="22" y2="20"></line>
+                            </svg>
+                        </div>
+                        <h3 class="category-card__title">Ноутбуки</h3>
+                        <p class="category-card__count">32 гайда</p>
+                    </a>
+                    <a href="smartphones.html" class="category-card">
+                        <div class="category-card__icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+                                <line x1="12" y1="18" x2="12" y2="18"></line>
+                            </svg>
+                        </div>
+                        <h3 class="category-card__title">Смартфоны</h3>
+                        <p class="category-card__count">45 гайдов</p>
+                    </a>
+                    <a href="#" class="category-card">
+                        <div class="category-card__icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M3 6l3 6h12l3-6"></path>
+                                <path d="M3 12h18"></path>
+                                <path d="M6 12v6a3 3 0 0 0 3 3h6a3 3 0 0 0 3-3v-6"></path>
+                            </svg>
+                        </div>
+                        <h3 class="category-card__title">Мелкая техника</h3>
+                        <p class="category-card__count">28 гайдов</p>
+                    </a>
+                    <a href="#" class="category-card">
+                        <div class="category-card__icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                                <rect x="6" y="8" width="12" height="8" rx="1"></rect>
+                                <line x1="6" y1="12" x2="6" y2="12"></line>
+                                <line x1="18" y1="12" x2="18" y2="12"></line>
+                            </svg>
+                        </div>
+                        <h3 class="category-card__title">Крупная техника</h3>
+                        <p class="category-card__count">22 гайда</p>
+                    </a>
+                    <a href="#" class="category-card">
+                        <div class="category-card__icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M5 17H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-1"></path>
+                                <polygon points="12 15 17 21 7 21 12 15"></polygon>
+                            </svg>
+                        </div>
+                        <h3 class="category-card__title">Автоэлектроника</h3>
+                        <p class="category-card__count">16 гайдов</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="popular-guides">
+            <div class="container">
+                <div class="section__header">
+                    <h2 class="section__title">Популярные гайды</h2>
+                    <a href="all-guides.html" class="link">Смотреть все</a>
+                </div>
+                <div class="guides__grid">
+                    <article class="guide-card">
+                        <div class="guide-card__image">
+                            <img src="img/guide1.jpg" alt="Чистка ноутбука">
+                            <span class="guide-card__badge">Новое</span>
+                        </div>
+                        <div class="guide-card__content">
+                            <div class="guide-card__meta">
+                                <span class="guide-card__rating">
+                                    <i class="fas fa-star"></i> 4.8
+                                </span>
+                                <span class="guide-card__time">
+                                    <i class="far fa-clock"></i> 12 мин
+                                </span>
+                            </div>
+                            <h3 class="guide-card__title">Как почистить ноутбук от пыли</h3>
+                            <p class="guide-card__excerpt">Подробная инструкция для новичков с фото</p>
+                            <a href="articles/clean-laptop.html" class="button button--small">Читать</a>
+                        </div>
+                    </article>
+                    <article class="guide-card">
+                        <div class="guide-card__image">
+                            <img src="img/guide2.jpg" alt="Ремонт телевизора">
+                            <span class="guide-card__badge">Топ</span>
+                        </div>
+                        <div class="guide-card__content">
+                            <div class="guide-card__meta">
+                                <span class="guide-card__rating">
+                                    <i class="fas fa-star"></i> 4.9
+                                </span>
+                                <span class="guide-card__time">
+                                    <i class="far fa-clock"></i> 8 мин
+                                </span>
+                            </div>
+                            <h3 class="guide-card__title">Ремонт разъема HDMI</h3>
+                            <p class="guide-card__excerpt">5 шагов для восстановления контактов</p>
+                            <a href="articles/repair-hdmi.html" class="button button--small">Читать</a>
+                        </div>
+                    </article>
+                    <article class="guide-card">
+                        <div class="guide-card__image">
+                            <img src="img/guide3.jpg" alt="Замена батареи">
+                            <span class="guide-card__badge">Просто</span>
+                        </div>
+                        <div class="guide-card__content">
+                            <div class="guide-card__meta">
+                                <span class="guide-card__rating">
+                                    <i class="fas fa-star"></i> 4.7
+                                </span>
+                                <span class="guide-card__time">
+                                    <i class="far fa-clock"></i> 6 мин
+                                </span>
+                            </div>
+                            <h3 class="guide-card__title">Замена батареи в смартфоне</h3>
+                            <p class="guide-card__excerpt">Пошаговое руководство с видео</p>
+                            <a href="articles/battery-replacement.html" class="button button--small">Читать</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__col footer__col--logo">
+                    <a href="index.html" class="footer-logo">
+                        <span class="logo__icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 15L7 10H17L12 15Z" fill="currentColor"/>
+                                <path d="M12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3ZM12 19C8.13401 19 5 15.866 5 12C5 8.13401 8.13401 5 12 5C15.866 5 19 8.13401 19 12C19 15.866 15.866 19 12 19Z" fill="currentColor"/>
+                            </svg>
+                        </span>
+                        <span class="logo__text">TechFix</span>
+                    </a>
+                    <p class="footer__text">Помогаем ремонтировать электронику с 2024 года</p>
+                </div>
+                <div class="footer__col">
+                    <h3 class="footer__title">Разделы</h3>
+                    <ul class="footer__links">
+                        <li><a href="index.html" class="footer__link">Главная</a></li>
+                        <li><a href="all-guides.html" class="footer__link">Все гайды</a></li>
+                        <li><a href="how-it-works.html" class="footer__link">Как это работает?</a></li>
+                        <li><a href="contacts.html" class="footer__link">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="footer__col">
+                    <h3 class="footer__title">Категории</h3>
+                    <ul class="footer__links">
+                        <li><a href="tv.html" class="footer__link">Телевизоры</a></li>
+                        <li><a href="cameras.html" class="footer__link">Фотоаппараты</a></li>
+                        <li><a href="consoles.html" class="footer__link">Игровые приставки</a></li>
+                        <li><a href="laptops.html" class="footer__link">Ноутбуки</a></li>
+                    </ul>
+                </div>
+                <div class="footer__col">
+                    <h3 class="footer__title">Контакты</h3>
+                    <ul class="footer__links">
+                        <li><a href="https://t.me/techfix_kz" class="footer__link"><i class="fab fa-telegram"></i> Telegram</a></li>
+                        <li><a href="https://instagram.com/techfix_kz" class="footer__link"><i class="fab fa-instagram"></i> Instagram</a></li>
+                        <li><a href="mailto:support@techfix.kz" class="footer__link"><i class="fas fa-envelope"></i> Email</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p class="footer__copyright">© 2024 TechFix. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+   
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const searchInput = document.querySelector('.search__input');
+            const examples = [
+                'Замена экрана iPhone...',
+                'Чистка матрицы фотоаппарата',
+                'Не работает кабель HDMI',
+                'Не работает телевизор',
+                'Bluetooth в машине не видит телефон',
+                'Течет холодильник',
+                'Камера не видит SD карту',
+                'Регестратор перестал записывать',
+                'Экран в машине погас и не работает сенсор',
+                'Не работает вспышка',
+                'Фен дует холодным воздухом',
+                'Слетели каналы на телевизоре',
+            ];
+            
+            let currentIndex = 0;
+            
+            function updatePlaceholder() {
+                searchInput.placeholder = examples[currentIndex];
+                currentIndex = (currentIndex + 1) % examples.length;
+            }
+            
+            // Меняем placeholder сразу при загрузке
+            updatePlaceholder();
+            
+            // Устанавливаем интервал для смены каждые 3 секунды
+            setInterval(updatePlaceholder, 3000);
+            
+            // Добавляем анимацию перехода
+            searchInput.style.transition = 'opacity 0.5s ease';
+        });
+        </script>
+    <script src="app.js"></script>
+</body>
+</html>
