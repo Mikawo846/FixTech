@@ -720,6 +720,60 @@ body[data-theme="dark"] .theme-toggle:hover {
     background: rgba(255, 255, 255, 0.1);
 }
 
+/* Пагинация */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-top: 40px;
+}
+
+.pagination__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-decoration: none;
+    color: var(--text);
+    font-weight: 600;
+    transition: var(--transition);
+    border: 1px solid var(--border);
+}
+
+.pagination__link:hover {
+    background: var(--primary-light);
+    border-color: var(--primary);
+}
+
+.pagination__link--active {
+    background: var(--primary);
+    color: white;
+    border-color: var(--primary);
+}
+
+.pagination__link--next {
+    width: auto;
+    padding: 0 16px;
+    gap: 8px;
+}
+
+/* Темная тема для пагинации */
+body[data-theme="dark"] .pagination__link {
+    color: var(--dark-text);
+    border-color: var(--dark-border);
+}
+
+body[data-theme="dark"] .pagination__link:hover {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+body[data-theme="dark"] .pagination__link--active {
+    background: var(--primary);
+}
+
 /* Адаптивность */
 @media (max-width: 992px) {
     .search-title {
