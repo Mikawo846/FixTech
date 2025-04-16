@@ -855,14 +855,12 @@ body[data-theme="dark"] .pagination__link--active {
 }
 
 /* Галерея категорий */
-.gallery-card {
-    position: relative;
-    border-radius: var(--border-radius);
-    overflow: hidden;
-    aspect-ratio: 1; /* Квадратные карточки */
-    transition: var(--transition);
-    box-shadow: var(--shadow);
-    height: 100%; /* Занимает всю высоту ячейки */
+/* Галерея категорий */
+.categories-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
 }
 
 .gallery-card {
