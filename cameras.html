@@ -3,11 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TechFix – Ремонт фотоаппаратов в Казахстане</title>
+    <title>Ремонт фотоаппаратов | TechFix</title>
     <link rel="stylesheet" href="./styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -32,258 +30,230 @@
                         <li><a href="smartphones.html" class="nav__link">Смартфоны</a></li>
                     </ul>
                 </nav>
-                <div class="header__actions">
-                    <button class="theme-toggle" aria-label="Переключить тему">
-                        <i class="fas fa-moon"></i>
-                    </button>
-                </div>
+                <button class="theme-toggle" aria-label="Переключить тему">
+                    <i class="fas fa-moon"></i>
+                </button>
             </div>
         </div>
     </header>
 
-    <div class="search-section">
-        <div class="container">
-            <div class="search-wrapper">
-                <h1 class="search-title">Гайды по ремонту фотоаппаратов</h1>
-                <div class="search">
-                    <input type="text" placeholder="Например: чистка матрицы..." class="search__input">
-                    <button class="search__button">
-                        <i class="fas fa-search"></i>
-                        <span>Поиск</span>
-                    </button>
-                </div>
-                <div class="search-tags">
-                    <span>Популярные запросы:</span>
-                    <a href="#">чистка матрицы</a>
-                    <a href="#">замена дисплея</a>
-                    <a href="#">ремонт объектива</a>
-                </div>
+    <main class="category-page">
+        <section class="category-hero" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1516035069371-29a1b244cc32?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')">
+            <div class="container">
+                <h1>Ремонт фотоаппаратов</h1>
+                <p>Профессиональный ремонт зеркальных и беззеркальных камер</p>
             </div>
-        </div>
-    </div>
+        </section>
 
-    <main>
-        <section id="guides" class="popular-guides">
+        <section class="guides-section">
             <div class="container">
                 <div class="section__header">
-                    <h2 class="section__title">Гайды по ремонту фотоаппаратов</h2>
-                    <p class="section__subtitle">Подробные инструкции по ремонту фотоаппаратов различных марок</p>
+                    <h2 class="section__title">10 гайдов по ремонту фотоаппаратов</h2>
+                    <div class="sort-controls">
+                        <span>Сортировка:</span>
+                        <select>
+                            <option>По популярности</option>
+                            <option>По новизне</option>
+                            <option>По сложности</option>
+                        </select>
+                    </div>
                 </div>
+
                 <div class="guides__grid">
                     <!-- Гайд 1 -->
                     <article class="guide-card">
                         <div class="guide-card__image">
-                            <img src="img/camera-guide1.jpg" alt="Чистка матрицы">
+                            <img src="https://images.unsplash.com/photo-1520390138845-fd2d229dd553?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Чистка матрицы" loading="lazy">
                             <span class="guide-card__badge">Топ</span>
                         </div>
                         <div class="guide-card__content">
+                            <h3 class="guide-card__title">Чистка матрицы от пыли</h3>
+                            <p class="guide-card__excerpt">Полное руководство по безопасной очистке сенсора</p>
                             <div class="guide-card__meta">
-                                <span class="guide-card__rating">
-                                    <i class="fas fa-star"></i> 4.9
-                                </span>
-                                <span class="guide-card__time">
-                                    <i class="far fa-clock"></i> 15 мин
-                                </span>
+                                <span><i class="fas fa-star"></i> 4.9</span>
+                                <span><i class="fas fa-clock"></i> 20 мин</span>
+                                <span><i class="fas fa-tools"></i> Средне</span>
                             </div>
-                            <h3 class="guide-card__title">Чистка матрицы зеркального фотоаппарата</h3>
-                            <p class="guide-card__excerpt">Полное руководство по безопасной очистке матрицы</p>
-                            <a href="articles/camera-matrix-clean.html" class="button button--small">Читать</a>
+                            <a href="guides/sensor-cleaning.html" class="button button--small">Читать гайд</a>
                         </div>
                     </article>
 
                     <!-- Гайд 2 -->
                     <article class="guide-card">
                         <div class="guide-card__image">
-                            <img src="img/camera-guide2.jpg" alt="Замена дисплея">
-                            <span class="guide-card__badge">Новое</span>
+                            <img src="https://images.unsplash.com/photo-1510127034890-ba27508e9f1c?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Ремонт затвора" loading="lazy">
+                            <span class="guide-card__badge">Сложно</span>
                         </div>
                         <div class="guide-card__content">
+                            <h3 class="guide-card__title">Замена механизма затвора</h3>
+                            <p class="guide-card__excerpt">Пошаговая инструкция с фотографиями процесса</p>
                             <div class="guide-card__meta">
-                                <span class="guide-card__rating">
-                                    <i class="fas fa-star"></i> 4.7
-                                </span>
-                                <span class="guide-card__time">
-                                    <i class="far fa-clock"></i> 25 мин
-                                </span>
+                                <span><i class="fas fa-star"></i> 4.7</span>
+                                <span><i class="fas fa-clock"></i> 45 мин</span>
+                                <span><i class="fas fa-tools"></i> Сложно</span>
                             </div>
-                            <h3 class="guide-card__title">Замена дисплея на Canon EOS 80D</h3>
-                            <p class="guide-card__excerpt">Пошаговая инструкция с фотографиями</p>
-                            <a href="articles/camera-display-replace.html" class="button button--small">Читать</a>
+                            <a href="guides/shutter-replacement.html" class="button button--small">Читать гайд</a>
                         </div>
                     </article>
 
                     <!-- Гайд 3 -->
                     <article class="guide-card">
                         <div class="guide-card__image">
-                            <img src="img/camera-guide3.jpg" alt="Ремонт объектива">
+                            <img src="https://images.unsplash.com/photo-1564466809058-bf4114d55352?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Ремонт объектива" loading="lazy">
+                            <span class="guide-card__badge">Новое</span>
                         </div>
                         <div class="guide-card__content">
+                            <h3 class="guide-card__title">Ремонт автофокуса объектива</h3>
+                            <p class="guide-card__excerpt">Как починить заклинивший механизм фокусировки</p>
                             <div class="guide-card__meta">
-                                <span class="guide-card__rating">
-                                    <i class="fas fa-star"></i> 4.8
-                                </span>
-                                <span class="guide-card__time">
-                                    <i class="far fa-clock"></i> 30 мин
-                                </span>
+                                <span><i class="fas fa-star"></i> 4.6</span>
+                                <span><i class="fas fa-clock"></i> 30 мин</span>
+                                <span><i class="fas fa-tools"></i> Средне</span>
                             </div>
-                            <h3 class="guide-card__title">Ремонт залипающего зума объектива</h3>
-                            <p class="guide-card__excerpt">Как починить механизм зума без специальных инструментов</p>
-                            <a href="articles/lens-zoom-repair.html" class="button button--small">Читать</a>
+                            <a href="guides/lens-repair.html" class="button button--small">Читать гайд</a>
                         </div>
                     </article>
 
                     <!-- Гайд 4 -->
                     <article class="guide-card">
                         <div class="guide-card__image">
-                            <img src="img/camera-guide4.jpg" alt="Замена батарейного отсека">
+                            <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Замена дисплея" loading="lazy">
                         </div>
                         <div class="guide-card__content">
+                            <h3 class="guide-card__title">Замена ЖК-дисплея</h3>
+                            <p class="guide-card__excerpt">Инструкция по замене экрана на популярных моделях</p>
                             <div class="guide-card__meta">
-                                <span class="guide-card__rating">
-                                    <i class="fas fa-star"></i> 4.5
-                                </span>
-                                <span class="guide-card__time">
-                                    <i class="far fa-clock"></i> 20 мин
-                                </span>
+                                <span><i class="fas fa-star"></i> 4.5</span>
+                                <span><i class="fas fa-clock"></i> 25 мин</span>
+                                <span><i class="fas fa-tools"></i> Средне</span>
                             </div>
-                            <h3 class="guide-card__title">Замена батарейного отсека на Nikon D3500</h3>
-                            <p class="guide-card__excerpt">Решение проблемы с плохим контактом батареи</p>
-                            <a href="articles/battery-compartment-replace.html" class="button button--small">Читать</a>
+                            <a href="guides/lcd-replacement.html" class="button button--small">Читать гайд</a>
                         </div>
                     </article>
 
                     <!-- Гайд 5 -->
                     <article class="guide-card">
                         <div class="guide-card__image">
-                            <img src="img/camera-guide5.jpg" alt="Ремонт кнопки">
+                            <img src="https://images.unsplash.com/photo-1564466809058-bf4114d55352?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Ремонт кнопок" loading="lazy">
                             <span class="guide-card__badge">Просто</span>
                         </div>
                         <div class="guide-card__content">
+                            <h3 class="guide-card__title">Ремонт кнопок управления</h3>
+                            <p class="guide-card__excerpt">Как восстановить работу западающих кнопок</p>
                             <div class="guide-card__meta">
-                                <span class="guide-card__rating">
-                                    <i class="fas fa-star"></i> 4.6
-                                </span>
-                                <span class="guide-card__time">
-                                    <i class="far fa-clock"></i> 10 мин
-                                </span>
+                                <span><i class="fas fa-star"></i> 4.4</span>
+                                <span><i class="fas fa-clock"></i> 15 мин</span>
+                                <span><i class="fas fa-tools"></i> Легко</span>
                             </div>
-                            <h3 class="guide-card__title">Ремонт залипшей кнопки спуска</h3>
-                            <p class="guide-card__excerpt">Быстрое решение распространенной проблемы</p>
-                            <a href="articles/shutter-button-repair.html" class="button button--small">Читать</a>
+                            <a href="guides/buttons-repair.html" class="button button--small">Читать гайд</a>
                         </div>
                     </article>
 
                     <!-- Гайд 6 -->
                     <article class="guide-card">
                         <div class="guide-card__image">
-                            <img src="img/camera-guide6.jpg" alt="Чистка сенсора">
+                            <img src="https://images.unsplash.com/photo-1520390138845-fd2d229dd553?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Чистка зеркала" loading="lazy">
                         </div>
                         <div class="guide-card__content">
+                            <h3 class="guide-card__title">Чистка зеркала и видоискателя</h3>
+                            <p class="guide-card__excerpt">Безопасные методы очистки оптических элементов</p>
                             <div class="guide-card__meta">
-                                <span class="guide-card__rating">
-                                    <i class="fas fa-star"></i> 4.9
-                                </span>
-                                <span class="guide-card__time">
-                                    <i class="far fa-clock"></i> 18 мин
-                                </span>
+                                <span><i class="fas fa-star"></i> 4.8</span>
+                                <span><i class="fas fa-clock"></i> 10 мин</span>
+                                <span><i class="fas fa-tools"></i> Легко</span>
                             </div>
-                            <h3 class="guide-card__title">Профессиональная чистка сенсора</h3>
-                            <p class="guide-card__excerpt">Как правильно чистить сенсор без повреждений</p>
-                            <a href="articles/sensor-cleaning-pro.html" class="button button--small">Читать</a>
+                            <a href="guides/mirror-cleaning.html" class="button button--small">Читать гайд</a>
                         </div>
                     </article>
 
                     <!-- Гайд 7 -->
                     <article class="guide-card">
                         <div class="guide-card__image">
-                            <img src="img/camera-guide7.jpg" alt="Замена шлейфа">
+                            <img src="https://images.unsplash.com/photo-1510127034890-ba27508e9f1c?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Ремонт картридера" loading="lazy">
                         </div>
                         <div class="guide-card__content">
+                            <h3 class="guide-card__title">Ремонт слота для карт памяти</h3>
+                            <p class="guide-card__excerpt">Решение проблем с чтением карт памяти</p>
                             <div class="guide-card__meta">
-                                <span class="guide-card__rating">
-                                    <i class="fas fa-star"></i> 4.4
-                                </span>
-                                <span class="guide-card__time">
-                                    <i class="far fa-clock"></i> 35 мин
-                                </span>
+                                <span><i class="fas fa-star"></i> 4.3</span>
+                                <span><i class="fas fa-clock"></i> 20 мин</span>
+                                <span><i class="fas fa-tools"></i> Средне</span>
                             </div>
-                            <h3 class="guide-card__title">Замена шлейфа дисплея на Sony A7</h3>
-                            <p class="guide-card__excerpt">Подробное руководство с видео</p>
-                            <a href="articles/display-cable-replace.html" class="button button--small">Читать</a>
+                            <a href="guides/card-slot-repair.html" class="button button--small">Читать гайд</a>
                         </div>
                     </article>
 
                     <!-- Гайд 8 -->
                     <article class="guide-card">
                         <div class="guide-card__image">
-                            <img src="img/camera-guide8.jpg" alt="Ремонт картридера">
+                            <img src="https://images.unsplash.com/photo-1564466809058-bf4114d55352?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Замена батареи" loading="lazy">
+                            <span class="guide-card__badge">Новое</span>
                         </div>
                         <div class="guide-card__content">
+                            <h3 class="guide-card__title">Замена аккумулятора</h3>
+                            <p class="guide-card__excerpt">Как заменить старую батарею в фотоаппарате</p>
                             <div class="guide-card__meta">
-                                <span class="guide-card__rating">
-                                    <i class="fas fa-star"></i> 4.7
-                                </span>
-                                <span class="guide-card__time">
-                                    <i class="far fa-clock"></i> 22 мин
-                                </span>
+                                <span><i class="fas fa-star"></i> 4.7</span>
+                                <span><i class="fas fa-clock"></i> 10 мин</span>
+                                <span><i class="fas fa-tools"></i> Легко</span>
                             </div>
-                            <h3 class="guide-card__title">Ремонт картридера в фотоаппарате</h3>
-                            <p class="guide-card__excerpt">Что делать если камера не видит карту памяти</p>
-                            <a href="articles/card-reader-repair.html" class="button button--small">Читать</a>
+                            <a href="guides/battery-replacement.html" class="button button--small">Читать гайд</a>
                         </div>
                     </article>
 
                     <!-- Гайд 9 -->
                     <article class="guide-card">
                         <div class="guide-card__image">
-                            <img src="img/camera-guide9.jpg" alt="Обновление прошивки">
-                            <span class="guide-card__badge">Важно</span>
+                            <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Ремонт вспышки" loading="lazy">
                         </div>
                         <div class="guide-card__content">
+                            <h3 class="guide-card__title">Ремонт встроенной вспышки</h3>
+                            <p class="guide-card__excerpt">Диагностика и ремонт проблем со вспышкой</p>
                             <div class="guide-card__meta">
-                                <span class="guide-card__rating">
-                                    <i class="fas fa-star"></i> 4.8
-                                </span>
-                                <span class="guide-card__time">
-                                    <i class="far fa-clock"></i> 12 мин
-                                </span>
+                                <span><i class="fas fa-star"></i> 4.5</span>
+                                <span><i class="fas fa-clock"></i> 25 мин</span>
+                                <span><i class="fas fa-tools"></i> Средне</span>
                             </div>
-                            <h3 class="guide-card__title">Обновление прошивки фотоаппарата</h3>
-                            <p class="guide-card__excerpt">Как безопасно обновить прошивку камеры</p>
-                            <a href="articles/firmware-update.html" class="button button--small">Читать</a>
+                            <a href="guides/flash-repair.html" class="button button--small">Читать гайд</a>
                         </div>
                     </article>
 
                     <!-- Гайд 10 -->
                     <article class="guide-card">
                         <div class="guide-card__image">
-                            <img src="img/camera-guide10.jpg" alt="Ремонт вспышки">
+                            <img src="https://images.unsplash.com/photo-1520390138845-fd2d229dd553?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Обновление прошивки" loading="lazy">
                         </div>
                         <div class="guide-card__content">
+                            <h3 class="guide-card__title">Обновление прошивки камеры</h3>
+                            <p class="guide-card__excerpt">Пошаговое руководство для всех брендов</p>
                             <div class="guide-card__meta">
-                                <span class="guide-card__rating">
-                                    <i class="fas fa-star"></i> 4.3
-                                </span>
-                                <span class="guide-card__time">
-                                    <i class="far fa-clock"></i> 28 мин
-                                </span>
+                                <span><i class="fas fa-star"></i> 4.8</span>
+                                <span><i class="fas fa-clock"></i> 15 мин</span>
+                                <span><i class="fas fa-tools"></i> Легко</span>
                             </div>
-                            <h3 class="guide-card__title">Ремонт встроенной вспышки</h3>
-                            <p class="guide-card__excerpt">Решение проблемы с неработающей вспышкой</p>
-                            <a href="articles/flash-repair.html" class="button button--small">Читать</a>
+                            <a href="guides/firmware-update.html" class="button button--small">Читать гайд</a>
                         </div>
                     </article>
                 </div>
 
-                <!-- Пагинация -->
                 <div class="pagination">
-                    <a href="cameras.html" class="pagination__link pagination__link--active">1</a>
-                    <a href="cameras-page2.html" class="pagination__link">2</a>
-                    <a href="cameras-page3.html" class="pagination__link">3</a>
-                    <a href="cameras-page2.html" class="pagination__link pagination__link--next">
-                        <span>Следующая</span>
-                        <i class="fas fa-chevron-right"></i>
-                    </a>
+                    <a href="#" class="pagination__link active">1</a>
+                    <a href="#" class="pagination__link">2</a>
+                    <a href="#" class="pagination__link">3</a>
+                    <a href="#" class="pagination__link pagination__link--next">Далее</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="brands-section">
+            <div class="container">
+                <h2 class="section__title">Ремонтируем все марки фотоаппаратов</h2>
+                <div class="brands-grid">
+                    <img src="https://via.placeholder.com/150x60?text=Canon" alt="Canon" loading="lazy">
+                    <img src="https://via.placeholder.com/150x60?text=Nikon" alt="Nikon" loading="lazy">
+                    <img src="https://via.placeholder.com/150x60?text=Sony" alt="Sony" loading="lazy">
+                    <img src="https://via.placeholder.com/150x60?text=Fujifilm" alt="Fujifilm" loading="lazy">
+                    <img src="https://via.placeholder.com/150x60?text=Olympus" alt="Olympus" loading="lazy">
                 </div>
             </div>
         </section>
@@ -336,36 +306,7 @@
             </div>
         </div>
     </footer>
-   
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const searchInput = document.querySelector('.search__input');
-            const examples = [
-                'Чистка матрицы фотоаппарата',
-                'Замена дисплея Canon',
-                'Ремонт объектива Nikon',
-                'Обновление прошивки',
-                'Ремонт картридера',
-                'Замена батарейного отсека',
-                'Ремонт кнопки спуска',
-                'Чистка сенсора',
-                'Замена шлейфа дисплея',
-                'Ремонт встроенной вспышки',
-                'Настройка автофокуса',
-                'Ремонт стабилизатора',
-            ];
-            
-            let currentIndex = 0;
-            
-            function updatePlaceholder() {
-                searchInput.placeholder = examples[currentIndex];
-                currentIndex = (currentIndex + 1) % examples.length;
-            }
-            
-            updatePlaceholder();
-            setInterval(updatePlaceholder, 3000);
-        });
-    </script>
+
     <script src="app.js"></script>
 </body>
 </html>
