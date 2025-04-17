@@ -18,12 +18,7 @@
     --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
     --border-radius: 12px;
     
-    /* Темная тема */
-    --dark-background: #1E1E1E;
-    --dark-background-alt: #2D2D2D;
-    --dark-text: #E0E0E0;
-    --dark-border: #444;
-}
+
 
 /* Базовые стили */
 body {
@@ -178,7 +173,7 @@ body {
 .button--small {
     padding: 10px 20px;
     font-size: 0.9rem;
-    text-light: #5a5a5a;
+    text-color: #f6f7ec
 }
 
 /* Переключатель темы */
@@ -669,58 +664,6 @@ body {
     animation: float 4s ease-in-out infinite;
 }
 
-/* Темная тема */
-body[data-theme="dark"] {
-    color: var(--dark-text);
-    background: var(--dark-background);
-    background-image: 
-        radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.05) 1px, transparent 0);
-}
-
-body[data-theme="dark"] .header {
-    background: var(--primary) !important;
-}
-
-body[data-theme="dark"] .hero,
-body[data-theme="dark"] .popular-guides {
-    background: var(--dark-background-alt);
-}
-
-body[data-theme="dark"] .hero__title,
-body[data-theme="dark"] .section__title,
-body[data-theme="dark"] .guide-card__title,
-body[data-theme="dark"] .category-card__title {
-    color: var(--accent);
-}
-
-body[data-theme="dark"] .hero__subtitle,
-body[data-theme="dark"] .section__subtitle,
-body[data-theme="dark"] .category-card__count,
-body[data-theme="dark"] .guide-card__excerpt,
-body[data-theme="dark"] .guide-card__meta {
-    color: rgba(255, 255, 255, 0.7);
-}
-
-body[data-theme="dark"] .category-card,
-body[data-theme="dark"] .guide-card {
-    background: var(--dark-background) !important;
-    border-color: var(--dark-border);
-}
-
-body[data-theme="dark"] .category-card:hover,
-body[data-theme="dark"] .guide-card:hover {
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
-}
-
-body[data-theme="dark"] .theme-toggle {
-    color: var(--dark-text);
-    background: rgba(255, 255, 255, 0.05);
-}
-
-body[data-theme="dark"] .theme-toggle:hover {
-    background: rgba(255, 255, 255, 0.1);
-}
-
 /* Пагинация */
 .pagination {
   display: flex;
@@ -761,31 +704,6 @@ body[data-theme="dark"] .theme-toggle:hover {
 .pagination__link--next,
 .pagination__link--prev {
   min-width: 90px;
-}
-
-/* Темная тема для пагинации */
-body[data-theme="dark"] .pagination__link {
-    color: var(--dark-text);
-    border-color: var(--dark-border);
-}
-
-body[data-theme="dark"] .pagination__link:hover {
-    background: rgba(255, 255, 255, 0.05);
-}
-
-body[data-theme="dark"] .pagination__link--active {
-    background: var(--primary);
-}
-
-/* Адаптивность */
-@media (max-width: 992px) {
-    .search-title {
-        font-size: 1.8rem;
-    }
-    
-    .section__title {
-        font-size: 2rem;
-    }
 }
 
 @media (max-width: 768px) {
