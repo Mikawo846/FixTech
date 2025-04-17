@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ремонт телевизоров | TechFix</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <a href="index.html" class="logo">
+                    <span class="logo__icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 15L7 10H17L12 15Z" fill="currentColor"/>
+                            <path d="M12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3ZM12 19C8.13401 19 5 15.866 5 12C5 8.13401 8.13401 5 12 5C15.866 5 19 8.13401 19 12C19 15.866 15.866 19 12 19Z" fill="currentColor"/>
+                        </svg>
+                    </span>
+                    <span class="logo__text">TechFix</span>
+                </a>
+                <nav class="nav">
+                    <ul class="nav__list">
+                        <li><a href="tv.html" class="nav__link active">Телевизоры</a></li>
+                        <li><a href="cameras.html" class="nav__link">Фотоаппараты</a></li>
+                        <li><a href="consoles.html" class="nav__link">Приставки</a></li>
+                        <li><a href="laptops.html" class="nav__link">Ноутбуки</a></li>
+                        <li><a href="smartphones.html" class="nav__link">Смартфоны</a></li>
+                    </ul>
+                </nav>
+                <button class="theme-toggle" aria-label="Переключить тему">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="category-page">
+        <section class="category-hero" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1593784991095-a205069470b6?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')">
+            <div class="container">
+                <h1>Ремонт телевизоров</h1>
+                <p>Профессиональный ремонт всех марок и моделей</p>
+            </div>
+        </section>
+
+        <section class="guides-section">
+            <div class="container">
+                <div class="section__header">
+                    <h2 class="section__title">Гайды по ремонту</h2>
+                    <div class="sort-controls">
+                        <span>Сортировка:</span>
+                        <select>
+                            <option>По популярности</option>
+                            <option>По новизне</option>
+                            <option>По сложности</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="guides__grid">
+                    <article class="guide-card">
+                        <div class="guide-card__image">
+                            <img src="https://images.unsplash.com/photo-1542751110-97427bbecf20?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Ремонт матрицы">
+                            <span class="guide-card__badge">Топ</span>
+                        </div>
+                        <div class="guide-card__content">
+                            <h3 class="guide-card__title">Замена матрицы телевизора</h3>
+                            <p class="guide-card__excerpt">Пошаговая инструкция по замене экрана</p>
+                            <div class="guide-card__meta">
+                                <span><i class="fas fa-star"></i> 4.8</span>
+                                <span><i class="fas fa-clock"></i> 25 мин</span>
+                                <span><i class="fas fa-tools"></i> Средняя</span>
+                            </div>
+                            <a href="#" class="button button--small">Читать гайд</a>
+                        </div>
+                    </article>
+
+                    <!-- Добавьте остальные карточки аналогично -->
+                </div>
+
+                <div class="pagination">
+                    <a href="#" class="pagination__link">1</a>
+                    <a href="#" class="pagination__link active">2</a>
+                    <a href="#" class="pagination__link">3</a>
+                    <a href="#" class="pagination__link pagination__link--next">Далее</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="brands-section">
+            <div class="container">
+                <h2>Ремонтируем все марки</h2>
+                <div class="brands-grid">
+                    <img src="img/brands/samsung.png" alt="Samsung">
+                    <img src="img/brands/lg.png" alt="LG">
+                    <!-- Добавьте другие бренды -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <!-- Футер как на главной странице -->
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
