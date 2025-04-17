@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ремонт крупной бытовой техники | TechFix</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <a href="index.html" class="logo">
+                    <span class="logo__icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 15L7 10H17L12 15Z" fill="currentColor"/>
+                            <path d="M12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3ZM12 19C8.13401 19 5 15.866 5 12C5 8.13401 8.13401 5 12 5C15.866 5 19 8.13401 19 12C19 15.866 15.866 19 12 19Z" fill="currentColor"/>
+                        </svg>
+                    </span>
+                    <span class="logo__text">TechFix</span>
+                </a>
+                <nav class="nav">
+                    <ul class="nav__list">
+                        <li><a href="tv.html" class="nav__link">Телевизоры</a></li>
+                        <li><a href="cameras.html" class="nav__link">Фотоаппараты</a></li>
+                        <li><a href="consoles.html" class="nav__link">Приставки</a></li>
+                        <li><a href="large-appliances.html" class="nav__link active">Крупная техника</a></li>
+                        <li><a href="small-appliances.html" class="nav__link">Мелкая техника</a></li>
+                    </ul>
+                </nav>
+                <button class="theme-toggle" aria-label="Переключить тему">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="category-page">
+        <section class="category-hero" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1626804475297-41608ea09aeb?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')">
+            <div class="container">
+                <h1>Ремонт крупной бытовой техники</h1>
+                <p>Профессиональный ремонт холодильников, стиральных машин и другой техники</p>
+            </div>
+        </section>
+
+        <section class="guides-section">
+            <div class="container">
+                <div class="section__header">
+                    <h2 class="section__title">10 гайдов по ремонту крупной техники</h2>
+                    <div class="sort-controls">
+                        <span>Сортировка:</span>
+                        <select>
+                            <option>По популярности</option>
+                            <option>По новизне</option>
+                            <option>По сложности</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="guides__grid">
+                    <!-- Гайд 1 -->
+                    <article class="guide-card">
+                        <div class="guide-card__image">
+                            <img src="https://images.unsplash.com/photo-1591488320449-011701bb6704?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Ремонт холодильника" loading="lazy">
+                            <span class="guide-card__badge">Топ</span>
+                        </div>
+                        <div class="guide-card__content">
+                            <h3 class="guide-card__title">Ремонт холодильника: не морозит</h3>
+                            <p class="guide-card__excerpt">Диагностика и решение основных проблем</p>
+                            <div class="guide-card__meta">
+                                <span><i class="fas fa-star"></i> 4.8</span>
+                                <span><i class="fas fa-clock"></i> 45 мин</span>
+                                <span><i class="fas fa-tools"></i> Сложно</span>
+                            </div>
+                            <a href="guides/fridge-not-cooling.html" class="button button--small">Читать гайд</a>
+                        </div>
+                    </article>
+
+                    <!-- Гайд 2 -->
+                    <article class="guide-card">
+                        <div class="guide-card__image">
+                            <img src="https://images.unsplash.com/photo-1626804475297-41608ea09aeb?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Замена уплотнителя" loading="lazy">
+                        </div>
+                        <div class="guide-card__content">
+                            <h3 class="guide-card__title">Замена уплотнителя двери холодильника</h3>
+                            <p class="guide-card__excerpt">Пошаговая инструкция с фотографиями</p>
+                            <div class="guide-card__meta">
+                                <span><i class="fas fa-star"></i> 4.6</span>
+                                <span><i class="fas fa-clock"></i> 30 мин</span>
+                                <span><i class="fas fa-tools"></i> Средне</span>
+                            </div>
+                            <a href="guides/fridge-gasket-replacement.html" class="button button--small">Читать гайд</a>
+                        </div>
+                    </article>
+
+                    <!-- Гайд 3 -->
+                    <article class="guide-card">
+                        <div class="guide-card__image">
+                            <img src="https://images.unsplash.com/photo-1551269901-5c5e14c25df7?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Ремонт стиральной машины" loading="lazy">
+                            <span class="guide-card__badge">Новое</span>
+                        </div>
+                        <div class="guide-card__content">
+                            <h3 class="guide-card__title">Ремонт стиральной машины: не сливает</h3>
+                            <p class="guide-card__excerpt">Как прочистить сливную систему</p>
+                            <div class="guide-card__meta">
+                                <span><i class="fas fa-star"></i> 4.7</span>
+                                <span><i class="fas fa-clock"></i> 40 мин</span>
+                                <span><i class="fas fa-tools"></i> Сложно</span>
+                            </div>
+                            <a href="guides/washer-drain-repair.html" class="button button--small">Читать гайд</a>
+                        </div>
+                    </article>
+
+                    <!-- Гайд 4 -->
+                    <article class="guide-card">
+                        <div class="guide-card__image">
+                            <img src="https://images.unsplash.com/photo-1584564472417-a8bda5cc6d0a?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Замена подшипников" loading="lazy">
+                            <span class="guide-card__badge">Сложно</span>
+                        </div>
+                        <div class="guide-card__content">
+                            <h3 class="guide-card__title">Замена подшипников в стиральной машине</h3>
+                            <p class="guide-card__excerpt">Полное руководство с инструментами</p>
+                            <div class="guide-card__meta">
+                                <span><i class="fas fa-star"></i> 4.5</span>
+                                <span><i class="fas fa-clock"></i> 2 часа</span>
+                                <span><i class="fas fa-tools"></i> Сложно</span>
+                            </div>
+                            <a href="guides/washer-bearings-replacement.html" class="button button--small">Читать гайд</a>
+                        </div>
+                    </article>
+
+                    <!-- Гайд 5 -->
+                    <article class="guide-card">
+                        <div class="guide-card__image">
+                            <img src="https://images.unsplash.com/photo-1591488320449-011701bb6704?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Чистка конденсатора" loading="lazy">
+                        </div>
+                        <div class="guide-card__content">
+                            <h3 class="guide-card__title">Чистка конденсатора холодильника</h3>
+                            <p class="guide-card__excerpt">Как улучшить охлаждение и снизить шум</p>
+                            <div class="guide-card__meta">
+                                <span><i class="fas fa-star"></i> 4.6</span>
+                                <span><i class="fas fa-clock"></i> 25 мин</span>
+                                <span><i class="fas fa-tools"></i> Средне</span>
+                            </div>
+                            <a href="guides/fridge-condenser-cleaning.html" class="button button--small">Читать гайд</a>
+                        </div>
+                    </article>
+
+                    <!-- Гайд 6 -->
+                    <article class="guide-card">
+                        <div class="guide-card__image">
+                            <img src="https://images.unsplash.com/photo-1551269901-5c5e14c25df7?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Ремонт ТЭНа" loading="lazy">
+                        </div>
+                        <div class="guide-card__content">
+                            <h3 class="guide-card__title">Замена ТЭНа в стиральной машине</h3>
+                            <p class="guide-card__excerpt">Диагностика и самостоятельная замена</p>
+                            <div class="guide-card__meta">
+                                <span><i class="fas fa-star"></i> 4.7</span>
+                                <span><i class="fas fa-clock"></i> 50 мин</span>
+                                <span><i class="fas fa-tools"></i> Сложно</span>
+                            </div>
+                            <a href="guides/washer-heater-replacement.html" class="button button--small">Читать гайд</a>
+                        </div>
+                    </article>
+
+                    <!-- Гайд 7 -->
+                    <article class="guide-card">
+                        <div class="guide-card__image">
+                            <img src="https://images.unsplash.com/photo-1626804475297-41608ea09aeb?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Ремонт посудомойки" loading="lazy">
+                        </div>
+                        <div class="guide-card__content">
+                            <h3 class="guide-card__title">Ремонт посудомоечной машины</h3>
+                            <p class="guide-card__excerpt">Решение проблем с циркуляцией воды</p>
+                            <div class="guide-card__meta">
+                                <span><i class="fas fa-star"></i> 4.4</span>
+                                <span><i class="fas fa-clock"></i> 35 мин</span>
+                                <span><i class="fas fa-tools"></i> Сложно</span>
+                            </div>
+                            <a href="guides/dishwasher-repair.html" class="button button--small">Читать гайд</a>
+                        </div>
+                    </article>
+
+                    <!-- Гайд 8 -->
+                    <article class="guide-card">
+                        <div class="guide-card__image">
+                            <img src="https://images.unsplash.com/photo-1591488320449-011701bb6704?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Замена компрессора" loading="lazy">
+                            <span class="guide-card__badge">Сложно</span>
+                        </div>
+                        <div class="guide-card__content">
+                            <h3 class="guide-card__title">Замена компрессора холодильника</h3>
+                            <p class="guide-card__excerpt">Полное руководство по замене</p>
+                            <div class="guide-card__meta">
+                                <span><i class="fas fa-star"></i> 4.3</span>
+                                <span><i class="fas fa-clock"></i> 1.5 часа</span>
+                                <span><i class="fas fa-tools"></i> Сложно</span>
+                            </div>
+                            <a href="guides/fridge-compressor-replacement.html" class="button button--small">Читать гайд</a>
+                        </div>
+                    </article>
+
+                    <!-- Гайд 9 -->
+                    <article class="guide-card">
+                        <div class="guide-card__image">
+                            <img src="https://images.unsplash.com/photo-1551269901-5c5e14c25df7?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Чистка фильтра" loading="lazy">
+                            <span class="guide-card__badge">Просто</span>
+                        </div>
+                        <div class="guide-card__content">
+                            <h3 class="guide-card__title">Чистка фильтра стиральной машины</h3>
+                            <p class="guide-card__excerpt">Профилактика засоров и неприятных запахов</p>
+                            <div class="guide-card__meta">
+                                <span><i class="fas fa-star"></i> 4.8</span>
+                                <span><i class="fas fa-clock"></i> 15 мин</span>
+                                <span><i class="fas fa-tools"></i> Легко</span>
+                            </div>
+                            <a href="guides/washer-filter-cleaning.html" class="button button--small">Читать гайд</a>
+                        </div>
+                    </article>
+
+                    <!-- Гайд 10 -->
+                    <article class="guide-card">
+                        <div class="guide-card__image">
+                            <img src="https://images.unsplash.com/photo-1584564472417-a8bda5cc6d0a?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Ремонт морозильника" loading="lazy">
+                        </div>
+                        <div class="guide-card__content">
+                            <h3 class="guide-card__title">Ремонт морозильной камеры</h3>
+                            <p class="guide-card__excerpt">Решение проблем с наледью и температурой</p>
+                            <div class="guide-card__meta">
+                                <span><i class="fas fa-star"></i> 4.5</span>
+                                <span><i class="fas fa-clock"></i> 40 мин</span>
+                                <span><i class="fas fa-tools"></i> Средне</span>
+                            </div>
+                            <a href="guides/freezer-repair.html" class="button button--small">Читать гайд</a>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="pagination">
+                    <a href="#" class="pagination__link active">1</a>
+                    <a href="#" class="pagination__link">2</a>
+                    <a href="#" class="pagination__link">3</a>
+                    <a href="#" class="pagination__link pagination__link--next">Далее</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="brands-section">
+            <div class="container">
+                <h2 class="section__title">Ремонтируем все бренды техники</h2>
+                <div class="brands-grid">
+                    <img src="https://via.placeholder.com/150x60?text=Samsung" alt="Samsung" loading="lazy">
+                    <img src="https://via.placeholder.com/150x60?text=LG" alt="LG" loading="lazy">
+                    <img src="https://via.placeholder.com/150x60?text=Bosch" alt="Bosch" loading="lazy">
+                    <img src="https://via.placeholder.com/150x60?text=Indesit" alt="Indesit" loading="lazy">
+                    <img src="https://via.placeholder.com/150x60?text=Atlant" alt="Atlant" loading="lazy">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__col footer__col--logo">
+                    <a href="index.html" class="footer-logo">
+                        <span class="logo__icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 15L7 10H17L12 15Z" fill="currentColor"/>
+                                <path d="M12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3ZM12 19C8.13401 19 5 15.866 5 12C5 8.13401 8.13401 5 12 5C15.866 5 19 8.13401 19 12C19 15.866 15.866 19 12 19Z" fill="currentColor"/>
+                            </svg>
+                        </span>
+                        <span class="logo__text">TechFix</span>
+                    </a>
+                    <p class="footer__text">Помогаем ремонтировать электронику с 2024 года</p>
+                </div>
+                <div class="footer__col">
+                    <h3 class="footer__title">Разделы</h3>
+                    <ul class="footer__links">
+                        <li><a href="index.html" class="footer__link">Главная</a></li>
+                        <li><a href="all-guides.html" class="footer__link">Все гайды</a></li>
+                        <li><a href="how-it-works.html" class="footer__link">Как это работает?</a></li>
+                        <li><a href="contacts.html" class="footer__link">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="footer__col">
+                    <h3 class="footer__title">Категории</h3>
+                    <ul class="footer__links">
+                        <li><a href="tv.html" class="footer__link">Телевизоры</a></li>
+                        <li><a href="large-appliances.html" class="footer__link">Крупная техника</a></li>
+                        <li><a href="small-appliances.html" class="footer__link">Мелкая техника</a></li>
+                        <li><a href="consoles.html" class="footer__link">Игровые приставки</a></li>
+                    </ul>
+                </div>
+                <div class="footer__col">
+                    <h3 class="footer__title">Контакты</h3>
+                    <ul class="footer__links">
+                        <li><a href="https://t.me/techfix_kz" class="footer__link"><i class="fab fa-telegram"></i> Telegram</a></li>
+                        <li><a href="https://instagram.com/techfix_kz" class="footer__link"><i class="fab fa-instagram"></i> Instagram</a></li>
+                        <li><a href="mailto:support@techfix.kz" class="footer__link"><i class="fas fa-envelope"></i> Email</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p class="footer__copyright">© 2024 TechFix. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
