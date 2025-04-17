@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ремонт смартфонов | TechFix</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <a href="index.html" class="logo">
+                    <span class="logo__icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 15L7 10H17L12 15Z" fill="currentColor"/>
+                            <path d="M12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3ZM12 19C8.13401 19 5 15.866 5 12C5 8.13401 8.13401 5 12 5C15.866 5 19 8.13401 19 12C19 15.866 15.866 19 12 19Z" fill="currentColor"/>
+                        </svg>
+                    </span>
+                    <span class="logo__text">TechFix</span>
+                </a>
+                <nav class="nav">
+                    <ul class="nav__list">
+                        <li><a href="tv.html" class="nav__link">Телевизоры</a></li>
+                        <li><a href="auto-electronics.html" class="nav__link">Автоэлектроника</a></li>
+                        <li><a href="smartphones.html" class="nav__link active">Смартфоны</a></li>
+                        <li><a href="laptops.html" class="nav__link">Ноутбуки</a></li>
+                        <li><a href="consoles.html" class="nav__link">Приставки</a></li>
+                    </ul>
+                </nav>
+                <button class="theme-toggle" aria-label="Переключить тему">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="category-page">
+        <section class="category-hero" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')">
+            <div class="container">
+                <h1>Ремонт смартфонов</h1>
+                <p>Профессиональный ремонт смартфонов всех марок и моделей</p>
+            </div>
+        </section>
+
+        <section class="guides-section">
+            <div class="container">
+                <div class="section__header">
+                    <h2 class="section__title">10 гайдов по ремонту смартфонов</h2>
+                    <div class="sort-controls">
+                        <span>Сортировка:</span>
+                        <select>
+                            <option>По популярности</option>
+                            <option>По новизне</option>
+                            <option>По сложности</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="guides__grid">
+                    <!-- Гайд 1 -->
+                    <article class="guide-card">
+                        <div class="guide-card__image">
+                            <img src="https://images.unsplash.com/photo-1581092921461-39b2f2f8a6c6?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Замена экрана" loading="lazy">
+                            <span class="guide-card__badge">Топ</span>
+                        </div>
+                        <div class="guide-card__content">
+                            <h3 class="guide-card__title">Замена разбитого экрана</h3>
+                            <p class="guide-card__excerpt">Пошаговая инструкция по замене дисплея</p>
+                            <div class="guide-card__meta">
+                                <span><i class="fas fa-star"></i> 4.9</span>
+                                <span><i class="fas fa-clock"></i> 1 час</span>
+                                <span><i class="fas fa-tools"></i> Средне</span>
+                            </div>
+                            <a href="guides/screen-replacement.html" class="button button--small">Читать гайд</a>
+                        </div>
+                    </article>
+
+                    <!-- Гайд 2 -->
+                    <article class="guide-card">
+                        <div class="guide-card__image">
+                            <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Замена батареи" loading="lazy">
+                        </div>
+                        <div class="guide-card__content">
+                            <h3 class="guide-card__title">Замена аккумулятора</h3>
+                            <p class="guide-card__excerpt">Как правильно заменить батарею в смартфоне</p>
+                            <div class="guide-card__meta">
+                                <span><i class="fas fa-star"></i> 4.7</span>
+                                <span><i class="fas fa-clock"></i> 40 мин</span>
+                                <span><i class="fas fa-tools"></i> Средне</span>
+                            </div>
+                            <a href="guides/battery-replacement.html" class="button button--small">Читать гайд</a>
+                        </div>
+                    </article>
+
+                    <!-- Гайд 3 -->
+                    <article class="guide-card">
+                        <div class="guide-card__image">
+                            <img src="https://images.unsplash.com/photo-1581092921461-39b2f2f8a6c6?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Ремонт кнопки" loading="lazy">
+                            <span class="guide-card__badge">Новое</span>
+                        </div>
+                        <div class="guide-card__content">
+                            <h3 class="guide-card__title">Ремонт кнопки питания</h3>
+                            <p class="guide-card__excerpt">Решение проблем с неработающей кнопкой</p>
+                            <div class="guide-card__meta">
+                                <span><i class="fas fa-star"></i> 4.6</span>
+                                <span><i class="fas fa-clock"></i> 35 мин</span>
+                                <span><i class="fas fa-tools"></i> Средне</span>
+                            </div>
+                            <a href="guides/power-button-repair.html" class="button button--small">Читать гайд</a>
+                        </div>
+                    </article>
+
+                    <!-- Гайд 4 -->
+                    <article class="guide-card">
+                        <div class="guide-card__image">
+                            <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Ремонт динамика" loading="lazy">
+                            <span class="guide-card__badge">Сложно</span>
+                        </div>
+                        <div class="guide-card__content">
+                            <h3 class="guide-card__title">Ремонт динамика</h3>
+                            <p class="guide-card__excerpt">Как починить неработающий динамик</p>
+                            <div class="guide-card__meta">
+                                <span><i class="fas fa-star"></i> 4.5</span>
+                                <span><i class="fas fa-clock"></i> 50 мин</span>
+                                <span><i class="fas fa-tools"></i> Сложно</span>
+                            </div>
+                            <a href="guides/speaker-repair.html" class="button button--small">Читать гайд</a>
+                        </div>
+                    </article>
+
+                    <!-- Гайд 5 -->
+                    <article class="guide-card">
+                        <div class="guide-card__image">
+                            <img src="https://images.unsplash.com/photo-1581092921461-39b2f2f8a6c6?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Ремонт разъема" loading="lazy">
+                        </div>
+                        <div class="guide-card__content">
+                            <h3 class="guide-card__title">Ремонт USB-разъема</h3>
+                            <p class="guide-card__excerpt">Решение проблем с зарядкой устройства</p>
+                            <div class="guide-card__meta">
+                                <span><i class="fas fa-star"></i> 4.8</span>
+                                <span><i class="fas fa-clock"></i> 45 мин</span>
+                                <span><i class="fas fa-tools"></i> Средне</span>
+                            </div>
+                            <a href="guides/usb-port-repair.html" class="button button--small">Читать гайд</a>
+                        </div>
+                    </article>
+
+                    <!-- Гайд 6 -->
+                    <article class="guide-card">
+                        <div class="guide-card__image">
+                            <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Ремонт камеры" loading="lazy">
+                            <span class="guide-card__badge">Просто</span>
+                        </div>
+                        <div class="guide-card__content">
+                            <h3 class="guide-card__title">Ремонт камеры</h3>
+                            <p class="guide-card__excerpt">Решение проблем с размытым изображением</p>
+                            <div class="guide-card__meta">
+                                <span><i class="fas fa-star"></i> 4.4</span>
+                                <span><i class="fas fa-clock"></i> 30 мин</span>
+                                <span><i class="fas fa-tools"></i> Легко</span>
+                            </div>
+                            <a href="guides/camera-repair.html" class="button button--small">Читать гайд</a>
+                        </div>
+                    </article>
+
+                    <!-- Гайд 7 -->
+                    <article class="guide-card">
+                        <div class="guide-card__image">
+                            <img src="https://images.unsplash.com/photo-1581092921461-39b2f2f8a6c6?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Ремонт микрофона" loading="lazy">
+                        </div>
+                        <div class="guide-card__content">
+                            <h3 class="guide-card__title">Ремонт микрофона</h3>
+                            <p class="guide-card__excerpt">Как починить неработающий микрофон</p>
+                            <div class="guide-card__meta">
+                                <span><i class="fas fa-star"></i> 4.3</span>
+                                <span><i class="fas fa-clock"></i> 40 мин</span>
+                                <span><i class="fas fa-tools"></i> Сложно</span>
+                            </div>
+                            <a href="guides/microphone-repair.html" class="button button--small">Читать гайд</a>
+                        </div>
+                    </article>
+
+                    <!-- Гайд 8 -->
+                    <article class="guide-card">
+                        <div class="guide-card__image">
+                            <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Ремонт вибромотора" loading="lazy">
+                        </div>
+                        <div class="guide-card__content">
+                            <h3 class="guide-card__title">Ремонт вибромотора</h3>
+                            <p class="guide-card__excerpt">Решение проблем с вибрацией</p>
+                            <div class="guide-card__meta">
+                                <span><i class="fas fa-star"></i> 4.2</span>
+                                <span><i class="fas fa-clock"></i> 25 мин</span>
+                                <span><i class="fas fa-tools"></i> Средне</span>
+                            </div>
+                            <a href="guides/vibration-motor-repair.html" class="button button--small">Читать гайд</a>
+                        </div>
+                    </article>
+
+                    <!-- Гайд 9 -->
+                    <article class="guide-card">
+                        <div class="guide-card__image">
+                            <img src="https://images.unsplash.com/photo-1581092921461-39b2f2f8a6c6?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Ремонт сенсора" loading="lazy">
+                            <span class="guide-card__badge">Срочно</span>
+                        </div>
+                        <div class="guide-card__content">
+                            <h3 class="guide-card__title">Калибровка сенсора</h3>
+                            <p class="guide-card__excerpt">Как восстановить чувствительность тачскрина</p>
+                            <div class="guide-card__meta">
+                                <span><i class="fas fa-star"></i> 4.7</span>
+                                <span><i class="fas fa-clock"></i> 15 мин</span>
+                                <span><i class="fas fa-tools"></i> Легко</span>
+                            </div>
+                            <a href="guides/touch-calibration.html" class="button button--small">Читать гайд</a>
+                        </div>
+                    </article>
+
+                    <!-- Гайд 10 -->
+                    <article class="guide-card">
+                        <div class="guide-card__image">
+                            <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Замена корпуса" loading="lazy">
+                        </div>
+                        <div class="guide-card__content">
+                            <h3 class="guide-card__title">Замена корпуса</h3>
+                            <p class="guide-card__excerpt">Полная инструкция по замене корпуса смартфона</p>
+                            <div class="guide-card__meta">
+                                <span><i class="fas fa-star"></i> 4.6</span>
+                                <span><i class="fas fa-clock"></i> 1.5 часа</span>
+                                <span><i class="fas fa-tools"></i> Сложно</span>
+                            </div>
+                            <a href="guides/housing-replacement.html" class="button button--small">Читать гайд</a>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="pagination">
+                    <a href="#" class="pagination__link active">1</a>
+                    <a href="#" class="pagination__link">2</a>
+                    <a href="#" class="pagination__link">3</a>
+                    <a href="#" class="pagination__link pagination__link--next">Далее</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="brands-section">
+            <div class="container">
+                <h2 class="section__title">Ремонтируем смартфоны всех марок</h2>
+                <div class="brands-grid">
+                    <img src="https://via.placeholder.com/150x60?text=Apple" alt="Apple" loading="lazy">
+                    <img src="https://via.placeholder.com/150x60?text=Samsung" alt="Samsung" loading="lazy">
+                    <img src="https://via.placeholder.com/150x60?text=Xiaomi" alt="Xiaomi" loading="lazy">
+                    <img src="https://via.placeholder.com/150x60?text=Huawei" alt="Huawei" loading="lazy">
+                    <img src="https://via.placeholder.com/150x60?text=Oppo" alt="Oppo" loading="lazy">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__col footer__col--logo">
+                    <a href="index.html" class="footer-logo">
+                        <span class="logo__icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 15L7 10H17L12 15Z" fill="currentColor"/>
+                                <path d="M12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3ZM12 19C8.13401 19 5 15.866 5 12C5 8.13401 8.13401 5 12 5C15.866 5 19 8.13401 19 12C19 15.866 15.866 19 12 19Z" fill="currentColor"/>
+                            </svg>
+                        </span>
+                        <span class="logo__text">TechFix</span>
+                    </a>
+                    <p class="footer__text">Помогаем ремонтировать электронику с 2024 года</p>
+                </div>
+                <div class="footer__col">
+                    <h3 class="footer__title">Разделы</h3>
+                    <ul class="footer__links">
+                        <li><a href="index.html" class="footer__link">Главная</a></li>
+                        <li><a href="all-guides.html" class="footer__link">Все гайды</a></li>
+                        <li><a href="how-it-works.html" class="footer__link">Как это работает?</a></li>
+                        <li><a href="contacts.html" class="footer__link">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="footer__col">
+                    <h3 class="footer__title">Категории</h3>
+                    <ul class="footer__links">
+                        <li><a href="auto-electronics.html" class="footer__link">Автоэлектроника</a></li>
+                        <li><a href="smartphones.html" class="footer__link">Смартфоны</a></li>
+                        <li><a href="laptops.html" class="footer__link">Ноутбуки</a></li>
+                        <li><a href="tv.html" class="footer__link">Телевизоры</a></li>
+                    </ul>
+                </div>
+                <div class="footer__col">
+                    <h3 class="footer__title">Контакты</h3>
+                    <ul class="footer__links">
+                        <li><a href="https://t.me/techfix_kz" class="footer__link"><i class="fab fa-telegram"></i> Telegram</a></li>
+                        <li><a href="https://instagram.com/techfix_kz" class="footer__link"><i class="fab fa-instagram"></i> Instagram</a></li>
+                        <li><a href="mailto:support@techfix.kz" class="footer__link"><i class="fas fa-envelope"></i> Email</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p class="footer__copyright">© 2024 TechFix. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
