@@ -1,14 +1,14 @@
 backend:
   name: git-gateway
-  branch: main # Укажите вашу ветку
+  branch: main  # Убедитесь, что ветка совпадает с вашей в GitHub
 
-media_folder: "img/gaids" # Папка для изображений
-public_folder: "/img/gaids"
+media_folder: "img/gaids"  # Папка для изображений
+public_folder: "/img/gaids"  # Публичный путь
 
 collections:
   - name: "gaids"
     label: "Гайды"
-    folder: "gaids" # Где будут храниться файлы
+    folder: "gaids"  # Папка для хранения .md файлов
     create: true
     slug: "{{slug}}"
     fields:
@@ -17,6 +17,6 @@ collections:
           options: ["Фотоаппараты", "Смартфоны", "Ноутбуки"] }
       - { name: "image", label: "Превью", widget: "image" }
       - { name: "time", label: "Время", widget: "number" }
-      - { name: "difficulty", label: "Сложность", widget: "select", 
+      - { name: "difficulty", label: "Сложность", widget: "select",
           options: ["Легко", "Средне", "Сложно"] }
       - { name: "content", label: "Контент", widget: "markdown" }
