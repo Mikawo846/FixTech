@@ -1,0 +1,118 @@
+/* Основные стили шапки */
+.header {
+    position: relative;
+    overflow: hidden;
+    background: #1a1a2e;
+    padding: 15px 0;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Фон с узором схемы */
+.header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        linear-gradient(90deg, transparent 49%, rgba(255,255,255,0.1) 50%, transparent 51%),
+        linear-gradient(transparent 49%, rgba(255,255,255,0.1) 50%, transparent 51%);
+    background-size: 40px 40px;
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+/* Анимированная верхняя линия */
+.header::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.5), transparent);
+    animation: circuitFlow 3s linear infinite;
+}
+
+/* Контейнер шапки */
+.header__inner {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Стили навигации */
+.nav__list {
+    position: relative;
+    display: flex;
+    gap: 25px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Точки-соединения */
+.nav__list::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -20px;
+    width: 10px;
+    height: 10px;
+    border: 2px solid rgba(255,255,255,0.5);
+    border-radius: 50%;
+    transform: translateY(-50%);
+}
+
+/* Линии между пунктами меню */
+.nav__item {
+    position: relative;
+}
+
+.nav__item:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    right: -15px;
+    top: 50%;
+    width: 10px;
+    height: 2px;
+    background: rgba(255,255,255,0.3);
+}
+
+/* Стили ссылок */
+.nav__link {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+    position: relative;
+}
+
+.nav__link:hover {
+    color: #4fc3f7;
+}
+
+.nav__link:hover::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #4fc3f7;
+    animation: linkUnderline 0.3s forwards;
+}
+
+/* Анимации */
+@keyframes circuitFlow {
+    0% { background-position: -100% 0; }
+    100% { background-position: 100% 0; }
+}
+
+@keyframes linkUnderline {
+    from { width: 0; }
+    to { width: 100%; }
+}
