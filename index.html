@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TechFix – Ремонт электроники в Казахстане</title>
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
     <link rel="stylesheet" href="./styles.css">
     <link rel="stylesheet" href="./styles-header.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -295,7 +296,19 @@
             // Добавляем анимацию перехода
             searchInput.style.transition = 'opacity 0.5s ease';
         });
-        </script>
-   <script src="script.js"></script> <!-- Подключение JS -->
+<script>
+  // Обработчик для входа через Identity
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", user => {
+      if (!user) {
+        window.netlifyIdentity.on("login", () => {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  }
+</script>
+
+<script src="script.js"></script> <!-- Ваш существующий скрипт -->
 </body>
 </html>
