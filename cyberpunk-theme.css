@@ -1,0 +1,180 @@
+/* Основные стили для всего сайта */
+body {
+    background-color: #0a0a12;
+    color: #e0e0e0;
+    font-family: 'Rajdhani', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+/* Киберпанк контейнеры */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 1px solid rgba(5, 217, 232, 0.3);
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* Заголовки */
+h1, h2, h3, h4, h5, h6 {
+    color: #05d9e8;
+    text-shadow: 0 0 10px rgba(5, 217, 232, 0.5);
+    margin-top: 0;
+    font-weight: 700;
+}
+
+h1 {
+    font-size: 2.5rem;
+    border-bottom: 2px solid #ff2a6d;
+    padding-bottom: 10px;
+    display: inline-block;
+}
+
+/* Ссылки */
+a {
+    color: #05d9e8;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+a:hover {
+    color: #ff2a6d;
+    text-shadow: 0 0 8px rgba(255, 42, 109, 0.7);
+}
+
+/* Кнопки */
+.button {
+    display: inline-block;
+    padding: 12px 24px;
+    background: linear-gradient(90deg, #05d9e8, #005678);
+    color: #000;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: none;
+    border-radius: 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 15px rgba(5, 217, 232, 0.5);
+}
+
+.button:hover {
+    background: linear-gradient(90deg, #ff2a6d, #d300c5);
+    box-shadow: 0 0 20px rgba(255, 42, 109, 0.7);
+    transform: translateY(-2px);
+}
+
+/* Карточки */
+.card {
+    background: rgba(10, 10, 20, 0.7);
+    border: 1px solid rgba(5, 217, 232, 0.2);
+    padding: 20px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, #05d9e8, #ff2a6d);
+}
+
+.card:hover {
+    box-shadow: 0 0 30px rgba(5, 217, 232, 0.3);
+}
+
+/* Формы */
+input, textarea, select {
+    background: rgba(20, 20, 30, 0.8);
+    border: 1px solid #05d9e8;
+    color: #fff;
+    padding: 12px;
+    font-family: 'Rajdhani', sans-serif;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: #ff2a6d;
+    box-shadow: 0 0 10px rgba(255, 42, 109, 0.5);
+}
+
+/* Футер */
+.footer {
+    background: #000;
+    padding: 40px 0;
+    border-top: 1px solid #ff2a6d;
+    position: relative;
+}
+
+.footer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #ff2a6d, #d300c5, #05d9e8);
+    animation: neonFlow 3s linear infinite;
+}
+
+/* Анимации (добавьте из header.css) */
+@keyframes neonFlow {
+    0% { background-position: 0 0; }
+    100% { background-position: 200% 0; }
+}
+
+/* Дополнительные эффекты */
+::selection {
+    background: #ff2a6d;
+    color: #000;
+}
+
+/* Адаптация для разных элементов */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table th {
+    background: rgba(5, 217, 232, 0.2);
+    color: #05d9e8;
+    padding: 12px;
+    text-align: left;
+}
+
+.table td {
+    padding: 10px 12px;
+    border-bottom: 1px solid rgba(5, 217, 232, 0.1);
+}
+
+/* Эффекты для изображений */
+.img-glow {
+    box-shadow: 0 0 20px rgba(5, 217, 232, 0.5);
+    transition: all 0.3s ease;
+}
+
+.img-glow:hover {
+    box-shadow: 0 0 30px rgba(255, 42, 109, 0.7);
+}
