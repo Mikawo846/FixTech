@@ -57,10 +57,11 @@
 /* Стиль неоновых вывесок для меню */
 .nav__list {
     display: flex;
-    gap: 25px;
-    list-style: none;
-    margin: 0;
-    padding: 0;
+    gap: 15px;
+    flex-wrap: nowrap; /* Запрещаем перенос пунктов */
+    overflow-x: auto; /* Добавляем скролл при необходимости */
+    padding-bottom: 10px;
+    -webkit-overflow-scrolling: touch; /* Плавный скролл на iOS */
 }
 
 .nav__item {
