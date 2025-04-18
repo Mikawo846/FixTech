@@ -1,52 +1,36 @@
 // Плавная прокрутка к #categories при загрузке страницы с якорем
 document.addEventListener('DOMContentLoaded', function() {
-  // Обработка якоря #categories
+  // Обработка якоря при загрузке страницы
   if (window.location.hash === '#categories') {
-    const target = document.getElementById('categories');
-    if (target) {
-      setTimeout(() => {
-        target.scrollIntoView({ behavior: 'smooth' });
-      }, 100);
-    }
-  }
-
-  // Обработка якоря #repair-categories (если он существует на странице)
-  if (window.location.hash === '#repair-categories') {
-    const target = document.getElementById('repair-categories');
-    if (target) {
-      setTimeout(() => {
-        target.scrollIntoView({ behavior: 'smooth' });
-      }, 100);
-    }
+    scrollToCategories();
   }
 
   // Обработчик для всех ссылок с #categories
   document.querySelectorAll('a[href*="#categories"]').forEach(link => {
     link.addEventListener('click', function(e) {
-      // Если ссылка ведет на текущую страницу
-      if (this.href.includes(window.location.pathname)) {
+      // Если это внутренняя ссылка на текущей странице
+      if (this.href === window.location.href || this.href.includes(`${window.location.pathname}#categories`)) {
         e.preventDefault();
-        const target = document.getElementById('categories');
-        if (target) {
-          target.scrollIntoView({ behavior: 'smooth' });
-        }
+        scrollToCategories();
       }
-      // Иначе - переход на index.html с якорем
-      else {
-        e.preventDefault();
-        window.location.href = 'index.html#categories';
+      // Если ссылка ведет на другую страницу (например, index.html#categories)
+      else if (this.href.includes('index.html#categories')) {
+        // Разрешаем стандартное поведение - браузер сам перейдет
+        return;
       }
     });
   });
 
-  // Обработчик для #repair-categories (если элемент существует)
-  const repairCategoriesLink = document.querySelector('.nav__link[href="#repair-categories"]');
-  const repairCategoriesTarget = document.getElementById('repair-categories');
-  
-  if (repairCategoriesLink && repairCategoriesTarget) {
-    repairCategoriesLink.addEventListener('click', function(e) {
-      e.preventDefault();
-      repairCategoriesTarget.scrollIntoView({ behavior: 'smooth' });
-    });
+  // Функция плавной прокрутки
+  function scrollToCategories() {
+    const target = document.getElementById('categories');
+    if (target) {
+      setTimeout(() => {
+        target.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start' // Прокрутка к началу элемента
+        });
+      }, 100);
+    }
   }
 });
