@@ -1,15 +1,151 @@
-/* Основные стили шапки */
+/* Основные стили шапки - Неоновый техно-стиль */
 .header {
     position: relative;
     overflow: hidden;
-    background: #0f0c29; /* Темно-синий градиент */
-    background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
-    padding: 20px 0;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+    background: #0a0a1a;
+    padding: 25px 0;
+    border-bottom: 1px solid rgba(0, 255, 255, 0.2);
+    box-shadow: 0 0 30px rgba(0, 255, 255, 0.1);
 }
 
-/* Сложный фон с узором электронной схемы */
-.header::before {
+/* Глитч-эффект при наведении */
+.header:hover::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, 
+        transparent, 
+        #00fffc, 
+        #00ff9d, 
+        #00fffc, 
+        transparent);
+    animation: glitchLine 0.8s linear infinite;
+}
+
+/* 3D-панель с перспективой */
+.header__inner {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+}
+
+/* Неоновое меню */
+.nav__list {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+.nav__item {
+    position: relative;
+    transform-style: preserve-3d;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.nav__item:hover {
+    transform: translateZ(20px);
+}
+
+/* Неоновые ссылки с голографическим эффектом */
+.nav__link {
+    color: transparent;
+    font-weight: 600;
+    font-size: 1.1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 8px 15px;
+    position: relative;
+    background: linear-gradient(90deg, #00fffc, #00ff9d);
+    -webkit-background-clip: text;
+    background-clip: text;
+    text-shadow: 0 0 10px rgba(0, 255, 252, 0.3);
+    transition: all 0.3s ease;
+}
+
+.nav__link::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 1px solid transparent;
+    border-image: linear-gradient(135deg, #00fffc 0%, transparent 50%, #00ff9d 100%);
+    border-image-slice: 1;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.nav__link:hover {
+    text-shadow: 0 0 20px rgba(0, 255, 252, 0.7);
+}
+
+.nav__link:hover::before {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+/* Логотип с неоновым свечением */
+.logo {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo__icon {
+    filter: drop-shadow(0 0 5px #00fffc);
+}
+
+.logo__text {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-shadow: 0 0 10px rgba(0, 255, 252, 0.5);
+    position: relative;
+}
+
+.logo__text::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, #00fffc, #00ff9d);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.logo:hover .logo__text::after {
+    transform: scaleX(1);
+}
+
+/* Анимации */
+@keyframes glitchLine {
+    0% { background-position: -100% 0; }
+    100% { background-position: 100% 0; }
+}
+
+@keyframes hologram {
+    0% { opacity: 0.7; transform: translateY(0) rotateX(0); }
+    50% { opacity: 1; transform: translateY(-5px) rotateX(5deg); }
+    100% { opacity: 0.7; transform: translateY(0) rotateX(0); }
+}
+
+/* Техно-сетка на заднем фоне */
+.header::after {
     content: "";
     position: absolute;
     top: 0;
@@ -17,86 +153,31 @@
     right: 0;
     bottom: 0;
     background: 
-        /* Горизонтальные линии */
-        linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px),
-        /* Вертикальные линии */
-        linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px),
-        /* Диагональные линии */
-        linear-gradient(45deg, rgba(255,255,255,0.05) 1px, transparent 1px),
-        linear-gradient(-45deg, rgba(255,255,255,0.05) 1px, transparent 1px);
-    background-size: 
-        40px 40px, /* Размер основной сетки */
-        40px 40px,
-        80px 80px, /* Размер диагональной сетки */
-        80px 80px;
-    opacity: 0.4;
+        linear-gradient(rgba(0, 255, 252, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 255, 252, 0.05) 1px, transparent 1px);
+    background-size: 30px 30px;
+    opacity: 0.3;
     pointer-events: none;
+    animation: gridMove 20s linear infinite;
 }
 
-/* Элементы схемы - чипы */
-.header::after {
-    content: "";
-    position: absolute;
-    top: 20%;
-    left: 15%;
-    width: 30px;
-    height: 30px;
-    border: 2px solid rgba(255,255,255,0.3);
-    border-radius: 5px;
-    transform: rotate(45deg);
-    box-shadow: 
-        0 0 10px rgba(255,255,255,0.2),
-        0 0 20px rgba(255,255,255,0.1);
-}
-
-/* Анимированные линии-соединения */
-.header .circuit-line {
-    position: absolute;
-    background: rgba(255,255,255,0.1);
-    animation: circuitPulse 2s infinite alternate;
-}
-
-.header .circuit-line:nth-child(1) {
-    top: 30%;
-    left: 10%;
-    width: 100px;
-    height: 2px;
-}
-
-.header .circuit-line:nth-child(2) {
-    top: 60%;
-    right: 15%;
-    width: 80px;
-    height: 2px;
-    animation-delay: 0.5s;
-}
-
-/* Контейнер шапки */
-.header__inner {
-    position: relative;
-    z-index: 10; /* Выше фоновых элементов */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-/* Анимации */
-@keyframes circuitPulse {
-    0% { opacity: 0.2; }
-    100% { opacity: 0.6; }
-}
-
-@keyframes circuitFlow {
+@keyframes gridMove {
     0% { background-position: 0 0; }
-    100% { background-position: 40px 40px; }
+    100% { background-position: 300px 300px; }
 }
 
-/* Остальные стили навигации остаются без изменений */
-.nav__list {
-    /* ... предыдущие стили ... */
+/* Парящие частицы */
+.header .particle {
+    position: absolute;
+    background: rgba(0, 255, 252, 0.6);
+    border-radius: 50%;
+    pointer-events: none;
+    animation: float 15s infinite linear;
 }
 
-/* ... и т.д. ... */
+@keyframes float {
+    0% { transform: translateY(0) rotate(0deg); opacity: 0; }
+    10% { opacity: 1; }
+    90% { opacity: 1; }
+    100% { transform: translateY(-500px) rotate(720deg); opacity: 0; }
+}
