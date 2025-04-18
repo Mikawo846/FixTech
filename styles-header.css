@@ -1,134 +1,183 @@
-/* Rockstar Games стиль шапки */
+/* Основные стили шапки - Неоновый техно-стиль */
 .header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background: #0a0a0a;
-    padding: 15px 0;
-    border-bottom: 1px solid #3a3a3a;
-    z-index: 1000;
-    box-shadow: 0 2px 30px rgba(0, 0, 0, 0.8);
+    position: relative;
+    overflow: hidden;
+    background: #0a0a1a;
+    padding: 25px 0;
+    border-bottom: 1px solid rgba(0, 255, 255, 0.2);
+    box-shadow: 0 0 30px rgba(0, 255, 255, 0.1);
 }
 
-/* Гранжевый текстурированный фон */
-.header::before {
+/* Глитч-эффект при наведении */
+.header:hover::before {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
-    background: 
-        linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
-    background-size: 15px 15px;
-    opacity: 0.3;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, 
+        transparent, 
+        #00fffc, 
+        #00ff9d, 
+        #00fffc, 
+        transparent);
+    animation: glitchLine 0.8s linear infinite;
 }
 
-/* Контейнер шапки */
+/* 3D-панель с перспективой */
 .header__inner {
     position: relative;
+    z-index: 2;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 25px;
+    transform-style: preserve-3d;
+    perspective: 1000px;
 }
 
-/* Логотип в стиле Rockstar */
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    text-decoration: none;
-}
-
-.logo__icon {
-    width: 32px;
-    height: 32px;
-    background: #ff0000;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #000;
-    font-weight: 900;
-    font-family: 'Arial Black', sans-serif;
-    border: 2px solid #fff;
-}
-
-.logo__text {
-    font-family: 'Bahnschrift', 'Arial Narrow', sans-serif;
-    font-size: 1.2rem;
-    font-weight: 700;
-    color: #fff;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
-}
-
-/* Навигация */
+/* Неоновое меню */
 .nav__list {
     display: flex;
     gap: 30px;
     list-style: none;
     margin: 0;
     padding: 0;
+    position: relative;
 }
 
 .nav__item {
     position: relative;
+    transform-style: preserve-3d;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
+.nav__item:hover {
+    transform: translateZ(20px);
+}
+
+/* Неоновые ссылки с голографическим эффектом */
 .nav__link {
-    color: #ccc;
-    font-family: 'Bahnschrift', 'Arial Narrow', sans-serif;
-    font-weight: 500;
-    font-size: 3rem;
+    color: transparent;
+    font-weight: 600;
+    font-size: 1.1rem;
     text-decoration: none;
     text-transform: uppercase;
     letter-spacing: 1px;
-    padding: 8px 0;
+    padding: 8px 15px;
     position: relative;
-    transition: all 0.25s ease;
-}
-
-.nav__link:hover {
-    color: #fff;
+    background: linear-gradient(90deg, #00fffc, #00ff9d);
+    -webkit-background-clip: text;
+    background-clip: text;
+    text-shadow: 0 0 10px rgba(0, 255, 252, 0.3);
+    transition: all 0.3s ease;
 }
 
 .nav__link::before {
-    content: '';
+    content: "";
     position: absolute;
-    bottom: 0;
+    top: 0;
     left: 0;
-    width: 0;
-    height: 2px;
-    background: #ff0000;
-    transition: width 0.3s ease;
+    right: 0;
+    bottom: 0;
+    border: 1px solid transparent;
+    border-image: linear-gradient(135deg, #00fffc 0%, transparent 50%, #00ff9d 100%);
+    border-image-slice: 1;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.nav__link:hover {
+    text-shadow: 0 0 20px rgba(0, 255, 252, 0.7);
 }
 
 .nav__link:hover::before {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+/* Логотип с неоновым свечением */
+.logo {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo__icon {
+    filter: drop-shadow(0 0 5px #00fffc);
+}
+
+.logo__text {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-shadow: 0 0 10px rgba(0, 255, 252, 0.5);
+    position: relative;
+}
+
+.logo__text::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
     width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, #00fffc, #00ff9d);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
 }
 
-/* Активный пункт меню */
-.nav__link.active {
-    color: #fff;
-    font-weight: 600;
+.logo:hover .logo__text::after {
+    transform: scaleX(1);
 }
 
-.nav__link.active::before {
-    width: 100%;
-    background: #ff0000;
+/* Анимации */
+@keyframes glitchLine {
+    0% { background-position: -100% 0; }
+    100% { background-position: 100% 0; }
 }
 
-/* Эффект при скролле */
-.header.scrolled {
-    background: rgba(10, 10, 10, 0.95);
-    backdrop-filter: blur(5px);
-    padding: 10px 0;
-    border-bottom: 1px solid #ff0000;
+@keyframes hologram {
+    0% { opacity: 0.7; transform: translateY(0) rotateX(0); }
+    50% { opacity: 1; transform: translateY(-5px) rotateX(5deg); }
+    100% { opacity: 0.7; transform: translateY(0) rotateX(0); }
+}
+
+/* Техно-сетка на заднем фоне */
+.header::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        linear-gradient(rgba(0, 255, 252, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 255, 252, 0.05) 1px, transparent 1px);
+    background-size: 30px 30px;
+    opacity: 0.3;
+    pointer-events: none;
+    animation: gridMove 20s linear infinite;
+}
+
+@keyframes gridMove {
+    0% { background-position: 0 0; }
+    100% { background-position: 300px 300px; }
+}
+
+/* Парящие частицы */
+.header .particle {
+    position: absolute;
+    background: rgba(0, 255, 252, 0.6);
+    border-radius: 50%;
+    pointer-events: none;
+    animation: float 15s infinite linear;
+}
+
+@keyframes float {
+    0% { transform: translateY(0) rotate(0deg); opacity: 0; }
+    10% { opacity: 1; }
+    90% { opacity: 1; }
+    100% { transform: translateY(-500px) rotate(720deg); opacity: 0; }
 }
