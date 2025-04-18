@@ -1,55 +1,62 @@
-/* Техно-шапка с акцентными подчеркиваниями */
+/* Техно-шапка с крупным текстом и подчеркиваниями */
 .header {
     position: relative;
     background: #0a0a1a;
-    padding: 20px 0;
+    padding: 25px 0;
     border-bottom: 1px solid rgba(0, 255, 255, 0.1);
     box-shadow: 0 2px 20px rgba(0, 255, 255, 0.05);
 }
 
+/* Увеличенный контейнер для крупного текста */
 .header__inner {
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: relative;
     z-index: 2;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 30px;
 }
 
-/* Меню с подчеркиваниями */
+/* Меню с увеличенным текстом */
 .nav__list {
     display: flex;
-    gap: 25px;
+    gap: 40px; /* Увеличил промежутки для крупного текста */
     list-style: none;
     margin: 0;
     padding: 0;
 }
 
+/* Увеличенный текст категорий в 3 раза (было 1rem → стало 3rem) */
 .nav__link {
     color: #e0e0e0;
     font-weight: 500;
-    font-size: 1rem;
+    font-size: 3rem; /* Главное изменение - увеличенный текст */
     text-decoration: none;
-    padding: 8px 0;
+    padding: 12px 0;
     position: relative;
     transition: all 0.3s ease;
+    line-height: 1.2;
 }
 
-/* Неоновое подчеркивание */
+/* Неоновое подчеркивание (толще для крупного текста) */
 .nav__link::after {
     content: '';
     position: absolute;
-    bottom: 0;
+    bottom: 8px; /* Поднято для баланса */
     left: 0;
     width: 0;
-    height: 2px;
+    height: 4px; /* Толще обычного */
     background: linear-gradient(90deg, #00fffc, #00ff9d);
-    transition: width 0.3s ease, opacity 0.3s ease;
+    transition: width 0.4s ease, opacity 0.3s ease;
     opacity: 0;
-    box-shadow: 0 0 10px rgba(0, 255, 252, 0.5);
+    box-shadow: 0 0 15px rgba(0, 255, 252, 0.7); /* Ярче свечение */
 }
 
 .nav__link:hover {
     color: #ffffff;
+    text-shadow: 0 0 10px rgba(0, 255, 252, 0.3);
 }
 
 .nav__link:hover::after {
@@ -57,90 +64,59 @@
     opacity: 1;
 }
 
-/* Активное состояние */
-.nav__link.active {
-    color: #ffffff;
-}
-
-.nav__link.active::after {
-    width: 100%;
-    opacity: 1;
-    background: linear-gradient(90deg, #00ff9d, #00fffc);
-}
-
-/* Логотип с подчеркиванием */
+/* Логотип также увеличен для баланса */
 .logo {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 15px;
     text-decoration: none;
 }
 
 .logo__text {
     color: white;
-    font-size: 1.4rem;
+    font-size: 2.5rem; /* Увеличенный логотип */
     font-weight: 600;
     position: relative;
-    padding-bottom: 5px;
+    padding-bottom: 8px;
 }
 
-/* Анимация подчеркивания лого */
+/* Адаптация подчеркивания для лого */
 .logo__text::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background: linear-gradient(90deg, #00fffc, #00ff9d);
-    transition: width 0.3s ease;
-    box-shadow: 0 0 8px rgba(0, 255, 252, 0.5);
+    height: 3px;
+    bottom: 2px;
+    box-shadow: 0 0 12px rgba(0, 255, 252, 0.6);
 }
 
-.logo:hover .logo__text::after {
-    width: 100%;
+/* Адаптация под мобильные устройства */
+@media (max-width: 1200px) {
+    .nav__link {
+        font-size: 2.5rem;
+    }
 }
 
-/* Техно-сетка на фоне */
-.header::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: 
-        linear-gradient(rgba(0, 255, 252, 0.03) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(0, 255, 252, 0.03) 1px, transparent 1px);
-    background-size: 40px 40px;
-    opacity: 0.5;
-    pointer-events: none;
+@media (max-width: 992px) {
+    .nav__list {
+        gap: 25px;
+    }
+    .nav__link {
+        font-size: 2rem;
+    }
+    .logo__text {
+        font-size: 2rem;
+    }
 }
 
-/* Анимация для сетки */
-@keyframes gridScroll {
-    0% { background-position: 0 0; }
-    100% { background-position: 40px 40px; }
-}
-
-.header:hover::before {
-    animation: gridScroll 2s linear infinite;
-}
-
-/* Минимальные частицы для акцента */
-.header .particle {
-    position: absolute;
-    width: 2px;
-    height: 2px;
-    background: rgba(0, 255, 252, 0.4);
-    border-radius: 50%;
-    pointer-events: none;
-    animation: float 8s infinite linear;
-}
-
-@keyframes float {
-    0% { transform: translateY(0); opacity: 0; }
-    10% { opacity: 1; }
-    90% { opacity: 1; }
-    100% { transform: translateY(-200px); opacity: 0; }
+@media (max-width: 768px) {
+    .header__inner {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .nav__list {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .nav__link {
+        font-size: 1.8rem;
+        padding: 8px 0;
+    }
 }
