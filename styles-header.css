@@ -1,23 +1,25 @@
-/* Стиль Glassmorphism - современный полупрозрачный */
+/* Органический стиль с природными элементами */
 .header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-    background: rgba(255, 255, 255, 0.85);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    padding: 15px 0;
-    box-shadow: 0 2px 30px rgba(0, 0, 0, 0.05);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-    transition: all 0.4s ease;
+    position: relative;
+    background: #f9f5f0;
+    padding: 20px 0;
+    border-bottom: 1px solid #e8e0d5;
+    overflow: hidden;
 }
 
-/* Эффект матового стекла при скролле */
-.header.scrolled {
-    background: rgba(255, 255, 255, 0.95);
-    padding: 10px 0;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+/* Органическая текстура фона */
+.header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><path fill="%23e8e0d5" d="M30,50 Q50,30 70,50 T90,50 Q70,70 50,50 T10,50 Q30,30 50,50 T30,50" opacity="0.2"/></svg>');
+    background-size: 120px 120px;
+    opacity: 0.4;
+    pointer-events: none;
 }
 
 /* Контейнер шапки */
@@ -28,83 +30,125 @@
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
+    position: relative;
 }
 
-/* Логотип с градиентом */
+/* Логотип с природными элементами */
 .logo {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
     text-decoration: none;
 }
 
-.logo__icon svg {
-    width: 28px;
-    height: 28px;
-    fill: url(#logo-gradient);
+.logo__icon {
+    width: 32px;
+    height: 32px;
+    background: #5a7247;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    transition: all 0.4s ease;
+}
+
+.logo:hover .logo__icon {
+    background: #3a5027;
+    transform: rotate(15deg);
 }
 
 .logo__text {
-    font-size: 1.4rem;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem;
+    color: #3a3a3a;
     font-weight: 700;
-    background: linear-gradient(135deg, #3a7bd5 0%, #00d2ff 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    letter-spacing: -0.5px;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
 }
 
-/* Навигация */
+.logo:hover .logo__text {
+    color: #5a7247;
+}
+
+/* Навигация с органическими формами */
 .nav__list {
     display: flex;
-    gap: 25px;
+    gap: 30px;
     list-style: none;
     margin: 0;
     padding: 0;
 }
 
-.nav__link {
-    color: #333;
-    font-weight: 500;
-    text-decoration: none;
+.nav__item {
     position: relative;
-    padding: 8px 0;
-    transition: all 0.3s ease;
-    font-size: 0.95rem;
 }
 
-.nav__link::after {
+.nav__link {
+    color: #5a5a5a;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    text-decoration: none;
+    padding: 8px 0;
+    position: relative;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+}
+
+.nav__link::before {
     content: '';
     position: absolute;
     bottom: 0;
     left: 0;
     width: 0;
     height: 2px;
-    background: linear-gradient(90deg, #3a7bd5 0%, #00d2ff 100%);
-    transition: width 0.3s ease;
+    background: #5a7247;
+    transition: width 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+    border-radius: 1px;
 }
 
 .nav__link:hover {
-    color: #3a7bd5;
+    color: #3a5027;
 }
 
-.nav__link:hover::after {
+.nav__link:hover::before {
     width: 100%;
 }
 
 /* Активный пункт меню */
 .nav__link.active {
-    color: #3a7bd5;
+    color: #3a5027;
     font-weight: 600;
 }
 
-.nav__link.active::after {
+.nav__link.active::before {
     width: 100%;
+    background: #8a9b6e;
 }
 
-/* SVG градиент для лого (добавить в HTML) */
-.logo-gradient {
+/* Органические декоративные элементы */
+.header__decor {
     position: absolute;
-    width: 0;
-    height: 0;
+    background: #8a9b6e;
+    border-radius: 50%;
+    opacity: 0.1;
+    pointer-events: none;
 }
+
+.header__decor:nth-child(1) {
+    width: 200px;
+    height: 200px;
+    top: -100px;
+    right: -50px;
+}
+
+.header__decor:nth-child(2) {
+    width: 150px;
+    height: 150px;
+    bottom: -75px;
+    left: -30px;
+}
+
+/* Подключите эти шрифты в <head> */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Raleway:wght@400;500;600&display=swap');
