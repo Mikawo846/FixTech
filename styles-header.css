@@ -1,151 +1,108 @@
-/* Основные стили шапки - Неоновый техно-стиль */
+/* Техно-шапка с акцентными подчеркиваниями */
 .header {
     position: relative;
-    overflow: hidden;
     background: #0a0a1a;
-    padding: 25px 0;
-    border-bottom: 1px solid rgba(0, 255, 255, 0.2);
-    box-shadow: 0 0 30px rgba(0, 255, 255, 0.1);
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(0, 255, 255, 0.1);
+    box-shadow: 0 2px 20px rgba(0, 255, 255, 0.05);
 }
 
-/* Глитч-эффект при наведении */
-.header:hover::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 3px;
-    background: linear-gradient(90deg, 
-        transparent, 
-        #00fffc, 
-        #00ff9d, 
-        #00fffc, 
-        transparent);
-    animation: glitchLine 0.8s linear infinite;
-}
-
-/* 3D-панель с перспективой */
 .header__inner {
-    position: relative;
-    z-index: 2;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    transform-style: preserve-3d;
-    perspective: 1000px;
+    position: relative;
+    z-index: 2;
 }
 
-/* Неоновое меню */
+/* Меню с подчеркиваниями */
 .nav__list {
     display: flex;
-    gap: 30px;
+    gap: 25px;
     list-style: none;
     margin: 0;
     padding: 0;
-    position: relative;
 }
 
-.nav__item {
-    position: relative;
-    transform-style: preserve-3d;
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-.nav__item:hover {
-    transform: translateZ(20px);
-}
-
-/* Неоновые ссылки с голографическим эффектом */
 .nav__link {
-    color: transparent;
-    font-weight: 600;
-    font-size: 1.1rem;
+    color: #e0e0e0;
+    font-weight: 500;
+    font-size: 1rem;
     text-decoration: none;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    padding: 8px 15px;
+    padding: 8px 0;
     position: relative;
-    background: linear-gradient(90deg, #00fffc, #00ff9d);
-    -webkit-background-clip: text;
-    background-clip: text;
-    text-shadow: 0 0 10px rgba(0, 255, 252, 0.3);
     transition: all 0.3s ease;
 }
 
-.nav__link::before {
-    content: "";
+/* Неоновое подчеркивание */
+.nav__link::after {
+    content: '';
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
     bottom: 0;
-    border: 1px solid transparent;
-    border-image: linear-gradient(135deg, #00fffc 0%, transparent 50%, #00ff9d 100%);
-    border-image-slice: 1;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #00fffc, #00ff9d);
+    transition: width 0.3s ease, opacity 0.3s ease;
     opacity: 0;
-    transition: all 0.3s ease;
+    box-shadow: 0 0 10px rgba(0, 255, 252, 0.5);
 }
 
 .nav__link:hover {
-    text-shadow: 0 0 20px rgba(0, 255, 252, 0.7);
+    color: #ffffff;
 }
 
-.nav__link:hover::before {
+.nav__link:hover::after {
+    width: 100%;
     opacity: 1;
-    transform: scale(1.1);
 }
 
-/* Логотип с неоновым свечением */
+/* Активное состояние */
+.nav__link.active {
+    color: #ffffff;
+}
+
+.nav__link.active::after {
+    width: 100%;
+    opacity: 1;
+    background: linear-gradient(90deg, #00ff9d, #00fffc);
+}
+
+/* Логотип с подчеркиванием */
 .logo {
-    position: relative;
     display: flex;
     align-items: center;
     gap: 10px;
-}
-
-.logo__icon {
-    filter: drop-shadow(0 0 5px #00fffc);
+    text-decoration: none;
 }
 
 .logo__text {
     color: white;
-    font-size: 1.5rem;
-    font-weight: 700;
-    text-shadow: 0 0 10px rgba(0, 255, 252, 0.5);
+    font-size: 1.4rem;
+    font-weight: 600;
     position: relative;
+    padding-bottom: 5px;
 }
 
+/* Анимация подчеркивания лого */
 .logo__text::after {
-    content: "";
+    content: '';
     position: absolute;
-    bottom: -5px;
+    bottom: 0;
     left: 0;
-    width: 100%;
+    width: 0;
     height: 2px;
     background: linear-gradient(90deg, #00fffc, #00ff9d);
-    transform: scaleX(0);
-    transition: transform 0.3s ease;
+    transition: width 0.3s ease;
+    box-shadow: 0 0 8px rgba(0, 255, 252, 0.5);
 }
 
 .logo:hover .logo__text::after {
-    transform: scaleX(1);
+    width: 100%;
 }
 
-/* Анимации */
-@keyframes glitchLine {
-    0% { background-position: -100% 0; }
-    100% { background-position: 100% 0; }
-}
-
-@keyframes hologram {
-    0% { opacity: 0.7; transform: translateY(0) rotateX(0); }
-    50% { opacity: 1; transform: translateY(-5px) rotateX(5deg); }
-    100% { opacity: 0.7; transform: translateY(0) rotateX(0); }
-}
-
-/* Техно-сетка на заднем фоне */
-.header::after {
+/* Техно-сетка на фоне */
+.header::before {
     content: "";
     position: absolute;
     top: 0;
@@ -153,31 +110,37 @@
     right: 0;
     bottom: 0;
     background: 
-        linear-gradient(rgba(0, 255, 252, 0.05) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(0, 255, 252, 0.05) 1px, transparent 1px);
-    background-size: 30px 30px;
-    opacity: 0.3;
+        linear-gradient(rgba(0, 255, 252, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 255, 252, 0.03) 1px, transparent 1px);
+    background-size: 40px 40px;
+    opacity: 0.5;
     pointer-events: none;
-    animation: gridMove 20s linear infinite;
 }
 
-@keyframes gridMove {
+/* Анимация для сетки */
+@keyframes gridScroll {
     0% { background-position: 0 0; }
-    100% { background-position: 300px 300px; }
+    100% { background-position: 40px 40px; }
 }
 
-/* Парящие частицы */
+.header:hover::before {
+    animation: gridScroll 2s linear infinite;
+}
+
+/* Минимальные частицы для акцента */
 .header .particle {
     position: absolute;
-    background: rgba(0, 255, 252, 0.6);
+    width: 2px;
+    height: 2px;
+    background: rgba(0, 255, 252, 0.4);
     border-radius: 50%;
     pointer-events: none;
-    animation: float 15s infinite linear;
+    animation: float 8s infinite linear;
 }
 
 @keyframes float {
-    0% { transform: translateY(0) rotate(0deg); opacity: 0; }
+    0% { transform: translateY(0); opacity: 0; }
     10% { opacity: 1; }
     90% { opacity: 1; }
-    100% { transform: translateY(-500px) rotate(720deg); opacity: 0; }
+    100% { transform: translateY(-200px); opacity: 0; }
 }
