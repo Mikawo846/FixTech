@@ -284,6 +284,36 @@
         </div>
     </footer>
 
+    <script>
+// Загрузка гайдов для категории "cameras"
+fetch('https://api.github.com/repos/Mikawo846/FixTech/contents/gaids?ref=main')
+  .then(response => response.json())
+  .then(files => {
+    const guidesContainer = document.querySelector('.guides__grid');
+    
+    files.forEach(file => {
+      if (file.name.endsWith('.md')) {
+        fetch(file.download_url)
+          .then(res => res.text())
+          .then(mdContent => {
+            const frontmatter = mdContent.split('---')[1];
+            const category = frontmatter.match(/category:\s*"([^"]+)"/)[1];
+            
+            if (category === 'cameras') {
+              const title = frontmatter.match(/title:\s*"([^"]+)"/)[1];
+              guidesContainer.innerHTML += `
+                <article class="guide-card">
+                  <h3>${title}</h3>
+                  <a href="${file.name.replace('.md', '.html')}">Читать</a>
+                </article>
+              `;
+            }
+          });
+      }
+    });
+  });
+</script>
+
     <script src="app.js"></script>
 </body>
 </html>
