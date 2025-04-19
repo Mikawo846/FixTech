@@ -284,34 +284,73 @@
         </div>
     </footer>
 
-    <script>
-// Загрузка гайдов для категории "cameras"
-fetch('https://api.github.com/repos/Mikawo846/FixTech/contents/gaids?ref=main')
-  .then(response => response.json())
-  .then(files => {
-    const guidesContainer = document.querySelector('.guides__grid');
-    
-    files.forEach(file => {
-      if (file.name.endsWith('.md')) {
+   <script>
+document.addEventListener('DOMContentLoaded', function() {
+  const guidesContainer = document.querySelector('.guides__grid');
+  
+  // Очищаем существующие демо-гайды (оставляем только шаблон)
+  guidesContainer.innerHTML = '';
+
+  // Загрузка гайдов
+  fetch('https://api.github.com/repos/Mikawo846/FixTech/contents/gaids?ref=main')
+    .then(response => {
+      if (!response.ok) throw new Error('GitHub API error');
+      return response.json();
+    })
+    .then(files => {
+      const mdFiles = files.filter(file => 
+        file.name.endsWith('.md') && 
+        file.size > 0
+      );
+
+      if (mdFiles.length === 0) {
+        guidesContainer.innerHTML = '<p>Гайды не найдены</p>';
+        return;
+      }
+
+      mdFiles.forEach(file => {
         fetch(file.download_url)
           .then(res => res.text())
           .then(mdContent => {
-            const frontmatter = mdContent.split('---')[1];
-            const category = frontmatter.match(/category:\s*"([^"]+)"/)[1];
-            
-            if (category === 'cameras') {
-              const title = frontmatter.match(/title:\s*"([^"]+)"/)[1];
-              guidesContainer.innerHTML += `
-                <article class="guide-card">
-                  <h3>${title}</h3>
-                  <a href="${file.name.replace('.md', '.html')}">Читать</a>
-                </article>
-              `;
+            try {
+              const frontmatter = mdContent.split('---')[1];
+              const categoryMatch = frontmatter.match(/category:\s*"([^"]+)"/i);
+              const titleMatch = frontmatter.match(/title:\s*"([^"]+)"/i);
+              const imageMatch = frontmatter.match(/image:\s*"([^"]+)"/i);
+              const timeMatch = frontmatter.match(/time:\s*(\d+)/i);
+              const difficultyMatch = frontmatter.match(/difficulty:\s*"([^"]+)"/i);
+
+              if (categoryMatch && categoryMatch[1].toLowerCase() === 'cameras') {
+                const slug = file.name.replace('.md', '');
+                guidesContainer.innerHTML += `
+                  <article class="guide-card">
+                    <div class="guide-card__image">
+                      <img src="${imageMatch ? imageMatch[1] : 'https://via.placeholder.com/500x300'}" loading="lazy">
+                    </div>
+                    <div class="guide-card__content">
+                      <h3>${titleMatch ? titleMatch[1] : 'Без названия'}</h3>
+                      <p class="guide-card__excerpt">${timeMatch ? timeMatch[1]+' мин' : ''} • ${difficultyMatch ? difficultyMatch[1] : ''}</p>
+                      <a href="gaids/${slug}.html" class="button button--small">Читать гайд</a>
+                    </div>
+                  </article>
+                `;
+              }
+            } catch (e) {
+              console.error('Error parsing:', file.name, e);
             }
           });
-      }
+      });
+    })
+    .catch(error => {
+      console.error('Fetch error:', error);
+      guidesContainer.innerHTML = `
+        <div class="alert">
+          Ошибка загрузки гайдов. Проверьте консоль для деталей.
+          <small>${error.message}</small>
+        </div>
+      `;
     });
-  });
+});
 </script>
 
     <script src="app.js"></script>
