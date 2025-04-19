@@ -1,28 +1,31 @@
+backend:
+  name: git-gateway
+  branch: main # Укажите вашу ветку
+
+media_folder: "img/gaids" # Папка для изображений
+public_folder: "/img/gaids"
+
 collections:
   - name: "gaids"
     label: "Гайды"
-    folder: "content/guides" # Путь латиницей
-    identifier_field: "category_id" # Новое поле для машинного имени
+    folder: "gaids" # Где будут храниться файлы
+    create: true
+    slug: "{{slug}}"
     fields:
       - { name: "title", label: "Название", widget: "string" }
-      - { 
-          name: "category_id", 
-          label: "Категория (системное имя)", 
-          widget: "hidden", # Поле будет скрыто в UI
-          default: "{{slug}}"
-        }
-      - { 
-          name: "category", 
-          label: "Категория", 
-          widget: "select",
+      - { name: "category", label: "Категория", widget: "select", 
           options: [
-            { label: "Телевизоры", value: "tv" },
-            { label: "Фотоаппараты", value: "cameras" },
-            { label: "Приставки", value: "consoles" },
-            { label: "Ноутбуки", value: "laptops" },
-            { label: "Смартфоны", value: "smartphones" },
-            { label: "Мелкая техника", value: "small-appliances" },
-            { label: "Бытовая техника", value: "large-appliances" },
-            { label: "Авто-Электроника", value: "auto-electronics" }
-          ]
-        }
+            "Телевизоры",
+            "Фотоаппараты",
+            "Приставки",
+            "Ноутбуки",
+            "Смартфоны",
+            "Мелкая техника",
+            "Бытовая техника",
+            "Авто-Электроника"
+          ] }
+      - { name: "image", label: "Превью", widget: "image" }
+      - { name: "time", label: "Время", widget: "number" }
+      - { name: "difficulty", label: "Сложность", widget: "select", 
+          options: ["Легко", "Средне", "Сложно"] }
+      - { name: "content", label: "Контент", widget: "markdown" }
