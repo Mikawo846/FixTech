@@ -20,6 +20,12 @@
             margin-bottom: 20px;
             font-size: 1.8rem;
         }
+        .guide-content h3 {
+            color: var(--primary-dark);
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+        }
         
         /* Обновленные стили для шагов */
         .step-group {
@@ -28,6 +34,14 @@
             background: var(--background);
             border-radius: var(--border-radius);
             border: 1px solid var(--border);
+            box-shadow: var(--shadow);
+        }
+
+        .step-group h3 {
+            margin-top: 0;
+            color: var(--primary-dark);
+            padding-bottom: 15px;
+            border-bottom: 1px solid var(--border);
         }
 
         .step {
@@ -38,6 +52,12 @@
             background: var(--background-alt);
             border-radius: 8px;
             align-items: flex-start;
+            transition: var(--transition);
+        }
+
+        .step:hover {
+            background: white;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
         }
 
         .step-number {
@@ -55,17 +75,14 @@
         }
         
         .guide-image-block {
-            margin: 30px 0;
-            padding: 20px;
-            background: var(--background);
-            border-radius: var(--border-radius);
-            border: 1px solid var(--border);
+            margin: 40px 0;
             text-align: center;
         }
         .guide-image-block img {
             max-width: 100%;
             height: auto;
-            border-radius: 8px;
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.1);
             border: 1px solid var(--border);
         }
         .image-caption {
@@ -108,8 +125,33 @@
         .breadcrumbs a {
             color: var(--primary);
             text-decoration: none;
+            transition: var(--transition);
             padding: 6px 10px;
             border-radius: 6px;
+            position: relative;
+        }
+
+        .breadcrumbs a:hover {
+            color: var(--primary-dark);
+            background: rgba(3, 74, 79, 0.1);
+        }
+
+        .breadcrumbs a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 10px;
+            right: 10px;
+            height: 1px;
+            background: var(--primary);
+            transform: scaleX(0);
+            transition: var(--transition);
+            transform-origin: right;
+        }
+
+        .breadcrumbs a:hover::after {
+            transform: scaleX(1);
+            transform-origin: left;
         }
 
         .breadcrumbs i {
@@ -174,7 +216,7 @@
 
             <!-- Первое ключевое изображение -->
             <div class="guide-image-block">
-                <img src="https://img.freepik.com/free-photo/side-view-hands-repairing-photo-camera_23-2149893876.jpg" alt="Процесс чистки матрицы фотоаппарата">
+                <img src="../img/gaids/matrix-main.jpg" alt="Процесс чистки матрицы фотоаппарата">
                 <div class="image-caption">Профессиональная чистка матрицы специальным карандашом</div>
             </div>
 
@@ -217,6 +259,8 @@
                 </div>
 
                 <div class="step-group">
+                    <h3>Подготовительные шаги</h3>
+                    
                     <div class="step">
                         <div class="step-number">1</div>
                         <div>
@@ -241,13 +285,15 @@
 
                 <!-- Второе ключевое изображение -->
                 <div class="guide-image-block">
-                    <img src="https://fotopro.by/media/k2/items/cache/6e6b736f77dd07b0a373e582bb4b1e3c_XL.jpg" alt="Инструменты для чистки матрицы">
+                    <img src="../img/gaids/matrix-process.jpg" alt="Инструменты для чистки матрицы">
                     <div class="image-caption">Профессиональный набор для чистки матрицы: карандаш, салфетки и очищающая жидкость</div>
                 </div>
 
                 <h2>2. Процесс очистки</h2>
                 
                 <div class="step-group">
+                    <h3>2.1. Продувка сжатым воздухом</h3>
+                    
                     <div class="step">
                         <div class="step-number">1</div>
                         <div>
@@ -271,22 +317,24 @@
                 </div>
 
                 <div class="step-group">
+                    <h3>2.2. Сухая очистка карандашом</h3>
+                    
                     <div class="step">
-                        <div class="step-number">4</div>
+                        <div class="step-number">1</div>
                         <div>
                             <p><strong>Используйте новую насадку</strong> карандаша для каждого движения.</p>
                         </div>
                     </div>
                     
                     <div class="step">
-                        <div class="step-number">5</div>
+                        <div class="step-number">2</div>
                         <div>
                             <p><strong>Проводите карандашом без нажима</strong> от одного края матрицы к другому одним плавным движением.</p>
                         </div>
                     </div>
                     
                     <div class="step">
-                        <div class="step-number">6</div>
+                        <div class="step-number">3</div>
                         <div>
                             <p><strong>Повторите 2-3 раза</strong> с новыми насадками при необходимости.</p>
                         </div>
@@ -294,22 +342,24 @@
                 </div>
 
                 <div class="step-group">
+                    <h3>2.3. Влажная очистка (для стойких загрязнений)</h3>
+                    
                     <div class="step">
-                        <div class="step-number">7</div>
+                        <div class="step-number">1</div>
                         <div>
                             <p><strong>Нанесите 2-3 капли жидкости</strong> на специальную салфетку (не на матрицу!).</p>
                         </div>
                     </div>
                     
                     <div class="step">
-                        <div class="step-number">8</div>
+                        <div class="step-number">2</div>
                         <div>
                             <p><strong>Проведите салфеткой по матрице</strong> одним движением без возвратных движений.</p>
                         </div>
                     </div>
                     
                     <div class="step">
-                        <div class="step-number">9</div>
+                        <div class="step-number">3</div>
                         <div>
                             <p><strong>Дайте высохнуть 2 минуты</strong> перед включением камеры.</p>
                         </div>
@@ -318,27 +368,29 @@
 
                 <!-- Третье ключевое изображение -->
                 <div class="guide-image-block">
-                    <img src="https://helpit-foto.ru/wp-content/uploads/2017/05/f19.jpg" alt="Результат чистки матрицы">
+                    <img src="../img/gaids/matrix-result.jpg" alt="Результат чистки матрицы">
                     <div class="image-caption">Сравнение снимков до и после профессиональной чистки матрицы</div>
                 </div>
 
                 <div class="step-group">
+                    <h3>3. Проверка результата</h3>
+                    
                     <div class="step">
-                        <div class="step-number">10</div>
+                        <div class="step-number">1</div>
                         <div>
                             <p><strong>Сделайте тестовый снимок</strong> белого листа бумаги или равномерно освещенной стены на диафрагме f/16.</p>
                         </div>
                     </div>
                     
                     <div class="step">
-                        <div class="step-number">11</div>
+                        <div class="step-number">2</div>
                         <div>
                             <p><strong>Проверьте снимок в редакторе</strong>, увеличив его до 100% и настроив контрастность.</p>
                         </div>
                     </div>
                     
                     <div class="step">
-                        <div class="step-number">12</div>
+                        <div class="step-number">3</div>
                         <div>
                             <p><strong>При необходимости повторите</strong> процедуру для оставшихся загрязнений.</p>
                         </div>
