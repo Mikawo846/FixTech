@@ -26,27 +26,54 @@
             margin-bottom: 15px;
             font-size: 1.4rem;
         }
+        
+        /* Обновленные стили для шагов */
+        .step-group {
+            margin: 30px 0;
+            padding: 25px;
+            background: var(--background);
+            border-radius: var(--border-radius);
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow);
+        }
+
+        .step-group h3 {
+            margin-top: 0;
+            color: var(--primary-dark);
+            padding-bottom: 15px;
+            border-bottom: 1px solid var(--border);
+        }
+
         .step {
             display: flex;
             gap: 20px;
-            margin: 20px 0;
-            padding: 20px;
-            background: var(--primary-light);
-            border-radius: 12px;
+            margin: 15px 0;
+            padding: 15px;
+            background: var(--background-alt);
+            border-radius: 8px;
             align-items: flex-start;
+            transition: var(--transition);
         }
+
+        .step:hover {
+            background: white;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+
         .step-number {
             background: var(--primary);
             color: white;
-            width: 32px;
-            height: 32px;
+            width: 28px;
+            height: 28px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             flex-shrink: 0;
             font-weight: bold;
+            font-size: 0.9rem;
         }
+        
         .guide-image-block {
             margin: 40px 0;
             text-align: center;
@@ -82,6 +109,63 @@
         .tool-card i {
             color: var(--primary);
             font-size: 1.2rem;
+        }
+        
+        /* Обновленные стили для breadcrumbs */
+        .breadcrumbs {
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 8px;
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        .breadcrumbs a {
+            color: var(--primary);
+            text-decoration: none;
+            transition: var(--transition);
+            padding: 6px 10px;
+            border-radius: 6px;
+            position: relative;
+        }
+
+        .breadcrumbs a:hover {
+            color: var(--primary-dark);
+            background: rgba(3, 74, 79, 0.1);
+        }
+
+        .breadcrumbs a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 10px;
+            right: 10px;
+            height: 1px;
+            background: var(--primary);
+            transform: scaleX(0);
+            transition: var(--transition);
+            transform-origin: right;
+        }
+
+        .breadcrumbs a:hover::after {
+            transform: scaleX(1);
+            transform-origin: left;
+        }
+
+        .breadcrumbs i {
+            font-size: 0.7rem;
+            color: var(--text-light);
+            opacity: 0.7;
+        }
+
+        .breadcrumbs span {
+            color: var(--text);
+            font-weight: 500;
+            padding: 6px 10px;
+            border-radius: 6px;
+            background: rgba(3, 74, 79, 0.05);
         }
     </style>
 </head>
@@ -174,22 +258,28 @@
                     </div>
                 </div>
 
-                <div class="step">
-                    <div class="step-number">1</div>
-                    <div>
-                        <p><strong>Зарядите аккумулятор</strong> камеры полностью, чтобы избежать внезапного отключения во время процесса.</p>
+                <div class="step-group">
+                    <h3>Подготовительные шаги</h3>
+                    
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div>
+                            <p><strong>Зарядите аккумулятор</strong> камеры полностью, чтобы избежать внезапного отключения во время процесса.</p>
+                        </div>
                     </div>
-                </div>
-                <div class="step">
-                    <div class="step-number">2</div>
-                    <div>
-                        <p><strong>Выберите чистое помещение</strong> без сквозняков и с хорошим освещением. Ванная комната после душа — отличный вариант из-за низкого содержания пыли.</p>
+                    
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div>
+                            <p><strong>Выберите чистое помещение</strong> без сквозняков и с хорошим освещением. Ванная комната после душа — отличный вариант из-за низкого содержания пыли.</p>
+                        </div>
                     </div>
-                </div>
-                <div class="step">
-                    <div class="step-number">3</div>
-                    <div>
-                        <p><strong>Активируйте режим очистки матрицы</strong> в меню вашей камеры. Это откроет затвор и предоставит доступ к сенсору.</p>
+                    
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div>
+                            <p><strong>Активируйте режим очистки матрицы</strong> в меню вашей камеры. Это откроет затвор и предоставит доступ к сенсору.</p>
+                        </div>
                     </div>
                 </div>
 
@@ -200,63 +290,79 @@
                 </div>
 
                 <h2>2. Процесс очистки</h2>
-                <h3>2.1. Продувка сжатым воздухом</h3>
-                <div class="step">
-                    <div class="step-number">1</div>
-                    <div>
-                        <p><strong>Держите камеру матрицей вниз</strong>, чтобы пыль выпадала под действием силы тяжести.</p>
+                
+                <div class="step-group">
+                    <h3>2.1. Продувка сжатым воздухом</h3>
+                    
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div>
+                            <p><strong>Держите камеру матрицей вниз</strong>, чтобы пыль выпадала под действием силы тяжести.</p>
+                        </div>
                     </div>
-                </div>
-                <div class="step">
-                    <div class="step-number">2</div>
-                    <div>
-                        <p><strong>Используйте короткие нажатия</strong> на баллончик (по 1-2 секунды) с расстояния 3-5 см.</p>
+                    
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div>
+                            <p><strong>Используйте короткие нажатия</strong> на баллончик (по 1-2 секунды) с расстояния 3-5 см.</p>
+                        </div>
                     </div>
-                </div>
-                <div class="step">
-                    <div class="step-number">3</div>
-                    <div>
-                        <p><strong>Не встряхивайте баллончик</strong> перед использованием и избегайте груш — они могут оставить влагу.</p>
-                    </div>
-                </div>
-
-                <h3>2.2. Сухая очистка карандашом</h3>
-                <div class="step">
-                    <div class="step-number">1</div>
-                    <div>
-                        <p><strong>Используйте новую насадку</strong> карандаша для каждого движения.</p>
-                    </div>
-                </div>
-                <div class="step">
-                    <div class="step-number">2</div>
-                    <div>
-                        <p><strong>Проводите карандашом без нажима</strong> от одного края матрицы к другому одним плавным движением.</p>
-                    </div>
-                </div>
-                <div class="step">
-                    <div class="step-number">3</div>
-                    <div>
-                        <p><strong>Повторите 2-3 раза</strong> с новыми насадками при необходимости.</p>
+                    
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div>
+                            <p><strong>Не встряхивайте баллончик</strong> перед использованием и избегайте груш — они могут оставить влагу.</p>
+                        </div>
                     </div>
                 </div>
 
-                <h3>2.3. Влажная очистка (для стойких загрязнений)</h3>
-                <div class="step">
-                    <div class="step-number">1</div>
-                    <div>
-                        <p><strong>Нанесите 2-3 капли жидкости</strong> на специальную салфетку (не на матрицу!).</p>
+                <div class="step-group">
+                    <h3>2.2. Сухая очистка карандашом</h3>
+                    
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div>
+                            <p><strong>Используйте новую насадку</strong> карандаша для каждого движения.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div>
+                            <p><strong>Проводите карандашом без нажима</strong> от одного края матрицы к другому одним плавным движением.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div>
+                            <p><strong>Повторите 2-3 раза</strong> с новыми насадками при необходимости.</p>
+                        </div>
                     </div>
                 </div>
-                <div class="step">
-                    <div class="step-number">2</div>
-                    <div>
-                        <p><strong>Проведите салфеткой по матрице</strong> одним движением без возвратных движений.</p>
+
+                <div class="step-group">
+                    <h3>2.3. Влажная очистка (для стойких загрязнений)</h3>
+                    
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div>
+                            <p><strong>Нанесите 2-3 капли жидкости</strong> на специальную салфетку (не на матрицу!).</p>
+                        </div>
                     </div>
-                </div>
-                <div class="step">
-                    <div class="step-number">3</div>
-                    <div>
-                        <p><strong>Дайте высохнуть 2 минуты</strong> перед включением камеры.</p>
+                    
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div>
+                            <p><strong>Проведите салфеткой по матрице</strong> одним движением без возвратных движений.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div>
+                            <p><strong>Дайте высохнуть 2 минуты</strong> перед включением камеры.</p>
+                        </div>
                     </div>
                 </div>
 
@@ -266,23 +372,28 @@
                     <div class="image-caption">Сравнение снимков до и после профессиональной чистки матрицы</div>
                 </div>
 
-                <h2>3. Проверка результата</h2>
-                <div class="step">
-                    <div class="step-number">1</div>
-                    <div>
-                        <p><strong>Сделайте тестовый снимок</strong> белого листа бумаги или равномерно освещенной стены на диафрагме f/16.</p>
+                <div class="step-group">
+                    <h3>3. Проверка результата</h3>
+                    
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div>
+                            <p><strong>Сделайте тестовый снимок</strong> белого листа бумаги или равномерно освещенной стены на диафрагме f/16.</p>
+                        </div>
                     </div>
-                </div>
-                <div class="step">
-                    <div class="step-number">2</div>
-                    <div>
-                        <p><strong>Проверьте снимок в редакторе</strong>, увеличив его до 100% и настроив контрастность.</p>
+                    
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div>
+                            <p><strong>Проверьте снимок в редакторе</strong>, увеличив его до 100% и настроив контрастность.</p>
+                        </div>
                     </div>
-                </div>
-                <div class="step">
-                    <div class="step-number">3</div>
-                    <div>
-                        <p><strong>При необходимости повторите</strong> процедуру для оставшихся загрязнений.</p>
+                    
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div>
+                            <p><strong>При необходимости повторите</strong> процедуру для оставшихся загрязнений.</p>
+                        </div>
                     </div>
                 </div>
 
