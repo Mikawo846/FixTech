@@ -1,40 +1,191 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ремонт HDMI-порта телевизора - Пошаговая инструкция</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Полное руководство: Чистка матрицы фотоаппарата | TechFix</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../styles-header.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Дополнительные стили для гайда */
+        .guide-content {
+            line-height: 1.7;
+            color: var(--text);
+        }
+        .guide-content h2 {
+            color: var(--primary);
+            margin-top: 40px;
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+        }
+        .guide-content h3 {
+            color: var(--primary-dark);
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+        }
+        
+        /* Обновленные стили для шагов */
+        .step-group {
+            margin: 30px 0;
+            padding: 25px;
+            background: var(--background);
+            border-radius: var(--border-radius);
+            border: 1px solid var(--border);
+        }
+
+        .step {
+            display: flex;
+            gap: 20px;
+            margin: 15px 0;
+            padding: 15px;
+            background: var(--background-alt);
+            border-radius: 8px;
+            align-items: flex-start;
+        }
+
+        .step-number {
+            background: var(--primary);
+            color: white;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+        
+        .guide-image-block {
+            margin: 30px 0;
+            padding: 20px;
+            background: var(--background);
+            border-radius: var(--border-radius);
+            border: 1px solid var(--border);
+            text-align: center;
+        }
+        .guide-image-block img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+        }
+        .image-caption {
+            margin-top: 12px;
+            font-size: 0.95rem;
+            color: var(--text-light);
+            font-style: italic;
+        }
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 15px;
+            margin: 25px 0;
+        }
+        .tool-card {
+            background: var(--background-alt);
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .tool-card i {
+            color: var(--primary);
+            font-size: 1.2rem;
+        }
+        
+        /* Обновленные стили для breadcrumbs */
+        .breadcrumbs {
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 8px;
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        .breadcrumbs a {
+            color: var(--primary);
+            text-decoration: none;
+            padding: 6px 10px;
+            border-radius: 6px;
+        }
+
+        .breadcrumbs i {
+            font-size: 0.7rem;
+            color: var(--text-light);
+            opacity: 0.7;
+        }
+
+        .breadcrumbs span {
+            color: var(--text);
+            font-weight: 500;
+            padding: 6px 10px;
+            border-radius: 6px;
+            background: rgba(3, 74, 79, 0.05);
+        }
+    </style>
 </head>
 <body>
     <header class="header">
         <div class="container">
             <div class="header__inner">
-                <a href="#" class="logo">
-                    <div class="logo__icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
+                <a href="../index.html" class="logo">
+                    <span class="logo__icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 15L7 10H17L12 15Z" fill="currentColor"/>
+                            <path d="M12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3ZM12 19C8.13401 19 5 15.866 5 12C5 8.13401 8.13401 5 12 5C15.866 5 19 8.13401 19 12C19 15.866 15.866 19 12 19Z" fill="currentColor"/>
                         </svg>
-                    </div>
-                    <span>РемонтТВ</span>
+                    </span>
+                    <span class="logo__text">TechFix</span>
                 </a>
                 <nav class="nav">
                     <ul class="nav__list">
-                        <li><a href="#" class="nav__link">Главная</a></li>
-                        <li><a href="#" class="nav__link active">Гайды</a></li>
-                        <li><a href="#" class="nav__link">Категории</a></li>
-                        <li><a href="#" class="nav__link">О нас</a></li>
+                        <li><a href="../tv.html" class="nav__link">Телевизоры</a></li>
+                        <li><a href="../cameras.html" class="nav__link">Фотоаппараты</a></li>
+                        <li><a href="../auto-electronics.html" class="nav__link">Автоэлектроника</a></li>
+                        <li><a href="../laptops.html" class="nav__link">Ноутбуки</a></li>
+                        <li><a href="../smartphones.html" class="nav__link">Смартфоны</a></li>
+                        <li><a href="../index.html#categories" class="nav__link">Все категории</a></li>
                     </ul>
                 </nav>
             </div>
         </div>
     </header>
 
-    <main class="guide-page">
+    <section class="guide-page">
         <div class="container">
             <div class="breadcrumbs">
-                <a href="#">Главная</a> / <a href="#">Гайды</a> / <a href="#">Ремонт телевизоров</a> / <span>Ремонт HDMI-порта</span>
+                <a href="../index.html">Главная</a>
+                <i class="fas fa-chevron-right"></i>
+                <a href="../cameras.html">Фотоаппараты</a>
+                <i class="fas fa-chevron-right"></i>
+                <span>Чистка матрицы</span>
+            </div>
+
+            <h1 class="section__title">Полное руководство по чистке матрицы фотоаппарата</h1>
+
+             <!-- Первое ключевое изображение -->
+            <div class="guide-image-block">
+                <img src="https://img.freepik.com/free-photo/side-view-hands-repairing-photo-camera_23-2149893876.jpg" alt="Процесс чистки матрицы фотоаппарата">
+                <div class="image-caption">Профессиональная чистка матрицы специальным карандашом</div>
+            </div>
+
+            <div class="warning-box">
+                <i class="fas fa-exclamation-triangle"></i>
+                <div>
+            
+            <div class="guide-meta">
+                <span><i class="fas fa-star"></i> 4.9</span>
+                <span><i class="fas fa-clock"></i> 25 мин</span>
+                <span><i class="fas fa-tools"></i> Средний уровень</span>
             </div>
 
             <h1>Пошаговая инструкция по ремонту HDMI-порта</h1>
