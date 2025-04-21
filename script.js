@@ -34,31 +34,43 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   }
 
-  // Код для скрытия/показа шапки при скролле (только на мобильных устройствах)
+  // Улучшенный код для скрытия/показа шапки
   const header = document.querySelector('.header');
   let lastScroll = 0;
+  let ticking = false;
   const mobileBreakpoint = 768;
+  const scrollUpThreshold = 50; // Минимальное расстояние скролла вверх для показа
+  const scrollDownThreshold = 10; // Минимальное расстояние скролла вниз для скрытия
   
   window.addEventListener('scroll', function() {
-    if (window.innerWidth <= mobileBreakpoint) {
-      const currentScroll = window.pageYOffset;
-      
-      if (currentScroll <= 0) {
+    if (!ticking && window.innerWidth <= mobileBreakpoint) {
+      window.requestAnimationFrame(function() {
+        const currentScroll = window.pageYOffset;
+        const scrollDirection = currentScroll > lastScroll ? 'down' : 'up';
+        const scrollDistance = Math.abs(currentScroll - lastScroll);
+        
         // В самом верху страницы - показываем шапку
-        header.classList.remove('hide');
-        return;
-      }
-      
-      if (currentScroll > lastScroll && !header.classList.contains('hide')) {
-        // Скролл вниз - скрываем шапку
-        header.classList.add('hide');
-      } else if (currentScroll < lastScroll && header.classList.contains('hide')) {
-        // Скролл вверх - показываем шапку
-        header.classList.remove('hide');
-      }
-      
-      lastScroll = currentScroll;
-    } else {
+        if (currentScroll <= 0) {
+          header.classList.remove('hide');
+          lastScroll = currentScroll;
+          ticking = false;
+          return;
+        }
+        
+        // Скролл вниз - скрываем шапку после преодоления порога
+        if (scrollDirection === 'down' && scrollDistance > scrollDownThreshold && !header.classList.contains('hide')) {
+          header.classList.add('hide');
+        } 
+        // Скролл вверх - показываем шапку после преодоления порога
+        else if (scrollDirection === 'up' && scrollDistance > scrollUpThreshold && header.classList.contains('hide')) {
+          header.classList.remove('hide');
+        }
+        
+        lastScroll = currentScroll;
+        ticking = false;
+      });
+      ticking = true;
+    } else if (window.innerWidth > mobileBreakpoint) {
       // На десктопах всегда показываем шапку
       header.classList.remove('hide');
     }
