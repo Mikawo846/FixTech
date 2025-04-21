@@ -33,4 +33,34 @@ document.addEventListener('DOMContentLoaded', function() {
       }, 100);
     }
   }
+
+  // Код для скрытия/показа шапки при скролле (только на мобильных устройствах)
+  const header = document.querySelector('.header');
+  let lastScroll = 0;
+  const mobileBreakpoint = 768;
+  
+  window.addEventListener('scroll', function() {
+    if (window.innerWidth <= mobileBreakpoint) {
+      const currentScroll = window.pageYOffset;
+      
+      if (currentScroll <= 0) {
+        // В самом верху страницы - показываем шапку
+        header.classList.remove('hide');
+        return;
+      }
+      
+      if (currentScroll > lastScroll && !header.classList.contains('hide')) {
+        // Скролл вниз - скрываем шапку
+        header.classList.add('hide');
+      } else if (currentScroll < lastScroll && header.classList.contains('hide')) {
+        // Скролл вверх - показываем шапку
+        header.classList.remove('hide');
+      }
+      
+      lastScroll = currentScroll;
+    } else {
+      // На десктопах всегда показываем шапку
+      header.classList.remove('hide');
+    }
+  });
 });
