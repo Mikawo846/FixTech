@@ -1,10 +1,20 @@
 /* Техно-шапка с акцентными подчеркиваниями */
 .header {
-    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
     background: #0a0a1a;
     padding: 20px 0;
     border-bottom: 1px solid rgba(0, 255, 255, 0.1);
     box-shadow: 0 2px 20px rgba(0, 255, 255, 0.05);
+    transition: transform 0.3s ease;
+    z-index: 1000;
+}
+
+/* Скрытие шапки при скролле вниз */
+.header.hide {
+    transform: translateY(-100%);
 }
 
 .header__inner {
@@ -143,4 +153,23 @@
     10% { opacity: 1; }
     90% { opacity: 1; }
     100% { transform: translateY(-200px); opacity: 0; }
+}
+
+/* Медиа-запрос для мобильных устройств */
+@media (max-width: 768px) {
+    .header {
+        padding: 15px 0;
+    }
+    
+    .nav__list {
+        gap: 15px;
+    }
+    
+    .nav__link {
+        font-size: 1.5rem;
+    }
+    
+    .logo__text {
+        font-size: 1.2rem;
+    }
 }
