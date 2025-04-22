@@ -446,28 +446,43 @@ body {
     margin-bottom: 60px;
     overflow: hidden;
 }
-    /* Стили для кнопки "Смотреть все" в новостях */
-.news .link {
+   .news .section__header .link {
     display: inline-block;
     padding: 12px 24px;
-    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    background: linear-gradient(135deg, #00c6ff, #4CAF50, #FFEB3B);
     color: white !important;
     border-radius: 30px;
     font-weight: 600;
     text-decoration: none;
     transition: all 0.3s ease;
-    box-shadow: var(--shadow);
-    margin-top: 20px;
-    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,198,255,0.3);
+    margin-top: 15px;
     border: none;
+    position: relative;
+    overflow: hidden;
 }
 
-.news .link:hover {
+.news .section__header .link:hover {
     transform: translateY(-3px);
-    box-shadow: var(--shadow-hover);
-    background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+    box-shadow: 0 6px 20px rgba(0,198,255,0.4);
+    background: linear-gradient(135deg, #00b4e6, #3e8e41, #FBC02D);
 }
 
+.news .section__header .link::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+    transition: all 0.5s ease;
+}
+
+.news .section__header .link:hover::before {
+    left: 100%;
+}
+    
 /* Анимированные молнии */
 .news::before {
     content: '';
