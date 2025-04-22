@@ -431,17 +431,45 @@ body {
     position: relative;
 }
 
-/* Новости */
+/* Новости с молниевым фоном */
 .news {
     padding: 80px 0;
-    background: 
-        linear-gradient(135deg, rgba(255,240,150,0.1) 0%, rgba(255,240,150,0.3) 100%),
-        url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><path fill="rgba(255,215,0,0.1)" d="M30,10 L40,50 L10,30 L50,40 L30,10 Z" transform="rotate(20 50 50)"/></svg>');
-    background-size: 200px 200px;
+    background-color: #fffae8; /* Светло-желтый фон */
+    background-image: 
+        url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path fill="rgba(255,215,0,0.15)" d="M30,10 L40,50 L10,30 L50,40 L30,10 Z" transform="rotate(20 50 50)"/></svg>'),
+        url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path fill="rgba(255,165,0,0.1)" d="M30,10 L40,50 L10,30 L50,40 L30,10 Z" transform="rotate(-10 50 50)"/></svg>'),
+        url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path fill="rgba(255,200,0,0.1)" d="M25,5 L35,45 L5,25 L45,35 L25,5 Z" transform="rotate(5 50 50)"/></svg>');
+    background-size: 150px 150px, 200px 200px, 180px 180px;
+    background-position: 10% 20%, 80% 60%, 40% 80%;
+    background-repeat: no-repeat;
     position: relative;
     margin-bottom: 60px;
+    overflow: hidden;
 }
 
+/* Анимированные молнии */
+.news::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+        url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path fill="rgba(255,225,0,0.07)" d="M30,10 L40,50 L10,30 L50,40 L30,10 Z" transform="rotate(15 50 50)"/></svg>'),
+        url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path fill="rgba(255,200,50,0.07)" d="M25,15 L35,55 L5,35 L45,45 L25,15 Z" transform="rotate(-15 50 50)"/></svg>');
+    background-size: 120px 120px;
+    animation: lightningMove 20s linear infinite;
+    opacity: 0.6;
+}
+
+@keyframes lightningMove {
+    0% { background-position: 0% 0%, 100% 100%; }
+    50% { background-position: 100% 50%, 0% 50%; }
+    100% { background-position: 0% 100%, 100% 0%; }
+}
+
+/* Разделительная линия */
 .news::after {
     content: '';
     position: absolute;
@@ -451,30 +479,31 @@ body {
     width: 80%;
     height: 1px;
     background: linear-gradient(90deg, transparent, var(--accent), transparent);
+    z-index: 1;
 }
 
-.section__header--news {
-    text-align: center;
-    margin-bottom: 40px;
-}
-
+/* Стили карточек новостей */
 .news .guides__grid {
     gap: 30px;
+    position: relative;
+    z-index: 2;
 }
 
 .news .guide-card {
-    background: var(--background-alt);
-    border: none;
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 215, 0, 0.2);
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
 }
 
-.news .guide-card__badge {
-    background: linear-gradient(135deg, #00c6ff, #0072ff);
-    color: white;
-    top: 10px;
-    right: 10px;
+.news .guide-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    background: white;
 }
 
+/* Стили для кнопок */
 .news .button--small {
     background: linear-gradient(135deg, #00c6ff, #4CAF50, #FFEB3B);
     color: white;
@@ -488,24 +517,57 @@ body {
     margin: 15px auto 0;
     box-shadow: 0 4px 15px rgba(0,198,255,0.3);
     transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.news .button--small::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+    transition: all 0.5s ease;
+    z-index: -1;
 }
 
 .news .button--small:hover {
     transform: translateY(-3px);
     box-shadow: 0 6px 20px rgba(0,198,255,0.4);
-    background: linear-gradient(135deg, #00b4e6, #3e8e41, #FBC02D);
 }
 
+.news .button--small:hover::before {
+    left: 100%;
+}
+
+/* Стили для бейджей */
+.news .guide-card__badge {
+    background: linear-gradient(135deg, #00c6ff, #0072ff);
+    color: white;
+    top: 10px;
+    right: 10px;
+    font-size: 0.7rem;
+    padding: 4px 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Текст в карточках */
 .news .guide-card__title {
     color: var(--primary-dark);
     font-size: 1.3rem;
     text-align: center;
+    margin-bottom: 10px;
 }
 
 .news .guide-card__excerpt {
     text-align: center;
     color: var(--text);
+    font-size: 0.95rem;
 }
+
 
 /* Разделитель перед популярными гайдами */
 .popular-guides {
