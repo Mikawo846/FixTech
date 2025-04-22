@@ -431,40 +431,6 @@ body {
     position: relative;
 }
 
-    .news * {
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-    background-image: linear-gradient(90deg, #0066ff, #00ffcc, #ffee00);
-}
-
-.news .button,
-.news .guide-card__badge {
-    background-image: linear-gradient(90deg, #0066ff, #00ffcc, #ffee00);
-    color: #000; /* Цвет текста для лучшей читаемости */
-    -webkit-background-clip: initial;
-    background-clip: initial;
-    border: none;
-    text-shadow: none;
-}
-
-.news .button {
-    padding: 8px 16px;
-    border-radius: 4px;
-    display: inline-block;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.news .guide-card__badge {
-    padding: 4px 8px;
-    border-radius: 12px;
-    font-size: 12px;
-    display: inline-block;
-    position: absolute;
-    top: 10px;
-    right: 10px;
-}
 .guides__grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
