@@ -21,6 +21,8 @@
 /* Плавная прокрутка для всей страницы */
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden; /* Добавьте это */
+    width: 100%;
 }
 
 /* Базовые стили */
@@ -36,6 +38,8 @@ body {
     background-image: 
         radial-gradient(circle at 1px 1px, rgba(0, 0, 0, 0.05) 1px, transparent 0);
     background-size: 20px 20px;
+    overflow-x: hidden; /* Добавьте это */
+    width: 100%;
 }
 
 /* Контейнер */
@@ -920,6 +924,19 @@ body {
     margin: 15px 0;
 }
 
+    /* Глобальные стили для таблиц */
+.error-table, .element-table {
+    width: 100%;
+    max-width: 100%;
+    display: block;
+    overflow-x: auto;
+}
+
+/* Для изображений */
+img {
+    max-width: 100%;
+    height: auto;
+}
     
     @media (max-width: 768px) {
   body {
@@ -935,6 +952,42 @@ body {
     .step {
         flex-direction: column;
         padding: 20px;
+    }
+}
+        @media (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+        width: 100%;
+    }
+    
+    .container {
+        padding: 0 15px;
+    }
+    
+    /* Добавьте эти стили */
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+    
+    .tools-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .step {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 576px) {
+    /* Добавьте это */
+    .tools-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .error-table, .element-table {
+        font-size: 0.9rem;
     }
 }
 /* Адаптивность галереи */
