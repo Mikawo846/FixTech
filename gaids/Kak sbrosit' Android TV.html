@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Устранение темного экрана при работающей подсветке | TechFix</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../styles-header.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Основные стили */
+        .guide-content {
+            line-height: 1.7;
+            color: var(--text);
+        }
+        .guide-content h2 {
+            color: var(--primary);
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+        .guide-content h3 {
+            color: var(--primary-dark);
+            margin-top: 25px;
+            margin-bottom: 12px;
+            font-size: 1.2rem;
+        }
+        /* Стили для шагов */
+        .step-group {
+            margin: 20px 0;
+            padding: 15px;
+            background: var(--background);
+            border-radius: var(--border-radius);
+            border: 1px solid var(--border);
+        }
+        .step {
+            display: flex;
+            gap: 15px;
+            margin: 12px 0;
+            padding: 12px;
+            background: var(--background-alt);
+            border-radius: 6px;
+            align-items: flex-start;
+        }
+        .step-number {
+            background: var(--primary);
+            color: white;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            font-weight: bold;
+            font-size: 0.8rem;
+        }
+        /* Изображения */
+        .guide-image-block {
+            margin: 20px 0;
+            padding: 15px;
+            background: var(--background);
+            border-radius: var(--border-radius);
+            border: 1px solid var(--border);
+            text-align: center;
+        }
+        .guide-image-block img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 6px;
+            border: 1px solid var(--border);
+        }
+        .image-caption {
+            margin-top: 10px;
+            font-size: 0.85rem;
+            color: var(--text-light);
+            font-style: italic;
+        }
+        /* Адаптивные замены таблицам */
+        .responsive-settings {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin: 15px 0;
+        }
+        .setting-card {
+            background: var(--background-alt);
+            padding: 12px;
+            border-radius: 6px;
+            border: 1px solid var(--border);
+        }
+        .setting-card-header {
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 5px;
+        }
+        /* Рекомендации */
+        .recommend-box {
+            background: rgba(3, 74, 79, 0.1);
+            border-left: 4px solid var(--primary);
+            padding: 12px;
+            margin: 15px 0;
+            display: flex;
+            gap: 12px;
+            align-items: flex-start;
+            border-radius: 4px;
+        }
+        .recommend-box i {
+            font-size: 1.2rem;
+            color: var(--primary);
+            margin-top: 2px;
+        }
+        /* Советы */
+        .pro-tips {
+            background: rgba(3, 74, 79, 0.05);
+            padding: 15px;
+            border-radius: 6px;
+            margin: 20px 0;
+        }
+        .pro-tips h4 {
+            color: var(--primary);
+            margin-top: 0;
+            margin-bottom: 12px;
+            font-size: 1.1rem;
+        }
+        .tip-item {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 8px;
+            align-items: flex-start;
+        }
+        /* Медиа-запросы для мобильных */
+        @media (max-width: 768px) {
+            .guide-content h2 {
+                font-size: 1.4rem;
+                margin-top: 25px;
+            }
+            .step-group, .guide-image-block {
+                padding: 12px;
+                margin: 15px 0;
+            }
+            .step {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <a href="../index.html" class="logo">
+                    <span class="logo__icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 15L7 10H17L12 15Z" fill="currentColor"/>
+                            <path d="M12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3ZM12 19C8.13401 19 5 15.866 5 12C5 8.13401 8.13401 5 12 5C15.866 5 19 8.13401 19 12C19 15.866 15.866 19 12 19Z" fill="currentColor"/>
+                        </svg>
+                    </span>
+                    <span class="logo__text">TechFix</span>
+                </a>
+                <nav class="nav">
+                    <ul class="nav__list">
+                        <li><a href="../tv.html" class="nav__link">Телевизоры</a></li>
+                        <li><a href="../cameras.html" class="nav__link">Фотоаппараты</a></li>
+                        <li><a href="../auto-electronics.html" class="nav__link">Автоэлектроника</a></li>
+                        <li><a href="../laptops.html" class="nav__link">Ноутбуки</a></li>
+                        <li><a href="../smartphones.html" class="nav__link">Смартфоны</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    
+    <section class="guide-page">
+        <div class="container">
+            <div class="breadcrumbs">
+                <a href="../index.html">Главная</a>
+                <i class="fas fa-chevron-right"></i>
+                <a href="../tv.html">Телевизоры</a>
+                <i class="fas fa-chevron-right"></i>
+                <span>Как сбросить Android TV</span>
+            </div>
+            <h1 class="section__title">Как сбросить Android TV до заводских настроек?</h1>
+            <div class="guide-meta">
+                <span><i class="fas fa-clock"></i> 5-15 мин</span>
+                <span><i class="fas fa-tools"></i> Лёгкий уровень</span>
+            </div>
+            <div class="guide-image-block">
+                <img src="https://avatars.mds.yandex.net/get-shedevrum/13723674/img_6c80b186fd9111eeb2e52257bd244c32/orig">
+            </div>
+            <div class="recommend-box">
+                <i class="fas fa-lightbulb"></i>
+                <div>
+                    <strong>Совет!</strong> Перед сбросом настроек убедитесь, что ваши данные (приложения, учётные записи, Wi-Fi) синхронизированы, если это необходимо.
+                </div>
+            </div>
+            <div class="guide-content">
+                <h2>Введение</h2>
+                <p>Если ваш Android TV начал работать медленно, возникают ошибки или проблемы с приложениями, возможно, поможет сброс до заводских настроек. В этом гайде мы покажем, как безопасно и правильно выполнить сброс на разных брендах Android TV.</p>
+    
+                <h2>1. Sony (Android TV)</h2>
+                <div class="step-group">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div>
+                            <p><strong>Перейдите в Настройки:</strong></p>
+                            <ul>
+                                <li>Настройки → Устройство → О телевизоре</li>
+                                <li>Выберите «Сброс»</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div>
+                            <p><strong>Выберите "Сброс до заводских настроек":</strong></p>
+                            <ul>
+                                <li>Нажмите «Сброс» → «Полный сброс»</li>
+                                <li>Подтвердите действие и дождитесь перезагрузки</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+    
+                <h2>2. Xiaomi / Mi TV</h2>
+                <div class="step-group">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div>
+                            <p><strong>Откройте системные настройки:</strong></p>
+                            <ul>
+                                <li>Настройки → Устройство → О телевизоре</li>
+                                <li>Выберите «Сброс настроек»</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div>
+                            <p><strong>Подтвердите сброс:</strong></p>
+                            <ul>
+                                <li>Нажмите «OK» для начала сброса</li>
+                                <li>Телевизор автоматически перезагрузится</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+    
+                <h2>3. Philips (Android TV)</h2>
+                <div class="step-group">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div>
+                            <p><strong>Зайдите в Настройки:</strong></p>
+                            <ul>
+                                <li>Настройки → Общие → Все настройки</li>
+                                <li>Выберите пункт «Сброс»</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div>
+                            <p><strong>Сброс к заводским:</strong></p>
+                            <ul>
+                                <li>Нажмите «Сбросить до заводских настроек»</li>
+                                <li>Введите PIN-код (обычно 8888 или 1234)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+    
+                <h2>4. TCL / Thomson (на Android TV)</h2>
+                <div class="step-group">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div>
+                            <p><strong>Перейдите в Настройки:</strong></p>
+                            <ul>
+                                <li>Настройки → Устройство → Хранилище и сброс</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div>
+                            <p><strong>Выберите «Сброс»:</strong></p>
+                            <ul>
+                                <li>Нажмите «Сброс к заводским настройкам»</li>
+                                <li>Подтвердите действие</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="pro-tips">
+                    <h4>🔹 Полезные советы</h4>
+                    <div class="tip-item">
+                        <i class="fas fa-lightbulb" style="color: var(--primary);"></i>
+                        <p>Перед сбросом сделайте фото или запишите настройки Wi-Fi и учётной записи Google</p>
+                    </div>
+                    <div class="tip-item">
+                        <i class="fas fa-lightbulb" style="color: var(--primary);"></i>
+                        <p>После сброса потребуется заново войти в аккаунты и переустановить приложения</p>
+                    </div>
+                    <div class="tip-item">
+                        <i class="fas fa-lightbulb" style="color: var(--primary);"></i>
+                        <p>Если ТВ не реагирует — выполните аппаратный сброс, зажав кнопку питания на корпусе</p>
+                    </div>
+                </div>
+    
+                <h2>📌 Итог</h2>
+                <p>Сброс Android TV поможет:</p>
+                <ul>
+                    <li>Устранить системные ошибки</li>
+                    <li>Очистить кэш и ненужные данные</li>
+                    <li>Вернуть производительность устройства</li>
+                    <li>Подготовить ТВ к продаже или передаче</li>
+                </ul>
+                <div style="text-align: center; margin-top: 30px;">
+                    <h3 style="color: var(--primary);">Сохраняйте руководство в закладки — пригодится! Мы регулярно публикуем полезные инструкции 💡</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__col footer__col--logo">
+                    <a href="index.html" class="footer-logo">
+                        <span class="logo__icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 15L7 10H17L12 15Z" fill="currentColor"/>
+                                <path d="M12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3ZM12 19C8.13401 19 5 15.866 5 12C5 8.13401 8.13401 5 12 5C15.866 5 19 8.13401 19 12C19 15.866 15.866 19 12 19Z" fill="currentColor"/>
+                            </svg>
+                        </span>
+                        <span class="logo__text">TechFix</span>
+                    </a>
+                    <p class="footer__text">Помогаем ремонтировать электронику с 2024 года</p>
+                </div>
+                <div class="footer__col">
+                    <h3 class="footer__title">Разделы</h3>
+                    <ul class="footer__links">
+                        <li><a href="index.html" class="footer__link">Главная</a></li>
+                        <li><a href="all-guides.html" class="footer__link">Все гайды</a></li>
+                        <li><a href="contacts.html" class="footer__link">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="footer__col">
+                    <h3 class="footer__title">Категории</h3>
+                    <ul class="footer__links">
+                        <li><a href="../tv.html" class="nav__link">Телевизоры</a></li>
+                        <li><a href="../cameras.html" class="nav__link">Фотоаппараты</a></li>
+                        <li><a href="../consoles.html" class="nav__link">Приставки</a></li>
+                        <li><a href="../laptops.html" class="nav__link">Ноутбуки</a></li>
+                        <li><a href="../smartphones.html" class="nav__link">Смартфоны</a></li>
+                        <li><a href="../small-appliances.html" class="nav__link">Мелкая техника</a></li>
+                        <li><a href="../large-appliances.html" class="nav__link">Бытовая техника</a></li>
+                        <li><a href="../auto-electronics.html" class="nav__link">Авто-Электроника</a></li>
+                    </ul>
+                </div>
+                <div class="footer__col">
+                    <h3 class="footer__title">Контакты</h3>
+                    <ul class="footer__links">
+                        <li><a href="https://t.me/techfix_kz" class="footer__link"><i class="fab fa-telegram"></i> Telegram</a></li>
+                        <li><a href="https://instagram.com/techfix_kz" class="footer__link"><i class="fab fa-instagram"></i> Instagram</a></li>
+                        <li><a href="mailto:support@techfix.kz" class="footer__link"><i class="fas fa-envelope"></i> Email</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p class="footer__copyright">© 2024 TechFix. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="../script.js"></script>
+</body>
+</html>
