@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Устранение темного экрана при работающей подсветке | TechFix</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../styles-header.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Основные стили */
+        .guide-content {
+            line-height: 1.7;
+            color: var(--text);
+        }
+        .guide-content h2 {
+            color: var(--primary);
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+        .guide-content h3 {
+            color: var(--primary-dark);
+            margin-top: 25px;
+            margin-bottom: 12px;
+            font-size: 1.2rem;
+        }
+        /* Стили для шагов */
+        .step-group {
+            margin: 20px 0;
+            padding: 15px;
+            background: var(--background);
+            border-radius: var(--border-radius);
+            border: 1px solid var(--border);
+        }
+        .step {
+            display: flex;
+            gap: 15px;
+            margin: 12px 0;
+            padding: 12px;
+            background: var(--background-alt);
+            border-radius: 6px;
+            align-items: flex-start;
+        }
+        .step-number {
+            background: var(--primary);
+            color: white;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            font-weight: bold;
+            font-size: 0.8rem;
+        }
+        /* Изображения */
+        .guide-image-block {
+            margin: 20px 0;
+            padding: 15px;
+            background: var(--background);
+            border-radius: var(--border-radius);
+            border: 1px solid var(--border);
+            text-align: center;
+        }
+        .guide-image-block img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 6px;
+            border: 1px solid var(--border);
+        }
+        .image-caption {
+            margin-top: 10px;
+            font-size: 0.85rem;
+            color: var(--text-light);
+            font-style: italic;
+        }
+        /* Адаптивные замены таблицам */
+        .responsive-settings {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin: 15px 0;
+        }
+        .setting-card {
+            background: var(--background-alt);
+            padding: 12px;
+            border-radius: 6px;
+            border: 1px solid var(--border);
+        }
+        .setting-card-header {
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 5px;
+        }
+        /* Рекомендации */
+        .recommend-box {
+            background: rgba(3, 74, 79, 0.1);
+            border-left: 4px solid var(--primary);
+            padding: 12px;
+            margin: 15px 0;
+            display: flex;
+            gap: 12px;
+            align-items: flex-start;
+            border-radius: 4px;
+        }
+        .recommend-box i {
+            font-size: 1.2rem;
+            color: var(--primary);
+            margin-top: 2px;
+        }
+        /* Советы */
+        .pro-tips {
+            background: rgba(3, 74, 79, 0.05);
+            padding: 15px;
+            border-radius: 6px;
+            margin: 20px 0;
+        }
+        .pro-tips h4 {
+            color: var(--primary);
+            margin-top: 0;
+            margin-bottom: 12px;
+            font-size: 1.1rem;
+        }
+        .tip-item {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 8px;
+            align-items: flex-start;
+        }
+        /* Медиа-запросы для мобильных */
+        @media (max-width: 768px) {
+            .guide-content h2 {
+                font-size: 1.4rem;
+                margin-top: 25px;
+            }
+            .step-group, .guide-image-block {
+                padding: 12px;
+                margin: 15px 0;
+            }
+            .step {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <a href="../index.html" class="logo">
+                    <span class="logo__icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 15L7 10H17L12 15Z" fill="currentColor"/>
+                            <path d="M12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3ZM12 19C8.13401 19 5 15.866 5 12C5 8.13401 8.13401 5 12 5C15.866 5 19 8.13401 19 12C19 15.866 15.866 19 12 19Z" fill="currentColor"/>
+                        </svg>
+                    </span>
+                    <span class="logo__text">TechFix</span>
+                </a>
+                <nav class="nav">
+                    <ul class="nav__list">
+                        <li><a href="../tv.html" class="nav__link">Телевизоры</a></li>
+                        <li><a href="../cameras.html" class="nav__link">Фотоаппараты</a></li>
+                        <li><a href="../auto-electronics.html" class="nav__link">Автоэлектроника</a></li>
+                        <li><a href="../laptops.html" class="nav__link">Ноутбуки</a></li>
+                        <li><a href="../smartphones.html" class="nav__link">Смартфоны</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section class="guide-page">
+        <div class="container">
+            <div class="breadcrumbs">
+                <a href="../index.html">Главная</a>
+                <i class="fas fa-chevron-right"></i>
+                <a href="../projectors.html">Проекторы</a>
+                <i class="fas fa-chevron-right"></i>
+                <span>Проблемы с VGA-входом</span>
+            </div>
+
+            <h1 class="section__title">Не работает VGA-вход на проекторе: диагностика и решение</h1>
+            
+            <div class="guide-meta">
+                <span><i class="fas fa-clock"></i> 15-30 мин</span>
+                <span><i class="fas fa-tools"></i> Средний уровень</span>
+                <span><i class="fas fa-projector"></i> Для проекторов с VGA-входом</span>
+            </div>
+
+            <div class="guide-image-block">
+                <img src="https://avatars.mds.yandex.net/get-shedevrum/15377961/img_b0dd68a7268a11f09eca3268489cbacc/orig">
+            </div>
+
+            <div class="warning-box">
+                <i class="fas fa-exclamation-triangle"></i>
+                <strong>Важно!</strong> Перед началом работ отключите проектор от сети и дайте ему остыть не менее 30 минут.
+            </div>
+
+            <div class="guide-content">
+                <h2>Основные причины неисправности VGA-входа</h2>
+                <ul>
+                    <li>Механическое повреждение разъема (расшатанность, погнутые контакты)</li>
+                    <li>Окисление контактов VGA-порта</li>
+                    <li>Проблемы с аналоговым видеопроцессором</li>
+                    <li>Обрыв или повреждение кабеля</li>
+                    <li>Неправильные настройки источника сигнала</li>
+                    <li>Неисправность конвертера сигнала (для цифровых проекторов)</li>
+                </ul>
+
+                <div class="signal-box">
+                    <i class="fas fa-plug"></i>
+                    <strong>Факт:</strong> VGA (D-Sub) - аналоговый интерфейс, более чувствительный к качеству соединения, чем цифровые интерфейсы.
+                </div>
+
+                <h2>1. Базовая диагностика</h2>
+                <div class="step-group">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div>
+                            <p><strong>Проверка кабеля и источника:</strong></p>
+                            <ul>
+                                <li>Попробуйте другой VGA-кабель (желательно экранированный)</li>
+                                <li>Проверьте плотность соединения (закрутите винты по бокам разъема)</li>
+                                <li>Подключите другой источник (ноутбук, ПК, DVD-плеер)</li>
+                                <li>Проверьте тот же источник на другом дисплее</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div>
+                            <p><strong>Осмотр разъема:</strong></p>
+                            <ul>
+                                <li>Проверьте, нет ли погнутых или отсутствующих штырьков</li>
+                                <li>Ищите признаки окисления (зеленый или белый налет)</li>
+                                <li>Убедитесь, что разъем не шатается в гнезде</li>
+                                <li>Проверьте на наличие пыли или мусора в разъеме</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div>
+                            <p><strong>Проверка других входов:</strong></p>
+                            <ul>
+                                <li>Попробуйте HDMI, DVI или другие доступные входы</li>
+                                <li>Если другие входы работают - проблема именно в VGS-модуле</li>
+                                <li>Если не работают все аналоговые входы - возможна проблема с видеопроцессором</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <h2>2. Решения для распространенных проблем</h2>
+                <div class="step-group">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div>
+                            <p><strong>Очистка контактов:</strong></p>
+                            <ul>
+                                <li>Очистите контакты разъема изопропиловым спиртом</li>
+                                <li>Используйте мягкую кисточку для удаления окислов</li>
+                                <li>Для труднодоступных мест используйте сжатый воздух</li>
+                                <li>Дайте полностью высохнуть перед подключением</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div>
+                            <p><strong>Проверка настроек:</strong></p>
+                            <ul>
+                                <li>На проекторе выберите правильный источник (PC/VGA)</li>
+                                <li>На источнике установите поддерживаемое разрешение</li>
+                                <li>Попробуйте разные частоты обновления (60Hz, 75Hz)</li>
+                                <li>Отключите в настройках проектора "Автовыбор входа"</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div>
+                            <p><strong>Ремонт разъема:</strong></p>
+                            <ul>
+                                <li>Аккуратно выпрямите погнутые контакты тонким пинцетом</li>
+                                <li>При плохой пайке - пропаяйте контакты заново</li>
+                                <li>При сильном повреждении - замените VGA-разъем</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="danger-box">
+                    <i class="fas fa-radiation-alt"></i>
+                    <strong>Внимание!</strong> При разборке проектора соблюдайте осторожность - внутри могут быть высоковольтные компоненты.
+                </div>
+
+                <h2>3. Продвинутые методы диагностики</h2>
+                <div class="step-group">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div>
+                            <p><strong>Проверка сигнала:</strong></p>
+                            <ul>
+                                <li>Используйте осциллограф для проверки сигналов RGB и синхронизации</li>
+                                <li>Проверьте наличие +5V на 9-м контакте (для DDC)</li>
+                                <li>Ищите обрывы на дорожках платы</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div>
+                            <p><strong>Диагностика компонентов:</strong></p>
+                            <ul>
+                                <li>Проверьте предохранители на линии VGA</li>
+                                <li>Ищите вздутые конденсаторы рядом с разъемом</li>
+                                <li>Проверьте стабилизаторы напряжения</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div>
+                            <p><strong>Тест с эталонным сигналом:</strong></p>
+                            <ul>
+                                <li>Используйте генератор тестовых VGA-сигналов</li>
+                                <li>Проверьте реакцию на разные разрешения</li>
+                                <li>Сравните с работой других входов</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pro-tips">
+                    <h4>🔹 Профессиональные советы</h4>
+                    <div class="tip-item">
+                        <i class="fas fa-lightbulb"></i>
+                        <p>Для лучшего качества VGA-сигнала используйте кабели длиной не более 5 метров с ферритовыми кольцами.</p>
+                    </div>
+                    <div class="tip-item">
+                        <i class="fas fa-lightbulb"></i>
+                        <p>При окисленных контактах поможет очистка специальным средством для контактов (например, Kontakt 60).</p>
+                    </div>
+                    <div class="tip-item">
+                        <i class="fas fa-lightbulb"></i>
+                        <p>Некоторые проекторы требуют ручного выбора типа сигнала (RGB/Component) для VGA-входа.</p>
+                    </div>
+                </div>
+
+                <h2>Когда обращаться в сервис?</h2>
+                <ul>
+                    <li>Разъем физически поврежден (оторван от платы)</li>
+                    <li>Проблема сохраняется после всех проверок</li>
+                    <li>Требуется замена компонентов на плате</li>
+                    <li>Проектор на гарантии</li>
+                </ul>
+
+                <h2>📌 Итог</h2>
+                <p>Для решения проблем с VGA-входом:</p>
+                <ul>
+                    <li>Проверьте кабель и источник сигнала</li>
+                    <li>Очистите контакты разъема</li>
+                    <li>Проверьте настройки проектора и источника</li>
+                    <li>При механических повреждениях замените разъем</li>
+                    <li>Для сложных случаев обратитесь к специалистам</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__col footer__col--logo">
+                    <a href="index.html" class="footer-logo">
+                        <span class="logo__icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 15L7 10H17L12 15Z" fill="currentColor"/>
+                                <path d="M12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3ZM12 19C8.13401 19 5 15.866 5 12C5 8.13401 8.13401 5 12 5C15.866 5 19 8.13401 19 12C19 15.866 15.866 19 12 19Z" fill="currentColor"/>
+                            </svg>
+                        </span>
+                        <span class="logo__text">TechFix</span>
+                    </a>
+                    <p class="footer__text">Помогаем ремонтировать электронику с 2024 года</p>
+                </div>
+                <div class="footer__col">
+                    <h3 class="footer__title">Разделы</h3>
+                    <ul class="footer__links">
+                        <li><a href="index.html" class="footer__link">Главная</a></li>
+                        <li><a href="all-guides.html" class="footer__link">Все гайды</a></li>
+                        <li><a href="contacts.html" class="footer__link">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="footer__col">
+                    <h3 class="footer__title">Категории</h3>
+                    <ul class="footer__links">
+                        <li><a href="../tv.html" class="nav__link">Телевизоры</a></li>
+                        <li><a href="../cameras.html" class="nav__link">Фотоаппараты</a></li>
+                        <li><a href="../consoles.html" class="nav__link">Приставки</a></li>
+                        <li><a href="../laptops.html" class="nav__link">Ноутбуки</a></li>
+                        <li><a href="../smartphones.html" class="nav__link">Смартфоны</a></li>
+                        <li><a href="../small-appliances.html" class="nav__link">Мелкая техника</a></li>
+                        <li><a href="../large-appliances.html" class="nav__link">Бытовая техника</a></li>
+                        <li><a href="../auto-electronics.html" class="nav__link">Авто-Электроника</a></li>
+                    </ul>
+                </div>
+                <div class="footer__col">
+                    <h3 class="footer__title">Контакты</h3>
+                    <ul class="footer__links">
+                        <li><a href="https://t.me/techfix_kz" class="footer__link"><i class="fab fa-telegram"></i> Telegram</a></li>
+                        <li><a href="https://instagram.com/techfix_kz" class="footer__link"><i class="fab fa-instagram"></i> Instagram</a></li>
+                        <li><a href="mailto:support@techfix.kz" class="footer__link"><i class="fas fa-envelope"></i> Email</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p class="footer__copyright">© 2024 TechFix. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="../script.js"></script>
+</body>
+</html>
+
+
+   
