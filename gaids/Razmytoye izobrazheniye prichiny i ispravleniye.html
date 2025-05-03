@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Размытое изображение от проектора | TechFix</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../styles-header.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Основные стили */
+        .guide-content {
+            line-height: 1.7;
+            color: var(--text);
+        }
+        .guide-content h2 {
+            color: var(--primary);
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+        /* Стили для шагов */
+        .step-group {
+            margin: 20px 0;
+            padding: 15px;
+            background: var(--background);
+            border-radius: var(--border-radius);
+            border: 1px solid var(--border);
+        }
+        .step {
+            display: flex;
+            gap: 15px;
+            margin: 12px 0;
+            padding: 12px;
+            background: var(--background-alt);
+            border-radius: 6px;
+            align-items: flex-start;
+        }
+        .step-number {
+            background: var(--primary);
+            color: white;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            font-weight: bold;
+            font-size: 0.8rem;
+        }
+        /* Изображения */
+        .guide-image-block {
+            margin: 20px 0;
+            padding: 15px;
+            background: var(--background);
+            border-radius: var(--border-radius);
+            border: 1px solid var(--border);
+            text-align: center;
+        }
+        .guide-image-block img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 6px;
+            border: 1px solid var(--border);
+        }
+        .image-caption {
+            margin-top: 10px;
+            font-size: 0.85rem;
+            color: var(--text-light);
+            font-style: italic;
+        }
+        /* Предупреждения */
+        .warning-box {
+            background-color: #fff3f3;
+            border-left: 4px solid #ff6b6b;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        .warning-box i {
+            color: #ff6b6b;
+            margin-right: 10px;
+        }
+        /* Советы */
+        .pro-tips {
+            background: rgba(3, 74, 79, 0.05);
+            padding: 15px;
+            border-radius: 6px;
+            margin: 20px 0;
+        }
+        .pro-tips h4 {
+            color: var(--primary);
+            margin-top: 0;
+            margin-bottom: 12px;
+            font-size: 1.1rem;
+        }
+        .tip-item {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 8px;
+            align-items: flex-start;
+        }
+        /* Таблица */
+        .focus-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        .focus-table th, 
+        .focus-table td {
+            border: 1px solid var(--border);
+            padding: 10px;
+            text-align: left;
+        }
+        .focus-table th {
+            background-color: var(--primary-light);
+            color: white;
+        }
+        .focus-table .recommended {
+            background-color: #e6ffe6;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <a href="../index.html" class="logo">
+                    <span class="logo__icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 15L7 10H17L12 15Z" fill="currentColor"/>
+                            <path d="M12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3ZM12 19C8.13401 19 5 15.866 5 12C5 8.13401 8.13401 5 12 5C15.866 5 19 8.13401 19 12C19 15.866 15.866 19 12 19Z" fill="currentColor"/>
+                        </svg>
+                    </span>
+                    <span class="logo__text">TechFix</span>
+                </a>
+                <nav class="nav">
+                    <ul class="nav__list">
+                        <li><a href="../tv.html" class="nav__link">Телевизоры</a></li>
+                        <li><a href="../cameras.html" class="nav__link">Фотоаппараты</a></li>
+                        <li><a href="../projectors.html" class="nav__link">Проекторы</a></li>
+                        <li><a href="../laptops.html" class="nav__link">Ноутбуки</a></li>
+                        <li><a href="../smartphones.html" class="nav__link">Смартфоны</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <section class="guide-page">
+        <div class="container">
+            <div class="breadcrumbs">
+                <a href="../index.html">Главная</a>
+                <i class="fas fa-chevron-right"></i>
+                <a href="../projectors.html">Проекторы</a>
+                <i class="fas fa-chevron-right"></i>
+                <span>Размытое изображение</span>
+            </div>
+            <h1 class="section__title">Размытое изображение от проектора: причины и исправление</h1>
+            <div class="guide-meta">
+                <span><i class="fas fa-clock"></i> 15-30 мин</span>
+                <span><i class="fas fa-tools"></i> Начальный уровень</span>
+                <span><i class="fas fa-eye"></i> Для всех типов проекторов</span>
+            </div>
+            <div class="guide-image-block">
+                <img src="https://avatars.mds.yandex.net/get-shedevrum/14906380/img_0a2934dd281211f087bd3e81a2a92a83/orig">
+            </div>
+            <div class="warning-box">
+                <i class="fas fa-exclamation-triangle"></i>
+                <strong>Важно!</strong> Не пытайтесь самостоятельно разбирать объектив проектора - это может привести к необратимым повреждениям.
+            </div>
+            <div class="guide-content">
+                <h2>Основные причины размытого изображения</h2>
+                <ul>
+                    <li>Неправильная фокусировка объектива</li>
+                    <li>Загрязнение линз объектива</li>
+                    <li>Неправильное расстояние до экрана</li>
+                    <li>Несоответствие разрешения источника и проектора</li>
+                    <li>Проблемы с соединением (кабелем)</li>
+                    <li>Износ лампы или LCD/DLP матрицы</li>
+                </ul>
+
+                <h2>1. Проверка и настройка фокуса</h2>
+                <div class="step-group">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div>
+                            <p><strong>Ручная фокусировка:</strong></p>
+                            <ul>
+                                <li>Найдите кольцо фокусировки на объективе проектора</li>
+                                <li>Плавно вращайте кольцо до достижения четкости</li>
+                                <li>Используйте тестовое изображение с мелкими деталями</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div>
+                            <p><strong>Автофокус (если есть):</strong></p>
+                            <ul>
+                                <li>Активируйте функцию автофокусировки</li>
+                                <li>Дайте проектору несколько секунд для настройки</li>
+                                <li>При необходимости сделайте ручную доводку</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div>
+                            <p><strong>Проверка по зонам:</strong></p>
+                            <ul>
+                                <li>Убедитесь, что резкость равномерна по всему экрану</li>
+                                <li>Если края размыты - возможно проблема с объективом</li>
+                                <li>Проверьте на разных расстояниях от экрана</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <table class="focus-table">
+                    <caption>Решение проблем с фокусировкой</caption>
+                    <thead>
+                        <tr>
+                            <th>Проблема</th>
+                            <th>Возможная причина</th>
+                            <th>Решение</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="recommended">
+                            <td>Размытость по всему экрану</td>
+                            <td>Неправильная фокусировка</td>
+                            <td>Настройте кольцо фокусировки</td>
+                        </tr>
+                        <tr>
+                            <td>Размыты только края</td>
+                            <td>Дефект объектива, кривизна поля</td>
+                            <td>Профессиональная юстировка</td>
+                        </tr>
+                        <tr>
+                            <td>Размытость после прогрева</td>
+                            <td>Термическая деформация</td>
+                            <td>Дайте прогреться 15 мин, затем настройте</td>
+                        </tr>
+                        <tr>
+                            <td>Не фокусируется ни в одном положении</td>
+                            <td>Механическая поломка</td>
+                            <td>Ремонт в сервисном центре</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h2>2. Очистка и обслуживание</h2>
+                <div class="step-group">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div>
+                            <p><strong>Очистка объектива:</strong></p>
+                            <ul>
+                                <li>Используйте специальную салфетку для оптики</li>
+                                <li>Аккуратно удалите пыль сухой кисточкой</li>
+                                <li>Для жирных пятен - капля спецраствора для оптики</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div>
+                            <p><strong>Проверка вентиляции:</strong></p>
+                            <ul>
+                                <li>Очистите воздушные фильтры (если есть)</li>
+                                <li>Убедитесь в свободной циркуляции воздуха</li>
+                                <li>Перегрев может вызывать деформацию оптики</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div>
+                            <p><strong>Проверка лампы/матрицы:</strong></p>
+                            <ul>
+                                <li>Изношенная лампа дает менее четкое изображение</li>
+                                <li>Проблемы с LCD/DLP матрицами проявляются артефактами</li>
+                                <li>Для диагностики требуется профессиональное оборудование</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <h2>3. Настройки и подключение</h2>
+                <div class="step-group">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div>
+                            <p><strong>Проверка разрешения:</strong></p>
+                            <ul>
+                                <li>Установите родное разрешение проектора</li>
+                                <li>Проверьте настройки источника сигнала (ПК, плеер)</li>
+                                <li>Используйте качественные HDMI кабели</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div>
+                            <p><strong>Коррекция трапеции:</strong></p>
+                            <ul>
+                                <li>Чрезмерная коррекция Keystone ухудшает четкость</li>
+                                <li>Старайтесь минимизировать цифровую коррекцию</li>
+                                <li>Лучше отрегулируйте положение проектора</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div>
+                            <p><strong>Тестовые сигналы:</strong></p>
+                            <ul>
+                                <li>Используйте тестовые изображения для оценки резкости</li>
+                                <li>Проверьте разные источники сигнала</li>
+                                <li>Исключите проблему с конкретным устройством</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pro-tips">
+                    <h4>🔹 Профессиональные советы</h4>
+                    <div class="tip-item">
+                        <i class="fas fa-lightbulb" style="color: var(--primary);"></i>
+                        <p>Для точной фокусировки используйте специальную мишень с мелкими деталями.</p>
+                    </div>
+                    <div class="tip-item">
+                        <i class="fas fa-lightbulb" style="color: var(--primary);"></i>
+                        <p>Если проектор упал или подвергся удару - возможно смещение оптического блока.</p>
+                    </div>
+                    <div class="tip-item">
+                        <i class="fas fa-lightbulb" style="color: var(--primary);"></i>
+                        <p>Старые проекторы могут терять четкость из-за деградации оптических компонентов.</p>
+                    </div>
+                    <div class="tip-item">
+                        <i class="fas fa-lightbulb" style="color: var(--primary);"></i>
+                        <p>Перед чисткой объектива всегда выключайте проектор и дайте ему остыть.</p>
+                    </div>
+                </div>
+
+                <h2>📌 Итог</h2>
+                <p>Для устранения размытости изображения:</p>
+                <ul>
+                    <li>Тщательно настройте фокусировку объектива</li>
+                    <li>Очистите линзы специальными средствами</li>
+                    <li>Проверьте правильность разрешения и подключения</li>
+                    <li>Избегайте чрезмерной цифровой коррекции</li>
+                    <li>При серьезных проблемах обратитесь в сервисный центр</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__col footer__col--logo">
+                    <a href="index.html" class="footer-logo">
+                        <span class="logo__icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 15L7 10H17L12 15Z" fill="currentColor"/>
+                                <path d="M12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3ZM12 19C8.13401 19 5 15.866 5 12C5 8.13401 8.13401 5 12 5C15.866 5 19 8.13401 19 12C19 15.866 15.866 19 12 19Z" fill="currentColor"/>
+                            </svg>
+                        </span>
+                        <span class="logo__text">TechFix</span>
+                    </a>
+                    <p class="footer__text">Помогаем ремонтировать электронику с 2024 года</p>
+                </div>
+                <div class="footer__col">
+                    <h3 class="footer__title">Разделы</h3>
+                    <ul class="footer__links">
+                        <li><a href="index.html" class="footer__link">Главная</a></li>
+                        <li><a href="all-guides.html" class="footer__link">Все гайды</a></li>
+                        <li><a href="contacts.html" class="footer__link">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="footer__col">
+                    <h3 class="footer__title">Категории</h3>
+                    <ul class="footer__links">
+                        <li><a href="../tv.html" class="nav__link">Телевизоры</a></li>
+                        <li><a href="../cameras.html" class="nav__link">Фотоаппараты</a></li>
+                        <li><a href="../projectors.html" class="nav__link">Проекторы</a></li>
+                        <li><a href="../laptops.html" class="nav__link">Ноутбуки</a></li>
+                        <li><a href="../smartphones.html" class="nav__link">Смартфоны</a></li>
+                    </ul>
+                </div>
+                <div class="footer__col">
+                    <h3 class="footer__title">Контакты</h3>
+                    <ul class="footer__links">
+                        <li><a href="https://t.me/techfix_kz" class="footer__link"><i class="fab fa-telegram"></i> Telegram</a></li>
+                        <li><a href="https://instagram.com/techfix_kz" class="footer__link"><i class="fab fa-instagram"></i> Instagram</a></li>
+                        <li><a href="mailto:support@techfix.kz" class="footer__link"><i class="fas fa-envelope"></i> Email</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p class="footer__copyright">© 2024 TechFix. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="../script.js"></script>
+</body>
+</html>
