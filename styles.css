@@ -901,35 +901,53 @@ body {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
 }
 
+/* Стили для рекламного блока */
+.special-offer {
+    background: var(--background-alt);
+    border: 1px solid var(--border);
+    border-radius: var(--border-radius);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 500px; /* Увеличенная ширина блока */
+    margin: 30px auto;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
 /* Стили для изображения */
 .special-offer-image {
-    margin-bottom: 16px;
+    margin-bottom: 20px;
 }
 
 .special-offer-image img {
     width: 100%;
+    max-width: 400px; /* Увеличенный размер изображения */
     height: auto;
-    border-radius: 8px;
-    transition: transform 0.3s ease;
+    border-radius: 12px;
+    border: 2px solid var(--border);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .special-offer-image img:hover {
     transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
 }
 
 /* Стили для заголовка */
 .special-offer-content h3 {
     color: var(--primary);
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     margin-bottom: 12px;
 }
 
 /* Стили для текста */
 .special-offer-content p {
     color: var(--text);
-    font-size: 0.9rem;
-    line-height: 1.5;
-    margin-bottom: 16px;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
 }
 
 /* Стили для кнопки */
@@ -940,9 +958,9 @@ body {
     background-color: #ffd700;
     color: black;
     font-weight: bold;
-    font-size: 0.9rem;
-    padding: 10px 20px;
-    border-radius: 6px;
+    font-size: 1rem;
+    padding: 12px 24px;
+    border-radius: 8px;
     text-decoration: none;
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
@@ -955,7 +973,8 @@ body {
 /* Стили для подписи */
 .image-caption {
     color: var(--text-light);
-    font-size: 0.8rem;
+    font-size: 0.85rem;
+    margin-top: 8px;
 }
     
 @media (max-width: 768px) {
