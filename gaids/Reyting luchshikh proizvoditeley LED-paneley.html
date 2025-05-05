@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Рейтинг лучших производителей LED-панелей | TechFix</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../styles-header.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Основные стили */
+        .guide-content {
+            line-height: 1.7;
+            color: var(--text);
+        }
+        .guide-content h2 {
+            color: var(--primary);
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+        /* Стили для шагов */
+        .step-group {
+            margin: 20px 0;
+            padding: 15px;
+            background: var(--background);
+            border-radius: var(--border-radius);
+            border: 1px solid var(--border);
+        }
+        .step {
+            display: flex;
+            gap: 15px;
+            margin: 12px 0;
+            padding: 12px;
+            background: var(--background-alt);
+            border-radius: 6px;
+            align-items: flex-start;
+        }
+        .step-number {
+            background: var(--primary);
+            color: white;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            font-weight: bold;
+            font-size: 0.8rem;
+        }
+        /* Изображения */
+        .guide-image-block {
+            margin: 20px 0;
+            padding: 15px;
+            background: var(--background);
+            border-radius: var(--border-radius);
+            border: 1px solid var(--border);
+            text-align: center;
+        }
+        .guide-image-block img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 6px;
+            border: 1px solid var(--border);
+        }
+        .image-caption {
+            margin-top: 10px;
+            font-size: 0.85rem;
+            color: var(--text-light);
+            font-style: italic;
+        }
+        /* Предупреждения */
+        .warning-box {
+            background-color: #fff3f3;
+            border-left: 4px solid #ff6b6b;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        .warning-box i {
+            color: #ff6b6b;
+            margin-right: 10px;
+        }
+        /* Советы */
+        .pro-tips {
+            background: rgba(3, 74, 79, 0.05);
+            padding: 15px;
+            border-radius: 6px;
+            margin: 20px 0;
+        }
+        .pro-tips h4 {
+            color: var(--primary);
+            margin-top: 0;
+            margin-bottom: 12px;
+            font-size: 1.1rem;
+        }
+        .tip-item {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 8px;
+            align-items: flex-start;
+        }
+        /* Таблица рейтинга */
+        .rating-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        .rating-table th, 
+        .rating-table td {
+            border: 1px solid var(--border);
+            padding: 10px;
+            text-align: left;
+        }
+        .rating-table th {
+            background-color: var(--primary-light);
+            color: white;
+        }
+        .rating-table .top {
+            background-color: #e6ffe6;
+        }
+        .rating-table .mid {
+            background-color: #fff9e6;
+        }
+        .rating-table .entry {
+            background-color: #ffe6e6;
+        }
+        .rating-badge {
+            display: inline-block;
+            padding: 3px 8px;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            font-weight: bold;
+            color: white;
+        }
+        .badge-premium {
+            background-color: #4a6baf;
+        }
+        .badge-standard {
+            background-color: #6c757d;
+        }
+        .badge-budget {
+            background-color: #dc3545;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <a href="../index.html" class="logo">
+                    <span class="logo__icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 15L7 10H17L12 15Z" fill="currentColor"/>
+                            <path d="M12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3ZM12 19C8.13401 19 5 15.866 5 12C5 8.13401 8.13401 5 12 5C15.866 5 19 8.13401 19 12C19 15.866 15.866 19 12 19Z" fill="currentColor"/>
+                        </svg>
+                    </span>
+                    <span class="logo__text">TechFix</span>
+                </a>
+                <nav class="nav">
+                    <ul class="nav__list">
+                        <li><a href="../tv.html" class="nav__link">Телевизоры</a></li>
+                        <li><a href="../cameras.html" class="nav__link">Фотоаппараты</a></li>
+                        <li><a href="../projectors.html" class="nav__link">Проекторы</a></li>
+                        <li><a href="../laptops.html" class="nav__link">Ноутбуки</a></li>
+                        <li><a href="../smartphones.html" class="nav__link">Смартфоны</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <section class="guide-page">
+        <div class="container">
+            <div class="breadcrumbs">
+                <a href="../index.html">Главная</a>
+                <i class="fas fa-chevron-right"></i>
+                <a href="../tv.html">Телевизоры</a>
+                <i class="fas fa-chevron-right"></i>
+                <span>Рейтинг производителей LED-панелей</span>
+            </div>
+            <h1 class="section__title">Рейтинг лучших производителей LED-панелей 2024</h1>
+            <div class="guide-meta">
+                <span><i class="fas fa-clock"></i> Обновлено: июнь 2024</span>
+                <span><i class="fas fa-star"></i> Экспертная оценка</span>
+                <span><i class="fas fa-chart-line"></i> На основе тестов и отзывов</span>
+            </div>
+            <div class="guide-image-block">
+                <img src="https://avatars.mds.yandex.net/get-shedevrum/16449972/img_133fd2e8298b11f0a240ea3649b96a8c/orig">
+            </div>
+            <div class="warning-box">
+                <i class="fas fa-exclamation-triangle"></i>
+                <strong>Важно!</strong> Рейтинг основан на экспертных оценках, лабораторных тестах и отзывах пользователей. Цены указаны ориентировочно для панелей диагональю 55".
+            </div>
+            <div class="guide-content">
+                <h2>Критерии оценки производителей</h2>
+                <p>При составлении рейтинга мы учитывали следующие параметры:</p>
+                <ul>
+                    <li>Качество изображения (цветопередача, контрастность, углы обзора)</li>
+                    <li>Срок службы светодиодов</li>
+                    <li>Надежность и частота ремонтов</li>
+                    <li>Технологические инновации</li>
+                    <li>Соотношение цена/качество</li>
+                    <li>Отзывы пользователей и экспертов</li>
+                </ul>
+
+                <table class="rating-table">
+                    <caption>Рейтинг производителей LED-панелей 2024</caption>
+                    <thead>
+                        <tr>
+                            <th>Место</th>
+                            <th>Производитель</th>
+                            <th>Сегмент</th>
+                            <th>Средняя цена</th>
+                            <th>Оценка качества</th>
+                            <th>Гарантия</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="top">
+                            <td>1</td>
+                            <td><strong>Samsung QLED</strong></td>
+                            <td><span class="rating-badge badge-premium">Премиум</span></td>
+                            <td>85,000 - 120,000 ₽</td>
+                            <td>9.8/10</td>
+                            <td>3 года</td>
+                        </tr>
+                        <tr class="top">
+                            <td>2</td>
+                            <td><strong>LG OLED</strong></td>
+                            <td><span class="rating-badge badge-premium">Премиум</span></td>
+                            <td>90,000 - 150,000 ₽</td>
+                            <td>9.7/10</td>
+                            <td>2 года</td>
+                        </tr>
+                        <tr class="top">
+                            <td>3</td>
+                            <td><strong>Sony Bravia</strong></td>
+                            <td><span class="rating-badge badge-premium">Премиум</span></td>
+                            <td>95,000 - 180,000 ₽</td>
+                            <td>9.6/10</td>
+                            <td>2 года</td>
+                        </tr>
+                        <tr class="mid">
+                            <td>4</td>
+                            <td><strong>Philips Ambilight</strong></td>
+                            <td><span class="rating-badge badge-standard">Стандарт+</span></td>
+                            <td>60,000 - 100,000 ₽</td>
+                            <td>9.2/10</td>
+                            <td>2 года</td>
+                        </tr>
+                        <tr class="mid">
+                            <td>5</td>
+                            <td><strong>Panasonic</strong></td>
+                            <td><span class="rating-badge badge-standard">Стандарт+</span></td>
+                            <td>55,000 - 95,000 ₽</td>
+                            <td>9.0/10</td>
+                            <td>2 года</td>
+                        </tr>
+                        <tr class="mid">
+                            <td>6</td>
+                            <td><strong>TCL</strong></td>
+                            <td><span class="rating-badge badge-standard">Стандарт</span></td>
+                            <td>40,000 - 75,000 ₽</td>
+                            <td>8.7/10</td>
+                            <td>1 год</td>
+                        </tr>
+                        <tr class="entry">
+                            <td>7</td>
+                            <td><strong>Hisense</strong></td>
+                            <td><span class="rating-badge badge-budget">Бюджет+</span></td>
+                            <td>35,000 - 65,000 ₽</td>
+                            <td>8.5/10</td>
+                            <td>1 год</td>
+                        </tr>
+                        <tr class="entry">
+                            <td>8</td>
+                            <td><strong>Xiaomi</strong></td>
+                            <td><span class="rating-badge badge-budget">Бюджет</span></td>
+                            <td>30,000 - 55,000 ₽</td>
+                            <td>8.3/10</td>
+                            <td>1 год</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h2>1. Премиум-сегмент</h2>
+                <div class="step-group">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div>
+                            <p><strong>Samsung QLED:</strong></p>
+                            <ul>
+                                <li>Лучшая яркость и цветовой охват</li>
+                                <li>Технология Quantum Dot для точной цветопередачи</li>
+                                <li>Минимальное выгорание пикселей</li>
+                                <li>Срок службы до 100,000 часов</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div>
+                            <p><strong>LG OLED:</strong></p>
+                            <ul>
+                                <li>Идеальный черный цвет и бесконечный контраст</li>
+                                <li>Самые тонкие панели на рынке</li>
+                                <li>Технология α9 Gen6 AI Processor</li>
+                                <li>Широкие углы обзора без искажений</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <h2>2. Средний ценовой сегмент</h2>
+                <div class="step-group">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div>
+                            <p><strong>Philips Ambilight:</strong></p>
+                            <ul>
+                                <li>Уникальная система подсветки Ambilight</li>
+                                <li>Отличное соотношение цена/качество</li>
+                                <li>Технология P5 Perfect Picture Engine</li>
+                                <li>Поддержка HDR10+ и Dolby Vision</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div>
+                            <p><strong>TCL:</strong></p>
+                            <ul>
+                                <li>Быстрорастущий качественный бренд</li>
+                                <li>Собственные матрицы CSOT</li>
+                                <li>Технология AiPQ Engine</li>
+                                <li>Лучший выбор в бюджетном премиуме</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pro-tips">
+                    <h4>🔹 Профессиональные советы</h4>
+                    <div class="tip-item">
+                        <i class="fas fa-lightbulb" style="color: var(--primary);"></i>
+                        <p>Для домашнего кинотеатра выбирайте OLED от LG или Sony, для ярких помещений - QLED от Samsung.</p>
+                    </div>
+                    <div class="tip-item">
+                        <i class="fas fa-lightbulb" style="color: var(--primary);"></i>
+                        <p>При ограниченном бюджете обратите внимание на TCL и Hisense - они предлагают отличные технологии за разумные деньги.</p>
+                    </div>
+                    <div class="tip-item">
+                        <i class="fas fa-lightbulb" style="color: var(--primary);"></i>
+                        <p>Проверяйте год выпуска модели - даже у топовых брендов есть неудачные линейки.</p>
+                    </div>
+                    <div class="tip-item">
+                        <i class="fas fa-lightbulb" style="color: var(--primary);"></i>
+                        <p>Обращайте внимание на тип подсветки: Full Array Local Dimming (FALD) лучше Edge LED.</p>
+                    </div>
+                </div>
+
+                <h2>3. Как выбрать производителя?</h2>
+                <div class="step-group">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div>
+                            <p><strong>Определите бюджет:</strong></p>
+                            <ul>
+                                <li>До 50,000 ₽ - Xiaomi, Hisense</li>
+                                <li>50,000-80,000 ₽ - TCL, Philips</li>
+                                <li>От 80,000 ₽ - Samsung, LG, Sony</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div>
+                            <p><strong>Учитывайте условия использования:</strong></p>
+                            <ul>
+                                <li>Яркое помещение - высокие ниты яркости</li>
+                                <li>Кинотеатр - глубокий черный цвет</li>
+                                <li>Игры - низкое время отклика</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div>
+                            <p><strong>Проверьте отзывы:</strong></p>
+                            <ul>
+                                <li>Экспертные обзоры на специализированных сайтах</li>
+                                <li>Отзывы реальных владельцев</li>
+                                <li>Статистику ремонтов и гарантийных случаев</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="warning-box">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <strong>Осторожно!</strong> Многие бренды выпускают панели в разных ценовых категориях. Уточняйте конкретную модель, так как внутри одного бренда качество может значительно отличаться.
+                </div>
+
+                <h2>📌 Итог</h2>
+                <p>Лучшие производители LED-панелей 2024:</p>
+                <ul>
+                    <li><strong>Премиум-класс:</strong> Samsung QLED, LG OLED, Sony Bravia</li>
+                    <li><strong>Средний сегмент:</strong> Philips, Panasonic, TCL</li>
+                    <li><strong>Бюджетные решения:</strong> Hisense, Xiaomi</li>
+                    <li>Выбор зависит от бюджета, условий использования и требуемых функций</li>
+                    <li>Всегда проверяйте конкретную модель, а не только бренд</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__col footer__col--logo">
+                    <a href="../index.html" class="footer-logo">
+                        <span class="logo__icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 15L7 10H17L12 15Z" fill="currentColor"/>
+                                <path d="M12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3ZM12 19C8.13401 19 5 15.866 5 12C5 8.13401 8.13401 5 12 5C15.866 5 19 8.13401 19 12C19 15.866 15.866 19 12 19Z" fill="currentColor"/>
+                            </svg>
+                        </span>
+                        <span class="logo__text">TechFix</span>
+                    </a>
+                    <p class="footer__text">Помогаем ремонтировать электронику с 2024 года</p>
+                </div>
+                <div class="footer__col">
+                    <h3 class="footer__title">Разделы</h3>
+                    <ul class="footer__links">
+                        <li><a href="../index.html" class="footer__link">Главная</a></li>
+                        <li><a href="../all-guides.html" class="footer__link">Все гайды</a></li>
+                        <li><a href="../contacts.html" class="footer__link">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="footer__col">
+                    <h3 class="footer__title">Категории</h3>
+                    <ul class="footer__links">
+                        <li><a href="../tv.html" class="nav__link">Телевизоры</a></li>
+                        <li><a href="../cameras.html" class="nav__link">Фотоаппараты</a></li>
+                        <li><a href="../projectors.html" class="nav__link">Проекторы</a></li>
+                        <li><a href="../laptops.html" class="nav__link">Ноутбуки</a></li>
+                        <li><a href="../smartphones.html" class="nav__link">Смартфоны</a></li>
+                        <li><a href="../small-appliances.html" class="nav__link">Мелкая техника</a></li>
+                        <li><a href="../large-appliances.html" class="nav__link">Бытовая техника</a></li>
+                        <li><a href="../auto-electronics.html" class="nav__link">Авто-Электроника</a></li>
+                    </ul>
+                </div>
+                <div class="footer__col">
+                    <h3 class="footer__title">Контакты</h3>
+                    <ul class="footer__links">
+                        <li><a href="https://t.me/techfix_kz" class="footer__link"><i class="fab fa-telegram"></i> Telegram</a></li>
+                        <li><a href="https://instagram.com/techfix_kz" class="footer__link"><i class="fab fa-instagram"></i> Instagram</a></li>
+                        <li><a href="mailto:support@techfix.kz" class="footer__link"><i class="fas fa-envelope"></i> Email</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p class="footer__copyright">© 2024 TechFix. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="../script.js"></script>
+</body>
+</html>
