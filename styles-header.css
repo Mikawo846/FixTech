@@ -124,32 +124,6 @@
     width: 100%;
 }
 
-/* Техно-сетка на фоне поверх градиента и звезд */
-.header::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: 
-        linear-gradient(rgba(0, 255, 252, 0.03) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(0, 255, 252, 0.03) 1px, transparent 1px);
-    background-size: 40px 40px;
-    opacity: 0.5;
-    pointer-events: none;
-    z-index: 1;
-}
-
-/* Анимация для сетки */
-@keyframes gridScroll {
-    0% { background-position: 0 0; }
-    100% { background-position: 40px 40px; }
-}
-
-.header:hover::before {
-    animation: gridScroll 2s linear infinite;
-}
 
 /* Минимальные частицы для акцента */
 .header .particle {
