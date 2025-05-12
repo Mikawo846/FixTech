@@ -1,5 +1,19 @@
-// Плавная прокрутка к #categories при загрузке страницы с якорем
+// smooth-header.js
+
 document.addEventListener('DOMContentLoaded', function() {
+  // Плавная прокрутка к #categories при загрузке страницы с якорем
+  function scrollToCategories() {
+    const target = document.getElementById('categories');
+    if (target) {
+      setTimeout(() => {
+        target.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      }, 100);
+    }
+  }
+
   // Обработка якоря при загрузке страницы
   if (window.location.hash === '#categories') {
     scrollToCategories();
@@ -15,40 +29,48 @@ document.addEventListener('DOMContentLoaded', function() {
       }
       // Если ссылка ведет на другую страницу (например, index.html#categories)
       else if (this.href.includes('index.html#categories')) {
-        // Разрешаем стандартное поведение - браузер сам перейдет
+        // Разрешаем стандартное поведение
         return;
       }
     });
   });
 
-  // Функция плавной прокрутки
-  function scrollToCategories() {
-    const target = document.getElementById('categories');
-    if (target) {
-      setTimeout(() => {
-        target.scrollIntoView({
-          behavior: 'smooth',
-          block: 'start' // Прокрутка к началу элемента
-        });
-      }, 100);
-    }
-  }
-
-  // Улучшенный код для скрытия/показа шапки
+  // Скрытие/показ шапки только после прокрутки до блока поиска
   const header = document.querySelector('.header');
-  let lastScroll = 0;
+  const searchSection = document.querySelector('.search-section');
+  let lastScroll = window.pageYOffset;
   let ticking = false;
   const mobileBreakpoint = 768;
-  const scrollUpThreshold = 50; // Минимальное расстояние скролла вверх для показа
-  const scrollDownThreshold = 10; // Минимальное расстояние скролла вниз для скрытия
-  
+  const scrollUpThreshold = 50;
+  const scrollDownThreshold = 10;
+
+  // Получаем абсолютную позицию блока поиска
+  let searchSectionTop = 0;
+  function updateSearchSectionTop() {
+    if (searchSection) {
+      searchSectionTop = searchSection.getBoundingClientRect().top + window.scrollY;
+    }
+  }
+  updateSearchSectionTop();
+  window.addEventListener('resize', updateSearchSectionTop);
+
   window.addEventListener('scroll', function() {
+    if (!header) return;
     if (!ticking && window.innerWidth <= mobileBreakpoint) {
       window.requestAnimationFrame(function() {
         const currentScroll = window.pageYOffset;
+
+        // Скрипт скрытия шапки начинает работать только после прокрутки до блока поиска
+        if (currentScroll < searchSectionTop) {
+          header.classList.remove('hide');
+          lastScroll = currentScroll;
+          ticking = false;
+          return;
+        }
+
         const scrollDirection = currentScroll > lastScroll ? 'down' : 'up';
         const scrollDistance = Math.abs(currentScroll - lastScroll);
-        
+
         // В самом верху страницы - показываем шапку
         if (currentScroll <= 0) {
           header.classList.remove('hide');
@@ -56,22 +78,21 @@ document.addEventListener('DOMContentLoaded', function() {
           ticking = false;
           return;
         }
-        
+
         // Скролл вниз - скрываем шапку после преодоления порога
         if (scrollDirection === 'down' && scrollDistance > scrollDownThreshold && !header.classList.contains('hide')) {
           header.classList.add('hide');
-        } 
+        }
         // Скролл вверх - показываем шапку после преодоления порога
         else if (scrollDirection === 'up' && scrollDistance > scrollUpThreshold && header.classList.contains('hide')) {
           header.classList.remove('hide');
         }
-        
+
         lastScroll = currentScroll;
         ticking = false;
       });
       ticking = true;
     } else if (window.innerWidth > mobileBreakpoint) {
-      // На десктопах всегда показываем шапку
       header.classList.remove('hide');
     }
   });
