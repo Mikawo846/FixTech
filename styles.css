@@ -243,13 +243,7 @@ body {
     min-width: 0;
 }
 
-.search__input:focus {
-    box-shadow: inset 0 0 0 2px var(--accent);
-    background: #f8f8f8; /* Лёгкий фон при фокусе для видимости */
-}
-
 .search__button {
-    display: none;
     background: var(--accent);
     color: var(--primary);
     border: none;
