@@ -74,34 +74,67 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 
-  // === Поиск по гайдам ===
-  const searchInput = document.getElementById('guide-search-input');
-  const guideCards = document.querySelectorAll('.guide-card');
+ // === Поиск по гайдам ===
+const searchInput = document.getElementById('guide-search-input');
+const allGuideCards = document.querySelectorAll('.guide-card, .news .guide-card'); // Ищем во всех блоках
+const guidesContainer = document.querySelector('.guides__grid');
+const newsContainer = document.querySelector('.news .guides__grid');
 
-  if (searchInput && guideCards.length > 0) {
+if (searchInput && allGuideCards.length > 0) {
+    // Создаем элемент для сообщения "Ничего не найдено"
+    const noResultsMessage = document.createElement('div');
+    noResultsMessage.className = 'no-results-message';
+    noResultsMessage.textContent = 'Ничего не найдено. Попробуйте изменить запрос.';
+    noResultsMessage.style.display = 'none';
+    noResultsMessage.style.textAlign = 'center';
+    noResultsMessage.style.padding = '2rem';
+    noResultsMessage.style.gridColumn = '1 / -1';
+    
+    if (guidesContainer) guidesContainer.appendChild(noResultsMessage);
+    
     function filterGuides() {
-      const query = searchInput.value.trim().toLowerCase();
-      guideCards.forEach(card => {
-        const title = card.querySelector('.guide-card__title')?.innerText.toLowerCase() || '';
-        const excerpt = card.querySelector('.guide-card__excerpt')?.innerText.toLowerCase() || '';
-        if (title.includes(query) || excerpt.includes(query)) {
-          card.style.display = '';
-        } else {
-          card.style.display = 'none';
+        const query = searchInput.value.trim().toLowerCase();
+        let hasResults = false;
+        
+        allGuideCards.forEach(card => {
+            const title = card.querySelector('.guide-card__title')?.textContent.toLowerCase() || '';
+            const excerpt = card.querySelector('.guide-card__excerpt')?.textContent.toLowerCase() || '';
+            
+            if (query === '' || title.includes(query) || excerpt.includes(query)) {
+                card.style.display = '';
+                hasResults = true;
+            } else {
+                card.style.display = 'none';
+            }
+        });
+        
+        // Показываем/скрываем сообщение "Ничего не найдено"
+        if (noResultsMessage) {
+            noResultsMessage.style.display = hasResults || query === '' ? 'none' : 'block';
         }
-      });
     }
-
+    
     searchInput.addEventListener('input', filterGuides);
-
-    // Если форма поиска - <form id="guide-search-form">
+    
+    // Обработка формы поиска
     const searchForm = document.getElementById('guide-search-form');
     if (searchForm) {
-      searchForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-        filterGuides();
-      });
+        searchForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            filterGuides();
+            
+            // Прокрутка к результатам
+            if (searchInput.value.trim() !== '') {
+                const firstResultsSection = document.querySelector('.guides__grid') || 
+                                         document.querySelector('.news');
+                if (firstResultsSection) {
+                    firstResultsSection.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            }
+        });
     }
-  }
-
+}
 });
