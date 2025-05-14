@@ -237,10 +237,10 @@ body {
     font-size: 1rem;
     font-family: 'Inter', sans-serif;
     outline: none;
-    background: transparent;
-    color: #222; /* Цвет текста для видимости */
+    background: #f9f9f9;
+    color: #222;
     transition: var(--transition);
-    min-width: 0; /* Исправляет баг с flex в некоторых браузерах */
+    min-width: 0;
 }
 
 .search__input:focus {
@@ -249,6 +249,7 @@ body {
 }
 
 .search__button {
+    display: none;
     background: var(--accent);
     color: var(--primary);
     border: none;
