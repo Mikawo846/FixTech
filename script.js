@@ -1,5 +1,6 @@
 // Плавная прокрутка к #categories при загрузке страницы с якорем
 document.addEventListener('DOMContentLoaded', function() {
+
   // Обработка якоря при загрузке страницы
   if (window.location.hash === '#categories') {
     scrollToCategories();
@@ -14,10 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
         scrollToCategories();
       }
       // Если ссылка ведет на другую страницу (например, index.html#categories)
-      else if (this.href.includes('index.html#categories')) {
-        // Разрешаем стандартное поведение - браузер сам перейдет
-        return;
-      }
+      // Разрешаем стандартное поведение - браузер сам перейдет
     });
   });
 
@@ -41,14 +39,14 @@ document.addEventListener('DOMContentLoaded', function() {
   const mobileBreakpoint = 768;
   const scrollUpThreshold = 50; // Минимальное расстояние скролла вверх для показа
   const scrollDownThreshold = 10; // Минимальное расстояние скролла вниз для скрытия
-  
+
   window.addEventListener('scroll', function() {
     if (!ticking && window.innerWidth <= mobileBreakpoint) {
       window.requestAnimationFrame(function() {
         const currentScroll = window.pageYOffset;
         const scrollDirection = currentScroll > lastScroll ? 'down' : 'up';
         const scrollDistance = Math.abs(currentScroll - lastScroll);
-        
+
         // В самом верху страницы - показываем шапку
         if (currentScroll <= 0) {
           header.classList.remove('hide');
@@ -56,16 +54,16 @@ document.addEventListener('DOMContentLoaded', function() {
           ticking = false;
           return;
         }
-        
+
         // Скролл вниз - скрываем шапку после преодоления порога
         if (scrollDirection === 'down' && scrollDistance > scrollDownThreshold && !header.classList.contains('hide')) {
           header.classList.add('hide');
-        } 
+        }
         // Скролл вверх - показываем шапку после преодоления порога
         else if (scrollDirection === 'up' && scrollDistance > scrollUpThreshold && header.classList.contains('hide')) {
           header.classList.remove('hide');
         }
-        
+
         lastScroll = currentScroll;
         ticking = false;
       });
@@ -75,4 +73,35 @@ document.addEventListener('DOMContentLoaded', function() {
       header.classList.remove('hide');
     }
   });
+
+  // === Поиск по гайдам ===
+  const searchInput = document.getElementById('guide-search-input');
+  const guideCards = document.querySelectorAll('.guide-card');
+
+  if (searchInput && guideCards.length > 0) {
+    function filterGuides() {
+      const query = searchInput.value.trim().toLowerCase();
+      guideCards.forEach(card => {
+        const title = card.querySelector('.guide-card__title')?.innerText.toLowerCase() || '';
+        const excerpt = card.querySelector('.guide-card__excerpt')?.innerText.toLowerCase() || '';
+        if (title.includes(query) || excerpt.includes(query)) {
+          card.style.display = '';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    searchInput.addEventListener('input', filterGuides);
+
+    // Если форма поиска - <form id="guide-search-form">
+    const searchForm = document.getElementById('guide-search-form');
+    if (searchForm) {
+      searchForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        filterGuides();
+      });
+    }
+  }
+
 });
