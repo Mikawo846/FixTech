@@ -40,21 +40,32 @@
 </header>
 
     
-<section class="search-section">
-  <form id="guide-search-form" class="search">
-    <input
-      type="text"
-      id="guide-search-input"
-      class="search__input"
-      placeholder="Поиск по гайдам..."
-      autocomplete="off"
-    />
-    <button type="submit" class="search__button">
-      <i class="fa fa-search"></i>
-      <span>Искать</span>
-    </button>
-  </form>
-</section>
+<div class="search-section">
+  <div class="container">
+    <div class="search-wrapper">
+      <h1 class="search-title">Просто найдите, просто сделайте</h1>
+      <form class="search" id="guide-search-form" autocomplete="off">
+        <input 
+          type="search" 
+          placeholder="Например: замена экрана iPhone..." 
+          class="search__input" 
+          id="guide-search-input"
+        >
+        <button class="search__button" type="submit">
+          <i class="fas fa-search"></i>
+          <span>Поиск</span>
+        </button>
+      </form>
+      <div id="search-results-message" style="display: none;"></div>
+      <div class="search-tags">
+        <span>Популярные запросы:</span>
+        <a href="#" class="search-tag">чистка ноутбука</a>
+        <a href="#" class="search-tag">замена батареи</a>
+        <a href="#" class="search-tag">ремонт HDMI</a>
+      </div>
+    </div>
+  </div>
+</div>
 
      
     <main>
