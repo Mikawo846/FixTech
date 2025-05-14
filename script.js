@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 
- // === Поиск по гайдам ===
+// === Поиск по гайдам ===
 const searchInput = document.getElementById('guide-search-input');
 const allGuideCards = document.querySelectorAll('.guide-card, .news .guide-card'); // Ищем во всех блоках
 const guidesContainer = document.querySelector('.guides__grid');
@@ -137,4 +137,3 @@ if (searchInput && allGuideCards.length > 0) {
         });
     }
 }
-});
