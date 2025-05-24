@@ -1815,7 +1815,7 @@
                     
                     
 
-    <footer class="footer">
+  <footer class="footer">
         <div class="container">
             <div class="footer__grid">
                 <div class="footer__col footer__col--logo">
@@ -1864,6 +1864,93 @@
             </div>
         </div>
     </footer>
+
+   <script>
+document.addEventListener('DOMContentLoaded', async function() {
+  const guidesContainer = document.querySelector('.guides__grid');
+  guidesContainer.innerHTML = '<p class="loading">Загрузка гайдов...</p>';
+
+  try {
+    // Замените на ваш реальный URL API или локальный эндпоинт
+    const response = await fetch('https://api.github.com/repos/Mikawo846/FixTech/contents/gaids?ref=main');
+    
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+
+    const files = await response.json();
+    const mdFiles = files.filter(file => 
+      file.name.endsWith('.md') && 
+      file.size > 0
+    );
+
+    if (mdFiles.length === 0) {
+      guidesContainer.innerHTML = '<p>Гайды не найдены</p>';
+      return;
+    }
+
+    // Очищаем контейнер
+    guidesContainer.innerHTML = '';
+
+    // Ограничиваем параллельные запросы
+    const MAX_CONCURRENT = 3;
+    for (let i = 0; i < mdFiles.length; i += MAX_CONCURRENT) {
+      const chunk = mdFiles.slice(i, i + MAX_CONCURRENT);
+      await Promise.all(chunk.map(processFile));
+    }
+
+  } catch (error) {
+    console.error('Fetch error:', error);
+    guidesContainer.innerHTML = `
+      <div class="alert alert-error">
+        Ошибка загрузки гайдов: ${error.message}
+      </div>
+    `;
+  }
+
+  async function processFile(file) {
+    try {
+      const fileResponse = await fetch(file.download_url);
+      if (!fileResponse.ok) throw new Error(`Failed to load ${file.name}`);
+      
+      const mdContent = await fileResponse.text();
+      const frontmatter = mdContent.split('---')[1];
+      
+      if (!frontmatter) return;
+
+      const getValue = (regex, index = 1) => {
+        const match = frontmatter.match(regex);
+        return match ? match[index] : null;
+      };
+
+      const category = getValue(/category:\s*"([^"]+)"/i);
+      if (category?.toLowerCase() !== 'cameras') return;
+
+      const title = getValue(/title:\s*"([^"]+)"/i) || 'Без названия';
+      const image = getValue(/image:\s*"([^"]+)"/i) || 'https://via.placeholder.com/500x300';
+      const time = getValue(/time:\s*(\d+)/i);
+      const difficulty = getValue(/difficulty:\s*"([^"]+)"/i);
+      const slug = file.name.replace('.md', '');
+
+      const guideCard = document.createElement('article');
+      guideCard.className = 'guide-card';
+      guideCard.innerHTML = `
+        <div class="guide-card__image">
+          <img src="${image}" loading="lazy" alt="${title}">
+        </div>
+        <div class="guide-card__content">
+          <h3 class="guide-card__title">${title}</h3>
+          <p class="guide-card__excerpt">${time ? time + ' мин' : ''}${difficulty ? ' • ' + difficulty : ''}</p>
+          <a href="gaids/${slug}.html" class="button button--small">Читать гайд</a>
+        </div>
+      `;
+
+      guidesContainer.appendChild(guideCard);
+    } catch (e) {
+      console.error(`Error processing ${file.name}:`, e);
+    }
+  }
+});
 
     <script src="app.js"></script>
 </body>
