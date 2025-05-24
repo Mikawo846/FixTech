@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ray Tracing на консолях – сравнение PS5 и Xbox Series X | Экспертный мегагайд 2025</title>
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="../styles-header.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    .guide-content { line-height: 1.7; color: var(--text); }
+    .guide-content h2 { color: var(--primary); margin-top: 30px; margin-bottom: 15px; font-size: 1.5rem; }
+    .guide-content h3 { color: var(--primary-dark); margin-top: 25px; margin-bottom: 12px; font-size: 1.2rem; }
+    .guide-image-block { margin: 20px 0; padding: 15px; background: var(--background); border-radius: var(--border-radius); border: 1px solid var(--border); text-align: center; }
+    .guide-image-block img { max-width: 100%; height: auto; border-radius: 6px; border: 1px solid var(--border); }
+    .image-caption { margin-top: 10px; font-size: 0.85rem; color: var(--text-light); font-style: italic; }
+    .pro-tips { background: rgba(3, 74, 79, 0.05); padding: 15px; border-radius: 6px; margin: 20px 0; }
+    .pro-tips h4 { color: var(--primary); margin-top: 0; margin-bottom: 12px; font-size: 1.1rem; }
+    .tip-item { display: flex; gap: 8px; margin-bottom: 8px; align-items: flex-start; }
+    table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+    th, td { border: 1px solid var(--border); padding: 8px; text-align: left; }
+    th { background: var(--background-light); }
+    @media (max-width: 768px) {
+      .guide-content h2 { font-size: 1.4rem; margin-top: 25px; }
+      .guide-image-block { padding: 12px; margin: 15px 0; }
+      table, th, td { font-size: 0.95rem; }
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="header__inner">
+        <a href="../index.html" class="logo">
+          <span class="logo__icon"></span>
+          <span class="logo__text">TechFix</span>
+        </a>
+        <nav class="nav">
+          <ul class="nav__list">
+            <li><a href="../tv.html" class="nav__link">Телевизоры</a></li>
+            <li><a href="../cameras.html" class="nav__link">Фотоаппараты</a></li>
+            <li><a href="../consoles.html" class="nav__link">Приставки</a></li>
+            <li><a href="../laptops.html" class="nav__link">Ноутбуки</a></li>
+            <li><a href="../smartphones.html" class="nav__link">Смартфоны</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <section class="guide-page">
+    <div class="container">
+      <div class="breadcrumbs">
+        <a href="../index.html">Главная</a>
+        <i class="fas fa-chevron-right"></i>
+        <a href="../consoles.html">Приставки</a>
+        <i class="fas fa-chevron-right"></i>
+        <span>Ray Tracing на консолях – сравнение PS5 и Xbox Series X</span>
+      </div>
+
+      <h1 class="section__title">Ray Tracing на консолях – сравнение PS5 и Xbox Series X</h1>
+
+      <div class="guide-meta">
+        <span><i class="fas fa-hourglass-half"></i> Глобальный мегагайд: архитектура, тесты, разница, лайфхаки, FAQ, таблицы, иллюстрация.</span>
+      </div>
+
+      <div class="guide-image-block">
+        <img src="https://avatars.mds.yandex.net/get-shedevrum/16367318/img_2b4a0bd9386911f0ba352e469673a1ac/orig" alt="Ray Tracing PS5 vs Xbox">
+        <div class="image-caption">
+          Ray Tracing на PS5 и Xbox Series X — это не просто модный эффект, а целая эпоха в графике. Как отличаются консоли в реальных играх, что лучше для тени и отражений, где выше FPS? Самый подробный разбор — ниже.
+        </div>
+      </div>
+
+      <div class="guide-content">
+
+        <h2>Введение: что такое Ray Tracing и зачем он нужен?</h2>
+        <p>
+          Ray Tracing (трассировка лучей) — это технология, которая моделирует физику света для создания фотореалистичного освещения, теней и отражений в играх. На PS5 и Xbox Series X трассировка лучей используется для глобального освещения, реалистичных теней, отражений в воде, стекле, металле, а также для сложных визуальных эффектов в AAA-тайтлах.<br>
+          В 2025 году Ray Tracing стал стандартом для большинства крупных релизов, но его реализация и качество могут заметно отличаться между платформами[2][10].
+        </p>
+
+        <h2>Таблица: архитектурные различия Ray Tracing на PS5 и Xbox Series X</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Параметр</th>
+              <th>PS5</th>
+              <th>Xbox Series X</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Графическая архитектура</td>
+              <td>AMD RDNA2, 36 CU</td>
+              <td>AMD RDNA2, 52 CU</td>
+            </tr>
+            <tr>
+              <td>Частота GPU</td>
+              <td>2.23 ГГц (динамическая)</td>
+              <td>1.825 ГГц (фиксированная)</td>
+            </tr>
+            <tr>
+              <td>Теоретическая производительность</td>
+              <td>10.28 TFLOPS</td>
+              <td>12 TFLOPS</td>
+            </tr>
+            <tr>
+              <td>Аппаратный блок RT</td>
+              <td>Есть (36 RT-ядра)</td>
+              <td>Есть (52 RT-ядра)</td>
+            </tr>
+            <tr>
+              <td>API трассировки лучей</td>
+              <td>Custom Sony RT API</td>
+              <td>DirectX Raytracing (DXR)</td>
+            </tr>
+            <tr>
+              <td>Память</td>
+              <td>16 ГБ GDDR6</td>
+              <td>16 ГБ GDDR6</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>Техническая реализация: как работает Ray Tracing на консолях?</h2>
+        <p>
+          Обе консоли используют архитектуру AMD RDNA2 с аппаратными RT-ядрами, но Xbox Series X имеет больше вычислительных блоков и RT-ядер, что теоретически даёт преимущество в сложных RT-сценах[4][10].<br>
+          Xbox Series X интегрирует DirectX Raytracing (DXR), что облегчает портирование с ПК и даёт разработчикам больше гибкости. PS5 использует собственный API, оптимизированный под специфику консоли и баланс между графикой и производительностью[2][10].
+        </p>
+
+        <h2>Влияние Ray Tracing на FPS и разрешение</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Игра</th>
+              <th>Платформа</th>
+              <th>RT-режим</th>
+              <th>Разрешение</th>
+              <th>FPS</th>
+              <th>Особенности</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Control</td>
+              <td>PS5</td>
+              <td>RT Reflections, AO</td>
+              <td>1440p DRS</td>
+              <td>30</td>
+              <td>Стабильно, но XSX быстрее на ~16%</td>
+            </tr>
+            <tr>
+              <td>Control</td>
+              <td>XSX</td>
+              <td>RT Reflections, AO</td>
+              <td>1440p DRS</td>
+              <td>30</td>
+              <td>FPS выше на 16%, но разница минимальна[3]</td>
+            </tr>
+            <tr>
+              <td>The Witcher 3</td>
+              <td>PS5</td>
+              <td>RT AO, GI</td>
+              <td>1440p-4K FSR</td>
+              <td>30</td>
+              <td>Визуал лучше, но FPS ниже, чем без RT[5][14]</td>
+            </tr>
+            <tr>
+              <td>The Witcher 3</td>
+              <td>XSX</td>
+              <td>RT AO, GI</td>
+              <td>1440p-4K FSR</td>
+              <td>30</td>
+              <td>Похожий результат, XSX чуть стабильнее[5][14]</td>
+            </tr>
+            <tr>
+              <td>Elden Ring</td>
+              <td>PS5</td>
+              <td>RT Shadows, AO</td>
+              <td>1620p DRS</td>
+              <td>30</td>
+              <td>Практически идентично XSX[6][11][15]</td>
+            </tr>
+            <tr>
+              <td>Elden Ring</td>
+              <td>XSX</td>
+              <td>RT Shadows, AO</td>
+              <td>1620p DRS</td>
+              <td>30</td>
+              <td>Идентично PS5, иногда чуть выше разрешение[6][11][15]</td>
+            </tr>
+            <tr>
+              <td>Watch Dogs Legion</td>
+              <td>PS5</td>
+              <td>RT Shadows</td>
+              <td>Dynamic 4K</td>
+              <td>30</td>
+              <td>Визуально почти одинаково[8]</td>
+            </tr>
+            <tr>
+              <td>Watch Dogs Legion</td>
+              <td>XSX</td>
+              <td>RT Shadows</td>
+              <td>Dynamic 4K</td>
+              <td>30</td>
+              <td>Визуально почти одинаково[8]</td>
+            </tr>
+            <tr>
+              <td>Guardians of the Galaxy</td>
+              <td>PS5</td>
+              <td>RT Reflections</td>
+              <td>Dynamic 4K</td>
+              <td>30</td>
+              <td>Стабильнее FPS, но ниже разрешение в отдельных сценах[9]</td>
+            </tr>
+            <tr>
+              <td>Guardians of the Galaxy</td>
+              <td>XSX</td>
+              <td>RT Reflections</td>
+              <td>Dynamic 4K</td>
+              <td>30</td>
+              <td>Чуть выше разрешение, но FPS аналогичен[9]</td>
+            </tr>
+            <tr>
+              <td>The Callisto Protocol</td>
+              <td>PS5</td>
+              <td>RT Shadows</td>
+              <td>1440p-4K</td>
+              <td>30</td>
+              <td>В ранних версиях RT был лучше на PS5, сейчас паритет[13]</td>
+            </tr>
+            <tr>
+              <td>The Callisto Protocol</td>
+              <td>XSX</td>
+              <td>RT Shadows</td>
+              <td>1440p-4K</td>
+              <td>30</td>
+              <td>После патча RT на уровне PS5[13]</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>Качество Ray Tracing: визуальные отличия и нюансы</h2>
+        <ul>
+          <li>В большинстве кроссплатформенных игр Ray Tracing реализован практически одинаково, отличия минимальны и заметны только при прямом сравнении кадров[6][8][9][13][14][15].</li>
+          <li>Xbox Series X чаще выдаёт чуть более высокое разрешение RT-эффектов (например, в Control, Guardians of the Galaxy), но разница в FPS и детализации обычно не превышает 10–16%[3][9][13].</li>
+          <li>PS5 иногда выигрывает по стабильности FPS в отдельных сценах, но чаще разница нивелируется динамическим разрешением[3][12][13].</li>
+          <li>В некоторых играх (The Callisto Protocol, Cyberpunk 2077) после патчей RT-качество стало идентичным на обеих консолях[13].</li>
+          <li>В эксклюзивах Sony (Ratchet & Clank, Spider-Man 2) Ray Tracing реализован с прицелом на баланс между производительностью и качеством — часто с уникальными отражениями и освещением[2][10].</li>
+          <li>Xbox Series X иногда лучше справляется с RT в больших открытых мирах (Forza Horizon 5, Cyberpunk 2077), благодаря большему количеству вычислительных блоков[2][10].</li>
+        </ul>
+
+        <h2>Лайфхаки и советы</h2>
+        <div class="pro-tips">
+          <h4>🔹 Практические советы</h4>
+          <div class="tip-item">
+            <i class="fas fa-lightbulb"></i>
+            <p>Включайте Ray Tracing только в играх, где он реально даёт прирост к визуалу (Control, Cyberpunk, The Witcher 3, Watch Dogs Legion, Spider-Man 2).</p>
+          </div>
+          <div class="tip-item">
+            <i class="fas fa-lightbulb"></i>
+            <p>Для максимального FPS используйте Performance Mode — RT-режим почти всегда ограничивает частоту 30 кадрами на обеих консолях[5][6][9][11][14][15].</p>
+          </div>
+          <div class="tip-item">
+            <i class="fas fa-lightbulb"></i>
+            <p>Если хотите больше отражений — выбирайте тайтлы с RT Reflections (Control, Guardians of the Galaxy, Spider-Man 2).</p>
+          </div>
+          <div class="tip-item">
+            <i class="fas fa-lightbulb"></i>
+            <p>Следите за патчами: качество RT на Xbox Series X и PS5 часто выравнивается после обновлений[13].</p>
+          </div>
+        </div>
+
+        <h2>FAQ — часто задаваемые вопросы о Ray Tracing на PS5 и Xbox Series X</h2>
+        <ul>
+          <li>
+            <strong>В чём разница Ray Tracing между PS5 и Xbox Series X?</strong><br>
+            В большинстве игр RT реализован очень похоже. Xbox Series X чуть мощнее по железу, но разница обычно не превышает 10–16% по FPS или разрешению RT-эффектов[3][9][13].
+          </li>
+          <li>
+            <strong>Какая консоль лучше для Ray Tracing?</strong><br>
+            Для кроссплатформенных игр — разницы почти нет. В эксклюзивах Sony RT часто выглядит интереснее за счёт уникальных эффектов и оптимизации[2][10].
+          </li>
+          <li>
+            <strong>Сильно ли падает FPS при включении Ray Tracing?</strong><br>
+            Да, почти всегда RT-режим ограничен 30 FPS, а иногда и ниже. Для максимальной плавности используйте Performance Mode[5][6][9][11][14][15].
+          </li>
+          <li>
+            <strong>Есть ли Ray Tracing на Xbox Series S?</strong><br>
+            Нет, на Series S RT-эффекты или отключены, или сильно урезаны[6][11][15].
+          </li>
+          <li>
+            <strong>Какие игры самые красивые с Ray Tracing?</strong><br>
+            Control, Cyberpunk 2077, The Witcher 3, Spider-Man 2, Ratchet & Clank: Rift Apart, Forza Horizon 5, Watch Dogs Legion.
+          </li>
+        </ul>
+
+        <h2>Пошаговая инструкция: как включить Ray Tracing на консолях</h2>
+        <ol>
+          <li>Запустите игру с поддержкой Ray Tracing.</li>
+          <li>В настройках графики выберите "Ray Tracing" или "Quality Mode".</li>
+          <li>На PS5 и Xbox Series X RT-режим обычно ограничен 30 FPS и динамическим разрешением.</li>
+          <li>Для максимальной плавности переключитесь на Performance Mode (RT отключится).</li>
+          <li>Следите за обновлениями — патчи могут улучшать RT-качество и производительность.</li>
+        </ol>
+
+        <h2>Таблица: плюсы и минусы Ray Tracing на PS5 и Xbox Series X</h2>
+        <table>
+          <thead>
+            <tr>
+              <th></th>
+              <th>Плюсы</th>
+              <th>Минусы</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>PS5</td>
+              <td>
+                + Отличная оптимизация в эксклюзивах<br>
+                + Стабильный FPS в RT-режиме<br>
+                + Красивые отражения и тени
+              </td>
+              <td>
+                – Меньше RT-ядр, иногда ниже разрешение RT<br>
+                – 30 FPS в большинстве RT-игр<br>
+                – Нет полного набора RT-эффектов как на ПК
+              </td>
+            </tr>
+            <tr>
+              <td>Xbox Series X</td>
+              <td>
+                + Больше RT-ядр, выше теоретическая производительность<br>
+                + Чуть выше разрешение RT-эффектов<br>
+                + DXR-API облегчает портирование с ПК
+              </td>
+              <td>
+                – Разница с PS5 минимальна<br>
+                – 30 FPS в RT-режиме<br>
+                – RT в эксклюзивах встречается реже
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>Итог: Ray Tracing на PS5 и Xbox Series X — есть ли победитель?</h2>
+        <p>
+          В 2025 году Ray Tracing на PS5 и Xbox Series X реализован на очень высоком уровне. Для кроссплатформенных игр разница минимальна и заметна только в синтетических тестах или при прямом сравнении кадров. Xbox Series X чуть мощнее по железу, но Sony добивается отличной оптимизации в эксклюзивах. В любом случае, Ray Tracing на обеих консолях — это огромный шаг вперёд в графике и атмосфере современных игр!
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__col footer__col--logo">
+          <a href="index.html" class="footer-logo">
+            <span class="logo__icon"></span>
+            <span class="logo__text">TechFix</span>
+          </a>
+          <p class="footer__text">Экспертные инструкции по геймингу с 2024 года</p>
+        </div>
+        <div class="footer__col">
+          <h3 class="footer__title">Разделы</h3>
+          <ul class="footer__links">
+            <li><a href="index.html" class="footer__link">Главная</a></li>
+            <li><a href="all-guides.html" class="footer__link">Все гайды</a></li>
+            <li><a href="contacts.html" class="footer__link">Контакты</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h3 class="footer__title">Категории</h3>
+          <ul class="footer__links">
+            <li><a href="../tv.html" class="nav__link">Телевизоры</a></li>
+            <li><a href="../cameras.html" class="nav__link">Фотоаппараты</a></li>
+            <li><a href="../consoles.html" class="nav__link">Приставки</a></li>
+            <li><a href="../laptops.html" class="nav__link">Ноутбуки</a></li>
+            <li><a href="../smartphones.html" class="nav__link">Смартфоны</a></li>
+            <li><a href="../small-appliances.html" class="nav__link">Мелкая техника</a></li>
+            <li><a href="../large-appliances.html" class="nav__link">Бытовая техника</a></li>
+            <li><a href="../auto-electronics.html" class="nav__link">Авто-Электроника</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h3 class="footer__title">Контакты</h3>
+          <ul class="footer__links">
+            <li>
+              <a href="https://t.me/techfix_kz" class="footer__link"><i class="fab fa-telegram"></i> Telegram</a>
+            </li>
+            <li>
+              <a href="https://instagram.com/techfix_kz" class="footer__link"><i class="fab fa-instagram"></i> Instagram</a>
+            </li>
+            <li>
+              <a href="mailto:support@techfix.kz" class="footer__link"><i class="fas fa-envelope"></i> Email</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copyright">© 2025 TechFix. Все права защищены.</p>
+      </div>
+    </div>
+  </footer>
+  <script src="../script.js"></script>
+</body>
+</html>
