@@ -198,6 +198,9 @@ body {
     position: relative;
     overflow: hidden;
     margin-top: -18px;
+     /* Только закругление снизу */
+    border-bottom-left-radius: 24px;
+    border-bottom-right-radius: 24px;
 }
 
 .search-section::before {
