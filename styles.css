@@ -901,35 +901,7 @@ body {
   min-width: 90px;
 }
 
-    /* Стили для рекламного блока */
-.special-offer {
-    background: var(--background-alt);
-    border: 1px solid var(--border);
-    border-radius: var(--border-radius);
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    max-width: 400px;
-    margin: 20px auto;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-}
-
-/* Стили для рекламного блока */
-.special-offer {
-    background: var(--background-alt);
-    border: 1px solid var(--border);
-    border-radius: var(--border-radius);
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    max-width: 500px; /* Увеличенная ширина блока */
-    margin: 30px auto;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-}
+    
 
 /* Стили для изображения */
 .special-offer-image {
@@ -1274,6 +1246,15 @@ img {
     .step {
         flex-direction: column;
     }
+}
+
+        body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+footer {
+  margin-top: auto;
 }
 
 @media (max-width: 576px) {
