@@ -3,11 +3,186 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ремонт ноутбуков | TechFix</title>
-    <link rel="stylesheet" href="./styles.css">
-    <link rel="stylesheet" href="./styles-header.css">
+    <title>Новости | TechFix</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: #181A20;
+            color: #E3E6F3;
+            font-family: 'Inter', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .header, .footer {
+            background: #23263A;
+            box-shadow: 0 2px 24px 0 #0ff2;
+        }
+        .logo__text {
+            color: #00FFF7;
+            font-weight: 700;
+            letter-spacing: 1px;
+            font-size: 1.5rem;
+            text-shadow: 0 0 8px #00fff799;
+        }
+        .header__inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px 0;
+        }
+        .nav__list {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        .nav__link {
+            color: #E3E6F3;
+            padding: 8px 20px;
+            border-radius: 8px;
+            transition: background 0.2s, color 0.2s;
+            font-weight: 500;
+            position: relative;
+            text-decoration: none;
+        }
+        .nav__link:hover, .nav__link.active {
+            background: linear-gradient(90deg, #00FFF7 0%, #7F5FFF 100%);
+            color: #181A20;
+            box-shadow: 0 0 12px #00FFF7;
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .guides-section {
+            padding: 40px 0;
+            background: linear-gradient(120deg, #23263A 60%, #181A20 100%);
+            min-height: 70vh;
+        }
+        .section__header {
+            margin-bottom: 32px;
+        }
+        .section__title {
+            font-size: 2.5rem;
+            color: #7F5FFF;
+            text-shadow: 0 0 12px #7F5FFF99;
+            margin-bottom: 0;
+        }
+        .guides__grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 32px;
+        }
+        .guide-card {
+            background: #23263A;
+            border-radius: 18px;
+            box-shadow: 0 0 24px 0 #00FFF799;
+            padding: 32px 24px;
+            transition: transform 0.2s, box-shadow 0.2s;
+            border: 1.5px solid #00FFF7;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            min-height: 220px;
+        }
+        .guide-card:hover {
+            transform: translateY(-8px) scale(1.03);
+            box-shadow: 0 0 36px 8px #7F5FFF99;
+            border-color: #7F5FFF;
+        }
+        .guide-card__title {
+            color: #00FFF7;
+            font-size: 1.3rem;
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+        .guide-card__desc {
+            color: #E3E6F3;
+            opacity: 0.9;
+            margin-bottom: 18px;
+            flex-grow: 1;
+        }
+        .guide-card .nav__link {
+            align-self: flex-start;
+            margin-top: auto;
+            font-size: 1rem;
+            padding: 6px 16px;
+        }
+        .pagination {
+            margin: 32px 0 0 0;
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+        }
+        .pagination__link {
+            background: #23263A;
+            color: #00FFF7;
+            border-radius: 6px;
+            padding: 8px 18px;
+            font-weight: 500;
+            border: 1.5px solid #00FFF7;
+            transition: background 0.2s, color 0.2s;
+            text-decoration: none;
+        }
+        .pagination__link.active, .pagination__link:hover {
+            background: linear-gradient(90deg, #00FFF7 0%, #7F5FFF 100%);
+            color: #181A20;
+            border-color: #7F5FFF;
+        }
+        .footer {
+            padding: 40px 0 0 0;
+            color: #7F5FFF;
+        }
+        .footer__grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 32px;
+            margin-bottom: 24px;
+        }
+        .footer__col--logo .logo__text {
+            color: #00FFF7;
+        }
+        .footer__link {
+            color: #E3E6F3;
+            transition: color 0.2s;
+            text-decoration: none;
+        }
+        .footer__link:hover {
+            color: #00FFF7;
+        }
+        .footer__title {
+            color: #7F5FFF;
+            font-size: 1.1rem;
+            margin-bottom: 12px;
+        }
+        .footer__links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .footer__links li {
+            margin-bottom: 8px;
+        }
+        .footer__text {
+            color: #E3E6F3;
+            opacity: 0.8;
+            font-size: 0.95rem;
+            margin-top: 8px;
+        }
+        .footer__bottom {
+            margin-top: 24px;
+            border-top: 1px solid #23263A;
+            padding-top: 16px;
+            color: #7F5FFF;
+            text-align: center;
+            opacity: 0.7;
+            font-size: 0.95rem;
+        }
+    </style>
 </head>
 <body>
     <header class="header">
@@ -24,7 +199,7 @@
                 </a>
                 <nav class="nav">
                     <ul class="nav__list">
-                       <li><a href="tv.html" class="nav__link">Телевизоры</a></li>
+                        <li><a href="tv.html" class="nav__link">Телевизоры</a></li>
                         <li><a href="auto-electronics.html" class="nav__link">Автоэлектроника</a></li>
                         <li><a href="consoles.html" class="nav__link">Приставки</a></li>
                         <li><a href="laptops.html" class="nav__link">Ноутбуки</a></li>
@@ -36,15 +211,11 @@
         </div>
     </header>
 
-  
-
-        <section class="guides-section">
-            <div class="container">
-                <div class="section__header">
-                    <h2 class="section__title">Новости</h2>
-                </div>
-
-                <div class="guides__grid">
+    <section class="guides-section">
+        <div class="container">
+            <div class="section__header">
+                <h2 class="section__title">Новости</h2>
+            </div>
                    
 
 
@@ -8355,6 +8526,7 @@
                         <li><a href="small-appliances.html" class="nav__link">Мелкая техника</a></li>
                         <li><a href="large-appliances.html" class="nav__link">Бытовая техника</a></li>
                         <li><a href="auto-electronics.html" class="nav__link">Авто-Электроника</a></li>
+                    </ul>
                 </div>
                 <div class="footer__col">
                     <h3 class="footer__title">Контакты</h3>
@@ -8370,7 +8542,5 @@
             </div>
         </div>
     </footer>
-
-    <script src="app.js"></script>
 </body>
 </html>
