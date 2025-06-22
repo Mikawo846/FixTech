@@ -1,35 +1,33 @@
 <!DOCTYPE html>
-<html lang="ru" data-theme="light">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Новости | TechFix</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
     <style>
         body {
-            background: #181A20;
-            color: #E3E6F3;
+            background: #f7f9fb;
+            color: #23263a;
             font-family: 'Inter', Arial, sans-serif;
             margin: 0;
             padding: 0;
         }
         .header, .footer {
-            background: #23263A;
-            box-shadow: 0 2px 24px 0 #0ff2;
-        }
-        .logo__text {
-            color: #00FFF7;
-            font-weight: 700;
-            letter-spacing: 1px;
-            font-size: 1.5rem;
-            text-shadow: 0 0 8px #00fff799;
+            background: #fff;
+            border-bottom: 1px solid #e5e8ef;
         }
         .header__inner {
             display: flex;
             align-items: center;
             justify-content: space-between;
             padding: 20px 0;
+        }
+        .logo__text {
+            color: #3f51b5;
+            font-weight: 700;
+            font-size: 1.5rem;
+            letter-spacing: 1px;
         }
         .nav__list {
             display: flex;
@@ -39,125 +37,120 @@
             padding: 0;
         }
         .nav__link {
-            color: #E3E6F3;
-            padding: 8px 20px;
-            border-radius: 8px;
-            transition: background 0.2s, color 0.2s;
-            font-weight: 500;
-            position: relative;
+            color: #23263a;
+            padding: 8px 16px;
+            border-radius: 6px;
             text-decoration: none;
+            font-weight: 500;
+            transition: background 0.15s, color 0.15s;
         }
         .nav__link:hover, .nav__link.active {
-            background: linear-gradient(90deg, #00FFF7 0%, #7F5FFF 100%);
-            color: #181A20;
-            box-shadow: 0 0 12px #00FFF7;
+            background: #e5e8ef;
+            color: #3f51b5;
         }
         .container {
             width: 90%;
-            max-width: 1200px;
+            max-width: 1100px;
             margin: 0 auto;
         }
         .guides-section {
-            padding: 40px 0;
-            background: linear-gradient(120deg, #23263A 60%, #181A20 100%);
-            min-height: 70vh;
-        }
-        .section__header {
-            margin-bottom: 32px;
+            padding: 48px 0 32px 0;
         }
         .section__title {
-            font-size: 2.5rem;
-            color: #7F5FFF;
-            text-shadow: 0 0 12px #7F5FFF99;
-            margin-bottom: 0;
+            font-size: 2rem;
+            color: #3f51b5;
+            margin-bottom: 32px;
         }
         .guides__grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 32px;
+            gap: 24px;
         }
         .guide-card {
-            background: #23263A;
-            border-radius: 18px;
-            box-shadow: 0 0 24px 0 #00FFF799;
-            padding: 32px 24px;
-            transition: transform 0.2s, box-shadow 0.2s;
-            border: 1.5px solid #00FFF7;
-            position: relative;
-            overflow: hidden;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px 0 #e5e8ef88;
+            padding: 28px 22px 20px 22px;
+            transition: box-shadow 0.18s;
+            border: 1px solid #e5e8ef;
             display: flex;
             flex-direction: column;
-            min-height: 220px;
+            min-height: 170px;
         }
         .guide-card:hover {
-            transform: translateY(-8px) scale(1.03);
-            box-shadow: 0 0 36px 8px #7F5FFF99;
-            border-color: #7F5FFF;
+            box-shadow: 0 4px 16px 0 #c7d0e6aa;
         }
         .guide-card__title {
-            color: #00FFF7;
-            font-size: 1.3rem;
-            margin-bottom: 12px;
+            color: #3f51b5;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
             font-weight: 600;
         }
         .guide-card__desc {
-            color: #E3E6F3;
-            opacity: 0.9;
-            margin-bottom: 18px;
+            color: #23263a;
+            opacity: 0.92;
+            margin-bottom: 16px;
             flex-grow: 1;
         }
         .guide-card .nav__link {
             align-self: flex-start;
-            margin-top: auto;
             font-size: 1rem;
-            padding: 6px 16px;
+            padding: 5px 14px;
+            background: #f1f4fa;
+            color: #3f51b5;
+            border-radius: 4px;
+            border: none;
+            box-shadow: none;
+        }
+        .guide-card .nav__link:hover {
+            background: #e5e8ef;
         }
         .pagination {
             margin: 32px 0 0 0;
             display: flex;
             justify-content: center;
-            gap: 12px;
+            gap: 10px;
         }
         .pagination__link {
-            background: #23263A;
-            color: #00FFF7;
-            border-radius: 6px;
-            padding: 8px 18px;
+            background: #fff;
+            color: #3f51b5;
+            border-radius: 4px;
+            padding: 7px 14px;
             font-weight: 500;
-            border: 1.5px solid #00FFF7;
-            transition: background 0.2s, color 0.2s;
+            border: 1px solid #e5e8ef;
             text-decoration: none;
+            transition: background 0.15s, color 0.15s;
         }
         .pagination__link.active, .pagination__link:hover {
-            background: linear-gradient(90deg, #00FFF7 0%, #7F5FFF 100%);
-            color: #181A20;
-            border-color: #7F5FFF;
+            background: #e5e8ef;
+            color: #23263a;
         }
         .footer {
-            padding: 40px 0 0 0;
-            color: #7F5FFF;
+            padding: 32px 0 0 0;
+            color: #3f51b5;
+            border-top: 1px solid #e5e8ef;
         }
         .footer__grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 32px;
-            margin-bottom: 24px;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 24px;
+            margin-bottom: 18px;
         }
         .footer__col--logo .logo__text {
-            color: #00FFF7;
+            color: #3f51b5;
         }
         .footer__link {
-            color: #E3E6F3;
-            transition: color 0.2s;
+            color: #23263a;
             text-decoration: none;
+            transition: color 0.15s;
         }
         .footer__link:hover {
-            color: #00FFF7;
+            color: #3f51b5;
         }
         .footer__title {
-            color: #7F5FFF;
-            font-size: 1.1rem;
-            margin-bottom: 12px;
+            color: #3f51b5;
+            font-size: 1.05rem;
+            margin-bottom: 10px;
         }
         .footer__links {
             list-style: none;
@@ -165,19 +158,19 @@
             margin: 0;
         }
         .footer__links li {
-            margin-bottom: 8px;
+            margin-bottom: 6px;
         }
         .footer__text {
-            color: #E3E6F3;
-            opacity: 0.8;
+            color: #23263a;
+            opacity: 0.7;
             font-size: 0.95rem;
-            margin-top: 8px;
+            margin-top: 7px;
         }
         .footer__bottom {
-            margin-top: 24px;
-            border-top: 1px solid #23263A;
-            padding-top: 16px;
-            color: #7F5FFF;
+            margin-top: 18px;
+            border-top: 1px solid #e5e8ef;
+            padding-top: 12px;
+            color: #3f51b5;
             text-align: center;
             opacity: 0.7;
             font-size: 0.95rem;
@@ -189,12 +182,6 @@
         <div class="container">
             <div class="header__inner">
                 <a href="index.html" class="logo">
-                    <span class="logo__icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12 15L7 10H17L12 15Z" fill="currentColor"/>
-                            <path d="M12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3ZM12 19C8.13401 19 5 15.866 5 12C5 8.13401 8.13401 5 12 5C15.866 5 19 8.13401 19 12C19 15.866 15.866 19 12 19Z" fill="currentColor"/>
-                        </svg>
-                    </span>
                     <span class="logo__text">TechFix</span>
                 </a>
                 <nav class="nav">
@@ -210,6 +197,7 @@
             </div>
         </div>
     </header>
+
 
     <section class="guides-section">
         <div class="container">
