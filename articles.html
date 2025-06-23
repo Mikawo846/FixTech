@@ -18,8 +18,7 @@
             --glass-bg: rgba(255, 255, 255, 0.25);
             --glass-border: 1px solid rgba(255, 255, 255, 0.18);
             --glass-blur: blur(10px);
-            --menu-bg: rgba(255, 255, 255, 0.95);
-            --menu-width: 280px;
+            --menu-bg: rgba(255, 255, 255, 0.9);
         }
 
         * {
@@ -33,12 +32,6 @@
             background-color: var(--main-bg);
             color: var(--text-color);
             line-height: 1.6;
-            transition: transform 0.3s ease;
-        }
-
-        body.menu-open {
-            transform: translateX(var(--menu-width));
-            overflow-x: hidden;
         }
 
         a {
@@ -133,8 +126,8 @@
         .mobile-menu {
             position: fixed;
             top: 0;
-            left: calc(-1 * var(--menu-width));
-            width: var(--menu-width);
+            left: 0;
+            width: 100%;
             height: 100%;
             background: var(--menu-bg);
             backdrop-filter: var(--glass-blur);
@@ -142,37 +135,40 @@
             z-index: 99;
             display: flex;
             flex-direction: column;
-            padding-top: 80px;
-            box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
-            overflow-y: auto;
+            justify-content: center;
+            align-items: center;
+            transform: translateY(-100%);
+            opacity: 0;
+            transition: all 0.3s ease;
+            pointer-events: none;
         }
 
         .mobile-menu.active {
-            transform: translateX(var(--menu-width));
+            transform: translateY(0);
+            opacity: 1;
+            pointer-events: all;
         }
 
         .mobile-menu__list {
             list-style: none;
-            width: 100%;
+            text-align: center;
         }
 
         .mobile-menu__item {
-            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            margin: 20px 0;
         }
 
         .mobile-menu__link {
             color: var(--text-color);
-            font-size: 16px;
+            font-size: 20px;
             font-weight: 600;
-            padding: 15px 20px;
-            display: block;
+            padding: 10px 20px;
+            border-radius: var(--radius);
             transition: all 0.3s;
         }
 
         .mobile-menu__link:hover {
             background: rgba(0, 0, 0, 0.05);
-            color: var(--gradient-end);
         }
 
         /* Main content */
@@ -387,25 +383,6 @@
             font-size: 14px;
         }
 
-        /* Overlay for mobile menu */
-        .menu-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.5);
-            z-index: 98;
-            opacity: 0;
-            visibility: hidden;
-            transition: all 0.3s ease;
-        }
-
-        .menu-overlay.active {
-            opacity: 1;
-            visibility: visible;
-        }
-
         /* Responsive styles */
         @media (max-width: 992px) {
             .content-wrapper {
@@ -473,9 +450,6 @@
             <li class="mobile-menu__item"><a href="index.html#categories" class="mobile-menu__link">Все категории</a></li>
         </ul>
     </div>
-
-    <!-- Menu overlay -->
-    <div class="menu-overlay" id="menu-overlay"></div>
 
     <main class="main">
         <div class="container">
@@ -614,22 +588,10 @@
         // Mobile menu toggle
         const menuToggle = document.getElementById('menu-toggle');
         const mobileMenu = document.getElementById('mobile-menu');
-        const menuOverlay = document.getElementById('menu-overlay');
-        const body = document.body;
 
         menuToggle.addEventListener('click', () => {
             mobileMenu.classList.toggle('active');
-            menuOverlay.classList.toggle('active');
-            body.classList.toggle('menu-open');
             menuToggle.textContent = mobileMenu.classList.contains('active') ? '✕' : '☰';
-        });
-
-        // Close menu when clicking on overlay
-        menuOverlay.addEventListener('click', () => {
-            mobileMenu.classList.remove('active');
-            menuOverlay.classList.remove('active');
-            body.classList.remove('menu-open');
-            menuToggle.textContent = '☰';
         });
 
         // Close menu when clicking on a link
@@ -637,8 +599,6 @@
         menuLinks.forEach(link => {
             link.addEventListener('click', () => {
                 mobileMenu.classList.remove('active');
-                menuOverlay.classList.remove('active');
-                body.classList.remove('menu-open');
                 menuToggle.textContent = '☰';
             });
         });
