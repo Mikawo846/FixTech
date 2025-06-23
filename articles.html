@@ -4,27 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ремонт ноутбуков | TechFix</title>
-    <!-- Иконки и шрифты -->
+    
+    <!-- Подключение внешних шрифтов и иконок -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
+    <!-- Все стили, включая последние изменения, встроены ниже -->
     <style>
-        /* ======================================== */
-        /*          НОВЫЕ СТИЛИ (CSS)             */
-        /* ======================================== */
+        /* ================================================= */
+        /*      ФИНАЛЬНЫЕ СТИЛИ ДЛЯ ВАШЕГО САЙТА         */
+        /* ================================================= */
 
-        /* --- Переменные для новой темы --- */
+        /* --- Переменные для новой градиентной темы --- */
         :root {
             --primary-gradient: linear-gradient(135deg, #C71585, #FFD700, #8A2BE2);
-            --primary-accent-color: #A03C9E; /* Средний цвет из градиента для акцентов */
+            --primary-accent-color: #A03C9E; /* Средний цвет из градиента для ссылок и акцентов */
             --background-color: #f4f4f9;
             --card-background: #ffffff;
             --text-color: #333;
-            --header-bg: #ffffff;
             --shadow-color: rgba(0, 0, 0, 0.08);
         }
 
-        /* --- Базовые стили --- */
+        /* --- Базовые стили для всей страницы --- */
         * {
             margin: 0;
             padding: 0;
@@ -44,24 +45,24 @@
             padding: 0 20px;
         }
 
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
-
-        ul {
-            list-style: none;
-        }
-
-        /* --- Стили для хедера (Header) --- */
+        /* --- СТИЛИ ДЛЯ ПОЛУПРОЗРАЧНОЙ И ЗАКРУГЛЕННОЙ ШАПКИ (HEADER) --- */
         .header {
-            background-color: var(--header-bg);
+            /* Эффект "матового стекла" */
+            background: rgba(255, 255, 255, 0.85); /* Белый фон с 85% непрозрачности */
+            -webkit-backdrop-filter: blur(12px);
+            backdrop-filter: blur(12px);
+
+            /* Закругление нижних углов */
+            border-bottom-left-radius: 24px;
+            border-bottom-right-radius: 24px;
+            
+            /* Остальные стили */
             padding: 15px 0;
-            border-bottom: 1px solid #e0e0e0;
-            box-shadow: 0 2px 10px var(--shadow-color);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.07);
             position: sticky;
             top: 0;
             z-index: 1000;
+            transition: all 0.3s ease;
         }
 
         .header__inner {
@@ -75,6 +76,7 @@
             align-items: center;
             font-weight: 700;
             font-size: 24px;
+            text-decoration: none;
         }
 
         .logo__icon {
@@ -88,7 +90,6 @@
         }
 
         .logo__text {
-            /* Применение градиента к тексту */
             background: var(--primary-gradient);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -99,12 +100,14 @@
         .nav__list {
             display: flex;
             gap: 25px;
+            list-style: none;
         }
 
         .nav__link {
             font-size: 16px;
             font-weight: 500;
             color: #555;
+            text-decoration: none;
             position: relative;
             padding-bottom: 5px;
             transition: color 0.3s ease;
@@ -125,7 +128,7 @@
         .nav__link:hover {
             color: var(--text-color);
         }
-        
+
         .nav__link:hover::after {
             width: 100%;
         }
@@ -143,19 +146,17 @@
         .section__title {
             font-size: 36px;
             font-weight: 700;
-            /* Применение градиента к заголовку */
+            display: inline-block;
             background: var(--primary-gradient);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
             text-fill-color: transparent;
-            display: inline-block;
         }
 
         /* --- СЕТКА КАРТОЧЕК: 2 КОЛОНКИ НА ДЕСКТОПЕ --- */
         .guides__grid {
             display: grid;
-            /* Вот здесь мы указываем 2 колонки */
             grid-template-columns: repeat(2, 1fr);
             gap: 30px;
         }
@@ -169,6 +170,7 @@
             display: flex;
             flex-direction: column;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-decoration: none;
         }
 
         .guide-card:hover {
@@ -178,8 +180,9 @@
 
         .card__image-container {
             width: 100%;
-            padding-top: 56.25%; /* Соотношение сторон 16:9 */
+            padding-top: 56.25%; /* 16:9 */
             position: relative;
+            overflow: hidden;
         }
 
         .card__image-container img {
@@ -189,8 +192,13 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
+            transition: transform 0.4s ease;
         }
-        
+
+        .guide-card:hover .card__image-container img {
+            transform: scale(1.05);
+        }
+
         .card__content {
             padding: 25px;
             flex-grow: 1;
@@ -202,6 +210,7 @@
             font-size: 20px;
             font-weight: 600;
             margin-bottom: 10px;
+            color: var(--text-color);
         }
 
         .card__description {
@@ -210,30 +219,31 @@
             margin-bottom: 20px;
             flex-grow: 1;
         }
-        
+
         .card__link {
             display: inline-block;
             font-weight: 600;
             color: var(--primary-accent-color);
             transition: color 0.3s ease;
+            align-self: flex-start;
         }
 
         .card__link:hover {
             text-decoration: underline;
         }
 
-
         /* --- АДАПТИВНОСТЬ (RESPONSIVE) --- */
-
-        /* Планшеты (и ниже) */
         @media (max-width: 992px) {
             .nav__list {
-                gap: 15px; /* Уменьшаем отступ в навигации */
+                gap: 15px;
             }
         }
-        
-        /* Мобильные устройства */
+
         @media (max-width: 768px) {
+            /* Стили для мобильных устройств */
+            .header {
+                border-radius: 0; /* Убираем закругление шапки на мобильных */
+            }
             .header__inner {
                 flex-direction: column;
                 gap: 15px;
@@ -246,19 +256,17 @@
             .nav__link {
                 font-size: 14px;
             }
-            
             .section__title {
                 font-size: 32px;
             }
-
-            /* --- СЕТКА КАРТОЧЕК: 1 КОЛОНКА НА МОБИЛЬНЫХ --- */
             .guides__grid {
-                grid-template-columns: 1fr;
+                grid-template-columns: 1fr; /* Одна колонка */
                 gap: 25px;
             }
         }
     </style>
 </head>
+
 <body>
     <header class="header">
         <div class="container">
@@ -303,7 +311,7 @@
 
 <article class="guide-card">
     <div class="guide-card__image">
-        <img src="https://via.placeholder.com/400x250"  alt="Apple iPhone 15 и 15 Pro анонс">
+        <img src="https://avatars.mds.yandex.net/get-shedevrum/16891129/img_d9c667a64de311f0b13402e72d7a45e9/orig"  alt="Apple iPhone 15 и 15 Pro анонс">
     </div>
     <div class="guide-card__content">
         <h3 class="guide-card__title">iPhone 15 и 15 Pro: что нового от Apple</h3>
@@ -315,7 +323,7 @@
 
 <article class="guide-card">
     <div class="guide-card__image">
-        <img src="https://via.placeholder.com/400x250"  alt="Google Pixel 8 и 8 Pro">
+        <img src="https://avatars.mds.yandex.net/get-shedevrum/14919379/img_8fff95ff4e0411f0a695e2eafd4d8d77/orig"  alt="Google Pixel 8 и 8 Pro">
     </div>
     <div class="guide-card__content">
         <h3 class="guide-card__title">Google Pixel 8 и 8 Pro: ИИ и камера в фокусе</h3>
@@ -327,7 +335,7 @@
 
 <article class="guide-card">
     <div class="guide-card__image">
-        <img src="https://via.placeholder.com/400x250"  alt="Samsung Galaxy Watch 6 Classic">
+        <img src="https://avatars.mds.yandex.net/get-shedevrum/15240847/img_721a2d284de311f087d4725cea79446a/orig"  alt="Samsung Galaxy Watch 6 Classic">
     </div>
     <div class="guide-card__content">
         <h3 class="guide-card__title">Galaxy Watch 6 Classic: дизайн и здоровье</h3>
@@ -339,7 +347,7 @@
 
 <article class="guide-card">
     <div class="guide-card__image">
-        <img src="https://via.placeholder.com/400x250"  alt="PlayStation Portal">
+        <img src="https://avatars.mds.yandex.net/get-shedevrum/15342086/img_50f87b794de311f08722b225f0806def/orig"  alt="PlayStation Portal">
     </div>
     <div class="guide-card__content">
         <h3 class="guide-card__title">PlayStation Portal: стриминг игр от Sony</h3>
@@ -351,7 +359,7 @@
 
 <article class="guide-card">
     <div class="guide-card__image">
-        <img src="https://via.placeholder.com/400x250"  alt="AMD Ryzen 9000X4000">
+        <img src="https://avatars.mds.yandex.net/get-shedevrum/16913138/img_db0348bf4e0311f083b6ce263fd3d7f5/orig"  alt="AMD Ryzen 9000X4000">
     </div>
     <div class="guide-card__content">
         <h3 class="guide-card__title">Процессоры AMD Ryzen 9000X4000</h3>
@@ -363,7 +371,7 @@
 
 <article class="guide-card">
     <div class="guide-card__image">
-        <img src="https://via.placeholder.com/400x250"  alt="Apple Glass AR очки">
+        <img src="https://avatars.mds.yandex.net/get-shedevrum/16891129/img_1da845ea4e0411f0bf1552aa4dba7032/orig"  alt="Apple Glass AR очки">
     </div>
     <div class="guide-card__content">
         <h3 class="guide-card__title">Apple Glass: возможно ли появление AR-очков?</h3>
@@ -375,7 +383,7 @@
 
 <article class="guide-card">
     <div class="guide-card__image">
-        <img src="https://via.placeholder.com/400x250"  alt="Starfield выход">
+        <img src="https://avatars.mds.yandex.net/get-shedevrum/14766198/img_55189b704e0411f0bfa66ab936583010/orig"  alt="Starfield выход">
     </div>
     <div class="guide-card__content">
         <h3 class="guide-card__title">Выход «Starfield»: масштаб и проблемы</h3>
