@@ -1,144 +1,285 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Новости технологий</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', Arial, sans-serif;
-      background-color: #f9f9f9;
-      color: #333;
-      margin: 0;
-      padding: 0;
-    }
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 20px;
-    }
-    header {
-      text-align: center;
-      margin-bottom: 40px;
-    }
-    h1 {
-      color: #2c2c2c;
-      font-size: 2.5rem;
-    }
-    .news-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-      gap: 20px;
-    }
-    .card {
-      background: white;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-      overflow: hidden;
-      transition: transform 0.2s;
-    }
-    .card:hover {
-      transform: translateY(-5px);
-    }
-    .card-img {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-    }
-    .card-content {
-      padding: 20px;
-    }
-    .card-title {
-      font-size: 1.3rem;
-      margin-bottom: 10px;
-      color: #2c2c2c;
-    }
-    .card-text {
-      font-size: 0.95rem;
-      color: #555;
-      margin-bottom: 20px;
-      line-height: 1.5;
-    }
-    .btn {
-      display: inline-block;
-      padding: 10px 18px;
-      background: linear-gradient(90deg, #f7e63c, #6ec63e);
-      color: white;
-      border: none;
-      border-radius: 24px;
-      font-weight: bold;
-      cursor: pointer;
-      text-transform: uppercase;
-      font-size: 0.9rem;
-      text-decoration: none;
-      transition: all 0.2s;
-    }
-    .btn:hover {
-      background: linear-gradient(90deg, #f9e82e, #5ebd2e);
-      box-shadow: 0 2px 10px rgba(110, 198, 62, 0.4);
-    }
-    footer {
-      text-align: center;
-      margin-top: 40px;
-      padding: 20px;
-      color: #777;
-    }
-    @media (max-width: 600px) {
-      .news-grid {
-        grid-template-columns: 1fr;
-      }
-      .card {
-        margin-bottom: 20px;
-      }
-      h1 {
-        font-size: 2rem;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Новости мира технологий</title>
+    <style>
+        /* Общие стили */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 20px;
+        }
+        
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        nav ul li a:hover {
+            color: #3498db;
+        }
+        
+        /* Стили для карточек новостей */
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+            padding: 30px 0;
+        }
+        
+        .news-card {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .news-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        .card-image {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+        
+        .card-content {
+            padding: 20px;
+        }
+        
+        .card-category {
+            display: inline-block;
+            background-color: #3498db;
+            color: white;
+            padding: 3px 10px;
+            border-radius: 20px;
+            font-size: 12px;
+            margin-bottom: 10px;
+        }
+        
+        .card-title {
+            font-size: 18px;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+        
+        .card-excerpt {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 15px;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        
+        .card-meta {
+            display: flex;
+            justify-content: space-between;
+            font-size: 12px;
+            color: #888;
+        }
+        
+        /* Футер */
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+        }
+        
+        /* Адаптивные стили */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            nav ul {
+                margin-top: 15px;
+                justify-content: center;
+            }
+            
+            nav ul li {
+                margin: 0 10px;
+            }
+            
+            .news-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 15px;
+            }
+            
+            .card-image {
+                height: 150px;
+            }
+            
+            .card-content {
+                padding: 15px;
+            }
+        }
+    </style>
 </head>
 <body>
-  <div class="container">
     <header>
-      <h1>Новости мира технологий</h1>
-      <p>Самые свежие события и тренды в мире IT и гаджетов</p>
+        <div class="container header-content">
+            <div class="logo">TechNews</div>
+            <nav>
+                <ul>
+                    <li><a href="#">Главная</a></li>
+                    <li><a href="#">Искусственный интеллект</a></li>
+                    <li><a href="#">Гаджеты</a></li>
+                    <li><a href="#">Кибербезопасность</a></li>
+                    <li><a href="#">О нас</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
-    <div class="news-grid">
-      <div class="card">
-        <img src="https://via.placeholder.com/300x180/2c2c2c/ffffff?text=AI" alt="Искусственный интеллект" class="card-img">
-        <div class="card-content">
-          <h2 class="card-title">Искусственный интеллект: новые горизонты</h2>
-          <p class="card-text">Учёные представили новую модель искусственного интеллекта, способную анализировать большие объёмы данных в реальном времени.</p>
-          <a href="#" class="btn">Читать далее</a>
+    
+    <main class="container">
+        <div class="news-grid">
+            <!-- Карточка новости 1 -->
+            <article class="news-card">
+                <img src="https://source.unsplash.com/random/600x400/?ai,technology" alt="ИИ" class="card-image">
+                <div class="card-content">
+                    <span class="card-category">Искусственный интеллект</span>
+                    <h3 class="card-title">Новый алгоритм ИИ превзошел человека в творческих задачах</h3>
+                    <p class="card-excerpt">Исследователи из OpenAI представили новую модель, способную генерировать художественные произведения, которые эксперты не могут отличить от созданных человеком.</p>
+                    <div class="card-meta">
+                        <span>2 часа назад</span>
+                        <span>Автор: Алексей Петров</span>
+                    </div>
+                </div>
+            </article>
+            
+            <!-- Карточка новости 2 -->
+            <article class="news-card">
+                <img src="https://source.unsplash.com/random/600x400/?smartphone" alt="Смартфон" class="card-image">
+                <div class="card-content">
+                    <span class="card-category">Гаджеты</span>
+                    <h3 class="card-title">Представлен новый флагманский смартфон с гибким экраном</h3>
+                    <p class="card-excerpt">Компания Samsung анонсировала очередную версию своего складного смартфона с улучшенной конструкцией и более прочным экраном.</p>
+                    <div class="card-meta">
+                        <span>5 часов назад</span>
+                        <span>Автор: Мария Иванова</span>
+                    </div>
+                </div>
+            </article>
+            
+            <!-- Карточка новости 3 -->
+            <article class="news-card">
+                <img src="https://source.unsplash.com/random/600x400/?cybersecurity" alt="Кибербезопасность" class="card-image">
+                <div class="card-content">
+                    <span class="card-category">Кибербезопасность</span>
+                    <h3 class="card-title">Обнаружена уязвимость в популярном VPN-сервисе</h3>
+                    <p class="card-excerpt">Исследователи безопасности обнаружили критическую уязвимость, позволяющую злоумышленникам перехватывать трафик пользователей. Разработчики уже выпустили патч.</p>
+                    <div class="card-meta">
+                        <span>Вчера</span>
+                        <span>Автор: Дмитрий Смирнов</span>
+                    </div>
+                </div>
+            </article>
+            
+            <!-- Карточка новости 4 -->
+            <article class="news-card">
+                <img src="https://source.unsplash.com/random/600x400/?quantum" alt="Квантовый компьютер" class="card-image">
+                <div class="card-content">
+                    <span class="card-category">Научные разработки</span>
+                    <h3 class="card-title">Квантовый компьютер решил задачу за 200 секунд вместо 10 000 лет</h3>
+                    <p class="card-excerpt">Google объявила о достижении квантового превосходства - их процессор выполнил вычисления, которые для классического суперкомпьютера заняли бы тысячелетия.</p>
+                    <div class="card-meta">
+                        <span>2 дня назад</span>
+                        <span>Автор: Ольга Кузнецова</span>
+                    </div>
+                </div>
+            </article>
+            
+            <!-- Карточка новости 5 -->
+            <article class="news-card">
+                <img src="https://source.unsplash.com/random/600x400/?robot" alt="Робот" class="card-image">
+                <div class="card-content">
+                    <span class="card-category">Робототехника</span>
+                    <h3 class="card-title">Робот-доставщик начал работу в Москве</h3>
+                    <p class="card-excerpt">Яндекс запустил пилотный проект по доставке еды с помощью автономных роботов в одном из районов столицы. Роботы уже успешно выполнили первые заказы.</p>
+                    <div class="card-meta">
+                        <span>3 дня назад</span>
+                        <span>Автор: Иван Васильев</span>
+                    </div>
+                </div>
+            </article>
+            
+            <!-- Карточка новости 6 -->
+            <article class="news-card">
+                <img src="https://source.unsplash.com/random/600x400/?blockchain" alt="Блокчейн" class="card-image">
+                <div class="card-content">
+                    <span class="card-category">Блокчейн</span>
+                    <h3 class="card-title">Центральный банк тестирует цифровой рубль на блокчейне</h3>
+                    <p class="card-excerpt">Банк России объявил о начале испытаний цифрового рубля с участием нескольких коммерческих банков. Тестирование продлится до конца года.</p>
+                    <div class="card-meta">
+                        <span>4 дня назад</span>
+                        <span>Автор: Екатерина Морозова</span>
+                    </div>
+                </div>
+            </article>
         </div>
-      </div>
-      <div class="card">
-        <img src="https://via.placeholder.com/300x180/2c2c2c/ffffff?text=VR" alt="Виртуальная реальность" class="card-img">
-        <div class="card-content">
-          <h2 class="card-title">Виртуальная реальность в образовании</h2>
-          <p class="card-text">VR-технологии активно внедряются в образовательные учреждения, делая обучение более интерактивным.</p>
-          <a href="#" class="btn">Читать далее</a>
-        </div>
-      </div>
-      <div class="card">
-        <img src="https://via.placeholder.com/300x180/2c2c2c/ffffff?text=5G" alt="5G" class="card-img">
-        <div class="card-content">
-          <h2 class="card-title">Развитие сетей 5G</h2>
-          <p class="card-text">Операторы по всему миру расширяют зону покрытия сетей пятого поколения, обеспечивая сверхбыструю связь.</p>
-          <a href="#" class="btn">Читать далее</a>
-        </div>
-      </div>
-      <div class="card">
-        <img src="https://via.placeholder.com/300x180/2c2c2c/ffffff?text=IoT" alt="Интернет вещей" class="card-img">
-        <div class="card-content">
-          <h2 class="card-title">Интернет вещей: будущее уже здесь</h2>
-          <p class="card-text">Количество подключённых устройств растёт с каждым годом, открывая новые возможности для автоматизации.</p>
-          <a href="#" class="btn">Читать далее</a>
-        </div>
-      </div>
-    </div>
+    </main>
+    
     <footer>
-      <p>© 2025 Новости технологий. Все права защищены.</p>
+        <div class="container">
+            <p>&copy; 2023 TechNews. Все права защищены.</p>
+            <p>Следите за нами в социальных сетях: Twitter, Facebook, Telegram</p>
+        </div>
     </footer>
-  </div>
 </body>
 </html>
