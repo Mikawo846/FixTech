@@ -9,22 +9,17 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-<!-- Добавленные стили для градиента шапки -->
+<!-- Стили для полной замены цвета шапки -->
 <style>
 .header {
-  background: linear-gradient(90deg, #ffe600 0%, #00ff85 100%);
-  /* Желтый (#ffe600) -> Зеленый (#00ff85) */
-  color: #222;
+  background: linear-gradient(90deg, #ffe600 0%, #00ff85 100%) !important;
+  background-color: #ffe600 !important;
+  box-shadow: none !important;
+  border: none !important;
 }
-.header .logo__text {
-  color: #222;
-}
-.nav__link {
-  color: #222;
-  transition: color 0.2s;
-}
-.nav__link:hover {
-  color: #388e3c;
+.header * {
+  background: transparent !important;
+  background-color: transparent !important;
 }
 </style>
 <!-- Конец добавленных стилей -->
@@ -56,6 +51,9 @@
 </div>
 </div>
 </header>
+</body>
+</html>
+
 
   
 
