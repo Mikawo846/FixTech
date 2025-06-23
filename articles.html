@@ -1,408 +1,353 @@
 <!DOCTYPE html>
 <html lang="ru" data-theme="light">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TechNews | Главная страница</title>
-    
-    <!-- Подключение шрифтов -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Все стили встроены в HTML-документ -->
-    <style>
-        /* --- Глобальные переменные и стили --- */
-        :root {
-            --primary-color: #ffffff;
-            --background-color: #f9f9f9;
-            --text-color: #1a1a1a;
-            --text-color-light: #6c757d;
-            --border-color: #e9ecef;
-            --gradient: linear-gradient(135deg, #e63946, #c31d6f, #8e2de2);
-            --shadow: 0 4px 6px rgba(0, 0, 0, 0.04), 0 1px 3px rgba(0, 0, 0, 0.08);
-            --shadow-hover: 0 10px 15px rgba(0, 0, 0, 0.06), 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        /* Обнуление стилей для чистоты */
-        body, h1, h2, h3, p, ul, li, a, article, section, aside, main, header, nav {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: var(--primary-color);
-            color: var(--text-color);
-            line-height: 1.6;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        
-        /* --- Стили для хэдера (из вашего кода с улучшениями) --- */
-        .header {
-            background-color: rgba(255, 255, 255, 0.85);
-            border-bottom: 1px solid var(--border-color);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            backdrop-filter: blur(8px);
-            -webkit-backdrop-filter: blur(8px);
-        }
-        
-        .header__inner {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            height: 70px;
-        }
-        
-        .logo {
-            display: flex;
-            align-items: center;
-            text-decoration: none;
-            color: var(--text-color);
-            font-weight: 700;
-            font-size: 1.5rem;
-        }
-        
-        .logo__icon {
-            margin-right: 8px;
-            color: #e63946;
-        }
-        
-        .nav__list {
-            display: flex;
-            list-style: none;
-            gap: 25px;
-        }
-        
-        .nav__link {
-            text-decoration: none;
-            color: var(--text-color);
-            font-weight: 500;
-            transition: color 0.2s ease;
-        }
-        
-        .nav__link:hover {
-            color: #e63946; /* Первый цвет из градиента для акцента */
-        }
-        
-        /* --- Основная структура страницы --- */
-        main.container {
-            display: grid;
-            grid-template-columns: 1fr; /* По умолчанию одна колонка */
-            gap: 40px;
-            padding-top: 40px;
-            padding-bottom: 40px;
-        }
-
-        /* На больших экранах включаем сетку с сайдбаром */
-        @media (min-width: 992px) {
-            main.container {
-                grid-template-columns: 1fr 320px;
-            }
-        }
-        
-        /* --- Главная новость --- */
-        .featured-article {
-            position: relative;
-            border-radius: 16px;
-            overflow: hidden;
-            color: white;
-            min-height: 450px;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
-        }
-        
-        .featured-article img {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            z-index: 1;
-            transition: transform 0.4s ease;
-        }
-        
-        .featured-article:hover img {
-            transform: scale(1.05);
-        }
-        
-        .featured-article::after {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0) 100%);
-            z-index: 2;
-        }
-        
-        .featured-article__content {
-            position: relative;
-            z-index: 3;
-            padding: 30px;
-        }
-        
-        .featured-article h1 {
-            font-size: 2.5rem;
-            font-weight: 700;
-            line-height: 1.2;
-            margin: 10px 0;
-        }
-        
-        .featured-article p {
-            font-size: 1.1rem;
-            max-width: 80%;
-            opacity: 0.9;
-        }
-        
-        /* --- Общие стили для карточек и мета-информации --- */
-        .category-tag {
-            display: inline-block;
-            padding: 6px 12px;
-            font-size: 0.75rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            border-radius: 20px;
-            color: white;
-            background: var(--gradient);
-        }
-        
-        .article-meta {
-            display: flex;
-            gap: 15px;
-            font-size: 0.8rem;
-            color: var(--text-color-light);
-            margin-top: 15px;
-        }
-        
-        .featured-article .article-meta {
-            color: rgba(255, 255, 255, 0.8);
-        }
-        
-        /* --- Сетка новостей --- */
-        .news-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 24px;
-            margin-top: 40px;
-        }
-        
-        .news-card {
-            background: var(--primary-color);
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: var(--shadow);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            display: flex;
-            flex-direction: column;
-        }
-        
-        .news-card:hover {
-            transform: translateY(-8px);
-            box-shadow: var(--shadow-hover);
-        }
-        
-        .news-card__link {
-            text-decoration: none;
-            color: inherit;
-            display: flex;
-            flex-direction: column;
-            height: 100%;
-        }
-        
-        .news-card img {
-            width: 100%;
-            height: 180px;
-            object-fit: cover;
-            border-bottom: 1px solid var(--border-color);
-        }
-        
-        .news-card__content {
-            padding: 16px;
-            display: flex;
-            flex-direction: column;
-            flex-grow: 1;
-        }
-        
-        .news-card h3 {
-            font-size: 1.1rem;
-            font-weight: 600;
-            line-height: 1.4;
-            margin: 12px 0 10px;
-            flex-grow: 1; /* Заголовок растягивается, прижимая мета-информацию к низу */
-        }
-        
-        /* --- Боковая панель --- */
-        .sidebar {
-            display: flex;
-            flex-direction: column;
-            gap: 30px;
-        }
-        
-        .sidebar-widget {
-            background: var(--primary-color);
-            border: 1px solid var(--border-color);
-            border-radius: 12px;
-            padding: 20px;
-        }
-        
-        .widget-title {
-            font-size: 1.2rem;
-            font-weight: 700;
-            margin: 0 0 20px 0;
-            position: relative;
-            padding-bottom: 10px;
-        }
-        
-        .widget-title::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 40px;
-            height: 3px;
-            background: var(--gradient);
-        }
-        
-        .category-list, .latest-posts {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-        
-        .category-list li, .latest-posts li {
-            margin-bottom: 12px;
-        }
-        
-        .category-list a, .latest-posts a {
-            text-decoration: none;
-            color: var(--text-color);
-            font-weight: 500;
-            transition: color 0.2s ease;
-        }
-        
-        .category-list a:hover, .latest-posts a:hover {
-            color: #c31d6f; /* Средний цвет градиента */
-        }
-        
-        .category-list a {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .category-list .count {
-            font-size: 0.85rem;
-            color: var(--text-color-light);
-            background-color: #f0f0f0;
-            padding: 2px 8px;
-            border-radius: 5px;
-        }
-        
-        /* --- Анимации загрузки --- */
-        .loader-container {
-            display: none; /* Скрыт по умолчанию, показывается через JS */
-            justify-content: center;
-            padding: 20px;
-            width: 100%;
-            grid-column: 1 / -1; /* Растягивается на всю ширину сетки */
-        }
-        
-        .loader {
-            width: 48px;
-            height: 48px;
-            border-radius: 50%;
-            display: inline-block;
-            border-top: 4px solid var(--text-color);
-            border-right: 4px solid transparent;
-            animation: rotation 1s linear infinite;
-        }
-        
-        @keyframes rotation {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-        
-        /* Скелетон для карточек */
-        @keyframes skeleton-shimmer {
-            0% { background-position: -1000px 0; }
-            100% { background-position: 1000px 0; }
-        }
-        
-        .skeleton .skeleton__image,
-        .skeleton .skeleton__tag,
-        .skeleton .skeleton__line {
-            background-color: #e0e0e0;
-            background-image: linear-gradient(90deg, #e0e0e0, #f5f5f5, #e0e0e0);
-            background-size: 2000px 100%;
-            background-repeat: no-repeat;
-            animation: skeleton-shimmer 2s infinite;
-        }
-        
-        .skeleton .skeleton__image {
-            width: 100%;
-            height: 180px;
-        }
-        
-        .skeleton .skeleton__tag {
-            width: 80px;
-            height: 24px;
-            border-radius: 20px;
-            margin-bottom: 16px;
-        }
-        
-        .skeleton .skeleton__line {
-            height: 16px;
-            border-radius: 4px;
-            margin-bottom: 8px;
-        }
-        
-        .skeleton .skeleton__line.short {
-            width: 60%;
-        }
-        
-        
-        /* --- Адаптивная верстка --- */
-        @media (max-width: 991px) {
-            .main-content {
-                order: 1; /* Основной контент идет первым */
-            }
-            .sidebar {
-                order: 2; /* Сайдбар идет вторым */
-            }
-        }
-        
-        @media (max-width: 767px) {
-            .nav__list {
-                /* Скрываем полное меню на мобильных */
-                display: none; 
-            }
-            .featured-article h1 {
-                font-size: 1.8rem;
-            }
-            .featured-article p {
-                font-size: 1rem;
-                max-width: 100%;
-            }
-        }
-        
-        @media (max-width: 480px) {
-            .featured-article__content {
-                padding: 20px;
-            }
-            .news-grid {
-                /* Одна колонка на самых маленьких экранах */
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TechFix — Новости технологий</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --gradient: linear-gradient(90deg, #e1005a 0%, #7f00ff 100%);
+      --color-accent: #e1005a;
+      --color-bg: #fff;
+      --color-sidebar: #fafaff;
+      --color-card-shadow: rgba(127,0,255,0.07);
+      --color-card-hover: rgba(225,0,90,0.12);
+      --radius: 16px;
+      --btn-radius: 18px;
+    }
+    body {
+      background: var(--color-bg);
+      font-family: 'Inter', sans-serif;
+      color: #222;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 0 16px;
+    }
+    .header {
+      background: #fff;
+      border-bottom: 1.5px solid #eee;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    .header__inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px 0;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      font-weight: 700;
+      font-size: 1.3rem;
+      color: #222;
+      text-decoration: none;
+      gap: 8px;
+    }
+    .logo__icon {
+      color: var(--color-accent);
+      display: flex;
+      align-items: center;
+    }
+    .nav__list {
+      display: flex;
+      gap: 28px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    .nav__link {
+      color: #444;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.15s;
+      font-size: 1rem;
+    }
+    .nav__link:hover {
+      color: var(--color-accent);
+    }
+    /* Featured Article */
+    .featured-article {
+      display: flex;
+      flex-direction: row;
+      background: var(--gradient);
+      border-radius: 20px;
+      overflow: hidden;
+      margin: 36px 0 32px 0;
+      min-height: 320px;
+      box-shadow: 0 2px 12px var(--color-card-shadow);
+    }
+    .featured-article__image {
+      width: 55%;
+      object-fit: cover;
+      min-height: 220px;
+      max-height: 260px;
+    }
+    .featured-article__content {
+      padding: 42px 36px;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 45%;
+    }
+    .featured-article .category {
+      background: #fff2;
+      padding: 4px 14px;
+      border-radius: 999px;
+      font-size: 0.92rem;
+      margin-bottom: 12px;
+      display: inline-block;
+      font-weight: 500;
+      letter-spacing: 0.03em;
+    }
+    .featured-article h1 {
+      font-size: 2.1rem;
+      margin: 0 0 14px 0;
+      font-weight: 700;
+      line-height: 1.2;
+    }
+    .featured-article p {
+      font-size: 1.15rem;
+      margin: 0 0 18px 0;
+      opacity: 0.96;
+      max-width: 90%;
+    }
+    .btn-gradient {
+      display: inline-block;
+      padding: 10px 28px;
+      border-radius: var(--btn-radius);
+      background: var(--gradient);
+      color: #fff;
+      font-weight: 600;
+      text-decoration: none;
+      font-size: 1rem;
+      border: none;
+      transition: background 0.2s, box-shadow 0.2s, transform 0.2s;
+      box-shadow: 0 2px 12px var(--color-card-shadow);
+      cursor: pointer;
+      margin-top: 8px;
+    }
+    .btn-gradient:hover, .btn-gradient:focus {
+      background: linear-gradient(90deg, #7f00ff 0%, #e1005a 100%);
+      box-shadow: 0 6px 30px var(--color-card-hover);
+      transform: translateY(-2px) scale(1.04);
+      color: #fff;
+      outline: none;
+    }
+    /* Main Layout */
+    .main-content {
+      display: flex;
+      gap: 32px;
+    }
+    /* News Grid */
+    .news-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
+      flex: 1;
+    }
+    .news-card-block {
+      margin-bottom: 0;
+      /* Можно добавить отступ если нужно */
+    }
+    .news-card {
+      background: #fff;
+      border-radius: var(--radius);
+      box-shadow: 0 2px 12px var(--color-card-shadow);
+      overflow: hidden;
+      display: flex;
+      align-items: flex-start;
+      gap: 18px;
+      padding: 18px;
+      transition: box-shadow 0.18s, transform 0.18s;
+      min-width: 0;
+      animation: fadeIn 0.7s;
+    }
+    .news-card:hover {
+      box-shadow: 0 6px 30px var(--color-card-hover);
+      transform: translateY(-3px) scale(1.012);
+    }
+    .news-card__image {
+      width: 108px;
+      height: 72px;
+      border-radius: 10px;
+      object-fit: cover;
+      background: #f3f3f7;
+      flex-shrink: 0;
+    }
+    .news-card__content {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      min-width: 0;
+    }
+    .news-card .category {
+      color: var(--color-accent);
+      font-size: 0.92rem;
+      font-weight: 500;
+      margin-bottom: 7px;
+    }
+    .news-card h2 {
+      font-size: 1.13rem;
+      margin: 0 0 8px 0;
+      font-weight: 600;
+      line-height: 1.25;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 100%;
+    }
+    .news-card p {
+      font-size: 0.97rem;
+      margin: 0 0 12px 0;
+      opacity: 0.92;
+      flex: 1;
+      max-width: 100%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .news-card__meta {
+      font-size: 0.93rem;
+      color: #888;
+      display: flex;
+      gap: 16px;
+      align-items: center;
+      margin-bottom: 7px;
+    }
+    .news-card__meta i {
+      margin-right: 6px;
+      color: var(--color-accent);
+    }
+    /* Sidebar */
+    .sidebar {
+      background: var(--color-sidebar);
+      border-radius: var(--radius);
+      padding: 24px;
+      min-width: 270px;
+      max-width: 320px;
+      box-shadow: 0 2px 12px var(--color-card-shadow);
+      height: fit-content;
+      position: sticky;
+      top: 90px;
+    }
+    .sidebar__block {
+      margin-bottom: 32px;
+    }
+    .sidebar__block h3 {
+      font-size: 1.08rem;
+      font-weight: 600;
+      margin: 0 0 12px 0;
+      color: var(--color-accent);
+      letter-spacing: 0.01em;
+    }
+    .sidebar__block ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .sidebar__block li {
+      margin-bottom: 12px;
+    }
+    .sidebar__block a {
+      color: #333;
+      text-decoration: none;
+      font-size: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: color 0.16s;
+    }
+    .sidebar__block a:hover {
+      color: var(--color-accent);
+    }
+    .latest-updates li {
+      font-size: 0.98rem;
+      margin-bottom: 8px;
+    }
+    /* Loading Spinner */
+    .loading-spinner {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 36px 0;
+    }
+    .spinner {
+      width: 38px;
+      height: 38px;
+      border: 4px solid #eaeaea;
+      border-top: 4px solid #e1005a;
+      border-radius: 50%;
+      animation: spin 0.9s linear infinite;
+    }
+    @keyframes spin {
+      0% { transform: rotate(0deg);}
+      100% { transform: rotate(360deg);}
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(18px);}
+      to { opacity: 1; transform: translateY(0);}
+    }
+    /* Responsive */
+    @media (max-width: 1024px) {
+      .main-content {
+        flex-direction: column;
+      }
+      .sidebar {
+        max-width: none;
+        margin: 32px 0 0 0;
+        position: static;
+      }
+      .featured-article {
+        flex-direction: column;
+        min-height: unset;
+      }
+      .featured-article__image,
+      .featured-article__content {
+        width: 100%;
+      }
+      .featured-article__content {
+        padding: 32px 22px;
+      }
+    }
+    @media (max-width: 600px) {
+      .header__inner {
+        flex-direction: column;
+        gap: 14px;
+      }
+      .nav__list {
+        gap: 14px;
+        font-size: 0.97rem;
+      }
+      .featured-article h1 {
+        font-size: 1.3rem;
+      }
+      .news-card h2 {
+        font-size: 1rem;
+      }
+      .sidebar {
+        padding: 16px;
+      }
+      .news-card {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+      }
+      .news-card__image {
+        width: 100%;
+        max-width: 100%;
+        height: 120px;
+      }
+    }
+  </style>
 </head>
 <body>
   <header class="header">
