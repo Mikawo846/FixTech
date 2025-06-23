@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechNews - iPhone 15 и 15 Pro: что нового от Apple</title>
+    <style>
+        :root {
+            --gradient-start: #f5f7a0;
+            --gradient-end: #8df1c0;
+            --main-bg: #ffffff;
+            --text-color: #333333;
+            --text-light: #666666;
+            --border-color: #e0e0e0;
+            --shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            --radius: 8px;
+            --nav-height: 60px;
+            --glass-bg: rgba(255, 255, 255, 0.25);
+            --glass-border: 1px solid rgba(255, 255, 255, 0.18);
+            --glass-blur: blur(10px);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--main-bg);
+            color: var(--text-color);
+            line-height: 1.6;
+            padding-top: var(--nav-height);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        header {
+            background: var(--glass-bg);
+            backdrop-filter: var(--glass-blur);
+            -webkit-backdrop-filter: var(--glass-blur);
+            border-bottom: var(--glass-border);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: var(--nav-height);
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--text-color);
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        .back-btn {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 600;
+            color: var(--text-color);
+            transition: color 0.3s;
+        }
+
+        .back-btn:hover {
+            color: var(--gradient-end);
+        }
+
+        .back-btn::before {
+            content: "←";
+            font-size: 20px;
+        }
+
+        .article {
+            padding: 40px 0;
+        }
+
+        .article-header {
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .article-title {
+            font-size: 32px;
+            margin-bottom: 15px;
+            line-height: 1.3;
+        }
+
+        .article-meta {
+            color: var(--text-light);
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        .article-image {
+            width: 100%;
+            max-height: 500px;
+            object-fit: cover;
+            border-radius: var(--radius);
+            margin-bottom: 30px;
+            box-shadow: var(--shadow);
+        }
+
+        .article-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .article-content p {
+            margin-bottom: 20px;
+            font-size: 18px;
+            line-height: 1.7;
+        }
+
+        .article-content h2, 
+        .article-content h3 {
+            margin: 30px 0 20px;
+            line-height: 1.4;
+        }
+
+        .article-content h2 {
+            font-size: 28px;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 10px;
+        }
+
+        .article-content h3 {
+            font-size: 24px;
+        }
+
+        .article-content img {
+            max-width: 100%;
+            height: auto;
+            border-radius: var(--radius);
+            margin: 25px 0;
+            box-shadow: var(--shadow);
+        }
+
+        .button {
+            display: inline-block;
+            padding: 12px 24px;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            border: none;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(90deg, var(--gradient-start), var(--gradient-end));
+            color: var(--text-color);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        footer {
+            background: #f5f5f5;
+            padding: 50px 0 20px;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .footer-column h3 {
+            font-size: 18px;
+            margin-bottom: 15px;
+            color: var(--text-color);
+            font-weight: 600;
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column li {
+            margin-bottom: 10px;
+        }
+
+        .footer-column a {
+            color: var(--text-light);
+            transition: color 0.3s;
+        }
+
+        .footer-column a:hover {
+            color: var(--gradient-end);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+            color: var(--text-light);
+            font-size: 14px;
+        }
+
+        @media (max-width: 768px) {
+            .article-title {
+                font-size: 26px;
+            }
+            
+            .article-content p {
+                font-size: 16px;
+            }
+            
+            .article-content h2 {
+                font-size: 24px;
+            }
+            
+            .article-content h3 {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-container">
+            <div class="logo">TechNews</div>
+            <a href="index.html" class="back-btn">Назад к новостям</a>
+        </div>
+    </header>
+    <main class="article">
+        <div class="container">
+            <article>
+                <div class="article-header">
+                    <h1 class="article-title">iPhone 15 и 15 Pro: что нового от Apple</h1>
+                    <div class="article-meta">Опубликовано: 12 сентября 2023 | Автор: Иван Петров</div>
+                    <img src="https://avatars.mds.yandex.net/get-shedevrum/16367318/img_22631932503e11f08f8752aa4dba7032/orig" alt="iPhone 15 Pro" class="article-image">
+                </div>
+                <div class="article-content">
+                    <p>Компания Apple представила новые смартфоны iPhone 15 и iPhone 15 Pro, которые получили множество улучшений по сравнению с предыдущим поколением. В этой статье мы расскажем обо всех ключевых нововведениях, особенностях дизайна, технических характеристиках, программных возможностях, а также о том, как новые устройства вписываются в экосистему Apple и рынок мобильных технологий в целом.</p>
+                    
+                    <h2>Дизайн и материалы</h2>
+                    <p>Внешний вид iPhone 15 и 15 Pro стал еще более современным и лаконичным. Для iPhone 15 Pro впервые использован титановый сплав, который делает устройство не только прочнее, но и легче. Это заметно ощущается при повседневном использовании: смартфон стал комфортнее лежать в руке, а его устойчивость к царапинам и повреждениям повысилась. Обычная версия iPhone 15 сохранила алюминиевую рамку, но получила обновлённые цвета и более мягкие скругления граней.</p>
+                    <img src="https://via.placeholder.com/800x450" alt="Сравнение дизайна iPhone 15 и 15 Pro">
+                    <p>Задняя панель обоих устройств выполнена из прочного стекла с матовым покрытием, что уменьшает количество отпечатков пальцев. Камерный блок стал более аккуратным, а выступы камер — менее заметными, что положительно сказывается на устойчивости устройства на плоских поверхностях.</p>
+                    
+                    <h2>Технические характеристики</h2>
+                    <p>Главное нововведение — новый процессор A17 Pro для iPhone 15 Pro, который существенно увеличил производительность и энергоэффективность. В обычном iPhone 15 установлен чип A16 Bionic, который ранее использовался только в Pro-версиях. Оба процессора выполнены по 3-нм техпроцессу, что обеспечивает высокий уровень производительности при низком энергопотреблении.</p>
+                    
+                    <h3>Процессор и графика</h3>
+                    <p>iPhone 15 Pro оснащён 6-ядерным CPU и 5-ядерным GPU с поддержкой аппаратной трассировки лучей. Это открывает новые возможности для мобильных игр и приложений с графикой высокого уровня. Даже самые требовательные задачи, такие как монтаж видео в 4K или работа с AR-приложениями, выполняются без малейших задержек.</p>
+                    
+                    <h3>Дисплей</h3>
+                    <p>Оба устройства получили Super Retina XDR дисплеи с поддержкой HDR10 и Dolby Vision. В Pro-версии частота обновления достигает 120 Гц благодаря технологии ProMotion, что обеспечивает максимально плавную прокрутку и отзывчивость интерфейса. Яркость экрана увеличена до 2000 нит, что позволяет комфортно использовать смартфон даже под прямыми солнечными лучами.</p>
+                    
+                    <h3>Камеры</h3>
+                    <p>Основная камера iPhone 15 Pro — 48 Мп с усовершенствованной системой стабилизации и ночным режимом. Новый телеобъектив обеспечивает 5-кратный оптический зум, а ультраширокоугольная камера позволяет делать качественные снимки даже в условиях низкой освещённости. В обычном iPhone 15 также улучшены алгоритмы обработки изображений, что положительно сказывается на детализации и цветопередаче.</p>
+                    <img src="https://via.placeholder.com/800x450" alt="Камеры iPhone 15 Pro">
+                    
+                    <h2>USB-C: новая эра подключения</h2>
+                    <p>Впервые в истории iPhone обе модели получили порт USB-C вместо Lightning. Это не только упрощает зарядку и передачу данных, но и позволяет использовать один кабель для всех современных устройств Apple. Скорость передачи данных у iPhone 15 Pro достигает 10 Гбит/с, что особенно актуально для работы с большими файлами и профессионального использования смартфона.</p>
+                    
+                    <h2>Программные возможности и iOS 17</h2>
+                    <p>Обе модели работают на новой версии iOS 17, которая получила ряд улучшений в области безопасности, персонализации и взаимодействия с экосистемой Apple. Введены новые функции для работы с виджетами, расширены возможности FaceTime, а также появились интеллектуальные инструменты для работы с фотографиями и видео.</p>
+                    
+                    <h2>Автономность и зарядка</h2>
+                    <p>Благодаря энергоэффективным процессорам и оптимизации программного обеспечения, время автономной работы увеличилось на 1-2 часа по сравнению с предыдущим поколением. Поддерживается быстрая зарядка и беспроводная зарядка MagSafe, а также обратная зарядка для аксессуаров.</p>
+                    
+                    <h2>Безопасность и конфиденциальность</h2>
+                    <p>Apple традиционно делает акцент на защите данных пользователей. В iPhone 15 и 15 Pro реализованы новые аппаратные и программные решения для шифрования данных, а также усовершенствована система Face ID, которая теперь работает быстрее и точнее даже при изменении внешности пользователя.</p>
+                    
+                    <h2>Экосистема Apple и интеграция с другими устройствами</h2>
+                    <p>Новые iPhone идеально интегрируются с другими устройствами Apple: Mac, iPad, Apple Watch и AirPods. Благодаря функции Continuity можно быстро переключаться между устройствами, отвечать на звонки и сообщения, а также использовать iPhone как веб-камеру для Mac. Интеграция с iCloud обеспечивает мгновенную синхронизацию данных, а новые функции AirDrop позволяют обмениваться файлами даже без доступа к интернету.</p>
+                    
+                    <h2>Цены и доступность</h2>
+                    <p>iPhone 15 доступен по цене от 799 долларов, а iPhone 15 Pro — от 999 долларов. Предзаказ стартует 15 сентября, а официальные продажи начнутся 22 сентября. На выбор предлагается несколько вариантов памяти и новые цветовые решения, включая эксклюзивные для Pro-линейки.</p>
+                    
+                    <h2>Сравнение iPhone 15 и 15 Pro</h2>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Характеристика</th>
+                                <th>iPhone 15</th>
+                                <th>iPhone 15 Pro</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Материал корпуса</td>
+                                <td>Алюминий и стекло</td>
+                                <td>Титан и стекло</td>
+                            </tr>
+                            <tr>
+                                <td>Процессор</td>
+                                <td>A16 Bionic</td>
+                                <td>A17 Pro</td>
+                            </tr>
+                            <tr>
+                                <td>Дисплей</td>
+                                <td>6,1/6,7" Super Retina XDR, 60 Гц</td>
+                                <td>6,1/6,7" Super Retina XDR, 120 Гц (ProMotion)</td>
+                            </tr>
+                            <tr>
+                                <td>Камера</td>
+                                <td>48 Мп + 12 Мп</td>
+                                <td>48 Мп + 12 Мп + 12 Мп (телеобъектив)</td>
+                            </tr>
+                            <tr>
+                                <td>Порт</td>
+                                <td>USB-C (USB 2.0)</td>
+                                <td>USB-C (USB 3.0)</td>
+                            </tr>
+                            <tr>
+                                <td>Цена</td>
+                                <td>от $799</td>
+                                <td>от $999</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    <h2>Заключение</h2>
+                    <p>iPhone 15 и iPhone 15 Pro — это не просто очередное обновление, а значительный шаг вперёд в развитии мобильных технологий Apple. Новые материалы, мощные процессоры, улучшенные камеры и переход на USB-C делают эти устройства одними из самых привлекательных на рынке. Благодаря глубокой интеграции с экосистемой Apple, новые iPhone становятся неотъемлемой частью цифровой жизни пользователей, предлагая максимальный комфорт, безопасность и производительность.</p>
+                    <p>С выходом iPhone 15 и 15 Pro Apple вновь подтверждает статус технологического лидера, предлагая пользователям не только стильные, но и по-настоящему инновационные устройства, которые будут актуальны ещё много лет.</p>
+                </div>
+            </article>
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-column">
+                    <h3>О нас</h3>
+                    <ul>
+                        <li><a href="#">О компании</a></li>
+                        <li><a href="#">Реклама</a></li>
+                        <li><a href="#">Вакансии</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Разделы</h3>
+                    <ul>
+                        <li><a href="#">Телевизоры</a></li>
+                        <li><a href="#">Автоэлектроника</a></li>
+                        <li><a href="#">Приставки</a></li>
+                        <li><a href="#">Ноутбуки</a></li>
+                        <li><a href="#">Смартфоны</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Помощь</h3>
+                    <ul>
+                        <li><a href="#">Правила сайта</a></li>
+                        <li><a href="#">Обратная связь</a></li>
+                        <li><a href="#">Политика конфиденциальности</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Контакты</h3>
+                    <ul>
+                        <li>Email: info@technews.ru</li>
+                        <li>Телефон: +7 (123) 456-78-90</li>
+                        <li>
+                            <a href="#">Facebook</a> | 
+                            <a href="#">Twitter</a> | 
+                            <a href="#">Telegram</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                © 2024 TechNews. Все права защищены.
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
