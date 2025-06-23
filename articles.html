@@ -5,27 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ремонт ноутбуков | TechFix</title>
     
-    <!-- Подключение внешних шрифтов и иконок -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-    <!-- Все стили, включая последние изменения, встроены ниже -->
     <style>
-        /* ================================================= */
-        /*      ФИНАЛЬНЫЕ СТИЛИ ДЛЯ ВАШЕГО САЙТА         */
-        /* ================================================= */
-
-        /* --- Переменные для новой градиентной темы --- */
         :root {
             --primary-gradient: linear-gradient(135deg, #C71585, #FFD700, #8A2BE2);
-            --primary-accent-color: #A03C9E; /* Средний цвет из градиента для ссылок и акцентов */
+            --primary-accent-color: #A03C9E;
             --background-color: #f4f4f9;
             --card-background: #ffffff;
             --text-color: #333;
             --shadow-color: rgba(0, 0, 0, 0.08);
         }
 
-        /* --- Базовые стили для всей страницы --- */
         * {
             margin: 0;
             padding: 0;
@@ -45,18 +37,12 @@
             padding: 0 20px;
         }
 
-        /* --- СТИЛИ ДЛЯ ПОЛУПРОЗРАЧНОЙ И ЗАКРУГЛЕННОЙ ШАПКИ (HEADER) --- */
         .header {
-            /* Эффект "матового стекла" */
-            background: rgba(255, 255, 255, 0.85); /* Белый фон с 85% непрозрачности */
+            background: rgba(255, 255, 255, 0.85);
             -webkit-backdrop-filter: blur(12px);
             backdrop-filter: blur(12px);
-
-            /* Закругление нижних углов */
             border-bottom-left-radius: 24px;
             border-bottom-right-radius: 24px;
-            
-            /* Остальные стили */
             padding: 15px 0;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.07);
             position: sticky;
@@ -133,7 +119,6 @@
             width: 100%;
         }
 
-        /* --- Секция с новостями/карточками --- */
         .guides-section {
             padding: 60px 0;
         }
@@ -154,14 +139,12 @@
             text-fill-color: transparent;
         }
 
-        /* --- СЕТКА КАРТОЧЕК: 2 КОЛОНКИ НА ДЕСКТОПЕ --- */
         .guides__grid {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 30px;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
         }
 
-        /* --- Стили для карточек --- */
         .guide-card {
             background-color: var(--card-background);
             border-radius: 16px;
@@ -180,9 +163,9 @@
 
         .card__image-container {
             width: 100%;
-            padding-top: 56.25%; /* 16:9 */
             position: relative;
             overflow: hidden;
+            padding-top: 75%;
         }
 
         .card__image-container img {
@@ -200,23 +183,23 @@
         }
 
         .card__content {
-            padding: 25px;
+            padding: 20px;
             flex-grow: 1;
             display: flex;
             flex-direction: column;
         }
 
         .card__title {
-            font-size: 20px;
+            font-size: 18px;
             font-weight: 600;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
             color: var(--text-color);
         }
 
         .card__description {
-            font-size: 15px;
+            font-size: 14px;
             color: #666;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
             flex-grow: 1;
         }
 
@@ -232,17 +215,18 @@
             text-decoration: underline;
         }
 
-        /* --- АДАПТИВНОСТЬ (RESPONSIVE) --- */
         @media (max-width: 992px) {
+            .guides__grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
             .nav__list {
                 gap: 15px;
             }
         }
 
         @media (max-width: 768px) {
-            /* Стили для мобильных устройств */
             .header {
-                border-radius: 0; /* Убираем закругление шапки на мобильных */
+                border-radius: 0;
             }
             .header__inner {
                 flex-direction: column;
@@ -260,7 +244,7 @@
                 font-size: 32px;
             }
             .guides__grid {
-                grid-template-columns: 1fr; /* Одна колонка */
+                grid-template-columns: 1fr;
                 gap: 25px;
             }
         }
@@ -280,14 +264,14 @@
                     </span>
                     <span class="logo__text">TechFix</span>
                 </a>
-                <nav class="nav">
+               <nav class="nav">
                     <ul class="nav__list">
-                       <li><a href="#" class="nav__link">Телевизоры</a></li>
-                        <li><a href="#" class="nav__link">Автоэлектроника</a></li>
-                        <li><a href="#" class="nav__link">Приставки</a></li>
-                        <li><a href="#" class="nav__link">Ноутбуки</a></li>
-                        <li><a href="#" class="nav__link">Смартфоны</a></li>
-                        <li><a href="#" class="nav__link">Все категории</a></li>
+                       <li><a href="tv.html" class="nav__link">Телевизоры</a></li>
+                        <li><a href="cameras.html" class="nav__link">Фотоаппараты</a></li>
+                        <li><a href="auto-electronics.html" class="nav__link">Автоэлектроника</a></li>
+                        <li><a href="laptops.html" class="nav__link">Ноутбуки</a></li>
+                        <li><a href="smartphones.html" class="nav__link">Смартфоны</a></li>
+                        <li><a href="index.html#categories" class="nav__link">Все категории</a></li>
                     </ul>
                 </nav>
             </div>
