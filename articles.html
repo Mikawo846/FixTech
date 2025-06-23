@@ -1,13 +1,263 @@
 <!DOCTYPE html>
-<html lang="ru" data-theme="light">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ремонт ноутбуков | TechFix</title>
-    <link rel="stylesheet" href="./styles.css">
-    <link rel="stylesheet" href="./styles-header.css">
+    <!-- Иконки и шрифты -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* ======================================== */
+        /*          НОВЫЕ СТИЛИ (CSS)             */
+        /* ======================================== */
+
+        /* --- Переменные для новой темы --- */
+        :root {
+            --primary-gradient: linear-gradient(135deg, #C71585, #FFD700, #8A2BE2);
+            --primary-accent-color: #A03C9E; /* Средний цвет из градиента для акцентов */
+            --background-color: #f4f4f9;
+            --card-background: #ffffff;
+            --text-color: #333;
+            --header-bg: #ffffff;
+            --shadow-color: rgba(0, 0, 0, 0.08);
+        }
+
+        /* --- Базовые стили --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* --- Стили для хедера (Header) --- */
+        .header {
+            background-color: var(--header-bg);
+            padding: 15px 0;
+            border-bottom: 1px solid #e0e0e0;
+            box-shadow: 0 2px 10px var(--shadow-color);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header__inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            font-weight: 700;
+            font-size: 24px;
+        }
+
+        .logo__icon {
+            margin-right: 10px;
+            color: var(--primary-accent-color);
+            transition: transform 0.3s ease;
+        }
+
+        .logo:hover .logo__icon {
+            transform: rotate(360deg);
+        }
+
+        .logo__text {
+            /* Применение градиента к тексту */
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+        }
+
+        .nav__list {
+            display: flex;
+            gap: 25px;
+        }
+
+        .nav__link {
+            font-size: 16px;
+            font-weight: 500;
+            color: #555;
+            position: relative;
+            padding-bottom: 5px;
+            transition: color 0.3s ease;
+        }
+
+        .nav__link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--primary-gradient);
+            transition: width 0.3s ease;
+        }
+
+        .nav__link:hover {
+            color: var(--text-color);
+        }
+        
+        .nav__link:hover::after {
+            width: 100%;
+        }
+
+        /* --- Секция с новостями/карточками --- */
+        .guides-section {
+            padding: 60px 0;
+        }
+
+        .section__header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section__title {
+            font-size: 36px;
+            font-weight: 700;
+            /* Применение градиента к заголовку */
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+            display: inline-block;
+        }
+
+        /* --- СЕТКА КАРТОЧЕК: 2 КОЛОНКИ НА ДЕСКТОПЕ --- */
+        .guides__grid {
+            display: grid;
+            /* Вот здесь мы указываем 2 колонки */
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+        }
+
+        /* --- Стили для карточек --- */
+        .guide-card {
+            background-color: var(--card-background);
+            border-radius: 16px;
+            box-shadow: 0 4px 20px var(--shadow-color);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .guide-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+        }
+
+        .card__image-container {
+            width: 100%;
+            padding-top: 56.25%; /* Соотношение сторон 16:9 */
+            position: relative;
+        }
+
+        .card__image-container img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .card__content {
+            padding: 25px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card__title {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .card__description {
+            font-size: 15px;
+            color: #666;
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+        
+        .card__link {
+            display: inline-block;
+            font-weight: 600;
+            color: var(--primary-accent-color);
+            transition: color 0.3s ease;
+        }
+
+        .card__link:hover {
+            text-decoration: underline;
+        }
+
+
+        /* --- АДАПТИВНОСТЬ (RESPONSIVE) --- */
+
+        /* Планшеты (и ниже) */
+        @media (max-width: 992px) {
+            .nav__list {
+                gap: 15px; /* Уменьшаем отступ в навигации */
+            }
+        }
+        
+        /* Мобильные устройства */
+        @media (max-width: 768px) {
+            .header__inner {
+                flex-direction: column;
+                gap: 15px;
+            }
+            .nav__list {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 10px 15px;
+            }
+            .nav__link {
+                font-size: 14px;
+            }
+            
+            .section__title {
+                font-size: 32px;
+            }
+
+            /* --- СЕТКА КАРТОЧЕК: 1 КОЛОНКА НА МОБИЛЬНЫХ --- */
+            .guides__grid {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+        }
+    </style>
 </head>
 <body>
     <header class="header">
@@ -16,20 +266,20 @@
                 <a href="index.html" class="logo">
                     <span class="logo__icon">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12 15L7 10H17L12 15Z" fill="currentColor"/>
-                            <path d="M12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3ZM12 19C8.13401 19 5 15.866 5 12C5 8.13401 8.13401 5 12 5C15.866 5 19 8.13401 19 12C19 15.866 15.866 19 12 19Z" fill="currentColor"/>
+                            <path d="M12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3ZM1 12C1 5.92487 5.92487 1 12 1C18.0751 1 23 5.92487 23 12C23 18.0751 18.0751 23 12 23C5.92487 23 1 18.0751 1 12Z" fill="currentColor"/>
+                            <path d="M16.5303 10.9697C16.8232 10.6768 16.8232 10.1979 16.5303 9.90498C16.2374 9.61208 15.7586 9.61208 15.4657 9.90498L12 13.3707L8.53431 9.90498C8.24142 9.61208 7.76256 9.61208 7.46967 9.90498C7.17678 10.1979 7.17678 10.6768 7.46967 10.9697L11.4697 14.9697C11.7626 15.2626 12.2414 15.2626 12.5343 14.9697L16.5303 10.9697Z" fill="currentColor"/>
                         </svg>
                     </span>
                     <span class="logo__text">TechFix</span>
                 </a>
                 <nav class="nav">
                     <ul class="nav__list">
-                       <li><a href="tv.html" class="nav__link">Телевизоры</a></li>
-                        <li><a href="auto-electronics.html" class="nav__link">Автоэлектроника</a></li>
-                        <li><a href="consoles.html" class="nav__link">Приставки</a></li>
-                        <li><a href="laptops.html" class="nav__link">Ноутбуки</a></li>
-                        <li><a href="smartphones.html" class="nav__link">Смартфоны</a></li>
-                        <li><a href="index.html#categories" class="nav__link">Все категории</a></li>
+                       <li><a href="#" class="nav__link">Телевизоры</a></li>
+                        <li><a href="#" class="nav__link">Автоэлектроника</a></li>
+                        <li><a href="#" class="nav__link">Приставки</a></li>
+                        <li><a href="#" class="nav__link">Ноутбуки</a></li>
+                        <li><a href="#" class="nav__link">Смартфоны</a></li>
+                        <li><a href="#" class="nav__link">Все категории</a></li>
                     </ul>
                 </nav>
             </div>
