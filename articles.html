@@ -1,272 +1,316 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" data-theme="light">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Новости | TechFix</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <title>TechFix — Новости технологий</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
-    html {
-      box-sizing: border-box;
-      font-size: 16px;
-      scroll-behavior: smooth;
+    :root {
+      --gradient: linear-gradient(90deg, #e1005a 0%, #7f00ff 100%);
+      --color-accent: #e1005a;
+      --color-bg: #fff;
+      --color-sidebar: #fafaff;
+      --color-card-shadow: rgba(127,0,255,0.07);
+      --color-card-hover: rgba(225,0,90,0.12);
+      --radius: 16px;
     }
-    *, *:before, *:after { box-sizing: inherit; }
-
     body {
+      background: var(--color-bg);
+      font-family: 'Inter', sans-serif;
+      color: #222;
       margin: 0;
       padding: 0;
-      background: #f7f6fa;
-      color: #2a223a;
-      font-family: 'Inter', Arial, sans-serif;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
     }
-
     .container {
-      width: 100%;
-      max-width: 1200px;
+      max-width: 1240px;
       margin: 0 auto;
       padding: 0 16px;
     }
-
-    .header, .footer {
+    .header {
       background: #fff;
-      border-bottom: 1px solid #ece1f5;
+      border-bottom: 1.5px solid #eee;
+      position: sticky;
+      top: 0;
+      z-index: 10;
     }
     .header__inner {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 16px 0;
-      flex-wrap: wrap;
+      padding: 18px 0;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      font-weight: 700;
+      font-size: 1.3rem;
+      color: #222;
+      text-decoration: none;
       gap: 8px;
     }
-    .logo__text {
-      color: #b9005b;
-      font-weight: 700;
-      font-size: 1.5rem;
-      letter-spacing: 1px;
-      text-decoration: none;
+    .logo__icon {
+      color: var(--color-accent);
+      display: flex;
+      align-items: center;
     }
     .nav__list {
       display: flex;
-      gap: 1rem;
+      gap: 28px;
       list-style: none;
       margin: 0;
       padding: 0;
-      flex-wrap: wrap;
     }
     .nav__link {
-      color: #2a223a;
-      padding: 8px 16px;
-      border-radius: 16px;
+      color: #444;
       text-decoration: none;
       font-weight: 500;
-      transition: background 0.15s, color 0.15s;
-      display: inline-block;
+      transition: color 0.15s;
+      font-size: 1rem;
     }
-    .nav__link:hover, .nav__link.active {
-      background: linear-gradient(90deg, #ff2566, #a259ff);
-      color: #fff;
+    .nav__link:hover {
+      color: var(--color-accent);
     }
-
-    .guides-section {
-      flex: 1 1 auto;
-      padding: 28px 0 16px 0;
-    }
-    .section__title {
-      font-size: 2rem;
-      font-weight: 700;
-      background: linear-gradient(90deg, #ff2566 20%, #a259ff 80%);
-      color: transparent;
-      background-clip: text;
-      -webkit-background-clip: text;
-      margin-bottom: 24px;
-    }
-    .guides__grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 16px;
-    }
-    .guide-card {
-      background: #fff;
+    /* Featured Article */
+    .featured-article {
+      display: flex;
+      flex-direction: row;
+      background: var(--gradient);
       border-radius: 20px;
-      box-shadow: 0 2px 12px 0 #e7d6f5aa;
-      padding: 16px 12px 12px 12px;
-      transition: box-shadow 0.18s, transform 0.18s;
+      overflow: hidden;
+      margin: 36px 0 32px 0;
+      min-height: 320px;
+      box-shadow: 0 2px 12px var(--color-card-shadow);
+    }
+    .featured-article__image {
+      width: 55%;
+      object-fit: cover;
+      min-height: 260px;
+    }
+    .featured-article__content {
+      padding: 42px 36px;
+      color: #fff;
       display: flex;
       flex-direction: column;
-      min-height: 110px;
-      position: relative;
-      overflow: hidden;
-    }
-    .guide-card:hover {
-      box-shadow: 0 4px 24px 0 #ff256644;
-      transform: translateY(-2px) scale(1.01);
-    }
-    .guide-card__title {
-      color: #b9005b;
-      font-size: 1rem;
-      margin-bottom: 7px;
-      font-weight: 700;
-      letter-spacing: 0.2px;
-      line-height: 1.22;
-      word-break: break-word;
-    }
-    .guide-card__desc {
-      color: #2a223a;
-      opacity: 0.95;
-      margin-bottom: 10px;
-      font-size: 0.95rem;
-      flex-grow: 1;
-      line-height: 1.4;
-      word-break: break-word;
-    }
-    .guide-card .nav__link {
-      align-self: flex-start;
-      font-size: 0.93rem;
-      padding: 6px 14px;
-      background: linear-gradient(90deg, #ff2566, #a259ff);
-      color: #fff;
-      border-radius: 12px;
-      border: none;
-      font-weight: 600;
-      transition: background 0.15s, color 0.15s;
-      margin-top: 2px;
-    }
-    .guide-card .nav__link:hover {
-      background: linear-gradient(90deg, #a259ff, #ff2566);
-      color: #fff;
-    }
-
-    .show-more-wrapper {
-      display: flex;
       justify-content: center;
-      margin: 20px 0 0 0;
+      width: 45%;
     }
-    .show-more-btn {
-      background: linear-gradient(90deg, #ff2566, #a259ff);
-      color: #fff;
-      font-size: 1rem;
+    .featured-article .category {
+      background: #fff2;
+      padding: 4px 14px;
+      border-radius: 999px;
+      font-size: 0.92rem;
+      margin-bottom: 12px;
+      display: inline-block;
+      font-weight: 500;
+      letter-spacing: 0.03em;
+    }
+    .featured-article h1 {
+      font-size: 2.1rem;
+      margin: 0 0 14px 0;
+      font-weight: 700;
+      line-height: 1.2;
+    }
+    .featured-article p {
+      font-size: 1.15rem;
+      margin: 0 0 18px 0;
+      opacity: 0.96;
+      max-width: 90%;
+    }
+    .read-more {
+      display: inline-block;
+      margin-top: 8px;
+      padding: 10px 24px;
+      border-radius: 999px;
+      background: #fff;
+      color: var(--color-accent);
       font-weight: 600;
-      border: none;
-      border-radius: 18px;
-      padding: 10px 28px;
-      cursor: pointer;
-      box-shadow: 0 2px 10px 0 #a259ff33;
-      transition: background 0.18s, transform 0.13s;
-    }
-    .show-more-btn:active {
-      transform: scale(0.97);
-    }
-    .show-more-btn:hover {
-      background: linear-gradient(90deg, #a259ff, #ff2566);
-      transform: scale(1.045);
-    }
-
-    .footer {
-      padding: 18px 0 0 0;
-      color: #a259ff;
-      border-top: 1px solid #ece1f5;
-      font-size: 0.97rem;
-    }
-    .footer__grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-      gap: 10px;
-      margin-bottom: 8px;
-    }
-    .footer__col--logo .logo__text {
-      color: #b9005b;
-    }
-    .footer__link {
-      color: #2a223a;
       text-decoration: none;
-      transition: color 0.15s;
-      font-size: 0.97rem;
-    }
-    .footer__link:hover {
-      color: #ff2566;
-    }
-    .footer__title {
-      color: #a259ff;
       font-size: 1rem;
-      margin-bottom: 6px;
+      box-shadow: 0 2px 12px var(--color-card-shadow);
+      transition: background 0.2s, color 0.2s;
     }
-    .footer__links {
+    .read-more:hover {
+      background: var(--color-accent);
+      color: #fff;
+    }
+    /* Main Layout */
+    .main-content {
+      display: flex;
+      gap: 32px;
+    }
+    /* News Grid */
+    .news-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 24px;
+      flex: 1;
+    }
+    .news-card {
+      background: #fff;
+      border-radius: var(--radius);
+      box-shadow: 0 2px 12px var(--color-card-shadow);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: box-shadow 0.18s, transform 0.18s;
+      min-width: 0;
+      animation: fadeIn 0.7s;
+    }
+    .news-card:hover {
+      box-shadow: 0 6px 30px var(--color-card-hover);
+      transform: translateY(-3px) scale(1.012);
+    }
+    .news-card__image {
+      width: 100%;
+      aspect-ratio: 16/9;
+      object-fit: cover;
+      background: #f3f3f7;
+    }
+    .news-card__content {
+      padding: 18px 18px 14px 18px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+    .news-card .category {
+      color: var(--color-accent);
+      font-size: 0.92rem;
+      font-weight: 500;
+      margin-bottom: 7px;
+    }
+    .news-card h2 {
+      font-size: 1.18rem;
+      margin: 0 0 8px 0;
+      font-weight: 600;
+      line-height: 1.25;
+    }
+    .news-card p {
+      font-size: 1rem;
+      margin: 0 0 12px 0;
+      opacity: 0.92;
+      flex: 1;
+    }
+    .news-card__meta {
+      font-size: 0.95rem;
+      color: #888;
+      display: flex;
+      gap: 18px;
+      align-items: center;
+    }
+    .news-card__meta i {
+      margin-right: 6px;
+      color: var(--color-accent);
+    }
+    /* Sidebar */
+    .sidebar {
+      background: var(--color-sidebar);
+      border-radius: var(--radius);
+      padding: 24px;
+      min-width: 270px;
+      max-width: 320px;
+      box-shadow: 0 2px 12px var(--color-card-shadow);
+      height: fit-content;
+      position: sticky;
+      top: 90px;
+    }
+    .sidebar__block {
+      margin-bottom: 32px;
+    }
+    .sidebar__block h3 {
+      font-size: 1.08rem;
+      font-weight: 600;
+      margin: 0 0 12px 0;
+      color: var(--color-accent);
+      letter-spacing: 0.01em;
+    }
+    .sidebar__block ul {
       list-style: none;
       padding: 0;
       margin: 0;
     }
-    .footer__links li {
-      margin-bottom: 3px;
+    .sidebar__block li {
+      margin-bottom: 12px;
     }
-    .footer__text {
-      color: #2a223a;
-      opacity: 0.8;
-      font-size: 0.91rem;
-      margin-top: 5px;
+    .sidebar__block a {
+      color: #333;
+      text-decoration: none;
+      font-size: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: color 0.16s;
     }
-    .footer__bottom {
-      margin-top: 7px;
-      border-top: 1px solid #ece1f5;
-      padding-top: 7px;
-      color: #a259ff;
-      text-align: center;
-      opacity: 0.7;
-      font-size: 0.91rem;
+    .sidebar__block a:hover {
+      color: var(--color-accent);
     }
-
+    .latest-updates li {
+      font-size: 0.98rem;
+      margin-bottom: 8px;
+    }
+    /* Loading Spinner */
+    .loading-spinner {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 36px 0;
+    }
+    .spinner {
+      width: 38px;
+      height: 38px;
+      border: 4px solid #eaeaea;
+      border-top: 4px solid #e1005a;
+      border-radius: 50%;
+      animation: spin 0.9s linear infinite;
+    }
+    @keyframes spin {
+      0% { transform: rotate(0deg);}
+      100% { transform: rotate(360deg);}
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(18px);}
+      to { opacity: 1; transform: translateY(0);}
+    }
+    /* Responsive */
+    @media (max-width: 1024px) {
+      .main-content {
+        flex-direction: column;
+      }
+      .sidebar {
+        max-width: none;
+        margin: 32px 0 0 0;
+        position: static;
+      }
+      .featured-article {
+        flex-direction: column;
+        min-height: unset;
+      }
+      .featured-article__image,
+      .featured-article__content {
+        width: 100%;
+      }
+      .featured-article__content {
+        padding: 32px 22px;
+      }
+    }
     @media (max-width: 600px) {
-      html { font-size: 15px; }
       .header__inner {
         flex-direction: column;
-        align-items: flex-start;
-        gap: 6px;
-        padding: 10px 0;
+        gap: 14px;
       }
       .nav__list {
-        gap: 0.4rem;
-        flex-wrap: wrap;
-      }
-      .container {
-        padding: 0 5px;
-      }
-      .guides-section {
-        padding: 10px 0 8px 0;
-      }
-      .section__title {
-        font-size: 1.1rem;
-        margin-bottom: 13px;
-      }
-      .guides__grid {
-        grid-template-columns: 1fr;
-        gap: 8px;
-      }
-      .guide-card {
-        padding: 9px 6px 7px 6px;
-        border-radius: 12px;
-        min-height: 80px;
-      }
-      .guide-card__title {
+        gap: 14px;
         font-size: 0.97rem;
       }
-      .guide-card__desc {
-        font-size: 0.89rem;
+      .featured-article h1 {
+        font-size: 1.3rem;
       }
-      .show-more-btn {
-        font-size: 0.95rem;
-        padding: 8px 16px;
-        border-radius: 12px;
+      .news-card h2 {
+        font-size: 1rem;
       }
-      .footer__grid {
-        grid-template-columns: 1fr;
-        gap: 4px;
-      }
-      .footer {
-        padding: 8px 0 0 0;
+      .sidebar {
+        padding: 16px;
       }
     }
   </style>
@@ -275,21 +319,25 @@
   <header class="header">
     <div class="container">
       <div class="header__inner">
-        <a href="index.html" class="logo__text">TechFix</a>
+        <a href="#" class="logo">
+          <span class="logo__icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 15L7 10H17L12 15Z" fill="currentColor"/><path d="M12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3ZM12 19C8.13401 19 5 15.866 5 12C5 8.13401 8.13401 5 12 5C15.866 5 19 8.13401 19 12C19 15.866 15.866 19 12 19Z" fill="currentColor"/></svg>
+          </span>
+          <span class="logo__text">TechFix</span>
+        </a>
         <nav class="nav">
           <ul class="nav__list">
-            <li><a href="tv.html" class="nav__link">Телевизоры</a></li>
-            <li><a href="auto-electronics.html" class="nav__link">Автоэлектроника</a></li>
-            <li><a href="consoles.html" class="nav__link">Приставки</a></li>
-            <li><a href="laptops.html" class="nav__link">Ноутбуки</a></li>
-            <li><a href="smartphones.html" class="nav__link">Смартфоны</a></li>
-            <li><a href="index.html#categories" class="nav__link">Все категории</a></li>
+            <li><a href="#" class="nav__link">Телевизоры</a></li>
+            <li><a href="#" class="nav__link">Автоэлектроника</a></li>
+            <li><a href="#" class="nav__link">Приставки</a></li>
+            <li><a href="#" class="nav__link">Ноутбуки</a></li>
+            <li><a href="#" class="nav__link">Смартфоны</a></li>
+            <li><a href="#" class="nav__link">Все категории</a></li>
           </ul>
         </nav>
       </div>
     </div>
   </header>
-
 
 
 
