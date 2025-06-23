@@ -16,39 +16,47 @@
             --footer-bg: #f0f0f0;
         }
 
+        * {
+            box-sizing: border-box;
+        }
+
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
             margin: 0;
             padding: 0;
             background-color: var(--bg-color);
             color: var(--text-color);
-            line-height: 1.6;
+            line-height: 1.5;
+            -webkit-text-size-adjust: 100%;
+            -webkit-font-smoothing: antialiased;
         }
 
         .container {
             display: flex;
             min-height: 100vh;
+            flex-direction: column;
         }
 
         /* Шапка */
         header {
-            position: fixed;
+            position: sticky;
             top: 0;
             left: 0;
             right: 0;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 15px 20px;
+            padding: 12px 16px;
             background-color: var(--header-bg);
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
             z-index: 1000;
         }
 
         .logo {
             font-weight: bold;
-            font-size: 24px;
+            font-size: 20px;
             color: #000;
+            white-space: nowrap;
         }
 
         .logo span {
@@ -57,16 +65,17 @@
 
         .search {
             flex-grow: 1;
-            max-width: 600px;
-            margin: 0 20px;
+            margin: 0 12px;
+            min-width: 0;
         }
 
         .search input {
             width: 100%;
-            padding: 10px 15px;
+            padding: 8px 12px;
             border: 1px solid var(--border-color);
-            border-radius: 20px;
-            font-size: 16px;
+            border-radius: 18px;
+            font-size: 14px;
+            background-color: #f1f1f1;
         }
 
         .header-right {
@@ -75,26 +84,41 @@
         }
 
         .theme-toggle, .login {
-            margin-left: 20px;
+            margin-left: 12px;
             cursor: pointer;
         }
 
         .theme-toggle i {
-            font-size: 20px;
+            font-size: 18px;
         }
 
         .login {
-            padding: 8px 15px;
+            padding: 6px 12px;
             border: 1px solid var(--border-color);
             border-radius: 4px;
+            font-size: 14px;
+            white-space: nowrap;
         }
 
         /* Меню */
         .sidebar {
-            width: 250px;
+            position: fixed;
+            top: 56px;
+            left: 0;
+            bottom: 0;
+            width: 280px;
             background-color: var(--header-bg);
-            padding: 80px 0 20px 20px;
+            padding: 16px;
             box-shadow: 1px 0 5px rgba(0,0,0,0.1);
+            transform: translateX(-100%);
+            transition: transform 0.3s ease;
+            z-index: 999;
+            overflow-y: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .sidebar.show {
+            transform: translateX(0);
         }
 
         .menu {
@@ -104,7 +128,7 @@
         }
 
         .menu li {
-            margin-bottom: 15px;
+            margin-bottom: 12px;
         }
 
         .menu a {
@@ -113,8 +137,9 @@
             text-decoration: none;
             color: var(--text-color);
             padding: 8px 10px;
-            border-radius: 4px;
-            transition: background-color 0.3s;
+            border-radius: 6px;
+            transition: background-color 0.2s;
+            font-size: 15px;
         }
 
         .menu a:hover {
@@ -122,15 +147,16 @@
         }
 
         .menu i {
-            margin-right: 10px;
+            margin-right: 12px;
             width: 20px;
             text-align: center;
+            font-size: 16px;
         }
 
         .submenu {
             list-style: none;
-            padding-left: 30px;
-            margin-top: 10px;
+            padding-left: 38px;
+            margin-top: 8px;
             display: none;
         }
 
@@ -141,15 +167,22 @@
         .more-btn {
             cursor: pointer;
             color: #666;
-            font-size: 14px;
-            margin-top: 10px;
+            font-size: 15px;
+            margin-top: 8px;
+            padding: 8px 10px;
             display: flex;
             align-items: center;
+            border-radius: 6px;
+        }
+
+        .more-btn:hover {
+            background-color: #f0f0f0;
         }
 
         .more-btn i {
-            margin-left: 5px;
+            margin-left: 8px;
             transition: transform 0.3s;
+            font-size: 12px;
         }
 
         .more-btn.active i {
@@ -159,25 +192,26 @@
         /* Контент */
         .content {
             flex-grow: 1;
-            padding: 80px 20px 20px 270px;
+            padding: 16px;
+            margin-top: 56px;
         }
 
         .news-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
+            grid-template-columns: 1fr;
+            gap: 16px;
         }
 
         .news-card {
             background-color: var(--card-bg);
             border-radius: 8px;
             overflow: hidden;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-            transition: transform 0.3s;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+            transition: transform 0.2s;
         }
 
         .news-card:hover {
-            transform: translateY(-5px);
+            transform: translateY(-2px);
         }
 
         .card-image {
@@ -187,7 +221,7 @@
         }
 
         .card-content {
-            padding: 15px;
+            padding: 12px;
         }
 
         .card-meta {
@@ -195,50 +229,52 @@
             justify-content: space-between;
             font-size: 12px;
             color: #666;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
         }
 
         .card-title {
-            font-size: 18px;
-            margin: 0 0 10px 0;
-            font-weight: bold;
+            font-size: 16px;
+            margin: 0 0 8px 0;
+            font-weight: 600;
+            line-height: 1.4;
         }
 
         .card-desc {
             font-size: 14px;
             color: #666;
             margin: 0;
+            line-height: 1.4;
         }
 
         .ad-label {
             display: inline-block;
             background-color: var(--accent-color);
             color: #000;
-            font-size: 12px;
+            font-size: 11px;
             padding: 2px 6px;
             border-radius: 3px;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
         }
 
         /* Футер */
         footer {
             background-color: var(--footer-bg);
-            padding: 20px;
+            padding: 20px 16px;
             text-align: center;
-            margin-top: 30px;
         }
 
         .footer-links {
             display: flex;
-            justify-content: center;
             flex-wrap: wrap;
-            margin-bottom: 15px;
+            justify-content: center;
+            margin-bottom: 16px;
+            gap: 8px 16px;
         }
 
         .footer-links a {
-            margin: 0 10px;
             color: #666;
             text-decoration: none;
+            font-size: 13px;
         }
 
         .install-btn {
@@ -248,62 +284,86 @@
             padding: 10px 20px;
             border-radius: 4px;
             text-decoration: none;
-            font-weight: bold;
+            font-weight: 500;
+            font-size: 14px;
+        }
+
+        /* Оверлей для меню */
+        .overlay {
+            position: fixed;
+            top: 56px;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0,0,0,0.5);
+            z-index: 998;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s, visibility 0.3s;
+        }
+
+        .overlay.show {
+            opacity: 1;
+            visibility: visible;
         }
 
         /* Адаптивность */
-        @media (max-width: 1024px) {
+        @media (min-width: 600px) {
             .news-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
+            
+            .card-image {
+                height: 160px;
+            }
         }
 
-        @media (max-width: 768px) {
+        @media (min-width: 900px) {
             .container {
-                flex-direction: column;
+                flex-direction: row;
             }
-
+            
             .sidebar {
-                width: 100%;
-                padding: 60px 20px 20px;
-                display: none;
+                position: sticky;
+                top: 56px;
+                transform: none;
+                width: 240px;
+                height: calc(100vh - 56px);
             }
-
-            .sidebar.show {
-                display: block;
-            }
-
+            
             .content {
-                padding: 80px 20px 20px;
+                padding: 20px;
+                margin-left: 240px;
+                margin-top: 56px;
             }
-
+            
             .news-grid {
-                grid-template-columns: 1fr;
+                grid-template-columns: repeat(3, 1fr);
             }
-
-            .menu-btn {
-                display: block;
-                position: fixed;
-                top: 15px;
-                left: 20px;
-                font-size: 20px;
-                z-index: 1001;
-                cursor: pointer;
-            }
-
-            .search {
-                margin-left: 50px;
+            
+            .menu-btn, .overlay {
+                display: none;
             }
         }
 
         /* Темная тема */
         .dark-mode {
-            --bg-color: #222;
-            --text-color: #eee;
-            --header-bg: #333;
-            --card-bg: #444;
-            --border-color: #555;
-            --footer-bg: #333;
+            --bg-color: #121212;
+            --text-color: #e0e0e0;
+            --header-bg: #1e1e1e;
+            --card-bg: #2d2d2d;
+            --border-color: #444;
+            --footer-bg: #1e1e1e;
+        }
+
+        .dark-mode .search input {
+            background-color: #333;
+            color: #fff;
+            border-color: #444;
+        }
+
+        .dark-mode .more-btn:hover {
+            background-color: #333;
         }
     </style>
 </head>
@@ -324,6 +384,9 @@
             <div class="login">Войти</div>
         </div>
     </header>
+
+    <!-- Оверлей для меню -->
+    <div class="overlay"></div>
 
     <div class="container">
         <!-- Меню -->
@@ -354,10 +417,10 @@
             <div class="news-grid">
                 <!-- Карточка 1 -->
                 <div class="news-card">
-                    <img src="https://via.placeholder.com/300x180" alt="Новость" class="card-image">
+                    <img src="https://via.placeholder.com/600x360" alt="Новость" class="card-image">
                     <div class="card-content">
                         <div class="card-meta">
-                            <span>Автор: TechNews</span>
+                            <span>TechNews</span>
                             <span>15.4K просмотров</span>
                         </div>
                         <h3 class="card-title">Новые технологии в 2023 году</h3>
@@ -367,10 +430,10 @@
 
                 <!-- Карточка 2 -->
                 <div class="news-card">
-                    <img src="https://via.placeholder.com/300x180" alt="Новость" class="card-image">
+                    <img src="https://via.placeholder.com/600x360" alt="Новость" class="card-image">
                     <div class="card-content">
                         <div class="card-meta">
-                            <span>Автор: Кулинарный блог</span>
+                            <span>Кулинарный блог</span>
                             <span>8.2K просмотров</span>
                         </div>
                         <h3 class="card-title">5 рецептов идеального завтрака</h3>
@@ -380,7 +443,7 @@
 
                 <!-- Карточка 3 (реклама) -->
                 <div class="news-card">
-                    <img src="https://via.placeholder.com/300x180" alt="Реклама" class="card-image">
+                    <img src="https://via.placeholder.com/600x360" alt="Реклама" class="card-image">
                     <div class="card-content">
                         <div class="ad-label">Реклама</div>
                         <div class="card-meta">
@@ -394,10 +457,10 @@
 
                 <!-- Карточка 4 -->
                 <div class="news-card">
-                    <img src="https://via.placeholder.com/300x180" alt="Новость" class="card-image">
+                    <img src="https://via.placeholder.com/600x360" alt="Новость" class="card-image">
                     <div class="card-content">
                         <div class="card-meta">
-                            <span>Автор: Путешествия</span>
+                            <span>Путешествия</span>
                             <span>12.7K просмотров</span>
                         </div>
                         <h3 class="card-title">10 мест, которые стоит посетить в России</h3>
@@ -407,10 +470,10 @@
 
                 <!-- Карточка 5 -->
                 <div class="news-card">
-                    <img src="https://via.placeholder.com/300x180" alt="Новость" class="card-image">
+                    <img src="https://via.placeholder.com/600x360" alt="Новость" class="card-image">
                     <div class="card-content">
                         <div class="card-meta">
-                            <span>Автор: Фитнес эксперт</span>
+                            <span>Фитнес эксперт</span>
                             <span>6.3K просмотров</span>
                         </div>
                         <h3 class="card-title">Как начать заниматься спортом дома</h3>
@@ -420,10 +483,10 @@
 
                 <!-- Карточка 6 -->
                 <div class="news-card">
-                    <img src="https://via.placeholder.com/300x180" alt="Новость" class="card-image">
+                    <img src="https://via.placeholder.com/600x360" alt="Новость" class="card-image">
                     <div class="card-content">
                         <div class="card-meta">
-                            <span>Автор: Финансы</span>
+                            <span>Финансы</span>
                             <span>9.1K просмотров</span>
                         </div>
                         <h3 class="card-title">Как сэкономить на путешествиях</h3>
@@ -448,8 +511,20 @@
 
     <script>
         // Мобильное меню
-        document.querySelector('.menu-btn').addEventListener('click', function() {
-            document.querySelector('.sidebar').classList.toggle('show');
+        const menuBtn = document.querySelector('.menu-btn');
+        const sidebar = document.querySelector('.sidebar');
+        const overlay = document.querySelector('.overlay');
+        
+        menuBtn.addEventListener('click', function() {
+            sidebar.classList.toggle('show');
+            overlay.classList.toggle('show');
+            document.body.style.overflow = sidebar.classList.contains('show') ? 'hidden' : '';
+        });
+
+        overlay.addEventListener('click', function() {
+            sidebar.classList.remove('show');
+            overlay.classList.remove('show');
+            document.body.style.overflow = '';
         });
 
         // Раскрывающееся подменю
@@ -461,7 +536,19 @@
         // Темная тема
         document.querySelector('.theme-toggle').addEventListener('click', function() {
             document.body.classList.toggle('dark-mode');
+            
+            // Сохраняем предпочтение в localStorage
+            const isDarkMode = document.body.classList.contains('dark-mode');
+            localStorage.setItem('darkMode', isDarkMode);
         });
+
+        // Проверяем сохраненную тему при загрузке
+        if (localStorage.getItem('darkMode') === 'true') {
+            document.body.classList.add('dark-mode');
+        }
+
+        // Оптимизация для тач-устройств
+        document.addEventListener('touchstart', function(){}, {passive: true});
     </script>
 </body>
 </html>
