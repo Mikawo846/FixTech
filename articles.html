@@ -1,467 +1,580 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Яндекс Дзен</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <style>
-        :root {
-            --bg-color: #f9f9f9;
-            --text-color: #333;
-            --accent-color: #ffdb4d;
-            --header-bg: #fff;
-            --card-bg: #fff;
-            --border-color: #e6e6e6;
-            --footer-bg: #f0f0f0;
-        }
-
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            line-height: 1.6;
-        }
-
-        .container {
-            display: flex;
-            min-height: 100vh;
-        }
-
-        /* Шапка */
-        header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 20px;
-            background-color: var(--header-bg);
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            z-index: 1000;
-        }
-
-        .logo {
-            font-weight: bold;
-            font-size: 24px;
-            color: #000;
-        }
-
-        .logo span {
-            color: #f00;
-        }
-
-        .search {
-            flex-grow: 1;
-            max-width: 600px;
-            margin: 0 20px;
-        }
-
-        .search input {
-            width: 100%;
-            padding: 10px 15px;
-            border: 1px solid var(--border-color);
-            border-radius: 20px;
-            font-size: 16px;
-        }
-
-        .header-right {
-            display: flex;
-            align-items: center;
-        }
-
-        .theme-toggle, .login {
-            margin-left: 20px;
-            cursor: pointer;
-        }
-
-        .theme-toggle i {
-            font-size: 20px;
-        }
-
-        .login {
-            padding: 8px 15px;
-            border: 1px solid var(--border-color);
-            border-radius: 4px;
-        }
-
-        /* Меню */
-        .sidebar {
-            width: 250px;
-            background-color: var(--header-bg);
-            padding: 80px 0 20px 20px;
-            box-shadow: 1px 0 5px rgba(0,0,0,0.1);
-        }
-
-        .menu {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        .menu li {
-            margin-bottom: 15px;
-        }
-
-        .menu a {
-            display: flex;
-            align-items: center;
-            text-decoration: none;
-            color: var(--text-color);
-            padding: 8px 10px;
-            border-radius: 4px;
-            transition: background-color 0.3s;
-        }
-
-        .menu a:hover {
-            background-color: var(--accent-color);
-        }
-
-        .menu i {
-            margin-right: 10px;
-            width: 20px;
-            text-align: center;
-        }
-
-        .submenu {
-            list-style: none;
-            padding-left: 30px;
-            margin-top: 10px;
-            display: none;
-        }
-
-        .submenu.show {
-            display: block;
-        }
-
-        .more-btn {
-            cursor: pointer;
-            color: #666;
-            font-size: 14px;
-            margin-top: 10px;
-            display: flex;
-            align-items: center;
-        }
-
-        .more-btn i {
-            margin-left: 5px;
-            transition: transform 0.3s;
-        }
-
-        .more-btn.active i {
-            transform: rotate(180deg);
-        }
-
-        /* Контент */
-        .content {
-            flex-grow: 1;
-            padding: 80px 20px 20px 270px;
-        }
-
-        .news-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-        }
-
-        .news-card {
-            background-color: var(--card-bg);
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-            transition: transform 0.3s;
-        }
-
-        .news-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .card-image {
-            width: 100%;
-            height: 180px;
-            object-fit: cover;
-        }
-
-        .card-content {
-            padding: 15px;
-        }
-
-        .card-meta {
-            display: flex;
-            justify-content: space-between;
-            font-size: 12px;
-            color: #666;
-            margin-bottom: 10px;
-        }
-
-        .card-title {
-            font-size: 18px;
-            margin: 0 0 10px 0;
-            font-weight: bold;
-        }
-
-        .card-desc {
-            font-size: 14px;
-            color: #666;
-            margin: 0;
-        }
-
-        .ad-label {
-            display: inline-block;
-            background-color: var(--accent-color);
-            color: #000;
-            font-size: 12px;
-            padding: 2px 6px;
-            border-radius: 3px;
-            margin-bottom: 10px;
-        }
-
-        /* Футер */
-        footer {
-            background-color: var(--footer-bg);
-            padding: 20px;
-            text-align: center;
-            margin-top: 30px;
-        }
-
-        .footer-links {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin-bottom: 15px;
-        }
-
-        .footer-links a {
-            margin: 0 10px;
-            color: #666;
-            text-decoration: none;
-        }
-
-        .install-btn {
-            display: inline-block;
-            background-color: #000;
-            color: #fff;
-            padding: 10px 20px;
-            border-radius: 4px;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        /* Адаптивность */
-        @media (max-width: 1024px) {
-            .news-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
-        @media (max-width: 768px) {
-            .container {
-                flex-direction: column;
-            }
-
-            .sidebar {
-                width: 100%;
-                padding: 60px 20px 20px;
-                display: none;
-            }
-
-            .sidebar.show {
-                display: block;
-            }
-
-            .content {
-                padding: 80px 20px 20px;
-            }
-
-            .news-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .menu-btn {
-                display: block;
-                position: fixed;
-                top: 15px;
-                left: 20px;
-                font-size: 20px;
-                z-index: 1001;
-                cursor: pointer;
-            }
-
-            .search {
-                margin-left: 50px;
-            }
-        }
-
-        /* Темная тема */
-        .dark-mode {
-            --bg-color: #222;
-            --text-color: #eee;
-            --header-bg: #333;
-            --card-bg: #444;
-            --border-color: #555;
-            --footer-bg: #333;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Новости — Дзен-стиль</title>
+  <style>
+    :root {
+      --main-bg: #f9f9f9;
+      --main-text: #333;
+      --accent: #ffd600;
+      --menu-bg: #fff;
+      --menu-hover: #f3f3f3;
+      --border: #ececec;
+      --ad-bg: #fffbe6;
+      --ad-border: #ffe066;
+      --footer-bg: #fff;
+      --footer-text: #888;
+    }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', 'Arial', sans-serif;
+      background: var(--main-bg);
+      color: var(--main-text);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    /* Header */
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 32px;
+      height: 64px;
+      background: #fff;
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .logo svg {
+      width: 32px; height: 32px;
+    }
+    .search-bar {
+      flex: 1;
+      max-width: 400px;
+      display: flex;
+      justify-content: center;
+    }
+    .search-bar input {
+      width: 100%;
+      padding: 8px 16px;
+      border-radius: 20px;
+      border: 1px solid var(--border);
+      outline: none;
+      font-size: 16px;
+      background: #f3f3f3;
+      transition: border 0.2s;
+    }
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .theme-toggle {
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 8px;
+      border-radius: 50%;
+      transition: background 0.2s;
+    }
+    .theme-toggle:hover {
+      background: var(--menu-hover);
+    }
+    .login-btn {
+      background: var(--accent);
+      color: #222;
+      border: none;
+      padding: 8px 20px;
+      border-radius: 20px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.2s;
+      font-size: 16px;
+    }
+    .login-btn:hover {
+      background: #ffe066;
+    }
+    /* Layout */
+    .container {
+      display: flex;
+      flex: 1;
+      min-height: 0;
+    }
+    /* Sidebar */
+    nav {
+      width: 220px;
+      background: var(--menu-bg);
+      border-right: 1px solid var(--border);
+      padding: 24px 0 24px 0;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      transition: width 0.2s;
+      position: relative;
+    }
+    .menu {
+      list-style: none;
+      padding: 0 0 0 24px;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .menu li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 0;
+      cursor: pointer;
+      border-radius: 12px 0 0 12px;
+      transition: background 0.2s;
+    }
+    .menu li:hover, .menu li.active {
+      background: var(--menu-hover);
+      color: var(--accent);
+    }
+    .menu li svg {
+      width: 20px; height: 20px;
+      fill: var(--main-text);
+    }
+    .dropdown {
+      margin-top: 16px;
+      padding-left: 24px;
+    }
+    .dropdown-toggle {
+      background: none;
+      border: none;
+      color: var(--main-text);
+      font-size: 15px;
+      cursor: pointer;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .dropdown-content {
+      display: none;
+      flex-direction: column;
+      gap: 8px;
+      margin-top: 8px;
+    }
+    .dropdown.open .dropdown-content {
+      display: flex;
+    }
+    /* Main content */
+    main {
+      flex: 1;
+      padding: 32px 32px 16px 32px;
+      min-width: 0;
+      background: var(--main-bg);
+    }
+    .news-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+    .news-card {
+      background: #fff;
+      border-radius: 18px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: box-shadow 0.2s;
+      border: 1px solid var(--border);
+      position: relative;
+    }
+    .news-card.ad {
+      background: var(--ad-bg);
+      border: 1.5px dashed var(--ad-border);
+    }
+    .news-card img {
+      width: 100%;
+      aspect-ratio: 16/9;
+      object-fit: cover;
+      background: #eee;
+    }
+    .news-card .card-content {
+      padding: 16px 18px 14px 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      flex: 1;
+    }
+    .news-meta {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 13px;
+      color: #888;
+    }
+    .news-meta .author {
+      font-weight: 500;
+      color: var(--main-text);
+    }
+    .news-title {
+      font-size: 19px;
+      font-weight: bold;
+      margin: 0;
+      color: var(--main-text);
+      line-height: 1.2;
+    }
+    .news-desc {
+      font-size: 15px;
+      color: #555;
+      margin: 0;
+      flex: 1;
+    }
+    .ad-label {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      background: var(--accent);
+      color: #222;
+      padding: 3px 10px;
+      border-radius: 12px;
+      font-size: 13px;
+      font-weight: bold;
+      letter-spacing: 0.5px;
+      z-index: 1;
+    }
+    /* Footer */
+    footer {
+      background: var(--footer-bg);
+      border-top: 1px solid var(--border);
+      padding: 18px 32px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 15px;
+      color: var(--footer-text);
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .footer-recs {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .footer-recs a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 500;
+      transition: text-decoration 0.2s;
+    }
+    .footer-recs a:hover {
+      text-decoration: underline;
+    }
+    .browser-btn {
+      background: var(--accent);
+      color: #222;
+      border: none;
+      padding: 7px 18px;
+      border-radius: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      font-size: 15px;
+      margin-left: 12px;
+      transition: background 0.2s;
+    }
+    .browser-btn:hover {
+      background: #ffe066;
+    }
+    /* Responsive */
+    @media (max-width: 1100px) {
+      .news-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+      nav {
+        width: 170px;
+        padding-left: 0;
+      }
+      main {
+        padding: 24px 12px 12px 12px;
+      }
+    }
+    @media (max-width: 800px) {
+      .news-grid {
+        grid-template-columns: 1fr;
+      }
+      nav {
+        position: absolute;
+        left: -220px;
+        top: 64px;
+        height: calc(100vh - 64px);
+        z-index: 200;
+        width: 200px;
+        transition: left 0.3s;
+        background: #fff;
+        box-shadow: 2px 0 8px rgba(0,0,0,0.07);
+        border-right: 1px solid var(--border);
+      }
+      nav.open {
+        left: 0;
+      }
+      .sidebar-toggle {
+        display: inline-flex;
+      }
+      .container {
+        flex-direction: column;
+      }
+      main {
+        padding: 18px 4vw;
+      }
+    }
+    @media (max-width: 600px) {
+      header {
+        padding: 0 12px;
+      }
+      .search-bar {
+        max-width: 180px;
+      }
+      .news-card .card-content {
+        padding: 11px 10px 10px 10px;
+      }
+      .news-title {
+        font-size: 16px;
+      }
+      .news-desc {
+        font-size: 13px;
+      }
+      nav {
+        width: 150px;
+      }
+      .footer-recs {
+        flex-direction: column;
+        gap: 6px;
+      }
+      footer {
+        padding: 12px 8px;
+        font-size: 13px;
+      }
+    }
+    .sidebar-toggle {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 24px;
+      margin-right: 10px;
+      cursor: pointer;
+      color: var(--main-text);
+    }
+    /* Dark theme */
+    body.dark {
+      --main-bg: #181818;
+      --main-text: #f9f9f9;
+      --menu-bg: #202020;
+      --menu-hover: #232323;
+      --border: #282828;
+      --ad-bg: #23220a;
+      --ad-border: #ffd600;
+      --footer-bg: #202020;
+      --footer-text: #aaa;
+    }
+  </style>
 </head>
 <body>
-    <!-- Шапка -->
-    <header>
-        <div class="menu-btn">
-            <i class="fas fa-bars"></i>
-        </div>
-        <div class="logo">Яндекс<span>Дзен</span></div>
-        <div class="search">
-            <input type="text" placeholder="Поиск по Дзену">
-        </div>
-        <div class="header-right">
-            <div class="theme-toggle">
-                <i class="fas fa-lightbulb"></i>
-            </div>
-            <div class="login">Войти</div>
-        </div>
-    </header>
-
-    <div class="container">
-        <!-- Меню -->
-        <aside class="sidebar">
-            <ul class="menu">
-                <li><a href="#"><i class="fas fa-home"></i> Главная</a></li>
-                <li><a href="#"><i class="fas fa-heart"></i> Подписки</a></li>
-                <li><a href="#"><i class="fas fa-newspaper"></i> Новости</a></li>
-                <li><a href="#"><i class="fas fa-book-open"></i> Статьи</a></li>
-                <li><a href="#"><i class="fas fa-video"></i> Видео</a></li>
-                <li><a href="#"><i class="fas fa-film"></i> Ролики</a></li>
-                <li><a href="#"><i class="fas fa-gamepad"></i> Видеоигры</a></li>
-                <li><a href="#"><i class="fas fa-child"></i> Детям</a></li>
-                
-                <div class="more-btn">
-                    Ещё <i class="fas fa-chevron-down"></i>
-                </div>
-                <ul class="submenu">
-                    <li><a href="#"><i class="fas fa-info-circle"></i> Всё о Дзене</a></li>
-                    <li><a href="#"><i class="fas fa-briefcase"></i> Вакансии</a></li>
-                    <li><a href="#"><i class="fas fa-mobile-alt"></i> Дзен на iOS и Android</a></li>
-                </ul>
-            </ul>
-        </aside>
-
-        <!-- Контент -->
-        <main class="content">
-            <div class="news-grid">
-                <!-- Карточка 1 -->
-                <div class="news-card">
-                    <img src="https://via.placeholder.com/300x180" alt="Новость" class="card-image">
-                    <div class="card-content">
-                        <div class="card-meta">
-                            <span>Автор: TechNews</span>
-                            <span>15.4K просмотров</span>
-                        </div>
-                        <h3 class="card-title">Новые технологии в 2023 году</h3>
-                        <p class="card-desc">Обзор самых перспективных технологий, которые изменят нашу жизнь в ближайшие годы.</p>
-                    </div>
-                </div>
-
-                <!-- Карточка 2 -->
-                <div class="news-card">
-                    <img src="https://via.placeholder.com/300x180" alt="Новость" class="card-image">
-                    <div class="card-content">
-                        <div class="card-meta">
-                            <span>Автор: Кулинарный блог</span>
-                            <span>8.2K просмотров</span>
-                        </div>
-                        <h3 class="card-title">5 рецептов идеального завтрака</h3>
-                        <p class="card-desc">Простые и вкусные идеи для начала дня, которые заряжают энергией.</p>
-                    </div>
-                </div>
-
-                <!-- Карточка 3 (реклама) -->
-                <div class="news-card">
-                    <img src="https://via.placeholder.com/300x180" alt="Реклама" class="card-image">
-                    <div class="card-content">
-                        <div class="ad-label">Реклама</div>
-                        <div class="card-meta">
-                            <span>Яндекс</span>
-                            <span>Спонсор</span>
-                        </div>
-                        <h3 class="card-title">Яндекс Браузер - быстрый и удобный</h3>
-                        <p class="card-desc">Попробуйте новый Яндекс Браузер с турбо-режимом и встроенным блокировщиком рекламы.</p>
-                    </div>
-                </div>
-
-                <!-- Карточка 4 -->
-                <div class="news-card">
-                    <img src="https://via.placeholder.com/300x180" alt="Новость" class="card-image">
-                    <div class="card-content">
-                        <div class="card-meta">
-                            <span>Автор: Путешествия</span>
-                            <span>12.7K просмотров</span>
-                        </div>
-                        <h3 class="card-title">10 мест, которые стоит посетить в России</h3>
-                        <p class="card-desc">От Байкала до Камчатки - самые красивые уголки нашей страны.</p>
-                    </div>
-                </div>
-
-                <!-- Карточка 5 -->
-                <div class="news-card">
-                    <img src="https://via.placeholder.com/300x180" alt="Новость" class="card-image">
-                    <div class="card-content">
-                        <div class="card-meta">
-                            <span>Автор: Фитнес эксперт</span>
-                            <span>6.3K просмотров</span>
-                        </div>
-                        <h3 class="card-title">Как начать заниматься спортом дома</h3>
-                        <p class="card-desc">Простая программа тренировок для новичков без специального оборудования.</p>
-                    </div>
-                </div>
-
-                <!-- Карточка 6 -->
-                <div class="news-card">
-                    <img src="https://via.placeholder.com/300x180" alt="Новость" class="card-image">
-                    <div class="card-content">
-                        <div class="card-meta">
-                            <span>Автор: Финансы</span>
-                            <span>9.1K просмотров</span>
-                        </div>
-                        <h3 class="card-title">Как сэкономить на путешествиях</h3>
-                        <p class="card-desc">Проверенные лайфхаки для бюджетных поездок без потери комфорта.</p>
-                    </div>
-                </div>
-            </div>
-        </main>
+  <!-- Header -->
+  <header>
+    <button class="sidebar-toggle" aria-label="Меню">
+      <svg width="28" height="28" viewBox="0 0 28 28"><rect y="5" width="28" height="3" rx="1.5"/><rect y="12.5" width="28" height="3" rx="1.5"/><rect y="20" width="28" height="3" rx="1.5"/></svg>
+    </button>
+    <div class="logo">
+      <!-- Yandex Zen style logo -->
+      <svg viewBox="0 0 32 32"><circle cx="16" cy="16" r="14" fill="#ffd600"/><circle cx="16" cy="16" r="9" fill="#fff"/><circle cx="16" cy="16" r="5" fill="#ffd600"/></svg>
+      <span style="font-weight:bold; font-size: 20px; letter-spacing:1px;">Дзен</span>
     </div>
-
-    <!-- Футер -->
-    <footer>
-        <div class="footer-links">
-            <a href="#">О Дзене</a>
-            <a href="#">Реклама</a>
-            <a href="#">Помощь</a>
-            <a href="#">Правила</a>
-            <a href="#">Политика конфиденциальности</a>
+    <div class="search-bar">
+      <input type="text" placeholder="Поиск по Дзене...">
+    </div>
+    <div class="header-actions">
+      <button class="theme-toggle" aria-label="Темная тема">
+        <!-- Lamp icon -->
+        <svg width="22" height="22" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 2.79 1.64 5.19 4 6.32V18a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-2.68c2.36-1.13 4-3.53 4-6.32a7 7 0 0 0-7-7zm1 15h-2v-1h2v1zm2.83-3.17A5.002 5.002 0 0 1 7 9a5 5 0 1 1 10 0c0 1.66-.81 3.14-2.17 4.09z"/></svg>
+      </button>
+      <button class="login-btn">Войти</button>
+    </div>
+  </header>
+  <div class="container">
+    <!-- Sidebar/Menu -->
+    <nav>
+      <ul class="menu">
+        <li class="active">
+          <svg viewBox="0 0 24 24"><path d="M3 12l9-8 9 8v8a2 2 0 0 1-2 2h-2a2 2 0 0 1-2-2v-4h-4v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+          Главная
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+          Подписки
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24"><path d="M21 6h-2V3H5v3H3c-1.1 0-2 .9-2 2v11c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm0 13H3V8h18v11zm-8-5l5-3-5-3v6z"/></svg>
+          Новости
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24"><path d="M19 2H8c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 18H8V4h11v16zM6 6H4v14c0 1.1.9 2 2 2h12v-2H6V6z"/></svg>
+          Статьи
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24"><path d="M10 16.5l6-4.5-6-4.5v9zm-7-13h18c1.1 0 2 .9 2 2v14c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V5c0-1.1.9-2 2-2zm0 16h18V5H3v14z"/></svg>
+          Видео
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24"><path d="M21 6.5a2.5 2.5 0 0 0-5 0c0 1.38 1.12 2.5 2.5 2.5S21 7.88 21 6.5zM7 6.5A2.5 2.5 0 1 0 2 6.5c0 1.38 1.12 2.5 2.5 2.5S7 7.88 7 6.5zm7 7a2.5 2.5 0 1 0-5 0c0 1.38 1.12 2.5 2.5 2.5s2.5-1.12 2.5-2.5zm7 0a2.5 2.5 0 1 0-5 0c0 1.38 1.12 2.5 2.5 2.5s2.5-1.12 2.5-2.5zM7 13.5A2.5 2.5 0 1 0 2 13.5c0 1.38 1.12 2.5 2.5 2.5S7 14.88 7 13.5z"/></svg>
+          Ролики
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24"><path d="M17 2H7c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 18H7V4h10v16zm-5-3.5c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4z"/></svg>
+          Видеоигры
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12c0 5.52 4.48 10 10 10s10-4.48 10-10C22 6.48 17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/></svg>
+          Детям
+        </li>
+      </ul>
+      <div class="dropdown">
+        <button class="dropdown-toggle">
+          <svg width="18" height="18" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>
+          Ещё
+        </button>
+        <div class="dropdown-content">
+          <span>Всё о Дзене</span>
+          <span>Вакансии</span>
+          <span>Дзен на iOS и Android</span>
         </div>
-        <a href="#" class="install-btn">Установить Яндекс Браузер</a>
-    </footer>
-
-    <script>
-        // Мобильное меню
-        document.querySelector('.menu-btn').addEventListener('click', function() {
-            document.querySelector('.sidebar').classList.toggle('show');
-        });
-
-        // Раскрывающееся подменю
-        document.querySelector('.more-btn').addEventListener('click', function() {
-            this.classList.toggle('active');
-            document.querySelector('.submenu').classList.toggle('show');
-        });
-
-        // Темная тема
-        document.querySelector('.theme-toggle').addEventListener('click', function() {
-            document.body.classList.toggle('dark-mode');
-        });
-    </script>
+      </div>
+    </nav>
+    <!-- Main Content -->
+    <main>
+      <div class="news-grid">
+        <!-- News Card 1 -->
+        <div class="news-card">
+          <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="Новость 1">
+          <div class="card-content">
+            <div class="news-meta">
+              <span class="author">Иван Петров</span>
+              <span>·</span>
+              <span>1.2K просмотров</span>
+              <span>·</span>
+              <span>Сегодня</span>
+            </div>
+            <h3 class="news-title">В Москве открыли новый парк развлечений</h3>
+            <p class="news-desc">В столице появился уникальный тематический парк для всей семьи. Рассказываем, что там интересного и сколько стоят билеты.</p>
+          </div>
+        </div>
+        <!-- News Card 2 -->
+        <div class="news-card">
+          <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80" alt="Новость 2">
+          <div class="card-content">
+            <div class="news-meta">
+              <span class="author">Мария Сидорова</span>
+              <span>·</span>
+              <span>3.8K просмотров</span>
+              <span>·</span>
+              <span>Вчера</span>
+            </div>
+            <h3 class="news-title">Как выбрать лучший летний лагерь для ребёнка</h3>
+            <p class="news-desc">Эксперты советуют, на что обратить внимание при выборе лагеря, чтобы отдых был не только весёлым, но и полезным.</p>
+          </div>
+        </div>
+        <!-- News Card 3 (Ad) -->
+        <div class="news-card ad">
+          <span class="ad-label">Реклама</span>
+          <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80" alt="Реклама">
+          <div class="card-content">
+            <div class="news-meta">
+              <span class="author">Рекламодатель</span>
+              <span>·</span>
+              <span>Промо</span>
+            </div>
+            <h3 class="news-title">Откройте для себя выгодные предложения в Яндекс Маркете!</h3>
+            <p class="news-desc">Скидки до 50% на электронику, товары для дома и многое другое. Не упустите шанс сэкономить!</p>
+          </div>
+        </div>
+        <!-- News Card 4 -->
+        <div class="news-card">
+          <img src="https://images.unsplash.com/photo-1517816743773-6e0fd518b4a6?auto=format&fit=crop&w=400&q=80" alt="Новость 3">
+          <div class="card-content">
+            <div class="news-meta">
+              <span class="author">Алексей Смирнов</span>
+              <span>·</span>
+              <span>2.1K просмотров</span>
+              <span>·</span>
+              <span>2 часа назад</span>
+            </div>
+            <h3 class="news-title">Видеоигры: лучшие новинки июня</h3>
+            <p class="news-desc">Обзор самых ожидаемых релизов этого месяца. Что стоит попробовать в первую очередь?</p>
+          </div>
+        </div>
+        <!-- News Card 5 -->
+        <div class="news-card">
+          <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=400&q=80" alt="Новость 4">
+          <div class="card-content">
+            <div class="news-meta">
+              <span class="author">Ольга Кузнецова</span>
+              <span>·</span>
+              <span>950 просмотров</span>
+              <span>·</span>
+              <span>Сегодня</span>
+            </div>
+            <h3 class="news-title">5 простых рецептов для летнего пикника</h3>
+            <p class="news-desc">Готовим вкусно и быстро: подборка лучших блюд для отдыха на природе.</p>
+          </div>
+        </div>
+        <!-- News Card 6 -->
+        <div class="news-card">
+          <img src="https://images.unsplash.com/photo-1465101178521-c1a9136a0b6a?auto=format&fit=crop&w=400&q=80" alt="Новость 5">
+          <div class="card-content">
+            <div class="news-meta">
+              <span class="author">Дмитрий Иванов</span>
+              <span>·</span>
+              <span>1.7K просмотров</span>
+              <span>·</span>
+              <span>3 часа назад</span>
+            </div>
+            <h3 class="news-title">Почему дети любят динозавров?</h3>
+            <p class="news-desc">Психологи объясняют, чем так привлекают малышей доисторические ящеры и как использовать этот интерес с пользой.</p>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+  <!-- Footer -->
+  <footer>
+    <div class="footer-recs">
+      <span>Рекомендуем:</span>
+      <a href="#">Популярное</a>
+      <a href="#">Для вас</a>
+      <a href="#">Новости дня</a>
+      <a href="#">Советы экспертов</a>
+    </div>
+    <button class="browser-btn">Установить Яндекс Браузер</button>
+  </footer>
+  <script>
+    // Sidebar toggle for mobile
+    const sidebarToggle = document.querySelector('.sidebar-toggle');
+    const nav = document.querySelector('nav');
+    sidebarToggle && sidebarToggle.addEventListener('click', () => {
+      nav.classList.toggle('open');
+    });
+    // Dropdown in menu
+    const dropdownToggle = document.querySelector('.dropdown-toggle');
+    const dropdown = document.querySelector('.dropdown');
+    dropdownToggle.addEventListener('click', () => {
+      dropdown.classList.toggle('open');
+    });
+    // Dark theme toggle
+    const themeToggle = document.querySelector('.theme-toggle');
+    themeToggle.addEventListener('click', () => {
+      document.body.classList.toggle('dark');
+    });
+    // Close sidebar on click outside (mobile)
+    document.addEventListener('click', function(e) {
+      if(window.innerWidth <= 800 && nav.classList.contains('open')) {
+        if (!nav.contains(e.target) && !sidebarToggle.contains(e.target)) {
+          nav.classList.remove('open');
+        }
+      }
+    });
+  </script>
 </body>
 </html>
