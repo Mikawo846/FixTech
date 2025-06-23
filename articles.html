@@ -490,15 +490,20 @@
         <div class="container">
             <div class="content-wrapper">
                 <div class="articles" id="articles-container">
-                   
+                    <article class="guide-card" onclick="window.location.href='articles/iPhone-15.html'">
+                        <div class="guide-card__image">
+                            <img src="https://via.placeholder.com/400x250" alt="Apple iPhone 15 и 15 Pro анонс">
+                        </div>
+                        <div class="guide-card__content">
+                            <h3 class="guide-card__title">iPhone 15 и 15 Pro: что нового от Apple</h3>
+                            <p class="guide-card__excerpt">USB-C для всех, титановый корпус и чип A17 Pro с трассировкой лучей</p>
+                            <div class="guide-card__meta"></div>
+                        </div>
+                    </article>
 
-
-
-
-                    
-                   <article class="guide-card">
+                    <article class="guide-card">
     <div class="guide-card__image">
-        <img src="https://avatars.mds.yandex.net/get-shedevrum/14887244/img_1b7a8f37503b11f09f4af2a534ae946b/orig"  alt="Apple iPhone 15 и 15 Pro анонс">
+        <img src="https://via.placeholder.com/400x250"  alt="Apple iPhone 15 и 15 Pro анонс">
     </div>
     <div class="guide-card__content">
         <h3 class="guide-card__title">iPhone 15 и 15 Pro: что нового от Apple</h3>
@@ -510,7 +515,7 @@
 
 <article class="guide-card">
     <div class="guide-card__image">
-        <img src="https://avatars.mds.yandex.net/get-shedevrum/14564444/img_e90a7577503d11f090cf0e5d09438c79/orig"  alt="Google Pixel 8 и 8 Pro">
+        <img src="https://via.placeholder.com/400x250"  alt="Google Pixel 8 и 8 Pro">
     </div>
     <div class="guide-card__content">
         <h3 class="guide-card__title">Google Pixel 8 и 8 Pro: ИИ и камера в фокусе</h3>
@@ -522,7 +527,7 @@
 
 <article class="guide-card">
     <div class="guide-card__image">
-        <img src="https://avatars.mds.yandex.net/get-shedevrum/14564444/img_0b73276a503e11f0a6c7e65daf6e7141/orig"  alt="Samsung Galaxy Watch 6 Classic">
+        <img src="https://via.placeholder.com/400x250"  alt="Samsung Galaxy Watch 6 Classic">
     </div>
     <div class="guide-card__content">
         <h3 class="guide-card__title">Galaxy Watch 6 Classic: дизайн и здоровье</h3>
@@ -546,7 +551,7 @@
 
 <article class="guide-card">
     <div class="guide-card__image">
-        <img src="https://avatars.mds.yandex.net/get-shedevrum/16367318/img_22631932503e11f08f8752aa4dba7032/orig"  alt="AMD Ryzen 9000X4000">
+        <img src="https://via.placeholder.com/400x250"  alt="AMD Ryzen 9000X4000">
     </div>
     <div class="guide-card__content">
         <h3 class="guide-card__title">Процессоры AMD Ryzen 9000X4000</h3>
@@ -604,7 +609,6 @@
     </div>
 </article>
 
- 
 <article class="guide-card">
     <div class="guide-card__image">
         <img src="https://via.placeholder.com/400x250"  alt="Assassin's Creed Mirage">
@@ -703,8 +707,6 @@
     </div>
 </article>
 
-                  
-
 <article class="guide-card">
     <div class="guide-card__image">
         <img src="https://via.placeholder.com/400x250"  alt="ASUS ROG Zephyrus 2024">
@@ -800,6 +802,7 @@
         <a href="articles/Valve vypustila Steam Deck OLED.html" class="button button--small">Читать</a>
     </div>
 </article>
+
 
 
 <article class="guide-card">
@@ -969,6 +972,10 @@
         <a href="articles/Square Enix podtverdila Final Fantasy XVI dlya PK.html" class="button button--small">Читать</a>
     </div>
 </article>
+
+
+
+
 
 <article class="guide-card">
     <div class="guide-card__image">
@@ -1197,6 +1204,11 @@
         <a href="articles/Novosti o novykh II-instrumentakh dlya razrabotchikov.html" class="button button--small">Читать</a>
     </div>
 </article>
+
+
+
+
+
 
 <article class="guide-card">
     <div class="guide-card__image">
@@ -8741,6 +8753,15 @@
 
 
 
+                <aside class="sidebar">
+                    <div class="ad-block">
+                        <img src="https://via.placeholder.com/300x150" alt="Реклама" class="ad-image">
+                        <div class="ad-content">
+                            <div>Специальное предложение от нашего партнера</div>
+                            <a href="https://example.com/ad1" class="ad-link" target="_blank">Подробнее на сайте партнера</a>
+                        </div>
+                    </div>
+
                     <div class="ad-block">
                         <img src="https://via.placeholder.com/300x150" alt="Реклама" class="ad-image">
                         <div class="ad-content">
@@ -8751,7 +8772,11 @@
                 </aside>
             </div>
 
-    
+            <div class="load-more">
+                <button id="load-more-btn" class="button">Загрузить ещё</button>
+            </div>
+        </div>
+    </main>
 
     <footer>
         <div class="container">
@@ -8767,14 +8792,11 @@
                 <div class="footer-column">
                     <h3>Разделы</h3>
                     <ul>
-                        <li><a href="tv.html" class="nav__link">Телевизоры</a></li>
-                        <li><a href="cameras.html" class="nav__link">Фотоаппараты</a></li>
-                        <li><a href="consoles.html" class="nav__link">Приставки</a></li>
-                        <li><a href="laptops.html" class="nav__link">Ноутбуки</a></li>
-                        <li><a href="smartphones.html" class="nav__link">Смартфоны</a></li>
-                        <li><a href="small-appliances.html" class="nav__link">Мелкая техника</a></li>
-                        <li><a href="large-appliances.html" class="nav__link">Бытовая техника</a></li>
-                        <li><a href="auto-electronics.html" class="nav__link">Авто-Электроника</a></li>
+                        <li><a href="#">Телевизоры</a></li>
+                        <li><a href="#">Автоэлектроника</a></li>
+                        <li><a href="#">Приставки</a></li>
+                        <li><a href="#">Ноутбуки</a></li>
+                        <li><a href="#">Смартфоны</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
