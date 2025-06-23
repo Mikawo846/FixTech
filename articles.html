@@ -4,78 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ремонт ноутбуков | TechFix</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./styles-header.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            margin: 0;
-            /* Градиент для всей страницы */
-            background: linear-gradient(135deg, #C71585, #FFD700, #8A2BE2);
-            background-attachment: fixed; /* Градиент не скроллится вместе с контентом */
-            min-height: 100vh; /* Растягиваем на всю высоту экрана */
-            color: white; /* Весь текст на странице будет белым для контраста */
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 15px;
-        }
-
-        .header {
-            /* Шапка теперь будет прозрачной, чтобы был виден градиент body */
-            background: transparent;
-            padding: 15px 0;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Тонкая линия для разделения */
-        }
-
-        .header__inner {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
-            text-decoration: none;
-            color: white;
-            font-weight: 700;
-            font-size: 24px;
-        }
-        
-        .logo__icon svg {
-            fill: white;
-            margin-right: 8px;
-        }
-        
-        /* Добавим тень для текста, чтобы он лучше читался на ярком фоне */
-        .logo__text, .nav__link {
-             text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
-        }
-
-        .nav__list {
-            list-style: none;
-            display: flex;
-            gap: 25px;
-            margin: 0;
-            padding: 0;
-        }
-
-        .nav__link {
-            text-decoration: none;
-            color: white;
-            font-weight: 500;
-            transition: opacity 0.3s ease;
-        }
-
-        .nav__link:hover {
-            opacity: 0.8;
-            text-decoration: underline;
-        }
-    </style>
 </head>
 <body>
     <header class="header">
@@ -103,35 +35,6 @@
             </div>
         </div>
     </header>
-</body>
-</html>
-
-<body>
-    <header class="header">
-        <div class="container">
-            <div class="header__inner">
-                <a href="index.html" class="logo">
-                    <span class="logo__icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3ZM1 12C1 5.92487 5.92487 1 12 1C18.0751 1 23 5.92487 23 12C23 18.0751 18.0751 23 12 23C5.92487 23 1 18.0751 1 12Z" fill="currentColor"/>
-                            <path d="M16.5303 10.9697C16.8232 10.6768 16.8232 10.1979 16.5303 9.90498C16.2374 9.61208 15.7586 9.61208 15.4657 9.90498L12 13.3707L8.53431 9.90498C8.24142 9.61208 7.76256 9.61208 7.46967 9.90498C7.17678 10.1979 7.17678 10.6768 7.46967 10.9697L11.4697 14.9697C11.7626 15.2626 12.2414 15.2626 12.5343 14.9697L16.5303 10.9697Z" fill="currentColor"/>
-                        </svg>
-                    </span>
-                    <span class="logo__text">TechFix</span>
-                </a>
-               <nav class="nav">
-                    <ul class="nav__list">
-                       <li><a href="tv.html" class="nav__link">Телевизоры</a></li>
-                        <li><a href="cameras.html" class="nav__link">Фотоаппараты</a></li>
-                        <li><a href="auto-electronics.html" class="nav__link">Автоэлектроника</a></li>
-                        <li><a href="laptops.html" class="nav__link">Ноутбуки</a></li>
-                        <li><a href="smartphones.html" class="nav__link">Смартфоны</a></li>
-                        <li><a href="index.html#categories" class="nav__link">Все категории</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
-    </header>
 
   
 
@@ -150,7 +53,7 @@
 
 <article class="guide-card">
     <div class="guide-card__image">
-        <img src="https://avatars.mds.yandex.net/get-shedevrum/16891129/img_4a66d54a4ff811f0bcb74218a4e1299f/orig"  alt="Apple iPhone 15 и 15 Pro анонс">
+        <img src="https://via.placeholder.com/400x250"  alt="Apple iPhone 15 и 15 Pro анонс">
     </div>
     <div class="guide-card__content">
         <h3 class="guide-card__title">iPhone 15 и 15 Pro: что нового от Apple</h3>
@@ -162,7 +65,7 @@
 
 <article class="guide-card">
     <div class="guide-card__image">
-        <img src="https://avatars.mds.yandex.net/get-shedevrum/16913138/img_5f50d3084ff811f08a20661b4d276305/orig"  alt="Google Pixel 8 и 8 Pro">
+        <img src="https://via.placeholder.com/400x250"  alt="Google Pixel 8 и 8 Pro">
     </div>
     <div class="guide-card__content">
         <h3 class="guide-card__title">Google Pixel 8 и 8 Pro: ИИ и камера в фокусе</h3>
@@ -174,7 +77,7 @@
 
 <article class="guide-card">
     <div class="guide-card__image">
-        <img src="https://avatars.mds.yandex.net/get-shedevrum/14887244/img_71de58b64ff811f0b06d2ac68eef758d/orig"  alt="Samsung Galaxy Watch 6 Classic">
+        <img src="https://via.placeholder.com/400x250"  alt="Samsung Galaxy Watch 6 Classic">
     </div>
     <div class="guide-card__content">
         <h3 class="guide-card__title">Galaxy Watch 6 Classic: дизайн и здоровье</h3>
@@ -186,7 +89,7 @@
 
 <article class="guide-card">
     <div class="guide-card__image">
-        <img src="https://avatars.mds.yandex.net/get-shedevrum/15342086/img_50f87b794de311f08722b225f0806def/orig"  alt="PlayStation Portal">
+        <img src="https://via.placeholder.com/400x250"  alt="PlayStation Portal">
     </div>
     <div class="guide-card__content">
         <h3 class="guide-card__title">PlayStation Portal: стриминг игр от Sony</h3>
@@ -198,7 +101,7 @@
 
 <article class="guide-card">
     <div class="guide-card__image">
-        <img src="https://avatars.mds.yandex.net/get-shedevrum/16913138/img_db0348bf4e0311f083b6ce263fd3d7f5/orig"  alt="AMD Ryzen 9000X4000">
+        <img src="https://via.placeholder.com/400x250"  alt="AMD Ryzen 9000X4000">
     </div>
     <div class="guide-card__content">
         <h3 class="guide-card__title">Процессоры AMD Ryzen 9000X4000</h3>
@@ -210,7 +113,7 @@
 
 <article class="guide-card">
     <div class="guide-card__image">
-        <img src="https://avatars.mds.yandex.net/get-shedevrum/16891129/img_1da845ea4e0411f0bf1552aa4dba7032/orig"  alt="Apple Glass AR очки">
+        <img src="https://via.placeholder.com/400x250"  alt="Apple Glass AR очки">
     </div>
     <div class="guide-card__content">
         <h3 class="guide-card__title">Apple Glass: возможно ли появление AR-очков?</h3>
@@ -222,7 +125,7 @@
 
 <article class="guide-card">
     <div class="guide-card__image">
-        <img src="https://avatars.mds.yandex.net/get-shedevrum/14766198/img_55189b704e0411f0bfa66ab936583010/orig"  alt="Starfield выход">
+        <img src="https://via.placeholder.com/400x250"  alt="Starfield выход">
     </div>
     <div class="guide-card__content">
         <h3 class="guide-card__title">Выход «Starfield»: масштаб и проблемы</h3>
