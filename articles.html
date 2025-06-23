@@ -1,387 +1,50 @@
 <!DOCTYPE html>
 <html lang="ru" data-theme="light">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TechFix — Новости технологий</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --gradient: linear-gradient(90deg, #e1005a 0%, #7f00ff 100%);
-      --color-accent: #e1005a;
-      --color-bg: #fff;
-      --color-sidebar: #fafaff;
-      --color-card-shadow: rgba(127,0,255,0.07);
-      --color-card-hover: rgba(225,0,90,0.12);
-      --radius: 16px;
-      --btn-radius: 18px;
-    }
-    body {
-      background: var(--color-bg);
-      font-family: 'Inter', sans-serif;
-      color: #222;
-      margin: 0;
-      padding: 0;
-    }
-    .container {
-      max-width: 1240px;
-      margin: 0 auto;
-      padding: 0 16px;
-    }
-    .header {
-      background: #fff;
-      border-bottom: 1.5px solid #eee;
-      position: sticky;
-      top: 0;
-      z-index: 10;
-    }
-    .header__inner {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 18px 0;
-    }
-    .logo {
-      display: flex;
-      align-items: center;
-      font-weight: 700;
-      font-size: 1.3rem;
-      color: #222;
-      text-decoration: none;
-      gap: 8px;
-    }
-    .logo__icon {
-      color: var(--color-accent);
-      display: flex;
-      align-items: center;
-    }
-    .nav__list {
-      display: flex;
-      gap: 28px;
-      list-style: none;
-      margin: 0;
-      padding: 0;
-    }
-    .nav__link {
-      color: #444;
-      text-decoration: none;
-      font-weight: 500;
-      transition: color 0.15s;
-      font-size: 1rem;
-    }
-    .nav__link:hover {
-      color: var(--color-accent);
-    }
-    /* Featured Article */
-    .featured-article {
-      display: flex;
-      flex-direction: row;
-      background: var(--gradient);
-      border-radius: 20px;
-      overflow: hidden;
-      margin: 36px 0 32px 0;
-      min-height: 320px;
-      box-shadow: 0 2px 12px var(--color-card-shadow);
-    }
-    .featured-article__image {
-      width: 55%;
-      object-fit: cover;
-      min-height: 220px;
-      max-height: 260px;
-    }
-    .featured-article__content {
-      padding: 42px 36px;
-      color: #fff;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      width: 45%;
-    }
-    .featured-article .category {
-      background: #fff2;
-      padding: 4px 14px;
-      border-radius: 999px;
-      font-size: 0.92rem;
-      margin-bottom: 12px;
-      display: inline-block;
-      font-weight: 500;
-      letter-spacing: 0.03em;
-    }
-    .featured-article h1 {
-      font-size: 2.1rem;
-      margin: 0 0 14px 0;
-      font-weight: 700;
-      line-height: 1.2;
-    }
-    .featured-article p {
-      font-size: 1.15rem;
-      margin: 0 0 18px 0;
-      opacity: 0.96;
-      max-width: 90%;
-    }
-    .btn-gradient {
-      display: inline-block;
-      padding: 10px 28px;
-      border-radius: var(--btn-radius);
-      background: var(--gradient);
-      color: #fff;
-      font-weight: 600;
-      text-decoration: none;
-      font-size: 1rem;
-      border: none;
-      transition: background 0.2s, box-shadow 0.2s, transform 0.2s;
-      box-shadow: 0 2px 12px var(--color-card-shadow);
-      cursor: pointer;
-      margin-top: 8px;
-    }
-    .btn-gradient:hover, .btn-gradient:focus {
-      background: linear-gradient(90deg, #7f00ff 0%, #e1005a 100%);
-      box-shadow: 0 6px 30px var(--color-card-hover);
-      transform: translateY(-2px) scale(1.04);
-      color: #fff;
-      outline: none;
-    }
-    /* Main Layout */
-    .main-content {
-      display: flex;
-      gap: 32px;
-    }
-    /* News Grid */
-    .news-grid {
-      display: flex;
-      flex-direction: column;
-      gap: 22px;
-      flex: 1;
-    }
-    .news-card-block {
-      margin-bottom: 0;
-      /* Можно добавить отступ если нужно */
-    }
-    .news-card {
-      background: #fff;
-      border-radius: var(--radius);
-      box-shadow: 0 2px 12px var(--color-card-shadow);
-      overflow: hidden;
-      display: flex;
-      align-items: flex-start;
-      gap: 18px;
-      padding: 18px;
-      transition: box-shadow 0.18s, transform 0.18s;
-      min-width: 0;
-      animation: fadeIn 0.7s;
-    }
-    .news-card:hover {
-      box-shadow: 0 6px 30px var(--color-card-hover);
-      transform: translateY(-3px) scale(1.012);
-    }
-    .news-card__image {
-      width: 108px;
-      height: 72px;
-      border-radius: 10px;
-      object-fit: cover;
-      background: #f3f3f7;
-      flex-shrink: 0;
-    }
-    .news-card__content {
-      display: flex;
-      flex-direction: column;
-      flex: 1;
-      min-width: 0;
-    }
-    .news-card .category {
-      color: var(--color-accent);
-      font-size: 0.92rem;
-      font-weight: 500;
-      margin-bottom: 7px;
-    }
-    .news-card h2 {
-      font-size: 1.13rem;
-      margin: 0 0 8px 0;
-      font-weight: 600;
-      line-height: 1.25;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      max-width: 100%;
-    }
-    .news-card p {
-      font-size: 0.97rem;
-      margin: 0 0 12px 0;
-      opacity: 0.92;
-      flex: 1;
-      max-width: 100%;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-    }
-    .news-card__meta {
-      font-size: 0.93rem;
-      color: #888;
-      display: flex;
-      gap: 16px;
-      align-items: center;
-      margin-bottom: 7px;
-    }
-    .news-card__meta i {
-      margin-right: 6px;
-      color: var(--color-accent);
-    }
-    /* Sidebar */
-    .sidebar {
-      background: var(--color-sidebar);
-      border-radius: var(--radius);
-      padding: 24px;
-      min-width: 270px;
-      max-width: 320px;
-      box-shadow: 0 2px 12px var(--color-card-shadow);
-      height: fit-content;
-      position: sticky;
-      top: 90px;
-    }
-    .sidebar__block {
-      margin-bottom: 32px;
-    }
-    .sidebar__block h3 {
-      font-size: 1.08rem;
-      font-weight: 600;
-      margin: 0 0 12px 0;
-      color: var(--color-accent);
-      letter-spacing: 0.01em;
-    }
-    .sidebar__block ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-    .sidebar__block li {
-      margin-bottom: 12px;
-    }
-    .sidebar__block a {
-      color: #333;
-      text-decoration: none;
-      font-size: 1rem;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      transition: color 0.16s;
-    }
-    .sidebar__block a:hover {
-      color: var(--color-accent);
-    }
-    .latest-updates li {
-      font-size: 0.98rem;
-      margin-bottom: 8px;
-    }
-    /* Loading Spinner */
-    .loading-spinner {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 36px 0;
-    }
-    .spinner {
-      width: 38px;
-      height: 38px;
-      border: 4px solid #eaeaea;
-      border-top: 4px solid #e1005a;
-      border-radius: 50%;
-      animation: spin 0.9s linear infinite;
-    }
-    @keyframes spin {
-      0% { transform: rotate(0deg);}
-      100% { transform: rotate(360deg);}
-    }
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(18px);}
-      to { opacity: 1; transform: translateY(0);}
-    }
-    /* Responsive */
-    @media (max-width: 1024px) {
-      .main-content {
-        flex-direction: column;
-      }
-      .sidebar {
-        max-width: none;
-        margin: 32px 0 0 0;
-        position: static;
-      }
-      .featured-article {
-        flex-direction: column;
-        min-height: unset;
-      }
-      .featured-article__image,
-      .featured-article__content {
-        width: 100%;
-      }
-      .featured-article__content {
-        padding: 32px 22px;
-      }
-    }
-    @media (max-width: 600px) {
-      .header__inner {
-        flex-direction: column;
-        gap: 14px;
-      }
-      .nav__list {
-        gap: 14px;
-        font-size: 0.97rem;
-      }
-      .featured-article h1 {
-        font-size: 1.3rem;
-      }
-      .news-card h2 {
-        font-size: 1rem;
-      }
-      .sidebar {
-        padding: 16px;
-      }
-      .news-card {
-        flex-direction: column;
-        align-items: stretch;
-        gap: 10px;
-      }
-      .news-card__image {
-        width: 100%;
-        max-width: 100%;
-        height: 120px;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ремонт ноутбуков | TechFix</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./styles-header.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header class="header">
-    <div class="container">
-      <div class="header__inner">
-        <a href="#" class="logo">
-          <span class="logo__icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 15L7 10H17L12 15Z" fill="currentColor"/><path d="M12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3ZM12 19C8.13401 19 5 15.866 5 12C5 8.13401 8.13401 5 12 5C15.866 5 19 8.13401 19 12C19 15.866 15.866 19 12 19Z" fill="currentColor"/></svg>
-          </span>
-          <span class="logo__text">TechFix</span>
-        </a>
-        <nav class="nav">
-          <ul class="nav__list">
-            <li><a href="#" class="nav__link">Телевизоры</a></li>
-            <li><a href="#" class="nav__link">Автоэлектроника</a></li>
-            <li><a href="#" class="nav__link">Приставки</a></li>
-            <li><a href="#" class="nav__link">Ноутбуки</a></li>
-            <li><a href="#" class="nav__link">Смартфоны</a></li>
-            <li><a href="#" class="nav__link">Все категории</a></li>
-          </ul>
-        </nav>
-      </div>
-    </div>
-  </header>
-
-
-
-
-    
-    <section class="guides-section">
+    <header class="header">
         <div class="container">
-            <div class="section__header">
-                <h2 class="section__title">Новости</h2>
+            <div class="header__inner">
+                <a href="index.html" class="logo">
+                    <span class="logo__icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 15L7 10H17L12 15Z" fill="currentColor"/>
+                            <path d="M12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3ZM12 19C8.13401 19 5 15.866 5 12C5 8.13401 8.13401 5 12 5C15.866 5 19 8.13401 19 12C19 15.866 15.866 19 12 19Z" fill="currentColor"/>
+                        </svg>
+                    </span>
+                    <span class="logo__text">TechFix</span>
+                </a>
+                <nav class="nav">
+                    <ul class="nav__list">
+                       <li><a href="tv.html" class="nav__link">Телевизоры</a></li>
+                        <li><a href="auto-electronics.html" class="nav__link">Автоэлектроника</a></li>
+                        <li><a href="consoles.html" class="nav__link">Приставки</a></li>
+                        <li><a href="laptops.html" class="nav__link">Ноутбуки</a></li>
+                        <li><a href="smartphones.html" class="nav__link">Смартфоны</a></li>
+                        <li><a href="index.html#categories" class="nav__link">Все категории</a></li>
+                    </ul>
+                </nav>
             </div>
+        </div>
+    </header>
+
+  
+
+        <section class="guides-section">
+            <div class="container">
+                <div class="section__header">
+                    <h2 class="section__title">Новости</h2>
+                </div>
+
+                <div class="guides__grid">
                    
 
 
@@ -390,7 +53,7 @@
 
 <article class="guide-card">
     <div class="guide-card__image">
-        <img src="https://avatars.mds.yandex.net/get-shedevrum/16500899/img_db3787b2443911f0b9bc66781aaf1de6/orig"  alt="Apple iPhone 15 и 15 Pro анонс">
+        <img src="https://via.placeholder.com/400x250"  alt="Apple iPhone 15 и 15 Pro анонс">
     </div>
     <div class="guide-card__content">
         <h3 class="guide-card__title">iPhone 15 и 15 Pro: что нового от Apple</h3>
@@ -402,7 +65,7 @@
 
 <article class="guide-card">
     <div class="guide-card__image">
-        <img src="https://avatars.mds.yandex.net/get-shedevrum/15342086/img_b84c3d4f443a11f0b8caba31a74c2f35/orig"  alt="Google Pixel 8 и 8 Pro">
+        <img src="https://via.placeholder.com/400x250"  alt="Google Pixel 8 и 8 Pro">
     </div>
     <div class="guide-card__content">
         <h3 class="guide-card__title">Google Pixel 8 и 8 Pro: ИИ и камера в фокусе</h3>
@@ -414,7 +77,7 @@
 
 <article class="guide-card">
     <div class="guide-card__image">
-        <img src="https://avatars.mds.yandex.net/get-shedevrum/15342086/img_fc852484443911f08a0cceaf04b5ef38/orig"  alt="Samsung Galaxy Watch 6 Classic">
+        <img src="https://via.placeholder.com/400x250"  alt="Samsung Galaxy Watch 6 Classic">
     </div>
     <div class="guide-card__content">
         <h3 class="guide-card__title">Galaxy Watch 6 Classic: дизайн и здоровье</h3>
@@ -426,7 +89,7 @@
 
 <article class="guide-card">
     <div class="guide-card__image">
-        <img src="https://avatars.mds.yandex.net/get-shedevrum/15240847/img_042a04c442b011f0ab4ada33849e98dc/orig"  alt="PlayStation Portal">
+        <img src="https://via.placeholder.com/400x250"  alt="PlayStation Portal">
     </div>
     <div class="guide-card__content">
         <h3 class="guide-card__title">PlayStation Portal: стриминг игр от Sony</h3>
@@ -438,7 +101,7 @@
 
 <article class="guide-card">
     <div class="guide-card__image">
-        <img src="https://avatars.mds.yandex.net/get-shedevrum/15240802/img_d3b473d342af11f089d80eb7dcd13225/orig"  alt="AMD Ryzen 9000X4000">
+        <img src="https://via.placeholder.com/400x250"  alt="AMD Ryzen 9000X4000">
     </div>
     <div class="guide-card__content">
         <h3 class="guide-card__title">Процессоры AMD Ryzen 9000X4000</h3>
@@ -450,7 +113,7 @@
 
 <article class="guide-card">
     <div class="guide-card__image">
-        <img src="https://avatars.mds.yandex.net/get-shedevrum/13672789/img_5c24c80c42af11f0b97daa35b3d6ca3e/orig"  alt="Apple Glass AR очки">
+        <img src="https://via.placeholder.com/400x250"  alt="Apple Glass AR очки">
     </div>
     <div class="guide-card__content">
         <h3 class="guide-card__title">Apple Glass: возможно ли появление AR-очков?</h3>
@@ -462,7 +125,7 @@
 
 <article class="guide-card">
     <div class="guide-card__image">
-        <img src="https://avatars.mds.yandex.net/get-shedevrum/16312463/img_e41dbf6842ae11f084e72aa11dc6dfe1/orig"  alt="Starfield выход">
+        <img src="https://via.placeholder.com/400x250"  alt="Starfield выход">
     </div>
     <div class="guide-card__content">
         <h3 class="guide-card__title">Выход «Starfield»: масштаб и проблемы</h3>
@@ -474,7 +137,7 @@
 
 <article class="guide-card">
     <div class="guide-card__image">
-        <img src="https://avatars.mds.yandex.net/get-shedevrum/16367318/img_32539f5c42af11f091c752bcfc2cc414/orig"  alt="Final Fantasy XVI ремастер">
+        <img src="https://via.placeholder.com/400x250"  alt="Final Fantasy XVI ремастер">
     </div>
     <div class="guide-card__content">
         <h3 class="guide-card__title">Remaster Final Fantasy XVI: что известно</h3>
@@ -486,7 +149,7 @@
 
 <article class="guide-card">
     <div class="guide-card__image">
-        <img src="https://avatars.mds.yandex.net/get-shedevrum/15240802/img_3e7b42bc42ae11f0bd17ce6525ebdb7d/orig"  alt="GeForce Now в России">
+        <img src="https://via.placeholder.com/400x250"  alt="GeForce Now в России">
     </div>
     <div class="guide-card__content">
         <h3 class="guide-card__title">Закрытие GeForce Now в России</h3>
@@ -8649,13 +8312,6 @@
                     
                 </div>
 
-
-        <div class="show-more-wrapper">
-                <button class="show-more-btn" id="showMoreBtn">Показать ещё</button>
-            </div>
-        </div>
-    </section>
-
                 <div class="pagination">
                     <a href="#" class="pagination__link active">1</a>
                     <a href="#" class="pagination__link">2</a>
@@ -8699,7 +8355,6 @@
                         <li><a href="small-appliances.html" class="nav__link">Мелкая техника</a></li>
                         <li><a href="large-appliances.html" class="nav__link">Бытовая техника</a></li>
                         <li><a href="auto-electronics.html" class="nav__link">Авто-Электроника</a></li>
-                    </ul>
                 </div>
                 <div class="footer__col">
                     <h3 class="footer__title">Контакты</h3>
@@ -8715,5 +8370,7 @@
             </div>
         </div>
     </footer>
+
+    <script src="app.js"></script>
 </body>
 </html>
