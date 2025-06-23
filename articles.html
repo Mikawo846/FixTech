@@ -1,54 +1,34 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ремонт ноутбуков | TechFix</title>
-    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
+    
     <style>
-        :root {
-            --primary-gradient: linear-gradient(135deg, #C71585, #FFD700, #8A2BE2);
-            --primary-accent-color: #A03C9E;
-            --background-color: #f4f4f9;
-            --card-background: #ffffff;
-            --text-color: #333;
-            --shadow-color: rgba(0, 0, 0, 0.08);
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
         body {
             font-family: 'Inter', sans-serif;
-            background-color: var(--background-color);
-            color: var(--text-color);
-            line-height: 1.6;
+            margin: 0;
+            /* Градиент для всей страницы */
+            background: linear-gradient(135deg, #C71585, #FFD700, #8A2BE2);
+            background-attachment: fixed; /* Градиент не скроллится вместе с контентом */
+            min-height: 100vh; /* Растягиваем на всю высоту экрана */
+            color: white; /* Весь текст на странице будет белым для контраста */
         }
 
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 0 15px;
         }
 
         .header {
-            background: rgba(255, 255, 255, 0.85);
-            -webkit-backdrop-filter: blur(12px);
-            backdrop-filter: blur(12px);
-            border-bottom-left-radius: 24px;
-            border-bottom-right-radius: 24px;
+            /* Шапка теперь будет прозрачной, чтобы был виден градиент body */
+            background: transparent;
             padding: 15px 0;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.07);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            transition: all 0.3s ease;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Тонкая линия для разделения */
         }
 
         .header__inner {
@@ -60,196 +40,71 @@
         .logo {
             display: flex;
             align-items: center;
+            text-decoration: none;
+            color: white;
             font-weight: 700;
             font-size: 24px;
-            text-decoration: none;
         }
-
-        .logo__icon {
-            margin-right: 10px;
-            color: var(--primary-accent-color);
-            transition: transform 0.3s ease;
+        
+        .logo__icon svg {
+            fill: white;
+            margin-right: 8px;
         }
-
-        .logo:hover .logo__icon {
-            transform: rotate(360deg);
-        }
-
-        .logo__text {
-            background: var(--primary-gradient);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            text-fill-color: transparent;
+        
+        /* Добавим тень для текста, чтобы он лучше читался на ярком фоне */
+        .logo__text, .nav__link {
+             text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
         }
 
         .nav__list {
+            list-style: none;
             display: flex;
             gap: 25px;
-            list-style: none;
+            margin: 0;
+            padding: 0;
         }
 
         .nav__link {
-            font-size: 16px;
-            font-weight: 500;
-            color: #555;
             text-decoration: none;
-            position: relative;
-            padding-bottom: 5px;
-            transition: color 0.3s ease;
-        }
-
-        .nav__link::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            background: var(--primary-gradient);
-            transition: width 0.3s ease;
+            color: white;
+            font-weight: 500;
+            transition: opacity 0.3s ease;
         }
 
         .nav__link:hover {
-            color: var(--text-color);
-        }
-
-        .nav__link:hover::after {
-            width: 100%;
-        }
-
-        .guides-section {
-            padding: 60px 0;
-        }
-
-        .section__header {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-
-        .section__title {
-            font-size: 36px;
-            font-weight: 700;
-            display: inline-block;
-            background: var(--primary-gradient);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            text-fill-color: transparent;
-        }
-
-        .guides__grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 25px;
-        }
-
-        .guide-card {
-            background-color: var(--card-background);
-            border-radius: 16px;
-            box-shadow: 0 4px 20px var(--shadow-color);
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            text-decoration: none;
-        }
-
-        .guide-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
-        }
-
-        .card__image-container {
-            width: 100%;
-            position: relative;
-            overflow: hidden;
-            padding-top: 75%;
-        }
-
-        .card__image-container img {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.4s ease;
-        }
-
-        .guide-card:hover .card__image-container img {
-            transform: scale(1.05);
-        }
-
-        .card__content {
-            padding: 20px;
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .card__title {
-            font-size: 18px;
-            font-weight: 600;
-            margin-bottom: 8px;
-            color: var(--text-color);
-        }
-
-        .card__description {
-            font-size: 14px;
-            color: #666;
-            margin-bottom: 15px;
-            flex-grow: 1;
-        }
-
-        .card__link {
-            display: inline-block;
-            font-weight: 600;
-            color: var(--primary-accent-color);
-            transition: color 0.3s ease;
-            align-self: flex-start;
-        }
-
-        .card__link:hover {
+            opacity: 0.8;
             text-decoration: underline;
-        }
-
-        @media (max-width: 992px) {
-            .guides__grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            .nav__list {
-                gap: 15px;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .header {
-                border-radius: 0;
-            }
-            .header__inner {
-                flex-direction: column;
-                gap: 15px;
-            }
-            .nav__list {
-                flex-wrap: wrap;
-                justify-content: center;
-                gap: 10px 15px;
-            }
-            .nav__link {
-                font-size: 14px;
-            }
-            .section__title {
-                font-size: 32px;
-            }
-            .guides__grid {
-                grid-template-columns: 1fr;
-                gap: 25px;
-            }
         }
     </style>
 </head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <a href="index.html" class="logo">
+                    <span class="logo__icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 15L7 10H17L12 15Z" fill="currentColor"/>
+                            <path d="M12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3ZM12 19C8.13401 19 5 15.866 5 12C5 8.13401 8.13401 5 12 5C15.866 5 19 8.13401 19 12C19 15.866 15.866 19 12 19Z" fill="currentColor"/>
+                        </svg>
+                    </span>
+                    <span class="logo__text">TechFix</span>
+                </a>
+                <nav class="nav">
+                    <ul class="nav__list">
+                       <li><a href="tv.html" class="nav__link">Телевизоры</a></li>
+                        <li><a href="auto-electronics.html" class="nav__link">Автоэлектроника</a></li>
+                        <li><a href="consoles.html" class="nav__link">Приставки</a></li>
+                        <li><a href="laptops.html" class="nav__link">Ноутбуки</a></li>
+                        <li><a href="smartphones.html" class="nav__link">Смартфоны</a></li>
+                        <li><a href="index.html#categories" class="nav__link">Все категории</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+</body>
+</html>
 
 <body>
     <header class="header">
