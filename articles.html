@@ -1,283 +1,563 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Новости</title>
-  <style>
-    :root {
-      --gradient: linear-gradient(90deg, #f7ff00, #00ff87);
-      --accent-color: #00ff87;
-      --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-      --radius: 12px;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechNews - Новости технологий</title>
+    <style>
+        :root {
+            --gradient-start: #F7FF00;
+            --gradient-end: #00FF87;
+            --main-bg: #ffffff;
+            --text-color: #333333;
+            --text-light: #666666;
+            --border-color: #e0e0e0;
+            --shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            --radius: 8px;
+            --nav-height: 60px;
+        }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    body {
-      font-family: sans-serif;
-      background: #fff;
-      color: #333;
-      line-height: 1.6;
-    }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--main-bg);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
 
-    header {
-      background: var(--gradient);
-      padding: 1rem 2rem;
-    }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
 
-    .nav__list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-      justify-content: center;
-    }
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
 
-    .nav__link {
-      text-decoration: none;
-      color: #000;
-      font-weight: bold;
-      padding: 0.5rem 1rem;
-      border-radius: var(--radius);
-      background: white;
-      opacity: 0.8;
-      transition: opacity 0.3s;
-    }
+        /* Header styles */
+        header {
+            background: linear-gradient(90deg, var(--gradient-start), var(--gradient-end));
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
 
-    .nav__link:hover {
-      opacity: 1;
-    }
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: var(--nav-height);
+        }
 
-    main {
-      max-width: 1200px;
-      margin: 2rem auto;
-      padding: 0 1rem;
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 2rem;
-    }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+        }
 
-    @media (min-width: 768px) {
-      main {
-        grid-template-columns: 3fr 1fr;
-      }
-    }
+        .nav-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+        }
 
-    .cards-grid {
-      display: grid;
-      gap: 1.5rem;
-    }
+        .nav {
+            display: flex;
+        }
 
-    @media (min-width: 768px) {
-      .cards-grid {
-        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      }
-    }
+        .nav__list {
+            display: flex;
+            list-style: none;
+        }
 
-    .guide-card {
-      background: #fff;
-      border-radius: var(--radius);
-      overflow: hidden;
-      box-shadow: var(--card-shadow);
-      display: flex;
-      flex-direction: column;
-    }
+        .nav__item {
+            margin-left: 20px;
+        }
 
-    .guide-card__image img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
+        .nav__link {
+            color: white;
+            font-weight: 500;
+            padding: 5px 0;
+            position: relative;
+            transition: opacity 0.3s;
+        }
 
-    .guide-card__content {
-      padding: 1rem;
-    }
+        .nav__link:hover {
+            opacity: 0.8;
+        }
 
-    .guide-card__title {
-      font-size: 1.1rem;
-      margin-bottom: 0.5rem;
-    }
+        .nav__link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: white;
+            transition: width 0.3s;
+        }
 
-    .button {
-      display: inline-block;
-      margin-top: 1rem;
-      padding: 0.5rem 1rem;
-      background: var(--gradient);
-      border: none;
-      border-radius: var(--radius);
-      color: #000;
-      font-weight: bold;
-      cursor: pointer;
-      text-decoration: none;
-      transition: opacity 0.3s;
-    }
+        .nav__link:hover::after {
+            width: 100%;
+        }
 
-    .button--small {
-      font-size: 0.9rem;
-    }
+        /* Main content */
+        .main {
+            padding: 30px 0;
+        }
 
-    .button:hover {
-      opacity: 0.9;
-    }
+        .content-wrapper {
+            display: flex;
+            gap: 30px;
+        }
 
-    .ad-block {
-      background: #f0fff5;
-      border: 1px dashed #ccc;
-      border-radius: var(--radius);
-      padding: 2rem;
-      text-align: center;
-      font-style: italic;
-    }
+        .articles {
+            flex: 1;
+        }
 
-    .load-more {
-      margin-top: 2rem;
-      text-align: center;
-    }
+        .sidebar {
+            width: 300px;
+        }
 
-    footer {
-      background: #f9f9f9;
-      padding: 2rem 1rem;
-      margin-top: 3rem;
-    }
+        /* Article cards */
+        .guide-card {
+            background: white;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            overflow: hidden;
+            margin-bottom: 30px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
 
-    .footer-grid {
-      max-width: 1200px;
-      margin: 0 auto;
-      display: grid;
-      gap: 1.5rem;
-    }
+        .guide-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
 
-    @media (min-width: 768px) {
-      .footer-grid {
-        grid-template-columns: 2fr 1fr 1fr;
-      }
-    }
+        .guide-card__image {
+            width: 100%;
+            height: 200px;
+            overflow: hidden;
+        }
 
-    .footer-logo {
-      font-size: 1.5rem;
-      font-weight: bold;
-      color: #000;
-    }
+        .guide-card__image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
 
-    .footer-links ul,
-    .footer-contact ul {
-      list-style: none;
-      padding-left: 0;
-    }
+        .guide-card:hover .guide-card__image img {
+            transform: scale(1.05);
+        }
 
-    .footer-links li,
-    .footer-contact li {
-      margin-bottom: 0.5rem;
-    }
+        .guide-card__content {
+            padding: 20px;
+        }
 
-    .footer-links a,
-    .footer-contact a {
-      text-decoration: none;
-      color: #333;
-    }
-  </style>
+        .guide-card__title {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: var(--text-color);
+        }
+
+        .guide-card__excerpt {
+            color: var(--text-light);
+            margin-bottom: 15px;
+        }
+
+        .guide-card__meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            font-size: 14px;
+            color: var(--text-light);
+        }
+
+        /* Buttons */
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            border-radius: var(--radius);
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s;
+            border: none;
+        }
+
+        .button--primary {
+            background: linear-gradient(90deg, var(--gradient-start), var(--gradient-end));
+            color: white;
+        }
+
+        .button--primary:hover {
+            opacity: 0.9;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .button--small {
+            padding: 8px 16px;
+            font-size: 14px;
+        }
+
+        /* Ad block */
+        .ad-block {
+            background: #f9f9f9;
+            border-radius: var(--radius);
+            padding: 20px;
+            margin-bottom: 30px;
+            border: 1px dashed var(--border-color);
+            text-align: center;
+            color: var(--text-light);
+        }
+
+        .ad-placeholder {
+            padding: 30px;
+        }
+
+        /* Load more button */
+        .load-more {
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        /* Footer */
+        footer {
+            background: #f5f5f5;
+            padding: 50px 0 20px;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .footer-column h3 {
+            font-size: 18px;
+            margin-bottom: 15px;
+            color: var(--text-color);
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column li {
+            margin-bottom: 10px;
+        }
+
+        .footer-column a {
+            color: var(--text-light);
+            transition: color 0.3s;
+        }
+
+        .footer-column a:hover {
+            color: var(--gradient-end);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+            color: var(--text-light);
+            font-size: 14px;
+        }
+
+        /* Responsive styles */
+        @media (max-width: 992px) {
+            .content-wrapper {
+                flex-direction: column;
+            }
+
+            .sidebar {
+                width: 100%;
+                order: -1;
+            }
+
+            .ad-block {
+                margin-top: 30px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-toggle {
+                display: block;
+            }
+
+            .nav {
+                position: fixed;
+                top: var(--nav-height);
+                left: 0;
+                width: 100%;
+                background: linear-gradient(90deg, var(--gradient-start), var(--gradient-end));
+                padding: 20px;
+                transform: translateY(-100%);
+                opacity: 0;
+                transition: all 0.3s;
+                pointer-events: none;
+            }
+
+            .nav.active {
+                transform: translateY(0);
+                opacity: 1;
+                pointer-events: all;
+            }
+
+            .nav__list {
+                flex-direction: column;
+            }
+
+            .nav__item {
+                margin: 10px 0;
+            }
+
+            .guide-card__image {
+                height: 150px;
+            }
+        }
+    </style>
 </head>
 <body>
-
-<header>
-  <nav class="nav">
-    <ul class="nav__list">
-      <li><a href="tv.html" class="nav__link">Телевизоры</a></li>
-      <li><a href="auto-electronics.html" class="nav__link">Автоэлектроника</a></li>
-      <li><a href="consoles.html" class="nav__link">Приставки</a></li>
-      <li><a href="laptops.html" class="nav__link">Ноутбуки</a></li>
-      <li><a href="smartphones.html" class="nav__link">Смартфоны</a></li>
-      <li><a href="#categories" class="nav__link">Все категории</a></li>
-    </ul>
-  </nav>
-</header>
-
-<main>
-  <div class="cards-grid" id="newsGrid">
-    <!-- Сгенерированные карточки -->
-  </div>
-
-  <aside class="ad-block">
-    <div class="ad-placeholder">Здесь могла быть ваша реклама</div>
-  </aside>
-</main>
-
-<div class="load-more">
-  <button class="button" onclick="loadMore()">Загрузить ещё</button>
-</div>
-
-<footer class="footer">
-  <div class="footer-grid">
-    <div class="footer-logo">MyNews</div>
-    <div class="footer-links">
-      <h4>Разделы</h4>
-      <ul>
-        <li><a href="#">Телевизоры</a></li>
-        <li><a href="#">Автоэлектроника</a></li>
-        <li><a href="#">Приставки</a></li>
-      </ul>
-    </div>
-    <div class="footer-contact">
-      <h4>Контакты</h4>
-      <ul>
-        <li>Email: info@mynews.ru</li>
-        <li>Телефон: +7 (999) 123-45-67</li>
-      </ul>
-    </div>
-  </div>
-</footer>
-
-<script>
-  const sampleNews = [
-    { title: "iPhone 15 и 15 Pro: что нового от Apple", excerpt: "USB-C для всех, титановый корпус и чип A17 Pro с трассировкой лучей" },
-    { title: "Samsung Galaxy S25 Ultra: ожидания и слухи", excerpt: "Обновленный дизайн и мощнейший процессор" },
-    { title: "Tesla Cybertruck выходит на рынок", excerpt: "Электромобиль будущего доступен для предзаказа" },
-    { title: "PS6: всё, что мы знаем", excerpt: "Ожидается революция в мире игровых консолей" },
-    { title: "Apple Watch Ultra 2: новые функции", excerpt: "Улучшенный GPS и батарея" },
-    { title: "Майнинг без видеокарт: новый тренд", excerpt: "Использование FPGA вместо GPU" },
-    { title: "Роботы в быту: реальность или фантастика?", excerpt: "Как ИИ меняет повседневную жизнь" },
-    { title: "Новые OLED-телевизоры LG: обзор", excerpt: "Высокая контрастность и яркость" },
-    { title: "AMD Ryzen 8000: первые утечки", excerpt: "Грядёт прорыв в производительности" },
-    { title: "Google Pixel 8: что изменилось", excerpt: "Улучшенный ИИ и камера" }
-  ];
-
-  let loadedCount = 0;
-
-  function loadMore() {
-    const container = document.getElementById('newsGrid');
-    const chunk = sampleNews.slice(loadedCount, loadedCount + 10);
-
-    chunk.forEach(news => {
-      const card = document.createElement('article');
-      card.className = 'guide-card';
-      card.innerHTML = `
-        <div class="guide-card__image">
-          <img src="https://via.placeholder.com/400x250"  alt="${news.title}">
+    <header>
+        <div class="container header-container">
+            <div class="logo">TechNews</div>
+            <button class="nav-toggle">☰</button>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="tv.html" class="nav__link">Телевизоры</a></li>
+                    <li class="nav__item"><a href="auto-electronics.html" class="nav__link">Автоэлектроника</a></li>
+                    <li class="nav__item"><a href="consoles.html" class="nav__link">Приставки</a></li>
+                    <li class="nav__item"><a href="laptops.html" class="nav__link">Ноутбуки</a></li>
+                    <li class="nav__item"><a href="smartphones.html" class="nav__link">Смартфоны</a></li>
+                    <li class="nav__item"><a href="index.html#categories" class="nav__link">Все категории</a></li>
+                </ul>
+            </nav>
         </div>
-        <div class="guide-card__content">
-          <h3 class="guide-card__title">${news.title}</h3>
-          <p class="guide-card__excerpt">${news.excerpt}</p>
-          <a href="#" class="button button--small">Читать</a>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <div class="content-wrapper">
+                <div class="articles" id="articles-container">
+                    <article class="guide-card">
+                        <div class="guide-card__image">
+                            <img src="https://via.placeholder.com/400x250" alt="Apple iPhone 15 и 15 Pro анонс">
+                        </div>
+                        <div class="guide-card__content">
+                            <h3 class="guide-card__title">iPhone 15 и 15 Pro: что нового от Apple</h3>
+                            <p class="guide-card__excerpt">USB-C для всех, титановый корпус и чип A17 Pro с трассировкой лучей</p>
+                            <div class="guide-card__meta"></div>
+                            <a href="articles/iPhone 15 i 15 Pro chto novogo ot Apple.html" class="button button--primary button--small">Читать</a>
+                        </div>
+                    </article>
+
+                    <article class="guide-card">
+                        <div class="guide-card__image">
+                            <img src="https://via.placeholder.com/400x250" alt="Новые процессоры Intel">
+                        </div>
+                        <div class="guide-card__content">
+                            <h3 class="guide-card__title">Intel представила новые процессоры 14-го поколения</h3>
+                            <p class="guide-card__excerpt">Увеличенная частота и улучшенная энергоэффективность</p>
+                            <div class="guide-card__meta"></div>
+                            <a href="#" class="button button--primary button--small">Читать</a>
+                        </div>
+                    </article>
+
+                    <article class="guide-card">
+                        <div class="guide-card__image">
+                            <img src="https://via.placeholder.com/400x250" alt="Игровая консоль нового поколения">
+                        </div>
+                        <div class="guide-card__content">
+                            <h3 class="guide-card__title">Обзор PlayStation 5 Pro: стоит ли обновляться?</h3>
+                            <p class="guide-card__excerpt">Тестируем новую версию консоли с улучшенной графикой</p>
+                            <div class="guide-card__meta"></div>
+                            <a href="#" class="button button--primary button--small">Читать</a>
+                        </div>
+                    </article>
+
+                    <article class="guide-card">
+                        <div class="guide-card__image">
+                            <img src="https://via.placeholder.com/400x250" alt="Электромобили 2024">
+                        </div>
+                        <div class="guide-card__content">
+                            <h3 class="guide-card__title">Топ-5 электромобилей 2024 года</h3>
+                            <p class="guide-card__excerpt">Какие модели стоит рассмотреть при покупке</p>
+                            <div class="guide-card__meta"></div>
+                            <a href="#" class="button button--primary button--small">Читать</a>
+                        </div>
+                    </article>
+
+                    <article class="guide-card">
+                        <div class="guide-card__image">
+                            <img src="https://via.placeholder.com/400x250" alt="ИИ в смартфонах">
+                        </div>
+                        <div class="guide-card__content">
+                            <h3 class="guide-card__title">Как ИИ изменит смартфоны в ближайшие годы</h3>
+                            <p class="guide-card__excerpt">Перспективы развития мобильных технологий</p>
+                            <div class="guide-card__meta"></div>
+                            <a href="#" class="button button--primary button--small">Читать</a>
+                        </div>
+                    </article>
+                </div>
+
+                <aside class="sidebar">
+                    <div class="ad-block">
+                        <div class="ad-placeholder">Здесь могла быть ваша реклама</div>
+                    </div>
+
+                    <div class="ad-block">
+                        <div class="ad-placeholder">Специальное предложение для рекламодателей</div>
+                    </div>
+                </aside>
+            </div>
+
+            <div class="load-more">
+                <button id="load-more-btn" class="button button--primary">Загрузить ещё</button>
+            </div>
         </div>
-      `;
-      container.appendChild(card);
-    });
+    </main>
 
-    loadedCount += chunk.length;
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-column">
+                    <h3>О нас</h3>
+                    <ul>
+                        <li><a href="#">О компании</a></li>
+                        <li><a href="#">Реклама</a></li>
+                        <li><a href="#">Вакансии</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Разделы</h3>
+                    <ul>
+                        <li><a href="#">Телевизоры</a></li>
+                        <li><a href="#">Автоэлектроника</a></li>
+                        <li><a href="#">Приставки</a></li>
+                        <li><a href="#">Ноутбуки</a></li>
+                        <li><a href="#">Смартфоны</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Помощь</h3>
+                    <ul>
+                        <li><a href="#">Правила сайта</a></li>
+                        <li><a href="#">Обратная связь</a></li>
+                        <li><a href="#">Политика конфиденциальности</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Контакты</h3>
+                    <ul>
+                        <li>Email: info@technews.ru</li>
+                        <li>Телефон: +7 (123) 456-78-90</li>
+                        <li>
+                            <a href="#">Facebook</a> | 
+                            <a href="#">Twitter</a> | 
+                            <a href="#">Telegram</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                © 2024 TechNews. Все права защищены.
+            </div>
+        </div>
+    </footer>
 
-    if (loadedCount >= sampleNews.length) {
-      document.querySelector('.load-more button').disabled = true;
-      document.querySelector('.load-more button').innerText = 'Больше новостей нет';
-    }
-  }
+    <script>
+        // Mobile menu toggle
+        const navToggle = document.querySelector('.nav-toggle');
+        const nav = document.querySelector('.nav');
 
-  // Загрузка первых 10 при старте
-  window.addEventListener('DOMContentLoaded', loadMore);
-</script>
+        navToggle.addEventListener('click', () => {
+            nav.classList.toggle('active');
+        });
 
+        // Load more articles
+        const loadMoreBtn = document.getElementById('load-more-btn');
+        const articlesContainer = document.getElementById('articles-container');
+        
+        // Sample articles data
+        const sampleArticles = [
+            {
+                title: "Новые смарт-часы от Samsung с измерением давления",
+                excerpt: "Обзор Galaxy Watch 6 Classic с расширенными функциями здоровья",
+                image: "https://via.placeholder.com/400x250"
+            },
+            {
+                title: "Windows 12: что ожидать от новой ОС",
+                excerpt: "Утечки и слухи о следующей версии Windows",
+                image: "https://via.placeholder.com/400x250"
+            },
+            {
+                title: "Лучшие игровые ноутбуки 2024 года",
+                excerpt: "Сравнение топовых моделей для геймеров",
+                image: "https://via.placeholder.com/400x250"
+            },
+            {
+                title: "Искусственный интеллект в фотокамерах",
+                excerpt: "Как ИИ меняет процесс создания фотографий",
+                image: "https://via.placeholder.com/400x250"
+            },
+            {
+                title: "Беспроводные наушники: рейтинг 2024",
+                excerpt: "Топ-5 моделей по версии TechNews",
+                image: "https://via.placeholder.com/400x250"
+            }
+        ];
+
+        loadMoreBtn.addEventListener('click', () => {
+            // Simulate loading
+            loadMoreBtn.textContent = 'Загрузка...';
+            loadMoreBtn.disabled = true;
+            
+            setTimeout(() => {
+                // Add new articles
+                sampleArticles.forEach(article => {
+                    const articleElement = document.createElement('article');
+                    articleElement.className = 'guide-card';
+                    articleElement.innerHTML = `
+                        <div class="guide-card__image">
+                            <img src="${article.image}" alt="${article.title}">
+                        </div>
+                        <div class="guide-card__content">
+                            <h3 class="guide-card__title">${article.title}</h3>
+                            <p class="guide-card__excerpt">${article.excerpt}</p>
+                            <div class="guide-card__meta"></div>
+                            <a href="#" class="button button--primary button--small">Читать</a>
+                        </div>
+                    `;
+                    articlesContainer.appendChild(articleElement);
+                });
+                
+                loadMoreBtn.textContent = 'Загрузить ещё';
+                loadMoreBtn.disabled = false;
+                
+                // Scroll to new articles
+                window.scrollBy({
+                    top: 300,
+                    behavior: 'smooth'
+                });
+            }, 800);
+        });
+    </script>
 </body>
 </html>
