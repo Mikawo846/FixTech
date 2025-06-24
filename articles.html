@@ -287,6 +287,23 @@
             color: var(--text-light);
         }
 
+        /* Делаем всю карточку ссылкой через псевдоэлемент */
+        .guide-card::after {
+             content: '';
+             position: absolute;
+             top: 0;
+             left: 0;
+             right: 0;
+             bottom: 0;
+         z-index: 1; /* Находится под кнопкой, но над карточкой */
+         }
+
+       /* Чтобы кнопка "Читать" была кликабельна отдельно */
+        .guide-card .button {
+             position: relative;
+             z-index: 2; /* Поднимаем над псевдоэлементом */
+         }
+
         /* Buttons */
         .button {
             display: inline-block;
