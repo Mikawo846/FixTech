@@ -8840,108 +8840,98 @@
         </div>
     </footer>
 
+
     <script>
-        // Mobile menu toggle
-        const menuToggle = document.getElementById('menu-toggle');
-        const mobileMenu = document.getElementById('mobile-menu');
+// Обработчик для кликабельных карточек с делегированием
+document.addEventListener('click', function(e) {
+    const card = e.target.closest('.guide-card');
+    if (!card) return;
+    
+    // Если кликнули не по кнопке и не по ссылке
+    if (!e.target.closest('.button') && !e.target.closest('a')) {
+        const link = card.querySelector('.button');
+        if (link) {
+            window.location.href = link.href;
+        }
+    }
+});
 
-        menuToggle.addEventListener('click', () => {
-            mobileMenu.classList.toggle('active');
-            menuToggle.textContent = mobileMenu.classList.contains('active') ? '✕' : '☰';
-            document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
+// Mobile menu toggle
+const menuToggle = document.getElementById('menu-toggle');
+const mobileMenu = document.getElementById('mobile-menu');
+
+menuToggle.addEventListener('click', () => {
+    mobileMenu.classList.toggle('active');
+    menuToggle.textContent = mobileMenu.classList.contains('active') ? '✕' : '☰';
+    document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
+});
+
+// Close menu when clicking on a link
+const menuLinks = document.querySelectorAll('.mobile-menu__link');
+menuLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        mobileMenu.classList.remove('active');
+        menuToggle.textContent = '☰';
+        document.body.style.overflow = '';
+    });
+});
+
+// Close menu when clicking outside
+document.addEventListener('click', (e) => {
+    if (!mobileMenu.contains(e.target) && e.target !== menuToggle) {
+        mobileMenu.classList.remove('active');
+        menuToggle.textContent = '☰';
+        document.body.style.overflow = '';
+    }
+});
+
+// Load more articles
+const loadMoreBtn = document.getElementById('load-more-btn');
+const articlesContainer = document.getElementById('articles-container');
+
+// Sample articles data
+const sampleArticles = [
+    {
+        title: "Новые смарт-часы от Samsung с измерением давления",
+        excerpt: "Обзор Galaxy Watch 6 Classic с расширенными функциями здоровья",
+        image: "https://via.placeholder.com/400x250",
+        url: "articles/samsung-watch.html"
+    },
+    // ... остальные статьи
+];
+
+loadMoreBtn.addEventListener('click', () => {
+    loadMoreBtn.textContent = 'Загрузка...';
+    loadMoreBtn.disabled = true;
+    
+    setTimeout(() => {
+        sampleArticles.forEach(article => {
+            const articleElement = document.createElement('article');
+            articleElement.className = 'guide-card';
+            articleElement.style.cursor = 'pointer'; // Добавляем курсор
+            articleElement.innerHTML = `
+                <div class="guide-card__image">
+                    <img src="${article.image}" alt="${article.title}">
+                </div>
+                <div class="guide-card__content">
+                    <h3 class="guide-card__title">${article.title}</h3>
+                    <p class="guide-card__excerpt">${article.excerpt}</p>
+                    <div class="guide-card__meta"></div>
+                    <a href="${article.url}" class="button button--small">Читать</a>
+                </div>
+            `;
+            articlesContainer.appendChild(articleElement);
         });
-
-        // Close menu when clicking on a link
-        const menuLinks = document.querySelectorAll('.mobile-menu__link');
-        menuLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.remove('active');
-                menuToggle.textContent = '☰';
-                document.body.style.overflow = '';
-            });
-        });
-
-        // Close menu when clicking outside
-        document.addEventListener('click', (e) => {
-            if (!mobileMenu.contains(e.target) && e.target !== menuToggle) {
-                mobileMenu.classList.remove('active');
-                menuToggle.textContent = '☰';
-                document.body.style.overflow = '';
-            }
-        });
-
-        // Load more articles
-        const loadMoreBtn = document.getElementById('load-more-btn');
-        const articlesContainer = document.getElementById('articles-container');
         
-        // Sample articles data
-        const sampleArticles = [
-            {
-                title: "Новые смарт-часы от Samsung с измерением давления",
-                excerpt: "Обзор Galaxy Watch 6 Classic с расширенными функциями здоровья",
-                image: "https://via.placeholder.com/400x250",
-                url: "articles/samsung-watch.html"
-            },
-            {
-                title: "Windows 12: что ожидать от новой ОС",
-                excerpt: "Утечки и слухи о следующей версии Windows",
-                image: "https://via.placeholder.com/400x250",
-                url: "articles/windows12.html"
-            },
-            {
-                title: "Лучшие игровые ноутбуки 2024 года",
-                excerpt: "Сравнение топовых моделей для геймеров",
-                image: "https://via.placeholder.com/400x250",
-                url: "articles/gaming-laptops.html"
-            },
-            {
-                title: "Искусственный интеллект в фотокамерах",
-                excerpt: "Как ИИ меняет процесс создания фотографий",
-                image: "https://via.placeholder.com/400x250",
-                url: "articles/ai-cameras.html"
-            },
-            {
-                title: "Беспроводные наушники: рейтинг 2024",
-                excerpt: "Топ-5 моделей по версии TechNews",
-                image: "https://via.placeholder.com/400x250",
-                url: "articles/earphones.html"
-            }
-        ];
-
-        loadMoreBtn.addEventListener('click', () => {
-            // Simulate loading
-            loadMoreBtn.textContent = 'Загрузка...';
-            loadMoreBtn.disabled = true;
-            
-            setTimeout(() => {
-                // Add new articles
-                sampleArticles.forEach(article => {
-                    const articleElement = document.createElement('article');
-                    articleElement.className = 'guide-card';
-                    articleElement.setAttribute('onclick', `window.location.href='${article.url}'`);
-                    articleElement.innerHTML = `
-                        <div class="guide-card__image">
-                            <img src="${article.image}" alt="${article.title}">
-                        </div>
-                        <div class="guide-card__content">
-                            <h3 class="guide-card__title">${article.title}</h3>
-                            <p class="guide-card__excerpt">${article.excerpt}</p>
-                            <div class="guide-card__meta"></div>
-                        </div>
-                    `;
-                    articlesContainer.appendChild(articleElement);
-                });
-                
-                loadMoreBtn.textContent = 'Загрузить ещё';
-                loadMoreBtn.disabled = false;
-                
-                // Scroll to new articles
-                window.scrollBy({
-                    top: 300,
-                    behavior: 'smooth'
-                });
-            }, 800);
+        loadMoreBtn.textContent = 'Загрузить ещё';
+        loadMoreBtn.disabled = false;
+        
+        window.scrollBy({
+            top: 300,
+            behavior: 'smooth'
         });
-    </script>
+    }, 800);
+});
+</script>
 </body>
 </html>
