@@ -16,7 +16,7 @@ jobs:
 
       - name: Remove reference numbers from all HTML files
         run: |
-          find guides-auto-electronics -name '*.html' -type f | while read file; do
+          find guides-auto-electronics guides-cameras -name '*.html' -type f | while read file; do
             sed -i 's/\[[0-9]\]//g' "$file"
             echo "Processed: $file"
           done
@@ -26,5 +26,5 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add -A
-          git commit -m "Remove all reference numbers [1-9] from guides-auto-electronics files" || echo "No changes to commit"
+          git commit -m "find guides-aRemove all reference numbers [1-9] from guides-auto-electronics and guides-cameras filesuto-electronics guides-cameras -name" || echo "No changes to commit"
           git push
