@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Как починить утюг, который не нагревается</title>
+
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="../styles-header.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    .guide-content { line-height: 1.7; color: var(--text); }
+    .guide-content h2 { color: var(--primary); margin-top: 30px; margin-bottom: 15px; font-size: 1.5rem; }
+    .guide-content h3 { color: var(--primary-dark); margin-top: 25px; margin-bottom: 12px; font-size: 1.2rem; }
+
+    .guide-image-block {
+      margin: 20px 0;
+      padding: 15px;
+      background: var(--background);
+      border-radius: var(--border-radius);
+      border: 1px solid var(--border);
+      text-align: center;
+    }
+    .guide-image-block img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 6px;
+      border: 1px solid var(--border);
+    }
+    .image-caption {
+      margin-top: 10px;
+      font-size: 0.85rem;
+      color: var(--text-light);
+      font-style: italic;
+    }
+
+    .pro-tips {
+      background: rgba(3, 74, 79, 0.05);
+      padding: 15px;
+      border-radius: 6px;
+      margin: 20px 0;
+    }
+    .pro-tips h4 {
+      color: var(--primary);
+      margin-top: 0;
+      margin-bottom: 12px;
+      font-size: 1.1rem;
+    }
+    .tip-item {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 8px;
+      align-items: flex-start;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+    th, td {
+      border: 1px solid var(--border);
+      padding: 8px;
+      text-align: left;
+    }
+    th {
+      background: var(--background-light);
+    }
+
+    @media (max-width: 768px) {
+      .guide-content h2 {
+        font-size: 1.4rem;
+        margin-top: 25px;
+      }
+      .guide-image-block {
+        padding: 12px;
+        margin: 15px 0;
+      }
+      table, th, td {
+        font-size: 0.95rem;
+      }
+    }
+  </style>
+</head>
+<body>
+<header class="header">
+  <div class="container">
+    <div class="header-inner">
+      <a href="../index.html" class="logo">
+        <span class="logo-icon"></span>
+        <span class="logo-text">TechFix</span>
+      </a>
+      <nav class="nav">
+        <ul class="nav-list">
+          <li><a href="../tv.html" class="nav-link">Телевизоры</a></li>
+          <li><a href="../cameras.html" class="nav-link">Камеры</a></li>
+          <li><a href="../consoles.html" class="nav-link">Приставки</a></li>
+          <li><a href="../laptops.html" class="nav-link">Ноутбуки</a></li>
+          <li><a href="../smartphones.html" class="nav-link">Смартфоны</a></li>
+          <li><a href="../small-appliances.html" class="nav-link">Малая техника</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<section class="guide-page">
+  <div class="container">
+    <div class="breadcrumbs">
+      <a href="../index.html">Главная</a>
+      <i class="fas fa-chevron-right"></i>
+      <a href="../small-appliances.html">Малая техника</a>
+      <i class="fas fa-chevron-right"></i>
+      <span>Как починить утюг, который не нагревается</span>
+    </div>
+
+    <h1 class="section-title">Как починить утюг, который не нагревается</h1>
+
+    <div class="guide-meta">
+      <span><i class="fas fa-hourglass-half"></i> Время: 30–60 минут</span>
+      <span><i class="fas fa-screwdriver-wrench"></i> Сложность: средняя</span>
+      <span><i class="fas fa-shield-alt"></i> Важно: соблюдайте технику безопасности и отключайте утюг от сети перед разборкой</span>
+    </div>
+
+    <div class="guide-image-block">
+      <img src="https://avatars.mds.yandex.net/get-shedevrum/13490899/img/1f516b5037b611f0858ce69b4fc2796a/orig" alt="Разобранный утюг на рабочем столе">
+      <div class="image-caption">Перед началом ремонта убедитесь, что утюг полностью остыл и отключен от сети.</div>
+    </div>
+
+    <div class="guide-content">
+
+      <h2>Основные причины, почему утюг не нагревается</h2>
+      <p>Когда утюг перестаёт греться, проблема почти всегда связана с обрывом цепи питания, перегоревшим нагревательным элементом или неисправностью термостата.</p>
+      <p>Перед разборкой важно определить, есть ли индикация питания и слышны ли щелчки термостата, это помогает быстро сузить круг возможных неисправностей.</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Симптом</th>
+            <th>Вероятная причина</th>
+            <th>Что проверить</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Индикатор не горит, утюг холодный</td>
+            <td>Обрыв шнура или проблемы с вилкой</td>
+            <td>Тест шнура мультиметром, осмотр вилки и ввода шнура</td>
+          </tr>
+          <tr>
+            <td>Индикатор горит, но нагрева нет</td>
+            <td>Неисправен термостат или ТЭН</td>
+            <td>Проверка сопротивления термостата и нагревательного элемента</td>
+          </tr>
+          <tr>
+            <td>Утюг кратко нагревается и глохнет</td>
+            <td>Плохой контакт или перегревающийся предохранитель</td>
+            <td>Осмотр клемм, термопредохранителя и мест пайки</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>Что потребуется для ремонта</h2>
+      <ul>
+        <li>Крестовая и плоская отвёртки подходящих размеров.</li>
+        <li>Мультиметр с режимом прозвонки.</li>
+        <li>Пинцет, тонкие плоскогубцы, при необходимости — нож или стриппер для зачистки проводов.</li>
+        <li>Термостойкая изолента или термоусадка для восстановления изоляции.</li>
+      </ul>
+
+      <h2>Шаг 1. Проверка шнура питания</h2>
+      <p>Чаще всего утюг перестаёт греться из-за перелома сетевого шнура в районе вилки или входа в корпус.</p>
+      <ol>
+        <li>Отключи утюг от сети и дождись полного остывания.</li>
+        <li>Установи мультиметр в режим прозвонки и прозвони каждый провод от вилки до клемм внутри утюга.</li>
+        <li>Если где-то нет контакта, укороти участок со сгибом или замени шнур целиком.</li>
+      </ol>
+
+      <h2>Шаг 2. Доступ к термостату и контактам</h2>
+      <p>Если шнур целый, нужно добраться до внутренней части корпуса, где расположены термостат, ТЭН и силовые контакты.</p>
+      <ol>
+        <li>Сними заднюю крышку или декоративную вставку, под которыми обычно спрятаны винты.</li>
+        <li>Аккуратно разъедини половинки корпуса, не повредив провода и трубки подачи пара.</li>
+        <li>Осмотри клеммные соединения: подгоревшие места, потемневшая изоляция и нагар указывают на плохой контакт.</li>
+      </ol>
+
+      <h2>Шаг 3. Диагностика термостата</h2>
+      <p>Термостат размыкает цепь при достижении заданной температуры, и при его поломке утюг может навсегда «уйти в открытое состояние».</p>
+      <ol>
+        <li>Установи мультиметр в режим прозвонки и отключи один из проводов термостата.</li>
+        <li>Проверь наличие контакта при минимальном и максимальном положении регулятора температуры.</li>
+        <li>Если термостат не замыкается ни в одном положении, его необходимо заменить на аналогичный по параметрам.</li>
+      </ol>
+
+      <h2>Шаг 4. Проверка нагревательного элемента (ТЭНа)</h2>
+      <p>Если шнур и термостат исправны, высокая вероятность неисправности нагревательного элемента, встроенного в подошву утюга.</p>
+      <ol>
+        <li>Отсоедини провода от выводов ТЭНа, чтобы исключить влияние других узлов.</li>
+        <li>Измерь сопротивление между выводами: при обрыве мультиметр покажет «бесконечность», при коротком замыкании — почти ноль.</li>
+        <li>Проверь пробой на корпус, измерив сопротивление между каждым выводом и металлической подошвой.</li>
+      </ol>
+
+      <h2>Собираем утюг и проводим тест</h2>
+      <p>После устранения обрыва, замены термостата или шнура собери корпус в обратной последовательности, следя, чтобы все провода лежали в своих каналах.</p>
+      <p>Подключи утюг, выставь средний режим нагрева и проследи, чтобы индикатор работал, а подошва равномерно нагревалась без посторонних запахов.</p>
+
+      <div class="pro-tips">
+        <h4>Полезные советы по эксплуатации</h4>
+        <div class="tip-item">
+          <i class="fas fa-lightbulb"></i>
+          <p>Не тяните утюг за шнур и не храните его с туго намотанным кабелем — это основная причина переломов проводов.</p>
+        </div>
+        <div class="tip-item">
+          <i class="fas fa-lightbulb"></i>
+          <p>Периодически очищайте подошву и отверстия для пара, чтобы предотвратить перегрев и неравномерный нагрев.</p>
+        </div>
+        <div class="tip-item">
+          <i class="fas fa-lightbulb"></i>
+          <p>Не оставляйте утюг включённым без присмотра, особенно на максимальном режиме, чтобы не перегружать контакты и термопредохранитель.</p>
+        </div>
+      </div>
+
+      <h2>FAQ</h2>
+      <ul>
+        <li>
+          <strong>Утюг иногда греется, иногда нет. Это шнур?</strong><br>
+          Чаще всего да: плавающая неисправность указывает на плохой контакт в шнуре или клеммах, реже — на термостат.
+        </li>
+        <li>
+          <strong>Если нагреватель «в обрыве», можно ли его отремонтировать?</strong><br>
+          Встроенный ТЭН в подошве обычно не подлежит ремонту, требуется замена всей подошвы или покупка нового утюга.
+        </li>
+        <li>
+          <strong>Можно ли просто перемкнуть термостат?</strong><br>
+          Делать так нельзя: без термостата утюг будет перегреваться и представляет серьёзную пожарную опасность.
+        </li>
+      </ul>
+
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col footer-col--logo">
+        <a href="../index.html" class="footer-logo">
+          <span class="logo-icon"></span>
+          <span class="logo-text">TechFix</span>
+        </a>
+        <p class="footer-text">Пошаговые инструкции по ремонту бытовой техники своими руками.</p>
+      </div>
+
+      <div class="footer-col">
+        <h3 class="footer-title">Навигация</h3>
+        <ul class="footer-links">
+          <li><a href="../index.html" class="footer-link">Главная</a></li>
+          <li><a href="../all-guides.html" class="footer-link">Все статьи</a></li>
+          <li><a href="../contacts.html" class="footer-link">Контакты</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3 class="footer-title">Категории</h3>
+        <ul class="footer-links">
+          <li><a href="../tv.html" class="nav-link">Телевизоры</a></li>
+          <li><a href="../cameras.html" class="nav-link">Камеры</a></li>
+          <li><a href="../consoles.html" class="nav-link">Приставки</a></li>
+          <li><a href="../laptops.html" class="nav-link">Ноутбуки</a></li>
+          <li><a href="../smartphones.html" class="nav-link">Смартфоны</a></li>
+          <li><a href="../small-appliances.html" class="nav-link">Малая техника</a></li>
+          <li><a href="../large-appliances.html" class="nav-link">Крупная техника</a></li>
+          <li><a href="../auto-electronics.html" class="nav-link">Автоэлектроника</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3 class="footer-title">Связаться с нами</h3>
+        <ul class="footer-links">
+          <li><a href="https://t.me/techfixkz" class="footer-link"><i class="fab fa-telegram"></i> Telegram</a></li>
+          <li><a href="https://instagram.com/techfixkz" class="footer-link"><i class="fab fa-instagram"></i> Instagram</a></li>
+          <li><a href="mailto:support@techfix.kz" class="footer-link"><i class="fas fa-envelope"></i> Email</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p class="footer-copyright">
+        © 2025 TechFix. Все права защищены.
+      </p>
+    </div>
+  </div>
+</footer>
+
+<script src="../script.js"></script>
+</body>
+</html>
