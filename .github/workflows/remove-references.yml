@@ -16,7 +16,7 @@ jobs:
 
       - name: Remove reference numbers from all HTML files
         run: |
-          find guides-auto-electronics guides-cameras guides-consoles guides-large-appliances guides-smartphones -name '*.html' -type f | while read file; do
+          find guides-auto-electronics guides-cameras guides-consoles guides-large-appliances guides-smartphones gaids -name '*.html' -type f | while read file; do
             sed -i 's/\[[0-9]\]//g' "$file"
             echo "Processed: $file"
           done
