@@ -102,6 +102,11 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     return out;
   }
+  // Escape HTML in excerpts/titles to avoid injection
+  function escapeHtml(s) {
+    if (!s) return '';
+    return s.replace(/[&<>\"]/g, function(c) { return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; });
+  }
 
   function renderResults(list, tokens) {
     if (!list.length) {
@@ -109,23 +114,47 @@ document.addEventListener('DOMContentLoaded', () => {
       return;
     }
 
-    const html = list.map(it => {
-      const excerpt = it.excerpt ? it.excerpt : (it.content || '').slice(0, 250);
-      const url = `${BASE}/${(it.url || '').replace(/^\/+/, '')}`;
+    // small inline SVG placeholder to avoid external image 404s
+    const svgPlaceholder = encodeURIComponent(`
+      <svg xmlns='http://www.w3.org/2000/svg' width='400' height='240' viewBox='0 0 400 240'>
+        <rect width='100%' height='100%' fill='%23f3f3f3'/>
+        <g fill='%23c8c8c8' opacity='0.9'>
+          <rect x='24' y='24' width='120' height='80' rx='6'/>
+          <rect x='160' y='30' width='216' height='18' rx='6'/>
+          <rect x='160' y='60' width='180' height='12' rx='6'/>
+          <rect x='160' y='80' width='140' height='12' rx='6'/>
+        </g>
+      </svg>`);
+    const imgSrc = 'data:image/svg+xml;utf8,' + svgPlaceholder;
+
+    const cards = list.map(it => {
+      let excerpt = it.excerpt ? it.excerpt : (it.content || '').slice(0, 240);
+      excerpt = excerpt.replace(/\s+/g, ' ').trim();
+      // remove obvious site header fragments
+      excerpt = excerpt.replace(/TechFix\s*-?\s*/ig, '');
+      if (excerpt.length > 180) excerpt = excerpt.slice(0, 177) + '...';
+
+      const href = `${BASE}/${(it.url || '').replace(/^\/+/, '')}`;
+      const safeTitle = escapeHtml(it.title || '');
+      const safeExcerpt = escapeHtml(excerpt);
 
       return `
-        <article class="search-result">
-          <h3 class="search-result__title">
-            <a href="${url}">${highlight(it.title || '', tokens)}</a>
-          </h3>
-          <p class="search-result__excerpt">
-            ${highlight(excerpt || '', tokens)}...
-          </p>
-          <a class="search-result__link" href="${url}">Открыть →</a>
+        <article class="guide-card search-card">
+          <div class="guide-card__image">
+            <img src="${imgSrc}" alt="${safeTitle}">
+          </div>
+          <div class="guide-card__content">
+            <h3 class="guide-card__title"><a href="${href}">${highlight(safeTitle, tokens)}</a></h3>
+            <p class="guide-card__excerpt">${highlight(safeExcerpt, tokens)}</p>
+            <div class="guide-card__meta">
+              <a class="button button--small" href="${href}">Открыть</a>
+            </div>
+          </div>
         </article>`;
     }).join('\n');
 
-    resultsContainer.innerHTML = html;
+    resultsContainer.innerHTML = `<div class="guides__grid search-cards">${cards}</div>`;
+  }
   }
 
   // ================== Поиск ==================

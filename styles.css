@@ -400,6 +400,45 @@ body {
     border-color: var(--accent);
 }
 
+/* Search results cards */
+.search-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 18px;
+    margin: 24px 0 60px;
+}
+.search-card { 
+    background: var(--background-alt) !important;
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+    display: flex;
+    gap: 12px;
+    align-items: stretch;
+}
+.search-card .guide-card__image {
+    flex: 0 0 140px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.search-card .guide-card__image img { 
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+.search-card .guide-card__content { 
+    padding: 16px 18px;
+}
+.search-card .guide-card__title a { 
+    color: var(--primary);
+    text-decoration: none;
+}
+.search-card .guide-card__excerpt { 
+    color: var(--text-light);
+    margin: 8px 0 12px;
+}
+
 .category-card__icon {
     width: 80px;
     height: 80px;
