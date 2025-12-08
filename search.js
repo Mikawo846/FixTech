@@ -2,9 +2,10 @@
 // Загрузите индекс и выполняйте поиск по токенам (простой подсчёт совпадений).
 
 document.addEventListener('DOMContentLoaded', () => {
-  // Для GitHub Pages в поддиректории /TechFix
-  // Если разворачиваешь в корень домена, можно сделать const BASE = '';
-  const BASE = '/TechFix';
+  // Автоопределение BASE для GitHub Pages репозитория mikawo846/FixTech
+  const repoName = 'FixTech';
+  const path = window.location.pathname;
+  const BASE = path.startsWith('/' + repoName + '/') ? '/' + repoName : '';
 
   const input = document.querySelector('.search__input');
   const button = document.querySelector('.search__button');
@@ -16,6 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
   let loadError = false;
   let loadPromise = null;
 
+  // Загрузка JSON‑индекса
   function fetchIndexUrl(url) {
     return fetch(url).then(r => {
       if (!r.ok) throw new Error('HTTP ' + r.status + ' ' + url);
@@ -23,7 +25,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // грузим индекс всегда из поддиректории BASE
   loadPromise = fetchIndexUrl(`${BASE}/search_index.json`)
     .then(data => {
       indexData = data;
@@ -36,8 +37,10 @@ document.addEventListener('DOMContentLoaded', () => {
       console.warn('Search index not available', err);
     });
 
-  // Build Fuse index if library loaded and docs are available
+  // ================== Fuse.js индекс ==================
+
   let fuse = null;
+
   function tryBuildFuse() {
     if (!indexData || !window.Fuse) return;
     const docs = indexData.docs || [];
@@ -54,7 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
       ignoreLocation: true,
       minMatchCharLength: 2,
       keys: [
-        { name: 'title', weight: 0.6 },
+        { name: 'title',   weight: 0.6 },
         { name: 'excerpt', weight: 0.25 },
         { name: 'content', weight: 0.15 }
       ]
@@ -66,6 +69,8 @@ document.addEventListener('DOMContentLoaded', () => {
       fuse = null;
     }
   }
+
+  // ================== Вспомогательные функции ==================
 
   function tokenize(s) {
     return s.toLowerCase().split(/[^\p{L}\p{N}]+/u).filter(Boolean);
@@ -80,7 +85,9 @@ document.addEventListener('DOMContentLoaded', () => {
       const w = weights[lemma];
       if (w) {
         score += w;
-        if (item.title && item.title.toLowerCase().indexOf(t) !== -1) score += w * 0.3;
+        if (item.title && item.title.toLowerCase().indexOf(t) !== -1) {
+          score += w * 0.3;
+        }
       }
     }
     return score;
@@ -101,39 +108,54 @@ document.addEventListener('DOMContentLoaded', () => {
       resultsContainer.innerHTML = '<div class="search-empty">Ничего не найдено</div>';
       return;
     }
+
     const html = list.map(it => {
       const excerpt = it.excerpt ? it.excerpt : (it.content || '').slice(0, 250);
       const url = `${BASE}/${(it.url || '').replace(/^\/+/, '')}`;
+
       return `
         <article class="search-result">
-          <h3 class="search-result__title"><a href="${url}">${highlight(it.title, tokens)}</a></h3>
-          <p class="search-result__excerpt">${highlight(excerpt, tokens)}...</p>
+          <h3 class="search-result__title">
+            <a href="${url}">${highlight(it.title || '', tokens)}</a>
+          </h3>
+          <p class="search-result__excerpt">
+            ${highlight(excerpt || '', tokens)}...
+          </p>
           <a class="search-result__link" href="${url}">Открыть →</a>
         </article>`;
     }).join('\n');
+
     resultsContainer.innerHTML = html;
   }
 
+  // ================== Поиск ==================
+
   let debounceTimer = null;
+
   function doSearch() {
     if (!ready) {
       if (loadError) {
-        resultsContainer.innerHTML = '<div class="search-error">Ошибка загрузки индекса. Попробуйте обновить страницу.</div>';
+        resultsContainer.innerHTML =
+          '<div class="search-error">Ошибка загрузки индекса. Попробуйте обновить страницу.</div>';
         return;
       }
-      resultsContainer.innerHTML = '<div class="search-loading">Идёт загрузка индекса...</div>';
+      resultsContainer.innerHTML =
+        '<div class="search-loading">Идёт загрузка индекса...</div>';
       if (loadPromise) {
         loadPromise.then(() => doSearch()).catch(() => {});
       }
       return;
     }
+
     const q = input.value.trim();
     if (!q) {
       resultsContainer.innerHTML = '';
       return;
     }
+
     const tokens = tokenize(q);
 
+    // кандидаты из обратного индекса
     let candidateIds = new Set();
     const inv = indexData && indexData.inv_index ? indexData.inv_index : null;
     if (inv && tokens.length) {
@@ -142,11 +164,12 @@ document.addEventListener('DOMContentLoaded', () => {
         const lemma = surface[t] || t;
         const postings = inv[lemma] || [];
         for (const p of postings) {
-          candidateIds.add(p[0]);
+          candidateIds.add(p[0]); // postings: [docIdx, weight]
         }
       }
     }
 
+    // ---------- Ветка с Fuse (фаззи + TF‑IDF) ----------
     if (fuse) {
       const raw = fuse.search(q, { limit: 200 });
 
@@ -199,10 +222,11 @@ document.addEventListener('DOMContentLoaded', () => {
         let score = (1 - fuzzyWeight) * tscore + fuzzyWeight * fscore;
 
         const item = indexData.docs[idx];
-        const title = (item && item.title) ? item.title.toLowerCase() : '';
-        const url = (item && item.url) ? item.url.toLowerCase() : '';
+        const title   = (item && item.title)   ? item.title.toLowerCase()   : '';
+        const url     = (item && item.url)     ? item.url.toLowerCase()     : '';
         const excerpt = (item && item.excerpt) ? item.excerpt.toLowerCase() : '';
 
+        // буст, если токен в заголовке
         for (const t of tokens) {
           if (t && title.indexOf(t) !== -1) {
             score += titleBoostFactor;
@@ -210,23 +234,36 @@ document.addEventListener('DOMContentLoaded', () => {
           }
         }
 
-        const isTemplate = /category|categories|all-guides|all_guides|index|категор|разделы|все гайды/.test(url + ' ' + title + ' ' + excerpt);
+        // штраф за шаблонные/категорийные страницы
+        const isTemplate = /category|categories|all-guides|all_guides|index|категор|разделы|все гайды/.test(
+          url + ' ' + title + ' ' + excerpt
+        );
         if (isTemplate) score = score * (1 - templatePenalty);
 
         combined.push({ idx, score });
       }
 
       combined.sort((a, b) => b.score - a.score);
-      const results = combined.slice(0, 20).map(r => indexData.docs[r.idx] || null).filter(Boolean);
+      const results = combined
+        .slice(0, 20)
+        .map(r => indexData.docs[r.idx] || null)
+        .filter(Boolean);
+
       renderResults(results, tokens);
       return;
     }
 
+    // ---------- Фоллбэк: только TF‑IDF ----------
     const docs = (indexData && indexData.docs) ? indexData.docs : [];
-    const scored = docs.map(it => ({ it, score: scoreItem(it, tokens) })).filter(x => x.score > 0);
+    const scored = docs
+      .map(it => ({ it, score: scoreItem(it, tokens) }))
+      .filter(x => x.score > 0);
+
     scored.sort((a, b) => b.score - a.score);
     renderResults(scored.slice(0, 20).map(x => x.it), tokens);
   }
+
+  // ================== Обработчики UI ==================
 
   input.addEventListener('input', () => {
     clearTimeout(debounceTimer);
@@ -241,6 +278,9 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   if (button) {
-    button.addEventListener('click', (e) => { e.preventDefault(); doSearch(); });
+    button.addEventListener('click', (e) => {
+      e.preventDefault();
+      doSearch();
+    });
   }
 });
