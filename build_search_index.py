@@ -100,6 +100,26 @@ def build_index(root: Path, top_k: int = 400, title_boost: int = 5) -> None:
             content = strip_tags(html)
             excerpt = content[:300].strip()
 
+            # try to extract a representative image: og:image or first <img>
+            img = None
+            m_og = re.search(r'<meta[^>]+property=["\']og:image["\'][^>]+content=["\']([^"\']+)["\']', html, re.IGNORECASE)
+            if m_og:
+                img = m_og.group(1).strip()
+            else:
+                m_img = re.search(r'<img[^>]+src=["\']([^"\']+)["\']', html, re.IGNORECASE)
+                if m_img:
+                    img = m_img.group(1).strip()
+
+            # normalize image URL: prefer relative paths as-is, remove leading ./
+            if img:
+                img = img.replace('\\', '/')
+                img = img.replace('./', '')
+                # if img starts with http(s) keep as-is
+                if not re.match(r'^https?:', img):
+                    doc_dir = str(rel.parent).replace('\\', '/')
+                    if doc_dir and not img.startswith('/'):
+                        img = (doc_dir + '/' + img).lstrip('/')
+
             # tokenize and lemmatize
             tokens = tokenize(title + ' ' + content)
             lemmas = [lemma_token(t) for t in tokens]
@@ -126,6 +146,7 @@ def build_index(root: Path, top_k: int = 400, title_boost: int = 5) -> None:
                 'content': content,
                 'counts': counts,
                 'total_terms': total_terms,
+                'image': img,
             })
 
     N = len(docs_raw)

@@ -133,15 +133,16 @@ document.addEventListener('DOMContentLoaded', () => {
       // remove obvious site header fragments
       excerpt = excerpt.replace(/TechFix\s*-?\s*/ig, '');
       if (excerpt.length > 180) excerpt = excerpt.slice(0, 177) + '...';
-
       const href = `${BASE}/${(it.url || '').replace(/^\/+/, '')}`;
       const safeTitle = escapeHtml(it.title || '');
       const safeExcerpt = escapeHtml(excerpt);
+      // choose image from index if present, otherwise fallback to placeholder
+      const imageSrc = it.image ? (it.image.match(/^https?:/) ? it.image : (BASE + '/' + it.image.replace(/^\/+/, ''))) : imgSrc;
 
       return `
         <article class="guide-card search-card">
           <div class="guide-card__image">
-            <img src="${imgSrc}" alt="${safeTitle}">
+            <img src="${imageSrc}" alt="${safeTitle}">
           </div>
           <div class="guide-card__content">
             <h3 class="guide-card__title"><a href="${href}">${highlight(safeTitle, tokens)}</a></h3>
