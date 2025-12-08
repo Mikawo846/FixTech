@@ -2,6 +2,10 @@
 // Загрузите индекс и выполняйте поиск по токенам (простой подсчёт совпадений).
 
 document.addEventListener('DOMContentLoaded', () => {
+  // Для GitHub Pages в поддиректории /TechFix
+  // Если разворачиваешь в корень домена, можно сделать const BASE = '';
+  const BASE = '/TechFix';
+
   const input = document.querySelector('.search__input');
   const button = document.querySelector('.search__button');
   const resultsContainer = document.querySelector('.search-results');
@@ -11,8 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
   let ready = false;
   let loadError = false;
   let loadPromise = null;
-  // Загружаем индекс и сохраняем промис, чтобы другие функции могли дождаться.
-  // Сначала пробуем относительный путь (удобно для поддиректорий), затем абсолютный '/'.
+
   function fetchIndexUrl(url) {
     return fetch(url).then(r => {
       if (!r.ok) throw new Error('HTTP ' + r.status + ' ' + url);
@@ -20,11 +23,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  loadPromise = fetchIndexUrl('search_index.json')
-    .catch(err => {
-      console.warn('Relative index load failed, trying absolute /search_index.json', err);
-      return fetchIndexUrl('/search_index.json');
-    })
+  // грузим индекс всегда из поддиректории BASE
+  loadPromise = fetchIndexUrl(`${BASE}/search_index.json`)
     .then(data => {
       indexData = data;
       ready = true;
@@ -41,7 +41,6 @@ document.addEventListener('DOMContentLoaded', () => {
   function tryBuildFuse() {
     if (!indexData || !window.Fuse) return;
     const docs = indexData.docs || [];
-    // Prepare documents for Fuse (include truncated content for better recall)
     const docsForFuse = docs.map((d, i) => ({
       title: d.title || '',
       excerpt: d.excerpt || '',
@@ -68,17 +67,11 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  // try to build Fuse once index is ready and Fuse lib probably loaded
-  // tryBuildFuse() вызывается после успешной загрузки индекса
-
   function tokenize(s) {
     return s.toLowerCase().split(/[^\p{L}\p{N}]+/u).filter(Boolean);
   }
 
   function scoreItem(item, tokens) {
-    // Using TF-IDF weights precomputed by the indexer.
-    // `item.weights` is a map lemma->weight. We map query tokens to lemmas
-    // using `surface_to_lemma` published in the index.
     const weights = item.weights || {};
     const surface = indexData && indexData.surface_to_lemma ? indexData.surface_to_lemma : {};
     let score = 0;
@@ -87,7 +80,6 @@ document.addEventListener('DOMContentLoaded', () => {
       const w = weights[lemma];
       if (w) {
         score += w;
-        // small extra boost if token appears in title text
         if (item.title && item.title.toLowerCase().indexOf(t) !== -1) score += w * 0.3;
       }
     }
@@ -111,11 +103,12 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     const html = list.map(it => {
       const excerpt = it.excerpt ? it.excerpt : (it.content || '').slice(0, 250);
+      const url = `${BASE}/${(it.url || '').replace(/^\/+/, '')}`;
       return `
         <article class="search-result">
-          <h3 class="search-result__title"><a href="/${it.url}">${highlight(it.title, tokens)}</a></h3>
+          <h3 class="search-result__title"><a href="${url}">${highlight(it.title, tokens)}</a></h3>
           <p class="search-result__excerpt">${highlight(excerpt, tokens)}...</p>
-          <a class="search-result__link" href="/${it.url}">Открыть →</a>
+          <a class="search-result__link" href="${url}">Открыть →</a>
         </article>`;
     }).join('\n');
     resultsContainer.innerHTML = html;
@@ -128,10 +121,9 @@ document.addEventListener('DOMContentLoaded', () => {
         resultsContainer.innerHTML = '<div class="search-error">Ошибка загрузки индекса. Попробуйте обновить страницу.</div>';
         return;
       }
-      // индекс ещё загружается — покажем индикатор и подождём
       resultsContainer.innerHTML = '<div class="search-loading">Идёт загрузка индекса...</div>';
       if (loadPromise) {
-        loadPromise.then(() => doSearch()).catch(() => {/* error already shown */});
+        loadPromise.then(() => doSearch()).catch(() => {});
       }
       return;
     }
@@ -142,7 +134,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     const tokens = tokenize(q);
 
-    // If we have an inverted index, collect candidate doc ids from token postings
     let candidateIds = new Set();
     const inv = indexData && indexData.inv_index ? indexData.inv_index : null;
     if (inv && tokens.length) {
@@ -151,16 +142,14 @@ document.addEventListener('DOMContentLoaded', () => {
         const lemma = surface[t] || t;
         const postings = inv[lemma] || [];
         for (const p of postings) {
-          // postings are [docIdx, weight]
           candidateIds.add(p[0]);
         }
       }
     }
-    // If Fuse is available prefer combined fuzzy + TF-IDF ranking for better UX
+
     if (fuse) {
       const raw = fuse.search(q, { limit: 200 });
 
-      // map fuse results to idx->fuseScore
       const rawMap = new Map();
       raw.forEach(r => {
         const it = r.item;
@@ -170,11 +159,8 @@ document.addEventListener('DOMContentLoaded', () => {
         candidateIds.add(idx);
       });
 
-      // Prepare maps for scores
       const tfidfMap = new Map();
       const fuzzyMap = new Map();
-
-      // Candidate list is union of inv_index hits and fuse hits
       const candidateList = Array.from(candidateIds).slice(0, 400);
 
       for (const idx of candidateList) {
@@ -186,7 +172,6 @@ document.addEventListener('DOMContentLoaded', () => {
         fuzzyMap.set(idx, fscore);
       }
 
-      // Normalize both maps
       function normalizeMap(m) {
         const vals = Array.from(m.values());
         if (!vals.length) return new Map();
@@ -204,10 +189,9 @@ document.addEventListener('DOMContentLoaded', () => {
       const tfidfNorm = normalizeMap(tfidfMap);
       const fuzzyNorm = normalizeMap(fuzzyMap);
 
-      // Combine with heuristics
-      const fuzzyWeight = 0.35; // balance between TF-IDF and fuzzy
-      const templatePenalty = 0.45; // how much to demote template/category pages
-      const titleBoostFactor = 0.25; // boost when token found in title
+      const fuzzyWeight = 0.35;
+      const templatePenalty = 0.45;
+      const titleBoostFactor = 0.25;
 
       const combined = [];
       for (const [idx, fscore] of fuzzyNorm) {
@@ -219,7 +203,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const url = (item && item.url) ? item.url.toLowerCase() : '';
         const excerpt = (item && item.excerpt) ? item.excerpt.toLowerCase() : '';
 
-        // Title exact-token boost
         for (const t of tokens) {
           if (t && title.indexOf(t) !== -1) {
             score += titleBoostFactor;
@@ -227,7 +210,6 @@ document.addEventListener('DOMContentLoaded', () => {
           }
         }
 
-        // Demote template/category pages detected by common patterns
         const isTemplate = /category|categories|all-guides|all_guides|index|категор|разделы|все гайды/.test(url + ' ' + title + ' ' + excerpt);
         if (isTemplate) score = score * (1 - templatePenalty);
 
@@ -239,10 +221,10 @@ document.addEventListener('DOMContentLoaded', () => {
       renderResults(results, tokens);
       return;
     }
-    // fallback to TF-IDF scoring
+
     const docs = (indexData && indexData.docs) ? indexData.docs : [];
-    const scored = docs.map(it => ({it, score: scoreItem(it, tokens)})).filter(x => x.score > 0);
-    scored.sort((a,b) => b.score - a.score);
+    const scored = docs.map(it => ({ it, score: scoreItem(it, tokens) })).filter(x => x.score > 0);
+    scored.sort((a, b) => b.score - a.score);
     renderResults(scored.slice(0, 20).map(x => x.it), tokens);
   }
 
@@ -251,7 +233,6 @@ document.addEventListener('DOMContentLoaded', () => {
     debounceTimer = setTimeout(doSearch, 250);
   });
 
-  // Enter в поле должен запускать поиск
   input.addEventListener('keydown', (e) => {
     if (e.key === 'Enter') {
       e.preventDefault();
@@ -259,7 +240,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // Кнопка может отсутствовать в некоторых шаблонах — защитимся
   if (button) {
     button.addEventListener('click', (e) => { e.preventDefault(); doSearch(); });
   }
