@@ -9,15 +9,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
   let indexData = null;
   let ready = false;
-
-  fetch('/search_index.json')
-    .then(r => r.ok ? r.json() : Promise.reject(r.status))
+  let loadError = false;
+  let loadPromise = null;
+  // Загружаем индекс и сохраняем промис, чтобы другие функции могли дождаться
+  loadPromise = fetch('/search_index.json')
+    .then(r => {
+      if (!r.ok) throw new Error('HTTP ' + r.status);
+      return r.json();
+    })
     .then(data => {
       indexData = data;
       ready = true;
+      tryBuildFuse();
+      console.info('Search index loaded, docs:', (indexData.docs || []).length);
     })
-    .catch(() => {
-      console.warn('Search index not available');
+    .catch((err) => {
+      loadError = true;
+      console.warn('Search index not available', err);
     });
 
   // Build Fuse index if library loaded and docs are available
@@ -52,12 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // try to build Fuse once index is ready and Fuse lib probably loaded
-  const fuseTryInterval = setInterval(() => {
-    if (ready) {
-      tryBuildFuse();
-      clearInterval(fuseTryInterval);
-    }
-  }, 200);
+  // tryBuildFuse() вызывается после успешной загрузки индекса
 
   function tokenize(s) {
     return s.toLowerCase().split(/[^\p{L}\p{N}]+/u).filter(Boolean);
@@ -112,8 +115,15 @@ document.addEventListener('DOMContentLoaded', () => {
   let debounceTimer = null;
   function doSearch() {
     if (!ready) {
-      // индекс ещё загружается — покажем индикатор
+      if (loadError) {
+        resultsContainer.innerHTML = '<div class="search-error">Ошибка загрузки индекса. Попробуйте обновить страницу.</div>';
+        return;
+      }
+      // индекс ещё загружается — покажем индикатор и подождём
       resultsContainer.innerHTML = '<div class="search-loading">Идёт загрузка индекса...</div>';
+      if (loadPromise) {
+        loadPromise.then(() => doSearch()).catch(() => {/* error already shown */});
+      }
       return;
     }
     const q = input.value.trim();
