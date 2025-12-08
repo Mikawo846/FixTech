@@ -171,6 +171,23 @@ def build_index(root: Path, top_k: int = 400, title_boost: int = 5) -> None:
         'docs': docs_out,
     }
 
+    # Build inverted index: lemma -> list of (doc_idx, weight)
+    inv = {}
+    for i, d in enumerate(docs_out):
+        for lemma, w in (d.get('weights') or {}).items():
+            inv.setdefault(lemma, []).append((i, float(w)))
+
+    # Trim and sort posting lists to keep index compact
+    MAX_POSTINGS = 200
+    for lemma, postings in list(inv.items()):
+        postings.sort(key=lambda x: x[1], reverse=True)
+        if len(postings) > MAX_POSTINGS:
+            inv[lemma] = postings[:MAX_POSTINGS]
+        else:
+            inv[lemma] = postings
+
+    out_data['inv_index'] = inv
+
     out = root / 'search_index.json'
     with out.open('w', encoding='utf-8') as f:
         json.dump(out_data, f, ensure_ascii=False)

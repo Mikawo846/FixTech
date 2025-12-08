@@ -141,23 +141,50 @@ document.addEventListener('DOMContentLoaded', () => {
       return;
     }
     const tokens = tokenize(q);
+
+    // If we have an inverted index, collect candidate doc ids from token postings
+    let candidateIds = new Set();
+    const inv = indexData && indexData.inv_index ? indexData.inv_index : null;
+    if (inv && tokens.length) {
+      const surface = indexData.surface_to_lemma || {};
+      for (const t of tokens) {
+        const lemma = surface[t] || t;
+        const postings = inv[lemma] || [];
+        for (const p of postings) {
+          // postings are [docIdx, weight]
+          candidateIds.add(p[0]);
+        }
+      }
+    }
     // If Fuse is available prefer combined fuzzy + TF-IDF ranking for better UX
     if (fuse) {
       const raw = fuse.search(q, { limit: 200 });
+
+      // map fuse results to idx->fuseScore
+      const rawMap = new Map();
+      raw.forEach(r => {
+        const it = r.item;
+        const idx = it.__idx;
+        const fuseScore = (typeof r.score === 'number') ? (1 - r.score) : 0;
+        rawMap.set(idx, fuseScore);
+        candidateIds.add(idx);
+      });
 
       // Prepare maps for scores
       const tfidfMap = new Map();
       const fuzzyMap = new Map();
 
-      raw.forEach(r => {
-        const it = r.item;
-        const idx = it.__idx; // we attach index when building docsForFuse
-        const fuseScore = (typeof r.score === 'number') ? (1 - r.score) : 0; // convert 0..1 (lower better) -> higher better
-        fuzzyMap.set(idx, fuseScore);
-        // compute TF-IDF for the same item
-        const tf = scoreItem(it, tokens);
+      // Candidate list is union of inv_index hits and fuse hits
+      const candidateList = Array.from(candidateIds).slice(0, 400);
+
+      for (const idx of candidateList) {
+        const item = indexData.docs[idx];
+        if (!item) continue;
+        const tf = scoreItem(item, tokens);
         tfidfMap.set(idx, tf);
-      });
+        const fscore = rawMap.has(idx) ? rawMap.get(idx) : 0;
+        fuzzyMap.set(idx, fscore);
+      }
 
       // Normalize both maps
       function normalizeMap(m) {
