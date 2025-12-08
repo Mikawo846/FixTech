@@ -11,11 +11,19 @@ document.addEventListener('DOMContentLoaded', () => {
   let ready = false;
   let loadError = false;
   let loadPromise = null;
-  // Загружаем индекс и сохраняем промис, чтобы другие функции могли дождаться
-  loadPromise = fetch('/search_index.json')
-    .then(r => {
-      if (!r.ok) throw new Error('HTTP ' + r.status);
+  // Загружаем индекс и сохраняем промис, чтобы другие функции могли дождаться.
+  // Сначала пробуем относительный путь (удобно для поддиректорий), затем абсолютный '/'.
+  function fetchIndexUrl(url) {
+    return fetch(url).then(r => {
+      if (!r.ok) throw new Error('HTTP ' + r.status + ' ' + url);
       return r.json();
+    });
+  }
+
+  loadPromise = fetchIndexUrl('search_index.json')
+    .catch(err => {
+      console.warn('Relative index load failed, trying absolute /search_index.json', err);
+      return fetchIndexUrl('/search_index.json');
     })
     .then(data => {
       indexData = data;
