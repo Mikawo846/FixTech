@@ -155,7 +155,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     resultsContainer.innerHTML = `<div class="guides__grid search-cards">${cards}</div>`;
   }
-  }
 
   // ================== Поиск ==================
 
