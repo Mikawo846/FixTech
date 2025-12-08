@@ -111,7 +111,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
   let debounceTimer = null;
   function doSearch() {
-    if (!ready) return;
+    if (!ready) {
+      // индекс ещё загружается — покажем индикатор
+      resultsContainer.innerHTML = '<div class="search-loading">Идёт загрузка индекса...</div>';
+      return;
+    }
     const q = input.value.trim();
     if (!q) {
       resultsContainer.innerHTML = '';
@@ -136,5 +140,17 @@ document.addEventListener('DOMContentLoaded', () => {
     clearTimeout(debounceTimer);
     debounceTimer = setTimeout(doSearch, 250);
   });
-  button.addEventListener('click', (e) => { e.preventDefault(); doSearch(); });
+
+  // Enter в поле должен запускать поиск
+  input.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') {
+      e.preventDefault();
+      doSearch();
+    }
+  });
+
+  // Кнопка может отсутствовать в некоторых шаблонах — защитимся
+  if (button) {
+    button.addEventListener('click', (e) => { e.preventDefault(); doSearch(); });
+  }
 });
