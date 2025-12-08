@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Разница между зеркальными (DSLR), беззеркальными (Mirrorless) и компактными камерами | TechFix</title>
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="../styles-header.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <style>
+      .guide-content {
+        line-height: 1.7;
+        color: var(--text);
+      }
+      .guide-content h2 {
+        color: var(--primary);
+        margin-top: 30px;
+        margin-bottom: 15px;
+        font-size: 1.5rem;
+      }
+      .compare-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 20px 0;
+      }
+      .compare-table th,
+      .compare-table td {
+        border: 1px solid var(--border);
+        padding: 10px 15px;
+        text-align: left;
+      }
+      .compare-table th {
+        background: var(--background-alt);
+      }
+      .recommend-box {
+        background: rgba(3, 74, 79, 0.1);
+        border-left: 4px solid var(--primary);
+        padding: 12px;
+        margin: 15px 0;
+        display: flex;
+        gap: 12px;
+        align-items: flex-start;
+        border-radius: 4px;
+      }
+      .recommend-box i {
+        font-size: 1.2rem;
+        color: var(--primary);
+        margin-top: 2px;
+      }
+      .pro-tips {
+        background: rgba(3, 74, 79, 0.05);
+        padding: 15px;
+        border-radius: 6px;
+        margin: 20px 0;
+      }
+      .pro-tips h4 {
+        color: var(--primary);
+        margin-top: 0;
+        margin-bottom: 12px;
+        font-size: 1.1rem;
+      }
+      .tip-item {
+        display: flex;
+        gap: 8px;
+        margin-bottom: 8px;
+        align-items: flex-start;
+      }
+      @media (max-width: 768px) {
+        .guide-content h2 {
+          font-size: 1.4rem;
+          margin-top: 25px;
+        }
+        .compare-table th,
+        .compare-table td {
+          padding: 8px 10px;
+        }
+      }
+    </style>
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="header__inner">
+        <a href="../index.html" class="logo">
+          <span class="logo__icon"></span>
+          <span class="logo__text">TechFix</span>
+        </a>
+        <nav class="nav">
+          <ul class="nav__list">
+            <li><a href="../cameras.html" class="nav__link">Фотоаппараты</a></li>
+            <li><a href="../tv.html" class="nav__link">Телевизоры</a></li>
+            <li><a href="../laptops.html" class="nav__link">Ноутбуки</a></li>
+            <li><a href="../smartphones.html" class="nav__link">Смартфоны</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <section class="guide-page">
+    <div class="container">
+      <div class="breadcrumbs">
+        <a href="../index.html">Главная</a>
+        <i class="fas fa-chevron-right"></i>
+        <a href="../cameras.html">Фотоаппараты</a>
+        <i class="fas fa-chevron-right"></i>
+        <span>Разница между зеркальными (DSLR), беззеркальными (Mirrorless) и компактными камерами</span>
+      </div>
+      <h1 class="section__title">Разница между зеркальными (DSLR), беззеркальными (Mirrorless) и компактными камерами</h1>
+      <div class="guide-meta">
+        <span><i class="fas fa-camera"></i> Обзор типов камер</span>
+      </div>
+      <div class="guide-image-block">
+                <img src="https://avatars.mds.yandex.net/get-shedevrum/15247318/img_a2f357a42cb111f0b42ece263fd3d7f5/orig">
+            </div>
+      <div class="guide-content">
+        <h2>Основные типы фотоаппаратов</h2>
+        <table class="compare-table">
+          <thead>
+            <tr>
+              <th>Тип камеры</th>
+              <th>Описание</th>
+              <th>Плюсы</th>
+              <th>Минусы</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><b>Зеркальные (DSLR)</b></td>
+              <td>Камеры с зеркалом и оптическим видоискателем. Свет проходит через объектив, отражается зеркалом в видоискатель.</td>
+              <td>
+                - Отличное качество изображения<br/>
+                - Быстрый и точный автофокус через видоискатель<br/>
+                - Большой выбор объективов и аксессуаров<br/>
+                - Долгая работа от аккумулятора
+              </td>
+              <td>
+                - Большой и тяжёлый корпус<br/>
+                - Механизм зеркала увеличивает вибрации и шум<br/>
+                - Менее компактны и мобильны
+              </td>
+            </tr>
+            <tr>
+              <td><b>Беззеркальные (Mirrorless)</b></td>
+              <td>Камеры без зеркала, с электронным видоискателем или только экраном. Свет сразу попадает на матрицу.</td>
+              <td>
+                - Компактнее и легче DSLR<br/>
+                - Быстрый автофокус с технологией фазовой детекции на матрице<br/>
+                - Возможность видеосъёмки высокого качества<br/>
+                - Электронный видоискатель с отображением настроек в реальном времени
+              </td>
+              <td>
+                - Меньшее время работы от аккумулятора<br/>
+                - Электронный видоискатель может иметь задержку и шум<br/>
+                - Меньший выбор оптики (но быстро растёт)
+              </td>
+            </tr>
+            <tr>
+              <td><b>Компактные камеры</b></td>
+              <td>Маленькие камеры с фиксированным объективом, часто с меньшей матрицей.</td>
+              <td>
+                - Очень компактные и лёгкие<br/>
+                - Просты в использовании<br/>
+                - Часто имеют встроенный зум и автоматические режимы
+              </td>
+              <td>
+                - Ограниченные возможности ручных настроек<br/>
+                - Меньшее качество изображения<br/>
+                - Фиксированный объектив, отсутствие сменной оптики
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <h2>Когда какую камеру выбрать?</h2>
+        <ul>
+          <li><b>DSLR:</b> для тех, кто ценит качество, широкий выбор объективов и привык к классическому управлению.</li>
+          <li><b>Беззеркальные:</b> для тех, кто хочет компактность, современные технологии и высокое качество, особенно для видео.</li>
+          <li><b>Компактные:</b> для простых задач, путешествий, быстрого фото без сложных настроек.</li>
+        </ul>
+        <div class="recommend-box">
+          <i class="fas fa-info-circle"></i>
+          <div>
+            <strong>Совет:</strong> Выбирайте камеру исходя из своих задач, бюджета и предпочтений по размеру и функционалу. Беззеркальные камеры сейчас активно развиваются и подходят большинству пользователей.
+          </div>
+        </div>
+        <div class="pro-tips">
+          <h4>🔹 Профессиональные советы</h4>
+          <div class="tip-item">
+            <i class="fas fa-lightbulb"></i>
+            <p>Если планируете снимать видео, выбирайте беззеркальные камеры с хорошей стабилизацией и автофокусом.</p>
+          </div>
+          <div class="tip-item">
+            <i class="fas fa-lightbulb"></i>
+            <p>Для портретов и студийной съёмки DSLR с оптическим видоискателем остаются классикой.</p>
+          </div>
+          <div class="tip-item">
+            <i class="fas fa-lightbulb"></i>
+            <p>Компактные камеры хороши для повседневных снимков и путешествий, но быстро ограничивают творческие возможности.</p>
+          </div>
+        </div>
+        <h2>Часто задаваемые вопросы</h2>
+        <ul>
+          <li><b>Что лучше для новичка?</b> – Беззеркальная камера за счёт простоты и компактности.</li>
+          <li><b>Можно ли использовать объективы DSLR на беззеркалках?</b> – Через адаптеры, но с ограничениями.</li>
+          <li><b>Компактная камера может заменить беззеркалку?</b> – Нет, по качеству и возможностям беззеркалки превосходят компакты.</li>
+        </ul>
+        <h2>📌 Итог</h2>
+        <p>
+          Зеркальные, беззеркальные и компактные камеры имеют свои сильные и слабые стороны. Выбирайте камеру, исходя из задач, бюджета и удобства. Беззеркальные камеры сегодня – оптимальный выбор для большинства пользователей благодаря сочетанию качества, компактности и современных функций.
+        </p>
+      </div>
+    </div>
+  </section>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__col footer__col--logo">
+          <a href="index.html" class="footer-logo">
+            <span class="logo__icon"></span>
+            <span class="logo__text">TechFix</span>
+          </a>
+          <p class="footer__text">Помогаем ремонтировать электронику с 2024 года</p>
+        </div>
+        <div class="footer__col">
+          <h3 class="footer__title">Разделы</h3>
+          <ul class="footer__links">
+            <li><a href="index.html" class="footer__link">Главная</a></li>
+            <li><a href="all-guides.html" class="footer__link">Все гайды</a></li>
+            <li><a href="contacts.html" class="footer__link">Контакты</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h3 class="footer__title">Категории</h3>
+          <ul class="footer__links">
+            <li><a href="../tv.html" class="nav__link">Телевизоры</a></li>
+            <li><a href="../cameras.html" class="nav__link">Фотоаппараты</a></li>
+            <li><a href="../consoles.html" class="nav__link">Приставки</a></li>
+            <li><a href="../laptops.html" class="nav__link">Ноутбуки</a></li>
+            <li><a href="../smartphones.html" class="nav__link">Смартфоны</a></li>
+            <li><a href="../small-appliances.html" class="nav__link">Мелкая техника</a></li>
+            <li><a href="../large-appliances.html" class="nav__link">Бытовая техника</a></li>
+            <li><a href="../auto-electronics.html" class="nav__link">Авто-Электроника</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h3 class="footer__title">Контакты</h3>
+          <ul class="footer__links">
+            <li><a href="https://t.me/techfix_kz" class="footer__link"><i class="fab fa-telegram"></i> Telegram</a></li>
+            <li><a href="https://instagram.com/techfix_kz" class="footer__link"><i class="fab fa-instagram"></i> Instagram</a></li>
+            <li><a href="mailto:support@techfix.kz" class="footer__link"><i class="fas fa-envelope"></i> Email</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copyright">© 2024 TechFix. Все права защищены.</p>
+      </div>
+    </div>
+  </footer>
+  <script src="../script.js"></script>
+</body>
+</html>

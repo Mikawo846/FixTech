@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Как правильно настроить фотоаппарат перед первой съемкой? | TechFix</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../styles-header.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .guide-content { line-height: 1.7; color: var(--text);}
+        .guide-content h2 { color: var(--primary); margin-top: 30px; margin-bottom: 15px; font-size: 1.5rem;}
+        .step-group { margin: 20px 0; padding: 15px; background: var(--background); border-radius: var(--border-radius); border: 1px solid var(--border);}
+        .step { display: flex; gap: 15px; margin: 12px 0; padding: 12px; background: var(--background-alt); border-radius: 6px; align-items: flex-start;}
+        .step-number { background: var(--primary); color: white; width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-weight: bold; font-size: 0.8rem;}
+        .recommend-box { background: rgba(3, 74, 79, 0.1); border-left: 4px solid var(--primary); padding: 12px; margin: 15px 0; display: flex; gap: 12px; align-items: flex-start; border-radius: 4px;}
+        .recommend-box i { font-size: 1.2rem; color: var(--primary); margin-top: 2px;}
+        .pro-tips { background: rgba(3, 74, 79, 0.05); padding: 15px; border-radius: 6px; margin: 20px 0;}
+        .pro-tips h4 { color: var(--primary); margin-top: 0; margin-bottom: 12px; font-size: 1.1rem;}
+        .tip-item { display: flex; gap: 8px; margin-bottom: 8px; align-items: flex-start;}
+        @media (max-width: 768px) {
+            .guide-content h2 { font-size: 1.4rem; margin-top: 25px;}
+            .step-group { padding: 12px; margin: 15px 0;}
+            .step { padding: 10px;}
+        }
+    </style>
+</head>
+<body>
+<header class="header">
+    <div class="container">
+        <div class="header__inner">
+            <a href="../index.html" class="logo">
+                <span class="logo__icon"></span>
+                <span class="logo__text">TechFix</span>
+            </a>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li><a href="../cameras.html" class="nav__link">Фотоаппараты</a></li>
+                    <li><a href="../tv.html" class="nav__link">Телевизоры</a></li>
+                    <li><a href="../laptops.html" class="nav__link">Ноутбуки</a></li>
+                    <li><a href="../smartphones.html" class="nav__link">Смартфоны</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>
+<section class="guide-page">
+    <div class="container">
+        <div class="breadcrumbs">
+            <a href="../index.html">Главная</a>
+            <i class="fas fa-chevron-right"></i>
+            <a href="../cameras.html">Фотоаппараты</a>
+            <i class="fas fa-chevron-right"></i>
+            <span>Как правильно настроить фотоаппарат перед первой съемкой?</span>
+        </div>
+        <h1 class="section__title">Как правильно настроить фотоаппарат перед первой съемкой?</h1>
+        <div class="guide-meta">
+            <span><i class="fas fa-camera-retro"></i> Чек-лист для новичка</span>
+        </div>
+        <div class="guide-image-block">
+                <img src="https://avatars.mds.yandex.net/get-shedevrum/16311338/img_08f1049a2cb511f0bf11aa21ebb699bc/orig">
+            </div>
+        <div class="guide-content">
+            <h2>Пошаговая настройка фотоаппарата перед первой съемкой</h2>
+            <div class="step-group">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div>
+                        <strong>Проверьте комплектность и работоспособность</strong>
+                        <ul>
+                            <li>Убедитесь, что аккумулятор заряжен, карта памяти установлена и отформатирована.</li>
+                            <li>Проверьте объектив: нет ли царапин, пыли, плесени, все ли элементы работают плавно и без люфтов.</li>
+                            <li>Проверьте работу автофокуса, переключая разные режимы и делая тестовые кадры.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div>
+                        <strong>Выберите формат и качество изображения</strong>
+                        <ul>
+                            <li>Для максимального качества и гибкости выберите формат RAW или RAW+JPEG. Для быстрой публикации – JPEG.</li>
+                            <li>Установите максимальное разрешение и качество файлов.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div>
+                        <strong>Настройте цветовое пространство и баланс белого</strong>
+                        <ul>
+                            <li>Для печати используйте AdobeRGB, для публикаций в интернете – sRGB.</li>
+                            <li>Баланс белого (WB): для начала можно оставить "Авто" (AWB), при сложном свете – выберите подходящую предустановку или настройте вручную.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div>
+                        <strong>Установите основные параметры экспозиции</strong>
+                        <ul>
+                            <li>ISO: ставьте минимально возможное (100–400) при хорошем свете, повышайте при недостатке света.</li>
+                            <li>Диафрагма: f/2–f/3 для портретов, f/5–f/8 для пейзажей и групповых фото.</li>
+                            <li>Выдержка: универсально – 1/125 сек, для движущихся объектов – короче, для статичных – можно длиннее.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">5</div>
+                    <div>
+                        <strong>Выберите режим съемки</strong>
+                        <ul>
+                            <li>Для контроля и обучения используйте ручной режим (M) или приоритет диафрагмы (A/Av) – так вы научитесь понимать влияние настроек.</li>
+                            <li>В автоматическом режиме проще начать, но лучше переходить к ручным настройкам для качественных кадров.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">6</div>
+                    <div>
+                        <strong>Настройте фокусировку и серийную съемку</strong>
+                        <ul>
+                            <li>Выберите подходящий режим автофокуса (AF-S для статичных, AF-C для движущихся объектов).</li>
+                            <li>Включите серийную съемку, чтобы не упустить удачный момент.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">7</div>
+                    <div>
+                        <strong>Отключите встроенную вспышку</strong>
+                        <ul>
+                            <li>Встроенная вспышка часто портит свет и делает фото плоским. Используйте её только в крайнем случае, лучше работать с естественным светом или внешней вспышкой.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <h2>Полезные советы для первой съемки</h2>
+            <ul>
+                <li>Сделайте несколько тестовых кадров, изучите результат, скорректируйте настройки при необходимости.</li>
+                <li>Не бойтесь экспериментировать с параметрами – так вы быстрее поймёте, как они влияют на фото.</li>
+                <li>Изучайте свет: ищите мягкое освещение, избегайте жёстких теней и пересветов.</li>
+                <li>Снимайте больше – опыт приходит с практикой. Используйте серийную съемку для выбора лучшего кадра.</li>
+            </ul>
+            <div class="recommend-box">
+                <i class="fas fa-info-circle"></i>
+                <div>
+                    <strong>Совет:</strong> После первой съемки обязательно просмотрите все кадры на большом экране, чтобы выявить ошибки и сделать работу над ошибками.
+                </div>
+            </div>
+            <div class="pro-tips">
+                <h4>🔹 Профессиональные советы</h4>
+                <div class="tip-item">
+                    <i class="fas fa-lightbulb"></i>
+                    <p>Перед важной съемкой проверьте батарею и запасную карту памяти.</p>
+                </div>
+                <div class="tip-item">
+                    <i class="fas fa-lightbulb"></i>
+                    <p>Регулярно форматируйте карту памяти в самой камере для стабильной работы.</p>
+                </div>
+                <div class="tip-item">
+                    <i class="fas fa-lightbulb"></i>
+                    <p>Не забывайте про чистоту объектива – даже небольшое пятно может испортить кадр.</p>
+                </div>
+            </div>
+            <h2>Часто задаваемые вопросы</h2>
+            <ul>
+                <li><b>Можно ли сразу снимать в ручном режиме?</b> – Да, это лучший способ понять, как работают настройки и получить качественные кадры.</li>
+                <li><b>Что делать, если фото темные или светлые?</b> – Корректируйте ISO, диафрагму и выдержку, ориентируйтесь на гистограмму и предпросмотр.</li>
+                <li><b>Нужно ли сразу снимать в RAW?</b> – Желательно, если планируете обрабатывать фото. Для быстрой публикации хватит JPEG.</li>
+            </ul>
+            <h2>📌 Итог</h2>
+            <p>
+                Перед первой съемкой проверьте технику, выберите формат и качество снимков, настройте баланс белого, ISO, диафрагму, выдержку и автофокус. Не бойтесь экспериментировать и анализируйте результат – так вы быстро освоите свой фотоаппарат и получите красивые кадры!
+            </p>
+        </div>
+    </div>
+</section>
+<footer class="footer">
+    <div class="container">
+        <div class="footer__grid">
+            <div class="footer__col footer__col--logo">
+                <a href="index.html" class="footer-logo">
+                    <span class="logo__icon"></span>
+                    <span class="logo__text">TechFix</span>
+                </a>
+                <p class="footer__text">Помогаем ремонтировать электронику с 2024 года</p>
+            </div>
+            <div class="footer__col">
+                <h3 class="footer__title">Разделы</h3>
+                <ul class="footer__links">
+                    <li><a href="index.html" class="footer__link">Главная</a></li>
+                    <li><a href="all-guides.html" class="footer__link">Все гайды</a></li>
+                    <li><a href="contacts.html" class="footer__link">Контакты</a></li>
+                </ul>
+            </div>
+            <div class="footer__col">
+                <h3 class="footer__title">Категории</h3>
+                <ul class="footer__links">
+                    <li><a href="../tv.html" class="nav__link">Телевизоры</a></li>
+                    <li><a href="../cameras.html" class="nav__link">Фотоаппараты</a></li>
+                    <li><a href="../consoles.html" class="nav__link">Приставки</a></li>
+                    <li><a href="../laptops.html" class="nav__link">Ноутбуки</a></li>
+                    <li><a href="../smartphones.html" class="nav__link">Смартфоны</a></li>
+                    <li><a href="../small-appliances.html" class="nav__link">Мелкая техника</a></li>
+                    <li><a href="../large-appliances.html" class="nav__link">Бытовая техника</a></li>
+                    <li><a href="../auto-electronics.html" class="nav__link">Авто-Электроника</a></li>
+                </ul>
+            </div>
+            <div class="footer__col">
+                <h3 class="footer__title">Контакты</h3>
+                <ul class="footer__links">
+                    <li><a href="https://t.me/techfix_kz" class="footer__link"><i class="fab fa-telegram"></i> Telegram</a></li>
+                    <li><a href="https://instagram.com/techfix_kz" class="footer__link"><i class="fab fa-instagram"></i> Instagram</a></li>
+                    <li><a href="mailto:support@techfix.kz" class="footer__link"><i class="fas fa-envelope"></i> Email</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <p class="footer__copyright">© 2024 TechFix. Все права защищены.</p>
+        </div>
+    </div>
+</footer>
+<script src="../script.js"></script>
+</body>
+</html>

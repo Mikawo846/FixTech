@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Восстановление телевизора после сброса настроек | TechFix</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../styles-header.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Основные стили */
+        .guide-content {
+            line-height: 1.7;
+            color: var(--text);
+        }
+        .guide-content h2 {
+            color: var(--primary);
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+        .guide-content h3 {
+            color: var(--primary-dark);
+            margin-top: 25px;
+            margin-bottom: 12px;
+            font-size: 1.2rem;
+        }
+        /* Стили для шагов */
+        .step-group {
+            margin: 20px 0;
+            padding: 15px;
+            background: var(--background);
+            border-radius: var(--border-radius);
+            border: 1px solid var(--border);
+        }
+        .step {
+            display: flex;
+            gap: 15px;
+            margin: 12px 0;
+            padding: 12px;
+            background: var(--background-alt);
+            border-radius: 6px;
+            align-items: flex-start;
+        }
+        .step-number {
+            background: var(--primary);
+            color: white;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            font-weight: bold;
+            font-size: 0.8rem;
+        }
+        /* Изображения */
+        .guide-image-block {
+            margin: 20px 0;
+            padding: 15px;
+            background: var(--background);
+            border-radius: var(--border-radius);
+            border: 1px solid var(--border);
+            text-align: center;
+        }
+        .guide-image-block img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 6px;
+            border: 1px solid var(--border);
+        }
+        .image-caption {
+            margin-top: 10px;
+            font-size: 0.85rem;
+            color: var(--text-light);
+            font-style: italic;
+        }
+        /* Рекомендации */
+        .recommend-box {
+            background: rgba(3, 74, 79, 0.1);
+            border-left: 4px solid var(--primary);
+            padding: 12px;
+            margin: 15px 0;
+            display: flex;
+            gap: 12px;
+            align-items: flex-start;
+            border-radius: 4px;
+        }
+        .recommend-box i {
+            font-size: 1.2rem;
+            color: var(--primary);
+            margin-top: 2px;
+        }
+        /* Советы */
+        .pro-tips {
+            background: rgba(3, 74, 79, 0.05);
+            padding: 15px;
+            border-radius: 6px;
+            margin: 20px 0;
+        }
+        .pro-tips h4 {
+            color: var(--primary);
+            margin-top: 0;
+            margin-bottom: 12px;
+            font-size: 1.1rem;
+        }
+        .tip-item {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 8px;
+            align-items: flex-start;
+        }
+        /* Медиа-запросы для мобильных */
+        @media (max-width: 768px) {
+            .guide-content h2 {
+                font-size: 1.4rem;
+                margin-top: 25px;
+            }
+            .step-group, .guide-image-block {
+                padding: 12px;
+                margin: 15px 0;
+            }
+            .step {
+                padding: 10px;
+            }
+        }
+        .troubleshooting-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        .troubleshooting-table th, .troubleshooting-table td {
+            border: 1px solid var(--border);
+            padding: 8px 12px;
+            text-align: left;
+        }
+        .troubleshooting-table th {
+            background-color: var(--primary);
+            color: white;
+        }
+        .troubleshooting-table tr:nth-child(even) {
+            background-color: var(--background-alt);
+        }
+        .brand-section {
+            background: #f0f7ff;
+            border-left: 4px solid #1890ff;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        .brand-section h4 {
+            color: #1890ff;
+            margin-top: 0;
+        }
+        .backup-section {
+            background: #fff8e6;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        .backup-section h4 {
+            color: #ff9800;
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <a href="../index.html" class="logo">
+                    <span class="logo__icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 15L7 10H17L12 15Z" fill="currentColor"/>
+                            <path d="M12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3ZM12 19C8.13401 19 5 15.866 5 12C5 8.13401 8.13401 5 12 5C15.866 5 19 8.13401 19 12C19 15.866 15.866 19 12 19Z" fill="currentColor"/>
+                        </svg>
+                    </span>
+                    <span class="logo__text">TechFix</span>
+                </a>
+                <nav class="nav">
+                    <ul class="nav__list">
+                        <li><a href="../tv.html" class="nav__link">Телевизоры</a></li>
+                        <li><a href="../cameras.html" class="nav__link">Фотоаппараты</a></li>
+                        <li><a href="../consoles.html" class="nav__link">Приставки</a></li>
+                        <li><a href="../laptops.html" class="nav__link">Ноутбуки</a></li>
+                        <li><a href="../smartphones.html" class="nav__link">Смартфоны</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <section class="guide-page">
+        <div class="container">
+            <div class="breadcrumbs">
+                <a href="../index.html">Главная</a>
+                <i class="fas fa-chevron-right"></i>
+                <a href="../tv.html">Телевизоры</a>
+                <i class="fas fa-chevron-right"></i>
+                <span>Восстановление после сброса настроек</span>
+            </div>
+            <h1 class="section__title">Как восстановить телевизор после сброса настроек</h1>
+            <div class="guide-meta">
+                <span><i class="fas fa-clock"></i> 20-40 мин</span>
+                <span><i class="fas fa-tools"></i> Средний уровень</span>
+            </div>
+            <div class="guide-image-block">
+                <img src="https://avatars.mds.yandex.net/get-shedevrum/16287116/img_77325f8f265211f0864216609d737eaa/orig">
+            </div>
+            <div class="guide-content">
+                <h2>Что происходит после сброса настроек?</h2>
+                <p>После сброса к заводским настройкам телевизор возвращается в состояние "как из магазина". Все ваши персональные настройки, установленные приложения и подключенные устройства будут удалены.</p>
+
+                <div class="recommend-box">
+                    <i class="fas fa-info-circle"></i>
+                    <div>
+                        <p><strong>Важно:</strong> Перед сбросом рекомендуется сделать резервную копию важных данных (логины, пароли, список приложений). Некоторые телевизоры поддерживают функцию резервного копирования настроек.</p>
+                    </div>
+                </div>
+
+                <h2>Пошаговое восстановление</h2>
+                <div class="step-group">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div>
+                            <p><strong>Первоначальная настройка:</strong></p>
+                            <ul>
+                                <li>Выберите язык интерфейса</li>
+                                <li>Настройте дату и время (рекомендуется автоматическая синхронизация)</li>
+                                <li>Примите лицензионное соглашение</li>
+                                <li>Выберите страну и регион</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div>
+                            <p><strong>Подключение к сети:</strong></p>
+                            <ul>
+                                <li>Подключитесь к Wi-Fi или Ethernet</li>
+                                <li>При необходимости введите пароль от сети</li>
+                                <li>Проверьте подключение к интернету</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div>
+                            <p><strong>Обновление системы:</strong></p>
+                            <ul>
+                                <li>Проверьте наличие обновлений ПО</li>
+                                <li>Установите последнюю версию прошивки</li>
+                                <li>Дождитесь завершения процесса обновления</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="backup-section">
+                    <h4>Восстановление из резервной копии</h4>
+                    <div class="step-group">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div>
+                                <p><strong>Для телевизоров Samsung:</strong></p>
+                                <ul>
+                                    <li>Перейдите в "Настройки" → "Общие" → "Сброс"</li>
+                                    <li>Выберите "Восстановление из резервной копии"</li>
+                                    <li>Укажите источник (USB-накопитель или облако)</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div>
+                                <p><strong>Для телевизоров LG:</strong></p>
+                                <ul>
+                                    <li>Откройте "Настройки" → "Общие" → "О телевизоре"</li>
+                                    <li>Выберите "Восстановление и сброс" → "Восстановить настройки"</li>
+                                    <li>Укажите файл резервной копии на USB-устройстве</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div>
+                                <p><strong>Для телевизоров Sony:</strong></p>
+                                <ul>
+                                    <li>Перейдите в "Настройки" → "Хранилище и сброс"</li>
+                                    <li>Выберите "Восстановление данных"</li>
+                                    <li>Следуйте инструкциям на экране</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h2>2. Восстановление приложений и аккаунтов</h2>
+                <div class="step-group">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div>
+                            <p><strong>Авторизация в аккаунтах:</strong></p>
+                            <ul>
+                                <li>Войдите в свой Google/Android TV аккаунт</li>
+                                <li>Авторизуйтесь в магазинах приложений (Google Play, LG Content Store и др.)</li>
+                                <li>Войдите в стриминговые сервисы (Netflix, YouTube и др.)</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div>
+                            <p><strong>Установка приложений:</strong></p>
+                            <ul>
+                                <li>Восстановите приложения из истории установок</li>
+                                <li>Или установите вручную наиболее важные приложения</li>
+                                <li>Обновите все установленные приложения</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div>
+                            <p><strong>Настройка Smart TV:</strong></p>
+                            <ul>
+                                <li>Настройте главный экран и порядок приложений</li>
+                                <li>Включите автоматические обновления приложений</li>
+                                <li>Настройте голосового помощника (если есть)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="brand-section">
+                    <h4>Особенности настройки изображения по брендам</h4>
+                    <div class="step-group">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div>
+                                <p><strong>Samsung:</strong></p>
+                                <ul>
+                                    <li>Режим изображения: "Стандартный" или "Кино"</li>
+                                    <li>Режим движения: Auto Motion Plus (установите 3-5)</li>
+                                    <li>Цветовая температура: "Теплый 2"</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div>
+                                <p><strong>LG:</strong></p>
+                                <ul>
+                                    <li>Режим изображения: "ISF Expert (Темный)"</li>
+                                    <li>TruMotion: "Natural" или "User" (De-Judder 3, De-Blur 5)</li>
+                                    <li>OLED Pixel Brightness: 60-80 для SDR</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div>
+                                <p><strong>Sony:</strong></p>
+                                <ul>
+                                    <li>Режим изображения: "Custom" или "Cinema"</li>
+                                    <li>MotionFlow: "True Cinema" для фильмов</li>
+                                    <li>Reality Creation: "Auto" или "Manual" (30-50)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h2>3. Восстановление подключенных устройств</h2>
+                <div class="step-group">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div>
+                            <p><strong>Пульт ДУ:</strong></p>
+                            <ul>
+                                <li>Выполните сопряжение пульта с телевизором</li>
+                                <li>Настройте кнопки быстрого доступа</li>
+                                <li>Проверьте работу голосового управления</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div>
+                            <p><strong>Внешние устройства:</strong></p>
+                            <ul>
+                                <li>Подключите приставки, игровые консоли, звуковые системы</li>
+                                <li>Настройте HDMI-CEC (управление через пульт ТВ)</li>
+                                <li>Проверьте работу ARC/eARC для аудиосистем</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div>
+                            <p><strong>Сетевые устройства:</strong></p>
+                            <ul>
+                                <li>Подключите NAS или медиасерверы</li>
+                                <li>Настройте DLNA/UPnP при необходимости</li>
+                                <li>Проверьте доступ к сетевым папкам</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pro-tips">
+                    <h4>🔹 Профессиональные советы</h4>
+                    <div class="tip-item">
+                        <i class="fas fa-lightbulb" style="color: var(--primary);"></i>
+                        <p>Сфотографируйте настройки изображения перед сбросом для точного восстановления</p>
+                    </div>
+                    <div class="tip-item">
+                        <i class="fas fa-lightbulb" style="color: var(--primary);"></i>
+                        <p>Используйте одинаковые имена Wi-Fi сетей и пароли для автоматического подключения</p>
+                    </div>
+                    <div class="tip-item">
+                        <i class="fas fa-lightbulb" style="color: var(--primary);"></i>
+                        <p>После восстановления проверьте работу всех HDMI-портов</p>
+                    </div>
+                    <div class="tip-item">
+                        <i class="fas fa-lightbulb" style="color: var(--primary);"></i>
+                        <p>Регулярно создавайте резервные копии настроек на USB-накопитель</p>
+                    </div>
+                </div>
+
+                <h2>4. Если проблемы сохраняются</h2>
+                <div class="step-group">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div>
+                            <p><strong>Повторный сброс:</strong></p>
+                            <ul>
+                                <li>Выполните полный сброс через сервисное меню</li>
+                                <li>Для входа в сервисное меню используйте комбинацию кнопок (зависит от модели)</li>
+                                <li>Выберите "Factory Reset" или "EEPROM Reset"</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div>
+                            <p><strong>Перепрошивка:</strong></p>
+                            <ul>
+                                <li>Скачайте последнюю прошивку с сайта производителя</li>
+                                <li>Загрузите на USB-накопитель и установите вручную</li>
+                                <li>Следуйте инструкциям на экране</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div>
+                            <p><strong>Обращение в сервис:</strong></p>
+                            <ul>
+                                <li>Если проблемы не исчезают, возможно аппаратная неисправность</li>
+                                <li>Обратитесь в авторизованный сервисный центр</li>
+                                <li>Проверьте гарантийный статус устройства</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <h2>📌 Итоговые рекомендации</h2>
+                <p>Для успешного восстановления телевизора:</p>
+                <ul>
+                    <li>Выполняйте шаги последовательно, не пропуская этапы</li>
+                    <li>Используйте резервные копии при их наличии</li>
+                    <li>Не прерывайте процесс обновления ПО</li>
+                    <li>После восстановления проверьте все функции</li>
+                    <li>Регулярно обновляйте прошивку телевизора</li>
+                </ul>
+                <div style="text-align: center; margin-top: 30px;">
+                    <h3 style="color: var(--primary);">Больше полезных гайдов по настройке телевизоров вы найдете в нашем разделе!</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__col footer__col--logo">
+                    <a href="index.html" class="footer-logo">
+                        <span class="logo__icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 15L7 10H17L12 15Z" fill="currentColor"/>
+                                <path d="M12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3ZM12 19C8.13401 19 5 15.866 5 12C5 8.13401 8.13401 5 12 5C15.866 5 19 8.13401 19 12C19 15.866 15.866 19 12 19Z" fill="currentColor"/>
+                            </svg>
+                        </span>
+                        <span class="logo__text">TechFix</span>
+                    </a>
+                    <p class="footer__text">Помогаем ремонтировать электронику с 2024 года</p>
+                </div>
+                <div class="footer__col">
+                    <h3 class="footer__title">Разделы</h3>
+                    <ul class="footer__links">
+                        <li><a href="index.html" class="footer__link">Главная</a></li>
+                        <li><a href="all-guides.html" class="footer__link">Все гайды</a></li>
+                        <li><a href="contacts.html" class="footer__link">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="footer__col">
+                    <h3 class="footer__title">Категории</h3>
+                    <ul class="footer__links">
+                        <li><a href="../tv.html" class="nav__link">Телевизоры</a></li>
+                        <li><a href="../cameras.html" class="nav__link">Фотоаппараты</a></li>
+                        <li><a href="../consoles.html" class="nav__link">Приставки</a></li>
+                        <li><a href="../laptops.html" class="nav__link">Ноутбуки</a></li>
+                        <li><a href="../smartphones.html" class="nav__link">Смартфоны</a></li>
+                    </ul>
+                </div>
+                <div class="footer__col">
+                    <h3 class="footer__title">Контакты</h3>
+                    <ul class="footer__links">
+                        <li><a href="https://t.me/techfix_kz" class="footer__link"><i class="fab fa-telegram"></i> Telegram</a></li>
+                        <li><a href="https://instagram.com/techfix_kz" class="footer__link"><i class="fab fa-instagram"></i> Instagram</a></li>
+                        <li><a href="mailto:support@techfix.kz" class="footer__link"><i class="fas fa-envelope"></i> Email</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p class="footer__copyright">© 2024 TechFix. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="../script.js"></script>
+</body>
+</html>

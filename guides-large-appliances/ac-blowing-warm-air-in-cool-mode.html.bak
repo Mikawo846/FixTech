@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Почему кондиционер дует теплым воздухом в режиме охлаждения?</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../styles-header.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .guide-content { line-height: 1.7; color: var(--text); }
+        .guide-content h2 { color: var(--primary); margin-top: 30px; margin-bottom: 15px; font-size: 1.5rem; }
+        .guide-content h3 { color: var(--primary-dark); margin-top: 25px; margin-bottom: 12px; font-size: 1.2rem; }
+        .guide-image-block { margin: 20px 0; padding: 15px; background: var(--background); border-radius: var(--border-radius); border: 1px solid var(--border); text-align: center; }
+        .guide-image-block img { max-width: 100%; height: auto; border-radius: 6px; border: 1px solid var(--border); }
+        .image-caption { margin-top: 10px; font-size: 0.85rem; color: var(--text-light); font-style: italic; }
+        .pro-tips { background: rgba(3, 74, 79, 0.05); padding: 15px; border-radius: 6px; margin: 20px 0; }
+        .pro-tips h4 { color: var(--primary); margin-top: 0; margin-bottom: 12px; font-size: 1.1rem; }
+        .tip-item { display: flex; gap: 8px; margin-bottom: 8px; align-items: flex-start; }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        th, td { border: 1px solid var(--border); padding: 8px; text-align: left; }
+        th { background: var(--background-light); }
+        @media (max-width: 768px) {
+            .guide-content h2 { font-size: 1.4rem; margin-top: 25px; }
+            .guide-image-block { padding: 12px; margin: 15px 0; }
+            table, th, td { font-size: 0.95rem; }
+        }
+    </style>
+</head>
+<body>
+<header class="header">
+    <div class="container">
+        <div class="header-inner">
+            <a href="../index.html" class="logo">
+                <span class="logo-icon"></span>
+                <span class="logo-text">TechFix</span>
+            </a>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="../tv.html" class="nav-link">ТВ</a></li>
+                    <li><a href="../cameras.html" class="nav-link">Камеры</a></li>
+                    <li><a href="../consoles.html" class="nav-link">Консоли</a></li>
+                    <li><a href="../laptops.html" class="nav-link">Ноутбуки</a></li>
+                    <li><a href="../smartphones.html" class="nav-link">Смартфоны</a></li>
+                    <li><a href="../small-appliances.html" class="nav-link">Мелкая техника</a></li>
+                    <li><a href="../large-appliances.html" class="nav-link">Крупная техника</a></li>
+                    <li><a href="../auto-electronics.html" class="nav-link">Автоэлектроника</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>
+<section class="guide-page">
+    <div class="container">
+        <div class="breadcrumbs">
+            <a href="../index.html">Главная</a>
+            <i class="fas fa-chevron-right"></i>
+            <a href="../large-appliances.html">Крупная техника</a>
+            <i class="fas fa-chevron-right"></i>
+            <span>Почему кондиционер дует теплым воздухом в режиме охлаждения?</span>
+        </div>
+        <h1 class="section-title">Почему кондиционер дует теплым воздухом в режиме охлаждения?</h1>
+        <div class="guide-meta">
+            <span><i class="fas fa-hourglass-half"></i> 2025, подробный гайд</span>
+        </div>
+        <div class="guide-image-block">
+            <img src="https://avatars.mds.yandex.net/get-shedevrum/15240847/img_1bfee7b248ff11f0b005661b4d276305/orig" alt="Кондиционер дует теплым воздухом в режиме охлаждения">
+            <div class="image-caption">Тёплый воздух из кондиционера при включённом охлаждении — признак неисправности или неправильной настройки системы</div>
+        </div>
+        <div class="guide-content">
+            <h2>Введение</h2>
+            <p>
+                Если кондиционер дует тёплым воздухом в режиме охлаждения, это свидетельствует о нарушении работы системы. Причины могут быть как простыми (ошибки в настройках, загрязнение фильтров, неправильный режим), так и связанными с техническими неисправностями (утечка фреона, поломка компрессора, сбой электроники). В этом материале — подробный разбор причин, пошаговая диагностика, таблицы, советы по профилактике и рекомендации по ремонту современных кондиционеров.
+            </p>
+
+            <h2>Основные причины, почему кондиционер дует тёплым воздухом в режиме охлаждения</h2>
+            <ul>
+                <li><b>Выбран неправильный режим работы</b> — установлен обогрев или вентиляция вместо охлаждения.</li>
+                <li><b>Загрязнены фильтры внутреннего блока</b> — снижается поток воздуха, система не может эффективно охлаждать помещение.</li>
+                <li><b>Недостаток или утечка хладагента (фреона)</b> — компрессор работает, но охлаждение не происходит.</li>
+                <li><b>Неисправность компрессора или его пускового реле</b> — компрессор не запускается или работает с перебоями.</li>
+                <li><b>Загрязнение теплообменника (радиатора) внутреннего или внешнего блока</b> — ухудшается теплоотвод, охлаждение не происходит.</li>
+                <li><b>Неисправность вентилятора внутреннего или наружного блока</b> — воздух не циркулирует, тепло не отводится.</li>
+                <li><b>Сбой или ошибка в работе платы управления, датчиков температуры</b> — система не получает правильных команд.</li>
+                <li><b>Открыты окна или двери, сильная жара снаружи</b> — поток горячего воздуха превышает возможности кондиционера.</li>
+                <li><b>Неправильный монтаж или повреждение магистрали</b> — нарушена циркуляция фреона.</li>
+            </ul>
+
+            <h2>Пошаговая диагностика для пользователя</h2>
+            <ol>
+                <li>
+                    <b>Проверьте выбранный режим работы</b><br>
+                    Убедитесь, что установлен режим "Cool" (охлаждение), а не "Heat" (обогрев) или "Fan" (вентиляция).
+                </li>
+                <li>
+                    <b>Проверьте температуру, заданную на пульте</b><br>
+                    Температура должна быть ниже, чем температура воздуха в помещении.
+                </li>
+                <li>
+                    <b>Очистите или замените воздушные фильтры</b><br>
+                    Загрязнённые фильтры снижают эффективность охлаждения и могут привести к перегреву системы.
+                </li>
+                <li>
+                    <b>Осмотрите внутренний и наружный блоки</b><br>
+                    Проверьте, не забиты ли радиаторы пылью, пухом, грязью. Очистите их мягкой щёткой или пылесосом.
+                </li>
+                <li>
+                    <b>Проверьте, работает ли компрессор и вентиляторы</b><br>
+                    При включении охлаждения должен запускаться наружный блок и компрессор. Если слышен только вентилятор — возможна неисправность компрессора.
+                </li>
+                <li>
+                    <b>Проверьте, не открыты ли окна и двери</b><br>
+                    Закройте все проёмы, чтобы не поступал горячий воздух с улицы.
+                </li>
+                <li>
+                    <b>Если после всех проверок проблема не решена — обратитесь к специалисту</b><br>
+                    Неисправности компрессора, утечка фреона, сбои электроники требуют профессионального ремонта.
+                </li>
+            </ol>
+
+            <div class="guide-image-block">
+                <img src="https://avatars.mds.yandex.net/get-shedevrum/15240847/img_1bfee7b248ff11f0b005661b4d276305/orig" alt="Диагностика кондиционера, который дует тёплым воздухом">
+                <div class="image-caption">Проверяйте режим, фильтры, чистоту блоков и работу компрессора — это основные причины появления тёплого воздуха</div>
+            </div>
+
+            <h2>Таблица: причины и решения</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Причина</th>
+                        <th>Признаки</th>
+                        <th>Решение</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Выбран не тот режим</td>
+                        <td>Дует тёплый воздух, охлаждение не включается</td>
+                        <td>Установить режим "Cool" (охлаждение)</td>
+                    </tr>
+                    <tr>
+                        <td>Загрязнены фильтры</td>
+                        <td>Слабый поток воздуха, пыль, шум</td>
+                        <td>Почистить или заменить фильтры</td>
+                    </tr>
+                    <tr>
+                        <td>Недостаток фреона</td>
+                        <td>Дует тёплый воздух, наружный блок работает, но не холодит</td>
+                        <td>Диагностика, дозаправка фреона специалистом</td>
+                    </tr>
+                    <tr>
+                        <td>Неисправен компрессор</td>
+                        <td>Вентилятор работает, компрессор не включается</td>
+                        <td>Ремонт или замена компрессора</td>
+                    </tr>
+                    <tr>
+                        <td>Загрязнён радиатор</td>
+                        <td>Слабое охлаждение, шум, перегрев</td>
+                        <td>Очистить радиатор внутреннего и наружного блока</td>
+                    </tr>
+                    <tr>
+                        <td>Сбой электроники</td>
+                        <td>Не реагирует на команды, некорректная работа</td>
+                        <td>Перезагрузка, ремонт платы управления</td>
+                    </tr>
+                    <tr>
+                        <td>Открыты окна/двери</td>
+                        <td>Ощущается тёплый поток, не охлаждает помещение</td>
+                        <td>Закрыть окна и двери</td>
+                    </tr>
+                    <tr>
+                        <td>Повреждение магистрали</td>
+                        <td>Нет холода, слышен свист, масло на трубках</td>
+                        <td>Ремонт и восстановление герметичности</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h2>Особенности для инверторных и обычных моделей</h2>
+            <ul>
+                <li>В инверторных кондиционерах сбои платы управления могут приводить к неправильному запуску режима охлаждения.</li>
+                <li>В обычных моделях чаще встречается утечка фреона и загрязнение фильтров.</li>
+                <li>В некоторых случаях после долгого простоя кондиционеру требуется несколько минут для перехода в режим охлаждения.</li>
+            </ul>
+
+            <h2>Профилактика и советы по эксплуатации</h2>
+            <div class="pro-tips">
+                <h4><i class="fas fa-lightbulb"></i> Практические советы</h4>
+                <div class="tip-item">
+                    <i class="fas fa-check-circle"></i>
+                    <p>Очищайте фильтры не реже 1 раза в месяц в сезон активного использования.</p>
+                </div>
+                <div class="tip-item">
+                    <i class="fas fa-user-shield"></i>
+                    <p>Проводите сервисное обслуживание кондиционера не реже 1 раза в год: чистка, диагностика, дозаправка фреона.</p>
+                </div>
+                <div class="tip-item">
+                    <i class="fas fa-tools"></i>
+                    <p>Следите за состоянием наружного блока — очищайте радиатор от пуха, листьев, грязи.</p>
+                </div>
+                <div class="tip-item">
+                    <i class="fas fa-user-cog"></i>
+                    <p>Не открывайте окна и двери во время работы кондиционера в режиме охлаждения.</p>
+                </div>
+                <div class="tip-item">
+                    <i class="fas fa-bolt"></i>
+                    <p>При первых признаках неисправности вызывайте специалиста — самостоятельная дозаправка фреона и ремонт компрессора не рекомендуются.</p>
+                </div>
+            </div>
+
+            <h2>FAQ</h2>
+            <ul>
+                <li><strong>Почему кондиционер дует тёплым воздухом, если фильтры чистые?</strong><br>
+                    Возможна утечка фреона, неисправность компрессора или сбой электроники.</li>
+                <li><strong>Можно ли самостоятельно дозаправить фреон?</strong><br>
+                    Нет, это требует специального оборудования и навыков, обращайтесь к специалисту.</li>
+                <li><strong>Что делать, если после чистки фильтров проблема не исчезла?</strong><br>
+                    Проверьте режим, температуру, работу наружного блока. Если не помогло — вызовите сервис.</li>
+                <li><strong>Влияет ли жара на эффективность кондиционера?</strong><br>
+                    Да, при температуре выше +35°C эффективность снижается, особенно если наружный блок на солнце.</li>
+                <li><strong>Что делать, если кондиционер работает, но не охлаждает?</strong><br>
+                    Проверьте все основные причины, при необходимости обратитесь к мастеру для диагностики и ремонта.</li>
+            </ul>
+
+            <h2>Заключение</h2>
+            <p>
+                Если кондиционер дует тёплым воздухом в режиме охлаждения, причина может быть как в настройках и загрязнении фильтров, так и в технических неисправностях — утечке фреона, поломке компрессора, сбое электроники. Проверьте простые причины самостоятельно, но для сложных случаев обращайтесь к профессионалам. Регулярное обслуживание и грамотная эксплуатация помогут избежать проблем и продлят срок службы вашего кондиционера!
+            </p>
+        </div>
+    </div>
+</section>
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col footer-col--logo">
+                <a href="../index.html" class="footer-logo">
+                    <span class="logo-icon"></span>
+                    <span class="logo-text">TechFix</span>
+                </a>
+                <p class="footer-text">© 2025 TechFix. Все права защищены.</p>
+            </div>
+            <div class="footer-col">
+                <h3 class="footer-title">Навигация</h3>
+                <ul class="footer-links">
+                    <li><a href="../index.html" class="footer-link">Главная</a></li>
+                    <li><a href="../all-guides.html" class="footer-link">Все статьи</a></li>
+                    <li><a href="../contacts.html" class="footer-link">Контакты</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3 class="footer-title">Разделы</h3>
+                <ul class="footer-links">
+                    <li><a href="../tv.html" class="nav-link">ТВ</a></li>
+                    <li><a href="../cameras.html" class="nav-link">Камеры</a></li>
+                    <li><a href="../consoles.html" class="nav-link">Консоли</a></li>
+                    <li><a href="../laptops.html" class="nav-link">Ноутбуки</a></li>
+                    <li><a href="../smartphones.html" class="nav-link">Смартфоны</a></li>
+                    <li><a href="../small-appliances.html" class="nav-link">Мелкая техника</a></li>
+                    <li><a href="../large-appliances.html" class="nav-link">Крупная техника</a></li>
+                    <li><a href="../auto-electronics.html" class="nav-link">Автоэлектроника</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3 class="footer-title">Связь</h3>
+                <ul class="footer-links">
+                    <li><a href="https://t.me/techfixkz" class="footer-link"><i class="fab fa-telegram"></i> Telegram</a></li>
+                    <li><a href="https://instagram.com/techfixkz" class="footer-link"><i class="fab fa-instagram"></i> Instagram</a></li>
+                    <li><a href="mailto:support@techfix.kz" class="footer-link"><i class="fas fa-envelope"></i> Email</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p class="footer-copyright">2025 TechFix. Все права защищены.</p>
+        </div>
+    </div>
+</footer>
+<script src="../script.js"></script>
+</body>
+</html>

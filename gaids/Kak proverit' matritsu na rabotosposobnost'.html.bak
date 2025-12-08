@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Как проверить матрицу телевизора на работоспособность | TechFix</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../styles-header.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Основные стили */
+        .guide-content {
+            line-height: 1.7;
+            color: var(--text);
+        }
+        .guide-content h2 {
+            color: var(--primary);
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+        .guide-content h3 {
+            color: var(--primary-dark);
+            margin-top: 25px;
+            margin-bottom: 12px;
+            font-size: 1.2rem;
+        }
+        /* Стили для шагов */
+        .step-group {
+            margin: 20px 0;
+            padding: 15px;
+            background: var(--background);
+            border-radius: var(--border-radius);
+            border: 1px solid var(--border);
+        }
+        .step {
+            display: flex;
+            gap: 15px;
+            margin: 12px 0;
+            padding: 12px;
+            background: var(--background-alt);
+            border-radius: 6px;
+            align-items: flex-start;
+        }
+        .step-number {
+            background: var(--primary);
+            color: white;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            font-weight: bold;
+            font-size: 0.8rem;
+        }
+        /* Изображения */
+        .guide-image-block {
+            margin: 20px 0;
+            padding: 15px;
+            background: var(--background);
+            border-radius: var(--border-radius);
+            border: 1px solid var(--border);
+            text-align: center;
+        }
+        .guide-image-block img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 6px;
+            border: 1px solid var(--border);
+        }
+        .image-caption {
+            margin-top: 10px;
+            font-size: 0.85rem;
+            color: var(--text-light);
+            font-style: italic;
+        }
+        /* Рекомендации */
+        .recommend-box {
+            background: rgba(3, 74, 79, 0.1);
+            border-left: 4px solid var(--primary);
+            padding: 12px;
+            margin: 15px 0;
+            display: flex;
+            gap: 12px;
+            align-items: flex-start;
+            border-radius: 4px;
+        }
+        .recommend-box i {
+            font-size: 1.2rem;
+            color: var(--primary);
+            margin-top: 2px;
+        }
+        /* Советы */
+        .pro-tips {
+            background: rgba(3, 74, 79, 0.05);
+            padding: 15px;
+            border-radius: 6px;
+            margin: 20px 0;
+        }
+        .pro-tips h4 {
+            color: var(--primary);
+            margin-top: 0;
+            margin-bottom: 12px;
+            font-size: 1.1rem;
+        }
+        .tip-item {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 8px;
+            align-items: flex-start;
+        }
+        /* Медиа-запросы для мобильных */
+        @media (max-width: 768px) {
+            .guide-content h2 {
+                font-size: 1.4rem;
+                margin-top: 25px;
+            }
+            .step-group, .guide-image-block {
+                padding: 12px;
+                margin: 15px 0;
+            }
+            .step {
+                padding: 10px;
+            }
+        }
+        .warning-box {
+            background-color: #fff3f3;
+            border-left: 4px solid #ff6b6b;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        .warning-box i {
+            color: #ff6b6b;
+            margin-right: 10px;
+        }
+        .test-pattern {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-radius: 6px;
+            margin: 15px 0;
+        }
+        .test-pattern h4 {
+            margin-top: 0;
+            color: var(--primary);
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <a href="../index.html" class="logo">
+                    <span class="logo__icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 15L7 10H17L12 15Z" fill="currentColor"/>
+                            <path d="M12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3ZM12 19C8.13401 19 5 15.866 5 12C5 8.13401 8.13401 5 12 5C15.866 5 19 8.13401 19 12C19 15.866 15.866 19 12 19Z" fill="currentColor"/>
+                        </svg>
+                    </span>
+                    <span class="logo__text">TechFix</span>
+                </a>
+                <nav class="nav">
+                    <ul class="nav__list">
+                        <li><a href="../tv.html" class="nav__link">Телевизоры</a></li>
+                        <li><a href="../cameras.html" class="nav__link">Фотоаппараты</a></li>
+                        <li><a href="../consoles.html" class="nav__link">Приставки</a></li>
+                        <li><a href="../laptops.html" class="nav__link">Ноутбуки</a></li>
+                        <li><a href="../smartphones.html" class="nav__link">Смартфоны</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <section class="guide-page">
+        <div class="container">
+            <div class="breadcrumbs">
+                <a href="../index.html">Главная</a>
+                <i class="fas fa-chevron-right"></i>
+                <a href="../tv.html">Телевизоры</a>
+                <i class="fas fa-chevron-right"></i>
+                <span>Как проверить матрицу на работоспособность</span>
+            </div>
+            <h1 class="section__title">Как проверить матрицу телевизора на работоспособность</h1>
+            <div class="guide-meta">
+                <span><i class="fas fa-clock"></i> 15-30 мин</span>
+                <span><i class="fas fa-tools"></i> Средний уровень</span>
+            </div>
+            <div class="guide-image-block">
+                <img src="https://avatars.mds.yandex.net/get-shedevrum/14906380/img_3cd6d9fa25b611f092eb52aa4dba7032/orig">
+            </div>
+            <div class="guide-content">
+                <h2>Признаки неисправности матрицы</h2>
+                <p>Прежде чем проверять матрицу, важно определить характерные симптомы ее неисправности:</p>
+                <ul>
+                    <li><strong>Мертвые пиксели</strong> - точки, которые не меняют цвет</li>
+                    <li><strong>Застрявшие пиксели</strong> - точки, постоянно светящиеся одним цветом</li>
+                    <li><strong>Горизонтальные/вертикальные полосы</strong> на экране</li>
+                    <li><strong>Цветовые пятна</strong> или неравномерная подсветка</li>
+                    <li><strong>Полное отсутствие изображения</strong> при работающей подсветке</li>
+                    <li><strong>Артефакты изображения</strong> - искажения, двоения</li>
+                    <li><strong>Темные или светлые области</strong> на экране</li>
+                </ul>
+
+                <div class="test-pattern">
+                    <h4>Тестовые изображения для проверки:</h4>
+                    <p>Для качественной проверки подготовьте следующие однотонные фоны:</p>
+                    <ul>
+                        <li>Полностью белый экран</li>
+                        <li>Полностью черный экран</li>
+                        <li>Красный, зеленый и синий монохромные фоны</li>
+                        <li>Градиент от черного к белому</li>
+                        <li>Мелкую сетку или шахматный узор</li>
+                    </ul>
+                    <p>Эти тесты можно найти в меню телевизора или загрузить с USB-носителя.</p>
+                </div>
+
+                <h2>1. Визуальная проверка</h2>
+                <div class="step-group">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div>
+                            <p><strong>Проверка на битые пиксели:</strong></p>
+                            <ul>
+                                <li>Включите белый фон - видны черные точки</li>
+                                <li>Включите черный фон - видны светящиеся точки</li>
+                                <li>Проверьте цветные фоны - точки должны соответствовать фону</li>
+                                <li>Используйте лупу для тщательного осмотра</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div>
+                            <p><strong>Проверка равномерности подсветки:</strong></p>
+                            <ul>
+                                <li>На темном фоне осмотрите края экрана</li>
+                                <li>Не должно быть ярких пятен или темных зон</li>
+                                <li>Проверьте все углы на одинаковую яркость</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div>
+                            <p><strong>Проверка на полосы и артефакты:</strong></p>
+                            <ul>
+                                <li>Включите шахматный узор или сетку</li>
+                                <li>Линии должны быть ровными без разрывов</li>
+                                <li>Проверьте все участки экрана</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <h2>2. Проверка цветопередачи</h2>
+                <div class="step-group">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div>
+                            <p><strong>Основные цвета:</strong></p>
+                            <ul>
+                                <li>Поочередно включите красный, зеленый и синий фоны</li>
+                                <li>Цвет должен быть равномерным по всему экрану</li>
+                                <li>Не должно быть посторонних оттенков</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div>
+                            <p><strong>Градиенты:</strong></p>
+                            <ul>
+                                <li>Включите плавный переход от черного к белому</li>
+                                <li>Не должно быть полос или резких переходов</li>
+                                <li>Проверьте все оттенки серого</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div>
+                            <p><strong>Реальные изображения:</strong></p>
+                            <ul>
+                                <li>Включите тестовое видео с людьми и природой</li>
+                                <li>Проверьте реалистичность цветов кожи</li>
+                                <li>Зеленый и синий цвета не должны быть кислотными</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <h2>3. Проверка углов обзора</h2>
+                <div class="step-group">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div>
+                            <p><strong>Горизонтальные углы:</strong></p>
+                            <ul>
+                                <li>Отойдите в сторону от центра экрана</li>
+                                <li>Цвета не должны сильно искажаться</li>
+                                <li>Контрастность должна сохраняться</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div>
+                            <p><strong>Вертикальные углы:</strong></p>
+                            <ul>
+                                <li>Посмотрите на экран сверху и снизу</li>
+                                <li>Особенно важно для IPS-матриц</li>
+                                <li>Не должно быть сильного затемнения</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="recommend-box">
+                        <i class="fas fa-lightbulb"></i>
+                        <div>
+                            <strong>Совет:</strong> Углы обзора особенно важны для LED и IPS матриц. VA-матрицы обычно имеют более узкие углы обзора.
+                        </div>
+                    </div>
+                </div>
+
+                <h2>4. Проверка реакции пикселей</h2>
+                <div class="step-group">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div>
+                            <p><strong>Быстрые движения:</strong></p>
+                            <<ul>
+                                <li>Включите видео с быстрым действием</li>
+                                <li>Не должно быть шлейфов за объектами</li>
+                                <li>Проверьте разные скорости движения</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div>
+                            <p><strong>Тест на инверсию:</strong></p>
+                            <ul>
+                                <li>Быстро меняйте черный и белый фон</li>
+                                <li>Не должно быть остаточных изображений</li>
+                                <li>Проверьте все участки экрана</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div>
+                            <p><strong>Проверка времени отклика:</strong></p>
+                            <ul>
+                                <li>Используйте специальные тесты (например, "moving box")</li>
+                                <li>Чем меньше размытие, тем лучше</li>
+                                <li>Особенно важно для игровых телевизоров</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pro-tips">
+                    <h4>🔹 Профессиональные советы</h4>
+                    <div class="tip-item">
+                        <i class="fas fa-lightbulb" style="color: var(--primary);"></i>
+                        <p>Для OLED-матриц дополнительно проверьте равномерность черного цвета и отсутствие выгорания</p>
+                    </div>
+                    <div class="tip-item">
+                        <i class="fas fa-lightbulb" style="color: var(--primary);"></i>
+                        <p>При проверке в магазине используйте собственный контент на USB-носителе</p>
+                    </div>
+                    <div class="tip-item">
+                        <i class="fas fa-lightbulb" style="color: var(--primary);"></i>
+                        <p>Для точной проверки используйте профессиональные калибровочные шаблоны</p>
+                    </div>
+                </div>
+
+                <div class="warning-box">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <div>
+                        <strong>Когда матрица не подлежит ремонту:</strong>
+                        <ul>
+                            <li>Большое количество битых пикселей (более 5-10)</li>
+                            <li>Физические повреждения (трещины, вмятины)</li>
+                            <li>Полосы, которые не исчезают при нажатии на матрицу</li>
+                            <li>Сильное выгорание (особенно для OLED)</li>
+                            <li>Залитие жидкостью с повреждением слоев матрицы</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h2>📌 Итог</h2>
+                <p>Для комплексной проверки матрицы:</p>
+                <ul>
+                    <li>Используйте набор тестовых изображений</li>
+                    <li>Проверьте все участки экрана под разными углами</li>
+                    <li>Обратите внимание на равномерность подсветки и цветопередачу</li>
+                    <li>Проверьте время отклика и отсутствие артефактов</li>
+                    <li>При серьезных дефектах рассмотрите замену матрицы</li>
+                </ul>
+                <div style="text-align: center; margin-top: 30px;">
+                    <h3 style="color: var(--primary);">Здесь всегда актуальные руководства и свежие новости из области электроники! Добавьте сайт в избранное чтобы не потерять 😉</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__col footer__col--logo">
+                    <a href="index.html" class="footer-logo">
+                        <span class="logo__icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 15L7 10H17L12 15Z" fill="currentColor"/>
+                                <path d="M12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3ZM12 19C8.13401 19 5 15.866 5 12C5 8.13401 8.13401 5 12 5C15.866 5 19 8.13401 19 12C19 15.866 15.866 19 12 19Z" fill="currentColor"/>
+                            </svg>
+                        </span>
+                        <span class="logo__text">TechFix</span>
+                    </a>
+                    <p class="footer__text">Помогаем ремонтировать электронику с 2024 года</p>
+                </div>
+                <div class="footer__col">
+                    <h3 class="footer__title">Разделы</h3>
+                    <ul class="footer__links">
+                        <li><a href="index.html" class="footer__link">Главная</a></li>
+                        <li><a href="all-guides.html" class="footer__link">Все гайды</a></li>
+                        <li><a href="contacts.html" class="footer__link">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="footer__col">
+                    <h3 class="footer__title">Категории</h3>
+                    <ul class="footer__links">
+                        <li><a href="../tv.html" class="nav__link">Телевизоры</a></li>
+                        <li><a href="../cameras.html" class="nav__link">Фотоаппараты</a></li>
+                        <li><a href="../consoles.html" class="nav__link">Приставки</a></li>
+                        <li><a href="../laptops.html" class="nav__link">Ноутбуки</a></li>
+                        <li><a href="../smartphones.html" class="nav__link">Смартфоны</a></li>
+                        <li><a href="../small-appliances.html" class="nav__link">Мелкая техника</a></li>
+                        <li><a href="../large-appliances.html" class="nav__link">Бытовая техника</a></li>
+                        <li><a href="../auto-electronics.html" class="nav__link">Авто-Электроника</a></li>
+                    </ul>
+                </div>
+                <div class="footer__col">
+                    <h3 class="footer__title">Контакты</h3>
+                    <ul class="footer__links">
+                        <li><a href="https://t.me/techfix_kz" class="footer__link"><i class="fab fa-telegram"></i> Telegram</a></li>
+                        <li><a href="https://instagram.com/techfix_kz" class="footer__link"><i class="fab fa-instagram"></i> Instagram</a></li>
+                        <li><a href="mailto:support@techfix.kz" class="footer__link"><i class="fas fa-envelope"></i> Email</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p class="footer__copyright">© 2024 TechFix. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="../script.js"></script>
+</body>
+</html>

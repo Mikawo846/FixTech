@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Как сделать тепловизор из смартфона: полный гид 2025 | TechFix</title>
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="../styles-header.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    .guide-content { line-height: 1.7; color: var(--text); }
+    .guide-content h2 { color: var(--primary); margin-top: 30px; margin-bottom: 15px; font-size: 1.5rem; }
+    .guide-content h3 { color: var(--primary-dark); margin-top: 25px; margin-bottom: 12px; font-size: 1.2rem; }
+    .guide-image-block { margin: 20px 0; padding: 15px; background: var(--background); border-radius: var(--border-radius); border: 1px solid var(--border); text-align: center; }
+    .guide-image-block img { max-width: 100%; height: auto; border-radius: 6px; border: 1px solid var(--border); }
+    .image-caption { margin-top: 10px; font-size: 0.85rem; color: var(--text-light); font-style: italic; }
+    .pro-tips { background: rgba(3, 74, 79, 0.05); padding: 15px; border-radius: 6px; margin: 20px 0; }
+    .pro-tips h4 { color: var(--primary); margin-top: 0; margin-bottom: 12px; font-size: 1.1rem; }
+    .tip-item { display: flex; gap: 8px; margin-bottom: 8px; align-items: flex-start; }
+    table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+    th, td { border: 1px solid var(--border); padding: 8px; text-align: left; }
+    th { background: var(--background-light); }
+    @media (max-width: 768px) {
+      .guide-content h2 { font-size: 1.4rem; margin-top: 25px; }
+      .guide-image-block { padding: 12px; margin: 15px 0; }
+      table, th, td { font-size: 0.95rem; }
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="header__inner">
+        <a href="../index.html" class="logo">
+          <span class="logo__icon"></span>
+          <span class="logo__text">TechFix</span>
+        </a>
+        <nav class="nav">
+          <ul class="nav__list">
+            <li><a href="../tv.html" class="nav__link">Телевизоры</a></li>
+            <li><a href="../cameras.html" class="nav__link">Фотоаппараты</a></li>
+            <li><a href="../consoles.html" class="nav__link">Приставки</a></li>
+            <li><a href="../laptops.html" class="nav__link">Ноутбуки</a></li>
+            <li><a href="../smartphones.html" class="nav__link">Смартфоны</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <section class="guide-page">
+    <div class="container">
+      <div class="breadcrumbs">
+        <a href="../index.html">Главная</a>
+        <i class="fas fa-chevron-right"></i>
+        <a href="../smartphones.html">Смартфоны</a>
+        <i class="fas fa-chevron-right"></i>
+        <span>Как сделать тепловизор из смартфона</span>
+      </div>
+
+      <h1 class="section__title">Как сделать тепловизор из смартфона: полное руководство 2025</h1>
+
+      <div class="guide-meta">
+        <span><i class="fas fa-thermometer-full"></i> Экспертный разбор: приложения, модули, DIY-решения, сравнения, советы, FAQ, иллюстрация.</span>
+      </div>
+
+      <div class="guide-image-block">
+        <img src="https://avatars.mds.yandex.net/get-shedevrum/16419046/img_21597b76444311f09c736eb662877692/orig" alt="Тепловизор из смартфона">
+        <div class="image-caption">
+          Современный смартфон + ИК-модуль = профессиональный тепловизор в кармане: обнаружение тепловых аномалий, энергоаудит и безопасность.
+        </div>
+      </div>
+
+      <div class="guide-content">
+
+        <h2>Основные методы превращения смартфона в тепловизор</h2>
+        <ul>
+          <li><b>Внешние ИК-модули:</b> Seek Thermal, FLIR One, Xinfrared T2 Pro (подключаются через USB-C/Bluetooth)</li>
+          <li><b>Приложения-симуляторы:</b> Thermal Scanner Real Simulator, Heat Vision (только визуализация без измерений)</li>
+          <li><b>DIY-решения:</b> Самодельные модули на базе ESP32 и ИК-сенсоров</li>
+          <li><b>Смартфоны со встроенным ИК:</b> Cat S62 Pro, Blackview BL8800 Pro (готовое решение)</li>
+        </ul>
+
+        <h2>Таблица: сравнение методов</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Метод</th>
+              <th>Точность</th>
+              <th>Стоимость</th>
+              <th>Сложность</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Готовые модули (Seek Thermal)</td>
+              <td>±2°C</td>
+              <td>15 000–30 000₽</td>
+              <td>Простота подключения</td>
+            </tr>
+            <tr>
+              <td>Приложения-симуляторы</td>
+              <td>Нет измерений</td>
+              <td>Бесплатно</td>
+              <td>Только для развлечения</td>
+            </tr>
+            <tr>
+              <td>DIY-модули</td>
+              <td>±5°C</td>
+              <td>3 000–8 000₽</td>
+              <td>Требует навыков пайки</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>Пошаговая инструкция: подключение готового модуля</h2>
+        <ol>
+          <li>Выберите совместимый модуль (проверьте разъём: USB-C/Micro-USB)</li>
+          <li>Скачайте фирменное приложение (Seek Thermal, FLIR Tools)</li>
+          <li>Подключите модуль к смартфону через USB-порт</li>
+          <li>Запустите приложение и откалибруйте по инструкции</li>
+          <li>Настройте цветовую палитру и температурный диапазон</li>
+        </ol>
+
+        <h2>Лучшие приложения для работы с ИК-модулями</h2>
+        <ul>
+          <li><b>Seek Thermal:</b> Запись видео 15 FPS, 5 режимов палитры</li>
+          <li><b>FLIR One:</b> Распознавание областей с аномальной температурой</li>
+          <li><b>Xinfrared Thermal Camera:</b> Поддержка DIY-модулей</li>
+        </ul>
+
+        <h2>DIY: создание модуля своими руками</h2>
+        <ol>
+          <li>Приобретите ИК-сенсор MLX90640 (разрешение 32x24)</li>
+          <li>Соберите схему на базе ESP32 с передачей данных по Wi-Fi</li>
+          <li>Напечатайте корпус на 3D-принтере для точного позиционирования</li>
+          <li>Используйте открытое ПО Thermal Camera для визуализации</li>
+        </ol>
+
+        <h2>Лайфхаки и советы</h2>
+        <div class="pro-tips">
+          <h4>💡 Практические советы</h4>
+          <div class="tip-item">
+            <i class="fas fa-lightbulb"></i>
+            <p>Используйте штатив для стабилизации при замерах точных температур</p>
+          </div>
+          <div class="tip-item">
+            <i class="fas fa-lightbulb"></i>
+            <p>Калибруйте модуль на объекте с известной температурой (например, чашка льда)</p>
+          </div>
+          <div class="tip-item">
+            <i class="fas fa-lightbulb"></i>
+            <p>Для энергоаудита выбирайте модули с углом обзора 90°+</p>
+          </div>
+        </div>
+
+        <h2>FAQ – часто задаваемые вопросы</h2>
+        <ul>
+          <li><b>Можно ли измерять температуру тела?</b><br>
+            Только сертифицированными медицинскими устройствами</li>
+          <li><b>Работает ли в полной темноте?</b><br>
+            Да, ИК-излучение не зависит от видимого света</li>
+          <li><b>Какой модуль лучше для строительства?</b><br>
+            FLIR One Pro с разрешением 160x120</li>
+        </ul>
+
+        <h2>📌 Итог: смартфон как профессиональный тепловизор</h2>
+        <p>
+          Современные ИК-модули превращают смартфон в мощный инструмент для обнаружения тепловых утечек, диагностики электроники и безопасности. Выбирайте готовые решения для простоты или DIY-сборки для гибкости. Помните: точность зависит от качества сенсора и правильной калибровки.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__col footer__col--logo">
+          <a href="../index.html" class="footer-logo">
+            <span class="logo__icon"></span>
+            <span class="logo__text">TechFix</span>
+          </a>
+          <p class="footer__text">Экспертные инструкции по мобильным технологиям с 2024 года</p>
+        </div>
+        <div class="footer__col">
+          <h3 class="footer__title">Разделы</h3>
+          <ul class="footer__links">
+            <li><a href="../index.html" class="footer__link">Главная</a></li>
+            <li><a href="../all-guides.html" class="footer__link">Все гайды</a></li>
+            <li><a href="../contacts.html" class="footer__link">Контакты</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h3 class="footer__title">Категории</h3>
+          <ul class="footer__links">
+            <li><a href="../tv.html" class="nav__link">Телевизоры</a></li>
+            <li><a href="../cameras.html" class="nav__link">Фотоаппараты</a></li>
+            <li><a href="../consoles.html" class="nav__link">Приставки</a></li>
+            <li><a href="../laptops.html" class="nav__link">Ноутбуки</a></li>
+            <li><a href="../smartphones.html" class="nav__link">Смартфоны</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h3 class="footer__title">Контакты</h3>
+          <ul class="footer__links">
+            <li>
+              <a href="https://t.me/techfix_kz" class="footer__link"><i class="fab fa-telegram"></i> Telegram</a>
+            </li>
+            <li>
+              <a href="https://instagram.com/techfix_kz" class="footer__link"><i class="fab fa-instagram"></i> Instagram</a>
+            </li>
+            <li>
+              <a href="mailto:support@techfix.kz" class="footer__link"><i class="fas fa-envelope"></i> Email</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copyright">© 2025 TechFix. Все права защищены.</p>
+      </div>
+    </div>
+  </footer>
+  <script src="../script.js"></script>
+</body>
+</html>

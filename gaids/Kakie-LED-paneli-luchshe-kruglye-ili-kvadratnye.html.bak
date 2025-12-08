@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Какие LED-панели лучше: круглые или квадратные? | TechFix</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../styles-header.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .guide-content { line-height: 1.7; color: var(--text);}
+        .guide-content h2 { color: var(--primary); margin-top: 30px; margin-bottom: 15px; font-size: 1.5rem;}
+        .table-led-shape { width: 100%; border-collapse: collapse; margin: 25px 0;}
+        .table-led-shape th, .table-led-shape td { border: 1px solid var(--border); padding: 8px 12px; text-align: left;}
+        .table-led-shape th { background: var(--background-alt);}
+        .recommend-box { background: rgba(3, 74, 79, 0.1); border-left: 4px solid var(--primary); padding: 12px; margin: 15px 0; display: flex; gap: 12px; align-items: flex-start; border-radius: 4px;}
+        .recommend-box i { font-size: 1.2rem; color: var(--primary); margin-top: 2px;}
+        .pro-tips { background: rgba(3, 74, 79, 0.05); padding: 15px; border-radius: 6px; margin: 20px 0;}
+        .pro-tips h4 { color: var(--primary); margin-top: 0; margin-bottom: 12px; font-size: 1.1rem;}
+        .tip-item { display: flex; gap: 8px; margin-bottom: 8px; align-items: flex-start;}
+        @media (max-width: 768px) {
+            .guide-content h2 { font-size: 1.4rem; margin-top: 25px;}
+            .table-led-shape th, .table-led-shape td { padding: 6px 8px;}
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <a href="../index.html" class="logo">
+                    <span class="logo__icon"></span>
+                    <span class="logo__text">TechFix</span>
+                </a>
+                <nav class="nav">
+                    <ul class="nav__list">
+                        <li><a href="../tv.html" class="nav__link">Телевизоры</a></li>
+                        <li><a href="../cameras.html" class="nav__link">Фотоаппараты</a></li>
+                        <li><a href="../consoles.html" class="nav__link">Приставки</a></li>
+                        <li><a href="../laptops.html" class="nav__link">Ноутбуки</a></li>
+                        <li><a href="../smartphones.html" class="nav__link">Смартфоны</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <section class="guide-page">
+        <div class="container">
+            <div class="breadcrumbs">
+                <a href="../index.html">Главная</a>
+                <i class="fas fa-chevron-right"></i>
+                <a href="../tv.html">Телевизоры</a>
+                <i class="fas fa-chevron-right"></i>
+                <span>Какие LED-панели лучше: круглые или квадратные?</span>
+            </div>
+            <h1 class="section__title">Какие LED-панели лучше: круглые или квадратные?</h1>
+            <div class="guide-meta">
+                <span><i class="fas fa-shapes"></i> Сравнение форм</span>
+            </div>
+            <div class="guide-image-block">
+                <img src="https://avatars.mds.yandex.net/get-shedevrum/16367318/img_818df8a32c9e11f0945252d8e6a785d9/orig">
+            </div>
+            <div class="guide-content">
+                <h2>Круглые и квадратные LED-панели: в чем разница?</h2>
+                <table class="table-led-shape">
+                    <thead>
+                        <tr>
+                            <th>Параметр</th>
+                            <th>Круглая LED-панель</th>
+                            <th>Квадратная LED-панель</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Дизайн и внешний вид</td>
+                            <td>Мягкие линии, классика, гармония, подходит для жилых и уютных интерьеров, ванных, прихожих</td>
+                            <td>Современный стиль, строгие линии, минимализм, часто используется в офисах, торговых и общественных помещениях</td>
+                        </tr>
+                        <tr>
+                            <td>Распределение света</td>
+                            <td>Более равномерное по кругу, нет выраженных углов</td>
+                            <td>Четкая геометрия, может быть небольшое затемнение по углам (малозаметно в качественных моделях)</td>
+                        </tr>
+                        <tr>
+                            <td>Варианты монтажа</td>
+                            <td>Чаще встраиваемые, подходят для натяжных и гипсокартонных потолков</td>
+                            <td>Встраиваемые и накладные, легко компоновать в группы и световые линии</td>
+                        </tr>
+                        <tr>
+                            <td>Размеры и мощность</td>
+                            <td>Обычно компактнее, оптимальны для небольших помещений</td>
+                            <td>Есть крупные модели для больших пространств, легко подобрать по площади</td>
+                        </tr>
+                        <tr>
+                            <td>Комбинирование</td>
+                            <td>Хорошо смотрятся поодиночке или в виде "точек"</td>
+                            <td>Удобны для создания световых сеток, линий, зонирования</td>
+                        </tr>
+                        <tr>
+                            <td>Цена</td>
+                            <td>Часто чуть дороже за счет дизайна и меньших тиражей</td>
+                            <td>Более широкий ценовой диапазон, много бюджетных моделей</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h2>Что выбрать?</h2>
+                <ul>
+                    <li><strong>Для домашнего уюта, ванных, коридоров, спальни</strong> - чаще выбирают круглые панели: они создают мягкий свет и гармонично смотрятся в интерьере.</li>
+                    <li><strong>Для офиса, кухни, больших комнат, коммерческих помещений</strong> - оптимальны квадратные панели: их проще компоновать, они дают больше света и лучше подходят для зонирования.</li>
+                    <li>По техническим характеристикам (яркость, CRI, энергоэффективность) разница минимальна - главное, выбирать качественную панель с нужными параметрами.</li>
+                </ul>
+                <div class="recommend-box">
+                    <i class="fas fa-info-circle"></i>
+                    <div>
+                        <strong>Совет:</strong> Ориентируйтесь на стиль помещения, задачи освещения и размеры комнаты. Для сложных световых схем удобно комбинировать оба типа панелей.
+                    </div>
+                </div>
+                <div class="pro-tips">
+                    <h4>🔹 Профессиональные советы</h4>
+                    <div class="tip-item"><i class="fas fa-lightbulb"></i> Для натяжных потолков лучше подходят круглые панели - проще монтаж и меньше риск деформации полотна.</div>
+                    <div class="tip-item"><i class="fas fa-lightbulb"></i> В больших офисах и магазинах выгоднее использовать квадратные панели - их проще компоновать в сетку.</div>
+                    <div class="tip-item"><i class="fas fa-lightbulb"></i> Всегда обращайте внимание на индекс цветопередачи (CRI) и отсутствие мерцания - это важнее формы.</div>
+                </div>
+                <h2>📌 Итог</h2>
+                <p>
+                    Круглые LED-панели - выбор для уюта и мягкого света в доме. Квадратные - универсальны, удобны для больших и коммерческих помещений. Главное - качество, а форма подбирается под стиль и задачи освещения.
+                </p>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__col footer__col--logo">
+                    <a href="index.html" class="footer-logo">
+                        <span class="logo__icon"></span>
+                        <span class="logo__text">TechFix</span>
+                    </a>
+                    <p class="footer__text">Помогаем ремонтировать электронику с 2024 года</p>
+                </div>
+                <div class="footer__col">
+                    <h3 class="footer__title">Разделы</h3>
+                    <ul class="footer__links">
+                        <li><a href="index.html" class="footer__link">Главная</a></li>
+                        <li><a href="all-guides.html" class="footer__link">Все гайды</a></li>
+                        <li><a href="contacts.html" class="footer__link">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="footer__col">
+                    <h3 class="footer__title">Категории</h3>
+                    <ul class="footer__links">
+                        <li><a href="../tv.html" class="nav__link">Телевизоры</a></li>
+                        <li><a href="../cameras.html" class="nav__link">Фотоаппараты</a></li>
+                        <li><a href="../consoles.html" class="nav__link">Приставки</a></li>
+                        <li><a href="../laptops.html" class="nav__link">Ноутбуки</a></li>
+                        <li><a href="../smartphones.html" class="nav__link">Смартфоны</a></li>
+                        <li><a href="../small-appliances.html" class="nav__link">Мелкая техника</a></li>
+                        <li><a href="../large-appliances.html" class="nav__link">Бытовая техника</a></li>
+                        <li><a href="../auto-electronics.html" class="nav__link">Авто-Электроника</a></li>
+                    </ul>
+                </div>
+                <div class="footer__col">
+                    <h3 class="footer__title">Контакты</h3>
+                    <ul class="footer__links">
+                        <li><a href="https://t.me/techfix_kz" class="footer__link"><i class="fab fa-telegram"></i> Telegram</a></li>
+                        <li><a href="https://instagram.com/techfix_kz" class="footer__link"><i class="fab fa-instagram"></i> Instagram</a></li>
+                        <li><a href="mailto:support@techfix.kz" class="footer__link"><i class="fas fa-envelope"></i> Email</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p class="footer__copyright">© 2024 TechFix. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="../script.js"></script>
+</body>
+</html>

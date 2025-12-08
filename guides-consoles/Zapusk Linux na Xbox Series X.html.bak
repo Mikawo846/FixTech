@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Запуск Linux на Xbox Series X | Экспертный мегагайд 2025</title>
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="../styles-header.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    .guide-content { line-height: 1.7; color: var(--text); }
+    .guide-content h2 { color: var(--primary); margin-top: 30px; margin-bottom: 15px; font-size: 1.5rem; }
+    .guide-content h3 { color: var(--primary-dark); margin-top: 25px; margin-bottom: 12px; font-size: 1.2rem; }
+    .guide-image-block { margin: 20px 0; padding: 15px; background: var(--background); border-radius: var(--border-radius); border: 1px solid var(--border); text-align: center; }
+    .guide-image-block img { max-width: 100%; height: auto; border-radius: 6px; border: 1px solid var(--border); }
+    .image-caption { margin-top: 10px; font-size: 0.85rem; color: var(--text-light); font-style: italic; }
+    .pro-tips { background: rgba(3, 74, 79, 0.05); padding: 15px; border-radius: 6px; margin: 20px 0; }
+    .pro-tips h4 { color: var(--primary); margin-top: 0; margin-bottom: 12px; font-size: 1.1rem; }
+    .tip-item { display: flex; gap: 8px; margin-bottom: 8px; align-items: flex-start; }
+    table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+    th, td { border: 1px solid var(--border); padding: 8px; text-align: left; }
+    th { background: var(--background-light); }
+    caption { caption-side: top; font-weight: bold; margin-bottom: 8px; }
+    @media (max-width: 768px) {
+      .guide-content h2 { font-size: 1.4rem; margin-top: 25px; }
+      .guide-image-block { padding: 12px; margin: 15px 0; }
+      table, th, td { font-size: 0.95rem; }
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="header__inner">
+        <a href="../index.html" class="logo">
+          <span class="logo__icon"></span>
+          <span class="logo__text">TechFix</span>
+        </a>
+        <nav class="nav">
+          <ul class="nav__list">
+            <li><a href="../tv.html" class="nav__link">Телевизоры</a></li>
+            <li><a href="../cameras.html" class="nav__link">Фотоаппараты</a></li>
+            <li><a href="../consoles.html" class="nav__link">Приставки</a></li>
+            <li><a href="../laptops.html" class="nav__link">Ноутбуки</a></li>
+            <li><a href="../smartphones.html" class="nav__link">Смартфоны</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <section class="guide-page">
+    <div class="container">
+      <div class="breadcrumbs">
+        <a href="../index.html">Главная</a>
+        <i class="fas fa-chevron-right"></i>
+        <a href="../consoles.html">Приставки</a>
+        <i class="fas fa-chevron-right"></i>
+        <span>Запуск Linux на Xbox Series X</span>
+      </div>
+
+      <h1 class="section__title">Запуск Linux на Xbox Series X</h1>
+
+      <div class="guide-meta">
+        <span><i class="fas fa-hourglass-half"></i> Мегагайд: реальность, ограничения, риски, альтернативы, схемы, FAQ, иллюстрация.</span>
+      </div>
+
+      <div class="guide-image-block">
+        <img src="https://avatars.mds.yandex.net/get-shedevrum/15382583/img_b98e9aea388011f0a21dfa1f3dbfa711/orig" alt="Запуск Linux на Xbox Series X">
+        <div class="image-caption">
+          Можно ли превратить Xbox Series X в полноценный Linux-компьютер? Какие есть способы, что реально работает и с какими рисками придётся столкнуться? Самый подробный мегагайд — ниже.
+        </div>
+      </div>
+
+      <div class="guide-content">
+
+        <h2>Введение: зачем запускать Linux на Xbox Series X?</h2>
+        <p>
+          Установка Linux на консоль — мечта энтузиастов, которые хотят использовать мощное железо Xbox Series X не только для игр, но и как домашний сервер, эмулятор, медиаплеер или даже рабочую станцию. На старых консолях (Xbox, Xbox 360, PS3) запуск Linux был возможен, хотя и с ограничениями. Но что с новым поколением?
+        </p>
+
+        <h2>Таблица: эволюция Linux на игровых консолях</h2>
+        <table>
+          <caption>Linux на разных поколениях Xbox</caption>
+          <thead>
+            <tr>
+              <th>Поколение</th>
+              <th>Возможность запуска Linux</th>
+              <th>Требования</th>
+              <th>Ограничения</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Xbox Classic</td>
+              <td>Да</td>
+              <td>Модификация BIOS, загрузчик, LiveCD</td>
+              <td>Нет поддержки GPU, риск бана Live</td>
+            </tr>
+            <tr>
+              <td>Xbox 360</td>
+              <td>Да</td>
+              <td>Freeboot, XeLL Loader, перепрошивка</td>
+              <td>Нет звука, нет 3D-ускорения, баги</td>
+            </tr>
+            <tr>
+              <td>Xbox One</td>
+              <td>Нет (официально)</td>
+              <td>Требуется взлом, не реализовано публично</td>
+              <td>Безопасность системы, шифрование</td>
+            </tr>
+            <tr>
+              <td>Xbox Series X/S</td>
+              <td>Нет (на 2025 год)</td>
+              <td>Взлом, аппаратный эксплойт (отсутствует)</td>
+              <td>Невозможно без аппаратного взлома</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>Текущая ситуация: что возможно на Xbox Series X/S?</h2>
+        <p>
+          На сегодняшний день (2025) публичных способов запуска полноценного Linux на Xbox Series X/S нет. Причины:
+        </p>
+        <ul>
+          <li>Жёсткая защита загрузчика и шифрование системных разделов.</li>
+          <li>Нет известных аппаратных эксплойтов для запуска альтернативных ОС.</li>
+          <li>Dev Mode (режим разработчика) не позволяет запускать сторонние ядра или менять загрузчик — только UWP-приложения (универсальные приложения Windows).</li>
+          <li>В отличие от PS4/PS5, где возможен запуск Linux на старых прошивках, для Xbox Series X/S такой возможности нет.</li>
+        </ul>
+        <p>
+          На форумах и Reddit регулярно появляются обсуждения и попытки, но ни один публичный проект не дал рабочий результат. Наиболее близкие успехи — это запуск Linux на Xbox 360 через XeLL Loader, но даже там нет поддержки 3D-ускорения и звука без USB-карты.
+        </p>
+
+        <h2>Почему так сложно запустить Linux на Series X/S?</h2>
+        <ul>
+          <li>Системный загрузчик и Secure Boot не дают загружать неподписанные ядра.</li>
+          <li>Все ключевые разделы шифруются и защищены на аппаратном уровне.</li>
+          <li>Аппаратные эксплойты (например, через чипы или уязвимости контроллеров) пока не найдены или не опубликованы.</li>
+          <li>Dev Mode ограничен только UWP — нельзя загрузить полноценный Linux-ядро.</li>
+          <li>Любая попытка аппаратного взлома приведёт к бану Xbox Live и потере гарантии.</li>
+        </ul>
+
+        <h2>FAQ — часто задаваемые вопросы о Linux на Xbox Series X</h2>
+        <ul>
+          <li>
+            <strong>Можно ли поставить Linux на Xbox Series X/S в 2025 году?</strong><br>
+            Нет, публичных способов нет. Все обсуждения на форумах и Reddit сводятся к тому, что железо слишком защищено.
+          </li>
+          <li>
+            <strong>Работает ли Dev Mode для запуска Linux?</strong><br>
+            Нет, Dev Mode только для UWP-приложений, запуск сторонних ОС невозможен.
+          </li>
+          <li>
+            <strong>А если заменить SSD и загрузиться с флешки?</strong><br>
+            Не сработает — загрузчик не подпишет сторонние ядра, система не увидит альтернативные разделы.
+          </li>
+          <li>
+            <strong>Можно ли хотя бы эмулировать Linux?</strong><br>
+            Только в виде приложений-эмуляторов в Dev Mode, но это не полноценный Linux, а ограниченная среда.
+          </li>
+          <li>
+            <strong>Почему на Xbox 360 и PS3 запуск Linux был возможен?</strong><br>
+            Там защита была слабее, а энтузиасты нашли уязвимости в загрузчике и BIOS.
+          </li>
+        </ul>
+
+        <h2>Альтернативы: как использовать Xbox Series X/S для Linux-задач?</h2>
+        <ul>
+          <li><b>Dev Mode + эмуляторы:</b> Можно запускать UWP-эмуляторы Linux и терминалы, но это не полноценная ОС.</li>
+          <li><b>Удалённый рабочий стол:</b> Используйте RDP/VNC для подключения к Linux-серверу с Xbox через браузер или приложение.</li>
+          <li><b>Потоковая передача:</b> Используйте Steam Link, Moonlight, Parsec для стриминга Linux-десктопа или приложений на Xbox.</li>
+          <li><b>Использование ПК или Steam Deck:</b> Если нужен Linux на мощном железе — лучше собрать мини-ПК или взять Steam Deck.</li>
+        </ul>
+
+        <h2>Пошаговая инструкция: как запускали Linux на старых Xbox (для справки)</h2>
+        <ol>
+          <li>Выполнялся аппаратный или софтовый взлом (Freeboot, XeLL Loader, модификация BIOS).</li>
+          <li>Создавался загрузочный диск или флешка с ядром Linux.</li>
+          <li>Загружался XeLL Loader, запускался LiveCD или устанавливался дистрибутив на HDD.</li>
+          <li>Для работы звука требовалась USB-звуковая карта, 3D-ускорение было недоступно.</li>
+          <li>Риски: бан Xbox Live, потеря гарантии, возможный "кирпич" консоли.</li>
+        </ol>
+
+        <h2>Таблица: сравнение Linux на Xbox 360 и Series X/S</h2>
+        <table>
+          <caption>Linux на разных поколениях Xbox</caption>
+          <thead>
+            <tr>
+              <th>Поколение</th>
+              <th>Linux</th>
+              <th>3D-ускорение</th>
+              <th>Звук</th>
+              <th>Риски</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Xbox 360</td>
+              <td>Да (через XeLL Loader)</td>
+              <td>Нет</td>
+              <td>USB-звуковая карта</td>
+              <td>Бан, баги, потеря гарантии</td>
+            </tr>
+            <tr>
+              <td>Xbox Series X/S</td>
+              <td>Нет (на 2025 год)</td>
+              <td>—</td>
+              <td>—</td>
+              <td>Взлом невозможен без эксплойта</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>Лайфхаки и советы энтузиастам</h2>
+        <div class="pro-tips">
+          <h4>🔹 Практические советы</h4>
+          <div class="tip-item">
+            <i class="fas fa-lightbulb"></i>
+            <p>Следите за форумами (Reddit, Linux.org.ru, XboxModding) — если появится рабочий эксплойт, он будет обсуждаться именно там.</p>
+          </div>
+          <div class="tip-item">
+            <i class="fas fa-lightbulb"></i>
+            <p>Не пытайтесь экспериментировать с аппаратным взломом без опыта — велик риск "окирпичить" консоль и лишиться Xbox Live.</p>
+          </div>
+          <div class="tip-item">
+            <i class="fas fa-lightbulb"></i>
+            <p>Для домашнего сервера или эмулятора лучше использовать мини-ПК, Raspberry Pi, Steam Deck или старый ноутбук — это безопаснее и проще.</p>
+          </div>
+        </div>
+
+        <h2>Итог: реально ли запустить Linux на Xbox Series X?</h2>
+        <p>
+          На 2025 год запуск полноценного Linux на Xbox Series X/S невозможен: защита загрузчика, отсутствие эксплойтов и ограничения Dev Mode делают задачу практически нерешаемой. Альтернативы — стриминг, удалённый доступ или покупка отдельного устройства. Следите за новостями и не рискуйте дорогой консолью ради экспериментов!
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__col footer__col--logo">
+          <a href="index.html" class="footer-logo">
+            <span class="logo__icon"></span>
+            <span class="logo__text">TechFix</span>
+          </a>
+          <p class="footer__text">Экспертные инструкции по геймингу и железу с 2024 года</p>
+        </div>
+        <div class="footer__col">
+          <h3 class="footer__title">Разделы</h3>
+          <ul class="footer__links">
+            <li><a href="index.html" class="footer__link">Главная</a></li>
+            <li><a href="all-guides.html" class="footer__link">Все гайды</a></li>
+            <li><a href="contacts.html" class="footer__link">Контакты</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h3 class="footer__title">Категории</h3>
+          <ul class="footer__links">
+            <li><a href="../tv.html" class="nav__link">Телевизоры</a></li>
+            <li><a href="../cameras.html" class="nav__link">Фотоаппараты</a></li>
+            <li><a href="../consoles.html" class="nav__link">Приставки</a></li>
+            <li><a href="../laptops.html" class="nav__link">Ноутбуки</a></li>
+            <li><a href="../smartphones.html" class="nav__link">Смартфоны</a></li>
+            <li><a href="../small-appliances.html" class="nav__link">Мелкая техника</a></li>
+            <li><a href="../large-appliances.html" class="nav__link">Бытовая техника</a></li>
+            <li><a href="../auto-electronics.html" class="nav__link">Авто-Электроника</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h3 class="footer__title">Контакты</h3>
+          <ul class="footer__links">
+            <li>
+              <a href="https://t.me/techfix_kz" class="footer__link"><i class="fab fa-telegram"></i> Telegram</a>
+            </li>
+            <li>
+              <a href="https://instagram.com/techfix_kz" class="footer__link"><i class="fab fa-instagram"></i> Instagram</a>
+            </li>
+            <li>
+              <a href="mailto:support@techfix.kz" class="footer__link"><i class="fas fa-envelope"></i> Email</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copyright">© 2025 TechFix. Все права защищены.</p>
+      </div>
+    </div>
+  </footer>
+  <script src="../script.js"></script>
+</body>
+</html>

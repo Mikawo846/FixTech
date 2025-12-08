@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Почему посудомоечная машина оставляет белый налет на посуде?</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../styles-header.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .guide-content { line-height: 1.7; color: var(--text); }
+        .guide-content h2 { color: var(--primary); margin-top: 30px; margin-bottom: 15px; font-size: 1.5rem; }
+        .guide-content h3 { color: var(--primary-dark); margin-top: 25px; margin-bottom: 12px; font-size: 1.2rem; }
+        .guide-image-block { margin: 20px 0; padding: 15px; background: var(--background); border-radius: var(--border-radius); border: 1px solid var(--border); text-align: center; }
+        .guide-image-block img { max-width: 100%; height: auto; border-radius: 6px; border: 1px solid var(--border); }
+        .image-caption { margin-top: 10px; font-size: 0.85rem; color: var(--text-light); font-style: italic; }
+        .pro-tips { background: rgba(3, 74, 79, 0.05); padding: 15px; border-radius: 6px; margin: 20px 0; }
+        .pro-tips h4 { color: var(--primary); margin-top: 0; margin-bottom: 12px; font-size: 1.1rem; }
+        .tip-item { display: flex; gap: 8px; margin-bottom: 8px; align-items: flex-start; }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        th, td { border: 1px solid var(--border); padding: 8px; text-align: left; }
+        th { background: var(--background-light); }
+        @media (max-width: 768px) {
+            .guide-content h2 { font-size: 1.4rem; margin-top: 25px; }
+            .guide-image-block { padding: 12px; margin: 15px 0; }
+            table, th, td { font-size: 0.95rem; }
+        }
+    </style>
+</head>
+<body>
+<header class="header">
+    <div class="container">
+        <div class="header-inner">
+            <a href="../index.html" class="logo">
+                <span class="logo-icon"></span>
+                <span class="logo-text">TechFix</span>
+            </a>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="../tv.html" class="nav-link">ТВ</a></li>
+                    <li><a href="../cameras.html" class="nav-link">Камеры</a></li>
+                    <li><a href="../consoles.html" class="nav-link">Консоли</a></li>
+                    <li><a href="../laptops.html" class="nav-link">Ноутбуки</a></li>
+                    <li><a href="../smartphones.html" class="nav-link">Смартфоны</a></li>
+                    <li><a href="../small-appliances.html" class="nav-link">Мелкая техника</a></li>
+                    <li><a href="../large-appliances.html" class="nav-link">Крупная техника</a></li>
+                    <li><a href="../auto-electronics.html" class="nav-link">Автоэлектроника</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>
+<section class="guide-page">
+    <div class="container">
+        <div class="breadcrumbs">
+            <a href="../index.html">Главная</a>
+            <i class="fas fa-chevron-right"></i>
+            <a href="../large-appliances.html">Крупная техника</a>
+            <i class="fas fa-chevron-right"></i>
+            <span>Почему посудомоечная машина оставляет белый налет на посуде?</span>
+        </div>
+        <h1 class="section-title">Почему посудомоечная машина оставляет белый налет на посуде?</h1>
+        <div class="guide-meta">
+            <span><i class="fas fa-hourglass-half"></i> 2025, подробный гайд</span>
+        </div>
+        <div class="guide-image-block">
+            <img src="https://avatars.mds.yandex.net/get-shedevrum/16118108/img_2c33b6c448fe11f082e22ac68eef758d/orig" alt="Белый налет на посуде после посудомоечной машины">
+            <div class="image-caption">Белый налет — признак проблем с жесткостью воды, солью, средствами или настройками посудомойки</div>
+        </div>
+        <div class="guide-content">
+            <h2>Введение</h2>
+            <p>
+                Белый налет на посуде после посудомоечной машины — одна из самых частых бытовых проблем, с которой сталкиваются пользователи. Он проявляется в виде матовых разводов, пятен, порошкообразного осадка или даже плотной пленки на стекле и металле. Причины могут быть разными: от жесткости воды и неправильных настроек до ошибок в эксплуатации и некачественных моющих средств. В этой статье — полный разбор причин, таблицы, советы по профилактике и рекомендации по устранению белого налета.
+            </p>
+
+            <h2>Основные причины появления белого налета</h2>
+            <ul>
+                <li><b>Жесткая вода</b> — избыток кальция и магния приводит к образованию известкового налета на посуде и деталях машины.</li>
+                <li><b>Недостаток или отсутствие соли для посудомоечной машины</b> — соль нужна для смягчения воды, без нее на посуде и в камере появляется белый осадок.</li>
+                <li><b>Неправильная настройка жесткости воды</b> — если параметры выставлены неверно, машина подает слишком мало соли и не справляется с минералами.</li>
+                <li><b>Избыточное или недостаточное количество моющего средства</b> — избыток оставляет пленку, недостаток не удаляет загрязнения, что приводит к налету.</li>
+                <li><b>Плохое качество моющих средств и ополаскивателя</b> — дешевые или неподходящие средства плохо растворяются и оставляют следы.</li>
+                <li><b>Переполненность или неправильная загрузка посуды</b> — вода и средства не попадают на все поверхности, что приводит к налету и разводам.</li>
+                <li><b>Засор фильтра или разбрызгивателей</b> — снижает эффективность мытья и приводит к оседанию минеральных солей.</li>
+                <li><b>Попадание соли в камеру</b> — если соль просыпалась или крышка бака негерметична, на посуде появятся белые разводы.</li>
+            </ul>
+
+            <h2>Как выглядит белый налет и чем он опасен?</h2>
+            <p>
+                Белый налет — это минеральные отложения (чаще всего кальция и магния), остатки моющего средства или соли. Он проявляется как матовый слой, порошкообразные пятна, пленка или разводы. Такой налет портит внешний вид посуды, снижает эффективность мытья, может вызывать аллергии и ускоряет износ деталей машины.
+            </p>
+
+            <h2>Таблица: причины и решения белого налета</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Причина</th>
+                        <th>Признаки</th>
+                        <th>Решение</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Жесткая вода</td>
+                        <td>Белый налет, матовый осадок на стекле и металле</td>
+                        <td>Отрегулировать жесткость, добавить соль, использовать смягчители</td>
+                    </tr>
+                    <tr>
+                        <td>Нет соли или неверная настройка</td>
+                        <td>Белые разводы, накипь внутри машины</td>
+                        <td>Добавить соль, настроить уровень по инструкции</td>
+                    </tr>
+                    <tr>
+                        <td>Избыточное/недостаточное моющее средство</td>
+                        <td>Пленка, порошкообразные пятна, остатки на посуде</td>
+                        <td>Соблюдать дозировку, менять средство при необходимости</td>
+                    </tr>
+                    <tr>
+                        <td>Плохое качество средств</td>
+                        <td>Нерастворившиеся таблетки, следы порошка, мутная пленка</td>
+                        <td>Использовать профессиональные средства, ополаскиватель</td>
+                    </tr>
+                    <tr>
+                        <td>Переполненность камеры</td>
+                        <td>Налет на отдельных предметах, неравномерная чистота</td>
+                        <td>Загружать посуду по инструкции, не перегружать</td>
+                    </tr>
+                    <tr>
+                        <td>Засор фильтра/разбрызгивателей</td>
+                        <td>Налет, остатки пищи, ухудшение качества мойки</td>
+                        <td>Регулярно чистить фильтр и форсунки</td>
+                    </tr>
+                    <tr>
+                        <td>Попадание соли в камеру</td>
+                        <td>Белые пятна, кристаллы соли на посуде</td>
+                        <td>Аккуратно засыпать соль, проверять крышку бака</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h2>Пошаговая инструкция: как избавиться от белого налета</h2>
+            <ol>
+                <li>
+                    <b>Проверьте и отрегулируйте жесткость воды</b><br>
+                    Используйте тест-полоски или данные водоканала. Настройте уровень подачи соли в соответствии с реальной жесткостью воды.
+                </li>
+                <li>
+                    <b>Добавьте соль для посудомоечной машины</b><br>
+                    Используйте только специальную соль, засыпайте в отдельный отсек, не используйте пищевую соль.
+                </li>
+                <li>
+                    <b>Проверьте наличие и дозировку ополаскивателя</b><br>
+                    Ополаскиватель предотвращает появление разводов и ускоряет высыхание посуды.
+                </li>
+                <li>
+                    <b>Используйте только качественные моющие средства</b><br>
+                    Предпочтительнее гели и капсулы, так как порошок может не раствориться полностью.
+                </li>
+                <li>
+                    <b>Соблюдайте дозировку средств</b><br>
+                    Не превышайте и не уменьшайте рекомендованное количество моющего средства и ополаскивателя.
+                </li>
+                <li>
+                    <b>Загружайте посуду правильно</b><br>
+                    Не перегружайте камеру, размещайте крупные предметы по краям, чтобы вода свободно циркулировала.
+                </li>
+                <li>
+                    <b>Регулярно очищайте фильтр и разбрызгиватели</b><br>
+                    Промывайте фильтр и форсунки не реже 1 раза в месяц.
+                </li>
+                <li>
+                    <b>Запустите цикл самоочистки</b><br>
+                    Используйте специальное средство и пустую машину для удаления накипи и отложений.
+                </li>
+                <li>
+                    <b>Проверьте, не попала ли соль в камеру</b><br>
+                    Засыпайте соль аккуратно, сразу убирайте просыпавшуюся, проверяйте крышку бака на герметичность.
+                </li>
+            </ol>
+
+            <div class="guide-image-block">
+                <img src="https://avatars.mds.yandex.net/get-shedevrum/16118108/img_2c33b6c448fe11f082e22ac68eef758d/orig" alt="Белый налет на посуде после посудомойки">
+                <div class="image-caption">Правильная настройка, качественные средства и уход за техникой — залог чистой посуды без налета</div>
+            </div>
+
+            <h2>FAQ</h2>
+            <ul>
+                <li><strong>Почему белый налет появляется только на стеклянной посуде?</strong><br>
+                    Стекло сильнее реагирует на минеральные соли и остатки средств, особенно при жесткой воде или неправильной дозировке.
+                </li>
+                <li><strong>Можно ли использовать пищевую соль вместо специальной?</strong><br>
+                    Нет, только специальная соль подходит для смягчения воды, пищевая может повредить машину.
+                </li>
+                <li><strong>Что делать, если налет не исчезает после смены средств?</strong><br>
+                    Проверьте настройки жесткости, очистите фильтр, попробуйте другой ополаскиватель, проведите самоочистку.
+                </li>
+                <li><strong>Можно ли использовать таблетки "3 в 1" на коротких программах?</strong><br>
+                    Не рекомендуется — они могут не раствориться полностью и оставить следы.
+                </li>
+                <li><strong>Чем опасен белый налет для самой машины?</strong><br>
+                    Он ускоряет износ нагревателя, фильтров, разбрызгивателей и может привести к поломкам.
+                </li>
+            </ul>
+
+            <h2>Профилактика и советы по эксплуатации</h2>
+            <div class="pro-tips">
+                <h4><i class="fas fa-lightbulb"></i> Практические советы</h4>
+                <div class="tip-item">
+                    <i class="fas fa-check-circle"></i>
+                    <p>Регулярно проверяйте и пополняйте соль, ополаскиватель и моющее средство.</p>
+                </div>
+                <div class="tip-item">
+                    <i class="fas fa-user-shield"></i>
+                    <p>Настройте уровень жесткости воды в соответствии с реальными данными — используйте тест-полоски или справьтесь у водоканала.</p>
+                </div>
+                <div class="tip-item">
+                    <i class="fas fa-tools"></i>
+                    <p>Чистите фильтр и разбрызгиватели не реже 1 раза в месяц, особенно при жесткой воде.</p>
+                </div>
+                <div class="tip-item">
+                    <i class="fas fa-user-cog"></i>
+                    <p>Загружайте посуду по инструкции, не перегружайте камеру и не перекрывайте форсунки.</p>
+                </div>
+                <div class="tip-item">
+                    <i class="fas fa-bolt"></i>
+                    <p>Используйте только профессиональные и качественные средства, не смешивайте разные типы моющих средств.</p>
+                </div>
+            </div>
+
+            <h2>Заключение</h2>
+            <p>
+                Белый налет на посуде после посудомоечной машины — это не только эстетическая проблема, но и сигнал о неправильной эксплуатации или настройках техники. Проверьте уровень и качество соли, настройте жесткость воды, используйте профессиональные средства, не перегружайте камеру и регулярно очищайте фильтр. Соблюдение этих правил обеспечит чистоту посуды и долгую работу вашей посудомойки!
+            </p>
+        </div>
+    </div>
+</section>
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col footer-col--logo">
+                <a href="../index.html" class="footer-logo">
+                    <span class="logo-icon"></span>
+                    <span class="logo-text">TechFix</span>
+                </a>
+                <p class="footer-text">© 2025 TechFix. Все права защищены.</p>
+            </div>
+            <div class="footer-col">
+                <h3 class="footer-title">Навигация</h3>
+                <ul class="footer-links">
+                    <li><a href="../index.html" class="footer-link">Главная</a></li>
+                    <li><a href="../all-guides.html" class="footer-link">Все статьи</a></li>
+                    <li><a href="../contacts.html" class="footer-link">Контакты</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3 class="footer-title">Разделы</h3>
+                <ul class="footer-links">
+                    <li><a href="../tv.html" class="nav-link">ТВ</a></li>
+                    <li><a href="../cameras.html" class="nav-link">Камеры</a></li>
+                    <li><a href="../consoles.html" class="nav-link">Консоли</a></li>
+                    <li><a href="../laptops.html" class="nav-link">Ноутбуки</a></li>
+                    <li><a href="../smartphones.html" class="nav-link">Смартфоны</a></li>
+                    <li><a href="../small-appliances.html" class="nav-link">Мелкая техника</a></li>
+                    <li><a href="../large-appliances.html" class="nav-link">Крупная техника</a></li>
+                    <li><a href="../auto-electronics.html" class="nav-link">Автоэлектроника</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3 class="footer-title">Связь</h3>
+                <ul class="footer-links">
+                    <li><a href="https://t.me/techfixkz" class="footer-link"><i class="fab fa-telegram"></i> Telegram</a></li>
+                    <li><a href="https://instagram.com/techfixkz" class="footer-link"><i class="fab fa-instagram"></i> Instagram</a></li>
+                    <li><a href="mailto:support@techfix.kz" class="footer-link"><i class="fas fa-envelope"></i> Email</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p class="footer-copyright">2025 TechFix. Все права защищены.</p>
+        </div>
+    </div>
+</footer>
+<script src="../script.js"></script>
+</body>
+</html>

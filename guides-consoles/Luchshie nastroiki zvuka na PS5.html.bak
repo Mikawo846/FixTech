@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Лучшие настройки звука (3D Audio, Dolby Atmos) на PS5 | Экспертный мегагайд</title>
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="../styles-header.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    .guide-content { line-height: 1.7; color: var(--text); }
+    .guide-content h2 { color: var(--primary); margin-top: 30px; margin-bottom: 15px; font-size: 1.5rem; }
+    .guide-content h3 { color: var(--primary-dark); margin-top: 25px; margin-bottom: 12px; font-size: 1.2rem; }
+    .guide-image-block { margin: 20px 0; padding: 15px; background: var(--background); border-radius: var(--border-radius); border: 1px solid var(--border); text-align: center; }
+    .guide-image-block img { max-width: 100%; height: auto; border-radius: 6px; border: 1px solid var(--border); }
+    .image-caption { margin-top: 10px; font-size: 0.85rem; color: var(--text-light); font-style: italic; }
+    .pro-tips { background: rgba(3, 74, 79, 0.05); padding: 15px; border-radius: 6px; margin: 20px 0; }
+    .pro-tips h4 { color: var(--primary); margin-top: 0; margin-bottom: 12px; font-size: 1.1rem; }
+    .tip-item { display: flex; gap: 8px; margin-bottom: 8px; align-items: flex-start; }
+    table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+    th, td { border: 1px solid var(--border); padding: 8px; text-align: left; }
+    th { background: var(--background-light); }
+    @media (max-width: 768px) {
+      .guide-content h2 { font-size: 1.4rem; margin-top: 25px; }
+      .guide-image-block { padding: 12px; margin: 15px 0; }
+      table, th, td { font-size: 0.95rem; }
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="header__inner">
+        <a href="../index.html" class="logo">
+          <span class="logo__icon"></span>
+          <span class="logo__text">TechFix</span>
+        </a>
+        <nav class="nav">
+          <ul class="nav__list">
+            <li><a href="../tv.html" class="nav__link">Телевизоры</a></li>
+            <li><a href="../cameras.html" class="nav__link">Фотоаппараты</a></li>
+            <li><a href="../consoles.html" class="nav__link">Приставки</a></li>
+            <li><a href="../laptops.html" class="nav__link">Ноутбуки</a></li>
+            <li><a href="../smartphones.html" class="nav__link">Смартфоны</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <section class="guide-page">
+    <div class="container">
+      <div class="breadcrumbs">
+        <a href="../index.html">Главная</a>
+        <i class="fas fa-chevron-right"></i>
+        <a href="../consoles.html">Приставки</a>
+        <i class="fas fa-chevron-right"></i>
+        <span>Лучшие настройки звука (3D Audio, Dolby Atmos) на PS5</span>
+      </div>
+
+      <h1 class="section__title">Лучшие настройки звука (3D Audio, Dolby Atmos) на PS5</h1>
+
+      <div class="guide-meta">
+        <span><i class="fas fa-hourglass-half"></i> Самое подробное руководство по настройке объемного звука на PlayStation 5: 3D Audio, Dolby Atmos, эквалайзер, советы, лайфхаки, FAQ и таблицы.</span>
+      </div>
+
+      <div class="guide-image-block">
+        <img src="https://avatars.mds.yandex.net/get-shedevrum/14550299/img_b5c902aa37d311f0a80ece263fd3d7f5/orig" alt="3D Audio PS5">
+        <div class="image-caption">
+          Объемный звук на PS5 — ключ к полному погружению в игры. Правильная настройка 3D Audio и Dolby Atmos раскрывает все детали и создаёт эффект присутствия.
+        </div>
+      </div>
+
+      <div class="guide-content">
+
+        <h2>Введение: что такое 3D Audio и Dolby Atmos на PS5?</h2>
+        <p>
+          PlayStation 5 использует технологию Tempest 3D AudioTech, которая создаёт трехмерное звуковое пространство, позволяя точно определить направление и расстояние до источников звука. Это особенно важно в шутерах, приключениях и хоррорах, где звук — ключ к выживанию и погружению.
+        </p>
+        <p>
+          Dolby Atmos — это продвинутый формат объемного звука с поддержкой потолочных каналов, который обеспечивает ещё более реалистичное звучание, особенно при использовании совместимых саундбаров, AV-ресиверов и наушников.
+        </p>
+        <p>
+          PS5 поддерживает оба формата: 3D Audio для наушников и Dolby Atmos для домашних кинотеатров и саундбаров с HDMI eARC.
+        </p>
+
+        <h2>Настройка 3D Audio на PS5</h2>
+        <ol>
+          <li>Подключите совместимые наушники (например, Sony Pulse 3D или другие с поддержкой 3D Audio).</li>
+          <li>Перейдите в "Настройки" → "Звук" → "Аудиовыход".</li>
+          <li>Выберите "Гарнитура (USB или Bluetooth)" в качестве устройства вывода.</li>
+          <li>Включите "Tempest 3D AudioTech" — активируется объемный звук.</li>
+          <li>В разделе "Аудио-профили" выберите подходящий профиль (например, "Шутеры", "Приключения", "Музыка").</li>
+          <li>При необходимости настройте эквалайзер для тонкой подстройки частот.</li>
+        </ol>
+
+        <h2>Настройка Dolby Atmos на PS5</h2>
+        <ol>
+          <li>Подключите PS5 к телевизору или AV-ресиверу с поддержкой HDMI eARC и Dolby Atmos.</li>
+          <li>Перейдите в "Настройки" → "Звук" → "Аудиовыход".</li>
+          <li>Выберите устройство вывода с поддержкой Dolby Atmos.</li>
+          <li>В разделе "Формат аудио" выберите "Dolby Atmos".</li>
+          <li>Убедитесь, что на вашем оборудовании включена поддержка Dolby Atmos.</li>
+          <li>Проверьте работу Dolby Atmos в играх и фильмах с поддержкой этого формата.</li>
+        </ol>
+
+        <h2>Эквалайзер и профили звука</h2>
+        <p>
+          PS5 позволяет настраивать эквалайзер для наушников, что помогает адаптировать звук под индивидуальные предпочтения и особенности гарнитуры. В приложении Sony Headphones Connect можно выбрать предустановленные профили или создать собственный, регулируя низкие, средние и высокие частоты.
+        </p>
+        <p>
+          В самой консоли доступны аудиопрофили, которые оптимизируют звук под разные жанры игр, например, усиливая звуки шагов в шутерах или делая музыку более насыщенной в приключениях.
+        </p>
+
+        <h2>Таблица: сравнение 3D Audio и Dolby Atmos на PS5</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Параметр</th>
+              <th>3D Audio</th>
+              <th>Dolby Atmos</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Поддержка устройств</td>
+              <td>Наушники (Pulse 3D, совместимые Bluetooth/USB)</td>
+              <td>Саундбары, AV-ресиверы, телевизоры с HDMI eARC</td>
+            </tr>
+            <tr>
+              <td>Технология</td>
+              <td>Tempest 3D AudioTech — виртуальный объемный звук</td>
+              <td>Аппаратный объемный звук с потолочными каналами</td>
+            </tr>
+            <tr>
+              <td>Качество</td>
+              <td>Отличное для наушников, иммерсивное</td>
+              <td>Максимально реалистичное для домашнего кинотеатра</td>
+            </tr>
+            <tr>
+              <td>Настройка</td>
+              <td>Профили, эквалайзер, усиление частот</td>
+              <td>Зависит от оборудования и настроек ресивера</td>
+            </tr>
+            <tr>
+              <td>Совместимость с играми</td>
+              <td>Широкая, все игры с поддержкой 3D Audio</td>
+              <td>Ограничена играми и приложениями с поддержкой Dolby Atmos</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>Лайфхаки и советы по настройке звука на PS5</h2>
+        <div class="pro-tips">
+          <h4>🔹 Практические советы</h4>
+          <div class="tip-item">
+            <i class="fas fa-lightbulb"></i>
+            <p>Для максимального эффекта используйте фирменные наушники Sony Pulse 3D — они оптимизированы под Tempest 3D AudioTech.</p>
+          </div>
+          <div class="tip-item">
+            <i class="fas fa-lightbulb"></i>
+            <p>Если используете саундбар или домашний кинотеатр — убедитесь, что он поддерживает Dolby Atmos и подключён через HDMI eARC.</p>
+          </div>
+          <div class="tip-item">
+            <i class="fas fa-lightbulb"></i>
+            <p>Настраивайте эквалайзер под свои предпочтения — усиление низких частот помогает в шутерах лучше слышать шаги.</p>
+          </div>
+          <div class="tip-item">
+            <i class="fas fa-lightbulb"></i>
+            <p>Используйте аудиопрофили PS5 для разных жанров игр — это быстро и удобно.</p>
+          </div>
+          <div class="tip-item">
+            <i class="fas fa-lightbulb"></i>
+            <p>Регулярно обновляйте прошивку PS5 и аудиоустройств для получения новых функций и улучшений.</p>
+          </div>
+        </div>
+
+        <h2>FAQ — часто задаваемые вопросы о 3D Audio и Dolby Atmos на PS5</h2>
+        <ul>
+          <li>
+            <strong>Можно ли использовать 3D Audio с любыми наушниками?</strong><br>
+            Нет, для полноценного 3D Audio рекомендуется использовать Pulse 3D или совместимые с PS5 наушники.
+          </li>
+          <li>
+            <strong>Что лучше — 3D Audio или Dolby Atmos?</strong><br>
+            Для наушников лучше 3D Audio, для домашнего кинотеатра — Dolby Atmos.
+          </li>
+          <li>
+            <strong>Как включить 3D Audio на PS5?</strong><br>
+            В настройках звука выберите гарнитуру и активируйте Tempest 3D AudioTech.
+          </li>
+          <li>
+            <strong>Поддерживает ли PS5 Dolby Atmos в играх?</strong><br>
+            С недавних обновлений — да, при подключении к совместимому оборудованию через HDMI eARC.
+          </li>
+          <li>
+            <strong>Можно ли настроить эквалайзер на PS5?</strong><br>
+            Да, в настройках звука есть аудиопрофили и базовый эквалайзер для наушников.
+          </li>
+        </ul>
+
+        <h2>Итог: как получить лучший звук на PS5?</h2>
+        <p>
+          Используйте Tempest 3D AudioTech с фирменными наушниками для максимального погружения в игры. Для домашнего кинотеатра и саундбаров включайте Dolby Atmos через HDMI eARC. Не забывайте настраивать эквалайзер и аудиопрофили под свои предпочтения. Регулярно обновляйте прошивку и экспериментируйте с настройками — и звук на PS5 станет вашим главным преимуществом в играх!
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__col footer__col--logo">
+          <a href="index.html" class="footer-logo">
+            <span class="logo__icon"></span>
+            <span class="logo__text">TechFix</span>
+          </a>
+          <p class="footer__text">Экспертные инструкции по игровому звуку с 2024 года</p>
+        </div>
+        <div class="footer__col">
+          <h3 class="footer__title">Разделы</h3>
+          <ul class="footer__links">
+            <li><a href="index.html" class="footer__link">Главная</a></li>
+            <li><a href="all-guides.html" class="footer__link">Все гайды</a></li>
+            <li><a href="contacts.html" class="footer__link">Контакты</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h3 class="footer__title">Категории</h3>
+          <ul class="footer__links">
+            <li><a href="../tv.html" class="nav__link">Телевизоры</a></li>
+            <li><a href="../cameras.html" class="nav__link">Фотоаппараты</a></li>
+            <li><a href="../consoles.html" class="nav__link">Приставки</a></li>
+            <li><a href="../laptops.html" class="nav__link">Ноутбуки</a></li>
+            <li><a href="../smartphones.html" class="nav__link">Смартфоны</a></li>
+            <li><a href="../small-appliances.html" class="nav__link">Мелкая техника</a></li>
+            <li><a href="../large-appliances.html" class="nav__link">Бытовая техника</a></li>
+            <li><a href="../auto-electronics.html" class="nav__link">Авто-Электроника</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h3 class="footer__title">Контакты</h3>
+          <ul class="footer__links">
+            <li>
+              <a href="https://t.me/techfix_kz" class="footer__link"><i class="fab fa-telegram"></i> Telegram</a>
+            </li>
+            <li>
+              <a href="https://instagram.com/techfix_kz" class="footer__link"><i class="fab fa-instagram"></i> Instagram</a>
+            </li>
+            <li>
+              <a href="mailto:support@techfix.kz" class="footer__link"><i class="fas fa-envelope"></i> Email</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copyright">© 2025 TechFix. Все права защищены.</p>
+      </div>
+    </div>
+  </footer>
+  <script src="../script.js"></script>
+</body>
+</html>

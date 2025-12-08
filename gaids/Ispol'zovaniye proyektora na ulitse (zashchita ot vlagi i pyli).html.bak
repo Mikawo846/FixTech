@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Использование проектора на улице | TechFix</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../styles-header.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Основные стили */
+        .guide-content {
+            line-height: 1.7;
+            color: var(--text);
+        }
+        .guide-content h2 {
+            color: var(--primary);
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+        /* Стили для шагов */
+        .step-group {
+            margin: 20px 0;
+            padding: 15px;
+            background: var(--background);
+            border-radius: var(--border-radius);
+            border: 1px solid var(--border);
+        }
+        .step {
+            display: flex;
+            gap: 15px;
+            margin: 12px 0;
+            padding: 12px;
+            background: var(--background-alt);
+            border-radius: 6px;
+            align-items: flex-start;
+        }
+        .step-number {
+            background: var(--primary);
+            color: white;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            font-weight: bold;
+            font-size: 0.8rem;
+        }
+        /* Изображения */
+        .guide-image-block {
+            margin: 20px 0;
+            padding: 15px;
+            background: var(--background);
+            border-radius: var(--border-radius);
+            border: 1px solid var(--border);
+            text-align: center;
+        }
+        .guide-image-block img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 6px;
+            border: 1px solid var(--border);
+        }
+        .image-caption {
+            margin-top: 10px;
+            font-size: 0.85rem;
+            color: var(--text-light);
+            font-style: italic;
+        }
+        /* Предупреждения */
+        .warning-box {
+            background-color: #fff3f3;
+            border-left: 4px solid #ff6b6b;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        .warning-box i {
+            color: #ff6b6b;
+            margin-right: 10px;
+        }
+        /* Советы */
+        .pro-tips {
+            background: rgba(3, 74, 79, 0.05);
+            padding: 15px;
+            border-radius: 6px;
+            margin: 20px 0;
+        }
+        .pro-tips h4 {
+            color: var(--primary);
+            margin-top: 0;
+            margin-bottom: 12px;
+            font-size: 1.1rem;
+        }
+        .tip-item {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 8px;
+            align-items: flex-start;
+        }
+        /* Таблица */
+        .protection-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        .protection-table th, 
+        .protection-table td {
+            border: 1px solid var(--border);
+            padding: 10px;
+            text-align: left;
+        }
+        .protection-table th {
+            background-color: var(--primary-light);
+            color: white;
+        }
+        .protection-table .recommended {
+            background-color: #e6ffe6;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <a href="../index.html" class="logo">
+                    <span class="logo__icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 15L7 10H17L12 15Z" fill="currentColor"/>
+                            <path d="M12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3ZM12 19C8.13401 19 5 15.866 5 12C5 8.13401 8.13401 5 12 5C15.866 5 19 8.13401 19 12C19 15.866 15.866 19 12 19Z" fill="currentColor"/>
+                        </svg>
+                    </span>
+                    <span class="logo__text">TechFix</span>
+                </a>
+                <nav class="nav">
+                    <ul class="nav__list">
+                        <li><a href="../tv.html" class="nav__link">Телевизоры</a></li>
+                        <li><a href="../cameras.html" class="nav__link">Фотоаппараты</a></li>
+                        <li><a href="../projectors.html" class="nav__link">Проекторы</a></li>
+                        <li><a href="../laptops.html" class="nav__link">Ноутбуки</a></li>
+                        <li><a href="../smartphones.html" class="nav__link">Смартфоны</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <section class="guide-page">
+        <div class="container">
+            <div class="breadcrumbs">
+                <a href="../index.html">Главная</a>
+                <i class="fas fa-chevron-right"></i>
+                <a href="../projectors.html">Проекторы</a>
+                <i class="fas fa-chevron-right"></i>
+                <span>Использование на улице</span>
+            </div>
+            <h1 class="section__title">Использование проектора на улице: защита от влаги и пыли</h1>
+            <div class="guide-meta">
+                <span><i class="fas fa-clock"></i> 30-60 мин</span>
+                <span><i class="fas fa-tools"></i> Средний уровень</span>
+                <span><i class="fas fa-cloud-sun"></i> Для уличного использования</span>
+            </div>
+            <div class="guide-image-block">
+                <img src="https://avatars.mds.yandex.net/get-shedevrum/15247318/img_992def43280d11f0b883a21f0ff6afac/orig">
+            </div>
+            <div class="warning-box">
+                <i class="fas fa-exclamation-triangle"></i>
+                <strong>Важно!</strong> Обычные проекторы не предназначены для использования на улице. Применяйте специальные защитные меры.
+            </div>
+            <div class="guide-content">
+                <h2>1. Подготовка проектора к уличному использованию</h2>
+                <div class="step-group">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div>
+                            <p><strong>Выбор места:</strong></p>
+                            <ul>
+                                <li>Сухая ровная поверхность под навесом</li>
+                                <li>Удаленность от деревьев и водоемов</li>
+                                <li>Защита от прямого ветра и осадков</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div>
+                            <p><strong>Защитный корпус:</strong></p>
+                            <ul>
+                                <li>Используйте специальные боксы для уличных проекторов</li>
+                                <li>Самодельные решения из пластиковых контейнеров с вентиляцией</li>
+                                <li>Защитные чехлы от влаги и пыли</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div>
+                            <p><strong>Вентиляция:</strong></p>
+                            <ul>
+                                <li>Обеспечьте свободную циркуляцию воздуха</li>
+                                <li>Используйте вентиляторы с фильтрами от пыли</li>
+                                <li>Избегайте перегрева - не ставьте на солнце</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <table class="protection-table">
+                    <caption>Методы защиты проектора</caption>
+                    <thead>
+                        <tr>
+                            <th>Угроза</th>
+                            <th>Способ защиты</th>
+                            <th>Эффективность</th>
+                            <th>Стоимость</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="recommended">
+                            <td>Влага</td>
+                            <td>Влагозащитный корпус</td>
+                            <td>Высокая</td>
+                            <td>Средняя</td>
+                        </tr>
+                        <tr class="recommended">
+                            <td>Пыль</td>
+                            <td>Воздушные фильтры + вентиляция</td>
+                            <td>Высокая</td>
+                            <td>Низкая</td>
+                        </tr>
+                        <tr>
+                            <td>Перегрев</td>
+                            <td>Дополнительные вентиляторы</td>
+                            <td>Средняя</td>
+                            <td>Низкая</td>
+                        </tr>
+                        <tr>
+                            <td>Насекомые</td>
+                            <td>Мелкие сетки на вентиляцию</td>
+                            <td>Высокая</td>
+                            <td>Очень низкая</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h2>2. Организация уличного кинотеатра</h2>
+                <div class="step-group">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div>
+                            <p><strong>Экран:</strong></p>
+                            <ul>
+                                <li>Используйте специальные уличные экраны</li>
+                                <li>Альтернатива: светлая стена или натянутое белое полотно</li>
+                                <li>Размещайте экран в тени для лучшей видимости</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div>
+                            <p><strong>Питание:</strong></p>
+                            <ul>
+                                <li>Используйте стабилизатор напряжения</li>
+                                <li>Защитите розетки от влаги</li>
+                                <li>Рассмотрите вариант портативного генератора</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div>
+                            <p><strong>Настройки проектора:</strong></p>
+                            <ul>
+                                <li>Максимальная яркость (минимум 3000 люмен)</li>
+                                <li>Режим "Яркий" или "На улице"</li>
+                                <li>Высокая контрастность</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <h2>3. Защита и обслуживание после использования</h2>
+                <div class="step-group">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div>
+                            <p><strong>Охлаждение:</strong></p>
+                            <ul>
+                                <li>Дайте проектору остыть перед перемещением</li>
+                                <li>Не выключайте сразу - дайте поработать вентиляторам</li>
+                                <li>Избегайте резких перепадов температуры</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div>
+                            <p><strong>Очистка:</strong></p>
+                            <ul>
+                                <li>Аккуратно протрите корпус сухой тканью</li>
+                                <li>Очистите воздушные фильтры (если есть)</li>
+                                <li>Проверьте объектив на наличие конденсата</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div>
+                            <p><strong>Хранение:</strong></p>
+                            <ul>
+                                <li>Храните в сухом месте с низкой влажностью</li>
+                                <li>Используйте силикагель для поглощения влаги</li>
+                                <li>Накрывайте чехлом для защиты от пыли</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pro-tips">
+                    <h4>🔹 Профессиональные советы</h4>
+                    <div class="tip-item">
+                        <i class="fas fa-lightbulb" style="color: var(--primary);"></i>
+                        <p>Для частого уличного использования рассмотрите покупку специального уличного проектора (IP-защита).</p>
+                    </div>
+                    <div class="tip-item">
+                        <i class="fas fa-lightbulb" style="color: var(--primary);"></i>
+                        <p>Используйте проектор с лазерным источником света - он менее чувствителен к температуре.</p>
+                    </div>
+                    <div class="tip-item">
+                        <i class="fas fa-lightbulb" style="color: var(--primary);"></i>
+                        <p>При высокой влажности включайте проектор на 30 минут в сухом помещении после использования.</p>
+                    </div>
+                    <div class="tip-item">
+                        <i class="fas fa-lightbulb" style="color: var(--primary);"></i>
+                        <p>Для защиты от росы используйте антиконденсатные нагреватели в защитном корпусе.</p>
+                    </div>
+                </div>
+
+                <h2>📌 Итог</h2>
+                <p>Для безопасного использования проектора на улице:</p>
+                <ul>
+                    <li>Обеспечьте надежную защиту от влаги и пыли</li>
+                    <li>Используйте проектор с высокой яркостью (от 3000 люмен)</li>
+                    <li>Организуйте правильную вентиляцию и охлаждение</li>
+                    <li>Тщательно очищайте и сушите оборудование после использования</li>
+                    <li>Рассмотрите специализированные уличные модели для частого использования</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__col footer__col--logo">
+                    <a href="index.html" class="footer-logo">
+                        <span class="logo__icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 15L7 10H17L12 15Z" fill="currentColor"/>
+                                <path d="M12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3ZM12 19C8.13401 19 5 15.866 5 12C5 8.13401 8.13401 5 12 5C15.866 5 19 8.13401 19 12C19 15.866 15.866 19 12 19Z" fill="currentColor"/>
+                            </svg>
+                        </span>
+                        <span class="logo__text">TechFix</span>
+                    </a>
+                    <p class="footer__text">Помогаем ремонтировать электронику с 2024 года</p>
+                </div>
+                <div class="footer__col">
+                    <h3 class="footer__title">Разделы</h3>
+                    <ul class="footer__links">
+                        <li><a href="index.html" class="footer__link">Главная</a></li>
+                        <li><a href="all-guides.html" class="footer__link">Все гайды</a></li>
+                        <li><a href="contacts.html" class="footer__link">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="footer__col">
+                    <h3 class="footer__title">Категории</h3>
+                    <ul class="footer__links">
+                        <li><a href="../tv.html" class="nav__link">Телевизоры</a></li>
+                        <li><a href="../cameras.html" class="nav__link">Фотоаппараты</a></li>
+                        <li><a href="../projectors.html" class="nav__link">Проекторы</a></li>
+                        <li><a href="../laptops.html" class="nav__link">Ноутбуки</a></li>
+                        <li><a href="../smartphones.html" class="nav__link">Смартфоны</a></li>
+                    </ul>
+                </div>
+                <div class="footer__col">
+                    <h3 class="footer__title">Контакты</h3>
+                    <ul class="footer__links">
+                        <li><a href="https://t.me/techfix_kz" class="footer__link"><i class="fab fa-telegram"></i> Telegram</a></li>
+                        <li><a href="https://instagram.com/techfix_kz" class="footer__link"><i class="fab fa-instagram"></i> Instagram</a></li>
+                        <li><a href="mailto:support@techfix.kz" class="footer__link"><i class="fas fa-envelope"></i> Email</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p class="footer__copyright">© 2024 TechFix. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="../script.js"></script>
+</body>
+</html>

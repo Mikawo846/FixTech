@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Создание 3D-сканера из смартфона: полный гид | TechFix 2025</title>
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="../styles-header.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    .guide-content { line-height: 1.7; color: var(--text); }
+    .guide-content h2 { color: var(--primary); margin-top: 30px; margin-bottom: 15px; font-size: 1.5rem; }
+    .guide-content h3 { color: var(--primary-dark); margin-top: 25px; margin-bottom: 12px; font-size: 1.2rem; }
+    .guide-image-block { margin: 20px 0; padding: 15px; background: var(--background); border-radius: var(--border-radius); border: 1px solid var(--border); text-align: center; }
+    .guide-image-block img { max-width: 100%; height: auto; border-radius: 6px; border: 1px solid var(--border); }
+    .image-caption { margin-top: 10px; font-size: 0.85rem; color: var(--text-light); font-style: italic; }
+    .pro-tips { background: rgba(3, 74, 79, 0.05); padding: 15px; border-radius: 6px; margin: 20px 0; }
+    .pro-tips h4 { color: var(--primary); margin-top: 0; margin-bottom: 12px; font-size: 1.1rem; }
+    .tip-item { display: flex; gap: 8px; margin-bottom: 8px; align-items: flex-start; }
+    table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+    th, td { border: 1px solid var(--border); padding: 8px; text-align: left; }
+    th { background: var(--background-light); }
+    @media (max-width: 768px) {
+      .guide-content h2 { font-size: 1.4rem; margin-top: 25px; }
+      .guide-image-block { padding: 12px; margin: 15px 0; }
+      table, th, td { font-size: 0.95rem; }
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="header__inner">
+        <a href="../index.html" class="logo">
+          <span class="logo__icon"></span>
+          <span class="logo__text">TechFix</span>
+        </a>
+        <nav class="nav">
+          <ul class="nav__list">
+            <li><a href="../tv.html" class="nav__link">Телевизоры</a></li>
+            <li><a href="../cameras.html" class="nav__link">Фотоаппараты</a></li>
+            <li><a href="../consoles.html" class="nav__link">Приставки</a></li>
+            <li><a href="../laptops.html" class="nav__link">Ноутбуки</a></li>
+            <li><a href="../smartphones.html" class="nav__link">Смартфоны</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <section class="guide-page">
+    <div class="container">
+      <div class="breadcrumbs">
+        <a href="../index.html">Главная</a>
+        <i class="fas fa-chevron-right"></i>
+        <a href="../smartphones.html">Смартфоны</a>
+        <i class="fas fa-chevron-right"></i>
+        <span>Создание 3D-сканера из смартфона</span>
+      </div>
+
+      <h1 class="section__title">Создание 3D-сканера из смартфона: подробный гид 2025</h1>
+
+      <div class="guide-meta">
+        <span><i class="fas fa-cube"></i> Экспертный разбор: приложения, оборудование, методы сканирования, сравнения, советы, FAQ, иллюстрация.</span>
+      </div>
+
+      <div class="guide-image-block">
+        <img src="https://avatars.mds.yandex.net/get-shedevrum/16295926/img_76ff1003444211f09f08aed22654229d/orig" alt="3D-сканер из смартфона">
+        <div class="image-caption">
+          Современный смартфон — это портативная 3D-лаборатория: фотограмметрия, LiDAR и внешние модули превращают его в профессиональный инструмент для сканирования.
+        </div>
+      </div>
+
+      <div class="guide-content">
+
+        <h2>Как работает 3D-сканирование на смартфоне?</h2>
+        <p>
+          3D-сканирование смартфоном основано на фотограмметрии — технологии создания 3D-моделей из серии фотографий объекта, сделанных под разными углами. Некоторые устройства с LiDAR-сенсорами (например, iPhone Pro) используют лазерное сканирование для повышения точности до 0.5 мм.
+        </p>
+
+        <h2>Таблица: методы 3D-сканирования смартфоном</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Метод</th>
+              <th>Точность</th>
+              <th>Необходимое оборудование</th>
+              <th>Приложения</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Фотограмметрия</td>
+              <td>1–5 мм</td>
+              <td>Смартфон, поворотный стол (опционально)</td>
+              <td>3dpresso, Qlone, Polycam</td>
+            </tr>
+            <tr>
+              <td>LiDAR-сканирование</td>
+              <td>0.5–2 мм</td>
+              <td>iPhone 12 Pro/13 Pro/14 Pro</td>
+              <td>Scaniverse, Polycam, 3D Scanner App</td>
+            </tr>
+            <tr>
+              <td>Внешние модули</td>
+              <td>0.3–1 мм</td>
+              <td>Eora 3D, Scandy Pro</td>
+              <td>Специальное ПО производителя</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>Топ-5 приложений для 3D-сканирования</h2>
+        <ul>
+          <li><b>3dpresso</b> (Android/iOS): Бесплатное решение с экспортом в OBJ/GLB и интеграцией с Blender.</li>
+          <li><b>Polycam</b> (iOS): LiDAR-сканирование с точностью до 0.5 мм и облачным хранением.</li>
+          <li><b>Qlone</b> (Android/iOS): Использует AR-маркеры для автоматического позиционирования объекта.</li>
+          <li><b>Scaniverse</b> (iOS): Профессиональное сканирование с текстурами и возможностью редактирования.</li>
+          <li><b>KIRI Engine</b> (Android): Поддержка NeRF-технологий для реалистичного рендеринга.</li>
+        </ul>
+
+        <h2>Пошаговая инструкция: сканирование через 3dpresso</h2>
+        <ol>
+          <li>Установите приложение из <a href="https://3dpresso.ai" target="_blank">официального сайта</a>.</li>
+          <li>Снимите видео объекта, медленно обходя его по кругу (30–50 кадров).</li>
+          <li>Загрузите материал в приложение и дождитесь обработки (5–15 минут).</li>
+          <li>Экспортируйте модель в STL/OBJ для 3D-печати или редактирования в Blender.</li>
+        </ol>
+
+        <h2>Оборудование для профессионального сканирования</h2>
+        <ul>
+          <li><b>Eora 3D</b>: Bluetooth-сканер с точностью 0.1 мм и поддержкой объектов до 200 мм.</li>
+          <li><b>Scandy Pro</b>: Насадка с ToF-сенсором для iPhone (точность 0.3 мм).</li>
+          <li><b>GOSLAM RS100S</b>: Мобильный LiDAR-сканер с технологией SLAM для крупных объектов.</li>
+        </ul>
+
+        <h2>Сравнение точности</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Метод</th>
+              <th>Точность</th>
+              <th>Стоимость</th>
+              <th>Рекомендация</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Стандартное приложение</td>
+              <td>1–5 мм</td>
+              <td>Бесплатно</td>
+              <td>Для хобби и прототипов</td>
+            </tr>
+            <tr>
+              <td>LiDAR iPhone</td>
+              <td>0.5–2 мм</td>
+              <td>От 80 000₽</td>
+              <td>Для дизайна и архитектуры</td>
+            </tr>
+            <tr>
+              <td>Внешние модули</td>
+              <td>0.1–0.5 мм</td>
+              <td>От 15 000₽</td>
+              <td>Для инженерии и 3D-печати</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>Советы для качественного сканирования</h2>
+        <div class="pro-tips">
+          <h4>💡 Практические советы</h4>
+          <div class="tip-item">
+            <i class="fas fa-lightbulb"></i>
+            <p>Используйте рассеянное освещение — резкие тени создают артефакты.</p>
+          </div>
+          <div class="tip-item">
+            <i class="fas fa-lightbulb"></i>
+            <p>Наклейте на объект маркеры (стикеры/точки) для лучшего распознавания текстур.</p>
+          </div>
+          <div class="tip-item">
+            <i class="fas fa-lightbulb"></i>
+            <p>Для мелких деталей используйте макро-режим камеры или внешние линзы.</p>
+          </div>
+        </div>
+
+        <h2>FAQ — часто задаваемые вопросы</h2>
+        <ul>
+          <li>
+            <b>Можно ли сканировать людей?</b><br>
+            Да, в приложениях типа Bellus3D и 3D Creator есть специальные режимы для сканирования лиц.
+          </li>
+          <li>
+            <b>Какой формат лучше для 3D-печати?</b><br>
+            STL или OBJ — поддерживаются всеми слайсерами и принтерами.
+          </li>
+          <li>
+            <b>Чем смартфонный сканер хуже профессионального?</b><br>
+            Ограниченная точность (выше 0.1 мм не добиться) и сложность сканирования блестящих/прозрачных объектов.
+          </li>
+        </ul>
+
+        <h2>Памятка: если что-то пошло не так</h2>
+        <ol>
+          <li>Проверьте освещение и устраните блики.</li>
+          <li>Убедитесь, что объект не двигается во время съёмки.</li>
+          <li>Используйте штатив или поворотный стол для стабилизации.</li>
+          <li>Обновите приложение до последней версии.</li>
+        </ol>
+
+        <h2>📌 Итог: стоит ли использовать смартфон как 3D-сканер?</h2>
+        <p>
+          Смартфон — идеальный инструмент для быстрого прототипирования и любительского 3D-сканирования. С помощью приложений вроде 3dpresso или Polycam вы можете создавать модели для печати, игр и AR-проектов. Для профессиональных задач добавьте внешний модуль типа Eora 3D — это в разы дешевле промышленных сканеров, но обеспечивает точность до 0.1 мм.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__col footer__col--logo">
+          <a href="../index.html" class="footer-logo">
+            <span class="logo__icon"></span>
+            <span class="logo__text">TechFix</span>
+          </a>
+          <p class="footer__text">Экспертные инструкции по мобильным и 3D-технологиям с 2024 года</p>
+        </div>
+        <div class="footer__col">
+          <h3 class="footer__title">Разделы</h3>
+          <ul class="footer__links">
+            <li><a href="../index.html" class="footer__link">Главная</a></li>
+            <li><a href="../all-guides.html" class="footer__link">Все гайды</a></li>
+            <li><a href="../contacts.html" class="footer__link">Контакты</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h3 class="footer__title">Категории</h3>
+          <ul class="footer__links">
+            <li><a href="../tv.html" class="nav__link">Телевизоры</a></li>
+            <li><a href="../cameras.html" class="nav__link">Фотоаппараты</a></li>
+            <li><a href="../consoles.html" class="nav__link">Приставки</a></li>
+            <li><a href="../laptops.html" class="nav__link">Ноутбуки</a></li>
+            <li><a href="../smartphones.html" class="nav__link">Смартфоны</a></li>
+            <li><a href="../small-appliances.html" class="nav__link">Мелкая техника</a></li>
+            <li><a href="../large-appliances.html" class="nav__link">Бытовая техника</a></li>
+            <li><a href="../auto-electronics.html" class="nav__link">Авто-Электроника</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h3 class="footer__title">Контакты</h3>
+          <ul class="footer__links">
+            <li>
+              <a href="https://t.me/techfix_kz" class="footer__link"><i class="fab fa-telegram"></i> Telegram</a>
+            </li>
+            <li>
+              <a href="https://instagram.com/techfix_kz" class="footer__link"><i class="fab fa-instagram"></i> Instagram</a>
+            </li>
+            <li>
+              <a href="mailto:support@techfix.kz" class="footer__link"><i class="fas fa-envelope"></i> Email</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copyright">© 2025 TechFix. Все права защищены.</p>
+      </div>
+    </div>
+  </footer>
+  <script src="../script.js"></script>
+</body>
+</html>

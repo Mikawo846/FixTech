@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Почему посудомоечная машина не запускает программу?</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../styles-header.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .guide-content { line-height: 1.7; color: var(--text); }
+        .guide-content h2 { color: var(--primary); margin-top: 30px; margin-bottom: 15px; font-size: 1.5rem; }
+        .guide-content h3 { color: var(--primary-dark); margin-top: 25px; margin-bottom: 12px; font-size: 1.2rem; }
+        .guide-image-block { margin: 20px 0; padding: 15px; background: var(--background); border-radius: var(--border-radius); border: 1px solid var(--border); text-align: center; }
+        .guide-image-block img { max-width: 100%; height: auto; border-radius: 6px; border: 1px solid var(--border); }
+        .image-caption { margin-top: 10px; font-size: 0.85rem; color: var(--text-light); font-style: italic; }
+        .pro-tips { background: rgba(3, 74, 79, 0.05); padding: 15px; border-radius: 6px; margin: 20px 0; }
+        .pro-tips h4 { color: var(--primary); margin-top: 0; margin-bottom: 12px; font-size: 1.1rem; }
+        .tip-item { display: flex; gap: 8px; margin-bottom: 8px; align-items: flex-start; }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        th, td { border: 1px solid var(--border); padding: 8px; text-align: left; }
+        th { background: var(--background-light); }
+        @media (max-width: 768px) {
+            .guide-content h2 { font-size: 1.4rem; margin-top: 25px; }
+            .guide-image-block { padding: 12px; margin: 15px 0; }
+            table, th, td { font-size: 0.95rem; }
+        }
+    </style>
+</head>
+<body>
+<header class="header">
+    <div class="container">
+        <div class="header-inner">
+            <a href="../index.html" class="logo">
+                <span class="logo-icon"></span>
+                <span class="logo-text">TechFix</span>
+            </a>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="../tv.html" class="nav-link">ТВ</a></li>
+                    <li><a href="../cameras.html" class="nav-link">Камеры</a></li>
+                    <li><a href="../consoles.html" class="nav-link">Консоли</a></li>
+                    <li><a href="../laptops.html" class="nav-link">Ноутбуки</a></li>
+                    <li><a href="../smartphones.html" class="nav-link">Смартфоны</a></li>
+                    <li><a href="../small-appliances.html" class="nav-link">Мелкая техника</a></li>
+                    <li><a href="../large-appliances.html" class="nav-link">Крупная техника</a></li>
+                    <li><a href="../auto-electronics.html" class="nav-link">Автоэлектроника</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>
+<section class="guide-page">
+    <div class="container">
+        <div class="breadcrumbs">
+            <a href="../index.html">Главная</a>
+            <i class="fas fa-chevron-right"></i>
+            <a href="../large-appliances.html">Крупная техника</a>
+            <i class="fas fa-chevron-right"></i>
+            <span>Почему посудомоечная машина не запускает программу?</span>
+        </div>
+        <h1 class="section-title">Почему посудомоечная машина не запускает программу?</h1>
+        <div class="guide-meta">
+            <span><i class="fas fa-hourglass-half"></i> 2025, подробный гайд</span>
+        </div>
+        <div class="guide-image-block">
+            <img src="https://avatars.mds.yandex.net/get-shedevrum/15351718/img_c01a7e21487611f086e2a21f0ff6afac/orig" alt="Посудомоечная машина не запускает программу">
+            <div class="image-caption">Отсутствие запуска программы — одна из самых частых проблем посудомоечных машин[10]</div>
+        </div>
+        <div class="guide-content">
+            <h2>Введение</h2>
+            <p>
+                Если посудомоечная машина не запускает программу — не реагирует на кнопку «Пуск», не набирает воду или сразу останавливается — это может быть связано как с простыми ошибками эксплуатации, так и с серьезными техническими неисправностями. В этой статье вы найдете полный разбор причин, пошаговую диагностику и советы по самостоятельному устранению проблемы[10].
+            </p>
+
+            <h2>Основные причины, почему посудомоечная машина не запускает программу</h2>
+            <ul>
+                <li><b>Нет электропитания или проблемы с розеткой/шнуром</b>[10]</li>
+                <li><b>Неисправна кнопка «Пуск» или панель управления</b>[10]</li>
+                <li><b>Дверца закрыта неплотно, сломан замок или датчик</b></li>
+                <li><b>Включена функция отсрочки старта или не завершена предыдущая программа</b></li>
+                <li><b>Нет подачи воды или неисправен клапан залива</b></li>
+                <li><b>Сработала система защиты от протечек (AquaStop)</b></li>
+                <li><b>Неисправен блок управления или индикационный модуль</b>[10]</li>
+                <li><b>Перегорел конденсатор насоса или мотор</b>[10]</li>
+                <li><b>Проблемы с предохранителем или автоматом электросети</b>[10]</li>
+            </ul>
+
+            <h2>Пошаговая диагностика: что делать, если программа не запускается</h2>
+            <ol>
+                <li>
+                    <b>Проверьте электропитание</b><br>
+                    Убедитесь, что машина включена в розетку, есть напряжение, не выбит автомат или предохранитель, шнур и вилка не повреждены. Подключите другой прибор в ту же розетку для проверки[10].
+                </li>
+                <li>
+                    <b>Осмотрите кнопку «Пуск» и панель управления</b><br>
+                    Кнопка не должна западать, работать с перебоями, контакты не должны быть окислены. Если есть подозрение — требуется ремонт или замена[10].
+                </li>
+                <li>
+                    <b>Проверьте дверцу и замок</b><br>
+                    Дверца должна плотно закрываться с характерным щелчком. Если замок не срабатывает, программа не стартует — нужен ремонт или замена.
+                </li>
+                <li>
+                    <b>Убедитесь, что не включена отсрочка старта</b><br>
+                    Отключите функцию отложенного запуска, сбросьте или отмените предыдущую программу согласно инструкции.
+                </li>
+                <li>
+                    <b>Проверьте подачу воды</b><br>
+                    Откройте кран, проверьте заливной шланг на перегибы, убедитесь в наличии воды. Если клапан не срабатывает — требуется замена.
+                </li>
+                <li>
+                    <b>Проверьте, не сработала ли система AquaStop</b><br>
+                    Если сразу после включения работает сливной насос, а программа не стартует — возможно, сработала защита от протечек. Слейте воду из поддона, устраните причину протечки.
+                </li>
+                <li>
+                    <b>Перезапустите посудомоечную машину</b><br>
+                    Отключите прибор от сети на 10–15 минут, затем включите снова. Иногда это помогает сбросить сбой блока управления.
+                </li>
+                <li>
+                    <b>Проверьте индикацию и коды ошибок</b><br>
+                    Если на дисплее мигают индикаторы или высвечивается код ошибки — расшифруйте его по инструкции.
+                </li>
+                <li>
+                    <b>Если не помогло — обратитесь в сервис</b><br>
+                    Вероятны неисправности блока управления, конденсатора насоса, мотора или других узлов. Требуется диагностика специалиста[10].
+                </li>
+            </ol>
+
+            <div class="guide-image-block">
+                <img src="https://avatars.mds.yandex.net/get-shedevrum/15351718/img_c01a7e21487611f086e2a21f0ff6afac/orig" alt="Диагностика посудомоечной машины">
+                <div class="image-caption">Проверка питания, дверцы и панели управления — первые шаги при любой неисправности[10]</div>
+            </div>
+
+            <h2>Таблица: причины и решения</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Причина</th>
+                        <th>Признаки</th>
+                        <th>Решение</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Нет электропитания</td>
+                        <td>Не горит индикация, машина не реагирует</td>
+                        <td>Проверить розетку, автомат, шнур, вилку</td>
+                    </tr>
+                    <tr>
+                        <td>Неисправна кнопка «Пуск»</td>
+                        <td>Кнопка не нажимается, индикация есть, программа не стартует</td>
+                        <td>Ремонт или замена кнопки/сенсора</td>
+                    </tr>
+                    <tr>
+                        <td>Проблема с замком дверцы</td>
+                        <td>Дверца не фиксируется, нет щелчка, программа не запускается</td>
+                        <td>Починить или заменить замок/датчик</td>
+                    </tr>
+                    <tr>
+                        <td>Включена отсрочка старта</td>
+                        <td>На дисплее значок таймера, программа не начинается</td>
+                        <td>Отключить отсрочку, сбросить программу</td>
+                    </tr>
+                    <tr>
+                        <td>Нет подачи воды</td>
+                        <td>Нет шума воды, ошибка на дисплее</td>
+                        <td>Открыть кран, проверить шланг и клапан</td>
+                    </tr>
+                    <tr>
+                        <td>Сработала система AquaStop</td>
+                        <td>Работает слив, не реагирует на кнопки</td>
+                        <td>Слить воду из поддона, устранить протечку</td>
+                    </tr>
+                    <tr>
+                        <td>Неисправен блок управления</td>
+                        <td>Не реагирует на команды, сбои индикации</td>
+                        <td>Диагностика и ремонт/замена платы</td>
+                    </tr>
+                    <tr>
+                        <td>Перегорел конденсатор насоса</td>
+                        <td>Машина не запускает цикл, гудит</td>
+                        <td>Замена конденсатора</td>
+                    </tr>
+                    <tr>
+                        <td>Проблема с предохранителем</td>
+                        <td>Нет питания, не горит индикация</td>
+                        <td>Проверить и заменить предохранитель</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h2>Особенности запуска и эксплуатации</h2>
+            <ul>
+                <li>В некоторых моделях программа не стартует, если не завершён предыдущий цикл или не отменена отсрочка старта.</li>
+                <li>Машина не начнёт работу при неплотно закрытой дверце, даже если все остальные параметры в норме.</li>
+                <li>После срабатывания системы AquaStop требуется устранить причину протечки и полностью высушить поддон.</li>
+                <li>Если на дисплее мигает код ошибки — обязательно расшифруйте его по инструкции.</li>
+            </ul>
+
+            <h2>Профилактика и советы по эксплуатации</h2>
+            <div class="pro-tips">
+                <h4><i class="fas fa-lightbulb"></i> Практические советы</h4>
+                <div class="tip-item">
+                    <i class="fas fa-check-circle"></i>
+                    <p>Регулярно проверяйте состояние шнура, вилки и розетки, не допускайте перегибов и повреждений[10].</p>
+                </div>
+                <div class="tip-item">
+                    <i class="fas fa-user-shield"></i>
+                    <p>Очищайте дверцу и замок от налёта и мусора, чтобы избежать проблем с блокировкой.</p>
+                </div>
+                <div class="tip-item">
+                    <i class="fas fa-tools"></i>
+                    <p>Проводите профилактическую чистку фильтров и шлангов, чтобы избежать засоров и протечек.</p>
+                </div>
+                <div class="tip-item">
+                    <i class="fas fa-user-cog"></i>
+                    <p>Не перегружайте машину и не используйте неоригинальные моющие средства — это снижает ресурс деталей.</p>
+                </div>
+                <div class="tip-item">
+                    <i class="fas fa-bolt"></i>
+                    <p>Используйте стабилизатор напряжения для защиты электроники от скачков.</p>
+                </div>
+            </div>
+
+            <h2>FAQ</h2>
+            <ul>
+                <li><strong>Почему посудомоечная машина не запускает программу, хотя индикация горит?</strong><br>
+                    Причины: не закрыта дверца, неисправен замок, включена отсрочка старта, нет подачи воды, сработала система AquaStop, сбой блока управления.
+                </li>
+                <li><strong>Что делать, если машина не реагирует на кнопку «Пуск»?</strong><br>
+                    Проверьте исправность кнопки, панель управления, дверцу, питание. При необходимости обратитесь к мастеру[10].
+                </li>
+                <li><strong>Можно ли сбросить программу самостоятельно?</strong><br>
+                    Да, обычно для сброса нужно удерживать кнопку «Вкл./Выкл.» или специальную комбинацию согласно инструкции.
+                </li>
+                <li><strong>Почему не набирается вода?</strong><br>
+                    Возможны: перекрыт кран, засор шланга, неисправен клапан подачи воды, сработала защита от протечек.
+                </li>
+                <li><strong>Что делать, если после всех проверок программа не запускается?</strong><br>
+                    Обратитесь в сервис для диагностики блока управления, мотора, конденсатора, замка и других узлов[10].
+                </li>
+            </ul>
+
+            <h2>Заключение</h2>
+            <p>
+                Если посудомоечная машина не запускает программу, начните с простых шагов: проверьте питание, дверцу, кнопку «Пуск», отсрочку старта, подачу воды и отсутствие протечек. В большинстве случаев проблема решается самостоятельно. Если же программа по-прежнему не стартует — вероятна неисправность блока управления, мотора, конденсатора или замка дверцы, и потребуется помощь специалиста. Регулярное обслуживание и аккуратная эксплуатация помогут избежать большинства проблем и продлят срок службы вашей техники!
+            </p>
+        </div>
+    </div>
+</section>
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col footer-col--logo">
+                <a href="../index.html" class="footer-logo">
+                    <span class="logo-icon"></span>
+                    <span class="logo-text">TechFix</span>
+                </a>
+                <p class="footer-text">© 2025 TechFix. Все права защищены.</p>
+            </div>
+            <div class="footer-col">
+                <h3 class="footer-title">Навигация</h3>
+                <ul class="footer-links">
+                    <li><a href="../index.html" class="footer-link">Главная</a></li>
+                    <li><a href="../all-guides.html" class="footer-link">Все статьи</a></li>
+                    <li><a href="../contacts.html" class="footer-link">Контакты</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3 class="footer-title">Разделы</h3>
+                <ul class="footer-links">
+                    <li><a href="../tv.html" class="nav-link">ТВ</a></li>
+                    <li><a href="../cameras.html" class="nav-link">Камеры</a></li>
+                    <li><a href="../consoles.html" class="nav-link">Консоли</a></li>
+                    <li><a href="../laptops.html" class="nav-link">Ноутбуки</a></li>
+                    <li><a href="../smartphones.html" class="nav-link">Смартфоны</a></li>
+                    <li><a href="../small-appliances.html" class="nav-link">Мелкая техника</a></li>
+                    <li><a href="../large-appliances.html" class="nav-link">Крупная техника</a></li>
+                    <li><a href="../auto-electronics.html" class="nav-link">Автоэлектроника</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3 class="footer-title">Связь</h3>
+                <ul class="footer-links">
+                    <li><a href="https://t.me/techfixkz" class="footer-link"><i class="fab fa-telegram"></i> Telegram</a></li>
+                    <li><a href="https://instagram.com/techfixkz" class="footer-link"><i class="fab fa-instagram"></i> Instagram</a></li>
+                    <li><a href="mailto:support@techfix.kz" class="footer-link"><i class="fas fa-envelope"></i> Email</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p class="footer-copyright">2025 TechFix. Все права защищены.</p>
+        </div>
+    </div>
+</footer>
+<script src="../script.js"></script>
+</body>
+</html>

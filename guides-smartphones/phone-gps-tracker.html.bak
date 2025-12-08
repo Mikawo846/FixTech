@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Смартфон как GPS-трекер для авто | Экспертный гид</title>
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="../styles-header.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    .guide-content { line-height: 1.7; color: var(--text); }
+    .guide-content h2 { color: var(--primary); margin-top: 30px; margin-bottom: 15px; font-size: 1.5rem; }
+    .guide-content h3 { color: var(--primary-dark); margin-top: 25px; margin-bottom: 12px; font-size: 1.2rem; }
+    .guide-image-block { margin: 20px 0; padding: 15px; background: var(--background); border-radius: var(--border-radius); border: 1px solid var(--border); text-align: center; }
+    .guide-image-block img { max-width: 100%; height: auto; border-radius: 6px; border: 1px solid var(--border); }
+    .image-caption { margin-top: 10px; font-size: 0.85rem; color: var(--text-light); font-style: italic; }
+    .pro-tips { background: rgba(3, 74, 79, 0.05); padding: 15px; border-radius: 6px; margin: 20px 0; }
+    .pro-tips h4 { color: var(--primary); margin-top: 0; margin-bottom: 12px; font-size: 1.1rem; }
+    .tip-item { display: flex; gap: 8px; margin-bottom: 8px; align-items: flex-start; }
+    table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+    th, td { border: 1px solid var(--border); padding: 8px; text-align: left; }
+    th { background: var(--background-light); }
+    @media (max-width: 768px) {
+      .guide-content h2 { font-size: 1.4rem; margin-top: 25px; }
+      .guide-image-block { padding: 12px; margin: 15px 0; }
+      table, th, td { font-size: 0.95rem; }
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="header__inner">
+        <a href="../index.html" class="logo">
+          <span class="logo__icon"></span>
+          <span class="logo__text">TechFix</span>
+        </a>
+        <nav class="nav">
+          <ul class="nav__list">
+            <li><a href="../smartphones.html" class="nav__link">Смартфоны</a></li>
+            <li><a href="../automotive.html" class="nav__link">Авто</a></li>
+            <li><a href="../tools.html" class="nav__link">Инструменты</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <section class="guide-page">
+    <div class="container">
+      <div class="breadcrumbs">
+        <a href="../index.html">Главная</a>
+        <i class="fas fa-chevron-right"></i>
+        <a href="../automotive.html">Авто</a>
+        <i class="fas fa-chevron-right"></i>
+        <span>Смартфон как GPS-трекер</span>
+      </div>
+
+      <h1 class="section__title">Смартфон как GPS-трекер для авто: полное руководство</h1>
+
+      <div class="guide-meta">
+        <span><i class="fas fa-hourglass-half"></i> Экспертное руководство: приложения, настройки, лайфхаки, таблицы, советы, FAQ, иллюстрация.</span>
+      </div>
+
+      <div class="guide-image-block">
+        <img src="https://avatars.mds.yandex.net/get-shedevrum/16367318/img_68707507445711f0a703724f6c58f87a/orig" alt="Смартфон как GPS-трекер для авто">
+        <div class="image-caption">
+          Превратите старый смартфон в мощный GPS-трекер с функцией сигнализации и геозон. Дешевле специализированных устройств в 5-10 раз.
+        </div>
+      </div>
+
+      <div class="guide-content">
+
+        <h2>Зачем использовать смартфон как GPS-трекер?</h2>
+        <p>
+          Современные смартфоны с GPS/ГЛОНАСС-модулями способны заменить профессиональные трекеры, предлагая:
+        </p>
+        <ul>
+          <li>Точность позиционирования до 3 метров</li>
+          <li>Автоматическую синхронизацию с облаком</li>
+          <li>Геозоны и уведомления о перемещениях</li>
+          <li>Интеграцию с умным домом</li>
+          <li>Запись истории маршрутов за 365 дней</li>
+        </ul>
+
+        <h2>Таблица: сравнение методов GPS-трекинга</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Параметр</th>
+              <th>Смартфон</th>
+              <th>Профессиональный трекер</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Стоимость</td>
+              <td>0–5 000 ₽ (старый девайс)</td>
+              <td>10 000–50 000 ₽</td>
+            </tr>
+            <tr>
+              <td>Точность</td>
+              <td>3–5 м</td>
+              <td>1–3 м</td>
+            </tr>
+            <tr>
+              <td>Автономность</td>
+              <td>12–72 ч</td>
+              <td>30–180 дней</td>
+            </tr>
+            <tr>
+              <td>Доп. функции</td>
+              <td>Камера, микрофон, датчики</td>
+              <td>Датчик удара, CAN-шина</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>Топ-5 приложений для превращения смартфона в трекер</h2>
+        <div class="pro-tips">
+          <h4>🔹 Критерии выбора</h4>
+          <div class="tip-item">
+            <i class="fas fa-lightbulb"></i>
+            <p>Для бизнеса выбирайте WiaTag или Ruhavik, для личного использования – ГдеМои или Life360</p>
+          </div>
+        </div>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Приложение</th>
+              <th>Платформа</th>
+              <th>Ключевые функции</th>
+              <th>Цена</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>WiaTag</td>
+              <td>iOS/Android</td>
+              <td>Геозоны, история 1 год, интеграция с IoT</td>
+              <td>Бесплатно</td>
+            </tr>
+            <tr>
+              <td>ГдеМои</td>
+              <td>Android</td>
+              <td>Формы заданий, чат, энергосбережение</td>
+              <td>От 290 ₽/мес</td>
+            </tr>
+            <tr>
+              <td>Life360</td>
+              <td>iOS/Android</td>
+              <td>Семейный трекинг, аварийные оповещения</td>
+              <td>Бесплатно</td>
+            </tr>
+            <tr>
+              <td>Ruhavik</td>
+              <td>iOS/Android</td>
+              <td>Мониторинг автопарка, аналитика</td>
+              <td>От 500 ₽/мес</td>
+            </tr>
+            <tr>
+              <td>GPSWOX</td>
+              <td>iOS/Android</td>
+              <td>Профессиональная аналитика, отчеты</td>
+              <td>От 15$/мес</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>Пошаговая инструкция: настройка WiaTag</h2>
+        <ol>
+          <li>Установите WiaTag из Google Play/App Store</li>
+          <li>Зарегистрируйте аккаунт на сайте ruhavik.com</li>
+          <li>В приложении введите:
+            <ul>
+              <li>Сервер: <code>ruhavik.com</code></li>
+              <li>Порт: <code>20500</code></li>
+              <li>Уникальный ID устройства</li>
+            </ul>
+          </li>
+          <li>Закрепите смартфон в автомобиле с помощью держателя</li>
+          <li>Подключите к прикуривателю для постоянной зарядки</li>
+        </ol>
+
+        <h2>Оптимизация автономности</h2>
+        <div class="pro-tips">
+          <h4>🔹 Лайфхаки для экономии заряда</h4>
+          <div class="tip-item">
+            <i class="fas fa-lightbulb"></i>
+            <p>Используйте режим "Энергосбережение" в настройках приложения</p>
+          </div>
+          <div class="tip-item">
+            <i class="fas fa-lightbulb"></i>
+            <p>Отключите экран и функции Always-On Display</p>
+          </div>
+          <div class="tip-item">
+            <i class="fas fa-lightbulb"></i>
+            <p>Установите интервал отправки координат 5-10 минут</p>
+          </div>
+        </div>
+
+        <h2>Таблица: настройки для разных сценариев</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Сценарий</th>
+              <th>Интервал</th>
+              <th>Точность</th>
+              <th>Автономность</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Городское использование</td>
+              <td>5 мин</td>
+              <td>Высокая</td>
+              <td>24 ч</td>
+            </tr>
+            <tr>
+              <td>Дальние поездки</td>
+              <td>10 мин</td>
+              <td>Средняя</td>
+              <td>48 ч</td>
+            </tr>
+            <tr>
+              <td>Стоянка</td>
+              <td>30 мин</td>
+              <td>Низкая</td>
+              <td>72 ч</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>Интеграция с умным домом</h2>
+        <ul>
+          <li>Автоматическое включение света при подъезде к дому</li>
+          <li>Уведомления в Telegram при выходе за геозону</li>
+          <li>Синхронизация с Яндекс.Навигатором через IFTTT</li>
+        </ul>
+
+        <h2>FAQ – ответы на частые вопросы</h2>
+        <ul>
+          <li>
+            <strong>Нужна ли SIM-карта?</strong><br>
+            Да, требуется карта с тарифом "Интернет вещей" (от 50 ₽/мес)
+          </li>
+          <li>
+            <strong>Как скрыть смартфон в авто?</strong><br>
+            Используйте магнитные держатели под сиденьем или в бардачке
+          </li>
+          <li>
+            <strong>Законно ли это?</strong><br>
+            Да, если вы владелец авто или имеете письменное согласие
+          </li>
+        </ul>
+
+        <h2>Итог: когда стоит выбрать смартфон как трекер?</h2>
+        <p>
+          Решение идеально для временного мониторинга, тестирования систем слежения или использования старых устройств. Для постоянной работы более 3 месяцев лучше приобрести специализированный GPS-трекер с низким энергопотреблением.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__col footer__col--logo">
+          <a href="index.html" class="footer-logo">
+            <span class="logo__icon"></span>
+            <span class="logo__text">TechFix</span>
+          </a>
+          <p class="footer__text">Экспертные руководства по автомобильным технологиям с 2024 года</p>
+        </div>
+        <div class="footer__col">
+          <h3 class="footer__title">Разделы</h3>
+          <ul class="footer__links">
+            <li><a href="index.html" class="footer__link">Главная</a></li>
+            <li><a href="all-guides.html" class="footer__link">Все гайды</a></li>
+            <li><a href="contacts.html" class="footer__link">Контакты</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h3 class="footer__title">Категории</h3>
+          <ul class="footer__links">
+            <li><a href="../smartphones.html" class="nav__link">Смартфоны</a></li>
+            <li><a href="../automotive.html" class="nav__link">Авто</a></li>
+            <li><a href="../tools.html" class="nav__link">Инструменты</a></li>
+            <li><a href="../small-appliances.html" class="nav__link">Мелкая техника</a></li>
+            <li><a href="../large-appliances.html" class="nav__link">Бытовая техника</a></li>
+            <li><a href="../auto-electronics.html" class="nav__link">Авто-Электроника</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h3 class="footer__title">Контакты</h3>
+          <ul class="footer__links">
+            <li>
+              <a href="https://t.me/techfix_kz" class="footer__link"><i class="fab fa-telegram"></i> Telegram</a>
+            </li>
+            <li>
+              <a href="https://instagram.com/techfix_kz" class="footer__link"><i class="fab fa-instagram"></i> Instagram</a>
+            </li>
+            <li>
+              <a href="mailto:support@techfix.kz" class="footer__link"><i class="fas fa-envelope"></i> Email</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copyright">© 2025 TechFix. Все права защищены.</p>
+      </div>
+    </div>
+  </footer>
+  <script src="../script.js"></script>
+</body>
+</html>

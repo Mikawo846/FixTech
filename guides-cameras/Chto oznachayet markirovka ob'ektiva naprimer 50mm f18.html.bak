@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Что означает маркировка объектива (например, 50mm f/1.8)? | TechFix</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../styles-header.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .guide-content { line-height: 1.7; color: var(--text);}
+        .guide-content h2 { color: var(--primary); margin-top: 30px; margin-bottom: 15px; font-size: 1.5rem;}
+        .step-group { margin: 20px 0; padding: 15px; background: var(--background); border-radius: var(--border-radius); border: 1px solid var(--border);}
+        .step { display: flex; gap: 15px; margin: 12px 0; padding: 12px; background: var(--background-alt); border-radius: 6px; align-items: flex-start;}
+        .step-number { background: var(--primary); color: white; width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-weight: bold; font-size: 0.8rem;}
+        .guide-image-block { margin: 20px 0; padding: 15px; background: var(--background); border-radius: var(--border-radius); border: 1px solid var(--border); text-align: center;}
+        .guide-image-block img { max-width: 100%; height: auto; border-radius: 6px; border: 1px solid var(--border);}
+        .recommend-box { background: rgba(3, 74, 79, 0.1); border-left: 4px solid var(--primary); padding: 12px; margin: 15px 0; display: flex; gap: 12px; align-items: flex-start; border-radius: 4px;}
+        .recommend-box i { font-size: 1.2rem; color: var(--primary); margin-top: 2px;}
+        .pro-tips { background: rgba(3, 74, 79, 0.05); padding: 15px; border-radius: 6px; margin: 20px 0;}
+        .pro-tips h4 { color: var(--primary); margin-top: 0; margin-bottom: 12px; font-size: 1.1rem;}
+        .tip-item { display: flex; gap: 8px; margin-bottom: 8px; align-items: flex-start;}
+        table {width: 100%; border-collapse: collapse; margin: 20px 0;}
+        th, td {border: 1px solid var(--border); padding: 8px 12px; text-align: left;}
+        th {background: var(--background-alt);}
+        @media (max-width: 768px) {
+            .guide-content h2 { font-size: 1.4rem; margin-top: 25px;}
+            .guide-image-block, .step-group { padding: 12px; margin: 15px 0;}
+            .step { padding: 10px;}
+            table, th, td {font-size: 0.9em;}
+        }
+    </style>
+</head>
+<body>
+<header class="header">
+    <div class="container">
+        <div class="header__inner">
+            <a href="../index.html" class="logo">
+                <span class="logo__icon"></span>
+                <span class="logo__text">TechFix</span>
+            </a>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li><a href="../cameras.html" class="nav__link">Фотоаппараты</a></li>
+                    <li><a href="../tv.html" class="nav__link">Телевизоры</a></li>
+                    <li><a href="../laptops.html" class="nav__link">Ноутбуки</a></li>
+                    <li><a href="../smartphones.html" class="nav__link">Смартфоны</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>
+<section class="guide-page">
+    <div class="container">
+        <div class="breadcrumbs">
+            <a href="../index.html">Главная</a>
+            <i class="fas fa-chevron-right"></i>
+            <a href="../cameras.html">Фотоаппараты</a>
+            <i class="fas fa-chevron-right"></i>
+            <span>Что означает маркировка объектива (например, 50mm f/1.8)?</span>
+        </div>
+        <h1 class="section__title">Что означает маркировка объектива (например, 50mm f/1.8)?</h1>
+        <div class="guide-meta">
+            <span><i class="fas fa-adjust"></i> Объяснение и расшифровка</span>
+        </div>
+        <div class="guide-image-block">
+            <img src="https://avatars.mds.yandex.net/get-shedevrum/15036311/img_73276a0d2dc411f0945252d8e6a785d9/orig" alt="Что означает маркировка объектива?">
+        </div>
+        <div class="guide-content">
+            <h2>Основные элементы маркировки объектива</h2>
+            <table>
+                <tr>
+                    <th>Пример</th>
+                    <th>Что означает</th>
+                </tr>
+                <tr>
+                    <td>50mm</td>
+                    <td>Фокусное расстояние объектива (в миллиметрах)</td>
+                </tr>
+                <tr>
+                    <td>f/1.8</td>
+                    <td>Максимальная светосила (относительное отверстие диафрагмы)</td>
+                </tr>
+                <tr>
+                    <td>EF, RF, NIKKOR, FE, E, L, G, STM, IS, VR...</td>
+                    <td>Байонет, серия, тип мотора, наличие стабилизации и другие особенности</td>
+                </tr>
+            </table>
+
+            <h2>Что такое фокусное расстояние?</h2>
+            <ul>
+                <li><strong>Фокусное расстояние</strong> (например, 50mm) - это расстояние (в мм) от оптического центра объектива до матрицы камеры при фокусировке на бесконечность.</li>
+                <li>Определяет угол обзора: чем меньше число, тем шире угол (например, 24mm - широкий угол), чем больше - тем уже и сильнее приближение (например, 200mm - телеобъектив).</li>
+                <li>Классика для портретов - 85mm, для пейзажей - 16–35mm, для универсальной съёмки - 35–50mm.</li>
+            </ul>
+
+            <h2>Что такое светосила (апертура, диафрагма)?</h2>
+            <ul>
+                <li><strong>Светосила</strong> (например, f/1.8) - максимальное относительное отверстие диафрагмы, определяет, сколько света объектив пропускает к матрице.</li>
+                <li>Чем меньше число после f/ - тем больше отверстие, тем «светлее» объектив (f/1.4 - очень светосильный, f/4 - средний, f/5.6 - темноватый).</li>
+                <li>Светосильные объективы (f/1.2–f/2.8) позволяют снимать в темноте, получать малую глубину резкости и красивое боке.</li>
+            </ul>
+
+            <h2>Фикс или зум?</h2>
+            <ul>
+                <li><strong>Фикс-объектив</strong> - одно фокусное расстояние (например, 50mm f/1.8).</li>
+                <li><strong>Зум-объектив</strong> - диапазон фокусных расстояний (например, 24–70mm f/2.8).</li>
+            </ul>
+
+            <h2>Расшифровка дополнительных обозначений</h2>
+            <table>
+                <tr>
+                    <th>Обозначение</th>
+                    <th>Что значит</th>
+                    <th>Для чего важно</th>
+                </tr>
+                <tr>
+                    <td>EF, RF, Z, FE, E, F, MFT</td>
+                    <td>Тип байонета (крепления объектива)</td>
+                    <td>Должен подходить к вашей камере</td>
+                </tr>
+                <tr>
+                    <td>L, G, Art, Pro, S</td>
+                    <td>Премиальная серия (качество оптики, сборки)</td>
+                    <td>Лучшее качество, выше цена</td>
+                </tr>
+                <tr>
+                    <td>IS, VR, OSS, OIS</td>
+                    <td>Стабилизация изображения</td>
+                    <td>Позволяет снимать с рук на длинных выдержках</td>
+                </tr>
+                <tr>
+                    <td>USM, SWM, HSM, STM</td>
+                    <td>Тип мотора автофокуса (ультразвуковой, шаговый)</td>
+                    <td>Влияет на скорость и шум автофокуса</td>
+                </tr>
+                <tr>
+                    <td>Macro, Micro</td>
+                    <td>Макрообъектив (для съёмки с близкого расстояния)</td>
+                    <td>Для предметки, насекомых, деталей</td>
+                </tr>
+                <tr>
+                    <td>DC, DX, APS-C, EF-S</td>
+                    <td>Для кроп-камер (не для полного кадра)</td>
+                    <td>Совместимость с матрицей</td>
+                </tr>
+                <tr>
+                    <td>II, III, IV</td>
+                    <td>Поколение объектива</td>
+                    <td>Новые версии - лучше оптика, автофокус, стабилизация</td>
+                </tr>
+            </table>
+
+            <h2>Пошаговая расшифровка на примере</h2>
+            <div class="step-group">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div>
+                        <strong>Canon EF 50mm f/1.8 STM</strong>
+                        <ul>
+                            <li><b>Canon EF</b> - байонет для зеркалок Canon полного кадра и APS-C.</li>
+                            <li><b>50mm</b> - фокусное расстояние (универсальный фикс).</li>
+                            <li><b>f/1.8</b> - максимальная светосила (очень светлый объектив, красивое боке).</li>
+                            <li><b>STM</b> - шаговый мотор автофокуса, плавная и тихая фокусировка (идеально для видео).</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div>
+                        <strong>Sony FE 85mm f/1.4 GM OSS</strong>
+                        <ul>
+                            <li><b>FE</b> - байонет для полнокадровых беззеркалок Sony.</li>
+                            <li><b>85mm</b> - классический портретник.</li>
+                            <li><b>f/1.4</b> - очень светосильный.</li>
+                            <li><b>GM</b> - премиальная серия G Master.</li>
+                            <li><b>OSS</b> - оптическая стабилизация.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div>
+                        <strong>Nikon AF-S DX 18-140mm f/3.5-5.6G ED VR</strong>
+                        <ul>
+                            <li><b>AF-S</b> - ультразвуковой мотор автофокуса.</li>
+                            <li><b>DX</b> - для кроп-камер Nikon.</li>
+                            <li><b>18-140mm</b> - зум-объектив (широкий диапазон).</li>
+                            <li><b>f/3.5-5.6</b> - переменная светосила (на коротком конце светлее).</li>
+                            <li><b>G</b> - без кольца диафрагмы.</li>
+                            <li><b>ED</b> - низкодисперсионное стекло (качество).</li>
+                            <li><b>VR</b> - стабилизация изображения.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <h2>Дополнительные обозначения и нюансы</h2>
+            <ul>
+                <li><strong>IF (Internal Focusing):</strong> внутренняя фокусировка, не меняет длину объектива.</li>
+                <li><strong>Weather Sealed:</strong> пыле- и влагозащита корпуса.</li>
+                <li><strong>APO, LD, UD, FLD:</strong> специальные элементы для коррекции аберраций.</li>
+                <li><strong>TS-E, PC-E:</strong> tilt-shift объективы для архитектуры.</li>
+                <li><strong>Fish-eye:</strong> сверхширокоугольный объектив с сильным искажением.</li>
+            </ul>
+
+            <div class="recommend-box">
+                <i class="fas fa-info-circle"></i>
+                <div>
+                    <strong>Совет:</strong> Перед покупкой объектива всегда проверяйте совместимость байонета и матрицы, а также наличие нужных функций (стабилизация, автофокус, влагозащита).
+                </div>
+            </div>
+
+            <div class="pro-tips">
+                <h4>🔹 Профессиональные советы</h4>
+                <div class="tip-item">
+                    <i class="fas fa-lightbulb"></i>
+                    <p>Чем меньше число после f/ - тем легче снимать в темноте и красивее боке, но объектив крупнее и дороже.</p>
+                </div>
+                <div class="tip-item">
+                    <i class="fas fa-lightbulb"></i>
+                    <p>Зум-объективы с постоянной светосилой (например, f/2.8) - профессиональный выбор для репортажа и событий.</p>
+                </div>
+                <div class="tip-item">
+                    <i class="fas fa-lightbulb"></i>
+                    <p>Премиальные серии (Canon L, Sony GM, Nikon S) - лучшее качество, но выше цена и вес.</p>
+                </div>
+            </div>
+
+            <h2>Часто задаваемые вопросы</h2>
+            <ul>
+                <li><strong>Можно ли использовать объектив с маркировкой DX на полнокадровой камере?</strong> - Можно, но будет кроп-режим и потеря разрешения.</li>
+                <li><strong>Зачем нужна стабилизация?</strong> - Для съёмки с рук на длинных выдержках и телеобъективах.</li>
+                <li><strong>Что важнее - светосила или стабилизация?</strong> - Для портретов и ночной съёмки - светосила, для репортажа и телеобъективов - стабилизация.</li>
+                <li><strong>Почему у зум-объектива два значения f/?</strong> - Светосила меняется в зависимости от фокусного расстояния (например, f/3.5-5.6).</li>
+            </ul>
+
+            <h2>📌 Итог</h2>
+            <p>
+                Маркировка объектива - это краткая техническая характеристика: фокусное расстояние, светосила, байонет, серия, тип мотора, наличие стабилизации и другие особенности. Умение читать маркировку позволяет выбрать подходящий объектив для ваших задач и камеры, избежать ошибок совместимости и получить максимум от своей фототехники!
+            </p>
+        </div>
+    </div>
+</section>
+<footer class="footer">
+    <div class="container">
+        <div class="footer__grid">
+            <div class="footer__col footer__col--logo">
+                <a href="index.html" class="footer-logo">
+                    <span class="logo__icon"></span>
+                    <span class="logo__text">TechFix</span>
+                </a>
+                <p class="footer__text">Помогаем ремонтировать электронику с 2024 года</p>
+            </div>
+            <div class="footer__col">
+                <h3 class="footer__title">Разделы</h3>
+                <ul class="footer__links">
+                    <li><a href="index.html" class="footer__link">Главная</a></li>
+                    <li><a href="all-guides.html" class="footer__link">Все гайды</a></li>
+                    <li><a href="contacts.html" class="footer__link">Контакты</a></li>
+                </ul>
+            </div>
+            <div class="footer__col">
+                <h3 class="footer__title">Категории</h3>
+                <ul class="footer__links">
+                    <li><a href="../tv.html" class="nav__link">Телевизоры</a></li>
+                    <li><a href="../cameras.html" class="nav__link">Фотоаппараты</a></li>
+                    <li><a href="../consoles.html" class="nav__link">Приставки</a></li>
+                    <li><a href="../laptops.html" class="nav__link">Ноутбуки</a></li>
+                    <li><a href="../smartphones.html" class="nav__link">Смартфоны</a></li>
+                    <li><a href="../small-appliances.html" class="nav__link">Мелкая техника</a></li>
+                    <li><a href="../large-appliances.html" class="nav__link">Бытовая техника</a></li>
+                    <li><a href="../auto-electronics.html" class="nav__link">Авто-Электроника</a></li>
+                </ul>
+            </div>
+            <div class="footer__col">
+                <h3 class="footer__title">Контакты</h3>
+                <ul class="footer__links">
+                    <li><a href="https://t.me/techfix_kz" class="footer__link"><i class="fab fa-telegram"></i> Telegram</a></li>
+                    <li><a href="https://instagram.com/techfix_kz" class="footer__link"><i class="fab fa-instagram"></i> Instagram</a></li>
+                    <li><a href="mailto:support@techfix.kz" class="footer__link"><i class="fas fa-envelope"></i> Email</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <p class="footer__copyright">© 2024 TechFix. Все права защищены.</p>
+        </div>
+    </div>
+</footer>
+<script src="../script.js"></script>
+</body>
+</html>

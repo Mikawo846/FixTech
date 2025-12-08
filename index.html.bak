@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechFix – Ремонт электроники в Казахстане</title>
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./styles-header.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+   <header class="header">
+  <div class="container">
+    <div class="header__inner">
+      <a href="index.html" class="logo">
+        <span class="logo__icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 15L7 10H17L12 15Z" fill="currentColor"/>
+            <path d="M12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3ZM12 19C8.13401 19 5 15.866 5 12C5 8.13401 8.13401 5 12 5C15.866 5 19 8.13401 19 12C19 15.866 15.866 19 12 19Z" fill="currentColor"/>
+          </svg>
+        </span>
+        <span class="logo__text">TechFix</span>
+      </a>
+      <nav class="nav">
+        <ul class="nav__list">
+                    <li class="nav__item"><a href="tv.html" class="nav__link">Телевизоры</a></li>
+                    <li class="nav__item"><a href="auto-electronics.html" class="nav__link">Автоэлектроника</a></li>
+                    <li class="nav__item"><a href="consoles.html" class="nav__link">Приставки</a></li>
+                    <li class="nav__item"><a href="laptops.html" class="nav__link">Ноутбуки</a></li>
+                    <li class="nav__item"><a href="smartphones.html" class="nav__link">Смартфоны</a></li>
+                    <li class="nav__item"><a href="index.html#categories" class="nav__link">Все категории</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>
+
+    
+<div class="search-section">
+        <div class="container">
+            <div class="search-wrapper">
+                <h1 class="search-title">Введите запрос – получите решение!</h1>
+                <div class="search">
+                    <input type="text" placeholder="Например: замена экрана iPhone..." class="search__input">
+                    <button class="search__button">
+                        <i class="fas fa-search"></i>
+                        <span>Поиск</span>
+                    </button>
+                </div>
+                <div class="search-tags">
+                    <span>Популярные запросы:</span>
+                    <a href="#">чистка ноутбука</a>
+                    <a href="#">замена батареи</a>
+                    <a href="#">ремонт HDMI</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+     
+    <main>
+      <section id="categories" class="categories">
+    <div class="container">
+        <div class="categories-heading">
+              <h2 class="section__title">Категории ремонта</h2>
+              <a href="all-guides.html" class="link">Выберите категорию устройство</a>
+        </div>
+        <div class="categories-gallery">
+            <a href="tv.html" class="gallery-card" style="--card-color: #034a4f;">
+                <div class="gallery-card__image">
+                    <img src="https://avatars.mds.yandex.net/get-shedevrum/15407285/img_830884901d3f11f08619caf2840a7b5b/orig" alt="Телевизоры">
+                </div>
+                <div class="gallery-card__overlay">
+                    <h3 class="gallery-card__title">Телевизоры</h3>
+                    <span class="gallery-card__count">24 гайда</span>
+                </div>
+            </a>
+            <a href="cameras.html" class="gallery-card" style="--card-color: #2a6f6f;">
+                <div class="gallery-card__image">
+                    <img src="https://avatars.mds.yandex.net/get-shedevrum/16287116/img_7ed971501d4011f09b4b3e0ed56e7aeb/orig" alt="Фотоаппараты">
+                </div>
+                <div class="gallery-card__overlay">
+                    <h3 class="gallery-card__title">Фотоаппараты</h3>
+                    <span class="gallery-card__count">18 гайдов</span>
+                </div>
+            </a>
+            <a href="consoles.html" class="gallery-card" style="--card-color: #4a8b8b;">
+                <div class="gallery-card__image">
+                    <img src="https://avatars.mds.yandex.net/get-shedevrum/14906380/img_2d60aaf31d4111f0beff6ab936583010/orig" alt="Игровые приставки">
+                </div>
+                <div class="gallery-card__overlay">
+                    <h3 class="gallery-card__title">Игровые приставки</h3>
+                    <span class="gallery-card__count">15 гайдов</span>
+                </div>
+            </a>
+            <a href="laptops.html" class="gallery-card" style="--card-color: #6b9a9a;">
+                <div class="gallery-card__image">
+                    <img src="https://avatars.mds.yandex.net/get-shedevrum/15255128/img_f7ffdf0d1d3e11f08619caf2840a7b5b/orig" alt="Ноутбуки">
+                </div>
+                <div class="gallery-card__overlay">
+                    <h3 class="gallery-card__title">Ноутбуки</h3>
+                    <span class="gallery-card__count">32 гайда</span>
+                </div>
+            </a>
+            <a href="smartphones.html" class="gallery-card" style="--card-color: #8ca9a9;">
+                <div class="gallery-card__image">
+                    <img src="https://avatars.mds.yandex.net/get-shedevrum/15166209/img_44ba2eef1d3f11f0b68d82963e3c41a8/orig" alt="Смартфоны">
+                </div>
+                <div class="gallery-card__overlay">
+                    <h3 class="gallery-card__title">Смартфоны</h3>
+                    <span class="gallery-card__count">45 гайдов</span>
+                </div>
+            </a>
+            <a href="small-appliances.html" class="gallery-card" style="--card-color: #adc8c8;">
+                <div class="gallery-card__image">
+                    <img src="https://avatars.mds.yandex.net/get-shedevrum/14906380/img_c76a0cf91d4011f081871e54446fb7e4/orig" alt="Мелкая техника">
+                </div>
+                <div class="gallery-card__overlay">
+                    <h3 class="gallery-card__title">Мелкая техника</h3>
+                    <span class="gallery-card__count">28 гайдов</span>
+                </div>
+            </a>
+            <a href="large-appliances.html" class="gallery-card" style="--card-color: #cae4df;">
+                <div class="gallery-card__image">
+                    <img src="https://avatars.mds.yandex.net/get-shedevrum/15255128/img_8ac1b61d1b7111f08f0d52aa4dba7032/orig" alt="Крупная техника">
+                </div>
+                <div class="gallery-card__overlay">
+                    <h3 class="gallery-card__title">Крупная техника</h3>
+                    <span class="gallery-card__count">22 гайда</span>
+                </div>
+            </a>
+            <a href="auto-electronics.html" class="gallery-card" style="--card-color: #e8f5f2;">
+                <div class="gallery-card__image">
+                    <img src="https://avatars.mds.yandex.net/get-shedevrum/16525081/img_097a8e3b1d4011f09698564bb4657f04/orig" alt="Автоэлектроника">
+                </div>
+                <div class="gallery-card__overlay">
+                    <h3 class="gallery-card__title">Автоэлектроника</h3>
+                    <span class="gallery-card__count">16 гайдов</span>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
+
+        <section class="news">
+            <div class="container">
+                <div class="section__header">
+                    <h2 class="section__title">Новости мира технологий</h2>
+                    <a href="articles.html" class="link">Смотреть все</a>
+                </div>
+                <div class="guides__grid">
+                    <article class="guide-card">
+                        <div class="guide-card__image">
+                            <img src="https://avatars.mds.yandex.net/get-shedevrum/15407285/img_51f6c3f21f6411f0a6b7420d3fa739ae/orig" alt="Каким будет Iphone 17?">
+                            <span class="guide-card__badge">Сегодня</span>
+                        </div>
+                        <div class="guide-card__content">
+                            <div class="guide-card__meta">
+                                </span>
+                            </div>
+                            <h3 class="guide-card__title">Каким будет Iphone 17?</h3>
+                            <p class="guide-card__excerpt">Что говорят инсайдеры</p>
+                            <a href="articles/clean-laptop.html" class="button button--small">Читать сейчас</a>
+                        </div>
+                    </article>
+                    <article class="guide-card">
+                        <div class="guide-card__image">
+                            <img src="https://avatars.mds.yandex.net/get-shedevrum/13998349/img_5749fa021f5d11f0bedec2adf02644b6/orig" alt="Показали скриншоты GTA6">
+                            <span class="guide-card__badge">Вчера</span>
+                        </div>
+                        <div class="guide-card__content">
+                            <div class="guide-card__meta">
+                            </div>
+                            <h3 class="guide-card__title">Показали скриншоты GTA6</h3>
+                            <p class="guide-card__excerpt">Почему перенос неизбежен?</p>
+                            <a href="articles/repair-hdmi.html" class="button button--small">Читать сейчас</a>
+                        </div>
+                    </article>
+                    <article class="guide-card">
+                        <div class="guide-card__image">
+                            <img src="https://avatars.mds.yandex.net/get-shedevrum/16311338/img_b15ad3121f5b11f08e5e7e7d768ada3d/orig" alt="Чем отличаются ИИ samsung и apple">
+                            <span class="guide-card__badge">Сегодня</span>
+                        </div>
+                        <div class="guide-card__content">
+                            <div class="guide-card__meta">
+                            </div>
+                            <h3 class="guide-card__title">Чем отличаются ИИ samsung и apple?</h3>
+                            <p class="guide-card__excerpt">Разобрались для Вас какой ИИ лучше</p>
+                            <a href="articles/battery-replacement.html" class="button button--small">Читать Сейчас</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+        
+        <section class="popular-guides">
+            <div class="container">
+                <div class="section__header">
+                    <h2 class="section__title">Популярные гайды</h2>
+                    <a href="all-guides.html" class="link">Смотреть все</a>
+                </div>
+                <div class="guides__grid">
+                    <article class="guide-card">
+                        <div class="guide-card__image">
+                            <img src="img/guide1.jpg" alt="Чистка ноутбука">
+                            <span class="guide-card__badge">Новое</span>
+                        </div>
+                        <div class="guide-card__content">
+                            <div class="guide-card__meta">
+                                <span class="guide-card__rating">
+                                    <i class="fas fa-star"></i> 4.8
+                                </span>
+                                <span class="guide-card__time">
+                                    <i class="far fa-clock"></i> 12 мин
+                                </span>
+                            </div>
+                            <h3 class="guide-card__title">Как почистить ноутбук от пыли</h3>
+                            <p class="guide-card__excerpt">Подробная инструкция для новичков с фото</p>
+                            <a href="articles/clean-laptop.html" class="button button--small">Читать</a>
+                        </div>
+                    </article>
+                    <article class="guide-card">
+                        <div class="guide-card__image">
+                            <img src="img/guide2.jpg" alt="Ремонт телевизора">
+                            <span class="guide-card__badge">Топ</span>
+                        </div>
+                        <div class="guide-card__content">
+                            <div class="guide-card__meta">
+                                <span class="guide-card__rating">
+                                    <i class="fas fa-star"></i> 4.9
+                                </span>
+                                <span class="guide-card__time">
+                                    <i class="far fa-clock"></i> 8 мин
+                                </span>
+                            </div>
+                            <h3 class="guide-card__title">Ремонт разъема HDMI</h3>
+                            <p class="guide-card__excerpt">5 шагов для восстановления контактов</p>
+                            <a href="articles/repair-hdmi.html" class="button button--small">Читать</a>
+                        </div>
+                    </article>
+                    <article class="guide-card">
+                        <div class="guide-card__image">
+                            <img src="img/guide3.jpg" alt="Замена батареи">
+                            <span class="guide-card__badge">Просто</span>
+                        </div>
+                        <div class="guide-card__content">
+                            <div class="guide-card__meta">
+                                <span class="guide-card__rating">
+                                    <i class="fas fa-star"></i> 4.7
+                                </span>
+                                <span class="guide-card__time">
+                                    <i class="far fa-clock"></i> 6 мин
+                                </span>
+                            </div>
+                            <h3 class="guide-card__title">Замена батареи в смартфоне</h3>
+                            <p class="guide-card__excerpt">Пошаговое руководство с видео</p>
+                            <a href="articles/battery-replacement.html" class="button button--small">Читать</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__col footer__col--logo">
+                    <a href="index.html" class="footer-logo">
+                        <span class="logo__icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 15L7 10H17L12 15Z" fill="currentColor"/>
+                                <path d="M12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3ZM12 19C8.13401 19 5 15.866 5 12C5 8.13401 8.13401 5 12 5C15.866 5 19 8.13401 19 12C19 15.866 15.866 19 12 19Z" fill="currentColor"/>
+                            </svg>
+                        </span>
+                        <span class="logo__text">TechFix</span>
+                    </a>
+                    <p class="footer__text">Помогаем ремонтировать электронику с 2024 года</p>
+                </div>
+                <div class="footer__col">
+                    <h3 class="footer__title">Разделы</h3>
+                    <ul class="footer__links">
+                        <li><a href="index.html" class="footer__link">Главная</a></li>
+                        <li><a href="index.html#categories" class="footer__link">Все гайды</a></li>
+                        <li><a href="contacts.html" class="footer__link">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="footer__col">
+                    <h3 class="footer__title">Категории</h3>
+                    <ul class="footer__links">
+                        <li><a href="tv.html" class="nav__link">Телевизоры</a></li>
+                        <li><a href="cameras.html" class="nav__link">Фотоаппараты</a></li>
+                        <li><a href="consoles.html" class="nav__link">Приставки</a></li>
+                        <li><a href="laptops.html" class="nav__link">Ноутбуки</a></li>
+                        <li><a href="smartphones.html" class="nav__link">Смартфоны</a></li>
+                        <li><a href="small-appliances.html" class="nav__link">Мелкая техника</a></li>
+                        <li><a href="large-appliances.html" class="nav__link">Бытовая техника</a></li>
+                        <li><a href="auto-electronics.html" class="nav__link">Авто-Электроника</a></li>
+                        </ul>
+                    </div>
+                <div class="footer__col">
+                    <h3 class="footer__title">Контакты</h3>
+                    <ul class="footer__links">
+                        <li><a href="https://t.me/techfix_kz" class="footer__link"><i class="fab fa-telegram"></i> Telegram</a></li>
+                        <li><a href="https://instagram.com/techfix_kz" class="footer__link"><i class="fab fa-instagram"></i> Instagram</a></li>
+                        <li><a href="mailto:support@techfix.kz" class="footer__link"><i class="fas fa-envelope"></i> Email</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p class="footer__copyright">© 2024 TechFix. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+   
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const searchInput = document.querySelector('.search__input');
+            const examples = [
+                'Замена экрана iPhone...',
+                'Чистка матрицы фотоаппарата',
+                'Не работает кабель HDMI',
+                'Не работает телевизор',
+                'Bluetooth в машине не видит телефон',
+                'Течет холодильник',
+                'Камера не видит SD карту',
+                'Регестратор перестал записывать',
+                'Экран в машине погас и не работает сенсор',
+                'Не работает вспышка',
+                'Фен дует холодным воздухом',
+                'Слетели каналы на телевизоре',
+            ];
+            
+            let currentIndex = 0;
+            
+            function updatePlaceholder() {
+                searchInput.placeholder = examples[currentIndex];
+                currentIndex = (currentIndex + 1) % examples.length;
+            }
+            
+            // Меняем placeholder сразу при загрузке
+            updatePlaceholder();
+            
+            // Устанавливаем интервал для смены каждые 3 секунды
+            setInterval(updatePlaceholder, 3000);
+            
+            // Добавляем анимацию перехода
+            searchInput.style.transition = 'opacity 0.5s ease';
+        });
+<script>
+  // Обработчик для входа через Identity
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", user => {
+      if (!user) {
+        window.netlifyIdentity.on("login", () => {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  }
+</script>
+
+<script src="script.js"></script> <!-- Ваш существующий скрипт -->
+</body>
+</html>

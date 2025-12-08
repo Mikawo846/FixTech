@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Как восстановить смартфон после неудачного root? | Экспертный гид</title>
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="../styles-header.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    .guide-content { line-height: 1.7; color: var(--text); }
+    .guide-content h2 { color: var(--primary); margin-top: 30px; margin-bottom: 15px; font-size: 1.5rem; }
+    .guide-content h3 { color: var(--primary-dark); margin-top: 25px; margin-bottom: 12px; font-size: 1.2rem; }
+    .guide-image-block { margin: 20px 0; padding: 15px; background: var(--background); border-radius: var(--border-radius); border: 1px solid var(--border); text-align: center; }
+    .guide-image-block img { max-width: 100%; height: auto; border-radius: 6px; border: 1px solid var(--border); }
+    .image-caption { margin-top: 10px; font-size: 0.85rem; color: var(--text-light); font-style: italic; }
+    .pro-tips { background: rgba(3, 74, 79, 0.05); padding: 15px; border-radius: 6px; margin: 20px 0; }
+    .pro-tips h4 { color: var(--primary); margin-top: 0; margin-bottom: 12px; font-size: 1.1rem; }
+    .tip-item { display: flex; gap: 8px; margin-bottom: 8px; align-items: flex-start; }
+    table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+    th, td { border: 1px solid var(--border); padding: 8px; text-align: left; }
+    th { background: var(--background-light); }
+    @media (max-width: 768px) {
+      .guide-content h2 { font-size: 1.4rem; margin-top: 25px; }
+      .guide-image-block { padding: 12px; margin: 15px 0; }
+      table, th, td { font-size: 0.95rem; }
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="header__inner">
+        <a href="../index.html" class="logo">
+          <span class="logo__icon"></span>
+          <span class="logo__text">TechFix</span>
+        </a>
+        <nav class="nav">
+          <ul class="nav__list">
+            <li><a href="../smartphones.html" class="nav__link">Смартфоны</a></li>
+            <li><a href="../android.html" class="nav__link">Android</a></li>
+            <li><a href="../recovery.html" class="nav__link">Восстановление</a></li>
+            <li><a href="../tools.html" class="nav__link">Инструменты</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <section class="guide-page">
+    <div class="container">
+      <div class="breadcrumbs">
+        <a href="../index.html">Главная</a>
+        <i class="fas fa-chevron-right"></i>
+        <a href="../android.html">Android</a>
+        <i class="fas fa-chevron-right"></i>
+        <span>Восстановление после неудачного root</span>
+      </div>
+
+      <h1 class="section__title">Как восстановить смартфон после неудачного root? Полное руководство</h1>
+
+      <div class="guide-meta">
+        <span><i class="fas fa-hourglass-half"></i> Экспертное руководство: методы восстановления, таблицы, советы, лайфхаки, FAQ, иллюстрация.</span>
+      </div>
+
+      <div class="guide-image-block">
+        <img src="https://avatars.mds.yandex.net/get-shedevrum/15342086/img_127490c8445611f080a5da33849e98dc/orig" alt="Восстановление смартфона после root">
+        <div class="image-caption">
+          Неудачный root может привести к "кирпичиванию" устройства, но правильные методы восстановления вернут его к жизни.
+        </div>
+      </div>
+
+      <div class="guide-content">
+
+        <h2>Основные сценарии проблем после root</h2>
+        <p>
+          После неудачной попытки получения root-прав смартфон может оказаться в одном из трёх состояний:
+        </p>
+        <ul>
+          <li><b>Soft Brick:</b> Устройство включается, но застревает на логотипе или выдаёт ошибки</li>
+          <li><b>Bootloop:</b> Бесконечная перезагрузка без доступа к системе</li>
+          <li><b>Hard Brick:</b> Полное отсутствие реакции на кнопки (требует аппаратного ремонта)</li>
+        </ul>
+
+        <h2>Таблица: методы восстановления по типу проблемы</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Состояние</th>
+              <th>Доступные методы</th>
+              <th>Сложность</th>
+              <th>Успешность</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Soft Brick</td>
+              <td>Recovery Mode, Fastboot</td>
+              <td>Средняя</td>
+              <td>90%</td>
+            </tr>
+            <tr>
+              <td>Bootloop</td>
+              <td>Сброс через Recovery, перепрошивка</td>
+              <td>Высокая</td>
+              <td>70%</td>
+            </tr>
+            <tr>
+              <td>Hard Brick</td>
+              <td>JTAG, сервисный центр</td>
+              <td>Очень высокая</td>
+              <td>40%</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>Пошаговая инструкция: восстановление через Recovery Mode</h2>
+        <ol>
+          <li>Выключите устройство и войдите в Recovery (сочетание кнопок зависит от модели)</li>
+          <li>Выберите <b>Wipe data/factory reset</b></li>
+          <li>Подтвердите сброс и дождитесь завершения</li>
+          <li>Выберите <b>Wipe cache partition</b> для очистки кэша</li>
+          <li>Перезагрузите устройство</li>
+        </ol>
+        <div class="pro-tips">
+          <h4>🔹 Критические советы</h4>
+          <div class="tip-item">
+            <i class="fas fa-lightbulb"></i>
+            <p>Перед сбросом попробуйте загрузиться в Safe Mode (удерживайте кнопку уменьшения громкости при включении)</p>
+          </div>
+        </div>
+
+        <h2>Восстановление через Fastboot (для устройств с разблокированным загрузчиком)</h2>
+        <ol>
+          <li>Установите ADB и Fastboot драйверы</li>
+          <li>Подключите устройство в режиме Fastboot (Power + Vol-)</li>
+          <li>Выполните команды:
+            <pre><code>fastboot flash recovery имя_файла.img
+fastboot reboot recovery</code></pre>
+          </li>
+          <li>Через восстановленный Recovery установите чистую прошивку</li>
+        </ol>
+
+        <h2>Таблица: официальные инструменты для популярных брендов</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Производитель</th>
+              <th>Инструмент</th>
+              <th>Функции</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Samsung</td>
+              <td>Odin</td>
+              <td>Прошивка официальных ROM</td>
+            </tr>
+            <tr>
+              <td>Xiaomi</td>
+              <td>Mi Flash Tool</td>
+              <td>Восстановление через Fastboot</td>
+            </tr>
+            <tr>
+              <td>Huawei</td>
+              <td>HiSuite</td>
+              <td>Экстренное восстановление</td>
+            </tr>
+            <tr>
+              <td>Sony</td>
+              <td>Xperia Companion</td>
+              <td>Репейр-режим</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>Специализированные методы для сложных случаев</h2>
+        <h3>Использование Qualcomm EDL Mode</h3>
+        <ul>
+          <li>Требуется авторизованный аккаунт разработчика</li>
+          <li>Используйте инструменты QFIL или QPST</li>
+          <li>Загрузите подходящий firehose programmer</li>
+        </ul>
+
+        <h3>Восстановление через JTAG</h3>
+        <ul>
+          <li>Аппаратное подключение к тестовым точкам</li>
+          <li>Требуется Riff Box или аналогичный инструмент</li>
+          <li>Подходит для Hard Brick</li>
+        </ul>
+
+        <h2>Лайфхаки для предотвращения проблем</h2>
+        <div class="pro-tips">
+          <h4>🔹 Профилактические меры</h4>
+          <div class="tip-item">
+            <i class="fas fa-lightbulb"></i>
+            <p>Всегда делайте полный бэкап через TWRP перед root</p>
+          </div>
+          <div class="tip-item">
+            <i class="fas fa-lightbulb"></i>
+            <p>Используйте только проверенные инструменты вроде Magisk</p>
+          </div>
+          <div class="tip-item">
+            <i class="fas fa-lightbulb"></i>
+            <p>Скачивайте прошивки исключительно с официальных источников</p>
+          </div>
+        </div>
+
+        <h2>FAQ – ответы на частые вопросы</h2>
+        <ul>
+          <li>
+            <strong>Как проверить, что root действительно удалён?</strong><br>
+            Используйте приложения вроде Root Checker или терминальную команду <code>su -v</code>
+          </li>
+          <li>
+            <strong>Можно ли восстановить данные после сброса?</strong><br>
+            Да, с помощью инструментов вроде Apeaksoft Android Data Recovery
+          </li>
+          <li>
+            <strong>Что делать если не работает кнопка Recovery?</strong><br>
+            Используйте ADB команду <code>adb reboot recovery</code>
+          </li>
+        </ul>
+
+        <h2>Итог: алгоритм действий при неудачном root</h2>
+        <ol>
+          <li>Попробуйте загрузку в Safe Mode</li>
+          <li>Восстановите через Recovery Mode</li>
+          <li>Используйте Fastboot для перепрошивки</li>
+          <li>Примените официальные инструменты производителя</li>
+          <li>В крайнем случае обратитесь в сервисный центр</li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__col footer__col--logo">
+          <a href="index.html" class="footer-logo">
+            <span class="logo__icon"></span>
+            <span class="logo__text">TechFix</span>
+          </a>
+          <p class="footer__text">Экспертные руководства по восстановлению техники с 2024 года</p>
+        </div>
+        <div class="footer__col">
+          <h3 class="footer__title">Разделы</h3>
+          <ul class="footer__links">
+            <li><a href="index.html" class="footer__link">Главная</a></li>
+            <li><a href="all-guides.html" class="footer__link">Все гайды</a></li>
+            <li><a href="contacts.html" class="footer__link">Контакты</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h3 class="footer__title">Категории</h3>
+          <ul class="footer__links">
+            <li><a href="../smartphones.html" class="nav__link">Смартфоны</a></li>
+            <li><a href="../android.html" class="nav__link">Android</a></li>
+            <li><a href="../recovery.html" class="nav__link">Восстановление</a></li>
+            <li><a href="../tools.html" class="nav__link">Инструменты</a></li>
+            <li><a href="../small-appliances.html" class="nav__link">Мелкая техника</a></li>
+            <li><a href="../large-appliances.html" class="nav__link">Бытовая техника</a></li>
+            <li><a href="../auto-electronics.html" class="nav__link">Авто-Электроника</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h3 class="footer__title">Контакты</h3>
+          <ul class="footer__links">
+            <li>
+              <a href="https://t.me/techfix_kz" class="footer__link"><i class="fab fa-telegram"></i> Telegram</a>
+            </li>
+            <li>
+              <a href="https://instagram.com/techfix_kz" class="footer__link"><i class="fab fa-instagram"></i> Instagram</a>
+            </li>
+            <li>
+              <a href="mailto:support@techfix.kz" class="footer__link"><i class="fas fa-envelope"></i> Email</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copyright">© 2025 TechFix. Все права защищены.</p>
+      </div>
+    </div>
+  </footer>
+  <script src="../script.js"></script>
+</body>
+</html>

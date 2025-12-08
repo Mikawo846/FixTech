@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Запуск игр Game Boy Advance на Xbox Series S | Экспертный мегагайд</title>
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="../styles-header.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    .guide-content { line-height: 1.7; color: var(--text); }
+    .guide-content h2 { color: var(--primary); margin-top: 30px; margin-bottom: 15px; font-size: 1.5rem; }
+    .guide-content h3 { color: var(--primary-dark); margin-top: 25px; margin-bottom: 12px; font-size: 1.2rem; }
+    .guide-image-block { margin: 20px 0; padding: 15px; background: var(--background); border-radius: var(--border-radius); border: 1px solid var(--border); text-align: center; }
+    .guide-image-block img { max-width: 100%; height: auto; border-radius: 6px; border: 1px solid var(--border); }
+    .image-caption { margin-top: 10px; font-size: 0.85rem; color: var(--text-light); font-style: italic; }
+    .pro-tips { background: rgba(3, 74, 79, 0.05); padding: 15px; border-radius: 6px; margin: 20px 0; }
+    .pro-tips h4 { color: var(--primary); margin-top: 0; margin-bottom: 12px; font-size: 1.1rem; }
+    .tip-item { display: flex; gap: 8px; margin-bottom: 8px; align-items: flex-start; }
+    .warning-block {
+      background: #fff3e0;
+      border-left: 5px solid #ff9100;
+      padding: 15px 18px;
+      margin: 22px 0;
+      border-radius: 7px;
+    }
+    table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+    th, td { border: 1px solid var(--border); padding: 8px; text-align: left; }
+    th { background: var(--background-light); }
+    @media (max-width: 768px) {
+      .guide-content h2 { font-size: 1.4rem; margin-top: 25px; }
+      .guide-image-block { padding: 12px; margin: 15px 0; }
+      table, th, td { font-size: 0.95rem; }
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="header__inner">
+        <a href="../index.html" class="logo">
+          <span class="logo__icon"></span>
+          <span class="logo__text">TechFix</span>
+        </a>
+        <nav class="nav">
+          <ul class="nav__list">
+            <li><a href="../tv.html" class="nav__link">Телевизоры</a></li>
+            <li><a href="../cameras.html" class="nav__link">Фотоаппараты</a></li>
+            <li><a href="../consoles.html" class="nav__link">Приставки</a></li>
+            <li><a href="../laptops.html" class="nav__link">Ноутбуки</a></li>
+            <li><a href="../smartphones.html" class="nav__link">Смартфоны</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <section class="guide-page">
+    <div class="container">
+      <div class="breadcrumbs">
+        <a href="../index.html">Главная</a>
+        <i class="fas fa-chevron-right"></i>
+        <a href="../consoles.html">Приставки</a>
+        <i class="fas fa-chevron-right"></i>
+        <span>Запуск игр Game Boy Advance на Xbox Series S</span>
+      </div>
+
+      <h1 class="section__title">Запуск игр Game Boy Advance на Xbox Series S</h1>
+
+      <div class="guide-meta">
+        <span><i class="fas fa-gamepad"></i> Экспертный гид: пошаговая инструкция по эмуляции GBA через RetroArch, настройка BIOS, выбор ядер, управление, оптимизация и FAQ.</span>
+      </div>
+
+      <div class="guide-image-block">
+        <img src="https://avatars.mds.yandex.net/get-shedevrum/16367318/img_f27d15a93d5011f0b55fba22276cb0e7/orig" alt="Запуск GBA на Xbox Series S">
+        <div class="image-caption">
+          RetroArch, mGBA, VBA-M, BIOS GBA и кастомизация управления — всё для идеального ретро-опыта на Xbox Series S.
+        </div>
+      </div>
+
+      <div class="guide-content">
+
+        <h2>Почему Xbox Series S — идеальная платформа для GBA?</h2>
+        <p>
+          Xbox Series S с режимом разработчика превращается в мощную эмуляционную машину. Благодаря RetroArch и 4 доступным ядрам эмуляции (mGBA, VBA-M, VBA-Next, gpSP) вы можете запускать игры GBA в 4K с улучшенной графикой и быстрыми сохранениями.
+        </p>
+
+        <h2>Таблица: ключевые этапы настройки</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Этап</th>
+              <th>Время</th>
+              <th>Сложность</th>
+              <th>Необходимые компоненты</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Активация Dev Mode</td>
+              <td>15 мин</td>
+              <td>Низкая</td>
+              <td>Аккаунт Microsoft, $19</td>
+            </tr>
+            <tr>
+              <td>Установка RetroArch</td>
+              <td>10 мин</td>
+              <td>Средняя</td>
+              <td>Флеш-накопитель, ПК</td>
+            </tr>
+            <tr>
+              <td>Настройка ядра</td>
+              <td>5 мин</td>
+              <td>Низкая</td>
+              <td>BIOS GBA (gba_bios.bin)</td>
+            </tr>
+            <tr>
+              <td>Импорт игр</td>
+              <td>10 мин</td>
+              <td>Низкая</td>
+              <td>Легальные ROM-ы (.gba)</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>Пошаговая инструкция: от активации Dev Mode до запуска игр</h2>
+        <ol>
+          <li>
+            <b>Активация режима разработчика:</b>
+            <ul>
+              <li>Скачайте приложение Dev Mode Activation из Microsoft Store ($19).</li>
+              <li>Зарегистрируйтесь в Partner Center как индивидуальный разработчик.</li>
+              <li>Перезагрузите консоль в Dev Mode через настройки системы.</li>
+            </ul>
+          </li>
+          <li>
+            <b>Установка RetroArch:</b>
+            <ul>
+              <li>Скачайте UWP-версию RetroArch с официального сайта.</li>
+              <li>Перенесите файл .appx на флешку и установите через Dev Home.</li>
+            </ul>
+          </li>
+          <li>
+            <b>Добавление BIOS и игр:</b>
+            <ul>
+              <li>Создайте папку system в корне RetroArch и поместите туда gba_bios.bin.</li>
+              <li>Скопируйте ROM-ы GBA в папку games на внешнем SSD или флешке.</li>
+            </ul>
+          </li>
+          <li>
+            <b>Настройка ядра:</b>
+            <ul>
+              <li>В RetroArch: Online Updater → Core Downloader → Nintendo → mGBA.</li>
+              <li>Для лучшей совместимости используйте ядро VBA-M для старых игр.</li>
+            </ul>
+          </li>
+        </ol>
+
+        <h2>Сравнение ядер эмуляции GBA</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Ядро</th>
+              <th>Точность</th>
+              <th>Производительность</th>
+              <th>Рекомендуется для</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>mGBA</td>
+              <td>98%</td>
+              <td>Высокая</td>
+              <td>Большинство игр</td>
+            </tr>
+            <tr>
+              <td>VBA-M</td>
+              <td>95%</td>
+              <td>Очень высокая</td>
+              <td>Сложные проекты (Mother 3)</td>
+            </tr>
+            <tr>
+              <td>gpSP</td>
+              <td>90%</td>
+              <td>Максимальная</td>
+              <td>Слабые ПК/тестирование</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>Оптимизация графики и управления</h2>
+        <div class="pro-tips">
+          <h4>🔹 Профессиональные советы</h4>
+          <div class="tip-item">
+            <i class="fas fa-lightbulb"></i>
+            <p>Включите сглаживание (xBRZ) и масштабирование 4x для пиксель-перфект графики.</p>
+          </div>
+          <div class="tip-item">
+            <i class="fas fa-lightbulb"></i>
+            <p>Назначьте кнопку Turbo на LT для ускорения RPG-игр.</p>
+          </div>
+          <div class="tip-item">
+            <i class="fas fa-lightbulb"></i>
+            <p>Используйте шейдеры CRT-Geom для аутентичного "ретро-кинескопного" вида.</p>
+          </div>
+        </div>
+
+        <h2>FAQ: частые проблемы и решения</h2>
+        <ul>
+          <li>
+            <strong>Не запускается BIOS:</strong><br>
+            Поместите gba_bios.bin в system/retroarch/system и проверьте права доступа.
+          </li>
+          <li>
+            <strong>Артефакты в играх:</strong><br>
+            Смените ядро на VBA-M или обновите RetroArch до последней версии.
+          </li>
+          <li>
+            <strong>Нет звука:</strong><br>
+            В настройках аудио измените драйвер на XAudio2 и установите задержку 64 мс.
+          </li>
+        </ul>
+
+        <div class="warning-block">
+          <strong>Внимание!</strong> Используйте только легальные ROM-ы из ваших картриджей. Скачивание игр из интернета — нарушение закона даже при наличии оригинала.
+        </div>
+
+        <h2>Будущее эмуляции GBA на Xbox Series S</h2>
+        <ul>
+          <li>Интеграция с Xbox Cloud для синхронизации сохранений между устройствами.</li>
+          <li>Поддержка Achievement в ретро-играх через RetroAchievements.</li>
+          <li>Автоматическая загрузка обложек игр из онлайн-баз данных.</li>
+        </ul>
+
+        <h2>📌 Итог: карманный GBA на большом экране</h2>
+        <p>
+          Xbox Series S с RetroArch — идеальное решение для фанатов Game Boy Advance. Следуя этому гиду, вы получите стабильную эмуляцию, улучшенную графику и полный контроль над игровым процессом. Наслаждайтесь классикой с современным комфортом!
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__col footer__col--logo">
+          <a href="index.html" class="footer-logo">
+            <span class="logo__icon"></span>
+            <span class="logo__text">TechFix</span>
+          </a>
+          <p class="footer__text">Экспертные инструкции по технике с 2024 года</p>
+        </div>
+        <div class="footer__col">
+          <h3 class="footer__title">Разделы</h3>
+          <ul class="footer__links">
+            <li><a href="index.html" class="footer__link">Главная</a></li>
+            <li><a href="all-guides.html" class="footer__link">Все гайды</a></li>
+            <li><a href="contacts.html" class="footer__link">Контакты</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h3 class="footer__title">Категории</h3>
+          <ul class="footer__links">
+            <li><a href="../tv.html" class="nav__link">Телевизоры</a></li>
+            <li><a href="../cameras.html" class="nav__link">Фотоаппараты</a></li>
+            <li><a href="../consoles.html" class="nav__link">Приставки</a></li>
+            <li><a href="../laptops.html" class="nav__link">Ноутбуки</a></li>
+            <li><a href="../smartphones.html" class="nav__link">Смартфоны</a></li>
+            <li><a href="../small-appliances.html" class="nav__link">Мелкая техника</a></li>
+            <li><a href="../large-appliances.html" class="nav__link">Бытовая техника</a></li>
+            <li><a href="../auto-electronics.html" class="nav__link">Авто-Электроника</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h3 class="footer__title">Контакты</h3>
+          <ul class="footer__links">
+            <li>
+              <a href="https://t.me/techfix_kz" class="footer__link"><i class="fab fa-telegram"></i> Telegram</a>
+            </li>
+            <li>
+              <a href="https://instagram.com/techfix_kz" class="footer__link"><i class="fab fa-instagram"></i> Instagram</a>
+            </li>
+            <li>
+              <a href="mailto:support@techfix.kz" class="footer__link"><i class="fas fa-envelope"></i> Email</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copyright">© 2025 TechFix. Все права защищены.</p>
+      </div>
+    </div>
+  </footer>
+  <script src="../script.js"></script>
+</body>
+</html>

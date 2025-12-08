@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Съемка в путешествиях: что взять с собой | TechFix</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../styles-header.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .guide-content { line-height: 1.7; color: var(--text);}
+        .guide-content h2 { color: var(--primary); margin-top: 30px; margin-bottom: 15px; font-size: 1.5rem;}
+        .step-group { margin: 20px 0; padding: 15px; background: var(--background); border-radius: var(--border-radius); border: 1px solid var(--border);}
+        .step { display: flex; gap: 15px; margin: 12px 0; padding: 12px; background: var(--background-alt); border-radius: 6px; align-items: flex-start;}
+        .step-number { background: var(--primary); color: white; width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-weight: bold; font-size: 0.8rem;}
+        .guide-image-block { margin: 20px 0; padding: 15px; background: var(--background); border-radius: var(--border-radius); border: 1px solid var(--border); text-align: center;}
+        .guide-image-block img { max-width: 100%; height: auto; border-radius: 6px; border: 1px solid var(--border);}
+        .recommend-box { background: rgba(3, 74, 79, 0.1); border-left: 4px solid var(--primary); padding: 12px; margin: 15px 0; display: flex; gap: 12px; align-items: flex-start; border-radius: 4px;}
+        .recommend-box i { font-size: 1.2rem; color: var(--primary); margin-top: 2px;}
+        .pro-tips { background: rgba(3, 74, 79, 0.05); padding: 15px; border-radius: 6px; margin: 20px 0;}
+        .pro-tips h4 { color: var(--primary); margin-top: 0; margin-bottom: 12px; font-size: 1.1rem;}
+        .tip-item { display: flex; gap: 8px; margin-bottom: 8px; align-items: flex-start;}
+        @media (max-width: 768px) {
+            .guide-content h2 { font-size: 1.4rem; margin-top: 25px;}
+            .guide-image-block, .step-group { padding: 12px; margin: 15px 0;}
+            .step { padding: 10px;}
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <a href="../index.html" class="logo">
+                    <span class="logo__icon"></span>
+                    <span class="logo__text">TechFix</span>
+                </a>
+                <nav class="nav">
+                    <ul class="nav__list">
+                        <li><a href="../cameras.html" class="nav__link">Фотоаппараты</a></li>
+                        <li><a href="../tv.html" class="nav__link">Телевизоры</a></li>
+                        <li><a href="../laptops.html" class="nav__link">Ноутбуки</a></li>
+                        <li><a href="../smartphones.html" class="nav__link">Смартфоны</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <section class="guide-page">
+        <div class="container">
+            <div class="breadcrumbs">
+                <a href="../index.html">Главная</a>
+                <i class="fas fa-chevron-right"></i>
+                <a href="../cameras.html">Фотоаппараты</a>
+                <i class="fas fa-chevron-right"></i>
+                <span>Съемка в путешествиях: что взять с собой</span>
+            </div>
+            <h1 class="section__title">Съемка в путешествиях: что взять с собой</h1>
+            <div class="guide-meta">
+                <span><i class="fas fa-adjust"></i> Практический гайд</span>
+            </div>
+            <div class="guide-image-block">
+                <img src="https://avatars.mds.yandex.net/get-shedevrum/14906380/img_b8b64eac2d7611f0ba9982872adeaf38/orig">
+            </div>
+            <div class="guide-content">
+                <h2>Главные задачи тревел-фотографа</h2>
+                <ul>
+                    <li>Запечатлеть атмосферу и эмоции путешествия.</li>
+                    <li>Сделать разнообразные кадры: пейзажи, портреты, архитектуру, детали.</li>
+                    <li>Остаться мобильным и не перегружать себя техникой.</li>
+                </ul>
+                <h2>Что взять с собой в путешествие?</h2>
+                <ul>
+                    <li><strong>Камера:</strong> Лёгкая и надёжная. Для компактности подойдут беззеркальные камеры или продвинутые смартфоны.</li>
+                    <li><strong>Объектив:</strong> Универсальный зум (например, 18–135 мм или 24–105 мм) или пара фиксов (широкоугольник + портретник).</li>
+                    <li><strong>Запасные аккумуляторы и зарядное устройство:</strong> В дороге розетки бывают не всегда.</li>
+                    <li><strong>Карты памяти:</strong> Возьмите с запасом, чтобы не думать о месте для новых фото.</li>
+                    <li><strong>Фильтры:</strong> Поляризационный (CPL) для неба и воды, ND-фильтр для длинных выдержек.</li>
+                    <li><strong>Мини-штатив или гибкий трипод:</strong> Для ночных съёмок, автопортретов, таймлапсов.</li>
+                    <li><strong>Чистящая салфетка и груша:</strong> Пыль, капли и отпечатки могут испортить кадр.</li>
+                    <li><strong>Лёгкая сумка или рюкзак:</strong> Удобно носить технику и быстро доставать камеру.</li>
+                    <li><strong>Пауэрбанк:</strong> Для зарядки смартфона, камеры или экшн-камеры в пути.</li>
+                    <li><strong>Экшн-камера или компакт:</strong> Для экстрима, воды, съёмки в сложных условиях.</li>
+                </ul>
+                <h2>Пошаговая инструкция по сбору тревел-набора</h2>
+                <div class="step-group">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div>
+                            <strong>Определите цели поездки</strong>
+                            <ul>
+                                <li>Что вы хотите снимать: природу, города, людей, еду, экстрим?</li>
+                                <li>От этого зависит выбор камеры и объективов.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div>
+                            <strong>Минимизируйте вес</strong>
+                            <ul>
+                                <li>Оставьте дома всё лишнее: тяжелые фиксы, вспышки, громоздкие штативы.</li>
+                                <li>Универсальный зум или компактная камера - лучший выбор для путешествий.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div>
+                            <strong>Проверьте заряд и память</strong>
+                            <ul>
+                                <li>Зарядите все аккумуляторы и возьмите запасные.</li>
+                                <li>Очистите или замените карты памяти.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <div>
+                            <strong>Подготовьте аксессуары</strong>
+                            <ul>
+                                <li>Возьмите фильтры, чистящие средства, пауэрбанк, мини-штатив.</li>
+                                <li>Проверьте, что всё помещается в рюкзак и быстро достаётся.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="recommend-box">
+                    <i class="fas fa-info-circle"></i>
+                    <div>
+                        <strong>Совет:</strong> Не берите слишком много техники - лучше больше снимать и наслаждаться путешествием, чем таскать тяжёлый рюкзак.
+                    </div>
+                </div>
+                <div class="pro-tips">
+                    <h4>🔹 Профессиональные советы</h4>
+                    <div class="tip-item">
+                        <i class="fas fa-lightbulb"></i>
+                        <p>Сделайте копии важных снимков на облако или внешний диск - на случай потери или поломки карты памяти.</p>
+                    </div>
+                    <div class="tip-item">
+                        <i class="fas fa-lightbulb"></i>
+                        <p>Используйте ремень или страховочный тросик для камеры - это убережёт от случайного падения или кражи.</p>
+                    </div>
+                    <div class="tip-item">
+                        <i class="fas fa-lightbulb"></i>
+                        <p>Снимайте в RAW - это даст больше возможностей для обработки и спасёт кадры с ошибочной экспозицией.</p>
+                    </div>
+                </div>
+                <h2>Часто задаваемые вопросы</h2>
+                <ul>
+                    <li><strong>Можно ли обойтись смартфоном?</strong> - Да, современные смартфоны делают отличные снимки, особенно в дневное время и с хорошим светом.</li>
+                    <li><strong>Нужен ли штатив?</strong> - Мини-штатив пригодится для ночных кадров, автопортретов и таймлапсов, но большой штатив брать не обязательно.</li>
+                    <li><strong>Как защитить технику в путешествии?</strong> - Используйте водонепроницаемые чехлы, следите за погодой и не оставляйте камеру без присмотра.</li>
+                </ul>
+                <h2>📌 Итог</h2>
+                <p>
+                    Для съёмки в путешествиях главное - мобильность, универсальность и надёжность. Возьмите только самое нужное, заранее подготовьте технику и аксессуары, не забывайте про запас энергии и памяти. Тогда вы сможете запечатлеть лучшие моменты поездки и не устанете от лишнего груза!
+                </p>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__col footer__col--logo">
+                    <a href="index.html" class="footer-logo">
+                        <span class="logo__icon"></span>
+                        <span class="logo__text">TechFix</span>
+                    </a>
+                    <p class="footer__text">Помогаем ремонтировать электронику с 2024 года</p>
+                </div>
+                <div class="footer__col">
+                    <h3 class="footer__title">Разделы</h3>
+                    <ul class="footer__links">
+                        <li><a href="index.html" class="footer__link">Главная</a></li>
+                        <li><a href="all-guides.html" class="footer__link">Все гайды</a></li>
+                        <li><a href="contacts.html" class="footer__link">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="footer__col">
+                    <h3 class="footer__title">Категории</h3>
+                    <ul class="footer__links">
+                        <li><a href="../tv.html" class="nav__link">Телевизоры</a></li>
+                        <li><a href="../cameras.html" class="nav__link">Фотоаппараты</a></li>
+                        <li><a href="../consoles.html" class="nav__link">Приставки</a></li>
+                        <li><a href="../laptops.html" class="nav__link">Ноутбуки</a></li>
+                        <li><a href="../smartphones.html" class="nav__link">Смартфоны</a></li>
+                        <li><a href="../small-appliances.html" class="nav__link">Мелкая техника</a></li>
+                        <li><a href="../large-appliances.html" class="nav__link">Бытовая техника</a></li>
+                        <li><a href="../auto-electronics.html" class="nav__link">Авто-Электроника</a></li>
+                    </ul>
+                </div>
+                <div class="footer__col">
+                    <h3 class="footer__title">Контакты</h3>
+                    <ul class="footer__links">
+                        <li><a href="https://t.me/techfix_kz" class="footer__link"><i class="fab fa-telegram"></i> Telegram</a></li>
+                        <li><a href="https://instagram.com/techfix_kz" class="footer__link"><i class="fab fa-instagram"></i> Instagram</a></li>
+                        <li><a href="mailto:support@techfix.kz" class="footer__link"><i class="fas fa-envelope"></i> Email</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p class="footer__copyright">© 2024 TechFix. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="../script.js"></script>
+</body>
+</html>

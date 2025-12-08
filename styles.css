@@ -1301,3 +1301,56 @@ footer {
     }
 }
 
+/* Footer: центровка текста во всех футерах */
+/* Footer: жёсткая центровка текста для всех вариантах верстки футера */
+footer,
+.footer,
+.footer-container,
+.footer__bottom,
+.footer__grid,
+.footer__col,
+.footer-column,
+.footer__text,
+.footer__copyright,
+.footer-logo,
+.footer-bottom,
+.footer__links,
+.footer__link {
+    text-align: center !important;
+}
+
+/* Центрируем списки и обеспечиваем выравнивание ссылок */
+.footer__links,
+.footer-column ul {
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 0 auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+}
+
+.footer__link,
+.footer-column a {
+    display: inline-block !important;
+    text-align: center !important;
+}
+
+/* Центрируем заголовки и их декоративные линии */
+.footer__title,
+.footer-column h3 {
+    display: block !important;
+    width: 100% !important;
+    text-align: center !important;
+}
+.footer__title::after,
+.footer-column h3::after {
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+}
+
+/* На случай inline-стилей внутри футера — перекрываем всё */
+footer * {
+    text-align: inherit !important;
+}
+

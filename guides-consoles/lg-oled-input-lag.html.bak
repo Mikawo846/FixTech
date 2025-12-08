@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Как уменьшить input lag на телевизорах LG OLED? | Экспертный мегагайд</title>
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="../styles-header.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    .guide-content { line-height: 1.7; color: var(--text); }
+    .guide-content h2 { color: var(--primary); margin-top: 30px; margin-bottom: 15px; font-size: 1.5rem; }
+    .guide-content h3 { color: var(--primary-dark); margin-top: 25px; margin-bottom: 12px; font-size: 1.2rem; }
+    .guide-image-block { margin: 20px 0; padding: 15px; background: var(--background); border-radius: var(--border-radius); border: 1px solid var(--border); text-align: center; }
+    .guide-image-block img { max-width: 100%; height: auto; border-radius: 6px; border: 1px solid var(--border); }
+    .image-caption { margin-top: 10px; font-size: 0.85rem; color: var(--text-light); font-style: italic; }
+    .pro-tips { background: rgba(3, 74, 79, 0.05); padding: 15px; border-radius: 6px; margin: 20px 0; }
+    .pro-tips h4 { color: var(--primary); margin-top: 0; margin-bottom: 12px; font-size: 1.1rem; }
+    .tip-item { display: flex; gap: 8px; margin-bottom: 8px; align-items: flex-start; }
+    .warning-block {
+      background: #fff3e0;
+      border-left: 5px solid #ff9100;
+      padding: 15px 18px;
+      margin: 22px 0;
+      border-radius: 7px;
+    }
+    table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+    th, td { border: 1px solid var(--border); padding: 8px; text-align: left; }
+    th { background: var(--background-light); }
+    @media (max-width: 768px) {
+      .guide-content h2 { font-size: 1.4rem; margin-top: 25px; }
+      .guide-image-block { padding: 12px; margin: 15px 0; }
+      table, th, td { font-size: 0.95rem; }
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="header__inner">
+        <a href="../index.html" class="logo">
+          <span class="logo__icon"></span>
+          <span class="logo__text">TechFix</span>
+        </a>
+        <nav class="nav">
+          <ul class="nav__list">
+            <li><a href="../tv.html" class="nav__link">Телевизоры</a></li>
+            <li><a href="../cameras.html" class="nav__link">Фотоаппараты</a></li>
+            <li><a href="../consoles.html" class="nav__link">Приставки</a></li>
+            <li><a href="../laptops.html" class="nav__link">Ноутбуки</a></li>
+            <li><a href="../smartphones.html" class="nav__link">Смартфоны</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <section class="guide-page">
+    <div class="container">
+      <div class="breadcrumbs">
+        <a href="../index.html">Главная</a>
+        <i class="fas fa-chevron-right"></i>
+        <a href="../tv.html">Телевизоры</a>
+        <i class="fas fa-chevron-right"></i>
+        <span>Как уменьшить input lag на телевизорах LG OLED?</span>
+      </div>
+
+      <h1 class="section__title">Как уменьшить input lag на телевизорах LG OLED?</h1>
+
+      <div class="guide-meta">
+        <span><i class="fas fa-gamepad"></i> Экспертный гид: минимизация задержки ввода на LG OLED, режимы, оптимизация, советы, лайфхаки, FAQ, таблицы, иллюстрация.</span>
+      </div>
+
+      <div class="guide-image-block">
+        <img src="https://avatars.mds.yandex.net/get-shedevrum/16419046/img_1488f07a3c8111f0881efa13a7afe8f5/orig" alt="Input lag LG OLED">
+        <div class="image-caption">
+          Как снизить input lag на LG OLED: игровые режимы, оптимизация HDMI, отключение обработки, реальные замеры и советы для максимальной отзывчивости.
+        </div>
+      </div>
+
+      <div class="guide-content">
+
+        <h2>Введение: почему input lag важен для геймеров на LG OLED?</h2>
+        <p>
+          Input lag — это задержка между нажатием кнопки на геймпаде и реакцией на экране. Для динамичных игр (шутеры, файтинги, гонки) минимальная задержка критична: чем она меньше, тем выше шанс победить и получить удовольствие от управления. LG OLED — одни из самых быстрых телевизоров для игр, но только при правильных настройках.
+        </p>
+
+        <h2>Таблица: реальные значения input lag на LG OLED (2023–2025)</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Режим</th>
+              <th>4K 60 Гц</th>
+              <th>4K 120 Гц</th>
+              <th>2K 120 Гц</th>
+              <th>Особенности</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Стандартный режим</td>
+              <td>~90 мс</td>
+              <td>—</td>
+              <td>—</td>
+              <td>Не для игр, высокая задержка</td>
+            </tr>
+            <tr>
+              <td>Game Mode (игровой режим)</td>
+              <td>~12,9 мс</td>
+              <td>~4,3–6,2 мс</td>
+              <td>~5,2 мс</td>
+              <td>Рекомендуется для всех игр</td>
+            </tr>
+            <tr>
+              <td>Game Mode + Input Delay Boost/Enhancer</td>
+              <td>~9,2–9,3 мс</td>
+              <td>&lt;5 мс</td>
+              <td>&lt;5 мс</td>
+              <td>Включить в Game Optimizer</td>
+            </tr>
+            <tr>
+              <td>PC Mode (HDMI как ПК)</td>
+              <td>~10–13 мс</td>
+              <td>~4–6 мс</td>
+              <td>~5 мс</td>
+              <td>Для ПК, но часть настроек недоступна</td>
+            </tr>
+            <tr>
+              <td>ALLM/VRR (автоигровой режим/переменная частота)</td>
+              <td>~10–13 мс</td>
+              <td>~4 мс</td>
+              <td>~4 мс</td>
+              <td>Для PS5/Xbox, минимальный лаг</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>Пошаговая инструкция: как уменьшить input lag на LG OLED</h2>
+        <ol>
+          <li>
+            <b>Включите игровой режим (Game Mode)</b>
+            <ul>
+              <li>Зайдите в меню <b>Настройки → Картинка → Режим изображения</b> и выберите <b>Игра</b> или <b>Game Optimizer</b>.</li>
+            </ul>
+          </li>
+          <li>
+            <b>Активируйте Game Optimizer (Оптимизатор игр)</b>
+            <ul>
+              <li>В Game Optimizer включите опцию <b>Input Delay Boost</b> или <b>Enhancer</b> (название зависит от модели) — это снизит задержку до 9 мс.</li>
+            </ul>
+          </li>
+          <li>
+            <b>Включите ALLM (Auto Low Latency Mode)</b>
+            <ul>
+              <li>В настройках HDMI активируйте <b>ALLM</b> — телевизор сам переключится в игровой режим при запуске игры с консоли.</li>
+            </ul>
+          </li>
+          <li>
+            <b>Включите VRR (Variable Refresh Rate)</b> для PS5/Xbox/ПК
+            <ul>
+              <li>Это уменьшит разрывы кадров и дополнительно снизит input lag, особенно при нестабильном FPS.</li>
+            </ul>
+          </li>
+          <li>
+            <b>Отключите все улучшатели изображения</b>
+            <ul>
+              <li>Выключите TruMotion, шумоподавление, сглаживание, динамический контраст, фильтры цвета — они увеличивают задержку.</li>
+            </ul>
+          </li>
+          <li>
+            <b>Проверьте режим HDMI</b>
+            <ul>
+              <li>Убедитесь, что порт HDMI выставлен как "Game Console" или "PC" (для ПК) — это оптимизирует обработку сигнала.</li>
+            </ul>
+          </li>
+          <li>
+            <b>Используйте кабель HDMI 2.1</b>
+            <ul>
+              <li>Для 4K 120 Гц, VRR, ALLM используйте только сертифицированные HDMI 2.1-кабели.</li>
+            </ul>
+          </li>
+          <li>
+            <b>Включите Instant Game Response / Мгновенный отклик</b>
+            <ul>
+              <li>Эта функция есть в новых моделях LG OLED и дополнительно снижает input lag.</li>
+            </ul>
+          </li>
+        </ol>
+
+        <h2>Таблица: какие настройки увеличивают input lag на LG OLED</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Настройка</th>
+              <th>Влияние на input lag</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>TruMotion (интерполяция кадров)</td>
+              <td>+30–80 мс</td>
+            </tr>
+            <tr>
+              <td>Динамическая обработка цвета/контраста</td>
+              <td>+10–30 мс</td>
+            </tr>
+            <tr>
+              <td>Шумоподавление, сглаживание</td>
+              <td>+5–20 мс</td>
+            </tr>
+            <tr>
+              <td>HDR Tone Mapping (DTM вместо HGIG)</td>
+              <td>+5–10 мс</td>
+            </tr>
+            <tr>
+              <td>Неактивный игровой режим</td>
+              <td>+70–90 мс</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>Как правильно выбрать режим HDMI и картинку для игр?</h2>
+        <ul>
+          <li>В меню HDMI Input Label выберите "Game Console" для консолей или "PC" для ПК — это оптимизирует путь сигнала.</li>
+          <li>В режиме "PC" часть настроек изображения будет недоступна, но input lag минимален.</li>
+          <li>Для максимальной яркости используйте Game Mode + Warm50 (цветовая температура) — это даст точные цвета и быстрый отклик.</li>
+          <li>В режиме Game Optimizer можно настроить баланс между input lag и качеством картинки (например, "Standard" vs "Boost").</li>
+        </ul>
+
+        <h2>Лайфхаки и советы для минимального input lag на LG OLED</h2>
+        <div class="pro-tips">
+          <h4>🔹 Практические советы</h4>
+          <div class="tip-item">
+            <i class="fas fa-lightbulb"></i>
+            <p>Всегда используйте Game Mode для игр — разница между стандартным и игровым режимом может достигать 80 мс!</p>
+          </div>
+          <div class="tip-item">
+            <i class="fas fa-lightbulb"></i>
+            <p>Включите Input Delay Boost/Enhancer в Game Optimizer — это даст минимум задержки для киберспорта.</p>
+          </div>
+          <div class="tip-item">
+            <i class="fas fa-lightbulb"></i>
+            <p>Используйте VRR и ALLM с PS5/Xbox/ПК — это не только плавность, но и снижение input lag.</p>
+          </div>
+          <div class="tip-item">
+            <i class="fas fa-lightbulb"></i>
+            <p>Отключите все "улучшатели" картинки, если важна скорость — TruMotion, шумоподавление, сглаживание.</p>
+          </div>
+          <div class="tip-item">
+            <i class="fas fa-lightbulb"></i>
+            <p>Проверьте кабель и порт HDMI — только HDMI 2.1 даст полный функционал 4K120, VRR, ALLM.</p>
+          </div>
+        </div>
+
+        <h2>FAQ – часто задаваемые вопросы о снижении input lag на LG OLED</h2>
+        <ul>
+          <li>
+            <strong>Обязательно ли использовать Game Mode для минимального input lag?</strong><br>
+            Да, только в игровом режиме задержка снижается до 10–13 мс, иначе она может быть выше 80 мс.
+          </li>
+          <li>
+            <strong>Что лучше — Game Mode или PC Mode?</strong><br>
+            Для консолей — Game Mode, для ПК — PC Mode (минимальный lag, но меньше настроек).
+          </li>
+          <li>
+            <strong>Влияет ли VRR на input lag?</strong><br>
+            Да, VRR уменьшает разрывы кадров и дополнительно снижает задержку, особенно при нестабильном FPS.
+          </li>
+          <li>
+            <strong>Можно ли играть с минимальным input lag в HDR/Dolby Vision?</strong><br>
+            Да, но используйте HGIG вместо DTM и Game Mode — это даст оптимальный баланс.
+          </li>
+          <li>
+            <strong>Почему в Game Mode картинка тусклее?</strong><br>
+            Иногда Game Mode снижает яркость ради скорости, но можно компенсировать это настройкой подсветки и цветовой температуры.
+          </li>
+          <li>
+            <strong>Какая задержка считается идеальной для игр?</strong><br>
+            До 8 мс — для киберспорта, до 16 мс — для большинства геймеров.
+          </li>
+        </ul>
+
+        <div class="warning-block">
+          <strong>Внимание!</strong> Не используйте стандартный режим или включённые "улучшатели" для игр — input lag может вырасти до 100 мс! Всегда выбирайте Game Mode и отключайте обработку изображения.
+        </div>
+
+        <h2>Пошаговая инструкция: как измерить input lag на телевизоре LG OLED</h2>
+        <ol>
+          <li>Подключите ПК или консоль к телевизору через HDMI.</li>
+          <li>Включите режим "Дублировать экран" (Win+P на ПК).</li>
+          <li>Запустите секундомер на обоих экранах (например, sekundomer.net).</li>
+          <li>Сделайте фото обоих экранов с выдержкой 1/200 или ниже.</li>
+          <li>Разница между показаниями секундомера — ваш input lag.</li>
+        </ol>
+
+        <h2>📌 Итог: как добиться минимального input lag на LG OLED?</h2>
+        <p>
+          Для минимального input lag на LG OLED: всегда используйте Game Mode или Game Optimizer, включайте Input Delay Boost/Enhancer, активируйте VRR и ALLM, используйте HDMI 2.1-кабель, отключайте все улучшатели картинки. Для ПК — используйте PC Mode. При правильной настройке input lag на LG OLED составит 4–9 мс, что сравнимо с игровыми мониторами и идеально подходит для киберспорта и динамичных игр.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__col footer__col--logo">
+          <a href="index.html" class="footer-logo">
+            <span class="logo__icon"></span>
+            <span class="logo__text">TechFix</span>
+          </a>
+          <p class="footer__text">Экспертные инструкции по технике с 2024 года</p>
+        </div>
+        <div class="footer__col">
+          <h3 class="footer__title">Разделы</h3>
+          <ul class="footer__links">
+            <li><a href="index.html" class="footer__link">Главная</a></li>
+            <li><a href="all-guides.html" class="footer__link">Все гайды</a></li>
+            <li><a href="contacts.html" class="footer__link">Контакты</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h3 class="footer__title">Категории</h3>
+          <ul class="footer__links">
+            <li><a href="../tv.html" class="nav__link">Телевизоры</a></li>
+            <li><a href="../cameras.html" class="nav__link">Фотоаппараты</a></li>
+            <li><a href="../consoles.html" class="nav__link">Приставки</a></li>
+            <li><a href="../laptops.html" class="nav__link">Ноутбуки</a></li>
+            <li><a href="../smartphones.html" class="nav__link">Смартфоны</a></li>
+            <li><a href="../small-appliances.html" class="nav__link">Мелкая техника</a></li>
+            <li><a href="../large-appliances.html" class="nav__link">Бытовая техника</a></li>
+            <li><a href="../auto-electronics.html" class="nav__link">Авто-Электроника</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h3 class="footer__title">Контакты</h3>
+          <ul class="footer__links">
+            <li>
+              <a href="https://t.me/techfix_kz" class="footer__link"><i class="fab fa-telegram"></i> Telegram</a>
+            </li>
+            <li>
+              <a href="https://instagram.com/techfix_kz" class="footer__link"><i class="fab fa-instagram"></i> Instagram</a>
+            </li>
+            <li>
+              <a href="mailto:support@techfix.kz" class="footer__link"><i class="fas fa-envelope"></i> Email</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copyright">© 2025 TechFix. Все права защищены.</p>
+      </div>
+    </div>
+  </footer>
+  <script src="../script.js"></script>
+</body>
+</html>

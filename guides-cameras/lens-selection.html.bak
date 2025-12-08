@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Как выбрать объектив под свои задачи | TechFix</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../styles-header.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .guide-content { line-height: 1.7; color: var(--text);}
+        .guide-content h2 { color: var(--primary); margin-top: 30px; margin-bottom: 15px; font-size: 1.5rem;}
+        .step-group { margin: 20px 0; padding: 15px; background: var(--background); border-radius: var(--border-radius); border: 1px solid var(--border);}
+        .step { display: flex; gap: 15px; margin: 12px 0; padding: 12px; background: var(--background-alt); border-radius: 6px; align-items: flex-start;}
+        .step-number { background: var(--primary); color: white; width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-weight: bold; font-size: 0.8rem;}
+        .guide-image-block { margin: 20px 0; padding: 15px; background: var(--background); border-radius: var(--border-radius); border: 1px solid var(--border); text-align: center;}
+        .guide-image-block img { max-width: 100%; height: auto; border-radius: 6px; border: 1px solid var(--border);}
+        .recommend-box { background: rgba(3, 74, 79, 0.1); border-left: 4px solid var(--primary); padding: 12px; margin: 15px 0; display: flex; gap: 12px; align-items: flex-start; border-radius: 4px;}
+        .recommend-box i { font-size: 1.2rem; color: var(--primary); margin-top: 2px;}
+        .pro-tips { background: rgba(3, 74, 79, 0.05); padding: 15px; border-radius: 6px; margin: 20px 0;}
+        .pro-tips h4 { color: var(--primary); margin-top: 0; margin-bottom: 12px; font-size: 1.1rem;}
+        .tip-item { display: flex; gap: 8px; margin-bottom: 8px; align-items: flex-start;}
+        @media (max-width: 768px) {
+            .guide-content h2 { font-size: 1.4rem; margin-top: 25px;}
+            .guide-image-block, .step-group { padding: 12px; margin: 15px 0;}
+            .step { padding: 10px;}
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <a href="../index.html" class="logo">
+                    <span class="logo__icon"></span>
+                    <span class="logo__text">TechFix</span>
+                </a>
+                <nav class="nav">
+                    <ul class="nav__list">
+                        <li><a href="../cameras.html" class="nav__link">Фотоаппараты</a></li>
+                        <li><a href="../tv.html" class="nav__link">Телевизоры</a></li>
+                        <li><a href="../laptops.html" class="nav__link">Ноутбуки</a></li>
+                        <li><a href="../smartphones.html" class="nav__link">Смартфоны</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <section class="guide-page">
+        <div class="container">
+            <div class="breadcrumbs">
+                <a href="../index.html">Главная</a>
+                <i class="fas fa-chevron-right"></i>
+                <a href="../cameras.html">Фотоаппараты</a>
+                <i class="fas fa-chevron-right"></i>
+                <span>Как выбрать объектив под свои задачи</span>
+            </div>
+            <h1 class="section__title">Как выбрать объектив под свои задачи</h1>
+            <div class="guide-meta">
+                <span><i class="fas fa-adjust"></i> Практический гайд</span>
+            </div>
+            <div class="guide-image-block">
+                <img src="https://avatars.mds.yandex.net/get-shedevrum/16123700/img_250f7ddb2d6a11f09f322ac68eef758d/orig">
+            </div>
+            <div class="guide-content">
+                <h2>Зачем нужен правильный выбор объектива?</h2>
+                <ul>
+                    <li>Объектив определяет угол обзора, светосилу, резкость и характер снимка.</li>
+                    <li>Подбор подходящего объектива позволяет реализовать творческие задачи и раскрыть потенциал камеры.</li>
+                    <li>Выбор зависит от жанра съёмки: портрет, пейзаж, спорт, макро, путешествия и др.</li>
+                </ul>
+                <h2>Основные параметры объективов</h2>
+                <ul>
+                    <li><strong>Фокусное расстояние</strong> (мм): определяет угол обзора. Короткое - широкий угол, длинное - приближение.</li>
+                    <li><strong>Светосила (апертура, f/число)</strong>: чем меньше значение, тем лучше объектив работает в темноте и сильнее размывает фон.</li>
+                    <li><strong>Тип объектива</strong>: фикс (prime), зум, макро, рыбий глаз и др.</li>
+                    <li><strong>Совместимость</strong>: байонет (крепление), поддержка автофокуса, стабилизация.</li>
+                </ul>
+                <h2>Пошаговая инструкция по выбору объектива</h2>
+                <div class="step-group">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div>
+                            <strong>Определите задачи и жанр съёмки</strong>
+                            <ul>
+                                <li>Портрет, пейзаж, спорт, макро, репортаж, путешествия и т.д.</li>
+                                <li>Для каждого жанра есть свои оптимальные параметры объектива.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div>
+                            <strong>Выберите фокусное расстояние</strong>
+                            <ul>
+                                <li>Портрет: 50–135 мм (размытие фона, без искажений лица).</li>
+                                <li>Пейзаж: 10–35 мм (широкий угол обзора).</li>
+                                <li>Спорт/животные: 200 мм и больше (приближение к объекту).</li>
+                                <li>Макро: специальные макрообъективы (60–105 мм).</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div>
+                            <strong>Обратите внимание на светосилу (апертуру)</strong>
+                            <ul>
+                                <li>Для съёмки в помещении, портретов и художественных фото - f/1.2–f/2.8.</li>
+                                <li>Для пейзажей и путешествий - f/4–f/5.6.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <div>
+                            <strong>Проверьте совместимость с камерой</strong>
+                            <ul>
+                                <li>Уточните байонет (Canon EF, Nikon F, Sony E и др.).</li>
+                                <li>Проверьте поддержку автофокуса и стабилизации, если это важно.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">5</div>
+                        <div>
+                            <strong>Сравните фикс и зум-объективы</strong>
+                            <ul>
+                                <li>Фиксы обычно резче и светосильнее, но не меняют угол обзора.</li>
+                                <li>Зумы удобны для универсальной съёмки, но часто уступают фикс-объективам по светосиле и резкости.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="recommend-box">
+                    <i class="fas fa-info-circle"></i>
+                    <div>
+                        <strong>Совет:</strong> Перед покупкой попробуйте объектив в магазине или возьмите напрокат - так проще понять, подходит ли он под ваши задачи.
+                    </div>
+                </div>
+                <div class="pro-tips">
+                    <h4>🔹 Профессиональные советы</h4>
+                    <div class="tip-item">
+                        <i class="fas fa-lightbulb"></i>
+                        <p>Для путешествий и прогулок отлично подходят универсальные зумы 24–105 мм или 18–135 мм.</p>
+                    </div>
+                    <div class="tip-item">
+                        <i class="fas fa-lightbulb"></i>
+                        <p>Портретные объективы с большой светосилой (f/1.4–f/1.8) дают красивое боке и выделяют объект съёмки.</p>
+                    </div>
+                    <div class="tip-item">
+                        <i class="fas fa-lightbulb"></i>
+                        <p>Не гонитесь за максимальной светосилой, если снимаете в солнечную погоду - иногда важнее компактность и вес объектива.</p>
+                    </div>
+                </div>
+                <h2>Часто задаваемые вопросы</h2>
+                <ul>
+                    <li><strong>Можно ли использовать объективы других брендов?</strong> - Да, с помощью переходников, но возможны ограничения по автофокусу и стабилизации.</li>
+                    <li><strong>Что важнее - светосила или стабилизация?</strong> - Для статичных сюжетов стабилизация полезнее, для динамичных - светосила.</li>
+                    <li><strong>Стоит ли покупать б/у объективы?</strong> - Да, если они в хорошем состоянии и без следов грибка или повреждений линз.</li>
+                </ul>
+                <h2>📌 Итог</h2>
+                <p>
+                    Выбор объектива - это баланс между задачами, бюджетом и совместимостью с камерой. Определитесь с жанром съёмки, подберите подходящее фокусное расстояние и светосилу, проверьте совместимость - и ваш новый объектив поможет раскрыть творческий потенциал!
+                </p>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__col footer__col--logo">
+                    <a href="index.html" class="footer-logo">
+                        <span class="logo__icon"></span>
+                        <span class="logo__text">TechFix</span>
+                    </a>
+                    <p class="footer__text">Помогаем ремонтировать электронику с 2024 года</p>
+                </div>
+                <div class="footer__col">
+                    <h3 class="footer__title">Разделы</h3>
+                    <ul class="footer__links">
+                        <li><a href="index.html" class="footer__link">Главная</a></li>
+                        <li><a href="all-guides.html" class="footer__link">Все гайды</a></li>
+                        <li><a href="contacts.html" class="footer__link">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="footer__col">
+                    <h3 class="footer__title">Категории</h3>
+                    <ul class="footer__links">
+                        <li><a href="../tv.html" class="nav__link">Телевизоры</a></li>
+                        <li><a href="../cameras.html" class="nav__link">Фотоаппараты</a></li>
+                        <li><a href="../consoles.html" class="nav__link">Приставки</a></li>
+                        <li><a href="../laptops.html" class="nav__link">Ноутбуки</a></li>
+                        <li><a href="../smartphones.html" class="nav__link">Смартфоны</a></li>
+                        <li><a href="../small-appliances.html" class="nav__link">Мелкая техника</a></li>
+                        <li><a href="../large-appliances.html" class="nav__link">Бытовая техника</a></li>
+                        <li><a href="../auto-electronics.html" class="nav__link">Авто-Электроника</a></li>
+                    </ul>
+                </div>
+                <div class="footer__col">
+                    <h3 class="footer__title">Контакты</h3>
+                    <ul class="footer__links">
+                        <li><a href="https://t.me/techfix_kz" class="footer__link"><i class="fab fa-telegram"></i> Telegram</a></li>
+                        <li><a href="https://instagram.com/techfix_kz" class="footer__link"><i class="fab fa-instagram"></i> Instagram</a></li>
+                        <li><a href="mailto:support@techfix.kz" class="footer__link"><i class="fas fa-envelope"></i> Email</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p class="footer__copyright">© 2024 TechFix. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="../script.js"></script>
+</body>
+</html>
