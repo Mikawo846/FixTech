@@ -57,6 +57,7 @@
                     <a href="#">замена батареи</a>
                     <a href="#">ремонт HDMI</a>
                 </div>
+                <div class="search-results" aria-live="polite"></div>
             </div>
         </div>
     </div>
@@ -353,7 +354,8 @@
             // Добавляем анимацию перехода
             searchInput.style.transition = 'opacity 0.5s ease';
         });
-<script>
+    </script>
+    <script>
   // Обработчик для входа через Identity
   if (window.netlifyIdentity) {
     window.netlifyIdentity.on("init", user => {
@@ -367,5 +369,8 @@
 </script>
 
 <script src="script.js"></script> <!-- Ваш существующий скрипт -->
+<!-- Fuse.js for fuzzy client-side search -->
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2/dist/fuse.min.js"></script>
+<script src="search.js"></script>
 </body>
 </html>
