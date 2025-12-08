@@ -42,11 +42,12 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!indexData || !window.Fuse) return;
     const docs = indexData.docs || [];
     // Prepare documents for Fuse (include truncated content for better recall)
-    const docsForFuse = docs.map(d => ({
+    const docsForFuse = docs.map((d, i) => ({
       title: d.title || '',
       excerpt: d.excerpt || '',
       content: (d.content || '').slice(0, 2000),
-      url: d.url || ''
+      url: d.url || '',
+      __idx: i
     }));
     const options = {
       includeScore: true,
@@ -140,10 +141,74 @@ document.addEventListener('DOMContentLoaded', () => {
       return;
     }
     const tokens = tokenize(q);
-    // If Fuse is available prefer fuzzy search for better UX
+    // If Fuse is available prefer combined fuzzy + TF-IDF ranking for better UX
     if (fuse) {
-      const raw = fuse.search(q, { limit: 20 });
-      const results = raw.map(r => r.item);
+      const raw = fuse.search(q, { limit: 200 });
+
+      // Prepare maps for scores
+      const tfidfMap = new Map();
+      const fuzzyMap = new Map();
+
+      raw.forEach(r => {
+        const it = r.item;
+        const idx = it.__idx; // we attach index when building docsForFuse
+        const fuseScore = (typeof r.score === 'number') ? (1 - r.score) : 0; // convert 0..1 (lower better) -> higher better
+        fuzzyMap.set(idx, fuseScore);
+        // compute TF-IDF for the same item
+        const tf = scoreItem(it, tokens);
+        tfidfMap.set(idx, tf);
+      });
+
+      // Normalize both maps
+      function normalizeMap(m) {
+        const vals = Array.from(m.values());
+        if (!vals.length) return new Map();
+        const mx = Math.max(...vals);
+        const mn = Math.min(...vals);
+        const out = new Map();
+        if (mx === mn) {
+          for (const [k, v] of m) out.set(k, v > 0 ? 1 : 0);
+          return out;
+        }
+        for (const [k, v] of m) out.set(k, (v - mn) / (mx - mn));
+        return out;
+      }
+
+      const tfidfNorm = normalizeMap(tfidfMap);
+      const fuzzyNorm = normalizeMap(fuzzyMap);
+
+      // Combine with heuristics
+      const fuzzyWeight = 0.35; // balance between TF-IDF and fuzzy
+      const templatePenalty = 0.45; // how much to demote template/category pages
+      const titleBoostFactor = 0.25; // boost when token found in title
+
+      const combined = [];
+      for (const [idx, fscore] of fuzzyNorm) {
+        const tscore = tfidfNorm.get(idx) || 0;
+        let score = (1 - fuzzyWeight) * tscore + fuzzyWeight * fscore;
+
+        const item = indexData.docs[idx];
+        const title = (item && item.title) ? item.title.toLowerCase() : '';
+        const url = (item && item.url) ? item.url.toLowerCase() : '';
+        const excerpt = (item && item.excerpt) ? item.excerpt.toLowerCase() : '';
+
+        // Title exact-token boost
+        for (const t of tokens) {
+          if (t && title.indexOf(t) !== -1) {
+            score += titleBoostFactor;
+            break;
+          }
+        }
+
+        // Demote template/category pages detected by common patterns
+        const isTemplate = /category|categories|all-guides|all_guides|index|категор|разделы|все гайды/.test(url + ' ' + title + ' ' + excerpt);
+        if (isTemplate) score = score * (1 - templatePenalty);
+
+        combined.push({ idx, score });
+      }
+
+      combined.sort((a, b) => b.score - a.score);
+      const results = combined.slice(0, 20).map(r => indexData.docs[r.idx] || null).filter(Boolean);
       renderResults(results, tokens);
       return;
     }
