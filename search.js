@@ -18,24 +18,49 @@ document.addEventListener('DOMContentLoaded', () => {
   let loadPromise = null;
 
   // Загрузка JSON‑индекса
-  function fetchIndexUrl(url) {
-    return fetch(url).then(r => {
-      if (!r.ok) throw new Error('HTTP ' + r.status + ' ' + url);
-      return r.json();
+  function fetchIndexUrl(url, timeoutMs = 15000) {
+    return new Promise((resolve, reject) => {
+      const timer = setTimeout(() => reject(new Error('timeout')), timeoutMs);
+      fetch(url).then(r => {
+        clearTimeout(timer);
+        if (!r.ok) return reject(new Error('HTTP ' + r.status + ' ' + url));
+        return r.json().then(resolve, reject);
+      }).catch(err => { clearTimeout(timer); reject(err); });
     });
   }
 
-  loadPromise = fetchIndexUrl(`${BASE}/search_index.json`)
-    .then(data => {
-      indexData = data;
-      ready = true;
-      tryBuildFuse();
-      console.info('Search index loaded, docs:', (indexData.docs || []).length);
-    })
-    .catch((err) => {
-      loadError = true;
-      console.warn('Search index not available', err);
-    });
+  // Try several candidate URLs to be robust across desktop/mobile and subpaths
+  const candidateUrls = [];
+  try {
+    // relative to current document
+    candidateUrls.push(new URL('search_index.json', window.location.href).href);
+  } catch (e) {}
+  // base (for GitHub Pages in a subpath)
+  if (BASE) candidateUrls.push(`${BASE}/search_index.json`);
+  // root absolute
+  candidateUrls.push('/search_index.json');
+
+  // sequentially try candidates until one succeeds
+  loadPromise = (async () => {
+    for (const url of candidateUrls) {
+      try {
+        console.info('Trying search index URL:', url);
+        const data = await fetchIndexUrl(url, 15000);
+        indexData = data;
+        ready = true;
+        tryBuildFuse();
+        console.info('Search index loaded from', url, 'docs:', (indexData.docs || []).length);
+        return data;
+      } catch (err) {
+        console.warn('Index load failed for', url, err && err.message);
+        // try next
+      }
+    }
+    throw new Error('All index fetch attempts failed');
+  })().catch(err => {
+    loadError = true;
+    console.warn('Search index not available after tries', err && err.message);
+  });
 
   // ================== Fuse.js индекс ==================
 
