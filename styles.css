@@ -28,7 +28,7 @@ html {
 /* Базовые стили */
 body {
     background-color: var(--background);
-    color: #ffffff(--text);
+    color: var(--text);
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
     font-weight: 400;
     line-height: 1.6;
@@ -469,6 +469,16 @@ body {
     transition: var(--transition);
     color: var(--primary);
 }
+
+    /* Ensure search result cards look good in text-only mode */
+    .search-results .guide-card {
+      display: flex !important;
+      flex-direction: column !important;
+      justify-content: flex-start;
+    }
+    .search-results .guide-card .guide-card__content {
+      padding: 18px !important;
+    }
 
 .category-card__count {
     color: var(--text-light);

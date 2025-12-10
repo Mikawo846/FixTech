@@ -166,9 +166,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
       return `
         <article class="guide-card search-card">
-          <div class="guide-card__image">
-            <img src="${imageSrc}" alt="${safeTitle}">
-          </div>
           <div class="guide-card__content">
             <h3 class="guide-card__title"><a href="${href}">${highlight(safeTitle, tokens)}</a></h3>
             <p class="guide-card__excerpt">${highlight(safeExcerpt, tokens)}</p>
