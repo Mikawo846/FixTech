@@ -2,8 +2,8 @@
 // Загрузите индекс и выполняйте поиск по токенам (простой подсчёт совпадений).
 
 document.addEventListener('DOMContentLoaded', () => {
-  // Автоопределение BASE для GitHub Pages репозитория mikawo846/FixTech
-  const repoName = 'FixTech';
+  // Автоопределение BASE для GitHub Pages репозитория mikawo846/Repairo
+  const repoName = 'Repairo';
   const path = window.location.pathname;
   const BASE = path.startsWith('/' + repoName + '/') ? '/' + repoName : '';
 
@@ -156,7 +156,7 @@ document.addEventListener('DOMContentLoaded', () => {
       let excerpt = it.excerpt ? it.excerpt : (it.content || '').slice(0, 240);
       excerpt = excerpt.replace(/\s+/g, ' ').trim();
       // remove obvious site header fragments
-      excerpt = excerpt.replace(/TechFix\s*-?\s*/ig, '');
+      excerpt = excerpt.replace(/Repairo\s*-?\s*/ig, '');
       if (excerpt.length > 180) excerpt = excerpt.slice(0, 177) + '...';
       const href = `${BASE}/${(it.url || '').replace(/^\/+/, '')}`;
       const safeTitle = escapeHtml(it.title || '');
