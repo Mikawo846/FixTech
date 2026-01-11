@@ -62,17 +62,21 @@ document.addEventListener('DOMContentLoaded', () => {
     console.warn('Search index not available after tries', err && err.message);
   });
 
-  // ================== Fuse.js индекс ==================
+  // ================== Простой индексный поиск ==================
+  
+  // Мы используем предвычисленные веса из `search_index.json` и инвертированный
+  // индекс `inv_index` для быстрого получения кандидатов. Это простой и надёжный
+  // алгоритм, который хорошо работает в браузере и не требует Fuse.
 
   let fuse = null;
 
   function tryBuildFuse() {
     if (!indexData || !window.Fuse) return;
     const docs = indexData.docs || [];
+    // Build a lightweight Fuse corpus: only title + excerpt (much smaller than full content)
     const docsForFuse = docs.map((d, i) => ({
       title: d.title || '',
       excerpt: d.excerpt || '',
-      content: (d.content || '').slice(0, 2000),
       url: d.url || '',
       __idx: i
     }));
@@ -205,33 +209,104 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     const tokens = tokenize(q);
-
-    // кандидаты из обратного индекса
-    let candidateIds = new Set();
-    const inv = indexData && indexData.inv_index ? indexData.inv_index : null;
-    if (inv && tokens.length) {
-      const surface = indexData.surface_to_lemma || {};
-      for (const t of tokens) {
-        const lemma = surface[t] || t;
-        const postings = inv[lemma] || [];
-        for (const p of postings) {
-          candidateIds.add(p[0]); // postings: [docIdx, weight]
-        }
+    
+    const inv = indexData && indexData.inv_index ? indexData.inv_index : {};
+    const surface = indexData.surface_to_lemma || {};
+    const docs = (indexData && indexData.docs) ? indexData.docs : [];
+    
+    const scores = new Map();
+    // collect scores from postings
+    for (const t of tokens) {
+      const lemma = surface[t] || t;
+      const postings = inv[lemma] || [];
+      for (const p of postings) {
+        const idx = p[0];
+        const w = p[1] || 0;
+        scores.set(idx, (scores.get(idx) || 0) + w);
       }
     }
+    
+    // If no candidates from inverted index, fall back to scanning docs (cheap TF scan)
+    if (scores.size === 0) {
+      for (let i = 0; i < docs.length; i++) {
+        const it = docs[i];
+        const s = scoreItem(it, tokens);
+        if (s > 0) scores.set(i, s);
+      }
+    }
+    
+    if (scores.size === 0) {
+      renderResults([], tokens);
+      return;
+    }
+    
+    // normalize scores
+    const vals = Array.from(scores.values());
+    const mx = Math.max(...vals);
+    const mn = Math.min(...vals);
+    
+    const normalized = [];
+    for (const [idx, v] of scores.entries()) {
+      const norm = (mx === mn) ? (v > 0 ? 1 : 0) : ((v - mn) / (mx - mn));
+      let score = norm;
+      
+      const item = docs[idx];
+      const title = (item && item.title) ? item.title.toLowerCase() : '';
+      const url = (item && item.url) ? item.url.toLowerCase() : '';
+      const excerpt = (item && item.excerpt) ? item.excerpt.toLowerCase() : '';
+      
+      // title boost for token presence
+      for (const t of tokens) {
+        if (t && title.indexOf(t) !== -1) { score += 0.25; break; }
+      }
+      
+      // penalty for template/category pages
+      const isTemplate = /category|categories|all-guides|all_guides|index|категор|разделы|все гайды/.test(
+        url + ' ' + title + ' ' + excerpt
+      );
+      if (isTemplate) score = score * (1 - 0.45);
+      
+      normalized.push({ idx, score });
+    }
+    
+    normalized.sort((a, b) => b.score - a.score);
+    const results = normalized.slice(0, 20).map(r => docs[r.idx]).filter(Boolean);
+    renderResults(results, tokens);
 
     // ---------- Ветка с Fuse (фаззи + TF‑IDF) ----------
     if (fuse) {
-      const raw = fuse.search(q, { limit: 200 });
-
       const rawMap = new Map();
-      raw.forEach(r => {
-        const it = r.item;
-        const idx = it.__idx;
-        const fuseScore = (typeof r.score === 'number') ? (1 - r.score) : 0;
-        rawMap.set(idx, fuseScore);
-        candidateIds.add(idx);
-      });
+
+      // If we already have candidate IDs from the inverted index, avoid running Fuse over
+      // the whole corpus. Instead compute a cheap token-overlap fuzzy score for the
+      // candidate set. This is much faster in the browser for typical queries.
+      if (candidateIds && candidateIds.size) {
+        const candidateList = Array.from(candidateIds).slice(0, 400);
+        const qtokens = tokens;
+        for (const idx of candidateList) {
+          const item = indexData.docs[idx];
+          if (!item) continue;
+          const hay = ((item.title || '') + ' ' + (item.excerpt || '')).toLowerCase();
+          let matches = 0;
+          for (const t of qtokens) {
+            if (!t) continue;
+            if (hay.indexOf(t) !== -1) matches += 1;
+          }
+          const fscore = qtokens.length ? (matches / qtokens.length) : 0;
+          if (fscore > 0) {
+            rawMap.set(idx, fscore);
+          }
+        }
+      } else {
+        const raw = fuse.search(q, { limit: 200 });
+        raw.forEach(r => {
+          const it = r.item;
+          const idx = it.__idx;
+          const fuseScore = (typeof r.score === 'number') ? (1 - r.score) : 0;
+          rawMap.set(idx, fuseScore);
+          candidateIds.add(idx);
+        });
+      }
 
       const tfidfMap = new Map();
       const fuzzyMap = new Map();
