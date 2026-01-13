@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Remove [web:123] artifacts from text files in the repo."""
+"""Remove [web:NNN] artifacts from text files in the repo."""
 import re
 from pathlib import Path
 
