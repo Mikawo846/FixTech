@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Замена термопасты на процессоре телевизора | Repairo</title>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=106225686', 'ym');
+
+    ym(106225686, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/106225686" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../styles-header.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Основные стили */
+        .guide-content {
+            line-height: 1.7;
+            color: var(--text);
+        }
+        .guide-content h2 {
+            color: var(--primary);
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+        .guide-content h3 {
+            color: var(--primary-dark);
+            margin-top: 25px;
+            margin-bottom: 12px;
+            font-size: 1.2rem;
+        }
+        /* Стили для шагов */
+        .step-group {
+            margin: 20px 0;
+            padding: 15px;
+            background: var(--background);
+            border-radius: var(--border-radius);
+            border: 1px solid var(--border);
+        }
+        .step {
+            display: flex;
+            gap: 15px;
+            margin: 12px 0;
+            padding: 12px;
+            background: var(--background-alt);
+            border-radius: 6px;
+            align-items: flex-start;
+        }
+        .step-number {
+            background: var(--primary);
+            color: white;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            font-weight: bold;
+            font-size: 0.8rem;
+        }
+        /* Изображения */
+        .guide-image-block {
+            margin: 20px 0;
+            padding: 15px;
+            background: var(--background);
+            border-radius: var(--border-radius);
+            border: 1px solid var(--border);
+            text-align: center;
+        }
+        .guide-image-block img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 6px;
+            border: 1px solid var(--border);
+        }
+        .image-caption {
+            margin-top: 10px;
+            font-size: 0.85rem;
+            color: var(--text-light);
+            font-style: italic;
+        }
+        /* Рекомендации */
+        .recommend-box {
+            background: rgba(3, 74, 79, 0.1);
+            border-left: 4px solid var(--primary);
+            padding: 12px;
+            margin: 15px 0;
+            display: flex;
+            gap: 12px;
+            align-items: flex-start;
+            border-radius: 4px;
+        }
+        .recommend-box i {
+            font-size: 1.2rem;
+            color: var(--primary);
+            margin-top: 2px;
+        }
+        /* Советы */
+        .pro-tips {
+            background: rgba(3, 74, 79, 0.05);
+            padding: 15px;
+            border-radius: 6px;
+            margin: 20px 0;
+        }
+        .pro-tips h4 {
+            color: var(--primary);
+            margin-top: 0;
+            margin-bottom: 12px;
+            font-size: 1.1rem;
+        }
+        .tip-item {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 8px;
+            align-items: flex-start;
+        }
+        /* Медиа-запросы для мобильных */
+        @media (max-width: 768px) {
+            .guide-content h2 {
+                font-size: 1.4rem;
+                margin-top: 25px;
+            }
+            .step-group, .guide-image-block {
+                padding: 12px;
+                margin: 15px 0;
+            }
+            .step {
+                padding: 10px;
+            }
+        }
+        .warning-box {
+            background-color: #fff3f3;
+            border-left: 4px solid #ff6b6b;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        .warning-box i {
+            color: #ff6b6b;
+            margin-right: 10px;
+        }
+        .materials-list {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 6px;
+            margin: 15px 0;
+        }
+        .materials-list h4 {
+            margin-top: 0;
+            color: var(--primary);
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <a href="../index.html" class="logo">
+                    <span class="logo__icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 15L7 10H17L12 15Z" fill="currentColor"/>
+                            <path d="M12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3ZM12 19C8.13401 19 5 15.866 5 12C5 8.13401 8.13401 5 12 5C15.866 5 19 8.13401 19 12C19 15.866 15.866 19 12 19Z" fill="currentColor"/>
+                        </svg>
+                    </span>
+                    <span class="logo__text">Repairo</span>
+                </a>
+                <nav class="nav">
+                    <ul class="nav__list">
+                        <li><a href="../tv.html" class="nav__link">Телевизоры</a></li>
+                        <li><a href="../cameras.html" class="nav__link">Фотоаппараты</a></li>
+                        <li><a href="../consoles.html" class="nav__link">Приставки</a></li>
+                        <li><a href="../laptops.html" class="nav__link">Ноутбуки</a></li>
+                        <li><a href="../smartphones.html" class="nav__link">Смартфоны</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <section class="guide-page">
+        <div class="container">
+            <div class="breadcrumbs">
+                <a href="../index.html">Главная</a>
+                <i class="fas fa-chevron-right"></i>
+                <a href="../tv.html">Телевизоры</a>
+                <i class="fas fa-chevron-right"></i>
+                <span>Замена термопасты на процессоре телевизора</span>
+            </div>
+            <h1 class="section__title">Замена термопасты на процессоре телевизора: подробное руководство</h1>
+            <div class="guide-meta">
+                <span><i class="fas fa-clock"></i> 30-45 мин</span>
+                <span><i class="fas fa-tools"></i> Сложный уровень</span>
+            </div>
+            <div class="guide-image-block">
+                <img src="https://avatars.mds.yandex.net/get-shedevrum/15166209/img_1563eedc25ae11f092ddaeed8751ec3c/orig">
+            </div>
+            <div class="warning-box">
+                <i class="fas fa-exclamation-triangle"></i>
+                <div>
+                    <strong>Важно!</strong> Данная процедура требует определенных навыков. Неправильные действия могут повредить телевизор и привести к потере гарантии. Если вы не уверены в своих силах, лучше обратиться к специалисту.
+                </div>
+            </div>
+            <div class="guide-content">
+                <h2>Когда нужно менять термопасту?</h2>
+                <p>Термопаста - это специальный состав с высокой теплопроводностью, который улучшает передачу тепла от процессора к радиатору. Со временем она теряет свои свойства, что приводит к перегреву. Признаки необходимости замены:</p>
+                <ul>
+                    <li>Телевизор выключается при длительной работе</li>
+                    <li>Появление артефактов на экране при нагреве</li>
+                    <li>Сильный нагрев задней панели в области процессора</li>
+                    <li>Шумная работа системы охлаждения</li>
+                    <li>Более 3-5 лет эксплуатации без обслуживания</li>
+                </ul>
+
+                <div class="materials-list">
+                    <h4>Необходимые материалы и инструменты:</h4>
+                    <ul>
+                        <li>Качественная термопаста (например, Arctic MX-4, Thermal Grizzly Kryonaut)</li>
+                        <li>Спирт изопропиловый (90% или выше)</li>
+                        <li>Безворсовые салфетки или ватные палочки</li>
+                        <li>Набор отверток (крестовые и плоские)</li>
+                        <li>Пластиковая карта или медиатор для вскрытия корпуса</li>
+                        <li>Антистатический браслет (рекомендуется)</li>
+                        <li>Пинцет (для работы с мелкими деталями)</li>
+                    </ul>
+                </div>
+
+                <h2>1. Подготовка к работе</h2>
+                <div class="step-group">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div>
+                            <p><strong>Отключите телевизор от сети:</strong></p>
+                            <ul>
+                                <li>Вытащите вилку из розетки</li>
+                                <li>Подождите 10-15 минут для разрядки конденсаторов</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div>
+                            <p><strong>Подготовьте рабочее место:</strong></p>
+                            <ul>
+                                <li>Используйте чистую, хорошо освещенную поверхность</li>
+                                <li>Постелите антистатический коврик или чистую ткань</li>
+                                <li>Подготовьте контейнеры для винтов разных размеров</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div>
+                            <p><strong>Снимите заднюю крышку:</strong></p>
+                            <ul>
+                                <li>Открутите все винты по периметру (некоторые могут быть скрыты под резиновыми ножками)</li>
+                                <li>Аккуратно подденьте корпус пластиковым инструментом</li>
+                                <li>Отсоедините все шлейфы, мешающие доступу к материнской плате</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <h2>2. Демонтаж системы охлаждения</h2>
+                <div class="step-group">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div>
+                            <p><strong>Найдите процессор и радиатор:</strong></p>
+                            <ul>
+                                <li>Процессор обычно расположен под металлическим радиатором</li>
+                                <li>Может быть закрыт дополнительной защитной пластиной</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div>
+                            <p><strong>Открутите радиатор:</strong></p>
+                            <ul>
+                                <li>Открутите винты крепления радиатора в правильной последовательности (обычно по диагонали)</li>
+                                <li>Аккуратно отсоедините радиатор от процессора</li>
+                                <li>Если радиатор не снимается, не прилагайте силу - возможно, термопаста присохла</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div>
+                            <p><strong>Очистите поверхности:</strong></p>
+                            <ul>
+                                <li>Удалите старую термопасту с процессора и радиатора</li>
+                                <li>Используйте изопропиловый спирт и безворсовые салфетки</li>
+                                <li>Не используйте абразивные материалы!</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="guide-image-block">
+                        <img src="https://example.com/thermal-paste-cleaning.jpg" alt="Очистка процессора от старой термопасты">
+                        <div class="image-caption">Тщательно очистите поверхности процессора и радиатора от старой термопасты</div>
+                    </div>
+                </div>
+
+                <h2>3. Нанесение новой термопасты</h2>
+                <div class="step-group">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div>
+                            <p><strong>Подготовка термопасты:</strong></p>
+                            <ul>
+                                <li>Тщательно перемешайте термопасту в тюбике перед нанесением</li>
+                                <li>Не используйте слишком много пасты - достаточно капли размером с горошину</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div>
+                            <p><strong>Метод нанесения:</strong></p>
+                            <ul>
+                                <li>Для центральных процессоров: капля в центре</li>
+                                <li>Для графических процессоров: тонкий слой по всей поверхности</li>
+                                <li>Можно использовать пластиковую карту для равномерного распределения</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div>
+                            <p><strong>Установка радиатора:</strong></p>
+                            <ul>
+                                <li>Аккуратно установите радиатор на место</li>
+                                <li>Затягивайте винты крест-накрест для равномерного давления</li>
+                                <li>Не перетягивайте винты!</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="recommend-box">
+                        <i class="fas fa-lightbulb"></i>
+                        <div>
+                            <strong>Совет!</strong> Оптимальная толщина слоя термопасты - 0.1-0.3 мм. Слишком толстый слой ухудшает теплопередачу.
+                        </div>
+                    </div>
+                </div>
+
+                <h2>4. Сборка и проверка</h2>
+                <div class="step-group">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div>
+                            <p><strong>Сборка телевизора:</strong></p>
+                            <ul>
+                                <li>Подключите все отсоединенные шлейфы</li>
+                                <li>Установите заднюю крышку на место</li>
+                                <li>Затяните все винты (но не переусердствуйте)</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div>
+                            <p><strong>Проверка работы:</strong></p>
+                            <ul>
+                                <li>Включите телевизор и проверьте его работу</li>
+                                <li>Понаблюдайте за температурой корпуса в области процессора</li>
+                                <li>Запустите ресурсоемкое приложение (например, 4K видео) на 30-60 минут</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pro-tips">
+                    <h4>🔹 Профессиональные советы</h4>
+                    <div class="tip-item">
+                        <i class="fas fa-lightbulb" style="color: var(--primary);"></i>
+                        <p>Для телевизоров с OLED-матрицей будьте особенно осторожны при разборке - матрица очень хрупкая</p>
+                    </div>
+                    <div class="tip-item">
+                        <i class="fas fa-lightbulb" style="color: var(--primary);"></i>
+                        <p>Используйте термопасту с теплопроводностью не менее 5 Вт/(м·К)</p>
+                    </div>
+                    <div class="tip-item">
+                        <i class="fas fa-lightbulb" style="color: var(--primary);"></i>
+                        <p>После замены термопасты первые 2-3 дня телевизор может работать громче - это нормально, пока паста не "приработается"</p>
+                    </div>
+                </div>
+
+                <div class="warning-box">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <div>
+                        <strong>Если после замены термопасты телевизор не включается или работает нестабильно:</strong>
+                        <ul>
+                            <li>Проверьте правильность подключения всех шлейфов</li>
+                            <li>Убедитесь, что не осталось лишних винтов</li>
+                            <li>Проверьте, не попала ли термопаста на другие компоненты</li>
+                            <li>При серьезных проблемах немедленно обратитесь в сервисный центр</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h2>📌 Итог</h2>
+                <p>Правильная замена термопасты:</p>
+                <ul>
+                    <li>Улучшает теплоотвод и продлевает срок службы телевизора</li>
+                    <li>Снижает вероятность перегрева и внезапных отключений</li>
+                    <li>Позволяет процессору работать на оптимальной частоте</li>
+                    <li>Снижает шум системы охлаждения</li>
+                </ul>
+                <div style="text-align: center; margin-top: 30px;">
+                    <h3 style="color: var(--primary);">Здесь всегда актуальные руководства и свежие новости из области электроники! Добавьте сайт в избранное чтобы не потерять 😉</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__col footer__col--logo">
+                    <a href="index.html" class="footer-logo">
+                        <span class="logo__icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 15L7 10H17L12 15Z" fill="currentColor"/>
+                                <path d="M12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3ZM12 19C8.13401 19 5 15.866 5 12C5 8.13401 8.13401 5 12 5C15.866 5 19 8.13401 19 12C19 15.866 15.866 19 12 19Z" fill="currentColor"/>
+                            </svg>
+                        </span>
+                        <span class="logo__text">Repairo</span>
+                    </a>
+                    <p class="footer__text">Помогаем ремонтировать электронику с 2024 года</p>
+                </div>
+                <div class="footer__col">
+                    <h3 class="footer__title">Разделы</h3>
+                    <ul class="footer__links">
+                        <li><a href="index.html" class="footer__link">Главная</a></li>
+                        <li><a href="all-guides.html" class="footer__link">Все гайды</a></li>
+                        <li><a href="contacts.html" class="footer__link">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="footer__col">
+                    <h3 class="footer__title">Категории</h3>
+                    <ul class="footer__links">
+                        <li><a href="../tv.html" class="nav__link">Телевизоры</a></li>
+                        <li><a href="../cameras.html" class="nav__link">Фотоаппараты</a></li>
+                        <li><a href="../consoles.html" class="nav__link">Приставки</a></li>
+                        <li><a href="../laptops.html" class="nav__link">Ноутбуки</a></li>
+                        <li><a href="../smartphones.html" class="nav__link">Смартфоны</a></li>
+                        <li><a href="../small-appliances.html" class="nav__link">Мелкая техника</a></li>
+                        <li><a href="../large-appliances.html" class="nav__link">Бытовая техника</a></li>
+                        <li><a href="../auto-electronics.html" class="nav__link">Авто-Электроника</a></li>
+                    </ul>
+                </div>
+                <div class="footer__col">
+                    <h3 class="footer__title">Контакты</h3>
+                    <ul class="footer__links">
+                        <li><a href="https://t.me/repairo_kz" class="footer__link"><i class="fab fa-telegram"></i> Telegram</a></li>
+                        <li><a href="https://instagram.com/repairo_kz" class="footer__link"><i class="fab fa-instagram"></i> Instagram</a></li>
+                        <li><a href="mailto:support@repairo.kz" class="footer__link"><i class="fas fa-envelope"></i> Email</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                    <p class="disclaimer">
+        Администрация сайта не несёт ответственности за возможные повреждения техники
+        и иные последствия, возникшие в результате самостоятельного ремонта по
+        материалам и инструкциям, размещённым на сайте. Все работы вы выполняете
+        на свой страх и риск.
+    </p>
+                <p class="footer__copyright">© 2024 Repairo. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="../script.js"></script>
+</body>
+</html>

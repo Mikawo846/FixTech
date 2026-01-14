@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YE88Y994NX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-YE88Y994NX');
+</script>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Программирование на Python в Termux | Экспертное руководство</title>
+    <meta name="description" content="Пошаговая инструкция: Программирование на Python в Termux: экспертное руководство. Termux — это мощный эмулятор терминала для Android, предоставляющий полноц...">
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=106225686', 'ym');
+
+    ym(106225686, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/106225686" style="position:absolute; left:-9999px;" alt="Программирование на Python в Termux: экспертное ру - пошаговая инструкция по ремонту" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="../styles-header.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    .guide-content { line-height: 1.7; color: var(--text); }
+    .guide-content h2 { color: var(--primary); margin-top: 30px; margin-bottom: 15px; font-size: 1.5rem; }
+    .guide-content h3 { color: var(--primary-dark); margin-top: 25px; margin-bottom: 12px; font-size: 1.2rem; }
+    .guide-image-block { margin: 20px 0; padding: 15px; background: var(--background); border-radius: var(--border-radius); border: 1px solid var(--border); text-align: center; }
+    .guide-image-block img { max-width: 100%; height: auto; border-radius: 6px; border: 1px solid var(--border); }
+    .image-caption { margin-top: 10px; font-size: 0.85rem; color: var(--text-light); font-style: italic; }
+    .pro-tips { background: rgba(3, 74, 79, 0.05); padding: 15px; border-radius: 6px; margin: 20px 0; }
+    .pro-tips h4 { color: var(--primary); margin-top: 0; margin-bottom: 12px; font-size: 1.1rem; }
+    .tip-item { display: flex; gap: 8px; margin-bottom: 8px; align-items: flex-start; }
+    table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+    th, td { border: 1px solid var(--border); padding: 8px; text-align: left; }
+    th { background: var(--background-light); }
+    @media (max-width: 768px) {
+      .guide-content h2 { font-size: 1.4rem; margin-top: 25px; }
+      .guide-image-block { padding: 12px; margin: 15px 0; }
+      table, th, td { font-size: 0.95rem; }
+    }
+  </style>
+  <script async src="https://timeweb.cloud/api/v1/cloud-ai/agents/3cc03620-d051-4d8d-b5af-f7b6cd083a35/embed.js?collapsed=true"></script>
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="header__inner">
+        <a href="../index.html" class="logo">
+          <span class="logo__icon"></span>
+          <span class="logo__text">DevGuide</span>
+        </a>
+        <nav class="nav">
+          <ul class="nav__list">
+            <li><a href="../android.html" class="nav__link">Android</a></li>
+            <li><a href="../python.html" class="nav__link">Python</a></li>
+            <li><a href="../tools.html" class="nav__link">Инструменты</a></li>
+            <li><a href="../faq.html" class="nav__link">FAQ</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <section class="guide-page">
+    <div class="container">
+      <div class="breadcrumbs">
+        <a href="../index.html">Главная</a>
+        <i class="fas fa-chevron-right"></i>
+        <a href="../python.html">Python</a>
+        <i class="fas fa-chevron-right"></i>
+        <span>Программирование на Python в Termux</span>
+      </div>
+
+      <h1 class="section__title">Программирование на Python в Termux: экспертное руководство</h1>
+
+      <div class="guide-meta">
+        <span><i class="fas fa-terminal"></i> Подробная инструкция: установка, настройка, примеры, советы, таблицы, FAQ, иллюстрация.</span>
+      </div>
+
+      <div class="guide-image-block">
+        <img src="https://avatars.mds.yandex.net/get-shedevrum/16500899/img_5e9ec3f0450a11f08b1b0699c18b75b2/orig" alt="Программирование на Python в Termux на Android">
+        <div class="image-caption">
+          Termux превращает Android в полноценную среду для разработки на Python — с терминалом, пакетами и поддержкой большинства библиотек.
+        </div>
+      </div>
+
+      <div class="guide-content">
+
+        <h2>Введение: зачем программировать на Python в Termux?</h2>
+        <p>
+          Termux — это мощный эмулятор терминала для Android, предоставляющий полноценную Linux-среду прямо на смартфоне. Благодаря Termux вы можете запускать Python-скрипты, устанавливать библиотеки, работать с git, создавать проекты и даже разворачивать web-серверы, не прибегая к ПК. Это идеальный инструмент для обучения, автоматизации, тестирования и даже разработки небольших проектов "на ходу".
+        </p>
+
+        <h2>Таблица: сравнение Python на Termux и других мобильных решениях</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Платформа</th>
+              <th>Среда</th>
+              <th>Возможности</th>
+              <th>Плюсы</th>
+              <th>Минусы</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Android</td>
+              <td>Termux + Python</td>
+              <td>Полноценный терминал, pip, git, SSH, cron</td>
+              <td>Гибкость, поддержка большинства библиотек, автоматизация</td>
+              <td>Не все модули доступны, нет GUI</td>
+            </tr>
+            <tr>
+              <td>Android</td>
+              <td>Pydroid 3</td>
+              <td>IDE, pip, поддержка некоторых GUI</td>
+              <td>Удобный интерфейс, поддержка Kivy</td>
+              <td>Ограниченная консоль, меньше возможностей автоматизации</td>
+            </tr>
+            <tr>
+              <td>iOS</td>
+              <td>Pythonista</td>
+              <td>IDE, pip, поддержка iOS API</td>
+              <td>Интеграция с iOS, удобство</td>
+              <td>Платно, ограничен доступ к системным функциям</td>
+            </tr>
+            <tr>
+              <td>Android/iOS</td>
+              <td>Repl.it (браузер)</td>
+              <td>Онлайн-IDE, запуск кода</td>
+              <td>Доступно везде, не требует установки</td>
+              <td>Нет доступа к файловой системе, нужен интернет</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>Пошаговая инструкция: установка и настройка Python в Termux</h2>
+        <ol>
+          <li>
+            <b>Установите Termux</b><br>
+            Скачайте Termux из <a href="https://f-droid.org/en/packages/com.termux/" target="_blank">F-Droid</a> или другого надежного источника. Версия из Google Play может быть устаревшей.
+          </li>
+          <li>
+            <b>Обновите пакеты Termux</b><br>
+            Введите в терминале:<br>
+            <code>pkg update && pkg upgrade</code><br>
+            Это обеспечит актуальность всех компонентов.
+          </li>
+          <li>
+            <b>Установите Python</b><br>
+            Выполните команду:<br>
+            <code>pkg install python</code><br>
+            Подтвердите установку, нажав <b>y</b>.
+          </li>
+          <li>
+            <b>Проверьте установку</b><br>
+            <code>python --version</code><br>
+            Вы должны увидеть номер установленной версии Python.
+          </li>
+          <li>
+            <b>Установите pip (если не установлен)</b><br>
+            <code>pip --version</code><br>
+            Если pip отсутствует:<br>
+            <code>pkg install python-pip</code>.
+          </li>
+          <li>
+            <b>Установите дополнительные пакеты (по необходимости)</b><br>
+            Для некоторых библиотек могут потребоваться компиляторы:<br>
+            <code>pkg install clang make</code>.
+          </li>
+        </ol>
+
+        <h3>Первый запуск Python и "Hello, world!"</h3>
+        <ol>
+          <li>
+            Откройте Termux и введите:<br>
+            <code>python</code><br>
+            Вы попадёте в интерактивную оболочку Python.
+          </li>
+          <li>
+            Напишите и выполните:<br>
+            <code>print("Hello, world!")</code>
+          </li>
+          <li>
+            Для выхода из интерактивного режима используйте <code>exit()</code> или <kbd>Ctrl+D</kbd>.
+          </li>
+          <li>
+            Для запуска скрипта из файла создайте его, например:<br>
+            <code>nano hello.py</code><br>
+            Впишите:<br>
+            <code>print("Hello from Termux!")</code><br>
+            Сохраните файл и выполните:<br>
+            <code>python hello.py</code>
+          </li>
+        </ol>
+
+        <h2>Таблица: основные команды для работы с Python в Termux</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Команда</th>
+              <th>Назначение</th>
+              <th>Пример</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>python</td>
+              <td>Запуск интерактивной оболочки Python</td>
+              <td>python</td>
+            </tr>
+            <tr>
+              <td>python script.py</td>
+              <td>Запуск скрипта из файла</td>
+              <td>python myscript.py</td>
+            </tr>
+            <tr>
+              <td>pip install имя_библиотеки</td>
+              <td>Установка библиотеки Python</td>
+              <td>pip install requests</td>
+            </tr>
+            <tr>
+              <td>nano имя_файла.py</td>
+              <td>Открытие редактора nano для создания/редактирования скрипта</td>
+              <td>nano hello.py</td>
+            </tr>
+            <tr>
+              <td>ls</td>
+              <td>Просмотр файлов в директории</td>
+              <td>ls</td>
+            </tr>
+            <tr>
+              <td>cat имя_файла.py</td>
+              <td>Просмотр содержимого файла</td>
+              <td>cat hello.py</td>
+            </tr>
+            <tr>
+              <td>chmod +x script.py</td>
+              <td>Сделать скрипт исполняемым</td>
+              <td>chmod +x hello.py</td>
+            </tr>
+            <tr>
+              <td>./script.py</td>
+              <td>Запуск исполняемого скрипта (если есть shebang)</td>
+              <td>./hello.py</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>Работа с библиотеками и pip</h2>
+        <ul>
+          <li>
+            <b>Установка библиотеки:</b> <code>pip install имя_библиотеки</code><br>
+            Например: <code>pip install requests</code>
+          </li>
+          <li>
+            <b>Обновление pip:</b> <code>pip install --upgrade pip</code>
+          </li>
+          <li>
+            <b>Установка нескольких библиотек из файла:</b> <code>pip install -r requirements.txt</code>
+          </li>
+          <li>
+            <b>Удаление библиотеки:</b> <code>pip uninstall имя_библиотеки</code>
+          </li>
+        </ul>
+
+        <h3>Особенности установки сложных библиотек</h3>
+        <ul>
+          <li>Для некоторых библиотек (например, numpy, lxml) может потребоваться установка дополнительных пакетов: <code>pkg install clang make</code>.</li>
+          <li>Не все библиотеки, требующие C-расширений или специфических зависимостей, поддерживаются на Android.</li>
+        </ul>
+
+        <h2>Лайфхаки и советы для Python в Termux</h2>
+        <div class="pro-tips">
+          <h4>💡 Практические советы</h4>
+          <div class="tip-item">
+            <i class="fas fa-lightbulb"></i>
+            <p>Используйте alias'ы для ускорения работы: <code>alias py='python'</code> или <code>alias updg='pkg update && pkg upgrade'</code>.</p>
+          </div>
+          <div class="tip-item">
+            <i class="fas fa-lightbulb"></i>
+            <p>Для редактирования кода на телефоне удобен nano, но можно установить vim или даже emacs.</p>
+          </div>
+          <div class="tip-item">
+            <i class="fas fa-lightbulb"></i>
+            <p>Используйте <b>Termux:API</b> для доступа к функциям Android (камера, уведомления, SMS) прямо из Python-скриптов.</p>
+          </div>
+          <div class="tip-item">
+            <i class="fas fa-lightbulb"></i>
+            <p>Храните проекты в отдельной папке (например, <code>~/projects/</code>) для удобства навигации и бэкапа.</p>
+          </div>
+          <div class="tip-item">
+            <i class="fas fa-lightbulb"></i>
+            <p>Для синхронизации проектов используйте git: <code>pkg install git</code> и <code>git clone ...</code>.</p>
+          </div>
+          <div class="tip-item">
+            <i class="fas fa-lightbulb"></i>
+            <p>Если нужна полноценная клавиатура — подключите Bluetooth-клавиатуру или используйте расширенные клавиатуры Android.</p>
+          </div>
+          <div class="tip-item">
+            <i class="fas fa-lightbulb"></i>
+            <p>Для запуска web-сервера используйте <code>python -m http.server 8080</code> и откройте адрес <code>127.0.0.1:8080</code> в браузере Termux.</p>
+          </div>
+        </div>
+
+        <h2>Таблица: типичные проблемы и их решения</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Проблема</th>
+              <th>Причина</th>
+              <th>Решение</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>pip не найден</td>
+              <td>pip не установлен</td>
+              <td>pkg install python-pip</td>
+            </tr>
+            <tr>
+              <td>Ошибка при установке библиотеки</td>
+              <td>Нет компилятора или make</td>
+              <td>pkg install clang make</td>
+            </tr>
+            <tr>
+              <td>Permission denied при запуске скрипта</td>
+              <td>Нет прав на выполнение</td>
+              <td>chmod +x script.py</td>
+            </tr>
+            <tr>
+              <td>Скрипт не видит файлы из памяти телефона</td>
+              <td>Нет разрешения на доступ</td>
+              <td>termux-setup-storage</td>
+            </tr>
+            <tr>
+              <td>Медленный ввод/вывод в nano/vim</td>
+              <td>Ограничения Android, слабое устройство</td>
+              <td>Используйте легкие редакторы, уменьшите размер файлов</td>
+            </tr>
+            <tr>
+              <td>Не работает shebang (#!/usr/bin/env python)</td>
+              <td>Нет прав на выполнение или неправильный путь</td>
+              <td>Проверьте права и путь к python: <code>which python</code></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>Расширенные возможности: Termux:API и автоматизация</h2>
+        <ul>
+          <li>
+            <b>Termux:API</b> — набор инструментов, позволяющий Python-скриптам взаимодействовать с функциями Android: отправлять уведомления, читать SMS, получать геолокацию и даже делать фото.
+          </li>
+          <li>
+            Для работы установите:<br>
+            <code>pkg install termux-api</code><br>
+            и приложение <b>Termux:API</b> из F-Droid.
+          </li>
+          <li>
+            Пример отправки уведомления из Python:<br>
+            <code>os.system('termux-notification --title "Python" --content "Скрипт завершён!"')</code>
+          </li>
+        </ul>
+
+        <h2>FAQ — часто задаваемые вопросы</h2>
+        <ul>
+          <li>
+            <strong>Можно ли использовать все библиотеки Python в Termux?</strong><br>
+            Большинство библиотек поддерживаются, но некоторые, требующие C-расширений или специфичных зависимостей, могут не работать на Android.
+          </li>
+          <li>
+            <strong>Как получить доступ к памяти телефона из Termux?</strong><br>
+            Выполните <code>termux-setup-storage</code> и дайте разрешение приложению.
+          </li>
+          <li>
+            <strong>Можно ли запускать web-серверы и боты на Python в Termux?</strong><br>
+            Да, Termux подходит для запуска Flask, Django, Telegram-ботов и других серверных приложений, если хватает ресурсов устройства.
+          </li>
+          <li>
+            <strong>Как обновить Python в Termux?</strong><br>
+            Используйте <code>pkg upgrade python</code> или полностью обновите Termux: <code>pkg update && pkg upgrade</code>.
+          </li>
+          <li>
+            <strong>Можно ли подключить внешнюю клавиатуру?</strong><br>
+            Да, поддерживаются Bluetooth и USB-клавиатуры, что делает работу с кодом значительно удобнее.
+          </li>
+          <li>
+            <strong>Как синхронизировать проекты с GitHub?</strong><br>
+            Установите git: <code>pkg install git</code>, затем используйте <code>git clone</code>, <code>git pull</code> и <code>git push</code> для работы с репозиториями.
+          </li>
+          <li>
+            <strong>Можно ли запускать графические приложения (GUI) на Python в Termux?</strong><br>
+            Нет, полноценная поддержка GUI отсутствует, но можно использовать web-интерфейсы через Flask/Django.
+          </li>
+        </ul>
+
+        <h2>Пошаговая инструкция: автоматизация задач с помощью Python и Termux</h2>
+        <ol>
+          <li>
+            <b>Создайте скрипт для нужной задачи</b> (например, резервное копирование файлов, отправка уведомлений).
+          </li>
+          <li>
+            <b>Проверьте работоспособность вручную</b> — убедитесь, что скрипт выполняется без ошибок.
+          </li>
+          <li>
+            <b>Добавьте задачу в cron</b> (Termux поддерживает cron):<br>
+            <code>pkg install cronie</code><br>
+            <code>crontab -e</code><br>
+            Пример строки для запуска скрипта каждый день в 2:00:<br>
+            <code>0 2 * * * python /data/data/com.termux/files/home/backup.py</code>
+          </li>
+          <li>
+            <b>Используйте Termux:API для интеграции с Android</b> — например, отправляйте уведомления о завершении задачи.
+          </li>
+        </ol>
+
+        <h2>📌 Итог: почему стоит использовать Python в Termux?</h2>
+        <p>
+          Termux превращает ваш Android-смартфон в полноценную платформу для программирования на Python. Вы получаете гибкую среду с поддержкой большинства библиотек, возможностью автоматизации, работы с git, запуском серверов и интеграцией с функциями Android. Это отличный выбор для обучения, экспериментов, автоматизации и даже разработки небольших проектов без необходимости иметь под рукой ПК. Используйте все возможности Termux — и ваш смартфон станет мощным инструментом программиста.
+        </p>
+      </div>
+    </div>
+  </section>
+
+ <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__col footer__col--logo">
+          <a href="index.html" class="footer-logo">
+            <span class="logo__icon"></span>
+            <span class="logo__text">Repairo</span>
+          </a>
+          <p class="footer__text">Экспертные инструкции по фототехнике с 2024 года</p>
+        </div>
+        <div class="footer__col">
+          <h3 class="footer__title">Разделы</h3>
+          <ul class="footer__links">
+            <li><a href="index.html" class="footer__link">Главная</a></li>
+            <li><a href="all-guides.html" class="footer__link">Все гайды</a></li>
+            <li><a href="contacts.html" class="footer__link">Контакты</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h3 class="footer__title">Категории</h3>
+          <ul class="footer__links">
+            <li><a href="../tv.html" class="nav__link">Телевизоры</a></li>
+            <li><a href="../cameras.html" class="nav__link">Фотоаппараты</a></li>
+            <li><a href="../consoles.html" class="nav__link">Приставки</a></li>
+            <li><a href="../laptops.html" class="nav__link">Ноутбуки</a></li>
+            <li><a href="../smartphones.html" class="nav__link">Смартфоны</a></li>
+            <li><a href="../small-appliances.html" class="nav__link">Мелкая техника</a></li>
+            <li><a href="../large-appliances.html" class="nav__link">Бытовая техника</a></li>
+            <li><a href="../auto-electronics.html" class="nav__link">Авто-Электроника</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h3 class="footer__title">Контакты</h3>
+          <ul class="footer__links">
+            <li>
+              <a href="https://t.me/repairo_kz" class="footer__link"><i class="fab fa-telegram"></i> Telegram</a>
+            </li>
+            <li>
+              <a href="https://instagram.com/repairo_kz" class="footer__link"><i class="fab fa-instagram"></i> Instagram</a>
+            </li>
+            <li>
+              <a href="mailto:support@repairo.kz" class="footer__link"><i class="fas fa-envelope"></i> Email</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+            <p class="disclaimer">
+        Администрация сайта не несёт ответственности за возможные повреждения техники
+        и иные последствия, возникшие в результате самостоятельного ремонта по
+        материалам и инструкциям, размещённым на сайте. Все работы вы выполняете
+        на свой страх и риск.
+    </p>
+                <p class="footer__copyright">© 2025 Repairo. Все права защищены.</p>
+      </div>
+    </div>
+  </footer>
+  <script src="../script.js"></script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "Программирование на Python в Termux: экспертное руководство",
+  "description": "Пошаговая инструкция: Программирование на Python в Termux: экспертное руководство. Termux — это мощный эмулятор терминала для Android, предоставляющий полноц...",
+  "totalTime": "PT30M",
+  "step": [
+    {
+      "@type": "HowToStep",
+      "name": "Введение: зачем программировать на Python в Termux?",
+      "text": "Введение: зачем программировать на Python в Termux?",
+      "url": "#step-1"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Таблица: сравнение Python на Termux и других мобильных решениях",
+      "text": "Таблица: сравнение Python на Termux и других мобильных решениях",
+      "url": "#step-2"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Пошаговая инструкция: установка и настройка Python в Termux",
+      "text": "Пошаговая инструкция: установка и настройка Python в Termux",
+      "url": "#step-3"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Таблица: основные команды для работы с Python в Termux",
+      "text": "Таблица: основные команды для работы с Python в Termux",
+      "url": "#step-4"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Работа с библиотеками и pip",
+      "text": "Работа с библиотеками и pip",
+      "url": "#step-5"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Лайфхаки и советы для Python в Termux",
+      "text": "Лайфхаки и советы для Python в Termux",
+      "url": "#step-6"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Таблица: типичные проблемы и их решения",
+      "text": "Таблица: типичные проблемы и их решения",
+      "url": "#step-7"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Расширенные возможности: Termux:API и автоматизация",
+      "text": "Расширенные возможности: Termux:API и автоматизация",
+      "url": "#step-8"
+    }
+  ],
+  "image": "https://repairo.ru/https://mc.yandex.ru/watch/106225686"
+}
+</script>
+</body>
+</html>

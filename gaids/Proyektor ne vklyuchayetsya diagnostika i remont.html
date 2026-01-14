@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YE88Y994NX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-YE88Y994NX');
+</script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Проектор не включается: диагностика и ремонт | Repairo</title>
+    <meta name="description" content="Пошаговая инструкция: Проектор не включается: диагностика и ремонт. Проверка питания:. Советы экспертов, таблицы, FAQ.">
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=106225686', 'ym');
+
+    ym(106225686, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/106225686" style="position:absolute; left:-9999px;" alt="Проектор не включается: диагностика и ремонт - пошаговая инструкция по ремонту" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../styles-header.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Основные стили */
+        .guide-content {
+            line-height: 1.7;
+            color: var(--text);
+        }
+        .guide-content h2 {
+            color: var(--primary);
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+        .guide-content h3 {
+            color: var(--primary-dark);
+            margin-top: 25px;
+            margin-bottom: 12px;
+            font-size: 1.2rem;
+        }
+        /* Стили для шагов */
+        .step-group {
+            margin: 20px 0;
+            padding: 15px;
+            background: var(--background);
+            border-radius: var(--border-radius);
+            border: 1px solid var(--border);
+        }
+        .step {
+            display: flex;
+            gap: 15px;
+            margin: 12px 0;
+            padding: 12px;
+            background: var(--background-alt);
+            border-radius: 6px;
+            align-items: flex-start;
+        }
+        .step-number {
+            background: var(--primary);
+            color: white;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            font-weight: bold;
+            font-size: 0.8rem;
+        }
+        /* Изображения */
+        .guide-image-block {
+            margin: 20px 0;
+            padding: 15px;
+            background: var(--background);
+            border-radius: var(--border-radius);
+            border: 1px solid var(--border);
+            text-align: center;
+        }
+        .guide-image-block img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 6px;
+            border: 1px solid var(--border);
+        }
+        .image-caption {
+            margin-top: 10px;
+            font-size: 0.85rem;
+            color: var(--text-light);
+            font-style: italic;
+        }
+        /* Рекомендации */
+        .recommend-box {
+            background: rgba(3, 74, 79, 0.1);
+            border-left: 4px solid var(--primary);
+            padding: 12px;
+            margin: 15px 0;
+            display: flex;
+            gap: 12px;
+            align-items: flex-start;
+            border-radius: 4px;
+        }
+        .recommend-box i {
+            font-size: 1.2rem;
+            color: var(--primary);
+            margin-top: 2px;
+        }
+        /* Советы */
+        .pro-tips {
+            background: rgba(3, 74, 79, 0.05);
+            padding: 15px;
+            border-radius: 6px;
+            margin: 20px 0;
+        }
+        .pro-tips h4 {
+            color: var(--primary);
+            margin-top: 0;
+            margin-bottom: 12px;
+            font-size: 1.1rem;
+        }
+        .tip-item {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 8px;
+            align-items: flex-start;
+        }
+        /* Медиа-запросы для мобильных */
+        @media (max-width: 768px) {
+            .guide-content h2 {
+                font-size: 1.4rem;
+                margin-top: 25px;
+            }
+            .step-group, .guide-image-block {
+                padding: 12px;
+                margin: 15px 0;
+            }
+            .step {
+                padding: 10px;
+            }
+        }
+        .warning-box {
+            background-color: #fff3f3;
+            border-left: 4px solid #ff6b6b;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        .warning-box i {
+            color: #ff6b6b;
+            margin-right: 10px;
+        }
+        .danger-box {
+            background-color: #fff8f8;
+            border-left: 4px solid #ff0000;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        .danger-box i {
+            color: #ff0000;
+            margin-right: 10px;
+        }
+        .info-box {
+            background-color: #f0f7ff;
+            border-left: 4px solid #4d90fe;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        .info-box i {
+            color: #4d90fe;
+            margin-right: 10px;
+        }
+        .symptom-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        .symptom-table th, .symptom-table td {
+            border: 1px solid var(--border);
+            padding: 12px;
+            text-align: left;
+        }
+        .symptom-table th {
+            background-color: var(--background-alt);
+            color: var(--primary);
+        }
+        .symptom-table tr:nth-child(even) {
+            background-color: var(--background);
+        }
+    </style>
+  <script async src="https://timeweb.cloud/api/v1/cloud-ai/agents/3cc03620-d051-4d8d-b5af-f7b6cd083a35/embed.js?collapsed=true"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <a href="../index.html" class="logo">
+                    <span class="logo__icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 15L7 10H17L12 15Z" fill="currentColor"/>
+                            <path d="M12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3ZM12 19C8.13401 19 5 15.866 5 12C5 8.13401 8.13401 5 12 5C15.866 5 19 8.13401 19 12C19 15.866 15.866 19 12 19Z" fill="currentColor"/>
+                        </svg>
+                    </span>
+                    <span class="logo__text">Repairo</span>
+                </a>
+                <nav class="nav">
+                    <ul class="nav__list">
+                        <li><a href="../tv.html" class="nav__link">Телевизоры</a></li>
+                        <li><a href="../cameras.html" class="nav__link">Фотоаппараты</a></li>
+                        <li><a href="../consoles.html" class="nav__link">Приставки</a></li>
+                        <li><a href="../laptops.html" class="nav__link">Ноутбуки</a></li>
+                        <li><a href="../smartphones.html" class="nav__link">Смартфоны</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <section class="guide-page">
+        <div class="container">
+            <div class="breadcrumbs">
+                <a href="../index.html">Главная</a>
+                <i class="fas fa-chevron-right"></i>
+                <a href="../projectors.html">Проекторы</a>
+                <i class="fas fa-chevron-right"></i>
+                <span>Проектор не включается</span>
+            </div>
+            <h1 class="section__title">Проектор не включается: диагностика и ремонт</h1>
+            <div class="guide-meta">
+                <span><i class="fas fa-clock"></i> 20-60 мин</span>
+                <span><i class="fas fa-tools"></i> Средний/сложный уровень</span>
+            </div>
+            <div class="guide-image-block">
+                <img src="https://avatars.mds.yandex.net/get-shedevrum/14791598/img_0767dc66265a11f0ac8cee03161e37ce/orig">
+            </div>
+            <div class="danger-box">
+                <i class="fas fa-radiation-alt"></i>
+                <div>
+                    <strong>Внимание!</strong> Некоторые компоненты проектора (особенно в мощных моделях) могут сохранять опасное напряжение даже после отключения от сети. Не разбирайте проектор, если не уверены в своих силах!
+                </div>
+            </div>
+            <div class="guide-content">
+                <h2>Основные симптомы и возможные причины</h2>
+                <table class="symptom-table">
+                    <tr>
+                        <th>Симптом</th>
+                        <th>Возможные причины</th>
+                    </tr>
+                    <tr>
+                        <td>Проектор не реагирует на кнопку питания</td>
+                        <td>Проблемы с блоком питания, неисправная кнопка, сгоревший предохранитель</td>
+                    </tr>
+                    <tr>
+                        <td>Загорается индикатор, но изображения нет</td>
+                        <td>Неисправность лампы/светодиода, проблемы с цветовым колесом (DLP), сбой драйверов матрицы</td>
+                    </tr>
+                    <tr>
+                        <td>Проектор включается и сразу выключается</td>
+                        <td>Перегрев, неисправность системы охлаждения, проблемы с блоком питания</td>
+                    </tr>
+                    <tr>
+                        <td>Мигает индикатор ошибки</td>
+                        <td>Код ошибки (см. руководство), проблемы с лампой, перегрев, сбой вентиляторов</td>
+                    </tr>
+                    <tr>
+                        <td>Слышен звук работы, но нет изображения</td>
+                        <td>Проблемы с видеовходом, неисправность матрицы, сбой обработки сигнала</td>
+                    </tr>
+                </table>
+
+                <h2>1. Первичная диагностика</h2>
+                <div class="step-group">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div>
+                            <p><strong>Проверка питания:</strong></p>
+                            <ul>
+                                <li>Убедитесь, что кабель питания подключен к розетке и проектору</li>
+                                <li>Попробуйте другую розетку</li>
+                                <li>Проверьте кабель питания на повреждения</li>
+                                <li>Используйте другой кабель при возможности</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div>
+                            <p><strong>Индикаторы состояния:</strong></p>
+                            <ul>
+                                <li>Проверьте, загораются ли какие-либо индикаторы</li>
+                                <li>Обратите внимание на цвет и характер мигания</li>
+                                <li>Сравните с кодами ошибок в руководстве пользователя</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div>
+                            <p><strong>Попробуйте пульт ДУ:</strong></p>
+                            <ul>
+                                <li>Замените батарейки в пульте</li>
+                                <li>Проверьте ИК-порт на загрязнение</li>
+                                <li>Попробуйте включить с кнопки на корпусе проектора</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <h2>2. Проверка основных компонентов</h2>
+                <div class="step-group">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div>
+                            <p><strong>Лампа/световой модуль:</strong></p>
+                            <ul>
+                                <li>Проверьте часы наработки лампы (в меню проектора)</li>
+                                <li>Осмотрите лампу на предмет почернения или повреждений</li>
+                                <li>Для LED-проекторов проверьте светодиодный модуль</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div>
+                            <p><strong>Система охлаждения:</strong></p>
+                            <ul>
+                                <li>Проверьте, работают ли вентиляторы при включении</li>
+                                <li>Очистите вентиляционные отверстия от пыли</li>
+                                <li>Убедитесь, что проектор не перегревался перед поломкой</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div>
+                            <p><strong>Блок питания:</strong></p>
+                            <ul>
+                                <li>Проверьте предохранители (если есть доступ)</li>
+                                <li>Осмотрите блок питания на предмет вздутых конденсаторов</li>
+                                <li>Проверьте выходное напряжение (если есть навыки)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="warning-box">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <div>
+                        <strong>Важно!</strong> Лампы проекторов содержат ртуть и находятся под высоким давлением. Не пытайтесь вскрывать ламповый модуль — это может быть опасно!
+                    </div>
+                </div>
+
+                <h2>3. Популярные неисправности и их устранение</h2>
+                <div class="step-group">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div>
+                            <p><strong>Замена лампы:</strong></p>
+                            <ul>
+                                <li>Купите оригинальную или совместимую лампу</li>
+                                <li>Сбросьте счетчик часов лампы (если требуется)</li>
+                                <li>Аккуратно установите новую лампу согласно инструкции</li>
+                                <li>Убедитесь, что контакты чистые и плотно соединены</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div>
+                            <p><strong>Очистка от пыли:</strong></p>
+                            <ul>
+                                <li>Используйте баллончик со сжатым воздухом</li>
+                                <li>Очистите вентиляционные отверстия и радиаторы</li>
+                                <li>Для глубокой очистки может потребоваться разборка</li>
+                                <li>Будьте осторожны с оптическими компонентами</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div>
+                            <p><strong>Сброс настроек:</strong></p>
+                            <ul>
+                                <li>Найдите кнопку Reset или комбинацию клавиш</li>
+                                <li>Попробуйте сбросить настройки до заводских</li>
+                                <li>Отключите проектор от сети на 10-15 минут</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <h2>4. Когда обращаться в сервис?</h2>
+                <div class="step-group">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div>
+                            <p><strong>Сложные электронные неисправности:</strong></p>
+                            <ul>
+                                <li>Проблемы с материнской платой</li>
+                                <li>Неисправность блока питания</li>
+                                <li>Повреждение DMD-чипа (в DLP проекторах)</li>
+                                <li>Проблемы с LCD-матрицами (в 3LCD проекторах)</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div>
+                            <p><strong>Механические повреждения:</strong></p>
+                            <ul>
+                                <li>Разбитая оптика</li>
+                                <li>Поврежденный цветовой фильтр</li>
+                                <li>Сломанные вентиляторы</li>
+                                <li>Физические повреждения корпуса</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div>
+                            <p><strong>Гарантийный случай:</strong></p>
+                            <ul>
+                                <li>Если проектор на гарантии</li>
+                                <li>При отсутствии следов вскрытия</li>
+                                <li>Если не было механических повреждений</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pro-tips">
+                    <h4>🔹 Профессиональные советы</h4>
+                    <div class="tip-item">
+                        <i class="fas fa-lightbulb" style="color: var(--primary);"></i>
+                        <p>Перед заменой лампы дайте проектору полностью остыть (30-60 минут) — горячая лампа может взорваться.</p>
+                    </div>
+                    <div class="tip-item">
+                        <i class="fas fa-lightbulb" style="color: var(--primary);"></i>
+                        <p>Для очистки оптики используйте только специальные салфетки и жидкости — обычные могут оставить царапины.</p>
+                    </div>
+                    <div class="tip-item">
+                        <i class="fas fa-lightbulb" style="color: var(--primary);"></i>
+                        <p>Если проектор упал и перестал работать, вероятно повреждена лампа или оптический блок — не пытайтесь включать.</p>
+                    </div>
+                    <div class="tip-item">
+                        <i class="fas fa-lightbulb" style="color: var(--primary);"></i>
+                        <p>При замене лампы обязательно сбросьте счетчик часов в сервисном меню (если такая функция есть).</p>
+                    </div>
+                </div>
+
+                <h2>Профилактика проблем</h2>
+                <div class="step-group">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div>
+                            <p><strong>Правильная эксплуатация:</strong></p>
+                            <ul>
+                                <li>Давайте проектору остывать перед выключением</li>
+                                <li>Не отключайте питание сразу после выключения</li>
+                                <li>Используйте режим экономии ресурса лампы</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div>
+                            <p><strong>Регулярное обслуживание:</strong></p>
+                            <ul>
+                                <li>Чистка от пыли каждые 3-6 месяцев</li>
+                                <li>Проверка состояния вентиляторов</li>
+                                <li>Контроль часов работы лампы</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div>
+                            <p><strong>Правильное хранение:</strong></p>
+                            <ul>
+                                <li>Храните в сухом месте при комнатной температуре</li>
+                                <li>Используйте чехол для защиты от пыли</li>
+                                <li>Избегайте резких перепадов температуры</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="recommend-box">
+                    <i class="fas fa-star"></i>
+                    <div>
+                        <strong>Рекомендуемые сервисные центры:</strong>
+                        <ul>
+                            <li><strong>Epson:</strong> Официальный сервис на сайте производителя</li>
+                            <li><strong>BenQ:</strong> Авторизованные сервисные центры в крупных городах</li>
+                            <li><strong>Xiaomi:</strong> Через официальные магазины Mi Store</li>
+                            <li><strong>Sony:</strong> Только в авторизованных сервисных центрах</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h2>📌 Итог</h2>
+                <p>Если проектор не включается:</p>
+                <ul>
+                    <li>Проверьте питание и индикаторы состояния</li>
+                    <li>Осмотрите лампу и систему охлаждения</li>
+                    <li>Попробуйте сбросить настройки</li>
+                    <li>Очистите от пыли и проверьте вентиляцию</li>
+                    <li>При сложных неисправностях обратитесь в сервис</li>
+                </ul>
+
+                <div style="text-align: center; margin-top: 30px;">
+                    <h3 style="color: var(--primary);">Здесь всегда актуальные руководства и свежие новости из области электроники! Добавьте сайт в избранное чтобы не потерять 😉</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__col footer__col--logo">
+                    <a href="index.html" class="footer-logo">
+                        <span class="logo__icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 15L7 10H17L12 15Z" fill="currentColor"/>
+                                <path d="M12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3ZM12 19C8.13401 19 5 15.866 5 12C5 8.13401 8.13401 5 12 5C15.866 5 19 8.13401 19 12C19 15.866 15.866 19 12 19Z" fill="currentColor"/>
+                            </svg>
+                        </span>
+                        <span class="logo__text">Repairo</span>
+                    </a>
+                    <p class="footer__text">Помогаем ремонтировать электронику с 2024 года</p>
+                </div>
+                <div class="footer__col">
+                    <h3 class="footer__title">Разделы</h3>
+                    <ul class="footer__links">
+                        <li><a href="index.html" class="footer__link">Главная</a></li>
+                        <li><a href="all-guides.html" class="footer__link">Все гайды</a></li>
+                        <li><a href="contacts.html" class="footer__link">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="footer__col">
+                    <h3 class="footer__title">Категории</h3>
+                    <ul class="footer__links">
+                        <li><a href="../tv.html" class="nav__link">Телевизоры</a></li>
+                        <li><a href="../projectors.html" class="nav__link">Проекторы</a></li>
+                        <li><a href="../cameras.html" class="nav__link">Фотоаппараты</a></li>
+                        <li><a href="../consoles.html" class="nav__link">Приставки</a></li>
+                        <li><a href="../laptops.html" class="nav__link">Ноутбуки</a></li>
+                        <li><a href="../smartphones.html" class="nav__link">Смартфоны</a></li>
+                    </ul>
+                </div>
+                <div class="footer__col">
+                    <h3 class="footer__title">Контакты</h3>
+                    <ul class="footer__links">
+                        <li><a href="https://t.me/repairo_kz" class="footer__link"><i class="fab fa-telegram"></i> Telegram</a></li>
+                        <li><a href="https://instagram.com/repairo_kz" class="footer__link"><i class="fab fa-instagram"></i> Instagram</a></li>
+                        <li><a href="mailto:support@repairo.kz" class="footer__link"><i class="fas fa-envelope"></i> Email</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                    <p class="disclaimer">
+        Администрация сайта не несёт ответственности за возможные повреждения техники
+        и иные последствия, возникшие в результате самостоятельного ремонта по
+        материалам и инструкциям, размещённым на сайте. Все работы вы выполняете
+        на свой страх и риск.
+    </p>
+                <p class="footer__copyright">© 2024 Repairo. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="../script.js"></script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "Проектор не включается: диагностика и ремонт",
+  "description": "Пошаговая инструкция: Проектор не включается: диагностика и ремонт. Проверка питания:. Советы экспертов, таблицы, FAQ.",
+  "totalTime": "PT30M",
+  "step": [
+    {
+      "@type": "HowToStep",
+      "name": "Основные симптомы и возможные причины",
+      "text": "Основные симптомы и возможные причины",
+      "url": "#step-1"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "1. Первичная диагностика",
+      "text": "1. Первичная диагностика",
+      "url": "#step-2"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "2. Проверка основных компонентов",
+      "text": "2. Проверка основных компонентов",
+      "url": "#step-3"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "3. Популярные неисправности и их устранение",
+      "text": "3. Популярные неисправности и их устранение",
+      "url": "#step-4"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "4. Когда обращаться в сервис?",
+      "text": "4. Когда обращаться в сервис?",
+      "url": "#step-5"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Профилактика проблем",
+      "text": "Профилактика проблем",
+      "url": "#step-6"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "📌 Итог",
+      "text": "📌 Итог",
+      "url": "#step-7"
+    }
+  ],
+  "image": "https://repairo.ru/https://mc.yandex.ru/watch/106225686"
+}
+</script>
+</body>
+</html>

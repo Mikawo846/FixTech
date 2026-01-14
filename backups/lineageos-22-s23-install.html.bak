@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Как установить LineageOS 22 на Samsung Galaxy S23 | Полный экспертный гид</title>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=106225686', 'ym');
+
+    ym(106225686, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/106225686" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="../styles-header.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    .guide-content { line-height: 1.7; color: var(--text); }
+    .guide-content h2 { color: var(--primary); margin-top: 30px; margin-bottom: 15px; font-size: 1.5rem; }
+    .guide-content h3 { color: var(--primary-dark); margin-top: 25px; margin-bottom: 12px; font-size: 1.2rem; }
+    .guide-image-block { margin: 20px 0; padding: 15px; background: var(--background); border-radius: var(--border-radius); border: 1px solid var(--border); text-align: center; }
+    .guide-image-block img { max-width: 100%; height: auto; border-radius: 6px; border: 1px solid var(--border); }
+    .image-caption { margin-top: 10px; font-size: 0.85rem; color: var(--text-light); font-style: italic; }
+    .pro-tips { background: rgba(3, 74, 79, 0.05); padding: 15px; border-radius: 6px; margin: 20px 0; }
+    .pro-tips h4 { color: var(--primary); margin-top: 0; margin-bottom: 12px; font-size: 1.1rem; }
+    .tip-item { display: flex; gap: 8px; margin-bottom: 8px; align-items: flex-start; }
+    table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+    th, td { border: 1px solid var(--border); padding: 8px; text-align: left; }
+    th { background: var(--background-light); }
+    @media (max-width: 768px) {
+      .guide-content h2 { font-size: 1.4rem; margin-top: 25px; }
+      .guide-image-block { padding: 12px; margin: 15px 0; }
+      table, th, td { font-size: 0.95rem; }
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="header__inner">
+        <a href="../index.html" class="logo">
+          <span class="logo__icon"></span>
+          <span class="logo__text">Repairo</span>
+        </a>
+        <nav class="nav">
+          <ul class="nav__list">
+            <li><a href="../tv.html" class="nav__link">Телевизоры</a></li>
+            <li><a href="../cameras.html" class="nav__link">Фотоаппараты</a></li>
+            <li><a href="../consoles.html" class="nav__link">Приставки</a></li>
+            <li><a href="../laptops.html" class="nav__link">Ноутбуки</a></li>
+            <li><a href="../smartphones.html" class="nav__link">Смартфоны</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <section class="guide-page">
+    <div class="container">
+      <div class="breadcrumbs">
+        <a href="../index.html">Главная</a>
+        <i class="fas fa-chevron-right"></i>
+        <a href="../smartphones.html">Смартфоны</a>
+        <i class="fas fa-chevron-right"></i>
+        <span>Как установить LineageOS 22 на Samsung Galaxy S23</span>
+      </div>
+
+      <h1 class="section__title">Как установить LineageOS 22 на Samsung Galaxy S23: подробный экспертный гид</h1>
+
+      <div class="guide-meta">
+        <span><i class="fas fa-hourglass-half"></i> Самое подробное руководство: подготовка, пошаговая инструкция, советы, таблицы, FAQ, иллюстрация.</span>
+      </div>
+
+      <div class="guide-image-block">
+        <img src="https://avatars.mds.yandex.net/get-shedevrum/16312463/img_eb2afdfe42a011f08420ba885ecd37d4/orig" alt="Установка LineageOS на Samsung Galaxy S23">
+        <div class="image-caption">
+          Samsung Galaxy S23 с кастомной прошивкой LineageOS 22 — чистый Android 15, больше контроля, никаких лишних приложений.
+        </div>
+      </div>
+
+      <div class="guide-content">
+
+        <h2>Введение: зачем ставить LineageOS 22 на Galaxy S23?</h2>
+        <p>
+          LineageOS — один из самых популярных и стабильных кастомных ROM на базе Android Open Source Project. Установка LineageOS 22 (Android 15) на Samsung Galaxy S23 позволяет получить чистый Android без фирменных оболочек, избавиться от ненужных приложений, ускорить работу устройства и продлить срок поддержки смартфона. Это отличный выбор для тех, кто хочет максимальной кастомизации, регулярных обновлений безопасности и свежих функций даже после окончания официальной поддержки.
+        </p>
+
+        <h2>Что потребуется для установки?</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Необходимое</th>
+              <th>Описание</th>
+              <th>Где взять</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>ADB и Fastboot</td>
+              <td>Инструменты для подключения и управления устройством через ПК</td>
+              <td>Официальный сайт Android</td>
+            </tr>
+            <tr>
+              <td>LineageOS 22 ROM</td>
+              <td>Файл прошивки для Galaxy S23 (rom.zip)</td>
+              <td>Официальный сайт LineageOS</td>
+            </tr>
+            <tr>
+              <td>Lineage Recovery или TWRP</td>
+              <td>Кастомное рекавери для прошивки ROM</td>
+              <td>Сайт LineageOS или TWRP</td>
+            </tr>
+            <tr>
+              <td>GApps (опционально)</td>
+              <td>Пакет Google Apps: Play Market, Gmail и др.</td>
+              <td>OpenGApps или NikGApps</td>
+            </tr>
+            <tr>
+              <td>Магиск (опционально)</td>
+              <td>Для получения root-прав</td>
+              <td>Официальный сайт Magisk</td>
+            </tr>
+            <tr>
+              <td>Кабель USB-C</td>
+              <td>Для подключения смартфона к ПК</td>
+              <td>В комплекте с устройством</td>
+            </tr>
+            <tr>
+              <td>Резервная копия данных</td>
+              <td>Сохранение всех важных файлов и настроек</td>
+              <td>Google Диск, Samsung Smart Switch и др.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>Пошаговая инструкция: установка LineageOS 22 на Samsung Galaxy S23</h2>
+        <ol>
+          <li>
+            <b>Создайте резервную копию данных.</b> Установка кастомной прошивки полностью сотрет память устройства. Сохраните фото, контакты, документы и важные приложения.
+          </li>
+          <li>
+            <b>Установите ADB и Fastboot на ПК.</b> Скачайте и распакуйте <a href="https://developer.android.com/tools/releases/platform-tools">Platform Tools</a> в удобную папку.
+          </li>
+          <li>
+            <b>Скачайте LineageOS 22 ROM и Lineage Recovery/TWRP.</b> Проверьте совместимость версии для вашей модели (S23/S23+/S23 Ultra).
+          </li>
+          <li>
+            <b>Включите "Отладку по USB" и "OEM-разблокировку".</b> 
+            <ul>
+              <li>Настройки → О телефоне → 7 раз нажмите "Номер сборки" для открытия "Для разработчиков".</li>
+              <li>В разделе "Для разработчиков" включите "Отладка по USB" и "OEM-разблокировка".</li>
+            </ul>
+          </li>
+          <li>
+            <b>Разблокируйте загрузчик (bootloader).</b> 
+            <ul>
+              <li>Выключите телефон.</li>
+              <li>Зажмите "Громкость вверх" + "Питание" для входа в Recovery, выберите "Reboot to Bootloader".</li>
+              <li>Следуйте инструкциям на экране для разблокировки. <b>Внимание:</b> все данные будут удалены!</li>
+            </ul>
+          </li>
+          <li>
+            <b>Переведите устройство в режим загрузки (Download Mode).</b>
+            <ul>
+              <li>Выключите телефон, затем зажмите "Громкость вверх" + "Питание".</li>
+              <li>Выберите "Reboot to Bootloader", подтвердите кнопкой питания.</li>
+            </ul>
+          </li>
+          <li>
+            <b>Установите кастомное Recovery.</b>
+            <ul>
+              <li>Подключите телефон к ПК.</li>
+              <li>Откройте командную строку в папке с platform-tools и выполните:<br>
+                <code>fastboot flash recovery recovery.img</code>
+              </li>
+              <li>Перезагрузитесь в Recovery.</li>
+            </ul>
+          </li>
+          <li>
+            <b>Сделайте полный вайп (очистку).</b>
+            <ul>
+              <li>В Recovery выберите "Wipe Data/Factory Reset" или "Advanced Wipe" (system, data, cache, dalvik).</li>
+            </ul>
+          </li>
+          <li>
+            <b>Установите LineageOS 22 ROM.</b>
+            <ul>
+              <li>В Recovery выберите "Apply update" → "Apply from ADB".</li>
+              <li>На ПК выполните:<br>
+                <code>adb sideload rom.zip</code>
+              </li>
+              <li>Дождитесь завершения установки.</li>
+            </ul>
+          </li>
+          <li>
+            <b>(Опционально) Установите GApps и/или Magisk.</b>
+            <ul>
+              <li>Перезагрузитесь обратно в Recovery.</li>
+              <li>Снова выберите "Apply update" → "Apply from ADB".</li>
+              <li>На ПК выполните:<br>
+                <code>adb sideload gapps.zip</code> (или <code>magisk.zip</code> для root).</li>
+            </ul>
+          </li>
+          <li>
+            <b>Перезагрузите устройство.</b>
+            <ul>
+              <li>В Recovery выберите "Reboot system now".</li>
+              <li>Первый запуск может занять до 10 минут — это нормально!</li>
+            </ul>
+          </li>
+        </ol>
+
+        <h2>Таблица: сравнение LineageOS 22 и штатной прошивки One UI</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Параметр</th>
+              <th>LineageOS 22</th>
+              <th>Samsung One UI</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Обновления безопасности</td>
+              <td>Регулярные, даже после окончания поддержки Samsung</td>
+              <td>Только в рамках поддержки производителя</td>
+            </tr>
+            <tr>
+              <td>Скорость работы</td>
+              <td>Максимальная, нет лишних сервисов</td>
+              <td>Могут быть лаги из-за фирменных приложений</td>
+            </tr>
+            <tr>
+              <td>Встроенные приложения</td>
+              <td>Минимальный набор, можно удалить всё лишнее</td>
+              <td>Много предустановленных сервисов и рекламы</td>
+            </tr>
+            <tr>
+              <td>Кастомизация</td>
+              <td>Максимальная, вплоть до ядра</td>
+              <td>Ограничена фирменной оболочкой</td>
+            </tr>
+            <tr>
+              <td>Root-доступ</td>
+              <td>Легко получить через Magisk</td>
+              <td>Требует сложных манипуляций</td>
+            </tr>
+            <tr>
+              <td>Поддержка Google Apps</td>
+              <td>Устанавливается отдельно (GApps)</td>
+              <td>Встроено</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>Лайфхаки и советы по установке и использованию LineageOS</h2>
+        <div class="pro-tips">
+          <h4>💡 Практические советы</h4>
+          <div class="tip-item">
+            <i class="fas fa-lightbulb"></i>
+            <p>Перед началом убедитесь, что ваша модель S23 поддерживается официально. Для этого проверьте <a href="https://download.lineageos.org/">официальный сайт LineageOS</a>.</p>
+          </div>
+          <div class="tip-item">
+            <i class="fas fa-lightbulb"></i>
+            <p>Используйте только оригинальные кабели и проверенные сборки прошивок — это минимизирует риск "кирпича".</p>
+          </div>
+          <div class="tip-item">
+            <i class="fas fa-lightbulb"></i>
+            <p>После установки LineageOS рекомендуется сразу обновить все приложения и проверить наличие обновлений самой прошивки через встроенный OTA-обновления.</p>
+          </div>
+          <div class="tip-item">
+            <i class="fas fa-lightbulb"></i>
+            <p>Для восстановления банковских приложений и Google Pay используйте Magisk Hide и модули SafetyNet Fix.</p>
+          </div>
+          <div class="tip-item">
+            <i class="fas fa-lightbulb"></i>
+            <p>Держите резервную копию EFS-раздела (модем, IMEI) — это поможет восстановить связь в случае ошибок.</p>
+          </div>
+        </div>
+
+        <h2>FAQ — часто задаваемые вопросы</h2>
+        <ul>
+          <li>
+            <strong>Можно ли вернуть заводскую прошивку после установки LineageOS?</strong><br>
+            Да, вы всегда можете прошить официальную прошивку Samsung через Odin. Но все данные будут удалены.
+          </li>
+          <li>
+            <strong>Работают ли обновления по воздуху (OTA)?</strong><br>
+            Да, LineageOS поддерживает OTA-обновления для большинства моделей.
+          </li>
+          <li>
+            <strong>Что делать, если не работает камера или NFC?</strong><br>
+            Проверьте, что вы используете совместимую версию ROM и GApps. Иногда помогает установка других версий GApps или Magisk-модулей.
+          </li>
+          <li>
+            <strong>Можно ли использовать Samsung Pay?</strong><br>
+            Нет, Samsung Pay работает только на официальной прошивке. Для Google Pay используйте Magisk и соответствующие патчи.
+          </li>
+          <li>
+            <strong>Слетает ли гарантия после разблокировки загрузчика?</strong><br>
+            Да, разблокировка bootloader аннулирует гарантию производителя.
+          </li>
+          <li>
+            <strong>Как обновлять LineageOS без потери данных?</strong><br>
+            OTA-обновления не затрагивают пользовательские данные, но всегда делайте резервную копию на случай сбоев.
+          </li>
+        </ul>
+
+        <h2>Пошаговая памятка: что делать, если что-то пошло не так?</h2>
+        <ol>
+          <li>Не паникуйте — большинство проблем решается перепрошивкой или восстановлением из резервной копии.</li>
+          <li>Если устройство не загружается — попробуйте войти в Recovery и повторить установку ROM или восстановить бэкап.</li>
+          <li>Если возник bootloop — сделайте вайп data/cache и повторите прошивку.</li>
+          <li>Нет IMEI или связи — восстановите EFS-раздел из резервной копии.</li>
+          <li>Для сложных случаев — обратитесь на форумы XDA или 4PDA по вашей модели.</li>
+        </ol>
+
+        <h2>📌 Итог: стоит ли ставить LineageOS 22 на Galaxy S23?</h2>
+        <p>
+          Установка LineageOS 22 на Samsung Galaxy S23 — отличный способ вдохнуть новую жизнь в устройство, получить чистый Android 15, избавиться от лишних сервисов и получить регулярные обновления. Процесс требует внимательности и аккуратности, но при соблюдении инструкции риски минимальны, а результат — быстрый, безопасный и кастомизируемый смартфон. Держите резервные копии, следуйте шагам — и ваш Galaxy S23 станет максимально удобным и современным!
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__col footer__col--logo">
+          <a href="index.html" class="footer-logo">
+            <span class="logo__icon"></span>
+            <span class="logo__text">Repairo</span>
+          </a>
+          <p class="footer__text">Экспертные инструкции по смартфонам с 2024 года</p>
+        </div>
+        <div class="footer__col">
+          <h3 class="footer__title">Разделы</h3>
+          <ul class="footer__links">
+            <li><a href="index.html" class="footer__link">Главная</a></li>
+            <li><a href="all-guides.html" class="footer__link">Все гайды</a></li>
+            <li><a href="contacts.html" class="footer__link">Контакты</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h3 class="footer__title">Категории</h3>
+          <ul class="footer__links">
+            <li><a href="../tv.html" class="nav__link">Телевизоры</a></li>
+            <li><a href="../cameras.html" class="nav__link">Фотоаппараты</a></li>
+            <li><a href="../consoles.html" class="nav__link">Приставки</a></li>
+            <li><a href="../laptops.html" class="nav__link">Ноутбуки</a></li>
+            <li><a href="../smartphones.html" class="nav__link">Смартфоны</a></li>
+            <li><a href="../small-appliances.html" class="nav__link">Мелкая техника</a></li>
+            <li><a href="../large-appliances.html" class="nav__link">Бытовая техника</a></li>
+            <li><a href="../auto-electronics.html" class="nav__link">Авто-Электроника</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h3 class="footer__title">Контакты</h3>
+          <ul class="footer__links">
+            <li>
+              <a href="https://t.me/repairo_kz" class="footer__link"><i class="fab fa-telegram"></i> Telegram</a>
+            </li>
+            <li>
+              <a href="https://instagram.com/repairo_kz" class="footer__link"><i class="fab fa-instagram"></i> Instagram</a>
+            </li>
+            <li>
+              <a href="mailto:support@repairo.kz" class="footer__link"><i class="fas fa-envelope"></i> Email</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+            <p class="disclaimer">
+        Администрация сайта не несёт ответственности за возможные повреждения техники
+        и иные последствия, возникшие в результате самостоятельного ремонта по
+        материалам и инструкциям, размещённым на сайте. Все работы вы выполняете
+        на свой страх и риск.
+    </p>
+                <p class="footer__copyright">© 2025 Repairo. Все права защищены.</p>
+      </div>
+    </div>
+  </footer>
+  <script src="../script.js"></script>
+</body>
+</html>

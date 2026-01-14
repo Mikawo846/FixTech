@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Проектор с игровыми консолями | Repairo</title>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=106225686', 'ym');
+
+    ym(106225686, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/106225686" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../styles-header.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Основные стили */
+        .guide-content {
+            line-height: 1.7;
+            color: var(--text);
+        }
+        .guide-content h2 {
+            color: var(--primary);
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+        /* Стили для шагов */
+        .step-group {
+            margin: 20px 0;
+            padding: 15px;
+            background: var(--background);
+            border-radius: var(--border-radius);
+            border: 1px solid var(--border);
+        }
+        .step {
+            display: flex;
+            gap: 15px;
+            margin: 12px 0;
+            padding: 12px;
+            background: var(--background-alt);
+            border-radius: 6px;
+            align-items: flex-start;
+        }
+        .step-number {
+            background: var(--primary);
+            color: white;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            font-weight: bold;
+            font-size: 0.8rem;
+        }
+        /* Изображения */
+        .guide-image-block {
+            margin: 20px 0;
+            padding: 15px;
+            background: var(--background);
+            border-radius: var(--border-radius);
+            border: 1px solid var(--border);
+            text-align: center;
+        }
+        .guide-image-block img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 6px;
+            border: 1px solid var(--border);
+        }
+        .image-caption {
+            margin-top: 10px;
+            font-size: 0.85rem;
+            color: var(--text-light);
+            font-style: italic;
+        }
+        /* Предупреждения */
+        .warning-box {
+            background-color: #fff3f3;
+            border-left: 4px solid #ff6b6b;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        .warning-box i {
+            color: #ff6b6b;
+            margin-right: 10px;
+        }
+        /* Советы */
+        .pro-tips {
+            background: rgba(3, 74, 79, 0.05);
+            padding: 15px;
+            border-radius: 6px;
+            margin: 20px 0;
+        }
+        .pro-tips h4 {
+            color: var(--primary);
+            margin-top: 0;
+            margin-bottom: 12px;
+            font-size: 1.1rem;
+        }
+        .tip-item {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 8px;
+            align-items: flex-start;
+        }
+        /* Таблица */
+        .console-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        .console-table th, 
+        .console-table td {
+            border: 1px solid var(--border);
+            padding: 10px;
+            text-align: left;
+        }
+        .console-table th {
+            background-color: var(--primary-light);
+            color: white;
+        }
+        .console-table .recommended {
+            background-color: #e6ffe6;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <a href="../index.html" class="logo">
+                    <span class="logo__icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 15L7 10H17L12 15Z" fill="currentColor"/>
+                            <path d="M12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3ZM12 19C8.13401 19 5 15.866 5 12C5 8.13401 8.13401 5 12 5C15.866 5 19 8.13401 19 12C19 15.866 15.866 19 12 19Z" fill="currentColor"/>
+                        </svg>
+                    </span>
+                    <span class="logo__text">Repairo</span>
+                </a>
+                <nav class="nav">
+                    <ul class="nav__list">
+                        <li><a href="../tv.html" class="nav__link">Телевизоры</a></li>
+                        <li><a href="../cameras.html" class="nav__link">Фотоаппараты</a></li>
+                        <li><a href="../projectors.html" class="nav__link">Проекторы</a></li>
+                        <li><a href="../laptops.html" class="nav__link">Ноутбуки</a></li>
+                        <li><a href="../smartphones.html" class="nav__link">Смартфоны</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <section class="guide-page">
+        <div class="container">
+            <div class="breadcrumbs">
+                <a href="../index.html">Главная</a>
+                <i class="fas fa-chevron-right"></i>
+                <a href="../projectors.html">Проекторы</a>
+                <i class="fas fa-chevron-right"></i>
+                <span>Игровые консоли</span>
+            </div>
+            <h1 class="section__title">Использование проектора с игровыми консолями (PS5, Xbox, Switch)</h1>
+            <div class="guide-meta">
+                <span><i class="fas fa-clock"></i> 15-30 мин</span>
+                <span><i class="fas fa-tools"></i> Средний уровень</span>
+                <span><i class="fas fa-gamepad"></i> Для всех консолей</span>
+            </div>
+            <div class="guide-image-block">
+                <img src="http://avatars.mds.yandex.net/get-shedevrum/5570741/img_f34cb73a280311f09fe08a1f92f7a718/orig">
+            </div>
+            <div class="warning-box">
+                <i class="fas fa-exclamation-triangle"></i>
+                <strong>Внимание!</strong> Для комфортной игры выбирайте проекторы с input lag менее 30мс, а для соревновательных игр - менее 16мс.
+            </div>
+            <div class="guide-content">
+                <h2>1. Подключение консолей к проектору</h2>
+                <div class="step-group">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div>
+                            <p><strong>PS5/Xbox Series X|S:</strong></p>
+                            <ul>
+                                <li>Используйте HDMI 2.1 кабель для 4K 120Hz</li>
+                                <li>Подключите к порту HDMI с наименьшей задержкой</li>
+                                <li>Активируйте режим "Игровой" на проекторе</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div>
+                            <p><strong>Nintendo Switch:</strong></p>
+                            <ul>
+                                <li>Используйте HDMI кабель из комплекта</li>
+                                <li>Подключите к док-станции Switch</li>
+                                <li>Выберите правильный источник сигнала</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div>
+                            <p><strong>Общие настройки:</strong></p>
+                            <ul>
+                                <li>Включите HDR в настройках консоли (если проектор поддерживает)</li>
+                                <li>Настройте разрешение в соответствии с возможностями проектора</li>
+                                <li>Активируйте Game Mode на проекторе</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <table class="console-table">
+                    <caption>Рекомендации по настройкам для консолей</caption>
+                    <thead>
+                        <tr>
+                            <th>Консоль</th>
+                            <th>Оптимальное разрешение</th>
+                            <th>Частота обновления</th>
+                            <th>Особенности</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="recommended">
+                            <td>PS5</td>
+                            <td>4K (3840x2160)</td>
+                            <td>60Hz/120Hz</td>
+                            <td>Требуется HDMI 2.1 для 120Hz</td>
+                        </tr>
+                        <tr class="recommended">
+                            <td>Xbox Series X</td>
+                            <td>4K (3840x2160)</td>
+                            <td>60Hz/120Hz</td>
+                            <td>Поддержка VRR (если проектор поддерживает)</td>
+                        </tr>
+                        <tr>
+                            <td>Nintendo Switch</td>
+                            <td>1080p (1920x1080)</td>
+                            <td>60Hz</td>
+                            <td>Макс. разрешение в док-режиме 1080p</td>
+                        </tr>
+                        <tr>
+                            <td>Xbox One/PS4</td>
+                            <td>1080p/4K</td>
+                            <td>60Hz</td>
+                            <td>4K только для PS4 Pro/Xbox One X</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h2>2. Оптимальные настройки изображения</h2>
+                <div class="step-group">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div>
+                            <p><strong>Режим изображения:</strong></p>
+                            <ul>
+                                <li>Активируйте "Game Mode" или "Игровой режим"</li>
+                                <li>Отключите все обработки изображения</li>
+                                <li>Отключите динамическую контрастность</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div>
+                            <p><strong>Параметры HDR:</strong></p>
+                            <ul>
+                                <li>Включите HDR в настройках консоли</li>
+                                <li>Откалибруйте HDR с помощью инструментов консоли</li>
+                                <li>Настройте яркость проектора на максимум для HDR</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div>
+                            <p><strong>Дополнительные настройки:</strong></p>
+                            <ul>
+                                <li>Яркость: 70-80% (зависит от освещения)</li>
+                                <li>Контрастность: 75-85%</li>
+                                <li>Цветовая температура: 6500K (стандарт D65)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <h2>3. Особенности для разных консолей</h2>
+                <div class="step-group">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div>
+                            <p><strong>PS5:</strong></p>
+                            <ul>
+                                <li>Включите "Производительность" в настройках игры</li>
+                                <li>Активируйте 120Hz в настройках дисплея</li>
+                                <li>Для VRR требуется HDMI 2.1 и поддержка проектора</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div>
+                            <p><strong>Xbox Series X|S:</strong></p>
+                            <ul>
+                                <li>Включите "Игровой режим" в настройках консоли</li>
+                                <li>Активируйте ALLM (Auto Low Latency Mode)</li>
+                                <li>Настройте разрешение и частоту в параметрах дисплея</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div>
+                            <p><strong>Nintendo Switch:</strong></p>
+                            <ul>
+                                <li>Включите "Полный диапазон RGB" в настройках</li>
+                                <li>Для лучшего качества используйте режим "Игра на ТВ"</li>
+                                <li>Отрегулируйте размер области отображения</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pro-tips">
+                    <h4>🔹 Профессиональные советы</h4>
+                    <div class="tip-item">
+                        <i class="fas fa-lightbulb" style="color: var(--primary);"></i>
+                        <p>Для PS5/Xbox Series X выбирайте проекторы с поддержкой HDMI 2.1 для 4K 120Hz.</p>
+                    </div>
+                    <div class="tip-item">
+                        <i class="fas fa-lightbulb" style="color: var(--primary);"></i>
+                        <p>При игре в темноте уменьшайте яркость до 50-60% для комфорта глаз.</p>
+                    </div>
+                    <div class="tip-item">
+                        <i class="fas fa-lightbulb" style="color: var(--primary);"></i>
+                        <p>Для Nintendo Switch используйте режим "Игра" на проекторе для уменьшения задержки.</p>
+                    </div>
+                    <div class="tip-item">
+                        <i class="fas fa-lightbulb" style="color: var(--primary);"></i>
+                        <p>Регулярно очищайте фильтры проектора - перегрев увеличивает input lag.</p>
+                    </div>
+                </div>
+
+                <h2>📌 Итог</h2>
+                <p>Для лучшего игрового опыта на проекторе:</p>
+                <ul>
+                    <li>Используйте качественные HDMI кабели (2.1 для PS5/Xbox Series X)</li>
+                    <li>Активируйте игровой режим и отключайте обработку изображения</li>
+                    <li>Настройте HDR в соответствии с возможностями проектора</li>
+                    <li>Оптимизируйте настройки под конкретную консоль</li>
+                    <li>Создайте затемненное игровое пространство</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__col footer__col--logo">
+                    <a href="index.html" class="footer-logo">
+                        <span class="logo__icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 15L7 10H17L12 15Z" fill="currentColor"/>
+                                <path d="M12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3ZM12 19C8.13401 19 5 15.866 5 12C5 8.13401 8.13401 5 12 5C15.866 5 19 8.13401 19 12C19 15.866 15.866 19 12 19Z" fill="currentColor"/>
+                            </svg>
+                        </span>
+                        <span class="logo__text">Repairo</span>
+                    </a>
+                    <p class="footer__text">Помогаем ремонтировать электронику с 2024 года</p>
+                </div>
+                <div class="footer__col">
+                    <h3 class="footer__title">Разделы</h3>
+                    <ul class="footer__links">
+                        <li><a href="index.html" class="footer__link">Главная</a></li>
+                        <li><a href="all-guides.html" class="footer__link">Все гайды</a></li>
+                        <li><a href="contacts.html" class="footer__link">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="footer__col">
+                    <h3 class="footer__title">Категории</h3>
+                    <ul class="footer__links">
+                        <li><a href="../tv.html" class="nav__link">Телевизоры</a></li>
+                        <li><a href="../cameras.html" class="nav__link">Фотоаппараты</a></li>
+                        <li><a href="../projectors.html" class="nav__link">Проекторы</a></li>
+                        <li><a href="../laptops.html" class="nav__link">Ноутбуки</a></li>
+                        <li><a href="../smartphones.html" class="nav__link">Смартфоны</a></li>
+                    </ul>
+                </div>
+                <div class="footer__col">
+                    <h3 class="footer__title">Контакты</h3>
+                    <ul class="footer__links">
+                        <li><a href="https://t.me/repairo_kz" class="footer__link"><i class="fab fa-telegram"></i> Telegram</a></li>
+                        <li><a href="https://instagram.com/repairo_kz" class="footer__link"><i class="fab fa-instagram"></i> Instagram</a></li>
+                        <li><a href="mailto:support@repairo.kz" class="footer__link"><i class="fas fa-envelope"></i> Email</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                    <p class="disclaimer">
+        Администрация сайта не несёт ответственности за возможные повреждения техники
+        и иные последствия, возникшие в результате самостоятельного ремонта по
+        материалам и инструкциям, размещённым на сайте. Все работы вы выполняете
+        на свой страх и риск.
+    </p>
+                <p class="footer__copyright">© 2024 Repairo. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="../script.js"></script>
+</body>
+</html>

@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Как подключить Oculus Rift к Xbox? | Экспертный мегагайд 2025</title>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=106225686', 'ym');
+
+    ym(106225686, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/106225686" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="../styles-header.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    .guide-content { line-height: 1.7; color: var(--text); }
+    .guide-content h2 { color: var(--primary); margin-top: 30px; margin-bottom: 15px; font-size: 1.5rem; }
+    .guide-content h3 { color: var(--primary-dark); margin-top: 25px; margin-bottom: 12px; font-size: 1.2rem; }
+    .guide-image-block { margin: 20px 0; padding: 15px; background: var(--background); border-radius: var(--border-radius); border: 1px solid var(--border); text-align: center; }
+    .guide-image-block img { max-width: 100%; height: auto; border-radius: 6px; border: 1px solid var(--border); }
+    .image-caption { margin-top: 10px; font-size: 0.85rem; color: var(--text-light); font-style: italic; }
+    .pro-tips { background: rgba(3, 74, 79, 0.05); padding: 15px; border-radius: 6px; margin: 20px 0; }
+    .pro-tips h4 { color: var(--primary); margin-top: 0; margin-bottom: 12px; font-size: 1.1rem; }
+    .tip-item { display: flex; gap: 8px; margin-bottom: 8px; align-items: flex-start; }
+    table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+    th, td { border: 1px solid var(--border); padding: 8px; text-align: left; }
+    th { background: var(--background-light); }
+    @media (max-width: 768px) {
+      .guide-content h2 { font-size: 1.4rem; margin-top: 25px; }
+      .guide-image-block { padding: 12px; margin: 15px 0; }
+      table, th, td { font-size: 0.95rem; }
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="header__inner">
+        <a href="../index.html" class="logo">
+          <span class="logo__icon"></span>
+          <span class="logo__text">Repairo</span>
+        </a>
+        <nav class="nav">
+          <ul class="nav__list">
+            <li><a href="../tv.html" class="nav__link">Телевизоры</a></li>
+            <li><a href="../cameras.html" class="nav__link">Фотоаппараты</a></li>
+            <li><a href="../consoles.html" class="nav__link">Приставки</a></li>
+            <li><a href="../laptops.html" class="nav__link">Ноутбуки</a></li>
+            <li><a href="../smartphones.html" class="nav__link">Смартфоны</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <section class="guide-page">
+    <div class="container">
+      <div class="breadcrumbs">
+        <a href="../index.html">Главная</a>
+        <i class="fas fa-chevron-right"></i>
+        <a href="../consoles.html">Приставки</a>
+        <i class="fas fa-chevron-right"></i>
+        <span>Как подключить Oculus Rift к Xbox?</span>
+      </div>
+
+      <h1 class="section__title">Как подключить Oculus Rift к Xbox?</h1>
+
+      <div class="guide-meta">
+        <span><i class="fas fa-hourglass-half"></i> Мегагайд: все способы подключения, нюансы, ограничения, советы, таблицы, FAQ, иллюстрация.</span>
+      </div>
+
+      <div class="guide-image-block">
+        <img src="https://avatars.mds.yandex.net/get-shedevrum/15240847/img_44e54e75387f11f0911cd61d9a4b16fc/orig" alt="Oculus Rift на Xbox">
+        <div class="image-caption">
+          Oculus Rift официально не поддерживается Xbox напрямую, но есть способы запускать Xbox-игры в VR-режиме через ПК. Как это работает, что нужно и какие есть ограничения? Самый подробный разбор — ниже.
+        </div>
+      </div>
+
+      <div class="guide-content">
+
+        <h2>Введение: можно ли подключить Oculus Rift к Xbox напрямую?</h2>
+        <p>
+          Официальной поддержки VR-гарнитур, включая Oculus Rift, на Xbox Series X|S и Xbox One нет. Нельзя просто подключить Rift к консоли и играть в VR-игры. Однако есть обходные способы, позволяющие транслировать изображение с Xbox на Oculus Rift через ПК, создавая эффект огромного виртуального экрана — "VR-кинотеатр", а не полноценное погружение в 3D-мир.
+        </p>
+
+        <h2>Таблица: способы подключения Oculus Rift к Xbox</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Способ</th>
+              <th>Что нужно</th>
+              <th>Результат</th>
+              <th>Ограничения</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Xbox One Streaming App (через ПК)</td>
+              <td>ПК с Windows 10, Oculus Rift, Xbox One/Series, сеть Wi-Fi/LAN</td>
+              <td>Игры Xbox на виртуальном экране в Rift</td>
+              <td>Нет настоящего VR, только "кинотеатр"</td>
+            </tr>
+            <tr>
+              <td>AirServer (Quest/Quest 2)</td>
+              <td>Xbox, AirServer, Oculus Quest</td>
+              <td>Кастинг экрана на VR-шлем</td>
+              <td>Только для Quest, не для Rift</td>
+            </tr>
+            <tr>
+              <td>HDMI-сплиттер + видеозахват</td>
+              <td>Xbox, карта захвата, ПК, Rift</td>
+              <td>Трансляция геймплея на VR через OBS/Virtual Desktop</td>
+              <td>Задержка, сложная настройка</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>Пошаговая инструкция: запуск Xbox-игр на Oculus Rift через ПК</h2>
+        <ol>
+          <li>
+            <b>Убедитесь, что у вас есть:</b> ПК с Windows 10, установленный Oculus Rift, Xbox One или Series X|S, стабильная сеть Wi-Fi или LAN.
+          </li>
+          <li>
+            <b>Скачайте и установите "Xbox One Streaming" из Oculus Store на ПК.</b>
+          </li>
+          <li>
+            <b>Включите Xbox и убедитесь, что консоль и ПК в одной сети.</b>
+          </li>
+          <li>
+            <b>Запустите приложение Xbox Streaming в Oculus Rift.</b>
+          </li>
+          <li>
+            <b>Выберите свою консоль из списка (важно: если несколько Xbox — дайте каждой уникальное имя).</b>
+          </li>
+          <li>
+            <b>После подключения появится виртуальный экран с интерфейсом Xbox.</b>
+          </li>
+          <li>
+            <b>Управляйте играми с помощью геймпада Xbox — Rift выступает как огромный виртуальный телевизор.</b>
+          </li>
+        </ol>
+
+        <h2>Что происходит на самом деле?</h2>
+        <p>
+          Oculus Rift работает как виртуальный монитор: вы видите свою Xbox-игру на большом экране в 3D-театре, но не получаете настоящего VR-эффекта (отслеживания головы, глубины, 6DoF-контроллеров). Это удобно для просмотра игр, фильмов, стримов, но не заменяет нативные VR-проекты.
+        </p>
+
+        <h2>Возможности и ограничения</h2>
+        <ul>
+          <li><b>+ Можно играть в любые Xbox One и Xbox 360 (по обратной совместимости) игры на виртуальном экране Rift.</b></li>
+          <li><b>+ Несколько "виртуальных театров" на выбор — меняется окружение.</b></li>
+          <li><b>– Нет настоящего VR: нельзя "повернуть голову" внутрь мира игры, нет 3D-эффекта.</b></li>
+          <li><b>– Задержка зависит от качества сети — для динамичных шутеров может быть заметна.</b></li>
+          <li><b>– Нет поддержки Xbox Series X|S напрямую — только через стриминг с ПК.</b></li>
+        </ul>
+
+        <h2>Таблица: сравнение VR-режимов для Xbox и ПК</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Платформа</th>
+              <th>Настоящий VR</th>
+              <th>Виртуальный экран</th>
+              <th>Поддержка Xbox-контроллера</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Xbox + Oculus Rift (через стриминг)</td>
+              <td>Нет</td>
+              <td>Да</td>
+              <td>Да</td>
+            </tr>
+            <tr>
+              <td>ПК + Oculus Rift (нативные VR-игры)</td>
+              <td>Да</td>
+              <td>Да</td>
+              <td>Да</td>
+            </tr>
+            <tr>
+              <td>Xbox + Quest (AirServer)</td>
+              <td>Нет</td>
+              <td>Да</td>
+              <td>Да</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>Лайфхаки и советы</h2>
+        <div class="pro-tips">
+          <h4>🔹 Практические советы</h4>
+          <div class="tip-item">
+            <i class="fas fa-lightbulb"></i>
+            <p>Используйте проводное подключение Xbox и ПК к роутеру — это минимизирует задержку и повысит качество стриминга.</p>
+          </div>
+          <div class="tip-item">
+            <i class="fas fa-lightbulb"></i>
+            <p>Для лучшего качества изображения выберите "High" или "Very High" в настройках стриминга Xbox App на ПК.</p>
+          </div>
+          <div class="tip-item">
+            <i class="fas fa-lightbulb"></i>
+            <p>Если хотите больший эффект присутствия — используйте наушники с 3D-звуком, Rift это поддерживает.</p>
+          </div>
+          <div class="tip-item">
+            <i class="fas fa-lightbulb"></i>
+            <p>Для стриминга с Xbox Series X|S используйте приложение Xbox на Windows 10 — принцип тот же, но официальной поддержки VR нет.</p>
+          </div>
+        </div>
+
+        <h2>FAQ — часто задаваемые вопросы</h2>
+        <ul>
+          <li>
+            <strong>Можно ли подключить Oculus Rift к Xbox напрямую?</strong><br>
+            Нет, только через ПК и стриминг — консоль не распознаёт Rift как VR-шлем.
+          </li>
+          <li>
+            <strong>Работает ли это с Xbox Series X|S?</strong><br>
+            Только через стриминг с ПК, как с Xbox One — прямой поддержки нет.
+          </li>
+          <li>
+            <strong>Можно ли играть в VR-игры для ПК на Xbox через Rift?</strong><br>
+            Нет, только в Xbox-игры на виртуальном экране. Для настоящего VR — только ПК.
+          </li>
+          <li>
+            <strong>Есть ли альтернатива для Quest или других VR-шлемов?</strong><br>
+            Для Quest — AirServer, для других шлемов — аналогичные приложения, но принцип тот же: только виртуальный экран.
+          </li>
+        </ul>
+
+        <h2>Пошаговая инструкция: настройка стриминга с Xbox на Oculus Rift (через ПК)</h2>
+        <ol>
+          <li>Подключите Xbox и ПК к одной сети (лучше по кабелю).</li>
+          <li>Установите Xbox App на Windows 10 и войдите в свой аккаунт Xbox Live.</li>
+          <li>На Oculus Rift установите Xbox One Streaming из Oculus Store.</li>
+          <li>Запустите приложение, выберите консоль, начните стриминг.</li>
+          <li>Управляйте геймпадом Xbox — Rift покажет игру на виртуальном экране.</li>
+        </ol>
+
+        <h2>Итог: стоит ли подключать Oculus Rift к Xbox?</h2>
+        <p>
+          Oculus Rift можно использовать с Xbox только как виртуальный экран — для настоящего VR-гейминга нужна поддержка со стороны Microsoft и нативные приложения, которых на Xbox пока нет. Если хочется просто поиграть в Xbox-игры на "огромном экране" в VR-кинотеатре — стриминг через ПК и Oculus Rift вполне рабочий вариант. Для полноценного VR-опыта выбирайте ПК-игры, поддерживающие Rift напрямую.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__col footer__col--logo">
+          <a href="index.html" class="footer-logo">
+            <span class="logo__icon"></span>
+            <span class="logo__text">Repairo</span>
+          </a>
+          <p class="footer__text">Экспертные инструкции по VR и геймингу с 2024 года</p>
+        </div>
+        <div class="footer__col">
+          <h3 class="footer__title">Разделы</h3>
+          <ul class="footer__links">
+            <li><a href="index.html" class="footer__link">Главная</a></li>
+            <li><a href="all-guides.html" class="footer__link">Все гайды</a></li>
+            <li><a href="contacts.html" class="footer__link">Контакты</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h3 class="footer__title">Категории</h3>
+          <ul class="footer__links">
+            <li><a href="../tv.html" class="nav__link">Телевизоры</a></li>
+            <li><a href="../cameras.html" class="nav__link">Фотоаппараты</a></li>
+            <li><a href="../consoles.html" class="nav__link">Приставки</a></li>
+            <li><a href="../laptops.html" class="nav__link">Ноутбуки</a></li>
+            <li><a href="../smartphones.html" class="nav__link">Смартфоны</a></li>
+            <li><a href="../small-appliances.html" class="nav__link">Мелкая техника</a></li>
+            <li><a href="../large-appliances.html" class="nav__link">Бытовая техника</a></li>
+            <li><a href="../auto-electronics.html" class="nav__link">Авто-Электроника</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h3 class="footer__title">Контакты</h3>
+          <ul class="footer__links">
+            <li>
+              <a href="https://t.me/repairo_kz" class="footer__link"><i class="fab fa-telegram"></i> Telegram</a>
+            </li>
+            <li>
+              <a href="https://instagram.com/repairo_kz" class="footer__link"><i class="fab fa-instagram"></i> Instagram</a>
+            </li>
+            <li>
+              <a href="mailto:support@repairo.kz" class="footer__link"><i class="fas fa-envelope"></i> Email</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+            <p class="disclaimer">
+        Администрация сайта не несёт ответственности за возможные повреждения техники
+        и иные последствия, возникшие в результате самостоятельного ремонта по
+        материалам и инструкциям, размещённым на сайте. Все работы вы выполняете
+        на свой страх и риск.
+    </p>
+                <p class="footer__copyright">© 2025 Repairo. Все права защищены.</p>
+      </div>
+    </div>
+  </footer>
+  <script src="../script.js"></script>
+</body>
+</html>

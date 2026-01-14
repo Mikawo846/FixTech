@@ -1,0 +1,30 @@
+name: Remove Reference Numbers
+
+on:
+  workflow_dispatch:
+
+jobs:
+  remove-references:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+        with:
+          ref: main
+
+      - name: Remove reference numbers from all HTML files
+        run: |
+          find guides-auto-electronics guides-cameras guides-consoles guides-large-appliances guides-smartphones gaids -name '*.html' -type f | while read file; do
+            sed -i 's/\[[0-9]\]//g' "$file"
+            echo "Processed: $file"
+          done
+
+      - name: Commit changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add -A
+          git commit -m "find guides-aRemove all reference numbers [1-9] from guides-auto-electronics and guides-cameras filesuto-electronics guides-cameras -name" || echo "No changes to commit"
+          git push
