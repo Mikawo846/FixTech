@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Топ частых ошибок PS5 и быстрые способы их устранения</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Подробный гайд по частым ошибкам PS5: коды CE-100028-1, CE-108255-1, CE-107857-8, проблемы с сетью, БД, Rest Mode и дрифт стиков DualSense — с быстрыми способами решения.">
+    <style>
+        :root {
+            --bg: #050816;
+            --bg-alt: #0b1020;
+            --card: #111827;
+            --accent: #3b82f6;
+            --accent-soft: rgba(59,130,246,0.1);
+            --accent-strong: rgba(59,130,246,0.25);
+            --danger: #f97373;
+            --success: #22c55e;
+            --text-main: #e5e7eb;
+            --text-soft: #9ca3af;
+            --border-soft: #1f2937;
+            --code-bg: #020617;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            background: radial-gradient(circle at top, #111827 0, #020617 55%, #000 100%);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .page {
+            max-width: 1024px;
+            margin: 0 auto;
+            padding: 32px 16px 48px;
+        }
+
+        .hero {
+            display: grid;
+            grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+            gap: 32px;
+            align-items: center;
+            margin-bottom: 40px;
+        }
+
+        .hero-text h1 {
+            font-size: 32px;
+            margin: 0 0 12px;
+        }
+
+        .hero-text h1 strong {
+            color: var(--accent);
+        }
+
+        .hero-text p {
+            margin: 4px 0;
+            color: var(--text-soft);
+        }
+
+        .hero-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 12px;
+        }
+
+        .badge {
+            font-size: 12px;
+            padding: 4px 10px;
+            border-radius: 999px;
+            border: 1px solid var(--border-soft);
+            background: rgba(15,23,42,0.85);
+            color: var(--text-soft);
+            backdrop-filter: blur(6px);
+        }
+
+        .badge--accent {
+            border-color: var(--accent);
+            background: var(--accent-soft);
+            color: #dbeafe;
+        }
+
+        .badge--danger {
+            border-color: var(--danger);
+            background: rgba(248,113,113,0.08);
+            color: #fecaca;
+        }
+
+        .hero-image {
+            border-radius: 18px;
+            overflow: hidden;
+            border: 1px solid var(--border-soft);
+            background: radial-gradient(circle at top, #1f2933 0, #020617 100%);
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero-image img {
+            max-width: 100%;
+            border-radius: 12px;
+            display: block;
+        }
+
+        .hero-note {
+            font-size: 12px;
+            color: var(--text-soft);
+            margin-top: 6px;
+            text-align: center;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: minmax(0, 2.1fr) minmax(0, 1.4fr);
+            gap: 24px;
+        }
+
+        .card {
+            background: radial-gradient(circle at top left, rgba(148,163,184,0.08), transparent 55%);
+            border-radius: 18px;
+            border: 1px solid var(--border-soft);
+            padding: 20px 18px 18px;
+            box-shadow: 0 18px 40px rgba(15,23,42,0.9);
+        }
+
+        .card h2 {
+            font-size: 20px;
+            margin: 0 0 10px;
+        }
+
+        .card h3 {
+            font-size: 16px;
+            margin: 18px 0 6px;
+        }
+
+        .tagline {
+            font-size: 13px;
+            color: var(--text-soft);
+            margin-bottom: 10px;
+        }
+
+        .highlight {
+            border-left: 3px solid var(--accent);
+            padding-left: 10px;
+            margin: 8px 0 14px;
+            font-size: 14px;
+            color: var(--text-soft);
+        }
+
+        .quick-list {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 10px;
+            font-size: 13px;
+            margin: 10px 0 12px;
+        }
+
+        .quick-list ul {
+            margin: 0;
+            padding-left: 18px;
+        }
+
+        .quick-list li {
+            margin-bottom: 4px;
+        }
+
+        .pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 12px;
+            padding: 4px 10px;
+            border-radius: 999px;
+            border: 1px solid rgba(148,163,184,0.4);
+            background: rgba(15,23,42,0.9);
+            margin-right: 6px;
+            margin-bottom: 4px;
+        }
+
+        .pill-bullet {
+            width: 6px;
+            height: 6px;
+            border-radius: 999px;
+            background: var(--accent);
+        }
+
+        .pill-danger .pill-bullet {
+            background: var(--danger);
+        }
+
+        .pill-success .pill-bullet {
+            background: var(--success);
+        }
+
+        .table-wrapper {
+            margin-top: 12px;
+            border-radius: 14px;
+            overflow: hidden;
+            border: 1px solid var(--border-soft);
+            background: rgba(15,23,42,0.95);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 13px;
+        }
+
+        thead {
+            background: linear-gradient(to right, rgba(59,130,246,0.18), rgba(76,29,149,0.3));
+        }
+
+        th, td {
+            padding: 6px 8px;
+            text-align: left;
+            border-bottom: 1px solid #111827;
+        }
+
+        th {
+            font-weight: 600;
+            color: #e5e7eb;
+            white-space: nowrap;
+        }
+
+        tbody tr:nth-child(odd) {
+            background: rgba(15,23,42,0.95);
+        }
+
+        tbody tr:nth-child(even) {
+            background: rgba(12,18,35,0.95);
+        }
+
+        .label {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 2px 8px;
+            border-radius: 999px;
+            font-size: 11px;
+            border: 1px solid rgba(148,163,184,0.6);
+            background: rgba(15,23,42,0.95);
+        }
+
+        .label-dot {
+            width: 7px;
+            height: 7px;
+            border-radius: 999px;
+            background: var(--accent);
+        }
+
+        .label-danger .label-dot {
+            background: var(--danger);
+        }
+
+        .label-soft {
+            opacity: 0.9;
+        }
+
+        .steps {
+            margin: 10px 0 6px;
+            padding-left: 18px;
+            font-size: 13px;
+        }
+
+        .steps li {
+            margin-bottom: 4px;
+        }
+
+        .note {
+            font-size: 12px;
+            color: var(--text-soft);
+            margin-top: 6px;
+        }
+
+        .note strong {
+            color: #facc15;
+        }
+
+        .code {
+            font-family: ui-monospace, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+            background: var(--code-bg);
+            border-radius: 6px;
+            padding: 1px 4px;
+            font-size: 12px;
+        }
+
+        .side-block {
+            font-size: 13px;
+        }
+
+        .badge-block {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-bottom: 10px;
+        }
+
+        .checklist {
+            list-style: none;
+            padding-left: 0;
+            margin: 8px 0 4px;
+        }
+
+        .checklist li {
+            margin-bottom: 5px;
+            display: flex;
+            align-items: flex-start;
+            gap: 6px;
+        }
+
+        .checklist-icon {
+            width: 14px;
+            height: 14px;
+            border-radius: 4px;
+            border: 1px solid rgba(148,163,184,0.6);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 11px;
+            color: var(--accent);
+            flex-shrink: 0;
+        }
+
+        .footer-note {
+            margin-top: 18px;
+            font-size: 12px;
+            color: var(--text-soft);
+            border-top: 1px dashed #1f2937;
+            padding-top: 10px;
+        }
+
+        @media (max-width: 860px) {
+            .hero {
+                grid-template-columns: minmax(0, 1fr);
+            }
+            .grid {
+                grid-template-columns: minmax(0, 1fr);
+            }
+            .hero-image {
+                order: -1;
+            }
+        }
+
+        @media (max-width: 520px) {
+            .page {
+                padding: 20px 12px 32px;
+            }
+            .hero-text h1 {
+                font-size: 26px;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+
+    <section class="hero">
+        <div class="hero-text">
+            <h1><strong>Топ частых ошибок PS5</strong> и быстрые способы их устранения</h1>
+            <p>Практический гайд: что означают типичные коды ошибок PS5 и какие шаги реально помогают, без паники и лишнего сервиса.</p>
+            <p>Подойдёт, если консоль ругается кодами CE‑100028-1, CE‑108255-1, CE‑107857-8, не грузит игры, падает в Safe Mode или перегревается.</p>
+
+            <div class="hero-badges">
+                <span class="badge badge--accent">PS5 • Ошибки и зависания</span>
+                <span class="badge">5–10 минут на быстрый фикс</span>
+                <span class="badge badge--danger">Безопасные шаги перед сервисом</span>
+            </div>
+        </div>
+
+        <div>
+            <div class="hero-image">
+                <img src="https://i.postimg.cc/vHPJVFF0/resize-m-mfit-w-450-h-450.png" alt="PS5: частые ошибки и способы их устранения">
+            </div>
+            <div class="hero-note">Иллюстрация для гайда. Можно заменить на локальный файл с тем же разрешением.</div>
+        </div>
+    </section>
+
+    <section class="grid">
+        <!-- ЛЕВАЯ КОЛОНКА: основные ошибки и быстрые решения -->
+        <article class="card">
+            <h2>Частые ошибки PS5 и что они значат</h2>
+            <p class="tagline">Фокус не на всех возможных кодах, а на самых раздражающих, с которыми сталкивается большинство владельцев PS5.</p>
+            <p class="highlight">Логика гайда: сначала быстрые и безопасные действия, только потом — тяжёлая артиллерия вроде сброса консоли.</p>
+
+            <div class="quick-list">
+                <div>
+                    <strong>Что разберём:</strong>
+                    <ul>
+                        <li>Недостаточно места на SSD (CE‑100028-1).</li>
+                        <li>Краш игр и ошибка CE‑108255-1.</li>
+                        <li>CE‑107857-8 и проблемы с сетью / PSN.</li>
+                        <li>«Database is corrupted», Safe Mode‑зацикливание.</li>
+                        <li>Rest Mode ломает сессию и включает консоль самопроизвольно.</li>
+                        <li>Дрифт стиков DualSense.</li>
+                    </ul>
+                </div>
+                <div>
+                    <strong>Быстрая навигация:</strong>
+                    <div class="pill"><span class="pill-bullet"></span>Простые шаги → сложные</div>
+                    <div class="pill pill-success"><span class="pill-bullet"></span>Сначала безопасные методы</div>
+                    <div class="pill pill-danger"><span class="pill-bullet"></span>Сброс системы — в самом конце</div>
+                </div>
+            </div>
+
+            <!-- Ошибка 1 -->
+            <h3>1. CE‑100028-1: не хватает места на SSD</h3>
+            <p class="tagline">Ошибка появляется, когда на внутреннем SSD физически нет достаточно свободного пространства для установки или обновления игры.</p>
+
+            <ul class="steps">
+                <li>Откройте <span class="code">Настройки → Хранилище → Память консоли</span> и посмотрите, сколько осталось свободного места.</li>
+                <li>Удалите неиспользуемые игры или клипы: выделите контент → <span class="code">Удалить</span>.</li>
+                <li>Если есть внешний SSD/NVMe, перенесите туда менее критичные проекты.</li>
+            </ul>
+            <p class="note"><strong>Совет:</strong> всегда держите 10–15 % SSD свободными — это снижает шанс ошибок при обновлениях и ускоряет работу системы.</p>
+
+            <!-- Ошибка 2 -->
+            <h3>2. CE‑108255-1: «в приложении произошла ошибка»</h3>
+            <p class="tagline">Одна из самых неприятных ошибок: игра вылетает на рабочий стол или крашится при запуске.</p>
+
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                    <tr>
+                        <th>Симптом</th>
+                        <th>Что проверить сначала</th>
+                        <th>Следующий шаг</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>Вылет только в одной игре</td>
+                        <td>Обновить игру и прошивку PS5.</td>
+                        <td>Удалить и переустановить игру.</td>
+                    </tr>
+                    <tr>
+                        <td>Крашатся разные игры</td>
+                        <td>Проверить обновления системы и базу данных.</td>
+                        <td>Rebuild Database через Safe Mode.</td>
+                    </tr>
+                    <tr>
+                        <td>После обновления прошивки</td>
+                        <td>Полное выключение и холодный старт.</td>
+                        <td>Обновление/переустановка системного ПО с флешки.</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <ul class="steps">
+                <li>Сделайте перезапуск консоли: полное выключение, подождать 1–2 минуты, затем включить.</li>
+                <li>Обновите системное ПО: <span class="code">Настройки → Система → Системное ПО → Обновление</span>.</li>
+                <li>Обновите саму игру, проверьте целостность установки (удалить и скачать заново при необходимости).</li>
+                <li>Если краши массовые — войдите в Safe Mode и выполните <span class="code">Rebuild Database</span>.</li>
+            </ul>
+            <p class="note"><strong>Важно:</strong> полный сброс PS5 стоит делать только после резервного копирования сохранений на USB или в PS Plus облако.</p>
+
+            <!-- Ошибка 3 -->
+            <h3>3. CE‑107857-8: «что-то пошло не так» (часто сеть/лицензии)</h3>
+            <p class="tagline">Код часто связан с временными сбоями PSN, нестабильным интернетом или проблемами с лицензиями на игры.</p>
+
+            <ul class="steps">
+                <li>Перезагрузите PS5 и роутер: отключите питание на 3–5 минут, затем включите заново.</li>
+                <li>Проверьте соединение: <span class="code">Настройки → Сеть → Проверить подключение к Интернету</span>.</li>
+                <li>Очистите кэш и перезапустите систему через Safe Mode: <span class="code">Clear Cache and Rebuild Database → Clear System Software Cache</span>.</li>
+                <li>Если игры «не видят» лицензии — восстановите их: <span class="code">Настройки → Пользователи и аккаунты → Другое → Восстановить лицензии</span>.</li>
+            </ul>
+            <p class="note"><strong>Проверка PSN:</strong> если проблема массовая, статус серверов PlayStation стоит посмотреть на официальной странице перед сложной диагностикой.</p>
+
+            <!-- Ошибка 4 -->
+            <h3>4. «Database is corrupted» и вечный Safe Mode</h3>
+            <p class="tagline">Сообщение о повреждённой базе данных, цикличный переход в Safe Mode или длинная проверка диска при каждом запуске.</p>
+
+            <ul class="steps">
+                <li>Выключите консоль полностью, затем удерживайте кнопку питания до двух звуковых сигналов, чтобы зайти в Safe Mode.</li>
+                <li>Подключите контроллер по USB и выберите <span class="code">Очистить кэш и восстановить БД</span> или <span class="code">Clear Cache and Rebuild Database</span>.</li>
+                <li>Сначала очистите кэш, затем выполните <span class="code">Rebuild Database</span> и дождитесь окончания операции.</li>
+            </ul>
+            <p class="note"><strong>Если не помогло:</strong> может потребоваться переустановка системного ПО с USB‑носителя или обращение в сервис — особенно при подозрении на проблемы с SSD.</p>
+
+            <!-- Ошибка 5 -->
+            <h3>5. Rest Mode вызывает зависания и самопроизвольные включения</h3>
+            <p class="tagline">Режим покоя на PS5 иногда провоцирует зависания, ошибки при выходе из сна и неожиданные включения консоли.</p>
+
+            <ul class="steps">
+                <li>Отключите Rest Mode: <span class="code">Настройки → Система → Энергосбережение → Функции в режиме покоя</span> и выставьте минимальный набор опций.</li>
+                <li>Во вкладке времени до перевода в сон выставьте «Не переводить» или увеличьте таймаут.</li>
+                <li>Для теста полностью выключайте приставку после сессий, чтобы отследить, связано ли поведение именно с Rest Mode.</li>
+            </ul>
+            <p class="note"><strong>Патчи прошивки:</strong> после крупных обновлений ПО Sony часто улучшает поведение Rest Mode, поэтому следите за актуальностью системы.</p>
+
+            <!-- Ошибка 6 -->
+            <h3>6. Дрифт стиков DualSense</h3>
+            <p class="tagline">Персонаж или камера медленно двигаются сами по себе, даже если не трогать стики — типичный stick drift.</p>
+
+            <ul class="steps">
+                <li>Обновите прошивку контроллера через PS5: подключите его по кабелю и выполните обновление при запросе системы.</li>
+                <li>Очистите область вокруг стика: спиртовая салфетка по кругу в основании, при возможности — лёгкая продувка сжатым воздухом.</li>
+                <li>Сделайте аппаратный ресет DualSense: тонкой шпилькой нажмите кнопку в маленьком отверстии на задней части геймпада на 3–5 секунд, затем переподключите.</li>
+            </ul>
+            <p class="note"><strong>Гарантия:</strong> при сильном дрейфе и отсутствии эффекта от чистки есть смысл обратиться по гарантии — это известная аппаратная проблема.</p>
+        </article>
+
+        <!-- ПРАВАЯ КОЛОНКА: универсальный чек-лист и когда идти в сервис -->
+        <aside class="card side-block">
+            <h2>Универсальный чек‑лист перед паникой</h2>
+            <p class="tagline">Минимальный набор действий, который стоит сделать почти при любой ошибке PS5, прежде чем думать о ремонте.</p>
+
+            <div class="badge-block">
+                <span class="label"><span class="label-dot"></span>2–5 минут на проверку</span>
+                <span class="label label-soft"><span class="label-dot"></span>Подходит для большинства ошибок</span>
+            </div>
+
+            <ul class="checklist">
+                <li>
+                    <span class="checklist-icon">1</span>
+                    <span><strong>Полное выключение вместо Rest Mode.</strong> Выключите PS5, подождите пару минут, затем включите заново — это убирает временные глюки кэша и памяти.</span>
+                </li>
+                <li>
+                    <span class="checklist-icon">2</span>
+                    <span><strong>Проверка обновлений.</strong> Обновите системное ПО и проблемные игры до последних версий — многие коды ошибок устраняются патчами.</span>
+                </li>
+                <li>
+                    <span class="checklist-icon">3</span>
+                    <span><strong>Свободное место на SSD.</strong> Удалите пару больших игр или клипов, чтобы освободить десятки гигабайт и исключить CE‑100028-1.</span>
+                </li>
+                <li>
+                    <span class="checklist-icon">4</span>
+                    <span><strong>Rebuild Database.</strong> Раз в несколько месяцев полезно пересобрать базу данных через Safe Mode, особенно если заметны микрофризы и долгие загрузки.</span>
+                </li>
+                <li>
+                    <span class="checklist-icon">5</span>
+                    <span><strong>Проветривание и чистота.</strong> Убедитесь, что консоль стоит свободно, без плотных ниш, и что отверстия вентиляции не забиты пылью.</span>
+                </li>
+                <li>
+                    <span class="checklist-icon">6</span>
+                    <span><strong>Состояние сети.</strong> При сетевых ошибках проверьте кабель/wi‑fi, перезагрузите роутер и сравните поведение других устройств в той же сети.</span>
+                </li>
+            </ul>
+
+            <h3>Когда пора думать о сервисе</h3>
+            <p class="tagline">Есть ряд признаков, при которых лучше не затягивать с обращением к специалистам.</p>
+
+            <ul class="checklist">
+                <li>
+                    <span class="checklist-icon">!</span>
+                    <span>Консоль сильно греется и регулярно выключается с ошибками перегрева, даже при умеренной нагрузке.</span>
+                </li>
+                <li>
+                    <span class="checklist-icon">!</span>
+                    <span>Rebuild Database, переустановка игр и чистая прошивка не помогают: ошибки и вылеты продолжаются в разных проектах.</span>
+                </li>
+                <li>
+                    <span class="checklist-icon">!</span>
+                    <span>Налицо артефакты изображения, проблемы с портами HDMI или постоянные звуки механического треска.</span>
+                </li>
+            </ul>
+
+            <p class="note"><strong>Главное правило:</strong> если ошибки повторяются изо дня в день, не игнорируйте их — чем раньше будет сделана диагностика, тем меньше шанс потери данных и полного выхода консоли из строя.</p>
+
+            <div class="footer-note">
+                Этот мини‑гайд можно использовать как основу для лендинга, статьи или PDF‑инструкции по диагностике PS5, дополнив его своими кейсами и скриншотами экранов ошибок.
+            </div>
+        </aside>
+    </section>
+</div>
+</body>
+</html>
