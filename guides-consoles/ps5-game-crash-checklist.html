@@ -1,758 +1,665 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" data-theme="light">
 <head>
-    <meta charset="UTF-8">
-    <title>Проблемы с вылетами и зависаниями игр на PS5: пошаговый чек‑лист диагностики</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Подробный чек-лист диагностики вылетов и зависаний игр на PS5: ошибки CE-108255-1, фризы, зависания, перегрев, проблемы с диском и сохранениями. Пошаговый план от простого к сложному.">
-    <style>
-        :root {
-            --bg: #020617;
-            --bg-alt: #050816;
-            --card: #0b1220;
-            --accent: #3b82f6;
-            --accent-soft: rgba(59,130,246,0.09);
-            --accent-strong: rgba(59,130,246,0.22);
-            --danger: #f97373;
-            --success: #22c55e;
-            --warn: #facc15;
-            --text-main: #e5e7eb;
-            --text-soft: #9ca3af;
-            --border-soft: #111827;
-            --code-bg: #020617;
-        }
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YE88Y994NX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-YE88Y994NX');
+  </script>
 
-        * {
-            box-sizing: border-box;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Проблемы с вылетами и зависаниями игр на PS5: пошаговый чек‑лист диагностики | Экспертный мегагайд</title>
+  <meta name="description" content="Подробный чек‑лист диагностики вылетов и зависаний игр на PS5: причины, коды ошибок, перегрев, повреждённые данные, проблемы с диском и сетью, пошаговые сценарии проверки, таблицы, советы и FAQ.">
 
-        body {
-            margin: 0;
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-            background:
-                radial-gradient(circle at top, #111827 0, #020617 55%, #000 100%);
-            color: var(--text-main);
-            line-height: 1.6;
-        }
+  <!-- Yandex.Metrika counter -->
+  <script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+      m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+      m[i].l=1*new Date();
+      for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+      k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=106225686', 'ym');
 
-        a {
-            color: var(--accent);
-            text-decoration: none;
-        }
+    ym(106225686, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", accurateTrackBounce:true, trackLinks:true});
+  </script>
+  <noscript>
+    <div>
+      <img src="https://mc.yandex.ru/watch/106225686" style="position:absolute; left:-9999px;" alt="Проблемы с вылетами и зависаниями игр на PS5: пошаговый чек‑лист диагностики - пошаговая инструкция по ремонту">
+    </div>
+  </noscript>
+  <!-- /Yandex.Metrika counter -->
 
-        a:hover {
-            text-decoration: underline;
-        }
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="../styles-header.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
-        .page {
-            max-width: 1120px;
-            margin: 0 auto;
-            padding: 32px 16px 48px;
-        }
+  <style>
+    .guide-content { line-height: 1.7; color: var(--text); }
+    .guide-content h2 { color: var(--primary); margin-top: 30px; margin-bottom: 15px; font-size: 1.5rem; }
+    .guide-content h3 { color: var(--primary-dark); margin-top: 25px; margin-bottom: 12px; font-size: 1.2rem; }
+    .guide-image-block { margin: 20px 0; padding: 15px; background: var(--background); border-radius: var(--border-radius); border: 1px solid var(--border); text-align: center; }
+    .guide-image-block img { max-width: 100%; height: auto; border-radius: 6px; border: 1px solid var(--border); }
+    .image-caption { margin-top: 10px; font-size: 0.85rem; color: var(--text-light); font-style: italic; }
+    .pro-tips { background: rgba(3, 74, 79, 0.05); padding: 15px; border-radius: 6px; margin: 20px 0; }
+    .pro-tips h4 { color: var(--primary); margin-top: 0; margin-bottom: 12px; font-size: 1.1rem; }
+    .tip-item { display: flex; gap: 8px; margin-bottom: 8px; align-items: flex-start; }
+    .tip-item i { margin-top: 3px; color: var(--primary); }
+    .warning-block {
+      background: #fff3e0;
+      border-left: 5px solid #ff9100;
+      padding: 15px 18px;
+      margin: 22px 0;
+      border-radius: 7px;
+    }
+    table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+    th, td { border: 1px solid var(--border); padding: 8px; text-align: left; vertical-align: top; }
+    th { background: var(--background-light); }
+    .code-like { font-family: "SF Mono", "Consolas", "Menlo", monospace; background: var(--background-light); padding: 2px 4px; border-radius: 4px; }
+    .step-badge {
+      display: inline-block;
+      background: var(--primary);
+      color: #fff;
+      font-size: 0.8rem;
+      padding: 2px 8px;
+      border-radius: 999px;
+      margin-right: 6px;
+    }
+    .faq-item { margin-bottom: 16px; }
+    .faq-item strong { display: block; margin-bottom: 4px; }
+    .scenario-block {
+      background: var(--background-light);
+      border-radius: 8px;
+      padding: 14px 16px;
+      margin-bottom: 16px;
+      border: 1px solid var(--border);
+    }
+    .scenario-title {
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+    @media (max-width: 768px) {
+      .guide-content h2 { font-size: 1.4rem; margin-top: 25px; }
+      .guide-image-block { padding: 12px; margin: 15px 0; }
+      table, th, td { font-size: 0.95rem; }
+    }
+  </style>
 
-        .hero {
-            display: grid;
-            grid-template-columns: minmax(0, 3fr) minmax(0, 2.1fr);
-            gap: 32px;
-            align-items: center;
-            margin-bottom: 40px;
-        }
-
-        .hero-text h1 {
-            font-size: 32px;
-            margin: 0 0 12px;
-        }
-
-        .hero-text h1 strong {
-            color: var(--accent);
-        }
-
-        .hero-text p {
-            margin: 4px 0;
-            color: var(--text-soft);
-        }
-
-        .hero-badges {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            margin-top: 12px;
-        }
-
-        .badge {
-            font-size: 12px;
-            padding: 4px 10px;
-            border-radius: 999px;
-            border: 1px solid var(--border-soft);
-            background: rgba(15,23,42,0.9);
-            color: var(--text-soft);
-            backdrop-filter: blur(6px);
-        }
-
-        .badge--accent {
-            border-color: var(--accent);
-            background: var(--accent-soft);
-            color: #dbeafe;
-        }
-
-        .badge--danger {
-            border-color: var(--danger);
-            background: rgba(248,113,113,0.09);
-            color: #fecaca;
-        }
-
-        .badge--success {
-            border-color: var(--success);
-            background: rgba(34,197,94,0.1);
-            color: #bbf7d0;
-        }
-
-        .hero-image {
-            border-radius: 18px;
-            overflow: hidden;
-            border: 1px solid var(--border-soft);
-            background: radial-gradient(circle at top, #1f2937 0, #020617 100%);
-            padding: 10px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .hero-image img {
-            max-width: 100%;
-            border-radius: 12px;
-            display: block;
-        }
-
-        .hero-note {
-            font-size: 12px;
-            color: var(--text-soft);
-            margin-top: 6px;
-            text-align: center;
-        }
-
-        .grid {
-            display: grid;
-            grid-template-columns: minmax(0, 2.3fr) minmax(0, 1.5fr);
-            gap: 24px;
-        }
-
-        .card {
-            background:
-                radial-gradient(circle at top left, rgba(148,163,184,0.08), transparent 55%);
-            border-radius: 18px;
-            border: 1px solid var(--border-soft);
-            padding: 20px 18px 18px;
-            box-shadow: 0 18px 40px rgba(15,23,42,0.9);
-        }
-
-        .card h2 {
-            font-size: 20px;
-            margin: 0 0 10px;
-        }
-
-        .card h3 {
-            font-size: 16px;
-            margin: 18px 0 6px;
-        }
-
-        .tagline {
-            font-size: 13px;
-            color: var(--text-soft);
-            margin-bottom: 10px;
-        }
-
-        .highlight {
-            border-left: 3px solid var(--accent);
-            padding-left: 10px;
-            margin: 8px 0 14px;
-            font-size: 14px;
-            color: var(--text-soft);
-        }
-
-        .section-intro {
-            font-size: 14px;
-            color: var(--text-soft);
-            margin: 4px 0 10px;
-        }
-
-        .quick-list {
-            display: grid;
-            grid-template-columns: 1.2fr 1fr;
-            gap: 10px;
-            font-size: 13px;
-            margin: 10px 0 12px;
-        }
-
-        .quick-list ul {
-            margin: 0;
-            padding-left: 18px;
-        }
-
-        .quick-list li {
-            margin-bottom: 4px;
-        }
-
-        .pill {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            font-size: 12px;
-            padding: 4px 10px;
-            border-radius: 999px;
-            border: 1px solid rgba(148,163,184,0.45);
-            background: rgba(15,23,42,0.9);
-            margin-right: 6px;
-            margin-bottom: 4px;
-        }
-
-        .pill-bullet {
-            width: 6px;
-            height: 6px;
-            border-radius: 999px;
-            background: var(--accent);
-        }
-
-        .pill-danger .pill-bullet {
-            background: var(--danger);
-        }
-
-        .pill-success .pill-bullet {
-            background: var(--success);
-        }
-
-        .pill-warn .pill-bullet {
-            background: var(--warn);
-        }
-
-        .table-wrapper {
-            margin-top: 12px;
-            border-radius: 14px;
-            overflow: hidden;
-            border: 1px solid var(--border-soft);
-            background: rgba(15,23,42,0.96);
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            font-size: 13px;
-        }
-
-        thead {
-            background: linear-gradient(to right, rgba(59,130,246,0.2), rgba(76,29,149,0.34));
-        }
-
-        th, td {
-            padding: 6px 8px;
-            text-align: left;
-            border-bottom: 1px solid #111827;
-        }
-
-        th {
-            font-weight: 600;
-            color: #e5e7eb;
-            white-space: nowrap;
-        }
-
-        tbody tr:nth-child(odd) {
-            background: rgba(15,23,42,0.96);
-        }
-
-        tbody tr:nth-child(even) {
-            background: rgba(10,16,32,0.96);
-        }
-
-        .steps {
-            margin: 10px 0 6px;
-            padding-left: 18px;
-            font-size: 13px;
-        }
-
-        .steps li {
-            margin-bottom: 5px;
-        }
-
-        .note {
-            font-size: 12px;
-            color: var(--text-soft);
-            margin-top: 6px;
-        }
-
-        .note strong {
-            color: var(--warn);
-        }
-
-        .code {
-            font-family: ui-monospace, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-            background: var(--code-bg);
-            border-radius: 6px;
-            padding: 1px 4px;
-            font-size: 12px;
-        }
-
-        .badge-block {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 6px;
-            margin-bottom: 10px;
-        }
-
-        .label {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            padding: 2px 8px;
-            border-radius: 999px;
-            font-size: 11px;
-            border: 1px solid rgba(148,163,184,0.6);
-            background: rgba(15,23,42,0.96);
-        }
-
-        .label-dot {
-            width: 7px;
-            height: 7px;
-            border-radius: 999px;
-            background: var(--accent);
-        }
-
-        .label-soft {
-            opacity: 0.92;
-        }
-
-        .checklist {
-            list-style: none;
-            padding-left: 0;
-            margin: 8px 0 4px;
-            font-size: 13px;
-        }
-
-        .checklist li {
-            margin-bottom: 6px;
-            display: flex;
-            align-items: flex-start;
-            gap: 6px;
-        }
-
-        .checklist-icon {
-            width: 15px;
-            height: 15px;
-            border-radius: 4px;
-            border: 1px solid rgba(148,163,184,0.6);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 11px;
-            color: var(--accent);
-            flex-shrink: 0;
-        }
-
-        .checklist-icon--danger {
-            color: var(--danger);
-            border-color: rgba(248,113,113,0.8);
-        }
-
-        .side-section {
-            font-size: 13px;
-        }
-
-        .side-section h3 {
-            margin-top: 14px;
-        }
-
-        .stat {
-            display: flex;
-            justify-content: space-between;
-            font-size: 12px;
-            margin: 2px 0;
-            color: var(--text-soft);
-        }
-
-        .stat span:first-child {
-            opacity: 0.9;
-        }
-
-        .footer-note {
-            margin-top: 18px;
-            font-size: 12px;
-            color: var(--text-soft);
-            border-top: 1px dashed #1f2937;
-            padding-top: 10px;
-        }
-
-        .divider {
-            margin: 16px 0 10px;
-            border-top: 1px dashed #1e293b;
-        }
-
-        @media (max-width: 920px) {
-            .hero {
-                grid-template-columns: minmax(0, 1fr);
-            }
-            .grid {
-                grid-template-columns: minmax(0, 1fr);
-            }
-            .hero-image {
-                order: -1;
-            }
-        }
-
-        @media (max-width: 560px) {
-            .page {
-                padding: 20px 12px 32px;
-            }
-            .hero-text h1 {
-                font-size: 26px;
-            }
-            .quick-list {
-                grid-template-columns: minmax(0, 1fr);
-            }
-        }
-    </style>
+  <script async src="https://timeweb.cloud/api/v1/cloud-ai/agents/3cc03620-d051-4d8d-b5af-f7b6cd083a35/embed.js?collapsed=true"></script>
 </head>
 <body>
-<div class="page">
+  <header class="header">
+    <div class="container">
+      <div class="header__inner">
+        <a href="../index.html" class="logo">
+          <span class="logo__icon"></span>
+          <span class="logo__text">Repairo</span>
+        </a>
+        <nav class="nav">
+          <ul class="nav__list">
+            <li><a href="../tv.html" class="nav__link">Телевизоры</a></li>
+            <li><a href="../cameras.html" class="nav__link">Фотоаппараты</a></li>
+            <li><a href="../consoles.html" class="nav__link">Приставки</a></li>
+            <li><a href="../laptops.html" class="nav__link">Ноутбуки</a></li>
+            <li><a href="../smartphones.html" class="nav__link">Смартфоны</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
 
-    <!-- HERO -->
-    <section class="hero">
-        <div class="hero-text">
-            <h1><strong>Проблемы с вылетами и зависаниями игр на PS5</strong>: пошаговый чек‑лист диагностики</h1>
-            <p>Этот гайд собран как практический чек‑лист: его можно просто открывать, когда игра на PS5 вылетает, зависает или выдаёт ошибки вроде CE‑108255-1, и идти по пунктам сверху вниз.</p>
-            <p>Материал подойдёт для цифровых и дисковых версий игр, как для PS5‑версий, так и для игр с PS4, запущенных через обратную совместимость.</p>
+  <section class="guide-page">
+    <div class="container">
+      <div class="breadcrumbs">
+        <a href="../index.html">Главная</a>
+        <i class="fas fa-chevron-right"></i>
+        <a href="../consoles.html">Приставки</a>
+        <i class="fas fa-chevron-right"></i>
+        <span>Проблемы с вылетами и зависаниями игр на PS5: пошаговый чек‑лист диагностики</span>
+      </div>
 
-            <div class="hero-badges">
-                <span class="badge badge--accent">PS5 • Вылеты • Фризы • Ошибки</span>
-                <span class="badge badge--success">Чек‑лист от простого к сложному</span>
-                <span class="badge badge--danger">Безопасные шаги перед сбросом и сервисом</span>
-            </div>
+      <h1 class="section__title">Проблемы с вылетами и зависаниями игр на PS5: пошаговый чек‑лист диагностики</h1>
+
+      <div class="guide-meta">
+        <span>
+          <i class="fas fa-gamepad"></i>
+          Детальный чек‑лист по устранению вылетов и зависаний игр на PlayStation 5: признаки, коды ошибок, перегрев, повреждённые данные, проблемы с диском, сетью и прошивкой. Пошаговые сценарии, таблицы, лайфхаки и ответы на частые вопросы.
+        </span>
+      </div>
+
+      <div class="guide-image-block">
+        <img src="https://i.postimg.cc/7hjSFZJj/resize-m-mfit-w-450-h-450.png" alt="Проблемы с вылетами и зависаниями игр на PS5: пошаговый чек‑лист диагностики">
+        <div class="image-caption">
+          Типичные сценарии: игра зависает на загрузочном экране, вылетает на рабочий стол, появляется ошибка или консоль уходит в перезагрузку прямо в разгар онлайн‑матча.
+        </div>
+      </div>
+
+      <div class="guide-content">
+
+        <h2 id="step-1">Введение: как понять, что именно ломает игру</h2>
+        <p>
+          Вылеты и зависания игр на PS5 — одна из самых раздражающих категорий проблем: всё вроде работает, но в самый важный момент игра закрывается, картинка замирает или приставка перезагружается. Ключевая сложность здесь в том, что виновником может быть практически любой элемент цепочки: сама игра, внутренняя прошивка PS5, внутренний или внешний накопитель, перегрев, сеть или даже подключённые аксессуары.
+        </p>
+        <p>
+          Правильный подход — не хаотично переустанавливать всё подряд, а идти по чёткому чек‑листу диагностики: от простых программных причин к более сложным аппаратным. Такой подход экономит время, помогает не усугубить ситуацию и чётко зафиксировать момент, когда домашние методы себя исчерпали и нужно думать о сервисе. Этот гид построен именно как пошаговый сценарный справочник для реальных случаев из практики.
+        </p>
+
+        <h2 id="step-2">Типы вылетов и зависаний: с чего начать</h2>
+        <p>
+          Перед началом диагностики полезно классифицировать проблему: как именно ведёт себя PS5 и в какой момент возникают вылеты. Это позволяет сразу отсечь часть гипотез и понять, в какой блок чек‑листа идти: игру, систему, диск, охлаждение или сеть. Ниже приведена таблица с базовыми сценариями и вероятными направлениями поиска.
+        </p>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Симптом</th>
+              <th>Когда происходит</th>
+              <th>Вероятная зона проблемы</th>
+              <th>С чего начать диагностику</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Игра вылетает на главные плитки PS5</td>
+              <td>Через 1–5 минут после запуска конкретного тайтла</td>
+              <td>Повреждённые данные игры, баг патча, конфликты сохранений</td>
+              <td>Обновить игру и систему, переустановить игру, проверить сохранения</td>
+            </tr>
+            <tr>
+              <td>Игра зависает, но PS5 откликается</td>
+              <td>В определённых местах сюжета или у конкретных игроков</td>
+              <td>Скриптовый баг игры, повреждённый локальный кэш</td>
+              <td>Очистить кэш через перезагрузку, переустановить игру, проверить патчи</td>
+            </tr>
+            <tr>
+              <td>Полный фриз, помогает только удержание питания</td>
+              <td>В любых играх, иногда даже в меню</td>
+              <td>Глубокие системные ошибки, перегрев, проблемы с SSD</td>
+              <td>Проверить охлаждение, выполнить восстановление базы данных, инициализацию</td>
+            </tr>
+            <tr>
+              <td>PS5 выключается или перезагружается</td>
+              <td>В тяжёлых сценах, под высокой нагрузкой</td>
+              <td>Перегрев, блок питания, нагрузка на графику</td>
+              <td>Проверить вентиляцию, режимы графики, грязь и температуру</td>
+            </tr>
+            <tr>
+              <td>Вылет только в онлайновых режимах</td>
+              <td>В матчах, рейдах, сессиях кооператива</td>
+              <td>Сетевые проблемы, нестабильный интернет, NAT и DNS</td>
+              <td>Проверить сеть, перейти на кабель, протестировать NAT и задержку</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2 id="step-3">Шаг 1: фиксируем симптомы и контекст</h2>
+        <p>
+          Первый шаг чек‑листа — не трогать настройки, а зафиксировать, когда именно вылетает игра, какие сообщения появляются на экране и какие проекты это затрагивает. Важно понять, затрагивает ли проблема один конкретный тайтл или несколько, показываются ли коды ошибок, сопровождается ли вылет изменением звука, появлением артефактов или перезагрузкой консоли.
+        </p>
+        <p>
+          Чем точнее описан сценарий, тем проще последующие шаги: например, если зависания происходят только после 30–40 минут игры и сопровождаются раскручиванием вентилятора, логично сначала подозревать перегрев. Если же вылет происходит сразу после запуска и без нагрева, приоритет у повреждённых данных и багов патча, а не у системы охлаждения.
+        </p>
+
+        <h3>Мини‑чек‑лист фиксации проблемы</h3>
+        <ul>
+          <li>Запишите, какие именно игры вылетают: только одна или несколько, в том числе из разных студий и жанров.</li>
+          <li>Отметьте время до вылета: сразу при запуске, через 5–10 минут или после часа игры под высокой нагрузкой.</li>
+          <li>Посмотрите, появляется ли код ошибки, и зафиксируйте его, либо сделайте фото экрана.</li>
+          <li>Обратите внимание, шумит ли PS5 сильнее обычного, нагревается ли корпус, не появляются ли артефакты в картинке.</li>
+          <li>Проверьте, вылетает ли консоль в офлайн‑режиме или только в онлайне, с подключением к сети и без него.</li>
+        </ul>
+
+        <h2 id="step-4">Шаг 2: быстрое программное ТО — перезагрузка, обновления, кэш</h2>
+        <p>
+          Второй этап — базовое программное обслуживание, которое решает значительную часть случайных вылетов и зависаний. Цель — очистить кэш, обновить системное ПО и наслаивающиеся патчи, убедиться, что игра и прошивка находятся в актуальном состоянии. Эти действия почти не несут риска для данных и должны выполняться всегда перед радикальными шагами.
+        </p>
+        <p>
+          Логика проста: PS5, как и любой компьютер, со временем накапливает временные файлы и сессии, которые при долгой работе без перезагрузки могут мешать стабильности. Обновления игр и системы часто содержат исправления именно таких вылетов, но их установка иногда откладывается, если владелец игнорирует уведомления или держит консоль только в режиме отдыха.
+        </p>
+
+        <h3>Базовые шаги программного обслуживания</h3>
+        <ol>
+          <li>
+            <span class="step-badge">Шаг 2.1</span>
+            <b>Полностью выключите PS5</b> через меню питания, дождитесь отключения индикатора и подождите 1–2 минуты.  
+            Затем включите консоль и проверьте, повторяется ли вылет при первом запуске игры после чистого старта.
+          </li>
+          <li>
+            <span class="step-badge">Шаг 2.2</span>
+            <b>Обновите системное ПО</b> в разделе настроек системы, если доступна новая версия.  
+            Обновления нередко содержат фиксы специфических багов с конкретными играми или типами накопителей.
+          </li>
+          <li>
+            <span class="step-badge">Шаг 2.3</span>
+            <b>Обновите проблемную игру</b> до последнего патча через меню «Параметры → Проверить наличие обновлений».  
+            Многие вылеты исправляются разработчиками через несколько дней или недель после релиза.
+          </li>
+          <li>
+            <span class="step-badge">Шаг 2.4</span>
+            <b>Очистите кэш</b> через полное выключение, а не режим отдыха, а также загрузку в безопасном режиме с последующей обычной перезагрузкой.  
+            Это убирает часть временных данных, которые не очищаются в спящем режиме.
+          </li>
+        </ol>
+
+        <h2 id="step-5">Шаг 3: проверка конкретной игры — данные установки и сохранения</h2>
+        <p>
+          Если вылеты привязаны к одному конкретному тайтлу, а другие игры работают без нареканий, логично подозревать повреждённые данные установки, сохранения или точечные баги. Особенно это актуально для проектов, которые долго обновлялись поверх старых версий, пережили перенос с PS4 или внешнего диска, а также для игр с обширными сохранениями и модульным контентом.
+        </p>
+        <p>
+          Важно деликатно работать с сохранениями, особенно если они хранят десятки часов прогресса. Иногда проблема решается их временным переносом или использованием облачного бэкапа, чтобы проверить запуск игры на «чистом» профиле. В крайнем случае можно полностью переустановить игру, удалив все её данные с диска и скачав заново.
+        </p>
+
+        <h3>Чек‑лист по проверке конкретной игры</h3>
+        <ol>
+          <li>
+            <span class="step-badge">Шаг 3.1</span>
+            <b>Переустановите игру</b>, если проблема воспроизводится только в ней.  
+            Удалите приложение и связанные данные (кроме сохранений, если боитесь потерять прогресс), затем заново скачайте игру из библиотеки.
+          </li>
+          <li>
+            <span class="step-badge">Шаг 3.2</span>
+            <b>Протестируйте запуск на другом профиле</b> той же консоли.  
+            Если на новом профиле игра идёт стабильно, высока вероятность, что проблема в конкретном наборе сохранений или пользовательских настроек.
+          </li>
+          <li>
+            <span class="step-badge">Шаг 3.3</span>
+            <b>Создайте резерв сохранений</b> на USB или в облаке при наличии подписки, затем временно удалите локальные сейвы и попробуйте запустить игру с нуля.  
+            Это поможет понять, связаны ли вылеты с конкретным прогрессом.
+          </li>
+          <li>
+            <span class="step-badge">Шаг 3.4</span>
+            <b>Проверьте, где установлена игра</b>: на внутреннем SSD или внешнем накопителе.  
+            Для теста перенесите игру на внутренний диск и проверьте стабильность работы в таком варианте.
+          </li>
+        </ol>
+
+        <h2 id="step-6">Шаг 4: перегрев и система охлаждения</h2>
+        <p>
+          Перегрев — одна из частых физических причин вылетов и зависаний под нагрузкой. Если PS5 стоит в закрытом шкафу, вплотную к стенам или рядом с источником тепла, вентилятор вынужден постоянно работать на повышенных оборотах, а компоненты прогреваются до предела. При достижении критической температуры система может как показать предупреждение, так и просто выключиться или зависнуть без подсказок.
+        </p>
+        <p>
+          Важно отличать однократное срабатывание защиты в жаркий день от систематического перегрева, который говорит о проблемах с вентиляцией или накопившейся пыли. В последнем случае стоит не ограничиваться косметическими мерами, а всерьёз подумать о чистке системы охлаждения и изменении места установки консоли, иначе ресурс компонентов будет снижаться с каждой такой сессией.
+        </p>
+
+        <h3>Признаки перегрева и что делать</h3>
+        <ul>
+          <li>Вентилятор работает громче обычного, обороты резко растут в тяжёлых сценах, корпус заметно нагревается в области выдува воздуха.</li>
+          <li>Игра вылетает или PS5 отключается именно после длительной нагрузки, в простых приложениях проблема не воспроизводится.</li>
+          <li>Приставка стоит в закрытой нише, на ковре, рядом с батареей или другой техникой, которая дополнительно греет воздух.</li>
+          <li>Решение: переставьте PS5 в хорошо проветриваемое место, обеспечьте зазор со всех сторон, удалите пыль вокруг вентиляционных отверстий.</li>
+          <li>Если перегрев повторяется даже после изменения условий, рассмотрите профессиональную чистку и диагностику охлаждения в сервисе.</li>
+        </ul>
+
+        <h2 id="step-7">Шаг 5: внутренний SSD и внешние накопители</h2>
+        <p>
+          Логические ошибки файловой системы и проблемы с накопителями могут приводить к зависаниям при загрузке уровней, долгим паузам при обращении к данным и вылетам в моменты интенсивного чтения. Особенно это заметно в проектах с открытым миром, где игра постоянно подгружает новые ресурсы, и любая задержка чтения может привести к нестабильному поведению.
+        </p>
+        <p>
+          Для PS5 критично качество как внутреннего SSD, так и внешних дисков, если игры частично или полностью установлены на них. Некачественный кабель, изношенный внешний HDD, проблемы с питанием USB‑портов или некорректное отключение накопителя в режиме работы способны со временем повредить данные и спровоцировать вылеты. Поэтому диагностика дисков — важный пункт чек‑листа.
+        </p>
+
+        <h3>Проверка и обслуживание накопителей</h3>
+        <ol>
+          <li>
+            <span class="step-badge">Шаг 5.1</span>
+            <b>Запустите восстановление базы данных</b> через безопасный режим PS5.  
+            Консоль пересоберёт структуру файловой системы, что иногда устраняет вылеты, связанные с логическими ошибками.
+          </li>
+          <li>
+            <span class="step-badge">Шаг 5.2</span>
+            <b>Проверьте внешний диск</b>: отключите его по правилам, затем временно запустите игру только с внутреннего SSD.  
+            Если вылеты исчезают, проблема может быть в внешнем накопителе или его кабеле.
+          </li>
+          <li>
+            <span class="step-badge">Шаг 5.3</span>
+            <b>Не допускайте полного заполнения SSD</b>.  
+            Оставляйте запас свободного пространства для кэша, обновлений и временных файлов игр, это снижает риск фризов при подгрузке.
+          </li>
+          <li>
+            <span class="step-badge">Шаг 5.4</span>
+            <b>При повторяющихся ошибках чтения</b> и постоянных вылетах в разных играх рассмотрите инициализацию системы с полным форматированием.  
+            Перед этим обязательно сделайте резерв важных данных.
+          </li>
+        </ol>
+
+        <h2 id="step-8">Шаг 6: сеть и онлайн‑режимы как источник вылетов</h2>
+        <p>
+          Вылеты в онлайновых режимах иногда принимают за сбои самой игры или консоли, хотя на самом деле причина в нестабильной сети: разрывы соединения, строгий NAT, высокие задержки и потери пакетов. При этом офлайн‑часы игры могут проходить идеально, а проблемы возникают только в матчах, рейдах или кооперативных сессиях. Это важный маркер, что нужно потестировать именно сетевую часть.
+        </p>
+        <p>
+          Для диагностики полезно отключить сетевые функции, запустить игру в одиночном режиме и проверить, повторяется ли проблема. Если зависания пропадают, фокус смещается на настройки роутера, тип подключения (Wi‑Fi или кабель), статус PSN и серверов игры. В некоторых случаях достаточно перейти на кабель, чтобы полностью избавиться от вылетов в онлайне.
+        </p>
+
+        <h3>Мини‑чек‑лист по онлайновым вылетам</h3>
+        <ul>
+          <li>Сравните поведение игры в офлайн‑режимах и в онлайне: если вылеты только в сети, в первую очередь проверяйте соединение.</li>
+          <li>Подключите PS5 к роутеру по кабелю и повторите тест в онлайне, чтобы исключить влияние слабого Wi‑Fi и помех.</li>
+          <li>Выполните тест соединения, обратите внимание на тип NAT и скорость, а также стабильность подключения к PSN.</li>
+          <li>Проверьте статус серверов игры и PSN, чтобы убедиться, что проблема не носит массовый характер.</li>
+          <li>При регулярных разрывах обратитесь к провайдеру с описанием симптомов, времени сбоев и названиями игр, где проблема проявляется сильнее всего.</li>
+        </ul>
+
+        <h2 id="step-9">Шаг 7: сценарный чек‑лист для разных случаев</h2>
+        <p>
+          Ниже собраны готовые сценарии, которые можно использовать как «быстрый маршрут» в зависимости от того, как именно ведёт себя PS5. Каждый сценарий — это сокращённая версия полного чек‑листа, ориентированная на конкретный тип вылетов или зависаний.
+        </p>
+
+        <div class="scenario-block">
+          <div class="scenario-title">Сценарий A: вылетает только одна игра</div>
+          <ul>
+            <li>Обновите игру и систему, перезагрузите PS5.</li>
+            <li>Переустановите игру, не трогая сохранения, затем протестируйте на своём профиле.</li>
+            <li>Создайте новый профиль и попробуйте запустить игру там.</li>
+            <li>Сделайте резерв сохранений, временно удалите их и проверьте запуск с нуля.</li>
+            <li>Если вылеты продолжаются только в этой игре, следите за патчами и обращайтесь к поддержке разработчика.</li>
+          </ul>
         </div>
 
-        <div>
-            <div class="hero-image">
-                <img src="https://i.postimg.cc/7hjSFZJj/resize-m-mfit-w-450-h-450.png" alt="Проблемы с вылетами и зависаниями игр на PS5: пошаговый чек-лист диагностики">
-            </div>
-            <div class="hero-note">Иллюстрация для лендинга. При желании можно заменить на локальный файл с тем же разрешением.</div>
+        <div class="scenario-block">
+          <div class="scenario-title">Сценарий B: вылетают несколько игр, но консоль не выключается</div>
+          <ul>
+            <li>Обновите все проблемные игры и системное ПО PS5.</li>
+            <li>Запустите восстановление базы данных в безопасном режиме.</li>
+            <li>Проверьте место на диске, удалите несколько крупных игр, оставив запас.</li>
+            <li>Перенесите хотя бы одну игру с внешнего диска на внутренний и сравните поведение.</li>
+            <li>При сохранении проблемы рассмотрите инициализацию консоли с резервом данных.</li>
+          </ul>
         </div>
-    </section>
 
-    <section class="grid">
-        <!-- ОСНОВНОЙ КОНТЕНТ -->
-        <article class="card">
-            <h2>С чего начать: логика чек‑листа</h2>
-            <p class="tagline">Игры на PS5 могут вылетать по множеству причин: от обычного бага в конкретном патче до перегрева, битых сохранений и проблем с внутренним SSD. Здесь всё упорядочено так, чтобы сначала отсеять быстрые и безопасные варианты.</p>
-            <p class="highlight">Принцип простой: сначала проверяем очевидное (обновления и базовые вещи), затем кеш и базу данных, после этого — файлы игры и сохранения, только в самом конце — сброс консоли и диагностика возможного железного дефекта.</p>
+        <div class="scenario-block">
+          <div class="scenario-title">Сценарий C: PS5 выключается/перезагружается при игре</div>
+          <ul>
+            <li>Проверьте условия установки и вентиляции, переставьте консоль в открытое пространство.</li>
+            <li>Снизьте графические настройки там, где это возможно (режимы приоритета производительности).</li>
+            <li>Оцените частоту сбоев: только в тяжёлых сценах или вообще при любой нагрузке.</li>
+            <li>Если выключения сопровождаются предупреждениями о перегреве, откладывать чистку и диагностику охлаждения не стоит.</li>
+            <li>При повторяющихся перезагрузках даже в меню — прямая дорога в сервисный центр.</li>
+          </ul>
+        </div>
 
-            <div class="quick-list">
-                <div>
-                    <strong>Что разберём:</strong>
-                    <ul>
-                        <li>Как понять, это проблема игры, системы или железа.</li>
-                        <li>Быстрые действия, которые стоит делать всегда.</li>
-                        <li>Ошибки вида CE‑108255-1 и похожие симптомы.</li>
-                        <li>Роль обновлений, кеша и базы данных.</li>
-                        <li>Перегрев и проблемы с размещением консоли.</li>
-                        <li>Когда без резервного копирования и сброса уже не обойтись.</li>
-                    </ul>
-                </div>
-                <div>
-                    <strong>Навигация по сложности:</strong>
-                    <div class="pill pill-success"><span class="pill-bullet"></span>Блок 1–3: быстрые и безопасные шаги</div>
-                    <div class="pill"><span class="pill-bullet"></span>Блок 4–6: работа с файлами и системой</div>
-                    <div class="pill pill-danger"><span class="pill-bullet"></span>Блок 7–8: жёсткие меры и сервис</div>
-                </div>
-            </div>
+        <div class="scenario-block">
+          <div class="scenario-title">Сценарий D: вылеты только в онлайновых матчах</div>
+          <ul>
+            <li>Проверьте стабильность игры в офлайне на том же тайтле.</li>
+            <li>Переходите на кабельное подключение и тестируйте несколько боёв.</li>
+            <li>Убедитесь, что в сети нет тяжёлых параллельных загрузок или стриминга.</li>
+            <li>Проверьте NAT и статус серверов игры.</li>
+            <li>Если проблема массовая для региона, лучше дождаться стабилизации серверов.</li>
+          </ul>
+        </div>
 
-            <!-- Блок 1 -->
-            <h3>1. Зафиксировать симптомы и контекст</h3>
-            <p class="section-intro">Перед тем как что‑то чинить, важно записать, как именно ведёт себя игра. Это поможет понять, к какой группе причин относить проблему и не тратить время на лишние шаги.</p>
+        <h2 id="step-10">Сводная таблица: когда можно чинить самому, а когда нужен сервис</h2>
+        <p>
+          Важно вовремя остановиться, чтобы не усугубить аппаратные проблемы бесконечными экспериментами. Таблица ниже помогает быстро понять, где ещё есть смысл продолжать самостоятельную диагностику, а где рациональнее сразу обратиться к специалистам.
+        </p>
 
-            <ul class="steps">
-                <li>Определите, когда именно происходит вылет или зависание: при запуске, в меню, в конкретной локации, через 5–10 минут игры или совершенно случайно.</li>
-                <li>Посмотрите, появляется ли конкретный код ошибки (например, CE‑108255-1) или просто сообщение о том, что приложение было закрыто.</li>
-                <li>Проверьте, падает ли только одна игра или несколько разных проектов, включая другие жанры и издателей.</li>
-                <li>Отметьте, были ли недавние обновления: вы ставили свежий патч игры, обновляли прошивку PS5 или меняли диск/SSD.</li>
-                <li>Обратите внимание на звук вентилятора и температуру корпуса PS5: не становится ли она заметно горячее обычного.</li>
-            </ul>
-            <p class="note"><strong>Зачем это нужно:</strong> если вылеты только в одной игре и только после последнего патча, это один сценарий. Если вылетает всё подряд и консоль греется — это уже похоже на системную или аппаратную проблему.</p>
+        <table>
+          <thead>
+            <tr>
+              <th>Симптом</th>
+              <th>Допустима самостоятельная диагностика</th>
+              <th>Лучше идти в сервис</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Вылет только одной игры</td>
+              <td>Да, переустановка, обновления, работа с сохранениями, ожидание патчей.</td>
+              <td>Если вылеты сохраняются после полной переустановки и на других консолях.</td>
+            </tr>
+            <tr>
+              <td>Вылетают несколько игр, но система работает</td>
+              <td>Да, восстановление базы данных, проверка дисков, инициализация.</td>
+              <td>Если после инициализации вылеты продолжаются и появляются новые ошибки.</td>
+            </tr>
+            <tr>
+              <td>Консоль выключается от перегрева</td>
+              <td>Базовая чистка, смена места установки, снижение нагрузки.</td>
+              <td>Повторяющиеся отключения при нормальной вентиляции, подозрение на проблемы охлаждения.</td>
+            </tr>
+            <tr>
+              <td>Фризы и вылеты даже в меню</td>
+              <td>Краткие попытки с инициализацией и проверкой хранилища.</td>
+              <td>Постоянные зависания после сброса, странные звуки, артефакты изображения.</td>
+            </tr>
+            <tr>
+              <td>Вылеты только в онлайне</td>
+              <td>Настройка сети, проверка провайдера, переход на кабель.</td>
+              <td>Нет смысла в сервисе, если консоль стабильна офлайн и проблема именно в сети или серверах игры.</td>
+            </tr>
+          </tbody>
+        </table>
 
-            <!-- Блок 2 -->
-            <h3>2. Быстрые шаги «первой помощи»</h3>
-            <p class="section-intro">Этот блок нужен, чтобы убрать временные глюки без копания в настройках. Его имеет смысл выполнять почти всегда, как только появляются вылеты или фризы.</p>
+        <h2 id="step-11">Лайфхаки по профилактике вылетов и зависаний</h2>
+        <div class="pro-tips">
+          <h4>Практические советы для стабильной игры</h4>
+          <div class="tip-item">
+            <i class="fas fa-lightbulb"></i>
+            <p>Регулярно перезагружайте PS5 полностью, а не держите её неделями только в режиме отдыха — это снижает накопление временных сбоев и кэша.</p>
+          </div>
+          <div class="tip-item">
+            <i class="fas fa-lightbulb"></i>
+            <p>Старайтесь не забивать внутренний SSD до крайности, оставляя запас свободного места под обновления и работу игр с данными.</p>
+          </div>
+          <div class="tip-item">
+            <i class="fas fa-lightbulb"></i>
+            <p>Игры, в которые играете чаще всего, держите на внутреннем SSD, а не на внешнем HDD, чтобы минимизировать задержки и риск ошибок чтения.</p>
+          </div>
+          <div class="tip-item">
+            <i class="fas fa-lightbulb"></i>
+            <p>Не игнорируйте ранние признаки перегрева и необычного шума: чем раньше отреагировать, тем меньше шанс получить серьёзный ремонт в будущем.</p>
+          </div>
+          <div class="tip-item">
+            <i class="fas fa-lightbulb"></i>
+            <p>Перед крупными апдейтами игр и системы по возможности создавайте резерв важных сохранений, чтобы не потерять прогресс при редких, но возможных сбоях обновления.</p>
+          </div>
+        </div>
 
-            <ul class="steps">
-                <li>Полностью закройте игру через меню PS5, а затем запустите её заново. Простая перезагрузка клиента часто снимает единичный глюк.</li>
-                <li>Если игра недавно скачивалась или обновлялась, убедитесь, что загрузка действительно завершилась, и на фоне не идёт установка ресурсов.</li>
-                <li>Перезагрузите PS5: выберите полное выключение, а не режим покоя, подождите минуту и включите консоль снова.</li>
-                <li>Отсоедините шнур питания PS5 от розетки на пару минут. Это помогает глубже очистить временный кеш и снять небольшие программные зависания.</li>
-                <li>Запустите любую другую игру и поиграйте 5–10 минут. Если вторая игра ведёт себя идеально, вероятнее всего, проблема в конкретном проекте, а не в системе.</li>
-            </ul>
-            <p class="note"><strong>Нюанс:</strong> если одна и та же игра стабильно падает в одном и том же месте, быстрая перезагрузка редко помогает надолго, но она всё равно нужна как стартовый шаг.</p>
+        <h2 id="step-12">FAQ — частые вопросы о вылетах и зависаниях на PS5</h2>
+        <div class="faq-item">
+          <strong>Поможет ли всегда сброс к заводским настройкам при вылетах?</strong>
+          <p>
+            Сброс — мощный, но крайний инструмент: он устраняет большинство программных причин, но не влияет на перегрев, физические проблемы накопителей или дефекты комплектующих. Использовать его стоит только после того, как более мягкие меры не дали результата, и обязательно с резервным копированием данных.
+          </p>
+        </div>
+        <div class="faq-item">
+          <strong>Можно ли продолжать играть, если вылеты случаются редко и только в одной игре?</strong>
+          <p>
+            Если вылеты редкие, не сопровождаются странными звуками, перегревом или системными ошибками, серьёзного риска для железа обычно нет. Тем не менее лучше по возможности обновить игру, следить за патчами и иметь резерв сохранений, чтобы не потерять прогресс после очередного сбоя.
+          </p>
+        </div>
+        <div class="faq-item">
+          <strong>Стоит ли сразу разбирать и чистить PS5 при первых зависаниях?</strong>
+          <p>
+            Нет, начинать стоит с проверки условий установки, обновлений и программных инструментов вроде восстановления базы данных. Глубокая разборка без опыта может привести к повреждению компонентов или потере гарантии, поэтому она оправдана только при явных признаках перегрева и после консультации со специалистами.
+          </p>
+        </div>
+        <div class="faq-item">
+          <strong>Могут ли вылеты быть связаны с сетевыми кабелями, HDMI или периферией?</strong>
+          <p>
+            Да, иногда нестабильные или повреждённые кабели, геймпады, внешние устройства и даже док‑станции вызывают кратковременные обрывы питания или сигнала, что приводит к зависаниям. При диагностике полезно временно отключить всё лишнее и проверить поведение PS5 в минимальной конфигурации.
+          </p>
+        </div>
+        <div class="faq-item">
+          <strong>Есть ли смысл ждать патчей или лучше сразу нести консоль в сервис?</strong>
+          <p>
+            Если проблема явно привязана к конкретной игре и воспроизводится у многих игроков, логично подождать обновлений от разработчика. Если же вылеты многократные, связаны с разными тайтлами и сопровождаются системными сбоями, ждать патчей бессмысленно — это повод сфокусироваться на самой консоли и, при необходимости, сервисной диагностике.
+          </p>
+        </div>
 
-            <!-- Блок 3 -->
-            <h3>3. Проверка обновлений игры и системы</h3>
-            <p class="section-intro">Большое количество вылетов связано с багами в конкретной версии игры или несовместимостью с текущей прошивкой консоли. Поэтому следующий логичный шаг — убедиться, что всё обновлено.</p>
+        <h2 id="step-13">Краткий чек‑лист для быстрого доступа</h2>
+        <p>
+          В завершение — короткий список действий, который можно использовать как «первая помощь» при любых вылетах и зависаниях. Он не заменяет полный гид, но помогает быстро пройти базовые шаги перед углублённой диагностикой.
+        </p>
+        <ul>
+          <li>Перезагрузить PS5 полностью и обновить системное ПО.</li>
+          <li>Обновить проблемную игру, при необходимости переустановить её и проверить на другом профиле.</li>
+          <li>Проверить условия вентиляции и температуру консоли, при необходимости переставить её в более прохладное место.</li>
+          <li>Запустить восстановление базы данных в безопасном режиме, оценить поведение игр после процедуры.</li>
+          <li>Сделать резерв важных данных и, если проблема сохраняется с разными играми, рассмотреть инициализацию или поход в сервис.</li>
+        </ul>
 
-            <ul class="steps">
-                <li>На главном экране PS5 выделите игру, которая вылетает, нажмите кнопку опций на геймпаде и выберите пункт проверки обновлений. Установите доступные патчи.</li>
-                <li>Зайдите в настройки PS5, затем в раздел системного ПО и выполните проверку на наличие обновлений системы. При необходимости установите свежую прошивку.</li>
-                <li>После обновлений перезагрузите консоль, прежде чем снова запускать игру, чтобы корректно применить изменения.</li>
-                <li>Если известен крупный проблемный патч, имеет смысл посмотреть, не выпустил ли разработчик уже хотфикс. Иногда между патчем, ломающим игру, и фиксирующим патчем проходит всего несколько дней.</li>
-            </ul>
-            <p class="note"><strong>Смысл шага:</strong> разработчики регулярно чинят вылеты и фризы в обновлениях. Часто достаточно просто догнать игру и систему до актуальной версии, чтобы избавиться от части проблем.</p>
+        <div class="warning-block">
+          <strong>Напоминание!</strong> Любые радикальные действия с разборкой, заменой накопителей, вмешательством в систему охлаждения или прошивку консоли вы выполняете на свой страх и риск. При серьёзных симптомах — повторяющихся перезагрузках, чёрном экране, необычных звуках и сильном перегреве — безопаснее остановиться на базовом чек‑листе и передать PS5 в руки квалифицированных специалистов.
+        </div>
 
-            <!-- Блок 4 -->
-            <h3>4. Работа с кешем и базой данных PS5</h3>
-            <p class="section-intro">Даже если игры и система обновлены, вылеты могут возникать из‑за битых временных данных или фрагментированной базы данных, через которую PS5 управляет файлами и библиотекой.</p>
+      </div>
+    </div>
+  </section>
 
-            <div class="table-wrapper">
-                <table>
-                    <thead>
-                    <tr>
-                        <th>Инструмент</th>
-                        <th>Что делает</th>
-                        <th>Когда использовать</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td>Очистка кеша</td>
-                        <td>Удаляет временные файлы системы, не затрагивая сохранения и игры</td>
-                        <td>После частых зависаний и странного поведения меню</td>
-                    </tr>
-                    <tr>
-                        <td>Rebuild Database</td>
-                        <td>Перестраивает базу данных PS5, упорядочивая структуру файлов и записей</td>
-                        <td>При вылетах сразу после запуска, долгих загрузках и ощущении «тормозов» интерфейса</td>
-                    </tr>
-                    <tr>
-                        <td>Комбинация кеш + база</td>
-                        <td>Устраняет накопившиеся ошибки индексации и старые системные хвосты</td>
-                        <td>После крупных обновлений, переезда данных или множества установок и удалений игр</td>
-                    </tr>
-                    </tbody>
-                </table>
-            </div>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__col footer__col--logo">
+          <a href="index.html" class="footer-logo">
+            <span class="logo__icon"></span>
+            <span class="logo__text">Repairo</span>
+          </a>
+          <p class="footer__text">Экспертные инструкции по технике с 2024 года</p>
+        </div>
+        <div class="footer__col">
+          <h3 class="footer__title">Разделы</h3>
+          <ul class="footer__links">
+            <li><a href="index.html" class="footer__link">Главная</a></li>
+            <li><a href="all-guides.html" class="footer__link">Все гайды</a></li>
+            <li><a href="contacts.html" class="footer__link">Контакты</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h3 class="footer__title">Категории</h3>
+          <ul class="footer__links">
+            <li><a href="../tv.html" class="nav__link">Телевизоры</a></li>
+            <li><a href="../cameras.html" class="nav__link">Фотоаппараты</a></li>
+            <li><a href="../consoles.html" class="nav__link">Приставки</a></li>
+            <li><a href="../laptops.html" class="nav__link">Ноутбуки</a></li>
+            <li><a href="../smartphones.html" class="nav__link">Смартфоны</a></li>
+            <li><a href="../small-appliances.html" class="nav__link">Мелкая техника</a></li>
+            <li><a href="../large-appliances.html" class="nav__link">Бытовая техника</a></li>
+            <li><a href="../auto-electronics.html" class="nav__link">Авто-Электроника</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h3 class="footer__title">Контакты</h3>
+          <ul class="footer__links">
+            <li>
+              <a href="https://t.me/repairo_kz" class="footer__link"><i class="fab fa-telegram"></i> Telegram</a>
+            </li>
+            <li>
+              <a href="https://instagram.com/repairo_kz" class="footer__link"><i class="fab fa-instagram"></i> Instagram</a>
+            </li>
+            <li>
+              <a href="mailto:support@repairo.kz" class="footer__link"><i class="fas fa-envelope"></i> Email</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="disclaimer">
+          Администрация сайта не несёт ответственности за возможные повреждения техники
+          и иные последствия, возникшие в результате самостоятельного ремонта по
+          материалам и инструкциям, размещённым на сайте. Все работы вы выполняете
+          на свой страх и риск.
+        </p>
+        <p class="footer__copyright">© 2025 Repairo. Все права защищены.</p>
+      </div>
+    </div>
+  </footer>
 
-            <p class="section-intro"><strong>Базовый алгоритм через безопасный режим:</strong></p>
-            <ul class="steps">
-                <li>Полностью выключите PS5, дождитесь, пока индикатор погаснет, и подождите несколько секунд.</li>
-                <li>Нажмите и удерживайте кнопку питания на консоли до второго звукового сигнала. Таким образом PS5 загрузится в безопасном режиме.</li>
-                <li>Подключите контроллер по USB и нажмите кнопку PS, чтобы управлять меню безопасного режима.</li>
-                <li>Сначала выберите вариант очистки кеша системного ПО, чтобы удалить временные файлы, влияющие на поведение игр и интерфейса.</li>
-                <li>Затем запустите перестроение базы данных. Консоль просканирует внутренний диск и переорганизует структуру данных, что часто убирает вылеты, связанные с повреждённой индексацией.</li>
-            </ul>
-            <p class="note"><strong>Важно:</strong> эти операции не должны удалять ваши игры и сохранения, но перед любым вмешательством на уровне системы полезно иметь резервную копию важных сейвов.</p>
+  <script src="../script.js"></script>
 
-            <!-- Блок 5 -->
-            <h3>5. Проверка самих файлов игры и сохранений</h3>
-            <p class="section-intro">Вылеты могут быть связаны не с консолью, а с конкретной установкой игры или её сохранениями. Особенно часто это проявляется, когда падает только один проект, а остальные игры работают идеально.</p>
-
-            <p class="section-intro"><strong>Работа с файлами игры:</strong></p>
-            <ul class="steps">
-                <li>Если вылеты начались сразу после установки или обновления игры, удалите её и установите заново. Это помогает при частично загруженных или повреждённых файлах.</li>
-                <li>Для дисковых игр обязательно проверьте диск: аккуратно протрите его мягкой тканью от центра к краям и убедитесь, что нет серьёзных царапин.</li>
-                <li>При возможности установите игру на другой накопитель (если добавлен дополнительный SSD), чтобы исключить локальную проблему с конкретным участком памяти.</li>
-            </ul>
-
-            <p class="section-intro"><strong>Работа с сохранениями:</strong></p>
-            <ul class="steps">
-                <li>Иногда краш происходит при загрузке конкретного сохранения. Попробуйте создать новую игру или загрузить более ранний сейв, если он доступен.</li>
-                <li>Резервно скопируйте важные сохранения в облако или на USB‑накопитель через меню управления данными сохранений.</li>
-                <li>Если есть подозрение, что сейв повреждён, протестируйте игру с полностью новым профилем или сейвом, чтобы понять, меняется ли поведение.</li>
-            </ul>
-            <p class="note"><strong>Особенность:</strong> повреждённые сохранения часто проявляются как вылет именно в момент загрузки мира или конкретной локации, тогда как сама игра запускается без проблем.</p>
-
-            <!-- Блок 6 -->
-            <h3>6. Перегрев, вентиляция и режимы производительности</h3>
-            <p class="section-intro">PS5 оснащена мощным железом, которое при нагрузке сильно нагревается. Если консоль не может нормально отводить тепло, она может снижать производительность, зависать или аварийно закрывать игры.</p>
-
-            <p class="section-intro"><strong>Что проверить по части охлаждения:</strong></p>
-            <ul class="steps">
-                <li>Оцените, где стоит PS5: есть ли по бокам и сзади свободное пространство для выхода горячего воздуха, не зажата ли она в плотной нише или шкафу.</li>
-                <li>Убедитесь, что вентиляционные отверстия не закрыты другими устройствами, тканями или стенами. Даже несколько сантиметров зазора могут влиять на эффективность охлаждения.</li>
-                <li>Проверьте, не забились ли решётки пылью. При необходимости аккуратно очистите их от видимых загрязнений, не разбирая консоль.</li>
-                <li>Следите за интенсивностью работы вентилятора: если он постоянно работает на максимальных оборотах при средней нагрузке, это повод дополнительно задуматься о температурном режиме.</li>
-            </ul>
-
-            <p class="section-intro"><strong>Режимы производительности и разрешения:</strong></p>
-            <ul class="steps">
-                <li>В настройках игры или в системных пресетах попробуйте переключить проект в режим производительности вместо приоритета качества или разрешения. Меньшая нагрузка на GPU и CPU иногда снижает вероятность перегрева и вылетов.</li>
-                <li>Если ваш телевизор или монитор поддерживает высокие разрешения и частоты, можно временно уменьшить их, чтобы снизить нагрузку и проверить влияние на стабильность.</li>
-            </ul>
-            <p class="note"><strong>Ключевой момент:</strong> консоль не должна обжигать руку при лёгком касании и не должна находиться в закрытом шкафу без вентиляции, если вы планируете длительные игровые сессии.</p>
-
-            <!-- Блок 7 -->
-            <h3>7. Ошибка CE‑108255-1 и похожие системные сбои</h3>
-            <p class="section-intro">Код CE‑108255-1 часто сопровождает вылеты с сообщением «в приложении произошла ошибка». Он может быть связан и с конкретной игрой, и с общими проблемами системы.</p>
-
-            <div class="table-wrapper">
-                <table>
-                    <thead>
-                    <tr>
-                        <th>Сценарий</th>
-                        <th>Как проявляется</th>
-                        <th>Что делать в первую очередь</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td>Ошибка только в одной игре</td>
-                        <td>Краш на запуске или в одних и тех же сценах</td>
-                        <td>Переустановка игры, проверка обновлений, работа с сохранениями</td>
-                    </tr>
-                    <tr>
-                        <td>Ошибка в нескольких играх</td>
-                        <td>Случайные вылеты в разных проектах</td>
-                        <td>Очистка кеша, перестроение базы данных, тест SSD</td>
-                    </tr>
-                    <tr>
-                        <td>Ошибка после обновления системы</td>
-                        <td>Проблемы начали проявляться сразу после новой прошивки</td>
-                        <td>Перезагрузка, повторная проверка обновлений и работа через безопасный режим</td>
-                    </tr>
-                    <tr>
-                        <td>Ошибка вне игр</td>
-                        <td>Вылеты приложений и нестабильная работа интерфейса</td>
-                        <td>Более глубокая диагностика, резервное копирование и подготовка к сбросу</td>
-                    </tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <p class="section-intro"><strong>Усиленный набор действий для таких ошибок:</strong></p>
-            <ul class="steps">
-                <li>Сначала повторите базовые шаги: обновление игры и системы, перезапуск консоли, проверка сети и освобождение места на SSD.</li>
-                <li>Если ошибка проявляется в разных играх, обязательно пройдите процедуру очистки кеша и перестроения базы данных в безопасном режиме.</li>
-                <li>Переустановите одну из проблемных игр и протестируйте её после fresh‑установки. Если она всё равно падает вместе с другими проектами, это указывает на более общий сбой.</li>
-                <li>Проверьте, сколько свободного места осталось на внутреннем SSD. Старайтесь держать запас свободного пространства, а не забивать диск под завязку.</li>
-            </ul>
-            <p class="note"><strong>Если CE‑108255-1 появляется повсеместно:</strong> при большом количестве разных игр это уже сигнал задуматься о резервном копировании данных и подготовке к более радикальным мерам.</p>
-
-            <!-- Блок 8 -->
-            <h3>8. Резервное копирование, сброс и возможные проблемы железа</h3>
-            <p class="section-intro">Когда все мягкие методы исчерпаны, а вылеты и зависания продолжают преследовать любые игры, стоит перейти к более серьёзным шагам. Здесь особенно важно не потерять данные.</p>
-
-            <p class="section-intro"><strong>Резервное копирование перед любыми глобальными действиями:</strong></p>
-            <ul class="steps">
-                <li>Сделайте копию важных сохранений на USB‑накопитель или в облако, если используется подписка с облачными сейвами.</li>
-                <li>Если на консоли есть уникальные скриншоты и клипы, заранее перенесите их на внешний носитель.</li>
-                <li>Продумайте, какие игры необходимо будет скачать заново после сброса, и убедитесь, что интернет‑канал и место на диске это позволят.</li>
-            </ul>
-
-            <p class="section-intro"><strong>Сброс ПО как крайняя мера:</strong></p>
-            <ul class="steps">
-                <li>Через меню системы можно выполнить сброс настроек с сохранением или удалением пользовательских данных. В контексте постоянных вылетов обычно рассматривается полный сброс.</li>
-                <li>Альтернативный путь — использовать безопасный режим, где есть пункт полного сброса системы с переустановкой системного ПО.</li>
-                <li>После сброса протестируйте консоль на чистой системе с одной‑двумя играми, чтобы понять, устранена ли проблема.</li>
-            </ul>
-
-            <p class="section-intro"><strong>Когда подозревать аппаратный дефект:</strong></p>
-            <ul class="steps">
-                <li>Если после полного сброса, свежей установки игр и аккуратного обращения консоль продолжает вылетать и зависать в разных проектах, стоит задуматься о возможной проблеме с внутренним SSD или другим компонентом.</li>
-                <li>Дополнительный тревожный признак — внезапное выключение консоли под нагрузкой или заметные артефакты на экране перед вылетом.</li>
-                <li>В такой ситуации разумно обратиться в официальную поддержку или сервисный центр, особенно если устройство ещё находится на гарантии.</li>
-            </ul>
-            <p class="note"><strong>Главное правило на этом этапе:</strong> не запускать тяжёлые игры снова и снова, если консоль явно нестабильна. Лучше потратить время на корректную диагностику или сервис, чем довести до полной потери данных.</p>
-
-            <!-- Блок 9 -->
-            <h3>9. Сводный чек‑лист действий при вылетах и зависаниях</h3>
-            <p class="section-intro">Ниже компактный вариант последовательности шагов, к которому можно возвращаться каждый раз, когда игра на PS5 начинает вести себя нестабильно.</p>
-
-            <ul class="steps">
-                <li><strong>Шаг 1.</strong> Зафиксировать, в каких играх и когда возникают вылеты, есть ли конкретные коды ошибок.</li>
-                <li><strong>Шаг 2.</strong> Перезапустить игру и консоль, дать им «остыть» несколько минут, проверить вторую игру для сравнения.</li>
-                <li><strong>Шаг 3.</strong> Убедиться, что игра и системное ПО PS5 обновлены до последней версии.</li>
-                <li><strong>Шаг 4.</strong> Зайти в безопасный режим, очистить кеш и перестроить базу данных, затем протестировать несколько игр.</li>
-                <li><strong>Шаг 5.</strong> Переустановить проблемную игру и при необходимости проверить её на другом накопителе.</li>
-                <li><strong>Шаг 6.</strong> Проверить охлаждение, расположение консоли и при необходимости снизить нагрузку, переключившись в режим производительности.</li>
-                <li><strong>Шаг 7.</strong> При множественных вылетах и системных ошибках подготовить резервные копии и рассмотреть полный сброс с переустановкой ПО.</li>
-                <li><strong>Шаг 8.</strong> Если даже после сброса вылеты продолжаются в разных играх, обратиться в сервис для проверки железа.</li>
-            </ul>
-            <p class="note"><strong>Идея чек‑листа:</strong> не прыгать сразу к радикальным мерам, а последовательно отсеивать возможные источники проблемы, сохранив при этом данные и время.</p>
-        </article>
-
-        <!-- ПРАВАЯ КОЛОНКА / САЙДБАР -->
-        <aside class="card side-section">
-            <h2>Быстрый набор действий перед «жёсткими» мерами</h2>
-            <p class="tagline">Этот блок можно дать пользователю как краткую инструкцию: что проверить, прежде чем удалять игры, делать сброс или нести консоль в ремонт.</p>
-
-            <div class="badge-block">
-                <span class="label"><span class="label-dot"></span>3–7 минут на проверку</span>
-                <span class="label label-soft"><span class="label-dot"></span>Минимальный риск для данных</span>
-            </div>
-
-            <ul class="checklist">
-                <li>
-                    <span class="checklist-icon">1</span>
-                    <span><strong>Обновить игру и систему.</strong> Всегда начинать с установки последних патчей и прошивок, чтобы не ловить уже исправленные баги.</span>
-                </li>
-                <li>
-                    <span class="checklist-icon">2</span>
-                    <span><strong>Освободить место на SSD.</strong> Оставить запас свободного пространства, удалив пару крупных игр или клипов, чтобы система не работала «на грани».</span>
-                </li>
-                <li>
-                    <span class="checklist-icon">3</span>
-                    <span><strong>Очистить кеш и перестроить базу.</strong> Разовая профилактика, которая нередко вычищает накопившиеся ошибки и фрагментацию данных.</span>
-                </li>
-                <li>
-                    <span class="checklist-icon">4</span>
-                    <span><strong>Проверить вторую игру.</strong> Если вылеты только в одном проекте — фокус на его файлах и сохранениях, а не на консоли в целом.</span>
-                </li>
-                <li>
-                    <span class="checklist-icon">5</span>
-                    <span><strong>Оценить температуру и шум.</strong> При подозрении на перегрев пересмотреть место установки PS5 и условия работы.</span>
-                </li>
-            </ul>
-
-            <div class="divider"></div>
-
-            <h3>Когда пора задуматься о резервном копировании</h3>
-            <p class="tagline">Чем раньше вы скопируете важные данные, тем спокойнее и свободнее можно экспериментировать с настройками и сбросом системы.</p>
-
-            <ul class="checklist">
-                <li>
-                    <span class="checklist-icon checklist-icon--danger">!</span>
-                    <span>Если вылеты стали ежедневными и затрагивают разные игры, а не один проект.</span>
-                </li>
-                <li>
-                    <span class="checklist-icon checklist-icon--danger">!</span>
-                    <span>Если PS5 иногда зависает не только в играх, но и в меню или при установке обновлений.</span>
-                </li>
-                <li>
-                    <span class="checklist-icon checklist-icon--danger">!</span>
-                    <span>Если вы уже несколько раз видели ошибки при включении консоли или сообщения о восстановлении базы данных.</span>
-                </li>
-            </ul>
-
-            <div class="divider"></div>
-
-            <h3>Мини‑мониторинг стабильности PS5</h3>
-            <p class="tagline">Небольшой журнал наблюдений помогает уловить закономерности и быстрее понять, что именно влияет на вылеты.</p>
-
-            <div class="stat">
-                <span>Частота вылетов:</span>
-                <span>сколько раз в день / неделю</span>
-            </div>
-            <div class="stat">
-                <span>Список игр с проблемами:</span>
-                <span>одна или сразу несколько</span>
-            </div>
-            <div class="stat">
-                <span>Нагрузка и время сессий:</span>
-                <span>короткие или многочасовые</span>
-            </div>
-            <div class="stat">
-                <span>Изменения перед началом проблем:</span>
-                <span>обновления, переезды, периферия</span>
-            </div>
-
-            <p class="note"><strong>Зачем это нужно:</strong> с таким журналом проще объяснить ситуацию поддержке или мастеру, а также увидеть, помогли ли конкретные действия вроде перестройки базы или переустановки игр.</p>
-
-            <div class="footer-note">
-                Этот чек‑лист можно использовать как основу для лендинга, статьи с иллюстрациями или PDF‑инструкции для техподдержки, добавив скриншоты ошибок, реальные кейсы и формы для записи наблюдений.
-            </div>
-        </aside>
-    </section>
-</div>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "Проблемы с вылетами и зависаниями игр на PS5: пошаговый чек‑лист диагностики",
+    "description": "Чек‑лист по устранению вылетов и зависаний игр на PS5: причины, коды ошибок, перегрев, накопители, сеть, пошаговые сценарии, таблицы, советы и FAQ.",
+    "totalTime": "PT40M",
+    "step": [
+      {
+        "@type": "HowToStep",
+        "name": "Введение: как понять, что ломает игру",
+        "text": "Объяснение причин вылетов и зависаний на PS5 и структура чек‑листа.",
+        "url": "#step-1"
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Типы вылетов и зависаний: с чего начать",
+        "text": "Классификация симптомов и таблица сценариев.",
+        "url": "#step-2"
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Шаг 1: фиксируем симптомы и контекст",
+        "text": "Сбор информации о том, когда и как именно вылетают игры.",
+        "url": "#step-3"
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Шаг 2: базовое программное обслуживание",
+        "text": "Перезагрузка, обновления, очистка кэша.",
+        "url": "#step-4"
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Шаг 3: проверка конкретной игры",
+        "text": "Работа с установкой, сохранениями и профилями.",
+        "url": "#step-5"
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Шаг 4: перегрев и охлаждение",
+        "text": "Диагностика перегрева и советы по вентиляции.",
+        "url": "#step-6"
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Шаг 5: внутренний SSD и внешние накопители",
+        "text": "Проверка дисков и восстановление базы данных.",
+        "url": "#step-7"
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Шаг 6: сеть и онлайн‑режимы",
+        "text": "Диагностика вылетов, связанных с онлайном.",
+        "url": "#step-8"
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Шаг 7: сценарный чек‑лист для разных случаев",
+        "text": "Готовые маршруты действий по типу проблемы.",
+        "url": "#step-9"
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Сводная таблица: когда нужен сервис",
+        "text": "Граница между домашним ремонтом и сервисным центром.",
+        "url": "#step-10"
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Лайфхаки по профилактике вылетов",
+        "text": "Практические советы по снижению риска зависаний.",
+        "url": "#step-11"
+      },
+      {
+        "@type": "HowToStep",
+        "name": "FAQ — частые вопросы о вылетах и зависаниях на PS5",
+        "text": "Ответы на распространённые вопросы пользователей.",
+        "url": "#step-12"
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Краткий чек‑лист для быстрого доступа",
+        "text": "Список базовых действий при любых вылетах и зависаниях.",
+        "url": "#step-13"
+      }
+    ],
+    "image": "https://i.postimg.cc/7hjSFZJj/resize-m-mfit-w-450-h-450.png"
+  }
+  </script>
 </body>
 </html>
