@@ -1,726 +1,642 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" data-theme="light">
 <head>
-    <meta charset="UTF-8">
-    <title>Коды ошибок PS5 для сетевых проблем: как вернуть стабильный онлайн</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Подробный разбор кодов ошибок PS5 для сетевых проблем: CE-109506-1, CE-108862-5, NAT Type Failed, лаги, потери пакетов, DNS и MTU. Пошаговые решения, как вернуть стабильный онлайн.">
-    <style>
-        :root {
-            --bg: #020617;
-            --bg-alt: #050816;
-            --card: #0b1220;
-            --accent: #3b82f6;
-            --accent-soft: rgba(59,130,246,0.09);
-            --accent-strong: rgba(59,130,246,0.22);
-            --danger: #f97373;
-            --success: #22c55e;
-            --warn: #facc15;
-            --text-main: #e5e7eb;
-            --text-soft: #9ca3af;
-            --border-soft: #111827;
-            --code-bg: #020617;
-        }
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YE88Y994NX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-YE88Y994NX');
+  </script>
 
-        * {
-            box-sizing: border-box;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Коды ошибок PS5 для сетевых проблем: как вернуть стабильный онлайн | Экспертный мегагайд</title>
+  <meta name="description" content="Подробный гид по сетевым ошибкам PS5: NP-104433-0, NP-102944-0, WS-116521-6, CE-113212-0 и другие. Причины, пошаговые решения, настройка Wi‑Fi и кабеля, NAT, DNS, таблицы, лайфхаки, FAQ.">
 
-        body {
-            margin: 0;
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-            background:
-                radial-gradient(circle at top, #111827 0, #020617 55%, #000 100%);
-            color: var(--text-main);
-            line-height: 1.6;
-        }
+  <!-- Yandex.Metrika counter -->
+  <script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+      m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+      m[i].l=1*new Date();
+      for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+      k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=106225686', 'ym');
 
-        a {
-            color: var(--accent);
-            text-decoration: none;
-        }
+    ym(106225686, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", accurateTrackBounce:true, trackLinks:true});
+  </script>
+  <noscript>
+    <div>
+      <img src="https://mc.yandex.ru/watch/106225686" style="position:absolute; left:-9999px;" alt="Коды ошибок PS5 для сетевых проблем: как вернуть стабильный онлайн - пошаговая инструкция по ремонту">
+    </div>
+  </noscript>
+  <!-- /Yandex.Metrika counter -->
 
-        a:hover {
-            text-decoration: underline;
-        }
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="../styles-header.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
-        .page {
-            max-width: 1120px;
-            margin: 0 auto;
-            padding: 32px 16px 48px;
-        }
+  <style>
+    .guide-content { line-height: 1.7; color: var(--text); }
+    .guide-content h2 { color: var(--primary); margin-top: 30px; margin-bottom: 15px; font-size: 1.5rem; }
+    .guide-content h3 { color: var(--primary-dark); margin-top: 25px; margin-bottom: 12px; font-size: 1.2rem; }
+    .guide-image-block { margin: 20px 0; padding: 15px; background: var(--background); border-radius: var(--border-radius); border: 1px solid var(--border); text-align: center; }
+    .guide-image-block img { max-width: 100%; height: auto; border-radius: 6px; border: 1px solid var(--border); }
+    .image-caption { margin-top: 10px; font-size: 0.85rem; color: var(--text-light); font-style: italic; }
+    .pro-tips { background: rgba(3, 74, 79, 0.05); padding: 15px; border-radius: 6px; margin: 20px 0; }
+    .pro-tips h4 { color: var(--primary); margin-top: 0; margin-bottom: 12px; font-size: 1.1rem; }
+    .tip-item { display: flex; gap: 8px; margin-bottom: 8px; align-items: flex-start; }
+    .tip-item i { margin-top: 3px; color: var(--primary); }
+    .warning-block {
+      background: #fff3e0;
+      border-left: 5px solid #ff9100;
+      padding: 15px 18px;
+      margin: 22px 0;
+      border-radius: 7px;
+    }
+    table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+    th, td { border: 1px solid var(--border); padding: 8px; text-align: left; vertical-align: top; }
+    th { background: var(--background-light); }
+    .code-like { font-family: "SF Mono", "Consolas", "Menlo", monospace; background: var(--background-light); padding: 2px 4px; border-radius: 4px; }
+    .step-badge {
+      display: inline-block;
+      background: var(--primary);
+      color: #fff;
+      font-size: 0.8rem;
+      padding: 2px 8px;
+      border-radius: 999px;
+      margin-right: 6px;
+    }
+    .faq-item { margin-bottom: 16px; }
+    .faq-item strong { display: block; margin-bottom: 4px; }
+    @media (max-width: 768px) {
+      .guide-content h2 { font-size: 1.4rem; margin-top: 25px; }
+      .guide-image-block { padding: 12px; margin: 15px 0; }
+      table, th, td { font-size: 0.95rem; }
+    }
+  </style>
 
-        .hero {
-            display: grid;
-            grid-template-columns: minmax(0, 3fr) minmax(0, 2.1fr);
-            gap: 32px;
-            align-items: center;
-            margin-bottom: 40px;
-        }
-
-        .hero-text h1 {
-            font-size: 32px;
-            margin: 0 0 12px;
-        }
-
-        .hero-text h1 strong {
-            color: var(--accent);
-        }
-
-        .hero-text p {
-            margin: 4px 0;
-            color: var(--text-soft);
-        }
-
-        .hero-badges {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            margin-top: 12px;
-        }
-
-        .badge {
-            font-size: 12px;
-            padding: 4px 10px;
-            border-radius: 999px;
-            border: 1px solid var(--border-soft);
-            background: rgba(15,23,42,0.9);
-            color: var(--text-soft);
-            backdrop-filter: blur(6px);
-        }
-
-        .badge--accent {
-            border-color: var(--accent);
-            background: var(--accent-soft);
-            color: #dbeafe;
-        }
-
-        .badge--danger {
-            border-color: var(--danger);
-            background: rgba(248,113,113,0.09);
-            color: #fecaca;
-        }
-
-        .badge--success {
-            border-color: var(--success);
-            background: rgba(34,197,94,0.1);
-            color: #bbf7d0;
-        }
-
-        .hero-image {
-            border-radius: 18px;
-            overflow: hidden;
-            border: 1px solid var(--border-soft);
-            background: radial-gradient(circle at top, #1f2937 0, #020617 100%);
-            padding: 10px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .hero-image img {
-            max-width: 100%;
-            border-radius: 12px;
-            display: block;
-        }
-
-        .hero-note {
-            font-size: 12px;
-            color: var(--text-soft);
-            margin-top: 6px;
-            text-align: center;
-        }
-
-        .grid {
-            display: grid;
-            grid-template-columns: minmax(0, 2.3fr) minmax(0, 1.5fr);
-            gap: 24px;
-        }
-
-        .card {
-            background:
-                radial-gradient(circle at top left, rgba(148,163,184,0.08), transparent 55%);
-            border-radius: 18px;
-            border: 1px solid var(--border-soft);
-            padding: 20px 18px 18px;
-            box-shadow: 0 18px 40px rgba(15,23,42,0.9);
-        }
-
-        .card h2 {
-            font-size: 20px;
-            margin: 0 0 10px;
-        }
-
-        .card h3 {
-            font-size: 16px;
-            margin: 18px 0 6px;
-        }
-
-        .tagline {
-            font-size: 13px;
-            color: var(--text-soft);
-            margin-bottom: 10px;
-        }
-
-        .highlight {
-            border-left: 3px solid var(--accent);
-            padding-left: 10px;
-            margin: 8px 0 14px;
-            font-size: 14px;
-            color: var(--text-soft);
-        }
-
-        .section-intro {
-            font-size: 14px;
-            color: var(--text-soft);
-            margin: 4px 0 10px;
-        }
-
-        .quick-list {
-            display: grid;
-            grid-template-columns: 1.2fr 1fr;
-            gap: 10px;
-            font-size: 13px;
-            margin: 10px 0 12px;
-        }
-
-        .quick-list ul {
-            margin: 0;
-            padding-left: 18px;
-        }
-
-        .quick-list li {
-            margin-bottom: 4px;
-        }
-
-        .pill {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            font-size: 12px;
-            padding: 4px 10px;
-            border-radius: 999px;
-            border: 1px solid rgba(148,163,184,0.45);
-            background: rgba(15,23,42,0.9);
-            margin-right: 6px;
-            margin-bottom: 4px;
-        }
-
-        .pill-bullet {
-            width: 6px;
-            height: 6px;
-            border-radius: 999px;
-            background: var(--accent);
-        }
-
-        .pill-danger .pill-bullet {
-            background: var(--danger);
-        }
-
-        .pill-success .pill-bullet {
-            background: var(--success);
-        }
-
-        .pill-warn .pill-bullet {
-            background: var(--warn);
-        }
-
-        .table-wrapper {
-            margin-top: 12px;
-            border-radius: 14px;
-            overflow: hidden;
-            border: 1px solid var(--border-soft);
-            background: rgba(15,23,42,0.96);
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            font-size: 13px;
-        }
-
-        thead {
-            background: linear-gradient(to right, rgba(59,130,246,0.2), rgba(76,29,149,0.34));
-        }
-
-        th, td {
-            padding: 6px 8px;
-            text-align: left;
-            border-bottom: 1px solid #111827;
-        }
-
-        th {
-            font-weight: 600;
-            color: #e5e7eb;
-            white-space: nowrap;
-        }
-
-        tbody tr:nth-child(odd) {
-            background: rgba(15,23,42,0.96);
-        }
-
-        tbody tr:nth-child(even) {
-            background: rgba(10,16,32,0.96);
-        }
-
-        .steps {
-            margin: 10px 0 6px;
-            padding-left: 18px;
-            font-size: 13px;
-        }
-
-        .steps li {
-            margin-bottom: 5px;
-        }
-
-        .note {
-            font-size: 12px;
-            color: var(--text-soft);
-            margin-top: 6px;
-        }
-
-        .note strong {
-            color: var(--warn);
-        }
-
-        .code {
-            font-family: ui-monospace, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-            background: var(--code-bg);
-            border-radius: 6px;
-            padding: 1px 4px;
-            font-size: 12px;
-        }
-
-        .badge-block {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 6px;
-            margin-bottom: 10px;
-        }
-
-        .label {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            padding: 2px 8px;
-            border-radius: 999px;
-            font-size: 11px;
-            border: 1px solid rgba(148,163,184,0.6);
-            background: rgba(15,23,42,0.96);
-        }
-
-        .label-dot {
-            width: 7px;
-            height: 7px;
-            border-radius: 999px;
-            background: var(--accent);
-        }
-
-        .label-soft {
-            opacity: 0.92;
-        }
-
-        .checklist {
-            list-style: none;
-            padding-left: 0;
-            margin: 8px 0 4px;
-            font-size: 13px;
-        }
-
-        .checklist li {
-            margin-bottom: 6px;
-            display: flex;
-            align-items: flex-start;
-            gap: 6px;
-        }
-
-        .checklist-icon {
-            width: 15px;
-            height: 15px;
-            border-radius: 4px;
-            border: 1px solid rgba(148,163,184,0.6);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 11px;
-            color: var(--accent);
-            flex-shrink: 0;
-        }
-
-        .checklist-icon--danger {
-            color: var(--danger);
-            border-color: rgba(248,113,113,0.8);
-        }
-
-        .side-section {
-            font-size: 13px;
-        }
-
-        .side-section h3 {
-            margin-top: 14px;
-        }
-
-        .stat {
-            display: flex;
-            justify-content: space-between;
-            font-size: 12px;
-            margin: 2px 0;
-            color: var(--text-soft);
-        }
-
-        .stat span:first-child {
-            opacity: 0.9;
-        }
-
-        .footer-note {
-            margin-top: 18px;
-            font-size: 12px;
-            color: var(--text-soft);
-            border-top: 1px dashed #1f2937;
-            padding-top: 10px;
-        }
-
-        .divider {
-            margin: 16px 0 10px;
-            border-top: 1px dashed #1e293b;
-        }
-
-        @media (max-width: 920px) {
-            .hero {
-                grid-template-columns: minmax(0, 1fr);
-            }
-            .grid {
-                grid-template-columns: minmax(0, 1fr);
-            }
-            .hero-image {
-                order: -1;
-            }
-        }
-
-        @media (max-width: 560px) {
-            .page {
-                padding: 20px 12px 32px;
-            }
-            .hero-text h1 {
-                font-size: 26px;
-            }
-            .quick-list {
-                grid-template-columns: minmax(0, 1fr);
-            }
-        }
-    </style>
+  <script async src="https://timeweb.cloud/api/v1/cloud-ai/agents/3cc03620-d051-4d8d-b5af-f7b6cd083a35/embed.js?collapsed=true"></script>
 </head>
 <body>
-<div class="page">
+  <header class="header">
+    <div class="container">
+      <div class="header__inner">
+        <a href="../index.html" class="logo">
+          <span class="logo__icon"></span>
+          <span class="logo__text">Repairo</span>
+        </a>
+        <nav class="nav">
+          <ul class="nav__list">
+            <li><a href="../tv.html" class="nav__link">Телевизоры</a></li>
+            <li><a href="../cameras.html" class="nav__link">Фотоаппараты</a></li>
+            <li><a href="../consoles.html" class="nav__link">Приставки</a></li>
+            <li><a href="../laptops.html" class="nav__link">Ноутбуки</a></li>
+            <li><a href="../smartphones.html" class="nav__link">Смартфоны</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
 
-    <!-- HERO -->
-    <section class="hero">
-        <div class="hero-text">
-            <h1><strong>Коды ошибок PS5 для сетевых проблем</strong>: как вернуть стабильный онлайн</h1>
-            <p>Этот гайд помогает разобраться с сетевыми ошибками PS5: от «не удаётся подключиться к серверу» до постоянных лагов, потерь пакетов и проблем с NAT.</p>
-            <p>Подойдёт, если консоль показывает CE‑109506-1, CE‑108862-5, «NAT Type Failed», часто выкидывает из матча, а пинг и дерганья делают онлайн‑игры невыносимыми.</p>
+  <section class="guide-page">
+    <div class="container">
+      <div class="breadcrumbs">
+        <a href="../index.html">Главная</a>
+        <i class="fas fa-chevron-right"></i>
+        <a href="../consoles.html">Приставки</a>
+        <i class="fas fa-chevron-right"></i>
+        <span>Коды ошибок PS5 для сетевых проблем: как вернуть стабильный онлайн</span>
+      </div>
 
-            <div class="hero-badges">
-                <span class="badge badge--accent">PS5 • Сетевые ошибки и онлайн</span>
-                <span class="badge badge--success">Пошаговая диагностика для дома</span>
-                <span class="badge badge--danger">Безопасные действия без риска для данных</span>
-            </div>
+      <h1 class="section__title">Коды ошибок PS5 для сетевых проблем: как вернуть стабильный онлайн</h1>
+
+      <div class="guide-meta">
+        <span>
+          <i class="fas fa-wifi"></i>
+          Экспертный гид по сетевым ошибкам PlayStation 5: коды NP‑104433‑0, NP‑102944‑0, WS‑116521‑6, CE‑113212‑0 и другим проблемам PSN, NAT, DNS, Wi‑Fi и кабельных подключений. Пошаговые решения, таблицы, лайфхаки и FAQ по стабильному онлайну.
+        </span>
+      </div>
+
+      <div class="guide-image-block">
+        <img src="https://i.postimg.cc/NMp4ztxP/resize-m-mfit-w-450-h-450.png" alt="Коды ошибок PS5 для сетевых проблем: как вернуть стабильный онлайн">
+        <div class="image-caption">
+          Типичные сетевые ошибки PS5: разрывы соединения, недоступный PSN, нестабильный Wi‑Fi, высокий пинг и коды NP‑ и WS‑серий при запуске онлайновых игр.
+        </div>
+      </div>
+
+      <div class="guide-content">
+
+        <h2 id="step-1">Введение: почему онлайн на PS5 нестабилен</h2>
+        <p>
+          Онлайн на PS5 зависит сразу от нескольких звеньев: самой консоли, роутера, провайдера, серверов PlayStation Network и серверов конкретной игры. Ошибка в любом из этих звеньев приводит к знакомым симптомам: долгая авторизация, кики из матчей, лаги, высокий пинг, невозможность войти в PSN или постоянные сообщения с кодами NP и WS. Важно правильно определить, где именно «рвётся цепочка», иначе можно бесконечно перезапускать приставку, когда на самом деле лежат сервера игры.
+        </p>
+        <p>
+          Этот мегагайд сфокусирован на сетевых ошибках PS5: официальных кодах из серий NP‑, WS‑ и CE, а также типичных ситуациях вроде «консоль не получает IP‑адрес», «NAT слишком строгий» или «скорость скачивания критически низкая». Для каждого сценария разобраны вероятные причины, пошаговые инструкции и границы, где домашняя диагностика заканчивается, а начинается зона ответственности провайдера или сервиса PlayStation.
+        </p>
+
+        <h2 id="step-2">Обзор: ключевые сетевые коды ошибок PS5</h2>
+        <p>
+          На экране PS5 сетевые ошибки обычно сопровождаются буквенно‑цифровыми кодами, по которым легко понять тип проблемы. Одни коды связаны с PSN и авторизацией, другие — с доступом к серверам игр, третьи — с общим интернет‑подключением, DNS или NAT. Ниже приведена сводная таблица с самыми частыми кодами и краткими рекомендациями, куда смотреть в первую очередь.
+        </p>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Код / ситуация</th>
+              <th>Короткое описание</th>
+              <th>Вероятная причина</th>
+              <th>Первое действие</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="code-like">NP-104433-0</span></td>
+              <td>Ошибка связи с PSN при входе или запуске игры.</td>
+              <td>Проблемы на стороне PSN, блокировка по сети, нестабильный интернет.</td>
+              <td>Проверить статус PSN, перезапустить роутер, протестировать соединение на PS5.</td>
+            </tr>
+            <tr>
+              <td><span class="code-like">NP-102944-0</span></td>
+              <td>Не удалось войти в PSN или подтвердить данные аккаунта.</td>
+              <td>Неверный пароль, сбой авторизации, временные ограничения или блокировки.</td>
+              <td>Проверить логин/пароль, попытаться войти позже, проверить почту и уведомления PSN.</td>
+            </tr>
+            <tr>
+              <td><span class="code-like">WS-116521-6</span></td>
+              <td>Проблема при подключении к серверам PSN или загрузке контента.</td>
+              <td>Сбои PSN, перегрузка сервера, временные работы.</td>
+              <td>Запустить тест соединения, проверить статус PSN, подождать и повторить попытку.</td>
+            </tr>
+            <tr>
+              <td><span class="code-like">CE-113212-0</span></td>
+              <td>Не удалось подключиться к сети или серверу.</td>
+              <td>Ошибки DNS, проблемы на линии провайдера, некорректные настройки роутера.</td>
+              <td>Сменить DNS, перезапустить роутер, временно подключить PS5 по кабелю.</td>
+            </tr>
+            <tr>
+              <td>Тест соединения: NAT 3</td>
+              <td>Строгий NAT, ограниченный доступ к P2P‑подключениям и матчмейкингу.</td>
+              <td>Закрытые порты, двойной NAT, особенности роутера или провайдера.</td>
+              <td>Включить UPnP, настроить переадресацию портов или DMZ, связаться с провайдером.</td>
+            </tr>
+            <tr>
+              <td>Низкая скорость скачивания</td>
+              <td>Очень медленные загрузки игр и обновлений.</td>
+              <td>Загруженный Wi‑Fi, фоновые процессы, ограничения провайдера.</td>
+              <td>Подключить кабель, закрыть фоновые загрузки, проверить тариф и скорость на ПК/смартфоне.</td>
+            </tr>
+            <tr>
+              <td>Частые разрывы соединения в играх</td>
+              <td>Выкидывает из матчей, высокий пинг и лаги.</td>
+              <td>Высокий джиттер, перегруженный канал, слабый сигнал Wi‑Fi.</td>
+              <td>Перейти на 5 ГГц или кабель, уменьшить количество устройств в сети.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2 id="step-3">NP-104433-0: проблемы связи с PSN</h2>
+        <p>
+          Код <span class="code-like">NP-104433-0</span> обычно указывает на невозможность корректно связаться с серверами PlayStation Network. Он может появляться при входе в аккаунт, запуске игры, попытке открыть раздел PS Store или при проверке лицензий. Часто это следствие временных технических работ или перегрузки PSN, но иногда код провоцируется локальными проблемами: нестабильным Wi‑Fi, ошибками DNS или ограничениями со стороны провайдера.
+        </p>
+        <p>
+          Перед сложными действиями важно исключить глобальные сбои PSN: если у многих пользователей одновременно падает сеть, никакие перезапуски роутера ситуацию не исправят. При отсутствии официальных сообщений о проблемах стоит проверить своё подключение через тест сети на PS5, а затем постепенно переходить к смене DNS, перезапуску оборудования и проверке кабельного соединения вместо Wi‑Fi.
+        </p>
+
+        <h3>Что делать при NP-104433-0</h3>
+        <ol>
+          <li>
+            <span class="step-badge">Шаг 1</span>
+            <b>Запустите тест соединения на PS5</b> в разделе «Настройки → Сеть → Состояние соединения».  
+            Отметьте, получает ли приставка IP‑адрес, есть ли подключение к интернету и к PSN, а также показатели скорости и NAT.
+          </li>
+          <li>
+            <span class="step-badge">Шаг 2</span>
+            <b>Перезагрузите роутер и консоль</b> с полным отключением питания на 1–2 минуты.  
+            Это помогает сбросить временные ошибки сетевого оборудования и обновить сессию у провайдера.
+          </li>
+          <li>
+            <span class="step-badge">Шаг 3</span>
+            <b>Проверьте статус PSN</b> через официальный сайт или мобильное приложение, а также социальные сети PlayStation.  
+            Если сервисы отмечены как «вне сети» или «с перебоями», остаётся только подождать стабилизации.
+          </li>
+          <li>
+            <span class="step-badge">Шаг 4</span>
+            <b>Смените DNS‑серверы</b> в настройках сети PS5 на адреса, рекомендованные вашим провайдером или общедоступные.  
+            Неполадки с DNS часто вызывают частичный доступ к интернету, когда браузер работает, а PSN — нет.
+          </li>
+          <li>
+            <span class="step-badge">Шаг 5</span>
+            <b>По возможности подключите PS5 по кабелю</b>, хотя бы временно.  
+            Это позволит исключить влияние слабого Wi‑Fi и помех, а также даст более стабильный канал для связи с PSN.
+          </li>
+        </ol>
+
+        <div class="warning-block">
+          <strong>Важно!</strong> Если NP‑104433‑0 появляется неделями, а все домашние проверки не выявляют проблем, есть смысл обратиться к провайдеру и в поддержку PlayStation. Иногда сети определённых операторов попадают под частичные блокировки или нестандартную маршрутизацию, из‑за чего PSN периодически становится недоступен с конкретных IP‑диапазонов.
         </div>
 
-        <div>
-            <div class="hero-image">
-                <img src="https://i.postimg.cc/NMp4ztxP/resize-m-mfit-w-450-h-450.png" alt="Коды ошибок PS5 для сетевых проблем: как вернуть стабильный онлайн">
-            </div>
-            <div class="hero-note">Картинку можно заменить на локальный файл с таким же разрешением для лендинга или статьи.</div>
+        <h2 id="step-4">NP-102944-0: вход в PSN и аккаунт</h2>
+        <p>
+          Код <span class="code-like">NP-102944-0</span> чаще всего связан с авторизацией: не получается войти в PSN, система сообщает о неверных данных или временной блокировке. Причина может быть банальной — опечатка в пароле или смена учётных данных на другом устройстве, — но нередко ошибка возникает на фоне мер безопасности, когда Sony временно ограничивает вход из‑за подозрительной активности, частых смен IP или многочисленных попыток входа подряд.
+        </p>
+        <p>
+          В такой ситуации главное — не пытаться десятки раз подряд вводить один и тот же пароль, а спокойно проверить данные через браузер или смартфон, убедиться, что аккаунт активен и не заблокирован. При необходимости стоит сменить пароль, включить двухэтапную аутентификацию и после этого снова добавить учётную запись на PS5, чтобы продолжить играть онлайн без риска потери доступа.
+        </p>
+
+        <h3>Как восстановить вход при NP-102944-0</h3>
+        <ol>
+          <li>
+            <span class="step-badge">Шаг 1</span>
+            <b>Проверьте логин и пароль</b> через официальный сайт PSN в браузере ПК или смартфона.  
+            Если вход с других устройств невозможен, выполните процедуру восстановления пароля.
+          </li>
+          <li>
+            <span class="step-badge">Шаг 2</span>
+            <b>Смените пароль и включите двухэтапную аутентификацию</b>, если этого ещё не сделано.  
+            Это снизит риск подозрительных входов и возможных автоматических блокировок.
+          </li>
+          <li>
+            <span class="step-badge">Шаг 3</span>
+            <b>Удалите учётную запись с PS5</b> и добавьте её заново уже с актуальными данными.  
+            Иногда локальный кэш учётной записи на приставке конфликтует с обновлённой информацией на серверах.
+          </li>
+          <li>
+            <span class="step-badge">Шаг 4</span>
+            <b>Проверьте почту</b>, привязанную к аккаунту PSN.  
+            В письмах могут быть уведомления о блокировках, попытках входа и ссылках для подтверждения подозрительной активности.
+          </li>
+          <li>
+            <span class="step-badge">Шаг 5</span>
+            <b>Если аккаунт ограничен</b> по правилам сообщества или за нарушения, остаётся следовать инструкциям службы поддержки.  
+            В некоторых случаях онлайн‑функции могут быть временно отключены полностью или частично.
+          </li>
+        </ol>
+
+        <h2 id="step-5">WS-116521-6 и похожие коды: проблемы сервиса PSN</h2>
+        <p>
+          Ошибки серии <span class="code-like">WS-1165xx-</span> часто сигнализируют о проблемах именно на стороне сервиса, а не в вашей сети. Они возникают при попытке открыть PS Store, активировать подписку, скачать игру или обновить библиотеку, при этом обычный интернет и даже подключение к PSN могут быть в порядке. В такие моменты PSN частично работает: общие сервисы доступны, но магазин или отдельные функции испытывают перегрузку.
+        </p>
+        <p>
+          Главное — не тратить часы на перестройку дома всей сети, если у большинства пользователей в этот момент такие же коды. В качестве проверки достаточно протестировать соединение на PS5, удостовериться, что интернет и подключение к PSN есть, а затем заглянуть на страницу статуса PSN и официальные каналы. Часто подобные сбои устраняются в течение нескольких часов без участия владельца.
+        </p>
+
+        <h3>Как вести себя при WS-116521-6</h3>
+        <ul>
+          <li>Проверьте, что общий доступ в интернет работает: зайдите в браузер на PS5 или любом другом устройстве в той же сети.</li>
+          <li>Запустите тест сети на приставке и убедитесь, что до PSN в целом есть соединение, а ошибка возникает только при обращении к магазину или отдельным сервисам.</li>
+          <li>Проверьте официальную страницу статуса PSN и социальные сети PlayStation на предмет массовых сбоев или профилактических работ.</li>
+          <li>Если проблема подтверждена как глобальная, просто подождите 30–60 минут и попробуйте снова, не меняя настройки сети.</li>
+          <li>При локальной проблеме (только у вас) повторно перезапустите роутер и PS5, затем очистите кэш магазина, выйдя из аккаунта и войдя снова.</li>
+        </ul>
+
+        <h2 id="step-6">CE-113212-0: нет доступа к сети</h2>
+        <p>
+          Код <span class="code-like">CE-113212-0</span> относится к общим сетевым ошибкам и обычно означает, что консоль не может связаться с сервером или корректно завершить сетевую операцию. Часто он появляется при использовании нестабильного Wi‑Fi, при проблемах с DNS, а также при внутренних сбоях на линии провайдера. В отличие от чисто PSN‑кодов, здесь речь именно о базовом интернет‑доступе.
+        </p>
+        <p>
+          Логика действий в этом случае — от простого к сложному: перезапустить оборудование, сменить тип подключения, проверить работу интернета на других устройствах, временно задать ручные DNS и при необходимости связаться с оператором связи. Важно не забывать, что PS5 показывает только общую ошибку, тогда как источник проблемы может находиться гораздо дальше — вплоть до магистральной линии провайдера.
+        </p>
+
+        <h3>Пошаговый план при CE-113212-0</h3>
+        <ol>
+          <li>
+            <span class="step-badge">Шаг 1</span>
+            <b>Проверьте интернет на других устройствах</b> в этой же сети: смартфоне, ноутбуке, ТВ.  
+            Если везде наблюдаются обрывы или сайты не открываются, проблема почти наверняка в провайдере или роутере.
+          </li>
+          <li>
+            <span class="step-badge">Шаг 2</span>
+            <b>Полностью перезагрузите роутер</b>, выключив его из сети на 1–2 минуты.  
+            После включения повторно протестируйте соединение на PS5.
+          </li>
+          <li>
+            <span class="step-badge">Шаг 3</span>
+            <b>Переключите PS5 на кабельное соединение</b>, если она была по Wi‑Fi.  
+            Это снизит влияние помех, слабого сигнала и загруженности эфира.
+          </li>
+          <li>
+            <span class="step-badge">Шаг 4</span>
+            <b>Установите ручные DNS‑серверы</b> в настройках сети PS5, используя надёжные адреса.  
+            Некоторые ошибки связаны именно с некорректной работой DNS‑серверов провайдера.
+          </li>
+          <li>
+            <span class="step-badge">Шаг 5</span>
+            <b>Свяжитесь с провайдером</b>, если ошибка повторяется длительное время при общем нестабильном интернете.  
+            Оператор может уточнить наличие аварий и дать рекомендации по настройкам оборудования.
+          </li>
+        </ol>
+
+        <h2 id="step-7">NAT 1/2/3: что это и почему не ищет матчи</h2>
+        <p>
+          Помимо явных кодов ошибок PS5 показывает тип NAT в результатах теста соединения: 1, 2 или 3. NAT 1 и 2 обычно считаются нормальными для онлайн‑игр, тогда как NAT 3 означает строгие ограничения, когда часть портов закрыта, и консоль может испытывать трудности с прямыми соединениями, голосовым чатом, созданием и поиском матчей. Проблема чаще всего связана с настройкой роутера, использованием двойного NAT или особенностями сети провайдера.
+        </p>
+        <p>
+          Для стабильного онлайна оптимально добиться NAT 2: это означает, что PS5 находится за маршрутизатором, но нужные порты доступны. Добиться этого можно несколькими способами: включить UPnP, открыть определённые порты вручную, разместить консоль в DMZ или попросить провайдера перевести тариф на публичный IP‑адрес без CG‑NAT. Каждый метод имеет свои плюсы и риски, поэтому важен аккуратный подход.
+        </p>
+
+        <h3>Как улучшить NAT для PS5</h3>
+        <ul>
+          <li>Включите UPnP в настройках роутера, если он поддерживает эту функцию, и перезапустите как роутер, так и PS5.</li>
+          <li>Назначьте для PS5 статический IP‑адрес в локальной сети, чтобы маршрутизатор всегда знал, на какое устройство направлять открытые порты.</li>
+          <li>Настройте переадресацию портов (port forwarding) для диапазонов, используемых PSN и конкретными играми, указав IP‑адрес PS5 как получателя.</li>
+          <li>Рассмотрите возможность помещения консоли в DMZ роутера, чтобы убрать большую часть ограничений, при этом понимая риски для безопасности.</li>
+          <li>Если сеть провайдера использует CG‑NAT и не даёт «белый» IP, уточните у оператора возможность перехода на тариф с публичным адресом.</li>
+        </ul>
+
+        <h2 id="step-8">Медленный интернет и разрывы в онлайне</h2>
+        <p>
+          Не все сетевые проблемы PS5 сопровождаются кодами ошибок. Часто владельцы жалуются на медленные загрузки, постоянные лаги в онлайновых шутерах, внезапные разрывы соединения и «телепортацию» персонажа, хотя формально интернет работает. Такие симптомы связаны с параметрами, которые тест сети не всегда показывает прямо: джиттер, потери пакетов, перегрузка канала другими устройствами и особенности маршрутов провайдера.
+        </p>
+        <p>
+          Для игр особенно критичны не номинальная скорость в мегабитах, а стабильность канала и задержка. Поэтому даже при высоком тарифе можно испытывать сильные лаги из‑за забитого Wi‑Fi, слабого сигнала через две стены или постоянных загрузок фильмов и торрентов на других устройствах. Единственное надёжное лекарство — разгрузить сеть и по возможности перейти на кабельное подключение.
+        </p>
+
+        <h3>Практические шаги для стабильного онлайна</h3>
+        <ul>
+          <li>Подключите PS5 к роутеру по витой паре, если это физически возможно, чтобы минимизировать задержки и потери пакетов.</li>
+          <li>Если кабель недоступен, используйте диапазон 5 ГГц с хорошим уровнем сигнала и минимальным количеством препятствий, избегая старых маршрутизаторов.</li>
+          <li>Во время онлайновых матчей ограничьте трафик других устройств: не качайте крупные файлы, не запускайте потоковое видео в 4K на соседних экранах.</li>
+          <li>Проверьте реальные значения пинга и стабильности через специализированные сервисы на ПК или смартфоне, подключённом к той же сети.</li>
+          <li>При регулярных лагх обратитесь к провайдеру с просьбой проверить качество линии и маршрутизацию до популярных игровых серверов.</li>
+        </ul>
+
+        <h2 id="step-9">Сводная таблица: сетевые коды и что делать</h2>
+        <p>
+          Ниже приведён компактный ориентир по наиболее частым сетевым кодам PS5 и типичным действиям, которые стоит выполнить в первую очередь. Таблица удобна как «быстрая шпаргалка», когда нет времени перечитывать весь гид.
+        </p>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Код / симптом</th>
+              <th>Что значит</th>
+              <th>Что сделать сразу</th>
+              <th>Когда обращаться к провайдеру / в поддержку</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>NP-104433-0</td>
+              <td>PSN временно недоступен или не отвечает.</td>
+              <td>Тест сети, перезапуск роутера, проверка статуса PSN.</td>
+              <td>Ошибка держится днями при нормальном интернете на других устройствах.</td>
+            </tr>
+            <tr>
+              <td>NP-102944-0</td>
+              <td>Проблема с входом в PSN и авторизацией.</td>
+              <td>Проверка пароля, смена учётных данных, двухэтапная аутентификация.</td>
+              <td>Уведомления о блокировке аккаунта или длительные ограничения без понятной причины.</td>
+            </tr>
+            <tr>
+              <td>WS-116521-6</td>
+              <td>Сбои в работе отдельных сервисов PSN.</td>
+              <td>Проверка статуса PSN, ожидание восстановления сервиса.</td>
+              <td>Проблема только в вашей сети при отсутствии глобальных сбоев.</td>
+            </tr>
+            <tr>
+              <td>CE-113212-0</td>
+              <td>Общая ошибка доступа к сети или серверу.</td>
+              <td>Перезапуск роутера, смена DNS, переход на кабель.</td>
+              <td>Постоянные обрывы интернета, жалобы от других устройств и пользователей.</td>
+            </tr>
+            <tr>
+              <td>NAT 3</td>
+              <td>Строгий NAT, ограниченный онлайн.</td>
+              <td>Включить UPnP, открыть порты, настроить DMZ.</td>
+              <td>CG‑NAT или особые ограничения провайдера, требующие публичного IP‑адреса.</td>
+            </tr>
+            <tr>
+              <td>Медленный онлайн</td>
+              <td>Высокий пинг, лаги, медленные загрузки.</td>
+              <td>Кабель, разгрузка сети, 5 ГГц Wi‑Fi, закрытие фоновых загрузок.</td>
+              <td>Низкая реальная скорость и высокие потери при любом устройстве и типе подключения.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2 id="step-10">Лайфхаки по настройке сети для PS5</h2>
+        <div class="pro-tips">
+          <h4>Практические советы по стабильному онлайне</h4>
+          <div class="tip-item">
+            <i class="fas fa-lightbulb"></i>
+            <p>Выделите под PS5 отдельный сетевой профиль с фиксированным IP‑адресом, чтобы проще было управлять портами, приоритизацией и ограничениями трафика.</p>
+          </div>
+          <div class="tip-item">
+            <i class="fas fa-lightbulb"></i>
+            <p>Используйте современные маршрутизаторы с поддержкой QoS или приоритизации трафика игр — это помогает уменьшить лаги при одновременной загрузке контента на других устройствах.</p>
+          </div>
+          <div class="tip-item">
+            <i class="fas fa-lightbulb"></i>
+            <p>Для больших загрузок оставляйте PS5 подключённой по кабелю на ночь, чтобы избежать просадок скорости и случайных обрывов Wi‑Fi, которые ломают установку игр.</p>
+          </div>
+          <div class="tip-item">
+            <i class="fas fa-lightbulb"></i>
+            <p>Не меняйте сразу десятки параметров в роутере: вносите изменения по одному и фиксируйте, что именно помогло, чтобы потом можно было быстро повторить настройку после сброса.</p>
+          </div>
+          <div class="tip-item">
+            <i class="fas fa-lightbulb"></i>
+            <p>Если дома несколько геймеров, рассмотрите отдельный роутер или сегмент сети для консолей, чтобы изолировать игровой трафик от бытовых устройств.</p>
+          </div>
         </div>
-    </section>
 
-    <section class="grid">
-        <!-- ОСНОВНОЙ КОНТЕНТ -->
-        <article class="card">
-            <h2>Какие сетевые ошибки PS5 разберём</h2>
-            <p class="tagline">Главная идея гайда — не просто перечислить коды ошибок, а дать понятный алгоритм действий, который можно повторить и объяснить даже не самому техническому пользователю.</p>
-            <p class="highlight">Структура: сначала базовый чек‑лист сети, затем разбор конкретных кодов (CE‑109506-1, CE‑108862-5, NAT Type Failed), а в конце — оптимизация для стабильного онлайна и снижения лагов.</p>
+        <h2 id="step-11">FAQ — частые вопросы о сетевых ошибках PS5</h2>
+        <div class="faq-item">
+          <strong>Нужно ли каждый раз менять DNS, когда возникают сетевые ошибки?</strong>
+          <p>
+            Нет, смена DNS — это всего лишь один из инструментов диагностики, который помогает в случае проблем с именами серверов и маршрутизацией. Если после разовой смены всё стабильно работает, не стоит постоянно переключать настройки, а при новых ошибках сначала проверить статус PSN и работу интернета в целом.
+          </p>
+        </div>
+        <div class="faq-item">
+          <strong>Безопасно ли использовать DMZ для PS5?</strong>
+          <p>
+            Размещение приставки в DMZ убирает большую часть ограничений NAT и часто улучшает онлайн, но формально открывает устройство шире во внешнюю сеть. Поскольку PS5 — закрытая система с ограниченным набором сервисов, риски здесь ниже, чем для ПК, однако при возможности лучше ограничиться UPnP и переадресацией портов.
+          </p>
+        </div>
+        <div class="faq-item">
+          <strong>Почему скорость скачивания на PS5 ниже, чем на ПК в той же сети?</strong>
+          <p>
+            Скорость загрузки на PS5 зависит не только от тарифа и возможностей роутера, но и от загруженности серверов PSN и конкретных игровых серверов. Поэтому ситуация, когда на ПК скорость выше, чем на консоли, вполне нормальна, особенно в часы пик или при массовых релизах крупных игр.
+          </p>
+        </div>
+        <div class="faq-item">
+          <strong>Помогает ли VPN решить сетевые ошибки PS5?</strong>
+          <p>
+            Иногда VPN через роутер может обходить проблемные маршруты провайдера или региональные ограничения, но увеличивает задержку и не всегда допустим с точки зрения условий сервисов. Использовать его стоит только осознанно и с пониманием, что пинг может вырасти, а часть сервисов PSN или игр может работать некорректно.
+          </p>
+        </div>
+        <div class="faq-item">
+          <strong>Что делать, если только одна игра постоянно вылетает из онлайна, а другие работают нормально?</strong>
+          <p>
+            В таком случае проблема чаще всего связана с серверами именно этой игры или её сетевым кодом. Полезно проверить официальные каналы разработчика, форумы и статусы серверов, а также попробовать сменить регион матча или сервер, если игра это позволяет, прежде чем менять общие сетевые настройки.
+          </p>
+        </div>
 
-            <div class="quick-list">
-                <div>
-                    <strong>В этом гайде:</strong>
-                    <ul>
-                        <li>Базовая проверка сети PS5: что посмотреть в настройках.</li>
-                        <li>Код CE‑109506-1: «не удаётся подключиться к PSN».</li>
-                        <li>Код CE‑108862-5: проблемы с подключением к серверу игры.</li>
-                        <li>Ошибка «NAT Type Failed» и тип NAT 1/2/3.</li>
-                        <li>Потери пакетов, высокий пинг и подлагивания в матчах.</li>
-                        <li>Мини‑гайд по DNS, MTU, кабелю и wi‑fi для PS5.</li>
-                    </ul>
-                </div>
-                <div>
-                    <strong>Навигация по сложности:</strong>
-                    <div class="pill pill-success"><span class="pill-bullet"></span>Шаги 1–3: простые, без входа в роутер</div>
-                    <div class="pill"><span class="pill-bullet"></span>Шаги 4–6: меняем настройки сети на PS5</div>
-                    <div class="pill pill-danger"><span class="pill-bullet"></span>Шаги 7+: роутер, NAT, провайдер</div>
-                </div>
-            </div>
+        <h2 id="step-12">Краткий чеклист стабильного онлайна</h2>
+        <p>
+          Для повседневного использования удобно держать под рукой короткий список действий, который помогает быстро вернуть стабильный онлайн без глубокой диагностики. Он особенно полезен, когда сетевые проблемы возникают внезапно перед важным рейдом или соревновательным матчем.
+        </p>
+        <ul>
+          <li>Проверить статус PSN и серверов конкретной игры перед тем, как перестраивать домашнюю сеть.</li>
+          <li>Перезапустить роутер и PS5, выполнить тест соединения и убедиться в адекватных показателях скорости и NAT.</li>
+          <li>По возможности использовать кабельное подключение или качественный Wi‑Fi 5 ГГц с хорошим уровнем сигнала.</li>
+          <li>Временно отключить фоновые загрузки, стриминг видео и другие ресурсоёмкие задачи на соседних устройствах.</li>
+          <li>При регулярных проблемах вести учёт времени сбоев и их симптомов, чтобы при обращении к провайдеру или поддержке PlayStation предоставить максимум информации.</li>
+        </ul>
 
-            <!-- Базовый чек-лист сети -->
-            <h3>1. Быстрый базовый чек‑лист сети на PS5</h3>
-            <p class="section-intro">Перед тем как разбираться с конкретным кодом ошибки, полезно сделать универсальную проверку. Часто проблема решается уже на этом этапе.</p>
+        <div class="warning-block">
+          <strong>Напоминание!</strong> Любые сложные манипуляции с прошивкой роутера, экспериментами с VPN, нестандартными схемами NAT и редактированием низкоуровневых настроек сети выполняются на ваш страх и риск. Если нет уверенности в действиях, лучше ограничиться базовыми шагами или привлечь специалиста, чтобы не потерять доступ в интернет на всех устройствах сразу.
+        </div>
 
-            <ul class="steps">
-                <li>Откройте на PS5 раздел <span class="code">Настройки → Сеть → Состояние подключения → Проверить подключение к Интернету</span> и дождитесь результатов теста.</li>
-                <li>Запишите, что показывает тест: есть ли IP‑адрес, подключена ли PSN, каковы скорость загрузки и отправки, есть ли сообщение об ошибке NAT.</li>
-                <li>Если используется wi‑fi, по возможности переведите PS5 на подключение по кабелю LAN, хотя бы временно, чтобы исключить проблемы радиосигнала.</li>
-                <li>Перезагрузите роутер: выключите питание на 3–5 минут, затем включите и дождитесь, пока индикаторы стабильно загорятся, после чего повторите тест на PS5.</li>
-                <li>Полностью выключите PS5 (не режим покоя), отсоедините питание на минуту, подключите снова и включите консоль для чистого старта сети.</li>
-            </ul>
-            <p class="note"><strong>Смысл этого шага:</strong> базовый тест показывает, где ломается цепочка — на уровне интернета, PSN или конкретной игры, а перезапуск устройств очищает временные глюки и кэш соединений.</p>
+      </div>
+    </div>
+  </section>
 
-            <!-- CE-109506-1 -->
-            <h3>2. Код CE‑109506-1: «Не удаётся подключиться к PlayStation Network»</h3>
-            <p class="section-intro">Эта ошибка означает, что консоль не может корректно установить соединение с PSN в заданный интервал времени. В большинстве случаев виноваты нестабильный интернет, DNS или временные сбои службы.</p>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__col footer__col--logo">
+          <a href="index.html" class="footer-logo">
+            <span class="logo__icon"></span>
+            <span class="logo__text">Repairo</span>
+          </a>
+          <p class="footer__text">Экспертные инструкции по технике с 2024 года</p>
+        </div>
+        <div class="footer__col">
+          <h3 class="footer__title">Разделы</h3>
+          <ul class="footer__links">
+            <li><a href="index.html" class="footer__link">Главная</a></li>
+            <li><a href="all-guides.html" class="footer__link">Все гайды</a></li>
+            <li><a href="contacts.html" class="footer__link">Контакты</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h3 class="footer__title">Категории</h3>
+          <ul class="footer__links">
+            <li><a href="../tv.html" class="nav__link">Телевизоры</a></li>
+            <li><a href="../cameras.html" class="nav__link">Фотоаппараты</a></li>
+            <li><a href="../consoles.html" class="nav__link">Приставки</a></li>
+            <li><a href="../laptops.html" class="nav__link">Ноутбуки</a></li>
+            <li><a href="../smartphones.html" class="nav__link">Смартфоны</a></li>
+            <li><a href="../small-appliances.html" class="nav__link">Мелкая техника</a></li>
+            <li><a href="../large-appliances.html" class="nav__link">Бытовая техника</a></li>
+            <li><a href="../auto-electronics.html" class="nav__link">Авто-Электроника</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h3 class="footer__title">Контакты</h3>
+          <ul class="footer__links">
+            <li>
+              <a href="https://t.me/repairo_kz" class="footer__link"><i class="fab fa-telegram"></i> Telegram</a>
+            </li>
+            <li>
+              <a href="https://instagram.com/repairo_kz" class="footer__link"><i class="fab fa-instagram"></i> Instagram</a>
+            </li>
+            <li>
+              <a href="mailto:support@repairo.kz" class="footer__link"><i class="fas fa-envelope"></i> Email</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="disclaimer">
+          Администрация сайта не несёт ответственности за возможные повреждения техники
+          и иные последствия, возникшие в результате самостоятельного ремонта по
+          материалам и инструкциям, размещённым на сайте. Все работы вы выполняете
+          на свой страх и риск.
+        </p>
+        <p class="footer__copyright">© 2025 Repairo. Все права защищены.</p>
+      </div>
+    </div>
+  </footer>
 
-            <div class="table-wrapper">
-                <table>
-                    <thead>
-                    <tr>
-                        <th>Симптом</th>
-                        <th>Вероятная причина</th>
-                        <th>Приоритет действия</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td>CE‑109506-1 появляется иногда, повторный вход работает</td>
-                        <td>Временная перегрузка серверов или скачки сети</td>
-                        <td>Подождать, проверить статус PSN и повторить попытку позже</td>
-                    </tr>
-                    <tr>
-                        <td>Ошибка стабильно повторяется, другие устройства в сети работают</td>
-                        <td>DNS, MTU или особенности NAT / роутера</td>
-                        <td>Изменить DNS, при необходимости настроить роутер</td>
-                    </tr>
-                    <tr>
-                        <td>Проблемы только в одной сети, в других всё нормально</td>
-                        <td>Ограничения провайдера, CG‑NAT, фильтрация игровых сервисов</td>
-                        <td>Связаться с провайдером, запросить публичный IP или ослабление фильтрации</td>
-                    </tr>
-                    </tbody>
-                </table>
-            </div>
+  <script src="../script.js"></script>
 
-            <p class="section-intro">Алгоритм действий для CE‑109506-1 удобно пройти сверху вниз, не перескакивая шаги — так проще понять, где именно отваливается связь.</p>
-
-            <ul class="steps">
-                <li><strong>Шаг 1. Повторная проверка подключения.</strong> В разделе сети выполните тест подключения повторно, затем попробуйте войти в PSN ещё раз, не меняя никаких настроек.</li>
-                <li><strong>Шаг 2. Перезагрузка роутера и консоли.</strong> Полностью отключите питание роутера и PS5, подождите несколько минут и включите сначала роутер, потом консоль.</li>
-                <li><strong>Шаг 3. Проверка на другой сети.</strong> Если возможно, подключите PS5 к мобильной точке доступа или другому роутеру, чтобы понять, связана ли проблема с домашним интернетом.</li>
-                <li><strong>Шаг 4. Ручная настройка DNS.</strong> В настройках сети на PS5 выберите свою сеть, затем «Дополнительно» и установите DNS вручную (например, публичные DNS от крупных провайдеров). Это помогает, если стандартные DNS вашего оператора работают нестабильно или долго отвечают.</li>
-                <li><strong>Шаг 5. Изменение MTU.</strong> В тех же расширенных настройках сети выберите ручной режим MTU и попробуйте значение чуть меньше стандартного, например 1473 или 1450. Иногда это снижает вероятность обрыва соединения на перегруженных маршрутах.</li>
-                <li><strong>Шаг 6. Проверка кабеля и порта.</strong> Для проводного подключения убедитесь, что LAN‑кабель цел, плотно вставлен и при необходимости замените его на другой, желательно категории не ниже Cat5e.</li>
-                <li><strong>Шаг 7. Обращение к провайдеру.</strong> Если на других сетях PS5 работает норм, а дома ошибка стабильно повторяется, есть смысл уточнить у провайдера, не включён ли CG‑NAT или дополнительные фильтры игровых сервисов.</li>
-            </ul>
-            <p class="note"><strong>Главное по CE‑109506-1:</strong> сначала нужно исключить сбои PSN и локальные глюки, а уже потом лезть в настройки DNS/MTU и тем более в конфиг роутера или к провайдеру.</p>
-
-            <!-- CE-108862-5 -->
-            <h3>3. Код CE‑108862-5: проблемы с подключением к серверу игры</h3>
-            <p class="section-intro">Этот код обычно появляется, когда консоль не может соединиться с сервером конкретной игры. Виноват может быть как ваш интернет, так и сами сервера проекта.</p>
-
-            <div class="table-wrapper">
-                <table>
-                    <thead>
-                    <tr>
-                        <th>Ситуация</th>
-                        <th>Что проверить</th>
-                        <th>Что сделать</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td>Ошибка только в одной игре</td>
-                        <td>Статус серверов именно этой игры</td>
-                        <td>Подождать, перегрузить игру, попробовать позже или на другом режиме</td>
-                    </tr>
-                    <tr>
-                        <td>Ошибка в нескольких онлайн‑играх</td>
-                        <td>Общее состояние сети, NAT, потери пакетов</td>
-                        <td>Перейти на кабель, перезапустить роутер, проверить NAT и DNS</td>
-                    </tr>
-                    <tr>
-                        <td>Иногда подключается, но часто выкидывает</td>
-                        <td>Стабильность wi‑fi, дальность до роутера</td>
-                        <td>Сместить консоль или роутер, сменить канал wi‑fi, по возможности использовать 5 ГГц</td>
-                    </tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <ul class="steps">
-                <li>Перезапустите саму игру, а затем попробуйте зайти в другой режим или на другой сервер, если игра это позволяет.</li>
-                <li>Проверьте, работают ли онлайн‑функции в других играх. Если другие проекты тоже не пускают онлайн, проблема, скорее всего, в вашей сети.</li>
-                <li>Сделайте обычный сетевой тест на PS5 и посмотрите, нет ли предупреждений о NAT или о невозможности подключиться к PSN.</li>
-                <li>Временно подключите консоль напрямую к роутеру по кабелю, минуя повторители, усилители или сложные mesh‑схемы, чтобы исключить лишние точки отказа.</li>
-                <li>Если игра использует региональные сервера, попробуйте сменить регион матчмейкинга в настройках игры, чтобы уйти с перегруженного кластера.</li>
-            </ul>
-            <p class="note"><strong>Особенность CE‑108862-5:</strong> когда проблема на стороне сервера игры, никакие пляски с роутером не помогут, поэтому важно сначала понять, падает ли только этот проект или весь онлайн.</p>
-
-            <!-- NAT Type Failed -->
-            <h3>4. NAT Type Failed и строгий NAT на PS5</h3>
-            <p class="section-intro">Ошибка «NAT Type Failed» и строгий NAT делают онлайн‑опыт болезненным: долгое подключение к матчам, проблемы с голосовым чатом, невозможность хостить лобби и постоянные разрывы соединения.</p>
-
-            <p class="section-intro"><strong>Кратко про типы NAT на PS5:</strong></p>
-            <ul class="steps">
-                <li><strong>NAT 1.</strong> Практически прямое подключение к интернету. Максимальная совместимость, но почти не используется за обычными роутерами.</li>
-                <li><strong>NAT 2.</strong> Наиболее желательный вариант. PS5 за роутером, но все нужные порты доступны, игры и голос работают стабильно.</li>
-                <li><strong>NAT 3.</strong> Строгий режим. Много ограничений, сложности с подключением к другим игрокам и серверам, частые ошибки NAT.</li>
-            </ul>
-
-            <p class="section-intro">Базовый план по устранению NAT Type Failed и переходу на более комфортный NAT 2 выглядит так.</p>
-
-            <ul class="steps">
-                <li><strong>Шаг 1. Перезапуск роутера и PS5.</strong> Часто помогает простой перезапуск обоих устройств, особенно если ошибка появилась внезапно.</li>
-                <li><strong>Шаг 2. Проверка UPnP.</strong> В настройках роутера включите UPnP (если он есть). Этот режим позволяет маршрутизатору автоматически открывать нужные порты для игровых сервисов без ручной настройки.</li>
-                <li><strong>Шаг 3. Статический IP для PS5.</strong> В настройках сети на PS5 закрепите за консолью статический локальный IP‑адрес, чтобы он не менялся при каждом подключении.</li>
-                <li><strong>Шаг 4. Проброс портов (порт‑форвардинг).</strong> Откройте на роутере рекомендованные диапазоны портов для сервисов PlayStation и направьте их на статический IP вашей PS5. Это снижает количество отказов NAT и улучшает качество соединения.</li>
-                <li><strong>Шаг 5. DMZ для PS5.</strong> При отсутствии сложных требований к безопасности можно добавить IP PS5 в DMZ роутера, чтобы убрать лишнюю фильтрацию для консоли. Делать это стоит только при понимании рисков и по возможности при отдельной сети для игровых устройств.</li>
-                <li><strong>Шаг 6. Проверка на двойной NAT.</strong> Если интернет‑кабель идёт не напрямую к вашему роутеру, а к модему/роутеру провайдера, может возникать ситуация двойного NAT, при которой проброс портов почти бесполезен. В этом случае помогает перевод одного из устройств в мостовой режим или получение от провайдера подключения без дополнительного NAT.</li>
-            </ul>
-            <p class="note"><strong>Ключевой момент:</strong> целевая конфигурация для PS5 — NAT 2. Этого достаточно для комфортной игры и голосового чата, при этом нет необходимости полностью обнажать консоль в интернете, как при NAT 1.</p>
-
-            <!-- Потери пакетов и пинг -->
-            <h3>5. Лаги, высокий пинг и потери пакетов</h3>
-            <p class="section-intro">Даже при отсутствии явных кодов ошибок онлайн может быть формально «подключён», но играть тяжело: на экране происходят рывки, попадания регистрируются с задержкой, движения других игроков дёргаются.</p>
-
-            <p class="section-intro"><strong>Основные признаки сетевых проблем в игре:</strong></p>
-            <ul class="steps">
-                <li>Всё движется рывками, телепорты игроков, задержка регистрации попаданий и действий.</li>
-                <li>Пинг показывает нормальные значения, но ощущается «резиновое» управление.</li>
-                <li>Периодические резкие скачки задержки и кратковременные зависания матча.</li>
-            </ul>
-
-            <p class="section-intro"><strong>Что можно сделать для стабилизации соединения:</strong></p>
-            <ul class="steps">
-                <li>Приоритетно перевести PS5 на проводное подключение. Кабель даёт предсказуемый и стабильный канал связи, тогда как wi‑fi чувствителен к стенам, помехам и соседним сетям.</li>
-                <li>Если кабель недоступен, разместить роутер ближе к консоли, использовать диапазон 5 ГГц и сменить канал wi‑fi на менее загруженный.</li>
-                <li>Отключить на время игры тяжёлые загрузки и стриминг на других устройствах сети, чтобы исключить забивание канала.</li>
-                <li>В расширенных сетевых настройках PS5 аккуратно поэкспериментировать с MTU — иногда снижение значения до диапазона около 1473–1450 помогает уменьшить потери пакетов.</li>
-                <li>Настроить ручной DNS на быстрые и стабильные публичные адреса, если стандартные DNS провайдера дают нестабильные задержки.</li>
-            </ul>
-            <p class="note"><strong>Важно понимать:</strong> MTU и DNS не создают «магический ускоритель», но могут устранить конкретные проблемы маршрутизации и фрагментации пакетов, из‑за которых соединение рвётся или становится рваным.</p>
-
-            <!-- DNS и MTU более подробно -->
-            <h3>6. Что такое DNS и MTU для PS5 простыми словами</h3>
-            <p class="section-intro">Чтобы осознанно менять сетевые настройки, полезно понимать, что именно вы трогаете. Это не глубокий сетевой курс, а практичное объяснение двумя абзацами.</p>
-
-            <p class="section-intro"><strong>DNS в контексте PS5:</strong></p>
-            <ul class="steps">
-                <li>DNS отвечает за перевод адресов вида «имя сервиса PlayStation» в реальные IP‑адреса. Если он работает медленно или нестабильно, консоль дольше подключается и чаще выдаёт ошибки.</li>
-                <li>Смена DNS на более быстрый позволяет ускорить начальный этап подключения к серверам и иногда убрать редкие таймауты при авторизации и входе в матч.</li>
-            </ul>
-
-            <p class="section-intro"><strong>MTU в контексте PS5:</strong></p>
-            <ul class="steps">
-                <li>MTU определяет максимальный размер сетевого пакета, который устройство отправляет за раз. Если значение слишком высокое для конкретного маршрута, пакеты фрагментируются или теряются.</li>
-                <li>Немного уменьшив MTU, можно обойти «узкие места» на пути пакетов до серверов и снизить вероятность обрыва или зависания соединения, особенно при перегруженных или тонких каналах.</li>
-            </ul>
-            <p class="note"><strong>Практический совет:</strong> менять DNS и MTU стоит по одному параметру за раз и каждый раз проверять результат в конкретной игре, чтобы понимать, что реально дало эффект.</p>
-
-            <!-- Мини-гайд по пошаговой диагностике -->
-            <h3>7. Пошаговая схема диагностики сетевых проблем PS5</h3>
-            <p class="section-intro">Ниже последовательность, которую удобно повторять каждый раз, когда онлайн на PS5 начинает вести себя странно — будь то код ошибки или просто постоянные лаги.</p>
-
-            <ul class="steps">
-                <li><strong>Шаг A.</strong> Сделать тест сети на PS5 и зафиксировать результат: подключение к интернету, статус PSN, тип NAT, скорости.</li>
-                <li><strong>Шаг B.</strong> Перезапустить роутер и консоль, исключить временные сбои и перегрев оборудования.</li>
-                <li><strong>Шаг C.</strong> Перевести консоль на проводное подключение или улучшить условия wi‑fi (5 ГГц, меньше препятствий, смена канала).</li>
-                <li><strong>Шаг D.</strong> Проверить, работают ли другие игры и сервисы. Если ломается только один проект, дождаться стабилизации его серверов.</li>
-                <li><strong>Шаг E.</strong> При повторяющихся ошибках CE‑109506-1 или проблемах с NAT настроить статический IP и задействовать UPnP или порт‑форвардинг на роутере.</li>
-                <li><strong>Шаг F.</strong> При отсутствии результата — позвонить провайдеру, уточнить наличие ограничений для игровых сервисов и возможность получить более «чистое» подключение без жёсткого NAT.</li>
-            </ul>
-            <p class="note"><strong>Суть схемы:</strong> каждый шаг либо решает проблему, либо сужает круг причин, пока вы не поймёте, что именно мешает PS5 держать стабильный онлайн.</p>
-        </article>
-
-        <!-- ПРАВАЯ КОЛОНКА / САЙДБАР -->
-        <aside class="card side-section">
-            <h2>Быстрый набор действий для стабильного онлайна</h2>
-            <p class="tagline">Если нет времени вникать в детали, этот блок можно использовать как чек‑лист перед каждым важным матчем или рейдом.</p>
-
-            <div class="badge-block">
-                <span class="label"><span class="label-dot"></span>2–5 минут подготовки</span>
-                <span class="label label-soft"><span class="label-dot"></span>Подходит почти для любых онлайн‑игр</span>
-            </div>
-
-            <ul class="checklist">
-                <li>
-                    <span class="checklist-icon">1</span>
-                    <span><strong>Перезапустить роутер заранее.</strong> Включить и проверить соединение за 5–10 минут до игры, чтобы к моменту матча сеть была уже стабильной.</span>
-                </li>
-                <li>
-                    <span class="checklist-icon">2</span>
-                    <span><strong>Закрыть тяжёлые загрузки.</strong> Остановить стриминг, торренты и обновления на других устройствах, чтобы не делить канал с PS5.</span>
-                </li>
-                <li>
-                    <span class="checklist-icon">3</span>
-                    <span><strong>Когда возможно — кабель.</strong> Для соревновательных игр прямое подключение по LAN почти всегда лучше любого wi‑fi, даже сильного.</span>
-                </li>
-                <li>
-                    <span class="checklist-icon">4</span>
-                    <span><strong>Проверить NAT и тест сети.</strong> Быстрый тест в настройках PS5 перед игрой позволяет заранее заметить проблемы до того, как они испортят матч.</span>
-                </li>
-                <li>
-                    <span class="checklist-icon">5</span>
-                    <span><strong>Перезапустить игру после долгого простоя.</strong> Если клиент был открыт часами, перезапуск помогает избавиться от накопившихся сетевых глюков.</span>
-                </li>
-            </ul>
-
-            <div class="divider"></div>
-
-            <h3>Когда проблема не у вас</h3>
-            <p class="tagline">Иногда важно вовремя остановиться и не ломать свою сеть, если всё уже настроено правильно, а сбой — на стороне сервера игры или PSN.</p>
-
-            <ul class="checklist">
-                <li>
-                    <span class="checklist-icon checklist-icon--danger">!</span>
-                    <span>Если несколько друзей из разных городов жалуются на те же ошибки в той же игре, вероятнее всего, сервер испытывает трудности.</span>
-                </li>
-                <li>
-                    <span class="checklist-icon checklist-icon--danger">!</span>
-                    <span>Если ошибки появляются только в конкретные вечерние часы, возможно, это часы пик у провайдера или сервиса, а не ошибка вашей настройки.</span>
-                </li>
-                <li>
-                    <span class="checklist-icon checklist-icon--danger">!</span>
-                    <span>Если на другой сети (у друзей или через мобильный интернет) PS5 работает идеально, то виновата именно домашняя сеть или ограничения текущего оператора.</span>
-                </li>
-            </ul>
-
-            <div class="divider"></div>
-
-            <h3>Мини‑мониторинг своей сети</h3>
-            <p class="tagline">Простой журнал наблюдений помогает быстрее находить «узкие места» и понимать, на что реально повлияли изменения настроек.</p>
-
-            <div class="stat">
-                <span>Время суток с наибольшими лагами:</span>
-                <span>зафиксировать 2–3 типичных промежутка</span>
-            </div>
-            <div class="stat">
-                <span>Тип подключения:</span>
-                <span>wi‑fi 2.4 / wi‑fi 5 / LAN</span>
-            </div>
-            <div class="stat">
-                <span>Тип NAT и примерный пинг:</span>
-                <span>записывать раз в несколько дней</span>
-            </div>
-            <div class="stat">
-                <span>Название игры и режим:</span>
-                <span>чтобы видеть, где проблема повторяется чаще</span>
-            </div>
-
-            <p class="note"><strong>Зачем это нужно:</strong> когда появляется история наблюдений, по ней легко объяснить проблему техподдержке провайдера или разработчику игры, а также понять, помогли ли изменения в настройках маршрутизатора и PS5.</p>
-
-            <div class="footer-note">
-                Этот гайд можно использовать как основу для лендинга о сетевых ошибках PS5, обучающей статьи или PDF‑инструкции для техподдержки, добавив собственные скриншоты с кодами ошибок и примеры проблем из реальных матчей.
-            </div>
-        </aside>
-    </section>
-</div>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "Коды ошибок PS5 для сетевых проблем: как вернуть стабильный онлайн",
+    "description": "Подробный гид по сетевым ошибкам PS5: NP-104433-0, NP-102944-0, WS-116521-6, CE-113212-0 и другим. Причины, решения, настройка Wi‑Fi и кабеля, NAT, DNS, таблицы, лайфхаки, FAQ.",
+    "totalTime": "PT40M",
+    "step": [
+      {
+        "@type": "HowToStep",
+        "name": "Введение: почему онлайн на PS5 нестабилен",
+        "text": "Объяснение причин сетевых ошибок и структуры гайда.",
+        "url": "#step-1"
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Обзор: ключевые сетевые коды ошибок PS5",
+        "text": "Сводная таблица по частым сетевым кодам и симптомам.",
+        "url": "#step-2"
+      },
+      {
+        "@type": "HowToStep",
+        "name": "NP-104433-0: проблемы связи с PSN",
+        "text": "Разбор причины и пошаговое решение ошибки NP-104433-0.",
+        "url": "#step-3"
+      },
+      {
+        "@type": "HowToStep",
+        "name": "NP-102944-0: вход в PSN и аккаунт",
+        "text": "Инструкция по восстановлению доступа к PSN и аккаунту.",
+        "url": "#step-4"
+      },
+      {
+        "@type": "HowToStep",
+        "name": "WS-116521-6: проблемы сервиса PSN",
+        "text": "Рекомендации при сбоях отдельных сервисов PSN.",
+        "url": "#step-5"
+      },
+      {
+        "@type": "HowToStep",
+        "name": "CE-113212-0: нет доступа к сети",
+        "text": "Пошаговый план при общем отсутствии сетевого доступа.",
+        "url": "#step-6"
+      },
+      {
+        "@type": "HowToStep",
+        "name": "NAT 1/2/3: что это и почему не ищет матчи",
+        "text": "Объяснение типов NAT и способов улучшить онлайн.",
+        "url": "#step-7"
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Медленный интернет и разрывы в онлайне",
+        "text": "Практические шаги для стабильной игры онлайн.",
+        "url": "#step-8"
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Сводная таблица: сетевые коды и что делать",
+        "text": "Краткая шпаргалка по основным кодам и действиям.",
+        "url": "#step-9"
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Лайфхаки по настройке сети для PS5",
+        "text": "Практические советы по конфигурации сети под консоль.",
+        "url": "#step-10"
+      },
+      {
+        "@type": "HowToStep",
+        "name": "FAQ — частые вопросы о сетевых ошибках PS5",
+        "text": "Ответы на типичные вопросы пользователей.",
+        "url": "#step-11"
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Краткий чеклист стабильного онлайна",
+        "text": "Список действий для быстрого восстановления онлайна.",
+        "url": "#step-12"
+      }
+    ],
+    "image": "https://i.postimg.cc/NMp4ztxP/resize-m-mfit-w-450-h-450.png"
+  }
+  </script>
 </body>
 </html>
