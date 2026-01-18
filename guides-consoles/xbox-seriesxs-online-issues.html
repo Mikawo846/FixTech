@@ -1,663 +1,630 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" data-theme="light">
 <head>
-    <meta charset="UTF-8">
-    <title>Частые проблемы Xbox Series X|S при онлайн‑игре и просмотре видео, и как их исправить</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Подробный разбор частых проблем Xbox Series X|S при онлайн‑игре и просмотре видео: NAT, Wi‑Fi, лаги, чёрный экран, проблемы с приложениями. Пошаговые решения простыми словами.">
-    <style>
-        :root {
-            --bg: #020617;
-            --bg-alt: #050816;
-            --card: #0b1220;
-            --accent: #22c55e;
-            --accent-soft: rgba(34,197,94,0.09);
-            --accent-strong: rgba(34,197,94,0.22);
-            --danger: #f97373;
-            --success: #38bdf8;
-            --warn: #facc15;
-            --text-main: #e5e7eb;
-            --text-soft: #9ca3af;
-            --border-soft: #111827;
-            --code-bg: #020617;
-        }
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YE88Y994NX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-YE88Y994NX');
+  </script>
 
-        * { box-sizing: border-box; }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Частые проблемы Xbox Series X|S при онлайн‑игре и просмотре видео, и как их исправить | Экспертный мегагайд</title>
+  <meta name="description" content="Подробный гид по частым проблемам Xbox Series X|S: онлайн‑игры, Xbox Live и Game Pass, стриминг и приложения видео, тормоза, ошибки, артефакты, звук. Пошаговые решения и чек‑листы.">
 
-        body {
-            margin: 0;
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-            background: radial-gradient(circle at top, #111827 0, #020617 55%, #000 100%);
-            color: var(--text-main);
-            line-height: 1.6;
-        }
+  <!-- Yandex.Metrika counter -->
+  <script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+      m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+      m[i].l=1*new Date();
+      for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+      k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=106225686', 'ym');
 
-        a { color: var(--accent); text-decoration: none; }
-        a:hover { text-decoration: underline; }
+    ym(106225686, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", accurateTrackBounce:true, trackLinks:true});
+  </script>
+  <noscript>
+    <div>
+      <img src="https://mc.yandex.ru/watch/106225686" style="position:absolute; left:-9999px;" alt="Частые проблемы Xbox Series X|S при онлайн‑игре и просмотре видео, и как их исправить - пошаговая инструкция по ремонту">
+    </div>
+  </noscript>
+  <!-- /Yandex.Metrika counter -->
 
-        .page {
-            max-width: 1120px;
-            margin: 0 auto;
-            padding: 32px 16px 48px;
-        }
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="../styles-header.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
-        .hero {
-            display: grid;
-            grid-template-columns: minmax(0, 3fr) minmax(0, 2.1fr);
-            gap: 32px;
-            align-items: center;
-            margin-bottom: 40px;
-        }
+  <style>
+    .guide-content { line-height: 1.7; color: var(--text); }
+    .guide-content h2 { color: var(--primary); margin-top: 30px; margin-bottom: 15px; font-size: 1.5rem; }
+    .guide-content h3 { color: var(--primary-dark); margin-top: 25px; margin-bottom: 12px; font-size: 1.2rem; }
+    .guide-image-block { margin: 20px 0; padding: 15px; background: var(--background); border-radius: var(--border-radius); border: 1px solid var(--border); text-align: center; }
+    .guide-image-block img { max-width: 100%; height: auto; border-radius: 6px; border: 1px solid var(--border); }
+    .image-caption { margin-top: 10px; font-size: 0.85rem; color: var(--text-light); font-style: italic; }
+    .pro-tips { background: rgba(3, 74, 79, 0.05); padding: 15px; border-radius: 6px; margin: 20px 0; }
+    .pro-tips h4 { color: var(--primary); margin-top: 0; margin-bottom: 12px; font-size: 1.1rem; }
+    .tip-item { display: flex; gap: 8px; margin-bottom: 8px; align-items: flex-start; }
+    .tip-item i { margin-top: 3px; color: var(--primary); }
+    .warning-block {
+      background: #fff3e0;
+      border-left: 5px solid #ff9100;
+      padding: 15px 18px;
+      margin: 22px 0;
+      border-radius: 7px;
+    }
+    table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+    th, td { border: 1px solid var(--border); padding: 8px; text-align: left; vertical-align: top; }
+    th { background: var(--background-light); }
+    .code-like { font-family: "SF Mono", "Consolas", "Menlo", monospace; background: var(--background-light); padding: 2px 4px; border-radius: 4px; }
+    .step-badge {
+      display: inline-block;
+      background: var(--primary);
+      color: #fff;
+      font-size: 0.8rem;
+      padding: 2px 8px;
+      border-radius: 999px;
+      margin-right: 6px;
+    }
+    .faq-item { margin-bottom: 16px; }
+    .faq-item strong { display: block; margin-bottom: 4px; }
+    .scenario-block {
+      background: var(--background-light);
+      border-radius: 8px;
+      padding: 14px 16px;
+      margin-bottom: 16px;
+      border: 1px solid var(--border);
+    }
+    .scenario-title {
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+    @media (max-width: 768px) {
+      .guide-content h2 { font-size: 1.4rem; margin-top: 25px; }
+      .guide-image-block { padding: 12px; margin: 15px 0; }
+      table, th, td { font-size: 0.95rem; }
+    }
+  </style>
 
-        .hero-text h1 {
-            font-size: 32px;
-            margin: 0 0 12px;
-        }
-
-        .hero-text h1 strong { color: var(--accent); }
-
-        .hero-text p {
-            margin: 4px 0;
-            color: var(--text-soft);
-        }
-
-        .hero-badges {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            margin-top: 12px;
-        }
-
-        .badge {
-            font-size: 12px;
-            padding: 4px 10px;
-            border-radius: 999px;
-            border: 1px solid var(--border-soft);
-            background: rgba(15,23,42,0.9);
-            color: var(--text-soft);
-            backdrop-filter: blur(6px);
-        }
-
-        .badge--accent {
-            border-color: var(--accent);
-            background: var(--accent-soft);
-            color: #bbf7d0;
-        }
-
-        .badge--danger {
-            border-color: var(--danger);
-            background: rgba(248,113,113,0.09);
-            color: #fecaca;
-        }
-
-        .badge--success {
-            border-color: var(--success);
-            background: rgba(56,189,248,0.1);
-            color: #e0f2fe;
-        }
-
-        .hero-image {
-            border-radius: 18px;
-            overflow: hidden;
-            border: 1px solid var(--border-soft);
-            background: radial-gradient(circle at top, #1f2937 0, #020617 100%);
-            padding: 10px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .hero-image img {
-            max-width: 100%;
-            border-radius: 12px;
-            display: block;
-        }
-
-        .hero-note {
-            font-size: 12px;
-            color: var(--text-soft);
-            margin-top: 6px;
-            text-align: center;
-        }
-
-        .grid {
-            display: grid;
-            grid-template-columns: minmax(0, 2.3fr) minmax(0, 1.5fr);
-            gap: 24px;
-        }
-
-        .card {
-            background: radial-gradient(circle at top left, rgba(148,163,184,0.08), transparent 55%);
-            border-radius: 18px;
-            border: 1px solid var(--border-soft);
-            padding: 20px 18px 18px;
-            box-shadow: 0 18px 40px rgba(15,23,42,0.9);
-        }
-
-        .card h2 {
-            font-size: 20px;
-            margin: 0 0 10px;
-        }
-
-        .card h3 {
-            font-size: 16px;
-            margin: 18px 0 6px;
-        }
-
-        .tagline {
-            font-size: 13px;
-            color: var(--text-soft);
-            margin-bottom: 10px;
-        }
-
-        .highlight {
-            border-left: 3px solid var(--accent);
-            padding-left: 10px;
-            margin: 8px 0 14px;
-            font-size: 14px;
-            color: var(--text-soft);
-        }
-
-        .section-intro {
-            font-size: 14px;
-            color: var(--text-soft);
-            margin: 4px 0 10px;
-        }
-
-        .quick-list {
-            display: grid;
-            grid-template-columns: 1.2fr 1fr;
-            gap: 10px;
-            font-size: 13px;
-            margin: 10px 0 12px;
-        }
-
-        .quick-list ul {
-            margin: 0;
-            padding-left: 18px;
-        }
-
-        .quick-list li { margin-bottom: 4px; }
-
-        .pill {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            font-size: 12px;
-            padding: 4px 10px;
-            border-radius: 999px;
-            border: 1px solid rgba(148,163,184,0.45);
-            background: rgba(15,23,42,0.9);
-            margin-right: 6px;
-            margin-bottom: 4px;
-        }
-
-        .pill-bullet {
-            width: 6px;
-            height: 6px;
-            border-radius: 999px;
-            background: var(--accent);
-        }
-
-        .pill-danger .pill-bullet { background: var(--danger); }
-        .pill-success .pill-bullet { background: var(--success); }
-        .pill-warn .pill-bullet { background: var(--warn); }
-
-        .table-wrapper {
-            margin-top: 12px;
-            border-radius: 14px;
-            overflow: hidden;
-            border: 1px solid var(--border-soft);
-            background: rgba(15,23,42,0.96);
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            font-size: 13px;
-        }
-
-        thead {
-            background: linear-gradient(to right, rgba(34,197,94,0.2), rgba(56,189,248,0.34));
-        }
-
-        th, td {
-            padding: 6px 8px;
-            text-align: left;
-            border-bottom: 1px solid #111827;
-        }
-
-        th {
-            font-weight: 600;
-            color: #e5e7eb;
-            white-space: nowrap;
-        }
-
-        tbody tr:nth-child(odd) { background: rgba(15,23,42,0.96); }
-        tbody tr:nth-child(even) { background: rgba(10,16,32,0.96); }
-
-        .steps {
-            margin: 10px 0 6px;
-            padding-left: 18px;
-            font-size: 13px;
-        }
-
-        .steps li { margin-bottom: 5px; }
-
-        .note {
-            font-size: 12px;
-            color: var(--text-soft);
-            margin-top: 6px;
-        }
-
-        .note strong { color: var(--warn); }
-
-        .code {
-            font-family: ui-monospace, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-            background: var(--code-bg);
-            border-radius: 6px;
-            padding: 1px 4px;
-            font-size: 12px;
-        }
-
-        .badge-block {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 6px;
-            margin-bottom: 10px;
-        }
-
-        .label {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            padding: 2px 8px;
-            border-radius: 999px;
-            font-size: 11px;
-            border: 1px solid rgba(148,163,184,0.6);
-            background: rgba(15,23,42,0.96);
-        }
-
-        .label-dot {
-            width: 7px;
-            height: 7px;
-            border-radius: 999px;
-            background: var(--accent);
-        }
-
-        .label-soft { opacity: 0.92; }
-
-        .checklist {
-            list-style: none;
-            padding-left: 0;
-            margin: 8px 0 4px;
-            font-size: 13px;
-        }
-
-        .checklist li {
-            margin-bottom: 6px;
-            display: flex;
-            align-items: flex-start;
-            gap: 6px;
-        }
-
-        .checklist-icon {
-            width: 15px;
-            height: 15px;
-            border-radius: 4px;
-            border: 1px solid rgba(148,163,184,0.6);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 11px;
-            color: var(--accent);
-            flex-shrink: 0;
-        }
-
-        .checklist-icon--danger {
-            color: var(--danger);
-            border-color: rgba(248,113,113,0.8);
-        }
-
-        .side-section { font-size: 13px; }
-        .side-section h3 { margin-top: 14px; }
-
-        .stat {
-            display: flex;
-            justify-content: space-between;
-            font-size: 12px;
-            margin: 2px 0;
-            color: var(--text-soft);
-        }
-
-        .stat span:first-child { opacity: 0.9; }
-
-        .footer-note {
-            margin-top: 18px;
-            font-size: 12px;
-            color: var(--text-soft);
-            border-top: 1px dashed #1f2937;
-            padding-top: 10px;
-        }
-
-        .divider {
-            margin: 16px 0 10px;
-            border-top: 1px dashed #1e293b;
-        }
-
-        @media (max-width: 920px) {
-            .hero { grid-template-columns: minmax(0, 1fr); }
-            .grid { grid-template-columns: minmax(0, 1fr); }
-            .hero-image { order: -1; }
-        }
-
-        @media (max-width: 560px) {
-            .page { padding: 20px 12px 32px; }
-            .hero-text h1 { font-size: 26px; }
-            .quick-list { grid-template-columns: minmax(0, 1fr); }
-        }
-    </style>
+  <script async src="https://timeweb.cloud/api/v1/cloud-ai/agents/3cc03620-d051-4d8d-b5af-f7b6cd083a35/embed.js?collapsed=true"></script>
 </head>
 <body>
-<div class="page">
+  <header class="header">
+    <div class="container">
+      <div class="header__inner">
+        <a href="../index.html" class="logo">
+          <span class="logo__icon"></span>
+          <span class="logo__text">Repairo</span>
+        </a>
+        <nav class="nav">
+          <ul class="nav__list">
+            <li><a href="../tv.html" class="nav__link">Телевизоры</a></li>
+            <li><a href="../cameras.html" class="nav__link">Фотоаппараты</a></li>
+            <li><a href="../consoles.html" class="nav__link">Приставки</a></li>
+            <li><a href="../laptops.html" class="nav__link">Ноутбуки</a></li>
+            <li><a href="../smartphones.html" class="nav__link">Смартфоны</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
 
-    <!-- HERO -->
-    <section class="hero">
-        <div class="hero-text">
-            <h1><strong>Частые проблемы Xbox Series X|S</strong> при онлайн‑игре и просмотре видео, и как их исправить</h1>
-            <p>Этот гайд помогает понять, почему Xbox Series X|S иногда не пускает в онлайн‑матчи, лагает в партиях, выдает чёрный экран или тормозит при просмотре фильмов и стриминга, и что с этим делать по шагам.</p>
-            <p>Разбираются сетевые проблемы (NAT, Wi‑Fi, кабель), нюансы HDMI и HDR, сбои приложений и то, как без паники пройти от простых действий до более продвинутой диагностики.</p>
+  <section class="guide-page">
+    <div class="container">
+      <div class="breadcrumbs">
+        <a href="../index.html">Главная</a>
+        <i class="fas fa-chevron-right"></i>
+        <a href="../consoles.html">Приставки</a>
+        <i class="fas fa-chevron-right"></i>
+        <span>Частые проблемы Xbox Series X|S при онлайн‑игре и просмотре видео, и как их исправить</span>
+      </div>
 
-            <div class="hero-badges">
-                <span class="badge badge--accent">Xbox Series X|S • Онлайн • Видео</span>
-                <span class="badge badge--success">NAT, сеть, HDMI простым языком</span>
-                <span class="badge badge--danger">Без лишних ресетов и потери данных</span>
-            </div>
+      <h1 class="section__title">Частые проблемы Xbox Series X|S при онлайн‑игре и просмотре видео, и как их исправить</h1>
+
+      <div class="guide-meta">
+        <span>
+          <i class="fas fa-tv"></i>
+          Подробный гид по проблемам Xbox Series X|S в онлайне и приложениях видео: лаги, вылеты, ошибки Xbox Live и Game Pass, сетевые сбои, разрывы стриминга, артефакты, отсутствие звука, HDR и HDMI. Пошаговые решения и сценарные чек‑листы.
+        </span>
+      </div>
+
+      <div class="guide-image-block">
+        <img src="https://i.postimg.cc/TPsKStsb/resize-m-mfit-w-450-h-450.png" alt="Частые проблемы Xbox Series X|S при онлайн‑игре и просмотре видео, и как их исправить">
+        <div class="image-caption">
+          Xbox Series X|S может работать идеально, но на практике появляются лаги в онлайне, зависания приложений, странности с Netflix и YouTube, HDMI‑глюки и ошибки сети — большую часть из них можно убрать правильными настройками.
+        </div>
+      </div>
+
+      <div class="guide-content">
+
+        <h2 id="step-1">Введение: почему онлайн и видео на Xbox иногда «капризничают»</h2>
+        <p>
+          Xbox Series X|S — мощные консоли, но комфорт онлайн‑игры и просмотра видео зависит не только от железа. В цепочке участвуют сеть, роутер, телевизор, HDMI‑кабель, приложения стриминга, серверы Xbox Live и сервисов видео. Любой слабый участок даёт лаги, разрывы, рассыпавшуюся картинку или отсутствие звука.
+        </p>
+        <p>
+          В отличие от чисто офлайновых сценариев, онлайн‑игры и стриминг видео чувствительны к задержкам, потерям пакетов, особенностям HDMI и настроек изображения. Этот мегагайд помогает разложить хаос на понятные категории: где искать причину, что сделать в первую очередь и когда проблема, скорее всего, не на стороне консоли, а в сети или сервисе.
+        </p>
+
+        <h2 id="step-2">Карта проблем: что ломается чаще всего</h2>
+        <p>
+          Чтобы не тратить время на хаотичные действия, полезно понимать, какие типы проблем чаще всего встречаются у владельцев Xbox Series X|S при онлайне и видео. Таблица ниже — быстрый ориентир по симптомам и вероятным источникам.
+        </p>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Симптом</th>
+              <th>Область</th>
+              <th>Чаще всего виноват</th>
+              <th>Что трогать первым</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Лаги и вылеты в онлайн‑играх</td>
+              <td>Сеть и Xbox Live</td>
+              <td>Wi‑Fi, роутер, NAT, сервера игры или Xbox</td>
+              <td>Тест сети, проводное подключение, проверка статуса сервисов</td>
+            </tr>
+            <tr>
+              <td>Загрузка игр и обновлений идёт медленно</td>
+              <td>Маркет и CDN</td>
+              <td>Роутер, канал провайдера, серверы Microsoft</td>
+              <td>Перезапуск сети, тест других устройств, смена времени скачивания</td>
+            </tr>
+            <tr>
+              <td>Приложения видео зависают или тормозят</td>
+              <td>Стриминг</td>
+              <td>Wi‑Fi, перегрузка сети, сервис стриминга</td>
+              <td>Снижение нагрузки на сеть, проверка других устройств, перезапуск приложений</td>
+            </tr>
+            <tr>
+              <td>Нет звука или странные артефакты при видео</td>
+              <td>HDMI/аудио</td>
+              <td>Настройки звука, ТВ, кабель, режимы вывода</td>
+              <td>Проверка HDMI, выбор формата звука и видео, перезапуск ТВ и приставки</td>
+            </tr>
+            <tr>
+              <td>Чёрный экран при запуске приложений</td>
+              <td>Видео, HDR, HDMI</td>
+              <td>Несовместимый режим, сбой приложения или ТВ</td>
+              <td>Выключить/включить HDR, изменить разрешение, очистить кэш приложения</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2 id="step-3">Часть 1. Онлайн‑игры: лаги, вылеты и ошибки Xbox Live</h2>
+        <p>
+          Основные проблемы в онлайне на Xbox — задержки, резкие скачки пинга, вылеты из матчей, ошибки подключения к серверам игры или Xbox Live. Игрок видит сообщения вроде «Не удаётся подключиться к игре», «Требуется проверка сети», «Службы Xbox Live недоступны». Главная задача — понять, проблема в своей сети или на стороне сервиса.
+        </p>
+        <p>
+          Консоль имеет встроенную диагностику сети, которая показывает базовые показатели: тип NAT, скорость, наличие потерь. Это первый инструмент, которым стоит воспользоваться перед тем, как менять роутер или ругать провайдера. Параллельно важно проверить, работают ли другие онлайн‑сервисы и игры на этой же сети.
+        </p>
+
+        <h3>Мини‑чек‑лист для проблем с онлайн‑играми</h3>
+        <ol>
+          <li>
+            <span class="step-badge">Шаг 1.1</span>
+            Запустить тест сети в настройках Xbox и убедиться, что интернет есть, потерь и критических ошибок нет.
+          </li>
+          <li>
+            <span class="step-badge">Шаг 1.2</span>
+            Проверить, как ведут себя другие онлайн‑игры и приложения: проблемы везде или в одном проекте.
+          </li>
+          <li>
+            <span class="step-badge">Шаг 1.3</span>
+            Перезапустить консоль и роутер, затем снова протестировать подключение.
+          </li>
+          <li>
+            <span class="step-badge">Шаг 1.4</span>
+            Если есть возможность, подключить Xbox к роутеру по кабелю и сравнить стабильность матчей.
+          </li>
+          <li>
+            <span class="step-badge">Шаг 1.5</span>
+            Проверить статус сервисов Xbox Live и конкретной игры: массовые проблемы означают, что виноваты не ваша сеть и не консоль.</li>
+        </ol>
+
+        <h2 id="step-4">Часть 2. NAT и типы подключения: почему невозможно подключиться к друзьям</h2>
+        <p>
+          NAT на Xbox определяет, насколько легко консоль может подключаться к другим игрокам. Открытый NAT даёт минимум проблем, умеренный создаёт отдельные сложности, а строгий часто приводит к ошибкам при подключении к друзьям и группам. При онлайне в кооперативе и мультиплеере неблагоприятный тип NAT — частый источник «мистических» ошибок.
+        </p>
+        <p>
+          Консоль показывает тип NAT в тесте сети. Если он не «открытый», есть смысл потратить время на настройку роутера: включить UPnP, настроить DMZ или переадресацию портов. Это не требует глубоких знаний сетей, но требует аккуратности и понимания, что именно вы меняете.
+        </p>
+
+        <h3>Что можно сделать с NAT без лишней боли</h3>
+        <ul>
+          <li>Включить UPnP в настройках роутера, чтобы он сам открывал нужные порты для Xbox.</li>
+          <li>Назначить консоли постоянный IP‑адрес внутри сети, чтобы было проще работать с правилами.</li>
+          <li>При необходимости открыть рекомендуемые порты для Xbox в настройках роутера, прописав их для IP приставки.</li>
+          <li>Избегать сложных каскадных схем (например, роутер за роутером) без необходимости: они усложняют NAT.</li>
+          <li>Если провайдер отдаёт интернет через несколько уровней NAT, обсудить с ним возможность получения более «прямого» подключения.</li>
+        </ul>
+
+        <h2 id="step-5">Часть 3. Медленная загрузка игр, обновлений и видео</h2>
+        <p>
+          Другая частая проблема — когда игры и обновления скачиваются значительно медленнее, чем позволяет тариф, а видео в приложениях подгружается медленно или часто буферизуется. Это может быть вызвано как реальной загруженностью сети, так и особенностями работы CDN или временными проблемами у провайдера.
+        </p>
+        <p>
+          Важно отличать разовые просадки от системных. Нормально, когда в моменты выхода крупного релиза скорость скачивания может «проседать» из‑за массовых загрузок. Ненормально, когда Xbox стабильно качает в несколько раз медленнее, чем другие устройства в той же сети, в любое время суток.
+        </p>
+
+        <h3>Как бороться с медленными загрузками</h3>
+        <ul>
+          <li>Проверить скорость интернета на другом устройстве через тот же роутер и в то же время.</li>
+          <li>На время загрузки игр и обновлений сократить активную нагрузку: торренты, стриминг 4K, облачные резервные копии.</li>
+          <li>Перезапустить роутер и приставку, повторить попытку скачивания позже (особенно в непиковое время).</li>
+          <li>Если в сети много устройств — настроить приоритизацию трафика для Xbox на уровне роутера, если такая функция есть.</li>
+          <li>При стабильных проблемах только у приставки рассмотреть проводное подключение или обновление роутера.</li>
+        </ul>
+
+        <h2 id="step-6">Часть 4. Приложения видео: Netflix, YouTube, стриминг и их капризы</h2>
+        <p>
+          Xbox Series X|S часто используется как медиаприставка: для Netflix, YouTube, Disney+, онлайн‑кинотеатров. Проблемы типичны: видео долго стартует, качество прыгает, картинка рассыпается или приложение зависает, требуя принудительного закрытия. При этом на телевизоре или другой приставке тот же сервис может работать лучше.
+        </p>
+        <p>
+          В отличие от игр, стриминговые приложения завязаны не только на сети, но и на работу конкретного клиента под Xbox: кэш, настройки качества, взаимодействие с системой. Часто помогает обычная «перезагрузка приложения», очистка кэша или повторный вход в аккаунт. В сложных случаях не исключены баги клиента, которые можно только переждать.
+        </p>
+
+        <h3>Чек‑лист по проблемам приложений видео</h3>
+        <ul>
+          <li>Полностью закрыть приложение (через меню, а не просто вернуться на главный экран) и запустить его заново.</li>
+          <li>Перезайти в аккаунт сервиса, если приложение ведёт себя странно или не загружает профиль.</li>
+          <li>Проверить работу сервиса на другом устройстве в той же сети: телевизоре, смартфоне, ПК.</li>
+          <li>Снизить нагрузку на сеть в момент просмотра, особенно при 4K и HDR‑контенте.</li>
+          <li>При регулярных зависаниях конкретного приложения переустановить его и проверить обновления системы Xbox.</li>
+        </ul>
+
+        <h2 id="step-7">Часть 5. HDMI, HDR и отсутствие звука или изображения</h2>
+        <p>
+          Видеопроблемы на Xbox Series X|S часто связаны с HDMI и режимами изображения. Типичные симптомы: чёрный экран при запуске приложения или игры, периодические пропадания картинки, отсутствие звука, странные цвета или «выгоревший» HDR. Всё это может быть результатом конфликта настроек приставки, телевизора и кабеля.
+        </p>
+        <p>
+          Современные ТВ и ресиверы поддерживают множество режимов: разные версии HDMI, HDR‑форматы, частоты обновления, eARC. Если приставка и телевизор не согласовали режим, возможны чёрные экраны, переключения или странное поведение. Иногда решает простой обмен кабеля на качественный или переключение порта HDMI на ТВ.
+        </p>
+
+        <h3>Что проверить при проблемах с HDMI и звуком</h3>
+        <ul>
+          <li>Убедиться, что используется исправный HDMI‑кабель, желательно версии не ниже 2.0/2.1 и без видимых повреждений.</li>
+          <li>Подключить Xbox к другому HDMI‑порту ТВ или напрямую, минуя ресивер/саундбар, для проверки.</li>
+          <li>В настройках приставки временно отключить автоопределение и вручную выставить более консервативный режим (например, без 120 Гц и с выключенным HDR).</li>
+          <li>Проверить настройки звука: режим вывода (стерео/битстрим), включён ли eARC и правильно ли выбран исходящий канал.</li>
+          <li>Перезагрузить и приставку, и ТВ, иногда порядок включения устройств влияет на корректное определение HDMI‑режима.</li>
+        </ul>
+
+        <h2 id="step-8">Часть 6. Специфические глюки: зависания приложений, ошибки при запуске</h2>
+        <p>
+          Помимо сетевых и HDMI‑сценариев, есть класс проблем, связанных именно с программной частью: приложения видео не запускаются, сразу выдают ошибку, зависают на логотипе, а некоторые игры начинают вылетать при обращении к онлайновым сервисам. Это чаще всего вопросы к кэшу, конфликту временных данных или последствий не совсем корректного обновления.
+        </p>
+        <p>
+          Xbox, как и другие современные приставки, активно кэширует состояние программ для ускорения запуска. Если в этот процесс вмешаться (например, во время обновления выключилось электричество), в системе могут остаться неконсистентные данные, мешающие нормальному старту приложений. Решается это обычно мягкой очисткой и переустановкой конкретного клиента.
+        </p>
+
+        <h3>Как «перезагрузить» капризное приложение или игру</h3>
+        <ul>
+          <li>Полностью закрыть приложение, а затем зайти в управление хранилищем и очистить его данные (кэш), не затрагивая аккаунт, если это возможно.</li>
+          <li>Удалить приложение, перезапустить приставку и установить его заново.</li>
+          <li>Проверить свободу места на диске: при переполненном хранилище система начинает вести себя непредсказуемо.</li>
+          <li>Обновить систему Xbox и само приложение до последней версии.</li>
+          <li>Если проблема только с одним сервисом и она массовая, подождать официального исправления, не ломая общие настройки приставки.</li>
+        </ul>
+
+        <h2 id="step-9">Сценарные кейсы: решаем реальные ситуации</h2>
+        <p>
+          Ниже несколько жизненных сценариев и последовательности действий для каждого — удобный формат, когда не хочется разбираться в теории, а нужно быстро понять, что делать, если онлайн или видео ведут себя странно.
+        </p>
+
+        <div class="scenario-block">
+          <div class="scenario-title">Сценарий A: в онлайн‑игре постоянно высокий пинг и частые вылеты</div>
+          <ul>
+            <li>Запустить тест сети на Xbox и убедиться, что нет явных ошибок соединения.</li>
+            <li>По возможности подключить приставку по кабелю к роутеру и проверить, станет ли стабильнее.</li>
+            <li>Сократить нагрузку на сеть: временно отключить тяжёлые загрузки и стримы на других устройствах.</li>
+            <li>Поиграть в другое время суток, чтобы оценить влияние нагрузки на провайдера и серверы игры.</li>
+            <li>При стойких проблемах в разных играх — обсудить ситуацию с провайдером и рассмотреть обновление роутера.</li>
+          </ul>
         </div>
 
-        <div>
-            <div class="hero-image">
-                <img src="https://i.postimg.cc/TPsKStsb/resize-m-mfit-w-450-h-450.png" alt="Частые проблемы Xbox Series X|S при онлайн-игре и просмотре видео, и как их исправить">
-            </div>
-            <div class="hero-note">Картинку можно заменить на локальный файл с тем же разрешением, если делаете лендинг или статью.</div>
+        <div class="scenario-block">
+          <div class="scenario-title">Сценарий B: Netflix/YouTube регулярно подвисает, хотя интернет вроде норм</div>
+          <ul>
+            <li>Полностью закрыть приложение и запустить его заново.</li>
+            <li>Проверить работу сервиса на другом устройстве (смартфон, ТВ) в той же сети.</li>
+            <li>Уменьшить общую нагрузку на сеть и убедиться, что никто параллельно не качает крупные файлы.</li>
+            <li>Переустановить приложение на Xbox и обновить систему.</li>
+            <li>Если тормозит только на Xbox, но не на других устройствах, рассмотреть проводное подключение и проверку роутера.</li>
+          </ul>
         </div>
-    </section>
 
-    <section class="grid">
-        <!-- ОСНОВНОЙ КОНТЕНТ -->
-        <article class="card">
-            <h2>С чего начать: как понять, где именно проблема</h2>
-            <p class="tagline">Онлайн‑игра и видео на Xbox одновременно зависят от трёх вещей: сети, HDMI/видео‑цепочки и самих приложений. Больше половины проблем решаются на первых двух уровнях.[web:148][web:157][web:162]</p>
-            <p class="highlight">Прежде чем менять роутер или делать полный сброс консоли, полезно задать четыре вопроса: что именно не работает (онлайн, голос, видео), как ведут себя другие устройства, есть ли ошибки NAT и есть ли артефакты по HDMI (чёрный экран, мигания).[web:148][web:159][web:162]</p>
+        <div class="scenario-block">
+          <div class="scenario-title">Сценарий C: при запуске видео или игры экран периодически гаснет на секунду</div>
+          <ul>
+            <li>Проверить HDMI‑кабель, при необходимости заменить на новый, сертифицированный для нужного режима (4K/HDR/120 Гц).</li>
+            <li>Подключить Xbox к другому HDMI‑порту ТВ, желательно с полной поддержкой нужных функций.</li>
+            <li>В настройках видео приставки временно убрать 120 Гц или отключить VRR/HDR и проверить стабильность.</li>
+            <li>Перезагрузить ТВ и приставку, поменять порядок включения (сначала ТВ, потом Xbox).</li>
+            <li>Если проблема только в конкретном режиме (например, 4K HDR 120 Гц), возможно, стоит остановиться на менее агрессивной конфигурации.</li>
+          </ul>
+        </div>
 
-            <div class="quick-list">
-                <div>
-                    <strong>Что разберём:</strong>
-                    <ul>
-                        <li>NAT и типичные сетевые проблемы в онлайн‑играх.</li>
-                        <li>Wi‑Fi и кабель: отрывки связи, лаги, «всё тормозит».</li>
-                        <li>Чёрный экран, мигание картинки, HDR и HDMI‑рукопожатие.</li>
-                        <li>Тормоза и вылеты приложений для видео.</li>
-                        <li>Мини‑чек‑лист, когда уже пора трогать роутер и провайдера.</li>
-                    </ul>
-                </div>
-                <div>
-                    <strong>Уровень вмешательства:</strong>
-                    <div class="pill pill-success"><span class="pill-bullet"></span>Блок 1–3: базовые действия на консоли</div>
-                    <div class="pill"><span class="pill-bullet"></span>Блок 4–6: роутер, NAT и HDMI‑настройки</div>
-                    <div class="pill pill-danger"><span class="pill-bullet"></span>Блок 7–8: когда нужен провайдер или сервис</div>
-                </div>
-            </div>
+        <div class="scenario-block">
+          <div class="scenario-title">Сценарий D: невозможно подключиться к лобби друзей, хотя игры с рандомами работают</div>
+          <ul>
+            <li>Проверить тип NAT в настройках сети Xbox.</li>
+            <li>Включить UPnP на роутере и перезапустить и его, и приставку.</li>
+            <li>Попробовать, чтобы хостом лобби стал другой человек, с более благоприятным NAT.</li>
+            <li>При необходимости настроить перенаправление портов на IP Xbox, используя рекомендации по портам для сервиса.</li>
+            <li>Если у провайдера многоуровневый NAT, обсудить опции получения «белого» IP или другого решения.</li>
+          </ul>
+        </div>
 
-            <!-- Блок 1 -->
-            <h3>1. NAT и проблемы с подключением к онлайн‑играм</h3>
-            <p class="section-intro">NAT определяет, насколько легко ваша консоль общается с серверами и другими игроками. Неправильный NAT — классическая причина проблем с матчмейкингом, голосовым чатом и подключением к сессиям.[web:148][web:149][web:161]</p>
+        <h2 id="step-10">Сводная таблица: кто виноват и что делать</h2>
+        <p>
+          Быстрый ориентир по распространённым проблемам с онлайном и видео на Xbox Series X|S помогает избежать лишних действий и быстрее понять, в какую сторону копать.
+        </p>
 
-            <div class="table-wrapper">
-                <table>
-                    <thead>
-                    <tr>
-                        <th>Состояние NAT</th>
-                        <th>Что значит</th>
-                        <th>Как проявляется</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td>Open (Открытый)</td>
-                        <td>Максимально свободное соединение</td>
-                        <td>Онлайн‑игры и чат работают без ограничений</td>
-                    </tr>
-                    <tr>
-                        <td>Moderate (Умеренный)</td>
-                        <td>Часть соединений ограничена</td>
-                        <td>Иногда проблемы с подключением к конкретным друзьям</td>
-                    </tr>
-                    <tr>
-                        <td>Strict (Строгий)</td>
-                        <td>Сильно урезанные входящие соединения</td>
-                        <td>Постоянные проблемы с матчмейкингом, голосом, играми «peer‑to‑peer»[web:148][web:161]</td>
-                    </tr>
-                    <tr>
-                        <td>NAT Type: Unavailable</td>
-                        <td>Консоль не может определить NAT‑тип</td>
-                        <td>Часто вообще не удаётся нормально выйти в онлайн‑функции[web:149][web:152]</td>
-                    </tr>
-                    </tbody>
-                </table>
-            </div>
+        <table>
+          <thead>
+            <tr>
+              <th>Симптом</th>
+              <th>Предполагаемый источник</th>
+              <th>Рекомендуемые действия</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Вылеты и лаги в нескольких онлайн‑играх</td>
+              <td>Сеть, роутер, провайдер</td>
+              <td>Тест сети, проводной режим, снижение нагрузки, контакт с провайдером</td>
+            </tr>
+            <tr>
+              <td>Проблемы только в одной онлайн‑игре</td>
+              <td>Сервера конкретной игры или её код</td>
+              <td>Проверить статус серверов, подождать патч, протестировать другие игры</td>
+            </tr>
+            <tr>
+              <td>Только стриминговые сервисы видео тормозят</td>
+              <td>Сервис, кэш приложения, сеть</td>
+              <td>Перезапуск/переустановка приложения, проверка других устройств, снижение нагрузки</td>
+            </tr>
+            <tr>
+              <td>Чёрный экран/отсутствие звука при видео</td>
+              <td>HDMI, ТВ, настройки вывода</td>
+              <td>Смена кабеля/порта, корректировка разрешения и HDR, проверка звукового режима</td>
+            </tr>
+            <tr>
+              <td>Невозможно подключиться к друзьям</td>
+              <td>NAT, роутер, особенности сети</td>
+              <td>UPnP, порты, смена хоста, возможная работа с провайдером</td>
+            </tr>
+          </tbody>
+        </table>
 
-            <p class="section-intro"><strong>С чего начать при ошибках NAT:</strong></p>
-            <ul class="steps">
-                <li>Открыть гайд Xbox: Профиль и система → Настройки → Общие → Настройки сети. Там видно текущий NAT и статус подключения.[web:148]</li>
-                <li>Если NAT «Unavailable» или соединение нестабильно — выполнить перезапуск консоли и роутера (полный power‑cycle).[web:149][web:152][web:157]</li>
-                <li>Если после перезапуска NAT остаётся Strict/Moderate и мешает играть, переходить к настройке роутера: UPnP, открытие портов и, при необходимости, DMZ.[web:148][web:150][web:152][web:161]</li>
-            </ul>
-            <p class="note"><strong>Идея:</strong> комфортный онлайн на Xbox почти всегда начинается с NAT Open или хотя бы Moderate. Всё, что ниже, рано или поздно даст о себе знать лагами и отказами подключиться.[web:148][web:161]</p>
+        <h2 id="step-11">Лайфхаки для стабильного онлайна и стриминга на Xbox</h2>
+        <div class="pro-tips">
+          <h4>Простые привычки, которые сильно помогают</h4>
+          <div class="tip-item">
+            <i class="fas fa-lightbulb"></i>
+            <p>По возможности подключать Xbox Series X|S к роутеру по кабелю, особенно если приставка активно используется для онлайна и 4K‑стриминга.</p>
+          </div>
+          <div class="tip-item">
+            <i class="fas fa-lightbulb"></i>
+            <p>Не загружать сеть тяжёлыми загрузками во время важных матчей или просмотра фильмов в высоком разрешении.</p>
+          </div>
+          <div class="tip-item">
+            <i class="fas fa-lightbulb"></i>
+            <p>Периодически перезагружать роутер и приставку, особенно если они работают без остановки месяцами.</p>
+          </div>
+          <div class="tip-item">
+            <i class="fas fa-lightbulb"></i>
+            <p>Следить за обновлениями системы Xbox и приложений, но не ставить их прямо перед важной игровой сессией.</p>
+          </div>
+          <div class="tip-item">
+            <i class="fas fa-lightbulb"></i>
+            <p>Использовать качественные HDMI‑кабели и корректные порты ТВ, рассчитанные на нужные режимы (4K/HDR/120 Гц), чтобы избежать странных видео‑глюков.</p>
+          </div>
+        </div>
 
-            <!-- Блок 2 -->
-            <h3>2. Настройка NAT через роутер: UPnP, порты и DMZ</h3>
-            <p class="section-intro">Если перезагрузка не помогла, нужно объяснить роутеру, что Xbox — «важный гость», которому нужно открыть правильные двери. Для этого используются UPnP, проброс портов и, в крайнем случае, DMZ.[web:148][web:150][web:152][web:161]</p>
+        <h2 id="step-12">FAQ — ответы на частые вопросы владельцев Xbox Series X|S</h2>
+        <div class="faq-item">
+          <strong>Если онлайн глючит только вечером — это проблема приставки?</strong>
+          <p>
+            Чаще всего это вопрос нагрузки на сеть у провайдера и серверы игр. Приставка здесь лишь «пассажир», поэтому полезно сравнить поведение в другое время суток и на других устройствах в той же сети.
+          </p>
+        </div>
+        <div class="faq-item">
+          <strong>Стоит ли ради онлайна менять провайдера?</strong>
+          <p>
+            Это имеет смысл, если разные игры, сервисы и устройства страдают от нестабильного пинга и потерь пакетов, а провайдер не предлагает решения. Но сначала лучше протестировать проводной режим, смену роутера и настройки.</p>
+        </div>
+        <div class="faq-item">
+          <strong>Помогут ли усилители Wi‑Fi полностью убрать лаги?</strong>
+          <p>
+            Усилители и mesh‑системы улучшают покрытие, но добавляют свои нюансы. Для критичного онлайна кабель обычно надёжнее, а для Wi‑Fi стоит выбирать продуманную конфигурацию, а не случайный репитер.</p>
+        </div>
+        <div class="faq-item">
+          <strong>Нормально ли, что приложения видео иногда подвисают?</strong>
+          <p>
+            Редкие подлагивания и зависания допустимы для любых стриминговых сервисов. Повод для действий — регулярные проблемы именно на Xbox при нормальной работе тех же сервисов на других устройствах.</p>
+        </div>
+        <div class="faq-item">
+          <strong>Когда пора обращаться в поддержку Xbox или провайдера?</strong>
+          <p>
+            Если после базовых шагов (перезапуск, тест сети, проверка кабелей, проводное подключение) проблемы в онлайне и видео остаются устойчивыми и проявляются в разных сервисах и играх, логично сначала поговорить с провайдером, а затем, при необходимости, обратиться в поддержку Xbox.</p>
+        </div>
 
-            <div class="table-wrapper">
-                <table>
-                    <thead>
-                    <tr>
-                        <th>Метод</th>
-                        <th>Сложность</th>
-                        <th>Суть</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td>UPnP</td>
-                        <td>Низкая</td>
-                        <td>Роутер сам открывает нужные порты для Xbox по запросу.[web:150][web:161]</td>
-                    </tr>
-                    <tr>
-                        <td>Port Forwarding</td>
-                        <td>Средняя</td>
-                        <td>Вы вручную пробрасываете порты Xbox Live на IP консоли.[web:148][web:152]</td>
-                    </tr>
-                    <tr>
-                        <td>DMZ</td>
-                        <td>Средняя/высокая</td>
-                        <td>Консоль ставится в «зону без фильтров», получая максимальную открытость.[web:152][web:161]</td>
-                    </tr>
-                    </tbody>
-                </table>
-            </div>
+        <h2 id="step-13">Краткий чек‑лист: что сделать за 5 минут при проблемах с онлайном или видео</h2>
+        <p>
+          Для ситуаций, когда нет времени вникать в детали, достаточно последовательности быстрых шагов, которые помогают в большинстве бытовых случаев.
+        </p>
+        <ul>
+          <li>Перезагрузить Xbox и роутер, затем заново протестировать сеть на приставке.</li>
+          <li>По возможности подключить консоль по кабелю или перейти ближе к роутеру при использовании Wi‑Fi.</li>
+          <li>Сократить нагрузку на сеть, временно остановив тяжёлые загрузки и стримы на других устройствах.</li>
+          <li>Закрыть и заново открыть проблемное приложение или игру, при необходимости переустановить его.</li>
+          <li>Проверить, не связана ли проблема с конкретным сервисом или временем суток, и при устойчивых симптомах рассмотреть более глубокие шаги: настройку NAT, работу с провайдером или поддержку Xbox.</li>
+        </ul>
 
-            <p class="section-intro"><strong>Основные шаги:</strong></p>
-            <ul class="steps">
-                <li>В веб‑интерфейсе роутера включить UPnP (если его не было) — это уже решает проблемы NAT во многих случаях.[web:150][web:161]</li>
-                <li>При необходимости выполнить проброс стандартных портов Xbox Live: TCP 3074 и UDP 88, 500, 3074, 3544, 4500, как рекомендует поддержка и гайды.[web:148][web:152]</li>
-                <li>Назначить Xbox фиксированный IP (через DHCP резервацию или вручную), чтобы порты всегда указывали на правильное устройство.[web:148][web:152]</li>
-                <li>В крайнем случае — вынести Xbox в DMZ, если вы понимаете риски и используете домашнюю сеть без критично важных сервисов.[web:152][web:161]</li>
-            </ul>
-            <p class="note"><strong>Важно:</strong> почти всегда хватает связки UPnP + корректной настройки роутера. DMZ и ручной порт‑форвардинг — это уже «тяжёлая артиллерия», к которой лучше подходить осознанно.[web:148][web:150][web:152]</p>
+        <div class="warning-block">
+          <strong>Напоминание!</strong> Перед тем как радикально менять провайдера, роутер или сбрасывать Xbox до заводских настроек, всегда стоит пройти мягкий чек‑лист: тест сети, проверка кабелей и режимов, перезапуск приложений и оценка работы других устройств. В большинстве случаев этого достаточно, чтобы вернуть стабильный онлайн и нормальный стриминг.
+        </div>
 
-            <!-- Блок 3 -->
-            <h3>3. Wi‑Fi и кабель: лаги, обрывы, «вроде подключено, но всё тупит»</h3>
-            <p class="section-intro">Даже при правильном NAT онлайн может разваливаться из‑за слабого Wi‑Fi, перегруженной сети или мелких глюков сетевого стека Xbox, вроде пропадающей сети или «памяти» о старом MAC‑адресе.[web:154][web:157]</p>
+      </div>
+    </div>
+  </section>
 
-            <p class="section-intro"><strong>Типичные симптомы:</strong></p>
-            <ul class="steps">
-                <li>Консоль иногда не видит Wi‑Fi или «забывает» сеть до полного перезапуска.[web:154][web:157]</li>
-                <li>Во время онлайна пинг скачет, игры подлагивают, а видео качается рывками, хотя на телефоне/ПК всё более‑менее нормально.[web:157]</li>
-                <li>При включении с подключённой внешней картой памяти могут пропадать и кабель, и Wi‑Fi — известный баг для части пользователей.[web:160]</li>
-            </ul>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__col footer__col--logo">
+          <a href="index.html" class="footer-logo">
+            <span class="logo__icon"></span>
+            <span class="logo__text">Repairo</span>
+          </a>
+          <p class="footer__text">Экспертные инструкции по технике с 2024 года</p>
+        </div>
+        <div class="footer__col">
+          <h3 class="footer__title">Разделы</h3>
+          <ul class="footer__links">
+            <li><a href="index.html" class="footer__link">Главная</a></li>
+            <li><a href="all-guides.html" class="footer__link">Все гайды</a></li>
+            <li><a href="contacts.html" class="footer__link">Контакты</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h3 class="footer__title">Категории</h3>
+          <ul class="footer__links">
+            <li><a href="../tv.html" class="nav__link">Телевизоры</a></li>
+            <li><a href="../cameras.html" class="nav__link">Фотоаппараты</a></li>
+            <li><a href="../consoles.html" class="nav__link">Приставки</a></li>
+            <li><a href="../laptops.html" class="nav__link">Ноутбуки</a></li>
+            <li><a href="../smartphones.html" class="nav__link">Смартфоны</a></li>
+            <li><a href="../small-appliances.html" class="nav__link">Мелкая техника</a></li>
+            <li><a href="../large-appliances.html" class="nav__link">Бытовая техника</a></li>
+            <li><a href="../auto-electronics.html" class="nav__link">Авто-Электроника</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h3 class="footer__title">Контакты</h3>
+          <ul class="footer__links">
+            <li>
+              <a href="https://t.me/repairo_kz" class="footer__link"><i class="fab fa-telegram"></i> Telegram</a>
+            </li>
+            <li>
+              <a href="https://instagram.com/repairo_kz" class="footer__link"><i class="fab fa-instagram"></i> Instagram</a>
+            </li>
+            <li>
+              <a href="mailto:support@repairo.kz" class="footer__link"><i class="fas fa-envelope"></i> Email</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="disclaimer">
+          Администрация сайта не несёт ответственности за возможные повреждения техники
+          и иные последствия, возникшие в результате самостоятельного ремонта по
+          материалам и инструкциям, размещённым на сайте. Все работы вы выполняете
+          на свой страх и риск.
+        </p>
+        <p class="footer__copyright">© 2025 Repairo. Все права защищены.</p>
+      </div>
+    </div>
+  </footer>
 
-            <p class="section-intro"><strong>Базовый набор действий по сети:</strong></p>
-            <ul class="steps">
-                <li>Power‑cycle сети: выключить Xbox, выдернуть роутер/модем на 30–60 секунд, затем включить роутер, подождать и только потом запускать консоль.[web:157][web:152]</li>
-                <li>На Xbox: Профиль и система → Настройки → Общие → Сетевые настройки → Дополнительные настройки → Альтернативный MAC‑адрес → Очистить → Перезапустить.[web:154][web:157][web:155]</li>
-                <li>Если возможно, перейти с Wi‑Fi на Ethernet‑кабель — для онлайна и стриминга это всегда стабильнее.[web:157]</li>
-                <li>В случае глюка с расширительной картой хранения — выключить консоль, вынуть карту, сделать полный power‑off, потом включить и вставить карту уже после нормального старта сети.[web:160]</li>
-            </ul>
-            <p class="note"><strong>Вывод:</strong> многие «мистические» подвисания, падения matchmaking и проблемы с приложениями видео оказываются обычной нестабильной сетью или сбойным MAC/кешем на самой консоли.[web:154][web:157][web:160]</p>
+  <script src="../script.js"></script>
 
-            <!-- Блок 4 -->
-            <h3>4. Чёрный экран и мигания при запуске игр и видео</h3>
-            <p class="section-intro">Ещё одна категория проблем — когда звук есть, консоль вроде бы живёт, но экран чернеет, мигает или не показывает картинку при запуске игры, приложения или фильма.[web:153][web:156][web:159][web:162]</p>
-
-            <p class="section-intro"><strong>Типичные случаи:</strong></p>
-            <ul class="steps">
-                <li>При запуске игр или 4K‑фильмов экран то включается, то гаснет на несколько секунд, особенно на некоторых ТВ, пока не «устаканится».[web:153]</li>
-                <li>При переходах между меню и контентом видео/стриминга иногда ловится чёрный экран на несколько секунд или дольше.[web:153][web:159]</li>
-                <li>Периодические чёрные экраны даже в интерфейсе, не связанные напрямую с конкретным приложением.[web:156][web:159][web:162]</li>
-            </ul>
-
-            <p class="section-intro"><strong>Что проверить в первую очередь:</strong></p>
-            <ul class="steps">
-                <li>Сделать power‑cycle консоли: выключить, выдернуть питание на несколько минут, включить снова.[web:156]</li>
-                <li>Проверить HDMI‑цепочку: плотно ли вставлен кабель, работает ли другой порт на ТВ/мониторе, попробовать другой HDMI‑кабель с нужной версией.[web:156][web:162]</li>
-                <li>Проверить настройки видео: Профиль и система → Настройки → Общие → Параметры ТВ и дисплея и выставить совместимое разрешение и частоту.[web:159]</li>
-                <li>Отключить Auto HDR или отдельные HDR‑режимы, если именно они вызывают «рукопожатные» глюки на конкретном ТВ — пользователи отмечали, что это убирает мигание.[web:153][web:159]</li>
-            </ul>
-            <p class="note"><strong>Смысл:</strong> больше половины чёрных экранов — это конфликт по HDMI (кабель, порт, режим HDR/разрешения), а не поломка консоли. Настройка совместимого режима и кабеля почти всегда помогает.[web:153][web:156][web:159][web:162]</p>
-
-            <!-- Блок 5 -->
-            <h3>5. Проблемы приложений для видео: Netflix, YouTube, стриминг</h3>
-            <p class="section-intro">Иногда падения, буферизация, вылеты и зависания случаются не в играх, а в приложениях для просмотра видео — хотя сами игры при этом работают нормально.[web:162][web:159]</p>
-
-            <p class="section-intro"><strong>Как это выглядит:</strong></p>
-            <ul class="steps">
-                <li>Приложение зависает на лого, долго грузит или вечно буферизует, тогда как на Smart TV или телефоне тот же сервис идёт нормально.</li>
-                <li>Видео идёт рывками, качество постоянно скачет, звук отстаёт, при этом тест сети на Xbox показывает нормальные цифры.</li>
-                <li>После нескольких часов использования приложения видео внезапно перестаёт воспроизводиться, пока вы не перезапустите приложение или консоль.</li>
-            </ul>
-
-            <p class="section-intro"><strong>Пошаговый план:</strong></p>
-            <ul class="steps">
-                <li>Полностью закрыть приложение (через меню, а не просто выйти на главную) и запустить его снова.</li>
-                <li>Перезагрузить консоль и проверить работу других онлайн‑сервисов (игры, другой видеосервис) — чтобы отсеять проблемы сети общего уровня.[web:157]</li>
-                <li>Проверить обновления приложений и системы, затем при необходимости удалить и переустановить конкретное приложение видео.</li>
-                <li>Проверить, нет ли проблем с HDMI/режимом ТВ, если проблема проявляется только на 4K/HDR‑контенте.[web:153][web:159][web:162]</li>
-            </ul>
-            <p class="note"><strong>Вывод:</strong> приложения — такая же часть экосистемы, как игры. Их баги часто лечатся обновлением, переустановкой и исправлением проблем по сети и HDMI.[web:159][web:162][web:157]</p>
-
-            <!-- Блок 6 -->
-            <h3>6. Мини‑алгоритм диагностики: онлайн‑игра тормозит или не подключается</h3>
-            <p class="section-intro">Ниже небольшой практический сценарий, когда всё плохо именно в онлайне: лаги, потери пакетов, проблемы с голосовым чатом и матчмейкингом.</p>
-
-            <p class="section-intro"><strong>Пошагово:</strong></p>
-            <ul class="steps">
-                <li>Открыть Настройки сети на Xbox и посмотреть NAT, состояние подключения и наличие потери пакетов.[web:148]</li>
-                <li>Сделать power‑cycle роутера и консоли, очистить альтернативный MAC‑адрес и перезагрузить консоль.[web:149][web:154][web:157]</li>
-                <li>По возможности переключиться на кабельное подключение и повторить тест сети и онлайн‑игру.[web:157]</li>
-                <li>Проверить в роутере UPnP и, при необходимости, настроить проброс портов для Xbox Live, чтобы добиться NAT Open/Moderate.[web:148][web:150][web:152][web:161]</li>
-                <li>Сравнить поведение в другой онлайн‑игре или приложении, чтобы понять, локальна ли проблема конкретной игре.</li>
-            </ul>
-            <p class="note"><strong>Итог:</strong> если в другой сети (например, у друга или при раздаче с телефона) всё работает хорошо, проблема почти наверняка в домашнем роутере или линии провайдера, а не в консоли.[web:148][web:157]</p>
-        </article>
-
-        <!-- ПРАВАЯ КОЛОНКА / САЙДБАР -->
-        <aside class="card side-section">
-            <h2>Шпаргалка по онлайну и видео на Xbox Series X|S</h2>
-            <p class="tagline">Компактный план, который удобно держать под рукой при настройке консоли для игр и стриминга.</p>
-
-            <div class="badge-block">
-                <span class="label"><span class="label-dot"></span>5–20 минут на базовую настройку</span>
-                <span class="label label-soft"><span class="label-dot"></span>Подходит для большинства бытовых проблем</span>
-            </div>
-
-            <ul class="checklist">
-                <li>
-                    <span class="checklist-icon">1</span>
-                    <span><strong>Проверить NAT и сеть.</strong> Настройки сети → тест, смотреть NAT, потери пакетов и задержку.[web:148][web:149]</span>
-                </li>
-                <li>
-                    <span class="checklist-icon">2</span>
-                    <span><strong>Сделать power‑cycle.</strong> Выключить Xbox и роутер, обесточить на 30–60 секунд, включить снова и повторить тест.[web:157][web:156]</span>
-                </li>
-                <li>
-                    <span class="checklist-icon">3</span>
-                    <span><strong>Очистить альтернативный MAC‑адрес.</strong> Дополнительные настройки сети → Альтернативный MAC → Очистить → перезапуск.[web:154][web:157][web:155]</span>
-                </li>
-                <li>
-                    <span class="checklist-icon">4</span>
-                    <span><strong>Перейти на кабель или улучшить Wi‑Fi.</strong> Кабель, другой диапазон, меньше помех и конкурирующих устройств.[web:157]</span>
-                </li>
-                <li>
-                    <span class="checklist-icon">5</span>
-                    <span><strong>Проверить HDMI и HDR.</strong> Качество кабеля, другой HDMI‑порт, отключение Auto HDR/HDR при мигании или чёрном экране.[web:153][web:156][web:159][web:162]</span>
-                </li>
-            </ul>
-
-            <div class="divider"></div>
-
-            <h3>Когда пора звать провайдера или поддержку Xbox</h3>
-            <p class="tagline">Не все проблемы нужно решать самостоятельно, особенно если они явно выходят за пределы домашних настроек.</p>
-
-            <ul class="checklist">
-                <li>
-                    <span class="checklist-icon checklist-icon--danger">!</span>
-                    <span>Тест сети на Xbox регулярно показывает высокую потерю пакетов и нестабильный пинг даже после всех базовых шагов.[web:148][web:157]</span>
-                </li>
-                <li>
-                    <span class="checklist-icon checklist-icon--danger">!</span>
-                    <span>В разных сетях (дома, у друзей, с мобильной точки доступа) консоль ведёт себя одинаково плохо — возможна аппаратная проблема.[web:157][web:156]</span>
-                </li>
-                <li>
-                    <span class="checklist-icon checklist-icon--danger">!</span>
-                    <span>Чёрный экран и артефакты сохраняются при смене HDMI‑кабеля, портов и ТВ/мониторов — повод подумать о диагностике HDMI‑выхода или сервисе.[web:156][web:159][web:162]</span>
-                </li>
-            </ul>
-
-            <div class="divider"></div>
-
-            <h3>Мини‑план профилактики проблем онлайна и видео</h3>
-            <p class="tagline">Несколько простых привычек, которые значительно уменьшают шанс внезапных глюков.</p>
-
-            <div class="stat">
-                <span>Регулярный перезапуск роутера:</span>
-                <span>раз в несколько недель для обновления сети.[web:157]</span>
-            </div>
-            <div class="stat">
-                <span>Стабильный кабель/HDMI:</span>
-                <span>качественные кабели, минимум переходников.[web:156][web:159][web:162]</span>
-            </div>
-            <div class="stat">
-                <span>Осторожность с Wi‑Fi:</span>
-                <span>по возможности использовать кабель для серьёзного онлайна.[web:157]</span>
-            </div>
-            <div class="stat">
-                <span>Знание своих режимов ТВ:</span>
-                <span>понимать, как работают HDR, VRR и поддерживаемые частоты.[web:159][web:162]</span>
-            </div>
-            <div class="stat">
-                <span>Обновления без фанатизма:</span>
-                <span>держать систему и приложения актуальными, но не игнорировать первые отзывы об обновлениях.[web:139][web:162]</span>
-            </div>
-
-            <p class="note"><strong>Результат:</strong> при понятном подходе Xbox Series X|S перестаёт казаться «капризной коробкой» — становится ясно, что большинство проблем онлайна и видео лежит в сетевых и HDMI‑настройках и решается последовательными шагами, а не слепыми ресетами.</p>
-
-            <div class="footer-note">
-                Этот HTML‑гайд можно использовать как основу для лендинга о проблемах Xbox Series X|S, обучающей статьи или PDF‑инструкции для техподдержки, дополнив его скриншотами настроек сети и видео, примерами конфигураций роутеров и типовыми сценариями общения с провайдером.
-            </div>
-        </aside>
-    </section>
-</div>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "Частые проблемы Xbox Series X|S при онлайн‑игре и просмотре видео, и как их исправить",
+    "description": "Подробный гид по частым проблемам Xbox Series X|S в онлайне и приложениях видео и по шагам их решения.",
+    "totalTime": "PT45M",
+    "step": [
+      {
+        "@type": "HowToStep",
+        "name": "Введение: почему онлайн и видео капризничают",
+        "text": "Объяснение цепочки от Xbox до сервисов и целей гайда.",
+        "url": "#step-1"
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Карта проблем",
+        "text": "Обзор частых проблем: онлайн, загрузки, приложения видео, HDMI и звук.",
+        "url": "#step-2"
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Часть 1. Онлайн‑игры: лаги и вылеты",
+        "text": "Диагностика проблем с Xbox Live и серверами игр.",
+        "url": "#step-3"
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Часть 2. NAT и типы подключения",
+        "text": "Как тип NAT влияет на возможность играть с друзьями и что можно сделать.",
+        "url": "#step-4"
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Часть 3. Медленные загрузки",
+        "text": "Причины низкой скорости скачивания и базовые решения.",
+        "url": "#step-5"
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Часть 4. Приложения видео",
+        "text": "Проблемы Netflix, YouTube и других сервисов и способы их решить.",
+        "url": "#step-6"
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Часть 5. HDMI, HDR и звук",
+        "text": "Диагностика чёрного экрана, артефактов и отсутствия звука.",
+        "url": "#step-7"
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Часть 6. Капризы приложений",
+        "text": "Что делать, если приложения не запускаются или зависают.",
+        "url": "#step-8"
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Сценарные кейсы",
+        "text": "Готовые маршруты действий для типичных ситуаций.",
+        "url": "#step-9"
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Сводная таблица: кто виноват и что делать",
+        "text": "Быстрый ориентир по источникам проблем и шагам.",
+        "url": "#step-10"
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Лайфхаки по стабильному онлайна и видео",
+        "text": "Полезные привычки при использовании Xbox Series X|S.",
+        "url": "#step-11"
+      },
+      {
+        "@type": "HowToStep",
+        "name": "FAQ",
+        "text": "Ответы на частые вопросы владельцев Xbox по онлайу и стримингу.",
+        "url": "#step-12"
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Краткий чек‑лист",
+        "text": "Быстрый набор шагов при проблеме с онлайном или видео.",
+        "url": "#step-13"
+      }
+    ],
+    "image": "https://i.postimg.cc/TPsKStsb/resize-m-mfit-w-450-h-450.png"
+  }
+  </script>
 </body>
 </html>
