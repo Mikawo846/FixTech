@@ -1,655 +1,685 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" data-theme="light">
 <head>
-    <meta charset="UTF-8">
-    <title>Настройки производительности Steam Deck для тяжёлых игр: как убрать лаги и перегрев</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Практический гайд по настройкам производительности Steam Deck для тяжёлых игр: TDP‑лимит, ограничение FPS, частота дисплея, ручной GPU‑clock, режимы энергопотребления и уменьшение перегрева и шума.">
-    <style>
-        :root {
-            --bg: #020617;
-            --bg-alt: #050816;
-            --card: #0b1220;
-            --accent: #22c55e;
-            --accent-soft: rgba(34,197,94,0.09);
-            --accent-strong: rgba(34,197,94,0.22);
-            --danger: #f97373;
-            --success: #38bdf8;
-            --warn: #facc15;
-            --text-main: #e5e7eb;
-            --text-soft: #9ca3af;
-            --border-soft: #111827;
-            --code-bg: #020617;
-        }
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YE88Y994NX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-YE88Y994NX');
+  </script>
 
-        * { box-sizing: border-box; }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Настройки производительности Steam Deck для тяжёлых игр: как убрать лаги и перегрев | Экспертный мегагайд</title>
+  <meta name="description" content="Подробный гид по настройкам производительности Steam Deck для тяжёлых игр: FPS, TDP, частота GPU, FSR, горячие клавиши, профили, док‑режим. Как убрать лаги, шум и перегрев без потери кайфа.">
 
-        body {
-            margin: 0;
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-            background: radial-gradient(circle at top, #111827 0, #020617 55%, #000 100%);
-            color: var(--text-main);
-            line-height: 1.6;
-        }
+  <!-- Yandex.Metrika counter -->
+  <script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+      m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+      m[i].l=1*new Date();
+      for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+      k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=106225686', 'ym');
 
-        a { color: var(--accent); text-decoration: none; }
-        a:hover { text-decoration: underline; }
+    ym(106225686, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", accurateTrackBounce:true, trackLinks:true});
+  </script>
+  <noscript>
+    <div>
+      <img src="https://mc.yandex.ru/watch/106225686" style="position:absolute; left:-9999px;" alt="Настройки производительности Steam Deck для тяжёлых игр: как убрать лаги и перегрев - пошаговая инструкция по ремонту">
+    </div>
+  </noscript>
+  <!-- /Yandex.Metrika counter -->
 
-        .page {
-            max-width: 1120px;
-            margin: 0 auto;
-            padding: 32px 16px 48px;
-        }
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="../styles-header.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
-        .hero {
-            display: grid;
-            grid-template-columns: minmax(0, 3fr) minmax(0, 2.1fr);
-            gap: 32px;
-            align-items: center;
-            margin-bottom: 40px;
-        }
+  <style>
+    .guide-content { line-height: 1.7; color: var(--text); }
+    .guide-content h2 { color: var(--primary); margin-top: 30px; margin-bottom: 15px; font-size: 1.5rem; }
+    .guide-content h3 { color: var(--primary-dark); margin-top: 25px; margin-bottom: 12px; font-size: 1.2rem; }
+    .guide-image-block { margin: 20px 0; padding: 15px; background: var(--background); border-radius: var(--border-radius); border: 1px solid var(--border); text-align: center; }
+    .guide-image-block img { max-width: 100%; height: auto; border-radius: 6px; border: 1px solid var(--border); }
+    .image-caption { margin-top: 10px; font-size: 0.85rem; color: var(--text-light); font-style: italic; }
+    .pro-tips { background: rgba(3, 74, 79, 0.05); padding: 15px; border-radius: 6px; margin: 20px 0; }
+    .pro-tips h4 { color: var(--primary); margin-top: 0; margin-bottom: 12px; font-size: 1.1rem; }
+    .tip-item { display: flex; gap: 8px; margin-bottom: 8px; align-items: flex-start; }
+    .tip-item i { margin-top: 3px; color: var(--primary); }
+    .warning-block {
+      background: #fff3e0;
+      border-left: 5px solid #ff9100;
+      padding: 15px 18px;
+      margin: 22px 0;
+      border-radius: 7px;
+    }
+    table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+    th, td { border: 1px solid var(--border); padding: 8px; text-align: left; vertical-align: top; }
+    th { background: var(--background-light); }
+    .code-like { font-family: "SF Mono", "Consolas", "Menlo", monospace; background: var(--background-light); padding: 2px 4px; border-radius: 4px; }
+    .step-badge {
+      display: inline-block;
+      background: var(--primary);
+      color: #fff;
+      font-size: 0.8rem;
+      padding: 2px 8px;
+      border-radius: 999px;
+      margin-right: 6px;
+    }
+    .faq-item { margin-bottom: 16px; }
+    .faq-item strong { display: block; margin-bottom: 4px; }
+    .scenario-block {
+      background: var(--background-light);
+      border-radius: 8px;
+      padding: 14px 16px;
+      margin-bottom: 16px;
+      border: 1px solid var(--border);
+    }
+    .scenario-title {
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+    @media (max-width: 768px) {
+      .guide-content h2 { font-size: 1.4rem; margin-top: 25px; }
+      .guide-image-block { padding: 12px; margin: 15px 0; }
+      table, th, td { font-size: 0.95rem; }
+    }
+  </style>
 
-        .hero-text h1 {
-            font-size: 32px;
-            margin: 0 0 12px;
-        }
-
-        .hero-text h1 strong { color: var(--accent); }
-
-        .hero-text p {
-            margin: 4px 0;
-            color: var(--text-soft);
-        }
-
-        .hero-badges {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            margin-top: 12px;
-        }
-
-        .badge {
-            font-size: 12px;
-            padding: 4px 10px;
-            border-radius: 999px;
-            border: 1px solid var(--border-soft);
-            background: rgba(15,23,42,0.9);
-            color: var(--text-soft);
-            backdrop-filter: blur(6px);
-        }
-
-        .badge--accent {
-            border-color: var(--accent);
-            background: var(--accent-soft);
-            color: #bbf7d0;
-        }
-
-        .badge--danger {
-            border-color: var(--danger);
-            background: rgba(248,113,113,0.09);
-            color: #fecaca;
-        }
-
-        .badge--success {
-            border-color: var(--success);
-            background: rgba(56,189,248,0.1);
-            color: #e0f2fe;
-        }
-
-        .hero-image {
-            border-radius: 18px;
-            overflow: hidden;
-            border: 1px solid var(--border-soft);
-            background: radial-gradient(circle at top, #1f2937 0, #020617 100%);
-            padding: 10px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .hero-image img {
-            max-width: 100%;
-            border-radius: 12px;
-            display: block;
-        }
-
-        .hero-note {
-            font-size: 12px;
-            color: var(--text-soft);
-            margin-top: 6px;
-            text-align: center;
-        }
-
-        .grid {
-            display: grid;
-            grid-template-columns: minmax(0, 2.3fr) minmax(0, 1.5fr);
-            gap: 24px;
-        }
-
-        .card {
-            background: radial-gradient(circle at top left, rgba(148,163,184,0.08), transparent 55%);
-            border-radius: 18px;
-            border: 1px solid var(--border-soft);
-            padding: 20px 18px 18px;
-            box-shadow: 0 18px 40px rgba(15,23,42,0.9);
-        }
-
-        .card h2 {
-            font-size: 20px;
-            margin: 0 0 10px;
-        }
-
-        .card h3 {
-            font-size: 16px;
-            margin: 18px 0 6px;
-        }
-
-        .tagline {
-            font-size: 13px;
-            color: var(--text-soft);
-            margin-bottom: 10px;
-        }
-
-        .highlight {
-            border-left: 3px solid var(--accent);
-            padding-left: 10px;
-            margin: 8px 0 14px;
-            font-size: 14px;
-            color: var(--text-soft);
-        }
-
-        .section-intro {
-            font-size: 14px;
-            color: var(--text-soft);
-            margin: 4px 0 10px;
-        }
-
-        .quick-list {
-            display: grid;
-            grid-template-columns: 1.2fr 1fr;
-            gap: 10px;
-            font-size: 13px;
-            margin: 10px 0 12px;
-        }
-
-        .quick-list ul {
-            margin: 0;
-            padding-left: 18px;
-        }
-
-        .quick-list li { margin-bottom: 4px; }
-
-        .pill {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            font-size: 12px;
-            padding: 4px 10px;
-            border-radius: 999px;
-            border: 1px solid rgba(148,163,184,0.45);
-            background: rgba(15,23,42,0.9);
-            margin-right: 6px;
-            margin-bottom: 4px;
-        }
-
-        .pill-bullet {
-            width: 6px;
-            height: 6px;
-            border-radius: 999px;
-            background: var(--accent);
-        }
-
-        .pill-danger .pill-bullet { background: var(--danger); }
-        .pill-success .pill-bullet { background: var(--success); }
-        .pill-warn .pill-bullet { background: var(--warn); }
-
-        .table-wrapper {
-            margin-top: 12px;
-            border-radius: 14px;
-            overflow: hidden;
-            border: 1px solid var(--border-soft);
-            background: rgba(15,23,42,0.96);
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            font-size: 13px;
-        }
-
-        thead {
-            background: linear-gradient(to right, rgba(34,197,94,0.2), rgba(56,189,248,0.34));
-        }
-
-        th, td {
-            padding: 6px 8px;
-            text-align: left;
-            border-bottom: 1px solid #111827;
-        }
-
-        th {
-            font-weight: 600;
-            color: #e5e7eb;
-            white-space: nowrap;
-        }
-
-        tbody tr:nth-child(odd) { background: rgba(15,23,42,0.96); }
-        tbody tr:nth-child(even) { background: rgba(10,16,32,0.96); }
-
-        .steps {
-            margin: 10px 0 6px;
-            padding-left: 18px;
-            font-size: 13px;
-        }
-
-        .steps li { margin-bottom: 5px; }
-
-        .note {
-            font-size: 12px;
-            color: var(--text-soft);
-            margin-top: 6px;
-        }
-
-        .note strong { color: var(--warn); }
-
-        .code {
-            font-family: ui-monospace, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-            background: var(--code-bg);
-            border-radius: 6px;
-            padding: 1px 4px;
-            font-size: 12px;
-        }
-
-        .badge-block {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 6px;
-            margin-bottom: 10px;
-        }
-
-        .label {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            padding: 2px 8px;
-            border-radius: 999px;
-            font-size: 11px;
-            border: 1px solid rgba(148,163,184,0.6);
-            background: rgba(15,23,42,0.96);
-        }
-
-        .label-dot {
-            width: 7px;
-            height: 7px;
-            border-radius: 999px;
-            background: var(--accent);
-        }
-
-        .label-soft { opacity: 0.92; }
-
-        .checklist {
-            list-style: none;
-            padding-left: 0;
-            margin: 8px 0 4px;
-            font-size: 13px;
-        }
-
-        .checklist li {
-            margin-bottom: 6px;
-            display: flex;
-            align-items: flex-start;
-            gap: 6px;
-        }
-
-        .checklist-icon {
-            width: 15px;
-            height: 15px;
-            border-radius: 4px;
-            border: 1px solid rgba(148,163,184,0.6);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 11px;
-            color: var(--accent);
-            flex-shrink: 0;
-        }
-
-        .checklist-icon--danger {
-            color: var(--danger);
-            border-color: rgba(248,113,113,0.8);
-        }
-
-        .side-section { font-size: 13px; }
-        .side-section h3 { margin-top: 14px; }
-
-        .stat {
-            display: flex;
-            justify-content: space-between;
-            font-size: 12px;
-            margin: 2px 0;
-            color: var(--text-soft);
-        }
-
-        .stat span:first-child { opacity: 0.9; }
-
-        .footer-note {
-            margin-top: 18px;
-            font-size: 12px;
-            color: var(--text-soft);
-            border-top: 1px dashed #1f2937;
-            padding-top: 10px;
-        }
-
-        .divider {
-            margin: 16px 0 10px;
-            border-top: 1px dashed #1e293b;
-        }
-
-        @media (max-width: 920px) {
-            .hero { grid-template-columns: minmax(0, 1fr); }
-            .grid { grid-template-columns: minmax(0, 1fr); }
-            .hero-image { order: -1; }
-        }
-
-        @media (max-width: 560px) {
-            .page { padding: 20px 12px 32px; }
-            .hero-text h1 { font-size: 26px; }
-            .quick-list { grid-template-columns: minmax(0, 1fr); }
-        }
-    </style>
+  <script async src="https://timeweb.cloud/api/v1/cloud-ai/agents/3cc03620-d051-4d8d-b5af-f7b6cd083a35/embed.js?collapsed=true"></script>
 </head>
 <body>
-<div class="page">
+  <header class="header">
+    <div class="container">
+      <div class="header__inner">
+        <a href="../index.html" class="logo">
+          <span class="logo__icon"></span>
+          <span class="logo__text">Repairo</span>
+        </a>
+        <nav class="nav">
+          <ul class="nav__list">
+            <li><a href="../tv.html" class="nav__link">Телевизоры</a></li>
+            <li><a href="../cameras.html" class="nav__link">Фотоаппараты</a></li>
+            <li><a href="../consoles.html" class="nav__link">Приставки</a></li>
+            <li><a href="../laptops.html" class="nav__link">Ноутбуки</a></li>
+            <li><a href="../smartphones.html" class="nav__link">Смартфоны</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
 
-    <!-- HERO -->
-    <section class="hero">
-        <div class="hero-text">
-            <h1><strong>Настройки производительности Steam Deck</strong> для тяжёлых игр: как убрать лаги и перегрев</h1>
-            <p>Этот гайд показывает, как с помощью встроенных настроек SteamOS выжать максимум из Steam Deck в тяжёлых играх, при этом не устроить консоли «духовку» и не слушать постоянно ревущий вентилятор.</p>
-            <p>Фокус на практических вещах: TDP‑лимит, FPS‑ограничения, частота дисплея, ручной GPU‑clock, профили на игру и грамотное снижение температуры без заметной потери качества картинки.</p>
+  <section class="guide-page">
+    <div class="container">
+      <div class="breadcrumbs">
+        <a href="../index.html">Главная</a>
+        <i class="fas fa-chevron-right"></i>
+        <a href="../consoles.html">Приставки</a>
+        <i class="fas fa-chevron-right"></i>
+        <span>Настройки производительности Steam Deck для тяжёлых игр: как убрать лаги и перегрев</span>
+      </div>
 
-            <div class="hero-badges">
-                <span class="badge badge--accent">Steam Deck • Тяжёлые игры</span>
-                <span class="badge badge--success">TDP, FPS, частота, профили</span>
-                <span class="badge badge--danger">Меньше лагов и перегрева, больше стабильности</span>
-            </div>
+      <h1 class="section__title">Настройки производительности Steam Deck для тяжёлых игр: как убрать лаги и перегрев</h1>
+
+      <div class="guide-meta">
+        <span>
+          <i class="fas fa-gauge-high"></i>
+          Экспертный гид по настройкам производительности Steam Deck: лимит FPS, TDP, частоты GPU/CPU, FSR, динамическое разрешение, профили для игр, док‑режим, охлаждение и энергоэффективность. Пошаговые сценарии настроек под тяжёлые проекты.
+        </span>
+      </div>
+
+      <div class="guide-image-block">
+        <img src="https://i.postimg.cc/MpvwGZ46/resize-m-mfit-w-450-h-450.png" alt="Настройки производительности Steam Deck для тяжёлых игр: как убрать лаги и перегрев">
+        <div class="image-caption">
+          Тяжёлые ААА‑игры на Steam Deck требуют тонкой настройки: ограничение FPS, разумный TDP, FSR и упор на стабильность, а не на максимальную графику, чтобы избежать нагрева, шума и внезапных фризов.
+        </div>
+      </div>
+
+      <div class="guide-content">
+
+        <h2 id="step-1">Введение: зачем вообще трогать настройки производительности</h2>
+        <p>
+          По умолчанию Steam Deck старается выжать максимум из железа, но в тяжёлых играх это оборачивается высокими температурами, шумом вентилятора, просадками FPS и быстрым разрядом батареи. Вместо того чтобы мириться с лагами и перегревом, разумнее настроить Deck под конкретную игру: слегка пожертвовать «картинкой», но получить ровный FPS и комфортную температуру.
+        </p>
+        <p>
+          Встроенное меню производительности Steam Deck даёт доступ к тому, что на обычных консолях скрыто: лимит кадров, потребляемая мощность, частота GPU, скейлинг разрешения, оверлей с нагрузкой. Этот мегагайд объясняет, какие ползунки реально влияют на лаги и троттлинг, как их комбинировать и какие «базовые профили» логично применять для разных типов тяжёлых игр — от сюжетных ААА до онлайн‑шутеров.
+        </p>
+
+        <h2 id="step-2">Карта настроек производительности Steam Deck</h2>
+        <p>
+          Чтобы осмысленно настраивать производительность, полезно понимать, за что отвечает каждая группа параметров. Таблица ниже даёт обзор основных элементов меню производительности Steam Deck и того, как они влияют на FPS, нагрев и батарею.
+        </p>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Параметр</th>
+              <th>За что отвечает</th>
+              <th>Как влияет на FPS</th>
+              <th>Как влияет на нагрев и автономность</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Лимит FPS</td>
+              <td>Максимальное количество кадров в секунду.</td>
+              <td>Стабилизирует картинку, предотвращает «пилу» FPS.</td>
+              <td>Снижает нагрузку, температуру и расход батареи при разумных значениях (30–40 FPS).</td>
+            </tr>
+            <tr>
+              <td>Вертикальная синхронизация</td>
+              <td>Синхронизация FPS с частотой экрана.</td>
+              <td>Убирает разрывы кадра, иногда добавляет задержку.</td>
+              <td>Практически не влияет на нагрев, но в паре с лимитом FPS помогает стабильности.</td>
+            </tr>
+            <tr>
+              <td>Лимит мощности (TDP)</td>
+              <td>Максимальная потребляемая мощность APU (CPU+GPU).</td>
+              <td>Определяет потолок производительности в тяжёлых сценах.</td>
+              <td>Чем ниже лимит, тем меньше нагрев и расход батареи, но возможны просадки FPS.</td>
+            </tr>
+            <tr>
+              <td>Частота GPU</td>
+              <td>Максимальная частота графического блока.</td>
+              <td>Влияет на рендеринг, особенно в графически насыщенных сценах.</td>
+              <td>Высокие частоты увеличивают температуру и потребление энергии.</td>
+            </tr>
+            <tr>
+              <td>FSR / скейлинг</td>
+              <td>Масштабирование разрешения с апскейлом.</td>
+              <td>Позволяет получать больше FPS при меньшем «внутреннем» разрешении.</td>
+              <td>Снижает нагрузку на GPU, уменьшает нагрев, иногда ухудшает чёткость.</td>
+            </tr>
+            <tr>
+              <td>Оверлей производительности</td>
+              <td>Отображение FPS, температуры, нагрузки, TDP.</td>
+              <td>Помогает видеть, где узкое место: CPU, GPU или память.</td>
+              <td>Практически не влияет на ресурс, но сильно помогает в настройке.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2 id="step-3">Часть 1. Лимит FPS: база стабильности</h2>
+        <p>
+          Лимит FPS — главный рычаг, который стоит трогать в первую очередь. Дисплей Steam Deck работает на 60 Гц, но далеко не все тяжёлые игры готовы стабильно держать 60 кадров при комфортной температуре и TDP. Вместо нестабильных 40–60 FPS с регулярными просадками комфортнее играть в честные 30–40 FPS, но ровные.
+        </p>
+        <p>
+          Установка лимита FPS уменьшает нагрузку на APU и тепловой пакет, даёт системе «запас» для сложных сцен и снижает риск троттлинга. Для сюжетных ААА‑игр чаще всего достаточно 30 FPS, для динамичных шутеров и мультиплеера оптимальными становятся 40 FPS — это хороший компромисс между плавностью и теплом для Deck.
+        </p>
+
+        <h3>Рекомендованные значения лимита FPS</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Тип игры</th>
+              <th>Рекомендуемый лимит FPS</th>
+              <th>Комментарий</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Сюжетные ААА (RPG, приключения)</td>
+              <td>30 FPS</td>
+              <td>Приоритет на стабильности и автономности, плавности достаточно для большинства сцен.</td>
+            </tr>
+            <tr>
+              <td>Онлайн‑шутеры и экшены</td>
+              <td>40 FPS</td>
+              <td>Более отзывчивый геймплей, чуть большая нагрузка и нагрев, но всё ещё разумный баланс.</td>
+            </tr>
+            <tr>
+              <td>Нетребовательные игры и инди</td>
+              <td>60 FPS</td>
+              <td>Deck легко держит 60 кадров без перегрева и сильного расхода батареи.</td>
+            </tr>
+            <tr>
+              <td>Док‑режим с внешним монитором</td>
+              <td>40 или 60 FPS</td>
+              <td>Зависит от разрешения и тяжести игры, межу плавностью и теплом придется выбирать.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2 id="step-4">Часть 2. Лимит мощности (TDP) и частота GPU</h2>
+        <p>
+          Лимит TDP задаёт потолок того, сколько ватт может потреблять APU Steam Deck. Чем выше лимит, тем больше производительности в теории, но тем сильнее нагрев и выше шанс троттлинга под длительной нагрузкой. В тяжёлых играх важно найти «плато»: такой уровень мощности, при котором FPS стабилен, а температура и шум остаются в разумных пределах.
+        </p>
+        <p>
+          Точно так же частота GPU определяет, насколько агрессивно графический блок будет пытаться выжать FPS. Иногда снижение частоты GPU на небольшую величину в паре с разумным TDP почти не бьёт по кадрам, но заметно разгружает охлаждение. Поэтому неплохо иметь несколько типовых профилей, которые легко включить под конкретную игру.
+        </p>
+
+        <h3>Примерные ориенти�ры по TDP и частоте GPU</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Тип нагрузки</th>
+              <th>TDP (примерный диапазон)</th>
+              <th>Частота GPU</th>
+              <th>Комментарий</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Сюжетные тяжёлые игры при 30 FPS</td>
+              <td>8–12 Вт</td>
+              <td>Среднее значение, без форсажа до максимума.</td>
+              <td>Достаточно для стабильных 30 FPS при умеренном нагреве.</td>
+            </tr>
+            <tr>
+              <td>Динамичные игры с 40 FPS</td>
+              <td>10–13 Вт</td>
+              <td>Чуть выше среднего, но с запасом для сложных сцен.</td>
+              <td>Баланс между отзывчивостью и температурой.</td>
+            </tr>
+            <tr>
+              <td>Лёгкие игры и инди</td>
+              <td>6–8 Вт</td>
+              <td>Можно ограничивать ниже максимума.</td>
+              <td>Сильная экономия батареи и тишина вентилятора.</td>
+            </tr>
+            <tr>
+              <td>Док‑режим в 1080p и выше</td>
+              <td>12–15 Вт</td>
+              <td>Близко к максимуму, в зависимости от игры.</td>
+              <td>Важна хорошая вентиляция и разумные графические настройки.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2 id="step-5">Часть 3. Разрешение, скейлинг и FSR</h2>
+        <p>
+          Одно из главных преимуществ Steam Deck — небольшое физическое разрешение дисплея. На 7‑дюймовом экране не обязательно рендерить картинку в «чистых» 800p, чтобы она выглядела достойно. Уменьшая внутреннее разрешение и используя апскейл (FSR, встроенные скейлеры игр), можно значительно разгрузить GPU и избавиться от лагов.
+        </p>
+        <p>
+          Суть проста: игра рендерится в меньшем разрешении (например, 540p или 600p), а затем картинка растягивается до 800p. На небольшой диагонали потеря чёткости часто почти незаметна, особенно в динамичных сценах, зато прирост FPS ощутим. Важно лишь не переборщить и не уходить в слишком мыльную картинку.
+        </p>
+
+        <h3>Практические советы по разрешению и FSR</h3>
+        <ul>
+          <li>Для тяжёлых ААА‑игр можно снижать разрешение ниже «родных» 800p, особенно при приоритете FPS и температуры.</li>
+          <li>Использовать FSR или аналогичные технологии апскейлинга, если они есть в игре или на уровне SteamOS.</li>
+          <li>Комбинировать снижение разрешения с умеренным TDP и лимитом FPS для максимальной стабильности.</li>
+          <li>В статичных и визуально насыщенных играх (например, с акцентом на графику) снижать разрешение аккуратнее, чем в динамичных шутерах.</li>
+          <li>В док‑режиме с внешним монитором особенно важно не пытаться держать «честные» высокие разрешения, а использовать разумный апскейл.</li>
+        </ul>
+
+        <h2 id="step-6">Часть 4. Встроенный оверлей: как понять, что именно тормозит</h2>
+        <p>
+          Без измерений настройка производительности превращается в гадание. Встроенный оверлей Steam Deck показывает FPS, температуру, загрузку CPU/GPU, потребляемую мощность и другие параметры. Это главный инструмент для поиска баланса: где проседают кадры, из‑за чего греется система, хватает ли «ватт» текущему пресету.
+        </p>
+        <p>
+          Для быстрой диагностики достаточно включить один из средних уровней оверлея, чтобы одновременно видеть FPS, температуру и TDP. Если при этом Deck явно упирается в лимит мощности, есть смысл чуть поднять TDP или снизить настройки. Если температура стабильно высокая при умеренном FPS, логичнее ограничить FPS и TDP, подправив графику.
+        </p>
+
+        <h3>Как читать данные оверлея</h3>
+        <ul>
+          <li>Если FPS прыгает, а TDP близок к максимальному лимиту — игре не хватает мощности, стоит снижать графику или FPS.</li>
+          <li>Если температура стабильно высока, даже при средних FPS, но TDP высокий — можно попробовать уменьшить TDP и ограничить FPS.</li>
+          <li>Если FPS низкий, а TDP и температура невысокие, возможно, упор идёт в CPU или ограничения самой игры (плохая оптимизация).</li>
+          <li>Если при небольшом снижении графики FPS сильно растёт — игра была в основном GPU‑зависимой.</li>
+          <li>Если GPU и CPU далеко от пиковых значений, а лаги всё равно есть, стоит проверить хранилище и фоновые процессы (обновления, загрузки).</li>
+        </ul>
+
+        <h2 id="step-7">Часть 5. Типовые профили для тяжёлых игр</h2>
+        <p>
+          Чтобы каждый раз не начинать с нуля, удобно иметь несколько типовых профилей настроек производительности для разных классов тяжёлых игр. Их можно адаптировать под конкретные проекты, но логика останется общей: есть профиль «киношный», «балансный» и «киберспорт‑лайт».
+        </p>
+
+        <h3>Профиль A: «Кино 30 FPS» (сюжетные ААА, одиночные RPG)</h3>
+        <ul>
+          <li>Лимит FPS: 30.</li>
+          <li>TDP: 8–12 Вт в зависимости от игры.</li>
+          <li>Разрешение: ближе к 800p, при необходимости легкий скейлинг или FSR.</li>
+          <li>Графика в игре: средние/низко‑средние настройки, отключение тяжёлых эффектов (тени, отражения, плотный туман).</li>
+          <li>Цель: стабильная картинка без резких просадок, разумный нагрев и нормальная автономность.</li>
+        </ul>
+
+        <h3>Профиль B: «Баланс 40 FPS» (динамичные экшены и шутеры)</h3>
+        <ul>
+          <li>Лимит FPS: 40.</li>
+          <li>TDP: 10–13 Вт.</li>
+          <li>Разрешение: можно немного снизить с упором на FSR, чтобы удержать 40 FPS.</li>
+          <li>Графика: приоритет на чёткую картинку и читаемость, отключение избыточных эффектов.</li>
+          <li>Цель: более плавная и отзывчивая игра с управляемым нагревом и шумом.</li>
+        </ul>
+
+        <h3>Профиль C: «Тихий режим» (игра на батарее с упором на время работы)</h3>
+        <ul>
+          <li>Лимит FPS: 30 или ниже, если игра позволяет комфортно играть.</li>
+          <li>TDP: 6–8 Вт.</li>
+          <li>Разрешение: допускается агрессивный скейлинг и оптимизация графики.</li>
+          <li>Графика: низкие/средние настройки, акцент на играбельности, а не на красоте.</li>
+          <li>Цель: максимальная автономность и минимальный нагрев, Deck остаётся прохладным и тихим.</li>
+        </ul>
+
+        <h2 id="step-8">Часть 6. Настройки внутри игры: что резать в первую очередь</h2>
+        <p>
+          Настройки производительности Steam Deck работают в связке с графическими опциями внутри самой игры. Иногда проще слегка «урезать» пару тяжёлых параметров, чем агрессивно снижать TDP и бороться с троттлингом. Особенно это касается тех опций, которые дают минимум визуального профита, но сильно нагружают GPU.
+        </p>
+        <p>
+          Подход простой: оставить на приемлемом уровне текстуры и геометрию (чтобы игра не выглядела совсем бедно), а вот тени, отражения, объёмный туман и пост‑эффекты опустить, насколько позволяет терпение. Это разгружает GPU и уменьшает вероятность фризов в самых насыщенных сценах.
+        </p>
+
+        <h3>Параметры, которые стоит снижать первыми</h3>
+        <ul>
+          <li>Качество теней и расстояние их прорисовки.</li>
+          <li>Отражения, особенно отражения в реальном времени и трассировку лучей (если она есть).</li>
+          <li>Плотные эффекты тумана, объёмный свет, глубину резкости и размытие движения.</li>
+          <li>Качество травы и плотность растительности на дальних дистанциях.</li>
+          <li>Качество освещения, если его «ультра» режим даёт минимальный визуальный профит.</li>
+        </ul>
+
+        <h2 id="step-9">Часть 7. Док‑режим и тяжёлые игры на большом экране</h2>
+        <p>
+          В док‑режиме Steam Deck часто запускают на телевизоре или мониторе с разрешением выше, чем встроенный экран. Это автоматически повышает требования к GPU и TDP. Если просто воткнуть Deck в док и попытаться играть в тяжёлую игру в 1080p или выше без настройки, лаги и перегрев почти гарантированы.
+        </p>
+        <p>
+          В док‑режиме действуют те же правила, что и в портативном, но с поправкой на разрешение: есть смысл снижать «родное» разрешение вывода или использовать скейлинг, а также чуть повышать TDP при условии хорошей вентиляции. Важно не забывать, что Deck остаётся компактным устройством, а не полноценной десктопной видеокартой.
+        </p>
+
+        <h3>Советы для тяжёлых игр в док‑режиме</h3>
+        <ul>
+          <li>Не гнаться за «честным» 1080p или выше, использовать скейлинг и FSR.</li>
+          <li>Установить лимит FPS на уровне 30 или 40, если 60 не держится стабильно.</li>
+          <li>При необходимости поднять TDP до 12–15 Вт, следя за температурой и шумом.</li>
+          <li>Обеспечить хорошую вентиляцию Deck, не закрывать его корпус в тесной нише.</li>
+          <li>Настроить графику внутри игры с учётом увеличенного разрешения — иногда достаточный компромисс достигается комбинацией более низких пресетов и апскейла.</li>
+        </ul>
+
+        <h2 id="step-10">Сценарные кейсы: практические примеры настройки</h2>
+        <p>
+          Теория полезна, но проще опираться на живые сценарии. Ниже — несколько типичных случаев настройки производительности Steam Deck под тяжёлые игры и последовательность действий для каждого.
+        </p>
+
+        <div class="scenario-block">
+          <div class="scenario-title">Сценарий A: свежий ААА‑экшен фризит, FPS скачет от 25 до 50</div>
+          <ul>
+            <li>Включить оверлей производительности, чтобы видеть FPS, TDP и температуру.</li>
+            <li>Ограничить FPS до 30 или 40, чтобы убрать резкие скачки.</li>
+            <li>Снизить качество теней, отражений и плотных эффектов в настройках игры.</li>
+            <li>При необходимости немного уменьшить разрешение с использованием скейлинга или FSR.</li>
+            <li>Подобрать TDP в диапазоне 10–13 Вт: если игра не использует максимум, можно уменьшить лимит для снижения нагрева.</li>
+          </ul>
         </div>
 
-        <div>
-            <div class="hero-image">
-                <img src="https://i.postimg.cc/MpvwGZ46/resize-m-mfit-w-450-h-450.png" alt="Настройки производительности Steam Deck для тяжёлых игр: как убрать лаги и перегрев">
-            </div>
-            <div class="hero-note">Картинку можно заменить на локальный файл с тем же разрешением, если делаете лендинг или статью.</div>
+        <div class="scenario-block">
+          <div class="scenario-title">Сценарий B: игра держит 60 FPS, но Deck сильно греется и шумит</div>
+          <ul>
+            <li>Снизить лимит FPS до 40 или 30: визуально это менее заметно, чем кажется, но сильно влияет на тепло.</li>
+            <li>Сократить TDP, пока FPS остаётся стабильным на выбранном уровне.</li>
+            <li>Проверить, не завышены ли графические настройки сверх разумного (ультра‑тени, пост‑эффекты).</li>
+            <li>Следить за температурой в оверлее: ориентироваться на комфортные значения и отсутствие постоянных пиков.</li>
+            <li>Если Deck всё равно греется, по возможности играть в более прохладном помещении или делать короткие перерывы.</li>
+          </ul>
         </div>
-    </section>
 
-    <section class="grid">
-        <!-- ОСНОВНОЙ КОНТЕНТ -->
-        <article class="card">
-            <h2>Главная идея: стабильно, а не «как‑нибудь 60 FPS»</h2>
-            <p class="tagline">Steam Deck не ПК с запасом мощности, который всё вытянет brute force. Здесь важны стабильность фреймтайма, ограничение FPS и грамотное распределение мощности между CPU и GPU.</p>
-            <p class="highlight">Цель настроек — не максимально возможные FPS любой ценой, а комфортные «ровные» 30–40–60 кадров без диких просадок и перегрева. Лучше честные 40 FPS, чем «60», которые проваливаются до 25 каждые несколько секунд.</p>
+        <div class="scenario-block">
+          <div class="scenario-title">Сценарий C: игра на батарее разряжает Deck за час–полтора</div>
+          <ul>
+            <li>Перейти на профиль с 30 FPS и TDP около 6–8 Вт.</li>
+            <li>Снизить графику до средних/низких значений, оставив приоритет на читабельности интерфейса.</li>
+            <li>При необходимости уменьшить внутреннее разрешение и включить FSR.</li>
+            <li>Отключить фоновую загрузку обновлений и другие лишние процессы во время игры.</li>
+            <li>Принять, что в тяжёлых играх чудес не бывает: автономность и производительность всегда в конфликте, и нужно выбирать приоритет.</li>
+          </ul>
+        </div>
 
-            <div class="quick-list">
-                <div>
-                    <strong>В этом гайде:</strong>
-                    <ul>
-                        <li>Как включить оверлей производительности и профили на игру.</li>
-                        <li>Что такое TDP‑лимит и как его подбирать под тяжёлые проекты.</li>
-                        <li>Золотая связка частоты дисплея 40 Гц и лимита 40 FPS.</li>
-                        <li>Когда нужен ручной GPU‑clock, а когда он только мешает.</li>
-                        <li>Как снизить температуру и шум без критичной потери качества.</li>
-                    </ul>
-                </div>
-                <div>
-                    <strong>По уровню вмешательства:</strong>
-                    <div class="pill pill-success"><span class="pill-bullet"></span>Блок 1–3: базовые шаги для всех</div>
-                    <div class="pill"><span class="pill-bullet"></span>Блок 4–6: тонкая настройка тяжёлых игр</div>
-                    <div class="pill pill-danger"><span class="pill-bullet"></span>Блок 7–8: борьба с перегревом и шумом</div>
-                </div>
-            </div>
+        <div class="scenario-block">
+          <div class="scenario-title">Сценарий D: в док‑режиме на телевизоре игра лагает сильнее, чем на встроенном экране</div>
+          <ul>
+            <li>Проверить, какое разрешение выводится на телевизор, и снизить его или включить скейлинг.</li>
+            <li>Ограничить FPS до 30 или 40 в зависимости от типа игры.</li>
+            <li>Поднять TDP в разумных пределах (12–15 Вт), не забывая про вентиляцию.</li>
+            <li>Снизить самые тяжёлые графические настройки, особенно в части теней и пост‑эффектов.</li>
+            <li>Следить за температурой и шумом: если они выходят за комфортные рамки, сделать шаг назад в настройках.</li>
+          </ul>
+        </div>
 
-            <!-- Блок 1 -->
-            <h3>1. Оверлей производительности и профили на игру</h3>
-            <p class="section-intro">Прежде чем что‑то крутить, нужно видеть, что происходит. Без цифр настройка превращается в тыканье на удачу. Оверлей производительности и профили на игру — основной инструмент.</p>
+        <h2 id="step-11">Сводная таблица: быстрый ориентир по настройкам</h2>
+        <p>
+          Чтобы не вспоминать всю теорию каждый раз, удобно держать компактный ориентир по ключевым настройкам производительности и их эффекту на FPS, нагрев и автономность.
+        </p>
 
-            <p class="section-intro"><strong>Как включить оверлей производительности:</strong></p>
-            <ul class="steps">
-                <li>Запустите игру, затем нажмите кнопку быстрого доступа с тремя точками на корпусе Deck.</li>
-                <li>Перейдите в раздел с иконкой батареи — это меню производительности.</li>
-                <li>Найдите пункт уровня оверлея производительности и установите уровень 3 или 4, чтобы видеть FPS, загрузку CPU/GPU, температуру и расход батареи.</li>
-                <li>Следите за графиком фреймтайма: ровная линия важнее большой цифры FPS — именно она показывает, насколько плавно воспринимается игра.</li>
-            </ul>
+        <table>
+          <thead>
+            <tr>
+              <th>Настройка</th>
+              <th>Если уменьшить</th>
+              <th>Эффект на FPS</th>
+              <th>Эффект на нагрев и батарею</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Лимит FPS</td>
+              <td>С 60 до 40–30</td>
+              <td>Становится ровнее, реже просадки.</td>
+              <td>Заметно меньше нагрев и расход.</td>
+            </tr>
+            <tr>
+              <td>TDP</td>
+              <td>С верхнего порога до 8–12 Вт</td>
+              <td>Может слегка снизить FPS в тяжёлых сценах.</td>
+              <td>Снижает температуру и расход батареи.</td>
+            </tr>
+            <tr>
+              <td>Разрешение</td>
+              <td>Немного ниже «родного»</td>
+              <td>Чаще растёт FPS, особенно в GPU‑зависимых играх.</td>
+              <td>Разгружает GPU, улучшает тепловой режим.</td>
+            </tr>
+            <tr>
+              <td>Качество теней/эффектов</td>
+              <td>С высоких до средних/низких</td>
+              <td>Заметное улучшение FPS в сценах с большим количеством объектов.</td>
+              <td>Снижает нагрузку на GPU, уменьшает пики нагрева.</td>
+            </tr>
+            <tr>
+              <td>Частота GPU</td>
+              <td>До разумного среднего значения</td>
+              <td>При правильной связке почти не страдает.</td>
+              <td>Меньше тепло и потребление, тише вентилятор.</td>
+            </tr>
+          </tbody>
+        </table>
 
-            <p class="section-intro"><strong>Профили «на игру»:</strong></p>
-            <ul class="steps">
-                <li>В том же меню включите «Use per-game profile» или аналогичный переключатель профилей на игру.</li>
-                <li>Это позволит для каждого тяжёлого проекта сохранить свой набор настроек: TDP‑лимит, FPS‑ограничения, частоту дисплея, ручной GPU‑clock и другие параметры.</li>
-                <li>После этого все изменения, которые вы делаете в меню производительности, будут относиться только к текущей игре, не ломая настройки остальных.</li>
-            </ul>
-            <p class="note"><strong>Суть:</strong> тяжёлым играм нужен свой аккуратный профиль. То, что идеально для инди‑проекта, может убивать FPS и греть Deck в масштабной AAA‑игре.</p>
+        <h2 id="step-12">Лайфхаки: как настроить Deck один раз и забыть о лагах</h2>
+        <div class="pro-tips">
+          <h4>Практические привычки для комфортной игры</h4>
+          <div class="tip-item">
+            <i class="fas fa-lightbulb"></i>
+            <p>Создавайте отдельные профили производительности под самые тяжёлые игры и не полагайтесь на один универсальный пресет «на всё».</p>
+          </div>
+          <div class="tip-item">
+            <i class="fas fa-lightbulb"></i>
+            <p>При первом запуске нового ААА‑проекта сразу включайте оверлей, чтобы увидеть реальные потребности игры и не тратить время на угадайку.</p>
+          </div>
+          <div class="tip-item">
+            <i class="fas fa-lightbulb"></i>
+            <p>Не бойтесь 30 FPS в сюжетных играх: ровные 30 на Deck часто воспринимаются комфортнее, чем разъезжающиеся 45–60 с фризами и шумом.</p>
+          </div>
+          <div class="tip-item">
+            <i class="fas fa-lightbulb"></i>
+            <p>Периодически пересматривайте настройки после крупных обновлений SteamOS и самих игр — оптимизация со временем меняется.</p>
+          </div>
+          <div class="tip-item">
+            <i class="fas fa-lightbulb"></i>
+            <p>Старайтесь держать устройство чистым и открытым для вентиляции: продуманная термодинамика в паре с грамотными настройками даёт лучший результат.</p>
+          </div>
+        </div>
 
-            <!-- Блок 2 -->
-            <h3>2. Лимит FPS и частота дисплея: фундамент плавности</h3>
-            <p class="section-intro">Ограничение FPS — самый простой и мощный рычаг для борьбы с лагами и перегревом. Особенно полезен режим 40 Гц/40 FPS, ставший негласным стандартом Steam Deck‑комьюнити.</p>
+        <h2 id="step-13">Краткий чек‑лист: как убрать лаги и перегрев в тяжёлой игре за 5 минут</h2>
+        <p>
+          На случай, когда нет времени углубляться в детали, поможет короткий набор шагов, который покрывает большинство проблем с лагами и перегревом в тяжёлых проектах на Steam Deck.
+        </p>
+        <ul>
+          <li>Включить оверлей производительности и посмотреть на FPS, TDP и температуру в типичной сцене игры.</li>
+          <li>Ограничить FPS до 30 или 40 вместо нестабильных 60.</li>
+          <li>Снизить тяжёлые графические опции: тени, отражения, объёмные эффекты.</li>
+          <li>При необходимости немного уменьшить внутреннее разрешение и включить FSR или скейлинг.</li>
+          <li>Отрегулировать TDP до уровня, при котором FPS стабилен, а температура и шум не выходят за комфортные рамки.</li>
+        </ul>
 
-            <div class="table-wrapper">
-                <table>
-                    <thead>
-                    <tr>
-                        <th>Режим</th>
-                        <th>Когда использовать</th>
-                        <th>Плюсы</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td>60 Гц / 60 FPS</td>
-                        <td>Более лёгкие и хорошо оптимизированные игры</td>
-                        <td>Максимальная плавность, но выше температура и расход батареи</td>
-                    </tr>
-                    <tr>
-                        <td>40 Гц / 40 FPS</td>
-                        <td>Большинство тяжёлых AAA, где стабильные 60 недостижимы</td>
-                        <td>Гладкая картинка при заметно меньшей нагрузке и нагреве</td>
-                    </tr>
-                    <tr>
-                        <td>30 FPS при 60 Гц</td>
-                        <td>Очень тяжёлые проекты, когда даже 40 FPS не удержать</td>
-                        <td>Стабильность и низкий нагрев, пусть и с меньшей плавностью</td>
-                    </tr>
-                    </tbody>
-                </table>
-            </div>
+        <div class="warning-block">
+          <strong>Напоминание!</strong> Steam Deck — не магический карманный ПК, а компактное устройство с ограниченным тепловым бюджетом. Вместо попыток выжать из него «на ультрах» всё, что возможно, разумнее построить собственную философию: стабильность, предсказуемый FPS и комфортные температуры важнее максимума графики на 7‑дюймовом экране.
+        </div>
 
-            <p class="section-intro"><strong>Как настроить FPS и частоту:</strong></p>
-            <ul class="steps">
-                <li>В меню производительности откройте расширенный вид: там можно менять частоту дисплея (Гц) и ограничение кадров в секунду.</li>
-                <li>Для тяжёлых игр начните с режима 40 Гц и лимита 40 FPS: чаще всего он даёт лучшую комбинацию плавности, температуры и времени работы от батареи.</li>
-                <li>Если игра заметно не тянет 40 FPS и график фреймтайма «зубчатый», попробуйте ограничение 30 FPS — но только если вы готовы мириться с меньшей плавностью.</li>
-            </ul>
-            <p class="note"><strong>Ключевой принцип:</strong> стабильные 40 лучше нестабильных «45–60». Глаз очень чувствителен к скачкам, но гораздо терпимее к честно ограниченной стабильной частоте.</p>
+      </div>
+    </div>
+  </section>
 
-            <!-- Блок 3 -->
-            <h3>3. TDP‑лимит: сколько ватт вы отдаёте игре</h3>
-            <p class="section-intro">TDP‑лимит управляет тем, сколько мощности батарея реально может отдать APU Steam Deck. Для тяжёлых игр это критичный параметр: слишком мало — лаги, слишком много — лишний жар и шум.</p>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__col footer__col--logo">
+          <a href="index.html" class="footer-logo">
+            <span class="logo__icon"></span>
+            <span class="logo__text">Repairo</span>
+          </a>
+          <p class="footer__text">Экспертные инструкции по технике с 2024 года</p>
+        </div>
+        <div class="footer__col">
+          <h3 class="footer__title">Разделы</h3>
+          <ul class="footer__links">
+            <li><a href="index.html" class="footer__link">Главная</a></li>
+            <li><a href="all-guides.html" class="footer__link">Все гайды</a></li>
+            <li><a href="contacts.html" class="footer__link">Контакты</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h3 class="footer__title">Категории</h3>
+          <ul class="footer__links">
+            <li><a href="../tv.html" class="nav__link">Телевизоры</a></li>
+            <li><a href="../cameras.html" class="nav__link">Фотоаппараты</a></li>
+            <li><a href="../consoles.html" class="nav__link">Приставки</a></li>
+            <li><a href="../laptops.html" class="nav__link">Ноутбуки</a></li>
+            <li><a href="../smartphones.html" class="nav__link">Смартфоны</a></li>
+            <li><a href="../small-appliances.html" class="nav__link">Мелкая техника</a></li>
+            <li><a href="../large-appliances.html" class="nav__link">Бытовая техника</a></li>
+            <li><a href="../auto-electronics.html" class="nav__link">Авто-Электроника</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h3 class="footer__title">Контакты</h3>
+          <ul class="footer__links">
+            <li>
+              <a href="https://t.me/repairo_kz" class="footer__link"><i class="fab fa-telegram"></i> Telegram</a>
+            </li>
+            <li>
+              <a href="https://instagram.com/repairo_kz" class="footer__link"><i class="fab fa-instagram"></i> Instagram</a>
+            </li>
+            <li>
+              <a href="mailto:support@repairo.kz" class="footer__link"><i class="fas fa-envelope"></i> Email</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="disclaimer">
+          Администрация сайта не несёт ответственности за возможные повреждения техники
+          и иные последствия, возникшие в результате самостоятельного ремонта по
+          материалам и инструкциям, размещённым на сайте. Все работы вы выполняете
+          на свой страх и риск.
+        </p>
+        <p class="footer__copyright">© 2025 Repairo. Все права защищены.</p>
+      </div>
+    </div>
+  </footer>
 
-            <p class="section-intro"><strong>Базовая логика TDP‑лимита:</strong></p>
-            <ul class="steps">
-                <li>Без ограничения Deck стремится дать игре максимум — это часто приводит к более высоким температурам и быстрой разрядке.</li>
-                <li>Умеренный TDP‑лимит позволяет «подрезать» лишний расход, сохранив при этом стабильный FPS, если игра не забивает APU на 100 %.</li>
-                <li>Слишком жёсткий лимит начинает душить игру, приводя к фризам, микролагам и ощутимой потере отзывчивости управления.</li>
-            </ul>
+  <script src="../script.js"></script>
 
-            <p class="section-intro"><strong>Практический подход к подбору TDP:</strong></p>
-            <ul class="steps">
-                <li>Включите оверлей производительности и посмотрите на реальное потребление мощности в тяжёлой сцене без ограничений.</li>
-                <li>Постепенно уменьшайте TDP‑лимит, наблюдая за FPS и температурой. Ваша цель — найти точку, где FPS ещё стабилен, а ватт уже меньше.</li>
-                <li>Для тяжёлых AAA‑проектов нередко приходится оставлять достаточно высокий лимит, но даже уменьшение на пару ватт может заметно снизить температуру и шум.</li>
-                <li>Сохраняйте найденный TDP‑лимит в профиле конкретной игры, чтобы не подбирать его заново каждый раз.</li>
-            </ul>
-            <p class="note"><strong>Важно:</strong> не существует универсального «идеального» TDP‑значения. У каждой игры своя нагрузка, поэтому всегда ориентируйтесь на оверлей и ощущения от геймплея.</p>
-
-            <!-- Блок 4 -->
-            <h3>4. Ручной GPU‑clock: когда стоит трогать частоту видеоядра</h3>
-            <p class="section-intro">Steam Deck позволяет вручную ограничивать частоту GPU. Эта настройка полезна не всегда, но в некоторых играх помогает снять избыточный нагрев, почти не трогая FPS.</p>
-
-            <p class="section-intro"><strong>Как понять, нужен ли ручной GPU‑clock:</strong></p>
-            <ul class="steps">
-                <li>Включите оверлей на уровне, где видно частоту и загрузку GPU. Во время игры посмотрите, насколько загружен графический процессор.</li>
-                <li>Если GPU большую часть времени использует далеко не весь доступный диапазон и выдаёт высокие FPS, можно попробовать немного снизить его максимальную частоту.</li>
-                <li>Если же игра и так упирается в GPU, ручное занижение частоты почти гарантированно приведёт к падению FPS и дополнительным лагам.</li>
-            </ul>
-
-            <p class="section-intro"><strong>Пошаговое снижение частоты:</strong></p>
-            <ul class="steps">
-                <li>Включите ручной режим для частоты GPU в меню производительности и установите значение немного ниже максимального.</li>
-                <li>Следите за изменением FPS и температуры в тяжёлых сценах. Если FPS почти не просел, а температура стала заметно ниже, вы нашли хорошую точку.</li>
-                <li>Не пытайтесь агрессивно гасить частоту ради каждой единицы температуры. Лучше небольшое снижение нагрузки без заметного падения качества игры.</li>
-            </ul>
-            <p class="note"><strong>Идея:</strong> ручной GPU‑clock — тонкий инструмент, а не волшебная кнопка. Для тяжёлых игр он полезен там, где есть запас по мощности, но не хватает термоголовы или тишины.</p>
-
-            <!-- Блок 5 -->
-            <h3>5. Внутриигровая графика: «честные» настройки для Deck</h3>
-            <p class="section-intro">Настройки SteamOS — только половина картины. Вторая половина — сами настройки графики в игре, которые нужно подстроить под реальный потолок Deck, а не под десктопные гайды.</p>
-
-            <p class="section-intro"><strong>Что имеет смысл урезать в тяжёлых играх:</strong></p>
-            <ul class="steps">
-                <li>Разрешение рендеринга: небольшое снижение часто даёт большой прирост производительности, особенно если включены масштабирование и фильтры.</li>
-                <li>Тени и дальность прорисовки: эти параметры часто «едят» много ресурсов, но их снижение не разрушает картинку на маленьком экране.</li>
-                <li>Обработку постэффектов (motion blur, bloom, depth of field): их отключение или уменьшение снижает нагрузку и делает картинку менее «мыльной».</li>
-                <li>Ин‑игровые лимитаторы FPS и вертикальную синхронизацию: часто лучше выключить их в игре и управлять FPS через системные настройки Deck.</li>
-            </ul>
-
-            <p class="section-intro"><strong>Согласованность с настройками Deck:</strong></p>
-            <ul class="steps">
-                <li>Если ограничение FPS делается через SteamOS, в самой игре лучше оставить FPS без ограничений или выставить максимально высокое значение.</li>
-                <li>Следите, чтобы не было двойного ограничителя: системный лимит FPS плюс лимит в игре иногда дают странные фреймтаймы.</li>
-                <li>После изменения графики ещё раз проверьте оверлей, чтобы убедиться, что выигрыши по FPS и температуре реальные, а не субъективные.</li>
-            </ul>
-            <p class="note"><strong>Принцип:</strong> настройки в игре и настройки Deck не должны друг другу мешать. Один лимит FPS и одна главная «точка правды» по производительности — этого достаточно.</p>
-
-            <!-- Блок 6 -->
-            <h3>6. Как целенаправленно бороться с перегревом и шумом</h3>
-            <p class="section-intro">Если ваша цель — убрать не только лаги, но и перегрев с ревущим вентилятором, нужно работать сразу по нескольким направлениям: FPS, TDP, графика и физическая вентиляция.</p>
-
-            <p class="section-intro"><strong>Последовательность шагов против перегрева:</strong></p>
-            <ul class="steps">
-                <li>Ограничьте FPS до разумного уровня (40 или 30) и проверьте, насколько упали температуры в тяжёлой сцене.</li>
-                <li>Подберите TDP‑лимит, который даёт стабильный FPS без излишнего «разгона» APU. Часто можно выиграть несколько градусов без заметного ущерба.</li>
-                <li>Снизьте нагрузку через графику: тени, дальность прорисовки, эффектные, но тяжёлые фильтры.</li>
-                <li>Убедитесь, что Deck не лежит на мягкой поверхности, перекрывающей вентиляционные отверстия, и что вокруг достаточно воздуха для нормального теплоотвода.</li>
-            </ul>
-
-            <p class="section-intro"><strong>Дополнительные меры для фанатов тишины:</strong></p>
-            <ul class="steps">
-                <li>Использовать внешнее охлаждение (подставки, направленные вентиляторы), если играете долго в тяжёлые AAA‑проекты.</li>
-                <li>Регулярно очищать воздухозаборники от пыли, особенно если Deck много времени проводит дома на одной полке или в сумке.</li>
-                <li>При желании рассмотреть аккуратные аппаратные модификации охлаждения, если вы готовы к разборке устройства и потере части гарантийных удобств.</li>
-            </ul>
-            <p class="note"><strong>Главное:</strong> не пытаться получить от Deck «настольный» уровень графики и FPS в самых тяжёлых играх. Правильная цель — комфорт без ощущения, что устройство плавится в руках.</p>
-
-            <!-- Блок 7 -->
-            <h3>7. Примерный алгоритм настройки тяжёлой игры на Steam Deck</h3>
-            <p class="section-intro">Ниже универсальная схема, которую можно применять почти к любой тяжёлой игре. Её удобно использовать как чек‑лист.</p>
-
-            <ul class="steps">
-                <li>Запустить игру и включить оверлей производительности на уровне, где видно FPS, температуру и загрузку CPU/GPU.</li>
-                <li>Включить профиль «на игру», затем выставить частоту дисплея 40 Гц и лимит 40 FPS, поиграть несколько минут в тяжёлой сцене.</li>
-                <li>Оценить, тянет ли игра стабильные 40 FPS. Если да — переходить к TDP‑подбору. Если нет — рассмотреть ограничение 30 FPS и снижение графики.</li>
-                <li>Подбирать TDP‑лимит: по чуть‑чуть снижать его, пока FPS остаётся стабильным, а температура и шум улучшаются. Зафиксировать значение, когда компромисс устраивает.</li>
-                <li>При наличии запаса по GPU можно немного уменьшить максимальный GPU‑clock, проверяя, не просел ли FPS. Если всё хорошо — сохранить настройку.</li>
-                <li>Ещё раз пробежать по настройкам графики в игре, отключив всё чрезмерное, и проверить, как это сказалось на фреймтайме и температуре.</li>
-            </ul>
-            <p class="note"><strong>Идея:</strong> настройка тяжёлой игры — не «магический рецепт», а последовательное приближение к балансу. Главное, чтобы каждый шаг был осознанным и измеримым.</p>
-        </article>
-
-        <!-- ПРАВАЯ КОЛОНКА / САЙДБАР -->
-        <aside class="card side-section">
-            <h2>Быстрый чек‑лист для тяжёлых игр на Deck</h2>
-            <p class="tagline">Эту часть удобно использовать как шпаргалку при настройке каждого нового «тяжёлого» проекта.</p>
-
-            <div class="badge-block">
-                <span class="label"><span class="label-dot"></span>10–20 минут на настройку игры</span>
-                <span class="label label-soft"><span class="label-dot"></span>Существенное снижение лагов и перегрева</span>
-            </div>
-
-            <ul class="checklist">
-                <li>
-                    <span class="checklist-icon">1</span>
-                    <span><strong>Включить оверлей и профиль.</strong> Уровень 3–4, включить профиль «на игру», смотреть на FPS, фреймтайм, температуру и загрузку APU.</span>
-                </li>
-                <li>
-                    <span class="checklist-icon">2</span>
-                    <span><strong>Выбрать режим FPS/Гц.</strong> Сначала 40 Гц / 40 FPS. Если слишком тяжело — 30 FPS, если игра лёгкая — можно пробовать честные 60.</span>
-                </li>
-                <li>
-                    <span class="checklist-icon">3</span>
-                    <span><strong>Подобрать TDP‑лимит.</strong> Снижать по шагам, отслеживая, когда FPS ещё держится, а ватт и температура уже заметно меньше.</span>
-                </li>
-                <li>
-                    <span class="checklist-icon">4</span>
-                    <span><strong>Настроить графику.</strong> Урезать тени, дальность, тяжёлые эффекты, не использовать «двойные» ограничители FPS.</span>
-                </li>
-                <li>
-                    <span class="checklist-icon">5</span>
-                    <span><strong>При необходимости тронуть GPU‑clock.</strong> Только если есть запас по мощности и хочется чуть снизить нагрев и шум.</span>
-                </li>
-            </ul>
-
-            <div class="divider"></div>
-
-            <h3>Сигналы, что настройки слишком агрессивные</h3>
-            <p class="tagline">Иногда в погоне за тишиной и батареей можно случайно убить комфорт геймплея.</p>
-
-            <ul class="checklist">
-                <li>
-                    <span class="checklist-icon checklist-icon--danger">!</span>
-                    <span>FPS стабильно ниже выбранного лимита, а график фреймтайма «зубчатый» — TDP‑лимит или частота GPU задушены слишком сильно.</span>
-                </li>
-                <li>
-                    <span class="checklist-icon checklist-icon--danger">!</span>
-                    <span>Управление ощущается «резиновым», реакции на нажатия задерживаются — лучше немного ослабить ограничение мощности или повысить FPS‑лимит.</span>
-                </li>
-                <li>
-                    <span class="checklist-icon checklist-icon--danger">!</span>
-                    <span>Картинка стала слишком «мыльной» и темной от чрезмерного снижения графики, при этом выигрыш по температуре минимален.</span>
-                </li>
-            </ul>
-
-            <div class="divider"></div>
-
-            <h3>Мини‑план профилактики перегрева Steam Deck</h3>
-            <p class="tagline">Эти простые шаги помогут не только в тяжёлых играх, но и в повседневном использовании.</p>
-
-            <div class="stat">
-                <span>Регулярное обновление SteamOS:</span>
-                <span>фикс багов и улучшение управления питанием</span>
-            </div>
-            <div class="stat">
-                <span>Чистота воздухозаборников:</span>
-                <span>нет пыли — меньше шума и перегрева</span>
-            </div>
-            <div class="stat">
-                <span>Игры на твёрдой поверхности:</span>
-                <span>не перекрывать вентиляцию тканью и мягкими вещами</span>
-            </div>
-            <div class="stat">
-                <span>Умеренные ожидания:</span>
-                <span>не пытаться сделать из Deck настольный ПК на ультра‑настройках</span>
-            </div>
-            <div class="stat">
-                <span>Профили под каждый тяжёлый проект:</span>
-                <span>одна игра — один аккуратно подобранный набор параметров</span>
-            </div>
-
-            <p class="note"><strong>Итог:</strong> грамотные настройки производительности превращают Steam Deck из «горячего и шумного компромисса» в удобную портативную машину, которая тянет тяжёлые игры ровно настолько, насколько это возможно для её форм‑фактора.</p>
-
-            <div class="footer-note">
-                Этот HTML‑гайд можно использовать как основу для лендинга о настройке производительности Steam Deck, обучающей статьи или PDF‑инструкции для пользователей, добавив примеры профилей под конкретные игры и скриншоты меню производительности.
-            </div>
-        </aside>
-    </section>
-</div>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "Настройки производительности Steam Deck для тяжёлых игр: как убрать лаги и перегрев",
+    "description": "Подробный гид по настройкам производительности Steam Deck: лимит FPS, TDP, частоты, FSR, профили для тяжёлых игр, док‑режим и охлаждение.",
+    "totalTime": "PT45M",
+    "step": [
+      {
+        "@type": "HowToStep",
+        "name": "Введение: зачем трогать настройки производительности",
+        "text": "Объяснение, почему по умолчанию Deck не всегда ведёт себя идеально в тяжёлых играх.",
+        "url": "#step-1"
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Карта настроек производительности Steam Deck",
+        "text": "Обзор ключевых параметров: FPS, TDP, частоты GPU, FSR, оверлей.",
+        "url": "#step-2"
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Часть 1. Лимит FPS",
+        "text": "Почему FPS‑лимит — база стабильности и рекомендуемые значения.",
+        "url": "#step-3"
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Часть 2. Лимит мощности и частота GPU",
+        "text": "Работа с TDP и частотами для баланса производительности и температуры.",
+        "url": "#step-4"
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Часть 3. Разрешение, скейлинг и FSR",
+        "text": "Как использовать снижение разрешения и апскейл для разгрузки GPU.",
+        "url": "#step-5"
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Часть 4. Встроенный оверлей",
+        "text": "Как читать данные оверлея и понимать, что именно тормозит.",
+        "url": "#step-6"
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Часть 5. Типовые профили для тяжёлых игр",
+        "text": "Профили «Кино 30 FPS», «Баланс 40 FPS» и «Тихий режим».",
+        "url": "#step-7"
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Часть 6. Настройки внутри игры",
+        "text": "Какие графические параметры снижать первыми для выгоды.",
+        "url": "#step-8"
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Часть 7. Док‑режим и тяжёлые игры",
+        "text": "Особенности настройки Deck при игре на внешних мониторах.",
+        "url": "#step-9"
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Сценарные кейсы",
+        "text": "Практические примеры настройки для типичных ситуаций.",
+        "url": "#step-10"
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Сводная таблица по настройкам",
+        "text": "Быстрый ориентир по влиянию ключевых параметров.",
+        "url": "#step-11"
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Лайфхаки по настройке Deck",
+        "text": "Полезные привычки, чтобы не возвращаться к лагам и перегреву.",
+        "url": "#step-12"
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Краткий чек‑лист за 5 минут",
+        "text": "Мини‑инструкция по устранению лагов и перегрева в тяжёлой игре.",
+        "url": "#step-13"
+      }
+    ],
+    "image": "https://i.postimg.cc/MpvwGZ46/resize-m-mfit-w-450-h-450.png"
+  }
+  </script>
 </body>
 </html>
