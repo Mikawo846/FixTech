@@ -1,644 +1,636 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" data-theme="light">
 <head>
-    <meta charset="UTF-8">
-    <title>Что делать, если консоль не подключается к интернету: универсальный чек‑лист для PS5, Xbox, Switch и Steam Deck</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Пошаговый универсальный чек‑лист, что делать, если PS5, Xbox Series X|S, Nintendo Switch или Steam Deck не подключаются к интернету. Простой алгоритм от перезапуска до настройки DNS и NAT.">
-    <style>
-        :root {
-            --bg: #020617;
-            --bg-alt: #050816;
-            --card: #0b1220;
-            --accent: #22c55e;
-            --accent-soft: rgba(34,197,94,0.09);
-            --accent-strong: rgba(34,197,94,0.22);
-            --danger: #f97373;
-            --success: #38bdf8;
-            --warn: #facc15;
-            --text-main: #e5e7eb;
-            --text-soft: #9ca3af;
-            --border-soft: #111827;
-            --code-bg: #020617;
-        }
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YE88Y994NX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-YE88Y994NX');
+  </script>
 
-        * { box-sizing: border-box; }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Что делать, если консоль не подключается к интернету: универсальный чек‑лист для PS5, Xbox, Switch и Steam Deck | Экспертный мегагайд</title>
+  <meta name="description" content="Подробный универсальный чек‑лист: что делать, если PS5, Xbox, Nintendo Switch или Steam Deck не подключаются к интернету. Wi‑Fi, кабель, роутер, NAT, DNS, обновления, ошибки сетевых тестов и сервисов.">
 
-        body {
-            margin: 0;
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-            background: radial-gradient(circle at top, #111827 0, #020617 55%, #000 100%);
-            color: var(--text-main);
-            line-height: 1.6;
-        }
+  <!-- Yandex.Metrika counter -->
+  <script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+      m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+      m[i].l=1*new Date();
+      for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+      k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=106225686', 'ym');
 
-        a { color: var(--accent); text-decoration: none; }
-        a:hover { text-decoration: underline; }
+    ym(106225686, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", accurateTrackBounce:true, trackLinks:true});
+  </script>
+  <noscript>
+    <div>
+      <img src="https://mc.yandex.ru/watch/106225686" style="position:absolute; left:-9999px;" alt="Что делать, если консоль не подключается к интернету: универсальный чек‑лист для PS5, Xbox, Switch и Steam Deck - пошаговая инструкция по ремонту">
+    </div>
+  </noscript>
+  <!-- /Yandex.Metrika counter -->
 
-        .page {
-            max-width: 1120px;
-            margin: 0 auto;
-            padding: 32px 16px 48px;
-        }
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="../styles-header.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
-        .hero {
-            display: grid;
-            grid-template-columns: minmax(0, 3fr) minmax(0, 2.1fr);
-            gap: 32px;
-            align-items: center;
-            margin-bottom: 40px;
-        }
+  <style>
+    .guide-content { line-height: 1.7; color: var(--text); }
+    .guide-content h2 { color: var(--primary); margin-top: 30px; margin-bottom: 15px; font-size: 1.5rem; }
+    .guide-content h3 { color: var(--primary-dark); margin-top: 25px; margin-bottom: 12px; font-size: 1.2rem; }
+    .guide-image-block { margin: 20px 0; padding: 15px; background: var(--background); border-radius: var(--border-radius); border: 1px solid var(--border); text-align: center; }
+    .guide-image-block img { max-width: 100%; height: auto; border-radius: 6px; border: 1px solid var(--border); }
+    .image-caption { margin-top: 10px; font-size: 0.85rem; color: var(--text-light); font-style: italic; }
+    .pro-tips { background: rgba(3, 74, 79, 0.05); padding: 15px; border-radius: 6px; margin: 20px 0; }
+    .pro-tips h4 { color: var(--primary); margin-top: 0; margin-bottom: 12px; font-size: 1.1rem; }
+    .tip-item { display: flex; gap: 8px; margin-bottom: 8px; align-items: flex-start; }
+    .tip-item i { margin-top: 3px; color: var(--primary); }
+    .warning-block {
+      background: #fff3e0;
+      border-left: 5px solid #ff9100;
+      padding: 15px 18px;
+      margin: 22px 0;
+      border-radius: 7px;
+    }
+    table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+    th, td { border: 1px solid var(--border); padding: 8px; text-align: left; vertical-align: top; }
+    th { background: var(--background-light); }
+    .code-like { font-family: "SF Mono", "Consolas", "Menlo", monospace; background: var(--background-light); padding: 2px 4px; border-radius: 4px; }
+    .step-badge {
+      display: inline-block;
+      background: var(--primary);
+      color: #fff;
+      font-size: 0.8rem;
+      padding: 2px 8px;
+      border-radius: 999px;
+      margin-right: 6px;
+    }
+    .scenario-block {
+      background: var(--background-light);
+      border-radius: 8px;
+      padding: 14px 16px;
+      margin-bottom: 16px;
+      border: 1px solid var(--border);
+    }
+    .scenario-title {
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+    .faq-item { margin-bottom: 16px; }
+    .faq-item strong { display: block; margin-bottom: 4px; }
+    @media (max-width: 768px) {
+      .guide-content h2 { font-size: 1.4rem; margin-top: 25px; }
+      .guide-image-block { padding: 12px; margin: 15px 0; }
+      table, th, td { font-size: 0.95rem; }
+    }
+  </style>
 
-        .hero-text h1 {
-            font-size: 30px;
-            margin: 0 0 12px;
-        }
-
-        .hero-text h1 strong { color: var(--accent); }
-
-        .hero-text p {
-            margin: 4px 0;
-            color: var(--text-soft);
-        }
-
-        .hero-badges {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            margin-top: 12px;
-        }
-
-        .badge {
-            font-size: 12px;
-            padding: 4px 10px;
-            border-radius: 999px;
-            border: 1px solid var(--border-soft);
-            background: rgba(15,23,42,0.9);
-            color: var(--text-soft);
-            backdrop-filter: blur(6px);
-        }
-
-        .badge--accent {
-            border-color: var(--accent);
-            background: var(--accent-soft);
-            color: #bbf7d0;
-        }
-
-        .badge--danger {
-            border-color: var(--danger);
-            background: rgba(248,113,113,0.09);
-            color: #fecaca;
-        }
-
-        .badge--success {
-            border-color: var(--success);
-            background: rgba(56,189,248,0.1);
-            color: #e0f2fe;
-        }
-
-        .hero-image {
-            border-radius: 18px;
-            overflow: hidden;
-            border: 1px solid var(--border-soft);
-            background: radial-gradient(circle at top, #1f2937 0, #020617 100%);
-            padding: 10px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .hero-image img {
-            max-width: 100%;
-            border-radius: 12px;
-            display: block;
-        }
-
-        .hero-note {
-            font-size: 12px;
-            color: var(--text-soft);
-            margin-top: 6px;
-            text-align: center;
-        }
-
-        .grid {
-            display: grid;
-            grid-template-columns: minmax(0, 2.3fr) minmax(0, 1.5fr);
-            gap: 24px;
-        }
-
-        .card {
-            background: radial-gradient(circle at top left, rgba(148,163,184,0.08), transparent 55%);
-            border-radius: 18px;
-            border: 1px solid var(--border-soft);
-            padding: 20px 18px 18px;
-            box-shadow: 0 18px 40px rgba(15,23,42,0.9);
-        }
-
-        .card h2 {
-            font-size: 20px;
-            margin: 0 0 10px;
-        }
-
-        .card h3 {
-            font-size: 16px;
-            margin: 18px 0 6px;
-        }
-
-        .tagline {
-            font-size: 13px;
-            color: var(--text-soft);
-            margin-bottom: 10px;
-        }
-
-        .highlight {
-            border-left: 3px solid var(--accent);
-            padding-left: 10px;
-            margin: 8px 0 14px;
-            font-size: 14px;
-            color: var(--text-soft);
-        }
-
-        .section-intro {
-            font-size: 14px;
-            color: var(--text-soft);
-            margin: 4px 0 10px;
-        }
-
-        .quick-list {
-            display: grid;
-            grid-template-columns: 1.2fr 1fr;
-            gap: 10px;
-            font-size: 13px;
-            margin: 10px 0 12px;
-        }
-
-        .quick-list ul {
-            margin: 0;
-            padding-left: 18px;
-        }
-
-        .quick-list li { margin-bottom: 4px; }
-
-        .pill {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            font-size: 12px;
-            padding: 4px 10px;
-            border-radius: 999px;
-            border: 1px solid rgba(148,163,184,0.45);
-            background: rgba(15,23,42,0.9);
-            margin-right: 6px;
-            margin-bottom: 4px;
-        }
-
-        .pill-bullet {
-            width: 6px;
-            height: 6px;
-            border-radius: 999px;
-            background: var(--accent);
-        }
-
-        .pill-danger .pill-bullet { background: var(--danger); }
-        .pill-success .pill-bullet { background: var(--success); }
-        .pill-warn .pill-bullet { background: var(--warn); }
-
-        .table-wrapper {
-            margin-top: 12px;
-            border-radius: 14px;
-            overflow: hidden;
-            border: 1px solid var(--border-soft);
-            background: rgba(15,23,42,0.96);
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            font-size: 13px;
-        }
-
-        thead {
-            background: linear-gradient(to right, rgba(34,197,94,0.2), rgba(56,189,248,0.34));
-        }
-
-        th, td {
-            padding: 6px 8px;
-            text-align: left;
-            border-bottom: 1px solid #111827;
-        }
-
-        th {
-            font-weight: 600;
-            color: #e5e7eb;
-            white-space: nowrap;
-        }
-
-        tbody tr:nth-child(odd) { background: rgba(15,23,42,0.96); }
-        tbody tr:nth-child(even) { background: rgba(10,16,32,0.96); }
-
-        .steps {
-            margin: 10px 0 6px;
-            padding-left: 18px;
-            font-size: 13px;
-        }
-
-        .steps li { margin-bottom: 5px; }
-
-        .note {
-            font-size: 12px;
-            color: var(--text-soft);
-            margin-top: 6px;
-        }
-
-        .note strong { color: var(--warn); }
-
-        .badge-block {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 6px;
-            margin-bottom: 10px;
-        }
-
-        .label {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            padding: 2px 8px;
-            border-radius: 999px;
-            font-size: 11px;
-            border: 1px solid rgba(148,163,184,0.6);
-            background: rgba(15,23,42,0.96);
-        }
-
-        .label-dot {
-            width: 7px;
-            height: 7px;
-            border-radius: 999px;
-            background: var(--accent);
-        }
-
-        .label-soft { opacity: 0.92; }
-
-        .checklist {
-            list-style: none;
-            padding-left: 0;
-            margin: 8px 0 4px;
-            font-size: 13px;
-        }
-
-        .checklist li {
-            margin-bottom: 6px;
-            display: flex;
-            align-items: flex-start;
-            gap: 6px;
-        }
-
-        .checklist-icon {
-            width: 15px;
-            height: 15px;
-            border-radius: 4px;
-            border: 1px solid rgba(148,163,184,0.6);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 11px;
-            color: var(--accent);
-            flex-shrink: 0;
-        }
-
-        .checklist-icon--danger {
-            color: var(--danger);
-            border-color: rgba(248,113,113,0.8);
-        }
-
-        .side-section { font-size: 13px; }
-        .side-section h3 { margin-top: 14px; }
-
-        .stat {
-            display: flex;
-            justify-content: space-between;
-            font-size: 12px;
-            margin: 2px 0;
-            color: var(--text-soft);
-        }
-
-        .stat span:first-child { opacity: 0.9; }
-
-        .footer-note {
-            margin-top: 18px;
-            font-size: 12px;
-            color: var(--text-soft);
-            border-top: 1px dashed #1f2937;
-            padding-top: 10px;
-        }
-
-        .divider {
-            margin: 16px 0 10px;
-            border-top: 1px dashed #1e293b;
-        }
-
-        @media (max-width: 920px) {
-            .hero { grid-template-columns: minmax(0, 1fr); }
-            .grid { grid-template-columns: minmax(0, 1fr); }
-            .hero-image { order: -1; }
-        }
-
-        @media (max-width: 560px) {
-            .page { padding: 20px 12px 32px; }
-            .hero-text h1 { font-size: 24px; }
-            .quick-list { grid-template-columns: minmax(0, 1fr); }
-        }
-    </style>
+  <script async src="https://timeweb.cloud/api/v1/cloud-ai/agents/3cc03620-d051-4d8d-b5af-f7b6cd083a35/embed.js?collapsed=true"></script>
 </head>
 <body>
-<div class="page">
+  <header class="header">
+    <div class="container">
+      <div class="header__inner">
+        <a href="../index.html" class="logo">
+          <span class="logo__icon"></span>
+          <span class="logo__text">Repairo</span>
+        </a>
+        <nav class="nav">
+          <ul class="nav__list">
+            <li><a href="../tv.html" class="nav__link">Телевизоры</a></li>
+            <li><a href="../cameras.html" class="nav__link">Фотоаппараты</a></li>
+            <li><a href="../consoles.html" class="nav__link">Приставки</a></li>
+            <li><a href="../laptops.html" class="nav__link">Ноутбуки</a></li>
+            <li><a href="../smartphones.html" class="nav__link">Смартфоны</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
 
-    <!-- HERO -->
-    <section class="hero">
-        <div class="hero-text">
-            <h1><strong>Что делать, если консоль не подключается к интернету</strong>: универсальный чек‑лист для PS5, Xbox, Switch и Steam Deck</h1>
-            <p>Этот чек‑лист помогает, когда любая из консолей — PS5, Xbox Series X|S, Nintendo Switch или Steam Deck — внезапно перестаёт подключаться к интернету: не видит сеть, не проходит тест, не заходит в онлайн‑игры или магазин.</p>
-            <p>Алгоритм один для всех платформ: от проверки сети и перезапуска роутера до ручной настройки DNS, смены диапазона Wi‑Fi и работы с NAT, если проблема не решается простыми шагами.</p>
+  <section class="guide-page">
+    <div class="container">
+      <div class="breadcrumbs">
+        <a href="../index.html">Главная</a>
+        <i class="fas fa-chevron-right"></i>
+        <a href="../consoles.html">Приставки</a>
+        <i class="fas fa-chevron-right"></i>
+        <span>Что делать, если консоль не подключается к интернету: универсальный чек‑лист</span>
+      </div>
 
-            <div class="hero-badges">
-                <span class="badge badge--accent">PS5 • Xbox • Switch • Steam Deck</span>
-                <span class="badge badge--success">Универсальный сетевой чек‑лист</span>
-                <span class="badge badge--danger">От простого перезапуска до NAT и DNS</span>
-            </div>
+      <h1 class="section__title">Что делать, если консоль не подключается к интернету: универсальный чек‑лист для PS5, Xbox, Switch и Steam Deck</h1>
+
+      <div class="guide-meta">
+        <span>
+          <i class="fas fa-wifi"></i>
+          Универсальный практический чек‑лист: как понять, почему PS5, Xbox Series/One, Nintendo Switch или Steam Deck не подключаются к интернету. Пошаговый алгоритм от простых проверок до продвинутых настроек роутера, NAT, DNS и особенностей разных платформ.
+        </span>
+      </div>
+
+      <div class="guide-image-block">
+        <img src="https://i.postimg.cc/PJxFxr49/resize-m-mfit-w-450-h-450.png" alt="Что делать, если консоль не подключается к интернету: универсальный чек‑лист для PS5, Xbox, Switch и Steam Deck">
+        <div class="image-caption">
+          Любая консоль может внезапно потерять интернет: PS5, Xbox, Nintendo Switch и Steam Deck зависят от роутера, провайдера, Wi‑Fi, кабелей и настроек — универсальный чек‑лист помогает быстро найти слабое звено.
+        </div>
+      </div>
+
+      <div class="guide-content">
+
+        <h2 id="step-1">Введение: почему «нет интернета» — это не всегда проблема приставки</h2>
+        <p>
+          Сообщение «Не удалось подключиться к интернету» на PS5, Xbox, Switch или Steam Deck пугает, но чаще всего виновата не сама консоль. Интернет‑цепочка включает в себя несколько звеньев: приставка, домашний роутер, кабель или Wi‑Fi, модем, провайдер и сервера PlayStation Network, Xbox Live, Nintendo, Steam и конкретных игр.
+        </p>
+        <p>
+          Универсальный подход — идти от простого к сложному: сначала проверять, работает ли сеть вообще, затем — локальные проблемы Wi‑Fi или кабеля, настройки консоли, а уже потом копать в роутер, NAT, DNS и особенности конкретной платформы. Этот мегагайд даёт общий чек‑лист и отдельные нюансы для PS5, Xbox, Nintendo Switch и Steam Deck.
+        </p>
+
+        <h2 id="step-2">Общая карта диагностики: от простого к сложному</h2>
+        <p>
+          Прежде чем погружаться в детали каждой платформы, полезно увидеть общую последовательность действий, которая подходит почти для любой приставки. Таблица ниже показывает уровни проверки: «дом», «роутер», «консоль», «онлайн‑сервисы».
+        </p>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Уровень</th>
+              <th>Что проверяем</th>
+              <th>Типичные симптомы</th>
+              <th>Примеры действий</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1. Дом и провайдер</td>
+              <td>Есть ли интернет на других устройствах.</td>
+              <td>Ничего не грузится ни на телефоне, ни на ПК.</td>
+              <td>Перезапуск модема/роутера, звонок провайдеру.</td>
+            </tr>
+            <tr>
+              <td>2. Роутер и Wi‑Fi/кабель</td>
+              <td>Работает ли локальная сеть и Wi‑Fi.</td>
+              <td>Другие устройства работают, но сигнал слабый/нестабильный.</td>
+              <td>Изменение точки установки роутера, замена кабеля, смена диапазона.</td>
+            </tr>
+            <tr>
+              <td>3. Консоль</td>
+              <td>Видит ли приставка сеть и получает ли IP‑адрес.</td>
+              <td>Ошибка подключения только на консоли, другие устройства в порядке.</td>
+              <td>Перезапуск, забывание сети, ручной ввод параметров.</td>
+            </tr>
+            <tr>
+              <td>4. Сервисы платформы</td>
+              <td>Работают ли PSN, Xbox Live, Nintendo Online, Steam.</td>
+              <td>Сеть есть, но магазин/онлайн‑игры не запускаются.</td>
+              <td>Проверка статуса сервисов, ожидание, смена игры/сервиса.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2 id="step-3">Шаг 1. Проверяем, жив ли интернет вообще</h2>
+        <p>
+          Первый вопрос — проблема только на консоли или в принципе дома нет интернета. Пропавший интернет у провайдера или зависший модем легко выдаёт себя тем, что ни одно устройство в доме не открывает сайты и не загружает видео.
+        </p>
+        <p>
+          Вместо того чтобы сразу копаться в настройках PS5 или Switch, лучше взять телефон или ноутбук и проверить соединение по той же сети. Если и там ничего не работает, значит, консоль здесь не при чём, а копать нужно в сторону провайдера или оборудования.
+        </p>
+
+        <h3>Быстрый тест «жив ли интернет»</h3>
+        <ul>
+          <li>Проверить сайт или приложение на смартфоне/ПК, подключённом к тому же Wi‑Fi или кабелю.</li>
+          <li>Если ничего не открывается, перезапустить модем и роутер, подождать 2–3 минуты.</li>
+          <li>Проверить индикацию на модеме/роутере: нет ли явно красных/мигающих ламп на линии.</li>
+          <li>Если после перезапуска ничего не поменялось, обратиться к провайдеру.</li>
+          <li>Если интернет есть только по мобильной сети, значит проблема в домашнем подключении, а не в консоли.</li>
+        </ul>
+
+        <h2 id="step-4">Шаг 2. Проверяем Wi‑Fi, кабель и расстояние до роутера</h2>
+        <p>
+          Если в целом интернет дома работает, следующий кандидат — локальная сеть между консолью и роутером. Для Wi‑Fi критичны расстояние, стены, помехи от соседних сетей. Для кабеля — целостность провода и портов. Нередко достаточно перенести приставку ближе к роутеру или временно подключить её по кабелю, чтобы понять, где слабое место.
+        </p>
+        <p>
+          Важно помнить, что Switch и Steam Deck особенно чувствительны к качеству Wi‑Fi, а PS5 и Xbox при возможности лучше подключать по Ethernet, особенно если они стоят рядом с роутером или можно протянуть кабель.
+        </p>
+
+        <h3>Мини‑чек‑лист по локальной сети</h3>
+        <ul>
+          <li>Если консоль по Wi‑Fi далеко от роутера, временно перенести её ближе и проверить подключение.</li>
+          <li>При наличии Ethernet‑порта на консоли и роутере попробовать подключиться кабелем и сравнить результат.</li>
+          <li>Проверить, не забит ли роутер кучей устройств, особенно если все гаджеты активно качают или стримят.</li>
+          <li>По возможности включить 5 ГГц‑диапазон и подключить к нему консоль, если до роутера недалеко.</li>
+          <li>Осмотреть кабель на предмет повреждений (заломы, пережатия) и протестировать другой порт роутера.</li>
+        </ul>
+
+        <h2 id="step-5">Шаг 3. Тест сети на самой консоли (PS5, Xbox, Switch, Steam Deck)</h2>
+        <p>
+          Все современные приставки умеют тестировать сеть: проверять подключение к маршрутизатору, интернету и серверам платформы. Этот встроенный тест помогает понять, на каком именно этапе соединение лопается: нет IP‑адреса, не удаётся выйти в интернет или не отвечает сервис платформы.
+        </p>
+        <p>
+          Результат теста — важная подсказка: если консоль не получает IP, проблема ближе к роутеру; если есть IP и интернет, но не отвечает PSN/Xbox Live/Nintendo/Steam — это уже вопрос к сервисам или настройкам региона и DNS.
+        </p>
+
+        <h3>Что смотреть в результате теста сети</h3>
+        <ul>
+          <li>Есть ли IP‑адрес и маска (значит, роутер отвечает и выдаёт адрес).</li>
+          <li>Пишет ли приставка, что интернет есть, но сервис платформы недоступен.</li>
+          <li>Есть ли указание на проблемы с DNS или «невозможно найти сервер».</li>
+          <li>Не ругается ли тест на слишком слабый или нестабильный сигнал Wi‑Fi.</li>
+          <li>Различается ли результат теста при подключении по Wi‑Fi и по кабелю.</li>
+        </ul>
+
+        <h2 id="step-6">Шаг 4. Универсальные действия: перезапуск и забывание сети</h2>
+        <p>
+          Даже если тест сети показывает ошибку, зачастую её можно устранить мягкими действиями: перезапуск консоли и роутера, удаление и повторное добавление Wi‑Fi‑сети, ручное подтверждение пароля. Удивительно много проблем уходит после того, как консоль просто забывает старые настройки сети и получает новые от роутера.
+        </p>
+        <p>
+          Такой подход безопасен для всех четырёх платформ: PS5, Xbox, Switch и Steam Deck не пострадают от того, что вы удалите сеть и подключитесь к ней заново. Главное — помнить пароль от Wi‑Fi и, по возможности, иметь под рукой альтернативный способ временного подключения (например, мобильную точку доступа для проверки).
+        </p>
+
+        <h3>Универсальные мягкие шаги</h3>
+        <ul>
+          <li>Полностью перезагрузить консоль, а не выводить её только из сна.</li>
+          <li>Выключить роутер и модем на 1–2 минуты и включить их снова.</li>
+          <li>На консоли удалить сохранённую Wi‑Fi‑сеть, затем заново выбрать её и ввести пароль.</li>
+          <li>При временном подключении к мобильной точке проверить, воспроизводится ли ошибка там.</li>
+          <li>Убедиться, что на роутере не включены фильтры по MAC‑адресу, блокирующие новые устройства.</li>
+        </ul>
+
+        <h2 id="step-7">Особенности PS5: сетевой тест, тип NAT и ошибки PSN</h2>
+        <p>
+          Для PS5 типичные проблемы с интернетом: ошибки подключения к PSN, невозможность войти в аккаунт, неудачные загрузки обновлений и игр, невозможность запустить онлайн‑режим. Встроенный тест соединения показывает: подключение к интернету, вход в PSN, скорость и тип NAT.
+        </p>
+        <p>
+          Если PS5 пишет, что интернет есть, но вход в PSN невозможен, стоит сначала проверить сервера PSN и лишь потом копаться в настройках. Если же консоль не может получить IP‑адрес или выдать стабильное соединение, виноваты, скорее всего, роутер или Wi‑Fi.
+        </p>
+
+        <h3>Чек‑лист для PS5</h3>
+        <ul>
+          <li>Запустить тест соединения в настройках сети и посмотреть, на каком шаге возникает проблема.</li>
+          <li>При ошибке IP‑адреса — перезапустить роутер, проверить пароль, при возможности протестировать кабель.</li>
+          <li>Если интернет есть, но не работает PSN — проверить статус сервисов и подождать, не ломая настройки.</li>
+          <li>При регулярных проблемах с NAT и онлайном — настроить роутер (UPnP, проброс портов, «открытый» NAT).</li>
+          <li>При странных единичных ошибках — перезагрузить PS5, забыть сеть и подключиться снова.</li>
+        </ul>
+
+        <h2 id="step-8">Особенности Xbox: сетевой тест и NAT</h2>
+        <p>
+          Xbox Series и Xbox One уделяют особое внимание типу NAT, так как от него зависят стабильность онлайна и возможность соединяться с друзьями. При проверке сети Xbox показывает качество подключения к интернету и Xbox Live, скорость и тип NAT (открытый, умеренный, строгий).
+        </p>
+        <p>
+          Если консоль вообще не подключается к интернету, шаги у Xbox похожи на PS5. Если подключение есть, но онлайновые игры и чаты работают нестабильно, следует обратить внимание именно на NAT и настройки роутера: включение UPnP, выделение IP‑адреса, упрощение сетевой схемы.
+        </p>
+
+        <h3>Чек‑лист для Xbox</h3>
+        <ul>
+          <li>Запустить тест сети и проверить, есть ли подключение к интернету и Xbox Live.</li>
+          <li>При полном отсутствии соединения пройти общий универсальный чек‑лист: другие устройства, роутер, перезапуск, забывание сети.</li>
+          <li>Если интернет есть, но проблемы с мультиплеером — смотреть на тип NAT и работать с настройками роутера.</li>
+          <li>При связанных с сетью системных ошибках — перезапуск, обновление системы, временное проводное подключение.</li>
+          <li>Убедиться, что в роутере нет строгих ограничений, блокирующих трафик Xbox.</li>
+        </ul>
+
+        <h2 id="step-9">Особенности Nintendo Switch: слабый Wi‑Fi и мобильные сценарии</h2>
+        <p>
+          Nintendo Switch часто используется в портативном режиме, что делает качество Wi‑Fi критичным. Типичные проблемы: приставка плохо ловит сеть в дальних комнатах, часто теряет соединение, не может подключиться к «сложным» сетям (гостевые, офисные, с авторизацией в браузере).
+        </p>
+        <p>
+          В отличие от стационарных консолей, Switch редко используют по кабелю (кроме дока с адаптером), поэтому основной акцент — на правильном выборе точки Wi‑Fi, минимизации помех и, при необходимости, временном использовании мобильной точки доступа для диагностики.
+        </p>
+
+        <h3>Чек‑лист для Nintendo Switch</h3>
+        <ul>
+          <li>Перейти ближе к роутеру и заново протестировать подключение.</li>
+          <li>Удалить сохранённую сеть и заново подключиться к ней с вводом пароля.</li>
+          <li>По возможности подключить консоль через док и USB‑LAN‑адаптер, чтобы проверить, проблема ли в Wi‑Fi.</li>
+          <li>Избегать гостевых сетей с авторизацией через веб‑страницы, если это возможно.</li>
+          <li>При устойчивых проблемах только с одной сетью, но нормальной работе с другим Wi‑Fi — работать с настройками именно этой сети/роутера.</li>
+        </ul>
+
+        <h2 id="step-10">Особенности Steam Deck: Linux, Wi‑Fi и настройка сети</h2>
+        <p>
+          Steam Deck — по сути портативный Linux‑ПК, и его сетевое поведение иногда отличается от классических консолей. Deck может быть более чувствителен к некоторым режимам Wi‑Fi, особенностям шифрования и странным настройкам роутера, особенно в старых прошивках.
+        </p>
+        <p>
+          При проблемах с подключением Deck стоит тестировать в двух режимах: игровой режим (SteamOS UI) и Desktop Mode. Иногда один режим цепляет сеть лучше другого, что помогает локализовать проблему. Не стоит забывать и о возможности проводного подключения через док‑станцию или USB‑C адаптер.
+        </p>
+
+        <h3>Чек‑лист для Steam Deck</h3>
+        <ul>
+          <li>Перезагрузить Deck и попробовать переподключиться к сети в игровом режиме.</li>
+          <li>Перейти в Desktop Mode и посмотреть, видит ли система Wi‑Fi‑адаптер и сети.</li>
+          <li>Удалить и заново добавить проблемную сеть, перепроверить пароль.</li>
+          <li>По возможности подключить Deck к интернету через док‑станцию и Ethernet, оценить разницу.</li>
+          <li>Следить за обновлениями SteamOS, так как они регулярно улучшают работу с сетевыми адаптерами.</li>
+        </ul>
+
+        <h2 id="step-11">DNS, IP и продвинутые настройки: когда базовый чек‑лист не помог</h2>
+        <p>
+          Если базовые шаги не дали результата, можно попробовать более продвинутые настройки: смену DNS, статический IP, проверку конфликтов с другими устройствами. Это уже шаг для уверенных пользователей, но в некоторых сетях (особенно с нестандартными роутерами) именно он приносит успех.
+        </p>
+        <p>
+          Главное правило — не менять сразу всё подряд. Менять параметры нужно по одному шагу и фиксировать, что именно было сделано, чтобы можно было вернуться назад при необходимости.
+        </p>
+
+        <h3>Примеры продвинутых шагов</h3>
+        <ul>
+          <li>На консоли вручную указать альтернативные DNS‑серверы вместо автоматически выданных роутером.</li>
+          <li>Назначить приставке статический IP‑адрес в пределах домашней сети, чтобы избежать конфликтов.</li>
+          <li>В роутере включить или перенастроить UPnP, если он был отключён.</li>
+          <li>Упростить конфигурацию сети: временно отключить лишние маршрутизаторы и повторители для проверки.</li>
+          <li>При особо сложных топологиях — рассмотреть консультацию с провайдером или специалистом по сети.</li>
+        </ul>
+
+        <h2 id="step-12">Сценарные кейсы: реальные ситуации и порядок действий</h2>
+        <p>
+          Ниже несколько типичных сценариев, с которыми сталкиваются владельцы PS5, Xbox, Switch и Steam Deck, и пошаговые рекомендации для каждой ситуации.
+        </p>
+
+        <div class="scenario-block">
+          <div class="scenario-title">Сценарий A: «Ни одна приставка дома не выходит в интернет»</div>
+          <ul>
+            <li>Проверить смартфон или ноутбук: открываются ли сайты через ту же сеть.</li>
+            <li>Если нет — перезапустить модем и роутер, подождать 2–3 минуты.</li>
+            <li>Проверить индикацию на оборудовании, при необходимости позвонить провайдеру.</li>
+            <li>Не менять настройки самих консолей до восстановления основного соединения.</li>
+            <li>После восстановления связи при необходимости перезапустить приставки, чтобы обновить сетевые параметры.</li>
+          </ul>
         </div>
 
-        <div>
-            <div class="hero-image">
-                <img src="https://i.postimg.cc/PJxFxr49/resize-m-mfit-w-450-h-450.png" alt="Что делать, если консоль не подключается к интернету: универсальный чек-лист для PS5, Xbox, Switch и Steam Deck">
-            </div>
-            <div class="hero-note">Картинку можно заменить на локальный файл с тем же разрешением, если делаете лендинг или статью.</div>
+        <div class="scenario-block">
+          <div class="scenario-title">Сценарий B: «Интернет есть на ПК и телефоне, но PS5/ Xbox / Switch / Deck не подключаются»</div>
+          <ul>
+            <li>Перезагрузить консоль и выполнить её тест сети.</li>
+            <li>Удалить сохранённую Wi‑Fi‑сеть на приставке и подключиться к ней заново.</li>
+            <li>Если возможно, временно подключить консоль по кабелю и проверить результат.</li>
+            <li>Проверить, не включены ли на роутере фильтры по устройствам или детский контроль.</li>
+            <li>При сохранении проблемы только на одной приставке — рассмотреть мягкий сброс её сетевых настроек.</li>
+          </ul>
         </div>
-    </section>
 
-    <section class="grid">
-        <!-- ОСНОВНОЙ КОНТЕНТ -->
-        <article class="card">
-            <h2>Логика универсального чек‑листа</h2>
-            <p class="tagline">У всех консолей одинаковая база: им нужна рабочая домашняя сеть, корректный роутер и живые серверы платформы. Поэтому базовая диагностика одинакова и для PS5, и для Xbox, и для Switch, и для Steam Deck.[web:183][web:189]</p>
-            <p class="highlight">Алгоритм простой: 1) проверить, жив ли интернет в доме; 2) перезапустить консоль и роутер; 3) заново подключить консоль к сети; 4) протестировать соединение и поправить DNS/NAT; 5) при необходимости — чуть настроить роутер.[web:107][web:109][web:179][web:183][web:186][web:189]</p>
+        <div class="scenario-block">
+          <div class="scenario-title">Сценарий C: «Приставка подключается, но не работают PSN/Xbox Live/Nintendo Online/Steam»</div>
+          <ul>
+            <li>Убедиться, что обычные сайты и приложения на приставке открываются (если такая возможность есть).</li>
+            <li>Запустить тест сети и посмотреть, ругается ли он на сервис платформы.</li>
+            <li>Проверить, работают ли сервисы платформы у других пользователей и на других устройствах.</li>
+            <li>Не менять агрессивно настройки роутера, если очевидно, что проблема массовая и на стороне сервиса.</li>
+            <li>Повторить попытку через некоторое время или попробовать другую игру/функцию, не завязанную на сервис.</li>
+          </ul>
+        </div>
 
-            <div class="quick-list">
-                <div>
-                    <strong>Для каких случаев этот чек‑лист:</strong>
-                    <ul>
-                        <li>Консоль не видит Wi‑Fi или не подключается к нему.</li>
-                        <li>Тест соединения падает на любом этапе.</li>
-                        <li>Магазин, онлайн‑игры и обновления не работают, хотя сеть вроде есть.</li>
-                        <li>Периодически теряется связь или онлайн‑сервисы нестабильны.</li>
-                    </ul>
-                </div>
-                <div>
-                    <strong>Кому подходит:</strong>
-                    <div class="pill pill-success"><span class="pill-bullet"></span>Владельцам PS5 / PS4</div>
-                    <div class="pill"><span class="pill-bullet"></span>Xbox Series X|S / One</div>
-                    <div class="pill"><span class="pill-bullet"></span>Nintendo Switch / OLED / Lite</div>
-                    <div class="pill pill-success"><span class="pill-bullet"></span>Steam Deck (SteamOS)</div>
-                </div>
-            </div>
+        <div class="scenario-block">
+          <div class="scenario-title">Сценарий D: «Онлайн постоянно отваливается на одной приставке, остальные устройства стабильны»</div>
+          <ul>
+            <li>Переподключить приставку к сети, по возможности изменить диапазон Wi‑Fi (2,4/5 ГГц).</li>
+            <li>Проверить работу по кабелю (если есть такая возможность).</li>
+            <li>Переустановить или сбросить сетевые настройки приставки, перезапустить её.</li>
+            <li>Убедиться, что нет перегрева или других системных проблем, влияющих на соединение.</li>
+            <li>При необходимости протестировать приставку в другой сети (у друзей, через мобильную точку), чтобы исключить проблемы домашнего роутера.</li>
+          </ul>
+        </div>
 
-            <!-- Блок 1 -->
-            <h3>1. Проверка: интернет вообще есть?</h3>
-            <p class="section-intro">Прежде чем мучать консоль, нужно понять, доступен ли интернет в принципе. Иногда проблема не в приставке, а в провайдере или роутере.[web:183][web:186][web:189]</p>
+        <h2 id="step-13">Сводная таблица: универсальный чек‑лист по шагам</h2>
+        <p>
+          Для быстрой работы удобно иметь под рукой сжатый список шагов, одинаково применимых к PS5, Xbox, Switch и Steam Deck.
+        </p>
 
-            <p class="section-intro"><strong>Быстрые проверки на любых консолях:</strong></p>
-            <ul class="steps">
-                <li>Проверить на другом устройстве (телефон, ноутбук), подключённом к тому же роутеру, открываются ли сайты и идут ли стримы.</li>
-                <li>Если на всех устройствах нет сети — перезапустить только модем/роутер, подождать восстановления линии и уже потом трогать консоль.[web:183][web:186][web:189]</li>
-                <li>Если интернет есть в браузере и приложениях на других устройствах, проблема почти наверняка на стороне настройки консоли или её связи с роутером.[web:183][web:189]</li>
-            </ul>
-            <p class="note"><strong>Смысл:</strong> этот шаг отделяет глобальные проблемы провайдера и роутера от локальных глюков консоли. Нельзя починить то, чего нет вообще.[web:183][web:186][web:189]</p>
+        <table>
+          <thead>
+            <tr>
+              <th>Шаг</th>
+              <th>Что делаем</th>
+              <th>Зачем</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1. Проверка других устройств</td>
+              <td>Смотрим, работает ли интернет на телефоне/ПК.</td>
+              <td>Отделить проблемы провайдера от проблем приставки.</td>
+            </tr>
+            <tr>
+              <td>2. Перезапуск модема и роутера</td>
+              <td>Отключаем питание на 1–2 минуты, включаем снова.</td>
+              <td>Убрать зависания и обновить подключение к провайдеру.</td>
+            </tr>
+            <tr>
+              <td>3. Перезапуск консоли</td>
+              <td>Полностью выключаем и включаем приставку.</td>
+              <td>Очистить временное состояние и кэш сети.</td>
+            </tr>
+            <tr>
+              <td>4. Забывание и повторное добавление сети</td>
+              <td>Удаляем Wi‑Fi на консоли, вводим пароль заново.</td>
+              <td>Сбросить некорректные параметры подключения.</td>
+            </tr>
+            <tr>
+              <td>5. Проверка через кабель</td>
+              <td>Подключаем приставку по Ethernet при возможности.</td>
+              <td>Отделить проблемы Wi‑Fi от проблем линии.</td>
+            </tr>
+            <tr>
+              <td>6. Тест сети на приставке</td>
+              <td>Используем встроенную диагностику платформы.</td>
+              <td>Понять, на каком участке цепи проблема.</td>
+            </tr>
+            <tr>
+              <td>7. Проверка сервисов платформы</td>
+              <td>Уточняем статус PSN/Xbox Live/Nintendo/Steam.</td>
+              <td>Не чинить то, что сломано на стороне сервиса.</td>
+            </tr>
+            <tr>
+              <td>8. Продвинутые настройки</td>
+              <td>DNS, IP, NAT, UPnP и т. д. при необходимости.</td>
+              <td>Решать сложные, но локальные сетевые конфликты.</td>
+            </tr>
+          </tbody>
+        </table>
 
-            <!-- Блок 2 -->
-            <h3>2. Перезапуск консоли и роутера: базовый «софт‑ресет» сети</h3>
-            <p class="section-intro">Большинство кратковременных сетевых глюков лечится обычным перезапуском консоли и роутера: это «обнуляет» временные ошибки и очищает кеш сетевого стека.[web:107][web:109][web:179][web:183][web:186]</p>
+        <h2 id="step-14">Лайфхаки: как сделать так, чтобы консоль реже теряла интернет</h2>
+        <div class="pro-tips">
+          <h4>Привычки для стабильной игровой сети</h4>
+          <div class="tip-item">
+            <i class="fas fa-lightbulb"></i>
+            <p>По возможности подключать стационарные консоли (PS5, Xbox) по кабелю, оставляя Wi‑Fi для мобильных устройств и Switch/Deck.</p>
+          </div>
+          <div class="tip-item">
+            <i class="fas fa-lightbulb"></i>
+            <p>Периодически перезагружать роутер, особенно если он работает без остановки месяцами и обслуживает много устройств.</p>
+          </div>
+          <div class="tip-item">
+            <i class="fas fa-lightbulb"></i>
+            <p>Не загружать сеть тяжёлыми скачиваниями и облачными резервными копиями одновременно с важными онлайновыми матчами или стримингом в 4K.</p>
+          </div>
+          <div class="tip-item">
+            <i class="fas fa-lightbulb"></i>
+            <p>Размещать роутер в максимально открытом месте, а не в шкафу или за металлическими препятствиями.</p>
+          </div>
+          <div class="tip-item">
+            <i class="fas fa-lightbulb"></i>
+            <p>Не бояться использовать встроенные тесты сети на консоли: они не вредят системе, но дают много полезной информации.</p>
+          </div>
+        </div>
 
-            <p class="section-intro"><strong>Шаги для любой консоли:</strong></p>
-            <ul class="steps">
-                <li>Корректно выключить консоль через меню питания. Если она зависла — удерживать кнопку питания 7–10 секунд до полного отключения.[web:107][web:109][web:186]</li>
-                <li>Отключить роутер и, если есть, отдельный модем от питания на 30–60 секунд, затем включить снова и подождать, пока все индикаторы не покажут стабильную работу.[web:109][web:183][web:186][web:189]</li>
-                <li>Включить консоль, подождать загрузки и проверить, появилась ли сеть (иконка подключения, тест соединения).[web:107][web:179][web:182][web:185]</li>
-            </ul>
-            <p class="note"><strong>Вывод:</strong> перезапуск обновляет IP, сбрасывает временные ошибки и часто уже сам по себе возвращает связь без каких‑либо сложных манипуляций.[web:107][web:109][web:179][web:183][web:186]</p>
+        <div class="warning-block">
+          <strong>Напоминание!</strong> Любая консоль — не магическое устройство, а часть домашней сети. Чем понятнее её место в этой цепочке и чем последовательнее подход к диагностике, тем меньше времени уйдёт на разбор полётов, когда в очередной раз появится сообщение «Нет подключения к интернету».
+        </div>
 
-            <!-- Блок 3 -->
-            <h3>3. Забыть сеть и подключиться заново</h3>
-            <p class="section-intro">Если Wi‑Fi‑пароль менялся, настройки повреждены или консоль «залипла» на старых параметрах, помогает удаление текущей сети и повторное подключение.[web:107][web:109][web:181]</p>
+      </div>
+    </div>
+  </section>
 
-            <p class="section-intro"><strong>Общий принцип для всех платформ:</strong></p>
-            <ul class="steps">
-                <li>Зайти в настройки сети консоли и открыть список известных сетей.</li>
-                <li>Выбрать текущую проблемную сеть и выбрать действие вроде «Забыть эту сеть» или «Удалить».</li>
-                <li>Заново выбрать ту же сеть в списке доступных, ввести пароль и дождаться подключения.[web:107][web:109][web:181][web:185]</li>
-            </ul>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__col footer__col--logo">
+          <a href="index.html" class="footer-logo">
+            <span class="logo__icon"></span>
+            <span class="logo__text">Repairo</span>
+          </a>
+          <p class="footer__text">Экспертные инструкции по технике с 2024 года</p>
+        </div>
+        <div class="footer__col">
+          <h3 class="footer__title">Разделы</h3>
+          <ul class="footer__links">
+            <li><a href="index.html" class="footer__link">Главная</a></li>
+            <li><a href="all-guides.html" class="footer__link">Все гайды</a></li>
+            <li><a href="contacts.html" class="footer__link">Контакты</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h3 class="footer__title">Категории</h3>
+          <ul class="footer__links">
+            <li><a href="../tv.html" class="nav__link">Телевизоры</a></li>
+            <li><a href="../cameras.html" class="nav__link">Фотоаппараты</a></li>
+            <li><a href="../consoles.html" class="nav__link">Приставки</a></li>
+            <li><a href="../laptops.html" class="nav__link">Ноутбуки</a></li>
+            <li><a href="../smartphones.html" class="nav__link">Смартфоны</a></li>
+            <li><a href="../small-appliances.html" class="nav__link">Мелкая техника</a></li>
+            <li><a href="../large-appliances.html" class="nav__link">Бытовая техника</a></li>
+            <li><a href="../auto-electronics.html" class="nav__link">Авто-Электроника</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h3 class="footer__title">Контакты</h3>
+          <ul class="footer__links">
+            <li>
+              <a href="https://t.me/repairo_kz" class="footer__link"><i class="fab fa-telegram"></i> Telegram</a>
+            </li>
+            <li>
+              <a href="https://instagram.com/repairo_kz" class="footer__link"><i class="fab fa-instagram"></i> Instagram</a>
+            </li>
+            <li>
+              <a href="mailto:support@repairo.kz" class="footer__link"><i class="fas fa-envelope"></i> Email</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="disclaimer">
+          Администрация сайта не несёт ответственности за возможные повреждения техники
+          и иные последствия, возникшие в результате самостоятельного ремонта по
+          материалам и инструкциям, размещённым на сайте. Все работы вы выполняете
+          на свой страх и риск.
+        </p>
+        <p class="footer__copyright">© 2025 Repairo. Все права защищены.</p>
+      </div>
+    </div>
+  </footer>
 
-            <p class="section-intro"><strong>Особенности:</strong></p>
-            <ul class="steps">
-                <li>На Steam Deck для Wi‑Fi помогает полное перезапуск устройства и роутера, затем повторное подключение — это подчёркивается в инструкциях и опыте пользователей.[web:107][web:109][web:178][web:179]</li>
-                <li>На PS5, Xbox и Switch повторное подключение к Wi‑Fi помогает при ошибках пароля, смене параметров роутера и случайных сбоях шифрования.[web:185][web:182][web:181][web:189]</li>
-            </ul>
-            <p class="note"><strong>Суть:</strong> удаление и повторное создание подключения часто оказывается быстрее и надежнее, чем бесконечный перебор частных опций в старом профиле сети.[web:107][web:109][web:181][web:185]</p>
+  <script src="../script.js"></script>
 
-            <!-- Блок 4 -->
-            <h3>4. Использовать тест соединения и статус серверов</h3>
-            <p class="section-intro">Каждая консоль содержит встроенный тест соединения и отдельную индикацию состояния онлайн‑сервисов. Это помогает отличить локальную проблему от глобального падения PSN/Xbox Live/Nintendo/Steam.[web:179][web:182][web:28][web:186]</p>
-
-            <div class="table-wrapper">
-                <table>
-                    <thead>
-                    <tr>
-                        <th>Платформа</th>
-                        <th>Что проверить</th>
-                        <th>Что это даёт</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td>PS5</td>
-                        <td>Настройки → Сеть → Состояние соединения → Проверить соединение.[web:28][web:185]</td>
-                        <td>Показывает IP, доступ в интернет, доступ к PSN и возможные ошибки.</td>
-                    </tr>
-                    <tr>
-                        <td>Xbox</td>
-                        <td>Профиль и система → Настройки → Общие → Сетевые настройки → Тест сетевого подключения.[web:182][web:186]</td>
-                        <td>Проверяет подключение к интернету и Xbox услугам, показывает ошибки и NAT.</td>
-                    </tr>
-                    <tr>
-                        <td>Nintendo Switch</td>
-                        <td>Системные настройки → Интернет → Тест соединения.</td>
-                        <td>Отчёт по подключению к роутеру и онлайн‑сервисам Nintendo.</td>
-                    </tr>
-                    <tr>
-                        <td>Steam Deck</td>
-                        <td>Настройки → Интернет или иконка Wi‑Fi в Desktop‑режиме и проверка статуса.</td>
-                        <td>Понимание, получает ли устройство IP и есть ли доступ к сети.[web:109][web:179]</td>
-                    </tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <p class="section-intro"><strong>Дополнительно:</strong></p>
-            <ul class="steps">
-                <li>При подозрении на глобальный сбой полезно проверить статус сервисов (PSN, Xbox Live, Nintendo Online, Steam) с другого устройства: иногда «лежит» именно сервер.[web:189][web:186]</li>
-                <li>Если тест показывает доступ в интернет, но проблемы только в конкретной игре — возможны проблемы на стороне сервера этой игры или региона.</li>
-            </ul>
-            <p class="note"><strong>Вывод:</strong> тест соединения и статус сервисов — это «диагностика», которая не лечит, но даёт понимание, где искать причину.[web:179][web:182][web:28][web:186][web:189]</p>
-
-            <!-- Блок 5 -->
-            <h3>5. Смена диапазона Wi‑Fi, канала или переход на кабель</h3>
-            <p class="section-intro">Если консоль «видит» сеть, но не может стабильно подключиться, часто виноваты помехи или перегруженный диапазон. Все платформы выигрывают от чистого сигнала или кабельного подключения.[web:109][web:181][web:183][web:189]</p>
-
-            <p class="section-intro"><strong>Что можно сделать с Wi‑Fi:</strong></p>
-            <ul class="steps">
-                <li>По возможности переключить консоль на другой диапазон: с 2.4 ГГц на 5 ГГц или наоборот — в зависимости от качества сигнала и помех.[web:109][web:181][web:183]</li>
-                <li>В настройках роутера выбрать менее перегруженный канал (часто помогает уход от «середины» диапазона к нижним номерам).[web:109][web:181]</li>
-                <li>Переместить консоль ближе к роутеру, убрать лишние стены и крупную технику между ними.[web:109][web:183][web:189]</li>
-            </ul>
-
-            <p class="section-intro"><strong>Когда стоит перейти на кабель:</strong></p>
-            <ul class="steps">
-                <li>Если есть возможность, подключить консоль к роутеру по Ethernet — это всегда более стабильный вариант для онлайна и загрузок.[web:183][web:189]</li>
-                <li>Для Steam Deck и Nintendo Switch такой вариант возможен через USB‑LAN‑адаптер или док‑станцию, что часто полностью решает проблемы с лагами и обрывами.[web:109][web:181]</li>
-            </ul>
-            <p class="note"><strong>Суть:</strong> стабильность сети важнее номинальной скорости. Хороший кабель или чистый Wi‑Fi‑канал решают половину «мистических» сетевых ошибок.[web:109][web:181][web:183][web:189]</p>
-
-            <!-- Блок 6 -->
-            <h3>6. DNS и ручная настройка сетевого профиля</h3>
-            <p class="section-intro">Иногда консоль видит роутер, но не может достучаться до серверов — проблема на уровне DNS или получения IP. В таких случаях помогает ручная настройка адресов и DNS.[web:109][web:28][web:183][web:186]</p>
-
-            <p class="section-intro"><strong>Общая идея для всех устройств:</strong></p>
-            <ul class="steps">
-                <li>Убедиться, что по умолчанию параметры IP и DNS получаются автоматически через DHCP, если нет особых требований сети.[web:186][web:28][web:183]</li>
-                <li>Если автоматический DNS глючит, прописать вручную общеизвестные серверы (например, 8.8.8.8 и 8.8.4.4) и посмотреть, станет ли лучше.[web:109][web:28][web:183]</li>
-                <li>После изменения настроек перезапустить консоль и повторно выполнить тест соединения.</li>
-            </ul>
-
-            <p class="section-intro"><strong>Примеры:</strong></p>
-            <ul class="steps">
-                <li>Steam Deck в ряде гайдов рекомендуют настраивать DNS и BSSID вручную через Desktop‑режим для улучшения стабильности и скорости Wi‑Fi.[web:109][web:179]</li>
-                <li>PS5 официальные и сторонние инструкции советуют при сложных случаях задать статический IP и DNS, полученные от провайдера или использовать общедоступные.[web:28][web:186]</li>
-            </ul>
-            <p class="note"><strong>Момент:</strong> ручная настройка IP/DNS нужна не всем, но при повторяющихся «странных» сетевых ошибках это мощный инструмент, который выравнивает поведение многих сетей.[web:109][web:28][web:183][web:186]</p>
-
-            <!-- Блок 7 -->
-            <h3>7. NAT и открытие портов, если онлайн всё равно не работает</h3>
-            <p class="section-intro">Даже при успешном подключении к интернету консоль может ругаться на NAT или не пускать в онлайн‑игры и голосовой чат. Это уже вопрос настроек роутера.[web:28][web:181][web:184][web:189]</p>
-
-            <p class="section-intro"><strong>Упрощённая стратегия для всех консолей:</strong></p>
-            <ul class="steps">
-                <li>В настройках сети консоли посмотреть тип NAT или статус соединения с сервером платформы.[web:28][web:182][web:186]</li>
-                <li>В панели роутера включить UPnP (если поддерживается) — это позволяет устройствам автоматически открывать нужные порты.[web:181][web:184][web:189]</li>
-                <li>При необходимости настроить статический IP для каждой консоли и проброс портов для соответствующей платформы (PSN, Xbox Live, Nintendo, Steam), по гайдам или инструкциям.[web:28][web:184][web:181]</li>
-            </ul>
-            <p class="note"><strong>Логика:</strong> NAT‑проблемы чаще проявляются в онлайн‑играх и голосе. Если консоль в принципе не может выйти в интернет, сначала нужно добить базовое подключение, а уже потом трогать NAT.[web:28][web:181][web:184][web:189]</p>
-
-            <!-- Блок 8 -->
-            <h3>8. Краткий универсальный алгоритм «консоль не подключается к интернету»</h3>
-            <p class="section-intro">Ниже чек‑лист, который можно прямо повесить рядом с консолью или использовать в статье/поддержке.</p>
-
-            <ul class="steps">
-                <li>Проверить интернет на другом устройстве (телефон/ноутбук) в той же сети.[web:183][web:186][web:189]</li>
-                <li>Перезапустить консоль и сделать power‑cycle роутера (обесточить на 30–60 секунд).[web:107][web:109][web:183][web:186]</li>
-                <li>Удалить проблемную Wi‑Fi‑сеть на консоли, подключиться к ней заново с вводом пароля.[web:107][web:109][web:181][web:185]</li>
-                <li>Выполнить встроенный тест соединения и посмотреть на результат (IP, интернет, статус платформы).[web:179][web:182][web:28][web:186]</li>
-                <li>При слабом Wi‑Fi — сменить диапазон/канал или подключить консоль по кабелю.[web:109][web:181][web:183][web:189]</li>
-                <li>При подозрении на DNS — настроить авто‑получение или вручную прописать надёжные DNS‑серверы, затем перезагрузить консоль.[web:109][web:28][web:183][web:186]</li>
-                <li>Если онлайн‑игры жалуются на NAT — включить UPnP и рассмотреть проброс портов для консолей.[web:28][web:181][web:184][web:189]</li>
-                <li>Если в другой сети (у друзей/мобильный hotspot) консоль работает нормально — дальше разбираться уже с роутером и провайдером.</li>
-            </ul>
-            <p class="note"><strong>Результат:</strong> следуя этому алгоритму, в большинстве домашних сценариев удаётся вернуть интернет на консоль без выезда мастера и сложной сетевой магии.[web:107][web:109][web:179][web:183][web:186][web:189]</p>
-        </article>
-
-        <!-- ПРАВАЯ КОЛОНКА / САЙДБАР -->
-        <aside class="card side-section">
-            <h2>Шпаргалка по консольному интернету</h2>
-            <p class="tagline">Короткий справочник, который дословно подходит и для PS5, и для Xbox, и для Switch, и для Steam Deck.</p>
-
-            <div class="badge-block">
-                <span class="label"><span class="label-dot"></span>5–30 минут на базовую диагностику</span>
-                <span class="label label-soft"><span class="label-dot"></span>Подходит для любых домашних консолей</span>
-            </div>
-
-            <ul class="checklist">
-                <li>
-                    <span class="checklist-icon">1</span>
-                    <span><strong>Всегда начать с простого.</strong> Интернет на другом устройстве, перезапуск консоли и роутера, повторное подключение к Wi‑Fi.[web:107][web:109][web:183][web:186][web:189]</span>
-                </li>
-                <li>
-                    <span class="checklist-icon">2</span>
-                    <span><strong>Тест соединения.</strong> Встроенный тест на консоли даёт подсказку: проблема на уровне IP, DNS, платформы или конкретного сервиса.[web:179][web:182][web:28][web:186]</span>
-                </li>
-                <li>
-                    <span class="checklist-icon">3</span>
-                    <span><strong>Сигнал важнее «скорости по тарифу».</strong> Чистый Wi‑Fi‑канал или кабель часто важнее, чем цифра в мегабитах в договоре.[web:109][web:181][web:183][web:189]</span>
-                </li>
-                <li>
-                    <span class="checklist-icon">4</span>
-                    <span><strong>DNS и NAT на сладкое.</strong> К ручной настройке DNS и открытию портов имеет смысл переходить, только когда базовые шаги уже сделаны.[web:109][web:28][web:181][web:184][web:186]</span>
-                </li>
-                <li>
-                    <span class="checklist-icon">5</span>
-                    <span><strong>Сравнение сетей.</strong> Если консоль отлично работает в другой сети, в фокус попадают роутер и провайдер, а не сама приставка.[web:183][web:186][web:189]</span>
-                </li>
-            </ul>
-
-            <div class="divider"></div>
-
-            <h3>Когда пора звать провайдера или сервис</h3>
-            <p class="tagline">Не все проблемы нужно решать своими силами: есть ситуации, когда дальше уже «их зона ответственности».</p>
-
-            <ul class="checklist">
-                <li>
-                    <span class="checklist-icon checklist-icon--danger">!</span>
-                    <span>Высокая потеря пакетов и нестабильный пинг в тестах на всех устройствах, независимо от консоли.[web:183][web:186][web:189]</span>
-                </li>
-                <li>
-                    <span class="checklist-icon checklist-icon--danger">!</span>
-                    <span>Консоль не получает IP даже при простых настройках и после всех перезапусков.</span>
-                </li>
-                <li>
-                    <span class="checklist-icon checklist-icon--danger">!</span>
-                    <span>Даже в другой сети (у друзей/мобильной точке) консоль не подключается, а другие устройства в той же сети работают — повод подумать о сервисе консоли.</span>
-                </li>
-            </ul>
-
-            <div class="divider"></div>
-
-            <h3>Мини‑профилактика сетевых проблем</h3>
-            <p class="tagline">Пара привычек, которые сильно снижают вероятность «внезапно пропал интернет» на консолях.</p>
-
-            <div class="stat">
-                <span>Регулярный перезапуск роутера:</span>
-                <span>раз в несколько недель — освежить прошивку и соединение.[web:183][web:189]</span>
-            </div>
-            <div class="stat">
-                <span>Хорошее расположение:</span>
-                <span>роутер и консоль не в шкафу и не за стеной бетона.[web:181][web:183][web:189]</span>
-            </div>
-            <div class="stat">
-                <span>Кабель для серьёзного онлайна:</span>
-                <span>турниры и рейды лучше играть по Ethernet.[web:183][web:189]</span>
-            </div>
-            <div class="stat">
-                <span>Обновления прошивки:</span>
-                <span>консоль и роутер держать в актуальном состоянии.[web:179][web:183][web:186]</span>
-            </div>
-            <div class="stat">
-                <span>Знание базового чек‑листа:</span>
-                <span>понимать, что делать по шагам, а не паниковать.[web:107][web:109][web:179][web:183][web:186][web:189]</span>
-            </div>
-
-            <p class="note"><strong>Результат:</strong> при таком подходе любая консоль — PS5, Xbox, Switch или Steam Deck — перестаёт быть «магическим чёрным ящиком», а сетевые проблемы превращаются в понятную цепочку действий, которую можно повторять и объяснять другим.</p>
-
-            <div class="footer-note">
-                Этот HTML‑гайд можно использовать как основу для универсальной сетевой инструкции для консолей, лендинга или PDF‑памятки, дополнив его скриншотами настроек каждой платформы, примерами конфигураций роутера и отдельными разделами для продвинутых пользователей.
-            </div>
-        </aside>
-    </section>
-</div>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "Что делать, если консоль не подключается к интернету: универсальный чек‑лист для PS5, Xbox, Switch и Steam Deck",
+    "description": "Универсальный чек‑лист диагностики проблем с интернетом на PS5, Xbox, Nintendo Switch и Steam Deck: от проверки провайдера до настроек NAT и DNS.",
+    "totalTime": "PT45M",
+    "step": [
+      {
+        "@type": "HowToStep",
+        "name": "Введение",
+        "text": "Объяснение, почему проблема не всегда в приставке.",
+        "url": "#step-1"
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Общая карта диагностики",
+        "text": "Уровни проверки: дом, роутер, консоль, сервисы.",
+        "url": "#step-2"
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Шаг 1. Проверяем интернет дома",
+        "text": "Проверка других устройств и работы провайдера.",
+        "url": "#step-3"
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Шаг 2. Локальная сеть",
+        "text": "Wi‑Fi, кабель, расстояние до роутера.",
+        "url": "#step-4"
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Шаг 3. Тест сети на консоли",
+        "text": "Используем встроенную диагностику PS5, Xbox, Switch и Steam Deck.",
+        "url": "#step-5"
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Шаг 4. Универсальные мягкие действия",
+        "text": "Перезапуск консоли, роутера, забывание сети.",
+        "url": "#step-6"
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Особенности PS5",
+        "text": "Сетевой тест, PSN и NAT.",
+        "url": "#step-7"
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Особенности Xbox",
+        "text": "Подключение к Xbox Live и тип NAT.",
+        "url": "#step-8"
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Особенности Nintendo Switch",
+        "text": "Слабый Wi‑Fi и портативные сценарии.",
+        "url": "#step-9"
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Особенности Steam Deck",
+        "text": "SteamOS, Desktop Mode и док‑станция.",
+        "url": "#step-10"
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Продвинутые настройки",
+        "text": "DNS, статический IP, UPnP и NAT.",
+        "url": "#step-11"
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Сценарные кейсы",
+        "text": "Готовые маршруты для частых ситуаций.",
+        "url": "#step-12"
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Сводный чек‑лист и лайфхаки",
+        "text": "Краткий план действий и полезные привычки.",
+        "url": "#step-13"
+      }
+    ],
+    "image": "https://i.postimg.cc/PJxFxr49/resize-m-mfit-w-450-h-450.png"
+  }
+  </script>
 </body>
 </html>
