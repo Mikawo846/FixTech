@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Неочевидные проблемы Steam Deck и как их решить: вылеты, подвисания, сети</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Подробный разбор неочевидных проблем Steam Deck: вылеты, подвисания, странные лаги, загадочные тормоза, Wi‑Fi и сетевые глюки. Пошаговые решения и чек‑лист для стабильной работы.">
+    <style>
+        :root {
+            --bg: #020617;
+            --bg-alt: #050816;
+            --card: #0b1220;
+            --accent: #22c55e;
+            --accent-soft: rgba(34,197,94,0.09);
+            --accent-strong: rgba(34,197,94,0.22);
+            --danger: #f97373;
+            --success: #38bdf8;
+            --warn: #facc15;
+            --text-main: #e5e7eb;
+            --text-soft: #9ca3af;
+            --border-soft: #111827;
+            --code-bg: #020617;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            background:
+                radial-gradient(circle at top, #111827 0, #020617 55%, #000 100%);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .page {
+            max-width: 1120px;
+            margin: 0 auto;
+            padding: 32px 16px 48px;
+        }
+
+        .hero {
+            display: grid;
+            grid-template-columns: minmax(0, 3fr) minmax(0, 2.1fr);
+            gap: 32px;
+            align-items: center;
+            margin-bottom: 40px;
+        }
+
+        .hero-text h1 {
+            font-size: 32px;
+            margin: 0 0 12px;
+        }
+
+        .hero-text h1 strong {
+            color: var(--accent);
+        }
+
+        .hero-text p {
+            margin: 4px 0;
+            color: var(--text-soft);
+        }
+
+        .hero-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 12px;
+        }
+
+        .badge {
+            font-size: 12px;
+            padding: 4px 10px;
+            border-radius: 999px;
+            border: 1px solid var(--border-soft);
+            background: rgba(15,23,42,0.9);
+            color: var(--text-soft);
+            backdrop-filter: blur(6px);
+        }
+
+        .badge--accent {
+            border-color: var(--accent);
+            background: var(--accent-soft);
+            color: #bbf7d0;
+        }
+
+        .badge--danger {
+            border-color: var(--danger);
+            background: rgba(248,113,113,0.09);
+            color: #fecaca;
+        }
+
+        .badge--success {
+            border-color: var(--success);
+            background: rgba(56,189,248,0.1);
+            color: #e0f2fe;
+        }
+
+        .hero-image {
+            border-radius: 18px;
+            overflow: hidden;
+            border: 1px solid var(--border-soft);
+            background: radial-gradient(circle at top, #1f2937 0, #020617 100%);
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero-image img {
+            max-width: 100%;
+            border-radius: 12px;
+            display: block;
+        }
+
+        .hero-note {
+            font-size: 12px;
+            color: var(--text-soft);
+            margin-top: 6px;
+            text-align: center;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: minmax(0, 2.3fr) minmax(0, 1.5fr);
+            gap: 24px;
+        }
+
+        .card {
+            background:
+                radial-gradient(circle at top left, rgba(148,163,184,0.08), transparent 55%);
+            border-radius: 18px;
+            border: 1px solid var(--border-soft);
+            padding: 20px 18px 18px;
+            box-shadow: 0 18px 40px rgba(15,23,42,0.9);
+        }
+
+        .card h2 {
+            font-size: 20px;
+            margin: 0 0 10px;
+        }
+
+        .card h3 {
+            font-size: 16px;
+            margin: 18px 0 6px;
+        }
+
+        .tagline {
+            font-size: 13px;
+            color: var(--text-soft);
+            margin-bottom: 10px;
+        }
+
+        .highlight {
+            border-left: 3px solid var(--accent);
+            padding-left: 10px;
+            margin: 8px 0 14px;
+            font-size: 14px;
+            color: var(--text-soft);
+        }
+
+        .section-intro {
+            font-size: 14px;
+            color: var(--text-soft);
+            margin: 4px 0 10px;
+        }
+
+        .quick-list {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 10px;
+            font-size: 13px;
+            margin: 10px 0 12px;
+        }
+
+        .quick-list ul {
+            margin: 0;
+            padding-left: 18px;
+        }
+
+        .quick-list li {
+            margin-bottom: 4px;
+        }
+
+        .pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 12px;
+            padding: 4px 10px;
+            border-radius: 999px;
+            border: 1px solid rgba(148,163,184,0.45);
+            background: rgba(15,23,42,0.9);
+            margin-right: 6px;
+            margin-bottom: 4px;
+        }
+
+        .pill-bullet {
+            width: 6px;
+            height: 6px;
+            border-radius: 999px;
+            background: var(--accent);
+        }
+
+        .pill-danger .pill-bullet {
+            background: var(--danger);
+        }
+
+        .pill-success .pill-bullet {
+            background: var(--success);
+        }
+
+        .pill-warn .pill-bullet {
+            background: var(--warn);
+        }
+
+        .table-wrapper {
+            margin-top: 12px;
+            border-radius: 14px;
+            overflow: hidden;
+            border: 1px solid var(--border-soft);
+            background: rgba(15,23,42,0.96);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 13px;
+        }
+
+        thead {
+            background: linear-gradient(to right, rgba(34,197,94,0.2), rgba(56,189,248,0.34));
+        }
+
+        th, td {
+            padding: 6px 8px;
+            text-align: left;
+            border-bottom: 1px solid #111827;
+        }
+
+        th {
+            font-weight: 600;
+            color: #e5e7eb;
+            white-space: nowrap;
+        }
+
+        tbody tr:nth-child(odd) {
+            background: rgba(15,23,42,0.96);
+        }
+
+        tbody tr:nth-child(even) {
+            background: rgba(10,16,32,0.96);
+        }
+
+        .steps {
+            margin: 10px 0 6px;
+            padding-left: 18px;
+            font-size: 13px;
+        }
+
+        .steps li {
+            margin-bottom: 5px;
+        }
+
+        .note {
+            font-size: 12px;
+            color: var(--text-soft);
+            margin-top: 6px;
+        }
+
+        .note strong {
+            color: var(--warn);
+        }
+
+        .code {
+            font-family: ui-monospace, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+            background: var(--code-bg);
+            border-radius: 6px;
+            padding: 1px 4px;
+            font-size: 12px;
+        }
+
+        .badge-block {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-bottom: 10px;
+        }
+
+        .label {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 2px 8px;
+            border-radius: 999px;
+            font-size: 11px;
+            border: 1px solid rgba(148,163,184,0.6);
+            background: rgba(15,23,42,0.96);
+        }
+
+        .label-dot {
+            width: 7px;
+            height: 7px;
+            border-radius: 999px;
+            background: var(--accent);
+        }
+
+        .label-soft {
+            opacity: 0.92;
+        }
+
+        .checklist {
+            list-style: none;
+            padding-left: 0;
+            margin: 8px 0 4px;
+            font-size: 13px;
+        }
+
+        .checklist li {
+            margin-bottom: 6px;
+            display: flex;
+            align-items: flex-start;
+            gap: 6px;
+        }
+
+        .checklist-icon {
+            width: 15px;
+            height: 15px;
+            border-radius: 4px;
+            border: 1px solid rgba(148,163,184,0.6);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 11px;
+            color: var(--accent);
+            flex-shrink: 0;
+        }
+
+        .checklist-icon--danger {
+            color: var(--danger);
+            border-color: rgba(248,113,113,0.8);
+        }
+
+        .side-section {
+            font-size: 13px;
+        }
+
+        .side-section h3 {
+            margin-top: 14px;
+        }
+
+        .stat {
+            display: flex;
+            justify-content: space-between;
+            font-size: 12px;
+            margin: 2px 0;
+            color: var(--text-soft);
+        }
+
+        .stat span:first-child {
+            opacity: 0.9;
+        }
+
+        .footer-note {
+            margin-top: 18px;
+            font-size: 12px;
+            color: var(--text-soft);
+            border-top: 1px dashed #1f2937;
+            padding-top: 10px;
+        }
+
+        .divider {
+            margin: 16px 0 10px;
+            border-top: 1px dashed #1e293b;
+        }
+
+        @media (max-width: 920px) {
+            .hero {
+                grid-template-columns: minmax(0, 1fr);
+            }
+            .grid {
+                grid-template-columns: minmax(0, 1fr);
+            }
+            .hero-image {
+                order: -1;
+            }
+        }
+
+        @media (max-width: 560px) {
+            .page {
+                padding: 20px 12px 32px;
+            }
+            .hero-text h1 {
+                font-size: 26px;
+            }
+            .quick-list {
+                grid-template-columns: minmax(0, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-text">
+            <h1><strong>Неочевидные проблемы Steam Deck</strong> и как их решить: вылеты, подвисания, сети</h1>
+            <p>Этот гайд собран для тех случаев, когда Steam Deck ведёт себя странно: игры вылетают без понятного кода, система подвисает, FPS падает «на ровном месте», а Wi‑Fi то пропадает, то оживает.</p>
+            <p>Речь не о банальных багованных релизах, а о скрытых вещах вроде ограничений частоты, глюков Wi‑Fi‑модуля, перегрева, проблем с Proton и фоне, который ест ресурсы, пока вы думаете, что всё закрыто.</p>
+
+            <div class="hero-badges">
+                <span class="badge badge--accent">Steam Deck • Вылеты • Сети</span>
+                <span class="badge badge--success">Пошаговая диагностика от простого к сложному</span>
+                <span class="badge badge--danger">Безопасные шаги до радикального ресета</span>
+            </div>
+        </div>
+
+        <div>
+            <div class="hero-image">
+                <img src="https://i.postimg.cc/GhbhbCd3/resize-m-mfit-w-450-h-450.png" alt="Неочевидные проблемы Steam Deck и как их решить: вылеты, подвисания, сети">
+            </div>
+            <div class="hero-note">Картинку можно заменить на локальный файл с тем же разрешением, если делаете лендинг или статью.</div>
+        </div>
+    </section>
+
+    <section class="grid">
+        <!-- ОСНОВНОЙ КОНТЕНТ -->
+        <article class="card">
+            <h2>С чего начать: как понять, что именно «ломается»</h2>
+            <p class="tagline">Steam Deck — это маленький ПК с Linux и оболочкой SteamOS. Поэтому проблемы у него тоже «компьютерные»: от конфликтов драйверов до странного поведения частот и энергосбережения.</p>
+            <p class="highlight">Вместо того чтобы сразу делать заводской сброс, лучше пройтись по слоям: игры и Proton → настройки Deck и TDP → температура и питание → сеть и Wi‑Fi → только потом крайние меры вроде recovery‑образа.</p>
+
+            <div class="quick-list">
+                <div>
+                    <strong>Что разберём:</strong>
+                    <ul>
+                        <li>Типичные сценарии вылетов и подвисаний и как их различать.</li>
+                        <li>Ловушка низкой частоты и режимов энергосбережения.</li>
+                        <li>Неочевидные Wi‑Fi‑глюки: 5 ГГц, Wi‑Fi 6, power management.</li>
+                        <li>Proton и конфигурация игр: когда виновата совместимость.</li>
+                        <li>Когда уже пора думать о ресете и проверке железа.</li>
+                    </ul>
+                </div>
+                <div>
+                    <strong>Навигация по сложности:</strong>
+                    <div class="pill pill-success"><span class="pill-bullet"></span>Блок 1–3: лёгкие и безопасные действия</div>
+                    <div class="pill"><span class="pill-bullet"></span>Блок 4–6: тонкая настройка и эксперименты</div>
+                    <div class="pill pill-danger"><span class="pill-bullet"></span>Блок 7–8: серьёзный ремонт, ресет и сервис</div>
+                </div>
+            </div>
+
+            <!-- Блок 1 -->
+            <h3>1. Симптомы: вылет, подвисание, «стало очень медленным»</h3>
+            <p class="section-intro">Сначала важно правильно описать поведение Deck. От этого зависит, в каком направлении искать проблему: софт, сеть, температура, питание или железо.</p>
+
+            <ul class="steps">
+                <li>Если игра просто закрывается и вы возвращаетесь в библиотеку, это похоже либо на конфликт Proton, либо на конкретный баг игры, либо на нехватку ресурсов.</li>
+                <li>Если зависает весь интерфейс, не реагирует на кнопки и тач, скорее всего, дело в системном сбое или драйвере. Здесь помогает принудительная перезагрузка.</li>
+                <li>Если вдруг всё стало «чудовищно медленным» — долгое включение, тормоза в меню, тормоза даже без игр — возможно, система случайно зажала частоты или столкнулась с ошибкой питания.</li>
+                <li>Если зависание или вылет происходит только в онлайне, а локально всё идеально, в первую очередь посмотрите в сторону Wi‑Fi и сетевой стабильности.</li>
+            </ul>
+            <p class="note"><strong>Полезно:</strong> фиксировать, в каких играх, режимах и ситуациях Deck ведёт себя плохо. Это быстро показывает, локальная проблема у одного проекта или системная у всей платформы.</p>
+
+            <!-- Блок 2 -->
+            <h3>2. Базовый «софт‑ресет»: что сделать перед поиском редких багов</h3>
+            <p class="section-intro">Многие странные глюки Steam Deck лечатся парой простых действий. Их стоит выполнять почти всегда перед углублённой диагностикой.</p>
+
+            <ul class="steps">
+                <li>Полностью перезапустите Steam Deck: удерживайте кнопку питания несколько секунд и выберите «Перезапустить». Если система зависла, удерживайте кнопку дольше, пока устройство не выключится.</li>
+                <li>После перезапуска дайте Deck пару минут спокойно загрузиться, не запускайте сразу тяжёлые игры — сначала зайдите в настройки, библиотеку, посмотрите, как ведёт себя интерфейс.</li>
+                <li>Проверьте наличие обновлений SteamOS и клиента Steam. Обновления часто содержат фиксы вылетов, Wi‑Fi‑глюков и странного поведения режима энергосбережения.</li>
+                <li>Временно выключите накладные слои вроде оверлеев производительности, сторонние утилиты и всё, что может перехватывать управление или видеовывод.</li>
+            </ul>
+            <p class="note"><strong>Смысл:</strong> перед тем как подозревать «сломанный Deck», стоит убедиться, что он работает на актуальной версии ПО и не забит временным мусором и зависшими процессами.</p>
+
+            <!-- Блок 3 -->
+            <h3>3. Вылеты и подвисания игр: Proton, настройки и ресурсы</h3>
+            <p class="section-intro">Не каждая игра идеально дружит с Deck. Даже официальная метка «Verified» не гарантирует нулевых вылетов, а уж «Playable» или «Unknown» тем более могут потребовать ручной настройки.</p>
+
+            <p class="section-intro"><strong>На что посмотреть сначала:</strong></p>
+            <ul class="steps">
+                <li>Проверьте, на каком Proton‑рантайме запускается игра. Иногда переход на другой Proton (например, Proton Experimental или специальную ветку) решает вылеты и падения.</li>
+                <li>Снизьте в игре графические настройки, выключите избыточные эффекты, ограничьте кадровую частоту. Перегрузка GPU и CPU часто проявляется именно нестабильностью, а не только низким FPS.</li>
+                <li>Убедитесь, что на Deck достаточно свободного места. Забитый SSD и отсутствие свободного пространства под кеш и временные файлы иногда приводят к вылетам.</li>
+                <li>Посмотрите, не запускаете ли вы параллельно ресурсоёмкие процессы в Desktop‑режиме (браузер с кучей вкладок, фоновые приложения) — для слабого по меркам ПК железа Deck это важно.</li>
+            </ul>
+            <p class="note"><strong>Паттерн:</strong> если вылеты происходят только в одной игре, почти всегда стоит начинать с Proton, графики и конкретных настроек, а не с предположения про сломанное железо.</p>
+
+            <!-- Блок 4 -->
+            <h3>4. Ловушка низкой частоты: когда Deck «залип» в 200–400 МГц</h3>
+            <p class="section-intro">Иногда пользователи замечают, что Deck стал работать как старый ноутбук: долго загружается, тормозит даже в меню, а игры не тянут ничего. Одна из возможных причин — система по какой‑то причине зафиксировала слишком низкую частоту.</p>
+
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                    <tr>
+                        <th>Симптом</th>
+                        <th>Что это означает</th>
+                        <th>По‑простому</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>Очень медленная загрузка системы и игр</td>
+                        <td>Процессор работает на сильно заниженной частоте</td>
+                        <td>Deck «думает», что должен экономить батарею или охлаждаться любой ценой</td>
+                    </tr>
+                    <tr>
+                        <td>Тормоза в меню, даже без игр</td>
+                        <td>Ограничение частоты и TDP не снялось после низкого заряда или перегрева</td>
+                        <td>Система застряла в энергосберегающем профиле</td>
+                    </tr>
+                    <tr>
+                        <td>Помогает только сложная комбинация перезагрузки и настроек</td>
+                        <td>Баг взаимодействия управления питанием и состояния батареи</td>
+                        <td>Иногда нужно вмешательство через BIOS или специальные режимы</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <p class="section-intro"><strong>Что можно сделать в таких ситуациях:</strong></p>
+            <ul class="steps">
+                <li>Полностью выключить Deck, затем включить и зайти в настройки производительности: проверить, не выставлены ли слишком жёсткие ограничения по TDP и частотам.</li>
+                <li>Попробовать изменить профиль энергопотребления, а затем вернуть его в более сбалансированное состояние, чтобы система пересчитала лимиты.</li>
+                <li>При наличии опыта и понимания зайти в BIOS устройства и проверить настройки, связанные с режимом хранения батареи и энергосбережением.</li>
+                <li>Если никакие манипуляции не помогают и система продолжает вести себя как «зажатая», имеет смысл рассмотреть использование recovery‑образа и откат к более стабильной версии SteamOS.</li>
+            </ul>
+            <p class="note"><strong>Важно:</strong> любые действия на уровне BIOS и recovery лучше выполнять, имея понятный план и резервное время — делать это «на бегу» перед игрой не стоит.</p>
+
+            <!-- Блок 5 -->
+            <h3>5. Неочевидные проблемы Wi‑Fi на Steam Deck</h3>
+            <p class="section-intro">Одна из самых неприятных категорий — когда Wi‑Fi на Deck то работает, то нет. Особенно часто это проявляется на 5 ГГц, Wi‑Fi 6 и в ситуациях с переключением между точками доступа и каналами.</p>
+
+            <p class="section-intro"><strong>Характерные симптомы Wi‑Fi‑глюков:</strong></p>
+            <ul class="steps">
+                <li>Deck показывает, что подключён к сети, но скорость скачивания скачет, онлайн‑игры подлагивают или постоянно теряется соединение.</li>
+                <li>Соединение обрывается каждые несколько минут, особенно на 5 ГГц или при высокой нагрузке — например, при стриминге или скачивании больших игр.</li>
+                <li>Переключение каналов или точек доступа иногда приводит к полному зависанию сети до перезагрузки Deck.</li>
+            </ul>
+
+            <p class="section-intro"><strong>Базовый набор действий:</strong></p>
+            <ul class="steps">
+                <li>Перезагрузите и Steam Deck, и роутер. После перезапуска дайте им по минуте «прийти в себя», затем снова подключитесь к сети.</li>
+                <li>В настройках сети Deck «забудьте» проблемную сеть и подключитесь к ней заново, вручную введя пароль — это сбросит некорректные настройки и кеш.</li>
+                <li>По возможности переключитесь с перегруженного диапазона 2.4 ГГц на 5 ГГц или наоборот — некоторые проблемы проявляются только на одном из диапазонов.</li>
+                <li>Если используется Wi‑Fi 6‑роутер и есть подозрение на конфликт, попробуйте временно отключить специальные функции Wi‑Fi 6 или перевести сеть в более консервативный режим.</li>
+            </ul>
+            <p class="note"><strong>Паттерн:</strong> когда Wi‑Fi на Deck ведёт себя хуже, чем на других устройствах в той же сети, это не всегда ваш провайдер. Иногда нужны тонкие настройки именно под Wi‑Fi‑модуль Deck.</p>
+
+            <!-- Блок 6 -->
+            <h3>6. Продвинутая настройка Wi‑Fi: каналы, энергосбережение и особенности роутера</h3>
+            <p class="section-intro">Для некоторых комбинаций роутера и Deck помогают более детальные настройки: каналов, ширины канала, режима энергосбережения Wi‑Fi‑модуля.</p>
+
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                    <tr>
+                        <th>Параметр</th>
+                        <th>Что влияет</th>
+                        <th>Как помогает Deck</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>Канал 2.4/5 ГГц</td>
+                        <td>Уровень помех и пересечений с соседними сетями</td>
+                        <td>Выбор менее загруженного канала уменьшает обрывы и нестабильность</td>
+                    </tr>
+                    <tr>
+                        <td>Ширина канала 5 ГГц</td>
+                        <td>Скорость и чувствительность к помехам</td>
+                        <td>Ограничение до адекватной ширины улучшает стабильность, жертвуя избыточной скоростью</td>
+                    </tr>
+                    <tr>
+                        <td>Энергосбережение Wi‑Fi</td>
+                        <td>Как агрессивно адаптер «засыпает» ради экономии батареи</td>
+                        <td>Отключение слишком агрессивного power management может убрать странные лаги и обрывы</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <p class="section-intro"><strong>Что можно настроить на практике:</strong></p>
+            <ul class="steps">
+                <li>В веб‑панели роутера вручную выбрать канал 5 ГГц с меньшей загруженностью, вместо автоматического выбора середины диапазона.</li>
+                <li>Снизить ширину канала 5 ГГц, если роутер выставлен на максимальную — иногда Deck стабильнее работает на более узком, но надёжном канале.</li>
+                <li>Избегать устаревших типов шифрования и аутентификации — лучше использовать современный WPA2/WPA3, а не старые протоколы.</li>
+                <li>При наличии в Deck режима разработчика и опций управления энергосбережением Wi‑Fi осторожно экспериментировать с отключением слишком агрессивного power‑saving для проверки.</li>
+            </ul>
+            <p class="note"><strong>Важно:</strong> любые изменения в конфигурации роутера стоит делать осознанно и по одному параметру за раз, каждый раз проверяя, стало ли лучше или хуже.</p>
+
+            <!-- Блок 7 -->
+            <h3>7. Когда проблема глубже: системные сбои, повреждение файлов и необходимость recovery</h3>
+            <p class="section-intro">Если Deck стабильно вылетает в разных играх, подвисает в меню, а Wi‑Fi или другие подсистемы ведут себя непредсказуемо даже после всех базовых шагов, стоит подумать о более серьёзной диагностике.</p>
+
+            <p class="section-intro"><strong>Признаки системной проблемы:</strong></p>
+            <ul class="steps">
+                <li>Вылеты происходят практически во всех играх, причём даже в тех, которые раньше работали идеально.</li>
+                <li>Интерфейс SteamOS заметно «заикается», возникают задержки при переходе между вкладками и меню.</li>
+                <li>Перезагрузки, обновления и базовые настройки почти не дают долгосрочного эффекта — всё работает лучше только на короткое время.</li>
+            </ul>
+
+            <p class="section-intro"><strong>Возможные шаги в таких случаях:</strong></p>
+            <ul class="steps">
+                <li>Сделать резервные копии важных сохранений и файлов, особенно если используете Deck как полноценный ПК в Desktop‑режиме.</li>
+                <li>Рассмотреть использование официального recovery‑образа SteamOS: он позволяет восстановить систему, откатиться к более стабильной версии или выполнить заводской сброс.</li>
+                <li>После восстановления системы сначала протестировать работу на «чистом» Deck с одной‑двумя играми, прежде чем возвращать все старые настройки и библиотеку.</li>
+            </ul>
+            <p class="note"><strong>Идея:</strong> иногда проще и надёжнее переустановить систему, чем бесконечно чинить её последствиями старых обновлений и конфликтов софта.</p>
+
+            <!-- Блок 8 -->
+            <h3>8. Когда подозревать железо и что делать дальше</h3>
+            <p class="section-intro">Хотя большинство проблем на Deck программные, иногда встречаются и аппаратные проблемы: перегрев, дефекты памяти, проблемы с Wi‑Fi‑модулем или питанием.</p>
+
+            <p class="section-intro"><strong>Симптомы возможной аппаратной неисправности:</strong></p>
+            <ul class="steps">
+                <li>Вылеты и подвисания не зависят от игры, режима, сети или температуры в комнате, а возникают почти хаотично.</li>
+                <li>При нагрузке сильно греется корпус, а вентилятор ведёт себя аномально — слишком шумный, странные звуки или, наоборот, подозрительно тихо.</li>
+                <li>Wi‑Fi нестабилен во всех сетях и после любых смен настроек, другие устройства при этом работают идеально.</li>
+                <li>После recovery и заводского сброса проявляются те же самые симптомы без каких‑либо установленных сторонних программ.</li>
+            </ul>
+
+            <p class="section-intro"><strong>Что делать, если подозрение падает на железо:</strong></p>
+            <ul class="steps">
+                <li>Проверить срок гарантии и условия поддержки для вашего экземпляра Deck. При живой гарантии лучше не вскрывать устройство самостоятельно.</li>
+                <li>Составить краткое описание симптомов: когда началось, как часто проявляется, в каких условиях. Это пригодится при обращении в поддержку.</li>
+                <li>Связаться с поддержкой платформы и описать шаги, которые вы уже предприняли: перезагрузки, обновления, смену сетей, recovery. Это покажет, что вы не ищете «быструю кнопку», а уже проделали базовые проверки.</li>
+            </ul>
+            <p class="note"><strong>Рациональный подход:</strong> если Deck стабильно ведёт себя странно на чистой системе без стороннего софта, шансы на аппаратный дефект растут, и лучше не затягивать с диагностикой.</p>
+        </article>
+
+        <!-- ПРАВАЯ КОЛОНКА / САЙДБАР -->
+        <aside class="card side-section">
+            <h2>Быстрый чек‑лист для «глючащего» Steam Deck</h2>
+            <p class="tagline">Этот блок удобно использовать как короткую инструкцию рядом с устройством или в службе поддержки.</p>
+
+            <div class="badge-block">
+                <span class="label"><span class="label-dot"></span>5–15 минут на базовую проверку</span>
+                <span class="label label-soft"><span class="label-dot"></span>Подходит для вылетов, лагов и проблем Wi‑Fi</span>
+            </div>
+
+            <ul class="checklist">
+                <li>
+                    <span class="checklist-icon">1</span>
+                    <span><strong>Перезапустить Deck и игру.</strong> Удержать кнопку питания при зависании, затем снова включить и проверить, как ведёт себя система без игр.</span>
+                </li>
+                <li>
+                    <span class="checklist-icon">2</span>
+                    <span><strong>Обновить SteamOS и клиент Steam.</strong> Установить все актуальные обновления, перезагрузить и протестировать несколько игр.</span>
+                </li>
+                <li>
+                    <span class="checklist-icon">3</span>
+                    <span><strong>Проверить Proton и настройки игры.</strong> Сменить Proton, уменьшить графику, отключить лишние эффекты и посмотреть, исчезли ли вылеты.</span>
+                </li>
+                <li>
+                    <span class="checklist-icon">4</span>
+                    <span><strong>Проверить Wi‑Fi.</strong> Забыть сеть, подключиться заново, при необходимости попробовать другой диапазон или сеть (например, раздачу с телефона).</span>
+                </li>
+                <li>
+                    <span class="checklist-icon">5</span>
+                    <span><strong>Следить за температурой и шумом.</strong> Если Deck ощутимо перегревается или ведёт себя подозрительно под нагрузкой, сократить TDP и дать ему остыть.</span>
+                </li>
+            </ul>
+
+            <div class="divider"></div>
+
+            <h3>Когда переходить к серьёзным мерам</h3>
+            <p class="tagline">Не всегда нужен немедленный ресет, но есть сигналы, при которых лучше не ограничиваться перезапуском игры.</p>
+
+            <ul class="checklist">
+                <li>
+                    <span class="checklist-icon checklist-icon--danger">!</span>
+                    <span>Deck тормозит и вылетает даже в простых играх и меню, независимо от настроек и Proton.</span>
+                </li>
+                <li>
+                    <span class="checklist-icon checklist-icon--danger">!</span>
+                    <span>Wi‑Fi регулярно отваливается во всех сетях, а перезапуск помогает только на короткое время.</span>
+                </li>
+                <li>
+                    <span class="checklist-icon checklist-icon--danger">!</span>
+                    <span>Даже чистая система после recovery продолжает вести себя нестабильно без установленного дополнительного софта.</span>
+                </li>
+            </ul>
+
+            <div class="divider"></div>
+
+            <h3>Мини‑план профилактики глюков Steam Deck</h3>
+            <p class="tagline">Эти привычки помогают реже сталкиваться с неожиданными вылетами, подвисаниями и сетевыми проблемами.</p>
+
+            <div class="stat">
+                <span>Регулярные обновления:</span>
+                <span>SteamOS и клиент Steam всегда актуальны</span>
+            </div>
+            <div class="stat">
+                <span>Чистота системы:</span>
+                <span>минимум лишнего софта в Desktop‑режиме</span>
+            </div>
+            <div class="stat">
+                <span>Контроль температуры:</span>
+                <span>игры под нагрузкой — в хорошо проветриваемой среде</span>
+            </div>
+            <div class="stat">
+                <span>Сеть:</span>
+                <span>устойчивая wi‑fi‑конфигурация, при возможности 5 ГГц</span>
+            </div>
+            <div class="stat">
+                <span>Резервные точки:</span>
+                <span>понимание, как пользоваться recovery‑образом</span>
+            </div>
+
+            <p class="note"><strong>Результат:</strong> Steam Deck перестаёт быть «чёрным ящиком» — становится понятно, какие типы глюков решаются на месте, а когда нужен более серьёзный подход или помощь сервиса.</p>
+
+            <div class="footer-note">
+                Этот HTML‑гайд можно использовать как основу для лендинга о проблемах Steam Deck, обучающей статьи или PDF‑инструкции для техподдержки, добавив скриншоты настроек, примеры конфигураций Proton и пошаговые иллюстрации работы с Wi‑Fi и recovery.
+            </div>
+        </aside>
+    </section>
+</div>
+</body>
+</html>
