@@ -1,736 +1,653 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" data-theme="light">
 <head>
-    <meta charset="UTF-8">
-    <title>Проблемы с Wi‑Fi и eShop на Switch: типичные коды и решения</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Подробный гайд по проблемам с Wi‑Fi и Nintendo eShop на Switch. Объяснение типичных кодов ошибок простыми словами и пошаговые решения: 2110‑2003, 2110‑3127, 2137‑8056, 2811‑7503 и другие.">
-    <style>
-        :root {
-            --bg: #020617;
-            --bg-alt: #050816;
-            --card: #0b1220;
-            --accent: #22c55e;
-            --accent-soft: rgba(34,197,94,0.09);
-            --accent-strong: rgba(34,197,94,0.22);
-            --danger: #f97373;
-            --success: #38bdf8;
-            --warn: #facc15;
-            --text-main: #e5e7eb;
-            --text-soft: #9ca3af;
-            --border-soft: #111827;
-            --code-bg: #020617;
-        }
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YE88Y994NX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-YE88Y994NX');
+  </script>
 
-        * {
-            box-sizing: border-box;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Проблемы с Wi‑Fi и eShop на Switch: типичные коды и решения | Экспертный мегагайд</title>
+  <meta name="description" content="Подробный гид по Wi‑Fi и eShop на Nintendo Switch: типичные коды ошибок, проблемы с сетью, роутером и аккаунтом. Простые объяснения, пошаговые решения, таблицы и чек‑листы.">
 
-        body {
-            margin: 0;
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-            background:
-                radial-gradient(circle at top, #111827 0, #020617 55%, #000 100%);
-            color: var(--text-main);
-            line-height: 1.6;
-        }
+  <!-- Yandex.Metrika counter -->
+  <script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+      m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+      m[i].l=1*new Date();
+      for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+      k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=106225686', 'ym');
 
-        a {
-            color: var(--accent);
-            text-decoration: none;
-        }
+    ym(106225686, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", accurateTrackBounce:true, trackLinks:true});
+  </script>
+  <noscript>
+    <div>
+      <img src="https://mc.yandex.ru/watch/106225686" style="position:absolute; left:-9999px;" alt="Проблемы с Wi‑Fi и eShop на Switch: типичные коды и решения - пошаговая инструкция по ремонту">
+    </div>
+  </noscript>
+  <!-- /Yandex.Metrika counter -->
 
-        a:hover {
-            text-decoration: underline;
-        }
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="../styles-header.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
-        .page {
-            max-width: 1120px;
-            margin: 0 auto;
-            padding: 32px 16px 48px;
-        }
+  <style>
+    .guide-content { line-height: 1.7; color: var(--text); }
+    .guide-content h2 { color: var(--primary); margin-top: 30px; margin-bottom: 15px; font-size: 1.5rem; }
+    .guide-content h3 { color: var(--primary-dark); margin-top: 25px; margin-bottom: 12px; font-size: 1.2rem; }
+    .guide-image-block { margin: 20px 0; padding: 15px; background: var(--background); border-radius: var(--border-radius); border: 1px solid var(--border); text-align: center; }
+    .guide-image-block img { max-width: 100%; height: auto; border-radius: 6px; border: 1px solid var(--border); }
+    .image-caption { margin-top: 10px; font-size: 0.85rem; color: var(--text-light); font-style: italic; }
+    .pro-tips { background: rgba(3, 74, 79, 0.05); padding: 15px; border-radius: 6px; margin: 20px 0; }
+    .pro-tips h4 { color: var(--primary); margin-top: 0; margin-bottom: 12px; font-size: 1.1rem; }
+    .tip-item { display: flex; gap: 8px; margin-bottom: 8px; align-items: flex-start; }
+    .tip-item i { margin-top: 3px; color: var(--primary); }
+    .warning-block {
+      background: #fff3e0;
+      border-left: 5px solid #ff9100;
+      padding: 15px 18px;
+      margin: 22px 0;
+      border-radius: 7px;
+    }
+    table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+    th, td { border: 1px solid var(--border); padding: 8px; text-align: left; vertical-align: top; }
+    th { background: var(--background-light); }
+    .code-like { font-family: "SF Mono", "Consolas", "Menlo", monospace; background: var(--background-light); padding: 2px 4px; border-radius: 4px; }
+    .step-badge {
+      display: inline-block;
+      background: var(--primary);
+      color: #fff;
+      font-size: 0.8rem;
+      padding: 2px 8px;
+      border-radius: 999px;
+      margin-right: 6px;
+    }
+    .faq-item { margin-bottom: 16px; }
+    .faq-item strong { display: block; margin-bottom: 4px; }
+    .scenario-block {
+      background: var(--background-light);
+      border-radius: 8px;
+      padding: 14px 16px;
+      margin-bottom: 16px;
+      border: 1px solid var(--border);
+    }
+    .scenario-title {
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+    @media (max-width: 768px) {
+      .guide-content h2 { font-size: 1.4rem; margin-top: 25px; }
+      .guide-image-block { padding: 12px; margin: 15px 0; }
+      table, th, td { font-size: 0.95rem; }
+    }
+  </style>
 
-        .hero {
-            display: grid;
-            grid-template-columns: minmax(0, 3fr) minmax(0, 2.1fr);
-            gap: 32px;
-            align-items: center;
-            margin-bottom: 40px;
-        }
-
-        .hero-text h1 {
-            font-size: 32px;
-            margin: 0 0 12px;
-        }
-
-        .hero-text h1 strong {
-            color: var(--accent);
-        }
-
-        .hero-text p {
-            margin: 4px 0;
-            color: var(--text-soft);
-        }
-
-        .hero-badges {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            margin-top: 12px;
-        }
-
-        .badge {
-            font-size: 12px;
-            padding: 4px 10px;
-            border-radius: 999px;
-            border: 1px solid var(--border-soft);
-            background: rgba(15,23,42,0.9);
-            color: var(--text-soft);
-            backdrop-filter: blur(6px);
-        }
-
-        .badge--accent {
-            border-color: var(--accent);
-            background: var(--accent-soft);
-            color: #bbf7d0;
-        }
-
-        .badge--danger {
-            border-color: var(--danger);
-            background: rgba(248,113,113,0.09);
-            color: #fecaca;
-        }
-
-        .badge--success {
-            border-color: var(--success);
-            background: rgba(56,189,248,0.1);
-            color: #e0f2fe;
-        }
-
-        .hero-image {
-            border-radius: 18px;
-            overflow: hidden;
-            border: 1px solid var(--border-soft);
-            background: radial-gradient(circle at top, #1f2937 0, #020617 100%);
-            padding: 10px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .hero-image img {
-            max-width: 100%;
-            border-radius: 12px;
-            display: block;
-        }
-
-        .hero-note {
-            font-size: 12px;
-            color: var(--text-soft);
-            margin-top: 6px;
-            text-align: center;
-        }
-
-        .grid {
-            display: grid;
-            grid-template-columns: minmax(0, 2.3fr) minmax(0, 1.5fr);
-            gap: 24px;
-        }
-
-        .card {
-            background:
-                radial-gradient(circle at top left, rgba(148,163,184,0.08), transparent 55%);
-            border-radius: 18px;
-            border: 1px solid var(--border-soft);
-            padding: 20px 18px 18px;
-            box-shadow: 0 18px 40px rgba(15,23,42,0.9);
-        }
-
-        .card h2 {
-            font-size: 20px;
-            margin: 0 0 10px;
-        }
-
-        .card h3 {
-            font-size: 16px;
-            margin: 18px 0 6px;
-        }
-
-        .tagline {
-            font-size: 13px;
-            color: var(--text-soft);
-            margin-bottom: 10px;
-        }
-
-        .highlight {
-            border-left: 3px solid var(--accent);
-            padding-left: 10px;
-            margin: 8px 0 14px;
-            font-size: 14px;
-            color: var(--text-soft);
-        }
-
-        .section-intro {
-            font-size: 14px;
-            color: var(--text-soft);
-            margin: 4px 0 10px;
-        }
-
-        .quick-list {
-            display: grid;
-            grid-template-columns: 1.2fr 1fr;
-            gap: 10px;
-            font-size: 13px;
-            margin: 10px 0 12px;
-        }
-
-        .quick-list ul {
-            margin: 0;
-            padding-left: 18px;
-        }
-
-        .quick-list li {
-            margin-bottom: 4px;
-        }
-
-        .pill {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            font-size: 12px;
-            padding: 4px 10px;
-            border-radius: 999px;
-            border: 1px solid rgba(148,163,184,0.45);
-            background: rgba(15,23,42,0.9);
-            margin-right: 6px;
-            margin-bottom: 4px;
-        }
-
-        .pill-bullet {
-            width: 6px;
-            height: 6px;
-            border-radius: 999px;
-            background: var(--accent);
-        }
-
-        .pill-danger .pill-bullet {
-            background: var(--danger);
-        }
-
-        .pill-success .pill-bullet {
-            background: var(--success);
-        }
-
-        .pill-warn .pill-bullet {
-            background: var(--warn);
-        }
-
-        .table-wrapper {
-            margin-top: 12px;
-            border-radius: 14px;
-            overflow: hidden;
-            border: 1px solid var(--border-soft);
-            background: rgba(15,23,42,0.96);
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            font-size: 13px;
-        }
-
-        thead {
-            background: linear-gradient(to right, rgba(34,197,94,0.2), rgba(56,189,248,0.34));
-        }
-
-        th, td {
-            padding: 6px 8px;
-            text-align: left;
-            border-bottom: 1px solid #111827;
-        }
-
-        th {
-            font-weight: 600;
-            color: #e5e7eb;
-            white-space: nowrap;
-        }
-
-        tbody tr:nth-child(odd) {
-            background: rgba(15,23,42,0.96);
-        }
-
-        tbody tr:nth-child(even) {
-            background: rgba(10,16,32,0.96);
-        }
-
-        .steps {
-            margin: 10px 0 6px;
-            padding-left: 18px;
-            font-size: 13px;
-        }
-
-        .steps li {
-            margin-bottom: 5px;
-        }
-
-        .note {
-            font-size: 12px;
-            color: var(--text-soft);
-            margin-top: 6px;
-        }
-
-        .note strong {
-            color: var(--warn);
-        }
-
-        .code {
-            font-family: ui-monospace, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-            background: var(--code-bg);
-            border-radius: 6px;
-            padding: 1px 4px;
-            font-size: 12px;
-        }
-
-        .badge-block {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 6px;
-            margin-bottom: 10px;
-        }
-
-        .label {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            padding: 2px 8px;
-            border-radius: 999px;
-            font-size: 11px;
-            border: 1px solid rgba(148,163,184,0.6);
-            background: rgba(15,23,42,0.96);
-        }
-
-        .label-dot {
-            width: 7px;
-            height: 7px;
-            border-radius: 999px;
-            background: var(--accent);
-        }
-
-        .label-soft {
-            opacity: 0.92;
-        }
-
-        .checklist {
-            list-style: none;
-            padding-left: 0;
-            margin: 8px 0 4px;
-            font-size: 13px;
-        }
-
-        .checklist li {
-            margin-bottom: 6px;
-            display: flex;
-            align-items: flex-start;
-            gap: 6px;
-        }
-
-        .checklist-icon {
-            width: 15px;
-            height: 15px;
-            border-radius: 4px;
-            border: 1px solid rgba(148,163,184,0.6);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 11px;
-            color: var(--accent);
-            flex-shrink: 0;
-        }
-
-        .checklist-icon--danger {
-            color: var(--danger);
-            border-color: rgba(248,113,113,0.8);
-        }
-
-        .side-section {
-            font-size: 13px;
-        }
-
-        .side-section h3 {
-            margin-top: 14px;
-        }
-
-        .stat {
-            display: flex;
-            justify-content: space-between;
-            font-size: 12px;
-            margin: 2px 0;
-            color: var(--text-soft);
-        }
-
-        .stat span:first-child {
-            opacity: 0.9;
-        }
-
-        .footer-note {
-            margin-top: 18px;
-            font-size: 12px;
-            color: var(--text-soft);
-            border-top: 1px dashed #1f2937;
-            padding-top: 10px;
-        }
-
-        .divider {
-            margin: 16px 0 10px;
-            border-top: 1px dashed #1e293b;
-        }
-
-        @media (max-width: 920px) {
-            .hero {
-                grid-template-columns: minmax(0, 1fr);
-            }
-            .grid {
-                grid-template-columns: minmax(0, 1fr);
-            }
-            .hero-image {
-                order: -1;
-            }
-        }
-
-        @media (max-width: 560px) {
-            .page {
-                padding: 20px 12px 32px;
-            }
-            .hero-text h1 {
-                font-size: 26px;
-            }
-            .quick-list {
-                grid-template-columns: minmax(0, 1fr);
-            }
-        }
-    </style>
+  <script async src="https://timeweb.cloud/api/v1/cloud-ai/agents/3cc03620-d051-4d8d-b5af-f7b6cd083a35/embed.js?collapsed=true"></script>
 </head>
 <body>
-<div class="page">
+  <header class="header">
+    <div class="container">
+      <div class="header__inner">
+        <a href="../index.html" class="logo">
+          <span class="logo__icon"></span>
+          <span class="logo__text">Repairo</span>
+        </a>
+        <nav class="nav">
+          <ul class="nav__list">
+            <li><a href="../tv.html" class="nav__link">Телевизоры</a></li>
+            <li><a href="../cameras.html" class="nav__link">Фотоаппараты</a></li>
+            <li><a href="../consoles.html" class="nav__link">Приставки</a></li>
+            <li><a href="../laptops.html" class="nav__link">Ноутбуки</a></li>
+            <li><a href="../smartphones.html" class="nav__link">Смартфоны</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
 
-    <!-- HERO -->
-    <section class="hero">
-        <div class="hero-text">
-            <h1><strong>Проблемы с Wi‑Fi и eShop на Switch</strong>: типичные коды и решения</h1>
-            <p>Этот гайд объясняет, что означают самые частые коды ошибок Wi‑Fi и Nintendo eShop на Switch простыми словами и даёт пошаговый план, как вернуть подключение и загрузки.</p>
-            <p>Подойдёт, если Switch пишет, что не может подключиться к сети, ругается кодами вроде 2110‑2003, 2110‑3127, 2137‑8056, 2811‑7503, не пускает в eShop или обрывает скачивание игр.</p>
+  <section class="guide-page">
+    <div class="container">
+      <div class="breadcrumbs">
+        <a href="../index.html">Главная</a>
+        <i class="fas fa-chevron-right"></i>
+        <a href="../consoles.html">Приставки</a>
+        <i class="fas fa-chevron-right"></i>
+        <span>Проблемы с Wi‑Fi и eShop на Switch: типичные коды и решения</span>
+      </div>
 
-            <div class="hero-badges">
-                <span class="badge badge--accent">Nintendo Switch • Wi‑Fi • eShop</span>
-                <span class="badge badge--success">Пошаговое устранение ошибок</span>
-                <span class="badge badge--danger">Безопасные действия для дома</span>
-            </div>
+      <h1 class="section__title">Проблемы с Wi‑Fi и eShop на Switch: типичные коды и решения</h1>
+
+      <div class="guide-meta">
+        <span>
+          <i class="fas fa-wifi"></i>
+          Экспертный гид по сетевым проблемам Nintendo Switch: нестабильный Wi‑Fi, ошибки при подключении к интернету и eShop, типичные коды вроде 2110‑xxxx и 2811‑xxxx. Простые объяснения, таблицы, пошаговые инструкции и лайфхаки.
+        </span>
+      </div>
+
+      <div class="guide-image-block">
+        <img src="https://i.postimg.cc/NMN2Rjg3/resize-m-mfit-w-450-h-450.png" alt="Проблемы с Wi‑Fi и eShop на Switch: типичные коды и решения">
+        <div class="image-caption">
+          Стандартные сетевые ошибки Switch при попытке подключиться к Wi‑Fi или открыть eShop: коды с цифрами и сообщениями, которые на деле часто означают всего лишь «нет интернета» или «сервер занят».
+        </div>
+      </div>
+
+      <div class="guide-content">
+
+        <h2 id="step-1">Введение: когда Switch «ругается» на Wi‑Fi и eShop</h2>
+        <p>
+          Практически каждый владелец Nintendo Switch рано или поздно сталкивается с ситуацией, когда консоль отказывается подключаться к Wi‑Fi, не входит в eShop или выдаёт код ошибки при попытке скачать игру. При этом на телефоне и ноутбуке интернет работает, так что кажется, будто проблема именно в консоли. На самом деле в цепочке задействованы сразу несколько уровней: сам Switch, роутер, провайдер и сервера Nintendo.
+        </p>
+        <p>
+          Этот мегагайд разбирает самые частые ситуации с Wi‑Fi и eShop на простом языке: без сложных сетевых терминов, с акцентом на реальных симптомах и понятных решениях. Здесь нет полного каталога всех возможных кодов, но есть логика, по которой можно действовать: чему соответствуют группы ошибок, что проверить в первую очередь и когда выгоднее подождать, а не ломать настройки роутера.
+        </p>
+
+        <h2 id="step-2">Как Switch понимает проблемы с сетью и eShop</h2>
+        <p>
+          Когда Nintendo Switch пытается выйти в интернет, он проходит несколько «контрольных точек»: получает IP‑адрес от роутера, проверяет доступ к интернету, связывается с серверами Nintendo и, при необходимости, с eShop. На каждом этапе при сбое появляется свой код ошибки. Для пользователя важен не столько набор цифр, сколько общий тип проблемы: «Switch не видит сеть», «работает сеть, но не работает Nintendo», «проблема только с покупками».
+        </p>
+        <p>
+          В этом гайде коды условно делятся на четыре крупные группы: ошибки Wi‑Fi и подключения к роутеру, ошибки интернета (когда роутер есть, а интернета нет), ошибки связи с серверами Nintendo и ошибки eShop/покупок. Такой подход помогает даже без глубокого знания кодов быстро определить, на чьей стороне искать причину: консоль, роутер, провайдер или сервис Nintendo.
+        </p>
+
+        <h2 id="step-3">Типичные коды и их смысл «по‑человечески»</h2>
+        <p>
+          Nintendo использует довольно длинные коды (например, 2110‑1100 или 2811‑XXXX), но обычному игроку важно только «о чём вообще речь». Ниже — обобщённая таблица типичных ситуаций с Wi‑Fi и eShop и то, что они означают простыми словами. Конкретные числа могут отличаться, но логика остаётся той же: связи с роутером нет, интернет нестабилен, серверы заняты или платёж не проходит.
+        </p>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Ситуация / пример кода</th>
+              <th>Что происходит</th>
+              <th>Объяснение простыми словами</th>
+              <th>С чего начать</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="code-like">2110‑xxxx</span></td>
+              <td>Ошибка при подключении к точке доступа или получении IP‑адреса.</td>
+              <td>Switch видит сеть, но не может нормально «подружиться» с роутером.</td>
+              <td>Проверить пароль Wi‑Fi, перезапустить роутер, протестировать другую сеть.</td>
+            </tr>
+            <tr>
+              <td><span class="code-like">2123‑xxxx / 2137‑xxxx</span></td>
+              <td>Ошибки при загрузке данных или обновлений.</td>
+              <td>Интернет есть, но скачивание прерывается или нестабильно.</td>
+              <td>Перезапустить загрузку, проверить Wi‑Fi, по возможности перейти ближе к роутеру.</td>
+            </tr>
+            <tr>
+              <td><span class="code-like">2811‑xxxx</span></td>
+              <td>Проблемы с подключением к сервисам Nintendo, включая eShop.</td>
+              <td>Интернет, скорее всего, работает, но сервера Nintendo не отвечают как надо.</td>
+              <td>Проверить статус сервисов Nintendo, подождать и попробовать позже.</td>
+            </tr>
+            <tr>
+              <td>Ошибка входа в eShop</td>
+              <td>eShop не открывается, вылетает по дороге или не загружает контент.</td>
+              <td>Либо перегружен eShop, либо нестабилен интернет.</td>
+              <td>Проверить интернет на других устройствах, перезапустить Switch, открыть eShop чуть позже.</td>
+            </tr>
+            <tr>
+              <td>Ошибка при оплате в eShop</td>
+              <td>Покупка не проходит, консоль пишет об ошибке транзакции.</td>
+              <td>Платёж отклонил банк или есть ограничения по аккаунту/региону.</td>
+              <td>Проверить карту и счёт, попробовать другую карту или способ оплаты.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2 id="step-4">Шаг 1: базовая диагностика Wi‑Fi — не только на Switch</h2>
+        <p>
+          Если Switch сообщает о проблемах с Wi‑Fi или интернетом, первый шаг — убедиться, что проблема действительно в консоли, а не в сети в целом. Часто причина банальна: роутер завис, провайдер переживает временные трудности или к одному каналу Wi‑Fi повисло слишком много устройств. Пропуск этого шага ведёт к лишним танцам с настройками маршрутизатора и ненужной нервотрёпке.
+        </p>
+        <p>
+          Базовая диагностика Wi‑Fi одинакова почти для любых устройств: проверить работу других гаджетов, перезапустить роутер, протестировать альтернативную сеть. Задача — понять, отвечает ли интернет вообще и ведут ли себя другие устройства более стабильно, чем Switch.
+        </p>
+
+        <h3>Мини‑чек‑лист базовой проверки Wi‑Fi</h3>
+        <ol>
+          <li>
+            <span class="step-badge">Шаг 1.1</span>
+            <b>Проверьте интернет на других устройствах</b>.  
+            Откройте пару сайтов или видео на телефоне или ноутбуке, подключённых к той же сети Wi‑Fi, что и Switch.
+          </li>
+          <li>
+            <span class="step-badge">Шаг 1.2</span>
+            <b>Перезапустите роутер</b>, выключив его из розетки на 30–60 секунд, затем снова включив.  
+            После загрузки подождите ещё минуту и повторите попытку подключения Switch.
+          </li>
+          <li>
+            <span class="step-badge">Шаг 1.3</span>
+            <b>Перезагрузите сам Switch</b> через меню питания, а не просто усыпляйте его.  
+            Иногда простая перезагрузка решает случайные сетевые глюки.
+          </li>
+          <li>
+            <span class="step-badge">Шаг 1.4</span>
+            <b>Протестируйте другую сеть</b>, например, раздачу интернета с телефона.  
+            Если Switch прекрасно работает через мобильную точку, проблема, скорее всего, в домашнем роутере или провайдере.
+          </li>
+        </ol>
+
+        <h2 id="step-5">Шаг 2: Wi‑Fi на Switch — настройки и расстояние</h2>
+        <p>
+          Если интернет в целом работает, но Switch продолжает выдавать ошибки, стоит присмотреться к самому подключению: насколько далёк роутер, нет ли толстых стен на пути сигнала, правильно ли введён пароль. Nintendo Switch чувствителен к качеству Wi‑Fi, особенно в загруженных многоквартирных домах с десятками соседских сетей вокруг.
+        </p>
+        <p>
+          Простейшие действия — сократить расстояние до роутера, убрать крупные препятствия между ним и консолью, временно отключить лишние устройства, активно забивающие канал (стриминг в 4K, торренты). Иногда помогает смена диапазона и канала Wi‑Fi: уход с загруженного 2,4 ГГц на 5 ГГц или наоборот, если роутер и Switch это поддерживают.
+        </p>
+
+        <h3>Практические шаги по настройке Wi‑Fi на Switch</h3>
+        <ul>
+          <li>По возможности играйте и скачивайте игры в зоне уверенного приёма: не через две бетонные стены и не на границе действия сети.</li>
+          <li>Избегайте размещения роутера за металлическими шкафами, бытовой техникой и в углу комнаты — так сигнал доходит до Switch гораздо хуже.</li>
+          <li>Если доступен диапазон 5 ГГц, попробуйте создать отдельную сеть и подключить к ней Switch для меньшего количества помех.</li>
+          <li>В меню Switch удалите старые сети, к которым больше не подключаетесь, и переподключите актуальную с нуля.</li>
+          <li>На время крупных загрузок сократите число других активных устройств в сети, чтобы трафик не дробился на всех подряд.</li>
+        </ul>
+
+        <h2 id="step-6">Шаг 3: типичные ошибки eShop и как их «прочитать»</h2>
+        <p>
+          eShop — это отдельный слой поверх общего интернет‑подключения. Даже если Wi‑Fi работает и сайты открываются, магазин может вести себя странно: выдавать ошибки при открытии, не загружать картинки, обрывать загрузку игр или не принимать платёж. Коды при этом указывают на сбои связи с серверами Nintendo или проблемы с транзакциями.
+        </p>
+        <p>
+          Главное — разделять ситуации: когда eShop не открывается вообще (похоже на сбой сервера), когда игры не скачиваются (возможен сетевой глюк) и когда платёж не проходит (скорее финансовая часть, чем интернет). Подход к каждой из них немного различается, хотя базовый шаг «проверить интернет и перезагрузить консоль» общ для всех.
+        </p>
+
+        <h3>Типовые сценарии eShop и их решения</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Сценарий</th>
+              <th>Что видит пользователь</th>
+              <th>Простой смысл</th>
+              <th>Что делать</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>eShop не открывается</td>
+              <td>Долгая загрузка, затем ошибка и код.</td>
+              <td>Сервера Nintendo перегружены или временно недоступны.</td>
+              <td>Проверить интернет, подождать 10–30 минут и повторить попытку. При частых повторах — проверить статус сервисов Nintendo.</td>
+            </tr>
+            <tr>
+              <td>eShop открывается, но не грузит контент</td>
+              <td>Меню есть, но обложки и список игр грузятся с ошибками.</td>
+              <td>Соединение есть, но слишком нестабильное или медленное.</td>
+              <td>Сократить нагрузку на сеть, подойти ближе к роутеру, временно отключить другие активные устройства.</td>
+            </tr>
+            <tr>
+              <td>Ошибка при скачивании купленной игры</td>
+              <td>Загрузка начинается, но обрывается с кодом.</td>
+              <td>Где‑то по пути теряются пакеты или сервер перегружен.</td>
+              <td>Перезапустить загрузку, попробовать в другое время, проверить стабильность Wi‑Fi.</td>
+            </tr>
+            <tr>
+              <td>Ошибка оплаты</td>
+              <td>Покупка не проходит, eShop выдаёт код и отменяет операцию.</td>
+              <td>Банк или платёжная система отклонили транзакцию, либо не совпадает регион.</td>
+              <td>Проверить карту и её ограничения, попробовать другой способ оплаты, при необходимости связаться с банком.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2 id="step-7">Шаг 4: проблемы на стороне Nintendo — когда виноват не Switch</h2>
+        <p>
+          Даже при идеальном домашнем интернете и грамотных настройках иногда виноваты сервера Nintendo. Во время крупных релизов, распродаж или технических работ eShop и онлайн‑функции могут работать с перебоями, выдавать коды ошибок и вести себя нестабильно. В таких случаях сколько ни перезагружай роутер, проблема не исчезнет, пока Nintendo не приведёт в порядок свои сервисы.
+        </p>
+        <p>
+          Признак того, что проблема глобальная, а не локальная — массовые жалобы игроков, ошибки на разных Switch и в разных сетях, сообщения о работах или сбоях в официальных источниках. В такой момент лучшая стратегия — пауза и повторная попытка чуть позже, а не бесполезные манипуляции с оборудованием.
+        </p>
+
+        <h3>Как понять, что проблема на стороне Nintendo</h3>
+        <ul>
+          <li>Та же ошибка появляется, даже если подключить Switch к другой сети (например, к мобильному интернету).</li>
+          <li>Друзья и знакомые тоже не могут зайти в eShop или играть онлайн в ту же игру.</li>
+          <li>Официальные каналы Nintendo и тематические ресурсы сообщают о временных проблемах с серверами.</li>
+          <li>Интернет на других устройствах работает идеально, а проблемы есть только с eShop и онлайн‑функциями Switch.</li>
+          <li>Спустя время (час‑другой) проблема исчезает сама без каких‑либо изменений настроек.</li>
+        </ul>
+
+        <h2 id="step-8">Шаг 5: когда дело в роутере или провайдере</h2>
+        <p>
+          Если интернет на Switch нестабилен, а другие устройства тоже иногда «подтормаживают», скорее всего проблема на стороне роутера или провайдера. В такой ситуации Switch лишь первым реагирует на качество связи: eShop и онлайн‑игры более чувствительны к задержкам и обрывам, чем простой просмотр сайтов.
+        </p>
+        <p>
+          Часто достаточно обновить прошивку маршрутизатора, сменить канал Wi‑Fi, переставить роутер в другое место или договориться с провайдером об устранении аварий. В сложных случаях помогает временный тест другой сети, чтобы убедиться, что Switch в принципе способен работать стабильно.
+        </p>
+
+        <h3>Мини‑план по работе с роутером и провайдером</h3>
+        <ul>
+          <li>Убедитесь, что на роутере установлена актуальная прошивка, при необходимости обновите её.</li>
+          <li>Смените канал Wi‑Fi вручную, избежав самых загруженных, или включите автоматический выбор канала.</li>
+          <li>Переместите роутер в более открытое место, желательно ближе к центру квартиры.</li>
+          <li>Зафиксируйте время и частоту сбоев, чтобы было легче объяснить провайдеру суть проблемы.</li>
+          <li>Если есть возможность, временно протестируйте Switch в другой сети (у друзей, в офисе) для сравнения.</li>
+        </ul>
+
+        <h2 id="step-9">Сценарные кейсы: что делать «по шагам»</h2>
+        <p>
+          Ниже несколько типичных сценариев с Wi‑Fi и eShop на Nintendo Switch и краткий маршрут действий для каждого. Это удобно, когда нет времени копаться в таблицах, а нужно быстро понять, какие шаги логично сделать прямо сейчас.
+        </p>
+
+        <div class="scenario-block">
+          <div class="scenario-title">Сценарий A: Switch не подключается к домашнему Wi‑Fi</div>
+          <ul>
+            <li>Проверить работу интернета на других устройствах в этой сети.</li>
+            <li>Перезапустить роутер и Switch, затем заново выбрать сеть и ввести пароль.</li>
+            <li>Подойти ближе к роутеру, убрать крупные препятствия и повторить попытку.</li>
+            <li>Если есть возможность, временно подключиться к другой сети и сравнить поведение.</li>
+            <li>При устойчивых проблемах только с этой сетью — проверить настройки роутера или связаться с провайдером.</li>
+          </ul>
         </div>
 
-        <div>
-            <div class="hero-image">
-                <img src="https://i.postimg.cc/NMN2Rjg3/resize-m-mfit-w-450-h-450.png" alt="Проблемы с Wi-Fi и eShop на Switch: типичные коды и решения">
-            </div>
-            <div class="hero-note">Картинку можно заменить на локальный файл с тем же разрешением, если делаете лендинг или статью.</div>
+        <div class="scenario-block">
+          <div class="scenario-title">Сценарий B: eShop открывается, но всё грузится медленно и с ошибками</div>
+          <ul>
+            <li>Убедиться, что в этот момент сеть не забита стримингом и загрузками на других устройствах.</li>
+            <li>Перейти ближе к роутеру, по возможности — в прямую видимость без стен и мебели.</li>
+            <li>Перезапустить Switch и повторно открыть eShop.</li>
+            <li>Попробовать зайти позже, когда нагрузка на сеть и серверы, возможно, снизится.</li>
+            <li>При регулярных проблемах в любое время суток — задуматься о качестве канала и тарифе у провайдера.</li>
+          </ul>
         </div>
-    </section>
 
-    <section class="grid">
-        <!-- ОСНОВНОЙ КОНТЕНТ -->
-        <article class="card">
-            <h2>Как подойти к ошибкам Wi‑Fi и eShop без паники</h2>
-            <p class="tagline">Код ошибки Nintendo Switch — это не страшный приговор, а подсказка, что именно пошло не так: сеть, роутер, DNS, сервера Nintendo или настройки самой консоли.</p>
-            <p class="highlight">Прежде чем копаться в роутере, нужно ответить на три вопроса: что вы делали, когда появилась ошибка, работает ли интернет на других устройствах и повторяется ли ошибка стабильно или иногда. Уже этого хватает, чтобы выбрать нужный блок гайда.</p>
+        <div class="scenario-block">
+          <div class="scenario-title">Сценарий C: игра покупается, но не скачивается</div>
+          <ul>
+            <li>Проверить свободное место в хранилище Switch и при необходимости удалить часть старых игр или скриншотов.</li>
+            <li>Перезапустить загрузку из меню загрузок eShop.</li>
+            <li>Выключить и снова включить Switch, затем попытаться возобновить загрузку.</li>
+            <li>Проверить стабильность Wi‑Fi, сократить нагрузку на сеть и выполнить тест с другой точки доступа при возможности.</li>
+            <li>Если проблема сохраняется длительное время, при этом другие игры скачиваются нормально, возможно, есть временный сбой именно с этой игрой на стороне Nintendo.</li>
+          </ul>
+        </div>
 
-            <div class="quick-list">
-                <div>
-                    <strong>Что разберём:</strong>
-                    <ul>
-                        <li>Где смотреть код ошибки и как его записать.</li>
-                        <li>Коды Wi‑Fi 2110‑**** и их значение простыми словами.</li>
-                        <li>Коды eShop и загрузок 2137‑8056, 2811‑7503 и похожие.</li>
-                        <li>Как работать с DNS, частотами wi‑fi и помехами.</li>
-                        <li>Быстрый чек‑лист перед звонком провайдеру или в поддержку.</li>
-                    </ul>
-                </div>
-                <div>
-                    <strong>По уровню сложности:</strong>
-                    <div class="pill pill-success"><span class="pill-bullet"></span>Шаги 1–3: простые действия «на консоли»</div>
-                    <div class="pill"><span class="pill-bullet"></span>Шаги 4–5: тонкая настройка сети</div>
-                    <div class="pill pill-danger"><span class="pill-bullet"></span>Шаг 6+: возможно, нужен провайдер или сервис</div>
-                </div>
-            </div>
+        <div class="scenario-block">
+          <div class="scenario-title">Сценарий D: не проходит оплата в eShop</div>
+          <ul>
+            <li>Убедиться, что карта активна и работает в других онлайн‑сервисах.</li>
+            <li>Проверить баланс и лимиты по интернет‑платежам на стороне банка.</li>
+            <li>Сверить регион аккаунта Nintendo и страны, к которой относится карта.</li>
+            <li>Попробовать другой способ оплаты, если он доступен.</li>
+            <li>При повторных ошибках, даже с разными картами, подумать о поддержке Nintendo или банка.</li>
+          </ul>
+        </div>
 
-            <!-- Блок 1 -->
-            <h3>1. Где смотреть код ошибки и что важно запомнить</h3>
-            <p class="section-intro">Switch всегда показывает код ошибки в одном и том же месте. Главное — не закрыть окно в панике, а зафиксировать этот номер и ситуацию, в которой он появился.</p>
+        <h2 id="step-10">Сводная таблица: Wi‑Fi и eShop — кто виноват и что делать</h2>
+        <p>
+          Чтобы быстрее определяться с источником проблемы, удобно держать под рукой компактную таблицу: что скорее всего виновато и какие шаги логично предпринять в первую очередь.
+        </p>
 
-            <ul class="steps">
-                <li>Когда всплывает сообщение об ошибке, посмотрите на строку с номером вида «XXXX‑YYYY» внизу или в середине окна — это и есть код.</li>
-                <li>Сделайте фото экрана или запишите код на бумагу, обязательно с дефисом и всеми цифрами, чтобы не перепутать его потом.</li>
-                <li>Коротко опишите для себя, что именно вы делали: пытались подключиться к wi‑fi, заходили в eShop, скачивали игру, подключались к онлайн‑матчу.</li>
-                <li>Обратите внимание, один и тот же ли код появляется каждый раз или Switch выдаёт разные ошибки в разных ситуациях.</li>
-            </ul>
-            <p class="note"><strong>Смысл:</strong> код ошибки плюс контекст экономят массу времени. Вместо «ничего не работает» получается понятное «2110‑2003 при подключении к wi‑fi», а это уже половина диагноза.</p>
+        <table>
+          <thead>
+            <tr>
+              <th>Симптом</th>
+              <th>Скорее всего виноват</th>
+              <th>Первые шаги</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Switch не видит сеть или не подключается</td>
+              <td>Роутер, настройки Wi‑Fi или сама сеть.</td>
+              <td>Перезапустить роутер, проверить пароль, протестировать другую сеть.</td>
+            </tr>
+            <tr>
+              <td>Интернет есть, но eShop не открывается</td>
+              <td>Сервера Nintendo или нестабильное соединение.</td>
+              <td>Проверить статус сервисов, подождать, уменьшить нагрузку на сеть.</td>
+            </tr>
+            <tr>
+              <td>eShop работает, но игры скачиваются очень медленно</td>
+              <td>Канал у провайдера, загруженная сеть или Wi‑Fi.</td>
+              <td>Сократить фоновые загрузки, подойти к роутеру ближе, протестировать в другое время.</td>
+            </tr>
+            <tr>
+              <td>Оплаты в eShop часто не проходят</td>
+              <td>Банк, ограничения по карте или регион.</td>
+              <td>Проверить карту, лимиты, попробовать иной способ оплаты.</td>
+            </tr>
+            <tr>
+              <td>Ошибки и вылеты только в одной онлайн‑игре</td>
+              <td>Серверы конкретной игры или её код.</td>
+              <td>Проверить состояние серверов игры, попытаться зайти позже или сменить режим/регион.</td>
+            </tr>
+          </tbody>
+        </table>
 
-            <!-- Блок 2 -->
-            <h3>2. Коды Wi‑Fi 2110‑2003, 2110‑3127 и похожие: Switch не дружит с сетью</h3>
-            <p class="section-intro">Коды, начинающиеся на 2110, почти всегда связаны с подключением к сети. Консоль видит роутер, но не может корректно пройти все шаги подключения или добраться до интернета.</p>
+        <h2 id="step-11">Лайфхаки по стабильному Wi‑Fi и eShop на Switch</h2>
+        <div class="pro-tips">
+          <h4>Небольшие привычки, которые заметно улучшают онлайн</h4>
+          <div class="tip-item">
+            <i class="fas fa-lightbulb"></i>
+            <p>Старайтесь обновлять игры и систему ночью или в непиковое время, когда сеть у провайдера и сервера Nintendo менее загружены.</p>
+          </div>
+          <div class="tip-item">
+            <i class="fas fa-lightbulb"></i>
+            <p>Подключайте Switch к более «свободной» сети дома, если у вас несколько роутеров или диапазонов, чтобы не делить канал с десятком устройств одновременно.</p>
+          </div>
+          <div class="tip-item">
+            <i class="fas fa-lightbulb"></i>
+            <p>Периодически перезагружайте роутер, особенно если он работает без остановки месяцами: это уменьшает накопившиеся мелкие сетевые сбои.</p>
+          </div>
+          <div class="tip-item">
+            <i class="fas fa-lightbulb"></i>
+            <p>Не игнорируйте слабый сигнал Wi‑Fi: если Switch еле ловит сеть, стабильного онлайна и быстрых загрузок ждать не стоит, проще оптимизировать расположение роутера.</p>
+          </div>
+          <div class="tip-item">
+            <i class="fas fa-lightbulb"></i>
+            <p>Следите за обновлениями прошивки роутера: производители часто исправляют баги, влияющие на работу консолей и потоковых сервисов.</p>
+          </div>
+        </div>
 
-            <div class="table-wrapper">
-                <table>
-                    <thead>
-                    <tr>
-                        <th>Пример кода</th>
-                        <th>Что происходит</th>
-                        <th>По‑простому</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td>2110‑2003</td>
-                        <td>Ошибка при попытке подключиться к беспроводной сети</td>
-                        <td>Switch не может нормально подружиться с роутером: пароль, настройки или небольшой сбой</td>
-                    </tr>
-                    <tr>
-                        <td>2110‑3127</td>
-                        <td>Не удаётся выполнить DNS‑разрешение</td>
-                        <td>Консоль подключена к wi‑fi, но не может перевести адреса сайтов и серверов в понятные IP</td>
-                    </tr>
-                    <tr>
-                        <td>2110‑1100/2110‑1101</td>
-                        <td>Ошибка получения IP‑адреса</td>
-                        <td>Роутер не выдаёт корректный адрес Switch или что‑то мешает этому процессу</td>
-                    </tr>
-                    </tbody>
-                </table>
-            </div>
+        <h2 id="step-12">FAQ — частые вопросы по Wi‑Fi и eShop на Switch</h2>
+        <div class="faq-item">
+          <strong>Всегда ли виноват Wi‑Fi, если eShop работает плохо?</strong>
+          <p>
+            Не всегда: иногда слабое место — сервера Nintendo, особенно в дни крупных распродаж и релизов. Если другие устройства в сети работают нормально, а у друзей такие же проблемы с eShop, то менять домашние настройки вряд ли имеет смысл.
+          </p>
+        </div>
+        <div class="faq-item">
+          <strong>Поможет ли переход на проводное подключение к интернету?</strong>
+          <p>
+            Для Switch в док‑режиме это часто лучший вариант: адаптер LAN даёт стабильный проводной канал с минимальными помехами и заметно уменьшает количество сетевых ошибок при загрузке игр и в онлайне.
+          </p>
+        </div>
+        <div class="faq-item">
+          <strong>Нужно ли постоянно менять DNS‑серверы ради скорости eShop?</strong>
+          <p>
+            Смена DNS может помочь, если родные серверы провайдера работают нестабильно, но сама по себе не превращает медленный канал в быстрый. Если всё работает нормально, трогать DNS дополнительно не требуется.</p>
+        </div>
+        <div class="faq-item">
+          <strong>Нормально ли, что eShop иногда «тормозит» и выдаёт случайные ошибки?</strong>
+          <p>
+            Небольшие задержки и редкие разовые ошибки допустимы для любого онлайн‑сервиса. Повод для тревоги — многократные повторения одних и тех же ошибок в разное время суток и с разных сетей.
+          </p>
+        </div>
+        <div class="faq-item">
+          <strong>Когда имеет смысл сразу обращаться в поддержку Nintendo или к провайдеру?</strong>
+          <p>
+            Если Switch стабильно плохо работает в разных сетях — есть повод задать вопросы Nintendo. Если проблемы есть на всех устройствах только в одной сети, логичнее начать с провайдера и диагностики линии/роутера.</p>
+        </div>
 
-            <p class="section-intro"><strong>Базовый набор действий для 2110‑2003 и похожих:</strong></p>
-            <ul class="steps">
-                <li>Проверьте, правильно ли введён пароль от wi‑fi: иногда ошибка банально в одной букве или символе. Лучше удалить сеть и добавить её заново.</li>
-                <li>Перезагрузите Switch обычным способом, затем полностью выключите и снова включите, чтобы сбросить временные сетевые глюки.</li>
-                <li>Перезапустите роутер: отключите питание на 30–60 секунд, затем включите и дождитесь, пока индикаторы покажут стабильное подключение.</li>
-                <li>Подойдите ближе к роутеру, уберите лишние стены и крупную технику между ними — слабый сигнал часто проявляется именно странными ошибками подключения.</li>
-                <li>Если у роутера есть отдельные сети 2.4 ГГц и 5 ГГц, попробуйте подключиться к другой или, наоборот, разделить объединённые сети на две разные.</li>
-            </ul>
-            <p class="note"><strong>Важно:</strong> если Switch не подключается к домашнему wi‑fi, но легко подключается к раздаче с телефона, проблема почти наверняка в настройках или особенностях роутера, а не в самой консоли.</p>
+        <h2 id="step-13">Краткий универсальный чек‑лист для Wi‑Fi и eShop</h2>
+        <p>
+          На случай, когда нет времени разбираться в кодах, поможет простой список действий, который закрывает большинство бытовых ситуаций с Wi‑Fi и eShop на Nintendo Switch.
+        </p>
+        <ul>
+          <li>Перезагрузить Switch и роутер, затем снова попробовать подключиться к сети и зайти в eShop.</li>
+          <li>Проверить работу интернета на других устройствах и сравнить поведение в той же сети.</li>
+          <li>По возможности приблизиться к роутеру или временно протестировать другую точку доступа.</li>
+          <li>Уточнить, нет ли массовых проблем с серверами Nintendo или конкретной игрой.</li>
+          <li>При регулярных повторах одних и тех же ошибок — фиксировать время и симптомы, чтобы при обращении в поддержку Nintendo или к провайдеру максимально быстро объяснить суть проблемы.</li>
+        </ul>
 
-            <!-- Блок 3 -->
-            <h3>3. DNS‑ошибки 2110‑3127 и «подключено к wi‑fi, но нет интернета»</h3>
-            <p class="section-intro">Частая ситуация: Switch пишет, что подключён к сети, но интернет‑тест проваливается, а в коде ошибки фигурирует проблема с DNS или невозможность обратиться к серверу.</p>
+        <div class="warning-block">
+          <strong>Напоминание!</strong> Не стоит радикально менять настройки роутера, сбрасывать его до заводских параметров или менять провайдера только из‑за разовых ошибок Wi‑Fi и eShop. Начинайте с мягких шагов из чек‑листа, и лишь при устойчивых повторяющихся проблемах переходите к более серьёзным мерам и обращениям в поддержку.
+        </div>
 
-            <p class="section-intro"><strong>Что такое DNS простыми словами:</strong></p>
-            <ul class="steps">
-                <li>DNS — это как телефонная книга интернета: он переводит адреса вида «сервер Nintendo» в IP‑адрес, по которому устройство реально подключается.</li>
-                <li>Если DNS не отвечает или работает плохо, Switch как будто стоит у двери без номера квартиры и не понимает, куда стучаться.</li>
-            </ul>
+      </div>
+    </div>
+  </section>
 
-            <p class="section-intro"><strong>Что делать при ошибках DNS:</strong></p>
-            <ul class="steps">
-                <li>В настройках сети проверьте, не выставлены ли DNS‑серверы вручную. Если да, попробуйте вернуть их в автоматический режим, чтобы использовать настройки провайдера.</li>
-                <li>Если автоматический режим работает нестабильно, наоборот можно прописать проверенные публичные DNS вручную. Это иногда делает подключение к eShop и играм стабильнее.</li>
-                <li>После изменения DNS удалите текущее подключение к сети на Switch и создайте его заново, чтобы консоль не использовала старый кеш настроек.</li>
-                <li>Снова выполните тест подключения к интернету в системных настройках Switch и посмотрите, прошло ли DNS‑разрешение успешно.</li>
-            </ul>
-            <p class="note"><strong>Логика:</strong> при DNS‑ошибках сама wi‑fi‑связь обычно в порядке, проблемы начинаются на шаге обращения к серверам. Поэтому смена или сброс DNS‑настроек часто решает ситуацию.</p>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__col footer__col--logo">
+          <a href="index.html" class="footer-logo">
+            <span class="logo__icon"></span>
+            <span class="logo__text">Repairo</span>
+          </a>
+          <p class="footer__text">Экспертные инструкции по технике с 2024 года</p>
+        </div>
+        <div class="footer__col">
+          <h3 class="footer__title">Разделы</h3>
+          <ul class="footer__links">
+            <li><a href="index.html" class="footer__link">Главная</a></li>
+            <li><a href="all-guides.html" class="footer__link">Все гайды</a></li>
+            <li><a href="contacts.html" class="footer__link">Контакты</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h3 class="footer__title">Категории</h3>
+          <ul class="footer__links">
+            <li><a href="../tv.html" class="nav__link">Телевизоры</a></li>
+            <li><a href="../cameras.html" class="nav__link">Фотоаппараты</a></li>
+            <li><a href="../consoles.html" class="nav__link">Приставки</a></li>
+            <li><a href="../laptops.html" class="nav__link">Ноутбуки</a></li>
+            <li><a href="../smartphones.html" class="nav__link">Смартфоны</a></li>
+            <li><a href="../small-appliances.html" class="nav__link">Мелкая техника</a></li>
+            <li><a href="../large-appliances.html" class="nav__link">Бытовая техника</a></li>
+            <li><a href="../auto-electronics.html" class="nav__link">Авто-Электроника</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h3 class="footer__title">Контакты</h3>
+          <ul class="footer__links">
+            <li>
+              <a href="https://t.me/repairo_kz" class="footer__link"><i class="fab fa-telegram"></i> Telegram</a>
+            </li>
+            <li>
+              <a href="https://instagram.com/repairo_kz" class="footer__link"><i class="fab fa-instagram"></i> Instagram</a>
+            </li>
+            <li>
+              <a href="mailto:support@repairo.kz" class="footer__link"><i class="fas fa-envelope"></i> Email</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="disclaimer">
+          Администрация сайта не несёт ответственности за возможные повреждения техники
+          и иные последствия, возникшие в результате самостоятельного ремонта по
+          материалам и инструкциям, размещённым на сайте. Все работы вы выполняете
+          на свой страх и риск.
+        </p>
+        <p class="footer__copyright">© 2025 Repairo. Все права защищены.</p>
+      </div>
+    </div>
+  </footer>
 
-            <!-- Блок 4 -->
-            <h3>4. Ошибки eShop и скачивания: 2137‑8056, 2811‑7503 и близкие</h3>
-            <p class="section-intro">Эти коды появляются, когда вы заходите в Nintendo eShop или скачиваете игры и обновления. Текст обычно намекает на проблему связи с сервером и предлагает повторить попытку позже.</p>
+  <script src="../script.js"></script>
 
-            <div class="table-wrapper">
-                <table>
-                    <thead>
-                    <tr>
-                        <th>Пример кода</th>
-                        <th>Ситуация</th>
-                        <th>По‑простому</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td>2137‑8056</td>
-                        <td>Ошибка при подключении к eShop или серверам загрузки</td>
-                        <td>Сервер Nintendo сейчас занят, недоступен или сеть слишком нестабильна</td>
-                    </tr>
-                    <tr>
-                        <td>2811‑7503/2811‑7504</td>
-                        <td>Ошибка при попытке подключиться к онлайн‑службе</td>
-                        <td>Сервис временно перегружен или недоступен, иногда виноват DNS или ваш интернет</td>
-                    </tr>
-                    <tr>
-                        <td>2123‑1502</td>
-                        <td>Проблема при загрузке контента</td>
-                        <td>Загрузка прервалась из‑за временного сбоя, конфликта кеша или сети</td>
-                    </tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <p class="section-intro"><strong>План действий при ошибках eShop и загрузки:</strong></p>
-            <ul class="steps">
-                <li>Поставьте загрузку на паузу и снова возобновите её. Иногда достаточно просто перезапустить процесс загрузки, чтобы Switch получил устойчивое соединение.</li>
-                <li>Полностью закройте eShop и запустите его заново, затем попробуйте открыть разделы магазина или список скачивания ещё раз.</li>
-                <li>Проверьте подключение к интернету в системных настройках Switch, чтобы убедиться, что сама сеть работает корректно.</li>
-                <li>Перезапустите консоль и роутер: это помогает убрать зависшие сессии, старый кеш и оживить сеть.</li>
-                <li>Если известно, что у Nintendo в данный момент идут технические работы или высокая нагрузка, имеет смысл просто подождать некоторое время и повторить попытку позже.</li>
-            </ul>
-            <p class="note"><strong>Ключевой момент:</strong> при ошибках eShop и загрузки далеко не всегда виноват пользователь. Если в одно и то же время жалуются многие, проблема может быть на стороне сервиса.</p>
-
-            <!-- Блок 5 -->
-            <h3>5. Слабый сигнал, помехи и особенности wi‑fi на Switch</h3>
-            <p class="section-intro">Switch довольно чувствителен к качеству сигнала. Даже если другие устройства «как‑то работают», консоль может выдавать коды ошибок или рвать соединение при малейших проблемах связи.</p>
-
-            <p class="section-intro"><strong>Что учитывать по части сигнала:</strong></p>
-            <ul class="steps">
-                <li>Толстые стены, перекрытия, металлическая мебель и техника между Switch и роутером заметно ослабляют сигнал и могут приводить к обрывам.</li>
-                <li>Микроволновки, некоторые беспроводные телефоны и плотный «лес» соседних сетей на 2.4 ГГц создают помехи, от которых страдает стабильность.</li>
-                <li>Диапазон 5 ГГц даёт более чистый и быстрый сигнал, но хуже проходит через стены. 2.4 ГГц, наоборот, держит дальность, но часто перегружен и шумный.</li>
-            </ul>
-
-            <p class="section-intro"><strong>Практические шаги по улучшению связи:</strong></p>
-            <ul class="steps">
-                <li>Попробуйте поставить Switch ближе к роутеру и протестировать подключение в этом положении. Если ошибки исчезают, причина почти точно в слабом сигнале или помехах.</li>
-                <li>При возможности переключите подключение консоли на менее загруженный диапазон или канал wi‑fi в настройках роутера.</li>
-                <li>Если роутер поддерживает как 2.4, так и 5 ГГц, создайте для них отдельные сети с разными названиями, чтобы явно выбрать нужную с Switch.</li>
-                <li>В идеале при загрузке крупных игр использовать проводное подключение через фирменный или качественный USB‑LAN‑адаптер, чтобы обойти все проблемы радиосигнала.</li>
-            </ul>
-            <p class="note"><strong>Вывод:</strong> часть загадочных сетевых ошибок исчезает сама, как только сигнал становится стабильным и сильным, без каких‑то особых шаманств с настройками.</p>
-
-            <!-- Блок 6 -->
-            <h3>6. Роль кеша и системных настроек сети Switch</h3>
-            <p class="section-intro">Иногда проблема не в роутере и не в провайдере, а в том, что у самой консоли накопился «мусор» в виде старого кеша или конфликтующих сетевых настроек.</p>
-
-            <p class="section-intro"><strong>Что имеет смысл сделать на самой консоли:</strong></p>
-            <ul class="steps">
-                <li>Очистить кеш Switch в системных настройках. Это удалит временные данные, не трогая сохранения и игры, но поможет убрать странные сетевые глюки.</li>
-                <li>Удалить проблемное подключение к сети и добавить его заново, чтобы сбросить неверные параметры или старые DNS‑настройки.</li>
-                <li>Проверить наличие обновлений системного ПО и установить их. Обновления часто содержат фиксы сетевых проблем и улучшения работы eShop.</li>
-                <li>После всех изменений перезагрузить консоль, а затем ещё раз выполнить тест подключения к интернету и повторить вход в eShop.</li>
-            </ul>
-            <p class="note"><strong>Логика:</strong> очистка кеша и пере‑создание подключения часто работают как «обновить страницу» для сети консоли — старые некорректные данные исчезают, и соединение становится стабильнее.</p>
-
-            <!-- Блок 7 -->
-            <h3>7. Когда дело не в вас: загруженные или недоступные сервера Nintendo</h3>
-            <p class="section-intro">Не всякая ошибка сети — признак проблем дома. Иногда сервера Nintendo или конкретного онлайнового сервиса перегружены, лежат на техработах или испытывают временные сбои.</p>
-
-            <p class="section-intro"><strong>Как распознать проблемную сторону сервера:</strong></p>
-            <ul class="steps">
-                <li>Если интернет на других устройствах работает идеально, а Switch выдаёт коды вроде 2137‑8056 или 2811‑7503 при входе в eShop, есть шанс, что просто не повезло во время перегрузки сервера.</li>
-                <li>Если друзья из других городов или регионов в то же время жалуются на недоступность магазина или онлайна, велика вероятность именно сервера, а не вашей сети.</li>
-                <li>Когда ошибки появляются только в определённые часы (обычно вечер), ситуация может быть связана с часами пик и повышенной нагрузкой на инфраструктуру.</li>
-            </ul>
-
-            <p class="section-intro"><strong>Что делать в таких случаях:</strong></p>
-            <ul class="steps">
-                <li>Не ломать свои настройки, если всё остальное работает идеально. Лучше просто подождать и попробовать ещё раз через некоторое время.</li>
-                <li>Попробовать базовые шаги вроде перезапуска консоли и сети, но не уходить в сложный тюнинг роутера без необходимости.</li>
-                <li>Если доступна официальная информация о техработах, ориентироваться на указанные сроки завершения работ.</li>
-            </ul>
-            <p class="note"><strong>Принцип:</strong> если смена сети, перезапуск роутера и другие устройства показывают, что всё в порядке, иногда лучший «фикс» — это просто время.</p>
-
-            <!-- Блок 8 -->
-            <h3>8. Универсальный чек‑лист по Wi‑Fi и eShop перед обращением к провайдеру</h3>
-            <p class="section-intro">Перед тем как звонить в поддержку провайдера или Nintendo, полезно пройти небольшой чек‑лист. Это поможет либо решить проблему сразу, либо подготовиться к разговору грамотно.</p>
-
-            <ul class="steps">
-                <li>Зафиксируйте один‑два последних кода ошибок и то, что вы делали, когда они появлялись.</li>
-                <li>Сделайте тест подключения к интернету на Switch и отдельно проверьте сеть на другом устройстве.</li>
-                <li>Перезагрузите роутер и консоль, затем попробуйте подключиться к сети и зайти в eShop заново.</li>
-                <li>Попробуйте временно подключиться к другой сети (например, мобильной точке доступа) и посмотрите, повторяются ли те же ошибки.</li>
-                <li>Проверьте, не мешают ли специальные настройки роутера вроде слишком жёсткой фильтрации, отдельных приложений‑«родительского контроля» или блокировщиков.</li>
-                <li>Установите последние обновления системы и очистите кеш на Switch, затем снова протестируйте подключение.</li>
-            </ul>
-            <p class="note"><strong>Преимущество:</strong> если после всех этих шагов проблема остаётся, у вас уже будет чёткая картина для техподдержки: какие коды, на каких сетях, после каких действий — и это сильно ускорит решение.</p>
-        </article>
-
-        <!-- ПРАВАЯ КОЛОНКА / САЙДБАР -->
-        <aside class="card side-section">
-            <h2>Быстрый справочник по Wi‑Fi и eShop</h2>
-            <p class="tagline">Компактная шпаргалка, которую удобно держать под рукой при консультации пользователей или настройке своей консоли.</p>
-
-            <div class="badge-block">
-                <span class="label"><span class="label-dot"></span>2–5 минут на первичную диагностику</span>
-                <span class="label label-soft"><span class="label-dot"></span>Подходит для большинства бытовых проблем</span>
-            </div>
-
-            <ul class="checklist">
-                <li>
-                    <span class="checklist-icon">1</span>
-                    <span><strong>2110‑2003.</strong> Switch не может подключиться к wi‑fi. Проверить пароль, перезагрузить роутер и консоль, попробовать другую сеть или диапазон.</span>
-                </li>
-                <li>
-                    <span class="checklist-icon">2</span>
-                    <span><strong>2110‑3127.</strong> Подключение к wi‑fi есть, но не работает интернет из‑за DNS. Переключить DNS на автоматический или прописать надёжные вручную, пересоздать подключение.</span>
-                </li>
-                <li>
-                    <span class="checklist-icon">3</span>
-                    <span><strong>2137‑8056.</strong> Ошибка связи с eShop или сервером загрузки. Проверить тест сети, перезагрузить устройства, повторить чуть позже — возможно, сервера перегружены.</span>
-                </li>
-                <li>
-                    <span class="checklist-icon">4</span>
-                    <span><strong>2811‑7503/7504.</strong> Проблемы доступа к онлайн‑службам. Тест сети, DNS, перезапуск и проверка возможных техработ или общей нагрузки на сервис.</span>
-                </li>
-                <li>
-                    <span class="checklist-icon">5</span>
-                    <span><strong>Любые сетевые ошибки.</strong> Всегда начать с теста связи, перезагрузки роутера и консоли, проверки другой сети и установкой обновлений системы.</span>
-                </li>
-            </ul>
-
-            <div class="divider"></div>
-
-            <h3>Когда всё‑таки звонить провайдеру</h3>
-            <p class="tagline">Есть ситуации, когда настройки Switch уже отработаны, и пора посмотреть на сторону интернета и роутера.</p>
-
-            <ul class="checklist">
-                <li>
-                    <span class="checklist-icon checklist-icon--danger">!</span>
-                    <span>Switch стабильно не получает IP‑адрес или интернет, а другие устройства периодически тоже теряют сеть.</span>
-                </li>
-                <li>
-                    <span class="checklist-icon checklist-icon--danger">!</span>
-                    <span>Смена DNS и перезапуск оборудования не помогают, а соединение постоянно рвётся у всех устройств в квартире.</span>
-                </li>
-                <li>
-                    <span class="checklist-icon checklist-icon--danger">!</span>
-                    <span>Есть подозрение, что дополнительные фильтры или особенности тарифа ограничивают игровые сервисы или доступ к серверам Nintendo.</span>
-                </li>
-            </ul>
-
-            <div class="divider"></div>
-
-            <h3>Мини‑план, как сделать Wi‑Fi на Switch более стабильным</h3>
-            <p class="tagline">Эти рекомендации стоит добавить в памятку пользователю или разместить отдельным блоком на сайте.</p>
-
-            <div class="stat">
-                <span>Расположение консоли:</span>
-                <span>как можно ближе к роутеру, минимум стен</span>
-            </div>
-            <div class="stat">
-                <span>Выбор диапазона:</span>
-                <span>по возможности использовать 5 ГГц для стабильной игры</span>
-            </div>
-            <div class="stat">
-                <span>Регулярный перезапуск роутера:</span>
-                <span>раз в несколько дней или недель</span>
-            </div>
-            <div class="stat">
-                <span>Чистые настройки DNS:</span>
-                <span>без лишних экспериментов, только проверенные варианты</span>
-            </div>
-            <div class="stat">
-                <span>Проводное подключение для больших загрузок:</span>
-                <span>USB‑LAN‑адаптер вместо wi‑fi</span>
-            </div>
-
-            <p class="note"><strong>Итог:</strong> большинство проблем с Wi‑Fi и eShop на Switch решаются на уровне пары простых шагов. Главное — понимать, что означают типичные коды и не пытаться сразу «ломать» все настройки, если достаточно перезапуска и небольших корректировок.</p>
-
-            <div class="footer-note">
-                Этот HTML‑гайд можно использовать как основу для лендинга о сетевых проблемах Switch, обучающей статьи или PDF‑инструкции для техподдержки, дополнив его скриншотами ошибок и примерами настройки роутера.
-            </div>
-        </aside>
-    </section>
-</div>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "Проблемы с Wi‑Fi и eShop на Switch: типичные коды и решения",
+    "description": "Гид по типичным проблемам с Wi‑Fi и eShop на Nintendo Switch: коды ошибок, причины и простые пошаговые решения.",
+    "totalTime": "PT40M",
+    "step": [
+      {
+        "@type": "HowToStep",
+        "name": "Введение: когда Switch ругается на Wi‑Fi и eShop",
+        "text": "Объяснение, почему возникают ошибки сети и магазина, и общая логика гайда.",
+        "url": "#step-1"
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Как Switch понимает проблемы с сетью и eShop",
+        "text": "Краткое описание этапов подключения к Wi‑Fi и сервисам Nintendo.",
+        "url": "#step-2"
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Типичные коды и их смысл",
+        "text": "Таблица с примерами кодов и простыми объяснениями.",
+        "url": "#step-3"
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Шаг 1: базовая диагностика Wi‑Fi",
+        "text": "Проверка работы интернета на других устройствах и перезапуск оборудования.",
+        "url": "#step-4"
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Шаг 2: Wi‑Fi на Switch — настройки и расстояние",
+        "text": "Работа с сигналом, расположением роутера и параметрами сети.",
+        "url": "#step-5"
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Шаг 3: типичные ошибки eShop",
+        "text": "Сценарии с магазином: не открывается, не грузит, не скачивает, не принимает оплату.",
+        "url": "#step-6"
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Шаг 4: проблемы на стороне Nintendo",
+        "text": "Как отличить локальную проблему от глобального сбоя сервиса.",
+        "url": "#step-7"
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Шаг 5: когда дело в роутере или провайдере",
+        "text": "Работа с настройками маршрутизатора и обращением к провайдеру.",
+        "url": "#step-8"
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Сценарные кейсы: что делать по шагам",
+        "text": "Готовые маршруты действий для типичных ситуаций с Wi‑Fi и eShop.",
+        "url": "#step-9"
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Сводная таблица: Wi‑Fi и eShop — кто виноват",
+        "text": "Быстрый ориентир по источнику проблемы и первым шагам.",
+        "url": "#step-10"
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Лайфхаки по стабильному Wi‑Fi и eShop",
+        "text": "Советы по эксплуатации и настройке сети для Switch.",
+        "url": "#step-11"
+      },
+      {
+        "@type": "HowToStep",
+        "name": "FAQ — частые вопросы по Wi‑Fi и eShop на Switch",
+        "text": "Ответы на популярные вопросы пользователей.",
+        "url": "#step-12"
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Краткий универсальный чек‑лист",
+        "text": "Универсальные шаги для большинства проблем с Wi‑Fi и eShop.",
+        "url": "#step-13"
+      }
+    ],
+    "image": "https://i.postimg.cc/NMN2Rjg3/resize-m-mfit-w-450-h-450.png"
+  }
+  </script>
 </body>
 </html>
