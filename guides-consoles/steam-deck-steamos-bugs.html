@@ -1,658 +1,639 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" data-theme="light">
 <head>
-    <meta charset="UTF-8">
-    <title>Типичные программные баги SteamOS на Steam Deck и как с ними жить</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Подробный разбор типичных программных багов SteamOS на Steam Deck: зависания интерфейса, глюки контроллера, проблемы после обновлений, баги сна и сети. Практичные обходные пути и советы, как с этим жить.">
-    <style>
-        :root {
-            --bg: #020617;
-            --bg-alt: #050816;
-            --card: #0b1220;
-            --accent: #22c55e;
-            --accent-soft: rgba(34,197,94,0.09);
-            --accent-strong: rgba(34,197,94,0.22);
-            --danger: #f97373;
-            --success: #38bdf8;
-            --warn: #facc15;
-            --text-main: #e5e7eb;
-            --text-soft: #9ca3af;
-            --border-soft: #111827;
-            --code-bg: #020617;
-        }
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YE88Y994NX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-YE88Y994NX');
+  </script>
 
-        * { box-sizing: border-box; }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Типичные программные баги SteamOS на Steam Deck и как с ними жить | Экспертный мегагайд</title>
+  <meta name="description" content="Подробный гид по типичным программным багам SteamOS на Steam Deck: зависания, баги интерфейса, глюки обновлений, косяки Proton, проблемы Desktop Mode и сети. Как жить с этим и минимизировать боль.">
 
-        body {
-            margin: 0;
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-            background: radial-gradient(circle at top, #111827 0, #020617 55%, #000 100%);
-            color: var(--text-main);
-            line-height: 1.6;
-        }
+  <!-- Yandex.Metrika counter -->
+  <script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+      m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+      m[i].l=1*new Date();
+      for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+      k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=106225686', 'ym');
 
-        a { color: var(--accent); text-decoration: none; }
-        a:hover { text-decoration: underline; }
+    ym(106225686, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", accurateTrackBounce:true, trackLinks:true});
+  </script>
+  <noscript>
+    <div>
+      <img src="https://mc.yandex.ru/watch/106225686" style="position:absolute; left:-9999px;" alt="Типичные программные баги SteamOS на Steam Deck и как с ними жить - пошаговая инструкция по ремонту">
+    </div>
+  </noscript>
+  <!-- /Yandex.Metrika counter -->
 
-        .page {
-            max-width: 1120px;
-            margin: 0 auto;
-            padding: 32px 16px 48px;
-        }
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="../styles-header.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
-        .hero {
-            display: grid;
-            grid-template-columns: minmax(0, 3fr) minmax(0, 2.1fr);
-            gap: 32px;
-            align-items: center;
-            margin-bottom: 40px;
-        }
+  <style>
+    .guide-content { line-height: 1.7; color: var(--text); }
+    .guide-content h2 { color: var(--primary); margin-top: 30px; margin-bottom: 15px; font-size: 1.5rem; }
+    .guide-content h3 { color: var(--primary-dark); margin-top: 25px; margin-bottom: 12px; font-size: 1.2rem; }
+    .guide-image-block { margin: 20px 0; padding: 15px; background: var(--background); border-radius: var(--border-radius); border: 1px solid var(--border); text-align: center; }
+    .guide-image-block img { max-width: 100%; height: auto; border-radius: 6px; border: 1px solid var(--border); }
+    .image-caption { margin-top: 10px; font-size: 0.85rem; color: var(--text-light); font-style: italic; }
+    .pro-tips { background: rgba(3, 74, 79, 0.05); padding: 15px; border-radius: 6px; margin: 20px 0; }
+    .pro-tips h4 { color: var(--primary); margin-top: 0; margin-bottom: 12px; font-size: 1.1rem; }
+    .tip-item { display: flex; gap: 8px; margin-bottom: 8px; align-items: flex-start; }
+    .tip-item i { margin-top: 3px; color: var(--primary); }
+    .warning-block {
+      background: #fff3e0;
+      border-left: 5px solid #ff9100;
+      padding: 15px 18px;
+      margin: 22px 0;
+      border-radius: 7px;
+    }
+    table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+    th, td { border: 1px solid var(--border); padding: 8px; text-align: left; vertical-align: top; }
+    th { background: var(--background-light); }
+    .code-like { font-family: "SF Mono", "Consolas", "Menlo", monospace; background: var(--background-light); padding: 2px 4px; border-radius: 4px; }
+    .step-badge {
+      display: inline-block;
+      background: var(--primary);
+      color: #fff;
+      font-size: 0.8rem;
+      padding: 2px 8px;
+      border-radius: 999px;
+      margin-right: 6px;
+    }
+    .faq-item { margin-bottom: 16px; }
+    .faq-item strong { display: block; margin-bottom: 4px; }
+    .scenario-block {
+      background: var(--background-light);
+      border-radius: 8px;
+      padding: 14px 16px;
+      margin-bottom: 16px;
+      border: 1px solid var(--border);
+    }
+    .scenario-title {
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+    @media (max-width: 768px) {
+      .guide-content h2 { font-size: 1.4rem; margin-top: 25px; }
+      .guide-image-block { padding: 12px; margin: 15px 0; }
+      table, th, td { font-size: 0.95rem; }
+    }
+  </style>
 
-        .hero-text h1 {
-            font-size: 32px;
-            margin: 0 0 12px;
-        }
-
-        .hero-text h1 strong { color: var(--accent); }
-
-        .hero-text p {
-            margin: 4px 0;
-            color: var(--text-soft);
-        }
-
-        .hero-badges {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            margin-top: 12px;
-        }
-
-        .badge {
-            font-size: 12px;
-            padding: 4px 10px;
-            border-radius: 999px;
-            border: 1px solid var(--border-soft);
-            background: rgba(15,23,42,0.9);
-            color: var(--text-soft);
-            backdrop-filter: blur(6px);
-        }
-
-        .badge--accent {
-            border-color: var(--accent);
-            background: var(--accent-soft);
-            color: #bbf7d0;
-        }
-
-        .badge--danger {
-            border-color: var(--danger);
-            background: rgba(248,113,113,0.09);
-            color: #fecaca;
-        }
-
-        .badge--success {
-            border-color: var(--success);
-            background: rgba(56,189,248,0.1);
-            color: #e0f2fe;
-        }
-
-        .hero-image {
-            border-radius: 18px;
-            overflow: hidden;
-            border: 1px solid var(--border-soft);
-            background: radial-gradient(circle at top, #1f2937 0, #020617 100%);
-            padding: 10px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .hero-image img {
-            max-width: 100%;
-            border-radius: 12px;
-            display: block;
-        }
-
-        .hero-note {
-            font-size: 12px;
-            color: var(--text-soft);
-            margin-top: 6px;
-            text-align: center;
-        }
-
-        .grid {
-            display: grid;
-            grid-template-columns: minmax(0, 2.3fr) minmax(0, 1.5fr);
-            gap: 24px;
-        }
-
-        .card {
-            background: radial-gradient(circle at top left, rgba(148,163,184,0.08), transparent 55%);
-            border-radius: 18px;
-            border: 1px solid var(--border-soft);
-            padding: 20px 18px 18px;
-            box-shadow: 0 18px 40px rgba(15,23,42,0.9);
-        }
-
-        .card h2 {
-            font-size: 20px;
-            margin: 0 0 10px;
-        }
-
-        .card h3 {
-            font-size: 16px;
-            margin: 18px 0 6px;
-        }
-
-        .tagline {
-            font-size: 13px;
-            color: var(--text-soft);
-            margin-bottom: 10px;
-        }
-
-        .highlight {
-            border-left: 3px solid var(--accent);
-            padding-left: 10px;
-            margin: 8px 0 14px;
-            font-size: 14px;
-            color: var(--text-soft);
-        }
-
-        .section-intro {
-            font-size: 14px;
-            color: var(--text-soft);
-            margin: 4px 0 10px;
-        }
-
-        .quick-list {
-            display: grid;
-            grid-template-columns: 1.2fr 1fr;
-            gap: 10px;
-            font-size: 13px;
-            margin: 10px 0 12px;
-        }
-
-        .quick-list ul {
-            margin: 0;
-            padding-left: 18px;
-        }
-
-        .quick-list li { margin-bottom: 4px; }
-
-        .pill {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            font-size: 12px;
-            padding: 4px 10px;
-            border-radius: 999px;
-            border: 1px solid rgba(148,163,184,0.45);
-            background: rgba(15,23,42,0.9);
-            margin-right: 6px;
-            margin-bottom: 4px;
-        }
-
-        .pill-bullet {
-            width: 6px;
-            height: 6px;
-            border-radius: 999px;
-            background: var(--accent);
-        }
-
-        .pill-danger .pill-bullet { background: var(--danger); }
-        .pill-success .pill-bullet { background: var(--success); }
-        .pill-warn .pill-bullet { background: var(--warn); }
-
-        .table-wrapper {
-            margin-top: 12px;
-            border-radius: 14px;
-            overflow: hidden;
-            border: 1px solid var(--border-soft);
-            background: rgba(15,23,42,0.96);
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            font-size: 13px;
-        }
-
-        thead {
-            background: linear-gradient(to right, rgba(34,197,94,0.2), rgba(56,189,248,0.34));
-        }
-
-        th, td {
-            padding: 6px 8px;
-            text-align: left;
-            border-bottom: 1px solid #111827;
-        }
-
-        th {
-            font-weight: 600;
-            color: #e5e7eb;
-            white-space: nowrap;
-        }
-
-        tbody tr:nth-child(odd) { background: rgba(15,23,42,0.96); }
-        tbody tr:nth-child(even) { background: rgba(10,16,32,0.96); }
-
-        .steps {
-            margin: 10px 0 6px;
-            padding-left: 18px;
-            font-size: 13px;
-        }
-
-        .steps li { margin-bottom: 5px; }
-
-        .note {
-            font-size: 12px;
-            color: var(--text-soft);
-            margin-top: 6px;
-        }
-
-        .note strong { color: var(--warn); }
-
-        .code {
-            font-family: ui-monospace, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-            background: var(--code-bg);
-            border-radius: 6px;
-            padding: 1px 4px;
-            font-size: 12px;
-        }
-
-        .badge-block {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 6px;
-            margin-bottom: 10px;
-        }
-
-        .label {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            padding: 2px 8px;
-            border-radius: 999px;
-            font-size: 11px;
-            border: 1px solid rgba(148,163,184,0.6);
-            background: rgba(15,23,42,0.96);
-        }
-
-        .label-dot {
-            width: 7px;
-            height: 7px;
-            border-radius: 999px;
-            background: var(--accent);
-        }
-
-        .label-soft { opacity: 0.92; }
-
-        .checklist {
-            list-style: none;
-            padding-left: 0;
-            margin: 8px 0 4px;
-            font-size: 13px;
-        }
-
-        .checklist li {
-            margin-bottom: 6px;
-            display: flex;
-            align-items: flex-start;
-            gap: 6px;
-        }
-
-        .checklist-icon {
-            width: 15px;
-            height: 15px;
-            border-radius: 4px;
-            border: 1px solid rgba(148,163,184,0.6);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 11px;
-            color: var(--accent);
-            flex-shrink: 0;
-        }
-
-        .checklist-icon--danger {
-            color: var(--danger);
-            border-color: rgba(248,113,113,0.8);
-        }
-
-        .side-section { font-size: 13px; }
-        .side-section h3 { margin-top: 14px; }
-
-        .stat {
-            display: flex;
-            justify-content: space-between;
-            font-size: 12px;
-            margin: 2px 0;
-            color: var(--text-soft);
-        }
-
-        .stat span:first-child { opacity: 0.9; }
-
-        .footer-note {
-            margin-top: 18px;
-            font-size: 12px;
-            color: var(--text-soft);
-            border-top: 1px dashed #1f2937;
-            padding-top: 10px;
-        }
-
-        .divider {
-            margin: 16px 0 10px;
-            border-top: 1px dashed #1e293b;
-        }
-
-        @media (max-width: 920px) {
-            .hero { grid-template-columns: minmax(0, 1fr); }
-            .grid { grid-template-columns: minmax(0, 1fr); }
-            .hero-image { order: -1; }
-        }
-
-        @media (max-width: 560px) {
-            .page { padding: 20px 12px 32px; }
-            .hero-text h1 { font-size: 26px; }
-            .quick-list { grid-template-columns: minmax(0, 1fr); }
-        }
-    </style>
+  <script async src="https://timeweb.cloud/api/v1/cloud-ai/agents/3cc03620-d051-4d8d-b5af-f7b6cd083a35/embed.js?collapsed=true"></script>
 </head>
 <body>
-<div class="page">
+  <header class="header">
+    <div class="container">
+      <div class="header__inner">
+        <a href="../index.html" class="logo">
+          <span class="logo__icon"></span>
+          <span class="logo__text">Repairo</span>
+        </a>
+        <nav class="nav">
+          <ul class="nav__list">
+            <li><a href="../tv.html" class="nav__link">Телевизоры</a></li>
+            <li><a href="../cameras.html" class="nav__link">Фотоаппараты</a></li>
+            <li><a href="../consoles.html" class="nav__link">Приставки</a></li>
+            <li><a href="../laptops.html" class="nav__link">Ноутбуки</a></li>
+            <li><a href="../smartphones.html" class="nav__link">Смартфоны</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
 
-    <!-- HERO -->
-    <section class="hero">
-        <div class="hero-text">
-            <h1><strong>Типичные программные баги SteamOS на Steam Deck</strong> и как с ними жить</h1>
-            <p>Steam Deck — живая платформа: обновления выходят часто, вместе с новыми фичами прилетают и баги. Это нормально для устройства на Linux, но к такому нужно быть готовым.</p>
-            <p>Здесь собраны самые типичные программные глюки SteamOS и клиента Steam на Deck: зависания интерфейса, странное поведение контроллера, баги сна и обновлений, конфликты с Decky и плагинами, а также рабочие обходные пути.</p>
+  <section class="guide-page">
+    <div class="container">
+      <div class="breadcrumbs">
+        <a href="../index.html">Главная</a>
+        <i class="fas fa-chevron-right"></i>
+        <a href="../consoles.html">Приставки</a>
+        <i class="fas fa-chevron-right"></i>
+        <span>Типичные программные баги SteamOS на Steam Deck и как с ними жить</span>
+      </div>
 
-            <div class="hero-badges">
-                <span class="badge badge--accent">SteamOS • Steam Deck</span>
-                <span class="badge badge--success">Жизнь рядом с багами без истерики</span>
-                <span class="badge badge--danger">Практичные обходные пути вместо паники</span>
-            </div>
+      <h1 class="section__title">Типичные программные баги SteamOS на Steam Deck и как с ними жить</h1>
+
+      <div class="guide-meta">
+        <span>
+          <i class="fas fa-bug"></i>
+          Мегагайд по типичным программным багам SteamOS на Steam Deck: зависания интерфейса, пропажа курсора и клавиатуры, странности после обновлений, глюки Proton, проблемы Desktop Mode, сети и сна. Практичные советы, как минимизировать боль и не сломать систему.
+        </span>
+      </div>
+
+      <div class="guide-image-block">
+        <img src="https://i.postimg.cc/T17S8gTw/resize-m-mfit-w-450-h-450.png" alt="Типичные программные баги SteamOS на Steam Deck и как с ними жить">
+        <div class="image-caption">
+          SteamOS на Steam Deck — живой Linux‑зверёк: иногда интерфейс зависает, игры ведут себя странно, обновления что‑то ломают, но при правильном подходе с этим можно жить без постоянных переустановок.
+        </div>
+      </div>
+
+      <div class="guide-content">
+
+        <h2 id="step-1">Введение: почему баги SteamOS — это нормально (почти)</h2>
+        <p>
+          SteamOS на Steam Deck — не классическая «консольная прошивка», а постоянно развивающаяся Linux‑система с частыми обновлениями, экспериментальными функциями и гибкостью. За возможность запускать кучу ПК‑игр и тюнить систему приходится платить нестабильными мелочами: то интерфейс подумает лишние пару секунд, то игра после апдейта перестанет запускаться, то Desktop Mode подвиснет без видимых причин.
+        </p>
+        <p>
+          Важно сразу принять философию: цель не в том, чтобы навсегда «избавиться от багов», а в том, чтобы научиться с ними жить. То есть понимать, какие баги критичны и требуют вмешательства, а какие можно терпеть или обходить, пока Valve не выпустит очередной фикс. Этот гид как раз про это: классификация типичных багов SteamOS и аккуратные способы реагировать на них без лишних нервов и жёстких костылей.
+        </p>
+
+        <h2 id="step-2">Карта типичных багов SteamOS на Deck</h2>
+        <p>
+          Чтобы не путаться, полезно разложить баги SteamOS по крупным категориям. Это помогает быстро понимать, на что смотреть: на сам интерфейс, на игры через Proton, на сеть, на Desktop Mode или на хранилище. Таблица ниже — обзор того, как баги выглядят глазами пользователя.
+        </p>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Категория</th>
+              <th>Как проявляется</th>
+              <th>Что обычно за этим стоит</th>
+              <th>Что трогать первым</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Интерфейс SteamOS</td>
+              <td>Задержки меню, пропажа Overlay, зависания «одного» окна.</td>
+              <td>Подвисшие процессы, фоновые обновления, утечки памяти.</td>
+              <td>Перезапуск Steam / Deck, проверка обновлений, освобождение места.</td>
+            </tr>
+            <tr>
+              <td>Игры и Proton</td>
+              <td>Нестарт, вылеты, черный экран, специфические баги в одной игре.</td>
+              <td>Конкретная версия Proton, апдейты игры, кэш, баги порта.</td>
+              <td>Смена Proton, проверка файлов, откат графики и модов.</td>
+            </tr>
+            <tr>
+              <td>Обновления SteamOS</td>
+              <td>После апдейта «что‑то сломалось», пропала функция или игра.</td>
+              <td>Сырой апдейт, конфликт версий, изменённые зависимости.</td>
+              <td>Перезагрузка, откат ветки (Stable/Preview/Бета), ожидание фикса.</td>
+            </tr>
+            <tr>
+              <td>Desktop Mode</td>
+              <td>Глюки окон, артефакты, зависания приложений, странное поведение мыши/клавы.</td>
+              <td>Особенности KDE, сторонние приложения, несовместимые твики.</td>
+              <td>Перезапуск сессии, отключение автозапуска, минимум экспериментов.</td>
+            </tr>
+            <tr>
+              <td>Сеть и онлайн</td>
+              <td>Иногда не коннектится, падают загрузки, глючит Remote Play.</td>
+              <td>Комбо из Wi‑Fi, драйверов, роутера и Steam‑сервисов.</td>
+              <td>Переподключение, смена сети/диапазона, перезапуск роутера.</td>
+            </tr>
+            <tr>
+              <td>Сон/пробуждение</td>
+              <td>После сна нет звука, игра подвисла, сеть отвалилась.</td>
+              <td>Особенности управления питанием, неидеальная поддержка некоторых игр.</td>
+              <td>Настройка поведения сна, перезапуск игры или всей системы.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2 id="step-3">Часть 1. Лаги и зависания интерфейса SteamOS</h2>
+        <p>
+          Одна из самых раздражающих, но при этом типичных ситуаций — когда интерфейс Deck начинает ощущаться «тяжёлым»: меню открываются с задержкой, Overlay думает слишком долго, библиотека прокручивается рывками. Особо заметно это после длинных сессий, частых переходов между играми и активного использования Desktop Mode.
+        </p>
+        <p>
+          Часто источник проблемы прозаичен: забитый под завязку SSD, фоновые загрузки и обновления, накопленные временные файлы, подвисшие процессы. SteamOS умеет долго терпеть, но когда свободного пространства и ресурсов становится мало, интерфейс даёт это почувствовать. Главное — не игнорировать такие сигналы месяцами.
+        </p>
+
+        <h3>Что делать при лагах интерфейса</h3>
+        <ul>
+          <li>Перезагрузить Steam Deck полностью, а не просто усыплять его неделями подряд.</li>
+          <li>Проверить свободное место во внутренней памяти и освобождать хотя бы несколько десятков гигабайт.</li>
+          <li>Отключить ненужные фоновые загрузки игр и обновлений в момент активной игры.</li>
+          <li>По возможности не держать в автозапуске лишние программы в Desktop Mode.</li>
+          <li>Регулярно ставить обновления SteamOS, так как многие утечки памяти правят именно там.</li>
+        </ul>
+
+        <h2 id="step-4">Часть 2. Баги игр из‑за Proton и кэша</h2>
+        <p>
+          SteamOS полагается на Proton, чтобы запускать Windows‑игры. Это мощный инструмент, но не идеальный. После очередного обновления Proton или самой игры игрок может столкнуться с тем, что проект перестаёт запускаться, вылетает, показывает чёрный экран или начинает странно вести себя в конкретных местах.
+        </p>
+        <p>
+          Плюс сюда добавляется кэш: шейдеры, временные файлы, модификации. В сумме получается коктейль, где малозаметное обновление может неожиданно «сломать» стабильную игру. Часто это лечится аккуратной сменой версии Proton, проверкой файлов и чисткой лишнего, без необходимости трогать систему целиком.
+        </p>
+
+        <h3>Мини‑чек‑лист при проблеме именно с одной игрой</h3>
+        <ol>
+          <li>
+            <span class="step-badge">Шаг 2.1</span>
+            Перезагрузить Deck и перезапустить игру без сторонних программ, оверлеев и модификаций.
+          </li>
+          <li>
+            <span class="step-badge">Шаг 2.2</span>
+            Через свойства игры в Steam включить явный выбор версии Proton и протестировать несколько вариантов (стабильный, Experimental, Proton‑GE, если установлен).
+          </li>
+          <li>
+            <span class="step-badge">Шаг 2.3</span>
+            Запустить проверку целостности файлов — особенно после частичных обновлений.
+          </li>
+          <li>
+            <span class="step-badge">Шаг 2.4</span>
+            При наличии модов временно их отключить или перенести, проверив поведение «чистой» версии игры.
+          </li>
+          <li>
+            <span class="step-badge">Шаг 2.5</span>
+            Если проблема появилась после конкретного патча, подумать о временном откате Proton или подождать фикса со стороны разработчиков игры/Valve.</li>
+        </ol>
+
+        <h2 id="step-5">Часть 3. Обновления SteamOS: когда после апдейта «что‑то сломалось»</h2>
+        <p>
+          Частые обновления — сильная сторона SteamOS: появляются новые функции, улучшается поддержка игр, чинятся старые баги. Но каждый апдейт — риск того, что одновременно проснётся новый баг. Классика: вчера всё работало, сегодня после обновления сломался звук, сеть или одна‑две игры ведут себя иначе.
+        </p>
+        <p>
+          Поэтому логично относиться к веткам обновлений осознанно. Stable для тех, кто хочет минимум сюрпризов. Beta/Preview — для тех, кто готов терпеть возможные глюки ради новых фич. Если Deck — основное игровое устройство, не всегда выгодно жить на самой острой ветке SteamOS.
+        </p>
+
+        <h3>Как переживать обновления SteamOS</h3>
+        <ul>
+          <li>Делать обновления не в момент, когда «срочно нужно поиграть», а когда есть время откатиться или поискать решения при баге.</li>
+          <li>Если на бета‑ветке стало хуже, вернуться на стабильную, пожертвовав частью нововведений.</li>
+          <li>После крупного обновления обязательно перезагружать Deck, а не сразу прыгать в тяжёлые игры.</li>
+          <li>Не ставить экспериментальные функции только ради галочки, если они не дают реальной прибыли в вашем сценарии.</li>
+          <li>Фиксировать, что именно сломалось после апдейта (звук, сеть, конкретная игра), чтобы легче искать workaround и ждать нужного патча.</li>
+        </ul>
+
+        <h2 id="step-6">Часть 4. Баги Desktop Mode: окна, курсор, странное поведение приложений</h2>
+        <p>
+          Desktop Mode — тот самый момент, когда Steam Deck превращается в мини‑Linux‑ПК. Вместе с этим приходят и классические Linux‑штуки: глюки оконного менеджера, пропавший курсор, странно ведущие себя приложения, конфликты с раскладкой и вводом. Для игр это не критично, но для тех, кто активно использует Desktop Mode, такие баги могут нервировать.
+        </p>
+        <p>
+          Источник большинства проблем в Desktop Mode — комбинация: KDE + сторонние приложения + нестандартные плагины. Чем аккуратнее подход к настройкам и экспериментов, тем меньше шансов получить несмешную шутку в виде сломанных панелей или неоткрывающихся окон.
+        </p>
+
+        <h3>Как минимизировать боль в Desktop Mode</h3>
+        <ul>
+          <li>Не ставить всё подряд из репозиториев и не плодить автозапуск из десятка программ.</li>
+          <li>При глюке окон или панели сначала попробовать перезапустить сессию или Desktop Mode, а не сразу думать о переустановке.</li>
+          <li>По возможности использовать проверенные приложения, которые хорошо себя ведут на Deck.</li>
+          <li>Держать под рукой базовый план: как выйти обратно в игровой режим и перезагрузить систему, если Desktop завис.</li>
+          <li>Не менять глубоко системные настройки среды (темы, компоненты панелей), если Deck нужен прежде всего как игровое устройство.</li>
+        </ul>
+
+        <h2 id="step-7">Часть 5. Сон, пробуждение и баги «проснувшегося» Deck</h2>
+        <p>
+          Режим сна — удобная фича: закрыл крышку, отошёл, вернулся и продолжил играть. Но иногда после сна проявляются баги: пропадает звук, отваливается сеть, игра ведёт себя странно, появляется небольшая утечка FPS. Это результат того, что не все игры и компоненты одинаково корректно переживают переходы между режимами питания.
+        </p>
+        <p>
+          Баги после сна редко критичны, но могут подпортить впечатление от игры, если игнорировать их и не перезапускать процессы. В особо капризных случаях проще приучить себя выходить из определённых игр перед тем, как отправлять Deck в сон, чем каждый раз ловить пост‑глюки.
+        </p>
+
+        <h3>Что делать, если после сна что‑то сломалось</h3>
+        <ul>
+          <li>Если пропал звук — проверить уровень громкости, устройство вывода, при необходимости перезапустить игру или Deck.</li>
+          <li>Если отвалилась сеть — переподключиться к Wi‑Fi, иногда требуется кратковременное выключение/включение авиарежима.</li>
+          <li>При редких просадках FPS сразу после пробуждения — перезапустить игру или систему, особенно в тяжёлых проектах.</li>
+          <li>Для игр, которые стабильно плохо выдерживают сон, выработать привычку закрывать их перед усыплением Deck.</li>
+          <li>Следить за обновлениями: часть багов сна и пробуждения Valve постепенно полирует в новых версиях SteamOS.</li>
+        </ul>
+
+        <h2 id="step-8">Часть 6. Сетевые баги SteamOS: Steam, загрузки, Remote Play</h2>
+        <p>
+          Сетевые баги на SteamOS проявляются немного иначе, чем на обычном ПК: иногда интерфейс показывает, что сеть есть, но загрузки в Steam идут медленно или периодически обрываются, Remote Play ведёт себя нестабильно, а онлайн‑функции отдельных игр выдают ошибки. Виноваты могут быть и роутер, и драйверы, и сами Steam‑сервисы.
+        </p>
+        <p>
+          Вместо того чтобы сразу винить SteamOS, важно отделить общие сетевые проблемы от специфичных для Deck. Если в той же сети тормозят и другие устройства, то первый кандидат на разбор — роутер или провайдер. Если же Deck постоянно ведёт себя хуже, чем всё остальное, логичнее пересмотреть настройки сети и поведение самой системы.
+        </p>
+
+        <h3>Мини‑чек‑лист по сетевым багам SteamOS</h3>
+        <ol>
+          <li>
+            <span class="step-badge">Шаг 6.1</span>
+            Проверить скорость и стабильность интернета на другом устройстве в той же сети.
+          </li>
+          <li>
+            <span class="step-badge">Шаг 6.2</span>
+            Переподключить Deck к сети, по возможности сменив диапазон (2,4/5 ГГц).
+          </li>
+          <li>
+            <span class="step-badge">Шаг 6.3</span>
+            Перезапустить роутер и через пару минут повторить тест загрузок и Remote Play.
+          </li>
+          <li>
+            <span class="step-badge">Шаг 6.4</span>
+            Убедиться, что нет искусственных ограничений скорости в настройках Steam на Deck.
+          </li>
+          <li>
+            <span class="step-badge">Шаг 6.5</span>
+            При устойчивых проблемах в одной сети, но нормальной работе в другой — обсуждать с провайдером и, при необходимости, обновлять роутер.</li>
+        </ol>
+
+        <h2 id="step-9">Часть 7. Хранилище и баги из‑за нехватки места</h2>
+        <p>
+          Переполненное хранилище делает SteamOS капризной: возникают странные ошибки при обновлении, вылеты игр, подлагивания интерфейса, проблемы с установкой патчей. SSD и microSD постоянно используются для кэша, временных файлов и обновлений, поэтому оставлять их на грани забитого состояния — прямой путь к малоприятным сюрпризам.
+        </p>
+        <p>
+          Для систем вроде SteamOS особенно важно иметь запас свободного пространства — не только для игр, но и для служебных задач. Игнорировать уведомления о нехватке места и пытаться «запихнуть ещё одну игру» поверх десятка тяжёлых тайтлов — плохая идея в долгую.
+        </p>
+
+        <h3>Как жить с хранилищем, чтобы не провоцировать баги</h3>
+        <ul>
+          <li>Стараться держать во внутреннем SSD запас свободного пространства, не забивая его под ноль.</li>
+          <li>Часто неиграемые тяжёлые проекты переносить на microSD, освобождая место системе.</li>
+          <li>Периодически чистить кэш и лишние скриншоты/видео, накопленные за долгие сессии.</li>
+          <li>Не экономить на качестве microSD, если она используется активно, и выбирать проверенные бренды.</li>
+          <li>При первых странных вылетах во время установки или обновления игр проверить, не на нуле ли свободное место.</li>
+        </ul>
+
+        <h2 id="step-10">Сценарные кейсы: как реагировать на баги без паники</h2>
+        <p>
+          Ниже — несколько типичных сценариев, в которых владельцы Steam Deck чаще всего решают «всё, переустанавливаю». В большинстве из них можно обойтись более мягкими шагами и жить дальше с текущей системой.
+        </p>
+
+        <div class="scenario-block">
+          <div class="scenario-title">Сценарий A: интерфейс стал дико тормозить после пары недель активной игры</div>
+          <ul>
+            <li>Перезагрузить Deck, дать системе стартовать «с чистого листа».</li>
+            <li>Проверить свободное место и удалить несколько тяжёлых проектов или перенести их на microSD.</li>
+            <li>Поставить накопившиеся обновления SteamOS и перезагрузиться ещё раз.</li>
+            <li>Отключить из автозапуска и Desktop Mode лишние фоновые программы, если они есть.</li>
+            <li>Оценить работу интерфейса после «уборки» и использовать это как сигнал регулярнее чистить систему.</li>
+          </ul>
         </div>
 
-        <div>
-            <div class="hero-image">
-                <img src="https://i.postimg.cc/T17S8gTw/resize-m-mfit-w-450-h-450.png" alt="Типичные программные баги SteamOS на Steam Deck и как с ними жить">
-            </div>
-            <div class="hero-note">Картинку можно заменить на локальный файл с тем же разрешением, если делаете лендинг или статью.</div>
+        <div class="scenario-block">
+          <div class="scenario-title">Сценарий B: одна конкретная игра перестала запускаться после обновления</div>
+          <ul>
+            <li>Сменить Proton в настройках совместимости игры и протестировать несколько вариантов.</li>
+            <li>Проверить целостность файлов игры в Steam.</li>
+            <li>Временно отключить моды и сторонние оверлеи для этой игры.</li>
+            <li>Проверить, не отмечена ли игра как проблемная после последнего патча (заметки от разработчиков или сообщества).</li>
+            <li>Если это широко известный баг, подождать фикса или попробовать временное решение, не ломающее систему целиком.</li>
+          </ul>
         </div>
-    </section>
 
-    <section class="grid">
-        <!-- ОСНОВНОЙ КОНТЕНТ -->
-        <article class="card">
-            <h2>Как относиться к багам SteamOS: философия выжившего</h2>
-            <p class="tagline">SteamOS на Deck постоянно развивается, и баги — неизбежная плата за быстрый темп обновлений и экспериментальные фичи. Важно научиться отличать серьёзные проблемы от бытовых странностей.</p>
-            <p class="highlight">Главная мысль: большую часть программных багов можно либо временно обойти, либо переждать до следующего патча. Полный factory reset и recovery нужен далеко не всегда — сначала стоит пройтись по более мягким шагам.</p>
+        <div class="scenario-block">
+          <div class="scenario-title">Сценарий C: после обновления SteamOS пропал звук/глючит сеть</div>
+          <ul>
+            <li>Перезагрузить Deck, проверить базовые настройки звука/сети и устройства вывода/подключения.</li>
+            <li>Если вы на бета‑ветке, рассмотреть откат на стабильную ветку, если баг критичен именно для вас.</li>
+            <li>Проверить, проявляется ли баг только на Deck или и на других устройствах (для сети).</li>
+            <li>По возможности уточнить, не известен ли этот баг уже и не готовится ли ближайший фикс.</li>
+            <li>Временно подобрать обходной путь (например, использовать другой способ вывода звука или сеть) до следующего патча.</li>
+          </ul>
+        </div>
 
-            <div class="quick-list">
-                <div>
-                    <strong>Что разберём:</strong>
-                    <ul>
-                        <li>Подвисания UI и «хрупкость» SteamOS в гейминге и Desktop‑режиме.</li>
-                        <li>Глюки контроллерных вводов и зависающие кнопки.</li>
-                        <li>Проблемы со сном/пробуждением и зависания при резюме.</li>
-                        <li>Обновления, которые ломают плагин‑экосистему и часть функционала.</li>
-                        <li>Кастомные плагины и моды как источник сюрпризов.</li>
-                    </ul>
-                </div>
-                <div>
-                    <strong>Формула выживания:</strong>
-                    <div class="pill pill-success"><span class="pill-bullet"></span>1) Перезагрузка и обновление</div>
-                    <div class="pill"><span class="pill-bullet"></span>2) Отключение «обвеса» и плагинов</div>
-                    <div class="pill pill-danger"><span class="pill-bullet"></span>3) Recovery и, в край, factory reset</div>
-                </div>
-            </div>
+        <div class="scenario-block">
+          <div class="scenario-title">Сценарий D: Desktop Mode «поехал», окна и панели ведут себя странно</div>
+          <ul>
+            <li>Выйти из Desktop Mode обратно в игровой режим и перезагрузить систему.</li>
+            <li>Отключить автозапуск свежепоставленных приложений, если проблемы начались после их установки.</li>
+            <li>При повторяющихся глюках использовать Desktop Mode только по мере необходимости, а основную жизнь проводить в игровом режиме.</li>
+            <li>Не трогать глубоко системные настройки KDE без понимания, что именно они делают.</li>
+            <li>Если Desktop критичен, подумать о аккуратной переустановке системы с сохранением данных, но только после исчерпания более мягких вариантов.</li>
+          </ul>
+        </div>
 
-            <!-- Блок 1 -->
-            <h3>1. «Хрупкий» интерфейс: зависания SteamOS и Game Mode</h3>
-            <p class="section-intro">Один из самых частых сценариев — Steam Deck внешне включен, картинка есть, но интерфейс откликается с огромной задержкой или вообще не реагирует на кнопки и касания.[web:133][web:135]</p>
+        <h2 id="step-11">Сводная таблица: когда жить с багом, а когда лечить радикально</h2>
+        <p>
+          Не каждый баг SteamOS требует немедленного «формата». Полезно различать мелкие раздражители, с которыми можно мириться, и критичные проблемы, оправдывающие серьёзные действия вроде переустановки.
+        </p>
 
-            <p class="section-intro"><strong>Типичные проявления:</strong></p>
-            <ul class="steps">
-                <li>После выхода из сна Game Mode «висит»: меню не листается, кнопки не работают, а звук и игра при этом могут продолжать жить в фоне.[web:135]</li>
-                <li>В Desktop‑режиме иногда перестаёт отзываться оболочка, хотя сам Linux‑слой остаётся живым — часто виноваты плагины, Decky и прочий пользовательский обвес.[web:133]</li>
-                <li>При очень большой библиотеке игр и динамических коллекциях UI может подвисать на 30–60 секунд после пробуждения, пока Steam перерабатывает библиотеку.[web:135]</li>
-            </ul>
+        <table>
+          <thead>
+            <tr>
+              <th>Ситуация</th>
+              <th>Можно жить</th>
+              <th>Стоит думать о радикальных мерах</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Редкие лаги интерфейса</td>
+              <td>Если проходят после перезагрузки и уборки места.</td>
+              <td>Если интерфейс стабильно еле живёт даже после чистки и обновлений.</td>
+            </tr>
+            <tr>
+              <td>Баг в одной‑двух играх</td>
+              <td>Если остальные проекты работают нормально.</td>
+              <td>Если любые игры массово вылетают или не запускаются без понятной причины.</td>
+            </tr>
+            <tr>
+              <td>Глюк после обновления</td>
+              <td>Если есть обходной путь и ожидается быстрый фикс.</td>
+              <td>Если критичный функционал системы не работает долго и блокирует использование Deck.</td>
+            </tr>
+            <tr>
+              <td>Проблемы Desktop Mode</td>
+              <td>Если основной игровой режим работает нормально.</td>
+              <td>Если вы используете Deck как основной ПК и баги мешают базовым задачам.</td>
+            </tr>
+            <tr>
+              <td>Странности после сна</td>
+              <td>Если лечатся перезапуском игры и не критичны.</td>
+              <td>Если системные сбои после сна стали постоянными и затрагивают всё подряд.</td>
+            </tr>
+          </tbody>
+        </table>
 
-            <p class="section-intro"><strong>Как с этим жить на практике:</strong></p>
-            <ul class="steps">
-                <li>Использовать «жёсткую» перезагрузку: удерживать кнопку питания около 10 секунд, пока Deck полностью не выключится, потом включить снова.[web:136]</li>
-                <li>Периодически чистить библиотеку от сотен динамических коллекций и фильтров, если у вас большая библиотека — это уменьшает нагрузку при старте и пробуждении.[web:135]</li>
-                <li>Не забивать Desktop‑режим экспериментальными надстройками без необходимости, особенно теми, что вмешиваются в UI Steam.</li>
-            </ul>
-            <p class="note"><strong>Вывод:</strong> «хрупкость» UI часто не про поломку железа, а про то, что клиент Steam захлебнулся от задач (большая библиотека, коллекции, плагины) и ему нужно меньше «стресса».[web:133][web:135]</p>
+        <h2 id="step-12">Лайфхаки: философия спокойной жизни со SteamOS</h2>
+        <div class="pro-tips">
+          <h4>Привычки, которые сильно снижают раздражение от багов</h4>
+          <div class="tip-item">
+            <i class="fas fa-lightbulb"></i>
+            <p>Не обновлять SteamOS в минуту, когда «очень надо поиграть», и держать небольшой запас времени на адаптацию после апдейта.</p>
+          </div>
+          <div class="tip-item">
+            <i class="fas fa-lightbulb"></i>
+            <p>Выбирать ветку обновлений в соответствии с нервами: стабильная — меньше фич, но и меньше сюрпризов, бета — наоборот.</p>
+          </div>
+          <div class="tip-item">
+            <i class="fas fa-lightbulb"></i>
+            <p>Не превращать Deck в полнофункциональный Linux‑эксперимент, если основная задача — просто играть без бесконечного тюнинга.</p>
+          </div>
+          <div class="tip-item">
+            <i class="fas fa-lightbulb"></i>
+            <p>Раз в какое‑то время делать «уборку» игр, кэша и временных файлов, чтобы система не задыхалась от мусора.</p>
+          </div>
+          <div class="tip-item">
+            <i class="fas fa-lightbulb"></i>
+            <p>Фиксировать повторяющиеся баги и их контекст (после сна, после апдейта, в одной игре) — это помогает и при самостоятельном поиске решения, и при обращении в поддержку.</p>
+          </div>
+        </div>
 
-            <!-- Блок 2 -->
-            <h3>2. Замерзающие кнопки и странные вводы контроллера</h3>
-            <p class="section-intro">Иногда Deck продолжает показывать картинку и играет звук, но перестаёт реагировать на нажатия кнопок, стики или сенсорные зоны — либо в игре, либо во всей системе.[web:134][web:139]</p>
+        <h2 id="step-13">Краткий универсальный чек‑лист при «странном» баге SteamOS</h2>
+        <p>
+          На случай, когда Steam Deck начинает вести себя не так, как обычно, и нет желания сразу лезть в дебри, можно держать под рукой короткий список действий, который покрывает большинство бытовых программных проблем.
+        </p>
+        <ul>
+          <li>Перезагрузить Deck и проверить, повторяется ли баг в тех же условиях.</li>
+          <li>Проверить свободное место в хранилище и убрать заведомо лишнее.</li>
+          <li>Обновить SteamOS и игры при наличии обновлений, затем снова перезапустить систему.</li>
+          <li>Понять, баг это одной игры или всей системы, и действовать в рамках соответствующей категории.</li>
+          <li>Если проблема критична и не решается мягкими шагами, задуматься о более серьёзных действиях — от смены ветки обновлений до аккуратной переустановки, но только после того, как использованы более щадящие варианты.</li>
+        </ul>
 
-            <p class="section-intro"><strong>Как это обычно выглядит:</strong></p>
-            <ul class="steps">
-                <li>Во время игры внезапно перестают работать все контроллерные входы, при этом картинка и звук продолжаются, а сама игра не вылетает.[web:134]</li>
-                <li>В меню SteamOS кнопки будто «залипают» или игнорируются, а ввод с внешних устройств (клавиатура/мышь) может работать нормально.</li>
-                <li>Задержка ввода: нажимаете кнопку, а реакция появляется с ощутимой паузой — особенно в меню и overlay.[web:139]</li>
-            </ul>
+        <div class="warning-block">
+          <strong>Напоминание!</strong> Любая сложная система с частыми обновлениями и высокой гибкостью — в том числе SteamOS — обречена время от времени баговать. Главное — не воспринимать каждый глюк как личное оскорбление, а спокойно разруливать его понятными шагами и не спешить к «формат C» при первом же странном поведении.
+        </div>
 
-            <p class="section-intro"><strong>Практичные обходные пути:</strong></p>
-            <ul class="steps">
-                <li>Сначала обычная перезагрузка и проверка обновлений SteamOS/клиента — многие баги ввода фиксили именно патчами.[web:136][web:140]</li>
-                <li>Прогнать встроенный тест контроллера в настройках Deck: это помогает понять, проблема в системе или в железе/конкретной игре.[web:139]</li>
-                <li>Если проблема проявляется только в одной игре, пробовать другие схемы контроллера и ручной ремап кнопок под конкретный проект.[web:139]</li>
-                <li>При регулярных зависаниях ввода во всех играх и режимах — фиксировать, на каких версиях SteamOS это началось, и рассматривать откат/обновление до другой ветки.</li>
-            </ul>
-            <p class="note"><strong>Логика:</strong> глюки ввода часто связаны с конкретной версией SteamOS и взаимодействием Steam Input с играми и плагинами, а не с физическими кнопками.[web:134][web:139]</p>
+      </div>
+    </div>
+  </section>
 
-            <!-- Блок 3 -->
-            <h3>3. Баги сна и пробуждения: фризы, чёрные экраны, длительный лаг после wake</h3>
-            <p class="section-intro">Сон — одна из самых сложных частей для любой портативной системы. На Deck бывают ситуации, когда пробуждение сопровождается долгими зависаниями UI или вообще чёрным экраном.[web:135][web:142]</p>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__col footer__col--logo">
+          <a href="index.html" class="footer-logo">
+            <span class="logo__icon"></span>
+            <span class="logo__text">Repairo</span>
+          </a>
+          <p class="footer__text">Экспертные инструкции по технике с 2024 года</p>
+        </div>
+        <div class="footer__col">
+          <h3 class="footer__title">Разделы</h3>
+          <ul class="footer__links">
+            <li><a href="index.html" class="footer__link">Главная</a></li>
+            <li><a href="all-guides.html" class="footer__link">Все гайды</a></li>
+            <li><a href="contacts.html" class="footer__link">Контакты</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h3 class="footer__title">Категории</h3>
+          <ul class="footer__links">
+            <li><a href="../tv.html" class="nav__link">Телевизоры</a></li>
+            <li><a href="../cameras.html" class="nav__link">Фотоаппараты</a></li>
+            <li><a href="../consoles.html" class="nav__link">Приставки</a></li>
+            <li><a href="../laptops.html" class="nav__link">Ноутбуки</a></li>
+            <li><a href="../smartphones.html" class="nav__link">Смартфоны</a></li>
+            <li><a href="../small-appliances.html" class="nav__link">Мелкая техника</a></li>
+            <li><a href="../large-appliances.html" class="nav__link">Бытовая техника</a></li>
+            <li><a href="../auto-electronics.html" class="nav__link">Авто-Электроника</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h3 class="footer__title">Контакты</h3>
+          <ul class="footer__links">
+            <li>
+              <a href="https://t.me/repairo_kz" class="footer__link"><i class="fab fa-telegram"></i> Telegram</a>
+            </li>
+            <li>
+              <a href="https://instagram.com/repairo_kz" class="footer__link"><i class="fab fa-instagram"></i> Instagram</a>
+            </li>
+            <li>
+              <a href="mailto:support@repairo.kz" class="footer__link"><i class="fas fa-envelope"></i> Email</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="disclaimer">
+          Администрация сайта не несёт ответственности за возможные повреждения техники
+          и иные последствия, возникшие в результате самостоятельного ремонта по
+          материалам и инструкциям, размещённым на сайте. Все работы вы выполняете
+          на свой страх и риск.
+        </p>
+        <p class="footer__copyright">© 2025 Repairo. Все права защищены.</p>
+      </div>
+    </div>
+  </footer>
 
-            <p class="section-intro"><strong>Типичные сценарии:</strong></p>
-            <ul class="steps">
-                <li>После пробуждения игра продолжает работать, но интерфейс Steam не реагирует 30–60 секунд, затем внезапно «отпускает» и отрабатывает накопившиеся действия.[web:135]</li>
-                <li>После сна экран остаётся чёрным, хотя слышно звук или отклик на кнопки — требуется либо ждать, либо принудительно перезапускать Steam/Deck.[web:142]</li>
-                <li>В Desktop‑режиме после пробуждения зависают окна Steam‑клиента и видео, тогда как остальной KDE‑десктоп жив.[web:142]</li>
-            </ul>
+  <script src="../script.js"></script>
 
-            <p class="section-intro"><strong>Как жить с такими багами:</strong></p>
-            <ul class="steps">
-                <li>При кратком «фризе после сна» — просто дать Deckу 20–60 секунд, не спамить кнопками, чтобы не усугублять буферизацию UI.[web:135]</li>
-                <li>В случае чёрного экрана или повисшего клиента в Desktop‑режиме работает приём с переключением режимов и перезапуском Steam‑клиента (например, через Big Picture/launch‑параметры).[web:142]</li>
-                <li>Если конкретная версия SteamOS явно испортила поведение сна, имеет смысл временно перейти на другую ветку (stable/beta) или откатить обновление, пока не выйдет фикс.[web:145][web:144]</li>
-            </ul>
-            <p class="note"><strong>Момент:</strong> баги сна часто связаны с конкретными версиями SteamOS и обновлениями клиента; они либо фиксируются патчем, либо обходятся временными костылями вроде отключения отдельных фич.[web:135][web:144]</p>
-
-            <!-- Блок 4 -->
-            <h3>4. Обновления SteamOS: когда патч ломает привычный мир</h3>
-            <p class="section-intro">Иногда свежие обновления несут не только новые функции, но и новые проблемы: перегрев, странное поведение quick‑access меню, сломанные слайдеры TDP/GPU, баги записи, скриншотов и сна.[web:138][web:144][web:145]</p>
-
-            <div class="table-wrapper">
-                <table>
-                    <thead>
-                    <tr>
-                        <th>Что ломается</th>
-                        <th>Как проявляется</th>
-                        <th>Типичный временный выход</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td>Quick‑access меню и слайдеры мощности</td>
-                        <td>Слайдеры TDP/GPU зависают, не применяются, меню ведёт себя непредсказуемо после обновления.[web:144]</td>
-                        <td>Ждать хотфикс, использовать упрощённые настройки; при критичности — откатиться на предыдущую версию.[web:144][web:145]</td>
-                    </tr>
-                    <tr>
-                        <td>Перегрев и странные лимиты мощности</td>
-                        <td>Deck греется сильнее обычного, возможны самоперезагрузки и петли восстановления.[web:144]</td>
-                        <td>Избегать тяжёлых игр до фикса, снизить настройки и FPS, при необходимости откатить версию ОС.[web:144]</td>
-                    </tr>
-                    <tr>
-                        <td>Баги записи, скриншотов, KDE‑плагинов</td>
-                        <td>Падает запись, скриншоты ведут себя странно, часть Desktop‑функций ломается, особенно из Decky/EmuDeck.[web:138][web:146][web:147]</td>
-                        <td>Отключить/обновить плагины, следить за GitHub/релизами; в тяжёлых случаях — временно отказаться от новой фичи.[web:146][web:147]</td>
-                    </tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <p class="section-intro"><strong>Стратегия обновлений для спокойной жизни:</strong></p>
-            <ul class="steps">
-                <li>Не ставить обновление в первый же час релиза, если Deck нужен «как рабочий инструмент» — выждать пару дней и посмотреть, не всплыли ли массовые жалобы.[web:138][web:144]</li>
-                <li>Если ставите бета‑ветку, быть морально готовым к экспериментам и временному откату; не использовать её на единственном «боевом» устройстве без бэкапов.[web:145]</li>
-                <li>Иметь под рукой инструкцию и время на возможный rollback или рискованный factory reset, если обновление оказалось совсем неудачным.[web:145][web:139]</li>
-            </ul>
-            <p class="note"><strong>Практика:</strong> большинство проблемных обновлений довольно быстро получают хотфиксы, но первые дни после выхода — лучшее время проявлять осторожность.[web:140][web:144]</p>
-
-            <!-- Блок 5 -->
-            <h3>5. Decky Loader, плагины, EmuDeck и прочий «обвес»</h3>
-            <p class="section-intro">Decky, EmuDeck и другие надстройки делают Deck гораздо более гибким, но одновременно увеличивают шансы поймать непредсказуемый баг после очередного обновления SteamOS.[web:133][web:146][web:147]</p>
-
-            <p class="section-intro"><strong>Где именно возникают проблемы:</strong></p>
-            <ul class="steps">
-                <li>Плагины, вмешивающиеся в UI и рендер (темы, динамические оверлеи, расширенные панели) могут ломать Game Mode или вызывать падения Steam‑клиента.[web:133][web:147]</li>
-                <li>Плагины, завязанные на внутренние API SteamOS, могут перестать работать или начать вести себя странно после обновлений, пока разработчики не адаптируются.[web:147]</li>
-                <li>Скрипты и надстройки EmuDeck/эмуляторов иногда конфликтуют с обновлениями SteamOS, особенно в связке Desktop‑режим + Game Mode.[web:146]</li>
-            </ul>
-
-            <p class="section-intro"><strong>Как с этим жить, не отказываясь от удобств:</strong></p>
-            <ul class="steps">
-                <li>Держать список установленных плагинов и помнить, какие из них последние ставились — это помогает быстро найти виновника, если после обновления всё «полетело».[web:133][web:147]</li>
-                <li>При странных багов UI первым делом отключать Decky и плагины, перезапускать Steam‑клиент и смотреть, вернулась ли стабильность.[web:133]</li>
-                <li>Обновлять Decky и плагины не менее регулярно, чем сам SteamOS — разработчики часто срочно выкатывают фиксы после крупных системных апдейтов.[web:147]</li>
-            </ul>
-            <p class="note"><strong>Философия:</strong> считаем плагины «тестовой зоной». Если Deck стал вести себя хуже после экспериментов, сначала откатываем кастомизацию, а уже потом виндим Valve.[web:133][web:147]</p>
-
-            <!-- Блок 6 -->
-            <h3>6. Когда игры не запускаются вообще или с десятой попытки</h3>
-            <p class="section-intro">Бывает, что после определённого обновления игры вдруг перестают запускаться: либо стартуют только с многократной попытки, либо вообще зависают на логотипе или спиннинг‑анимации.[web:141][web:143]</p>
-
-            <p class="section-intro"><strong>Как это выглядит на практике:</strong></p>
-            <ul class="steps">
-                <li>Игра не стартует с первого раза, но всё‑таки запускается после нескольких повторных запусков подряд.[web:141]</li>
-                <li>Deck зависает на логотипе Steam Deck или бесконечной анимации запуска игры, иногда в связке с подключённым внешним контроллером.[web:143]</li>
-                <li>Ситуация появляется после конкретной версии SteamOS и может исчезнуть в одном из последующих патчей.[web:141]</li>
-            </ul>
-
-            <p class="section-intro"><strong>Промежуточные решения:</strong></p>
-            <ul class="steps">
-                <li>Пробовать разные Proton‑версии для проблемной игры, особенно если она не имеет статуса «Verified».[web:137][web:141]</li>
-                <li>Временно отключить внешние геймпады и доп. устройства, если баг воспроизводится в связке с ними.[web:143]</li>
-                <li>Следить за баг‑репортами по конкретной версии SteamOS; если игра массово не запускается у многих — шанс, что это уже в работе у Valve.[web:141][web:144]</li>
-            </ul>
-            <p class="note"><strong>Смысл:</strong> если игры перестали запускаться именно после определённого апдейта и раньше работали стабильно, это почти всегда программный баг, а не аппаратная смерть Deck.[web:141][web:144]</p>
-
-            <!-- Блок 7 -->
-            <h3>7. Когда нужны тяжёлые меры: recovery, factory reset и обращение в поддержку</h3>
-            <p class="section-intro">Иногда программная проблема заходит слишком далеко: система нестабильна, баги воспроизводятся на чистом профиле без плагинов, а откаты и патчи не помогают.[web:139][web:145]</p>
-
-            <p class="section-intro"><strong>Когда есть смысл задуматься о радикальных шагах:</strong></p>
-            <ul class="steps">
-                <li>Системные лаги и зависания происходят даже при минимуме игр, без Decky/EmuDeck, на «голом» SteamOS.[web:133][web:139]</li>
-                <li>Игры массово не запускаются или падают, хотя на других Deck с той же версией ОС работают нормально.[web:141][web:139]</li>
-                <li>После нескольких обновлений и откатов ситуация не меняется или становится хуже, а баги уже сильно мешают использовать устройство.[web:145][web:139]</li>
-            </ul>
-
-            <p class="section-intro"><strong>Что тогда делать:</strong></p>
-            <ul class="steps">
-                <li>Сделать резервные копии нужных данных (сейвы, конфиги, важные файлы в Desktop‑режиме) — лучше заранее организовать базовый бэкап.</li>
-                <li>Использовать официальный recovery‑образ SteamOS для восстановления системы; это помогает исправить повреждённые системные файлы и кривые состояния обновлений.[web:139][web:146]</li>
-                <li>Если не жалко данных — выполнить factory reset через настройки SteamOS или recovery‑опции, вернув Deck к заводскому состоянию.[web:145][web:139]</li>
-                <li>При сохранении странностей даже после чистой системы — зафиксировать симптомы и версию ОС и обратиться в поддержку, чтобы исключить аппаратный дефект.[web:139]</li>
-            </ul>
-            <p class="note"><strong>Принцип:</strong> радикальные меры — это последний шаг в цепочке. Сначала все мягкие обходные пути, потом recovery, и только в самом конце — factory reset и, если нужно, сервис.[web:139][web:145]</p>
-        </article>
-
-        <!-- ПРАВАЯ КОЛОНКА / САЙДБАР -->
-        <aside class="card side-section">
-            <h2>Шпаргалка: как пережить баги SteamOS</h2>
-            <p class="tagline">Короткий план действий, который помогает не паниковать при очередном странном поведении Steam Deck.</p>
-
-            <div class="badge-block">
-                <span class="label"><span class="label-dot"></span>5–15 минут на базовую диагностику</span>
-                <span class="label label-soft"><span class="label-dot"></span>Подходит для большинства программных глюков</span>
-            </div>
-
-            <ul class="checklist">
-                <li>
-                    <span class="checklist-icon">1</span>
-                    <span><strong>Перезагрузка и обновления.</strong> Жёстко перезапустить Deck при фризе, затем проверить наличие обновлений SteamOS и клиента Steam.</span>
-                </li>
-                <li>
-                    <span class="checklist-icon">2</span>
-                    <span><strong>Отключить «обвес».</strong> Выключить или удалить Decky‑плагины, временно убрать EmuDeck и посмотреть, поведёт ли себя система стабильнее.[web:133][web:147]</span>
-                </li>
-                <li>
-                    <span class="checklist-icon">3</span>
-                    <span><strong>Проверить, локален ли баг.</strong> Сравнить поведение других игр/режимов, посмотреть, нет ли массовых жалоб на конкретную версию SteamOS.[web:138][web:144]</span>
-                </li>
-                <li>
-                    <span class="checklist-icon">4</span>
-                    <span><strong>Попробовать другую ветку или подождать хотфикс.</strong> При критичном баге либо откатиться, либо обновиться до беты с фиксом, если это приемлемо.[web:140][web:145]</span>
-                </li>
-                <li>
-                    <span class="checklist-icon">5</span>
-                    <span><strong>Только потом думать о recovery.</strong> Если баг переживается костылями, лучше подождать патч, чем сразу сносить всю систему.[web:139][web:145]</span>
-                </li>
-            </ul>
-
-            <div class="divider"></div>
-
-            <h3>Сигналы, что это «обычный баг», а не смерть железа</h3>
-            <p class="tagline">По этим признакам можно понять, что проблема почти точно программная.</p>
-
-            <ul class="checklist">
-                <li>
-                    <span class="checklist-icon checklist-icon--danger">?</span>
-                    <span>Баг появился сразу после обновления SteamOS или установки плагина и не связан с физическими ударами/перегревом.[web:138][web:144][web:147]</span>
-                </li>
-                <li>
-                    <span class="checklist-icon checklist-icon--danger">?</span>
-                    <span>Другие пользователи с той же версией ОС массово жалуются на похожие симптомы.[web:138][web:144]</span>
-                </li>
-                <li>
-                    <span class="checklist-icon checklist-icon--danger">?</span>
-                    <span>Recovery или чистая система решают проблему, по крайней мере временно.[web:139]</span>
-                </li>
-            </ul>
-
-            <div class="divider"></div>
-
-            <h3>Мини‑план профилактики программных проблем SteamOS</h3>
-            <p class="tagline">Несколько привычек, которые делают жизнь с Deck спокойнее.</p>
-
-            <div class="stat">
-                <span>Осторожные обновления:</span>
-                <span>не обновляться в ноль‑день, если нужна стабильность.[web:138][web:144]</span>
-            </div>
-            <div class="stat">
-                <span>Разумная кастомизация:</span>
-                <span>минимум критичных плагинов, которые ломают UI.[web:133][web:147]</span>
-            </div>
-            <div class="stat">
-                <span>Аккуратная библиотека:</span>
-                <span>не собирать сотни динамических коллекций без нужды.[web:135]</span>
-            </div>
-            <div class="stat">
-                <span>Регулярные бэкапы:</span>
-                <span>сейвы и важные файлы всегда можно вернуть после reset.[web:139][web:146]</span>
-            </div>
-            <div class="stat">
-                <span>Готовность к recovery:</span>
-                <span>понимать, как пользоваться образами и rollback‑ом.[web:139][web:145]</span>
-            </div>
-
-            <p class="note"><strong>Итог:</strong> SteamOS на Deck периодически подбрасывает сюрпризы, но в большинстве случаев это управляемые вещи: достаточно иметь план, как отключить обвес, переждать патчи или аккуратно откатить систему, не превращая каждый баг в повод списывать устройство в утиль.[web:133][web:139][web:144]</p>
-
-            <div class="footer-note">
-                Этот HTML‑гайд можно использовать как основу для лендинга о программных проблемах Steam Deck, обучающей статьи или PDF‑памятки для техподдержки, дополнив его скриншотами багов, примерами настроек и инструкциями по recovery‑образам.
-            </div>
-        </aside>
-    </section>
-</div>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "Типичные программные баги SteamOS на Steam Deck и как с ними жить",
+    "description": "Подробный гид по типичным багам SteamOS на Steam Deck и аккуратным способам с ними жить: интерфейс, Proton, обновления, Desktop Mode, сеть и сон.",
+    "totalTime": "PT45M",
+    "step": [
+      {
+        "@type": "HowToStep",
+        "name": "Введение: почему баги — это почти нормально",
+        "text": "Объяснение специфики SteamOS и цели гайда.",
+        "url": "#step-1"
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Карта типичных багов SteamOS",
+        "text": "Классификация багов по категориям: интерфейс, игры, обновления, Desktop Mode, сеть, сон.",
+        "url": "#step-2"
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Часть 1. Лаги и зависания интерфейса",
+        "text": "Причины тормозов меню и Overlay и базовые способы лечения.",
+        "url": "#step-3"
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Часть 2. Баги игр из‑за Proton",
+        "text": "Что делать, если проблема только в одной игре: Proton, кэш, моды.",
+        "url": "#step-4"
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Часть 3. Обновления SteamOS",
+        "text": "Как переживать апдейты и ветки обновлений без лишнего стресса.",
+        "url": "#step-5"
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Часть 4. Desktop Mode",
+        "text": "Типичные глюки рабочего стола и как их минимизировать.",
+        "url": "#step-6"
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Часть 5. Сон и пробуждение",
+        "text": "Баги после сна и подход к их обходу.",
+        "url": "#step-7"
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Часть 6. Сетевые баги",
+        "text": "Проблемы со Steam, загрузками и Remote Play и базовый чек‑лист.",
+        "url": "#step-8"
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Часть 7. Хранилище",
+        "text": "Баги из‑за нехватки места и как с этим справляться.",
+        "url": "#step-9"
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Сценарные кейсы",
+        "text": "Практические сценарии: когда тормозит интерфейс, ломается игра, глючит Desktop.",
+        "url": "#step-10"
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Сводная таблица: жить или чинить радикально",
+        "text": "Как отличить терпимый баг от причины для переустановки.",
+        "url": "#step-11"
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Лайфхаки по философии SteamOS",
+        "text": "Советы по спокойной жизни с периодическими багами.",
+        "url": "#step-12"
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Краткий универсальный чек‑лист",
+        "text": "Набор шагов на случай любого «странного» бага SteamOS.",
+        "url": "#step-13"
+      }
+    ],
+    "image": "https://i.postimg.cc/T17S8gTw/resize-m-mfit-w-450-h-450.png"
+  }
+  </script>
 </body>
 </html>
