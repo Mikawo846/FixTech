@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Шум, перегрев и вылеты игр: базовая диагностика любой приставки своими силами</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Пошаговая базовая диагностика шума, перегрева и вылетов игр на любой игровой приставке: PS5, Xbox, Nintendo Switch, Steam Deck. Простые проверки, чистка, вентиляция, питание и когда пора в сервис.">
+    <style>
+        :root {
+            --bg: #020617;
+            --bg-alt: #050816;
+            --card: #0b1220;
+            --accent: #22c55e;
+            --accent-soft: rgba(34,197,94,0.09);
+            --accent-strong: rgba(34,197,94,0.22);
+            --danger: #f97373;
+            --success: #38bdf8;
+            --warn: #facc15;
+            --text-main: #e5e7eb;
+            --text-soft: #9ca3af;
+            --border-soft: #111827;
+            --code-bg: #020617;
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            margin: 0;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            background: radial-gradient(circle at top, #111827 0, #020617 55%, #000 100%);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        a { color: var(--accent); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        .page {
+            max-width: 1120px;
+            margin: 0 auto;
+            padding: 32px 16px 48px;
+        }
+
+        .hero {
+            display: grid;
+            grid-template-columns: minmax(0, 3fr) minmax(0, 2.1fr);
+            gap: 32px;
+            align-items: center;
+            margin-bottom: 40px;
+        }
+
+        .hero-text h1 {
+            font-size: 30px;
+            margin: 0 0 12px;
+        }
+
+        .hero-text h1 strong { color: var(--accent); }
+
+        .hero-text p {
+            margin: 4px 0;
+            color: var(--text-soft);
+        }
+
+        .hero-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 12px;
+        }
+
+        .badge {
+            font-size: 12px;
+            padding: 4px 10px;
+            border-radius: 999px;
+            border: 1px solid var(--border-soft);
+            background: rgba(15,23,42,0.9);
+            color: var(--text-soft);
+            backdrop-filter: blur(6px);
+        }
+
+        .badge--accent {
+            border-color: var(--accent);
+            background: var(--accent-soft);
+            color: #bbf7d0;
+        }
+
+        .badge--danger {
+            border-color: var(--danger);
+            background: rgba(248,113,113,0.09);
+            color: #fecaca;
+        }
+
+        .badge--success {
+            border-color: var(--success);
+            background: rgba(56,189,248,0.1);
+            color: #e0f2fe;
+        }
+
+        .hero-image {
+            border-radius: 18px;
+            overflow: hidden;
+            border: 1px solid var(--border-soft);
+            background: radial-gradient(circle at top, #1f2937 0, #020617 100%);
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero-image img {
+            max-width: 100%;
+            border-radius: 12px;
+            display: block;
+        }
+
+        .hero-note {
+            font-size: 12px;
+            color: var(--text-soft);
+            margin-top: 6px;
+            text-align: center;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: minmax(0, 2.3fr) minmax(0, 1.5fr);
+            gap: 24px;
+        }
+
+        .card {
+            background: radial-gradient(circle at top left, rgba(148,163,184,0.08), transparent 55%);
+            border-radius: 18px;
+            border: 1px solid var(--border-soft);
+            padding: 20px 18px 18px;
+            box-shadow: 0 18px 40px rgba(15,23,42,0.9);
+        }
+
+        .card h2 {
+            font-size: 20px;
+            margin: 0 0 10px;
+        }
+
+        .card h3 {
+            font-size: 16px;
+            margin: 18px 0 6px;
+        }
+
+        .tagline {
+            font-size: 13px;
+            color: var(--text-soft);
+            margin-bottom: 10px;
+        }
+
+        .highlight {
+            border-left: 3px solid var(--accent);
+            padding-left: 10px;
+            margin: 8px 0 14px;
+            font-size: 14px;
+            color: var(--text-soft);
+        }
+
+        .section-intro {
+            font-size: 14px;
+            color: var(--text-soft);
+            margin: 4px 0 10px;
+        }
+
+        .quick-list {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 10px;
+            font-size: 13px;
+            margin: 10px 0 12px;
+        }
+
+        .quick-list ul {
+            margin: 0;
+            padding-left: 18px;
+        }
+
+        .quick-list li { margin-bottom: 4px; }
+
+        .pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 12px;
+            padding: 4px 10px;
+            border-radius: 999px;
+            border: 1px solid rgba(148,163,184,0.45);
+            background: rgba(15,23,42,0.9);
+            margin-right: 6px;
+            margin-bottom: 4px;
+        }
+
+        .pill-bullet {
+            width: 6px;
+            height: 6px;
+            border-radius: 999px;
+            background: var(--accent);
+        }
+
+        .pill-danger .pill-bullet { background: var(--danger); }
+        .pill-success .pill-bullet { background: var(--success); }
+        .pill-warn .pill-bullet { background: var(--warn); }
+
+        .table-wrapper {
+            margin-top: 12px;
+            border-radius: 14px;
+            overflow: hidden;
+            border: 1px solid var(--border-soft);
+            background: rgba(15,23,42,0.96);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 13px;
+        }
+
+        thead {
+            background: linear-gradient(to right, rgba(34,197,94,0.2), rgba(56,189,248,0.34));
+        }
+
+        th, td {
+            padding: 6px 8px;
+            text-align: left;
+            border-bottom: 1px solid #111827;
+        }
+
+        th {
+            font-weight: 600;
+            color: #e5e7eb;
+            white-space: nowrap;
+        }
+
+        tbody tr:nth-child(odd) { background: rgba(15,23,42,0.96); }
+        tbody tr:nth-child(even) { background: rgba(10,16,32,0.96); }
+
+        .steps {
+            margin: 10px 0 6px;
+            padding-left: 18px;
+            font-size: 13px;
+        }
+
+        .steps li { margin-bottom: 5px; }
+
+        .note {
+            font-size: 12px;
+            color: var(--text-soft);
+            margin-top: 6px;
+        }
+
+        .note strong { color: var(--warn); }
+
+        .checklist {
+            list-style: none;
+            padding-left: 0;
+            margin: 8px 0 4px;
+            font-size: 13px;
+        }
+
+        .checklist li {
+            margin-bottom: 6px;
+            display: flex;
+            align-items: flex-start;
+            gap: 6px;
+        }
+
+        .checklist-icon {
+            width: 15px;
+            height: 15px;
+            border-radius: 4px;
+            border: 1px solid rgba(148,163,184,0.6);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 11px;
+            color: var(--accent);
+            flex-shrink: 0;
+        }
+
+        .checklist-icon--danger {
+            color: var(--danger);
+            border-color: rgba(248,113,113,0.8);
+        }
+
+        .badge-block {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-bottom: 10px;
+        }
+
+        .label {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 2px 8px;
+            border-radius: 999px;
+            font-size: 11px;
+            border: 1px solid rgba(148,163,184,0.6);
+            background: rgba(15,23,42,0.96);
+        }
+
+        .label-dot {
+            width: 7px;
+            height: 7px;
+            border-radius: 999px;
+            background: var(--accent);
+        }
+
+        .label-soft { opacity: 0.92; }
+
+        .side-section { font-size: 13px; }
+        .side-section h3 { margin-top: 14px; }
+
+        .stat {
+            display: flex;
+            justify-content: space-between;
+            font-size: 12px;
+            margin: 2px 0;
+            color: var(--text-soft);
+        }
+
+        .stat span:first-child { opacity: 0.9; }
+
+        .footer-note {
+            margin-top: 18px;
+            font-size: 12px;
+            color: var(--text-soft);
+            border-top: 1px dashed #1f2937;
+            padding-top: 10px;
+        }
+
+        .divider {
+            margin: 16px 0 10px;
+            border-top: 1px dashed #1e293b;
+        }
+
+        @media (max-width: 920px) {
+            .hero { grid-template-columns: minmax(0, 1fr); }
+            .grid { grid-template-columns: minmax(0, 1fr); }
+            .hero-image { order: -1; }
+        }
+
+        @media (max-width: 560px) {
+            .page { padding: 20px 12px 32px; }
+            .hero-text h1 { font-size: 24px; }
+            .quick-list { grid-template-columns: minmax(0, 1fr); }
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-text">
+            <h1><strong>Шум, перегрев и вылеты игр</strong>: базовая диагностика любой приставки своими силами</h1>
+            <p>Этот гайд помогает понять, что делать, когда приставка — PS5, Xbox, Nintendo Switch или Steam Deck — стала сильно шуметь, греться и выбрасывать из игр.</p>
+            <p>Разбираются универсальные причины: плохая вентиляция, пыль, перегретый чип, уставший вентилятор, тяжёлые игры и проблемы с питанием, а также пошаговый алгоритм диагностики до того, как нести устройство в сервис.</p>
+
+            <div class="hero-badges">
+                <span class="badge badge--accent">PS5 • Xbox • Switch • Steam Deck</span>
+                <span class="badge badge--success">Шум • Перегрев • Крэши</span>
+                <span class="badge badge--danger">Только безопасные действия дома</span>
+            </div>
+        </div>
+
+        <div>
+            <div class="hero-image">
+                <img src="https://i.postimg.cc/N0dnwH8w/resize-m-mfit-w-450-h-450.png" alt="Шум, перегрев и вылеты игр: базовая диагностика любой приставки своими силами">
+            </div>
+            <div class="hero-note">Картинку можно заменить на локальный файл с тем же разрешением, если делаете лендинг или статью.</div>
+        </div>
+    </section>
+
+    <section class="grid">
+        <!-- ОСНОВНОЙ КОНТЕНТ -->
+        <article class="card">
+            <h2>Как связаны шум, температура и вылеты игр</h2>
+            <p class="tagline">Вентилятор начинает шуметь, когда приставке жарко, а вылеты игр и самоперезагрузки часто оказываются защитной реакцией на перегрев или сбои питания.[web:191][web:194][web:195][web:197][web:200][web:201][web:203]</p>
+            <p class="highlight">Базовая диагностика всегда идёт по одной линии: 1) место, где стоит приставка; 2) чистота и забитость пылью; 3) режим работы и нагрузка игр; 4) питание и кабели. Всё остальное — это уже сервис и разборка.</p>
+
+            <div class="quick-list">
+                <div>
+                    <strong>Что разберём:</strong>
+                    <ul>
+                        <li>Как отличить нормальный шум вентилятора от тревожного.</li>
+                        <li>Проверка вентиляции и правильного расположения приставки.</li>
+                        <li>Пыль, забитые решётки и базовая чистка без вскрытия.</li>
+                        <li>Тяжёлые игры, настройки и влияние FPS на нагрев.</li>
+                        <li>Питание, розетки, блоки питания и крэши «по питанию».</li>
+                        <li>Когда пора остановиться и не лезть внутрь самому.</li>
+                    </ul>
+                </div>
+                <div>
+                    <strong>Подходит для:</strong>
+                    <div class="pill pill-success"><span class="pill-bullet"></span>PS5 / PS4</div>
+                    <div class="pill"><span class="pill-bullet"></span>Xbox Series / One</div>
+                    <div class="pill"><span class="pill-bullet"></span>Nintendo Switch / OLED / Lite</div>
+                    <div class="pill pill-success"><span class="pill-bullet"></span>Steam Deck и другие портативки</div>
+                </div>
+            </div>
+
+            <!-- Блок 1 -->
+            <h3>1. Шум вентилятора: нормальный или нет?</h3>
+            <p class="section-intro">Современные приставки умеют временно раскручивать вентилятор сильнее в тяжёлых сценах — это нормально. Тревожно, когда шум стал заметно сильнее обычного и не зависит от нагрузки.[web:194][web:195][web:200][web:201][web:203]</p>
+
+            <p class="section-intro"><strong>Нормальный шум:</strong></p>
+            <ul class="steps">
+                <li>Вентилятор слышно только в тяжёлых играх, а в меню и простых проектах он работает тише.[web:194][web:201][web:196]</li>
+                <li>Шум ровный, без дребезга, писка, свиста или «трения».</li>
+                <li>Консоль не выдаёт предупреждений о перегреве и не выключается сама по себе.</li>
+            </ul>
+
+            <p class="section-intro"><strong>Тревожный шум:</strong></p>
+            <ul class="steps">
+                <li>Вентилятор почти всегда работает «на взлёт», даже в меню и при малой нагрузке.[web:194][web:195][web:200][web:201][web:203]</li>
+                <li>Слышен свист, скрежет, вибрация — похоже на забитую пылью крыльчатку или уставший подшипник вентилятора.[web:190][web:192][web:195][web:197]</li>
+                <li>Шум сопровождается вылетами игр, чёрным экраном, отключением консоли — это уже признаки перегрева или проблем охлаждения.[web:191][web:193][web:194][web:195][web:197][web:200][web:203]</li>
+            </ul>
+            <p class="note"><strong>Вывод:</strong> если шум растёт вместе с нагрузкой и утихает в меню — чаще всего всё нормально. Если приставка орёт всегда и при этом греется и вылетает — пора к диагностике.</p>
+
+            <!-- Блок 2 -->
+            <h3>2. Проверяем место установки и вентиляцию</h3>
+            <p class="section-intro">Самая частая причина перегрева — приставку поставили «куда красиво», а не «где ей дышится»: тесные ниши, закрытые шкафы, мягкие поверхности.[web:195][web:197][web:200][web:201][web:203]</p>
+
+            <p class="section-intro"><strong>Базовые требования для любой приставки:</strong></p>
+            <ul class="steps">
+                <li>Минимум 10–15 см свободного пространства вокруг вентиляционных отверстий, особенно сзади и по бокам.[web:195][web:197][web:200][web:201][web:203]</li>
+                <li>Никаких ковров, пледов, мягких подставок прямо под приставкой: они перекрывают нижние/боковые воздухозаборы и держат тепло.[web:195][web:200][web:203]</li>
+                <li>Никаких закрытых ниш и шкафчиков без притока воздуха: горячий воздух должен уходить в комнату, а не гулять по замкнутой коробке.[web:195][web:197][web:200][web:201][web:203]</li>
+            </ul>
+
+            <p class="section-intro"><strong>Быстрая проверка:</strong></p>
+            <ul class="steps">
+                <li>На время теста поставьте приставку на открытую твёрдую поверхность (стол, открытая полка), с зазором вокруг неё.</li>
+                <li>Поиграйте 20–30 минут в ту же тяжёлую игру и посмотрите, изменился ли шум/нагрев и частота вылетов.[web:195][web:197][web:200][web:203]</li>
+            </ul>
+            <p class="note"><strong>Смысл:</strong> если приставка в открытом положении ведёт себя гораздо спокойнее, виноват был не «плохой консольный кулер», а шкаф или ковёр.</p>
+
+            <!-- Блок 3 -->
+            <h3>3. Пыль и забитые решётки: чистка без вскрытия</h3>
+            <p class="section-intro">Пыль — враг номер один любой приставки. Она забивает решётки, радиаторы и вентилятор, ухудшает теплоотвод и заставляет кулер крутиться на максимум.[web:195][web:197][web:200][web:190][web:192][web:203]</p>
+
+            <p class="section-intro"><strong>Что можно сделать дома без разбора корпуса:</strong></p>
+            <ul class="steps">
+                <li>Полностью выключить приставку и вытащить её из розетки (или отключить блок питания).[web:195][web:200][web:203]</li>
+                <li>Осмотреть все видимые вентиляционные отверстия и порты: часто там прямо видны слои пыли.[web:195][web:197][web:190][web:192]</li>
+                <li>Использовать баллон с сжатым воздухом и аккуратно выдуть пыль из решёток, не поднося сопло слишком близко и не раскручивая вентилятор до безумия.[web:195][web:197][web:190][web:192][web:203]</li>
+                <li>Мягкой сухой кистью или щёткой аккуратно пройтись по решёткам, чтобы помочь пыли вылететь наружу.</li>
+            </ul>
+
+            <p class="section-intro"><strong>Когда лучше не лезть внутрь:</strong></p>
+            <ul class="steps">
+                <li>Если приставка на гарантии и разборка явно её лишит — ограничиться внешней чисткой и, при необходимости, обратиться в авторизованный сервис.[web:195][web:197][web:203][web:194]</li>
+                <li>Если слышны странные звуки вентилятора (гул, треск, скрежет) — возможен износ подшипника, это уже ремонтный уровень.[web:191][web:194][web:195][web:197][web:190][web:192]</li>
+            </ul>
+            <p class="note"><strong>Итог:</strong> даже простая «наружная» чистка раз в несколько месяцев заметно снижает риск перегрева и падения FPS на старших консолях и портативках.[web:195][web:197][web:200][web:203]</p>
+
+            <!-- Блок 4 -->
+            <h3>4. Игры, настройки и нагрузка: не все проекты одинаково тяжёлые</h3>
+            <p class="section-intro">Тяжёлые игры нагружают APU/GPU сильнее, чем простые инди — это нормально. Но если вылеты и перегрев происходят только в паре конкретных проектов, важно посмотреть на настройки и режимы работы.[web:191][web:194][web:195][web:196][web:200]</p>
+
+            <p class="section-intro"><strong>Как нагрузка влияет на симптомы:</strong></p>
+            <ul class="steps">
+                <li>Высокий FPS и режимы 4K/60/120 Гц требуют от приставки максимума, повышая температуру и шум вентилятора.[web:194][web:195][web:196][web:200]</li>
+                <li>Некоторые игры сами по себе плохо оптимизированы и более склонны к перегреву и крэшам, чем другие, даже на той же приставке.[web:191][web:194]</li>
+            </ul>
+
+            <p class="section-intro"><strong>Что можно сделать без вмешательства в железо:</strong></p>
+            <ul class="steps">
+                <li>Переключить игру из режима «производительность» в «качество» или наоборот, в зависимости от того, где нагрузка меньше.[web:194][web:196][web:200]</li>
+                <li>Отключить лишние визуальные фичи, если игра это позволяет (например, в меню игры на PC‑подобных платформах вроде Steam Deck).[web:196][web:191]</li>
+                <li>При наличии системных лимитов FPS (Steam Deck, некоторые режимы PS5/Series) ограничить кадры до стабильных значений вместо попыток «жать 60 любой ценой».[web:196][web:191]</li>
+            </ul>
+            <p class="note"><strong>Смысл:</strong> если приставка стабильно ведёт себя нормально во всех играх, кроме одной‑двух, вполне возможно, проблема именно в этих проектах, а не в самой консоли.</p>
+
+            <!-- Блок 5 -->
+            <h3>5. Питание, блоки, удлинители: скрытая причина крэшей</h3>
+            <p class="section-intro">Резкие вылеты, выключения и перезапуски могут происходить не только из‑за температуры, но и из‑за проблем с питанием: слабая розетка, перегруженный удлинитель, уставший блок питания.[web:191][web:197][web:195][web:199][web:203]</p>
+
+            <p class="section-intro"><strong>Быстрые проверки по питанию:</strong></p>
+            <ul class="steps">
+                <li>Подключить приставку напрямую к стеновой розетке, минуя старые удлинители, тройники и сетевые фильтры, и посмотреть, исчезли ли случайные перезагрузки.[web:197][web:195][web:199]</li>
+                <li>Убедиться, что по тому же удлинителю не работают мощные электроприборы (обогреватели, чайники, микроволновки), которые просаживают напряжение.[web:197][web:195][web:199][web:203]</li>
+                <li>Проверить целостность кабеля питания и, при возможности, протестировать с другим совместимым кабелем/блоком.[web:197][web:195]</li>
+            </ul>
+
+            <p class="section-intro"><strong>Симптомы «по питанию»:</strong></p>
+            <ul class="steps">
+                <li>Консоль резко выключается без предупреждений на экране и может не включаться какое‑то время, пока «остынет».</li>
+                <li>Перезагрузки не зависят от нагрузки конкретной игры, могут случиться и в меню, и при установках.[web:191][web:197][web:195][web:199]</li>
+            </ul>
+            <p class="note"><strong>Вывод:</strong> иногда достаточно перевести приставку на отдельную нормальную розетку, чтобы вылеты исчезли — особенно в старых квартирах с перегруженной проводкой.[web:197][web:195][web:199][web:203]</p>
+
+            <!-- Блок 6 -->
+            <h3>6. Базовый чек‑лист по диагностике перегрева и шума</h3>
+            <p class="section-intro">Ниже универсальный алгоритм, который можно применять почти к любой приставке, не вскрывая корпус.</p>
+
+            <ul class="steps">
+                <li>Оценить шум: он усиливается только в игре или даже в меню? Есть ли странные звуки (скрежет, вой, вибрация)?[web:194][web:195][web:200][web:201][web:203][web:190][web:192]</li>
+                <li>Проверить место установки: убрать приставку из шкафа на открытую поверхность, дать ей поработать там и сравнить поведение.[web:195][web:197][web:200][web:201][web:203]</li>
+                <li>Очистить решётки от пыли сжатым воздухом и мягкой кистью, не включая приставку и не раскручивая вентилятор «в разнос».[web:195][web:197][web:190][web:192][web:203]</li>
+                <li>Попробовать другую тяжёлую игру: если вылеты только в одном проекте — вероятна проблема игры, а не железа.[web:191][web:194]</li>
+                <li>Проверить питание: отдельная розетка, другой кабель/удлинитель, отсутствие мощных приборов в той же цепи.[web:197][web:195][web:199][web:203]</li>
+                <li>По возможности обновить систему приставки до актуальной версии — иногда прошивки улучшают управление вентилятором и температурой.[web:196][web:194][web:203]</li>
+            </ul>
+            <p class="note"><strong>Идея:</strong> эти шаги уже дают ответ, относится ли проблема к размещению, пыли, конкретной игре или к более серьёзному дефекту охлаждения/питания.</p>
+
+            <!-- Блок 7 -->
+            <h3>7. Когда пора в сервис и чего лучше не делать самому</h3>
+            <p class="section-intro">Есть граница, за которую не стоит заходить без опыта и инструмента: замена термопасты, обслуживание жидкого металла, разборка корпуса и ремонт блока питания.[web:191][web:194][web:195][web:197][web:200][web:202][web:203]</p>
+
+            <p class="section-intro"><strong>Признаки, что нужен сервис:</strong></p>
+            <ul class="steps">
+                <li>Консоль выключается с предупреждением о перегреве или просто уходит в защиту при любом серьёзном запуске, даже после чистки решёток и улучшения вентиляции.[web:193][web:194][web:195][web:197][web:200][web:201][web:203][web:202]</li>
+                <li>Вентилятор издаёт громкие посторонние звуки или не раскручивается вообще — вероятен физический дефект.[web:191][web:194][web:195][web:197][web:190][web:192]</li>
+                <li>Позже простого теста питания (другая розетка, кабель) остаются самоперезапуски, а в помещении нет явных проблем с электричеством.[web:191][web:197][web:195][web:199]</li>
+            </ul>
+
+            <p class="section-intro"><strong>Чего лучше не делать без опыта:</strong></p>
+            <ul class="steps">
+                <li>Разбирать приставку до радиатора и заменять термопасту/термопрокладки, особенно на системах с жидким металлом (PS5 и др.).[web:194][web:200][web:203]</li>
+                <li>Разбирать блок питания консоли: это и опасно, и легко добивает устройство окончательно.[web:191][web:197][web:195][web:199][web:203]</li>
+                <li>Принудительно блокировать датчики температуры или вентилятор (например, глушить шум подручными средствами).</li>
+            </ul>
+            <p class="note"><strong>Принцип:</strong> домашняя диагностика и чистка — ок, глубокий ремонт и вмешательство в охлаждение и питание лучше доверять сервису, особенно при сохранённой гарантии.</p>
+        </article>
+
+        <!-- САЙДБАР -->
+        <aside class="card side-section">
+            <h2>Шпаргалка по шуму и перегреву приставок</h2>
+            <p class="tagline">Короткий блок, который можно использовать как отдельный чек‑лист для пользователей.</p>
+
+            <div class="badge-block">
+                <span class="label"><span class="label-dot"></span>5–30 минут на базовую диагностику</span>
+                <span class="label label-soft"><span class="label-dot"></span>Подходит для любых консолей</span>
+            </div>
+
+            <ul class="checklist">
+                <li>
+                    <span class="checklist-icon">1</span>
+                    <span><strong>Послушать и понаблюдать.</strong> Шум только под нагрузкой — нормально. Постоянный «турбовзлёт» + вылеты — тревожный сигнал.</span>
+                </li>
+                <li>
+                    <span class="checklist-icon">2</span>
+                    <span><strong>Дать приставке дышать.</strong> Убрать её из шкафа, с ковра, от стены; оставить зазор по всем сторонам.[web:195][web:197][web:200][web:201][web:203]</span>
+                </li>
+                <li>
+                    <span class="checklist-icon">3</span>
+                    <span><strong>Почистить решётки.</strong> Выключить, выдернуть из розетки, пройтись сжатым воздухом и кистью по вентрешёткам.[web:195][web:197][web:190][web:192][web:203]</span>
+                </li>
+                <li>
+                    <span class="checklist-icon">4</span>
+                    <span><strong>Сравнить игры.</strong> Если падает только одна игра — смотреть в сторону её оптимизации и настроек, а не кулера.[web:191][web:194]</span>
+                </li>
+                <li>
+                    <span class="checklist-icon">5</span>
+                    <span><strong>Проверить питание.</strong> Подключить консоль к нормальной розетке без перегруженных удлинителей.[web:197][web:195][web:199][web:203]</span>
+                </li>
+            </ul>
+
+            <div class="divider"></div>
+
+            <h3>Мини‑профилактика, чтобы консоль меньше грелась и шумела</h3>
+            <p class="tagline">Эти привычки сильно продлевают жизнь приставки и экономят нервы.</p>
+
+            <div class="stat">
+                <span>Регулярная чистка решёток:</span>
+                <span>раз в 3–6 месяцев выдувать пыль.[web:195][web:197][web:200][web:203]</span>
+            </div>
+            <div class="stat">
+                <span>Правильное место:</span>
+                <span>открытая полка, а не закрытый шкаф.[web:195][web:197][web:200][web:201][web:203]</span>
+            </div>
+            <div class="stat">
+                <span>Умеренные сессии:</span>
+                <span>перерывы в ультра‑тяжёлых играх в жару.[web:197][web:195][web:200]</span>
+            </div>
+            <div class="stat">
+                <span>Обновления системы:</span>
+                <span>актуальная прошивка улучшает управление кулером.[web:196][web:194][web:203]</span>
+            </div>
+            <div class="stat">
+                <span>Аккуратное питание:</span>
+                <span>качественные кабели и розетки без перегрузки.[web:197][web:195][web:199][web:203]</span>
+            </div>
+
+            <p class="note"><strong>Результат:</strong> при таком подходе подавляющее большинство проблем «шумит, греется, вылетает» можно либо решить дома, либо чётко понять, что пора обратиться в сервис, а не гадать, «сломалась ли приставка».</p>
+
+            <div class="footer-note">
+                Этот HTML‑гайд можно использовать как основу для универсальной памятки по перегреву и шуму приставок, лендинга или PDF‑инструкции, дополнив его отдельными блоками по конкретным моделям (PS5, Xbox, Switch, Steam Deck) и примерами допустимых температур и режимов.
+            </div>
+        </aside>
+    </section>
+</div>
+</body>
+</html>
