@@ -1,750 +1,718 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" data-theme="light">
 <head>
-    <meta charset="UTF-8">
-    <title>Основные коды ошибок Nintendo Switch и что они означают простыми словами</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Понятное объяснение основных кодов ошибок Nintendo Switch простыми словами: сеть, eShop, скачивание игр, ошибки карт памяти и системные сбои. Пошаговые советы, что делать в каждом случае.">
-    <style>
-        :root {
-            --bg: #020617;
-            --bg-alt: #050816;
-            --card: #0b1220;
-            --accent: #22c55e;
-            --accent-soft: rgba(34,197,94,0.09);
-            --accent-strong: rgba(34,197,94,0.22);
-            --danger: #f97373;
-            --success: #38bdf8;
-            --warn: #facc15;
-            --text-main: #e5e7eb;
-            --text-soft: #9ca3af;
-            --border-soft: #111827;
-            --code-bg: #020617;
-        }
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YE88Y994NX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-YE88Y994NX');
+  </script>
 
-        * {
-            box-sizing: border-box;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Основные коды ошибок Nintendo Switch и что они означают простыми словами | Экспертный мегагайд</title>
+  <meta name="description" content="Понятный гид по основным кодам ошибок Nintendo Switch: сетевые, системные, проблемы с картриджами, SD‑картой и аккаунтом. Простые объяснения, таблицы, пошаговые решения и чек‑листы.">
 
-        body {
-            margin: 0;
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-            background:
-                radial-gradient(circle at top, #111827 0, #020617 55%, #000 100%);
-            color: var(--text-main);
-            line-height: 1.6;
-        }
+  <!-- Yandex.Metrika counter -->
+  <script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+      m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+      m[i].l=1*new Date();
+      for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+      k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=106225686', 'ym');
 
-        a {
-            color: var(--accent);
-            text-decoration: none;
-        }
+    ym(106225686, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", accurateTrackBounce:true, trackLinks:true});
+  </script>
+  <noscript>
+    <div>
+      <img src="https://mc.yandex.ru/watch/106225686" style="position:absolute; left:-9999px;" alt="Основные коды ошибок Nintendo Switch и что они означают простыми словами - пошаговая инструкция по ремонту">
+    </div>
+  </noscript>
+  <!-- /Yandex.Metrika counter -->
 
-        a:hover {
-            text-decoration: underline;
-        }
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="../styles-header.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
-        .page {
-            max-width: 1120px;
-            margin: 0 auto;
-            padding: 32px 16px 48px;
-        }
+  <style>
+    .guide-content { line-height: 1.7; color: var(--text); }
+    .guide-content h2 { color: var(--primary); margin-top: 30px; margin-bottom: 15px; font-size: 1.5rem; }
+    .guide-content h3 { color: var(--primary-dark); margin-top: 25px; margin-bottom: 12px; font-size: 1.2rem; }
+    .guide-image-block { margin: 20px 0; padding: 15px; background: var(--background); border-radius: var(--border-radius); border: 1px solid var(--border); text-align: center; }
+    .guide-image-block img { max-width: 100%; height: auto; border-radius: 6px; border: 1px solid var(--border); }
+    .image-caption { margin-top: 10px; font-size: 0.85rem; color: var(--text-light); font-style: italic; }
+    .pro-tips { background: rgba(3, 74, 79, 0.05); padding: 15px; border-radius: 6px; margin: 20px 0; }
+    .pro-tips h4 { color: var(--primary); margin-top: 0; margin-bottom: 12px; font-size: 1.1rem; }
+    .tip-item { display: flex; gap: 8px; margin-bottom: 8px; align-items: flex-start; }
+    .tip-item i { margin-top: 3px; color: var(--primary); }
+    .warning-block {
+      background: #fff3e0;
+      border-left: 5px solid #ff9100;
+      padding: 15px 18px;
+      margin: 22px 0;
+      border-radius: 7px;
+    }
+    table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+    th, td { border: 1px solid var(--border); padding: 8px; text-align: left; vertical-align: top; }
+    th { background: var(--background-light); }
+    .code-like { font-family: "SF Mono", "Consolas", "Menlo", monospace; background: var(--background-light); padding: 2px 4px; border-radius: 4px; }
+    .step-badge {
+      display: inline-block;
+      background: var(--primary);
+      color: #fff;
+      font-size: 0.8rem;
+      padding: 2px 8px;
+      border-radius: 999px;
+      margin-right: 6px;
+    }
+    .faq-item { margin-bottom: 16px; }
+    .faq-item strong { display: block; margin-bottom: 4px; }
+    .scenario-block {
+      background: var(--background-light);
+      border-radius: 8px;
+      padding: 14px 16px;
+      margin-bottom: 16px;
+      border: 1px solid var(--border);
+    }
+    .scenario-title {
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+    @media (max-width: 768px) {
+      .guide-content h2 { font-size: 1.4rem; margin-top: 25px; }
+      .guide-image-block { padding: 12px; margin: 15px 0; }
+      table, th, td { font-size: 0.95rem; }
+    }
+  </style>
 
-        .hero {
-            display: grid;
-            grid-template-columns: minmax(0, 3fr) minmax(0, 2.1fr);
-            gap: 32px;
-            align-items: center;
-            margin-bottom: 40px;
-        }
-
-        .hero-text h1 {
-            font-size: 32px;
-            margin: 0 0 12px;
-        }
-
-        .hero-text h1 strong {
-            color: var(--accent);
-        }
-
-        .hero-text p {
-            margin: 4px 0;
-            color: var(--text-soft);
-        }
-
-        .hero-badges {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            margin-top: 12px;
-        }
-
-        .badge {
-            font-size: 12px;
-            padding: 4px 10px;
-            border-radius: 999px;
-            border: 1px solid var(--border-soft);
-            background: rgba(15,23,42,0.9);
-            color: var(--text-soft);
-            backdrop-filter: blur(6px);
-        }
-
-        .badge--accent {
-            border-color: var(--accent);
-            background: var(--accent-soft);
-            color: #bbf7d0;
-        }
-
-        .badge--danger {
-            border-color: var(--danger);
-            background: rgba(248,113,113,0.09);
-            color: #fecaca;
-        }
-
-        .badge--success {
-            border-color: var(--success);
-            background: rgba(56,189,248,0.1);
-            color: #e0f2fe;
-        }
-
-        .hero-image {
-            border-radius: 18px;
-            overflow: hidden;
-            border: 1px solid var(--border-soft);
-            background: radial-gradient(circle at top, #1f2937 0, #020617 100%);
-            padding: 10px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .hero-image img {
-            max-width: 100%;
-            border-radius: 12px;
-            display: block;
-        }
-
-        .hero-note {
-            font-size: 12px;
-            color: var(--text-soft);
-            margin-top: 6px;
-            text-align: center;
-        }
-
-        .grid {
-            display: grid;
-            grid-template-columns: minmax(0, 2.3fr) minmax(0, 1.5fr);
-            gap: 24px;
-        }
-
-        .card {
-            background:
-                radial-gradient(circle at top left, rgba(148,163,184,0.08), transparent 55%);
-            border-radius: 18px;
-            border: 1px solid var(--border-soft);
-            padding: 20px 18px 18px;
-            box-shadow: 0 18px 40px rgba(15,23,42,0.9);
-        }
-
-        .card h2 {
-            font-size: 20px;
-            margin: 0 0 10px;
-        }
-
-        .card h3 {
-            font-size: 16px;
-            margin: 18px 0 6px;
-        }
-
-        .tagline {
-            font-size: 13px;
-            color: var(--text-soft);
-            margin-bottom: 10px;
-        }
-
-        .highlight {
-            border-left: 3px solid var(--accent);
-            padding-left: 10px;
-            margin: 8px 0 14px;
-            font-size: 14px;
-            color: var(--text-soft);
-        }
-
-        .section-intro {
-            font-size: 14px;
-            color: var(--text-soft);
-            margin: 4px 0 10px;
-        }
-
-        .quick-list {
-            display: grid;
-            grid-template-columns: 1.2fr 1fr;
-            gap: 10px;
-            font-size: 13px;
-            margin: 10px 0 12px;
-        }
-
-        .quick-list ul {
-            margin: 0;
-            padding-left: 18px;
-        }
-
-        .quick-list li {
-            margin-bottom: 4px;
-        }
-
-        .pill {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            font-size: 12px;
-            padding: 4px 10px;
-            border-radius: 999px;
-            border: 1px solid rgba(148,163,184,0.45);
-            background: rgba(15,23,42,0.9);
-            margin-right: 6px;
-            margin-bottom: 4px;
-        }
-
-        .pill-bullet {
-            width: 6px;
-            height: 6px;
-            border-radius: 999px;
-            background: var(--accent);
-        }
-
-        .pill-danger .pill-bullet {
-            background: var(--danger);
-        }
-
-        .pill-success .pill-bullet {
-            background: var(--success);
-        }
-
-        .pill-warn .pill-bullet {
-            background: var(--warn);
-        }
-
-        .table-wrapper {
-            margin-top: 12px;
-            border-radius: 14px;
-            overflow: hidden;
-            border: 1px solid var(--border-soft);
-            background: rgba(15,23,42,0.96);
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            font-size: 13px;
-        }
-
-        thead {
-            background: linear-gradient(to right, rgba(34,197,94,0.2), rgba(56,189,248,0.34));
-        }
-
-        th, td {
-            padding: 6px 8px;
-            text-align: left;
-            border-bottom: 1px solid #111827;
-        }
-
-        th {
-            font-weight: 600;
-            color: #e5e7eb;
-            white-space: nowrap;
-        }
-
-        tbody tr:nth-child(odd) {
-            background: rgba(15,23,42,0.96);
-        }
-
-        tbody tr:nth-child(even) {
-            background: rgba(10,16,32,0.96);
-        }
-
-        .steps {
-            margin: 10px 0 6px;
-            padding-left: 18px;
-            font-size: 13px;
-        }
-
-        .steps li {
-            margin-bottom: 5px;
-        }
-
-        .note {
-            font-size: 12px;
-            color: var(--text-soft);
-            margin-top: 6px;
-        }
-
-        .note strong {
-            color: var(--warn);
-        }
-
-        .code {
-            font-family: ui-monospace, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-            background: var(--code-bg);
-            border-radius: 6px;
-            padding: 1px 4px;
-            font-size: 12px;
-        }
-
-        .badge-block {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 6px;
-            margin-bottom: 10px;
-        }
-
-        .label {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            padding: 2px 8px;
-            border-radius: 999px;
-            font-size: 11px;
-            border: 1px solid rgba(148,163,184,0.6);
-            background: rgba(15,23,42,0.96);
-        }
-
-        .label-dot {
-            width: 7px;
-            height: 7px;
-            border-radius: 999px;
-            background: var(--accent);
-        }
-
-        .label-soft {
-            opacity: 0.92;
-        }
-
-        .checklist {
-            list-style: none;
-            padding-left: 0;
-            margin: 8px 0 4px;
-            font-size: 13px;
-        }
-
-        .checklist li {
-            margin-bottom: 6px;
-            display: flex;
-            align-items: flex-start;
-            gap: 6px;
-        }
-
-        .checklist-icon {
-            width: 15px;
-            height: 15px;
-            border-radius: 4px;
-            border: 1px solid rgba(148,163,184,0.6);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 11px;
-            color: var(--accent);
-            flex-shrink: 0;
-        }
-
-        .checklist-icon--danger {
-            color: var(--danger);
-            border-color: rgba(248,113,113,0.8);
-        }
-
-        .side-section {
-            font-size: 13px;
-        }
-
-        .side-section h3 {
-            margin-top: 14px;
-        }
-
-        .stat {
-            display: flex;
-            justify-content: space-between;
-            font-size: 12px;
-            margin: 2px 0;
-            color: var(--text-soft);
-        }
-
-        .stat span:first-child {
-            opacity: 0.9;
-        }
-
-        .footer-note {
-            margin-top: 18px;
-            font-size: 12px;
-            color: var(--text-soft);
-            border-top: 1px dashed #1f2937;
-            padding-top: 10px;
-        }
-
-        .divider {
-            margin: 16px 0 10px;
-            border-top: 1px dashed #1e293b;
-        }
-
-        @media (max-width: 920px) {
-            .hero {
-                grid-template-columns: minmax(0, 1fr);
-            }
-            .grid {
-                grid-template-columns: minmax(0, 1fr);
-            }
-            .hero-image {
-                order: -1;
-            }
-        }
-
-        @media (max-width: 560px) {
-            .page {
-                padding: 20px 12px 32px;
-            }
-            .hero-text h1 {
-                font-size: 26px;
-            }
-            .quick-list {
-                grid-template-columns: minmax(0, 1fr);
-            }
-        }
-    </style>
+  <script async src="https://timeweb.cloud/api/v1/cloud-ai/agents/3cc03620-d051-4d8d-b5af-f7b6cd083a35/embed.js?collapsed=true"></script>
 </head>
 <body>
-<div class="page">
+  <header class="header">
+    <div class="container">
+      <div class="header__inner">
+        <a href="../index.html" class="logo">
+          <span class="logo__icon"></span>
+          <span class="logo__text">Repairo</span>
+        </a>
+        <nav class="nav">
+          <ul class="nav__list">
+            <li><a href="../tv.html" class="nav__link">Телевизоры</a></li>
+            <li><a href="../cameras.html" class="nav__link">Фотоаппараты</a></li>
+            <li><a href="../consoles.html" class="nav__link">Приставки</a></li>
+            <li><a href="../laptops.html" class="nav__link">Ноутбуки</a></li>
+            <li><a href="../smartphones.html" class="nav__link">Смартфоны</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
 
-    <!-- HERO -->
-    <section class="hero">
-        <div class="hero-text">
-            <h1><strong>Основные коды ошибок Nintendo Switch</strong> и что они означают простыми словами</h1>
-            <p>Этот гайд переводит непонятные цифры на экране Nintendo Switch на человеческий язык и показывает, что делать шаг за шагом, не углубляясь в сложную технику.</p>
-            <p>Полезно, если при попытке зайти в интернет, eShop, скачать игру или просто поиграть консоль выдает коды вроде 2137‑8056, 2110‑2003, 2101‑0001 и другие.</p>
+  <section class="guide-page">
+    <div class="container">
+      <div class="breadcrumbs">
+        <a href="../index.html">Главная</a>
+        <i class="fas fa-chevron-right"></i>
+        <a href="../consoles.html">Приставки</a>
+        <i class="fas fa-chevron-right"></i>
+        <span>Основные коды ошибок Nintendo Switch и что они означают простыми словами</span>
+      </div>
 
-            <div class="hero-badges">
-                <span class="badge badge--accent">Nintendo Switch • Коды ошибок</span>
-                <span class="badge badge--success">Объяснение «на пальцах»</span>
-                <span class="badge badge--danger">Безопасные шаги перед сервисом</span>
-            </div>
+      <h1 class="section__title">Основные коды ошибок Nintendo Switch и что они означают простыми словами</h1>
+
+      <div class="guide-meta">
+        <span>
+          <i class="fas fa-gamepad"></i>
+          Понятный справочник по кодам ошибок Nintendo Switch: сетевые, системные, ошибки картриджей и microSD, проблемы с аккаунтом и покупками. Простые объяснения «человеческим» языком, таблицы, пошаговый чек‑лист и FAQ.
+        </span>
+      </div>
+
+      <div class="guide-image-block">
+        <img src="https://i.postimg.cc/fy27WvtT/resize-m-mfit-w-450-h-450.png" alt="Основные коды ошибок Nintendo Switch и что они означают простыми словами">
+        <div class="image-caption">
+          Типичные экраны ошибок Nintendo Switch: коды с дефисами и цифрами, которые пугают на первый взгляд, но в большинстве случаев означает простые вещи — проблемы с сетью, картой памяти или аккаунтом.
+        </div>
+      </div>
+
+      <div class="guide-content">
+
+        <h2 id="step-1">Введение: зачем разбираться в кодах ошибок Switch</h2>
+        <p>
+          Nintendo Switch показывает коды ошибок в формате «числа‑числа‑числа», которые выглядят страшно, но редко означают, что консоль «умерла». В большинстве случаев это аккуратный способ сказать, что не работает интернет, сервер магазина занят, картридж плохо вставлен или карта памяти дала сбой. Понимая общую логику кодов, проще не паниковать и быстро принять правильное решение.
+        </p>
+        <p>
+          Этот гид не превращает владельца Switch в инженера Nintendo, но помогает перевести сухие цифры на понятный язык: «нет интернета», «сервер занят», «карта памяти в шоке» и так далее. Вместо сложных формулировок здесь используются простые пояснения, таблицы и пошаговые сценарии — что проверить первым делом, когда можно справиться своими силами, а когда стоит подумать о сервисе или поддержке Nintendo.
+        </p>
+
+        <h2 id="step-2">Как устроены коды ошибок Nintendo Switch</h2>
+        <p>
+          Почти все коды ошибок Nintendo Switch состоят из трёх блоков чисел, разделённых дефисами. Часто первые цифры отвечают за общую категорию (сеть, система, покупки), а последняя часть уточняет конкретную ситуацию. Знать полную внутреннюю логику не обязательно, но полезно понимать, к какому крупному типу относится ошибка: сетевому, программному, связанному с носителями или аккаунтом.
+        </p>
+        <p>
+          Для быстрой навигации по этому мегагайду коды сгруппированы не по «внутренним» принципам Nintendo, а по тому, как проблема выглядит глазами обычного игрока: «не подключается к Wi‑Fi», «не даёт купить игру», «не видит картридж» и так далее. Это облегчает поиск решения, когда под рукой только Switch и несколько секунд до очередной попытки перезапуска.
+        </p>
+
+        <h2 id="step-3">Крупные группы ошибок: взгляд сверху</h2>
+        <p>
+          Прежде чем переходить к конкретным цифрам, полезно взглянуть на основные категории проблем, которые вообще умеет сигнализировать Nintendo Switch. Таблица ниже — короткая шпаргалка для понимания, в какую сторону смотреть, увидев неизвестный код.
+        </p>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Тип проблемы</th>
+              <th>Как проявляется</th>
+              <th>Примеры кодов</th>
+              <th>Что значит по‑простому</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Сетевые ошибки</td>
+              <td>Не подключается к интернету, не входит в Nintendo Account, не заходит в eShop.</td>
+              <td>2160‑xxxx, 2618‑xxxx и другие серии.</td>
+              <td>Проблемы с Wi‑Fi, роутером, серверами Nintendo или аккаунтом.</td>
+            </tr>
+            <tr>
+              <td>Ошибки носителей</td>
+              <td>Картридж не читается, игры на microSD не запускаются, вылеты при доступе к данным.</td>
+              <td>Серии, относящиеся к картам и слотам.</td>
+              <td>Картридж вставлен плохо, карта памяти с ошибками, слоты требуют внимания.</td>
+            </tr>
+            <tr>
+              <td>Системные ошибки</td>
+              <td>Консоль зависла, перезагрузилась, появилось сообщение о системной ошибке.</td>
+              <td>Коды с упоминанием системной ошибки и перезагрузки.</td>
+              <td>Сбой прошивки, глюк игры, иногда перегрев или редкая внутренняя ошибка.</td>
+            </tr>
+            <tr>
+              <td>Ошибки аккаунта и покупок</td>
+              <td>Не удаётся купить игру, подтвердить карту, загрузить уже купленный контент.</td>
+              <td>Серии, связанные с eShop и платёжными операциями.</td>
+              <td>Банк отклонил платёж, региональные ограничения, проблема с аккаунтом.</td>
+            </tr>
+            <tr>
+              <td>Ошибки контроллеров и аксессуаров</td>
+              <td>Joy‑Con не подключаются, обрывы связи, нестабильная работа док‑станции.</td>
+              <td>Коды подключений и аксессуаров.</td>
+              <td>Разряженные контроллеры, помехи, проблемы с разъёмами.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2 id="step-4">Сетевые коды ошибок: когда Switch не хочет в интернет</h2>
+        <p>
+          Одна из самых частых категорий — сетевые ошибки: консоль не может подключиться к Wi‑Fi, не видит сеть, не проходит авторизацию или выкидывает при попытке запустить онлайн‑игру. На экране появляются коды вроде «2160‑XXXX» или «2618‑XXXX», которые говорят о сетевых неполадках. Не обязательно разбираться, что означает каждое число — достаточно понимать общий смысл: «что‑то не так с интернетом».
+        </p>
+        <p>
+          Важно помнить, что сеть — это не только сам Switch. В цепочке участвуют роутер, провайдер и сервера Nintendo. Поэтому прежде чем обвинять консоль, стоит проверить, работает ли интернет на других устройствах и не проводит ли Nintendo работы, из‑за которых временно недоступен онлайн или магазин.
+        </p>
+
+        <h3>Сетевые ошибки простым языком</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Пример кода</th>
+              <th>Что за ситуация</th>
+              <th>Перевод на «человеческий»</th>
+              <th>Что делать первым</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="code-like">2160‑XXXX</span></td>
+              <td>Общая проблема с подключением к интернету или DNS.</td>
+              <td>Switch не может нормально выйти в интернет.</td>
+              <td>Проверить Wi‑Fi, перезапустить роутер, протестировать интернет на телефоне/ПК.</td>
+            </tr>
+            <tr>
+              <td><span class="code-like">2618‑XXXX</span></td>
+              <td>Ошибка при подключении к онлайн‑игре или голосовому чату.</td>
+              <td>Switch и сервер игры не договорились о соединении.</td>
+              <td>Проверить интернет, попробовать позже, убедиться, что сервер игры не лежит.</td>
+            </tr>
+            <tr>
+              <td>Коды при входе в Nintendo Account</td>
+              <td>Не удаётся войти или подтвердить учётную запись.</td>
+              <td>Либо проблемы с аккаунтом, либо Nintendo сейчас занята.</td>
+              <td>Проверить логин/пароль, войти через браузер, проверить статус сервисов Nintendo.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3>Мини‑чек‑лист при сетевых ошибках</h3>
+        <ul>
+          <li>Убедитесь, что интернет работает на телефоне или компьютере в той же сети.</li>
+          <li>Перезапустите роутер и сам Switch, затем заново подключитесь к Wi‑Fi.</li>
+          <li>Если есть возможность, протестируйте другую сеть (например, раздачу с телефона).</li>
+          <li>Проверьте статус серверов Nintendo и конкретной игры, если проблема только в онлайне.</li>
+          <li>При стабильной работе других устройств, но постоянных ошибках на Switch — стоит переподключить сеть в настройках консоли и заново ввести пароль.</li>
+        </ul>
+
+        <h2 id="step-5">Ошибки картриджей и слота: «картридж не читается»</h2>
+        <p>
+          Вторая по популярности категория — проблемы с физическими картриджами. Консоль показывает сообщение, что «картридж не вставлен» или «невозможно прочитать данные», хотя картридж видно в слоте. Такие ошибки обычно связаны с загрязнёнными контактами, не до конца вставленным картриджем или редкими проблемами самого слота.
+        </p>
+        <p>
+          Хорошая новость в том, что в большинстве случаев дело не в самой консоли, а в картридже. Игрушка могла долго лежать без чехла, покрыться пылью, получить микросколы или просто быть не до конца вставленной. Аккуратная чистка и правильное извлечение/вставка чаще всего решают такие ситуации.
+        </p>
+
+        <h3>Что означают ошибки картриджа простыми словами</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Ситуация</th>
+              <th>Как проявляется</th>
+              <th>Простой смысл</th>
+              <th>Первое действие</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Switch не видит картридж вообще</td>
+              <td>Игра не появляется на главном экране, сообщение «Картридж не вставлен».</td>
+              <td>Консоль видит пустой слот.</td>
+              <td>Извлечь картридж, аккуратно вставить до щелчка, попробовать другой картридж.</td>
+            </tr>
+            <tr>
+              <td>Ошибка чтения данных с картриджа</td>
+              <td>Игра запускается, но появляется ошибка, иногда посреди загрузки.</td>
+              <td>Switch не может стабильно считать данные с картриджа.</td>
+              <td>Остановить игру, аккуратно протереть контакты картриджа сухой салфеткой и вставить снова.</td>
+            </tr>
+            <tr>
+              <td>Проблема только с одним картриджем</td>
+              <td>Другие игры работают, а этот — нет.</td>
+              <td>Скорее всего, дело в самом картридже.</td>
+              <td>Проверить картридж на другом Switch, при необходимости обратиться по гарантии.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3>Мини‑чек‑лист по картриджам</h3>
+        <ul>
+          <li>Всегда извлекайте картридж только когда Switch выключен или в меню, а не в момент загрузки игры.</li>
+          <li>Держите картриджи в чехлах, не носите их россыпью в кармане или рюкзаке.</li>
+          <li>Для чистки контактов используйте только мягкую сухую салфетку, не применяйте спирт и жидкости.</li>
+          <li>Если только один картридж ведёт себя странно на разных Switch — это повод для обмена или ремонта именно этого носителя.</li>
+        </ul>
+
+        <h2 id="step-6">Ошибки microSD и хранилища: когда проблема в карте памяти</h2>
+        <p>
+          Nintendo Switch активно использует карты microSD для хранения игр и данных. Если с картой что‑то не так, консоль начинает жаловаться на невозможность прочитать или записать данные, некоторые игры больше не запускаются, появляются сообщения об ошибке хранилища. Причины типичные: карта низкого качества, внезапное извлечение во время записи, переполненное хранилище.
+        </p>
+        <p>
+          Главное правило — относиться к microSD как к миниатюрному жёсткому диску: не дёргать её на горячую, не заполнять «под завязку» и использовать проверенные бренды. При первых признаках ошибок стоит сразу подумать о резерве данных, чтобы не потерять скачанные игры и сохранения при полном отказе карты.
+        </p>
+
+        <h3>Ошибки хранилища простым языком</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Ситуация</th>
+              <th>Как выглядит</th>
+              <th>Что это значит</th>
+              <th>Что делать</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Switch не видит microSD</td>
+              <td>Сообщение о том, что карта не вставлена или не читается.</td>
+              <td>Либо карта не до конца вставлена, либо повреждена.</td>
+              <td>Выключить консоль, извлечь карту, аккуратно вставить снова и проверить в другом устройстве.</td>
+            </tr>
+            <tr>
+              <td>Игры с microSD вылетают</td>
+              <td>Запуск начинается, но появляются ошибки или вылеты.</td>
+              <td>Switch не может стабильно читать данные с карты.</td>
+              <td>Перенести игру во внутреннюю память (если возможно), сделать резерв, задуматься о замене карты.</td>
+            </tr>
+            <tr>
+              <td>Хранилище переполнено</td>
+              <td>Система сообщает о нехватке места.</td>
+              <td>На карте или во внутренней памяти не хватает свободного пространства.</td>
+              <td>Удалить игры, которые давно не запускаются, или установить карту большего объёма.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2 id="step-7">Системные ошибки и «вылет системного ПО»</h2>
+        <p>
+          Иногда Nintendo Switch показывает сообщения о системной ошибке и предлагает перезагрузиться. Это уже не банальный картридж или Wi‑Fi, а сбой в работе самой системы или игры. Многие такие ошибки разовые и не повторяются, но если они возникают часто, это повод обратить внимание на обновления, хранилище и возможные перегревы.
+        </p>
+        <p>
+          Системная ошибка не обязательно означает, что приставке конец. Часто виноват конкретный тайтл или его обновление, конфликт данных или логическая ошибка в файловой системе. Поэтому чек‑лист действий всегда начинается с обновлений, восстановления порядка в хранилище и перезагрузки, а уже потом — с более радикальных шагов.
+        </p>
+
+        <h3>Что делать при системных ошибках</h3>
+        <ul>
+          <li>Перезагрузить Switch через меню и проверить, повторяется ли ошибка при запуске той же игры.</li>
+          <li>Обновить системное ПО и проблемные игры до последней версии.</li>
+          <li>Проверить состояние памяти: достаточно ли свободного места во внутреннем хранилище и на microSD.</li>
+          <li>Запустить другие игры и приложения: если сбоит только одна игра, фокус на ней, а не на системе.</li>
+          <li>При повторяющихся системных ошибках в разных играх — подумать о резерве данных и, при необходимости, о заводском сбросе или обращении в сервис.</li>
+        </ul>
+
+        <h2 id="step-8">Ошибки аккаунта и покупок: когда не получается купить или скачать игру</h2>
+        <p>
+          Отдельный класс проблем связан с Nintendo Account и покупками в eShop. Консоль может отказать в покупке, не принять карту, не дать скачать уже купленную игру или сообщить об ограничениях региона. Здесь важно помнить, что на ситуацию влияют не только настройки Switch, но и банк, страна аккаунта и регион магазина.
+        </p>
+        <p>
+          Часто такие ошибки не лечатся перезагрузкой и требуют «бумажной» работы: проверить данные карты, регион аккаунта, настройки семейных ограничений и статусы платежей у банка. Простое объяснение: Switch только показывает, что операция не прошла, а причина может быть глубже — от лимита по карте до несовместимости регионов.
+        </p>
+
+        <h3>Типичные проблемы с аккаунтом и покупками</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Ситуация</th>
+              <th>Как проявляется</th>
+              <th>Простое объяснение</th>
+              <th>Первое действие</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Не проходит оплата в eShop</td>
+              <td>Консоль выдаёт ошибку при вводе карты или подтверждении покупки.</td>
+              <td>Банк отклонил платёж или карта/регион не подходят.</td>
+              <td>Проверить карту в других сервисах, уточнить ограничения банка, сверить регион аккаунта и магазина.</td>
+            </tr>
+            <tr>
+              <td>Нельзя скачать купленную игру</td>
+              <td>Игра есть в библиотеке, но загрузка не начинается или прерывается.</td>
+              <td>Проблемы сервера, нехватка места или сетевые ошибки.</td>
+              <td>Проверить интернет, свободное место и статус серверов, перезапустить загрузку.</td>
+            </tr>
+            <tr>
+              <td>Ограничения для ребёнка</td>
+              <td>Некоторые игры и покупки недоступны для детского аккаунта.</td>
+              <td>Работает родительский контроль или возрастные ограничения.</td>
+              <td>Проверить настройки семейной группы и разрешения у родительского аккаунта.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2 id="step-9">Сценарные примеры: что делать «по шагам»</h2>
+        <p>
+          Ниже — несколько типичных жизненных сценариев и краткий план действий, не привязанный к конкретным цифрам кода. Это удобно, когда пользователь не запомнил точный номер, но хорошо помнит, что происходило на экране.
+        </p>
+
+        <div class="scenario-block">
+          <div class="scenario-title">Сценарий A: Switch не подключается к Wi‑Fi</div>
+          <ul>
+            <li>Проверить интернет на телефоне или ноутбуке в той же сети.</li>
+            <li>Перезапустить роутер и через пару минут попробовать подключиться снова.</li>
+            <li>Забыть сеть на Switch и заново ввести пароль.</li>
+            <li>По возможности протестировать другую сеть, например, раздачу с телефона.</li>
+            <li>Если другие устройства работают нормально, но Switch упорно не подключается, уделить внимание настройкам роутера или обратиться к провайдеру.</li>
+          </ul>
         </div>
 
-        <div>
-            <div class="hero-image">
-                <img src="https://i.postimg.cc/fy27WvtT/resize-m-mfit-w-450-h-450.png" alt="Основные коды ошибок Nintendo Switch и что они означают простыми словами">
-            </div>
-            <div class="hero-note">Картинку можно заменить на локальный файл с таким же разрешением, если делаете лендинг или статью.</div>
+        <div class="scenario-block">
+          <div class="scenario-title">Сценарий B: картридж иногда не определяется</div>
+          <ul>
+            <li>Выключить консоль, аккуратно извлечь картридж и осмотреть контакты на наличие загрязнений.</li>
+            <li>Протереть контакты мягкой сухой салфеткой и вставить картридж до щелчка.</li>
+            <li>Проверить, как ведут себя другие картриджи в этой же консоли.</li>
+            <li>При необходимости взять этот картридж к знакомому и протестировать на другом Switch.</li>
+            <li>Если проблема только в одном носителе, лучше задуматься об обмене или ремонте именно его.</li>
+          </ul>
         </div>
-    </section>
 
-    <section class="grid">
-        <!-- ОСНОВНОЙ КОНТЕНТ -->
-        <article class="card">
-            <h2>Как читать коды ошибок Switch и почему это не так страшно</h2>
-            <p class="tagline">Код ошибки Nintendo Switch — это просто номер проблемы. Он помогает понять, в какой области что‑то пошло не так: сеть, eShop, память, карта microSD, системный сбой или даже железо.</p>
-            <p class="highlight">Важно не пугаться цифр, а ответить на три простых вопроса: что вы делали в момент ошибки, повторяется ли она и только ли на вашей консоли. Это сразу сузит круг причин и подскажет нужный раздел этого гайда.</p>
+        <div class="scenario-block">
+          <div class="scenario-title">Сценарий C: игры с microSD начали вылетать</div>
+          <ul>
+            <li>Посмотреть, хватает ли места на карте и во внутренней памяти.</li>
+            <li>Перенести одну из проблемных игр во внутреннее хранилище и проверить, исчезла ли ошибка.</li>
+            <li>Выключить Switch, извлечь карту и протестировать её на другом устройстве (например, через картридер).</li>
+            <li>При первых признаках серьёзных проблем сделать резерв важных данных.</li>
+            <li>Рассмотреть покупку более надёжной карты памяти при частых ошибках.</li>
+          </ul>
+        </div>
 
-            <div class="quick-list">
-                <div>
-                    <strong>Что разберём:</strong>
-                    <ul>
-                        <li>Где смотреть код ошибки и как его записать.</li>
-                        <li>Коды про интернет и eShop простыми словами.</li>
-                        <li>Ошибки при скачивании и обновлении игр.</li>
-                        <li>Коды, связанные с картой памяти microSD.</li>
-                        <li>Системные и аппаратные ошибки, когда консоль просто падает.</li>
-                        <li>Мини‑чек‑лист: что делать всегда перед паникой.</li>
-                    </ul>
-                </div>
-                <div>
-                    <strong>По уровню «жёсткости»:</strong>
-                    <div class="pill pill-success"><span class="pill-bullet"></span>Сеть и eShop: обычно решается дома</div>
-                    <div class="pill"><span class="pill-bullet"></span>Память и карта microSD: внимательность и бэкапы</div>
-                    <div class="pill pill-danger"><span class="pill-bullet"></span>Критические ошибки: возможен сервис</div>
-                </div>
-            </div>
+        <div class="scenario-block">
+          <div class="scenario-title">Сценарий D: Switch выдал системную ошибку и перезагрузился</div>
+          <ul>
+            <li>После перезапуска обновить систему и игру, в которой происходил сбой.</li>
+            <li>Проверить, повторяется ли ошибка только в этой игре или и в других.</li>
+            <li>Очистить место в хранилище, удалив лишние игры и скриншоты.</li>
+            <li>Если ошибки системного уровня появляются часто и в разных проектах, задуматься о резерве данных и обращении в сервис.</li>
+          </ul>
+        </div>
 
-            <!-- Блок 1 -->
-            <h3>1. Где смотреть код ошибки и как его запомнить</h3>
-            <p class="section-intro">Switch показывает код ошибки в формате «цифры‑цифры», например 2137‑8056. Этот номер важно записать полностью, включая дефис, чтобы потом проще было найти решение.</p>
+        <h2 id="step-10">Сводная таблица: когда волнуемся, а когда нет</h2>
+        <p>
+          Не каждый код ошибки — повод для паники. Иногда это всего лишь сигнал «попробуй ещё раз позже», а иногда — знак серьёзной проблемы. Таблица ниже помогает оценить уровень критичности ситуации.
+        </p>
 
-            <ul class="steps">
-                <li>Когда появляется окно ошибки, посмотрите в нижнюю часть экрана: там обычно написан код вида «XXXX‑YYYY».</li>
-                <li>Сфотографируйте экран или запишите код на листок. Если нужно обращаться в поддержку или искать гайд, этот номер — главный ориентир.</li>
-                <li>Обратите внимание, что разные коды могут быть похожи, но означать разные вещи, поэтому не путайте цифры и не меняйте местами части кода.</li>
-                <li>Хорошая привычка — коротко записать, что вы пытались сделать: «заходил в eShop», «скачивал игру», «подключался к wi‑fi», «играл, консоль выключилась».</li>
-            </ul>
-            <p class="note"><strong>Зачем всё это:</strong> код ошибки плюс контекст — это почти готовый диагноз. Осталось только сопоставить его с пояснениями из этого гайда и выполнить нужные шаги.</p>
+        <table>
+          <thead>
+            <tr>
+              <th>Ситуация</th>
+              <th>Можно не паниковать</th>
+              <th>Стоит насторожиться</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Сетевая ошибка в eShop</td>
+              <td>Иногда появляется, потом сама исчезает, другие сервисы работают.</td>
+              <td>Продолжается днями при нормальном интернете, затрагивает разные сети и аккаунты.</td>
+            </tr>
+            <tr>
+              <td>Разовая системная ошибка</td>
+              <td>Случилась один раз, после перезагрузки всё работает стабильно.</td>
+              <td>Повторяется регулярно в разных играх и приложениях.</td>
+            </tr>
+            <tr>
+              <td>Проблемы с картриджем</td>
+              <td>Только один картридж ведёт себя странно, остальные в порядке.</td>
+              <td>Все картриджи периодически не определяются или выдают ошибки чтения.</td>
+            </tr>
+            <tr>
+              <td>Ошибки microSD</td>
+              <td>Разовая ошибка, после перезапуска и проверки карта работает нормально.</td>
+              <td>Игры с карты регулярно вылетают, карта пропадает из системы.</td>
+            </tr>
+            <tr>
+              <td>Проблемы с покупками</td>
+              <td>Оплата прошла со второй попытки, банк подтвердил операцию.</td>
+              <td>Банк платёж видит, но игра не появляется, или аккаунт получает странные ограничения.</td>
+            </tr>
+          </tbody>
+        </table>
 
-            <!-- Блок 2 -->
-            <h3>2. Коды про интернет и eShop простыми словами</h3>
-            <p class="section-intro">Большая группа ошибок связана с подключением к интернету и серверам Nintendo. Типичные симптомы: не открывается eShop, не качаются обновления, игра говорит, что не может подключиться.</p>
+        <h2 id="step-11">Лайфхаки: как реже видеть коды ошибок на Switch</h2>
+        <div class="pro-tips">
+          <h4>Простые привычки, которые экономят нервы</h4>
+          <div class="tip-item">
+            <i class="fas fa-lightbulb"></i>
+            <p>Не выдёргивайте картриджи и microSD на горячую: сначала закрывайте игры и выключайте консоль, а уже потом трогайте носители.</p>
+          </div>
+          <div class="tip-item">
+            <i class="fas fa-lightbulb"></i>
+            <p>Раз в какое‑то время проверяйте свободное место в хранилище и не забивайте его под завязку, оставляя запас для обновлений и сохранений.</p>
+          </div>
+          <div class="tip-item">
+            <i class="fas fa-lightbulb"></i>
+            <p>Не ставьте роутер и Switch рядом с крупной техникой и металлическими предметами, чтобы снизить количество сетевых сбоев из‑за помех.</p>
+          </div>
+          <div class="tip-item">
+            <i class="fas fa-lightbulb"></i>
+            <p>Используйте качественные карты памяти проверенных брендов с достаточным запасом по скорости и объёму.</p>
+          </div>
+          <div class="tip-item">
+            <i class="fas fa-lightbulb"></i>
+            <p>Следите за обновлениями системы и игр: многие странные коды ошибок исчезают после выходов патчей и мелких исправлений.</p>
+          </div>
+        </div>
 
-            <div class="table-wrapper">
-                <table>
-                    <thead>
-                    <tr>
-                        <th>Пример кода</th>
-                        <th>Что происходит</th>
-                        <th>По‑простому</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td>2137‑8056</td>
-                        <td>Проблема при подключении к серверам Nintendo, eShop или скачивании игры</td>
-                        <td>Консоль не может нормально связаться с серверами, иногда из‑за сети, иногда из‑за самих серверов</td>
-                    </tr>
-                    <tr>
-                        <td>2137‑7503 / 2123‑1502</td>
-                        <td>Ошибка при загрузке или обновлении игр</td>
-                        <td>Связь с сервером нестабильна или временно недоступна</td>
-                    </tr>
-                    <tr>
-                        <td>2110‑2003 (и похожие 2110‑****)</td>
-                        <td>Проблема при подключении к сети wi‑fi или получении IP‑адреса</td>
-                        <td>Switch не может нормально подружиться с роутером</td>
-                    </tr>
-                    <tr>
-                        <td>2618‑0516 / 2618‑0502</td>
-                        <td>Не получается подключиться к онлайн‑игре или другу</td>
-                        <td>Сетевой матч или лобби отваливаются из‑за сети, NAT или серверов игры</td>
-                    </tr>
-                    </tbody>
-                </table>
-            </div>
+        <h2 id="step-12">FAQ — коротко о чаще всего задаваемых вопросах</h2>
+        <div class="faq-item">
+          <strong>Обязательно ли запоминать точный код ошибки?</strong>
+          <p>
+            Не обязательно держать его в голове, но полезно сделать фото экрана или записать код, если планируется обращаться в поддержку или искать решение в справочниках. Это экономит время и помогает быстрее найти нужный раздел инструкции.
+          </p>
+        </div>
+        <div class="faq-item">
+          <strong>Если ошибка появилась один раз и больше не повторяется — можно забыть?</strong>
+          <p>
+            Если после перезагрузки и пары игровых сессий проблема не вернулась, скорее всего это был случайный сбой. Имеет смысл насторожиться только при регулярных повторениях одного и того же кода или группы ошибок.
+          </p>
+        </div>
+        <div class="faq-item">
+          <strong>Опасно ли продолжать играть, если иногда вылезают сетевые ошибки?</strong>
+          <p>
+            Сетевые коды сами по себе железу не вредят: максимум, что грозит — вылет из матча или невозможность купить игру в конкретный момент. Опаснее игнорировать ошибки хранилища и картриджей, так как они могут привести к потере данных.
+          </p>
+        </div>
+        <div class="faq-item">
+          <strong>Поможет ли полный сброс настроек против всех ошибок сразу?</strong>
+          <p>
+            Заводской сброс решает часть системных и программных проблем, но не влияет на качество картриджей, microSD, сети и сервера Nintendo. Использовать его стоит только после того, как проверены носители, интернет и обновления, а ошибки продолжаются в разных играх и режимах.</p>
+        </div>
+        <div class="faq-item">
+          <strong>Когда однозначно пора в сервис?</strong>
+          <p>
+            Поводом для обращения в сервисный центр становятся постоянные системные ошибки, проблемы чтения любых картриджей, регулярные вылеты с microSD даже после её замены, а также странное поведение консоли (перегрев, перезагрузки) в сочетании с ошибками.
+          </p>
+        </div>
 
-            <p class="section-intro"><strong>Что делать при сетевых ошибках:</strong></p>
-            <ul class="steps">
-                <li>Сначала проверьте, работают ли другие устройства: телефон, ноутбук, ТВ. Если и там нет интернета или всё тормозит, проблема, скорее всего, в роутере или провайдере.</li>
-                <li>Перезагрузите роутер: отключите его от питания на 30–60 секунд и включите снова. После этого перезагрузите сам Nintendo Switch.</li>
-                <li>Если вы подключены по wi‑fi, попробуйте переместиться ближе к роутеру и убрать между ними по возможности стены и крупную технику.</li>
-                <li>При устойчивых ошибках можно вручную прописать DNS‑серверы в настройках сети Switch и проверить, не станет ли соединение стабильнее.</li>
-                <li>Если ошибка возникает только вечером или в конкретное время, а днём всё хорошо, вполне возможно, что это часы пика у провайдера или серверов Nintendo.</li>
-            </ul>
-            <p class="note"><strong>Простое правило:</strong> если остальные устройства работают идеально, а Switch постоянно выдает сетевые коды, стоит внимательно посмотреть настройки консоли и wi‑fi, а не винить общий интернет.</p>
+        <h2 id="step-13">Краткий чек‑лист по кодам ошибок Nintendo Switch</h2>
+        <p>
+          В заключение — короткий список шагов, которые можно применить практически при любой ошибке, если под рукой нет справочника и времени на глубокое изучение кода.
+        </p>
+        <ul>
+          <li>Спокойно прочитать текст под кодом ошибки и понять, о чём вообще речь: интернет, картридж, карта памяти, аккаунт.</li>
+          <li>Перезагрузить Switch и, если ошибка сетевого типа, также перезапустить роутер.</li>
+          <li>Проверить работу других устройств в этой же сети и других игр/приложений на самой консоли.</li>
+          <li>Не игнорировать повторяющиеся ошибки хранилища и носителей: при первых симптомах делать резерв важных данных.</li>
+          <li>Если коды продолжают появляться регулярно и касаются разных областей (система, носители, сеть) — задуматься о полноценной диагностике и, при необходимости, о сервисе.</li>
+        </ul>
 
-            <!-- Блок 3 -->
-            <h3>3. Коды при скачивании и обновлении игр (eShop, загрузка)</h3>
-            <p class="section-intro">Отдельная категория — ошибки, возникающие как раз в момент загрузки игр, DLC или обновлений. Здесь почти всегда участвуют и сервера Nintendo, и ваш интернет.</p>
+        <div class="warning-block">
+          <strong>Напоминание!</strong> Любые серьёзные эксперименты с разборкой приставки, самостоятельным ремонтом слотов, пайкой и перепрошивкой, не описанные в официальных инструкциях, могут привести к потере гарантии и ухудшению состояния устройства. При сомнениях лучше ограничиться мягкими действиями из чек‑листа и при необходимости обратиться к специалистам.
+        </div>
 
-            <p class="section-intro"><strong>Типичные сценарии:</strong></p>
-            <ul class="steps">
-                <li>Вы пытаетесь скачать игру или обновление, прогресс идёт медленно и в какой‑то момент появляется ошибка загрузки.</li>
-                <li>Switch пишет, что «соединение с сервером потеряно» или «произошла ошибка при загрузке», предлагает попробовать позже.</li>
-                <li>Скачивание то запускается, то обрывается, особенно при слабом wi‑fi.</li>
-            </ul>
+      </div>
+    </div>
+  </section>
 
-            <p class="section-intro"><strong>Что стоит сделать:</strong></p>
-            <ul class="steps">
-                <li>Поставить загрузку на паузу и снова возобновить её. Иногда этого достаточно, когда был кратковременный сбой.</li>
-                <li>Сделать обычный тест подключения к интернету в настройках Switch, чтобы убедиться, что консоль в принципе видит сеть и сервера.</li>
-                <li>Если возможно, временно подключить Switch по кабелю к роутеру (через адаптер) или переместиться ближе к точке доступа.</li>
-                <li>Перезагрузить роутер и консоль, а затем запустить загрузку заново. Это помогает убрать зависшие сессии и старый кеш сети.</li>
-                <li>Если известна информация о технических работах на стороне Nintendo, просто подождать и попробовать снова через час или позже.</li>
-            </ul>
-            <p class="note"><strong>Ключевой момент:</strong> при скачивании участвуют сразу две стороны — ваша сеть и сервера Nintendo. Если ошибки ловят многие игроки одновременно, дело может быть далеко не в вашей консоли.</p>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__col footer__col--logo">
+          <a href="index.html" class="footer-logo">
+            <span class="logo__icon"></span>
+            <span class="logo__text">Repairo</span>
+          </a>
+          <p class="footer__text">Экспертные инструкции по технике с 2024 года</p>
+        </div>
+        <div class="footer__col">
+          <h3 class="footer__title">Разделы</h3>
+          <ul class="footer__links">
+            <li><a href="index.html" class="footer__link">Главная</a></li>
+            <li><a href="all-guides.html" class="footer__link">Все гайды</a></li>
+            <li><a href="contacts.html" class="footer__link">Контакты</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h3 class="footer__title">Категории</h3>
+          <ul class="footer__links">
+            <li><a href="../tv.html" class="nav__link">Телевизоры</a></li>
+            <li><a href="../cameras.html" class="nav__link">Фотоаппараты</a></li>
+            <li><a href="../consoles.html" class="nav__link">Приставки</a></li>
+            <li><a href="../laptops.html" class="nav__link">Ноутбуки</a></li>
+            <li><a href="../smartphones.html" class="nav__link">Смартфоны</a></li>
+            <li><a href="../small-appliances.html" class="nav__link">Мелкая техника</a></li>
+            <li><a href="../large-appliances.html" class="nav__link">Бытовая техника</a></li>
+            <li><a href="../auto-electronics.html" class="nav__link">Авто-Электроника</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h3 class="footer__title">Контакты</h3>
+          <ul class="footer__links">
+            <li>
+              <a href="https://t.me/repairo_kz" class="footer__link"><i class="fab fa-telegram"></i> Telegram</a>
+            </li>
+            <li>
+              <a href="https://instagram.com/repairo_kz" class="footer__link"><i class="fab fa-instagram"></i> Instagram</a>
+            </li>
+            <li>
+              <a href="mailto:support@repairo.kz" class="footer__link"><i class="fas fa-envelope"></i> Email</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="disclaimer">
+          Администрация сайта не несёт ответственности за возможные повреждения техники
+          и иные последствия, возникшие в результате самостоятельного ремонта по
+          материалам и инструкциям, размещённым на сайте. Все работы вы выполняете
+          на свой страх и риск.
+        </p>
+        <p class="footer__copyright">© 2025 Repairo. Все права защищены.</p>
+      </div>
+    </div>
+  </footer>
 
-            <!-- Блок 4 -->
-            <h3>4. Ошибки сети 2110‑2003 и похожие: «Switch не дружит с роутером»</h3>
-            <p class="section-intro">Коды вида 2110‑2003 и похожие обычно означают, что Switch не смог корректно подключиться к домашней сети: не получил IP‑адрес, не прошёл проверку параметров или что‑то ещё пошло не так на уровне wi‑fi.</p>
+  <script src="../script.js"></script>
 
-            <p class="section-intro"><strong>Что попробовать по шагам:</strong></p>
-            <ul class="steps">
-                <li>Удалите проблемное подключение в настройках Switch и создайте его заново, заново введя пароль wi‑fi. Иногда ошибка просто в опечатке.</li>
-                <li>Перезагрузите роутер и спустя минуту попробуйте связаться с сетью снова.</li>
-                <li>Если роутер работает и на нём уже много подключений, отключите ненужные устройства на время и посмотрите, не станет ли Switch подключаться стабильнее.</li>
-                <li>Попробуйте временно отключить необычные настройки роутера: фильтрацию по MAC‑адресам, сильно ограничивающие гостевые сети и подобные функции.</li>
-                <li>Если есть возможность, протестируйте консоль в другой сети (например, через раздачу интернета с телефона), чтобы понять, проблема в самом Switch или именно в домашнем роутере.</li>
-            </ul>
-            <p class="note"><strong>Если консоль подключается только к другим сетям:</strong> скорее всего, домашний роутер или его настройки создают препятствия. Тогда имеет смысл посмотреть инструкции к маршрутизатору или обратиться к провайдеру.</p>
-
-            <!-- Блок 5 -->
-            <h3>5. Коды ошибок, связанные с картой памяти microSD</h3>
-            <p class="section-intro">При использовании microSD‑карты могут появляться коды ошибок, связанные с чтением или записью данных. Это происходит, если карта вставлена неправильно, повреждена или не подходит по формату.</p>
-
-            <p class="section-intro"><strong>Признаки проблем с microSD:</strong></p>
-            <ul class="steps">
-                <li>Консоль пишет, что не может прочитать карту или предлагает её отформатировать.</li>
-                <li>Игры, установленные на microSD, выдают ошибки или не запускаются, хотя внутренние игры работают нормально.</li>
-                <li>Коды ошибок появляются сразу после вставки новой карты или переноса игр.</li>
-            </ul>
-
-            <p class="section-intro"><strong>Что можно сделать:</strong></p>
-            <ul class="steps">
-                <li>Выключить консоль, аккуратно извлечь microSD‑карту и снова вставить её до щелчка, убедившись, что она села ровно.</li>
-                <li>Проверить карту на другом устройстве, если оно поддерживает microSD, чтобы оценить, читается ли она там.</li>
-                <li>Если на карте нет критически важных данных, отформатировать её средствами самой консоли, чтобы Switch привёл формат к нужному виду.</li>
-                <li>При повторяющихся ошибках с одной и той же картой имеет смысл заменить её на более качественный и подходящий по скорости вариант.</li>
-            </ul>
-            <p class="note"><strong>Важный момент:</strong> любые действия с форматированием стирают данные, поэтому, если на карте есть важные игры и сохранения, стоит заранее продумать, что именно вы готовы потерять.</p>
-
-            <!-- Блок 6 -->
-            <h3>6. Коды системных и аппаратных ошибок: 2101‑0001 и родные</h3>
-            <p class="section-intro">Иногда Switch выдаёт коды, которые связаны не с сетью и не с eShop, а с внутренней работой системы или даже железом. Пример — 2101‑0001 и похожие коды, которые могут появляться внезапно при использовании консоли.</p>
-
-            <div class="table-wrapper">
-                <table>
-                    <thead>
-                    <tr>
-                        <th>Пример кода</th>
-                        <th>Описание простыми словами</th>
-                        <th>Что сделать в первую очередь</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td>2101‑0001</td>
-                        <td>Серьёзный внутренний сбой: система столкнулась с ошибкой при работе с частью железа или периферией</td>
-                        <td>Полностью перезагрузить Switch, обновить систему, проверить карты памяти и аксессуары</td>
-                    </tr>
-                    <tr>
-                        <td>2002‑**** (ряд кодов)</td>
-                        <td>Ошибка при обращении к данным или внутреннему хранилищу</td>
-                        <td>Перезагрузка, проверка microSD, обновление и, при необходимости, обращение в поддержку</td>
-                    </tr>
-                    <tr>
-                        <td>ошибки при старте без конкретного действия</td>
-                        <td>Система не может корректно завершить запуск</td>
-                        <td>Полное выключение, ожидание, включение, тест без microSD и периферии</td>
-                    </tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <p class="section-intro"><strong>Общий алгоритм при системных ошибках:</strong></p>
-            <ul class="steps">
-                <li>Нажать и удерживать кнопку питания несколько секунд, выбрать пункт полного выключения и дождаться, пока Switch полностью погаснет.</li>
-                <li>Если консоль не реагирует, удерживать кнопку питания дольше (около 10–12 секунд), чтобы принудительно её выключить.</li>
-                <li>Извлечь карту microSD (если она есть), подождать немного и включить консоль без дополнительной памяти, проверив, появится ли ошибка снова.</li>
-                <li>После успешного запуска без карты проверить наличие обновления системы и установить его.</li>
-                <li>Если ошибка продолжает появляться часто и без понятной причины, рассмотреть обращение в службу поддержки или сервисный центр, особенно при действующей гарантии.</li>
-            </ul>
-            <p class="note"><strong>Главный риск:</strong> многократные перезапуски при постоянных ошибках могут привести к ухудшению состояния, поэтому лучше вовремя переключиться на спокойную диагностику или сервис.</p>
-
-            <!-- Блок 7 -->
-            <h3>7. Коды, связанные с аккаунтом, банами и доступом к сервисам</h3>
-            <p class="section-intro">Есть ещё одна группа кодов, которая реже связана с техникой, а чаще — с самим аккаунтом, условием использования сервиса или региональными ограничениями.</p>
-
-            <p class="section-intro"><strong>Типичные симптомы:</strong></p>
-            <ul class="steps">
-                <li>Ошибка появляется при попытке войти в аккаунт, добавить пользователя или связать его с сервисом.</li>
-                <li>Консоль пишет, что действие недоступно, требует обновления, а после него всё равно возвращается к ошибке.</li>
-                <li>Иногда текст ошибки явно говорит о проблеме с использованием устройства или нарушении правил сервиса.</li>
-            </ul>
-
-            <p class="section-intro"><strong>Что можно сделать:</strong></p>
-            <ul class="steps">
-                <li>Ещё раз внимательно прочитать текст сообщения, а не только код. В таких ошибках часто прямо указывается, какое действие запрещено или что требуется сделать.</li>
-                <li>Проверить, нет ли необходимости обновить систему или игру, прежде чем использовать онлайн‑функции или магазин.</li>
-                <li>Убедиться, что вы используете тот же регион аккаунта и магазина, который планировали, и что оплата и настройки соответствуют региону.</li>
-                <li>Если ошибка намекает на временное ограничение или возможный бан, лучше не пытаться «ломать» систему, а обратиться в официальную поддержку для уточнения статуса аккаунта.</li>
-            </ul>
-            <p class="note"><strong>Важный момент:</strong> если консоль или аккаунт получили ограничение за нарушение правил, обойти его техническими методами без последствий не получится. Здесь уже важно общаться с поддержкой или принимать условия.</p>
-
-            <!-- Блок 8 -->
-            <h3>8. Универсальный чек‑лист перед паникой</h3>
-            <p class="section-intro">Перед тем как искать редкие коды или думать о поломке, полезно пройти краткий универсальный чек‑лист. Он решает большую часть типичных ситуаций.</p>
-
-            <ul class="steps">
-                <li>Записать код ошибки с дефисом и коротким описанием того, что вы делали.</li>
-                <li>Перезапустить консоль обычным способом, затем при необходимости принудительно выключить и снова включить.</li>
-                <li>Проверить работу интернета на других устройствах, если ошибка связана с сетью или eShop.</li>
-                <li>Перезагрузить роутер и повторить попытку подключения или скачивания игр.</li>
-                <li>Протестировать консоль без microSD‑карты и без лишних аксессуаров, особенно при системных ошибках.</li>
-                <li>Установить все доступные обновления системы и по возможности нужных игр.</li>
-            </ul>
-            <p class="note"><strong>Идея чек‑листа:</strong> сначала убрать всё, что можно починить за несколько минут дома, и только потом тратить время на более глубокую диагностику и общение с техподдержкой.</p>
-        </article>
-
-        <!-- ПРАВАЯ КОЛОНКА / САЙДБАР -->
-        <aside class="card side-section">
-            <h2>Быстрый справочник по основным кодам</h2>
-            <p class="tagline">Если нет времени читать всё, этот блок можно использовать как мини‑шпаргалку при работе с пользователями или для себя.</p>
-
-            <div class="badge-block">
-                <span class="label"><span class="label-dot"></span>Под рукой при диагностике</span>
-                <span class="label label-soft"><span class="label-dot"></span>Подходит для большинства бытовых случаев</span>
-            </div>
-
-            <ul class="checklist">
-                <li>
-                    <span class="checklist-icon">1</span>
-                    <span><strong>2137‑8056 и похожие сетевые коды.</strong> Это не «сломанная консоль», а проблемы с интернетом или серверами. Проверить сеть, перезапустить роутер и подождать, если есть работы на стороне Nintendo.</span>
-                </li>
-                <li>
-                    <span class="checklist-icon">2</span>
-                    <span><strong>2110‑2003 и родственники.</strong> Switch не может корректно подключиться к wi‑fi. Проверить пароль, настройки роутера, сделать новое подключение или протестировать другую сеть.</span>
-                </li>
-                <li>
-                    <span class="checklist-icon">3</span>
-                    <span><strong>Коды при скачивании и обновлении.</strong> Загрузка обрывается при слабом или нестабильном соединении. Помогают пауза/возобновление, проводное подключение и перезагрузка сети.</span>
-                </li>
-                <li>
-                    <span class="checklist-icon">4</span>
-                    <span><strong>Ошибки с microSD.</strong> Консоль ругается на карту, не может прочитать игры. Проверить посадку карты, протестировать на другом устройстве, при необходимости отформатировать или заменить.</span>
-                </li>
-                <li>
-                    <span class="checklist-icon">5</span>
-                    <span><strong>2101‑0001 и другие серьёзные коды.</strong> Внутренний сбой системы или железа. Полная перезагрузка, запуск без microSD, обновление и, при повторении, обращение в сервис.</span>
-                </li>
-            </ul>
-
-            <div class="divider"></div>
-
-            <h3>Когда пора обращаться в сервис или поддержку</h3>
-            <p class="tagline">Большинство ошибок решается дома, но есть ситуации, где лучше не затягивать и не пытаться «доломать» консоль своими силами.</p>
-
-            <ul class="checklist">
-                <li>
-                    <span class="checklist-icon checklist-icon--danger">!</span>
-                    <span>Один и тот же серьёзный код (например, 2101‑0001) появляется регулярно, даже после перезагрузок и обновлений.</span>
-                </li>
-                <li>
-                    <span class="checklist-icon checklist-icon--danger">!</span>
-                    <span>Консоль выключается сама по себе, зависает на логотипе или не может завершить включение без ошибки.</span>
-                </li>
-                <li>
-                    <span class="checklist-icon checklist-icon--danger">!</span>
-                    <span>Ошибки возникают и с внутренней памятью, и с разными картами microSD, на новой системе и без дополнительных аксессуаров.</span>
-                </li>
-                <li>
-                    <span class="checklist-icon checklist-icon--danger">!</span>
-                    <span>Есть подозрение на физическое повреждение после падения, удара или попадания влаги.</span>
-                </li>
-            </ul>
-
-            <div class="divider"></div>
-
-            <h3>Мини‑план, как не довести до ошибок</h3>
-            <p class="tagline">Несколько простых привычек помогают реже видеть страшные окна с кодами ошибок и больше времени проводить в играх.</p>
-
-            <div class="stat">
-                <span>Регулярные обновления системы:</span>
-                <span>меньше конфликтов и багов</span>
-            </div>
-            <div class="stat">
-                <span>Аккуратная работа с microSD:</span>
-                <span>вставка/извлечение только при выключенной консоли</span>
-            </div>
-            <div class="stat">
-                <span>Стабильный интернет:</span>
-                <span>wi‑fi без перегруза, при возможности кабель</span>
-            </div>
-            <div class="stat">
-                <span>Осторожность с аксессуарами:</span>
-                <span>только качественные док‑станции и кабели</span>
-            </div>
-            <div class="stat">
-                <span>Бережное обращение:</span>
-                <span>без падений, ударов и перегрева</span>
-            </div>
-
-            <p class="note"><strong>Итог:</strong> коды ошибок Nintendo Switch — это не приговор, а подсказка, в какую сторону смотреть. Понимая общую логику и имея под рукой такой справочник, можно быстро успокоить пользователей и вернуть консоль к нормальной работе.</p>
-
-            <div class="footer-note">
-                Этот файл можно использовать как основу для русскоязычного лендинга, обучающей статьи или PDF‑памятки по кодам ошибок Nintendo Switch. Достаточно добавить примеры скриншотов с экрана и ссылки на подробную поддержку, если она нужна.
-            </div>
-        </aside>
-    </section>
-</div>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "Основные коды ошибок Nintendo Switch и что они означают простыми словами",
+    "description": "Понятный справочник по основным кодам ошибок Nintendo Switch: сетевые, системные, проблемы с картриджами, microSD и аккаунтом. Простые объяснения и пошаговые решения.",
+    "totalTime": "PT40M",
+    "step": [
+      {
+        "@type": "HowToStep",
+        "name": "Введение: зачем разбираться в кодах ошибок",
+        "text": "Объяснение, почему полезно понимать коды ошибок Nintendo Switch простыми словами.",
+        "url": "#step-1"
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Как устроены коды ошибок Nintendo Switch",
+        "text": "Основная структура кодов и крупные категории проблем.",
+        "url": "#step-2"
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Крупные группы ошибок: взгляд сверху",
+        "text": "Таблица основных типов ошибок: сеть, система, носители, аккаунт.",
+        "url": "#step-3"
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Сетевые коды ошибок",
+        "text": "Простые объяснения сетевых ошибок и базовый чек‑лист.",
+        "url": "#step-4"
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Ошибки картриджей и слота",
+        "text": "Что делать, если Switch не видит картридж или не может прочитать данные.",
+        "url": "#step-5"
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Ошибки microSD и хранилища",
+        "text": "Проблемы с картой памяти и нехваткой места, простые решения.",
+        "url": "#step-6"
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Системные ошибки и вылеты",
+        "text": "Что означает системная ошибка и как на неё реагировать.",
+        "url": "#step-7"
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Ошибки аккаунта и покупок",
+        "text": "Проблемы с Nintendo Account и eShop, объяснения и действия.",
+        "url": "#step-8"
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Сценарные примеры: что делать по шагам",
+        "text": "Готовые сценарии для типичных ситуаций с ошибками.",
+        "url": "#step-9"
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Сводная таблица: когда волнуемся, а когда нет",
+        "text": "Оценка критичности разных ошибок.",
+        "url": "#step-10"
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Лайфхаки: как реже видеть коды ошибок",
+        "text": "Советы по эксплуатации Switch, снижающие риск ошибок.",
+        "url": "#step-11"
+      },
+      {
+        "@type": "HowToStep",
+        "name": "FAQ по кодам ошибок Nintendo Switch",
+        "text": "Ответы на популярные вопросы владельцев Switch.",
+        "url": "#step-12"
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Краткий чек‑лист по кодам ошибок",
+        "text": "Список универсальных шагов при большинстве ошибок.",
+        "url": "#step-13"
+      }
+    ],
+    "image": "https://i.postimg.cc/fy27WvtT/resize-m-mfit-w-450-h-450.png"
+  }
+  </script>
 </body>
 </html>
