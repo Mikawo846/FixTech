@@ -1,746 +1,638 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" data-theme="light">
 <head>
-    <meta charset="UTF-8">
-    <title>Ошибка подключения к онлайн‑играм на Switch: разбор самых частых ситуаций</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Подробный разбор проблем с подключением к онлайн‑играм на Nintendo Switch. Простое объяснение частых кодов ошибок (2618‑0516, 2618‑0501, 2618‑0502, NAT‑тип и др.) и пошаговые решения для дома.">
-    <style>
-        :root {
-            --bg: #020617;
-            --bg-alt: #050816;
-            --card: #0b1220;
-            --accent: #22c55e;
-            --accent-soft: rgba(34,197,94,0.09);
-            --accent-strong: rgba(34,197,94,0.22);
-            --danger: #f97373;
-            --success: #38bdf8;
-            --warn: #facc15;
-            --text-main: #e5e7eb;
-            --text-soft: #9ca3af;
-            --border-soft: #111827;
-            --code-bg: #020617;
-        }
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YE88Y994NX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-YE88Y994NX');
+  </script>
 
-        * {
-            box-sizing: border-box;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ошибка подключения к онлайн‑играм на Switch: разбор самых частых ситуаций | Экспертный мегагайд</title>
+  <meta name="description" content="Подробный разбор ошибок подключения к онлайн‑играм на Nintendo Switch: частые коды, причины, проблемы с NAT и Wi‑Fi, сервера игр и Nintendo, пошаговые сценарии решений и чек‑листы.">
 
-        body {
-            margin: 0;
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-            background:
-                radial-gradient(circle at top, #111827 0, #020617 55%, #000 100%);
-            color: var(--text-main);
-            line-height: 1.6;
-        }
+  <!-- Yandex.Metrika counter -->
+  <script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+      m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+      m[i].l=1*new Date();
+      for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+      k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=106225686', 'ym');
 
-        a {
-            color: var(--accent);
-            text-decoration: none;
-        }
+    ym(106225686, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", accurateTrackBounce:true, trackLinks:true});
+  </script>
+  <noscript>
+    <div>
+      <img src="https://mc.yandex.ru/watch/106225686" style="position:absolute; left:-9999px;" alt="Ошибка подключения к онлайн‑играм на Switch: разбор самых частых ситуаций - пошаговая инструкция по ремонту">
+    </div>
+  </noscript>
+  <!-- /Yandex.Metrika counter -->
 
-        a:hover {
-            text-decoration: underline;
-        }
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="../styles-header.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
-        .page {
-            max-width: 1120px;
-            margin: 0 auto;
-            padding: 32px 16px 48px;
-        }
+  <style>
+    .guide-content { line-height: 1.7; color: var(--text); }
+    .guide-content h2 { color: var(--primary); margin-top: 30px; margin-bottom: 15px; font-size: 1.5rem; }
+    .guide-content h3 { color: var(--primary-dark); margin-top: 25px; margin-bottom: 12px; font-size: 1.2rem; }
+    .guide-image-block { margin: 20px 0; padding: 15px; background: var(--background); border-radius: var(--border-radius); border: 1px solid var(--border); text-align: center; }
+    .guide-image-block img { max-width: 100%; height: auto; border-radius: 6px; border: 1px solid var(--border); }
+    .image-caption { margin-top: 10px; font-size: 0.85rem; color: var(--text-light); font-style: italic; }
+    .pro-tips { background: rgba(3, 74, 79, 0.05); padding: 15px; border-radius: 6px; margin: 20px 0; }
+    .pro-tips h4 { color: var(--primary); margin-top: 0; margin-bottom: 12px; font-size: 1.1rem; }
+    .tip-item { display: flex; gap: 8px; margin-bottom: 8px; align-items: flex-start; }
+    .tip-item i { margin-top: 3px; color: var(--primary); }
+    .warning-block {
+      background: #fff3e0;
+      border-left: 5px solid #ff9100;
+      padding: 15px 18px;
+      margin: 22px 0;
+      border-radius: 7px;
+    }
+    table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+    th, td { border: 1px solid var(--border); padding: 8px; text-align: left; vertical-align: top; }
+    th { background: var(--background-light); }
+    .code-like { font-family: "SF Mono", "Consolas", "Menlo", monospace; background: var(--background-light); padding: 2px 4px; border-radius: 4px; }
+    .step-badge {
+      display: inline-block;
+      background: var(--primary);
+      color: #fff;
+      font-size: 0.8rem;
+      padding: 2px 8px;
+      border-radius: 999px;
+      margin-right: 6px;
+    }
+    .faq-item { margin-bottom: 16px; }
+    .faq-item strong { display: block; margin-bottom: 4px; }
+    .scenario-block {
+      background: var(--background-light);
+      border-radius: 8px;
+      padding: 14px 16px;
+      margin-bottom: 16px;
+      border: 1px solid var(--border);
+    }
+    .scenario-title {
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+    @media (max-width: 768px) {
+      .guide-content h2 { font-size: 1.4rem; margin-top: 25px; }
+      .guide-image-block { padding: 12px; margin: 15px 0; }
+      table, th, td { font-size: 0.95rem; }
+    }
+  </style>
 
-        .hero {
-            display: grid;
-            grid-template-columns: minmax(0, 3fr) minmax(0, 2.1fr);
-            gap: 32px;
-            align-items: center;
-            margin-bottom: 40px;
-        }
-
-        .hero-text h1 {
-            font-size: 32px;
-            margin: 0 0 12px;
-        }
-
-        .hero-text h1 strong {
-            color: var(--accent);
-        }
-
-        .hero-text p {
-            margin: 4px 0;
-            color: var(--text-soft);
-        }
-
-        .hero-badges {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            margin-top: 12px;
-        }
-
-        .badge {
-            font-size: 12px;
-            padding: 4px 10px;
-            border-radius: 999px;
-            border: 1px solid var(--border-soft);
-            background: rgba(15,23,42,0.9);
-            color: var(--text-soft);
-            backdrop-filter: blur(6px);
-        }
-
-        .badge--accent {
-            border-color: var(--accent);
-            background: var(--accent-soft);
-            color: #bbf7d0;
-        }
-
-        .badge--danger {
-            border-color: var(--danger);
-            background: rgba(248,113,113,0.09);
-            color: #fecaca;
-        }
-
-        .badge--success {
-            border-color: var(--success);
-            background: rgba(56,189,248,0.1);
-            color: #e0f2fe;
-        }
-
-        .hero-image {
-            border-radius: 18px;
-            overflow: hidden;
-            border: 1px solid var(--border-soft);
-            background: radial-gradient(circle at top, #1f2937 0, #020617 100%);
-            padding: 10px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .hero-image img {
-            max-width: 100%;
-            border-radius: 12px;
-            display: block;
-        }
-
-        .hero-note {
-            font-size: 12px;
-            color: var(--text-soft);
-            margin-top: 6px;
-            text-align: center;
-        }
-
-        .grid {
-            display: grid;
-            grid-template-columns: minmax(0, 2.3fr) minmax(0, 1.5fr);
-            gap: 24px;
-        }
-
-        .card {
-            background:
-                radial-gradient(circle at top left, rgba(148,163,184,0.08), transparent 55%);
-            border-radius: 18px;
-            border: 1px solid var(--border-soft);
-            padding: 20px 18px 18px;
-            box-shadow: 0 18px 40px rgba(15,23,42,0.9);
-        }
-
-        .card h2 {
-            font-size: 20px;
-            margin: 0 0 10px;
-        }
-
-        .card h3 {
-            font-size: 16px;
-            margin: 18px 0 6px;
-        }
-
-        .tagline {
-            font-size: 13px;
-            color: var(--text-soft);
-            margin-bottom: 10px;
-        }
-
-        .highlight {
-            border-left: 3px solid var(--accent);
-            padding-left: 10px;
-            margin: 8px 0 14px;
-            font-size: 14px;
-            color: var(--text-soft);
-        }
-
-        .section-intro {
-            font-size: 14px;
-            color: var(--text-soft);
-            margin: 4px 0 10px;
-        }
-
-        .quick-list {
-            display: grid;
-            grid-template-columns: 1.2fr 1fr;
-            gap: 10px;
-            font-size: 13px;
-            margin: 10px 0 12px;
-        }
-
-        .quick-list ul {
-            margin: 0;
-            padding-left: 18px;
-        }
-
-        .quick-list li {
-            margin-bottom: 4px;
-        }
-
-        .pill {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            font-size: 12px;
-            padding: 4px 10px;
-            border-radius: 999px;
-            border: 1px solid rgba(148,163,184,0.45);
-            background: rgba(15,23,42,0.9);
-            margin-right: 6px;
-            margin-bottom: 4px;
-        }
-
-        .pill-bullet {
-            width: 6px;
-            height: 6px;
-            border-radius: 999px;
-            background: var(--accent);
-        }
-
-        .pill-danger .pill-bullet {
-            background: var(--danger);
-        }
-
-        .pill-success .pill-bullet {
-            background: var(--success);
-        }
-
-        .pill-warn .pill-bullet {
-            background: var(--warn);
-        }
-
-        .table-wrapper {
-            margin-top: 12px;
-            border-radius: 14px;
-            overflow: hidden;
-            border: 1px solid var(--border-soft);
-            background: rgba(15,23,42,0.96);
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            font-size: 13px;
-        }
-
-        thead {
-            background: linear-gradient(to right, rgba(34,197,94,0.2), rgba(56,189,248,0.34));
-        }
-
-        th, td {
-            padding: 6px 8px;
-            text-align: left;
-            border-bottom: 1px solid #111827;
-        }
-
-        th {
-            font-weight: 600;
-            color: #e5e7eb;
-            white-space: nowrap;
-        }
-
-        tbody tr:nth-child(odd) {
-            background: rgba(15,23,42,0.96);
-        }
-
-        tbody tr:nth-child(even) {
-            background: rgba(10,16,32,0.96);
-        }
-
-        .steps {
-            margin: 10px 0 6px;
-            padding-left: 18px;
-            font-size: 13px;
-        }
-
-        .steps li {
-            margin-bottom: 5px;
-        }
-
-        .note {
-            font-size: 12px;
-            color: var(--text-soft);
-            margin-top: 6px;
-        }
-
-        .note strong {
-            color: var(--warn);
-        }
-
-        .code {
-            font-family: ui-monospace, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-            background: var(--code-bg);
-            border-radius: 6px;
-            padding: 1px 4px;
-            font-size: 12px;
-        }
-
-        .badge-block {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 6px;
-            margin-bottom: 10px;
-        }
-
-        .label {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            padding: 2px 8px;
-            border-radius: 999px;
-            font-size: 11px;
-            border: 1px solid rgba(148,163,184,0.6);
-            background: rgba(15,23,42,0.96);
-        }
-
-        .label-dot {
-            width: 7px;
-            height: 7px;
-            border-radius: 999px;
-            background: var(--accent);
-        }
-
-        .label-soft {
-            opacity: 0.92;
-        }
-
-        .checklist {
-            list-style: none;
-            padding-left: 0;
-            margin: 8px 0 4px;
-            font-size: 13px;
-        }
-
-        .checklist li {
-            margin-bottom: 6px;
-            display: flex;
-            align-items: flex-start;
-            gap: 6px;
-        }
-
-        .checklist-icon {
-            width: 15px;
-            height: 15px;
-            border-radius: 4px;
-            border: 1px solid rgba(148,163,184,0.6);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 11px;
-            color: var(--accent);
-            flex-shrink: 0;
-        }
-
-        .checklist-icon--danger {
-            color: var(--danger);
-            border-color: rgba(248,113,113,0.8);
-        }
-
-        .side-section {
-            font-size: 13px;
-        }
-
-        .side-section h3 {
-            margin-top: 14px;
-        }
-
-        .stat {
-            display: flex;
-            justify-content: space-between;
-            font-size: 12px;
-            margin: 2px 0;
-            color: var(--text-soft);
-        }
-
-        .stat span:first-child {
-            opacity: 0.9;
-        }
-
-        .footer-note {
-            margin-top: 18px;
-            font-size: 12px;
-            color: var(--text-soft);
-            border-top: 1px dashed #1f2937;
-            padding-top: 10px;
-        }
-
-        .divider {
-            margin: 16px 0 10px;
-            border-top: 1px dashed #1e293b;
-        }
-
-        @media (max-width: 920px) {
-            .hero {
-                grid-template-columns: minmax(0, 1fr);
-            }
-            .grid {
-                grid-template-columns: minmax(0, 1fr);
-            }
-            .hero-image {
-                order: -1;
-            }
-        }
-
-        @media (max-width: 560px) {
-            .page {
-                padding: 20px 12px 32px;
-            }
-            .hero-text h1 {
-                font-size: 26px;
-            }
-            .quick-list {
-                grid-template-columns: minmax(0, 1fr);
-            }
-        }
-    </style>
+  <script async src="https://timeweb.cloud/api/v1/cloud-ai/agents/3cc03620-d051-4d8d-b5af-f7b6cd083a35/embed.js?collapsed=true"></script>
 </head>
 <body>
-<div class="page">
+  <header class="header">
+    <div class="container">
+      <div class="header__inner">
+        <a href="../index.html" class="logo">
+          <span class="logo__icon"></span>
+          <span class="logo__text">Repairo</span>
+        </a>
+        <nav class="nav">
+          <ul class="nav__list">
+            <li><a href="../tv.html" class="nav__link">Телевизоры</a></li>
+            <li><a href="../cameras.html" class="nav__link">Фотоаппараты</a></li>
+            <li><a href="../consoles.html" class="nav__link">Приставки</a></li>
+            <li><a href="../laptops.html" class="nav__link">Ноутбуки</a></li>
+            <li><a href="../smartphones.html" class="nav__link">Смартфоны</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
 
-    <!-- HERO -->
-    <section class="hero">
-        <div class="hero-text">
-            <h1><strong>Ошибка подключения к онлайн‑играм на Switch</strong>: разбор самых частых ситуаций</h1>
-            <p>Этот гайд помогает понять, почему Nintendo Switch не пускает в онлайн‑матчи, обрывает соединение или выдаёт коды вроде 2618‑0516, 2618‑0501, 2618‑0502 и как всё это чинить по шагам.</p>
-            <p>Материал подойдёт для любых онлайн‑игр: от Mario Kart и Smash до Splatoon и других проектов, где важна стабильная сессия с другими игроками.</p>
+  <section class="guide-page">
+    <div class="container">
+      <div class="breadcrumbs">
+        <a href="../index.html">Главная</a>
+        <i class="fas fa-chevron-right"></i>
+        <a href="../consoles.html">Приставки</a>
+        <i class="fas fa-chevron-right"></i>
+        <span>Ошибка подключения к онлайн‑играм на Switch: разбор самых частых ситуаций</span>
+      </div>
 
-            <div class="hero-badges">
-                <span class="badge badge--accent">Nintendo Switch • Онлайн‑игры</span>
-                <span class="badge badge--success">Чёткий алгоритм диагностики</span>
-                <span class="badge badge--danger">NAT, роутер и сервера без лишней теории</span>
-            </div>
+      <h1 class="section__title">Ошибка подключения к онлайн‑играм на Switch: разбор самых частых ситуаций</h1>
+
+      <div class="guide-meta">
+        <span>
+          <i class="fas fa-network-wired"></i>
+          Подробный разбор типичных ошибок подключения к онлайн‑играм на Nintendo Switch: проблемы с Wi‑Fi и NAT, коды ошибок матчмейкинга, сбои на серверах игр и Nintendo, ограничения аккаунта. Пошаговые сценарии, таблицы и простые решения.
+        </span>
+      </div>
+
+      <div class="guide-image-block">
+        <img src="https://i.postimg.cc/hj7hQb5t/resize-m-mfit-w-450-h-450.png" alt="Ошибка подключения к онлайн‑играм на Switch: разбор самых частых ситуаций">
+        <div class="image-caption">
+          Типичные сценарии: Switch не может войти в онлайн‑лобби, выбрасывает из матчей, показывает коды ошибок при матчмейкинге или сообщает о невозможности подключиться к другим игрокам.
+        </div>
+      </div>
+
+      <div class="guide-content">
+
+        <h2 id="step-1">Введение: почему онлайн на Switch «ломается»</h2>
+        <p>
+          Онлайн‑игры на Nintendo Switch зависят от целой цепочки: самой консоли, домашнего Wi‑Fi или проводного подключения, провайдера, серверов Nintendo и серверов конкретной игры. Любая слабая точка в этой цепочке приводит к знакомым сообщениям: «Невозможно подключиться к другим игрокам», «Произошла ошибка соединения», «Матчмейкинг не удался» и длинному коду ошибки на экране.
+        </p>
+        <p>
+          Вместо того чтобы вслепую перезапускать консоль и ругаться на игру, удобно разложить ситуацию по полочкам: кто именно «виноват» чаще всего и какие шаги помогают в реальной жизни. Этот мегагайд как раз об этом: простое объяснение сложных сетевых вещей, разбор типовых сценарием и чёткий чек‑лист действий, который можно пробежать за несколько минут до следующей попытки подключиться к матчу.
+        </p>
+
+        <h2 id="step-2">Основные типы ошибок подключения к онлайн‑играм</h2>
+        <p>
+          Все проблемы онлайн‑подключения на Switch условно можно разделить на несколько крупных групп. Это помогает быстро понять, куда смотреть: в Wi‑Fi, настройки NAT, серверы игры или ограничения аккаунта. В таблице ниже — обзор основных типов с точки зрения обычного игрока, а не сетевого инженера.
+        </p>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Тип проблемы</th>
+              <th>Как проявляется</th>
+              <th>Что обычно означает</th>
+              <th>С чего начать</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Нет подключения к матчу</td>
+              <td>Матчмейкинг не запускается, всегда ошибка подключения.</td>
+              <td>Проблемы с сетью, NAT, серверами игры или подпиской.</td>
+              <td>Проверить интернет, статус сервера игры и наличие подписки Nintendo Switch Online.</td>
+            </tr>
+            <tr>
+              <td>Частые вылеты из матчей</td>
+              <td>Игра выкидывает в лобби или офлайн, иногда с кодом.</td>
+              <td>Нестабильное соединение, слабый Wi‑Fi, перегруженная сеть.</td>
+              <td>Перейти ближе к роутеру, сократить нагрузку на сеть, при возможности использовать проводной адаптер.</td>
+            </tr>
+            <tr>
+              <td>Высокий пинг и лаги</td>
+              <td>Персонаж «телепортируется», действия приходят с задержкой.</td>
+              <td>Большая задержка и потери пакетов до сервера игры.</td>
+              <td>Проверить стабильность сети, по возможности изменить тип подключения и время игры.</td>
+            </tr>
+            <tr>
+              <td>Ошибка при подключении к друзьям</td>
+              <td>Не удаётся зайти в лобби друга, хотя у него всё работает.</td>
+              <td>Несовместимые NAT, разные регионы, локальные ограничения сети.</td>
+              <td>Проверить NAT, попробовать другого хоста, по возможности сменить сеть.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2 id="step-3">Типичные коды ошибок онлайн‑подключения простыми словами</h2>
+        <p>
+          На экране Switch коды ошибок онлайн‑подключения выглядят как длинные комбинации цифр с дефисами. Разбирать каждую вариацию не обязательно: важнее понимать их общий смысл. Ниже — обобщённые примеры типов кодов и то, как их можно «перевести» на человеческий язык: «проблемы сети», «сервер игры занят», «NAT слишком строгий» и так далее.
+        </p>
+        <p>
+          Конкретные цифры в коде могут отличаться, особенно от игры к игре, но общий посыл остаётся похожим: консоль и сервер не могут договориться о соединении, подключение обрывается по пути или ограничено сетевыми настройками. Чтобы не усложнять, коды сгруппированы по сути, а не по внутреннему значению для Nintendo.
+        </p>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Группа кодов / ситуация</th>
+              <th>Что видит игрок</th>
+              <th>Что это значит «по‑человечески»</th>
+              <th>Первый шаг</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Коды при входе в онлайн‑лобби</td>
+              <td>Матч не стартует, пишет о невозможности подключиться.</td>
+              <td>Switch не может установить устойчивое соединение с сервером игры.</td>
+              <td>Проверить интернет, перезапустить игру, протестировать другие онлайн‑проекты.</td>
+            </tr>
+            <tr>
+              <td>Коды после нескольких минут матча</td>
+              <td>Игра выкидывает после начала, появляется ошибка сети.</td>
+              <td>По пути до сервера что‑то «сыпется»: Wi‑Fi, роутер, линия провайдера.</td>
+              <td>Подойти ближе к роутеру, сократить фоновые загрузки, при возможности использовать провод.</td>
+            </tr>
+            <tr>
+              <td>Коды при попытке подключиться к другу</td>
+              <td>Не удаётся войти в комнату друга, хотя он уже в игре.</td>
+              <td>Ваши сети не могут настроить прямое подключение из‑за NAT/ограничений.</td>
+              <td>Проверить NAT, поменять хоста комнаты, попробовать другую сеть.</td>
+            </tr>
+            <tr>
+              <td>Сообщения о необходимости подписки</td>
+              <td>Игра отказывается запускать онлайн‑режим без подписки.</td>
+              <td>Нужна активная Nintendo Switch Online для этого режима.</td>
+              <td>Проверить статус подписки и аккаунта, при необходимости её оформить или продлить.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2 id="step-4">Шаг 1: проверяем базовые условия онлайн‑игры</h2>
+        <p>
+          Перед тем как копаться в NAT, портах и настройках роутера, стоит убедиться в простых вещах: есть ли вообще интернет, активна ли подписка Nintendo Switch Online, не лежат ли сервера игры или Nintendo. Удивительно, но значительная часть «сетевых» проблем решается на этом уровне, без сложных манипуляций.
+        </p>
+        <p>
+          Онлайн‑режимы многих игр на Switch требуют обязательной подписки, кроме отдельных бесплатных проектов. Помимо этого, каждый крупный релиз и обновление иногда сопровождаются перегрузкой серверов. Поэтому ключевая идея первого шага — не чинить то, что находится вне контроля пользователя, а сначала проверить, на что действительно можно повлиять.
+        </p>
+
+        <h3>Базовый чек‑лист перед диагностикой</h3>
+        <ul>
+          <li>Проверить, подключён ли Switch к интернету и проходят ли тесты соединения в настройках.</li>
+          <li>Убедиться, что для выбранной игры действительно нужна и активна подписка Nintendo Switch Online.</li>
+          <li>Посмотреть, работают ли другие онлайн‑игры на этой же консоли и аккаунте.</li>
+          <li>Проверить статус серверов игры и сервисов Nintendo, если подозрение на массовые проблемы.</li>
+          <li>Перезагрузить Switch и роутер перед повторной попыткой подключения к матчу.</li>
+        </ul>
+
+        <h2 id="step-5">Шаг 2: Wi‑Fi против проводного подключения — влияние на онлайн</h2>
+        <p>
+          Wi‑Fi удобен, но далеко не всегда идеален для стабильного онлайна, особенно в многоквартирных домах и при большом количестве соседних сетей. Падения сигнала, помехи от техники, толстые стены — всё это приводит к потерям пакетов и задержкам, из‑за которых игра может выкидывать из матчей даже при неплохой номинальной скорости.
+        </p>
+        <p>
+          Для Switch в док‑режиме существует проводной адаптер LAN, который позволяет подключиться к роутеру по кабелю. Это заметно снижает количество разрывов и лагов. Если такую возможность использовать не получается, важно хотя бы оптимизировать Wi‑Fi: расположение роутера, расстояние, перегруженность канала и количество устройств.
+        </p>
+
+        <h3>Рекомендации по выбору и настройке подключения</h3>
+        <ul>
+          <li>Если игра критична к задержкам (онлайн‑шутеры, файтинги), по возможности используйте проводное подключение через LAN‑адаптер.</li>
+          <li>В портативном режиме старайтесь играть ближе к роутеру, избегая двух‑трёх бетонных стен между консолью и точкой доступа.</li>
+          <li>На время рейтинговых матчей или кооперативных рейдов минимизируйте фоновые загрузки и стриминг на других устройствах.</li>
+          <li>При устойчивых проблемах с Wi‑Fi попробуйте сменить канал и, если возможно, диапазон на роутере.</li>
+          <li>Регулярная перезагрузка роутера (раз в несколько недель) помогает избавиться от накопившихся мелких сбоев.</li>
+        </ul>
+
+        <h2 id="step-6">Шаг 3: NAT и его влияние на подключение к другим игрокам</h2>
+        <p>
+          NAT — это способ, которым роутер распределяет интернет между устройствами. На Switch тип NAT показывает, насколько легко консоль может взаимодействовать с другими игроками и серверами. Упрощённо: «хороший» NAT позволяет подключаться почти ко всем, а «строгий» создаёт проблемы с матчмейкингом, голосовым чатом и прямыми подключениями к друзьям.
+        </p>
+        <p>
+          Если Switch показывает «строгий» NAT или вы регулярно видите ошибки при попытке присоединиться к лобби друзей, есть смысл заняться настройкой сети. Иногда достаточно включить в роутере функцию UPnP, иногда требуется помощь провайдера или смена тарифного плана, если используется сложная конфигурация с несколькими уровнями NAT.
+        </p>
+
+        <h3>Что можно сделать с NAT без глубоких знаний сетей</h3>
+        <ul>
+          <li>Включить UPnP в настройках роутера, чтобы он автоматически открывал нужные порты для игр и сервисов.</li>
+          <li>Назначить Switch постоянный IP‑адрес в локальной сети, чтобы по нему было проще настраивать перенаправление портов.</li>
+          <li>При наличии инструкций — настроить переадресацию популярных игровых портов на IP‑адрес Switch.</li>
+          <li>Если у провайдера используется сложная схема с несколькими NAT (например, общий внешний IP у многих клиентов), уточнить возможность получения более «прямого» подключения.</li>
+          <li>При сомнениях не менять всё подряд, а вносить изменения по одному и проверять результат в конкретных онлайн‑играх.</li>
+        </ul>
+
+        <h2 id="step-7">Шаг 4: стабильность соединения — пинг, потери пакетов и «телепорты»</h2>
+        <p>
+          Даже когда консоль формально подключена к серверу, качество соединения может быть плохим: высокий пинг, скачущая задержка, потери пакетов. В игре это проявляется как лаги, «телепорты» других игроков, неправильное попадание выстрелов и внезапные разрывы соединения без очевидного кода ошибки.
+        </p>
+        <p>
+          На качество влияют не только Wi‑Fi и роутер, но и маршруты провайдера до серверов игры, время суток (нагрузка на сеть) и даже выбор региона матчмейкинга. Полностью контролировать это невозможно, но можно минимизировать негативные факторы на своей стороне и подстроить режим игры, выбирая более подходящее время и условия.
+        </p>
+
+        <h3>Практические шаги для более стабильного онлайна</h3>
+        <ul>
+          <li>Играть в самое загруженное время (вечер выходных) всегда сложнее: попробуйте сместить сессии на менее пиковые часы.</li>
+          <li>Выключить или приостановить торренты, облачную синхронизацию и стриминг на других устройствах во время важных матчей.</li>
+          <li>Использовать проводное подключение, если есть возможность, или максимально «чистый» Wi‑Fi с хорошим сигналом.</li>
+          <li>При выборе сервера или региона (если игра это позволяет) ориентироваться на меньший пинг, даже если там меньше игроков.</li>
+          <li>При постоянных лагх и «телепортах» попробовать попросить провайдера проверить линию и маршруты до популярных игровых серверов.</li>
+        </ul>
+
+        <h2 id="step-8">Шаг 5: когда проблема в серверах игры или Nintendo</h2>
+        <p>
+          Не все ошибки подключения зависят от пользователя. Серверы конкретной игры или сервисы Nintendo могут быть перегружены, обновляться или временно отключаться. В такие моменты игроки по всему миру сталкиваются с одинаковыми кодами, и единственным реальным решением остаётся ожидание.
+        </p>
+        <p>
+          Отличить серверный сбой от локальной проблемы помогает проверка: состояние других игр, поведение на разных сетях, наличие сообщений от разработчиков и Nintendo. Если Switch отлично работает с другими онлайн‑проектами, а только одна игра массово жалуется на ошибки подключения, с высокой вероятностью виноваты не роутер и не провайдер.
+        </p>
+
+        <h3>Признаки серверной проблемы</h3>
+        <ul>
+          <li>Один и тот же код ошибки получают многие игроки в игре, независимо от страны и провайдера.</li>
+          <li>Сайт игры или страницы разработчика сообщают о технических работах или перегрузке серверов.</li>
+          <li>Другие онлайн‑игры и eShop на Switch работают без нареканий.</li>
+          <li>Проблема возникает внезапно после крупного обновления или начала сезона и в итоге исчезает сама.</li>
+        </ul>
+
+        <h2 id="step-9">Сценарные кейсы: разбираем самые частые ситуации</h2>
+        <p>
+          Ниже несколько типичных сценариев, с которыми сталкиваются владельцы Switch при попытке играть онлайн, и пошаговые маршруты действий для каждого. Это удобные «шпаргалки», когда нет времени изучать теорию, а нужно быстро понять, что делать в конкретной ситуации.
+        </p>
+
+        <div class="scenario-block">
+          <div class="scenario-title">Сценарий A: игра вообще не пускает в онлайн‑режим</div>
+          <ul>
+            <li>Проверить подключение к интернету и пройти тест соединения в настройках Switch.</li>
+            <li>Убедиться, что активна подписка Nintendo Switch Online, если игра её требует.</li>
+            <li>Попробовать другие онлайн‑игры: если они работают, проблема в конкретном проекте или его серверах.</li>
+            <li>Перезапустить игру и консоль, затем попробовать подключиться снова.</li>
+            <li>Проверить каналы разработчика на предмет известных проблем с онлайн‑режимом.</li>
+          </ul>
         </div>
 
-        <div>
-            <div class="hero-image">
-                <img src="https://i.postimg.cc/hj7hQb5t/resize-m-mfit-w-450-h-450.png" alt="Ошибка подключения к онлайн-играм на Switch: разбор самых частых ситуаций">
-            </div>
-            <div class="hero-note">Картинку можно заменить на локальный файл с тем же разрешением, если делаете лендинг или статью.</div>
+        <div class="scenario-block">
+          <div class="scenario-title">Сценарий B: в матчи заходит, но каждые 5–10 минут выкидывает</div>
+          <ul>
+            <li>Проверить качество Wi‑Fi: расстояние до роутера, наличие помех, силу сигнала.</li>
+            <li>На время игр приостановить тяжёлые загрузки и стриминг на других устройствах в сети.</li>
+            <li>По возможности перейти на проводное соединение через LAN‑адаптер.</li>
+            <li>Переподключиться к сети или попробовать другую (например, временно раздать интернет с телефона для теста).</li>
+            <li>Если и на других сетях ситуация похожая, обратить внимание на время суток и возможную перегрузку серверов игры.</li>
+          </ul>
         </div>
-    </section>
 
-    <section class="grid">
-        <!-- ОСНОВНОЙ КОНТЕНТ -->
-        <article class="card">
-            <h2>Как подойти к проблемам с онлайн‑играми на Switch</h2>
-            <p class="tagline">Когда Switch пишет, что «невозможно подключиться к другим игрокам» или выдаёт код ошибки, это не обязательно значит, что консоль сломана. Чаще всего виноваты сеть, NAT‑тип, роутер или сервер игры.</p>
-            <p class="highlight">Правильный подход — не менять сразу всё подряд, а по шагам ответить на вопросы: работает ли интернет на других устройствах, есть ли доступ к eShop, что показывает тест соединения и какой NAT‑тип у консоли.</p>
+        <div class="scenario-block">
+          <div class="scenario-title">Сценарий C: не удаётся подключиться к лобби друга</div>
+          <ul>
+            <li>Проверить, могут ли оба игрока играть в онлайн‑матчи с другими людьми в этой игре.</li>
+            <li>Сменить хоста: один создаёт комнату, второй подключается, затем наоборот.</li>
+            <li>При возможности протестировать подключение в другой сети для одного из игроков.</li>
+            <li>Проверить NAT на обеих сторонах и при необходимости включить UPnP или перенастроить роутер.</li>
+            <li>Если проблема возникает только у одного человека в разных играх, основной кандидат на настройку — его сеть и оборудование.</li>
+          </ul>
+        </div>
 
-            <div class="quick-list">
-                <div>
-                    <strong>Что разберём:</strong>
-                    <ul>
-                        <li>Где смотреть коды ошибок онлайн‑матчей и что они значат.</li>
-                        <li>2618‑0516 и проблемы NAT‑типа простым языком.</li>
-                        <li>2618‑0501/0502 и обрывы до начала матча.</li>
-                        <li>Слабый wi‑fi, лаги и вылеты из лобби.</li>
-                        <li>Как шаг за шагом улучшить NAT и настроить роутер.</li>
-                        <li>Когда проблема в серверах игры, а не у вас.</li>
-                    </ul>
-                </div>
-                <div>
-                    <strong>По уровню вмешательства:</strong>
-                    <div class="pill pill-success"><span class="pill-bullet"></span>Блок 1–3: быстрые и безопасные шаги</div>
-                    <div class="pill"><span class="pill-bullet"></span>Блок 4–6: настройки NAT и роутера</div>
-                    <div class="pill pill-danger"><span class="pill-bullet"></span>Блок 7–8: провайдер, сервера и сложные случаи</div>
-                </div>
-            </div>
+        <div class="scenario-block">
+          <div class="scenario-title">Сценарий D: высокий пинг и лаги только в одной игре</div>
+          <ul>
+            <li>Сравнить поведение в других онлайн‑играх: если там всё нормально, дело в серверах или коде конкретного проекта.</li>
+            <li>Попробовать сменить регион или сервер в настройках игры, если такая опция предусмотрена.</li>
+            <li>Протестировать игру в другое время суток, чтобы оценить влияние нагрузки на сеть и сервера.</li>
+            <li>Оптимизировать собственное подключение (Wi‑Fi/кабель, отсутствие фоновой нагрузки).</li>
+            <li>При устойчивых проблемах посмотреть официальные каналы разработчика — возможно, игра переживает сложный период с онлайн‑частью.</li>
+          </ul>
+        </div>
 
-            <!-- Блок 1 -->
-            <h3>1. Где искать коды ошибок при подключении к онлайн‑играм</h3>
-            <p class="section-intro">Перед тем как настраивать сеть, важно зафиксировать конкретный код, который показывает Switch. Это сильно сузит круг возможных причин.</p>
+        <h2 id="step-10">Сводная таблица: кто виноват и что делать</h2>
+        <p>
+          Чтобы быстрее принимать решения, полезно иметь под рукой компактный ориентир по источнику проблем онлайн‑подключения и первому набору действий. Таблица ниже как раз для этого.
+        </p>
 
-            <ul class="steps">
-                <li>Когда игра не даёт войти в матч или отключает от лобби, на экране обычно появляется окно с кодом вида «XXXX‑YYYY» и коротким описанием.</li>
-                <li>Сделайте фото экрана или запишите код. Особенно полезно знать, одно и то же значение появляется каждый раз или коды меняются.</li>
-                <li>Отметьте, к какой игре и режиму относится ошибка: быстрый матч, игра с друзьями, локальный‑онлайн и так далее.</li>
-                <li>Посмотрите, есть ли доступ к eShop и работают ли другие онлайн‑функции — это поможет отличить общую сетевую проблему от узко игровой.</li>
-            </ul>
-            <p class="note"><strong>Смысл:</strong> один и тот же код ошибки в разных играх почти всегда говорит о сетевой проблеме, а уникальные коды в одной игре — скорее об особенностях сервера этого проекта.</p>
+        <table>
+          <thead>
+            <tr>
+              <th>Симптом</th>
+              <th>Предполагаемый источник</th>
+              <th>Рекомендуемые шаги</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Ни одна онлайн‑игра не запускается</td>
+              <td>Общее интернет‑подключение, подписка или сервисы Nintendo.</td>
+              <td>Проверить сеть, тест соединения, статус Nintendo Switch Online и сервисов Nintendo.</td>
+            </tr>
+            <tr>
+              <td>Проблемы только в одной игре</td>
+              <td>Серверы или код конкретной игры.</td>
+              <td>Проверить другие проекты, статус серверов, подождать обновлений или работ.</td>
+            </tr>
+            <tr>
+              <td>Выкидывает из матчей в любых играх</td>
+              <td>Нестабильная сеть, помехи Wi‑Fi, проблемы линии.</td>
+              <td>Оптимизировать Wi‑Fi, использовать провод, уменьшить нагрузку, тестировать другие сети.</td>
+            </tr>
+            <tr>
+              <td>Не удаётся подключиться именно к друзьям</td>
+              <td>NAT, настройки роутеров, особенности сетей у игроков.</td>
+              <td>Проверить NAT, включить UPnP, сменить хоста, протестировать другие сети.</td>
+            </tr>
+            <tr>
+              <td>Лаги и высокий пинг, но без вылетов</td>
+              <td>Маршруты до сервера, время суток, перегруженная сеть.</td>
+              <td>Играть в менее загруженное время, выбирать ближние сервера, разгружать канал.</td>
+            </tr>
+          </tbody>
+        </table>
 
-            <!-- Блок 2 -->
-            <h3>2. Ошибка 2618‑0516 и «неоптимальная сеть для P2P»</h3>
-            <p class="section-intro">Код 2618‑0516 часто появляется при попытке подключиться к другим игрокам и обычно говорит о том, что текущий NAT‑тип или сеть не подходят для нормального peer‑to‑peer соединения.</p>
+        <h2 id="step-11">Лайфхаки для тех, кто часто играет онлайн на Switch</h2>
+        <div class="pro-tips">
+          <h4>Полезные привычки для стабильного онлайна</h4>
+          <div class="tip-item">
+            <i class="fas fa-lightbulb"></i>
+            <p>Создайте отдельный Wi‑Fi‑профиль или проводной порт для приставки, чтобы проще управлять нагрузкой и настройками конкретно под игры.</p>
+          </div>
+          <div class="tip-item">
+            <i class="fas fa-lightbulb"></i>
+            <p>Планируйте обновления игр и скачивание крупных патчей на ночь или утро, чтобы в прайм‑тайм канал был свободен для матчей.</p>
+          </div>
+          <div class="tip-item">
+            <i class="fas fa-lightbulb"></i>
+            <p>Если в семье несколько активных геймеров и стримеров, рассмотрите более скоростной тариф и современный двухдиапазонный роутер с поддержкой приоритизации трафика.</p>
+          </div>
+          <div class="tip-item">
+            <i class="fas fa-lightbulb"></i>
+            <p>Регулярно проверяйте состояние кабелей и разъёмов (при проводном подключении), чтобы исключить влияние окислившихся контактов и повреждённых проводов.</p>
+          </div>
+          <div class="tip-item">
+            <i class="fas fa-lightbulb"></i>
+            <p>Фиксируйте повторяющиеся ошибки и сценарии: скриншоты, время, игра, тип подключения — это сильно упрощает общение с поддержкой Nintendo и провайдера.</p>
+          </div>
+        </div>
 
-            <div class="table-wrapper">
-                <table>
-                    <thead>
-                    <tr>
-                        <th>Что значит 2618‑0516</th>
-                        <th>По‑простому</th>
-                        <th>Куда смотреть</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td>Консоль не может корректно завершить матчмейкинг</td>
-                        <td>Сеть слишком «зажата», другие игроки не могут нормально связаться с вами</td>
-                        <td>NAT‑тип, настройки роутера, возможный двойной NAT и фильтры</td>
-                    </tr>
-                    <tr>
-                        <td>Ошибка повторяется при попытке подключиться к разным людям</td>
-                        <td>Проблема не в конкретном друге, а в вашей сети</td>
-                        <td>Тест соединения на Switch, настройки роутера и NAT</td>
-                    </tr>
-                    <tr>
-                        <td>Иногда подключается, иногда нет</td>
-                        <td>На грани: сеть то позволяет, то нет, особенно при высокой нагрузке</td>
-                        <td>Стабильность wi‑fi, помехи, перегруженный роутер</td>
-                    </tr>
-                    </tbody>
-                </table>
-            </div>
+        <h2 id="step-12">FAQ — ответы на частые вопросы об онлайн‑подключении Switch</h2>
+        <div class="faq-item">
+          <strong>Если онлайн работает плохо только вечером, это проблема Switch?</strong>
+          <p>
+            Чаще всего это сочетание пиковой нагрузки на домашнюю сеть, провайдера и серверы игры. Сам Switch здесь лишь «жертва», поэтому оптимизировать стоит время игры, подключение и, при необходимости, тариф или оборудование.
+          </p>
+        </div>
+        <div class="faq-item">
+          <strong>Поможет ли смена провайдера решить все онлайн‑проблемы?</strong>
+          <p>
+            Смена оператора связи иногда улучшает ситуацию, особенно если текущий провайдер явно перегружен или использует сложные схемы NAT, но сначала стоит убедиться, что проблема действительно на уровне линии, а не в роутере или настройках дома.</p>
+        </div>
+        <div class="faq-item">
+          <strong>Достаточно ли просто «усилить» Wi‑Fi усилителем сигнала?</strong>
+          <p>
+            Устройства‑репитеры помогают с покрытием, но иногда добавляют задержку и создают новые точки отказа. Для критичного онлайна провод или хорошо настроенный основной роутер часто надёжнее, чем сложные цепочки повторителей.
+          </p>
+        </div>
+        <div class="faq-item">
+          <strong>Можно ли без риска постоянно переключаться между разными сетями?</strong>
+          <p>
+            Сам по себе частый переход между Wi‑Fi‑сетями безопасен для консоли, но каждая новая сеть добавляет свою конфигурацию и возможные ограничения. Лучше иметь одну–две проверенные сети, чем десяток случайных с непредсказуемым поведением.</p>
+        </div>
+        <div class="faq-item">
+          <strong>Когда действительно стоит обращаться в поддержку Nintendo или к провайдеру?</strong>
+          <p>
+            Если после всех базовых шагов онлайн остаётся нестабильным во многих играх, а другие устройства тоже страдают от обрывов, логично начать с провайдера. Если же проблемы проявляются только на Switch при нормальной работе сети — тогда уже есть смысл описать ситуацию в поддержку Nintendo.</p>
+        </div>
 
-            <p class="section-intro"><strong>Базовые шаги при 2618‑0516:</strong></p>
-            <ul class="steps">
-                <li>Сделайте тест соединения на Switch: в настройках интернета выполните проверку и запишите текущий NAT‑тип (A, B, C, D или F) и скорости.</li>
-                <li>Перезагрузите консоль и роутер, как минимум на 30–60 секунд обесточив маршрутизатор, затем включите его и немного подождите.</li>
-                <li>Попробуйте подключиться к той же игре ещё раз после перезапуска, по возможности в другом режиме или с другим другом.</li>
-                <li>Если NAT‑тип показывает C, D или F, переходите к блоку с настройкой NAT и роутера — это первый кандидат в виновники.</li>
-            </ul>
-            <p class="note"><strong>Главное:</strong> 2618‑0516 чаще всего не про «сломанный Switch», а про сеть, которая слишком закрыта для нормальной P2P‑коммуникации между игроками.</p>
+        <h2 id="step-13">Краткий чек‑лист при ошибке подключения к онлайн‑игре</h2>
+        <p>
+          Для оперативной реакции на любую ошибку подключения удобно иметь небольшой универсальный список действий. Его можно пробежать каждый раз перед тем, как обвинять игру, консоль или провайдера.
+        </p>
+        <ul>
+          <li>Проверить интернет на других устройствах и пройти тест соединения на Switch.</li>
+          <li>Перезагрузить Switch и роутер, затем повторить попытку подключения к матчу.</li>
+          <li>Убедиться, что активна подписка Nintendo Switch Online и нет ограничений на аккаунте.</li>
+          <li>Попробовать другую онлайн‑игру или режим, чтобы оценить масштаб проблемы.</li>
+          <li>При повторяющихся ошибках — протестировать другую сеть, собрать информацию (время, игра, тип подключения) и при необходимости обратиться к провайдеру или в поддержку Nintendo.</li>
+        </ul>
 
-            <!-- Блок 3 -->
-            <h3>3. Ошибки 2618‑0501 и 2618‑0502: обрыв до начала матча</h3>
-            <p class="section-intro">Коды 2618‑0501 и 2618‑0502 означают, что консоль успела связаться с сервисом, но была отключена ещё до начала матча. Это часто связано с нестабильным интернетом или временными обрывами сети.</p>
+        <div class="warning-block">
+          <strong>Напоминание!</strong> Не стоит начинать с радикальных шагов вроде полного сброса настроек роутера, смены оборудования или провайдера от одной‑двух ошибок подключения. Гораздо эффективнее последовательно пройти описанный чек‑лист, поочерёдно исключая простые причины, и только затем принимать серьёзные решения по инфраструктуре.
+        </div>
 
-            <p class="section-intro"><strong>Типичные проявления:</strong></p>
-            <ul class="steps">
-                <li>Вы пытаетесь войти в онлайн‑матч, индикатор поиска показывает, что идёт подключение, а затем появляется ошибка с кодом 2618‑0501 или 2618‑0502.</li>
-                <li>В других онлайн‑играх иногда тоже проскакивают дисконнекты, особенно при высоком пинге или слабом wi‑fi.</li>
-                <li>Интернет в целом может работать, но иногда «проседает»: страницы на других устройствах грузятся рывками или не сразу.</li>
-            </ul>
+      </div>
+    </div>
+  </section>
 
-            <p class="section-intro"><strong>Что сделать для стабилизации:</strong></p>
-            <ul class="steps">
-                <li>Полностью перезапустите игру, в которой возникает ошибка, затем перезапустите консоль и снова попробуйте подключиться.</li>
-                <li>Перезагрузите домашнюю сеть: отключите роутер и, если есть, модем от питания на 30–60 секунд, затем включите и дождитесь стабильного подключения.</li>
-                <li>По возможности переместите Switch ближе к роутеру или временно используйте проводное подключение через USB‑LAN‑адаптер, чтобы исключить проблемы wi‑fi.</li>
-                <li>Сделайте повторный тест соединения на Switch и посмотрите на стабильность значений — скачущие скорости и высокий пинг намекают на проблемы в сети.</li>
-                <li>При частых разрывах на всех устройствах лучше связаться с провайдером и уточнить, нет ли проблем на линии или в оборудовании.</li>
-            </ul>
-            <p class="note"><strong>Суть:</strong> 2618‑0501/0502 часто говорят о том, что сеть «проседает» в самый важный момент, ещё до полноценного старта онлайн‑сессии.</p>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__col footer__col--logo">
+          <a href="index.html" class="footer-logo">
+            <span class="logo__icon"></span>
+            <span class="logo__text">Repairo</span>
+          </a>
+          <p class="footer__text">Экспертные инструкции по технике с 2024 года</p>
+        </div>
+        <div class="footer__col">
+          <h3 class="footer__title">Разделы</h3>
+          <ul class="footer__links">
+            <li><a href="index.html" class="footer__link">Главная</a></li>
+            <li><a href="all-guides.html" class="footer__link">Все гайды</a></li>
+            <li><a href="contacts.html" class="footer__link">Контакты</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h3 class="footer__title">Категории</h3>
+          <ul class="footer__links">
+            <li><a href="../tv.html" class="nav__link">Телевизоры</a></li>
+            <li><a href="../cameras.html" class="nav__link">Фотоаппараты</a></li>
+            <li><a href="../consoles.html" class="nav__link">Приставки</a></li>
+            <li><a href="../laptops.html" class="nav__link">Ноутбуки</a></li>
+            <li><a href="../smartphones.html" class="nav__link">Смартфоны</a></li>
+            <li><a href="../small-appliances.html" class="nav__link">Мелкая техника</a></li>
+            <li><a href="../large-appliances.html" class="nav__link">Бытовая техника</a></li>
+            <li><a href="../auto-electronics.html" class="nav__link">Авто-Электроника</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h3 class="footer__title">Контакты</h3>
+          <ul class="footer__links">
+            <li>
+              <a href="https://t.me/repairo_kz" class="footer__link"><i class="fab fa-telegram"></i> Telegram</a>
+            </li>
+            <li>
+              <a href="https://instagram.com/repairo_kz" class="footer__link"><i class="fab fa-instagram"></i> Instagram</a>
+            </li>
+            <li>
+              <a href="mailto:support@repairo.kz" class="footer__link"><i class="fas fa-envelope"></i> Email</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="disclaimer">
+          Администрация сайта не несёт ответственности за возможные повреждения техники
+          и иные последствия, возникшие в результате самостоятельного ремонта по
+          материалам и инструкциям, размещённым на сайте. Все работы вы выполняете
+          на свой страх и риск.
+        </p>
+        <p class="footer__copyright">© 2025 Repairo. Все права защищены.</p>
+      </div>
+    </div>
+  </footer>
 
-            <!-- Блок 4 -->
-            <h3>4. NAT‑тип на Switch: A, B, C, D, F простыми словами</h3>
-            <p class="section-intro">NAT‑тип определяет, насколько легко вашей консоли общаться с другими игроками и серверами. Он особенно важен при P2P‑играх, где соединение идёт не только через центральный сервер.</p>
+  <script src="../script.js"></script>
 
-            <p class="section-intro"><strong>Краткое расшифровка NAT‑типов:</strong></p>
-            <ul class="steps">
-                <li><strong>NAT A.</strong> Отличный вариант: почти нет ограничений, легко подключаться и хостить игры.</li>
-                <li><strong>NAT B.</strong> Нормальный и распространённый вариант за обычным домашним роутером. Онлайн работает стабильно.</li>
-                <li><strong>NAT C.</strong> Уже есть ограничения: иногда возникают сложности с подключением к конкретным игрокам или матчам.</li>
-                <li><strong>NAT D.</strong> Строгий вариант. Много ограничений, частые проблемы с матчмейкингом и голосовым чатом.</li>
-                <li><strong>NAT F.</strong> По сути провал: консоль не может корректно подключиться к онлайн‑сервисам. Тут точно нужен разбор сети.</li>
-            </ul>
-
-            <p class="section-intro"><strong>Где посмотреть NAT‑тип и что делать:</strong></p>
-            <ul class="steps">
-                <li>В настройках Switch выполните тест подключения к интернету — результат покажет NAT‑тип внизу отчёта.</li>
-                <li>Если у вас A или B, онлайн‑игры должны работать относительно стабильно, и причину ошибок стоит искать в другом.</li>
-                <li>При C, D или F есть смысл переходить к настройкам роутера, включению UPnP, пробросу портов и другим способам открыть сеть для игр.</li>
-            </ul>
-            <p class="note"><strong>Основная цель:</strong> добиться NAT‑типа не хуже B. Для многих игр этого достаточно, чтобы исчезли проблемы с подключением к друзьям и случайным матчам.</p>
-
-            <!-- Блок 5 -->
-            <h3>5. Как улучшить NAT‑тип: UPnP, порт‑форвардинг и DMZ</h3>
-            <p class="section-intro">Если NAT‑тип слишком строгий, нужно объяснить роутеру, что Switch — «важный гость», которому стоит открыть нужные двери наружу. Делается это разными способами.</p>
-
-            <div class="table-wrapper">
-                <table>
-                    <thead>
-                    <tr>
-                        <th>Метод</th>
-                        <th>Сложность</th>
-                        <th>Суть простыми словами</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td>UPnP</td>
-                        <td>Низкая</td>
-                        <td>Роутер сам открывает нужные порты для игр по запросу устройства</td>
-                    </tr>
-                    <tr>
-                        <td>Порт‑форвардинг</td>
-                        <td>Средняя</td>
-                        <td>Вы вручную говорите роутеру, какие порты направить на IP Switch</td>
-                    </tr>
-                    <tr>
-                        <td>DMZ</td>
-                        <td>Средняя/высокая</td>
-                        <td>Выделяете для Switch «зону без фильтров», максимально открывая его наружу</td>
-                    </tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <p class="section-intro"><strong>Примерный порядок действий:</strong></p>
-            <ul class="steps">
-                <li>Назначьте для Switch статический локальный IP‑адрес — либо через настройки роутера (привязка по MAC‑адресу), либо в самой консоли.</li>
-                <li>Зайдите в веб‑панель управления роутера и найдите раздел с UPnP. Включите эту опцию, сохраните настройки и перезагрузите роутер.</li>
-                <li>Сделайте тест соединения на Switch и посмотрите, поменялся ли NAT‑тип. Если всё ещё строгий, переходите к более точечной настройке.</li>
-                <li>Настройте порт‑форвардинг для портов, которые чаще всего использует Switch и игры, направив их на статический IP консоли.</li>
-                <li>В крайнем случае можно добавить IP Switch в DMZ роутера, если вы понимаете, что это делает устройство наиболее открытым — лучше использовать временно и при наличии нормального домашнего файрвола.</li>
-            </ul>
-            <p class="note"><strong>Важный момент:</strong> если у вас двойной NAT (например, роутер провайдера + ваш роутер), некоторые методы будут работать хуже. В таком случае полезно перевести одно из устройств в мостовой режим или обсудить ситуацию с провайдером.</p>
-
-            <!-- Блок 6 -->
-            <h3>6. Слабый wi‑fi, лаги и вылеты из матчей</h3>
-            <p class="section-intro">Даже с хорошим NAT‑типом онлайн‑игры на Switch могут страдать, если сигнал wi‑fi слабый или нестабильный. Это проявляется в виде лагов, рывков, «телепортации» игроков и частых дисконнектов.</p>
-
-            <p class="section-intro"><strong>Признаки проблем с сигналом:</strong></p>
-            <ul class="steps">
-                <li>Пинг и скорость в тесте соединения пляшут от запуска к запуску, особенно по вечерам.</li>
-                <li>Игра сначала подключает к матчу, но спустя пару минут выбрасывает, хотя другие устройства дома в это время тоже начинают «задыхаться».</li>
-                <li>Switch далеко от роутера, между ними несколько стен, а роутер спрятан в нише или шкафу.</li>
-            </ul>
-
-            <p class="section-intro"><strong>Что можно сделать:</strong></p>
-            <ul class="steps">
-                <li>По возможности расположите Switch ближе к роутеру, хотя бы на время важных матчей, и уберите лишние преграды.</li>
-                <li>Переключите консоль на диапазон 5 ГГц, если он есть, — он меньше страдает от помех, но требует физически меньшей дистанции.</li>
-                <li>Если играете в док‑режиме, используйте проводное подключение через USB‑LAN‑адаптер — это практически всегда стабильнее любого wi‑fi.</li>
-                <li>Отключите тяжёлые загрузки и стриминг на других устройствах, пока идёт важный матч, чтобы не делить канал.</li>
-            </ul>
-            <p class="note"><strong>Идея:</strong> онлайн‑игры чувствительны не только к общей скорости, но и к стабильности сигнала. Лучше честные умеренные показатели без скачков, чем «огромный» интернет, но с постоянными провалами.</p>
-
-            <!-- Блок 7 -->
-            <h3>7. Когда виноват не вы: сервера игры и Nintendo</h3>
-            <p class="section-intro">Иногда все настройки у вас идеальны, NAT‑тип хороший, wi‑fi стабильный, а онлайн всё равно ведёт себя плохо. В таких случаях проблема чаще всего на стороне игры или серверов Nintendo.</p>
-
-            <p class="section-intro"><strong>Как распознать проблемы серверов:</strong></p>
-            <ul class="steps">
-                <li>Ошибки подключения появляются только в одной‑двух конкретных играх, тогда как другие проекты спокойно запускают матчи.</li>
-                <li>Ваши друзья из других городов в то же время жалуются на невозможность подключиться к тем же серверам или режимам.</li>
-                <li>В eShop или официальных новостях упоминаются технические работы или временные проблемы с конкретной онлайн‑службой.</li>
-            </ul>
-
-            <p class="section-intro"><strong>Что делать в этой ситуации:</strong></p>
-            <ul class="steps">
-                <li>Не ломать свои рабочие настройки сети в попытках исправить то, что находится на стороне сервера.</li>
-                <li>Перейти на другие игры или режимы, где серверы работают корректно, и периодически проверять проблемный проект позже.</li>
-                <li>При необходимости отслеживать информацию о статусе сервисов, чтобы понимать, когда проблема будет решена.</li>
-            </ul>
-            <p class="note"><strong>Принцип:</strong> если многие игроки одновременно жалуются на одни и те же ошибки, с высокой вероятностью онлайн‑сервис просто переживает не лучшие времена, и нужно немного подождать.</p>
-
-            <!-- Блок 8 -->
-            <h3>8. Универсальный чек‑лист перед обращением в поддержку</h3>
-            <p class="section-intro">Перед тем как писать в поддержку Nintendo, провайдеру или разработчикам игры, полезно пройти краткий чек‑лист. Он либо решит проблему, либо даст вам готовый набор фактов для диалога.</p>
-
-            <ul class="steps">
-                <li>Запишите последние коды ошибок и названия игр, в которых они появляются, а также время суток, когда проблемы возникают чаще всего.</li>
-                <li>Сделайте тест соединения на Switch, зафиксируйте NAT‑тип, скорость загрузки и отдачи, примерный пинг.</li>
-                <li>Перезапустите роутер и консоль, затем ещё раз проверьте подключение и попробуйте зайти в матч.</li>
-                <li>Если есть возможность, протестируйте консоль в другой сети (мобильный интернет, wi‑fi у друзей) — это покажет, связано ли всё с вашим домом.</li>
-                <li>Убедитесь, что игры и система обновлены до последних версий и что у вас есть активная подписка Nintendo Switch Online, если она требуется.</li>
-                <li>Проверьте, не ограничивает ли кто‑то дома канал сверх меры: торренты, постоянный стриминг или тяжёлые загрузки на других устройствах.</li>
-            </ul>
-            <p class="note"><strong>Плюс:</strong> с таким набором данных поддержка быстро поймёт, где искать проблему: в вашей сети, оборудовании, аккаунте или на стороне серверов игры.</p>
-        </article>
-
-        <!-- ПРАВАЯ КОЛОНКА / САЙДБАР -->
-        <aside class="card side-section">
-            <h2>Шпаргалка по онлайн‑проблемам на Switch</h2>
-            <p class="tagline">Компактный блок, который можно использовать как быстрый чек‑лист рядом с консолью или в материале для пользователей.</p>
-
-            <div class="badge-block">
-                <span class="label"><span class="label-dot"></span>2–10 минут на первичную диагностику</span>
-                <span class="label label-soft"><span class="label-dot"></span>Подходит для большинства игр и сетей</span>
-            </div>
-
-            <ul class="checklist">
-                <li>
-                    <span class="checklist-icon">1</span>
-                    <span><strong>Проверить NAT‑тип.</strong> Через тест соединения убедитесь, что NAT не хуже B. При C/D/F переходите к настройкам роутера и UPnP.</span>
-                </li>
-                <li>
-                    <span class="checklist-icon">2</span>
-                    <span><strong>Перезапустить всё.</strong> Игра → Switch → роутер. Это решает много временных глюков, особенно 2618‑0501/0502.</span>
-                </li>
-                <li>
-                    <span class="checklist-icon">3</span>
-                    <span><strong>Проверить другую игру и сеть.</strong> Если во всех играх и на разных сетях проблемы одинаковы, фокус на настройках или провайдере.</span>
-                </li>
-                <li>
-                    <span class="checklist-icon">4</span>
-                    <span><strong>Усилить wi‑fi.</strong> Подвинуть Switch ближе, сменить диапазон, временно убрать конкурирующие устройства из сети.</span>
-                </li>
-                <li>
-                    <span class="checklist-icon">5</span>
-                    <span><strong>По возможности использовать кабель.</strong> Для серьёзного онлайна проводное подключение почти всегда лучше и стабильнее.</span>
-                </li>
-            </ul>
-
-            <div class="divider"></div>
-
-            <h3>Явные признаки, что пора звать провайдера или сервис</h3>
-            <p class="tagline">Эти симптомы говорят о том, что своих сил и базовых шагов уже может быть недостаточно.</p>
-
-            <ul class="checklist">
-                <li>
-                    <span class="checklist-icon checklist-icon--danger">!</span>
-                    <span>Вы не можете получить нормальный NAT‑тип даже после настройки роутера и UPnP; NAT остаётся D или F без понятной причины.</span>
-                </li>
-                <li>
-                    <span class="checklist-icon checklist-icon--danger">!</span>
-                    <span>Интернет нестабилен на всех устройствах, а провалы и обрывы происходят независимо от игры и времени суток.</span>
-                </li>
-                <li>
-                    <span class="checklist-icon checklist-icon--danger">!</span>
-                    <span>Попытка подключиться к разным сетям (дом, мобильный, у друзей) вызывает разные, но постоянные проблемы, намекающие на возможный дефект консоли.</span>
-                </li>
-            </ul>
-
-            <div class="divider"></div>
-
-            <h3>Мини‑план для стабильного онлайна на Switch</h3>
-            <p class="tagline">Его можно оформить отдельным блоком «Как подготовить сеть перед важным матчем».</p>
-
-            <div class="stat">
-                <span>Перед матчем:</span>
-                <span>перезапустить игру, консоль и при необходимости роутер</span>
-            </div>
-            <div class="stat">
-                <span>Расположение:</span>
-                <span>Switch не дальше одной комнаты от роутера или по кабелю</span>
-            </div>
-            <div class="stat">
-                <span>Нагрузка на сеть:</span>
-                <span>по минимуму стриминга и скачиваний во время игры</span>
-            </div>
-            <div class="stat">
-                <span>Системные обновления:</span>
-                <span>актуальная прошивка Switch и игры</span>
-            </div>
-            <div class="stat">
-                <span>Контроль NAT‑типа:</span>
-                <span>регулярный тест соединения, цель — NAT A/B</span>
-            </div>
-
-            <p class="note"><strong>Итог:</strong> большинство ошибок при подключении к онлайн‑играм на Switch — это не «магия», а понятное сочетание NAT‑типа, качества сети и состояния серверов. Имея такой план и шпаргалку, можно последовательно пройтись по всем ступеням и вернуть себе нормальный онлайн.</p>
-
-            <div class="footer-note">
-                Этот HTML‑гайд можно использовать как основу для лендинга об онлайн‑проблемах Nintendo Switch, обучающей статьи или PDF‑инструкции для техподдержки, добавив скриншоты ошибок, примеры настроек популярных роутеров и готовые шаблоны ответов пользователям.
-            </div>
-        </aside>
-    </section>
-</div>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "Ошибка подключения к онлайн‑играм на Switch: разбор самых частых ситуаций",
+    "description": "Разбор типичных ошибок подключения к онлайн‑играм на Nintendo Switch: Wi‑Fi, NAT, сервера игр и Nintendo, пошаговые сценарии и решения.",
+    "totalTime": "PT40M",
+    "step": [
+      {
+        "@type": "HowToStep",
+        "name": "Введение: почему онлайн ломается",
+        "text": "Объяснение причин ошибок подключения к онлайн‑играм на Switch и структура гайда.",
+        "url": "#step-1"
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Основные типы ошибок подключения",
+        "text": "Обзор ключевых категорий проблем: сеть, NAT, сервера, аккаунт.",
+        "url": "#step-2"
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Типичные коды ошибок простыми словами",
+        "text": "Группы кодов ошибок и их понятные объяснения.",
+        "url": "#step-3"
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Шаг 1: проверяем базовые условия онлайн‑игры",
+        "text": "Проверка интернета, подписки и статуса сервисов Nintendo.",
+        "url": "#step-4"
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Шаг 2: Wi‑Fi против проводного подключения",
+        "text": "Как тип подключения влияет на стабильность матчей.",
+        "url": "#step-5"
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Шаг 3: NAT и его влияние",
+        "text": "Роль NAT в подключении к другим игрокам и базовые действия.",
+        "url": "#step-6"
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Шаг 4: стабильность соединения и лаги",
+        "text": "Работа с пингом, потерями пакетов и временем игры.",
+        "url": "#step-7"
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Шаг 5: когда виноваты сервера игр или Nintendo",
+        "text": "Как определить, что проблема не на вашей стороне.",
+        "url": "#step-8"
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Сценарные кейсы: что делать по шагам",
+        "text": "Готовые маршруты для типичных ситуаций с подключением.",
+        "url": "#step-9"
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Сводная таблица: кто виноват и что делать",
+        "text": "Упрощённый ориентир по источнику проблем и действиям.",
+        "url": "#step-10"
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Лайфхаки для частых онлайн‑игроков",
+        "text": "Советы по настройке и эксплуатации сети для Switch.",
+        "url": "#step-11"
+      },
+      {
+        "@type": "HowToStep",
+        "name": "FAQ по онлайн‑подключению Switch",
+        "text": "Ответы на распространённые вопросы пользователей.",
+        "url": "#step-12"
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Краткий чек‑лист при ошибке подключения",
+        "text": "Универсальные шаги для большинства проблем с онлайн‑подключением.",
+        "url": "#step-13"
+      }
+    ],
+    "image": "https://i.postimg.cc/hj7hQb5t/resize-m-mfit-w-450-h-450.png"
+  }
+  </script>
 </body>
 </html>
