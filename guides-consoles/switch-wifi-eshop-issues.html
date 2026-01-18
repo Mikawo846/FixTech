@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Проблемы с Wi‑Fi и eShop на Switch: типичные коды и решения</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Подробный гайд по проблемам с Wi‑Fi и Nintendo eShop на Switch. Объяснение типичных кодов ошибок простыми словами и пошаговые решения: 2110‑2003, 2110‑3127, 2137‑8056, 2811‑7503 и другие.">
+    <style>
+        :root {
+            --bg: #020617;
+            --bg-alt: #050816;
+            --card: #0b1220;
+            --accent: #22c55e;
+            --accent-soft: rgba(34,197,94,0.09);
+            --accent-strong: rgba(34,197,94,0.22);
+            --danger: #f97373;
+            --success: #38bdf8;
+            --warn: #facc15;
+            --text-main: #e5e7eb;
+            --text-soft: #9ca3af;
+            --border-soft: #111827;
+            --code-bg: #020617;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            background:
+                radial-gradient(circle at top, #111827 0, #020617 55%, #000 100%);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .page {
+            max-width: 1120px;
+            margin: 0 auto;
+            padding: 32px 16px 48px;
+        }
+
+        .hero {
+            display: grid;
+            grid-template-columns: minmax(0, 3fr) minmax(0, 2.1fr);
+            gap: 32px;
+            align-items: center;
+            margin-bottom: 40px;
+        }
+
+        .hero-text h1 {
+            font-size: 32px;
+            margin: 0 0 12px;
+        }
+
+        .hero-text h1 strong {
+            color: var(--accent);
+        }
+
+        .hero-text p {
+            margin: 4px 0;
+            color: var(--text-soft);
+        }
+
+        .hero-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 12px;
+        }
+
+        .badge {
+            font-size: 12px;
+            padding: 4px 10px;
+            border-radius: 999px;
+            border: 1px solid var(--border-soft);
+            background: rgba(15,23,42,0.9);
+            color: var(--text-soft);
+            backdrop-filter: blur(6px);
+        }
+
+        .badge--accent {
+            border-color: var(--accent);
+            background: var(--accent-soft);
+            color: #bbf7d0;
+        }
+
+        .badge--danger {
+            border-color: var(--danger);
+            background: rgba(248,113,113,0.09);
+            color: #fecaca;
+        }
+
+        .badge--success {
+            border-color: var(--success);
+            background: rgba(56,189,248,0.1);
+            color: #e0f2fe;
+        }
+
+        .hero-image {
+            border-radius: 18px;
+            overflow: hidden;
+            border: 1px solid var(--border-soft);
+            background: radial-gradient(circle at top, #1f2937 0, #020617 100%);
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero-image img {
+            max-width: 100%;
+            border-radius: 12px;
+            display: block;
+        }
+
+        .hero-note {
+            font-size: 12px;
+            color: var(--text-soft);
+            margin-top: 6px;
+            text-align: center;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: minmax(0, 2.3fr) minmax(0, 1.5fr);
+            gap: 24px;
+        }
+
+        .card {
+            background:
+                radial-gradient(circle at top left, rgba(148,163,184,0.08), transparent 55%);
+            border-radius: 18px;
+            border: 1px solid var(--border-soft);
+            padding: 20px 18px 18px;
+            box-shadow: 0 18px 40px rgba(15,23,42,0.9);
+        }
+
+        .card h2 {
+            font-size: 20px;
+            margin: 0 0 10px;
+        }
+
+        .card h3 {
+            font-size: 16px;
+            margin: 18px 0 6px;
+        }
+
+        .tagline {
+            font-size: 13px;
+            color: var(--text-soft);
+            margin-bottom: 10px;
+        }
+
+        .highlight {
+            border-left: 3px solid var(--accent);
+            padding-left: 10px;
+            margin: 8px 0 14px;
+            font-size: 14px;
+            color: var(--text-soft);
+        }
+
+        .section-intro {
+            font-size: 14px;
+            color: var(--text-soft);
+            margin: 4px 0 10px;
+        }
+
+        .quick-list {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 10px;
+            font-size: 13px;
+            margin: 10px 0 12px;
+        }
+
+        .quick-list ul {
+            margin: 0;
+            padding-left: 18px;
+        }
+
+        .quick-list li {
+            margin-bottom: 4px;
+        }
+
+        .pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 12px;
+            padding: 4px 10px;
+            border-radius: 999px;
+            border: 1px solid rgba(148,163,184,0.45);
+            background: rgba(15,23,42,0.9);
+            margin-right: 6px;
+            margin-bottom: 4px;
+        }
+
+        .pill-bullet {
+            width: 6px;
+            height: 6px;
+            border-radius: 999px;
+            background: var(--accent);
+        }
+
+        .pill-danger .pill-bullet {
+            background: var(--danger);
+        }
+
+        .pill-success .pill-bullet {
+            background: var(--success);
+        }
+
+        .pill-warn .pill-bullet {
+            background: var(--warn);
+        }
+
+        .table-wrapper {
+            margin-top: 12px;
+            border-radius: 14px;
+            overflow: hidden;
+            border: 1px solid var(--border-soft);
+            background: rgba(15,23,42,0.96);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 13px;
+        }
+
+        thead {
+            background: linear-gradient(to right, rgba(34,197,94,0.2), rgba(56,189,248,0.34));
+        }
+
+        th, td {
+            padding: 6px 8px;
+            text-align: left;
+            border-bottom: 1px solid #111827;
+        }
+
+        th {
+            font-weight: 600;
+            color: #e5e7eb;
+            white-space: nowrap;
+        }
+
+        tbody tr:nth-child(odd) {
+            background: rgba(15,23,42,0.96);
+        }
+
+        tbody tr:nth-child(even) {
+            background: rgba(10,16,32,0.96);
+        }
+
+        .steps {
+            margin: 10px 0 6px;
+            padding-left: 18px;
+            font-size: 13px;
+        }
+
+        .steps li {
+            margin-bottom: 5px;
+        }
+
+        .note {
+            font-size: 12px;
+            color: var(--text-soft);
+            margin-top: 6px;
+        }
+
+        .note strong {
+            color: var(--warn);
+        }
+
+        .code {
+            font-family: ui-monospace, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+            background: var(--code-bg);
+            border-radius: 6px;
+            padding: 1px 4px;
+            font-size: 12px;
+        }
+
+        .badge-block {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-bottom: 10px;
+        }
+
+        .label {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 2px 8px;
+            border-radius: 999px;
+            font-size: 11px;
+            border: 1px solid rgba(148,163,184,0.6);
+            background: rgba(15,23,42,0.96);
+        }
+
+        .label-dot {
+            width: 7px;
+            height: 7px;
+            border-radius: 999px;
+            background: var(--accent);
+        }
+
+        .label-soft {
+            opacity: 0.92;
+        }
+
+        .checklist {
+            list-style: none;
+            padding-left: 0;
+            margin: 8px 0 4px;
+            font-size: 13px;
+        }
+
+        .checklist li {
+            margin-bottom: 6px;
+            display: flex;
+            align-items: flex-start;
+            gap: 6px;
+        }
+
+        .checklist-icon {
+            width: 15px;
+            height: 15px;
+            border-radius: 4px;
+            border: 1px solid rgba(148,163,184,0.6);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 11px;
+            color: var(--accent);
+            flex-shrink: 0;
+        }
+
+        .checklist-icon--danger {
+            color: var(--danger);
+            border-color: rgba(248,113,113,0.8);
+        }
+
+        .side-section {
+            font-size: 13px;
+        }
+
+        .side-section h3 {
+            margin-top: 14px;
+        }
+
+        .stat {
+            display: flex;
+            justify-content: space-between;
+            font-size: 12px;
+            margin: 2px 0;
+            color: var(--text-soft);
+        }
+
+        .stat span:first-child {
+            opacity: 0.9;
+        }
+
+        .footer-note {
+            margin-top: 18px;
+            font-size: 12px;
+            color: var(--text-soft);
+            border-top: 1px dashed #1f2937;
+            padding-top: 10px;
+        }
+
+        .divider {
+            margin: 16px 0 10px;
+            border-top: 1px dashed #1e293b;
+        }
+
+        @media (max-width: 920px) {
+            .hero {
+                grid-template-columns: minmax(0, 1fr);
+            }
+            .grid {
+                grid-template-columns: minmax(0, 1fr);
+            }
+            .hero-image {
+                order: -1;
+            }
+        }
+
+        @media (max-width: 560px) {
+            .page {
+                padding: 20px 12px 32px;
+            }
+            .hero-text h1 {
+                font-size: 26px;
+            }
+            .quick-list {
+                grid-template-columns: minmax(0, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-text">
+            <h1><strong>Проблемы с Wi‑Fi и eShop на Switch</strong>: типичные коды и решения</h1>
+            <p>Этот гайд объясняет, что означают самые частые коды ошибок Wi‑Fi и Nintendo eShop на Switch простыми словами и даёт пошаговый план, как вернуть подключение и загрузки.</p>
+            <p>Подойдёт, если Switch пишет, что не может подключиться к сети, ругается кодами вроде 2110‑2003, 2110‑3127, 2137‑8056, 2811‑7503, не пускает в eShop или обрывает скачивание игр.</p>
+
+            <div class="hero-badges">
+                <span class="badge badge--accent">Nintendo Switch • Wi‑Fi • eShop</span>
+                <span class="badge badge--success">Пошаговое устранение ошибок</span>
+                <span class="badge badge--danger">Безопасные действия для дома</span>
+            </div>
+        </div>
+
+        <div>
+            <div class="hero-image">
+                <img src="https://i.postimg.cc/NMN2Rjg3/resize-m-mfit-w-450-h-450.png" alt="Проблемы с Wi-Fi и eShop на Switch: типичные коды и решения">
+            </div>
+            <div class="hero-note">Картинку можно заменить на локальный файл с тем же разрешением, если делаете лендинг или статью.</div>
+        </div>
+    </section>
+
+    <section class="grid">
+        <!-- ОСНОВНОЙ КОНТЕНТ -->
+        <article class="card">
+            <h2>Как подойти к ошибкам Wi‑Fi и eShop без паники</h2>
+            <p class="tagline">Код ошибки Nintendo Switch — это не страшный приговор, а подсказка, что именно пошло не так: сеть, роутер, DNS, сервера Nintendo или настройки самой консоли.</p>
+            <p class="highlight">Прежде чем копаться в роутере, нужно ответить на три вопроса: что вы делали, когда появилась ошибка, работает ли интернет на других устройствах и повторяется ли ошибка стабильно или иногда. Уже этого хватает, чтобы выбрать нужный блок гайда.</p>
+
+            <div class="quick-list">
+                <div>
+                    <strong>Что разберём:</strong>
+                    <ul>
+                        <li>Где смотреть код ошибки и как его записать.</li>
+                        <li>Коды Wi‑Fi 2110‑**** и их значение простыми словами.</li>
+                        <li>Коды eShop и загрузок 2137‑8056, 2811‑7503 и похожие.</li>
+                        <li>Как работать с DNS, частотами wi‑fi и помехами.</li>
+                        <li>Быстрый чек‑лист перед звонком провайдеру или в поддержку.</li>
+                    </ul>
+                </div>
+                <div>
+                    <strong>По уровню сложности:</strong>
+                    <div class="pill pill-success"><span class="pill-bullet"></span>Шаги 1–3: простые действия «на консоли»</div>
+                    <div class="pill"><span class="pill-bullet"></span>Шаги 4–5: тонкая настройка сети</div>
+                    <div class="pill pill-danger"><span class="pill-bullet"></span>Шаг 6+: возможно, нужен провайдер или сервис</div>
+                </div>
+            </div>
+
+            <!-- Блок 1 -->
+            <h3>1. Где смотреть код ошибки и что важно запомнить</h3>
+            <p class="section-intro">Switch всегда показывает код ошибки в одном и том же месте. Главное — не закрыть окно в панике, а зафиксировать этот номер и ситуацию, в которой он появился.</p>
+
+            <ul class="steps">
+                <li>Когда всплывает сообщение об ошибке, посмотрите на строку с номером вида «XXXX‑YYYY» внизу или в середине окна — это и есть код.</li>
+                <li>Сделайте фото экрана или запишите код на бумагу, обязательно с дефисом и всеми цифрами, чтобы не перепутать его потом.</li>
+                <li>Коротко опишите для себя, что именно вы делали: пытались подключиться к wi‑fi, заходили в eShop, скачивали игру, подключались к онлайн‑матчу.</li>
+                <li>Обратите внимание, один и тот же ли код появляется каждый раз или Switch выдаёт разные ошибки в разных ситуациях.</li>
+            </ul>
+            <p class="note"><strong>Смысл:</strong> код ошибки плюс контекст экономят массу времени. Вместо «ничего не работает» получается понятное «2110‑2003 при подключении к wi‑fi», а это уже половина диагноза.</p>
+
+            <!-- Блок 2 -->
+            <h3>2. Коды Wi‑Fi 2110‑2003, 2110‑3127 и похожие: Switch не дружит с сетью</h3>
+            <p class="section-intro">Коды, начинающиеся на 2110, почти всегда связаны с подключением к сети. Консоль видит роутер, но не может корректно пройти все шаги подключения или добраться до интернета.</p>
+
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                    <tr>
+                        <th>Пример кода</th>
+                        <th>Что происходит</th>
+                        <th>По‑простому</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>2110‑2003</td>
+                        <td>Ошибка при попытке подключиться к беспроводной сети</td>
+                        <td>Switch не может нормально подружиться с роутером: пароль, настройки или небольшой сбой</td>
+                    </tr>
+                    <tr>
+                        <td>2110‑3127</td>
+                        <td>Не удаётся выполнить DNS‑разрешение</td>
+                        <td>Консоль подключена к wi‑fi, но не может перевести адреса сайтов и серверов в понятные IP</td>
+                    </tr>
+                    <tr>
+                        <td>2110‑1100/2110‑1101</td>
+                        <td>Ошибка получения IP‑адреса</td>
+                        <td>Роутер не выдаёт корректный адрес Switch или что‑то мешает этому процессу</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <p class="section-intro"><strong>Базовый набор действий для 2110‑2003 и похожих:</strong></p>
+            <ul class="steps">
+                <li>Проверьте, правильно ли введён пароль от wi‑fi: иногда ошибка банально в одной букве или символе. Лучше удалить сеть и добавить её заново.</li>
+                <li>Перезагрузите Switch обычным способом, затем полностью выключите и снова включите, чтобы сбросить временные сетевые глюки.</li>
+                <li>Перезапустите роутер: отключите питание на 30–60 секунд, затем включите и дождитесь, пока индикаторы покажут стабильное подключение.</li>
+                <li>Подойдите ближе к роутеру, уберите лишние стены и крупную технику между ними — слабый сигнал часто проявляется именно странными ошибками подключения.</li>
+                <li>Если у роутера есть отдельные сети 2.4 ГГц и 5 ГГц, попробуйте подключиться к другой или, наоборот, разделить объединённые сети на две разные.</li>
+            </ul>
+            <p class="note"><strong>Важно:</strong> если Switch не подключается к домашнему wi‑fi, но легко подключается к раздаче с телефона, проблема почти наверняка в настройках или особенностях роутера, а не в самой консоли.</p>
+
+            <!-- Блок 3 -->
+            <h3>3. DNS‑ошибки 2110‑3127 и «подключено к wi‑fi, но нет интернета»</h3>
+            <p class="section-intro">Частая ситуация: Switch пишет, что подключён к сети, но интернет‑тест проваливается, а в коде ошибки фигурирует проблема с DNS или невозможность обратиться к серверу.</p>
+
+            <p class="section-intro"><strong>Что такое DNS простыми словами:</strong></p>
+            <ul class="steps">
+                <li>DNS — это как телефонная книга интернета: он переводит адреса вида «сервер Nintendo» в IP‑адрес, по которому устройство реально подключается.</li>
+                <li>Если DNS не отвечает или работает плохо, Switch как будто стоит у двери без номера квартиры и не понимает, куда стучаться.</li>
+            </ul>
+
+            <p class="section-intro"><strong>Что делать при ошибках DNS:</strong></p>
+            <ul class="steps">
+                <li>В настройках сети проверьте, не выставлены ли DNS‑серверы вручную. Если да, попробуйте вернуть их в автоматический режим, чтобы использовать настройки провайдера.</li>
+                <li>Если автоматический режим работает нестабильно, наоборот можно прописать проверенные публичные DNS вручную. Это иногда делает подключение к eShop и играм стабильнее.</li>
+                <li>После изменения DNS удалите текущее подключение к сети на Switch и создайте его заново, чтобы консоль не использовала старый кеш настроек.</li>
+                <li>Снова выполните тест подключения к интернету в системных настройках Switch и посмотрите, прошло ли DNS‑разрешение успешно.</li>
+            </ul>
+            <p class="note"><strong>Логика:</strong> при DNS‑ошибках сама wi‑fi‑связь обычно в порядке, проблемы начинаются на шаге обращения к серверам. Поэтому смена или сброс DNS‑настроек часто решает ситуацию.</p>
+
+            <!-- Блок 4 -->
+            <h3>4. Ошибки eShop и скачивания: 2137‑8056, 2811‑7503 и близкие</h3>
+            <p class="section-intro">Эти коды появляются, когда вы заходите в Nintendo eShop или скачиваете игры и обновления. Текст обычно намекает на проблему связи с сервером и предлагает повторить попытку позже.</p>
+
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                    <tr>
+                        <th>Пример кода</th>
+                        <th>Ситуация</th>
+                        <th>По‑простому</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>2137‑8056</td>
+                        <td>Ошибка при подключении к eShop или серверам загрузки</td>
+                        <td>Сервер Nintendo сейчас занят, недоступен или сеть слишком нестабильна</td>
+                    </tr>
+                    <tr>
+                        <td>2811‑7503/2811‑7504</td>
+                        <td>Ошибка при попытке подключиться к онлайн‑службе</td>
+                        <td>Сервис временно перегружен или недоступен, иногда виноват DNS или ваш интернет</td>
+                    </tr>
+                    <tr>
+                        <td>2123‑1502</td>
+                        <td>Проблема при загрузке контента</td>
+                        <td>Загрузка прервалась из‑за временного сбоя, конфликта кеша или сети</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <p class="section-intro"><strong>План действий при ошибках eShop и загрузки:</strong></p>
+            <ul class="steps">
+                <li>Поставьте загрузку на паузу и снова возобновите её. Иногда достаточно просто перезапустить процесс загрузки, чтобы Switch получил устойчивое соединение.</li>
+                <li>Полностью закройте eShop и запустите его заново, затем попробуйте открыть разделы магазина или список скачивания ещё раз.</li>
+                <li>Проверьте подключение к интернету в системных настройках Switch, чтобы убедиться, что сама сеть работает корректно.</li>
+                <li>Перезапустите консоль и роутер: это помогает убрать зависшие сессии, старый кеш и оживить сеть.</li>
+                <li>Если известно, что у Nintendo в данный момент идут технические работы или высокая нагрузка, имеет смысл просто подождать некоторое время и повторить попытку позже.</li>
+            </ul>
+            <p class="note"><strong>Ключевой момент:</strong> при ошибках eShop и загрузки далеко не всегда виноват пользователь. Если в одно и то же время жалуются многие, проблема может быть на стороне сервиса.</p>
+
+            <!-- Блок 5 -->
+            <h3>5. Слабый сигнал, помехи и особенности wi‑fi на Switch</h3>
+            <p class="section-intro">Switch довольно чувствителен к качеству сигнала. Даже если другие устройства «как‑то работают», консоль может выдавать коды ошибок или рвать соединение при малейших проблемах связи.</p>
+
+            <p class="section-intro"><strong>Что учитывать по части сигнала:</strong></p>
+            <ul class="steps">
+                <li>Толстые стены, перекрытия, металлическая мебель и техника между Switch и роутером заметно ослабляют сигнал и могут приводить к обрывам.</li>
+                <li>Микроволновки, некоторые беспроводные телефоны и плотный «лес» соседних сетей на 2.4 ГГц создают помехи, от которых страдает стабильность.</li>
+                <li>Диапазон 5 ГГц даёт более чистый и быстрый сигнал, но хуже проходит через стены. 2.4 ГГц, наоборот, держит дальность, но часто перегружен и шумный.</li>
+            </ul>
+
+            <p class="section-intro"><strong>Практические шаги по улучшению связи:</strong></p>
+            <ul class="steps">
+                <li>Попробуйте поставить Switch ближе к роутеру и протестировать подключение в этом положении. Если ошибки исчезают, причина почти точно в слабом сигнале или помехах.</li>
+                <li>При возможности переключите подключение консоли на менее загруженный диапазон или канал wi‑fi в настройках роутера.</li>
+                <li>Если роутер поддерживает как 2.4, так и 5 ГГц, создайте для них отдельные сети с разными названиями, чтобы явно выбрать нужную с Switch.</li>
+                <li>В идеале при загрузке крупных игр использовать проводное подключение через фирменный или качественный USB‑LAN‑адаптер, чтобы обойти все проблемы радиосигнала.</li>
+            </ul>
+            <p class="note"><strong>Вывод:</strong> часть загадочных сетевых ошибок исчезает сама, как только сигнал становится стабильным и сильным, без каких‑то особых шаманств с настройками.</p>
+
+            <!-- Блок 6 -->
+            <h3>6. Роль кеша и системных настроек сети Switch</h3>
+            <p class="section-intro">Иногда проблема не в роутере и не в провайдере, а в том, что у самой консоли накопился «мусор» в виде старого кеша или конфликтующих сетевых настроек.</p>
+
+            <p class="section-intro"><strong>Что имеет смысл сделать на самой консоли:</strong></p>
+            <ul class="steps">
+                <li>Очистить кеш Switch в системных настройках. Это удалит временные данные, не трогая сохранения и игры, но поможет убрать странные сетевые глюки.</li>
+                <li>Удалить проблемное подключение к сети и добавить его заново, чтобы сбросить неверные параметры или старые DNS‑настройки.</li>
+                <li>Проверить наличие обновлений системного ПО и установить их. Обновления часто содержат фиксы сетевых проблем и улучшения работы eShop.</li>
+                <li>После всех изменений перезагрузить консоль, а затем ещё раз выполнить тест подключения к интернету и повторить вход в eShop.</li>
+            </ul>
+            <p class="note"><strong>Логика:</strong> очистка кеша и пере‑создание подключения часто работают как «обновить страницу» для сети консоли — старые некорректные данные исчезают, и соединение становится стабильнее.</p>
+
+            <!-- Блок 7 -->
+            <h3>7. Когда дело не в вас: загруженные или недоступные сервера Nintendo</h3>
+            <p class="section-intro">Не всякая ошибка сети — признак проблем дома. Иногда сервера Nintendo или конкретного онлайнового сервиса перегружены, лежат на техработах или испытывают временные сбои.</p>
+
+            <p class="section-intro"><strong>Как распознать проблемную сторону сервера:</strong></p>
+            <ul class="steps">
+                <li>Если интернет на других устройствах работает идеально, а Switch выдаёт коды вроде 2137‑8056 или 2811‑7503 при входе в eShop, есть шанс, что просто не повезло во время перегрузки сервера.</li>
+                <li>Если друзья из других городов или регионов в то же время жалуются на недоступность магазина или онлайна, велика вероятность именно сервера, а не вашей сети.</li>
+                <li>Когда ошибки появляются только в определённые часы (обычно вечер), ситуация может быть связана с часами пик и повышенной нагрузкой на инфраструктуру.</li>
+            </ul>
+
+            <p class="section-intro"><strong>Что делать в таких случаях:</strong></p>
+            <ul class="steps">
+                <li>Не ломать свои настройки, если всё остальное работает идеально. Лучше просто подождать и попробовать ещё раз через некоторое время.</li>
+                <li>Попробовать базовые шаги вроде перезапуска консоли и сети, но не уходить в сложный тюнинг роутера без необходимости.</li>
+                <li>Если доступна официальная информация о техработах, ориентироваться на указанные сроки завершения работ.</li>
+            </ul>
+            <p class="note"><strong>Принцип:</strong> если смена сети, перезапуск роутера и другие устройства показывают, что всё в порядке, иногда лучший «фикс» — это просто время.</p>
+
+            <!-- Блок 8 -->
+            <h3>8. Универсальный чек‑лист по Wi‑Fi и eShop перед обращением к провайдеру</h3>
+            <p class="section-intro">Перед тем как звонить в поддержку провайдера или Nintendo, полезно пройти небольшой чек‑лист. Это поможет либо решить проблему сразу, либо подготовиться к разговору грамотно.</p>
+
+            <ul class="steps">
+                <li>Зафиксируйте один‑два последних кода ошибок и то, что вы делали, когда они появлялись.</li>
+                <li>Сделайте тест подключения к интернету на Switch и отдельно проверьте сеть на другом устройстве.</li>
+                <li>Перезагрузите роутер и консоль, затем попробуйте подключиться к сети и зайти в eShop заново.</li>
+                <li>Попробуйте временно подключиться к другой сети (например, мобильной точке доступа) и посмотрите, повторяются ли те же ошибки.</li>
+                <li>Проверьте, не мешают ли специальные настройки роутера вроде слишком жёсткой фильтрации, отдельных приложений‑«родительского контроля» или блокировщиков.</li>
+                <li>Установите последние обновления системы и очистите кеш на Switch, затем снова протестируйте подключение.</li>
+            </ul>
+            <p class="note"><strong>Преимущество:</strong> если после всех этих шагов проблема остаётся, у вас уже будет чёткая картина для техподдержки: какие коды, на каких сетях, после каких действий — и это сильно ускорит решение.</p>
+        </article>
+
+        <!-- ПРАВАЯ КОЛОНКА / САЙДБАР -->
+        <aside class="card side-section">
+            <h2>Быстрый справочник по Wi‑Fi и eShop</h2>
+            <p class="tagline">Компактная шпаргалка, которую удобно держать под рукой при консультации пользователей или настройке своей консоли.</p>
+
+            <div class="badge-block">
+                <span class="label"><span class="label-dot"></span>2–5 минут на первичную диагностику</span>
+                <span class="label label-soft"><span class="label-dot"></span>Подходит для большинства бытовых проблем</span>
+            </div>
+
+            <ul class="checklist">
+                <li>
+                    <span class="checklist-icon">1</span>
+                    <span><strong>2110‑2003.</strong> Switch не может подключиться к wi‑fi. Проверить пароль, перезагрузить роутер и консоль, попробовать другую сеть или диапазон.</span>
+                </li>
+                <li>
+                    <span class="checklist-icon">2</span>
+                    <span><strong>2110‑3127.</strong> Подключение к wi‑fi есть, но не работает интернет из‑за DNS. Переключить DNS на автоматический или прописать надёжные вручную, пересоздать подключение.</span>
+                </li>
+                <li>
+                    <span class="checklist-icon">3</span>
+                    <span><strong>2137‑8056.</strong> Ошибка связи с eShop или сервером загрузки. Проверить тест сети, перезагрузить устройства, повторить чуть позже — возможно, сервера перегружены.</span>
+                </li>
+                <li>
+                    <span class="checklist-icon">4</span>
+                    <span><strong>2811‑7503/7504.</strong> Проблемы доступа к онлайн‑службам. Тест сети, DNS, перезапуск и проверка возможных техработ или общей нагрузки на сервис.</span>
+                </li>
+                <li>
+                    <span class="checklist-icon">5</span>
+                    <span><strong>Любые сетевые ошибки.</strong> Всегда начать с теста связи, перезагрузки роутера и консоли, проверки другой сети и установкой обновлений системы.</span>
+                </li>
+            </ul>
+
+            <div class="divider"></div>
+
+            <h3>Когда всё‑таки звонить провайдеру</h3>
+            <p class="tagline">Есть ситуации, когда настройки Switch уже отработаны, и пора посмотреть на сторону интернета и роутера.</p>
+
+            <ul class="checklist">
+                <li>
+                    <span class="checklist-icon checklist-icon--danger">!</span>
+                    <span>Switch стабильно не получает IP‑адрес или интернет, а другие устройства периодически тоже теряют сеть.</span>
+                </li>
+                <li>
+                    <span class="checklist-icon checklist-icon--danger">!</span>
+                    <span>Смена DNS и перезапуск оборудования не помогают, а соединение постоянно рвётся у всех устройств в квартире.</span>
+                </li>
+                <li>
+                    <span class="checklist-icon checklist-icon--danger">!</span>
+                    <span>Есть подозрение, что дополнительные фильтры или особенности тарифа ограничивают игровые сервисы или доступ к серверам Nintendo.</span>
+                </li>
+            </ul>
+
+            <div class="divider"></div>
+
+            <h3>Мини‑план, как сделать Wi‑Fi на Switch более стабильным</h3>
+            <p class="tagline">Эти рекомендации стоит добавить в памятку пользователю или разместить отдельным блоком на сайте.</p>
+
+            <div class="stat">
+                <span>Расположение консоли:</span>
+                <span>как можно ближе к роутеру, минимум стен</span>
+            </div>
+            <div class="stat">
+                <span>Выбор диапазона:</span>
+                <span>по возможности использовать 5 ГГц для стабильной игры</span>
+            </div>
+            <div class="stat">
+                <span>Регулярный перезапуск роутера:</span>
+                <span>раз в несколько дней или недель</span>
+            </div>
+            <div class="stat">
+                <span>Чистые настройки DNS:</span>
+                <span>без лишних экспериментов, только проверенные варианты</span>
+            </div>
+            <div class="stat">
+                <span>Проводное подключение для больших загрузок:</span>
+                <span>USB‑LAN‑адаптер вместо wi‑fi</span>
+            </div>
+
+            <p class="note"><strong>Итог:</strong> большинство проблем с Wi‑Fi и eShop на Switch решаются на уровне пары простых шагов. Главное — понимать, что означают типичные коды и не пытаться сразу «ломать» все настройки, если достаточно перезапуска и небольших корректировок.</p>
+
+            <div class="footer-note">
+                Этот HTML‑гайд можно использовать как основу для лендинга о сетевых проблемах Switch, обучающей статьи или PDF‑инструкции для техподдержки, дополнив его скриншотами ошибок и примерами настройки роутера.
+            </div>
+        </aside>
+    </section>
+</div>
+</body>
+</html>
