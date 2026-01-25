@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Использование LiDAR для измерения расстояний | Экспертный гид 2025</title>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=106225686', 'ym');
+
+    ym(106225686, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/106225686" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="../styles-header.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    .guide-content { line-height: 1.7; color: var(--text); }
+    .guide-content h2 { color: var(--primary); margin-top: 30px; margin-bottom: 15px; font-size: 1.5rem; }
+    .guide-content h3 { color: var(--primary-dark); margin-top: 25px; margin-bottom: 12px; font-size: 1.2rem; }
+    .guide-image-block { margin: 20px 0; padding: 15px; background: var(--background); border-radius: var(--border-radius); border: 1px solid var(--border); text-align: center; }
+    .guide-image-block img { max-width: 100%; height: auto; border-radius: 6px; border: 1px solid var(--border); }
+    .image-caption { margin-top: 10px; font-size: 0.85rem; color: var(--text-light); font-style: italic; }
+    .pro-tips { background: rgba(3, 74, 79, 0.05); padding: 15px; border-radius: 6px; margin: 20px 0; }
+    .pro-tips h4 { color: var(--primary); margin-top: 0; margin-bottom: 12px; font-size: 1.1rem; }
+    .tip-item { display: flex; gap: 8px; margin-bottom: 8px; align-items: flex-start; }
+    table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+    th, td { border: 1px solid var(--border); padding: 8px; text-align: left; }
+    th { background: var(--background-light); }
+    @media (max-width: 768px) {
+      .guide-content h2 { font-size: 1.4rem; margin-top: 25px; }
+      .guide-image-block { padding: 12px; margin: 15px 0; }
+      table, th, td { font-size: 0.95rem; }
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="header__inner">
+        <a href="../index.html" class="logo">
+          <span class="logo__icon"></span>
+          <span class="logo__text">Repairo</span>
+        </a>
+        <nav class="nav">
+          <ul class="nav__list">
+            <li><a href="../tv.html" class="nav__link">Телевизоры</a></li>
+            <li><a href="../cameras.html" class="nav__link">Фотоаппараты</a></li>
+            <li><a href="../consoles.html" class="nav__link">Приставки</a></li>
+            <li><a href="../laptops.html" class="nav__link">Ноутбуки</a></li>
+            <li><a href="../smartphones.html" class="nav__link">Смартфоны</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <section class="guide-page">
+    <div class="container">
+      <div class="breadcrumbs">
+        <a href="../index.html">Главная</a>
+        <i class="fas fa-chevron-right"></i>
+        <a href="../smartphones.html">Смартфоны</a>
+        <i class="fas fa-chevron-right"></i>
+        <span>Использование LiDAR для измерения расстояний</span>
+      </div>
+
+      <h1 class="section__title">Использование LiDAR для измерения расстояний: подробный гид 2025</h1>
+
+      <div class="guide-meta">
+        <span><i class="fas fa-ruler"></i> Экспертный разбор: принципы работы, точность, приложения, сравнения, советы, FAQ, иллюстрация.</span>
+      </div>
+
+      <div class="guide-image-block">
+        <img src="https://avatars.mds.yandex.net/get-shedevrum/16118108/img_e4d8e20c444211f09143d60b04329523/orig" alt="LiDAR для измерений">
+        <div class="image-caption">
+          LiDAR-сканер в смартфоне — это цифровая рулетка нового поколения: мгновенные замеры с точностью до миллиметра.
+        </div>
+      </div>
+
+      <div class="guide-content">
+
+        <h2>Как работает LiDAR в смартфонах?</h2>
+        <p>
+          LiDAR (Light Detection and Ranging) использует лазерные импульсы для создания 3D-карты пространства. Сенсор излучает невидимые инфракрасные лучи и измеряет время их возврата, вычисляя расстояния с точностью до 1-5 мм. Технология доступна в iPhone 12 Pro и новее, iPad Pro 2020+.
+        </p>
+
+        <h2>Таблица: возможности LiDAR для измерений</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Параметр</th>
+              <th>Характеристика</th>
+              <th>Точность</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Дистанция измерения</td>
+              <td>До 5 метров</td>
+              <td>±1 см (до 2 м), ±5 см (5 м)</td>
+            </tr>
+            <tr>
+              <td>Скорость сканирования</td>
+              <td>До 5 млн точек/сек</td>
+              <td>Реальное время измерения — мгновенно</td>
+            </tr>
+            <tr>
+              <td>3D-моделирование</td>
+              <td>Создание полигональных сеток</td>
+              <td>Детализация до 0.5 мм</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>Топ-5 приложений для измерений LiDAR</h2>
+        <ul>
+          <li><b>Measure (iOS):</b> Встроенное приложение Apple с автоматическим определением размеров объектов</li>
+          <li><b>Polycam:</b> Профессиональное 3D-сканирование с экспортом в CAD-форматы</li>
+          <li><b>Canvas:</b> Создание поэтажных планов с точностью 99%</li>
+          <li><b>Scaniverse:</b> Замер сложных поверхностей и генерация текстурированных моделей</li>
+          <li><b>Dot3D:</b> Промышленные измерения с облачной аналитикой</li>
+        </ul>
+
+        <h2>Пошаговая инструкция: как измерить расстояние</h2>
+        <ol>
+          <li>Откройте приложение Measure или Polycam</li>
+          <li>Наведите камеру на объект — LiDAR автоматически определит плоскости</li>
+          <li>Тапните по начальной точке измерения, проведите линию до конечной точки</li>
+          <li>Для 3D-сканирования медленно обойдите объект по периметру</li>
+          <li>Экспортируйте данные в нужном формате (PDF, OBJ, CAD)</li>
+        </ol>
+
+        <h2>Сравнение точности LiDAR с другими методами</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Метод</th>
+              <th>Точность</th>
+              <th>Скорость</th>
+              <th>Стоимость</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>LiDAR в iPhone</td>
+              <td>1-5 см</td>
+              <td>Мгновенно</td>
+              <td>Включено в цену смартфона</td>
+            </tr>
+            <tr>
+              <td>Лазерная рулетка</td>
+              <td>±1 мм</td>
+              <td>5-10 сек/замер</td>
+              <td>От 2000₽</td>
+            </tr>
+            <tr>
+              <td>Ультразвуковой датчик</td>
+              <td>±10 см</td>
+              <td>2-3 сек</td>
+              <td>От 500₽</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>Лайфхаки для точных измерений</h2>
+        <div class="pro-tips">
+          <h4>💡 Практические советы</h4>
+          <div class="tip-item">
+            <i class="fas fa-lightbulb"></i>
+            <p>Используйте маркеры-стикеры для сложных поверхностей — улучшает распознавание текстур</p>
+          </div>
+          <div class="tip-item">
+            <i class="fas fa-lightbulb"></i>
+            <p>Калибруйте приложения при первом запуске — проведите телефоном "восьмёрку" в воздухе</p>
+          </div>
+          <div class="tip-item">
+            <i class="fas fa-lightbulb"></i>
+            <p>Для замеров выше 2 метров используйте штатив — уменьшает дрожание рук</p>
+          </div>
+        </div>
+
+        <h2>FAQ – часто задаваемые вопросы</h2>
+        <ul>
+          <li>
+            <b>Какие смартфоны поддерживают LiDAR?</b><br>
+            iPhone 12 Pro/13 Pro/14 Pro/15 Pro, iPad Pro 2020+
+          </li>
+          <li>
+            <b>Можно ли измерить объём комнаты?</b><br>
+            Да, в Canvas и Polycam есть автоматический расчёт площади и объёма
+          </li>
+          <li>
+            <b>Работает ли в темноте?</b><br>
+            Да, LiDAR использует инфракрасный лазер, не требующий видимого света
+          </li>
+        </ul>
+
+        <h2>📌 Итог: будущее измерений в кармане</h2>
+        <p>
+          LiDAR в смартфонах совершил революцию в бытовых и профессиональных замерах. С точностью до 1 см и мгновенной обработкой данных он заменяет рулетки, дальномеры и даже частично профессиональное 3D-оборудование. Для идеальных результатов используйте Polycam или Scaniverse, не забывая о калибровке и хорошем освещении.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__col footer__col--logo">
+          <a href="../index.html" class="footer-logo">
+            <span class="logo__icon"></span>
+            <span class="logo__text">Repairo</span>
+          </a>
+          <p class="footer__text">Экспертные инструкции по мобильным технологиям и измерениям с 2024 года</p>
+        </div>
+        <div class="footer__col">
+          <h3 class="footer__title">Разделы</h3>
+          <ul class="footer__links">
+            <li><a href="../index.html" class="footer__link">Главная</a></li>
+            <li><a href="../all-guides.html" class="footer__link">Все гайды</a></li>
+            <li><a href="../contacts.html" class="footer__link">Контакты</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h3 class="footer__title">Категории</h3>
+          <ul class="footer__links">
+            <li><a href="../tv.html" class="nav__link">Телевизоры</a></li>
+            <li><a href="../cameras.html" class="nav__link">Фотоаппараты</a></li>
+            <li><a href="../consoles.html" class="nav__link">Приставки</a></li>
+            <li><a href="../laptops.html" class="nav__link">Ноутбуки</a></li>
+            <li><a href="../smartphones.html" class="nav__link">Смартфоны</a></li>
+            <li><a href="../small-appliances.html" class="nav__link">Мелкая техника</a></li>
+            <li><a href="../large-appliances.html" class="nav__link">Бытовая техника</a></li>
+            <li><a href="../auto-electronics.html" class="nav__link">Авто-Электроника</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h3 class="footer__title">Контакты</h3>
+          <ul class="footer__links">
+            <li>
+              <a href="https://t.me/repairo_kz" class="footer__link"><i class="fab fa-telegram"></i> Telegram</a>
+            </li>
+            <li>
+              <a href="https://instagram.com/repairo_kz" class="footer__link"><i class="fab fa-instagram"></i> Instagram</a>
+            </li>
+            <li>
+              <a href="mailto:support@repairo.kz" class="footer__link"><i class="fas fa-envelope"></i> Email</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+            <p class="disclaimer">
+        Администрация сайта не несёт ответственности за возможные повреждения техники
+        и иные последствия, возникшие в результате самостоятельного ремонта по
+        материалам и инструкциям, размещённым на сайте. Все работы вы выполняете
+        на свой страх и риск.
+    </p>
+                <p class="footer__copyright">© 2025 Repairo. Все права защищены.</p>
+      </div>
+    </div>
+  </footer>
+  <script src="../script.js"></script>
+</body>
+</html>

@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Как играть в PS5-игры на телефоне через Remote Play? | Экспертный мегагайд</title>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=106225686', 'ym');
+
+    ym(106225686, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/106225686" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="../styles-header.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    .guide-content { line-height: 1.7; color: var(--text); }
+    .guide-content h2 { color: var(--primary); margin-top: 30px; margin-bottom: 15px; font-size: 1.5rem; }
+    .guide-content h3 { color: var(--primary-dark); margin-top: 25px; margin-bottom: 12px; font-size: 1.2rem; }
+    .guide-image-block { margin: 20px 0; padding: 15px; background: var(--background); border-radius: var(--border-radius); border: 1px solid var(--border); text-align: center; }
+    .guide-image-block img { max-width: 100%; height: auto; border-radius: 6px; border: 1px solid var(--border); }
+    .image-caption { margin-top: 10px; font-size: 0.85rem; color: var(--text-light); font-style: italic; }
+    .pro-tips { background: rgba(3, 74, 79, 0.05); padding: 15px; border-radius: 6px; margin: 20px 0; }
+    .pro-tips h4 { color: var(--primary); margin-top: 0; margin-bottom: 12px; font-size: 1.1rem; }
+    .tip-item { display: flex; gap: 8px; margin-bottom: 8px; align-items: flex-start; }
+    .warning-block {
+      background: #fff3e0;
+      border-left: 5px solid #ff9100;
+      padding: 15px 18px;
+      margin: 22px 0;
+      border-radius: 7px;
+    }
+    table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+    th, td { border: 1px solid var(--border); padding: 8px; text-align: left; }
+    th { background: var(--background-light); }
+    @media (max-width: 768px) {
+      .guide-content h2 { font-size: 1.4rem; margin-top: 25px; }
+      .guide-image-block { padding: 12px; margin: 15px 0; }
+      table, th, td { font-size: 0.95rem; }
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="header__inner">
+        <a href="../index.html" class="logo">
+          <span class="logo__icon"></span>
+          <span class="logo__text">Repairo</span>
+        </a>
+        <nav class="nav">
+          <ul class="nav__list">
+            <li><a href="../tv.html" class="nav__link">Телевизоры</a></li>
+            <li><a href="../cameras.html" class="nav__link">Фотоаппараты</a></li>
+            <li><a href="../consoles.html" class="nav__link">Приставки</a></li>
+            <li><a href="../laptops.html" class="nav__link">Ноутбуки</a></li>
+            <li><a href="../smartphones.html" class="nav__link">Смартфоны</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <section class="guide-page">
+    <div class="container">
+      <div class="breadcrumbs">
+        <a href="../index.html">Главная</a>
+        <i class="fas fa-chevron-right"></i>
+        <a href="../consoles.html">Приставки</a>
+        <i class="fas fa-chevron-right"></i>
+        <span>Как играть в PS5-игры на телефоне через Remote Play?</span>
+      </div>
+
+      <h1 class="section__title">Как играть в PS5-игры на телефоне через Remote Play?</h1>
+
+      <div class="guide-meta">
+        <span><i class="fas fa-gamepad"></i> Полное руководство: установка, настройка, требования, советы, FAQ и оптимизация качества игры на мобильном устройстве.</span>
+      </div>
+
+      <div class="guide-image-block">
+        <img src="https://avatars.mds.yandex.net/get-shedevrum/13732027/img_8f0c234f3b9f11f08ce7923f0c10f08f/orig" alt="PS5 Remote Play на телефоне">
+        <div class="image-caption">
+          Играйте в любимые PS5-игры на смартфоне или планшете с помощью официального приложения PS Remote Play.
+        </div>
+      </div>
+
+      <div class="guide-content">
+
+        <h2>Введение: что такое PS Remote Play?</h2>
+        <p>
+          PS Remote Play — это официальное приложение от Sony, позволяющее удалённо подключаться к вашей консоли PlayStation 5 и играть в игры на мобильных устройствах, таких как смартфоны и планшеты под управлением Android и iOS. Это отличный способ продолжить игру, когда вы не можете находиться перед телевизором с консолью, либо хотите играть в удобном месте с мобильного устройства.
+        </p>
+
+        <h2>Требования для использования PS Remote Play</h2>
+        <ul>
+          <li><b>Консоль PlayStation 5</b> с последним обновлением системы.</li>
+          <li><b>Мобильное устройство</b>: смартфон или планшет с Android 7.0 и выше, либо iPhone/iPad с iOS 12.1 и выше.</li>
+          <li><b>Учётная запись PlayStation Network</b>, используемая на вашей PS5.</li>
+          <li><b>Высокоскоростное интернет-соединение</b> с минимальной скоростью загрузки и отдачи 5 Мбит/с, рекомендуется не менее 15 Мбит/с для оптимального качества.</li>
+          <li><b>Wi-Fi сеть</b> с низкой задержкой предпочтительна, но можно использовать мобильные данные с осторожностью из-за большого трафика.</li>
+          <li><b>Подключённый беспроводной контроллер DualSense, DualSense Edge или DUALSHOCK 4</b> для удобного управления.</li>
+        </ul>
+
+        <h2>Установка приложения PS Remote Play</h2>
+        <p>
+          Загрузите и установите приложение PS Remote Play из Google Play или App Store. Приложение универсально и поддерживает подключение как к PS5, так и к PS4. При первом запуске потребуется войти в свою учётную запись PlayStation Network.
+        </p>
+
+        <h3>Шаги установки:</h3>
+        <ol>
+          <li>Откройте Google Play или App Store на вашем мобильном устройстве.</li>
+          <li>Найдите приложение <strong>PS Remote Play</strong> и установите его.</li>
+          <li>Запустите приложение и войдите в свою учётную запись PSN, используемую на PS5.</li>
+          <li>Разрешите необходимые разрешения приложению (доступ к микрофону, уведомлениям и т.д.).</li>
+        </ol>
+
+        <h2>Настройка консоли PS5 для удалённой игры</h2>
+        <p>
+          Чтобы PS Remote Play работал корректно, необходимо включить соответствующие настройки на самой консоли.
+        </p>
+
+        <h3>Как включить функцию дистанционной игры на PS5:</h3>
+        <ol>
+          <li>На главном экране PS5 перейдите в <strong>Настройки</strong>.</li>
+          <li>Выберите раздел <strong>Система</strong>.</li>
+          <li>Перейдите в подраздел <strong>Дистанционная игра</strong>.</li>
+          <li>Включите опцию <strong>Разрешить дистанционную игру</strong> для нужного пользователя.</li>
+          <li>Для возможности включения PS5 из режима покоя через сеть, перейдите в <strong>Энергосбережение</strong> → <strong>Функции, доступные в режиме покоя</strong> и активируйте <strong>Сохранить подключение к Интернету</strong> и <strong>Разрешить включение PS5 через сеть</strong>.</li>
+        </ol>
+
+        <h2>Подготовка мобильного устройства для Remote Play</h2>
+        <p>
+          Для использования мобильных данных с Remote Play потребуется дополнительная настройка:
+        </p>
+        <ol>
+          <li>Запустите приложение PS Remote Play и войдите в учётную запись PSN.</li>
+          <li>Откройте меню <strong>Настройки</strong> (значок шестерёнки в правом верхнем углу).</li>
+          <li>Выберите пункт <strong>Мобильные данные</strong> и активируйте опцию <strong>Использовать мобильные данные</strong>.</li>
+          <li>Рекомендуется включить уведомления при использовании мобильных данных, чтобы контролировать расход трафика.</li>
+          <li>В разделе <strong>Качество видео при потоковой передаче</strong> выберите оптимальное качество для мобильной сети (стандартное или низкое).</li>
+        </ol>
+        <p>
+          Помните, что Remote Play потребляет значительный объём данных, поэтому внимательно следите за своим тарифным планом.
+        </p>
+
+        <h2>Подключение контроллера к мобильному устройству</h2>
+        <p>
+          Для комфортной игры рекомендуется подключить к мобильному устройству беспроводной контроллер DualSense, DualSense Edge или DUALSHOCK 4.
+        </p>
+        <ol>
+          <li>Включите Bluetooth на мобильном устройстве.</li>
+          <li>Переведите контроллер в режим сопряжения (удерживайте кнопку PS и кнопку Share/Создать одновременно до мигания индикатора).</li>
+          <li>В списке доступных устройств Bluetooth на телефоне выберите контроллер.</li>
+          <li>После подключения в приложении Remote Play управление будет осуществляться через контроллер.</li>
+        </ol>
+
+        <h2>Оптимизация качества потоковой передачи</h2>
+        <p>
+          Для наилучшего игрового опыта важно оптимизировать качество видеопотока и минимизировать задержки.
+        </p>
+        <ul>
+          <li>Используйте Wi-Fi с частотой 5 ГГц и минимальной задержкой.</li>
+          <li>Подключайте PS5 к интернету через кабель Ethernet для стабильности.</li>
+          <li>В настройках приложения Remote Play выбирайте качество видео в зависимости от скорости интернета.</li>
+          <li>Отключайте другие устройства, которые могут загружать сеть во время игры.</li>
+          <li>При использовании мобильных данных выбирайте более низкое качество видео, чтобы избежать задержек и потерь пакетов.</li>
+        </ul>
+
+        <h2>Работа с другими приложениями во время Remote Play</h2>
+        <p>
+          Во время игры через Remote Play вы можете переключаться между приложениями на мобильном устройстве, но при этом игра будет приостановлена или продолжит работать в фоне в зависимости от ОС и настроек.
+        </p>
+        <ul>
+          <li>На iOS и iPadOS приложение Remote Play поддерживает работу в фоне, но с ограничениями.</li>
+          <li>На Android возможна приостановка игры при переключении на другие приложения.</li>
+          <li>Для комфортной игры рекомендуется оставаться в приложении Remote Play во время игровой сессии.</li>
+        </ul>
+
+        <h2>Выход из Remote Play и отключение сессии</h2>
+        <p>
+          Чтобы завершить сессию дистанционной игры:
+        </p>
+        <ol>
+          <li>Нажмите кнопку «Назад» или «Домой» в приложении Remote Play.</li>
+          <li>Выберите «Отключить» или «Выйти» из сессии.</li>
+          <li>Можно также выключить консоль PS5 дистанционно через приложение.</li>
+        </ol>
+
+        <h2>Таблица: советы по устранению проблем с Remote Play</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Проблема</th>
+              <th>Возможная причина</th>
+              <th>Решение</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Нет соединения с PS5</td>
+              <td>Консоль выключена, не в сети или не включена функция дистанционной игры</td>
+              <td>Проверьте настройки PS5, включите функцию дистанционной игры</td>
+            </tr>
+            <tr>
+              <td>Задержки и лаги</td>
+              <td>Низкая скорость интернета, высокая загрузка сети</td>
+              <td>Используйте Wi-Fi 5 ГГц, уменьшите качество видео, отключите другие устройства</td>
+            </tr>
+            <tr>
+              <td>Прерывание сессии</td>
+              <td>Потеря сигнала, нестабильное соединение</td>
+              <td>Перезапустите приложение, проверьте сеть</td>
+            </tr>
+            <tr>
+              <td>Не работает контроллер</td>
+              <td>Проблемы с Bluetooth или сопряжением</td>
+              <td>Переподключите контроллер, обновите прошивку</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>FAQ – часто задаваемые вопросы о PS Remote Play на телефоне</h2>
+        <ul>
+          <li>
+            <strong>Можно ли играть в PS5-игры на телефоне без консоли?</strong><br>
+            Нет, приложение Remote Play требует активной и включённой PS5 с подключением к интернету.
+          </li>
+          <li>
+            <strong>Поддерживаются ли все игры PS5 через Remote Play?</strong><br>
+            Большинство игр поддерживаются, но некоторые, требующие VR или специфических периферийных устройств — нет.
+          </li>
+          <li>
+            <strong>Можно ли использовать мобильные данные для Remote Play?</strong><br>
+            Да, но рекомендуется использовать тариф с большим объёмом трафика и хорошим покрытием, так как игра потребляет много данных.
+          </li>
+          <li>
+            <strong>Как подключить контроллер DualSense к телефону?</strong><br>
+            Включите Bluetooth на телефоне, переведите контроллер в режим сопряжения и выберите его в списке устройств.
+          </li>
+          <li>
+            <strong>Можно ли играть через Remote Play на телевизоре?</strong><br>
+            Да, если у вас Android TV или совместимое устройство с приложением Remote Play.
+          </li>
+          <li>
+            <strong>Что делать, если качество видео плохое?</strong><br>
+            Проверьте скорость интернета, уменьшите качество видео в настройках приложения, используйте Wi-Fi 5 ГГц.
+          </li>
+        </ul>
+
+        <div class="warning-block">
+          <strong>Внимание!</strong> Использование функции Remote Play требует стабильного и быстрого интернет-соединения. При использовании мобильных данных следите за расходом трафика, чтобы избежать дополнительных затрат.
+        </div>
+
+        <h2>Итог</h2>
+        <p>
+          PS Remote Play — удобный и мощный инструмент для игры в PS5-игры на мобильных устройствах. Следуя рекомендациям по установке, настройке и оптимизации, вы сможете наслаждаться любимыми играми в любом месте без привязки к телевизору. Используйте качественные сети, подключайте контроллеры и не забывайте про настройки качества видео для лучшего игрового опыта.
+        </p>
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__col footer__col--logo">
+          <a href="index.html" class="footer-logo">
+            <span class="logo__icon"></span>
+            <span class="logo__text">Repairo</span>
+          </a>
+          <p class="footer__text">Экспертные инструкции по технике с 2024 года</p>
+        </div>
+        <div class="footer__col">
+          <h3 class="footer__title">Разделы</h3>
+          <ul class="footer__links">
+            <li><a href="index.html" class="footer__link">Главная</a></li>
+            <li><a href="all-guides.html" class="footer__link">Все гайды</a></li>
+            <li><a href="contacts.html" class="footer__link">Контакты</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h3 class="footer__title">Категории</h3>
+          <ul class="footer__links">
+            <li><a href="../tv.html" class="nav__link">Телевизоры</a></li>
+            <li><a href="../cameras.html" class="nav__link">Фотоаппараты</a></li>
+            <li><a href="../consoles.html" class="nav__link">Приставки</a></li>
+            <li><a href="../laptops.html" class="nav__link">Ноутбуки</a></li>
+            <li><a href="../smartphones.html" class="nav__link">Смартфоны</a></li>
+            <li><a href="../small-appliances.html" class="nav__link">Мелкая техника</a></li>
+            <li><a href="../large-appliances.html" class="nav__link">Бытовая техника</a></li>
+            <li><a href="../auto-electronics.html" class="nav__link">Авто-Электроника</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h3 class="footer__title">Контакты</h3>
+          <ul class="footer__links">
+            <li>
+              <a href="https://t.me/repairo_kz" class="footer__link"><i class="fab fa-telegram"></i> Telegram</a>
+            </li>
+            <li>
+              <a href="https://instagram.com/repairo_kz" class="footer__link"><i class="fab fa-instagram"></i> Instagram</a>
+            </li>
+            <li>
+              <a href="mailto:support@repairo.kz" class="footer__link"><i class="fas fa-envelope"></i> Email</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+            <p class="disclaimer">
+        Администрация сайта не несёт ответственности за возможные повреждения техники
+        и иные последствия, возникшие в результате самостоятельного ремонта по
+        материалам и инструкциям, размещённым на сайте. Все работы вы выполняете
+        на свой страх и риск.
+    </p>
+                <p class="footer__copyright">© 2025 Repairo. Все права защищены.</p>
+      </div>
+    </div>
+  </footer>
+  <script src="../script.js"></script>
+</body>
+</html>

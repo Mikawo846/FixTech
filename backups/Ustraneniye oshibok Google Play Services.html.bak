@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Android TV: ошибки Google Play Services | Repairo</title>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=106225686', 'ym');
+
+    ym(106225686, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/106225686" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../styles-header.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Основные стили */
+        .guide-content {
+            line-height: 1.7;
+            color: var(--text);
+        }
+        .guide-content h2 {
+            color: var(--primary);
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+        .guide-content h3 {
+            color: var(--primary-dark);
+            margin-top: 25px;
+            margin-bottom: 12px;
+            font-size: 1.2rem;
+        }
+        /* Стили для шагов */
+        .step-group {
+            margin: 20px 0;
+            padding: 15px;
+            background: var(--background);
+            border-radius: var(--border-radius);
+            border: 1px solid var(--border);
+        }
+        .step {
+            display: flex;
+            gap: 15px;
+            margin: 12px 0;
+            padding: 12px;
+            background: var(--background-alt);
+            border-radius: 6px;
+            align-items: flex-start;
+        }
+        .step-number {
+            background: var(--primary);
+            color: white;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            font-weight: bold;
+            font-size: 0.8rem;
+        }
+        /* Изображения */
+        .guide-image-block {
+            margin: 20px 0;
+            padding: 15px;
+            background: var(--background);
+            border-radius: var(--border-radius);
+            border: 1px solid var(--border);
+            text-align: center;
+        }
+        .guide-image-block img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 6px;
+            border: 1px solid var(--border);
+        }
+        .image-caption {
+            margin-top: 10px;
+            font-size: 0.85rem;
+            color: var(--text-light);
+            font-style: italic;
+        }
+        /* Рекомендации */
+        .recommend-box {
+            background: rgba(3, 74, 79, 0.1);
+            border-left: 4px solid var(--primary);
+            padding: 12px;
+            margin: 15px 0;
+            display: flex;
+            gap: 12px;
+            align-items: flex-start;
+            border-radius: 4px;
+        }
+        .recommend-box i {
+            font-size: 1.2rem;
+            color: var(--primary);
+            margin-top: 2px;
+        }
+        /* Советы */
+        .pro-tips {
+            background: rgba(3, 74, 79, 0.05);
+            padding: 15px;
+            border-radius: 6px;
+            margin: 20px 0;
+        }
+        .pro-tips h4 {
+            color: var(--primary);
+            margin-top: 0;
+            margin-bottom: 12px;
+            font-size: 1.1rem;
+        }
+        .tip-item {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 8px;
+            align-items: flex-start;
+        }
+        /* Медиа-запросы для мобильных */
+        @media (max-width: 768px) {
+            .guide-content h2 {
+                font-size: 1.4rem;
+                margin-top: 25px;
+            }
+            .step-group, .guide-image-block {
+                padding: 12px;
+                margin: 15px 0;
+            }
+            .step {
+                padding: 10px;
+            }
+        }
+        .error-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        .error-table th, .error-table td {
+            border: 1px solid var(--border);
+            padding: 8px 12px;
+            text-align: left;
+        }
+        .error-table th {
+            background-color: var(--primary);
+            color: white;
+        }
+        .error-table tr:nth-child(even) {
+            background-color: var(--background-alt);
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <a href="../index.html" class="logo">
+                    <span class="logo__icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 15L7 10H17L12 15Z" fill="currentColor"/>
+                            <path d="M12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3ZM12 19C8.13401 19 5 15.866 5 12C5 8.13401 8.13401 5 12 5C15.866 5 19 8.13401 19 12C19 15.866 15.866 19 12 19Z" fill="currentColor"/>
+                        </svg>
+                    </span>
+                    <span class="logo__text">Repairo</span>
+                </a>
+                <nav class="nav">
+                    <ul class="nav__list">
+                        <li><a href="../tv.html" class="nav__link">Телевизоры</a></li>
+                        <li><a href="../cameras.html" class="nav__link">Фотоаппараты</a></li>
+                        <li><a href="../consoles.html" class="nav__link">Приставки</a></li>
+                        <li><a href="../laptops.html" class="nav__link">Ноутбуки</a></li>
+                        <li><a href="../smartphones.html" class="nav__link">Смартфоны</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <section class="guide-page">
+        <div class="container">
+            <div class="breadcrumbs">
+                <a href="../index.html">Главная</a>
+                <i class="fas fa-chevron-right"></i>
+                <a href="../tv.html">Телевизоры</a>
+                <i class="fas fa-chevron-right"></i>
+                <span>Android TV: ошибки Google Play Services</span>
+            </div>
+            <h1 class="section__title">Решение ошибок Google Play Services на Android TV</h1>
+            <div class="guide-meta">
+                <span><i class="fas fa-clock"></i> 15-30 мин</span>
+                <span><i class="fas fa-tools"></i> Средний уровень</span>
+            </div>
+            <div class="guide-image-block">
+                <img src="https://avatars.mds.yandex.net/get-shedevrum/15407285/img_4415677d25c911f0ae6882872adeaf38/orig">
+            </div>
+            <div class="guide-content">
+                <h2>Распространенные ошибки Google Play Services</h2>
+                <table class="error-table">
+                    <thead>
+                        <tr>
+                            <th>Код ошибки</th>
+                            <th>Описание</th>
+                            <th>Возможные причины</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>DF-DFERH-01</td>
+                            <td>Сервисы Google Play остановлены</td>
+                            <td>Устаревшая версия, проблемы с кэшем</td>
+                        </tr>
+                        <tr>
+                            <td>491</td>
+                            <td>Не удается установить приложение</td>
+                            <td>Проблемы с хранилищем, ошибки аккаунта</td>
+                        </tr>
+                        <tr>
+                            <td>963</td>
+                            <td>Не удается установить обновление</td>
+                            <td>Недостаточно места, конфликт версий</td>
+                        </tr>
+                        <tr>
+                            <td>RH-01</td>
+                            <td>Сервисы Google Play не отвечают</td>
+                            <td>Проблемы с соединением, датой и временем</td>
+                        </tr>
+                        <tr>
+                            <td>505</td>
+                            <td>Несовместимость приложения</td>
+                            <td>Устаревшая версия Android TV</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h2>1. Базовые решения</h2>
+                <div class="step-group">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div>
+                            <p><strong>Перезагрузка устройства:</strong></p>
+                            <ul>
+                                <li>Полностью выключите телевизор (не в режим ожидания)</li>
+                                <li>Отключите от сети на 1-2 минуты</li>
+                                <li>Включите и проверьте работу сервисов</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div>
+                            <p><strong>Проверка соединения:</strong></p>
+                            <ul>
+                                <li>Убедитесь в стабильности интернет-соединения</li>
+                                <li>Попробуйте переключиться с Wi-Fi на кабель (или наоборот)</li>
+                                <li>Проверьте настройки DNS (можно использовать 8.8.8.8 и 8.8.4.4)</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div>
+                            <p><strong>Очистка кэша и данных:</strong></p>
+                            <ul>
+                                <li>Настройки → Приложения → Сервисы Google Play</li>
+                                <li>Выберите "Очистить кэш" и "Очистить данные"</li>
+                                <li>Повторите для Google Play Маркет и проблемного приложения</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <h2>2. Обновление сервисов</h2>
+                <div class="step-group">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div>
+                            <p><strong>Проверка обновлений:</strong></p>
+                            <ul>
+                                <li>Настройки → О телевизоре → Обновление системы</li>
+                                <li>Установите последние обновления Android TV</li>
+                                <li>Перезагрузите устройство после обновления</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div>
+                            <p><strong>Ручное обновление Google Play Services:</strong></p>
+                            <ul>
+                                <li>Откройте Google Play Маркет</li>
+                                <li>Найдите "Google Play Services"</li>
+                                <li>Если доступно, нажмите "Обновить"</li>
+                                <li>Или скачайте APK с официального сайта (для вашей версии Android)</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div>
+                            <p><strong>Синхронизация аккаунта:</strong></p>
+                            <ul>
+                                <li>Настройки → Аккаунты → Google</li>
+                                <li>Выберите свой аккаунт → Синхронизировать сейчас</li>
+                                <li>Удалите и добавьте аккаунт заново, если проблемы сохраняются</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <h2>3. Продвинутые методы</h2>
+                <div class="step-group">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div>
+                            <p><strong>Сброс настроек Google Services Framework:</strong></p>
+                            <ul>
+                                <li>Настройки → Приложения → Показать системные приложения</li>
+                                <li>Найдите "Google Services Framework"</li>
+                                <li>Очистите кэш и данные (это сбросит настройки сервисов)</li>
+                                <li>Перезагрузите устройство</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div>
+                            <p><strong>Проверка даты и времени:</strong></p>
+                            <ul>
+                                <li>Настройки → Система → Дата и время</li>
+                                <li>Включите "Автоматическая дата и время"</li>
+                                <li>Если проблема остается, установите вручную правильные значения</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div>
+                            <p><strong>Безопасный режим:</strong></p>
+                            <ul>
+                                <li>Перезагрузите телевизор в безопасном режиме</li>
+                                <li>Проверьте работу сервисов (удерживайте кнопку питания на пульте)</li>
+                                <li>Если ошибки исчезли - проблема в стороннем приложении</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pro-tips">
+                    <h4>🔹 Профессиональные советы</h4>
+                    <div class="tip-item">
+                        <i class="fas fa-lightbulb" style="color: var(--primary);"></i>
+                        <p>Для телевизоров с ограниченной памятью регулярно очищайте кэш приложений</p>
+                    </div>
+                    <div class="tip-item">
+                        <i class="fas fa-lightbulb" style="color: var(--primary);"></i>
+                        <p>При обновлении сервисов Google используйте только официальные источники</p>
+                    </div>
+                    <div class="tip-item">
+                        <i class="fas fa-lightbulb" style="color: var(--primary);"></i>
+                        <p>Для диагностики подключите телевизор к другому Google аккаунту</p>
+                    </div>
+                </div>
+
+                <h2>4. Если ничего не помогает</h2>
+                <div class="step-group">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div>
+                            <p><strong>Сброс к заводским настройкам:</strong></p>
+                            <ul>
+                                <li>Настройки → Система → Сброс</li>
+                                <li>Выберите "Сбросить настройки" (данные приложений сохранятся)</li>
+                                <li>Или "Полный сброс" (удалит все данные)</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div>
+                            <p><strong>Обращение в сервисный центр:</strong></p>
+                            <ul>
+                                <li>Если ошибки появляются после сброса</li>
+                                <li>При физических повреждениях устройства</li>
+                                <li>Если телевизор больше не получает обновлений Android</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div>
+                            <p><strong>Альтернативные магазины приложений:</strong></p>
+                            <ul>
+                                <li>Рассмотрите возможность использования Aptoide TV</li>
+                                <li>Или установите приложения вручную через APK-файлы</li>
+                                <li>Это временное решение до устранения проблемы</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <h2>📌 Итог</h2>
+                <p>Для устранения ошибок Google Play Services:</p>
+                <ul>
+                    <li>Начните с простых решений (перезагрузка, очистка кэша)</li>
+                    <li>Обновите сервисы и систему Android TV</li>
+                    <li>Проверьте соединение и настройки аккаунта</li>
+                    <li>Используйте безопасный режим для диагностики</li>
+                    <li>В крайнем случае выполните сброс настроек</li>
+                </ul>
+                <div style="text-align: center; margin-top: 30px;">
+                    <h3 style="color: var(--primary);">Здесь всегда актуальные руководства и свежие новости из области электроники! Добавьте сайт в избранное чтобы не потерять 😉</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__col footer__col--logo">
+                    <a href="index.html" class="footer-logo">
+                        <span class="logo__icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 15L7 10H17L12 15Z" fill="currentColor"/>
+                                <path d="M12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3ZM12 19C8.13401 19 5 15.866 5 12C5 8.13401 8.13401 5 12 5C15.866 5 19 8.13401 19 12C19 15.866 15.866 19 12 19Z" fill="currentColor"/>
+                            </svg>
+                        </span>
+                        <span class="logo__text">Repairo</span>
+                    </a>
+                    <p class="footer__text">Помогаем ремонтировать электронику с 2024 года</p>
+                </div>
+                <div class="footer__col">
+                    <h3 class="footer__title">Разделы</h3>
+                    <ul class="footer__links">
+                        <li><a href="index.html" class="footer__link">Главная</a></li>
+                        <li><a href="all-guides.html" class="footer__link">Все гайды</a></li>
+                        <li><a href="contacts.html" class="footer__link">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="footer__col">
+                    <h3 class="footer__title">Категории</h3>
+                    <ul class="footer__links">
+                        <li><a href="../tv.html" class="nav__link">Телевизоры</a></li>
+                        <li><a href="../cameras.html" class="nav__link">Фотоаппараты</a></li>
+                        <li><a href="../consoles.html" class="nav__link">Приставки</a></li>
+                        <li><a href="../laptops.html" class="nav__link">Ноутбуки</a></li>
+                        <li><a href="../smartphones.html" class="nav__link">Смартфоны</a></li>
+                        <li><a href="../small-appliances.html" class="nav__link">Мелкая техника</a></li>
+                        <li><a href="../large-appliances.html" class="nav__link">Бытовая техника</a></li>
+                        <li><a href="../auto-electronics.html" class="nav__link">Авто-Электроника</a></li>
+                    </ul>
+                </div>
+                <div class="footer__col">
+                    <h3 class="footer__title">Контакты</h3>
+                    <ul class="footer__links">
+                        <li><a href="https://t.me/repairo_kz" class="footer__link"><i class="fab fa-telegram"></i> Telegram</a></li>
+                        <li><a href="https://instagram.com/repairo_kz" class="footer__link"><i class="fab fa-instagram"></i> Instagram</a></li>
+                        <li><a href="mailto:support@repairo.kz" class="footer__link"><i class="fas fa-envelope"></i> Email</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                    <p class="disclaimer">
+        Администрация сайта не несёт ответственности за возможные повреждения техники
+        и иные последствия, возникшие в результате самостоятельного ремонта по
+        материалам и инструкциям, размещённым на сайте. Все работы вы выполняете
+        на свой страх и риск.
+    </p>
+                <p class="footer__copyright">© 2024 Repairo. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="../script.js"></script>
+</body>
+</html>

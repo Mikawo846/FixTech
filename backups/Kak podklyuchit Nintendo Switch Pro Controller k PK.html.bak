@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Как подключить Nintendo Switch Pro Controller к ПК? | Экспертный мегагайд 2025</title>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=106225686', 'ym');
+
+    ym(106225686, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/106225686" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="../styles-header.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    .guide-content { line-height: 1.7; color: var(--text); }
+    .guide-content h2 { color: var(--primary); margin-top: 30px; margin-bottom: 15px; font-size: 1.5rem; }
+    .guide-content h3 { color: var(--primary-dark); margin-top: 25px; margin-bottom: 12px; font-size: 1.2rem; }
+    .guide-image-block { margin: 20px 0; padding: 15px; background: var(--background); border-radius: var(--border-radius); border: 1px solid var(--border); text-align: center; }
+    .guide-image-block img { max-width: 100%; height: auto; border-radius: 6px; border: 1px solid var(--border); }
+    .image-caption { margin-top: 10px; font-size: 0.85rem; color: var(--text-light); font-style: italic; }
+    .pro-tips { background: rgba(3, 74, 79, 0.05); padding: 15px; border-radius: 6px; margin: 20px 0; }
+    .pro-tips h4 { color: var(--primary); margin-top: 0; margin-bottom: 12px; font-size: 1.1rem; }
+    .tip-item { display: flex; gap: 8px; margin-bottom: 8px; align-items: flex-start; }
+    table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+    th, td { border: 1px solid var(--border); padding: 8px; text-align: left; }
+    th { background: var(--background-light); }
+    @media (max-width: 768px) {
+      .guide-content h2 { font-size: 1.4rem; margin-top: 25px; }
+      .guide-image-block { padding: 12px; margin: 15px 0; }
+      table, th, td { font-size: 0.95rem; }
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="header__inner">
+        <a href="../index.html" class="logo">
+          <span class="logo__icon"></span>
+          <span class="logo__text">Repairo</span>
+        </a>
+        <nav class="nav">
+          <ul class="nav__list">
+            <li><a href="../tv.html" class="nav__link">Телевизоры</a></li>
+            <li><a href="../cameras.html" class="nav__link">Фотоаппараты</a></li>
+            <li><a href="../consoles.html" class="nav__link">Приставки</a></li>
+            <li><a href="../laptops.html" class="nav__link">Ноутбуки</a></li>
+            <li><a href="../smartphones.html" class="nav__link">Смартфоны</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <section class="guide-page">
+    <div class="container">
+      <div class="breadcrumbs">
+        <a href="../index.html">Главная</a>
+        <i class="fas fa-chevron-right"></i>
+        <a href="../consoles.html">Приставки</a>
+        <i class="fas fa-chevron-right"></i>
+        <span>Как подключить Nintendo Switch Pro Controller к ПК?</span>
+      </div>
+
+      <h1 class="section__title">Как подключить Nintendo Switch Pro Controller к ПК?</h1>
+
+      <div class="guide-meta">
+        <span><i class="fas fa-hourglass-half"></i> Глобальный мегагайд: пошаговая настройка, сравнения, лайфхаки, FAQ, таблицы, иллюстрация.</span>
+      </div>
+
+      <div class="guide-image-block">
+        <img src="https://avatars.mds.yandex.net/get-shedevrum/16312463/img_switch_pro_pc/orig" alt="Подключение Switch Pro к ПК">
+        <div class="image-caption">
+          Switch Pro Controller — один из лучших геймпадов для ПК: удобный, автономный, с отличной крестовиной и гироскопом. Как подключить его к Windows по USB и Bluetooth? Самый подробный гайд — ниже.
+        </div>
+      </div>
+
+      <div class="guide-content">
+
+        <h2>Введение: почему стоит использовать Switch Pro Controller на ПК?</h2>
+        <p>
+          Nintendo Switch Pro Controller — это премиальный геймпад с отличной эргономикой, качественными стиками, крестовиной и поддержкой гироскопа. Он прекрасно подходит для игр на ПК, особенно если вы привыкли к Nintendo или ищете альтернативу Xbox-контроллерам. Благодаря поддержке Steam и сторонних программ, подключить и настроить Pro Controller можно буквально за 5 минут.
+        </p>
+
+        <h2>Таблица: основные способы подключения Switch Pro Controller к ПК</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Метод</th>
+              <th>Плюсы</th>
+              <th>Минусы</th>
+              <th>Где работает</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>USB (проводное)</td>
+              <td>Простота, нет задержки, зарядка</td>
+              <td>Ограничение длиной кабеля</td>
+              <td>Windows, Steam, эмуляторы</td>
+            </tr>
+            <tr>
+              <td>Bluetooth (беспроводное)</td>
+              <td>Свобода, автономность до 40 ч</td>
+              <td>Нужен Bluetooth, возможна задержка</td>
+              <td>Windows, Steam, эмуляторы</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>Пошаговая инструкция: подключение через USB</h2>
+        <ol>
+          <li>
+            <b>Возьмите любой USB-C кабель (лучше оригинальный).</b>
+          </li>
+          <li>
+            <b>Вставьте кабель в контроллер и подключите к ПК.</b>
+          </li>
+          <li>
+            <b>Windows автоматически определит устройство как "Pro Controller".</b>
+          </li>
+          <li>
+            <b>Откройте Steam &rarr; Настройки &rarr; Контроллер &rarr; Основные настройки контроллера.</b>
+          </li>
+          <li>
+            <b>Включите поддержку Nintendo Switch Pro Controller.</b>
+          </li>
+          <li>
+            <b>Настройте кнопки, калибруйте стики и гироскоп, создайте профиль для игр.</b>
+          </li>
+        </ol>
+        <p>
+          <b>Плюсы:</b> нет задержек, контроллер заряжается во время игры, максимальная совместимость со Steam.
+        </p>
+
+        <h2>Пошаговая инструкция: подключение по Bluetooth</h2>
+        <ol>
+          <li>
+            <b>Убедитесь, что на ПК есть Bluetooth (встроенный или донгл).</b>
+          </li>
+          <li>
+            <b>Зайдите в "Параметры Windows" → "Bluetooth и устройства" → "Добавить устройство".</b>
+          </li>
+          <li>
+            <b>На геймпаде зажмите кнопку синхронизации (на верхней грани рядом с USB-C) на 5–10 секунд, пока индикаторы не начнут мигать.</b>
+          </li>
+          <li>
+            <b>В списке устройств выберите "Pro Controller".</b>
+          </li>
+          <li>
+            <b>Дождитесь подключения, убедитесь, что горит индикатор "Player 1".</b>
+          </li>
+          <li>
+            <b>Откройте Steam и включите поддержку Pro Controller, как в инструкции выше.</b>
+          </li>
+        </ol>
+        <p>
+          <b>Плюсы:</b> до 40 часов автономной работы, свобода движений, простая настройка в Steam.
+        </p>
+
+        <h2>Таблица: сравнение USB и Bluetooth подключения</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Параметр</th>
+              <th>USB</th>
+              <th>Bluetooth</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Легкость подключения</td>
+              <td>Максимум</td>
+              <td>Высокая</td>
+            </tr>
+            <tr>
+              <td>Задержка</td>
+              <td>Минимальная</td>
+              <td>Может быть выше</td>
+            </tr>
+            <tr>
+              <td>Автономность</td>
+              <td>Зарядка во время игры</td>
+              <td>До 40 ч</td>
+            </tr>
+            <tr>
+              <td>Дальность</td>
+              <td>Ограничено кабелем</td>
+              <td>До 10 м</td>
+            </tr>
+            <tr>
+              <td>Совместимость</td>
+              <td>Любой ПК</td>
+              <td>Нужен Bluetooth</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>Пошаговая инструкция: настройка контроллера в Steam</h2>
+        <ol>
+          <li>Откройте Steam &rarr; Настройки &rarr; Контроллер &rarr; Основные настройки контроллера.</li>
+          <li>Поставьте галочку "Поддержка Nintendo Switch Pro Controller".</li>
+          <li>При необходимости включите "Использовать макет кнопок Nintendo" (A/B, X/Y).</li>
+          <li>Калибруйте стики и гироскоп, настройте профили под разные игры.</li>
+          <li>В Big Picture Mode можно настраивать мёртвые зоны, вибрацию, макросы.</li>
+          <li>Проверьте работу контроллера через "Тестирование" — все кнопки и стики должны работать корректно.</li>
+        </ol>
+        <p>
+          <b>Важно:</b> В Steam Pro Controller работает в большинстве игр без дополнительного ПО. Для не-Steam игр используйте DS4Windows или аналогичные программы.
+        </p>
+
+        <h2>Пошаговая инструкция: использование в не-Steam играх</h2>
+        <ol>
+          <li>Скачайте DS4Windows или аналог (например, reWASD, BetterJoy).</li>
+          <li>Запустите программу, выберите Switch Pro Controller как устройство.</li>
+          <li>Настройте эмуляцию Xbox-контроллера (XInput) для максимальной совместимости.</li>
+          <li>Сохраните профиль, убедитесь, что игра видит контроллер как Xbox-геймпад.</li>
+        </ol>
+        <p>
+          <b>Совет:</b> Для эмуляторов (Yuzu, Cemu, Dolphin) Switch Pro Controller поддерживается напрямую — настройте кнопки в меню эмулятора.
+        </p>
+
+        <h2>Лайфхаки и советы по использованию Switch Pro Controller на ПК</h2>
+        <div class="pro-tips">
+          <h4>🔹 Практические советы</h4>
+          <div class="tip-item">
+            <i class="fas fa-lightbulb"></i>
+            <p>Для максимального комфорта обновите прошивку контроллера через Switch перед использованием на ПК.</p>
+          </div>
+          <div class="tip-item">
+            <i class="fas fa-lightbulb"></i>
+            <p>В Steam можно включить гироскоп для управления камерой в шутерах и гонках.</p>
+          </div>
+          <div class="tip-item">
+            <i class="fas fa-lightbulb"></i>
+            <p>Если возникают лаги по Bluetooth — попробуйте другой USB-порт или Bluetooth-донгл, отключите лишние устройства.</p>
+          </div>
+          <div class="tip-item">
+            <i class="fas fa-lightbulb"></i>
+            <p>Для не-Steam игр используйте DS4Windows или reWASD для эмуляции Xbox-контроллера.</p>
+          </div>
+          <div class="tip-item">
+            <i class="fas fa-lightbulb"></i>
+            <p>Для игр с неправильной раскладкой кнопок (A/B, X/Y) — включите "Использовать макет Nintendo" в Steam.</p>
+          </div>
+        </div>
+
+        <h2>FAQ — часто задаваемые вопросы о подключении Switch Pro Controller к ПК</h2>
+        <ul>
+          <li>
+            <strong>Можно ли подключить Switch Pro Controller к ПК без Steam?</strong><br>
+            Да, но для большинства игр потребуется стороннее ПО (DS4Windows, reWASD).
+          </li>
+          <li>
+            <strong>Работает ли вибрация и гироскоп на ПК?</strong><br>
+            В Steam — да, в не-Steam играх зависит от поддержки в программе-эмуляторе.
+          </li>
+          <li>
+            <strong>Сколько держит батарея Pro Controller на ПК?</strong><br>
+            До 40 часов игры по Bluetooth, при проводном подключении — зарядка во время игры.
+          </li>
+          <li>
+            <strong>Можно ли подключить несколько Pro Controller к одному ПК?</strong><br>
+            Да, но для Steam-игр потребуется индивидуальная настройка каждого геймпада.
+          </li>
+          <li>
+            <strong>Какие альтернативы для не-Steam игр?</strong><br>
+            DS4Windows, reWASD, BetterJoy — эмуляция Xbox-контроллера.
+          </li>
+        </ul>
+
+        <h2>Профилактика и уход за Switch Pro Controller</h2>
+        <ol>
+          <li>Регулярно обновляйте прошивку через Switch.</li>
+          <li>Не используйте дешёвые кабели — возможны обрывы связи.</li>
+          <li>Заряжайте контроллер не реже раза в месяц при хранении.</li>
+          <li>Храните в чехле, избегайте падений и влаги.</li>
+        </ol>
+
+        <h2>Таблица: плюсы и минусы использования Switch Pro Controller на ПК</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Плюсы</th>
+              <th>Минусы</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                + Отличная эргономика<br>
+                + До 40 ч автономности<br>
+                + Поддержка Steam, эмуляторов<br>
+                + Гироскоп и вибрация
+              </td>
+              <td>
+                – Не все игры поддерживают без Steam<br>
+                – Иногда требуется стороннее ПО<br>
+                – Возможна задержка по Bluetooth
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>Итог: как подключить и настроить Switch Pro Controller на ПК?</h2>
+        <p>
+          В 2025 году подключить Nintendo Switch Pro Controller к ПК — задача на 5 минут: по USB или Bluetooth, с полной поддержкой в Steam и эмуляторах. Для не-Steam игр используйте DS4Windows или reWASD. Главное — не забывайте обновлять прошивку, использовать качественные кабели и настраивать кнопки под себя. Switch Pro Controller — один из лучших геймпадов для ПК, особенно если вы цените автономность, эргономику и гибкость!
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__col footer__col--logo">
+          <a href="index.html" class="footer-logo">
+            <span class="logo__icon"></span>
+            <span class="logo__text">Repairo</span>
+          </a>
+          <p class="footer__text">Экспертные инструкции по геймингу с 2024 года</p>
+        </div>
+        <div class="footer__col">
+          <h3 class="footer__title">Разделы</h3>
+          <ul class="footer__links">
+            <li><a href="index.html" class="footer__link">Главная</a></li>
+            <li><a href="all-guides.html" class="footer__link">Все гайды</a></li>
+            <li><a href="contacts.html" class="footer__link">Контакты</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h3 class="footer__title">Категории</h3>
+          <ul class="footer__links">
+            <li><a href="../tv.html" class="nav__link">Телевизоры</a></li>
+            <li><a href="../cameras.html" class="nav__link">Фотоаппараты</a></li>
+            <li><a href="../consoles.html" class="nav__link">Приставки</a></li>
+            <li><a href="../laptops.html" class="nav__link">Ноутбуки</a></li>
+            <li><a href="../smartphones.html" class="nav__link">Смартфоны</a></li>
+            <li><a href="../small-appliances.html" class="nav__link">Мелкая техника</a></li>
+            <li><a href="../large-appliances.html" class="nav__link">Бытовая техника</a></li>
+            <li><a href="../auto-electronics.html" class="nav__link">Авто-Электроника</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h3 class="footer__title">Контакты</h3>
+          <ul class="footer__links">
+            <li>
+              <a href="https://t.me/repairo_kz" class="footer__link"><i class="fab fa-telegram"></i> Telegram</a>
+            </li>
+            <li>
+              <a href="https://instagram.com/repairo_kz" class="footer__link"><i class="fab fa-instagram"></i> Instagram</a>
+            </li>
+            <li>
+              <a href="mailto:support@repairo.kz" class="footer__link"><i class="fas fa-envelope"></i> Email</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+            <p class="disclaimer">
+        Администрация сайта не несёт ответственности за возможные повреждения техники
+        и иные последствия, возникшие в результате самостоятельного ремонта по
+        материалам и инструкциям, размещённым на сайте. Все работы вы выполняете
+        на свой страх и риск.
+    </p>
+                <p class="footer__copyright">© 2025 Repairo. Все права защищены.</p>
+      </div>
+    </div>
+  </footer>
+  <script src="../script.js"></script>
+</body>
+</html>

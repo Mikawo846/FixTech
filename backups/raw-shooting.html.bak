@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Как включить и настроить RAW-съемку? | Repairo</title>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=106225686', 'ym');
+
+    ym(106225686, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/106225686" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../styles-header.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .guide-content { line-height: 1.7; color: var(--text);}
+        .guide-content h2 { color: var(--primary); margin-top: 30px; margin-bottom: 15px; font-size: 1.5rem;}
+        .step-group { margin: 20px 0; padding: 15px; background: var(--background); border-radius: var(--border-radius); border: 1px solid var(--border);}
+        .step { display: flex; gap: 15px; margin: 12px 0; padding: 12px; background: var(--background-alt); border-radius: 6px; align-items: flex-start;}
+        .step-number { background: var(--primary); color: white; width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-weight: bold; font-size: 0.8rem;}
+        .guide-image-block { margin: 20px 0; padding: 15px; background: var(--background); border-radius: var(--border-radius); border: 1px solid var(--border); text-align: center;}
+        .guide-image-block img { max-width: 100%; height: auto; border-radius: 6px; border: 1px solid var(--border);}
+        .image-caption { margin-top: 10px; font-size: 0.85rem; color: var(--text-light); font-style: italic;}
+        .recommend-box { background: rgba(3, 74, 79, 0.1); border-left: 4px solid var(--primary); padding: 12px; margin: 15px 0; display: flex; gap: 12px; align-items: flex-start; border-radius: 4px;}
+        .recommend-box i { font-size: 1.2rem; color: var(--primary); margin-top: 2px;}
+        .pro-tips { background: rgba(3, 74, 79, 0.05); padding: 15px; border-radius: 6px; margin: 20px 0;}
+        .pro-tips h4 { color: var(--primary); margin-top: 0; margin-bottom: 12px; font-size: 1.1rem;}
+        .tip-item { display: flex; gap: 8px; margin-bottom: 8px; align-items: flex-start;}
+        @media (max-width: 768px) {
+            .guide-content h2 { font-size: 1.4rem; margin-top: 25px;}
+            .guide-image-block, .step-group { padding: 12px; margin: 15px 0;}
+            .step { padding: 10px;}
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <a href="../index.html" class="logo">
+                    <span class="logo__icon"></span>
+                    <span class="logo__text">Repairo</span>
+                </a>
+                <nav class="nav">
+                    <ul class="nav__list">
+                        <li><a href="../cameras.html" class="nav__link">Фотоаппараты</a></li>
+                        <li><a href="../tv.html" class="nav__link">Телевизоры</a></li>
+                        <li><a href="../laptops.html" class="nav__link">Ноутбуки</a></li>
+                        <li><a href="../smartphones.html" class="nav__link">Смартфоны</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <section class="guide-page">
+        <div class="container">
+            <div class="breadcrumbs">
+                <a href="../index.html">Главная</a>
+                <i class="fas fa-chevron-right"></i>
+                <a href="../cameras.html">Фотоаппараты</a>
+                <i class="fas fa-chevron-right"></i>
+                <span>Как включить и настроить RAW-съемку?</span>
+            </div>
+            <h1 class="section__title">Как включить и настроить RAW-съемку?</h1>
+            <div class="guide-meta">
+                <span><i class="fas fa-file-archive"></i> Практический гайд</span>
+            </div>
+            <div class="guide-image-block">
+                <img src="https://avatars.mds.yandex.net/get-shedevrum/15407285/img_b796fcc22cb411f0a2b876232a015dfe/orig">
+            </div>
+            <div class="guide-content">
+                <h2>Что такое RAW и зачем он нужен?</h2>
+                <ul>
+                    <li><strong>RAW</strong> - это «сырой» формат, в котором камера сохраняет все данные с матрицы без обработки и сжатия. Такой файл содержит максимум информации для последующей обработки.</li>
+                    <li>RAW позволяет гибко корректировать экспозицию, баланс белого, вытягивать детали из светов и теней, не теряя качество.</li>
+                </ul>
+                <h2>Как включить RAW-съемку на фотоаппарате?</h2>
+                <div class="step-group">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div>
+                            <strong>Откройте меню камеры</strong>
+                            <ul>
+                                <li>Зайдите в меню <b>Качество изображения</b> или <b>Формат файла</b> (Image Quality, File Format).</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div>
+                            <strong>Выберите формат RAW</strong>
+                            <ul>
+                                <li>Выберите <b>RAW</b> или <b>RAW+JPEG</b> для одновременного сохранения «сырого» и обработанного файла.</li>
+                                <li>На некоторых камерах опция может называться <b>FINE+RAW</b> или <b>NORMAL+RAW</b> (различие только в качестве JPEG).</li>
+                                <li>Для смартфонов используйте приложения, поддерживающие RAW (например, Adobe Lightroom).</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div>
+                            <strong>Сохраните настройки</strong>
+                            <ul>
+                                <li>Подтвердите выбор и выйдите из меню. На экране появится индикатор RAW.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <h2>Дополнительные настройки RAW-съемки</h2>
+                <ul>
+                    <li><strong>Битовая глубина (Nikon):</strong> можно выбрать 12 или 14 бит - чем выше, тем больше деталей и размер файла.</li>
+                    <li><strong>Размер RAW-файла:</strong> некоторые камеры позволяют выбрать полный или уменьшенный размер RAW (например, sRAW, mRAW).</li>
+                    <li><strong>Режим RAW-серии (Canon):</strong> позволяет записывать несколько RAW-кадров в одном файле для выбора лучшего момента.</li>
+                    <li><strong>RAW+JPEG:</strong> удобно, если нужен быстрый просмотр на устройствах, не поддерживающих RAW.</li>
+                </ul>
+                <h2>Особенности и советы</h2>
+                <ul>
+                    <li>В автоматическом режиме (Auto) RAW часто недоступен - переключитесь в P, A, S, M или ручной режим.</li>
+                    <li>RAW-файлы занимают больше места (20–50 МБ и более).</li>
+                    <li>Для обработки RAW используйте программы Lightroom, Photoshop, Capture One или фирменные конвертеры камер.</li>
+                    <li>На смартфонах RAW доступен не на всех моделях и только через специальные приложения.</li>
+                </ul>
+                <div class="recommend-box">
+                    <i class="fas fa-info-circle"></i>
+                    <div>
+                        <strong>Совет:</strong> Снимайте в RAW+JPEG, если хотите быстро делиться фото и иметь максимум возможностей для последующей обработки.
+                    </div>
+                </div>
+                <div class="pro-tips">
+                    <h4>🔹 Профессиональные советы</h4>
+                    <div class="tip-item">
+                        <i class="fas fa-lightbulb"></i>
+                        <p>Для максимального качества выбирайте 14-битный RAW и полный размер файла.</p>
+                    </div>
+                    <div class="tip-item">
+                        <i class="fas fa-lightbulb"></i>
+                        <p>Проверьте, чтобы карта памяти была достаточно ёмкой и быстрой для работы с RAW.</p>
+                    </div>
+                    <div class="tip-item">
+                        <i class="fas fa-lightbulb"></i>
+                        <p>Сохраняйте RAW-файлы для важных съёмок (портреты, пейзажи, коммерция), а для повседневных кадров используйте JPEG.</p>
+                    </div>
+                </div>
+                <h2>Часто задаваемые вопросы</h2>
+                <ul>
+                    <li><strong>Какой формат RAW у моей камеры?</strong> - Canon: CR2/CR3, Nikon: NEF/NRW, Sony: ARW, Olympus: ORF, Leica: DNG.</li>
+                    <li><strong>Можно ли просматривать RAW на телевизоре или медиаплеере?</strong> - Обычно нет, для этого используйте JPEG или конвертируйте RAW на компьютере.</li>
+                    <li><strong>Почему нет RAW в автоматическом режиме?</strong> - RAW предназначен для ручной и творческой съёмки, а не для "авто".</li>
+                </ul>
+                <h2>📌 Итог</h2>
+                <p>
+                    Включить RAW-съёмку просто: выберите формат RAW или RAW+JPEG в меню камеры, сохраните настройки и снимайте в ручном или творческом режиме. Для обработки используйте профессиональные программы - так вы получите максимум качества и возможностей для творчества.
+                </p>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__col footer__col--logo">
+                    <a href="index.html" class="footer-logo">
+                        <span class="logo__icon"></span>
+                        <span class="logo__text">Repairo</span>
+                    </a>
+                    <p class="footer__text">Помогаем ремонтировать электронику с 2024 года</p>
+                </div>
+                <div class="footer__col">
+                    <h3 class="footer__title">Разделы</h3>
+                    <ul class="footer__links">
+                        <li><a href="index.html" class="footer__link">Главная</a></li>
+                        <li><a href="all-guides.html" class="footer__link">Все гайды</a></li>
+                        <li><a href="contacts.html" class="footer__link">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="footer__col">
+                    <h3 class="footer__title">Категории</h3>
+                    <ul class="footer__links">
+                        <li><a href="../tv.html" class="nav__link">Телевизоры</a></li>
+                        <li><a href="../cameras.html" class="nav__link">Фотоаппараты</a></li>
+                        <li><a href="../consoles.html" class="nav__link">Приставки</a></li>
+                        <li><a href="../laptops.html" class="nav__link">Ноутбуки</a></li>
+                        <li><a href="../smartphones.html" class="nav__link">Смартфоны</a></li>
+                        <li><a href="../small-appliances.html" class="nav__link">Мелкая техника</a></li>
+                        <li><a href="../large-appliances.html" class="nav__link">Бытовая техника</a></li>
+                        <li><a href="../auto-electronics.html" class="nav__link">Авто-Электроника</a></li>
+                    </ul>
+                </div>
+                <div class="footer__col">
+                    <h3 class="footer__title">Контакты</h3>
+                    <ul class="footer__links">
+                        <li><a href="https://t.me/repairo_kz" class="footer__link"><i class="fab fa-telegram"></i> Telegram</a></li>
+                        <li><a href="https://instagram.com/repairo_kz" class="footer__link"><i class="fab fa-instagram"></i> Instagram</a></li>
+                        <li><a href="mailto:support@repairo.kz" class="footer__link"><i class="fas fa-envelope"></i> Email</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                    <p class="disclaimer">
+        Администрация сайта не несёт ответственности за возможные повреждения техники
+        и иные последствия, возникшие в результате самостоятельного ремонта по
+        материалам и инструкциям, размещённым на сайте. Все работы вы выполняете
+        на свой страх и риск.
+    </p>
+                <p class="footer__copyright">© 2024 Repairo. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="../script.js"></script>
+</body>
+</html>

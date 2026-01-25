@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Как играть в Xbox 360-игры на Steam Deck | Экспертный мегагайд</title>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=106225686', 'ym');
+
+    ym(106225686, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/106225686" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="../styles-header.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    .guide-content { line-height: 1.7; color: var(--text); }
+    .guide-content h2 { color: var(--primary); margin-top: 30px; margin-bottom: 15px; font-size: 1.5rem; }
+    .guide-content h3 { color: var(--primary-dark); margin-top: 25px; margin-bottom: 12px; font-size: 1.2rem; }
+    .guide-image-block { margin: 20px 0; padding: 15px; background: var(--background); border-radius: var(--border-radius); border: 1px solid var(--border); text-align: center; }
+    .guide-image-block img { max-width: 100%; height: auto; border-radius: 6px; border: 1px solid var(--border); }
+    .image-caption { margin-top: 10px; font-size: 0.85rem; color: var(--text-light); font-style: italic; }
+    .pro-tips { background: rgba(3, 74, 79, 0.05); padding: 15px; border-radius: 6px; margin: 20px 0; }
+    .pro-tips h4 { color: var(--primary); margin-top: 0; margin-bottom: 12px; font-size: 1.1rem; }
+    .tip-item { display: flex; gap: 8px; margin-bottom: 8px; align-items: flex-start; }
+    .warning-block {
+      background: #fff3e0;
+      border-left: 5px solid #ff9100;
+      padding: 15px 18px;
+      margin: 22px 0;
+      border-radius: 7px;
+    }
+    table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+    th, td { border: 1px solid var(--border); padding: 8px; text-align: left; }
+    th { background: var(--background-light); }
+    @media (max-width: 768px) {
+      .guide-content h2 { font-size: 1.4rem; margin-top: 25px; }
+      .guide-image-block { padding: 12px; margin: 15px 0; }
+      table, th, td { font-size: 0.95rem; }
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="header__inner">
+        <a href="../index.html" class="logo">
+          <span class="logo__icon"></span>
+          <span class="logo__text">Repairo</span>
+        </a>
+        <nav class="nav">
+          <ul class="nav__list">
+            <li><a href="../tv.html" class="nav__link">Телевизоры</a></li>
+            <li><a href="../cameras.html" class="nav__link">Фотоаппараты</a></li>
+            <li><a href="../consoles.html" class="nav__link">Приставки</a></li>
+            <li><a href="../laptops.html" class="nav__link">Ноутбуки</a></li>
+            <li><a href="../smartphones.html" class="nav__link">Смартфоны</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <section class="guide-page">
+    <div class="container">
+      <div class="breadcrumbs">
+        <a href="../index.html">Главная</a>
+        <i class="fas fa-chevron-right"></i>
+        <a href="../consoles.html">Приставки</a>
+        <i class="fas fa-chevron-right"></i>
+        <span>Как играть в Xbox 360-игры на Steam Deck</span>
+      </div>
+
+      <h1 class="section__title">Как играть в Xbox 360-игры на Steam Deck</h1>
+
+      <div class="guide-meta">
+        <span><i class="fas fa-xbox"></i> Экспертный гид: эмуляция Xbox 360 на Steam Deck — Xenia, EmuDeck, Xenia Manager, XenonRecomp, настройка, патчи, стриминг, советы, FAQ, таблицы, иллюстрация.</span>
+      </div>
+
+      <div class="guide-image-block">
+        <img src="https://avatars.mds.yandex.net/get-shedevrum/15342086/img_ef221e653d5111f0abd62e469673a1ac/orig" alt="Как играть в Xbox 360-игры на Steam Deck">
+        <div class="image-caption">
+          Xenia, Xenia Manager, EmuDeck, XenonRecomp, Steam ROM Manager, Proton, Moonlight, Sunshine — все способы запуска Xbox 360-игр на Steam Deck с кастомизацией управления, патчами и обложками.
+        </div>
+      </div>
+
+      <div class="guide-content">
+
+        <h2>Введение: почему Steam Deck — лучший портатив для Xbox 360-игр?</h2>
+        <p>
+          Steam Deck — первый массовый портативный ПК, способный запускать Xbox 360-игры через эмуляцию и даже нативные порты. Благодаря поддержке Windows, Linux, Proton и мощному железу, вы можете играть в классику Microsoft где угодно, с полным контролем над настройками и интерфейсом.
+        </p>
+
+        <h2>Таблица: основные способы запуска Xbox 360-игр на Steam Deck</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Метод</th>
+              <th>Плюсы</th>
+              <th>Минусы</th>
+              <th>Сложность</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Xenia Standalone (Windows/Proton)</td>
+              <td>Максимальная совместимость, гибкая настройка, поддержка патчей</td>
+              <td>Требует ручной настройки, не все игры работают идеально</td>
+              <td>Средняя</td>
+            </tr>
+            <tr>
+              <td>Xenia Manager (GUI)</td>
+              <td>Удобный интерфейс, управление патчами, профили для игр</td>
+              <td>Требует установки .NET и Protontricks</td>
+              <td>Средняя</td>
+            </tr>
+            <tr>
+              <td>EmuDeck + EmulationStation</td>
+              <td>Интеграция в SteamOS, автоматизация, обложки, коллекции</td>
+              <td>Меньше гибкости, не все патчи доступны</td>
+              <td>Низкая</td>
+            </tr>
+            <tr>
+              <td>XenonRecomp (нативные порты)</td>
+              <td>Запуск без эмуляции, максимальная производительность</td>
+              <td>Требует сборки, поддержка только отдельных игр</td>
+              <td>Высокая</td>
+            </tr>
+            <tr>
+              <td>Стриминг с ПК (Sunshine/Moonlight, xbplay)</td>
+              <td>Идеальная совместимость, любые игры, минимальные лаги</td>
+              <td>Требуется мощный ПК, стабильный Wi-Fi</td>
+              <td>Средняя</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>Пошаговая инструкция: запуск Xbox 360-игр через Xenia на Steam Deck</h2>
+        <ol>
+          <li>
+            <b>Перейдите в Desktop Mode на Steam Deck</b> (через меню Power).
+          </li>
+          <li>
+            <b>Скачайте Xenia или Xenia Manager</b> с официального сайта или GitHub.
+          </li>
+          <li>
+            <b>Добавьте Xenia Manager как Non-Steam Game</b> в Steam (правый клик → Add to Steam).
+          </li>
+          <li>
+            <b>Установите .NET 8.0.10 через Protontricks</b> (для Xenia Manager).
+          </li>
+          <li>
+            <b>Настройте Xenia Manager:</b>
+            <ul>
+              <li>Добавьте папку с играми (.iso, .xex, .xbla).</li>
+              <li>Включите нужные патчи (через GUI, не вручную в текстовых файлах).</li>
+              <li>Настройте графику (Vulkan/DirectX12), управление, профили для разных игр.</li>
+            </ul>
+          </li>
+          <li>
+            <b>Добавьте обложки и интегрируйте в Steam</b> через Steam ROM Manager или вручную.
+          </li>
+          <li>
+            <b>Переключитесь в Gaming Mode</b> и запускайте Xbox 360-игры прямо из библиотеки Steam.
+          </li>
+        </ol>
+
+        <h2>EmuDeck и EmulationStation: автоматизация и коллекции</h2>
+        <ul>
+          <li>Установите EmuDeck в Desktop Mode — он автоматически скачает Xenia и настроит папки для ROM-ов.</li>
+          <li>Скопируйте образы игр в папку /Emulation/roms/xbox360 и XBLA-игры в /Emulation/roms/xbla.</li>
+          <li>Запустите Steam ROM Manager для добавления игр в библиотеку Steam с обложками и коллекциями.</li>
+          <li>Используйте EmulationStation для удобной навигации и запуска игр с красивым меню.</li>
+        </ul>
+
+        <h2>XenonRecomp: нативные порты Xbox 360-игр на Steam Deck</h2>
+        <ul>
+          <li>Проект XenonRecomp позволяет запускать отдельные Xbox 360-игры на Steam Deck без эмуляции, путём перекомпиляции кода под x86 (например, Sonic Unleashed).</li>
+          <li>Для этого нужно извлечь данные с оригинального диска или образа, следовать инструкции Flatpak/компиляции.</li>
+          <li>Преимущества — максимальная производительность, поддержка 60 FPS, расширенные моды и патчи.</li>
+          <li>Минус — поддержка только отдельных проектов, требует технических навыков.</li>
+        </ul>
+
+        <h2>Стриминг Xbox 360-игр с ПК на Steam Deck</h2>
+        <ul>
+          <li>Используйте Sunshine (сервер на ПК) и Moonlight (клиент на Steam Deck) для стриминга Xenia с ПК.</li>
+          <li>Идеально для тяжёлых игр или если нужна максимальная совместимость и производительность.</li>
+          <li>Настройте разрешение, битрейт, управление — всё работает с минимальной задержкой даже по Wi-Fi.</li>
+        </ul>
+
+        <h2>Настройка патчей, графики и производительности</h2>
+        <ul>
+          <li>В Xenia Manager можно включать/отключать патчи (например, для разблокировки FPS, фикса багов) одним кликом.</li>
+          <li>Для некоторых игр (Gears of War, Blue Dragon) требуется смена API на D3D12 или Vulkan, настройка графики и даже перенос сейвов с Windows.</li>
+          <li>Для мультидисковых игр используйте EmulationStation для корректной смены дисков.</li>
+          <li>Проверяйте совместимость игр на <a href="https://github.com/xenia-project/game-compatibility/issues">официальном списке Xenia</a>.</li>
+        </ul>
+
+        <h2>Таблица: сравнение эмуляторов и методов для Xbox 360 на Steam Deck</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Метод</th>
+              <th>Совместимость</th>
+              <th>Гибкость</th>
+              <th>Удобство</th>
+              <th>Рекомендуется для</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Xenia Standalone</td>
+              <td>Высокая (но не 100%)</td>
+              <td>Максимум</td>
+              <td>Среднее</td>
+              <td>Продвинутых пользователей</td>
+            </tr>
+            <tr>
+              <td>Xenia Manager</td>
+              <td>Высокая</td>
+              <td>Высокая</td>
+              <td>Высокое</td>
+              <td>Всех, кто хочет удобный GUI</td>
+            </tr>
+            <tr>
+              <td>EmuDeck/EmulationStation</td>
+              <td>Средняя</td>
+              <td>Средняя</td>
+              <td>Максимум</td>
+              <td>Новичков, коллекционеров</td>
+            </tr>
+            <tr>
+              <td>XenonRecomp</td>
+              <td>Только поддерживаемые игры</td>
+              <td>Низкая</td>
+              <td>Низкое</td>
+              <td>Технических энтузиастов</td>
+            </tr>
+            <tr>
+              <td>Стриминг с ПК</td>
+              <td>Любые игры</td>
+              <td>Высокая</td>
+              <td>Среднее</td>
+              <td>Тех, у кого мощный ПК</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>Лайфхаки и советы для стабильной эмуляции Xbox 360 на Steam Deck</h2>
+        <div class="pro-tips">
+          <h4>🔹 Практические советы</h4>
+          <div class="tip-item">
+            <i class="fas fa-lightbulb"></i>
+            <p>Используйте Xenia Manager для удобной работы с патчами и профилями — это экономит массу времени.</p>
+          </div>
+          <div class="tip-item">
+            <i class="fas fa-lightbulb"></i>
+            <p>Для сложных игр пробуйте разные графические API (Vulkan, D3D12) и экспериментируйте с настройками.</p>
+          </div>
+          <div class="tip-item">
+            <i class="fas fa-lightbulb"></i>
+            <p>Добавляйте обложки и коллекции через Steam ROM Manager для красивой библиотеки в Gaming Mode.</p>
+          </div>
+          <div class="tip-item">
+            <i class="fas fa-lightbulb"></i>
+            <p>Проверяйте совместимость и ищите патчи для конкретных игр на GitHub и Reddit.</p>
+          </div>
+          <div class="tip-item">
+            <i class="fas fa-lightbulb"></i>
+            <p>Не забывайте про стриминг с ПК — это спасение для тяжёлых или нестабильных игр.</p>
+          </div>
+        </div>
+
+        <h2>FAQ — часто задаваемые вопросы о запуске Xbox 360 на Steam Deck</h2>
+        <ul>
+          <li>
+            <strong>Все ли игры Xbox 360 работают на Steam Deck?</strong><br>
+            Нет, эмуляция экспериментальна: часть игр не запускается или требует патчей и ручной настройки.
+          </li>
+          <li>
+            <strong>Какая ОС предпочтительнее?</strong><br>
+            Xenia работает лучше всего под Windows, но через Proton на SteamOS тоже возможен запуск.
+          </li>
+          <li>
+            <strong>Можно ли запускать мультидисковые игры?</strong><br>
+            Да, через EmulationStation и ручную смену дисков.
+          </li>
+          <li>
+            <strong>Есть ли альтернатива эмуляции?</strong><br>
+            Да, XenonRecomp позволяет запускать отдельные игры нативно, а также всегда ищите PC-порты в Steam.
+          </li>
+          <li>
+            <strong>Какой способ самый стабильный?</strong><br>
+            Для большинства — Xenia Manager или стриминг с ПК через Sunshine/Moonlight.
+          </li>
+        </ul>
+
+        <div class="warning-block">
+          <strong>Внимание!</strong> Используйте только легальные образы игр и не скачивайте пиратские ROM-ы. Не все игры работают идеально — эмуляция Xbox 360 всё ещё развивается!
+        </div>
+
+        <h2>Пошаговая инструкция: быстрый старт Xbox 360 на Steam Deck</h2>
+        <ol>
+          <li>Установите Xenia Manager или EmuDeck в Desktop Mode.</li>
+          <li>Добавьте папку с играми, настройте патчи и графику.</li>
+          <li>Добавьте эмулятор и игры в библиотеку Steam через Steam ROM Manager.</li>
+          <li>Переключитесь в Gaming Mode и запускайте игры прямо из Steam.</li>
+          <li>Для нестабильных игр используйте стриминг с ПК (Sunshine/Moonlight).</li>
+        </ol>
+
+        <h2>Будущее эмуляции Xbox 360 на Steam Deck: тренды 2025–2028</h2>
+        <ul>
+          <li>Развитие Xenia и Xenia Manager с поддержкой большего числа игр и автоматизацией патчей.</li>
+          <li>Появление новых нативных портов через XenonRecomp.</li>
+          <li>Интеграция эмуляторов в SteamOS, автоматизация коллекций и обложек.</li>
+          <li>Улучшение стриминга и совместимости с геймпадами и аксессуарами.</li>
+        </ul>
+
+        <h2>📌 Итог: Xbox 360 на Steam Deck — реально и удобно!</h2>
+        <p>
+          Steam Deck — идеальная платформа для ретро-гейминга и эмуляции Xbox 360. С помощью Xenia, EmuDeck, Xenia Manager, XenonRecomp и стриминга с ПК вы получите доступ к огромной библиотеке классики, гибкой настройке и удобному портативному форм-фактору. Экспериментируйте, настраивайте и наслаждайтесь золотой эпохой Xbox 360 где угодно!
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__col footer__col--logo">
+          <a href="index.html" class="footer-logo">
+            <span class="logo__icon"></span>
+            <span class="logo__text">Repairo</span>
+          </a>
+          <p class="footer__text">Экспертные инструкции по технике с 2024 года</p>
+        </div>
+        <div class="footer__col">
+          <h3 class="footer__title">Разделы</h3>
+          <ul class="footer__links">
+            <li><a href="index.html" class="footer__link">Главная</a></li>
+            <li><a href="all-guides.html" class="footer__link">Все гайды</a></li>
+            <li><a href="contacts.html" class="footer__link">Контакты</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h3 class="footer__title">Категории</h3>
+          <ul class="footer__links">
+            <li><a href="../tv.html" class="nav__link">Телевизоры</a></li>
+            <li><a href="../cameras.html" class="nav__link">Фотоаппараты</a></li>
+            <li><a href="../consoles.html" class="nav__link">Приставки</a></li>
+            <li><a href="../laptops.html" class="nav__link">Ноутбуки</a></li>
+            <li><a href="../smartphones.html" class="nav__link">Смартфоны</a></li>
+            <li><a href="../small-appliances.html" class="nav__link">Мелкая техника</a></li>
+            <li><a href="../large-appliances.html" class="nav__link">Бытовая техника</a></li>
+            <li><a href="../auto-electronics.html" class="nav__link">Авто-Электроника</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h3 class="footer__title">Контакты</h3>
+          <ul class="footer__links">
+            <li>
+              <a href="https://t.me/repairo_kz" class="footer__link"><i class="fab fa-telegram"></i> Telegram</a>
+            </li>
+            <li>
+              <a href="https://instagram.com/repairo_kz" class="footer__link"><i class="fab fa-instagram"></i> Instagram</a>
+            </li>
+            <li>
+              <a href="mailto:support@repairo.kz" class="footer__link"><i class="fas fa-envelope"></i> Email</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+            <p class="disclaimer">
+        Администрация сайта не несёт ответственности за возможные повреждения техники
+        и иные последствия, возникшие в результате самостоятельного ремонта по
+        материалам и инструкциям, размещённым на сайте. Все работы вы выполняете
+        на свой страх и риск.
+    </p>
+                <p class="footer__copyright">© 2025 Repairo. Все права защищены.</p>
+      </div>
+    </div>
+  </footer>
+  <script src="../script.js"></script>
+</body>
+</html>

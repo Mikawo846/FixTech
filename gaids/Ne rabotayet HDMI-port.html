@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YE88Y994NX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-YE88Y994NX');
+</script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Не работает HDMI-порт на проекторе | Repairo</title>
+    <meta name="description" content="{{ description }}">
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=106225686', 'ym');
+
+    ym(106225686, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/106225686" style="position:absolute; left:-9999px;" alt="Не работает HDMI-порт на проекторе: диагностика и  - пошаговая инструкция по ремонту" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../styles-header.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Основные стили */
+        .guide-content {
+            line-height: 1.7;
+            color: var(--text);
+        }
+        .guide-content h2 {
+            color: var(--primary);
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+        .guide-content h3 {
+            color: var(--primary-dark);
+            margin-top: 25px;
+            margin-bottom: 12px;
+            font-size: 1.2rem;
+        }
+        /* Стили для шагов */
+        .step-group {
+            margin: 20px 0;
+            padding: 15px;
+            background: var(--background);
+            border-radius: var(--border-radius);
+            border: 1px solid var(--border);
+        }
+        .step {
+            display: flex;
+            gap: 15px;
+            margin: 12px 0;
+            padding: 12px;
+            background: var(--background-alt);
+            border-radius: 6px;
+            align-items: flex-start;
+        }
+        .step-number {
+            background: var(--primary);
+            color: white;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            font-weight: bold;
+            font-size: 0.8rem;
+        }
+        /* Изображения */
+        .guide-image-block {
+            margin: 20px 0;
+            padding: 15px;
+            background: var(--background);
+            border-radius: var(--border-radius);
+            border: 1px solid var(--border);
+            text-align: center;
+        }
+        .guide-image-block img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 6px;
+            border: 1px solid var(--border);
+        }
+        .image-caption {
+            margin-top: 10px;
+            font-size: 0.85rem;
+            color: var(--text-light);
+            font-style: italic;
+        }
+        /* Рекомендации */
+        .recommend-box {
+            background: rgba(3, 74, 79, 0.1);
+            border-left: 4px solid var(--primary);
+            padding: 12px;
+            margin: 15px 0;
+            display: flex;
+            gap: 12px;
+            align-items: flex-start;
+            border-radius: 4px;
+        }
+        .recommend-box i {
+            font-size: 1.2rem;
+            color: var(--primary);
+            margin-top: 2px;
+        }
+        /* Советы */
+        .pro-tips {
+            background: rgba(3, 74, 79, 0.05);
+            padding: 15px;
+            border-radius: 6px;
+            margin: 20px 0;
+        }
+        .pro-tips h4 {
+            color: var(--primary);
+            margin-top: 0;
+            margin-bottom: 12px;
+            font-size: 1.1rem;
+        }
+        .tip-item {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 8px;
+            align-items: flex-start;
+        }
+        /* Медиа-запросы для мобильных */
+        @media (max-width: 768px) {
+            .guide-content h2 {
+                font-size: 1.4rem;
+                margin-top: 25px;
+            }
+            .step-group, .guide-image-block {
+                padding: 12px;
+                margin: 15px 0;
+            }
+            .step {
+                padding: 10px;
+            }
+        }
+        .warning-box {
+            background-color: #fff3f3;
+            border-left: 4px solid #ff6b6b;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        .warning-box i {
+            color: #ff6b6b;
+            margin-right: 10px;
+        }
+        .danger-box {
+            background-color: #fff8e6;
+            border-left: 4px solid #ffb347;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        .danger-box i {
+            color: #ffb347;
+            margin-right: 10px;
+        }
+        .signal-box {
+            background-color: #f0f7ff;
+            border-left: 4px solid #4d90fe;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        .signal-box i {
+            color: #4d90fe;
+            margin-right: 10px;
+        }
+        .connection-diagram {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            text-align: center;
+            border: 1px dashed #ccc;
+        }
+    </style>
+  <script async src="https://timeweb.cloud/api/v1/cloud-ai/agents/3cc03620-d051-4d8d-b5af-f7b6cd083a35/embed.js?collapsed=true"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <a href="../index.html" class="logo">
+                    <span class="logo__icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 15L7 10H17L12 15Z" fill="currentColor"/>
+                            <path d="M12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3ZM12 19C8.13401 19 5 15.866 5 12C5 8.13401 8.13401 5 12 5C15.866 5 19 8.13401 19 12C19 15.866 15.866 19 12 19Z" fill="currentColor"/>
+                        </svg>
+                    </span>
+                    <span class="logo__text">Repairo</span>
+                </a>
+                <nav class="nav">
+                    <ul class="nav__list">
+                        <li><a href="../tv.html" class="nav__link">Телевизоры</a></li>
+                        <li><a href="../cameras.html" class="nav__link">Фотоаппараты</a></li>
+                        <li><a href="../projectors.html" class="nav__link">Проекторы</a></li>
+                        <li><a href="../laptops.html" class="nav__link">Ноутбуки</a></li>
+                        <li><a href="../smartphones.html" class="nav__link">Смартфоны</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <section class="guide-page">
+        <div class="container">
+            <div class="breadcrumbs">
+                <a href="../index.html">Главная</a>
+                <i class="fas fa-chevron-right"></i>
+                <a href="../projectors.html">Проекторы</a>
+                <i class="fas fa-chevron-right"></i>
+                <span>Не работает HDMI-порт на проекторе</span>
+            </div>
+            <h1 class="section__title">Не работает HDMI-порт на проекторе: диагностика и ремонт</h1>
+            <div class="guide-meta">
+                <span><i class="fas fa-clock"></i> 15-45 мин</span>
+                <span><i class="fas fa-tools"></i> Средний уровень</span>
+                <span><i class="fas fa-projector"></i> Для всех проекторов с HDMI</span>
+            </div>
+            <div class="guide-image-block">
+                <img src="https://avatars.mds.yandex.net/get-shedevrum/15377961/img_9a636332268711f0a2c9e65daf6e7141/orig">            </div>
+            <div class="warning-box">
+                <i class="fas fa-exclamation-triangle"></i>
+                <strong>Важно!</strong> Прежде чем приступать к ремонту, убедитесь, что проблема именно в HDMI-порте проектора, а не в источнике сигнала или кабеле.
+            </div>
+            <div class="guide-content">
+                <h2>Основные причины неисправности HDMI-порта</h2>
+                <p>HDMI-порт может не работать по нескольким причинам:</p>
+                <ul>
+                    <li>Механическое повреждение разъема (отслоение, погнутые контакты)</li>
+                    <li>Окисление контактов HDMI-порта</li>
+                    <li>Проблемы с видеопроцессором проектора</li>
+                    <li>Неисправность HDMI-контроллера</li>
+                    <li>Повреждение внутренних дорожек на плате</li>
+                    <li>Программный сбой (неправильные настройки или прошивка)</li>
+                    <li>Проблемы с питанием HDMI-модуля</li>
+                </ul>
+                
+                <div class="signal-box">
+                    <i class="fas fa-plug"></i>
+                    <strong>Статистика:</strong> В 70% случаев проблема оказывается не в самом проекторе, а в кабеле, источнике сигнала или настройках.
+                </div>
+                
+                <h2>1. Базовая диагностика</h2>
+                <div class="step-group">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div>
+                            <p><strong>Проверка кабеля и источника:</strong></p>
+                            <ul>
+                                <li>Попробуйте другой HDMI-кабель (желательно качественный и короткий)</li>
+                                <li>Подключите проектор к другому источнику (ноутбук, плеер, игровая консоль)</li>
+                                <li>Проверьте, работает ли тот же источник с другим дисплеем</li>
+                                <li>Попробуйте другой HDMI-порт на проекторе (если есть)</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div>
+                            <p><strong>Проверка физического состояния порта:</strong></p>
+                            <ul>
+                                <li>Осмотрите HDMI-порт на предмет механических повреждений</li>
+                                <li>Проверьте, нет ли погнутых или отсутствующих контактов</li>
+                                <li>Убедитесь, что разъем не шатается и надежно закреплен</li>
+                                <li>Проверьте на наличие пыли, мусора или окислов в разъеме</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div>
+                            <p><strong>Проверка других входов:</strong></p>
+                            <ul>
+                                <li>Попробуйте подключиться через VGA, DisplayPort или другие доступные входы</li>
+                                <li>Если другие входы работают - проблема именно в HDMI-модуле</li>
+                                <li>Если не работают все входы - возможна проблема с видеопроцессором</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="connection-diagram">
+                    <h3>Схема проверки HDMI-соединения</h3>
+                    <p>Источник → Кабель → Проектор → Изображение</p>
+                    <p>Проверьте каждое звено по очереди!</p>
+                </div>
+                
+                <h2>2. Программные решения</h2>
+                <div class="step-group">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div>
+                            <p><strong>Сброс настроек проектора:</strong></p>
+                            <ul>
+                                <li>Выполните сброс проектора к заводским настройкам</li>
+                                <li>Найдите в меню пункт "Сброс" или "Reset"</li>
+                                <li>После сброса проверьте работу HDMI-порта</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div>
+                            <p><strong>Обновление прошивки:</strong></p>
+                            <ul>
+                                <li>Проверьте наличие обновлений прошивки на сайте производителя</li>
+                                <li>Следуйте инструкции по обновлению</li>
+                                <li>После обновления проверьте работу HDMI</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div>
+                            <p><strong>Проверка настроек источника:</strong></p>
+                            <ul>
+                                <li>Попробуйте разные разрешения на источнике сигнала</li>
+                                <li>Отключите HDCP в настройках источника (если возможно)</li>
+                                <li>Попробуйте другой цветовой формат (RGB, YCbCr)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="guide-image-block">
+                    <img src="https://example.com/projector-hdmi-settings.jpg" alt="Настройки HDMI на проекторе">
+                    <div class="image-caption">Типичные настройки HDMI в меню проектора</div>
+                </div>
+                
+                <h2>3. Аппаратные решения</h2>
+                <div class="step-group">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div>
+                            <p><strong>Очистка HDMI-порта:</strong></p>
+                            <ul>
+                                <li>Аккуратно почистите разъем сжатым воздухом</li>
+                                <li>Используйте мягкую кисточку для удаления пыли</li>
+                                <li>При окислении аккуратно протрите контакты спиртом (95%)</li>
+                                <li>Дайте полностью высохнуть перед подключением</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div>
+                            <p><strong>Проверка пайки разъема:</strong></p>
+                            <ul>
+                                <li>При наличии навыков аккуратно снимите корпус проектора</li>
+                                <li>Проверьте, не оторван ли HDMI-разъем от платы</li>
+                                <li>Осмотрите качество пайки контактов разъема</li>
+                                <li>При необходимости пропаяйте контакты (только при наличии опыта)</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div>
+                            <p><strong>Диагностика электроники:</strong></p>
+                            <ul>
+                                <li>Проверьте предохранители на плате возле HDMI-разъема</li>
+                                <li>Ищите следы перегрева или поврежденные компоненты</li>
+                                <li>Проверьте напряжение на разъеме (требуются схемы и навыки)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="danger-box">
+                    <i class="fas fa-radiation-alt"></i>
+                    <strong>Осторожно!</strong> Не разбирайте проектор, если он на гарантии. При отсутствии опыта лучше обратиться к специалисту - высокое напряжение внутри может быть опасным.
+                </div>
+                
+                <h2>4. Альтернативные решения</h2>
+                <div class="step-group">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div>
+                            <p><strong>Использование переходников:</strong></p>
+                            <ul>
+                                <li>Попробуйте HDMI → VGA или HDMI → DisplayPort адаптер</li>
+                                <li>Используйте активные преобразователи при необходимости</li>
+                                <li>Убедитесь, что адаптер поддерживает нужное разрешение</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div>
+                            <p><strong>Беспроводное подключение:</strong></p>
+                            <ul>
+                                <li>Используйте Miracast или другие технологии беспроводной передачи</li>
+                                <li>Примените HDMI-трансмиттер (беспроводной HDMI)</li>
+                                <li>Проверьте совместимость с вашим проектором</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div>
+                            <p><strong>Использование других интерфейсов:</strong></p>
+                            <ul>
+                                <li>Если проектор поддерживает DisplayPort - используйте его</li>
+                                <li>Для старых устройств подойдет VGA или компонентный вход</li>
+                                <li>USB-C с поддержкой DisplayPort Alt Mode может быть альтернативой</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="pro-tips">
+                    <h4>🔹 Профессиональные советы</h4>
+                    <div class="tip-item">
+                        <i class="fas fa-lightbulb" style="color: var(--primary);"></i>
+                        <p>Перед чисткой HDMI-порта всегда отключайте проектор от сети и дайте ему остыть.</p>
+                    </div>
+                    <div class="tip-item">
+                        <i class="fas fa-lightbulb" style="color: var(--primary);"></i>
+                        <p>При использовании длинных HDMI-кабелей (более 5м) выбирайте качественные кабели с усилителем.</p>
+                    </div>
+                    <div class="tip-item">
+                        <i class="fas fa-lightbulb" style="color: var(--primary);"></i>
+                        <p>Некоторые проекторы имеют отдельные настройки для каждого HDMI-входа - проверьте их в меню.</p>
+                    </div>
+                    <div class="tip-item">
+                        <i class="fas fa-lightbulb" style="color: var(--primary);"></i>
+                        <p>Если HDMI перестал работать после перепада напряжения - вероятно сгорел защитный диод на входе.</p>
+                    </div>
+                </div>
+                
+                <h2>Когда обращаться в сервисный центр?</h2>
+                <p>Профессиональный ремонт необходим, если:</p>
+                <ul>
+                    <li>HDMI-порт физически поврежден (оторван от платы, сломан)</li>
+                    <li>Проблема сохраняется после всех проверок</li>
+                    <li>Проектор находится на гарантии</li>
+                    <li>Требуется замена HDMI-контроллера или ремонт платы</li>
+                    <li>Вы не уверены в своих силах при разборке</li>
+                </ul>
+                
+                <div class="warning-box">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <strong>Важно!</strong> Попытка самостоятельного ремонта сложных компонентов может привести к полному выходу проектора из строя.
+                </div>
+                
+                <h2>📌 Итог</h2>
+                <p>Для решения проблемы с HDMI-портом проектора:</p>
+                <ul>
+                    <li>Проверьте кабель и источник сигнала</li>
+                    <li>Осмотрите физическое состояние порта</li>
+                    <li>Сбросьте настройки проектора</li>
+                    <li>Попробуйте обновить прошивку</li>
+                    <li>Очистите контакты HDMI-разъема</li>
+                    <li>При серьезных неисправностях обратитесь к специалистам</li>
+                </ul>
+                
+                <div style="text-align: center; margin-top: 30px;">
+                    <h3 style="color: var(--primary);">Здесь всегда актуальные руководства и свежие новости из области электроники! Добавьте сайт в избранное чтобы не потерять 😉</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__col footer__col--logo">
+                    <a href="index.html" class="footer-logo">
+                        <span class="logo__icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 15L7 10H17L12 15Z" fill="currentColor"/>
+                                <path d="M12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3ZM12 19C8.13401 19 5 15.866 5 12C5 8.13401 8.13401 5 12 5C15.866 5 19 8.13401 19 12C19 15.866 15.866 19 12 19Z" fill="currentColor"/>
+                            </svg>
+                        </span>
+                        <span class="logo__text">Repairo</span>
+                    </a>
+                    <p class="footer__text">Помогаем ремонтировать электронику с 2024 года</p>
+                </div>
+                <div class="footer__col">
+                    <h3 class="footer__title">Разделы</h3>
+                    <ul class="footer__links">
+                        <li><a href="index.html" class="footer__link">Главная</a></li>
+                        <li><a href="all-guides.html" class="footer__link">Все гайды</a></li>
+                        <li><a href="contacts.html" class="footer__link">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="footer__col">
+                    <h3 class="footer__title">Категории</h3>
+                    <ul class="footer__links">
+                        <li><a href="../tv.html" class="nav__link">Телевизоры</a></li>
+                        <li><a href="../cameras.html" class="nav__link">Фотоаппараты</a></li>
+                        <li><a href="../projectors.html" class="nav__link">Проекторы</a></li>
+                        <li><a href="../laptops.html" class="nav__link">Ноутбуки</a></li>
+                        <li><a href="../smartphones.html" class="nav__link">Смартфоны</a></li>
+                        <li><a href="../small-appliances.html" class="nav__link">Мелкая техника</a></li>
+                        <li><a href="../large-appliances.html" class="nav__link">Бытовая техника</a></li>
+                        <li><a href="../auto-electronics.html" class="nav__link">Авто-Электроника</a></li>
+                    </ul>
+                </div>
+                <div class="footer__col">
+                    <h3 class="footer__title">Контакты</h3>
+                    <ul class="footer__links">
+                        <li><a href="https://t.me/repairo_kz" class="footer__link"><i class="fab fa-telegram"></i> Telegram</a></li>
+                        <li><a href="https://instagram.com/repairo_kz" class="footer__link"><i class="fab fa-instagram"></i> Instagram</a></li>
+                        <li><a href="mailto:support@repairo.kz" class="footer__link"><i class="fas fa-envelope"></i> Email</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                    <p class="disclaimer">
+        Администрация сайта не несёт ответственности за возможные повреждения техники
+        и иные последствия, возникшие в результате самостоятельного ремонта по
+        материалам и инструкциям, размещённым на сайте. Все работы вы выполняете
+        на свой страх и риск.
+    </p>
+                <p class="footer__copyright">© 2024 Repairo. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="../script.js"></script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "Не работает HDMI-порт на проекторе: диагностика и ремонт",
+  "description": "Пошаговая инструкция: Не работает HDMI-порт на проекторе: диагностика и ремонт. HDMI-порт может не работать по нескольким причинам:. Советы экспертов, таблиц...",
+  "totalTime": "PT30M",
+  "step": [
+    {
+      "@type": "HowToStep",
+      "name": "Основные причины неисправности HDMI-порта",
+      "text": "Основные причины неисправности HDMI-порта",
+      "url": "#step-1"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "1. Базовая диагностика",
+      "text": "1. Базовая диагностика",
+      "url": "#step-2"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "2. Программные решения",
+      "text": "2. Программные решения",
+      "url": "#step-3"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "3. Аппаратные решения",
+      "text": "3. Аппаратные решения",
+      "url": "#step-4"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "4. Альтернативные решения",
+      "text": "4. Альтернативные решения",
+      "url": "#step-5"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Когда обращаться в сервисный центр?",
+      "text": "Когда обращаться в сервисный центр?",
+      "url": "#step-6"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "📌 Итог",
+      "text": "📌 Итог",
+      "url": "#step-7"
+    }
+  ],
+  "image": "https://repairo.ru/https://mc.yandex.ru/watch/106225686"
+}
+</script>
+</body>
+</html>

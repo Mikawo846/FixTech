@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Как рассчитать необходимое количество LED-панелей для комнаты? | Repairo</title>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=106225686', 'ym');
+
+    ym(106225686, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/106225686" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="../styles-header.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .guide-content {
+        line-height: 1.7;
+        color: var(--text);
+      }
+      .guide-content h2 {
+        color: var(--primary);
+        margin-top: 30px;
+        margin-bottom: 15px;
+        font-size: 1.5rem;
+      }
+      .step-group {
+        margin: 20px 0;
+        padding: 15px;
+        background: var(--background);
+        border-radius: var(--border-radius);
+        border: 1px solid var(--border);
+      }
+      .step {
+        margin-bottom: 15px;
+      }
+      .step-number {
+        background: var(--primary);
+        color: white;
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        font-size: 0.8rem;
+        margin-right: 10px;
+      }
+      .guide-image-block {
+        margin: 20px 0;
+        padding: 15px;
+        background: var(--background);
+        border-radius: var(--border-radius);
+        border: 1px solid var(--border);
+        text-align: center;
+      }
+      .guide-image-block img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 6px;
+        border: 1px solid var(--border);
+      }
+      .image-caption {
+        margin-top: 10px;
+        font-size: 0.85rem;
+        color: var(--text-light);
+        font-style: italic;
+      }
+      .recommend-box {
+        background: rgba(3, 74, 79, 0.1);
+        border-left: 4px solid var(--primary);
+        padding: 12px;
+        margin: 15px 0;
+        display: flex;
+        gap: 12px;
+        align-items: flex-start;
+        border-radius: 4px;
+      }
+      .recommend-box i {
+        font-size: 1.2rem;
+        color: var(--primary);
+        margin-top: 2px;
+      }
+      @media (max-width: 768px) {
+        .guide-content h2 {
+          font-size: 1.4rem;
+          margin-top: 25px;
+        }
+        .guide-image-block {
+          padding: 12px;
+          margin: 15px 0;
+        }
+      }
+    </style>
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="header__inner">
+        <a href="../index.html" class="logo">
+          <span class="logo__icon"></span>
+          <span class="logo__text">Repairo</span>
+        </a>
+        <nav class="nav">
+          <ul class="nav__list">
+            <li><a href="../tv.html" class="nav__link">Телевизоры</a></li>
+            <li><a href="../cameras.html" class="nav__link">Фотоаппараты</a></li>
+            <li><a href="../consoles.html" class="nav__link">Приставки</a></li>
+            <li><a href="../laptops.html" class="nav__link">Ноутбуки</a></li>
+            <li><a href="../smartphones.html" class="nav__link">Смартфоны</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+  <section class="guide-page">
+    <div class="container">
+      <div class="breadcrumbs">
+        <a href="../index.html">Главная</a>
+        <i class="fas fa-chevron-right"></i>
+        <span>Как рассчитать необходимое количество LED-панелей для комнаты?</span>
+      </div>
+      <h1 class="section__title">Как рассчитать необходимое количество LED-панелей для комнаты?</h1>
+      <div class="guide-meta">
+        <span><i class="fas fa-calculator"></i> Практическое руководство</span>
+      </div>
+      <div class="guide-image-block">
+        <img
+          src="https://avatars.mds.yandex.net/get-shedevrum/14537874/img_4c8cf7422c9e11f098edaeed8751ec3c/orig"
+        />
+        <div class="image-caption">
+          Правильный расчет количества LED-панелей обеспечит комфортное и равномерное освещение комнаты
+        </div>
+      </div>
+      <div class="guide-content">
+        <h2>Основные параметры для расчета освещения</h2>
+        <ul>
+          <li><strong>Площадь комнаты (м²):</strong> измерьте длину и ширину помещения и перемножьте.</li>
+          <li><strong>Высота потолков:</strong> влияет на выбор мощности и типа панели.</li>
+          <li><strong>Назначение комнаты:</strong> разные помещения требуют разной освещенности (люмен на м²).</li>
+          <li><strong>Цвет стен и потолка:</strong> светлые поверхности отражают свет, уменьшая потребность в яркости.</li>
+          <li><strong>Яркость LED-панели (люмен):</strong> указывается в характеристиках панели.</li>
+        </ul>
+
+        <h2>Средние нормы освещенности (люкс) для разных помещений</h2>
+        <ul>
+          <li>Гостиная, спальня: 150–200 лк</li>
+          <li>Кухня, кабинет, рабочее место: 300–500 лк</li>
+          <li>Ванная комната, коридор: 100–150 лк</li>
+          <li>Детская комната: 200–300 лк</li>
+        </ul>
+
+        <h2>Формула расчета количества LED-панелей</h2>
+        <p>
+          Для расчета необходимого количества панелей используйте формулу:
+        </p>
+        <p style="font-weight: bold; font-size: 1.1rem;">
+          Количество панелей = (Площадь комнаты × Норма освещенности) ÷ Яркость одной панели
+        </p>
+        <p>где:</p>
+        <ul>
+          <li>Площадь комнаты - в квадратных метрах (м²)</li>
+          <li>Норма освещенности - в люксах (лк)</li>
+          <li>Яркость панели - в люменах (лм)</li>
+        </ul>
+
+        <h2>Пример расчета</h2>
+        <p>
+          Комната 20 м², назначение - гостиная, норма освещенности 200 лк, яркость панели 3200 лм.
+        </p>
+        <p>
+          Количество панелей = (20 × 200) ÷ 3200 = 4000 ÷ 3200 ≈ 1.25
+        </p>
+        <p>
+          Значит, для комфортного освещения понадобится 2 панели (округляем в большую сторону).
+        </p>
+
+        <h2>Дополнительные рекомендации</h2>
+        <ul>
+          <li>Учитывайте наличие естественного освещения и расположение окон.</li>
+          <li>Для равномерного освещения лучше распределить несколько панелей, чем одну мощную.</li>
+          <li>Для рабочих зон выбирайте панели с высокой цветопередачей (CRI 80+).</li>
+          <li>Если потолки высокие - выбирайте панели с большей мощностью или увеличьте количество.</li>
+          <li>Используйте диммеры для регулировки яркости под разные задачи и время суток.</li>
+        </ul>
+
+        <div class="recommend-box">
+          <i class="fas fa-info-circle"></i>
+          <div>
+            <strong>Совет:</strong> Перед покупкой сделайте точные замеры помещения и определите задачи освещения - это поможет подобрать оптимальное количество и тип LED-панелей.
+          </div>
+        </div>
+
+        <div class="pro-tips">
+          <h4>🔹 Профессиональные советы</h4>
+          <div class="tip-item">
+            <i class="fas fa-lightbulb"></i>
+            <p>Используйте специальные калькуляторы освещенности онлайн для более точного расчета с учетом отражения и высоты потолков.</p>
+          </div>
+          <div class="tip-item">
+            <i class="fas fa-lightbulb"></i>
+            <p>При покупке обращайте внимание на реальные характеристики панели, а не только на маркетинговые данные.</p>
+          </div>
+          <div class="tip-item">
+            <i class="fas fa-lightbulb"></i>
+            <p>Если сомневаетесь, консультируйтесь с профессионалами по светотехнике для создания комфортного и энергоэффективного освещения.</p>
+          </div>
+        </div>
+
+        <h2>📌 Итог</h2>
+        <p>
+          Расчет необходимого количества LED-панелей для комнаты основывается на площади, норме освещенности и яркости панелей. Правильный расчет обеспечит комфортный свет, экономию электроэнергии и приятную атмосферу в помещении.
+        </p>
+      </div>
+    </div>
+  </section>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__col footer__col--logo">
+          <a href="index.html" class="footer-logo">
+            <span class="logo__icon"></span>
+            <span class="logo__text">Repairo</span>
+          </a>
+          <p class="footer__text">Помогаем ремонтировать электронику с 2024 года</p>
+        </div>
+        <div class="footer__col">
+          <h3 class="footer__title">Разделы</h3>
+          <ul class="footer__links">
+            <li><a href="index.html" class="footer__link">Главная</a></li>
+            <li><a href="all-guides.html" class="footer__link">Все гайды</a></li>
+            <li><a href="contacts.html" class="footer__link">Контакты</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h3 class="footer__title">Категории</h3>
+          <ul class="footer__links">
+            <li><a href="../tv.html" class="nav__link">Телевизоры</a></li>
+            <li><a href="../cameras.html" class="nav__link">Фотоаппараты</a></li>
+            <li><a href="../consoles.html" class="nav__link">Приставки</a></li>
+            <li><a href="../laptops.html" class="nav__link">Ноутбуки</a></li>
+            <li><a href="../smartphones.html" class="nav__link">Смартфоны</a></li>
+            <li><a href="../small-appliances.html" class="nav__link">Мелкая техника</a></li>
+            <li><a href="../large-appliances.html" class="nav__link">Бытовая техника</a></li>
+            <li><a href="../auto-electronics.html" class="nav__link">Авто-Электроника</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h3 class="footer__title">Контакты</h3>
+          <ul class="footer__links">
+            <li><a href="https://t.me/repairo_kz" class="footer__link"><i class="fab fa-telegram"></i> Telegram</a></li>
+            <li><a href="https://instagram.com/repairo_kz" class="footer__link"><i class="fab fa-instagram"></i> Instagram</a></li>
+            <li><a href="mailto:support@repairo.kz" class="footer__link"><i class="fas fa-envelope"></i> Email</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>© 2024 Repairo. Все права защищены.</p>
+      </div>
+    </div>
+  </footer>
+  <script src="../script.js"></script>
+</body>
+</html>

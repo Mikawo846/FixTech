@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Полосы и артефакты на экране Samsung QN90C | Repairo</title>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=106225686', 'ym');
+
+    ym(106225686, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/106225686" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../styles-header.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Основные стили */
+        .guide-content {
+            line-height: 1.7;
+            color: var(--text);
+        }
+        .guide-content h2 {
+            color: var(--primary);
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+        .guide-content h3 {
+            color: var(--primary-dark);
+            margin-top: 25px;
+            margin-bottom: 12px;
+            font-size: 1.2rem;
+        }
+        
+        /* Стили для шагов */
+        .step-group {
+            margin: 20px 0;
+            padding: 15px;
+            background: var(--background);
+            border-radius: var(--border-radius);
+            border: 1px solid var(--border);
+        }
+
+        .step {
+            display: flex;
+            gap: 15px;
+            margin: 12px 0;
+            padding: 12px;
+            background: var(--background-alt);
+            border-radius: 6px;
+            align-items: flex-start;
+        }
+
+        .step-number {
+            background: var(--primary);
+            color: white;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            font-weight: bold;
+            font-size: 0.8rem;
+        }
+        
+        /* Изображения */
+        .guide-image-block {
+            margin: 20px 0;
+            padding: 15px;
+            background: var(--background);
+            border-radius: var(--border-radius);
+            border: 1px solid var(--border);
+            text-align: center;
+        }
+        .guide-image-block img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 6px;
+            border: 1px solid var(--border);
+        }
+        .image-caption {
+            margin-top: 10px;
+            font-size: 0.85rem;
+            color: var(--text-light);
+            font-style: italic;
+        }
+        
+        /* Адаптивные замены таблицам */
+        .responsive-settings {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin: 15px 0;
+        }
+        .setting-card {
+            background: var(--background-alt);
+            padding: 12px;
+            border-radius: 6px;
+            border: 1px solid var(--border);
+        }
+        .setting-card-header {
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 5px;
+        }
+        
+        /* Рекомендации */
+        .recommend-box {
+            background: rgba(3, 74, 79, 0.1);
+            border-left: 4px solid var(--primary);
+            padding: 12px;
+            margin: 15px 0;
+            display: flex;
+            gap: 12px;
+            align-items: flex-start;
+            border-radius: 4px;
+        }
+        .recommend-box i {
+            font-size: 1.2rem;
+            color: var(--primary);
+            margin-top: 2px;
+        }
+        
+        /* Советы */
+        .pro-tips {
+            background: rgba(3, 74, 79, 0.05);
+            padding: 15px;
+            border-radius: 6px;
+            margin: 20px 0;
+        }
+        .pro-tips h4 {
+            color: var(--primary);
+            margin-top: 0;
+            margin-bottom: 12px;
+            font-size: 1.1rem;
+        }
+        .tip-item {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 8px;
+            align-items: flex-start;
+        }
+        
+        /* Пресеты */
+        .preset-card {
+            background: var(--background-alt);
+            padding: 12px;
+            border-radius: 6px;
+            border: 1px solid var(--border);
+            margin: 12px 0;
+        }
+        .preset-card h4 {
+            margin-top: 0;
+            color: var(--primary);
+            font-size: 1.1rem;
+        }
+        
+        /* Медиа-запросы для мобильных */
+        @media (max-width: 768px) {
+            .guide-content h2 {
+                font-size: 1.4rem;
+                margin-top: 25px;
+            }
+            
+            .step-group, .guide-image-block {
+                padding: 12px;
+                margin: 15px 0;
+            }
+            
+            .step {
+                padding: 10px;
+            }
+        }
+
+        /* Специфические стили для этого гайда */
+        .symptom-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        .symptom-table th {
+            background: var(--primary);
+            color: white;
+            padding: 10px;
+            text-align: left;
+        }
+        .symptom-table td {
+            padding: 10px;
+            border-bottom: 1px solid var(--border);
+        }
+        .symptom-table tr:nth-child(even) {
+            background: var(--background-alt);
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <a href="../index.html" class="logo">
+                    <span class="logo__icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 15L7 10H17L12 15Z" fill="currentColor"/>
+                            <path d="M12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3ZM12 19C8.13401 19 5 15.866 5 12C5 8.13401 8.13401 5 12 5C15.866 5 19 8.13401 19 12C19 15.866 15.866 19 12 19Z" fill="currentColor"/>
+                        </svg>
+                    </span>
+                    <span class="logo__text">Repairo</span>
+                </a>
+                <nav class="nav">
+                    <ul class="nav__list">
+                        <li><a href="../tv.html" class="nav__link">Телевизоры</a></li>
+                        <li><a href="../cameras.html" class="nav__link">Фотоаппараты</a></li>
+                        <li><a href="../auto-electronics.html" class="nav__link">Автоэлектроника</a></li>
+                        <li><a href="../laptops.html" class="nav__link">Ноутбуки</a></li>
+                        <li><a href="../smartphones.html" class="nav__link">Смартфоны</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section class="guide-page">
+        <div class="container">
+            <div class="breadcrumbs">
+                <a href="../index.html">Главная</a>
+                <i class="fas fa-chevron-right"></i>
+                <a href="../tv.html">Телевизоры</a>
+                <i class="fas fa-chevron-right"></i>
+                <span>Полосы на экране Samsung QN90C</span>
+            </div>
+
+            <h1 class="section__title">Полосы и артефакты на экране Samsung QN90C/QN95C</h1>
+            
+            <div class="guide-meta">
+                <span><i class="fas fa-clock"></i> 8-12 мин</span>
+                <span><i class="fas fa-tools"></i> Средний уровень</span>
+            </div>
+
+            <div class="guide-image-block">
+                <img src="https://avatars.mds.yandex.net/get-shedevrum/15377961/img_4c3f494d1ee211f0a5e50a89b8a62c69/orig" alt="Пример полос на экране телевизора Samsung">
+                <div class="image-caption">Типичные проявления полос и артефактов на экране</div>
+            </div>
+
+            <div class="recommend-box">
+                <i class="fas fa-lightbulb"></i>
+                <div>
+                    <strong>Важно!</strong> Прежде чем обращаться в сервис, выполните все шаги диагностики. В 70% случаев проблема решается без ремонта.
+                </div>
+            </div>
+
+            <div class="guide-content">
+                <h2>1. Проверка источника сигнала</h2>
+                <p>Проблема может быть не в телевизоре, а в устройстве, которое подаёт сигнал (HDMI-приставка, игровая консоль, антенна).</p>
+                
+                <div class="step-group">
+                    <h3>Что делать:</h3>
+                    
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div>
+                            <p><strong>Переключите источник сигнала</strong></p>
+                            <p>Зайдите в меню телевизора (кнопка Home → Источники сигнала). Переключитесь на:</p>
+                            <ul>
+                                <li>Встроенные приложения (YouTube, Netflix, Samsung TV Plus)</li>
+                                <li>Другой HDMI-порт (попробуйте все доступные)</li>
+                                <li>Если есть антенна или кабельное TV, проверьте эфирные каналы</li>
+                            </ul>
+                            <p>Если артефакты/полосы есть только в одном источнике (например, на HDMI 1), значит, проблема в подключённом устройстве или кабеле.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div>
+                            <p><strong>Проверьте HDMI-кабель</strong></p>
+                            <ul>
+                                <li>Замените кабель на другой (желательно HDMI 2.1 Premium Certified, если подключаете 4K@120Hz)</li>
+                                <li>Попробуйте укоротить кабель (длинные кабели могут терять сигнал)</li>
+                                <li>Проверьте, плотно ли вставлен кабель в разъёмы (иногда плохой контакт вызывает помехи)</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div>
+                            <p><strong>Проверьте внешнее устройство (приставку, консоль, Blu-ray плеер)</strong></p>
+                            <ul>
+                                <li>Подключите устройство к другому телевизору/монитору</li>
+                                <li>Если на другом экране тоже есть артефакты — проблема в источнике сигнала</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <h2>2. Сброс настроек телевизора</h2>
+                <p>Иногда сбой в программном обеспечении или неправильные настройки изображения вызывают артефакты.</p>
+                
+                <div class="step-group">
+                    <h3>Как сделать полный сброс:</h3>
+                    
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div>
+                            <p>Откройте меню:</p>
+                            <p>Нажмите Home → Настройки (шестерёнка) → Общие и конфиденциальность → Сброс.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div>
+                            <p>Выберите "Сбросить настройки" (это не удалит приложения и аккаунты).</p>
+                            <p>Если проблема осталась, попробуйте "Сброс с вводом PIN" (по умолчанию 0000).</p>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div>
+                            <p><strong>После сброса:</strong></p>
+                            <ul>
+                                <li>Настройте изображение заново (рекомендуется режим "Фильм" или "Стандарт")</li>
+                                <li>Проверьте, остались ли артефакты</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <h2>3. Обновление прошивки</h2>
+                <p>Устаревшая или глючная прошивка может вызывать графические артефакты.</p>
+                
+                <div class="step-group">
+                    <h3>Как обновить ПО:</h3>
+                    
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div>
+                            <p><strong>Через интернет (автоматически)</strong></p>
+                            <p>Home → Настройки → Поддержка → Обновление ПО → Обновить сейчас.</p>
+                            <p>Если есть обновление, телевизор скачает и установит его.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div>
+                            <p><strong>Вручную (через USB)</strong></p>
+                            <ul>
+                                <li>Зайдите на официальный сайт Samsung</li>
+                                <li>Введите модель QN90C и скачайте последнюю прошивку</li>
+                                <li>Распакуйте архив и скопируйте файл .exe на чистую USB-флешку (FAT32)</li>
+                                <li>Вставьте флешку в телевизор, зайдите в Поддержка → Обновление ПО → Обновление через USB</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div>
+                            <p><strong>После обновления:</strong></p>
+                            <ul>
+                                <li>Проверьте, исчезли ли полосы</li>
+                                <li>Если телевизор стал вести себя хуже, можно откатить прошивку (через сервисное меню, но это сложнее)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <h2>4. Проверка матрицы и аппаратных проблем</h2>
+                <p>Если полосы видны на всех источниках, возможно, проблема в железе.</p>
+                
+                <div class="step-group">
+                    <h3>Диагностические шаги:</h3>
+                    
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div>
+                            <p><strong>Запустите тест самодиагностики</strong></p>
+                            <p>Home → Настройки → Поддержка → Самодиагностика → Тест изображения.</p>
+                            <p>Телевизор покажет однотонные экраны (красный, зелёный, синий, белый).</p>
+                            <ul>
+                                <li>Если полосы видны на всех цветах — проблема с матрицей или платами</li>
+                                <li>Если артефакты только в приложениях/HDMI — проблема в софте или кабеле</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div>
+                            <p><strong>Проверьте физические повреждения</strong></p>
+                            <ul>
+                                <li>Осмотрите экран на трещины, удары, пятна</li>
+                                <li>Лёгко нажмите на рамку телевизора (если полосы меняются при нажатии — проблема в контактах матрицы)</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div>
+                            <p><strong>Отключите все дополнительные функции</strong></p>
+                            <p>Иногда искусственное улучшение изображения вызывает артефакты:</p>
+                            <p>Home → Настройки → Изображение → Дополнительные настройки.</p>
+                            <p>Отключите:</p>
+                            <ul>
+                                <li>Auto Motion Plus (сглаживание движения) → может давать "разрывы" в динамичных сценах</li>
+                                <li>Локальное затемнение → если артефакты появляются в тёмных сценах</li>
+                                <li>HDR, Dynamic Contrast → могут перегружать процессор</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <h2>5. Что делать, если ничего не помогло?</h2>
+                <p>Если полосы остаются после всех проверок, вероятно, проблема в:</p>
+                <ul>
+                    <li>Неисправной матрице (дорогой ремонт, иногда проще купить новый TV)</li>
+                    <li>Сломанной T-Con плате (контроллер матрицы, ремонт возможен)</li>
+                    <li>Проблеме с Main Board (можно заменить в сервисе)</li>
+                </ul>
+                
+                <div class="step-group">
+                    <h3>Рекомендации:</h3>
+                    
+                    <div class="responsive-settings">
+                        <div class="setting-card">
+                            <div class="setting-card-header">Гарантийный ремонт</div>
+                            <p>Обратитесь в официальный сервис Samsung (если гарантия ещё действует).</p>
+                        </div>
+                        
+                        <div class="setting-card">
+                            <div class="setting-card-header">Проверка гарантии</div>
+                            <p>Проверьте гарантийный статус (на сайте Samsung или по серийному номеру).</p>
+                        </div>
+                        
+                        <div class="setting-card">
+                            <div class="setting-card-header">Самостоятельный ремонт</div>
+                            <p>Не разбирайте телевизор сами — можно повредить матрицу.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <h2>📌 Итоговая таблица диагностики</h2>
+                
+                <table class="symptom-table">
+                    <thead>
+                        <tr>
+                            <th>Симптом</th>
+                            <th>Вероятная причина</th>
+                            <th>Решение</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Полосы только в HDMI</td>
+                            <td>Проблема с кабелем/источником</td>
+                            <td>Заменить кабель, проверить устройство</td>
+                        </tr>
+                        <tr>
+                            <td>Полосы во всех приложениях</td>
+                            <td>Сбой ПО или матрица</td>
+                            <td>Сбросить настройки, обновить прошивку</td>
+                        </tr>
+                        <tr>
+                            <td>Полосы на тестовых экранах</td>
+                            <td>Аппаратная поломка</td>
+                            <td>Сервисный ремонт</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="pro-tips">
+                    <h4>🔹 Полезные советы</h4>
+                    <div class="tip-item">
+                        <i class="fas fa-lightbulb" style="color: var(--primary);"></i>
+                        <p>Перед обращением в сервис сделайте фото/видео проблемы — это поможет диагностике</p>
+                    </div>
+                    <div class="tip-item">
+                        <i class="fas fa-lightbulb" style="color: var(--primary);"></i>
+                        <p>Если телевизор на гарантии, не пытайтесь вскрывать его самостоятельно</p>
+                    </div>
+                    <div class="tip-item">
+                        <i class="fas fa-lightbulb" style="color: var(--primary);"></i>
+                        <p>Для сложных случаев используйте сервисное меню (но это может аннулировать гарантию)</p>
+                    </div>
+                </div>
+
+                <div style="text-align: center; margin-top: 30px;">
+                    <h3 style="color: var(--primary);">Надеемся, проблема решена! 📺</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__col footer__col--logo">
+                    <a href="index.html" class="footer-logo">
+                        <span class="logo__icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 15L7 10H17L12 15Z" fill="currentColor"/>
+                                <path d="M12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3ZM12 19C8.13401 19 5 15.866 5 12C5 8.13401 8.13401 5 12 5C15.866 5 19 8.13401 19 12C19 15.866 15.866 19 12 19Z" fill="currentColor"/>
+                            </svg>
+                        </span>
+                        <span class="logo__text">Repairo</span>
+                    </a>
+                    <p class="footer__text">Помогаем ремонтировать электронику с 2024 года</p>
+                </div>
+                <div class="footer__col">
+                    <h3 class="footer__title">Разделы</h3>
+                    <ul class="footer__links">
+                        <li><a href="index.html" class="footer__link">Главная</a></li>
+                        <li><a href="all-guides.html" class="footer__link">Все гайды</a></li>
+                        <li><a href="contacts.html" class="footer__link">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="footer__col">
+                    <h3 class="footer__title">Категории</h3>
+                    <ul class="footer__links">
+                        <li><a href="../tv.html" class="nav__link">Телевизоры</a></li>
+                        <li><a href="../cameras.html" class="nav__link">Фотоаппараты</a></li>
+                        <li><a href="../consoles.html" class="nav__link">Приставки</a></li>
+                        <li><a href="../laptops.html" class="nav__link">Ноутбуки</a></li>
+                        <li><a href="../smartphones.html" class="nav__link">Смартфоны</a></li>
+                        <li><a href="../small-appliances.html" class="nav__link">Мелкая техника</a></li>
+                        <li><a href="../large-appliances.html" class="nav__link">Бытовая техника</a></li>
+                        <li><a href="../auto-electronics.html" class="nav__link">Авто-Электроника</a></li>
+                    </ul>
+                </div>
+                <div class="footer__col">
+                    <h3 class="footer__title">Контакты</h3>
+                    <ul class="footer__links">
+                        <li><a href="https://t.me/repairo_kz" class="footer__link"><i class="fab fa-telegram"></i> Telegram</a></li>
+                        <li><a href="https://instagram.com/repairo_kz" class="footer__link"><i class="fab fa-instagram"></i> Instagram</a></li>
+                        <li><a href="mailto:support@repairo.kz" class="footer__link"><i class="fas fa-envelope"></i> Email</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                    <p class="disclaimer">
+        Администрация сайта не несёт ответственности за возможные повреждения техники
+        и иные последствия, возникшие в результате самостоятельного ремонта по
+        материалам и инструкциям, размещённым на сайте. Все работы вы выполняете
+        на свой страх и риск.
+    </p>
+                <p class="footer__copyright">© 2024 Repairo. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

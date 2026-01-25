@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YE88Y994NX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-YE88Y994NX');
+</script>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Кастомные прошивки для Steam Deck (Windows, Batocera) | Экспертный мегагайд</title>
+    <meta name="description" content="{{ description }}">
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=106225686', 'ym');
+
+    ym(106225686, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/106225686" style="position:absolute; left:-9999px;" alt="Кастомные прошивки для Steam Deck (Windows, Batoce - пошаговая инструкция по ремонту" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="../styles-header.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    .guide-content { line-height: 1.7; color: var(--text); }
+    .guide-content h2 { color: var(--primary); margin-top: 30px; margin-bottom: 15px; font-size: 1.5rem; }
+    .guide-content h3 { color: var(--primary-dark); margin-top: 25px; margin-bottom: 12px; font-size: 1.2rem; }
+    .guide-image-block { margin: 20px 0; padding: 15px; background: var(--background); border-radius: var(--border-radius); border: 1px solid var(--border); text-align: center; }
+    .guide-image-block img { max-width: 100%; height: auto; border-radius: 6px; border: 1px solid var(--border); }
+    .image-caption { margin-top: 10px; font-size: 0.85rem; color: var(--text-light); font-style: italic; }
+    .pro-tips { background: rgba(3, 74, 79, 0.05); padding: 15px; border-radius: 6px; margin: 20px 0; }
+    .pro-tips h4 { color: var(--primary); margin-top: 0; margin-bottom: 12px; font-size: 1.1rem; }
+    .tip-item { display: flex; gap: 8px; margin-bottom: 8px; align-items: flex-start; }
+    table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+    th, td { border: 1px solid var(--border); padding: 8px; text-align: left; }
+    th { background: var(--background-light); }
+    @media (max-width: 768px) {
+      .guide-content h2 { font-size: 1.4rem; margin-top: 25px; }
+      .guide-image-block { padding: 12px; margin: 15px 0; }
+      table, th, td { font-size: 0.95rem; }
+    }
+  </style>
+  <script async src="https://timeweb.cloud/api/v1/cloud-ai/agents/3cc03620-d051-4d8d-b5af-f7b6cd083a35/embed.js?collapsed=true"></script>
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="header__inner">
+        <a href="../index.html" class="logo">
+          <span class="logo__icon"></span>
+          <span class="logo__text">Repairo</span>
+        </a>
+        <nav class="nav">
+          <ul class="nav__list">
+            <li><a href="../tv.html" class="nav__link">Телевизоры</a></li>
+            <li><a href="../cameras.html" class="nav__link">Фотоаппараты</a></li>
+            <li><a href="../consoles.html" class="nav__link">Приставки</a></li>
+            <li><a href="../laptops.html" class="nav__link">Ноутбуки</a></li>
+            <li><a href="../smartphones.html" class="nav__link">Смартфоны</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <section class="guide-page">
+    <div class="container">
+      <div class="breadcrumbs">
+        <a href="../index.html">Главная</a>
+        <i class="fas fa-chevron-right"></i>
+        <a href="../consoles.html">Приставки</a>
+        <i class="fas fa-chevron-right"></i>
+        <span>Кастомные прошивки для Steam Deck (Windows, Batocera)</span>
+      </div>
+
+      <h1 class="section__title">Кастомные прошивки для Steam Deck (Windows, Batocera)</h1>
+
+      <div class="guide-meta">
+        <span><i class="fas fa-hourglass-half"></i> Экспертный мегагайд: пошаговая установка, сравнение, лайфхаки, FAQ, таблицы, иллюстрация.</span>
+      </div>
+
+      <div class="guide-image-block">
+        <img src="https://avatars.mds.yandex.net/get-shedevrum/13976311/img_d9c6757137d711f0b977fe937a76dd25/orig" alt="Кастомные прошивки Steam Deck">
+        <div class="image-caption">
+          Steam Deck — не только SteamOS: Windows и Batocera превращают консоль в универсальный геймерский комбайн. Как их установить, что выбрать и какие подводные камни? Подробный мегагайд — ниже.
+        </div>
+      </div>
+
+      <div class="guide-content">
+
+        <h2>Введение: зачем кастомные прошивки на Steam Deck?</h2>
+        <p>
+          Steam Deck из коробки работает на SteamOS — кастомной Linux-системе от Valve, идеально интегрированной с библиотекой Steam и оптимизированной для портативного гейминга. Но возможности устройства этим не ограничиваются: установка Windows открывает доступ к играм с античитом, Xbox Game Pass, лаунчерам и классическим приложениям, а Batocera превращает Deck в ретро-консоль с поддержкой сотен эмуляторов и удобным интерфейсом.
+        </p>
+        <p>
+          Выбор прошивки зависит от ваших задач: SteamOS — для максимального удобства и автономности, Windows — для универсальности и совместимости, Batocera — для ретро-гейминга и эмуляции.
+        </p>
+
+        <h2>Таблица: сравнение SteamOS, Windows и Batocera на Steam Deck</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Параметр</th>
+              <th>SteamOS</th>
+              <th>Windows</th>
+              <th>Batocera</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Установка</td>
+              <td>Из коробки</td>
+              <td>Через microSD/SSD, Rufus, драйверы</td>
+              <td>microSD, Balena Etcher, plug&play</td>
+            </tr>
+            <tr>
+              <td>Совместимость с играми</td>
+              <td>Steam, Proton, часть EGS/GOG</td>
+              <td>Steam, EGS, GOG, Battle.net, Xbox, античит</td>
+              <td>Ретро-игры, эмуляторы 220+ платформ</td>
+            </tr>
+            <tr>
+              <td>Производительность</td>
+              <td>Максимальная, оптимизировано</td>
+              <td>Ниже, выше энергопотребление</td>
+              <td>Высокая для эмуляции</td>
+            </tr>
+            <tr>
+              <td>Управление</td>
+              <td>Полная интеграция с геймпадом</td>
+              <td>Часть игр требует мышь/клаву</td>
+              <td>Геймпад, кастомизация</td>
+            </tr>
+            <tr>
+              <td>Автономность</td>
+              <td>Максимум</td>
+              <td>На 20–30% ниже</td>
+              <td>Зависит от эмулятора</td>
+            </tr>
+            <tr>
+              <td>Обновления</td>
+              <td>Valve, OTA</td>
+              <td>Ручные, через Windows Update</td>
+              <td>Ручные, через Batocera.org</td>
+            </tr>
+            <tr>
+              <td>Риски</td>
+              <td>Минимальные</td>
+              <td>Проблемы с драйверами, баги</td>
+              <td>Нет доступа к SteamOS, если не dual-boot</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>Пошаговая инструкция: установка Windows на Steam Deck</h2>
+        <ol>
+          <li>
+            <b>Скачайте ISO Windows 10/11 и Rufus на ПК.</b>
+          </li>
+          <li>
+            <b>Вставьте microSD или SSD в ПК, запустите Rufus.</b>
+            <ul>
+              <li>Выберите ISO, режим Windows To Go, отметьте все опции.</li>
+            </ul>
+          </li>
+          <li>
+            <b>Скачайте драйверы Steam Deck с сайта Valve, распакуйте их на microSD/SSD.</b>
+          </li>
+          <li>
+            <b>Вставьте microSD/SSD в Steam Deck, зажмите Volume Down + Power для входа в Boot Manager.</b>
+          </li>
+          <li>
+            <b>Выберите microSD/SSD, следуйте инструкции по установке Windows.</b>
+            <ul>
+              <li>На этапе выбора Wi-Fi пропустите шаг — драйверы установите позже.</li>
+            </ul>
+          </li>
+          <li>
+            <b>После загрузки Windows установите драйверы вручную (Wi-Fi, Bluetooth, APU, аудио, SD-картридер).</b>
+          </li>
+          <li>
+            <b>Перезагрузите Deck, настройте Steam, лаунчеры, геймпад и энергосбережение.</b>
+          </li>
+        </ol>
+        <p>
+          <b>Совет:</b> Для максимального удобства используйте dual-boot — SteamOS на внутреннем SSD, Windows на microSD.
+        </p>
+
+        <h2>Пошаговая инструкция: установка Batocera на Steam Deck</h2>
+        <ol>
+          <li>
+            <b>Скачайте образ Batocera для Steam Deck с официального сайта.</b>
+          </li>
+          <li>
+            <b>Запишите образ на microSD с помощью Balena Etcher (можно прямо из SteamOS Desktop Mode).</b>
+          </li>
+          <li>
+            <b>Вставьте microSD в Steam Deck, выключите консоль.</b>
+          </li>
+          <li>
+            <b>Зажмите Volume Down + Power для входа в Boot Manager.</b>
+          </li>
+          <li>
+            <b>Выберите microSD с Batocera — система загрузится автоматически.</b>
+          </li>
+          <li>
+            <b>Настройте BIOS и ROM-ы, подключите геймпад, выберите темы и эмуляторы.</b>
+          </li>
+        </ol>
+        <p>
+          <b>Batocera работает полностью с microSD и не трогает внутренний SSD или SteamOS — идеальный вариант для ретро-гейминга без риска!</b>
+        </p>
+
+        <h2>Таблица: лучшие microSD для кастомных прошивок Steam Deck</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Модель</th>
+              <th>Класс</th>
+              <th>Объем</th>
+              <th>Особенности</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Samsung EVO Select</td>
+              <td>U3 A2</td>
+              <td>256–512 ГБ</td>
+              <td>Быстрая, надёжная, для Batocera/Windows</td>
+            </tr>
+            <tr>
+              <td>Lexar 1TB</td>
+              <td>U3 A2</td>
+              <td>1 ТБ</td>
+              <td>Для огромной библиотеки ROM-ов и игр</td>
+            </tr>
+            <tr>
+              <td>SanDisk Extreme</td>
+              <td>U3 A2</td>
+              <td>256–1 ТБ</td>
+              <td>Максимальная скорость, стабильность</td>
+            </tr>
+            <tr>
+              <td>Gigastone Gaming Plus</td>
+              <td>U3 A2</td>
+              <td>512 ГБ</td>
+              <td>Оптимальна для Batocera</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>Лайфхаки и советы по кастомным прошивкам на Steam Deck</h2>
+        <div class="pro-tips">
+          <h4>🔹 Практические советы</h4>
+          <div class="tip-item">
+            <i class="fas fa-lightbulb"></i>
+            <p>Для Batocera и Windows используйте отдельные microSD — не трогайте внутренний SSD, чтобы не потерять SteamOS.</p>
+          </div>
+          <div class="tip-item">
+            <i class="fas fa-lightbulb"></i>
+            <p>В Batocera можно полностью кастомизировать интерфейс, темы, списки платформ и эмуляторов.</p>
+          </div>
+          <div class="tip-item">
+            <i class="fas fa-lightbulb"></i>
+            <p>Для Windows обязательно ставьте все драйверы с сайта Valve — иначе не будет работать Wi-Fi, звук, Bluetooth и SD-картридер.</p>
+          </div>
+          <div class="tip-item">
+            <i class="fas fa-lightbulb"></i>
+            <p>В SteamOS лучше всего работает эмуляция через EmuDeck — для большинства пользователей это оптимальный вариант.</p>
+          </div>
+          <div class="tip-item">
+            <i class="fas fa-lightbulb"></i>
+            <p>Batocera позволяет полностью изолировать ретро-игры от основной системы — удобно для путешествий и семейного использования.</p>
+          </div>
+        </div>
+
+        <h2>FAQ — часто задаваемые вопросы о кастомных прошивках Steam Deck</h2>
+        <ul>
+          <li>
+            <strong>Можно ли полностью заменить SteamOS на Windows?</strong><br>
+            Да, но рекомендуется dual-boot или запуск с microSD, чтобы не потерять удобство SteamOS.
+          </li>
+          <li>
+            <strong>Batocera удаляет SteamOS?</strong><br>
+            Нет, она работает с microSD и не трогает внутренний диск — просто вытащите карту для возврата к SteamOS.
+          </li>
+          <li>
+            <strong>Какая прошивка лучше для эмуляции?</strong><br>
+            Для ретро — Batocera, для современных игр с античитом — Windows, для универсальности — SteamOS с EmuDeck.
+          </li>
+          <li>
+            <strong>Можно ли запускать Windows и Batocera с одной карты?</strong><br>
+            Нет, лучше использовать отдельные microSD для каждой системы.
+          </li>
+          <li>
+            <strong>Что делать, если не работает звук/интернет в Windows?</strong><br>
+            Установить все драйверы с сайта Valve вручную после установки Windows.
+          </li>
+        </ul>
+
+        <h2>Пошаговая инструкция: возврат к SteamOS после кастомных прошивок</h2>
+        <ol>
+          <li>Выключите Steam Deck полностью.</li>
+          <li>Извлеките microSD с Windows или Batocera.</li>
+          <li>Включите Deck — автоматически загрузится SteamOS.</li>
+          <li>Если SteamOS не загружается, восстановите систему через официальный образ с сайта Valve.</li>
+        </ol>
+
+        <h2>Таблица: плюсы и минусы кастомных прошивок на Steam Deck</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Прошивка</th>
+              <th>Плюсы</th>
+              <th>Минусы</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>SteamOS</td>
+              <td>Максимальная оптимизация, простота, поддержка Valve, лучшая автономность</td>
+              <td>Не все игры и лаунчеры, часть античита не работает</td>
+            </tr>
+            <tr>
+              <td>Windows</td>
+              <td>Универсальность, все лаунчеры и игры, поддержка античита</td>
+              <td>Сложная настройка, меньше автономность, нужны драйверы</td>
+            </tr>
+            <tr>
+              <td>Batocera</td>
+              <td>Лучшая ретро-эмуляция, plug&play, не трогает SteamOS</td>
+              <td>Нет современных игр, ручная настройка ROM-ов и BIOS</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>Итог: какую кастомную прошивку выбрать для Steam Deck?</h2>
+        <p>
+          Steam Deck — уникальная платформа, где можно легко переключаться между SteamOS, Windows и Batocera. Для большинства пользователей оптимален dual-boot или запуск альтернативных систем с microSD: так вы получаете максимум возможностей без риска потерять родную ОС. SteamOS — для комфорта и автономности, Windows — для универсальности, Batocera — для ретро-гейминга и эмуляции. Следуйте пошаговым инструкциям, используйте только официальные драйверы и быстрые карты памяти — и ваш Steam Deck станет универсальным игровым центром!
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__col footer__col--logo">
+          <a href="index.html" class="footer-logo">
+            <span class="logo__icon"></span>
+            <span class="logo__text">Repairo</span>
+          </a>
+          <p class="footer__text">Экспертные инструкции по геймингу с 2024 года</p>
+        </div>
+        <div class="footer__col">
+          <h3 class="footer__title">Разделы</h3>
+          <ul class="footer__links">
+            <li><a href="index.html" class="footer__link">Главная</a></li>
+            <li><a href="all-guides.html" class="footer__link">Все гайды</a></li>
+            <li><a href="contacts.html" class="footer__link">Контакты</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h3 class="footer__title">Категории</h3>
+          <ul class="footer__links">
+            <li><a href="../tv.html" class="nav__link">Телевизоры</a></li>
+            <li><a href="../cameras.html" class="nav__link">Фотоаппараты</a></li>
+            <li><a href="../consoles.html" class="nav__link">Приставки</a></li>
+            <li><a href="../laptops.html" class="nav__link">Ноутбуки</a></li>
+            <li><a href="../smartphones.html" class="nav__link">Смартфоны</a></li>
+            <li><a href="../small-appliances.html" class="nav__link">Мелкая техника</a></li>
+            <li><a href="../large-appliances.html" class="nav__link">Бытовая техника</a></li>
+            <li><a href="../auto-electronics.html" class="nav__link">Авто-Электроника</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h3 class="footer__title">Контакты</h3>
+          <ul class="footer__links">
+            <li>
+              <a href="https://t.me/repairo_kz" class="footer__link"><i class="fab fa-telegram"></i> Telegram</a>
+            </li>
+            <li>
+              <a href="https://instagram.com/repairo_kz" class="footer__link"><i class="fab fa-instagram"></i> Instagram</a>
+            </li>
+            <li>
+              <a href="mailto:support@repairo.kz" class="footer__link"><i class="fas fa-envelope"></i> Email</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+            <p class="disclaimer">
+        Администрация сайта не несёт ответственности за возможные повреждения техники
+        и иные последствия, возникшие в результате самостоятельного ремонта по
+        материалам и инструкциям, размещённым на сайте. Все работы вы выполняете
+        на свой страх и риск.
+    </p>
+                <p class="footer__copyright">© 2025 Repairo. Все права защищены.</p>
+      </div>
+    </div>
+  </footer>
+  <script src="../script.js"></script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "Кастомные прошивки для Steam Deck (Windows, Batocera)",
+  "description": "Пошаговая инструкция: Кастомные прошивки для Steam Deck (Windows, Batocera). Steam Deck из коробки работает на SteamOS — кастомной Linux-системе от Valve, ид...",
+  "totalTime": "PT30M",
+  "step": [
+    {
+      "@type": "HowToStep",
+      "name": "Введение: зачем кастомные прошивки на Steam Deck?",
+      "text": "Введение: зачем кастомные прошивки на Steam Deck?",
+      "url": "#step-1"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Таблица: сравнение SteamOS, Windows и Batocera на Steam Deck",
+      "text": "Таблица: сравнение SteamOS, Windows и Batocera на Steam Deck",
+      "url": "#step-2"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Пошаговая инструкция: установка Windows на Steam Deck",
+      "text": "Пошаговая инструкция: установка Windows на Steam Deck",
+      "url": "#step-3"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Пошаговая инструкция: установка Batocera на Steam Deck",
+      "text": "Пошаговая инструкция: установка Batocera на Steam Deck",
+      "url": "#step-4"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Таблица: лучшие microSD для кастомных прошивок Steam Deck",
+      "text": "Таблица: лучшие microSD для кастомных прошивок Steam Deck",
+      "url": "#step-5"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Лайфхаки и советы по кастомным прошивкам на Steam Deck",
+      "text": "Лайфхаки и советы по кастомным прошивкам на Steam Deck",
+      "url": "#step-6"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "FAQ — часто задаваемые вопросы о кастомных прошивках Steam Deck",
+      "text": "FAQ — часто задаваемые вопросы о кастомных прошивках Steam Deck",
+      "url": "#step-7"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Пошаговая инструкция: возврат к SteamOS после кастомных прошивок",
+      "text": "Пошаговая инструкция: возврат к SteamOS после кастомных прошивок",
+      "url": "#step-8"
+    }
+  ],
+  "image": "https://repairo.ru/https://mc.yandex.ru/watch/106225686"
+}
+</script>
+</body>
+</html>

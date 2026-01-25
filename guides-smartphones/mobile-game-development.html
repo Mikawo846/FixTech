@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YE88Y994NX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-YE88Y994NX');
+</script>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Разработка игр на смартфоне | Экспертное руководство</title>
+    <meta name="description" content="{{ description }}">
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=106225686', 'ym');
+
+    ym(106225686, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/106225686" style="position:absolute; left:-9999px;" alt="Разработка игр на смартфоне: полное руководство - пошаговая инструкция по ремонту" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="../styles-header.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    .guide-content { line-height: 1.7; color: var(--text); }
+    .guide-content h2 { color: var(--primary); margin-top: 30px; margin-bottom: 15px; font-size: 1.5rem; }
+    .guide-content h3 { color: var(--primary-dark); margin-top: 25px; margin-bottom: 12px; font-size: 1.2rem; }
+    .guide-image-block { margin: 20px 0; padding: 15px; background: var(--background); border-radius: var(--border-radius); border: 1px solid var(--border); text-align: center; }
+    .guide-image-block img { max-width: 100%; height: auto; border-radius: 6px; border: 1px solid var(--border); }
+    .image-caption { margin-top: 10px; font-size: 0.85rem; color: var(--text-light); font-style: italic; }
+    .pro-tips { background: rgba(3, 74, 79, 0.05); padding: 15px; border-radius: 6px; margin: 20px 0; }
+    .pro-tips h4 { color: var(--primary); margin-top: 0; margin-bottom: 12px; font-size: 1.1rem; }
+    .tip-item { display: flex; gap: 8px; margin-bottom: 8px; align-items: flex-start; }
+    table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+    th, td { border: 1px solid var(--border); padding: 8px; text-align: left; }
+    th { background: var(--background-light); }
+    @media (max-width: 768px) {
+      .guide-content h2 { font-size: 1.4rem; margin-top: 25px; }
+      .guide-image-block { padding: 12px; margin: 15px 0; }
+      table, th, td { font-size: 0.95rem; }
+    }
+  </style>
+  <script async src="https://timeweb.cloud/api/v1/cloud-ai/agents/3cc03620-d051-4d8d-b5af-f7b6cd083a35/embed.js?collapsed=true"></script>
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="header__inner">
+        <a href="../index.html" class="logo">
+          <span class="logo__icon"></span>
+          <span class="logo__text">DevGuide</span>
+        </a>
+        <nav class="nav">
+          <ul class="nav__list">
+            <li><a href="../mobile.html" class="nav__link">Мобильная разработка</a></li>
+            <li><a href="../gamedev.html" class="nav__link">Геймдев</a></li>
+            <li><a href="../tools.html" class="nav__link">Инструменты</a></li>
+            <li><a href="../faq.html" class="nav__link">FAQ</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <section class="guide-page">
+    <div class="container">
+      <div class="breadcrumbs">
+        <a href="../index.html">Главная</a>
+        <i class="fas fa-chevron-right"></i>
+        <a href="../gamedev.html">Геймдев</a>
+        <i class="fas fa-chevron-right"></i>
+        <span>Разработка игр на смартфоне</span>
+      </div>
+
+      <h1 class="section__title">Разработка игр на смартфоне: полное руководство</h1>
+
+      <div class="guide-meta">
+        <span><i class="fas fa-gamepad"></i> Подробное руководство: движки, инструменты, лайфхаки, таблицы, FAQ, иллюстрация.</span>
+      </div>
+
+      <div class="guide-image-block">
+        <img src="https://avatars.mds.yandex.net/get-shedevrum/15342086/img_a314f2e7450a11f0bd7be65daf6e7141/orig" alt="Разработка игр на смартфоне">
+        <div class="image-caption">
+          Современные смартфоны позволяют создавать игры уровня ПК благодаря мощным процессорам и специализированным приложениям.
+        </div>
+      </div>
+
+      <div class="guide-content">
+
+        <h2>Введение: возможности современных смартфонов</h2>
+        <p>
+          Современные флагманские смартфоны с процессорами Snapdragon 8 Gen 3 или Apple A17 Pro по производительности сравнимы с ноутбуками среднего класса. Это позволяет разрабатывать игры непосредственно на устройстве, используя специализированные движки и инструменты. В этом руководстве — полный обзор технологий, лучших практик и лайфхаков для создания игр на Android и iOS.
+        </p>
+
+        <h2>Таблица: сравнение мобильных игровых движков</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Движок</th>
+              <th>Платформа</th>
+              <th>Язык</th>
+              <th>Особенности</th>
+              <th>Сложность</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>GDevelop</td>
+              <td>Android/iOS</td>
+              <td>Визуальное программирование</td>
+              <td>Бесплатный, экспорт в APK/IPA</td>
+              <td>Низкая</td>
+            </tr>
+            <tr>
+              <td>Unity</td>
+              <td>Android/iOS</td>
+              <td>C#</td>
+              <td>Поддержка AR/VR, 3D-графика</td>
+              <td>Высокая</td>
+            </tr>
+            <tr>
+              <td>Struckd</td>
+              <td>Android/iOS</td>
+              <td>Блочное программирование</td>
+              <td>3D-конструктор, мультиплеер</td>
+              <td>Средняя</td>
+            </tr>
+            <tr>
+              <td>Construct 3</td>
+              <td>Web</td>
+              <td>JavaScript</td>
+              <td>Кроссплатформенность, HTML5</td>
+              <td>Средняя</td>
+            </tr>
+            <tr>
+              <td>Epic Game Maker</td>
+              <td>iOS</td>
+              <td>Визуальный редактор</td>
+              <td>Готовые шаблоны, App Store Connect</td>
+              <td>Низкая</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>Пошаговая инструкция: создание 2D-платформера</h2>
+        <ol>
+          <li>
+            <b>Выберите движок</b><br>
+            Для новичков подойдёт GDevelop — бесплатный инструмент с визуальным программированием.
+          </li>
+          <li>
+            <b>Создайте проект</b><br>
+            В главном меню выберите "Новый проект" → "Платформер".
+          </li>
+          <li>
+            <b>Добавьте персонажа</b><br>
+            Импортируйте спрайты или используйте готовые ассеты из магазина движка.
+          </li>
+          <li>
+            <b>Настройте управление</b><br>
+            В разделе Events создайте триггеры для кнопок движения и прыжка.
+          </li>
+          <li>
+            <b>Постройте уровень</b><br>
+            Используйте Tilemap для создания платформ и препятствий.
+          </li>
+          <li>
+            <b>Добавьте физику</b><br>
+            Настройте гравитацию и коллайдеры в свойствах объектов.
+          </li>
+          <li>
+            <b>Протестируйте игру</b><br>
+            Запустите предпросмотр на устройстве через QR-код или локальную сеть.
+          </li>
+        </ol>
+
+        <h3>Публикация игры в Google Play</h3>
+        <ol>
+          <li>Экспортируйте проект в APK через меню сборки</li>
+          <li>Создайте аккаунт разработчика (25$)</li>
+          <li>Заполните карточку приложения в Google Play Console</li>
+          <li>Загрузите APK и пройдите модерацию</li>
+        </ol>
+
+        <h2>Лайфхаки для мобильной разработки</h2>
+        <div class="pro-tips">
+          <h4>💡 Экспертные советы</h4>
+          <div class="tip-item">
+            <i class="fas fa-lightbulb"></i>
+            <p>Используйте облачные IDE типа GitHub Codespaces для работы с Unity — это экономит ресурсы смартфона.</p>
+          </div>
+          <div class="tip-item">
+            <i class="fas fa-lightbulb"></i>
+            <p>Оптимизируйте текстуры под разрешение экрана — уменьшите размеры в 2 раза для мобильных устройств.</p>
+          </div>
+          <div class="tip-item">
+            <i class="fas fa-lightbulb"></i>
+            <p>Для сложной логики используйте Python в Termux — многие движки поддерживают скрипты на Python.</p>
+          </div>
+          <div class="tip-item">
+            <i class="fas fa-lightbulb"></i>
+            <p>Тестируйте игру на 3-5 устройствах с разными процессорами и разрешениями экрана.</p>
+          </div>
+        </div>
+
+        <h2>Таблица: типичные проблемы и решения</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Проблема</th>
+              <th>Причина</th>
+              <th>Решение</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Игра тормозит</td>
+              <td>Высокое разрешение текстур</td>
+              <td>Сжать текстуры до 512x512</td>
+            </tr>
+            <tr>
+              <td>Не работает управление</td>
+              <td>Неправильные бинды кнопок</td>
+              <td>Проверить настройки Input System</td>
+            </tr>
+            <tr>
+              <td>Вылетает на слабых устройствах</td>
+              <td>Перегрузка оперативной памяти</td>
+              <td>Уменьшить количество объектов на сцене</td>
+            </tr>
+            <tr>
+              <td>Не собирается APK</td>
+              <td>Ошибки в манифесте</td>
+              <td>Проверить разрешения и версию SDK</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>FAQ — часто задаваемые вопросы</h2>
+        <ul>
+          <li>
+            <strong>Можно ли разрабатывать 3D-игры на смартфоне?</strong><br>
+            Да, через Unity Remote или облачные сервисы типа Shadow PC.
+          </li>
+          <li>
+            <strong>Как тестировать игру без ПК?</strong><br>
+            Используйте встроенные эмуляторы в Construct 3 или GDevelop.
+          </li>
+          <li>
+            <strong>Какие игры проще всего создать новичку?</strong><br>
+            2D-платформеры, головоломки, кликеры — минимальная сложность механик.
+          </li>
+          <li>
+            <strong>Нужно ли знать программирование?</strong><br>
+            Нет — современные движки используют визуальное программирование.
+          </li>
+          <li>
+            <strong>Как монетизировать мобильную игру?</strong><br>
+            Через рекламу AdMob, внутриигровые покупки или премиум-версию[10].
+          </li>
+        </ul>
+
+        <h2>📌 Итог: с чего начать разработку?</h2>
+        <p>
+          Современные инструменты вроде GDevelop и Unity позволяют создавать полноценные игры прямо на смартфоне. Начните с простых 2D-проектов, освойте визуальное программирование и постепенно переходите к сложным механикам. Не забывайте об оптимизации под мобильные процессоры и тестировании на разных устройствах. Следуя этому руководству, вы сможете выпустить свою первую игру в магазины приложений уже через месяц активной разработки.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__col footer__col--logo">
+          <a href="index.html" class="footer-logo">
+            <span class="logo__icon"></span>
+            <span class="logo__text">Repairo</span>
+          </a>
+          <p class="footer__text">Экспертные инструкции по фототехнике с 2024 года</p>
+        </div>
+        <div class="footer__col">
+          <h3 class="footer__title">Разделы</h3>
+          <ul class="footer__links">
+            <li><a href="index.html" class="footer__link">Главная</a></li>
+            <li><a href="all-guides.html" class="footer__link">Все гайды</a></li>
+            <li><a href="contacts.html" class="footer__link">Контакты</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h3 class="footer__title">Категории</h3>
+          <ul class="footer__links">
+            <li><a href="../tv.html" class="nav__link">Телевизоры</a></li>
+            <li><a href="../cameras.html" class="nav__link">Фотоаппараты</a></li>
+            <li><a href="../consoles.html" class="nav__link">Приставки</a></li>
+            <li><a href="../laptops.html" class="nav__link">Ноутбуки</a></li>
+            <li><a href="../smartphones.html" class="nav__link">Смартфоны</a></li>
+            <li><a href="../small-appliances.html" class="nav__link">Мелкая техника</a></li>
+            <li><a href="../large-appliances.html" class="nav__link">Бытовая техника</a></li>
+            <li><a href="../auto-electronics.html" class="nav__link">Авто-Электроника</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h3 class="footer__title">Контакты</h3>
+          <ul class="footer__links">
+            <li>
+              <a href="https://t.me/repairo_kz" class="footer__link"><i class="fab fa-telegram"></i> Telegram</a>
+            </li>
+            <li>
+              <a href="https://instagram.com/repairo_kz" class="footer__link"><i class="fab fa-instagram"></i> Instagram</a>
+            </li>
+            <li>
+              <a href="mailto:support@repairo.kz" class="footer__link"><i class="fas fa-envelope"></i> Email</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+            <p class="disclaimer">
+        Администрация сайта не несёт ответственности за возможные повреждения техники
+        и иные последствия, возникшие в результате самостоятельного ремонта по
+        материалам и инструкциям, размещённым на сайте. Все работы вы выполняете
+        на свой страх и риск.
+    </p>
+                <p class="footer__copyright">© 2025 Repairo. Все права защищены.</p>
+      </div>
+    </div>
+  </footer>
+  <script src="../script.js"></script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "Разработка игр на смартфоне: полное руководство",
+  "description": "Пошаговая инструкция: Разработка игр на смартфоне: полное руководство. Современные флагманские смартфоны с процессорами Snapdragon 8 Gen 3 или Apple A1.... С...",
+  "totalTime": "PT30M",
+  "step": [
+    {
+      "@type": "HowToStep",
+      "name": "Введение: возможности современных смартфонов",
+      "text": "Введение: возможности современных смартфонов",
+      "url": "#step-1"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Таблица: сравнение мобильных игровых движков",
+      "text": "Таблица: сравнение мобильных игровых движков",
+      "url": "#step-2"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Пошаговая инструкция: создание 2D-платформера",
+      "text": "Пошаговая инструкция: создание 2D-платформера",
+      "url": "#step-3"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Лайфхаки для мобильной разработки",
+      "text": "Лайфхаки для мобильной разработки",
+      "url": "#step-4"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Таблица: типичные проблемы и решения",
+      "text": "Таблица: типичные проблемы и решения",
+      "url": "#step-5"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "FAQ — часто задаваемые вопросы",
+      "text": "FAQ — часто задаваемые вопросы",
+      "url": "#step-6"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "📌 Итог: с чего начать разработку?",
+      "text": "📌 Итог: с чего начать разработку?",
+      "url": "#step-7"
+    }
+  ],
+  "image": "https://repairo.ru/https://mc.yandex.ru/watch/106225686"
+}
+</script>
+</body>
+</html>

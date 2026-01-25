@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Почему PS5 не выдает 120 Гц на мониторе? | Экспертный мегагайд 2025</title>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=106225686', 'ym');
+
+    ym(106225686, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/106225686" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="../styles-header.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    .guide-content { line-height: 1.7; color: var(--text); }
+    .guide-content h2 { color: var(--primary); margin-top: 30px; margin-bottom: 15px; font-size: 1.5rem; }
+    .guide-content h3 { color: var(--primary-dark); margin-top: 25px; margin-bottom: 12px; font-size: 1.2rem; }
+    .guide-image-block { margin: 20px 0; padding: 15px; background: var(--background); border-radius: var(--border-radius); border: 1px solid var(--border); text-align: center; }
+    .guide-image-block img { max-width: 100%; height: auto; border-radius: 6px; border: 1px solid var(--border); }
+    .image-caption { margin-top: 10px; font-size: 0.85rem; color: var(--text-light); font-style: italic; }
+    .pro-tips { background: rgba(3, 74, 79, 0.05); padding: 15px; border-radius: 6px; margin: 20px 0; }
+    .pro-tips h4 { color: var(--primary); margin-top: 0; margin-bottom: 12px; font-size: 1.1rem; }
+    .tip-item { display: flex; gap: 8px; margin-bottom: 8px; align-items: flex-start; }
+    table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+    th, td { border: 1px solid var(--border); padding: 8px; text-align: left; }
+    th { background: var(--background-light); }
+    @media (max-width: 768px) {
+      .guide-content h2 { font-size: 1.4rem; margin-top: 25px; }
+      .guide-image-block { padding: 12px; margin: 15px 0; }
+      table, th, td { font-size: 0.95rem; }
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="header__inner">
+        <a href="../index.html" class="logo">
+          <span class="logo__icon"></span>
+          <span class="logo__text">Repairo</span>
+        </a>
+        <nav class="nav">
+          <ul class="nav__list">
+            <li><a href="../tv.html" class="nav__link">Телевизоры</a></li>
+            <li><a href="../cameras.html" class="nav__link">Фотоаппараты</a></li>
+            <li><a href="../consoles.html" class="nav__link">Приставки</a></li>
+            <li><a href="../laptops.html" class="nav__link">Ноутбуки</a></li>
+            <li><a href="../smartphones.html" class="nav__link">Смартфоны</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <section class="guide-page">
+    <div class="container">
+      <div class="breadcrumbs">
+        <a href="../index.html">Главная</a>
+        <i class="fas fa-chevron-right"></i>
+        <a href="../consoles.html">Приставки</a>
+        <i class="fas fa-chevron-right"></i>
+        <span>Почему PS5 не выдает 120 Гц на мониторе?</span>
+      </div>
+
+      <h1 class="section__title">Почему PS5 не выдает 120 Гц на мониторе?</h1>
+
+      <div class="guide-meta">
+        <span><i class="fas fa-hourglass-half"></i> Глобальный мегагайд: диагностика, настройка, лайфхаки, FAQ, таблицы, иллюстрация.</span>
+      </div>
+
+      <div class="guide-image-block">
+        <img src="https://avatars.mds.yandex.net/get-shedevrum/15377961/img_054c9689386911f0b9fa86d61b53b413/orig" alt="PS5 120 Гц проблема">
+        <div class="image-caption">
+          PS5 и монитор 120 Гц: почему не работает высокая герцовка, как правильно всё подключить, какие нюансы HDMI и игр? Полный мегагайд — ниже.
+        </div>
+      </div>
+
+      <div class="guide-content">
+
+        <h2>Введение: почему PS5 не выдает 120 Гц?</h2>
+        <p>
+          Даже если у вас игровой монитор с поддержкой 120/144/165 Гц и мощная PS5, консоль может не выдавать 120 Гц. Причины — несовместимость по HDMI, ограничения разрешения, настройки консоли, кабеля или даже конкретной игры. Ниже — полный разбор всех факторов, которые мешают получить 120 FPS на PlayStation 5.
+        </p>
+
+        <h2>Таблица: основные причины отсутствия 120 Гц на PS5</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Проблема</th>
+              <th>Возможная причина</th>
+              <th>Решение</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Нет опции 120 Гц</td>
+              <td>Монитор не поддерживает 120 Гц по HDMI, старый кабель</td>
+              <td>Проверьте порт, используйте HDMI 2.0/2.1</td>
+            </tr>
+            <tr>
+              <td>Только 60 Гц</td>
+              <td>Подключено к неправильному HDMI-порту, DisplayPort, переходник</td>
+              <td>Подключите к HDMI 2.0/2.1, не используйте переходники</td>
+            </tr>
+            <tr>
+              <td>Нет 120 FPS в игре</td>
+              <td>Игра не поддерживает 120 FPS, не включен режим производительности</td>
+              <td>Включите Performance Mode, проверьте список игр</td>
+            </tr>
+            <tr>
+              <td>Мерцание/артефакты</td>
+              <td>Проблемы с VRR/HDR, несовместимость панели</td>
+              <td>Отключите VRR/HDR, обновите прошивку</td>
+            </tr>
+            <tr>
+              <td>PS5 не видит 120 Гц</td>
+              <td>Устаревшая прошивка, кабель, порт</td>
+              <td>Обновите всё, проверьте кабель</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>Пошаговая диагностика: почему не работает 120 Гц?</h2>
+        <ol>
+          <li>
+            <b>Проверьте монитор:</b> Поддерживает ли он 120 Гц по HDMI? Многие мониторы выдают 120/144/165 Гц только по DisplayPort, а по HDMI — максимум 60 Гц. Смотрите инструкцию или сайт производителя.
+          </li>
+          <li>
+            <b>Используйте правильный кабель:</b> Для 4K 120 Гц нужен HDMI 2.1, для 1080p 120 Гц — минимум HDMI 2.0. Оригинальный кабель из комплекта PS5 — лучший вариант.
+          </li>
+          <li>
+            <b>Подключите к нужному порту:</b> На некоторых мониторах/ТВ только 1–2 порта HDMI поддерживают 120 Гц. Не используйте переходники DisplayPort→HDMI.
+          </li>
+          <li>
+            <b>Включите 120 Гц в настройках PS5:</b> Настройки → Экран и видео → Вывод видео → 120 Гц → Автоматически.
+          </li>
+          <li>
+            <b>Проверьте разрешение:</b> PS5 официально не поддерживает 1440p — только 1080p и 4K. При 1440p консоль может ограничить частоту до 60 Гц.
+          </li>
+          <li>
+            <b>Включите режим производительности:</b> Настройки → Сохранённые данные и настройки игр/приложений → Предустановки игр → Режим производительности.
+          </li>
+          <li>
+            <b>Проверьте настройки монитора:</b> В меню монитора включите "HDMI Enhanced", "Game Mode", "High Bandwidth" или аналогичные опции.
+          </li>
+          <li>
+            <b>Обновите прошивку:</b> И на PS5, и на мониторе/ТВ — это часто решает проблему.
+          </li>
+        </ol>
+
+        <h2>Таблица: поддержка 120 Гц на популярных мониторах</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Модель</th>
+              <th>HDMI 2.0</th>
+              <th>HDMI 2.1</th>
+              <th>120 Гц по HDMI</th>
+              <th>Комментарий</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>LG UltraGear 27GN950</td>
+              <td>Да</td>
+              <td>Да</td>
+              <td>Да (4K 120 Гц)</td>
+              <td>HDMI 2.1, Game Mode</td>
+            </tr>
+            <tr>
+              <td>Samsung Odyssey G7</td>
+              <td>Да</td>
+              <td>Нет</td>
+              <td>Да (1080p 120 Гц)</td>
+              <td>Только 1080p, не 4K</td>
+            </tr>
+            <tr>
+              <td>ASUS VG259QM</td>
+              <td>Да</td>
+              <td>Нет</td>
+              <td>Да (1080p 120 Гц)</td>
+              <td>HDMI 2.0</td>
+            </tr>
+            <tr>
+              <td>AOC 24G2U</td>
+              <td>Да</td>
+              <td>Нет</td>
+              <td>Да (1080p 120 Гц)</td>
+              <td>HDMI 2.0, Game Mode</td>
+            </tr>
+            <tr>
+              <td>Dell S2721DGF</td>
+              <td>Да</td>
+              <td>Нет</td>
+              <td>Нет (только 60 Гц)</td>
+              <td>144 Гц только по DP</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>Лайфхаки и советы для стабильных 120 Гц на PS5</h2>
+        <div class="pro-tips">
+          <h4>🔹 Практические советы</h4>
+          <div class="tip-item">
+            <i class="fas fa-lightbulb"></i>
+            <p>Проверьте спецификации монитора: 120/144/165 Гц часто доступны только по DisplayPort, а HDMI ограничен 60 Гц.</p>
+          </div>
+          <div class="tip-item">
+            <i class="fas fa-lightbulb"></i>
+            <p>Используйте только оригинальный кабель HDMI 2.1 — дешёвые кабели часто не держат нужную полосу пропускания.</p>
+          </div>
+          <div class="tip-item">
+            <i class="fas fa-lightbulb"></i>
+            <p>Включайте Game Mode и HDMI Enhanced/High Bandwidth на мониторе для нужного порта.</p>
+          </div>
+          <div class="tip-item">
+            <i class="fas fa-lightbulb"></i>
+            <p>Не используйте переходники DisplayPort→HDMI — PS5 работает только по HDMI.</p>
+          </div>
+          <div class="tip-item">
+            <i class="fas fa-lightbulb"></i>
+            <p>Включайте режим производительности в настройках PS5 и самой игре для активации 120 FPS.</p>
+          </div>
+          <div class="tip-item">
+            <i class="fas fa-lightbulb"></i>
+            <p>Обновите прошивку PS5 и монитора — часто это решает проблему несовместимости.</p>
+          </div>
+        </div>
+
+        <h2>FAQ — часто задаваемые вопросы о 120 Гц на PS5</h2>
+        <ul>
+          <li>
+            <strong>Почему мой монитор 144 Гц не работает с PS5 на 120 Гц?</strong><br>
+            Чаще всего 144 Гц поддерживается только по DisplayPort, а HDMI ограничен 60 Гц. Используйте HDMI 2.0/2.1 и проверьте спецификации.
+          </li>
+          <li>
+            <strong>Можно ли получить 120 Гц на 1440p?</strong><br>
+            PS5 официально не поддерживает 1440p — только 1080p (120 Гц) и 4K (120 Гц при HDMI 2.1).
+          </li>
+          <li>
+            <strong>Почему в игре нет опции 120 FPS?</strong><br>
+            Не все игры поддерживают 120 FPS. Проверьте список тайтлов и включите режим производительности.
+          </li>
+          <li>
+            <strong>Как проверить, что PS5 реально выдает 120 Гц?</strong><br>
+            В настройках PS5 → Экран и видео → Информация о видеовыходе — должно быть указано "120 Гц".
+          </li>
+          <li>
+            <strong>Почему появляется мерцание или артефакты при 120 Гц?</strong><br>
+            Это может быть связано с VRR/HDR или несовместимостью панели. Отключите VRR, обновите прошивку.
+          </li>
+        </ul>
+
+        <h2>Пошаговая инструкция: включение 120 Гц на PS5</h2>
+        <ol>
+          <li>Проверьте, поддерживает ли монитор 120 Гц по HDMI.</li>
+          <li>Используйте оригинальный кабель HDMI 2.1 или сертифицированный HDMI 2.0 для 1080p.</li>
+          <li>Подключите кабель к нужному HDMI-порту (обычно с маркировкой 2.1 или 4K 120 Гц).</li>
+          <li>В настройках PS5: Экран и видео → Вывод видео → 120 Гц → Автоматически.</li>
+          <li>В разделе "Информация о видеовыходе" проверьте наличие 120 Гц.</li>
+          <li>Включите Game Mode и HDMI Enhanced/High Bandwidth на мониторе.</li>
+          <li>В настройках игр и самой консоли включите режим производительности.</li>
+          <li>Обновите прошивки PS5 и монитора.</li>
+        </ol>
+
+        <h2>Итог: почему PS5 не выдает 120 Гц на мониторе?</h2>
+        <p>
+          Главные причины — несовместимость HDMI, неправильный порт или кабель, неподдерживаемое разрешение, не включённый режим производительности или устаревшая прошивка. Проверьте все пункты этого гайда — и наслаждайтесь плавным геймплеем на 120 Гц с вашей PS5!
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__col footer__col--logo">
+          <a href="index.html" class="footer-logo">
+            <span class="logo__icon"></span>
+            <span class="logo__text">Repairo</span>
+          </a>
+          <p class="footer__text">Экспертные инструкции по геймингу с 2024 года</p>
+        </div>
+        <div class="footer__col">
+          <h3 class="footer__title">Разделы</h3>
+          <ul class="footer__links">
+            <li><a href="index.html" class="footer__link">Главная</a></li>
+            <li><a href="all-guides.html" class="footer__link">Все гайды</a></li>
+            <li><a href="contacts.html" class="footer__link">Контакты</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h3 class="footer__title">Категории</h3>
+          <ul class="footer__links">
+            <li><a href="../tv.html" class="nav__link">Телевизоры</a></li>
+            <li><a href="../cameras.html" class="nav__link">Фотоаппараты</a></li>
+            <li><a href="../consoles.html" class="nav__link">Приставки</a></li>
+            <li><a href="../laptops.html" class="nav__link">Ноутбуки</a></li>
+            <li><a href="../smartphones.html" class="nav__link">Смартфоны</a></li>
+            <li><a href="../small-appliances.html" class="nav__link">Мелкая техника</a></li>
+            <li><a href="../large-appliances.html" class="nav__link">Бытовая техника</a></li>
+            <li><a href="../auto-electronics.html" class="nav__link">Авто-Электроника</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h3 class="footer__title">Контакты</h3>
+          <ul class="footer__links">
+            <li>
+              <a href="https://t.me/repairo_kz" class="footer__link"><i class="fab fa-telegram"></i> Telegram</a>
+            </li>
+            <li>
+              <a href="https://instagram.com/repairo_kz" class="footer__link"><i class="fab fa-instagram"></i> Instagram</a>
+            </li>
+            <li>
+              <a href="mailto:support@repairo.kz" class="footer__link"><i class="fas fa-envelope"></i> Email</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+            <p class="disclaimer">
+        Администрация сайта не несёт ответственности за возможные повреждения техники
+        и иные последствия, возникшие в результате самостоятельного ремонта по
+        материалам и инструкциям, размещённым на сайте. Все работы вы выполняете
+        на свой страх и риск.
+    </p>
+                <p class="footer__copyright">© 2025 Repairo. Все права защищены.</p>
+      </div>
+    </div>
+  </footer>
+  <script src="../script.js"></script>
+</body>
+</html>
