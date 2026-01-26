@@ -13,7 +13,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TechNews - Новости технологий</title>
+    <title>Repairo News - Новости технологий</title>
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript">
     (function(m,e,t,r,i,k,a){
@@ -334,38 +334,45 @@
             padding: 12px 24px;
             border-radius: 50px;
             font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s;
-            border: none;
+            text-decoration: none;
             text-align: center;
             position: relative;
             overflow: hidden;
-            background: linear-gradient(90deg, var(--gradient-start), var(--gradient-end));
+            background: linear-gradient(90deg, 
+                rgba(245, 247, 160, 0.6), 
+                rgba(141, 241, 192, 0.6));
             color: var(--text-color);
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
         }
 
         .button::after {
             content: '';
             position: absolute;
-            top: -5px;
-            left: -5px;
-            right: -5px;
-            bottom: -5px;
-            background: linear-gradient(90deg, var(--gradient-start), var(--gradient-end));
+            top: -10px;
+            left: -10px;
+            right: -10px;
+            bottom: -10px;
+            background: linear-gradient(90deg, 
+                rgba(245, 247, 160, 0.4), 
+                rgba(141, 241, 192, 0.4));
             z-index: -1;
-            filter: blur(10px);
-            opacity: 0.5;
+            filter: blur(20px);
+            opacity: 0.6;
             transition: opacity 0.3s;
         }
 
         .button:hover {
             transform: translateY(-2px);
             box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+            background: linear-gradient(90deg, 
+                rgba(245, 247, 160, 0.7), 
+                rgba(141, 241, 192, 0.7));
         }
 
         .button:hover::after {
-            opacity: 0.7;
+            opacity: 0.8;
         }
 
         /* Ad block */
