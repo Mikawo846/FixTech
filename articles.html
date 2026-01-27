@@ -92,6 +92,16 @@
             height: var(--nav-height);
         }
 
+        .header-image {
+            margin-right: 15px;
+        }
+
+        .header-image img {
+            height: 40px;
+            width: auto;
+            object-fit: contain;
+        }
+
         .logo {
             font-size: 24px;
             font-weight: bold;
@@ -512,13 +522,10 @@
 <body>
     <header>
         <div class="container header-container">
+            <div class="header-image">
+                <img src="https://i.postimg.cc/Hszb49cs/9510b6ea-9b74-4950-96b4-e4415dfef4eb-removebg-preview.png" alt="Header Image">
+            </div>
             <a href="./index.html" class="logo">
-                    <span class="logo__icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12 15L7 10H17L12 15Z" fill="currentColor"/>
-                            <path d="M12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3ZM12 19C8.13401 19 5 15.866 5 12C5 8.13401 8.13401 5 12 5C15.866 5 19 8.13401 19 12C19 15.866 15.866 19 12 19Z" fill="currentColor"/>
-                        </svg>
-                    </span>
                     <span class="logo__text">Repairo</span>
                 </a>
             <button class="nav-toggle" id="menu-toggle">☰</button>
