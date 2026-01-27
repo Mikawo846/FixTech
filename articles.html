@@ -115,17 +115,15 @@
 
         .header-container {
             display: flex;
-            justify-content: center;
+            justify-content: space-between;
             align-items: center;
             height: var(--nav-height);
             position: relative;
         }
 
         .header-image {
-            position: absolute;
-            left: 15px;
-            top: 50%;
-            transform: translateY(-50%);
+            display: flex;
+            align-items: center;
         }
 
         .header-image img {
@@ -139,6 +137,9 @@
             font-weight: bold;
             color: var(--text-color);
             text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
         }
 
         .nav-toggle {
@@ -153,11 +154,8 @@
         }
 
         .nav {
-            position: absolute;
-            right: 15px;
-            top: 50%;
-            transform: translateY(-50%);
             display: flex;
+            align-items: center;
             gap: 30px;
         }
 
@@ -535,17 +533,19 @@
         @media (max-width: 768px) {
             .nav-toggle {
                 display: block;
+                margin-left: auto;
             }
 
             .nav {
                 display: none;
             }
 
-            .articles {
-                grid-template-columns: 1fr;
+            .logo {
+                font-size: 20px;
             }
 
-            .sidebar {
+            .content-wrapper {
+                flex-direction: column;
                 grid-template-columns: 1fr;
             }
 
@@ -560,11 +560,11 @@
     <header>
         <div class="container header-container">
             <div class="header-image">
-                <img src="https://i.postimg.cc/q7H0JS0t/8d9ca2d0-7483-40bd-b92d-73c88a196afb-removebg-preview.png" alt="Header Image">
+                <img src="https://i.postimg.cc/Hszb49cs/9510b6ea-9b74-4950-96b4-e4415dfef4eb-removebg-preview.png" alt="Header Image">
             </div>
             <a href="./index.html" class="logo">
-                    <span class="logo__text">Repairo</span>
-                </a>
+                <span class="logo__text">Repairo</span>
+            </a>
             <button class="nav-toggle" id="menu-toggle">☰</button>
             <nav class="nav">
                 <ul class="nav__list">
