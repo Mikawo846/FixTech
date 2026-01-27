@@ -90,12 +90,14 @@
             justify-content: space-between;
             align-items: center;
             height: var(--nav-height);
+            position: relative;
         }
 
         .header-image {
-            margin-right: 15px;
-            margin-left: -15px;
-            margin-bottom: -15px;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            z-index: 1;
         }
 
         .header-image img {
