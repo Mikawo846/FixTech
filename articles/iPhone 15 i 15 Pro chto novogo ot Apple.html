@@ -87,7 +87,7 @@
 
         .header-container {
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
             height: var(--nav-height);
             position: relative;
@@ -95,8 +95,7 @@
 
         .header-image {
             position: absolute;
-            left: 0;
-            bottom: 0;
+            left: 15px;
             z-index: 1;
         }
 
@@ -107,6 +106,16 @@
         }
 
         .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--text-color);
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo__text {
             font-size: 24px;
             font-weight: bold;
             color: var(--text-color);
@@ -285,12 +294,12 @@
 <body>
     <header>
         <div class="container header-container">
+            <div class="header-image">
+                <img src="https://i.postimg.cc/q7H0JS0t/8d9ca2d0-7483-40bd-b92d-73c88a196afb-removebg-preview.png" alt="Header Image">
+            </div>
             <a href="../articles.html" class="logo">
-                    <div class="header-image">
-                        <img src="https://user-gen-media-assets.s3.amazonaws.com/gemini_images/8d9ca2d0-7483-40bd-b92d-73c88a196afb.png" alt="Header Image">
-                    </div>
-                    <span class="logo__text">Repairo</span>
-                </a>
+                <span class="logo__text">Repairo</span>
+            </a>
             
             <a href="../articles.html" class="back-btn">Назад к новостям</a>
         </div>
