@@ -56,6 +56,156 @@
       .guide-image-block { padding: 12px; margin: 15px 0; }
       table, th, td { font-size: 0.95rem; }
     }
+
+    /* Яндекс Маркет рекламный баннер */
+    .ym-hero-link {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+      max-width: 100%;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      margin: 40px 0;
+    }
+
+    .ym-hero-banner {
+      width: 100%;
+      max-width: 1706px;
+      min-height: 184px;
+      border-radius: 16px;
+      background: linear-gradient(90deg, #fff9d6 0%, #ffffff 40%, #f5f5f5 100%);
+      border: 1px solid #f0f0f0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+      overflow: hidden;
+      box-sizing: border-box;
+      padding: 24px 28px;
+    }
+
+    .ym-hero-content {
+      flex: 1 1 60%;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .ym-hero-badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: #ffe600;
+      color: #111827;
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    .ym-hero-title {
+      margin: 0;
+      font-size: 20px;
+      line-height: 1.2;
+      font-weight: 700;
+      color: #111827;
+    }
+
+    .ym-hero-text {
+      margin: 0;
+      font-size: 14px;
+      line-height: 1.4;
+      color: #4b5563;
+      max-width: 480px;
+    }
+
+    .ym-hero-button {
+      margin-top: 8px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 18px;
+      border-radius: 999px;
+      border: none;
+      background: #ffdc34;
+      color: #111827;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 2px 6px rgba(15, 23, 42, 0.18);
+      transition: background 0.15s ease, transform 0.15s ease,
+                  box-shadow 0.15s ease;
+    }
+
+    .ym-hero-button::after {
+      content: "→";
+      margin-left: 6px;
+      font-size: 14px;
+    }
+
+    .ym-hero-button:hover {
+      background: #ffe94f;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 10px rgba(15, 23, 42, 0.22);
+    }
+
+    .ym-hero-image {
+      flex: 0 0 30%;
+      max-width: 360px;
+      min-width: 260px;
+      height: 140px;
+      border-radius: 14px;
+      background: radial-gradient(circle at 30% 20%, #ffffff 0, #f5f5f5 60%, #e5e7eb 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .ym-hero-image img {
+      max-width: 90%;
+      max-height: 90%;
+      object-fit: contain;
+    }
+
+    .ym-hero-legal {
+      margin-top: 6px;
+      max-width: 1706px;
+      font-size: 11px;
+      line-height: 1.3;
+      color: #6b7280;
+    }
+
+    @media (max-width: 768px) {
+      .ym-hero-banner {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 16px 16px 14px;
+        min-height: auto;
+      }
+
+      .ym-hero-image {
+        order: -1;
+        width: 100%;
+        max-width: 100%;
+        margin-bottom: 10px;
+      }
+
+      .ym-hero-title {
+        font-size: 18px;
+      }
+
+      .ym-hero-text {
+        font-size: 13px;
+      }
+
+      .ym-hero-button {
+        font-size: 13px;
+        padding: 8px 14px;
+      }
+
+      .ym-hero-legal {
+        font-size: 10px;
+      }
+    }
   </style>
   <script async src="https://timeweb.cloud/api/v1/cloud-ai/agents/3cc03620-d051-4d8d-b5af-f7b6cd083a35/embed.js?collapsed=true"></script>
 </head>
@@ -158,165 +308,6 @@
           У каждого антивируса свои названия пунктов меню, но логика похожа: ищутся разделы «Брандмауэр», «Сетевой экран», «Сетевые правила», «Веб‑антивирус», где можно выключить жёсткие режимы и добавить исключения.
         </p>
         
-        <!-- Рекомендуемый товар -->
-        <style>
-          .product-banner {
-            margin: 30px auto;
-            max-width: 600px;
-            padding: 15px;
-            background: #FFD700; /* Чистый желтый фон */
-            border-radius: 12px;
-            border: 1px solid #dee2e6;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            aspect-ratio: 16/9;
-            display: flex;
-            align-items: center;
-          }
-          .product-banner-content {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            width: 100%;
-            height: 100%;
-          }
-          .product-banner-image {
-            flex-shrink: 0;
-            width: 40%;
-          }
-          .product-banner-image img {
-            width: 100%;
-            height: auto;
-            object-fit: cover;
-            border-radius: 8px;
-            border: 1px solid #dee2e6;
-          }
-          .product-banner-details {
-            flex: 1;
-            min-width: 0;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-          }
-          .product-banner-details h3 {
-            margin: 0 0 5px 0;
-            font-size: 1rem;
-            color: var(--primary);
-            font-weight: 600;
-            line-height: 1.2;
-          }
-          .product-banner-details p {
-            margin: 0 0 5px 0;
-            font-size: 0.8rem;
-            color: var(--text-light);
-            line-height: 1.2;
-          }
-          .product-banner-rating {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            margin-bottom: 5px;
-          }
-          .product-banner-rating span:first-child {
-            color: #ffa500;
-            font-weight: 600;
-            font-size: 0.85rem;
-          }
-          .product-banner-rating span:last-child {
-            color: var(--text);
-            font-size: 0.75rem;
-          }
-          .product-banner-buy {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            margin-bottom: 5px;
-          }
-          .product-banner-buy span {
-            font-size: 1.1rem;
-            font-weight: 700;
-            color: var(--primary);
-          }
-          .product-banner-buy a {
-            display: inline-block;
-            padding: 6px 12px;
-            background: #8a2be2;
-            color: white;
-            text-decoration: none;
-            border-radius: 6px;
-            font-weight: 500;
-            font-size: 0.8rem;
-            transition: all 0.3s ease;
-          }
-          .product-banner-buy a:hover {
-            background: #6a1aae;
-          }
-          .product-banner-ad-info {
-            font-size: 0.6rem;
-            color: #999;
-            line-height: 1;
-          }
-
-          /* Адаптация для мобильных устройств */
-          @media (max-width: 768px) {
-            .product-banner {
-              max-width: 100%;
-              margin: 20px 10px;
-              padding: 10px;
-              aspect-ratio: 16/9;
-            }
-            .product-banner-content {
-              flex-direction: column;
-              text-align: center;
-              gap: 10px;
-            }
-            .product-banner-image {
-              width: 50%;
-            }
-            .product-banner-details {
-              text-align: center;
-            }
-            .product-banner-buy {
-              justify-content: center;
-              flex-direction: column;
-              gap: 8px;
-            }
-            .product-banner-rating {
-              justify-content: center;
-            }
-            .product-banner-details h3 {
-              font-size: 0.9rem;
-            }
-            .product-banner-details p {
-              font-size: 0.7rem;
-            }
-            .product-banner-buy a {
-              font-size: 0.75rem;
-              padding: 5px 10px;
-            }
-          }
-        </style>
-        <div class="product-banner">
-          <div class="product-banner-content">
-            <div class="product-banner-image">
-              <img src="https://avatars.mds.yandex.net/get-mpic/16388639/2a0000019854edbad335d0a8739e3a980778/optimize" alt="Стол офисный POLLY. TIME Loft">
-            </div>
-            <div class="product-banner-details">
-              <h3>Стол офисный POLLY. TIME Loft</h3>
-              <p>Письменный, ЛДСП, 100х75х57 см</p>
-              <div class="product-banner-rating">
-                <span>★ 4.7 (1.7K)</span>
-                <span>8.9K купили</span>
-              </div>
-              <div class="product-banner-buy">
-                <span>от 3 490 ₽</span>
-                <a href="https://market.yandex.ru/cc/8hFCT8" target="_blank">Купить</a>
-              </div>
-              <div class="product-banner-ad-info">
-                Реклама. ООО «Яндекс.Маркет», ИНН 7704357909
-              </div>
-            </div>
-          </div>
-        </div>
         <ol>
           <li><b>Проверить режимы брандмауэра антивируса.</b> Убедитесь, что не установлен режим «Блокировать все входящие и исходящие соединения» или аналогичный; переключите в «Автоматический» или «Интерактивный» режим.</li>
           <li><b>Просмотреть список правил для приложений.</b> Найдите раздел, где показаны разрешённые/запрещённые программы, и убедитесь, что для браузеров, мессенджеров, игр стоят разрешающие правила, а не «Блокировать».</li>
@@ -351,6 +342,30 @@
             </tr>
           </tbody>
         </table>
+
+        <!-- Яндекс Маркет рекламный баннер -->
+        <a href="https://market.yandex.ru/cc/8hH7jD"
+           target="_blank"
+           rel="nofollow noopener"
+           class="ym-hero-link">
+          <div class="ym-hero-banner">
+            <div class="ym-hero-content">
+              <div class="ym-hero-badge">Хит на Яндекс&nbsp;Маркете</div>
+              <h2 class="ym-hero-title">Выгодное предложение на Маркете</h2>
+              <p class="ym-hero-text">
+                Забери товар по приятной цене с быстрой доставкой и гарантией сервиса Яндекс Маркет.
+              </p>
+              <button class="ym-hero-button">Купить на Маркете</button>
+            </div>
+            <div class="ym-hero-image">
+              <!-- сюда можешь добавить картинку товара -->
+              <!-- <img src="URL_КАРТИНКИ_ТОВАРА" alt="Название товара"> -->
+            </div>
+          </div>
+          <div class="ym-hero-legal">
+            Реклама. ООО "ЯНДЕКС МАРКЕТ", ИНН: 9704254424. erid: XXXX
+          </div>
+        </a>
 
         <h2>Не забыть про встроенный брандмауэр Windows и сетевые настройки</h2>
         <p>
