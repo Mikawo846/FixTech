@@ -64,96 +64,34 @@
       color: inherit;
       max-width: 100%;
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      margin: 40px 0;
     }
 
+    /* Горизонтальный баннер-карточка */
     .ym-hero-banner {
       width: 100%;
-      max-width: 1706px;
-      min-height: 184px;
+      max-width: 600px;
+      min-height: 140px;
       border-radius: 16px;
-      background: linear-gradient(90deg, #fff9d6 0%, #ffffff 40%, #f5f5f5 100%);
-      border: 1px solid #f0f0f0;
+      background: #ffffff;
+      border: 1px solid #e5e7eb;
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+      box-shadow: 0 4px 16px rgba(15, 23, 42, 0.08);
       overflow: hidden;
       box-sizing: border-box;
-      padding: 24px 28px;
+      padding: 16px 18px;
+      gap: 16px;
+      margin: 40px auto;
     }
 
-    .ym-hero-content {
-      flex: 1 1 60%;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-
-    .ym-hero-badge {
-      display: inline-flex;
-      align-items: center;
-      padding: 4px 10px;
-      border-radius: 999px;
-      background: #ffe600;
-      color: #111827;
-      font-size: 12px;
-      font-weight: 600;
-    }
-
-    .ym-hero-title {
-      margin: 0;
-      font-size: 20px;
-      line-height: 1.2;
-      font-weight: 700;
-      color: #111827;
-    }
-
-    .ym-hero-text {
-      margin: 0;
-      font-size: 14px;
-      line-height: 1.4;
-      color: #4b5563;
-      max-width: 480px;
-    }
-
-    .ym-hero-button {
-      margin-top: 8px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 10px 18px;
-      border-radius: 999px;
-      border: none;
-      background: #ffdc34;
-      color: #111827;
-      font-size: 14px;
-      font-weight: 600;
-      cursor: pointer;
-      box-shadow: 0 2px 6px rgba(15, 23, 42, 0.18);
-      transition: background 0.15s ease, transform 0.15s ease,
-                  box-shadow 0.15s ease;
-    }
-
-    .ym-hero-button::after {
-      content: "→";
-      margin-left: 6px;
-      font-size: 14px;
-    }
-
-    .ym-hero-button:hover {
-      background: #ffe94f;
-      transform: translateY(-1px);
-      box-shadow: 0 4px 10px rgba(15, 23, 42, 0.22);
-    }
-
+    /* Фото слева */
     .ym-hero-image {
-      flex: 0 0 30%;
-      max-width: 360px;
-      min-width: 260px;
-      height: 140px;
-      border-radius: 14px;
-      background: radial-gradient(circle at 30% 20%, #ffffff 0, #f5f5f5 60%, #e5e7eb 100%);
+      flex: 0 0 36%;
+      max-width: 220px;
+      min-width: 160px;
+      height: 110px;
+      border-radius: 12px;
+      background: #f5f5f5;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -166,35 +104,98 @@
       object-fit: contain;
     }
 
-    .ym-hero-legal {
-      margin-top: 6px;
-      max-width: 1706px;
-      font-size: 11px;
-      line-height: 1.3;
+    /* Правая часть: цена + рейтинг + кнопка */
+    .ym-hero-content {
+      flex: 1 1 auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    /* Цена + рейтинг в одну строку */
+    .ym-hero-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+    }
+
+    .ym-hero-price {
+      font-size: 20px;
+      font-weight: 700;
+      color: #111827;
+    }
+
+    .ym-hero-rating {
+      font-size: 13px;
+      font-weight: 500;
+      color: #111827;
+      background: #f9fafb;
+      border-radius: 999px;
+      padding: 4px 10px;
+    }
+
+    .ym-hero-rating-count {
       color: #6b7280;
     }
 
-    @media (max-width: 768px) {
+    /* Фиолетовая кнопка */
+    .ym-hero-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 9px 16px;
+      border-radius: 999px;
+      border: none;
+      background: #6a00ff;          /* фиолетовая */
+      color: #ffffff;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 2px 6px rgba(88, 28, 135, 0.35);
+      transition: background 0.15s ease, transform 0.15s ease,
+                  box-shadow 0.15s ease;
+    }
+
+    .ym-hero-button::after {
+      content: "→";
+      margin-left: 6px;
+      font-size: 14px;
+    }
+
+    .ym-hero-button:hover {
+      background: #7c3aed;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 10px rgba(88, 28, 135, 0.45);
+    }
+
+    /* Юридический блок */
+    .ym-hero-legal {
+      margin-top: 6px;
+      max-width: 600px;
+      font-size: 11px;
+      line-height: 1.3;
+      color: #6b7280;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* Адаптив */
+    @media (max-width: 480px) {
       .ym-hero-banner {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 16px 16px 14px;
-        min-height: auto;
+        max-width: 100%;
+        padding: 12px 12px;
+        gap: 12px;
       }
 
       .ym-hero-image {
-        order: -1;
-        width: 100%;
-        max-width: 100%;
-        margin-bottom: 10px;
+        min-width: 120px;
+        height: 90px;
       }
 
-      .ym-hero-title {
+      .ym-hero-price {
         font-size: 18px;
-      }
-
-      .ym-hero-text {
-        font-size: 13px;
       }
 
       .ym-hero-button {
@@ -349,17 +350,19 @@
            rel="nofollow noopener"
            class="ym-hero-link">
           <div class="ym-hero-banner">
-            <div class="ym-hero-content">
-              <div class="ym-hero-badge">Хит на Яндекс&nbsp;Маркете</div>
-              <h2 class="ym-hero-title">Выгодное предложение на Маркете</h2>
-              <p class="ym-hero-text">
-                Забери товар по приятной цене с быстрой доставкой и гарантией сервиса Яндекс Маркет.
-              </p>
-              <button class="ym-hero-button">Купить на Маркете</button>
-            </div>
             <div class="ym-hero-image">
-              <!-- сюда можешь добавить картинку товара -->
-              <!-- <img src="URL_КАРТИНКИ_ТОВАРА" alt="Название товара"> -->
+              <img src="https://avatars.mds.yandex.net/get-mpic/16388639/2a0000019854edbad335d0a8739e3a980778/optimize"
+                   alt="Товар на Яндекс Маркете">
+            </div>
+            <div class="ym-hero-content">
+              <div class="ym-hero-top">
+                <div class="ym-hero-price">9 999&nbsp;₽</div>
+                <div class="ym-hero-rating">
+                  ★ 4,9
+                  <span class="ym-hero-rating-count">(120)</span>
+                </div>
+              </div>
+              <button class="ym-hero-button">Купить на Яндекс Маркете</button>
             </div>
           </div>
           <div class="ym-hero-legal">
