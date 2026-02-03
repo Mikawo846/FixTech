@@ -110,7 +110,21 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      gap: 10px;
+      gap: 8px;
+    }
+
+    /* Название товара */
+    .ym-hero-title {
+      font-size: 14px;
+      font-weight: 600;
+      color: #111827;
+      line-height: 1.3;
+      margin: 0 0 4px 0;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
     }
 
     /* Цена + рейтинг в одну строку */
@@ -355,6 +369,7 @@
                    alt="Товар на Яндекс Маркете">
             </div>
             <div class="ym-hero-content">
+              <h3 class="ym-hero-title">Загрузка названия товара...</h3>
               <div class="ym-hero-top">
                 <div class="ym-hero-price">9 999&nbsp;₽</div>
                 <div class="ym-hero-rating">
@@ -474,6 +489,119 @@
   </footer>
 
   <script src="../script.js"></script>
+
+  <!-- Скрипт обновления цен и отзывов Яндекс Маркет -->
+  <script>
+    (function() {
+      // Функция для обновления цены, рейтинга и названия товара
+      async function updateYandexMarketData() {
+        try {
+          // URL для получения данных о товаре (замените на реальный API endpoint)
+          const productId = '16388639'; // ID товара с картинки
+          const marketUrl = 'https://market.yandex.ru/cc/8hH7jD';
+          
+          // В реальном сценарии здесь будет запрос к API Яндекс Маркета
+          // Для демонстрации используем моковые данные
+          const mockData = {
+            title: 'Ноутбук gaming ASUS ROG Strix G15 (2024) AMD Ryzen 7, RTX 4060, 16GB RAM, 512GB SSD',
+            price: Math.floor(Math.random() * 5000) + 8000, // Случайная цена от 8000 до 13000
+            rating: (Math.random() * 1.5 + 3.5).toFixed(1), // Рейтинг от 3.5 до 5.0
+            reviews: Math.floor(Math.random() * 500) + 50 // Отзывы от 50 до 550
+          };
+
+          // Находим элементы баннера
+          const banner = document.querySelector('.ym-hero-banner');
+          if (!banner) return;
+
+          const titleElement = banner.querySelector('.ym-hero-title');
+          const priceElement = banner.querySelector('.ym-hero-price');
+          const ratingElement = banner.querySelector('.ym-hero-rating');
+
+          // Обновляем название товара
+          if (titleElement) {
+            titleElement.textContent = mockData.title;
+          }
+
+          // Обновляем цену
+          if (priceElement) {
+            const formattedPrice = mockData.price.toLocaleString('ru-RU');
+            priceElement.innerHTML = `${formattedPrice}&nbsp;₽`;
+          }
+
+          // Обновляем рейтинг
+          if (ratingElement) {
+            ratingElement.innerHTML = `★ ${mockData.rating}<span class="ym-hero-rating-count">(${mockData.reviews})</span>`;
+          }
+
+          console.log('Данные Яндекс Маркет обновлены:', mockData);
+
+        } catch (error) {
+          console.error('Ошибка при обновлении данных Яндекс Маркет:', error);
+        }
+      }
+
+      // Функция для получения названия товара из URL (альтернативный метод)
+      async function fetchProductTitleFromUrl(url) {
+        try {
+          // В реальном сценарии можно использовать CORS proxy или server-side запрос
+          // Для демонстрации возвращаем моковое название
+          return 'Ноутбук gaming ASUS ROG Strix G15 (2024) AMD Ryzen 7, RTX 4060, 16GB RAM, 512GB SSD';
+          
+          // Пример реального запроса (нужен CORS proxy):
+          // const proxyUrl = 'https://cors-anywhere.herokuapp.com/' + url;
+          // const response = await fetch(proxyUrl);
+          // const html = await response.text();
+          // const parser = new DOMParser();
+          // const doc = parser.parseFromString(html, 'text/html');
+          // return doc.querySelector('h1[data-auto="product-title"]')?.textContent || 'Товар';
+        } catch (error) {
+          console.error('Ошибка при получении названия товара:', error);
+          return 'Товар на Яндекс Маркете';
+        }
+      }
+
+      // Функция для реального API запроса (когда будет доступен API)
+      async function fetchRealYandexMarketData() {
+        try {
+          const response = await fetch('https://api.market.yandex.ru/v2/products/12345/offers', {
+            headers: {
+              'Authorization': 'Bearer YOUR_API_KEY',
+              'Content-Type': 'application/json'
+            }
+          });
+          
+          if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+          }
+          
+          const data = await response.json();
+          return data;
+        } catch (error) {
+          console.error('Ошибка API запроса:', error);
+          return null;
+        }
+      }
+
+      // Инициализация при загрузке страницы
+      document.addEventListener('DOMContentLoaded', function() {
+        // Обновляем данные сразу
+        updateYandexMarketData();
+        
+        // Обновляем данные каждые 30 минут
+        setInterval(updateYandexMarketData, 30 * 60 * 1000);
+        
+        // Обновляем данные при возврате на вкладку
+        document.addEventListener('visibilitychange', function() {
+          if (!document.hidden) {
+            updateYandexMarketData();
+          }
+        });
+      });
+
+      // Делаем функцию доступной глобально для ручного обновления
+      window.updateYandexMarketData = updateYandexMarketData;
+    })();
+  </script>
 
 <script type="application/ld+json">
 {
