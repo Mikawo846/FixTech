@@ -159,23 +159,131 @@
         </p>
         
         <!-- Рекомендуемый товар -->
-        <div style="margin: 30px 0; padding: 20px; background: linear-gradient(135deg, #fffacd 0%, #ffe4b5 100%); border-radius: 12px; border: 1px solid #dee2e6; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
-          <div style="display: flex; align-items: center; gap: 20px; max-width: 800px; margin: 0 auto;">
-            <div style="flex-shrink: 0;">
-              <img src="https://avatars.mds.yandex.net/get-mpic/16388639/2a0000019854edbad335d0a8739e3a980778/optimize" alt="Стол офисный POLLY. TIME Loft" style="width: 120px; height: 120px; object-fit: cover; border-radius: 8px; border: 1px solid #dee2e6;">
+        <style>
+          .product-banner {
+            margin: 30px 0;
+            padding: 20px;
+            background: #FFD700; /* Чистый желтый фон */
+            border-radius: 12px;
+            border: 1px solid #dee2e6;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+          }
+          .product-banner-content {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+          }
+          .product-banner-image {
+            flex-shrink: 0;
+          }
+          .product-banner-image img {
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 8px;
+            border: 1px solid #dee2e6;
+          }
+          .product-banner-details {
+            flex: 1;
+            min-width: 0;
+          }
+          .product-banner-details h3 {
+            margin: 0 0 8px 0;
+            font-size: 1.2rem;
+            color: var(--primary);
+            font-weight: 600;
+          }
+          .product-banner-details p {
+            margin: 0 0 8px 0;
+            font-size: 0.9rem;
+            color: var(--text-light);
+          }
+          .product-banner-rating {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 10px;
+          }
+          .product-banner-rating span:first-child {
+            color: #ffa500;
+            font-weight: 600;
+          }
+          .product-banner-rating span:last-child {
+            color: var(--text);
+            font-size: 0.85rem;
+          }
+          .product-banner-buy {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+          }
+          .product-banner-buy span {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--primary);
+          }
+          .product-banner-buy a {
+            display: inline-block;
+            padding: 8px 16px;
+            background: #8a2be2;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+          }
+          .product-banner-buy a:hover {
+            background: #6a1aae;
+          }
+          .product-banner-ad-info {
+            margin-top: 8px;
+            font-size: 0.7rem;
+            color: #999;
+            line-height: 1.2;
+          }
+
+          /* Адаптация для мобильных устройств */
+          @media (max-width: 768px) {
+            .product-banner-content {
+              flex-direction: column;
+              text-align: center;
+            }
+            .product-banner-details {
+              text-align: center;
+            }
+            .product-banner-buy {
+              justify-content: center;
+              flex-direction: column;
+              gap: 15px;
+            }
+            .product-banner-rating {
+              justify-content: center;
+            }
+            .product-banner-image img {
+              width: 150px;
+              height: 150px;
+            }
+          }
+        </style>
+        <div class="product-banner">
+          <div class="product-banner-content">
+            <div class="product-banner-image">
+              <img src="https://avatars.mds.yandex.net/get-mpic/16388639/2a0000019854edbad335d0a8739e3a980778/optimize" alt="Стол офисный POLLY. TIME Loft">
             </div>
-            <div style="flex: 1; min-width: 0;">
-              <h3 style="margin: 0 0 8px 0; font-size: 1.2rem; color: var(--primary); font-weight: 600;">Стол офисный POLLY. TIME Loft</h3>
-              <p style="margin: 0 0 8px 0; font-size: 0.9rem; color: var(--text-light);">Письменный, ЛДСП, 100х75х57 см</p>
-              <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 10px;">
-                <span style="color: #ffa500; font-weight: 600;">★ 4.7 (1.7K отзывов)</span>
-                <span style="color: var(--text); font-size: 0.85rem;">8.9K купили</span>
+            <div class="product-banner-details">
+              <h3>Стол офисный POLLY. TIME Loft</h3>
+              <p>Письменный, ЛДСП, 100х75х57 см</p>
+              <div class="product-banner-rating">
+                <span>★ 4.7 (1.7K отзывов)</span>
+                <span>8.9K купили</span>
               </div>
-              <div style="display: flex; align-items: center; gap: 10px;">
-                <span style="font-size: 1.3rem; font-weight: 700; color: var(--primary);">от 3 490 ₽</span>
-                <a href="https://market.yandex.ru/cc/8hFCT8" target="_blank" style="display: inline-block; padding: 8px 16px; background: #8a2be2; color: white; text-decoration: none; border-radius: 6px; font-weight: 500; transition: all 0.3s ease;" onmouseover="this.style.background='#6a1aae'" onmouseout="this.style.background='#8a2be2'">Купить на Яндекс Маркете</a>
+              <div class="product-banner-buy">
+                <span>от 3 490 ₽</span>
+                <a href="https://market.yandex.ru/cc/8hFCT8" target="_blank">Купить на Яндекс Маркете</a>
               </div>
-              <div style="margin-top: 8px; font-size: 0.7rem; color: #999; line-height: 1.2;">
+              <div class="product-banner-ad-info">
                 Реклама. ООО «Яндекс.Маркет», ИНН 7704357909
               </div>
             </div>
