@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YE88Y994NX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-YE88Y994NX');
+</script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repairo - Apple Glass: возможно ли появление AR-очков в ближайшем будущем?</title>
+    <meta name="description" content="{{ description }}">
+    <meta name="description" content="Подробный разбор слухов и фактов об Apple Glass: когда ждать AR-очки, чем они отличаются от Vision Pro и почему Apple может начать с «умных очков» без экранов.">
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=106225686', 'ym');
+
+    ym(106225686, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/106225686" style="position:absolute; left:-9999px;" alt="Apple Glass AR-очки - аналитика и новости" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+    <style>
+        :root {
+            --gradient-start: #f5f7a0;
+            --gradient-end: #8df1c0;
+            --main-bg: #ffffff;
+            --text-color: #333333;
+            --text-light: #666666;
+            --border-color: #e0e0e0;
+            --shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            --radius: 8px;
+            --nav-height: 60px;
+            --glass-bg: rgba(255, 255, 255, 0.25);
+            --glass-border: 1px solid rgba(255, 255, 255, 0.18);
+            --glass-blur: blur(10px);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--main-bg);
+            color: var(--text-color);
+            line-height: 1.6;
+            padding-top: var(--nav-height);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        header {
+            background: var(--glass-bg);
+            backdrop-filter: var(--glass-blur);
+            -webkit-backdrop-filter: var(--glass-blur);
+            border-bottom: var(--glass-border);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: var(--nav-height);
+            position: relative;
+        }
+
+        .header-image {
+            position: absolute;
+            left: 15px;
+            z-index: 1;
+        }
+
+        .header-image img {
+            height: 40px;
+            width: auto;
+            object-fit: contain;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--text-color);
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo__text {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--text-color);
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        .back-btn {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 600;
+            color: var(--text-color);
+            transition: color 0.3s;
+        }
+
+        .back-btn:hover {
+            color: var(--gradient-end);
+        }
+
+        .back-btn::before {
+            content: "←";
+            font-size: 20px;
+        }
+
+        .article {
+            padding: 40px 0;
+        }
+
+        .article-header {
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .article-title {
+            font-size: 32px;
+            margin-bottom: 15px;
+            line-height: 1.3;
+        }
+
+        .article-meta {
+            color: var(--text-light);
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        .article-image {
+            width: 100%;
+            max-height: 500px;
+            object-fit: cover;
+            border-radius: var(--radius);
+            margin-bottom: 30px;
+            box-shadow: var(--shadow);
+        }
+
+        .article-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .article-content p {
+            margin-bottom: 20px;
+            font-size: 18px;
+            line-height: 1.7;
+        }
+
+        .article-content h2,
+        .article-content h3 {
+            margin: 30px 0 20px;
+            line-height: 1.4;
+        }
+
+        .article-content h2 {
+            font-size: 28px;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 10px;
+        }
+
+        .article-content h3 {
+            font-size: 24px;
+        }
+
+        .article-content img {
+            max-width: 100%;
+            height: auto;
+            border-radius: var(--radius);
+            margin: 25px 0;
+            box-shadow: var(--shadow);
+        }
+
+        .button {
+            display: inline-block;
+            padding: 12px 24px;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            border: none;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(90deg, var(--gradient-start), var(--gradient-end));
+            color: var(--text-color);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        footer {
+            background: #f5f5f5;
+            padding: 50px 0 20px;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .footer-column h3 {
+            font-size: 18px;
+            margin-bottom: 15px;
+            color: var(--text-color);
+            font-weight: 600;
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column li {
+            margin-bottom: 10px;
+        }
+
+        .footer-column a {
+            color: var(--text-light);
+            transition: color 0.3s;
+        }
+
+        .footer-column a:hover {
+            color: var(--gradient-end);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+            color: var(--text-light);
+            font-size: 14px;
+        }
+
+        @media (max-width: 768px) {
+            .article-title {
+                font-size: 26px;
+            }
+
+            .article-content p {
+                font-size: 16px;
+            }
+
+            .article-content h2 {
+                font-size: 24px;
+            }
+
+            .article-content h3 {
+                font-size: 20px;
+            }
+        }
+    </style>
+  <script async src="https://timeweb.cloud/api/v1/cloud-ai/agents/3cc03620-d051-4d8d-b5af-f7b6cd083a35/embed.js?collapsed=true"></script>
+</head>
+
+<body>
+    <header>
+        <div class="container header-container">
+            <div class="header-image">
+                <img src="https://i.postimg.cc/q7H0JS0t/8d9ca2d0-7483-40bd-b92d-73c88a196afb-removebg-preview.png" alt="Header Image">
+            </div>
+            <a href="../articles.html" class="logo">
+                <span class="logo__text">Repairo</span>
+            </a>
+        </div>
+    </header>
+
+    <main class="article">
+        <div class="container">
+            <article>
+                <div class="article-header">
+                    <h1 class="article-title">Apple Glass: возможно ли появление AR-очков в ближайшие годы?</h1>
+
+                    <!-- ВАЖНО: Одно единственное изображение сверху над текстом -->
+                    <img src="https://i8.imageban.ru/out/2026/02/04/4e344cabc414fe0fc48cf929b23da521.jpg"
+                         alt="Apple Glass AR concept"
+                         class="article-image">
+                </div>
+
+                <div class="article-meta">изображение: концепт из открытых источников</div>
+
+                <div class="article-content">
+                    <p>Слухи о том, что Apple разрабатывает очки дополненной реальности (AR), циркулируют уже более десяти лет. После выхода гарнитуры смешанной реальности Vision Pro дискуссия не утихла, а, напротив, разгорелась с новой силой. Многие эксперты и фанаты бренда задаются вопросом: является ли Vision Pro конечной целью компании, или это лишь тяжеловесный «прототип» будущего, более элегантного устройства, которое мы привыкли называть Apple Glass? В этом материале мы подробно разберем, насколько реально появление легких AR-очков от Apple, какие технологии для этого необходимы и когда, теоретически, это может произойти.</p>
+
+                    <h2 id="step-1">Мечта против Реальности: почему Vision Pro — это не Apple Glass</h2>
+                    <p>Важно сразу провести четкую границу между тем, что Apple выпустила сейчас (Vision Pro), и тем, о чем мечтают пользователи (Apple Glass). Vision Pro — это шлем (headset). Он использует камеры, чтобы снимать окружающий мир и показывать его вам на экранах внутри устройства (pass-through video). Это позволяет создавать невероятно качественную картинку и полное погружение, но платой за это являются вес, габариты и необходимость носить на лице довольно массивную конструкцию, которая изолирует вас от мира, если сядет батарейка.</p>
+                    <p>Apple Glass в идеальном представлении — это устройство совершенно другого класса. Это должны быть легкие очки, через которые вы смотрите на мир своими глазами (оптическая прозрачность), а цифровая информация накладывается поверх реальных объектов. Главная проблема здесь — физика. На данный момент человечество не обладает технологиями, позволяющими упаковать мощный процессор, батарею на весь день и качественные прозрачные дисплеи в оправу весом 30–50 граммов, которая не будет перегреваться и обжигать виски пользователя.</p>
+
+                    <h2 id="step-2">Два пути развития: «Умные очки» или «Настоящий AR»</h2>
+                    <p>Анализируя патенты и инсайдерские утечки 2024–2026 годов, можно заметить, что внутри Apple, по всей видимости, рассматривают два параллельных сценария развития носимой электроники.</p>
+
+                    <h3>Сценарий А: Конкурент Ray-Ban Meta (Smart Glasses)</h3>
+                    <p>Это наиболее реалистичный вариант на ближайшую перспективу (2026–2027 годы). Речь идет об очках без дисплеев вообще. По аналогии с популярными очками от Meta, такое устройство от Apple могло бы оснащаться камерами, микрофонами, динамиками и набором датчиков. Основная ставка в таком гаджете делается не на визуальный AR, а на «аудио-AR» и искусственный интеллект.</p>
+                    <p>Представьте очки, которые видят то же, что и вы. Вы смотрите на вывеску ресторана и спрашиваете Siri: «Хорошие ли здесь отзывы?», и получаете ответ голосом. Или очки автоматически переводят текст, на который вы смотрите, и зачитывают его вам. Такое устройство технически реализуемо уже сегодня, оно может быть легким, стильным и относительно недорогим. Для Apple это был бы логичный шаг, чтобы приучить людей носить электронику на лице, не пугая их громоздкими шлемами.</p>
+
+                    <h3>Сценарий Б: Полноценные AR-очки (Apple Glass)</h3>
+                    <p>Это «святой грааль» Тима Кука. Очки с прозрачными линзами, которые могут рисовать стрелки навигации прямо на асфальте перед вами, выводить уведомления в воздухе или показывать имя собеседника над его головой. Для этого требуются прорывы в технологии волноводов (waveguides) и микро-LED дисплеев. Экраны должны быть невероятно яркими, чтобы перебивать солнечный свет, но при этом прозрачными. Текущие прогнозы отодвигают появление такого устройства ближе к концу десятилетия, так как проблему энергоэффективности и теплоотвода решить крайне сложно.</p>
+
+                    <h2 id="step-3">Технологические барьеры</h2>
+                    <p>Почему мы до сих пор не видим Apple Glass на полках магазинов? Список проблем внушителен:</p>
+                    <ul>
+                        <li><strong>Тепловыделение:</strong> Процессор, обрабатывающий AR в реальном времени, сильно греется. В шлеме Vision Pro есть вентиляторы. В тонкой оправе очков места для вентиляторов нет, а нагревать оправу до 40+ градусов нельзя — это некомфортно и опасно.</li>
+                        <li><strong>Питание:</strong> Батареи в дужках очков имеют ничтожную емкость. Либо очки будут работать 30 минут, либо нужен провод к внешнему блоку (как в Vision Pro или Magic Leap), что убивает «магию» легкости и незаметности.</li>
+                        <li><strong>Оптика:</strong> Создать линзу, которая является одновременно и обычными очками (возможно, с диоптриями), и качественным дисплеем с широким полем зрения — инженерный кошмар. Существующие решения либо имеют очень узкое поле зрения (вы видите «экранчик» перед собой, а не AR вокруг), либо слишком громоздки.</li>
+                    </ul>
+
+                    <h2 id="step-4">Экосистема как главный козырь</h2>
+                    <p>Если Apple Glass и выйдут, они почти наверняка не будут самостоятельным устройством. Вся тяжелая вычислительная работа, скорее всего, будет переложена на iPhone, который лежит у вас в кармане. Очки станут лишь дисплеем и набором датчиков, передавая данные на смартфон по сверхбыстрому протоколу (возможно, следующему поколению Ultra Wideband или проприетарному Wi-Fi каналу).</p>
+                    <p>Это решает часть проблем с батареей и нагревом, но создает новые — задержка сигнала (latency). В AR задержка даже в миллисекунды приводит к тому, что виртуальные объекты «плавают» и не держатся на своих местах, что вызывает укачивание. Именно идеальная синхронизация «железа» и софта — то, в чем Apple традиционно сильна.</p>
+
+                    <h2 id="step-5">VisionOS как полигон</h2>
+                    <p>Операционная система visionOS, созданная для шлема Vision Pro, явно разрабатывалась с прицелом на будущее масштабирование. Интерфейс, управляемый взглядом и жестами рук, идеально подходит и для очков. Сейчас, выпуская дорогой шлем для энтузиастов и разработчиков, Apple фактически «натаскивает» свою нейросеть и создает библиотеку приложений. Когда (и если) «железо» дорастет до формата легких очков, софт для них будет уже готов и отполирован. Разработчикам не придется переучиваться — приложения с Vision Pro просто адаптируются под прозрачные экраны.</p>
+
+                    <h2 id="step-6">Вопрос приватности и этики</h2>
+                    <p>Еще один аспект, который может тормозить выход очков — социальный. Google Glass провалились во многом из-за того, что люди боялись скрытой камеры. Очки, которые выглядят как обычные, но могут снимать видео, вызывают отторжение у окружающих. Apple очень трепетно относится к своему имиджу «защитника приватности». Возможно, компании придется придумать жесткие аппаратные ограничения (яркие светодиоды при записи, невозможность скрытой съемки), чтобы устройство приняли в обществе.</p>
+
+                    <h2 id="step-7">Сроки и перспективы</h2>
+                    <p>Аналитики, такие как Минг-Чи Куо и Марк Гурман, постоянно сдвигают прогнозы. Если раньше говорили о 2023–2024 годах, то сейчас консенсус смещается: «умные очки» без дисплеев возможны в 2026–2027 годах, а полноценные AR-очки — не ранее 2028 года.</p>
+                    <p>Скорее всего, мы увидим постепенную эволюцию. Сначала — более дешевая версия шлема Vision (без приставки Pro). Затем — возможно, умные очки-ассистенты. И только когда технологии миниатюризации достигнут пика, Apple покажет те самые One More Thing — очки, которые заменят нам iPhone.</p>
+
+                    <h2 id="step-8">Заключение</h2>
+                    <p>Появление Apple Glass не просто возможно — оно неизбежно, если мы говорим о векторе развития технологий. Смартфон как форм-фактор достиг своего пика, и индустрии нужно новое поле для роста. Однако физику обмануть сложно. В ближайшие пару лет нам стоит ждать либо упрощенных версий (умные очки с камерами и ИИ), либо удешевленных шлемов смешанной реальности.</p>
+                    <p>Настоящая революция, когда цифровой слой станет неотделим от реальности в легкой оправе, пока остается делом будущего. Но зная Apple, компания не выпустит продукт, пока он не будет работать идеально. Поэтому, если вы ждете Apple Glass, запаситесь терпением — это марафон, а не спринт.</p>
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-column">
+                    <h3>О нас</h3>
+                    <ul>
+                        <li><a href="#">О компании</a></li>
+                        <li><a href="#">Реклама</a></li>
+                        <li><a href="#">Вакансии</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Разделы</h3>
+                    <ul>
+                        <li><a href="#">Телевизоры</a></li>
+                        <li><a href="#">Автоэлектроника</a></li>
+                        <li><a href="#">Приставки</a></li>
+                        <li><a href="#">Ноутбуки</a></li>
+                        <li><a href="#">Смартфоны</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Помощь</h3>
+                    <ul>
+                        <li><a href="#">Правила сайта</a></li>
+                        <li><a href="#">Обратная связь</a></li>
+                        <li><a href="#">Политика конфиденциальности</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Контакты</h3>
+                    <ul>
+                        <li>Email: info@technews.ru</li>
+                        <li>Телефон: +7 (123) 456-78-90</li>
+                        <li>
+                            <a href="#">Facebook</a> |
+                            <a href="#">Twitter</a> |
+                            <a href="#">Telegram</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                © 2024 TechNews. Все права защищены.
+            </div>
+        </div>
+        <p class="disclaimer">
+        Администрация сайта не несёт ответственности за возможные повреждения техники
+        и иные последствия, возникшие в результате самостоятельного ремонта по
+        материалам и инструкциям, размещённым на сайте. Все работы вы выполняете
+        на свой страх и риск.
+    </p>
+    </footer>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "Apple Glass: возможно ли появление AR-очков",
+  "description": "Подробный разбор слухов и фактов об Apple Glass: когда ждать AR-очки, чем они отличаются от Vision Pro и почему Apple может начать с «умных очков» без экранов.",
+  "totalTime": "PT30M",
+  "step": [
+    {
+      "@type": "HowToStep",
+      "name": "Мечта против Реальности",
+      "text": "Мечта против Реальности: почему Vision Pro — это не Apple Glass",
+      "url": "#step-1"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Два пути развития",
+      "text": "Два пути развития: «Умные очки» или «Настоящий AR»",
+      "url": "#step-2"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Технологические барьеры",
+      "text": "Технологические барьеры",
+      "url": "#step-3"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Экосистема как главный козырь",
+      "text": "Экосистема как главный козырь",
+      "url": "#step-4"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "VisionOS как полигон",
+      "text": "VisionOS как полигон",
+      "url": "#step-5"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Вопрос приватности",
+      "text": "Вопрос приватности и этики",
+      "url": "#step-6"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Сроки и перспективы",
+      "text": "Сроки и перспективы",
+      "url": "#step-7"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Заключение",
+      "text": "Заключение",
+      "url": "#step-8"
+    }
+  ],
+  "image": "https://i8.imageban.ru/out/2026/02/04/4e344cabc414fe0fc48cf929b23da521.jpg"
+}
+</script>
+</body>
+</html>
