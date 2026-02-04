@@ -117,8 +117,14 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            height: var(--nav-height);
+            padding: 15px 0;
             position: relative;
+        }
+
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 15px;
         }
 
         .header-image {
@@ -137,9 +143,6 @@
             font-weight: bold;
             color: var(--text-color);
             text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
         }
 
         .nav-toggle {
@@ -540,6 +543,14 @@
                 display: none;
             }
 
+            .header-left {
+                gap: 10px;
+            }
+
+            .header-image img {
+                height: 35px;
+            }
+
             .logo {
                 font-size: 20px;
             }
@@ -559,12 +570,14 @@
 <body>
     <header>
         <div class="container header-container">
-            <div class="header-image">
-                <img src="https://i.postimg.cc/Hszb49cs/9510b6ea-9b74-4950-96b4-e4415dfef4eb-removebg-preview.png" alt="Header Image">
+            <div class="header-left">
+                <div class="header-image">
+                    <img src="https://i.postimg.cc/Hszb49cs/9510b6ea-9b74-4950-96b4-e4415dfef4eb-removebg-preview.png" alt="Header Image">
+                </div>
+                <a href="./index.html" class="logo">
+                    <span class="logo__text">Repairo</span>
+                </a>
             </div>
-            <a href="./index.html" class="logo">
-                <span class="logo__text">Repairo</span>
-            </a>
             <button class="nav-toggle" id="menu-toggle">☰</button>
             <nav class="nav">
                 <ul class="nav__list">
