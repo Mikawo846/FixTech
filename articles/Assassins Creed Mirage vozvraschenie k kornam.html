@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YE88Y994NX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-YE88Y994NX');
+</script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repairo - Assassin's Creed Mirage: возвращение к корням серии</title>
+    <meta name="description" content="{{ description }}">
+    <meta name="description" content="Подробный разбор Assassin's Creed Mirage перед выходом 5 октября 2023 года: как Ubisoft возвращает серию к классическому стелсу, почему выбран Багдад IX века и что ждёт Басима в его трансформации из вора в ассасина.">
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=106225686', 'ym');
+
+    ym(106225686, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/106225686" style="position:absolute; left:-9999px;" alt="Assassin's Creed Mirage превью" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+    <style>
+        :root {
+            --gradient-start: #f5f7a0;
+            --gradient-end: #8df1c0;
+            --main-bg: #ffffff;
+            --text-color: #333333;
+            --text-light: #666666;
+            --border-color: #e0e0e0;
+            --shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            --radius: 8px;
+            --nav-height: 60px;
+            --glass-bg: rgba(255, 255, 255, 0.25);
+            --glass-border: 1px solid rgba(255, 255, 255, 0.18);
+            --glass-blur: blur(10px);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--main-bg);
+            color: var(--text-color);
+            line-height: 1.6;
+            padding-top: var(--nav-height);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        header {
+            background: var(--glass-bg);
+            backdrop-filter: var(--glass-blur);
+            -webkit-backdrop-filter: var(--glass-blur);
+            border-bottom: var(--glass-border);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: var(--nav-height);
+            position: relative;
+        }
+
+        .header-image {
+            position: absolute;
+            left: 15px;
+            z-index: 1;
+        }
+
+        .header-image img {
+            height: 40px;
+            width: auto;
+            object-fit: contain;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--text-color);
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo__text {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--text-color);
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        .back-btn {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 600;
+            color: var(--text-color);
+            transition: color 0.3s;
+        }
+
+        .back-btn:hover {
+            color: var(--gradient-end);
+        }
+
+        .back-btn::before {
+            content: "←";
+            font-size: 20px;
+        }
+
+        .article {
+            padding: 40px 0;
+        }
+
+        .article-header {
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .article-title {
+            font-size: 32px;
+            margin-bottom: 15px;
+            line-height: 1.3;
+        }
+
+        .article-meta {
+            color: var(--text-light);
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        .article-image {
+            width: 100%;
+            max-height: 500px;
+            object-fit: cover;
+            border-radius: var(--radius);
+            margin-bottom: 30px;
+            box-shadow: var(--shadow);
+        }
+
+        .article-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .article-content p {
+            margin-bottom: 20px;
+            font-size: 18px;
+            line-height: 1.7;
+        }
+
+        .article-content h2,
+        .article-content h3 {
+            margin: 30px 0 20px;
+            line-height: 1.4;
+        }
+
+        .article-content h2 {
+            font-size: 28px;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 10px;
+        }
+
+        .article-content h3 {
+            font-size: 24px;
+        }
+
+        .article-content img {
+            max-width: 100%;
+            height: auto;
+            border-radius: var(--radius);
+            margin: 25px 0;
+            box-shadow: var(--shadow);
+        }
+
+        .button {
+            display: inline-block;
+            padding: 12px 24px;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            border: none;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(90deg, var(--gradient-start), var(--gradient-end));
+            color: var(--text-color);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        footer {
+            background: #f5f5f5;
+            padding: 50px 0 20px;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .footer-column h3 {
+            font-size: 18px;
+            margin-bottom: 15px;
+            color: var(--text-color);
+            font-weight: 600;
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column li {
+            margin-bottom: 10px;
+        }
+
+        .footer-column a {
+            color: var(--text-light);
+            transition: color 0.3s;
+        }
+
+        .footer-column a:hover {
+            color: var(--gradient-end);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+            color: var(--text-light);
+            font-size: 14px;
+        }
+
+        @media (max-width: 768px) {
+            .article-title {
+                font-size: 26px;
+            }
+
+            .article-content p {
+                font-size: 16px;
+            }
+
+            .article-content h2 {
+                font-size: 24px;
+            }
+
+            .article-content h3 {
+                font-size: 20px;
+            }
+        }
+    </style>
+  <script async src="https://timeweb.cloud/api/v1/cloud-ai/agents/3cc03620-d051-4d8d-b5af-f7b6cd083a35/embed.js?collapsed=true"></script>
+</head>
+
+<body>
+    <header>
+        <div class="container header-container">
+            <div class="header-image">
+                <img src="https://i.postimg.cc/q7H0JS0t/8d9ca2d0-7483-40bd-b92d-73c88a196afb-removebg-preview.png" alt="Header Image">
+            </div>
+            <a href="../articles.html" class="logo">
+                <span class="logo__text">Repairo</span>
+            </a>
+        </div>
+    </header>
+
+    <main class="article">
+        <div class="container">
+            <article>
+                <div class="article-header">
+                    <h1 class="article-title">Assassin's Creed Mirage: возвращение к корням серии и новый взгляд на классику</h1>
+
+                    <!-- ВАЖНО: Одно единственное изображение сверху над текстом -->
+                    <img src="https://i3.imageban.ru/out/2026/02/04/b74b341a0c22720bd10ee5279f5275f4.jpg"
+                         alt="Assassin's Creed Mirage Басим в Багдаде"
+                         class="article-image">
+                </div>
+
+                <div class="article-meta">изображение: Ubisoft</div>
+
+                <div class="article-content">
+                    <p>Спустя годы экспериментов с масштабными открытыми мирами, системами прокачки в стиле RPG и эпическими сюжетами о богах и мифологии, Ubisoft делает смелый шаг назад. Assassin's Creed Mirage, выход которой намечен на 5 октября 2023 года, обещает вернуть серию к её истокам — камерному стелс-экшену о скрытых клинках, философии ассасинов и искусстве незаметного убийства. Но является ли это возвращение просто ностальгическим жестом, или разработчики действительно нашли способ вдохнуть новую жизнь в формулу, которой уже 16 лет?</p>
+
+                    <h2 id="step-1">Почему «возвращение к корням» стало необходимостью</h2>
+                    <p>Последние три крупных игры серии — Origins, Odyssey и Valhalla — представляли собой гигантские RPG с сотнями часов контента, системами добычи снаряжения, древами навыков размером с энциклопедию и открытыми мирами, которые требовали десятков часов просто для перемещения из точки А в точку Б. Эти игры были коммерчески успешны и получили положительные отзывы, но при этом практически потеряли связь с тем, чем была первая Assassin's Creed в 2007 году.</p>
+                    <p>Классическая формула строилась на трех столпах: социальный стелс, паркур по крышам и точечные убийства с продуманным планированием. В последних играх всё это отошло на задний план перед огромными битвами, магическими способностями и бесконечным лутом. Многие фанаты серии начали задаваться вопросом: «Это всё ещё Assassin's Creed, или просто исторический симулятор с брендом?»</p>
+                    <p>Ubisoft услышала эту критику. Mirage задумывалась не как очередное эпическое приключение на 100+ часов, а как компактная, сфокусированная история о том, как уличный вор по имени Басим Ибн Исхак становится мастером-ассасином. Игра изначально планировалась как DLC для Valhalla, но разрослась в полноценный проект, который стал своеобразным «палитр-клинзером» перед будущими амбициозными частями серии.</p>
+
+                    <h2 id="step-2">Багдад IX века: Золотой век ислама как игровая площадка</h2>
+                    <p>Выбор сеттинга для Mirage — это не случайность. Багдад IX века, во времена правления Аббасидского халифата, был одним из крупнейших и богатейших городов мира. Это эпоха Дома Мудрости, научных открытий, культурного расцвета и невероятной архитектуры. Для игры, которая делает акцент на паркуре и навигации по городской среде, это идеальное место.</p>
+                    <p>Разработчики обещают плотную, вертикальную застройку: узкие улочки базаров, минареты, с которых открывается вид на весь город, крыши, соединенные мостиками и балками. Это резко контрастирует с бескрайними равнинами Англии из Valhalla или бесконечными морями Odyssey. Здесь каждый квартал имеет свою уникальную планировку, свои секреты и свои пути для побега.</p>
+
+                    <h3>Историческая точность vs игровое удобство</h3>
+                    <p>Как и в предыдущих играх серии, Ubisoft пытается балансировать между исторической достоверностью и игровым процессом. Багдад в игре — это не буквальная реконструкция, а художественная интерпретация, вдохновленная реальными архитектурными стилями и культурой того времени. Консультанты-историки работали над деталями быта, костюмов и политической структуры, но при этом город «сжат» и адаптирован для удобства геймплея.</p>
+
+                    <h2 id="step-3">Басим: от вора к легенде</h2>
+                    <p>Главный герой Mirage — не новое лицо для фанатов серии. Басим Ибн Исхак впервые появился в Assassin's Creed Valhalla как загадочный союзник викингов и член ордена Скрытых (предшественников Ассасинов). Однако в той игре его роль была вторичной, а настоящая предыстория раскрывалась лишь частично. Mirage исправляет это, превращая Басима в полноценного протагониста с собственной драматической аркой.</p>
+                    <p>В начале истории Басим — обычный уличный вор, выживающий на окраинах Багдада. Его преследуют мучительные видения и кошмары, природа которых пока непонятна. После инцидента, который вынуждает его бежать из города, Басим попадает под крыло Скрытых и их загадочной наставницы Рошан, роль которой озвучила известная актриса Шохре Агдашлу (знакомая по сериалу «Пространство»).</p>
+                    <p>Сюжет обещает быть личным и трагичным. Это история взросления, поиска идентичности и борьбы с собственными демонами — как буквальными, так и метафорическими. В отличие от Эйвора или Кассандры, которые были воинами с самого начала, Басим учится всему с нуля, что делает его путь более понятным и эмоциональным для игрока.</p>
+
+                    <h2 id="step-4">Возвращение стелса: «Бой — это неудача»</h2>
+                    <p>Главное отличие Mirage от последних игр — это философия дизайна боевых столкновений. В Odyssey и Valhalla вы могли врываться в лагерь с топором наперевес и вырезать всех врагов в открытом бою. Более того, часто это был самый быстрый и эффективный способ прохождения. В Mirage всё по-другому.</p>
+                    <p>Директор игры Стефан Будон неоднократно подчеркивал: «Если вы дрались, значит, что-то пошло не так». Басим не супер-воин. Он ассасин, а значит, его сила — в скрытности, планировании и использовании окружения. Прямое столкновение с несколькими противниками быстро заканчивается смертью. Игра активно подталкивает вас к тому, чтобы разведывать территорию, помечать врагов, искать точки входа и использовать отвлекающие маневры.</p>
+
+                    <h3>Инструменты ассасина</h3>
+                    <p>Арсенал Басима включает всё, что фанаты помнят по первым играм: скрытый клинок (без необходимости прокачки уровня!), метательные ножи, дымовые шашки, духовые трубки с усыпляющими дротиками. К этому добавлена новая механика под названием «Assassin's Focus» — способность замедлить время и пометить сразу нескольких целей для серии молниеносных убийств. Это выглядит эффектно, но требует грамотного позиционирования и ограничено по количеству зарядов.</p>
+
+                    <h2 id="step-5">Социальный стелс и «Black Box» миссии</h2>
+                    <p>Одна из самых обсуждаемых механик, возвращающихся в Mirage, — это социальный стелс. В первых играх вы могли сливаться с толпой, садиться на скамейки, притворяться монахом или ученым. В последних частях это практически исчезло из-за разреженности населенных пунктов и акцента на открытом мире. Теперь эта механика вернулась и переработана.</p>
+                    <p>Узкие улицы Багдада заполнены людьми. Вы можете нанимать музыкантов, чтобы отвлечь стражников, прятаться в толпе во время погони или даже использовать местных жителей как живой щит (правда, это повлияет на вашу репутацию). Система «notoriety» (известность) также возвращается: чем больше вы шумите, тем активнее власти начинают вас искать. Придется срывать розыскные плакаты и подкупать глашатаев, чтобы снизить уровень розыска.</p>
+
+                    <h3>Black Box — миссии с множественными решениями</h3>
+                    <p>Это наследие Assassin's Creed Unity — лучшей игры серии в плане дизайна убийств. Black Box миссии — это масштабные задания, где вам дают цель и локацию, но способ её устранения полностью за вами. Можете отравить вино, подкупить слугу, проникнуть через крышу или устроить «несчастный случай». Каждое решение открывает уникальные сцены и диалоги.</p>
+
+                    <h2 id="step-6">Масштаб игры: меньше — лучше?</h2>
+                    <p>Mirage обещает быть значительно короче предшественниц. Если Valhalla могла отнять более 100 часов жизни, то здесь речь идет о 15-25 часах в зависимости от стиля прохождения. Для кого-то это минус, но многие увидели в этом долгожданное облегчение. Не всем нужна игра-работа. Иногда хочется компактной, плотно упакованной истории без бесконечных побочных квестов в стиле «принеси 10 шкур».</p>
+                    <p>Кроме того, это позволяет Ubisoft установить более демократичную цену: около 50 долларов вместо стандартных 70. Для многих это станет решающим фактором при покупке.</p>
+
+                    <h2 id="step-7">Технические аспекты и платформы</h2>
+                    <p>Mirage разрабатывается на движке AnvilNext 2.0, который использовался в Valhalla, но оптимизирован для меньшего масштаба и большей плотности. Игра выходит на PS4, PS5, Xbox One, Xbox Series X|S и ПК. Примечательно, что это одна из последних крупных игр Ubisoft, поддерживающих консоли прошлого поколения, что может объяснить некоторые компромиссы в визуальной части.</p>
+                    <p>Зато для владельцев iPhone 15 Pro запланирован релиз мобильной версии в 2024 году — амбициозный эксперимент по портированию полноценной AAA-игры на смартфон.</p>
+
+                    <h2 id="step-8">Ожидания и перспективы</h2>
+                    <p>Assassin's Creed Mirage — это не революция, а эволюция назад. Игра не пытается конкурировать с The Witcher 3 или Elden Ring по масштабу. Она пытается напомнить, почему эта серия вообще стала популярной: за атмосферу, за ощущение себя хищником в толпе, за умные убийства и захватывающий паркур.</p>
+                    <p>Сработает ли эта стратегия — покажет время. Но сам факт, что Ubisoft готова отступить от проверенной формулы «больше = лучше» и попробовать что-то более сфокусированное, уже заслуживает уважения. Для фанатов, уставших от раздутых открытых миров, Mirage может стать глотком свежего воздуха. А для новичков — идеальной точкой входа в серию без необходимости штудировать десятки предыдущих игр.</p>
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-column">
+                    <h3>О нас</h3>
+                    <ul>
+                        <li><a href="#">О компании</a></li>
+                        <li><a href="#">Реклама</a></li>
+                        <li><a href="#">Вакансии</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Разделы</h3>
+                    <ul>
+                        <li><a href="#">Телевизоры</a></li>
+                        <li><a href="#">Автоэлектроника</a></li>
+                        <li><a href="#">Приставки</a></li>
+                        <li><a href="#">Ноутбуки</a></li>
+                        <li><a href="#">Смартфоны</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Помощь</h3>
+                    <ul>
+                        <li><a href="#">Правила сайта</a></li>
+                        <li><a href="#">Обратная связь</a></li>
+                        <li><a href="#">Политика конфиденциальности</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Контакты</h3>
+                    <ul>
+                        <li>Email: info@technews.ru</li>
+                        <li>Телефон: +7 (123) 456-78-90</li>
+                        <li>
+                            <a href="#">Facebook</a> |
+                            <a href="#">Twitter</a> |
+                            <a href="#">Telegram</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                © 2024 TechNews. Все права защищены.
+            </div>
+        </div>
+        <p class="disclaimer">
+        Администрация сайта не несёт ответственности за возможные повреждения техники
+        и иные последствия, возникшие в результате самостоятельного ремонта по
+        материалам и инструкциям, размещённым на сайте. Все работы вы выполняете
+        на свой страх и риск.
+    </p>
+    </footer>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "Assassin's Creed Mirage: возвращение к корням",
+  "description": "Подробный разбор Assassin's Creed Mirage перед выходом 5 октября 2023 года: как Ubisoft возвращает серию к классическому стелсу, почему выбран Багдад IX века и что ждёт Басима в его трансформации из вора в ассасина.",
+  "totalTime": "PT30M",
+  "step": [
+    {
+      "@type": "HowToStep",
+      "name": "Почему возвращение к корням",
+      "text": "Почему возвращение к корням стало необходимостью",
+      "url": "#step-1"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Багдад IX века",
+      "text": "Багдад IX века: Золотой век ислама как игровая площадка",
+      "url": "#step-2"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Басим главный герой",
+      "text": "Басим: от вора к легенде",
+      "url": "#step-3"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Возвращение стелса",
+      "text": "Возвращение стелса: бой это неудача",
+      "url": "#step-4"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Социальный стелс",
+      "text": "Социальный стелс и Black Box миссии",
+      "url": "#step-5"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Масштаб игры",
+      "text": "Масштаб игры: меньше лучше?",
+      "url": "#step-6"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Технические аспекты",
+      "text": "Технические аспекты и платформы",
+      "url": "#step-7"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Ожидания и перспективы",
+      "text": "Ожидания и перспективы",
+      "url": "#step-8"
+    }
+  ],
+  "image": "https://i3.imageban.ru/out/2026/02/04/b74b341a0c22720bd10ee5279f5275f4.jpg"
+}
+</script>
+</body>
+</html>

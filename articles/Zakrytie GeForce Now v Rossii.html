@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YE88Y994NX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-YE88Y994NX');
+</script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repairo - Закрытие GeForce Now в России: причины, последствия и альтернативы</title>
+    <meta name="description" content="{{ description }}">
+    <meta name="description" content="Подробный анализ закрытия облачного игрового сервиса GeForce Now в России с 1 октября 2023 года. Причины ухода NVIDIA, возврат средств и альтернативы для геймеров.">
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=106225686', 'ym');
+
+    ym(106225686, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/106225686" style="position:absolute; left:-9999px;" alt="GeForce Now закрытие в России - анализ" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+    <style>
+        :root {
+            --gradient-start: #f5f7a0;
+            --gradient-end: #8df1c0;
+            --main-bg: #ffffff;
+            --text-color: #333333;
+            --text-light: #666666;
+            --border-color: #e0e0e0;
+            --shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            --radius: 8px;
+            --nav-height: 60px;
+            --glass-bg: rgba(255, 255, 255, 0.25);
+            --glass-border: 1px solid rgba(255, 255, 255, 0.18);
+            --glass-blur: blur(10px);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--main-bg);
+            color: var(--text-color);
+            line-height: 1.6;
+            padding-top: var(--nav-height);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        header {
+            background: var(--glass-bg);
+            backdrop-filter: var(--glass-blur);
+            -webkit-backdrop-filter: var(--glass-blur);
+            border-bottom: var(--glass-border);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: var(--nav-height);
+            position: relative;
+        }
+
+        .header-image {
+            position: absolute;
+            left: 15px;
+            z-index: 1;
+        }
+
+        .header-image img {
+            height: 40px;
+            width: auto;
+            object-fit: contain;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--text-color);
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo__text {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--text-color);
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        .back-btn {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 600;
+            color: var(--text-color);
+            transition: color 0.3s;
+        }
+
+        .back-btn:hover {
+            color: var(--gradient-end);
+        }
+
+        .back-btn::before {
+            content: "←";
+            font-size: 20px;
+        }
+
+        .article {
+            padding: 40px 0;
+        }
+
+        .article-header {
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .article-title {
+            font-size: 32px;
+            margin-bottom: 15px;
+            line-height: 1.3;
+        }
+
+        .article-meta {
+            color: var(--text-light);
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        .article-image {
+            width: 100%;
+            max-height: 500px;
+            object-fit: cover;
+            border-radius: var(--radius);
+            margin-bottom: 30px;
+            box-shadow: var(--shadow);
+        }
+
+        .article-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .article-content p {
+            margin-bottom: 20px;
+            font-size: 18px;
+            line-height: 1.7;
+        }
+
+        .article-content h2,
+        .article-content h3 {
+            margin: 30px 0 20px;
+            line-height: 1.4;
+        }
+
+        .article-content h2 {
+            font-size: 28px;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 10px;
+        }
+
+        .article-content h3 {
+            font-size: 24px;
+        }
+
+        .article-content img {
+            max-width: 100%;
+            height: auto;
+            border-radius: var(--radius);
+            margin: 25px 0;
+            box-shadow: var(--shadow);
+        }
+
+        .button {
+            display: inline-block;
+            padding: 12px 24px;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            border: none;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(90deg, var(--gradient-start), var(--gradient-end));
+            color: var(--text-color);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        footer {
+            background: #f5f5f5;
+            padding: 50px 0 20px;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .footer-column h3 {
+            font-size: 18px;
+            margin-bottom: 15px;
+            color: var(--text-color);
+            font-weight: 600;
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column li {
+            margin-bottom: 10px;
+        }
+
+        .footer-column a {
+            color: var(--text-light);
+            transition: color 0.3s;
+        }
+
+        .footer-column a:hover {
+            color: var(--gradient-end);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+            color: var(--text-light);
+            font-size: 14px;
+        }
+
+        @media (max-width: 768px) {
+            .article-title {
+                font-size: 26px;
+            }
+
+            .article-content p {
+                font-size: 16px;
+            }
+
+            .article-content h2 {
+                font-size: 24px;
+            }
+
+            .article-content h3 {
+                font-size: 20px;
+            }
+        }
+    </style>
+  <script async src="https://timeweb.cloud/api/v1/cloud-ai/agents/3cc03620-d051-4d8d-b5af-f7b6cd083a35/embed.js?collapsed=true"></script>
+</head>
+
+<body>
+    <header>
+        <div class="container header-container">
+            <div class="header-image">
+                <img src="https://i.postimg.cc/q7H0JS0t/8d9ca2d0-7483-40bd-b92d-73c88a196afb-removebg-preview.png" alt="Header Image">
+            </div>
+            <a href="../articles.html" class="logo">
+                <span class="logo__text">Repairo</span>
+            </a>
+        </div>
+    </header>
+
+    <main class="article">
+        <div class="container">
+            <article>
+                <div class="article-header">
+                    <h1 class="article-title">Закрытие GeForce Now в России: причины, последствия и что дальше</h1>
+
+                    <!-- ВАЖНО: Одно единственное изображение сверху над текстом -->
+                    <img src="https://i2.imageban.ru/out/2026/02/04/a82fdc21a6e96121fb878c709d110334.jpg"
+                         alt="GeForce Now облачный гейминг"
+                         class="article-image">
+                </div>
+
+                <div class="article-meta">изображение: NVIDIA Corporation</div>
+
+                <div class="article-content">
+                    <p>29 августа 2023 года российские пользователи облачного игрового сервиса GeForce Now получили неприятное известие: с 1 октября сервис полностью прекращает работу на территории страны. Для тысяч геймеров, которые на протяжении почти четырех лет пользовались возможностью играть в требовательные AAA-игры даже на слабых компьютерах, это стало настоящим ударом. Разбираемся, что именно произошло, почему NVIDIA приняла такое решение и какие альтернативы остаются у российских игроков.</p>
+
+                    <h2 id="step-1">Что такое GeForce Now и почему его закрытие важно</h2>
+                    <p>GeForce Now — это облачный игровой сервис от компании NVIDIA, позволяющий запускать игры на удаленных серверах и транслировать изображение на устройство пользователя через интернет. Технология работает по принципу видеостриминга: мощный игровой ПК с видеокартой RTX находится в дата-центре, а вы управляете им со своего ноутбука, планшета или даже смартфона.</p>
+                    <p>Ключевое преимущество такого подхода — отсутствие необходимости покупать дорогое железо. Достаточно стабильного интернет-соединения, и вы можете играть в Cyberpunk 2077 на максимальных настройках с трассировкой лучей даже на офисном ноутбуке пятилетней давности. Сервис работал по подписке: были бесплатный тариф с ограничениями и платные с приоритетным доступом и увеличенным временем сессии.</p>
+
+                    <h2 id="step-2">История работы сервиса в России</h2>
+                    <p>В России GeForce Now начал работать с октября 2019 года под брендом GFN.ru через партнерскую компанию. Это был один из немногих облачных игровых сервисов с локальными серверами, размещенными во многих крупных городах страны: Москве, Санкт-Петербурге, Екатеринбурге, Новосибирске и других. Благодаря близости серверов задержка ввода (input lag) была минимальной — часто всего 15-25 миллисекунд, что позволяло комфортно играть даже в шутеры и соревновательные игры.</p>
+                    <p>Сервис быстро завоевал аудиторию. Для многих студентов, школьников и просто людей, не имеющих возможности собрать игровой ПК за 150-200 тысяч рублей, GeForce Now стал единственным способом оставаться в курсе новых релизов. Цена подписки была вполне демократичной: около 500-600 рублей в месяц за приоритетный доступ с RTX ON.</p>
+
+                    <h2 id="step-3">Официальная причина закрытия: «текущие обстоятельства»</h2>
+                    <p>В официальном сообщении на сайте GFN.ru команда указала следующую формулировку: «В текущих обстоятельствах мы не можем обеспечивать то качество сервиса, которое мы установили для себя и которое ожидают и заслуживают наши пользователи». Конкретные причины названы не были, но любой, кто следит за новостями, понимает контекст.</p>
+                    <p>С начала 2022 года NVIDIA столкнулась с рядом ограничений, связанных с международными санкциями. Хотя компания официально не продавала свои продукты в Россию с марта 2022 года и закрыла офисы в октябре того же года, облачный сервис продолжал работать через партнера. Однако поддержание высокого качества стало невозможным: сложности с оплатой международных транзакций, проблемы с обновлением серверного оборудования, невозможность официального сотрудничества с издателями игр — все это накапливалось.</p>
+
+                    <h2 id="step-4">Истинные причины: санкции, платежи и геополитика</h2>
+                    <p>Эксперты сходятся во мнении, что главная причина закрытия — именно геополитическая ситуация. После отключения российских банковских карт Visa и Mastercard от международных платежных систем, компаниям пришлось интегрироваться с локальными платежными шлюзами вроде ЮMoney или Qiwi. Это требует дополнительных юридических усилий и создает риски для международных корпораций.</p>
+                    <p>Кроме того, NVIDIA как американская компания обязана соблюдать санкционное законодательство США. Продолжение работы в России, пусть даже через партнера, могло создать правовые риски. Закрытие GeForce Now — это не спонтанное решение, а результат длительного давления со стороны регуляторов и невозможности продолжать бизнес в текущих условиях.</p>
+
+                    <h3>Низкая популярность облачного гейминга как дополнительный фактор</h3>
+                    <p>Некоторые аналитики также указывают на низкую популярность облачных игр в целом. Даже гигант Google закрыл свой сервис Stadia в 2023 году, несмотря на миллиардные инвестиции. Возможно, GFN.ru не приносил достаточной прибыли, чтобы оправдать усилия по преодолению санкционных барьеров. Однако эта версия выглядит скорее как дополнительный фактор, а не главная причина.</p>
+
+                    <h2 id="step-5">График закрытия и возврат средств</h2>
+                    <p>Команда GFN.ru действовала максимально прозрачно и корректно. С 1 сентября 2023 года была закрыта регистрация новых пользователей и остановлена продажа подписок. Это дало существующим подписчикам месяц на то, чтобы использовать остаток своего времени. С 1 октября серверы были полностью отключены.</p>
+                    <p>Всем пользователям, чьи подписки были активны после 1 октября, был осуществлен автоматический возврат средств на банковские карты. Компания предупредила, что из-за большого объема возвратов процесс может занять до двух недель (до 15 октября), и просила не обращаться в поддержку раньше этого срока. Судя по отзывам пользователей, возвраты действительно прошли без проблем — редкий случай ответственного подхода при закрытии сервиса.</p>
+
+                    <h2 id="step-6">Что потеряли российские геймеры</h2>
+                    <p>Закрытие GeForce Now стало серьезным ударом по доступности современных игр. Сервис позволял запускать тысячи игр из библиотек Steam, Epic Games Store, Uplay и других платформ. Причем это были не какие-то специальные версии игр — вы использовали свои собственные лицензии, купленные в магазинах. GeForce Now не был похож на подписочный сервис вроде Game Pass, где игры принадлежат сервису. Здесь вы владели играми, а сервис предоставлял лишь мощности для их запуска.</p>
+                    <p>Особенно болезненной потеря стала для жителей регионов, где нет возможности купить современную видеокарту по адекватной цене, или для студентов, живущих в общежитиях без мощных ПК. Для многих из них GeForce Now был не «роскошью», а единственным способом оставаться частью игрового сообщества.</p>
+
+                    <h2 id="step-7">Альтернативы: что осталось после GFN.ru</h2>
+                    <p>После закрытия GeForce Now российские игроки начали искать альтернативы. К счастью (или к сожалению), рынок облачного гейминга не исчерпывается одним сервисом.</p>
+
+                    <h3>Альтернатива 1: Использование GeForce Now через VPN</h3>
+                    <p>Многие пользователи обнаружили, что международная версия GeForce Now через серверы в соседних странах (например, в Армении или Турции) всё ещё доступна при использовании VPN. Задержки, конечно, выше, чем были на российских серверах, но для однопользовательских игр это вполне терпимо. Однако такой метод требует стабильного VPN и международной платежной карты для оплаты подписки.</p>
+
+                    <h3>Альтернатива 2: Другие облачные сервисы</h3>
+                    <p>На рынке появились локальные игроки, пытающиеся заполнить нишу. Сервисы вроде «Игровой Сервис» и «PlayKey» предлагают похожую функциональность, хотя и с меньшим выбором игр и более высокими ценами. Качество этих платформ варьируется, и многие пользователи жалуются на нестабильность соединения и худшее качество картинки по сравнению с GeForce Now.</p>
+
+                    <h3>Альтернатива 3: Покупка собственного железа</h3>
+                    <p>Самый очевидный, но и самый затратный вариант. Рынок видеокарт в России стабилизировался после кризиса 2021-2022 годов, и сейчас можно собрать приличный игровой ПК за 80-120 тысяч рублей. Однако для многих это всё равно недоступная сумма, особенно в условиях экономической нестабильности.</p>
+
+                    <h2 id="step-8">Уроки и выводы</h2>
+                    <p>Закрытие GeForce Now в России — это яркий пример того, как глобальные геополитические процессы напрямую влияют на повседневную жизнь обычных людей. Для многих игра — это не просто развлечение, а способ социализации, способ оставаться на связи с друзьями, способ отвлечься от повседневных проблем. Когда такие сервисы уходят, это ощущается не как потеря «игрушки», а как сужение доступного культурного пространства.</p>
+                    <p>История также показывает хрупкость облачных сервисов. В отличие от физического железа или купленных игр, облачная подписка может исчезнуть в одночасье по причинам, не зависящим от пользователя. Это заставляет задуматься о балансе между удобством и надежностью. Возможно, в текущих реалиях владение собственным оборудованием снова становится не «архаизмом», а разумной стратегией.</p>
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-column">
+                    <h3>О нас</h3>
+                    <ul>
+                        <li><a href="#">О компании</a></li>
+                        <li><a href="#">Реклама</a></li>
+                        <li><a href="#">Вакансии</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Разделы</h3>
+                    <ul>
+                        <li><a href="#">Телевизоры</a></li>
+                        <li><a href="#">Автоэлектроника</a></li>
+                        <li><a href="#">Приставки</a></li>
+                        <li><a href="#">Ноутбуки</a></li>
+                        <li><a href="#">Смартфоны</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Помощь</h3>
+                    <ul>
+                        <li><a href="#">Правила сайта</a></li>
+                        <li><a href="#">Обратная связь</a></li>
+                        <li><a href="#">Политика конфиденциальности</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Контакты</h3>
+                    <ul>
+                        <li>Email: info@technews.ru</li>
+                        <li>Телефон: +7 (123) 456-78-90</li>
+                        <li>
+                            <a href="#">Facebook</a> |
+                            <a href="#">Twitter</a> |
+                            <a href="#">Telegram</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                © 2024 TechNews. Все права защищены.
+            </div>
+        </div>
+        <p class="disclaimer">
+        Администрация сайта не несёт ответственности за возможные повреждения техники
+        и иные последствия, возникшие в результате самостоятельного ремонта по
+        материалам и инструкциям, размещённым на сайте. Все работы вы выполняете
+        на свой страх и риск.
+    </p>
+    </footer>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "Закрытие GeForce Now в России",
+  "description": "Подробный анализ закрытия облачного игрового сервиса GeForce Now в России с 1 октября 2023 года. Причины ухода NVIDIA, возврат средств и альтернативы для геймеров.",
+  "totalTime": "PT30M",
+  "step": [
+    {
+      "@type": "HowToStep",
+      "name": "Что такое GeForce Now",
+      "text": "Что такое GeForce Now и почему его закрытие важно",
+      "url": "#step-1"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "История в России",
+      "text": "История работы сервиса в России",
+      "url": "#step-2"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Официальная причина",
+      "text": "Официальная причина закрытия: текущие обстоятельства",
+      "url": "#step-3"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Истинные причины",
+      "text": "Истинные причины: санкции, платежи и геополитика",
+      "url": "#step-4"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "График закрытия",
+      "text": "График закрытия и возврат средств",
+      "url": "#step-5"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Что потеряли геймеры",
+      "text": "Что потеряли российские геймеры",
+      "url": "#step-6"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Альтернативы",
+      "text": "Альтернативы: что осталось после GFN.ru",
+      "url": "#step-7"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Выводы",
+      "text": "Уроки и выводы",
+      "url": "#step-8"
+    }
+  ],
+  "image": "https://i2.imageban.ru/out/2026/02/04/a82fdc21a6e96121fb878c709d110334.jpg"
+}
+</script>
+</body>
+</html>
