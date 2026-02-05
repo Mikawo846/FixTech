@@ -75,38 +75,49 @@
       background: #ffffff;
       border: 1px solid #e5e7eb;
       display: flex;
-      align-items: center;
+      flex-direction: column;
       box-shadow: 0 4px 16px rgba(15, 23, 42, 0.08);
       overflow: hidden;
       box-sizing: border-box;
-      padding: 16px 18px;
-      gap: 16px;
       margin: 40px auto;
     }
 
-    /* Фото слева */
+    /* Контейнер для изображений */
+    .ym-hero-images {
+      display: flex;
+      height: 120px;
+      overflow: hidden;
+    }
+
     .ym-hero-image {
-      flex: 0 0 36%;
-      max-width: 220px;
-      min-width: 160px;
-      height: 110px;
-      border-radius: 12px;
-      background: #f5f5f5;
+      flex: 1;
+      min-width: 0;
+      height: 100%;
       display: flex;
       align-items: center;
       justify-content: center;
       overflow: hidden;
+      border-right: 1px solid #e5e7eb;
+    }
+
+    .ym-hero-image:last-child {
+      border-right: none;
     }
 
     .ym-hero-image img {
-      max-width: 90%;
-      max-height: 90%;
-      object-fit: contain;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
     }
 
-    /* Правая часть: цена + рейтинг + кнопка */
+    .ym-hero-image:hover img {
+      transform: scale(1.05);
+    }
+
+    /* Правая часть: контент */
     .ym-hero-content {
-      flex: 1 1 auto;
+      padding: 16px 18px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -127,18 +138,12 @@
       overflow: hidden;
     }
 
-    /* Цена + рейтинг в одну строку */
+    /* Рейтинг */
     .ym-hero-top {
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 8px;
-    }
-
-    .ym-hero-price {
-      font-size: 20px;
-      font-weight: 700;
-      color: #111827;
     }
 
     .ym-hero-rating {
@@ -222,17 +227,19 @@
     @media (max-width: 480px) {
       .ym-hero-banner {
         max-width: 100%;
+        margin: 20px 0;
+      }
+
+      .ym-hero-images {
+        height: 100px;
+      }
+
+      .ym-hero-content {
         padding: 12px 12px;
-        gap: 12px;
       }
 
-      .ym-hero-image {
-        min-width: 120px;
-        height: 90px;
-      }
-
-      .ym-hero-price {
-        font-size: 18px;
+      .ym-hero-title {
+        font-size: 13px;
       }
 
       .ym-hero-button {
@@ -387,10 +394,19 @@
            rel="noopener noreferrer sponsored"
            class="ym-hero-link">
           <div class="ym-hero-banner">
-            <div class="ym-hero-image">
-              <img src="https://avatars.mds.yandex.net/get-mpic/14770882/2a00000197f4dbee777f8afddccaf44faa53/optimize"
-                   alt="Распродажа бытовой электроники"
-                   onerror="this.src='https://avatars.mds.yandex.net/get-mpic/15580298/img_id8867318964670654684.jpeg/optimize'; this.onerror='this.src=\'https://avatars.mds.yandex.net/get-mpic/10096780/2a000001953b534fed2494e0b30fadd9b458/optimize\';'">
+            <div class="ym-hero-images">
+              <div class="ym-hero-image">
+                <img src="https://avatars.mds.yandex.net/get-mpic/14770882/2a00000197f4dbee777f8afddccaf44faa53/optimize"
+                     alt="Распродажа бытовой электроники 1">
+              </div>
+              <div class="ym-hero-image">
+                <img src="https://avatars.mds.yandex.net/get-mpic/15580298/img_id8867318964670654684.jpeg/optimize"
+                     alt="Распродажа бытовой электроники 2">
+              </div>
+              <div class="ym-hero-image">
+                <img src="https://avatars.mds.yandex.net/get-mpic/10096780/2a000001953b534fed2494e0b30fadd9b458/optimize"
+                     alt="Распродажа бытовой электроники 3">
+              </div>
             </div>
             <div class="ym-hero-content">
               <h3 class="ym-hero-title">Распродажа бытовой электроники на Яндекс Маркете</h3>
@@ -400,7 +416,7 @@
                   <span class="ym-hero-rating-count">Скидки до 50%</span>
                 </div>
               </div>
-              <button class="ym-hero-button">Смотреть предложения</button>
+              <button class="ym-hero-button">За скидками</button>
             </div>
           </div>
           <div class="ym-hero-legal">
