@@ -98,6 +98,7 @@
       justify-content: center;
       overflow: hidden;
       border-right: 1px solid #e5e7eb;
+      background: #f8f9fa;  /* Добавлен фон */
     }
 
     .ym-hero-image:last-child {
@@ -107,12 +108,13 @@
     .ym-hero-image img {
       width: 100%;
       height: 100%;
-      object-fit: cover;
+      object-fit: contain;  /* Изменено с cover на contain */
       transition: transform 0.3s ease;
+      background: #f8f9fa;  /* Добавлен фон для пустых областей */
     }
 
     .ym-hero-image:hover img {
-      transform: scale(1.05);
+      transform: scale(1.02);  /* Уменьшен масштаб для сохранения пропорций */
     }
 
     /* Правая часть: контент */
