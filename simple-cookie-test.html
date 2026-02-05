@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Простая Проверка Cookie</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .test-box { border: 2px solid #007bff; padding: 20px; margin: 10px 0; border-radius: 8px; }
+        .status { padding: 10px; margin: 5px 0; border-radius: 4px; }
+        .success { background: #d4edda; color: #155724; }
+        .error { background: #f8d7da; color: #721c24; }
+        .info { background: #d1ecf1; color: #0c5460; }
+        button { padding: 10px 15px; margin: 5px; cursor: pointer; border: none; border-radius: 4px; background: #007bff; color: white; }
+    </style>
+</head>
+<body>
+    <h1>🧪 Простая Проверка Cookie Системы</h1>
+    
+    <div class="test-box">
+        <h2>📊 Текущий Статус</h2>
+        <div id="status-display"></div>
+        <button onclick="updateStatus()">Обновить статус</button>
+    </div>
+
+    <div class="test-box">
+        <h2>🎮 Управление</h2>
+        <button onclick="testBanner()">Показать баннер</button>
+        <button onclick="acceptCookie()">Принять cookie</button>
+        <button onclick="clearCookies()">Очистить cookie</button>
+        <button onclick="testAnalytics()">Тестировать аналитику</button>
+    </div>
+
+    <div class="test-box">
+        <h2>📋 Лог событий</h2>
+        <div id="event-log"></div>
+    </div>
+
+    <script src="cookie-consent.js"></script>
+    
+    <script>
+        function log(message, type = 'info') {
+            const logDiv = document.getElementById('event-log');
+            const time = new Date().toLocaleTimeString();
+            const statusClass = type === 'error' ? 'error' : type === 'success' ? 'success' : 'info';
+            logDiv.innerHTML += `<div class="status ${statusClass}">[${time}] ${message}</div>`;
+            logDiv.scrollTop = logDiv.scrollHeight;
+        }
+
+        function updateStatus() {
+            const display = document.getElementById('status-display');
+            const hasConsent = document.cookie.includes('cookie_consent=all');
+            const hasBanner = !!document.getElementById('cookie-banner');
+            const hasYandex = typeof window.ym !== 'undefined';
+            const hasGoogle = typeof window.gtag !== 'undefined';
+            
+            display.innerHTML = `
+                <div class="status ${hasConsent ? 'success' : 'error'}">
+                    🍪 Cookie согласие: ${hasConsent ? 'ПОЛУЧЕНО' : 'ОТСУТСТВУЕТ'}
+                </div>
+                <div class="status ${hasBanner ? 'success' : 'error'}">
+                    📢 Баннер: ${hasBanner ? 'ЕСТЬ В DOM' : 'ОТСУТСТВУЕТ'}
+                </div>
+                <div class="status ${hasYandex ? 'success' : 'error'}">
+                    📊 Яндекс.Метрика: ${hasYandex ? 'ЗАГРУЖЕНА' : 'НЕ ЗАГРУЖЕНА'}
+                </div>
+                <div class="status ${hasGoogle ? 'success' : 'error'}">
+                    📈 Google Analytics: ${hasGoogle ? 'ЗАГРУЖЕН' : 'НЕ ЗАГРУЖЕН'}
+                </div>
+            `;
+            
+            log('Статус обновлен', 'info');
+        }
+
+        function testBanner() {
+            log('Попытка показать баннер...', 'info');
+            if (typeof showCookieBanner === 'function') {
+                showCookieBanner();
+                setTimeout(() => {
+                    const banner = document.getElementById('cookie-banner');
+                    if (banner) {
+                        log('Баннер успешно создан и показан', 'success');
+                    } else {
+                        log('Ошибка: баннер не создан', 'error');
+                    }
+                }, 500);
+            } else {
+                log('Ошибка: функция showCookieBanner не найдена', 'error');
+            }
+        }
+
+        function acceptCookie() {
+            log('Попытка принять cookie...', 'info');
+            const button = document.getElementById('cookie-accept');
+            if (button) {
+                button.click();
+                log('Клик на кнопку "Принять" выполнен', 'success');
+                setTimeout(() => {
+                    const hasConsent = document.cookie.includes('cookie_consent=all');
+                    if (hasConsent) {
+                        log('Cookie успешно сохранены', 'success');
+                    } else {
+                        log('Ошибка: cookie не сохранены', 'error');
+                    }
+                    updateStatus();
+                }, 500);
+            } else {
+                log('Ошибка: кнопка "Принять" не найдена', 'error');
+            }
+        }
+
+        function clearCookies() {
+            log('Очистка всех cookie...', 'info');
+            document.cookie = 'cookie_consent=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
+            document.cookie = '_ym_uid=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
+            document.cookie = '_ga=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
+            log('Cookie очищены', 'success');
+            
+            // Удаляем баннер
+            const banner = document.getElementById('cookie-banner');
+            if (banner) {
+                banner.remove();
+                log('Баннер удален из DOM', 'success');
+            }
+            
+            setTimeout(updateStatus, 100);
+        }
+
+        function testAnalytics() {
+            log('Тестирование аналитики...', 'info');
+            
+            if (typeof window.ym !== 'undefined') {
+                try {
+                    window.ym(106225686, 'hit', window.location.href);
+                    log('Яндекс.Метрика: hit отправлен', 'success');
+                } catch (e) {
+                    log(`Яндекс.Метрика ошибка: ${e.message}`, 'error');
+                }
+            } else {
+                log('Яндекс.Метрика не загружена', 'error');
+            }
+            
+            if (typeof window.gtag !== 'undefined') {
+                try {
+                    window.gtag('event', 'test_simple', {
+                        'event_category': 'debug',
+                        'event_label': 'simple_test'
+                    });
+                    log('Google Analytics: событие отправлено', 'success');
+                } catch (e) {
+                    log(`Google Analytics ошибка: ${e.message}`, 'error');
+                }
+            } else {
+                log('Google Analytics не загружен', 'error');
+            }
+        }
+
+        // Инициализация
+        setTimeout(() => {
+            log('Страница загружена, начинаю проверку...', 'info');
+            updateStatus();
+            
+            // Автообновление статуса каждые 3 секунды
+            setInterval(updateStatus, 3000);
+        }, 1000);
+    </script>
+</body>
+</html>

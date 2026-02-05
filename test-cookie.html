@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тест Cookie Баннера - Repairo</title>
+    
+    <link rel="stylesheet" href="./styles.css?v=2.1">
+    <link rel="stylesheet" href="./styles-header.css">
+    <link rel="stylesheet" href="./cookie-override.css?v=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <a href="index.html" class="logo">
+                    <span class="logo__icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 15L7 10H17L12 15Z" fill="currentColor"/>
+                            <path d="M12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3ZM12 19C8.13401 19 5 15.866 5 12C5 8.13401 8.13401 5 12 5C15.866 5 19 8.13401 19 12C19 15.866 15.866 19 12 19Z" fill="currentColor"/>
+                        </svg>
+                    </span>
+                    <span class="logo__text">Repairo</span>
+                </a>
+                <nav class="nav">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="index.html" class="nav__link">Главная</a></li>
+                        <li class="nav__item"><a href="index.html#categories" class="nav__link">Все категории</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <div class="page-content">
+                <h1>Тест страницы Cookie Баннера</h1>
+                <p>Это тестовая страница для демонстрации работы нового всплывающего уведомления о файлах cookie.</p>
+                <p>Баннер должен появиться через 1 секунду после загрузки страницы как всплывающее уведомление снизу.</p>
+                
+                <h2>Особенности нового баннера:</h2>
+                <ul>
+                    <li>Появляется на каждой странице при загрузке</li>
+                    <li>Современный дизайн с градиентом и анимацией</li>
+                    <li>Всплывающее уведомление снизу по центру</li>
+                    <li>Адаптивный дизайн для мобильных устройств</li>
+                    <li>Плавная анимация появления и исчезновения</li>
+                </ul>
+
+                <h2>Статус систем аналитики:</h2>
+                <div id="status-container">
+                    <div id="cookie-status" class="status-info">Проверка статуса cookie...</div>
+                    <div id="yandex-status" class="status-info">Проверка Яндекс.Метрики...</div>
+                    <div id="google-status" class="status-info">Проверка Google Analytics...</div>
+                </div>
+                
+                <h2>Действия:</h2>
+                <button onclick="checkStatus()">Обновить статус</button>
+                <button onclick="clearAllCookies()">Очистить все cookie</button>
+                <button onclick="testAnalytics()">Тестировать аналитику</button>
+                <button onclick="forceLoadAnalytics()">Загрузить аналитику принудительно</button>
+                
+                <h2>Отладочная информация:</h2>
+                <pre id="debug-info">Загрузка...</pre>
+
+                <p>Обновите страницу, чтобы увидеть баннер снова.</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Cookie Consent Banner -->
+    <!-- Cookie Consent Script -->
+    <script src="cookie-consent.js"></script>
+    
+    <style>
+        .status-info { background: #d1ecf1; color: #0c5460; padding: 10px; margin: 5px 0; border-radius: 5px; border: 1px solid #bee5eb; }
+        .status-success { background: #d4edda; color: #155724; padding: 10px; margin: 5px 0; border-radius: 5px; border: 1px solid #c3e6cb; }
+        .status-error { background: #f8d7da; color: #721c24; padding: 10px; margin: 5px 0; border-radius: 5px; border: 1px solid #f5c6cb; }
+        button { padding: 10px 15px; margin: 5px; cursor: pointer; border: 1px solid #ccc; border-radius: 5px; background: #f8f9fa; }
+        button:hover { background: #e9ecef; }
+        pre { background: #f8f9fa; padding: 15px; border-radius: 5px; border: 1px solid #dee2e6; font-size: 12px; overflow-x: auto; }
+    </style>
+    
+    <script>
+        // Функции для работы с cookie
+        function getCookie(name) {
+            const value = `; ${document.cookie}`;
+            const parts = value.split(`; ${name}=`);
+            if (parts.length === 2) return parts.pop().split(';').shift();
+            return null;
+        }
+
+        function deleteCookie(name) {
+            document.cookie = `${name}=;expires=Thu, 01 Jan 1970 00:00:00 UTC;path=/;`;
+        }
+
+        function checkStatus() {
+            console.log('Проверка статуса систем...');
+            
+            // Проверка cookie согласия
+            const cookieConsent = getCookie('cookie_consent');
+            const cookieStatus = document.getElementById('cookie-status');
+            
+            if (cookieConsent) {
+                cookieStatus.className = 'status-success';
+                cookieStatus.textContent = `✓ Cookie согласие получено: ${cookieConsent}`;
+            } else {
+                cookieStatus.className = 'status-error';
+                cookieStatus.textContent = '✗ Cookie согласие не получено';
+            }
+
+            // Проверка Яндекс.Метрики
+            const yandexStatus = document.getElementById('yandex-status');
+            if (typeof window.ym !== 'undefined') {
+                yandexStatus.className = 'status-success';
+                yandexStatus.textContent = '✓ Яндекс.Метрика загружена (ID: 106225686)';
+            } else {
+                yandexStatus.className = 'status-error';
+                yandexStatus.textContent = '✗ Яндекс.Метрика не загружена';
+            }
+
+            // Проверка Google Analytics
+            const googleStatus = document.getElementById('google-status');
+            if (typeof window.gtag !== 'undefined') {
+                googleStatus.className = 'status-success';
+                googleStatus.textContent = '✓ Google Analytics загружен (ID: G-YE88Y994NX)';
+            } else {
+                googleStatus.className = 'status-error';
+                googleStatus.textContent = '✗ Google Analytics не загружен';
+            }
+
+            updateDebugInfo();
+        }
+
+        function updateDebugInfo() {
+            const debugInfo = {
+                'Текущий URL': window.location.href,
+                'User Agent': navigator.userAgent,
+                'Cookie согласие': getCookie('cookie_consent'),
+                'Все cookie': document.cookie,
+                'Яндекс.Метрика (ym)': typeof window.ym !== 'undefined',
+                'Google Analytics (gtag)': typeof window.gtag !== 'undefined',
+                'DataLayer': typeof window.dataLayer !== 'undefined',
+                'Время': new Date().toISOString()
+            };
+            
+            document.getElementById('debug-info').textContent = JSON.stringify(debugInfo, null, 2);
+        }
+
+        function clearAllCookies() {
+            deleteCookie('cookie_consent');
+            deleteCookie('_ym_uid');
+            deleteCookie('_ym_d');
+            deleteCookie('_ga');
+            deleteCookie('_gid');
+            deleteCookie('_ym_isad');
+            deleteCookie('_ym_visorc');
+            console.log('Все cookie очищены');
+            checkStatus();
+        }
+
+        function testAnalytics() {
+            console.log('Тестирование систем аналитики...');
+            
+            if (typeof window.ym !== 'undefined') {
+                try {
+                    window.ym(106225686, 'hit', window.location.href, {
+                        title: 'Тестовая страница - ' + document.title,
+                        referer: document.referrer
+                    });
+                    console.log('✓ Яндекс.Метрика: hit отправлен успешно');
+                } catch (e) {
+                    console.error('✗ Ошибка Яндекс.Метрики:', e);
+                }
+            } else {
+                console.log('✗ Яндекс.Метрика не доступна');
+            }
+            
+            if (typeof window.gtag !== 'undefined') {
+                try {
+                    window.gtag('event', 'page_view', {
+                        page_title: 'Тестовая страница - ' + document.title,
+                        page_location: window.location.href
+                    });
+                    window.gtag('event', 'test_event', {
+                        'event_category': 'debug',
+                        'event_label': 'manual_test'
+                    });
+                    console.log('✓ Google Analytics: события отправлены успешно');
+                } catch (e) {
+                    console.error('✗ Ошибка Google Analytics:', e);
+                }
+            } else {
+                console.log('✗ Google Analytics не доступен');
+            }
+        }
+
+        function forceLoadAnalytics() {
+            console.log('Принудительная загрузка аналитики...');
+            
+            // Загрузка Яндекс.Метрики
+            (function(m,e,t,r,i,k,a){
+                m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+                m[i].l=1*new Date();
+                for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+                k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+            })(window, document, 'script', 'https://mc.yandex.ru/metrika/tag.js?id=106225686', 'ym');
+
+            if (typeof window.ym !== 'undefined') {
+                ym(106225686, 'init', {
+                    ssr: true, 
+                    webvisor: true, 
+                    clickmap: true, 
+                    ecommerce: "dataLayer", 
+                    accurateTrackBounce: true, 
+                    trackLinks: true
+                });
+            }
+
+            // Загрузка Google Analytics
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-YE88Y994NX', { 
+                anonymize_ip: true 
+            });
+
+            const gaScript = document.createElement('script');
+            gaScript.async = true;
+            gaScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-YE88Y994NX';
+            document.head.appendChild(gaScript);
+            
+            console.log('Аналитика загружена, проверка через 2 секунды...');
+            setTimeout(checkStatus, 2000);
+        }
+
+        // Инициализация при загрузке страницы
+        document.addEventListener('DOMContentLoaded', function() {
+            setTimeout(checkStatus, 1000);
+            setInterval(checkStatus, 10000); // Обновлять статус каждые 10 секунд
+        });
+    </script>
+</body>
+</html>
