@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Простой тест Cookie</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        .debug { background: #f0f0f0; padding: 10px; margin: 10px 0; }
+        button { padding: 10px; margin: 5px; }
+    </style>
+</head>
+<body>
+    <h1>Простой тест Cookie Banner</h1>
+    <div class="debug">
+        <p>Статус cookie: <span id="cookie-status">Проверка...</span></p>
+        <p>Баннер существует: <span id="banner-exists">Нет</span></p>
+    </div>
+    
+    <button onclick="checkCookie()">Проверить cookie</button>
+    <button onclick="clearCookie()">Очистить cookie</button>
+    <button onclick="forceShowBanner()">Показать баннер</button>
+
+    <script src="cookie-consent.js"></script>
+    
+    <script>
+        function checkCookie() {
+            const value = document.cookie.split('; ').find(row => row.startsWith('cookie_consent='));
+            document.getElementById('cookie-status').textContent = value ? value.split('=')[1] : 'Не найдено';
+        }
+        
+        function clearCookie() {
+            document.cookie = 'cookie_consent=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
+            checkCookie();
+            location.reload();
+        }
+        
+        function forceShowBanner() {
+            const banner = document.getElementById('cookie-banner');
+            if (banner) {
+                banner.style.opacity = '1';
+                banner.style.visibility = 'visible';
+                banner.style.transform = 'translateX(-50%) translateY(0)';
+                document.getElementById('banner-exists').textContent = 'Да (показан принудительно)';
+            } else {
+                document.getElementById('banner-exists').textContent = 'Нет';
+            }
+        }
+        
+        // Проверка каждые 2 секунды
+        setInterval(() => {
+            const banner = document.getElementById('cookie-banner');
+            document.getElementById('banner-exists').textContent = banner ? 'Да' : 'Нет';
+        }, 2000);
+        
+        // Начальная проверка
+        setTimeout(checkCookie, 1500);
+    </script>
+</body>
+</html>

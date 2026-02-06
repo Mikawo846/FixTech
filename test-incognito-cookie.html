@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тест Cookie Banner в режиме инкогнито</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./cookie-override.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .test-info {
+            background: #f0f8ff;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            border-left: 4px solid #007bff;
+        }
+        .debug-info {
+            background: #fff3cd;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border-left: 4px solid #ffc107;
+        }
+        .status {
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+        .success { background: #d4edda; color: #155724; }
+        .error { background: #f8d7da; color: #721c24; }
+        .warning { background: #fff3cd; color: #856404; }
+        button {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 5px;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="test-info">
+        <h2>🧪 Тест Cookie Banner в режиме инкогнито</h2>
+        <p>Эта страница предназначена для проверки работы cookie-баннера в режиме инкогнито/приватном режиме.</p>
+        <p><strong>Инструкции:</strong></p>
+        <ol>
+            <li>Откройте эту страницу в обычном режиме - баннер должен появиться</li>
+            <li>Примите cookie - баннер должен исчезнуть</li>
+            <li>Откройте эту же страницу в режиме инкогнито - баннер должен снова появиться</li>
+            <li>Проверьте консоль браузера для отладочной информации</li>
+        </ol>
+    </div>
+
+    <div class="debug-info">
+        <h3>🔍 Отладочная информация</h3>
+        <div id="debug-output"></div>
+    </div>
+
+    <div style="margin: 20px 0;">
+        <button onclick="checkCookieStatus()">Проверить статус cookie</button>
+        <button onclick="clearAllCookies()">Очистить все cookie</button>
+        <button onclick="forceShowBanner()">Принудительно показать баннер</button>
+        <button onclick="testIncognitoMode()">Тест режима инкогнито</button>
+    </div>
+
+    <div id="status-output"></div>
+
+    <script>
+        // Функции для тестирования
+        function updateDebugInfo() {
+            const debugOutput = document.getElementById('debug-output');
+            const info = {
+                'User Agent': navigator.userAgent,
+                'Cookie enabled': navigator.cookieEnabled,
+                'All cookies': document.cookie,
+                'SessionStorage available': typeof(Storage) !== "undefined",
+                'Current URL': window.location.href,
+                'Document readyState': document.readyState
+            };
+
+            let html = '<ul>';
+            for (const [key, value] of Object.entries(info)) {
+                html += `<li><strong>${key}:</strong> ${value || '(пусто)'}</li>`;
+            }
+            html += '</ul>';
+            debugOutput.innerHTML = html;
+        }
+
+        function showStatus(message, type = 'info') {
+            const statusOutput = document.getElementById('status-output');
+            const statusDiv = document.createElement('div');
+            statusDiv.className = `status ${type}`;
+            statusDiv.textContent = `[${new Date().toLocaleTimeString()}] ${message}`;
+            statusOutput.appendChild(statusDiv);
+            
+            // Автоматически удалять старые сообщения
+            if (statusOutput.children.length > 5) {
+                statusOutput.removeChild(statusOutput.firstChild);
+            }
+        }
+
+        function checkCookieStatus() {
+            const consentCookie = getCookie('cookie_consent');
+            if (consentCookie) {
+                showStatus(`Найден cookie согласия: ${consentCookie}`, 'success');
+            } else {
+                showStatus('Cookie согласия не найден', 'warning');
+            }
+            updateDebugInfo();
+        }
+
+        function clearAllCookies() {
+            document.cookie.split(";").forEach(function(c) { 
+                document.cookie = c.replace(/^ +/, "").replace(/=.*/, "=;expires=" + new Date().toUTCString() + ";path=/"); 
+            });
+            
+            // Очистить sessionStorage
+            try {
+                sessionStorage.clear();
+                showStatus('SessionStorage очищен', 'success');
+            } catch (e) {
+                showStatus('Ошибка очистки sessionStorage: ' + e.message, 'error');
+            }
+            
+            showStatus('Все cookie очищены', 'success');
+            updateDebugInfo();
+        }
+
+        function forceShowBanner() {
+            // Удаляем существующий баннер если есть
+            const existingBanner = document.getElementById('cookie-banner');
+            if (existingBanner) {
+                existingBanner.remove();
+            }
+            
+            // Показываем баннер
+            if (typeof showCookieBanner === 'function') {
+                showCookieBanner();
+                showStatus('Баннер принудительно показан', 'success');
+            } else {
+                showStatus('Функция showCookieBanner не найдена', 'error');
+            }
+        }
+
+        function testIncognitoMode() {
+            try {
+                // Пробуем установить тестовый cookie
+                document.cookie = 'test_incognito=1; max-age=60';
+                const cookiesEnabled = document.cookie.indexOf('test_incognito=') !== -1;
+                
+                // Очищаем тестовый cookie
+                document.cookie = 'test_incognito=1; max-age=-1';
+                
+                if (cookiesEnabled) {
+                    showStatus('Cookie работают - обычный режим', 'success');
+                } else {
+                    showStatus('Cookie не работают - режим инкогнито или блокировка', 'warning');
+                }
+            } catch (e) {
+                showStatus('Ошибка проверки cookie: ' + e.message, 'error');
+            }
+        }
+
+        // Инициализация при загрузке страницы
+        document.addEventListener('DOMContentLoaded', function() {
+            updateDebugInfo();
+            showStatus('Страница загружена, проверьте cookie баннер', 'info');
+            
+            // Обновляем debug info каждые 5 секунд
+            setInterval(updateDebugInfo, 5000);
+        });
+
+        // Перехватываем console.log для отображения в интерфейсе
+        const originalLog = console.log;
+        console.log = function(...args) {
+            originalLog.apply(console, args);
+            if (args[0] && args[0].includes('COOKIE')) {
+                showStatus(args.join(' '), 'info');
+            }
+        };
+    </script>
+
+    <!-- Cookie Consent Script -->
+    <script src="cookie-consent.js"></script>
+</body>
+</html>

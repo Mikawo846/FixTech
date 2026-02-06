@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тест Cookie Banner</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        .info {
+            background: #e3f2fd;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        .status {
+            background: #f0f0f0;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 10px 0;
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Тест Cookie Banner</h1>
+        
+        <div class="info">
+            <h3>Информация о тесте:</h3>
+            <p>Эта страница проверяет работу cookie-баннера.</p>
+            <ul>
+                <li>Если вы впервые заходите на сайт, должен появиться баннер с просьбой принять cookies</li>
+                <li>После принятия баннер должен исчезнуть и больше не появляться</li>
+                <li>Cookie сохраняется на 365 дней</li>
+            </ul>
+        </div>
+
+        <div class="status" id="cookie-status">
+            Проверка статуса cookie...
+        </div>
+
+        <div class="status" id="banner-status">
+            Проверка наличия баннера...
+        </div>
+
+        <div style="margin-top: 30px; text-align: center;">
+            <button onclick="checkCookieStatus()" style="padding: 10px 20px; background: #2196F3; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                Проверить статус
+            </button>
+            <button onclick="clearTestCookie()" style="padding: 10px 20px; background: #f44336; color: white; border: none; border-radius: 5px; cursor: pointer; margin-left: 10px;">
+                Удалить тестовый cookie
+            </button>
+        </div>
+    </div>
+
+    <script>
+        function checkCookieStatus() {
+            const hasConsent = document.cookie.includes('cookie_consent=all');
+            document.getElementById('cookie-status').innerHTML = 
+                'Cookie consent: ' + (hasConsent ? 'НАЙДЕН (принят)' : 'НЕ НАЙДЕН');
+            
+            const banner = document.getElementById('cookie-banner');
+            document.getElementById('banner-status').innerHTML = 
+                'Banner элемент: ' + (banner ? 'НАЙДЕН в DOM' : 'НЕ НАЙДЕН в DOM');
+        }
+
+        function clearTestCookie() {
+            document.cookie = 'cookie_consent=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
+            checkCookieStatus();
+            location.reload();
+        }
+
+        // Проверяем статус каждые 2 секунды
+        setInterval(checkCookieStatus, 2000);
+        
+        // Первоначальная проверка
+        setTimeout(checkCookieStatus, 1000);
+    </script>
+
+    <!-- Cookie Consent Script -->
+    <script src="cookie-consent.js"></script>
+</body>
+</html>

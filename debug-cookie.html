@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Отладка Cookie Banner</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        .debug { background: #f0f0f0; padding: 10px; margin: 10px 0; border-radius: 5px; }
+        button { padding: 10px 20px; margin: 5px; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <h1>Отладка Cookie Banner</h1>
+    
+    <div class="debug">
+        <h3>Текущие Cookie:</h3>
+        <div id="cookie-list"></div>
+    </div>
+    
+    <div class="debug">
+        <h3>Действия:</h3>
+        <button onclick="showCookies()">Показать cookie</button>
+        <button onclick="clearCookie()">Удалить cookie_consent</button>
+        <button onclick="testBanner()">Тестировать баннер</button>
+        <button onclick="checkScript()">Проверить скрипт</button>
+    </div>
+    
+    <div class="debug">
+        <h3>Консоль:</h3>
+        <div id="console"></div>
+    </div>
+
+    <script>
+        function log(message) {
+            const consoleDiv = document.getElementById('console');
+            consoleDiv.innerHTML += '<div>' + new Date().toLocaleTimeString() + ': ' + message + '</div>';
+        }
+        
+        function showCookies() {
+            const cookies = document.cookie.split(';');
+            const cookieList = document.getElementById('cookie-list');
+            cookieList.innerHTML = '';
+            
+            if (cookies.length === 1 && cookies[0] === '') {
+                cookieList.innerHTML = 'Нет cookie';
+            } else {
+                cookies.forEach(cookie => {
+                    const [name, value] = cookie.trim().split('=');
+                    cookieList.innerHTML += '<div><strong>' + name + '</strong>: ' + value + '</div>';
+                });
+            }
+        }
+        
+        function clearCookie() {
+            document.cookie = 'cookie_consent=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
+            log('Cookie cookie_consent удален');
+            showCookies();
+        }
+        
+        function testBanner() {
+            if (typeof createCookieBanner === 'function') {
+                log('Функция createCookieBanner найдена');
+                createCookieBanner();
+                setTimeout(() => {
+                    const banner = document.getElementById('cookie-banner');
+                    if (banner) {
+                        log('Баннер создан: ' + banner.id);
+                        log('Стили баннера: ' + banner.style.cssText.substring(0, 100) + '...');
+                    } else {
+                        log('Баннер НЕ найден после создания');
+                    }
+                }, 100);
+            } else {
+                log('Функция createCookieBanner НЕ найдена');
+            }
+        }
+        
+        function checkScript() {
+            log('Проверка загрузки скрипта...');
+            const scripts = document.getElementsByTagName('script');
+            let cookieScriptFound = false;
+            
+            for (let script of scripts) {
+                if (script.src && script.src.includes('cookie-consent.js')) {
+                    log('Найден скрипт: ' + script.src);
+                    cookieScriptFound = true;
+                }
+            }
+            
+            if (!cookieScriptFound) {
+                log('Скрипт cookie-consent.js НЕ найден');
+            }
+            
+            // Проверяем глобальные функции
+            if (typeof getCookie === 'function') {
+                log('Функция getCookie доступна');
+            } else {
+                log('Функция getCookie НЕ доступна');
+            }
+            
+            if (typeof initCookieConsent === 'function') {
+                log('Функция initCookieConsent доступна');
+            } else {
+                log('Функция initCookieConsent НЕ доступна');
+            }
+        }
+        
+        // Автоматически показываем cookie при загрузке
+        showCookies();
+        setTimeout(checkScript, 1000);
+    </script>
+    
+    <!-- Cookie Consent Script -->
+    <script src="cookie-consent.js"></script>
+</body>
+</html>

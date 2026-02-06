@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тест нового баннера Cookie - Repairo</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./styles-header.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div style="padding: 20px; font-family: 'Inter', sans-serif;">
+        <h1>Тест нового дизайна баннера Cookie</h1>
+        <p>Эта страница используется для проверки нового дизайна баннера с файлами cookie.</p>
+        <p>Баннер должен появиться через 1 секунду после загрузки страницы.</p>
+        
+        <div style="margin-top: 50px;">
+            <h2>Характеристики нового дизайна:</h2>
+            <ul>
+                <li>✅ Белый фон с полупрозрачностью</li>
+                <li>✅ Зеленая кнопка "Принять"</li>
+                <li>✅ Современные скругленные углы</li>
+                <li>✅ Адаптивный дизайн для мобильных устройств</li>
+                <li>✅ Эффекты наведения на кнопку</li>
+                <li>✅ Тени и размытие фона</li>
+            </ul>
+        </div>
+        
+        <div style="margin-top: 50px;">
+            <button onclick="localStorage.removeItem('cookie_consent'); location.reload();" style="padding: 10px 20px; background: #f44336; color: white; border: none; border-radius: 5px; cursor: pointer;">
+            Сбросить cookie и перезагрузить
+        </button>
+        </div>
+    </div>
+
+    <!-- Cookie Consent Script -->
+    <script src="cookie-consent.js"></script>
+</body>
+</html>
