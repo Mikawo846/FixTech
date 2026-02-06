@@ -159,9 +159,9 @@
             box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.15) !important;
             font-size: 14px !important;
             line-height: 1.4 !important;
-            width: 100% !important;
-            max-width: 100% !important;
-            min-width: 100% !important;
+            width: 100vw !important;
+            max-width: 100vw !important;
+            min-width: 100vw !important;
             opacity: 0 !important;
             visibility: hidden !important;
             transition: transform 0.3s ease-out !important;
@@ -172,11 +172,27 @@
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
             float: none !important;
             clear: both !important;
+            overflow: hidden !important;
+            contain: layout style !important;
         `;
 
         // Add button styles directly to ensure consistency
         const style = document.createElement('style');
         style.textContent = `
+            /* Base styles with viewport protection */
+            #cookie-banner {
+                position: fixed !important;
+                bottom: 0 !important;
+                left: 0 !important;
+                right: 0 !important;
+                width: 100vw !important;
+                max-width: 100vw !important;
+                min-width: 100vw !important;
+                box-sizing: border-box !important;
+                overflow: hidden !important;
+                contain: layout style !important;
+            }
+            
             #cookie-banner .cookie-banner__text {
                 flex: 1 !important;
                 margin-right: 15px !important;
@@ -184,6 +200,11 @@
                 font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
                 font-size: 14px !important;
                 line-height: 1.4 !important;
+                min-width: 0 !important;
+                overflow-wrap: break-word !important;
+                word-wrap: break-word !important;
+                word-break: break-word !important;
+                hyphens: auto !important;
             }
             
             #cookie-banner .cookie-banner__text a {
@@ -198,6 +219,7 @@
             
             #cookie-banner .cookie-banner__buttons {
                 flex-shrink: 0 !important;
+                min-width: fit-content !important;
             }
             
             #cookie-banner button.cookie-btn {
@@ -216,6 +238,8 @@
                 white-space: nowrap !important;
                 text-transform: none !important;
                 min-height: 40px !important;
+                box-sizing: border-box !important;
+                max-width: none !important;
             }
             
             #cookie-banner button.cookie-btn:hover {
@@ -242,6 +266,7 @@
                     margin-bottom: 10px !important;
                     font-size: 13px !important;
                     line-height: 1.3 !important;
+                    text-align: center !important;
                 }
                 
                 #cookie-banner button.cookie-btn {
@@ -260,12 +285,30 @@
                 #cookie-banner .cookie-banner__text {
                     font-size: 12px !important;
                     margin-bottom: 8px !important;
+                    padding: 0 5px !important;
                 }
                 
                 #cookie-banner button.cookie-btn {
                     min-height: 48px !important;
                     font-size: 16px !important;
-                    padding: 12px 20px !important;
+                    padding: 12px 16px !important;
+                }
+            }
+            
+            /* Extra small screens protection */
+            @media (max-width: 320px) {
+                #cookie-banner {
+                    padding: 8px 10px !important;
+                }
+                
+                #cookie-banner .cookie-banner__text {
+                    font-size: 11px !important;
+                    line-height: 1.2 !important;
+                }
+                
+                #cookie-banner button.cookie-btn {
+                    font-size: 14px !important;
+                    padding: 10px 14px !important;
                 }
             }
         `;
