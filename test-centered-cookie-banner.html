@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тест центрированного Cookie Banner</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: white;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: white;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .info {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        .status {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+            font-family: 'Courier New', monospace;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .button-group {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+        .test-btn {
+            padding: 12px 24px;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+        .test-btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        .test-btn.danger {
+            background: rgba(244, 67, 54, 0.8);
+            border-color: rgba(244, 67, 54, 0.9);
+        }
+        .test-btn.danger:hover {
+            background: rgba(244, 67, 54, 0.9);
+        }
+        .test-btn.success {
+            background: rgba(76, 175, 80, 0.8);
+            border-color: rgba(76, 175, 80, 0.9);
+        }
+        .test-btn.success:hover {
+            background: rgba(76, 175, 80, 0.9);
+        }
+        .demo-content {
+            margin: 40px 0;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .device-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        .device-card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+                margin: 10px;
+            }
+            .button-group {
+                flex-direction: column;
+                align-items: center;
+            }
+            .test-btn {
+                width: 100%;
+                max-width: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎯 Тест центрированного Cookie Banner</h1>
+        
+        <div class="info">
+            <h3>📋 Информация о тесте:</h3>
+            <p>Эта страница проверяет работу нового центрированного cookie-баннера.</p>
+            <ul>
+                <li>✅ Баннер должен появляться по центру внизу экрана</li>
+                <li>✅ Правильная адаптация под десктоп и мобильные устройства</li>
+                <li>✅ Плавная анимация появления и скрытия</li>
+                <li>✅ Красивый современный дизайн с blur-эффектом</li>
+            </ul>
+        </div>
+
+        <div class="device-info">
+            <div class="device-card">
+                <h4>🖥️ Десктоп</h4>
+                <p>Отступ 20px снизу<br>Макс. ширина 600px</p>
+            </div>
+            <div class="device-card">
+                <h4>📱 Планшет</h4>
+                <p>Отступ 10px снизу<br>Макс. ширина 95vw</p>
+            </div>
+            <div class="device-card">
+                <h4>📱 Смартфон</h4>
+                <p>Отступ 8px снизу<br>Макс. ширина 98vw</p>
+            </div>
+            <div class="device-card">
+                <h4>📱 Маленький экран</h4>
+                <p>Отступ 5px снизу<br>Макс. ширина 99vw</p>
+            </div>
+        </div>
+
+        <div class="status" id="cookie-status">
+            Проверка статуса cookie...
+        </div>
+
+        <div class="status" id="banner-status">
+            Проверка наличия баннера...
+        </div>
+
+        <div class="status" id="viewport-info">
+            Информация об экране...
+        </div>
+
+        <div class="demo-content">
+            <h3>🎨 Демо-контент</h3>
+            <p>Это демонстрационный контент для проверки того, что баннер не перекрывает важные элементы страницы.</p>
+            <p>Измените размер окна браузера, чтобы увидеть как баннер адаптируется под разные размеры экрана.</p>
+            <br>
+            <p><strong>Текущий размер окна:</strong> <span id="window-size">...</span></p>
+            <p><strong>Тип устройства:</strong> <span id="device-type">...</span></p>
+        </div>
+
+        <div class="button-group">
+            <button onclick="checkCookieStatus()" class="test-btn success">
+                🔄 Проверить статус
+            </button>
+            <button onclick="clearTestCookie()" class="test-btn danger">
+                🗑️ Удалить cookie
+            </button>
+            <button onclick="resetBanner()" class="test-btn">
+                🔄 Сбросить баннер
+            </button>
+            <button onclick="simulateMobile()" class="test-btn">
+                📱 Симуляция мобильного
+            </button>
+        </div>
+    </div>
+
+    <script>
+        function updateViewportInfo() {
+            const width = window.innerWidth;
+            const height = window.innerHeight;
+            const deviceType = width <= 320 ? 'Маленький экран' : 
+                              width <= 480 ? 'Смартфон' : 
+                              width <= 768 ? 'Планшет' : 'Десктоп';
+            
+            document.getElementById('window-size').textContent = `${width}x${height}px`;
+            document.getElementById('device-type').textContent = deviceType;
+            document.getElementById('viewport-info').innerHTML = 
+                `Размер: ${width}x${height}px | Тип: ${deviceType} | Scroll: ${window.scrollY}px`;
+        }
+
+        function checkCookieStatus() {
+            const hasConsent = document.cookie.includes('cookie_consent=all');
+            document.getElementById('cookie-status').innerHTML = 
+                '🍪 Cookie consent: ' + (hasConsent ? '✅ НАЙДЕН (принят)' : '❌ НЕ НАЙДЕН');
+            
+            const banner = document.getElementById('cookie-banner');
+            const isVisible = banner && banner.style.visibility !== 'hidden';
+            document.getElementById('banner-status').innerHTML = 
+                '🎯 Banner элемент: ' + (banner ? '✅ НАЙДЕН в DOM' : '❌ НЕ НАЙДЕН в DOM') + 
+                (banner ? ' | ' + (isVisible ? '👁️ ВИДИМЫЙ' : '🙈 СКРЫТЫЙ') : '');
+        }
+
+        function clearTestCookie() {
+            document.cookie = 'cookie_consent=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
+            try {
+                sessionStorage.removeItem('cookie_consent');
+            } catch (e) {}
+            checkCookieStatus();
+            setTimeout(() => {
+                alert('Cookie удален! Перезагрузите страницу или нажмите "Сбросить баннер"');
+            }, 100);
+        }
+
+        function resetBanner() {
+            if (typeof window.resetCookieBanner === 'function') {
+                window.resetCookieBanner();
+                setTimeout(checkCookieStatus, 500);
+            } else {
+                alert('Функция resetCookieBanner не найдена. Убедитесь что cookie-consent.js загружен.');
+            }
+        }
+
+        function simulateMobile() {
+            const currentWidth = window.innerWidth;
+            const mobileWidth = Math.min(375, currentWidth);
+            
+            // Создаем временную метку для симуляции
+            document.body.style.maxWidth = mobileWidth + 'px';
+            document.body.style.margin = '0 auto';
+            document.body.style.border = '2px solid #ff6b6b';
+            
+            setTimeout(() => {
+                document.body.style.maxWidth = '';
+                document.body.style.margin = '';
+                document.body.style.border = '';
+            }, 3000);
+            
+            alert(`Симуляция мобильного экрана ${mobileWidth}px на 3 секунды`);
+        }
+
+        // Обновляем информацию каждые 2 секунды
+        setInterval(() => {
+            checkCookieStatus();
+            updateViewportInfo();
+        }, 2000);
+        
+        // Первоначальная проверка
+        setTimeout(() => {
+            checkCookieStatus();
+            updateViewportInfo();
+        }, 1000);
+
+        // Отслеживаем изменение размера окна
+        window.addEventListener('resize', updateViewportInfo);
+        window.addEventListener('scroll', updateViewportInfo);
+    </script>
+
+    <!-- Cookie Consent Script -->
+    <script src="cookie-consent.js"></script>
+    <link rel="stylesheet" href="cookie-override.css">
+</body>
+</html>

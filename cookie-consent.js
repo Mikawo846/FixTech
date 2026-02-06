@@ -140,57 +140,88 @@
             </div>
         `;
         
-        // Add styles - ЕДИНЫЙ ДИЗАЙН ДЛЯ ВСЕХ УСТРОЙСТВ
+        // Add styles - ЦЕНТРИРОВАННЫЙ ДИЗАЙН ДЛЯ ВСЕХ УСТРОЙСТВ
         banner.style.cssText = `
             position: fixed !important;
-            bottom: 0 !important;
-            left: 0 !important;
-            right: 0 !important;
+            bottom: 20px !important;
+            left: 50% !important;
+            right: auto !important;
             top: auto !important;
-            transform: translateY(100%) !important;
+            transform: translateX(-50%) translateY(100%) !important;
             background: #ffffff !important;
             color: #333333 !important;
-            padding: 15px 20px !important;
+            padding: 20px 25px !important;
             z-index: 999999 !important;
             display: flex !important;
             align-items: center !important;
             justify-content: space-between !important;
-            border-radius: 0 !important;
-            box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.15) !important;
+            border-radius: 12px !important;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2) !important;
             font-size: 14px !important;
             line-height: 1.4 !important;
-            width: 100vw !important;
-            max-width: 100vw !important;
-            min-width: 100vw !important;
+            width: auto !important;
+            max-width: 90vw !important;
+            min-width: 300px !important;
+            max-width: 600px !important;
             opacity: 0 !important;
             visibility: hidden !important;
-            transition: transform 0.3s ease-out !important;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
             margin: 0 !important;
-            border: none !important;
-            border-top: 1px solid rgba(0, 0, 0, 0.1) !important;
+            border: 1px solid rgba(0, 0, 0, 0.1) !important;
             box-sizing: border-box !important;
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
             float: none !important;
             clear: both !important;
             overflow: hidden !important;
             contain: layout style !important;
+            backdrop-filter: blur(10px) !important;
+            -webkit-backdrop-filter: blur(10px) !important;
         `;
 
         // Add button styles directly to ensure consistency
         const style = document.createElement('style');
         style.textContent = `
-            /* Base styles with viewport protection */
+            /* Base styles - центрированный баннер */
             #cookie-banner {
                 position: fixed !important;
-                bottom: 0 !important;
-                left: 0 !important;
-                right: 0 !important;
-                width: 100vw !important;
-                max-width: 100vw !important;
-                min-width: 100vw !important;
+                bottom: 20px !important;
+                left: 50% !important;
+                right: auto !important;
+                transform: translateX(-50%) translateY(100%) !important;
+                background: #ffffff !important;
+                color: #333333 !important;
+                padding: 20px 25px !important;
+                z-index: 999999 !important;
+                display: flex !important;
+                align-items: center !important;
+                justify-content: space-between !important;
+                border-radius: 12px !important;
+                box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2) !important;
+                font-size: 14px !important;
+                line-height: 1.4 !important;
+                width: auto !important;
+                max-width: 90vw !important;
+                min-width: 300px !important;
+                max-width: 600px !important;
+                opacity: 0 !important;
+                visibility: hidden !important;
+                transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+                margin: 0 !important;
+                border: 1px solid rgba(0, 0, 0, 0.1) !important;
                 box-sizing: border-box !important;
+                font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+                float: none !important;
+                clear: both !important;
                 overflow: hidden !important;
                 contain: layout style !important;
+                backdrop-filter: blur(10px) !important;
+                -webkit-backdrop-filter: blur(10px) !important;
+            }
+            
+            #cookie-banner.show {
+                opacity: 1 !important;
+                visibility: visible !important;
+                transform: translateX(-50%) translateY(0) !important;
             }
             
             #cookie-banner .cookie-banner__text {
@@ -253,17 +284,28 @@
                 box-shadow: 0 2px 6px rgba(76, 175, 80, 0.3) !important;
             }
             
-            /* Простые адаптивные стили */
+            /* Адаптивные стили для мобильных устройств */
             @media (max-width: 768px) {
                 #cookie-banner {
-                    padding: 12px 15px !important;
+                    bottom: 10px !important;
+                    left: 50% !important;
+                    right: auto !important;
+                    transform: translateX(-50%) translateY(100%) !important;
+                    padding: 15px 20px !important;
                     flex-direction: column !important;
                     text-align: center !important;
+                    max-width: 95vw !important;
+                    min-width: 280px !important;
+                    border-radius: 10px !important;
+                }
+                
+                #cookie-banner.show {
+                    transform: translateX(-50%) translateY(0) !important;
                 }
                 
                 #cookie-banner .cookie-banner__text {
                     margin-right: 0 !important;
-                    margin-bottom: 10px !important;
+                    margin-bottom: 12px !important;
                     font-size: 13px !important;
                     line-height: 1.3 !important;
                     text-align: center !important;
@@ -271,7 +313,7 @@
                 
                 #cookie-banner button.cookie-btn {
                     width: 100% !important;
-                    max-width: 250px !important;
+                    max-width: 200px !important;
                     min-height: 44px !important;
                     font-size: 15px !important;
                 }
@@ -279,13 +321,25 @@
             
             @media (max-width: 480px) {
                 #cookie-banner {
-                    padding: 10px 12px !important;
+                    bottom: 8px !important;
+                    left: 50% !important;
+                    right: auto !important;
+                    transform: translateX(-50%) translateY(100%) !important;
+                    padding: 12px 16px !important;
+                    max-width: 98vw !important;
+                    min-width: 260px !important;
+                    border-radius: 8px !important;
+                }
+                
+                #cookie-banner.show {
+                    transform: translateX(-50%) translateY(0) !important;
                 }
                 
                 #cookie-banner .cookie-banner__text {
                     font-size: 12px !important;
-                    margin-bottom: 8px !important;
+                    margin-bottom: 10px !important;
                     padding: 0 5px !important;
+                    line-height: 1.3 !important;
                 }
                 
                 #cookie-banner button.cookie-btn {
@@ -295,20 +349,32 @@
                 }
             }
             
-            /* Extra small screens protection */
+            /* Очень маленькие экраны */
             @media (max-width: 320px) {
                 #cookie-banner {
-                    padding: 8px 10px !important;
+                    bottom: 5px !important;
+                    left: 50% !important;
+                    right: auto !important;
+                    transform: translateX(-50%) translateY(100%) !important;
+                    padding: 10px 12px !important;
+                    max-width: 99vw !important;
+                    min-width: 240px !important;
+                }
+                
+                #cookie-banner.show {
+                    transform: translateX(-50%) translateY(0) !important;
                 }
                 
                 #cookie-banner .cookie-banner__text {
                     font-size: 11px !important;
                     line-height: 1.2 !important;
+                    margin-bottom: 8px !important;
                 }
                 
                 #cookie-banner button.cookie-btn {
                     font-size: 14px !important;
                     padding: 10px 14px !important;
+                    min-height: 44px !important;
                 }
             }
         `;
@@ -336,8 +402,8 @@
                 // Also update inline styles for maximum compatibility
                 banner.style.opacity = '1';
                 banner.style.visibility = 'visible';
-                banner.style.transform = 'translateY(0)';
-                console.log('Banner should now be visible');
+                banner.style.transform = 'translateX(-50%) translateY(0)';
+                console.log('Banner should now be visible and centered');
             }, 100);
         } else {
             console.error('Banner element NOT found after creation!');
@@ -353,7 +419,7 @@
             setTimeout(() => {
                 banner.style.opacity = '0';
                 banner.style.visibility = 'hidden';
-                banner.style.transform = 'translateY(100%)';
+                banner.style.transform = 'translateX(-50%) translateY(100%)';
             }, 300);
         }
     }
