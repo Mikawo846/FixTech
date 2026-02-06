@@ -161,7 +161,9 @@
             line-height: 1.5 !important;
             max-width: 500px !important;
             width: 90% !important;
-            min-width: 300px !important;
+            min-width: 280px !important;
+            max-height: 80vh !important;
+            overflow-y: auto !important;
             opacity: 0 !important;
             visibility: hidden !important;
             transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55) !important;
@@ -225,25 +227,60 @@
             @media (max-width: 768px) {
                 #cookie-banner {
                     bottom: 10px !important;
-                    left: 10px !important;
-                    right: 10px !important;
+                    left: 5px !important;
+                    right: 5px !important;
                     transform: translateY(100px) !important;
-                    width: calc(100% - 20px) !important;
+                    width: calc(100% - 10px) !important;
                     max-width: none !important;
                     flex-direction: column !important;
                     text-align: center !important;
-                    padding: 15px 20px !important;
+                    padding: 18px 15px !important;
+                    min-height: auto !important;
+                    border-radius: 12px !important;
                 }
                 
                 #cookie-banner .cookie-banner__text {
                     margin-right: 0 !important;
                     margin-bottom: 15px !important;
                     font-size: 13px !important;
+                    line-height: 1.4 !important;
+                    flex: none !important;
+                }
+                
+                #cookie-banner .cookie-banner__buttons {
+                    width: 100% !important;
+                    display: flex !important;
+                    justify-content: center !important;
                 }
                 
                 #cookie-banner button.cookie-btn {
                     width: 100% !important;
-                    max-width: 200px !important;
+                    max-width: 280px !important;
+                    min-height: 44px !important;
+                    font-size: 14px !important;
+                    padding: 12px 20px !important;
+                }
+            }
+            
+            @media (max-width: 480px) {
+                #cookie-banner {
+                    bottom: 5px !important;
+                    left: 3px !important;
+                    right: 3px !important;
+                    width: calc(100% - 6px) !important;
+                    padding: 15px 12px !important;
+                    border-radius: 8px !important;
+                }
+                
+                #cookie-banner .cookie-banner__text {
+                    font-size: 12px !important;
+                    margin-bottom: 12px !important;
+                }
+                
+                #cookie-banner button.cookie-btn {
+                    min-height: 48px !important;
+                    font-size: 15px !important;
+                    font-weight: 600 !important;
                 }
             }
         `;

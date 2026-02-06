@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тест Cookie Баннера - Мобильная Версия</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./cookie-override.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .test-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        
+        .test-info {
+            background: #f0f9ff;
+            border-left: 4px solid #3b82f6;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .device-sizes {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .device-size {
+            background: #f8fafc;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            border: 2px solid #e2e8f0;
+        }
+        
+        .reset-btn {
+            background: #ef4444;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            margin: 10px 5px;
+            transition: all 0.3s ease;
+        }
+        
+        .reset-btn:hover {
+            background: #dc2626;
+            transform: translateY(-2px);
+        }
+        
+        .instructions {
+            background: #fef3c7;
+            border: 1px solid #f59e0b;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+            .test-container {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="test-container">
+        <h1>🧪 Тест Cookie Баннера - Мобильная Версия</h1>
+        
+        <div class="test-info">
+            <strong>ℹ️ Информация о тесте:</strong><br>
+            Эта страница проверяет корректность отображения cookie баннера на мобильных устройствах.
+            Баннер должен быть полностью виден, кнопка в зоне доступа, текст читаемый.
+        </div>
+        
+        <div class="instructions">
+            <strong>📱 Как тестировать:</strong><br>
+            1. Откройте инструменты разработчика (F12)<br>
+            2. Переключитесь в режим адаптивного дизайна<br>
+            3. Выберите разные размеры экрана<br>
+            4. Нажмите "Сбросить и показать баннер"<br>
+            5. Проверьте отображение на каждом размере
+        </div>
+        
+        <div class="device-sizes">
+            <div class="device-size">
+                <strong>📱 Мобильный</strong><br>
+                375×667<br>
+                <small>iPhone SE</small>
+            </div>
+            <div class="device-size">
+                <strong>📱 Мобильный+</strong><br>
+                414×896<br>
+                <small>iPhone 11</small>
+            </div>
+            <div class="device-size">
+                <strong>📱 Планшет</strong><br>
+                768×1024<br>
+                <small>iPad mini</small>
+            </div>
+            <div class="device-size">
+                <strong>💻 Десктоп</strong><br>
+                1920×1080<br>
+                <small>Full HD</small>
+            </div>
+        </div>
+        
+        <div style="text-align: center; margin: 30px 0;">
+            <button class="reset-btn" onclick="resetCookieBanner()">
+                🔄 Сбросить и показать баннер
+            </button>
+            <button class="reset-btn" onclick="simulateMobileView()" style="background: #3b82f6;">
+                📱 Симулировать мобильный вид
+            </button>
+        </div>
+        
+        <div class="test-info">
+            <strong>✅ Что проверить:</strong><br>
+            • Баннер не выходит за границы экрана<br>
+            • Кнопка "Принять" полностью видна и доступна<br>
+            • Текст читаемый, не обрезается<br>
+            • Отступы от краев экрана адекватные<br>
+            • На очень маленьких экранах кнопка увеличена для удобства
+        </div>
+        
+        <div style="height: 2000px; background: linear-gradient(to bottom, transparent, #f0f9ff); margin-top: 50px; padding: 50px; text-align: center; border-radius: 20px;">
+            <h3>Прокрутка для тестирования фиксированного позиционирования</h3>
+            <p>Прокрутите страницу вниз и вверх, чтобы убедиться что баннер остается на месте</p>
+        </div>
+    </div>
+
+    <!-- Cookie Consent Script -->
+    <script src="cookie-consent.js"></script>
+    
+    <script>
+        function resetCookieBanner() {
+            if (typeof window.resetCookieBanner === 'function') {
+                window.resetCookieBanner();
+            } else {
+                alert('Функция сброса баннера недоступна. Перезагрузите страницу.');
+            }
+        }
+        
+        function simulateMobileView() {
+            // Временно изменяем viewport для симуляции мобильного устройства
+            const viewport = document.querySelector('meta[name="viewport"]');
+            const originalContent = viewport.getAttribute('content');
+            viewport.setAttribute('content', 'width=375, initial-scale=1.0');
+            
+            setTimeout(() => {
+                viewport.setAttribute('content', originalContent);
+                alert('Симуляция мобильного вида завершена. Используйте инструменты разработчика для полноценного тестирования.');
+            }, 3000);
+            
+            resetCookieBanner();
+        }
+        
+        // Автоматически показываем баннер при загрузке страницы для теста
+        document.addEventListener('DOMContentLoaded', function() {
+            setTimeout(() => {
+                console.log('Автоматический показ баннера для тестирования...');
+                resetCookieBanner();
+            }, 2000);
+        });
+        
+        // Логирование размеров экрана для отладки
+        window.addEventListener('resize', function() {
+            console.log('Размеры экрана:', window.innerWidth + 'x' + window.innerHeight);
+            console.log('Размеры документа:', document.documentElement.scrollWidth + 'x' + document.documentElement.scrollHeight);
+        });
+    </script>
+</body>
+</html>
