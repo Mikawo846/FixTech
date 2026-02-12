@@ -2,36 +2,43 @@
 <html lang="ru" data-theme="light">
 <head>
 
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Как правильно кадрировать фото? Правило третей и золотое сеч</title>
-    <meta name="description" content="">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>РљР°Рє РїСЂР°РІРёР»СЊРЅРѕ РєР°РґСЂРёСЂРѕРІР°С‚СЊ С„РѕС‚Рѕ? РџСЂР°РІРёР»Рѕ С‚СЂРµС‚РµР№ Рё Р·РѕР»РѕС‚РѕРµ СЃРµС‡РµРЅРёРµ | Repairo</title>
+    <meta name="description" content="{{ description }}">
+    <meta name="description" content="РџРѕС€Р°РіРѕРІР°СЏ РёРЅСЃС‚СЂСѓРєС†РёСЏ: РљР°Рє РїСЂР°РІРёР»СЊРЅРѕ РєР°РґСЂРёСЂРѕРІР°С‚СЊ С„РѕС‚Рѕ? РџСЂР°РІРёР»Рѕ С‚СЂРµС‚РµР№ Рё Р·РѕР»РѕС‚РѕРµ СЃРµС‡РµРЅРёРµ. РСЃРїРѕР»СЊР·СѓР№С‚Рµ РєР°РґСЂРёСЂРѕРІР°РЅРёРµ РґР»СЏ СѓСЃРёР»РµРЅРёСЏ СЌРјРѕС†РёР№: РєСЂСѓРїРЅС‹Р№ РїР»Р°РЅ - РґР»СЏ РїРѕСЂС‚...">
 
-  <link rel="stylesheet" href="../styles.css" />
-  <link rel="stylesheet" href="../styles-header.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <style>
-    .guide-content { line-height: 1.7; color: var(--text); }
-    .guide-content h2 { color: var(--primary); margin-top: 30px; margin-bottom: 15px; font-size: 1.5rem; }
-    .guide-content h3 { color: var(--primary-dark); margin-top: 25px; margin-bottom: 12px; font-size: 1.2rem; }
-    .guide-image-block { margin: 20px 0; padding: 15px; background: var(--background); border-radius: var(--border-radius); border: 1px solid var(--border); text-align: center; }
-    .guide-image-block img { max-width: 100%; height: auto; border-radius: 6px; border: 1px solid var(--border); }
-    .image-caption { margin-top: 10px; font-size: 0.85rem; color: var(--text-light); font-style: italic; }
-    .pro-tips { background: rgba(3, 74, 79, 0.05); padding: 15px; border-radius: 6px; margin: 20px 0; }
-    .pro-tips h4 { color: var(--primary); margin-top: 0; margin-bottom: 12px; font-size: 1.1rem; }
-    .tip-item { display: flex; gap: 8px; margin-bottom: 8px; align-items: flex-start; }
-    table { width: 100%; border-collapse: collapse; margin: 20px 0; }
-    th, td { border: 1px solid var(--border); padding: 8px; text-align: left; }
-    th { background: var(--background-light); }
-    .highlight { background: #f5f7fa; border-left: 4px solid #2d9cdb; padding: 10px 15px; margin: 20px 0; }
-    .faq-section ul { margin-left: 1em; }
-    .block-section { margin-bottom: 2em; }
-    @media (max-width: 768px) {
-      .guide-content h2 { font-size: 1.4rem; margin-top: 25px; }
-      .guide-image-block { padding: 12px; margin: 15px 0; }
-      table, th, td { font-size: 0.95rem; }
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../styles-header.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .guide-content { line-height: 1.7; color: var(--text);}
+        .guide-content h2 { color: var(--primary); margin-top: 30px; margin-bottom: 15px; font-size: 1.5rem;}
+        .step-group { margin: 20px 0; padding: 15px; background: var(--background); border-radius: var(--border-radius); border: 1px solid var(--border);}
+        .step { display: flex; gap: 15px; margin: 12px 0; padding: 12px; background: var(--background-alt); border-radius: 6px; align-items: flex-start;}
+        .step-number { background: var(--primary); color: white; width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-weight: bold; font-size: 0.8rem;}
+        .guide-image-block { margin: 20px 0; padding: 15px; background: var(--background); border-radius: var(--border-radius); border: 1px solid var(--border); text-align: center;}
+        .guide-image-block img { max-width: 100%; height: auto; border-radius: 6px; border: 1px solid var(--border);}
+        .recommend-box { background: rgba(3, 74, 79, 0.1); border-left: 4px solid var(--primary); padding: 12px; margin: 15px 0; display: flex; gap: 12px; align-items: flex-start; border-radius: 4px;}
+        .recommend-box i { font-size: 1.2rem; color: var(--primary); margin-top: 2px;}
+        .pro-tips { background: rgba(3, 74, 79, 0.05); padding: 15px; border-radius: 6px; margin: 20px 0;}
+        .pro-tips h4 { color: var(--primary); margin-top: 0; margin-bottom: 12px; font-size: 1.1rem;}
+        .tip-item { display: flex; gap: 8px; margin-bottom: 8px; align-items: flex-start;}
+        @media (max-width: 768px) {
+            .guide-content h2 { font-size: 1.4rem; margin-top: 25px;}
+            .guide-image-block, .step-group { padding: 12px; margin: 15px 0;}
+            .step { padding: 10px;}
+        }
+    /* РЇРЅРґРµРєСЃ РњР°СЂРєРµС‚ СЂРµРєР»Р°РјРЅС‹Р№ Р±Р°РЅРЅРµСЂ */
+    .ym-hero-link {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+      max-width: 100%;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     }
+
     /* Р“РѕСЂРёР·РѕРЅС‚Р°Р»СЊРЅС‹Р№ Р±Р°РЅРЅРµСЂ-РєР°СЂС‚РѕС‡РєР° */
     .ym-hero-banner {
       width: 100%;
@@ -144,11 +151,13 @@
       transition: background 0.15s ease, transform 0.15s ease,
                   box-shadow 0.15s ease;
     }
+
     .ym-hero-button::after {
       content: "в†’";
       margin-left: 6px;
       font-size: 14px;
     }
+
     .ym-hero-button:hover {
       background: #7c3aed;
       transform: translateY(-1px);
@@ -172,19 +181,24 @@
         max-width: 100%;
         margin: 20px 0;
       }
+
       .ym-hero-images {
         height: 100px;
       }
+
       .ym-hero-content {
         padding: 12px 12px;
       }
+
       .ym-hero-title {
         font-size: 13px;
       }
+
       .ym-hero-button {
         font-size: 13px;
         padding: 8px 14px;
       }
+
       .ym-hero-legal {
         font-size: 10px;
       }
@@ -292,22 +306,27 @@
         padding: 15px;
         min-height: 100px;
       }
+
       .telegram-logo {
         width: 50px;
         height: 50px;
         min-width: 50px;
         margin-right: 15px;
       }
+
       .telegram-logo svg {
         width: 26px;
         height: 26px;
       }
+
       .telegram-title {
         font-size: 14px;
       }
+
       .telegram-subtitle {
         font-size: 12px;
       }
+
       .telegram-button {
         font-size: 12px;
         padding: 6px 12px;
@@ -316,118 +335,132 @@
 
 
 
-  </style>
+    </style>
   <script async src="https://timeweb.cloud/api/v1/cloud-ai/agents/3cc03620-d051-4d8d-b5af-f7b6cd083a35/embed.js?collapsed=true"></script>
 </head>
 <body>
-  <header class="header">
-    <div class="container">
-      <div class="header__inner">
-        <a href="../index.html" class="logo">
-          <span class="logo__icon"></span>
-          <span class="logo__text">GeoExpert</span>
-        </a>
-        <nav class="nav">
-          <ul class="nav__list">
-            <li><a href="../cameras.html" class="nav__link">РљР°РјРµСЂС‹</a></li>
-            <li><a href="../drones.html" class="nav__link">Р”СЂРѕРЅС‹</a></li>
-            <li><a href="../workflow.html" class="nav__link">Workflow</a></li>
-          </ul>
-        </nav>
-      </div>
-    </div>
-  </header>
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <a href="../index.html" class="logo">
+                    <span class="logo__icon"></span>
+                    <span class="logo__text">Repairo</span>
+                </a>
+                <nav class="nav">
+                    <ul class="nav__list">
+                        <li><a href="../cameras.html" class="nav__link">Р¤РѕС‚РѕР°РїРїР°СЂР°С‚С‹</a></li>
+                        <li><a href="../tv.html" class="nav__link">РўРµР»РµРІРёР·РѕСЂС‹</a></li>
+                        <li><a href="../laptops.html" class="nav__link">РќРѕСѓС‚Р±СѓРєРё</a></li>
+                        <li><a href="../smartphones.html" class="nav__link">РЎРјР°СЂС‚С„РѕРЅС‹</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
     <section class="guide-page">
         <div class="container">
             <div class="breadcrumbs">
-                <a href="../index.html">Главная</a>
+                <a href="../index.html">Р“Р»Р°РІРЅР°СЏ</a>
                 <i class="fas fa-chevron-right"></i>
-                <a href="../cameras.html">Фотоаппараты</a>
+                <a href="../cameras.html">Р¤РѕС‚РѕР°РїРїР°СЂР°С‚С‹</a>
                 <i class="fas fa-chevron-right"></i>
-                <span>Как правильно кадрировать фото? Правило третей и золотое сечение</span>
+                <span>РљР°Рє РїСЂР°РІРёР»СЊРЅРѕ РєР°РґСЂРёСЂРѕРІР°С‚СЊ С„РѕС‚Рѕ? РџСЂР°РІРёР»Рѕ С‚СЂРµС‚РµР№ Рё Р·РѕР»РѕС‚РѕРµ СЃРµС‡РµРЅРёРµ</span>
             </div>
-            <h1 class="section__title">Как правильно кадрировать фото? Правило третей и золотое сечение</h1>
+            <h1 class="section__title">РљР°Рє РїСЂР°РІРёР»СЊРЅРѕ РєР°РґСЂРёСЂРѕРІР°С‚СЊ С„РѕС‚Рѕ? РџСЂР°РІРёР»Рѕ С‚СЂРµС‚РµР№ Рё Р·РѕР»РѕС‚РѕРµ СЃРµС‡РµРЅРёРµ</h1>
             <div class="guide-meta">
-                <span><i class="fas fa-adjust"></i> Практический гайд</span>
+                <span><i class="fas fa-adjust"></i> РџСЂР°РєС‚РёС‡РµСЃРєРёР№ РіР°Р№Рґ</span>
             </div>
             <div class="guide-image-block">
                 <img src="https://avatars.mds.yandex.net/get-shedevrum/16311338/img_c72acd7b2d7f11f0b8d42aa11dc6dfe1/orig">
             </div>
             <div class="guide-content">
-        <!-- Яндекс Маркет рекламный блок -->
+        <!-- РЇРЅРґРµРєСЃ РњР°СЂРєРµС‚ СЂРµРєР»Р°РјРЅС‹Р№ Р±Р»РѕРє -->
         <a href="https://market.yandex.ru/catalog--bytovaia-tekhnika/54419/list?hid=198118&rs=eJwzUvjEKMvBILDwEKsEg8Kzbh6Nw4dZNS4D8c7lFhp9c1-wAQC3uAwP&clid=14635360&refid=rbck8fgamv681iu59go3iqxwddedl4x9&erid=5jtCeReNx12oajxS2bzShmZ&mclid=1003&distr_type=7&utm_source=partner_network&pp=900&utm_medium=link_list&utm_campaign=14635360"
            target="_blank"
            rel="noopener noreferrer sponsored"
+           class="ym-hero-link">
+          <div class="ym-hero-banner">
+            <div class="ym-hero-images">
+              <div class="ym-hero-image">
                 <img src="https://avatars.mds.yandex.net/get-mpic/14770882/2a00000197f4dbee777f8afddccaf44faa53/optimize"
-                     alt="Распродажа бытовой электроники 1">
+                     alt="Р Р°СЃРїСЂРѕРґР°Р¶Р° Р±С‹С‚РѕРІРѕР№ СЌР»РµРєС‚СЂРѕРЅРёРєРё 1">
               </div>
+              <div class="ym-hero-image">
                 <img src="https://avatars.mds.yandex.net/get-mpic/15580298/img_id8867318964670654684.jpeg/optimize"
-                     alt="Распродажа бытовой электроники 2">
+                     alt="Р Р°СЃРїСЂРѕРґР°Р¶Р° Р±С‹С‚РѕРІРѕР№ СЌР»РµРєС‚СЂРѕРЅРёРєРё 2">
               </div>
+              <div class="ym-hero-image">
                 <img src="https://avatars.mds.yandex.net/get-mpic/10096780/2a000001953b534fed2494e0b30fadd9b458/optimize"
-                     alt="Распродажа бытовой электроники 3">
+                     alt="Р Р°СЃРїСЂРѕРґР°Р¶Р° Р±С‹С‚РѕРІРѕР№ СЌР»РµРєС‚СЂРѕРЅРёРєРё 3">
               </div>
             </div>
-                  ? Выгодные предложения
+            <div class="ym-hero-content">
+              <h3 class="ym-hero-title">Р Р°СЃРїСЂРѕРґР°Р¶Р° Р±С‹С‚РѕРІРѕР№ СЌР»РµРєС‚СЂРѕРЅРёРєРё РЅР° РЇРЅРґРµРєСЃ РњР°СЂРєРµС‚Рµ</h3>
+              <div class="ym-hero-top">
+                <div class="ym-hero-rating">
+                  в­ђ Р’С‹РіРѕРґРЅС‹Рµ РїСЂРµРґР»РѕР¶РµРЅРёСЏ
+                  <span class="ym-hero-rating-count">РЎРєРёРґРєРё РґРѕ 50%</span>
                 </div>
               </div>
+              <button class="ym-hero-button">Р—Р° СЃРєРёРґРєР°РјРё</button>
             </div>
           </div>
-            Реклама. ООО "ЯНДЕКС", ИНН 7736207543. clid: 14635360, erid: 5jtCeReNx12oajxS2bzShmZ
+          <div class="ym-hero-legal">
+            Р РµРєР»Р°РјР°. РћРћРћ "РЇРќР”Р•РљРЎ", РРќРќ 7736207543. clid: 14635360, erid: 5jtCeReNx12oajxS2bzShmZ
           </div>
         </a>
-                <h2>Зачем кадрировать фото?</h2>
+                <h2>Р—Р°С‡РµРј РєР°РґСЂРёСЂРѕРІР°С‚СЊ С„РѕС‚Рѕ?</h2>
                 <ul>
-                    <li>Кадрирование помогает сделать композицию снимка более выразительной и гармоничной.</li>
-                    <li>С помощью грамотного кадрирования можно выделить главный объект и убрать лишние детали.</li>
+                    <li>РљР°РґСЂРёСЂРѕРІР°РЅРёРµ РїРѕРјРѕРіР°РµС‚ СЃРґРµР»Р°С‚СЊ РєРѕРјРїРѕР·РёС†РёСЋ СЃРЅРёРјРєР° Р±РѕР»РµРµ РІС‹СЂР°Р·РёС‚РµР»СЊРЅРѕР№ Рё РіР°СЂРјРѕРЅРёС‡РЅРѕР№.</li>
+                    <li>РЎ РїРѕРјРѕС‰СЊСЋ РіСЂР°РјРѕС‚РЅРѕРіРѕ РєР°РґСЂРёСЂРѕРІР°РЅРёСЏ РјРѕР¶РЅРѕ РІС‹РґРµР»РёС‚СЊ РіР»Р°РІРЅС‹Р№ РѕР±СЉРµРєС‚ Рё СѓР±СЂР°С‚СЊ Р»РёС€РЅРёРµ РґРµС‚Р°Р»Рё.</li>
                 </ul>
-                <h2>Правило третей</h2>
+                <h2>РџСЂР°РІРёР»Рѕ С‚СЂРµС‚РµР№</h2>
 <ul>
-                    <li>Изображение мысленно делится двумя горизонтальными и двумя вертикальными линиями на 9 равных частей.</li>
-                    <li>Ключевые объекты размещаются на пересечениях этих линий - это делает снимок более динамичным и интересным.</li>
-                    <li>Горизонт лучше располагать по одной из горизонтальных линий, а не по центру кадра.</li>
+                    <li>РР·РѕР±СЂР°Р¶РµРЅРёРµ РјС‹СЃР»РµРЅРЅРѕ РґРµР»РёС‚СЃСЏ РґРІСѓРјСЏ РіРѕСЂРёР·РѕРЅС‚Р°Р»СЊРЅС‹РјРё Рё РґРІСѓРјСЏ РІРµСЂС‚РёРєР°Р»СЊРЅС‹РјРё Р»РёРЅРёСЏРјРё РЅР° 9 СЂР°РІРЅС‹С… С‡Р°СЃС‚РµР№.</li>
+                    <li>РљР»СЋС‡РµРІС‹Рµ РѕР±СЉРµРєС‚С‹ СЂР°Р·РјРµС‰Р°СЋС‚СЃСЏ РЅР° РїРµСЂРµСЃРµС‡РµРЅРёСЏС… СЌС‚РёС… Р»РёРЅРёР№ - СЌС‚Рѕ РґРµР»Р°РµС‚ СЃРЅРёРјРѕРє Р±РѕР»РµРµ РґРёРЅР°РјРёС‡РЅС‹Рј Рё РёРЅС‚РµСЂРµСЃРЅС‹Рј.</li>
+                    <li>Р“РѕСЂРёР·РѕРЅС‚ Р»СѓС‡С€Рµ СЂР°СЃРїРѕР»Р°РіР°С‚СЊ РїРѕ РѕРґРЅРѕР№ РёР· РіРѕСЂРёР·РѕРЅС‚Р°Р»СЊРЅС‹С… Р»РёРЅРёР№, Р° РЅРµ РїРѕ С†РµРЅС‚СЂСѓ РєР°РґСЂР°.</li>
                 </ul>
-                <h2>Золотое сечение</h2>
+                <h2>Р—РѕР»РѕС‚РѕРµ СЃРµС‡РµРЅРёРµ</h2>
                 <ul>
-                    <li>Золотое сечение - это пропорция, встречающаяся в природе и искусстве (примерно 1:1,618).</li>
-                    <li>В фотографии используется спираль или сетка золотого сечения для размещения главных объектов.</li>
-                    <li>Такое построение кадра воспринимается как особенно гармоничное и приятное для глаза.</li>
+                    <li>Р—РѕР»РѕС‚РѕРµ СЃРµС‡РµРЅРёРµ - СЌС‚Рѕ РїСЂРѕРїРѕСЂС†РёСЏ, РІСЃС‚СЂРµС‡Р°СЋС‰Р°СЏСЃСЏ РІ РїСЂРёСЂРѕРґРµ Рё РёСЃРєСѓСЃСЃС‚РІРµ (РїСЂРёРјРµСЂРЅРѕ 1:1,618).</li>
+                    <li>Р’ С„РѕС‚РѕРіСЂР°С„РёРё РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ СЃРїРёСЂР°Р»СЊ РёР»Рё СЃРµС‚РєР° Р·РѕР»РѕС‚РѕРіРѕ СЃРµС‡РµРЅРёСЏ РґР»СЏ СЂР°Р·РјРµС‰РµРЅРёСЏ РіР»Р°РІРЅС‹С… РѕР±СЉРµРєС‚РѕРІ.</li>
+                    <li>РўР°РєРѕРµ РїРѕСЃС‚СЂРѕРµРЅРёРµ РєР°РґСЂР° РІРѕСЃРїСЂРёРЅРёРјР°РµС‚СЃСЏ РєР°Рє РѕСЃРѕР±РµРЅРЅРѕ РіР°СЂРјРѕРЅРёС‡РЅРѕРµ Рё РїСЂРёСЏС‚РЅРѕРµ РґР»СЏ РіР»Р°Р·Р°.</li>
                 </ul>
-                <h2>Пошаговая инструкция по кадрированию</h2>
+                <h2>РџРѕС€Р°РіРѕРІР°СЏ РёРЅСЃС‚СЂСѓРєС†РёСЏ РїРѕ РєР°РґСЂРёСЂРѕРІР°РЅРёСЋ</h2>
                 <div class="step-group">
                     <div class="step">
                         <div class="step-number">1</div>
                         <div>
-                            <strong>Включите сетку в камере или редакторе</strong>
+                            <strong>Р’РєР»СЋС‡РёС‚Рµ СЃРµС‚РєСѓ РІ РєР°РјРµСЂРµ РёР»Рё СЂРµРґР°РєС‚РѕСЂРµ</strong>
                             <ul>
-                                <li>Большинство камер и смартфонов поддерживают наложение сетки для правила третей или золотого сечения.</li>
+                                <li>Р‘РѕР»СЊС€РёРЅСЃС‚РІРѕ РєР°РјРµСЂ Рё СЃРјР°СЂС‚С„РѕРЅРѕРІ РїРѕРґРґРµСЂР¶РёРІР°СЋС‚ РЅР°Р»РѕР¶РµРЅРёРµ СЃРµС‚РєРё РґР»СЏ РїСЂР°РІРёР»Р° С‚СЂРµС‚РµР№ РёР»Рё Р·РѕР»РѕС‚РѕРіРѕ СЃРµС‡РµРЅРёСЏ.</li>
                             </ul>
                         </div>
                     </div>
                     <div class="step">
                         <div class="step-number">2</div>
                         <div>
-                            <strong>Расположите главный объект по правилам композиции</strong>
+                            <strong>Р Р°СЃРїРѕР»РѕР¶РёС‚Рµ РіР»Р°РІРЅС‹Р№ РѕР±СЉРµРєС‚ РїРѕ РїСЂР°РІРёР»Р°Рј РєРѕРјРїРѕР·РёС†РёРё</strong>
                             <ul>
-                                <li>Разместите объект на пересечении линий сетки или вдоль спирали золотого сечения.</li>
+                                <li>Р Р°Р·РјРµСЃС‚РёС‚Рµ РѕР±СЉРµРєС‚ РЅР° РїРµСЂРµСЃРµС‡РµРЅРёРё Р»РёРЅРёР№ СЃРµС‚РєРё РёР»Рё РІРґРѕР»СЊ СЃРїРёСЂР°Р»Рё Р·РѕР»РѕС‚РѕРіРѕ СЃРµС‡РµРЅРёСЏ.</li>
                             </ul>
                         </div>
                     </div>
                     <div class="step">
                         <div class="step-number">3</div>
                         <div>
-                            <strong>Удалите лишнее</strong>
+                            <strong>РЈРґР°Р»РёС‚Рµ Р»РёС€РЅРµРµ</strong>
                             <ul>
-                                <li>Обрежьте всё, что отвлекает внимание от главного объекта.</li>
+                                <li>РћР±СЂРµР¶СЊС‚Рµ РІСЃС‘, С‡С‚Рѕ РѕС‚РІР»РµРєР°РµС‚ РІРЅРёРјР°РЅРёРµ РѕС‚ РіР»Р°РІРЅРѕРіРѕ РѕР±СЉРµРєС‚Р°.</li>
                             </ul>
                         </div>
                     </div>
                     <div class="step">
                         <div class="step-number">4</div>
                         <div>
-                            <strong>Проверьте баланс и гармонию</strong>
+                            <strong>РџСЂРѕРІРµСЂСЊС‚Рµ Р±Р°Р»Р°РЅСЃ Рё РіР°СЂРјРѕРЅРёСЋ</strong>
                             <ul>
-                                <li>Убедитесь, что взгляд зрителя естественно движется к главному элементу кадра.</li>
+                                <li>РЈР±РµРґРёС‚РµСЃСЊ, С‡С‚Рѕ РІР·РіР»СЏРґ Р·СЂРёС‚РµР»СЏ РµСЃС‚РµСЃС‚РІРµРЅРЅРѕ РґРІРёР¶РµС‚СЃСЏ Рє РіР»Р°РІРЅРѕРјСѓ СЌР»РµРјРµРЅС‚Сѓ РєР°РґСЂР°.</li>
                             </ul>
                         </div>
                     </div>
@@ -435,36 +468,36 @@
                 <div class="recommend-box">
                     <i class="fas fa-info-circle"></i>
                     <div>
-                        <strong>Совет:</strong> Не бойтесь экспериментировать - иногда нарушение правил композиции делает снимок уникальным!
+                        <strong>РЎРѕРІРµС‚:</strong> РќРµ Р±РѕР№С‚РµСЃСЊ СЌРєСЃРїРµСЂРёРјРµРЅС‚РёСЂРѕРІР°С‚СЊ - РёРЅРѕРіРґР° РЅР°СЂСѓС€РµРЅРёРµ РїСЂР°РІРёР» РєРѕРјРїРѕР·РёС†РёРё РґРµР»Р°РµС‚ СЃРЅРёРјРѕРє СѓРЅРёРєР°Р»СЊРЅС‹Рј!
                     </div>
                 </div>
                 <div class="pro-tips">
-                    <h4>?? Профессиональные советы</h4>
+                    <h4>рџ”№ РџСЂРѕС„РµСЃСЃРёРѕРЅР°Р»СЊРЅС‹Рµ СЃРѕРІРµС‚С‹</h4>
                     <div class="tip-item">
                         <i class="fas fa-lightbulb"></i>
-                        <p>Используйте кадрирование для усиления эмоций: крупный план - для портретов, широкий - для пейзажей.</p>
+                        <p>РСЃРїРѕР»СЊР·СѓР№С‚Рµ РєР°РґСЂРёСЂРѕРІР°РЅРёРµ РґР»СЏ СѓСЃРёР»РµРЅРёСЏ СЌРјРѕС†РёР№: РєСЂСѓРїРЅС‹Р№ РїР»Р°РЅ - РґР»СЏ РїРѕСЂС‚СЂРµС‚РѕРІ, С€РёСЂРѕРєРёР№ - РґР»СЏ РїРµР№Р·Р°Р¶РµР№.</p>
                     </div>
                     <div class="tip-item">
                         <i class="fas fa-lightbulb"></i>
-                        <p>При съёмке архитектуры совмещайте линии здания с линиями сетки для строгой композиции.</p>
+                        <p>РџСЂРё СЃСЉС‘РјРєРµ Р°СЂС…РёС‚РµРєС‚СѓСЂС‹ СЃРѕРІРјРµС‰Р°Р№С‚Рµ Р»РёРЅРёРё Р·РґР°РЅРёСЏ СЃ Р»РёРЅРёСЏРјРё СЃРµС‚РєРё РґР»СЏ СЃС‚СЂРѕРіРѕР№ РєРѕРјРїРѕР·РёС†РёРё.</p>
                     </div>
                     <div class="tip-item">
                         <i class="fas fa-lightbulb"></i>
-                        <p>В редакторах (Lightroom, Photoshop) используйте разные сетки для поиска оптимального кадра.</p>
+                        <p>Р’ СЂРµРґР°РєС‚РѕСЂР°С… (Lightroom, Photoshop) РёСЃРїРѕР»СЊР·СѓР№С‚Рµ СЂР°Р·РЅС‹Рµ СЃРµС‚РєРё РґР»СЏ РїРѕРёСЃРєР° РѕРїС‚РёРјР°Р»СЊРЅРѕРіРѕ РєР°РґСЂР°.</p>
                     </div>
                 </div>
-                <h2>Часто задаваемые вопросы</h2>
+                <h2>Р§Р°СЃС‚Рѕ Р·Р°РґР°РІР°РµРјС‹Рµ РІРѕРїСЂРѕСЃС‹</h2>
                 <ul>
-                    <li><strong>Всегда ли нужно использовать правило третей?</strong> - Нет, но оно помогает новичкам делать гармоничные снимки.</li>
-                    <li><strong>Как включить сетку на смартфоне?</strong> - Обычно настройка находится в меню камеры («Сетка» или «Grid»).</li>
+                    <li><strong>Р’СЃРµРіРґР° Р»Рё РЅСѓР¶РЅРѕ РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ РїСЂР°РІРёР»Рѕ С‚СЂРµС‚РµР№?</strong> - РќРµС‚, РЅРѕ РѕРЅРѕ РїРѕРјРѕРіР°РµС‚ РЅРѕРІРёС‡РєР°Рј РґРµР»Р°С‚СЊ РіР°СЂРјРѕРЅРёС‡РЅС‹Рµ СЃРЅРёРјРєРё.</li>
+                    <li><strong>РљР°Рє РІРєР»СЋС‡РёС‚СЊ СЃРµС‚РєСѓ РЅР° СЃРјР°СЂС‚С„РѕРЅРµ?</strong> - РћР±С‹С‡РЅРѕ РЅР°СЃС‚СЂРѕР№РєР° РЅР°С…РѕРґРёС‚СЃСЏ РІ РјРµРЅСЋ РєР°РјРµСЂС‹ (В«РЎРµС‚РєР°В» РёР»Рё В«GridВ»).</li>
                 </ul>
-                <h2>?? Итог</h2>
+                <h2>рџ“Њ РС‚РѕРі</h2>
                 <p>
-                    Кадрирование - мощный инструмент для создания выразительных фотографий. Используйте правило третей и золотое сечение, чтобы ваши снимки выглядели профессионально и гармонично!
+                    РљР°РґСЂРёСЂРѕРІР°РЅРёРµ - РјРѕС‰РЅС‹Р№ РёРЅСЃС‚СЂСѓРјРµРЅС‚ РґР»СЏ СЃРѕР·РґР°РЅРёСЏ РІС‹СЂР°Р·РёС‚РµР»СЊРЅС‹С… С„РѕС‚РѕРіСЂР°С„РёР№. РСЃРїРѕР»СЊР·СѓР№С‚Рµ РїСЂР°РІРёР»Рѕ С‚СЂРµС‚РµР№ Рё Р·РѕР»РѕС‚РѕРµ СЃРµС‡РµРЅРёРµ, С‡С‚РѕР±С‹ РІР°С€Рё СЃРЅРёРјРєРё РІС‹РіР»СЏРґРµР»Рё РїСЂРѕС„РµСЃСЃРёРѕРЅР°Р»СЊРЅРѕ Рё РіР°СЂРјРѕРЅРёС‡РЅРѕ!
                 </p>
 </div>
 
-        <!-- Telegram рекламный баннер -->
+        <!-- Telegram СЂРµРєР»Р°РјРЅС‹Р№ Р±Р°РЅРЅРµСЂ -->
         <a href="https://t.me/RepairoRU" target="_blank" rel="noopener noreferrer" class="telegram-banner">
           <div class="telegram-banner-container">
             <div class="telegram-logo">
@@ -473,10 +506,10 @@
               </svg>
             </div>
             <div class="telegram-content">
-              <div class="telegram-title">Новости из мира технологий</div>
-              <div class="telegram-subtitle">В нашем новом Telegram-канале. Подписывайтесь и будьте в числе первых!</div>
+              <div class="telegram-title">РќРѕРІРѕСЃС‚Рё РёР· РјРёСЂР° С‚РµС…РЅРѕР»РѕРіРёР№</div>
+              <div class="telegram-subtitle">Р’ РЅР°С€РµРј РЅРѕРІРѕРј Telegram-РєР°РЅР°Р»Рµ. РџРѕРґРїРёСЃС‹РІР°Р№С‚РµСЃСЊ Рё Р±СѓРґСЊС‚Рµ РІ С‡РёСЃР»Рµ РїРµСЂРІС‹С…!</div>
               <div class="telegram-button">
-                Подписаться
+                РџРѕРґРїРёСЃР°С‚СЊСЃСЏ
                 <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.56c-.21 2.22-1.12 7.58-1.58 10.06-.19 1.07-.57 1.43-.94 1.46-.8.07-1.4-.52-2.17-1.03-1.21-.79-1.89-1.28-3.06-2.05-1.35-.87-.47-1.35.3-2.13.2-.21 3.71-3.39 3.77-3.68.01-.04.01-.18-.07-.26s-.2-.05-.29-.03c-.12.03-2.11 1.34-5.95 3.93-.56.38-1.07.57-1.53.56-.5-.01-1.47-.28-2.19-.51-.88-.28-1.58-.43-1.52-.91.03-.25.38-.51 1.04-.78 4.07-1.77 6.78-2.94 8.13-3.51 3.88-1.62 4.68-1.9 5.19-1.91.12 0 .37.03.54.17.14.12.18.28.2.44-.01.06 0 .11-.01.17z"/>
                 </svg>
@@ -501,45 +534,45 @@
                         </span>
                         <span class="logo__text">Repairo</span>
                     </a>
-                    <p class="footer__text">Помогаем ремонтировать электронику с 2024 года</p>
+                    <p class="footer__text">РџРѕРјРѕРіР°РµРј СЂРµРјРѕРЅС‚РёСЂРѕРІР°С‚СЊ СЌР»РµРєС‚СЂРѕРЅРёРєСѓ СЃ 2024 РіРѕРґР°</p>
                 </div>
                 <div class="footer__col">
-                    <h3 class="footer__title">Разделы</h3>
+                    <h3 class="footer__title">Р Р°Р·РґРµР»С‹</h3>
                     <ul class="footer__links">
-                        <li><a href="../index.html" class="footer__link">Главная</a></li>
-                        <li><a href="../index.html#categories" class="footer__link">Все гайды</a></li>
-                        <li><a href="../contacts.html" class="footer__link">Контакты</a></li>
+                        <li><a href="../index.html" class="footer__link">Р“Р»Р°РІРЅР°СЏ</a></li>
+                        <li><a href="../index.html#categories" class="footer__link">Р’СЃРµ РіР°Р№РґС‹</a></li>
+                        <li><a href="../contacts.html" class="footer__link">РљРѕРЅС‚Р°РєС‚С‹</a></li>
                     </ul>
                 </div>
                 <div class="footer__col">
-                    <h3 class="footer__title">Категории</h3>
+                    <h3 class="footer__title">РљР°С‚РµРіРѕСЂРёРё</h3>
                     <ul class="footer__links">
-                        <li><a href="../tv.html" class="nav__link">Телевизоры</a></li>
-                        <li><a href="../cameras.html" class="nav__link">Фотоаппараты</a></li>
-                        <li><a href="../consoles.html" class="nav__link">Приставки</a></li>
-                        <li><a href="../laptops.html" class="nav__link">Ноутбуки</a></li>
-                        <li><a href="../smartphones.html" class="nav__link">Смартфоны</a></li>
-                        <li><a href="../small-appliances.html" class="nav__link">Мелкая техника</a></li>
-                        <li><a href="../large-appliances.html" class="nav__link">Бытовая техника</a></li>
-                        <li><a href="../auto-electronics.html" class="nav__link">Авто-Электроника</a></li>
+                        <li><a href="../tv.html" class="nav__link">РўРµР»РµРІРёР·РѕСЂС‹</a></li>
+                        <li><a href="../cameras.html" class="nav__link">Р¤РѕС‚РѕР°РїРїР°СЂР°С‚С‹</a></li>
+                        <li><a href="../consoles.html" class="nav__link">РџСЂРёСЃС‚Р°РІРєРё</a></li>
+                        <li><a href="../laptops.html" class="nav__link">РќРѕСѓС‚Р±СѓРєРё</a></li>
+                        <li><a href="../smartphones.html" class="nav__link">РЎРјР°СЂС‚С„РѕРЅС‹</a></li>
+                        <li><a href="../small-appliances.html" class="nav__link">РњРµР»РєР°СЏ С‚РµС…РЅРёРєР°</a></li>
+                        <li><a href="../large-appliances.html" class="nav__link">Р‘С‹С‚РѕРІР°СЏ С‚РµС…РЅРёРєР°</a></li>
+                        <li><a href="../auto-electronics.html" class="nav__link">РђРІС‚Рѕ-Р­Р»РµРєС‚СЂРѕРЅРёРєР°</a></li>
                     </ul>
                 </div>
                 <div class="footer__col">
-                    <h3 class="footer__title">Контакты</h3>
+                    <h3 class="footer__title">РљРѕРЅС‚Р°РєС‚С‹</h3>
                     <ul class="footer__links">
                         <li><a href="https://t.me/RepairoRU" class="footer__link"><i class="fab fa-telegram"></i> Telegram</a></li>
-                        <li><span class="footer__link">Наша почта: repairo.info@mail.ru</span></li>
+                        <li><span class="footer__link">РќР°С€Р° РїРѕС‡С‚Р°: repairo.info@mail.ru</span></li>
                     </ul>
                 </div>
             </div>
             <div class="footer__bottom">
                 <p class="disclaimer">
-    Администрация сайта не несёт ответственности за возможные повреждения техники
-    и иные последствия, возникшие в результате самостоятельного ремонта по
-    материалам и инструкциям, размещённым на сайте. Все работы вы выполняете
-    на свой страх и риск.
+    РђРґРјРёРЅРёСЃС‚СЂР°С†РёСЏ СЃР°Р№С‚Р° РЅРµ РЅРµСЃС‘С‚ РѕС‚РІРµС‚СЃС‚РІРµРЅРЅРѕСЃС‚Рё Р·Р° РІРѕР·РјРѕР¶РЅС‹Рµ РїРѕРІСЂРµР¶РґРµРЅРёСЏ С‚РµС…РЅРёРєРё
+    Рё РёРЅС‹Рµ РїРѕСЃР»РµРґСЃС‚РІРёСЏ, РІРѕР·РЅРёРєС€РёРµ РІ СЂРµР·СѓР»СЊС‚Р°С‚Рµ СЃР°РјРѕСЃС‚РѕСЏС‚РµР»СЊРЅРѕРіРѕ СЂРµРјРѕРЅС‚Р° РїРѕ
+    РјР°С‚РµСЂРёР°Р»Р°Рј Рё РёРЅСЃС‚СЂСѓРєС†РёСЏРј, СЂР°Р·РјРµС‰С‘РЅРЅС‹Рј РЅР° СЃР°Р№С‚Рµ. Р’СЃРµ СЂР°Р±РѕС‚С‹ РІС‹ РІС‹РїРѕР»РЅСЏРµС‚Рµ
+    РЅР° СЃРІРѕР№ СЃС‚СЂР°С… Рё СЂРёСЃРє.
     </p>
-                <p class="footer__copyright">© 2026 Repairo. Все права защищены.</p>
+                <p class="footer__copyright">В© 2026 Repairo. Р’СЃРµ РїСЂР°РІР° Р·Р°С‰РёС‰РµРЅС‹.</p>
             </div>
         </div>
     </footer>
@@ -550,44 +583,44 @@
 {
   "@context": "https://schema.org",
   "@type": "HowTo",
-  "name": "Как правильно кадрировать фото? Правило третей и золотое сечение",
-  "description": "Пошаговая инструкция: Как правильно кадрировать фото? Правило третей и золотое сечение. Используйте кадрирование для усиления эмоций: крупный план - для порт...",
+  "name": "РљР°Рє РїСЂР°РІРёР»СЊРЅРѕ РєР°РґСЂРёСЂРѕРІР°С‚СЊ С„РѕС‚Рѕ? РџСЂР°РІРёР»Рѕ С‚СЂРµС‚РµР№ Рё Р·РѕР»РѕС‚РѕРµ СЃРµС‡РµРЅРёРµ",
+  "description": "РџРѕС€Р°РіРѕРІР°СЏ РёРЅСЃС‚СЂСѓРєС†РёСЏ: РљР°Рє РїСЂР°РІРёР»СЊРЅРѕ РєР°РґСЂРёСЂРѕРІР°С‚СЊ С„РѕС‚Рѕ? РџСЂР°РІРёР»Рѕ С‚СЂРµС‚РµР№ Рё Р·РѕР»РѕС‚РѕРµ СЃРµС‡РµРЅРёРµ. РСЃРїРѕР»СЊР·СѓР№С‚Рµ РєР°РґСЂРёСЂРѕРІР°РЅРёРµ РґР»СЏ СѓСЃРёР»РµРЅРёСЏ СЌРјРѕС†РёР№: РєСЂСѓРїРЅС‹Р№ РїР»Р°РЅ - РґР»СЏ РїРѕСЂС‚...",
   "totalTime": "PT30M",
   "step": [
     {
       "@type": "HowToStep",
-      "name": "Зачем кадрировать фото?",
-      "text": "Зачем кадрировать фото?",
+      "name": "Р—Р°С‡РµРј РєР°РґСЂРёСЂРѕРІР°С‚СЊ С„РѕС‚Рѕ?",
+      "text": "Р—Р°С‡РµРј РєР°РґСЂРёСЂРѕРІР°С‚СЊ С„РѕС‚Рѕ?",
       "url": "#step-1"
     },
     {
       "@type": "HowToStep",
-      "name": "Правило третей",
-      "text": "Правило третей",
+      "name": "РџСЂР°РІРёР»Рѕ С‚СЂРµС‚РµР№",
+      "text": "РџСЂР°РІРёР»Рѕ С‚СЂРµС‚РµР№",
       "url": "#step-2"
     },
     {
       "@type": "HowToStep",
-      "name": "Золотое сечение",
-      "text": "Золотое сечение",
+      "name": "Р—РѕР»РѕС‚РѕРµ СЃРµС‡РµРЅРёРµ",
+      "text": "Р—РѕР»РѕС‚РѕРµ СЃРµС‡РµРЅРёРµ",
       "url": "#step-3"
     },
     {
       "@type": "HowToStep",
-      "name": "Пошаговая инструкция по кадрированию",
-      "text": "Пошаговая инструкция по кадрированию",
+      "name": "РџРѕС€Р°РіРѕРІР°СЏ РёРЅСЃС‚СЂСѓРєС†РёСЏ РїРѕ РєР°РґСЂРёСЂРѕРІР°РЅРёСЋ",
+      "text": "РџРѕС€Р°РіРѕРІР°СЏ РёРЅСЃС‚СЂСѓРєС†РёСЏ РїРѕ РєР°РґСЂРёСЂРѕРІР°РЅРёСЋ",
       "url": "#step-4"
     },
     {
       "@type": "HowToStep",
-      "name": "Часто задаваемые вопросы",
-      "text": "Часто задаваемые вопросы",
+      "name": "Р§Р°СЃС‚Рѕ Р·Р°РґР°РІР°РµРјС‹Рµ РІРѕРїСЂРѕСЃС‹",
+      "text": "Р§Р°СЃС‚Рѕ Р·Р°РґР°РІР°РµРјС‹Рµ РІРѕРїСЂРѕСЃС‹",
       "url": "#step-5"
     },
     {
       "@type": "HowToStep",
-      "name": "?? Итог",
-      "text": "?? Итог",
+      "name": "рџ“Њ РС‚РѕРі",
+      "text": "рџ“Њ РС‚РѕРі",
       "url": "#step-6"
     }
   ],
@@ -598,8 +631,4 @@
 <script src="../cookie-consent.js"></script>
 </body>
 </html>
-
-
-
-
 

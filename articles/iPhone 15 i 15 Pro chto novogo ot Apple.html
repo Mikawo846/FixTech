@@ -1,37 +1,280 @@
 <!DOCTYPE html>
-<html lang="ru" data-theme="light">
+<html lang="ru">
 <head>
 
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Repairo - iPhone 15 и 15 Pro: что нового от Apple</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repairo - iPhone 15 Рё 15 Pro: С‡С‚Рѕ РЅРѕРІРѕРіРѕ РѕС‚ Apple</title>
     <meta name="description" content="{{ description }}">
+    <meta name="description" content="РџРѕС€Р°РіРѕРІР°СЏ РёРЅСЃС‚СЂСѓРєС†РёСЏ: iPhone 15 Рё 15 Pro: С‡С‚Рѕ РЅРѕРІРѕРіРѕ РѕС‚ Apple. РљРѕРјРїР°РЅРёСЏ Apple РїСЂРµРґСЃС‚Р°РІРёР»Р° РЅРѕРІС‹Рµ СЃРјР°СЂС‚С„РѕРЅС‹ iPhone 15 Рё iPhone 15 Pro, РєРѕС‚РѕСЂС‹Рµ РїРѕ.... РЎРѕРІРµС‚С‹ СЌРє...">
 
-  <link rel="stylesheet" href="../styles.css" />
-  <link rel="stylesheet" href="../styles-header.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <style>
-    .guide-content { line-height: 1.7; color: var(--text); }
-    .guide-content h2 { color: var(--primary); margin-top: 30px; margin-bottom: 15px; font-size: 1.5rem; }
-    .guide-content h3 { color: var(--primary-dark); margin-top: 25px; margin-bottom: 12px; font-size: 1.2rem; }
-    .guide-image-block { margin: 20px 0; padding: 15px; background: var(--background); border-radius: var(--border-radius); border: 1px solid var(--border); text-align: center; }
-    .guide-image-block img { max-width: 100%; height: auto; border-radius: 6px; border: 1px solid var(--border); }
-    .image-caption { margin-top: 10px; font-size: 0.85rem; color: var(--text-light); font-style: italic; }
-    .pro-tips { background: rgba(3, 74, 79, 0.05); padding: 15px; border-radius: 6px; margin: 20px 0; }
-    .pro-tips h4 { color: var(--primary); margin-top: 0; margin-bottom: 12px; font-size: 1.1rem; }
-    .tip-item { display: flex; gap: 8px; margin-bottom: 8px; align-items: flex-start; }
-    table { width: 100%; border-collapse: collapse; margin: 20px 0; }
-    th, td { border: 1px solid var(--border); padding: 8px; text-align: left; }
-    th { background: var(--background-light); }
-    .highlight { background: #f5f7fa; border-left: 4px solid #2d9cdb; padding: 10px 15px; margin: 20px 0; }
-    .faq-section ul { margin-left: 1em; }
-    .block-section { margin-bottom: 2em; }
-    @media (max-width: 768px) {
-      .guide-content h2 { font-size: 1.4rem; margin-top: 25px; }
-      .guide-image-block { padding: 12px; margin: 15px 0; }
-      table, th, td { font-size: 0.95rem; }
+    <style>
+        :root {
+            --gradient-start: #f5f7a0;
+            --gradient-end: #8df1c0;
+            --main-bg: #ffffff;
+            --text-color: #333333;
+            --text-light: #666666;
+            --border-color: #e0e0e0;
+            --shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            --radius: 8px;
+            --nav-height: 60px;
+            --glass-bg: rgba(255, 255, 255, 0.25);
+            --glass-border: 1px solid rgba(255, 255, 255, 0.18);
+            --glass-blur: blur(10px);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--main-bg);
+            color: var(--text-color);
+            line-height: 1.6;
+            padding-top: var(--nav-height);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        header {
+            background: var(--glass-bg);
+            backdrop-filter: var(--glass-blur);
+            -webkit-backdrop-filter: var(--glass-blur);
+            border-bottom: var(--glass-border);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: var(--nav-height);
+            position: relative;
+        }
+
+        .header-image {
+            position: absolute;
+            left: 15px;
+            z-index: 1;
+        }
+
+        .header-image img {
+            height: 40px;
+            width: auto;
+            object-fit: contain;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--text-color);
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo__text {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--text-color);
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        .back-btn {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 600;
+            color: var(--text-color);
+            transition: color 0.3s;
+        }
+
+        .back-btn:hover {
+            color: var(--gradient-end);
+        }
+
+        .back-btn::before {
+            content: "в†ђ";
+            font-size: 20px;
+        }
+
+        .article {
+            padding: 40px 0;
+        }
+
+        .article-header {
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .article-title {
+            font-size: 32px;
+            margin-bottom: 15px;
+            line-height: 1.3;
+        }
+
+        .article-meta {
+            color: var(--text-light);
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        .article-image {
+            width: 100%;
+            max-height: 500px;
+            object-fit: cover;
+            border-radius: var(--radius);
+            margin-bottom: 30px;
+            box-shadow: var(--shadow);
+        }
+
+        .article-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .article-content p {
+            margin-bottom: 20px;
+            font-size: 18px;
+            line-height: 1.7;
+        }
+
+        .article-content h2, 
+        .article-content h3 {
+            margin: 30px 0 20px;
+            line-height: 1.4;
+        }
+
+        .article-content h2 {
+            font-size: 28px;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 10px;
+        }
+
+        .article-content h3 {
+            font-size: 24px;
+        }
+
+        .article-content img {
+            max-width: 100%;
+            height: auto;
+            border-radius: var(--radius);
+            margin: 25px 0;
+            box-shadow: var(--shadow);
+        }
+
+        .button {
+            display: inline-block;
+            padding: 12px 24px;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            border: none;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(90deg, var(--gradient-start), var(--gradient-end));
+            color: var(--text-color);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        footer {
+            background: #f5f5f5;
+            padding: 50px 0 20px;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .footer-column h3 {
+            font-size: 18px;
+            margin-bottom: 15px;
+            color: var(--text-color);
+            font-weight: 600;
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column li {
+            margin-bottom: 10px;
+        }
+
+        .footer-column a {
+            color: var(--text-light);
+            transition: color 0.3s;
+        }
+
+        .footer-column a:hover {
+            color: var(--gradient-end);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+            color: var(--text-light);
+            font-size: 14px;
+        }
+
+        @media (max-width: 768px) {
+            .article-title {
+                font-size: 26px;
+            }
+            
+            .article-content p {
+                font-size: 16px;
+            }
+            
+            .article-content h2 {
+                font-size: 24px;
+            }
+            
+            .article-content h3 {
+                font-size: 20px;
+            }
+        }
+    /* РЇРЅРґРµРєСЃ РњР°СЂРєРµС‚ СЂРµРєР»Р°РјРЅС‹Р№ Р±Р°РЅРЅРµСЂ */
+    .ym-hero-link {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+      max-width: 100%;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     }
+
     /* Р“РѕСЂРёР·РѕРЅС‚Р°Р»СЊРЅС‹Р№ Р±Р°РЅРЅРµСЂ-РєР°СЂС‚РѕС‡РєР° */
     .ym-hero-banner {
       width: 100%;
@@ -144,11 +387,13 @@
       transition: background 0.15s ease, transform 0.15s ease,
                   box-shadow 0.15s ease;
     }
+
     .ym-hero-button::after {
       content: "в†’";
       margin-left: 6px;
       font-size: 14px;
     }
+
     .ym-hero-button:hover {
       background: #7c3aed;
       transform: translateY(-1px);
@@ -172,19 +417,24 @@
         max-width: 100%;
         margin: 20px 0;
       }
+
       .ym-hero-images {
         height: 100px;
       }
+
       .ym-hero-content {
         padding: 12px 12px;
       }
+
       .ym-hero-title {
         font-size: 13px;
       }
+
       .ym-hero-button {
         font-size: 13px;
         padding: 8px 14px;
       }
+
       .ym-hero-legal {
         font-size: 10px;
       }
@@ -292,22 +542,27 @@
         padding: 15px;
         min-height: 100px;
       }
+
       .telegram-logo {
         width: 50px;
         height: 50px;
         min-width: 50px;
         margin-right: 15px;
       }
+
       .telegram-logo svg {
         width: 26px;
         height: 26px;
       }
+
       .telegram-title {
         font-size: 14px;
       }
+
       .telegram-subtitle {
         font-size: 12px;
       }
+
       .telegram-button {
         font-size: 12px;
         padding: 6px 12px;
@@ -316,147 +571,153 @@
 
 
 
-  </style>
+    </style>
   <script async src="https://timeweb.cloud/api/v1/cloud-ai/agents/3cc03620-d051-4d8d-b5af-f7b6cd083a35/embed.js?collapsed=true"></script>
 </head>
 <body>
-  <header class="header">
-    <div class="container">
-      <div class="header__inner">
-        <a href="../index.html" class="logo">
-          <span class="logo__icon"></span>
-          <span class="logo__text">GeoExpert</span>
-        </a>
-        <nav class="nav">
-          <ul class="nav__list">
-            <li><a href="../cameras.html" class="nav__link">РљР°РјРµСЂС‹</a></li>
-            <li><a href="../drones.html" class="nav__link">Р”СЂРѕРЅС‹</a></li>
-            <li><a href="../workflow.html" class="nav__link">Workflow</a></li>
-          </ul>
-        </nav>
-      </div>
-    </div>
-  </header>
+    <header>
+        <div class="container header-container">
+            <div class="header-image">
+                <img src="https://i.postimg.cc/q7H0JS0t/8d9ca2d0-7483-40bd-b92d-73c88a196afb-removebg-preview.png" alt="Header Image">
+            </div>
+            <a href="../articles.html" class="logo">
+                <span class="logo__text">Repairo</span>
+            </a>
+        </div>
+    </header>
     <main class="article">
         <div class="container">
             <article>
                 <div class="article-header">
-                    <h1 class="article-title">iPhone 15 и 15 Pro: что нового от Apple</h1>
-                    <img src="https://images.unsplash.com/photo-1695048133021-be2def43f3b2?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="unsplash.com - iPhone 15 и 15 Pro: что нового - пошаговая инструкция по ремонту" class="article-image">
+                    <h1 class="article-title">iPhone 15 Рё 15 Pro: С‡С‚Рѕ РЅРѕРІРѕРіРѕ РѕС‚ Apple</h1>
+                    <img src="https://images.unsplash.com/photo-1695048133021-be2def43f3b2?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="unsplash.com - iPhone 15 Рё 15 Pro: С‡С‚Рѕ РЅРѕРІРѕРіРѕ - РїРѕС€Р°РіРѕРІР°СЏ РёРЅСЃС‚СЂСѓРєС†РёСЏ РїРѕ СЂРµРјРѕРЅС‚Сѓ" class="article-image">
                 </div>
-                <div class="article-meta">изображение взято с ресурса unsplash.com</div>
+                <div class="article-meta">РёР·РѕР±СЂР°Р¶РµРЅРёРµ РІР·СЏС‚Рѕ СЃ СЂРµСЃСѓСЂСЃР° unsplash.com</div>
                 <div class="article-content">
-                    <p>Компания Apple представила новые смартфоны iPhone 15 и iPhone 15 Pro, которые получили множество улучшений по сравнению с предыдущим поколением. В этой статье мы расскажем обо всех ключевых нововведениях, особенностях дизайна, технических характеристиках, программных возможностях, а также о том, как новые устройства вписываются в экосистему Apple и рынок мобильных технологий в целом.</p>
-        <!-- Яндекс Маркет рекламный блок -->
+                    <p>РљРѕРјРїР°РЅРёСЏ Apple РїСЂРµРґСЃС‚Р°РІРёР»Р° РЅРѕРІС‹Рµ СЃРјР°СЂС‚С„РѕРЅС‹ iPhone 15 Рё iPhone 15 Pro, РєРѕС‚РѕСЂС‹Рµ РїРѕР»СѓС‡РёР»Рё РјРЅРѕР¶РµСЃС‚РІРѕ СѓР»СѓС‡С€РµРЅРёР№ РїРѕ СЃСЂР°РІРЅРµРЅРёСЋ СЃ РїСЂРµРґС‹РґСѓС‰РёРј РїРѕРєРѕР»РµРЅРёРµРј. Р’ СЌС‚РѕР№ СЃС‚Р°С‚СЊРµ РјС‹ СЂР°СЃСЃРєР°Р¶РµРј РѕР±Рѕ РІСЃРµС… РєР»СЋС‡РµРІС‹С… РЅРѕРІРѕРІРІРµРґРµРЅРёСЏС…, РѕСЃРѕР±РµРЅРЅРѕСЃС‚СЏС… РґРёР·Р°Р№РЅР°, С‚РµС…РЅРёС‡РµСЃРєРёС… С…Р°СЂР°РєС‚РµСЂРёСЃС‚РёРєР°С…, РїСЂРѕРіСЂР°РјРјРЅС‹С… РІРѕР·РјРѕР¶РЅРѕСЃС‚СЏС…, Р° С‚Р°РєР¶Рµ Рѕ С‚РѕРј, РєР°Рє РЅРѕРІС‹Рµ СѓСЃС‚СЂРѕР№СЃС‚РІР° РІРїРёСЃС‹РІР°СЋС‚СЃСЏ РІ СЌРєРѕСЃРёСЃС‚РµРјСѓ Apple Рё СЂС‹РЅРѕРє РјРѕР±РёР»СЊРЅС‹С… С‚РµС…РЅРѕР»РѕРіРёР№ РІ С†РµР»РѕРј.</p>
+        <!-- РЇРЅРґРµРєСЃ РњР°СЂРєРµС‚ СЂРµРєР»Р°РјРЅС‹Р№ Р±Р»РѕРє -->
         <a href="https://market.yandex.ru/catalog--bytovaia-tekhnika/54419/list?hid=198118&rs=eJwzUvjEKMvBILDwEKsEg8Kzbh6Nw4dZNS4D8c7lFhp9c1-wAQC3uAwP&clid=14635360&refid=rbck8fgamv681iu59go3iqxwddedl4x9&erid=5jtCeReNx12oajxS2bzShmZ&mclid=1003&distr_type=7&utm_source=partner_network&pp=900&utm_medium=link_list&utm_campaign=14635360"
            target="_blank"
            rel="noopener noreferrer sponsored"
+           class="ym-hero-link">
+          <div class="ym-hero-banner">
+            <div class="ym-hero-images">
+              <div class="ym-hero-image">
                 <img src="https://avatars.mds.yandex.net/get-mpic/14770882/2a00000197f4dbee777f8afddccaf44faa53/optimize"
-                     alt="Распродажа бытовой электроники 1">
+                     alt="Р Р°СЃРїСЂРѕРґР°Р¶Р° Р±С‹С‚РѕРІРѕР№ СЌР»РµРєС‚СЂРѕРЅРёРєРё 1">
               </div>
+              <div class="ym-hero-image">
                 <img src="https://avatars.mds.yandex.net/get-mpic/15580298/img_id8867318964670654684.jpeg/optimize"
-                     alt="Распродажа бытовой электроники 2">
+                     alt="Р Р°СЃРїСЂРѕРґР°Р¶Р° Р±С‹С‚РѕРІРѕР№ СЌР»РµРєС‚СЂРѕРЅРёРєРё 2">
               </div>
+              <div class="ym-hero-image">
                 <img src="https://avatars.mds.yandex.net/get-mpic/10096780/2a000001953b534fed2494e0b30fadd9b458/optimize"
-                     alt="Распродажа бытовой электроники 3">
+                     alt="Р Р°СЃРїСЂРѕРґР°Р¶Р° Р±С‹С‚РѕРІРѕР№ СЌР»РµРєС‚СЂРѕРЅРёРєРё 3">
               </div>
             </div>
-                  ? Выгодные предложения
+            <div class="ym-hero-content">
+              <h3 class="ym-hero-title">Р Р°СЃРїСЂРѕРґР°Р¶Р° Р±С‹С‚РѕРІРѕР№ СЌР»РµРєС‚СЂРѕРЅРёРєРё РЅР° РЇРЅРґРµРєСЃ РњР°СЂРєРµС‚Рµ</h3>
+              <div class="ym-hero-top">
+                <div class="ym-hero-rating">
+                  в­ђ Р’С‹РіРѕРґРЅС‹Рµ РїСЂРµРґР»РѕР¶РµРЅРёСЏ
+                  <span class="ym-hero-rating-count">РЎРєРёРґРєРё РґРѕ 50%</span>
                 </div>
               </div>
+              <button class="ym-hero-button">Р—Р° СЃРєРёРґРєР°РјРё</button>
             </div>
           </div>
-            Реклама. ООО "ЯНДЕКС", ИНН 7736207543. clid: 14635360, erid: 5jtCeReNx12oajxS2bzShmZ
+          <div class="ym-hero-legal">
+            Р РµРєР»Р°РјР°. РћРћРћ "РЇРќР”Р•РљРЎ", РРќРќ 7736207543. clid: 14635360, erid: 5jtCeReNx12oajxS2bzShmZ
           </div>
         </a>
                     
-                    <h2>Дизайн и материалы</h2>
-                    <p>Внешний вид iPhone 15 и 15 Pro стал еще более современным и лаконичным. Для iPhone 15 Pro впервые использован титановый сплав, который делает устройство не только прочнее, но и легче. Это заметно ощущается при повседневном использовании: смартфон стал комфортнее лежать в руке, а его устойчивость к царапинам и повреждениям повысилась. Обычная версия iPhone 15 сохранила алюминиевую рамку, но получила обновлённые цвета и более мягкие скругления граней.</p>
-                    <img src="https://images.unsplash.com/photo-1609692814858-f7cd2f0afa4f?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Сравнение дизайна iPhone 15 и 15 Pro"> 
-                    <div class="article-meta">изображение взято с ресурса unsplash.com</div>
-                    <p>Задняя панель обоих устройств выполнена из прочного стекла с матовым покрытием, что уменьшает количество отпечатков пальцев. Камерный блок стал более аккуратным, а выступы камер — менее заметными, что положительно сказывается на устойчивости устройства на плоских поверхностях.</p>
+                    <h2>Р”РёР·Р°Р№РЅ Рё РјР°С‚РµСЂРёР°Р»С‹</h2>
+                    <p>Р’РЅРµС€РЅРёР№ РІРёРґ iPhone 15 Рё 15 Pro СЃС‚Р°Р» РµС‰Рµ Р±РѕР»РµРµ СЃРѕРІСЂРµРјРµРЅРЅС‹Рј Рё Р»Р°РєРѕРЅРёС‡РЅС‹Рј. Р”Р»СЏ iPhone 15 Pro РІРїРµСЂРІС‹Рµ РёСЃРїРѕР»СЊР·РѕРІР°РЅ С‚РёС‚Р°РЅРѕРІС‹Р№ СЃРїР»Р°РІ, РєРѕС‚РѕСЂС‹Р№ РґРµР»Р°РµС‚ СѓСЃС‚СЂРѕР№СЃС‚РІРѕ РЅРµ С‚РѕР»СЊРєРѕ РїСЂРѕС‡РЅРµРµ, РЅРѕ Рё Р»РµРіС‡Рµ. Р­С‚Рѕ Р·Р°РјРµС‚РЅРѕ РѕС‰СѓС‰Р°РµС‚СЃСЏ РїСЂРё РїРѕРІСЃРµРґРЅРµРІРЅРѕРј РёСЃРїРѕР»СЊР·РѕРІР°РЅРёРё: СЃРјР°СЂС‚С„РѕРЅ СЃС‚Р°Р» РєРѕРјС„РѕСЂС‚РЅРµРµ Р»РµР¶Р°С‚СЊ РІ СЂСѓРєРµ, Р° РµРіРѕ СѓСЃС‚РѕР№С‡РёРІРѕСЃС‚СЊ Рє С†Р°СЂР°РїРёРЅР°Рј Рё РїРѕРІСЂРµР¶РґРµРЅРёСЏРј РїРѕРІС‹СЃРёР»Р°СЃСЊ. РћР±С‹С‡РЅР°СЏ РІРµСЂСЃРёСЏ iPhone 15 СЃРѕС…СЂР°РЅРёР»Р° Р°Р»СЋРјРёРЅРёРµРІСѓСЋ СЂР°РјРєСѓ, РЅРѕ РїРѕР»СѓС‡РёР»Р° РѕР±РЅРѕРІР»С‘РЅРЅС‹Рµ С†РІРµС‚Р° Рё Р±РѕР»РµРµ РјСЏРіРєРёРµ СЃРєСЂСѓРіР»РµРЅРёСЏ РіСЂР°РЅРµР№.</p>
+                    <img src="https://images.unsplash.com/photo-1609692814858-f7cd2f0afa4f?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="РЎСЂР°РІРЅРµРЅРёРµ РґРёР·Р°Р№РЅР° iPhone 15 Рё 15 Pro"> 
+                    <div class="article-meta">РёР·РѕР±СЂР°Р¶РµРЅРёРµ РІР·СЏС‚Рѕ СЃ СЂРµСЃСѓСЂСЃР° unsplash.com</div>
+                    <p>Р—Р°РґРЅСЏСЏ РїР°РЅРµР»СЊ РѕР±РѕРёС… СѓСЃС‚СЂРѕР№СЃС‚РІ РІС‹РїРѕР»РЅРµРЅР° РёР· РїСЂРѕС‡РЅРѕРіРѕ СЃС‚РµРєР»Р° СЃ РјР°С‚РѕРІС‹Рј РїРѕРєСЂС‹С‚РёРµРј, С‡С‚Рѕ СѓРјРµРЅСЊС€Р°РµС‚ РєРѕР»РёС‡РµСЃС‚РІРѕ РѕС‚РїРµС‡Р°С‚РєРѕРІ РїР°Р»СЊС†РµРІ. РљР°РјРµСЂРЅС‹Р№ Р±Р»РѕРє СЃС‚Р°Р» Р±РѕР»РµРµ Р°РєРєСѓСЂР°С‚РЅС‹Рј, Р° РІС‹СЃС‚СѓРїС‹ РєР°РјРµСЂ вЂ” РјРµРЅРµРµ Р·Р°РјРµС‚РЅС‹РјРё, С‡С‚Рѕ РїРѕР»РѕР¶РёС‚РµР»СЊРЅРѕ СЃРєР°Р·С‹РІР°РµС‚СЃСЏ РЅР° СѓСЃС‚РѕР№С‡РёРІРѕСЃС‚Рё СѓСЃС‚СЂРѕР№СЃС‚РІР° РЅР° РїР»РѕСЃРєРёС… РїРѕРІРµСЂС…РЅРѕСЃС‚СЏС….</p>
                     
-                    <h2>Технические характеристики</h2>
-<p>Главное нововведение — новый процессор A17 Pro для iPhone 15 Pro, который существенно увеличил производительность и энергоэффективность. В обычном iPhone 15 установлен чип A16 Bionic, который ранее использовался только в Pro-версиях. Оба процессора выполнены по 3-нм техпроцессу, что обеспечивает высокий уровень производительности при низком энергопотреблении.</p>
+                    <h2>РўРµС…РЅРёС‡РµСЃРєРёРµ С…Р°СЂР°РєС‚РµСЂРёСЃС‚РёРєРё</h2>
+<p>Р“Р»Р°РІРЅРѕРµ РЅРѕРІРѕРІРІРµРґРµРЅРёРµ вЂ” РЅРѕРІС‹Р№ РїСЂРѕС†РµСЃСЃРѕСЂ A17 Pro РґР»СЏ iPhone 15 Pro, РєРѕС‚РѕСЂС‹Р№ СЃСѓС‰РµСЃС‚РІРµРЅРЅРѕ СѓРІРµР»РёС‡РёР» РїСЂРѕРёР·РІРѕРґРёС‚РµР»СЊРЅРѕСЃС‚СЊ Рё СЌРЅРµСЂРіРѕСЌС„С„РµРєС‚РёРІРЅРѕСЃС‚СЊ. Р’ РѕР±С‹С‡РЅРѕРј iPhone 15 СѓСЃС‚Р°РЅРѕРІР»РµРЅ С‡РёРї A16 Bionic, РєРѕС‚РѕСЂС‹Р№ СЂР°РЅРµРµ РёСЃРїРѕР»СЊР·РѕРІР°Р»СЃСЏ С‚РѕР»СЊРєРѕ РІ Pro-РІРµСЂСЃРёСЏС…. РћР±Р° РїСЂРѕС†РµСЃСЃРѕСЂР° РІС‹РїРѕР»РЅРµРЅС‹ РїРѕ 3-РЅРј С‚РµС…РїСЂРѕС†РµСЃСЃСѓ, С‡С‚Рѕ РѕР±РµСЃРїРµС‡РёРІР°РµС‚ РІС‹СЃРѕРєРёР№ СѓСЂРѕРІРµРЅСЊ РїСЂРѕРёР·РІРѕРґРёС‚РµР»СЊРЅРѕСЃС‚Рё РїСЂРё РЅРёР·РєРѕРј СЌРЅРµСЂРіРѕРїРѕС‚СЂРµР±Р»РµРЅРёРё.</p>
                     
-                    <h3>Процессор и графика</h3>
-                    <p>iPhone 15 Pro оснащён 6-ядерным CPU и 5-ядерным GPU с поддержкой аппаратной трассировки лучей. Это открывает новые возможности для мобильных игр и приложений с графикой высокого уровня. Даже самые требовательные задачи, такие как монтаж видео в 4K или работа с AR-приложениями, выполняются без малейших задержек.</p>
+                    <h3>РџСЂРѕС†РµСЃСЃРѕСЂ Рё РіСЂР°С„РёРєР°</h3>
+                    <p>iPhone 15 Pro РѕСЃРЅР°С‰С‘РЅ 6-СЏРґРµСЂРЅС‹Рј CPU Рё 5-СЏРґРµСЂРЅС‹Рј GPU СЃ РїРѕРґРґРµСЂР¶РєРѕР№ Р°РїРїР°СЂР°С‚РЅРѕР№ С‚СЂР°СЃСЃРёСЂРѕРІРєРё Р»СѓС‡РµР№. Р­С‚Рѕ РѕС‚РєСЂС‹РІР°РµС‚ РЅРѕРІС‹Рµ РІРѕР·РјРѕР¶РЅРѕСЃС‚Рё РґР»СЏ РјРѕР±РёР»СЊРЅС‹С… РёРіСЂ Рё РїСЂРёР»РѕР¶РµРЅРёР№ СЃ РіСЂР°С„РёРєРѕР№ РІС‹СЃРѕРєРѕРіРѕ СѓСЂРѕРІРЅСЏ. Р”Р°Р¶Рµ СЃР°РјС‹Рµ С‚СЂРµР±РѕРІР°С‚РµР»СЊРЅС‹Рµ Р·Р°РґР°С‡Рё, С‚Р°РєРёРµ РєР°Рє РјРѕРЅС‚Р°Р¶ РІРёРґРµРѕ РІ 4K РёР»Рё СЂР°Р±РѕС‚Р° СЃ AR-РїСЂРёР»РѕР¶РµРЅРёСЏРјРё, РІС‹РїРѕР»РЅСЏСЋС‚СЃСЏ Р±РµР· РјР°Р»РµР№С€РёС… Р·Р°РґРµСЂР¶РµРє.</p>
                     
-                    <h3>Дисплей</h3>
-                    <p>Оба устройства получили Super Retina XDR дисплеи с поддержкой HDR10 и Dolby Vision. В Pro-версии частота обновления достигает 120 Гц благодаря технологии ProMotion, что обеспечивает максимально плавную прокрутку и отзывчивость интерфейса. Яркость экрана увеличена до 2000 нит, что позволяет комфортно использовать смартфон даже под прямыми солнечными лучами.</p>
+                    <h3>Р”РёСЃРїР»РµР№</h3>
+                    <p>РћР±Р° СѓСЃС‚СЂРѕР№СЃС‚РІР° РїРѕР»СѓС‡РёР»Рё Super Retina XDR РґРёСЃРїР»РµРё СЃ РїРѕРґРґРµСЂР¶РєРѕР№ HDR10 Рё Dolby Vision. Р’ Pro-РІРµСЂСЃРёРё С‡Р°СЃС‚РѕС‚Р° РѕР±РЅРѕРІР»РµРЅРёСЏ РґРѕСЃС‚РёРіР°РµС‚ 120 Р“С† Р±Р»Р°РіРѕРґР°СЂСЏ С‚РµС…РЅРѕР»РѕРіРёРё ProMotion, С‡С‚Рѕ РѕР±РµСЃРїРµС‡РёРІР°РµС‚ РјР°РєСЃРёРјР°Р»СЊРЅРѕ РїР»Р°РІРЅСѓСЋ РїСЂРѕРєСЂСѓС‚РєСѓ Рё РѕС‚Р·С‹РІС‡РёРІРѕСЃС‚СЊ РёРЅС‚РµСЂС„РµР№СЃР°. РЇСЂРєРѕСЃС‚СЊ СЌРєСЂР°РЅР° СѓРІРµР»РёС‡РµРЅР° РґРѕ 2000 РЅРёС‚, С‡С‚Рѕ РїРѕР·РІРѕР»СЏРµС‚ РєРѕРјС„РѕСЂС‚РЅРѕ РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ СЃРјР°СЂС‚С„РѕРЅ РґР°Р¶Рµ РїРѕРґ РїСЂСЏРјС‹РјРё СЃРѕР»РЅРµС‡РЅС‹РјРё Р»СѓС‡Р°РјРё.</p>
                     
-                    <h3>Камеры</h3>
-                    <p>Основная камера iPhone 15 Pro — 48 Мп с усовершенствованной системой стабилизации и ночным режимом. Новый телеобъектив обеспечивает 5-кратный оптический зум, а ультраширокоугольная камера позволяет делать качественные снимки даже в условиях низкой освещённости. В обычном iPhone 15 также улучшены алгоритмы обработки изображений, что положительно сказывается на детализации и цветопередаче.</p>
-                    <img src="https://images.unsplash.com/photo-1609085174857-cfea32ae0140?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Камеры iPhone 15 Pro">
-                    <div class="article-meta">изображение взято с ресурса unsplash.com</div>
+                    <h3>РљР°РјРµСЂС‹</h3>
+                    <p>РћСЃРЅРѕРІРЅР°СЏ РєР°РјРµСЂР° iPhone 15 Pro вЂ” 48 РњРї СЃ СѓСЃРѕРІРµСЂС€РµРЅСЃС‚РІРѕРІР°РЅРЅРѕР№ СЃРёСЃС‚РµРјРѕР№ СЃС‚Р°Р±РёР»РёР·Р°С†РёРё Рё РЅРѕС‡РЅС‹Рј СЂРµР¶РёРјРѕРј. РќРѕРІС‹Р№ С‚РµР»РµРѕР±СЉРµРєС‚РёРІ РѕР±РµСЃРїРµС‡РёРІР°РµС‚ 5-РєСЂР°С‚РЅС‹Р№ РѕРїС‚РёС‡РµСЃРєРёР№ Р·СѓРј, Р° СѓР»СЊС‚СЂР°С€РёСЂРѕРєРѕСѓРіРѕР»СЊРЅР°СЏ РєР°РјРµСЂР° РїРѕР·РІРѕР»СЏРµС‚ РґРµР»Р°С‚СЊ РєР°С‡РµСЃС‚РІРµРЅРЅС‹Рµ СЃРЅРёРјРєРё РґР°Р¶Рµ РІ СѓСЃР»РѕРІРёСЏС… РЅРёР·РєРѕР№ РѕСЃРІРµС‰С‘РЅРЅРѕСЃС‚Рё. Р’ РѕР±С‹С‡РЅРѕРј iPhone 15 С‚Р°РєР¶Рµ СѓР»СѓС‡С€РµРЅС‹ Р°Р»РіРѕСЂРёС‚РјС‹ РѕР±СЂР°Р±РѕС‚РєРё РёР·РѕР±СЂР°Р¶РµРЅРёР№, С‡С‚Рѕ РїРѕР»РѕР¶РёС‚РµР»СЊРЅРѕ СЃРєР°Р·С‹РІР°РµС‚СЃСЏ РЅР° РґРµС‚Р°Р»РёР·Р°С†РёРё Рё С†РІРµС‚РѕРїРµСЂРµРґР°С‡Рµ.</p>
+                    <img src="https://images.unsplash.com/photo-1609085174857-cfea32ae0140?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="РљР°РјРµСЂС‹ iPhone 15 Pro">
+                    <div class="article-meta">РёР·РѕР±СЂР°Р¶РµРЅРёРµ РІР·СЏС‚Рѕ СЃ СЂРµСЃСѓСЂСЃР° unsplash.com</div>
                     
-                    <h2>USB-C: новая эра подключения</h2>
-                    <p>Впервые в истории iPhone обе модели получили порт USB-C вместо Lightning. Это не только упрощает зарядку и передачу данных, но и позволяет использовать один кабель для всех современных устройств Apple. Скорость передачи данных у iPhone 15 Pro достигает 10 Гбит/с, что особенно актуально для работы с большими файлами и профессионального использования смартфона.</p>
+                    <h2>USB-C: РЅРѕРІР°СЏ СЌСЂР° РїРѕРґРєР»СЋС‡РµРЅРёСЏ</h2>
+                    <p>Р’РїРµСЂРІС‹Рµ РІ РёСЃС‚РѕСЂРёРё iPhone РѕР±Рµ РјРѕРґРµР»Рё РїРѕР»СѓС‡РёР»Рё РїРѕСЂС‚ USB-C РІРјРµСЃС‚Рѕ Lightning. Р­С‚Рѕ РЅРµ С‚РѕР»СЊРєРѕ СѓРїСЂРѕС‰Р°РµС‚ Р·Р°СЂСЏРґРєСѓ Рё РїРµСЂРµРґР°С‡Сѓ РґР°РЅРЅС‹С…, РЅРѕ Рё РїРѕР·РІРѕР»СЏРµС‚ РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ РѕРґРёРЅ РєР°Р±РµР»СЊ РґР»СЏ РІСЃРµС… СЃРѕРІСЂРµРјРµРЅРЅС‹С… СѓСЃС‚СЂРѕР№СЃС‚РІ Apple. РЎРєРѕСЂРѕСЃС‚СЊ РїРµСЂРµРґР°С‡Рё РґР°РЅРЅС‹С… Сѓ iPhone 15 Pro РґРѕСЃС‚РёРіР°РµС‚ 10 Р“Р±РёС‚/СЃ, С‡С‚Рѕ РѕСЃРѕР±РµРЅРЅРѕ Р°РєС‚СѓР°Р»СЊРЅРѕ РґР»СЏ СЂР°Р±РѕС‚С‹ СЃ Р±РѕР»СЊС€РёРјРё С„Р°Р№Р»Р°РјРё Рё РїСЂРѕС„РµСЃСЃРёРѕРЅР°Р»СЊРЅРѕРіРѕ РёСЃРїРѕР»СЊР·РѕРІР°РЅРёСЏ СЃРјР°СЂС‚С„РѕРЅР°.</p>
                     
-                    <h2>Программные возможности и iOS 17</h2>
-                    <p>Обе модели работают на новой версии iOS 17, которая получила ряд улучшений в области безопасности, персонализации и взаимодействия с экосистемой Apple. Введены новые функции для работы с виджетами, расширены возможности FaceTime, а также появились интеллектуальные инструменты для работы с фотографиями и видео.</p>
+                    <h2>РџСЂРѕРіСЂР°РјРјРЅС‹Рµ РІРѕР·РјРѕР¶РЅРѕСЃС‚Рё Рё iOS 17</h2>
+                    <p>РћР±Рµ РјРѕРґРµР»Рё СЂР°Р±РѕС‚Р°СЋС‚ РЅР° РЅРѕРІРѕР№ РІРµСЂСЃРёРё iOS 17, РєРѕС‚РѕСЂР°СЏ РїРѕР»СѓС‡РёР»Р° СЂСЏРґ СѓР»СѓС‡С€РµРЅРёР№ РІ РѕР±Р»Р°СЃС‚Рё Р±РµР·РѕРїР°СЃРЅРѕСЃС‚Рё, РїРµСЂСЃРѕРЅР°Р»РёР·Р°С†РёРё Рё РІР·Р°РёРјРѕРґРµР№СЃС‚РІРёСЏ СЃ СЌРєРѕСЃРёСЃС‚РµРјРѕР№ Apple. Р’РІРµРґРµРЅС‹ РЅРѕРІС‹Рµ С„СѓРЅРєС†РёРё РґР»СЏ СЂР°Р±РѕС‚С‹ СЃ РІРёРґР¶РµС‚Р°РјРё, СЂР°СЃС€РёСЂРµРЅС‹ РІРѕР·РјРѕР¶РЅРѕСЃС‚Рё FaceTime, Р° С‚Р°РєР¶Рµ РїРѕСЏРІРёР»РёСЃСЊ РёРЅС‚РµР»Р»РµРєС‚СѓР°Р»СЊРЅС‹Рµ РёРЅСЃС‚СЂСѓРјРµРЅС‚С‹ РґР»СЏ СЂР°Р±РѕС‚С‹ СЃ С„РѕС‚РѕРіСЂР°С„РёСЏРјРё Рё РІРёРґРµРѕ.</p>
                     
-                    <h2>Автономность и зарядка</h2>
-                    <p>Благодаря энергоэффективным процессорам и оптимизации программного обеспечения, время автономной работы увеличилось на 1-2 часа по сравнению с предыдущим поколением. Поддерживается быстрая зарядка и беспроводная зарядка MagSafe, а также обратная зарядка для аксессуаров.</p>
+                    <h2>РђРІС‚РѕРЅРѕРјРЅРѕСЃС‚СЊ Рё Р·Р°СЂСЏРґРєР°</h2>
+                    <p>Р‘Р»Р°РіРѕРґР°СЂСЏ СЌРЅРµСЂРіРѕСЌС„С„РµРєС‚РёРІРЅС‹Рј РїСЂРѕС†РµСЃСЃРѕСЂР°Рј Рё РѕРїС‚РёРјРёР·Р°С†РёРё РїСЂРѕРіСЂР°РјРјРЅРѕРіРѕ РѕР±РµСЃРїРµС‡РµРЅРёСЏ, РІСЂРµРјСЏ Р°РІС‚РѕРЅРѕРјРЅРѕР№ СЂР°Р±РѕС‚С‹ СѓРІРµР»РёС‡РёР»РѕСЃСЊ РЅР° 1-2 С‡Р°СЃР° РїРѕ СЃСЂР°РІРЅРµРЅРёСЋ СЃ РїСЂРµРґС‹РґСѓС‰РёРј РїРѕРєРѕР»РµРЅРёРµРј. РџРѕРґРґРµСЂР¶РёРІР°РµС‚СЃСЏ Р±С‹СЃС‚СЂР°СЏ Р·Р°СЂСЏРґРєР° Рё Р±РµСЃРїСЂРѕРІРѕРґРЅР°СЏ Р·Р°СЂСЏРґРєР° MagSafe, Р° С‚Р°РєР¶Рµ РѕР±СЂР°С‚РЅР°СЏ Р·Р°СЂСЏРґРєР° РґР»СЏ Р°РєСЃРµСЃСЃСѓР°СЂРѕРІ.</p>
                     
-                    <h2>Безопасность и конфиденциальность</h2>
-                    <p>Apple традиционно делает акцент на защите данных пользователей. В iPhone 15 и 15 Pro реализованы новые аппаратные и программные решения для шифрования данных, а также усовершенствована система Face ID, которая теперь работает быстрее и точнее даже при изменении внешности пользователя.</p>
+                    <h2>Р‘РµР·РѕРїР°СЃРЅРѕСЃС‚СЊ Рё РєРѕРЅС„РёРґРµРЅС†РёР°Р»СЊРЅРѕСЃС‚СЊ</h2>
+                    <p>Apple С‚СЂР°РґРёС†РёРѕРЅРЅРѕ РґРµР»Р°РµС‚ Р°РєС†РµРЅС‚ РЅР° Р·Р°С‰РёС‚Рµ РґР°РЅРЅС‹С… РїРѕР»СЊР·РѕРІР°С‚РµР»РµР№. Р’ iPhone 15 Рё 15 Pro СЂРµР°Р»РёР·РѕРІР°РЅС‹ РЅРѕРІС‹Рµ Р°РїРїР°СЂР°С‚РЅС‹Рµ Рё РїСЂРѕРіСЂР°РјРјРЅС‹Рµ СЂРµС€РµРЅРёСЏ РґР»СЏ С€РёС„СЂРѕРІР°РЅРёСЏ РґР°РЅРЅС‹С…, Р° С‚Р°РєР¶Рµ СѓСЃРѕРІРµСЂС€РµРЅСЃС‚РІРѕРІР°РЅР° СЃРёСЃС‚РµРјР° Face ID, РєРѕС‚РѕСЂР°СЏ С‚РµРїРµСЂСЊ СЂР°Р±РѕС‚Р°РµС‚ Р±С‹СЃС‚СЂРµРµ Рё С‚РѕС‡РЅРµРµ РґР°Р¶Рµ РїСЂРё РёР·РјРµРЅРµРЅРёРё РІРЅРµС€РЅРѕСЃС‚Рё РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ.</p>
                     
-                    <h2>Экосистема Apple и интеграция с другими устройствами</h2>
-                    <p>Новые iPhone идеально интегрируются с другими устройствами Apple: Mac, iPad, Apple Watch и AirPods. Благодаря функции Continuity можно быстро переключаться между устройствами, отвечать на звонки и сообщения, а также использовать iPhone как веб-камеру для Mac. Интеграция с iCloud обеспечивает мгновенную синхронизацию данных, а новые функции AirDrop позволяют обмениваться файлами даже без доступа к интернету.</p>
+                    <h2>Р­РєРѕСЃРёСЃС‚РµРјР° Apple Рё РёРЅС‚РµРіСЂР°С†РёСЏ СЃ РґСЂСѓРіРёРјРё СѓСЃС‚СЂРѕР№СЃС‚РІР°РјРё</h2>
+                    <p>РќРѕРІС‹Рµ iPhone РёРґРµР°Р»СЊРЅРѕ РёРЅС‚РµРіСЂРёСЂСѓСЋС‚СЃСЏ СЃ РґСЂСѓРіРёРјРё СѓСЃС‚СЂРѕР№СЃС‚РІР°РјРё Apple: Mac, iPad, Apple Watch Рё AirPods. Р‘Р»Р°РіРѕРґР°СЂСЏ С„СѓРЅРєС†РёРё Continuity РјРѕР¶РЅРѕ Р±С‹СЃС‚СЂРѕ РїРµСЂРµРєР»СЋС‡Р°С‚СЊСЃСЏ РјРµР¶РґСѓ СѓСЃС‚СЂРѕР№СЃС‚РІР°РјРё, РѕС‚РІРµС‡Р°С‚СЊ РЅР° Р·РІРѕРЅРєРё Рё СЃРѕРѕР±С‰РµРЅРёСЏ, Р° С‚Р°РєР¶Рµ РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ iPhone РєР°Рє РІРµР±-РєР°РјРµСЂСѓ РґР»СЏ Mac. РРЅС‚РµРіСЂР°С†РёСЏ СЃ iCloud РѕР±РµСЃРїРµС‡РёРІР°РµС‚ РјРіРЅРѕРІРµРЅРЅСѓСЋ СЃРёРЅС…СЂРѕРЅРёР·Р°С†РёСЋ РґР°РЅРЅС‹С…, Р° РЅРѕРІС‹Рµ С„СѓРЅРєС†РёРё AirDrop РїРѕР·РІРѕР»СЏСЋС‚ РѕР±РјРµРЅРёРІР°С‚СЊСЃСЏ С„Р°Р№Р»Р°РјРё РґР°Р¶Рµ Р±РµР· РґРѕСЃС‚СѓРїР° Рє РёРЅС‚РµСЂРЅРµС‚Сѓ.</p>
                     
-                    <h2>Цены и доступность</h2>
-                    <p>iPhone 15 доступен по цене от 799 долларов, а iPhone 15 Pro — от 999 долларов. Предзаказ стартует 15 сентября, а официальные продажи начнутся 22 сентября. На выбор предлагается несколько вариантов памяти и новые цветовые решения, включая эксклюзивные для Pro-линейки.</p>
+                    <h2>Р¦РµРЅС‹ Рё РґРѕСЃС‚СѓРїРЅРѕСЃС‚СЊ</h2>
+                    <p>iPhone 15 РґРѕСЃС‚СѓРїРµРЅ РїРѕ С†РµРЅРµ РѕС‚ 799 РґРѕР»Р»Р°СЂРѕРІ, Р° iPhone 15 Pro вЂ” РѕС‚ 999 РґРѕР»Р»Р°СЂРѕРІ. РџСЂРµРґР·Р°РєР°Р· СЃС‚Р°СЂС‚СѓРµС‚ 15 СЃРµРЅС‚СЏР±СЂСЏ, Р° РѕС„РёС†РёР°Р»СЊРЅС‹Рµ РїСЂРѕРґР°Р¶Рё РЅР°С‡РЅСѓС‚СЃСЏ 22 СЃРµРЅС‚СЏР±СЂСЏ. РќР° РІС‹Р±РѕСЂ РїСЂРµРґР»Р°РіР°РµС‚СЃСЏ РЅРµСЃРєРѕР»СЊРєРѕ РІР°СЂРёР°РЅС‚РѕРІ РїР°РјСЏС‚Рё Рё РЅРѕРІС‹Рµ С†РІРµС‚РѕРІС‹Рµ СЂРµС€РµРЅРёСЏ, РІРєР»СЋС‡Р°СЏ СЌРєСЃРєР»СЋР·РёРІРЅС‹Рµ РґР»СЏ Pro-Р»РёРЅРµР№РєРё.</p>
                     
-                    <h2>Сравнение iPhone 15 и 15 Pro</h2>
+                    <h2>РЎСЂР°РІРЅРµРЅРёРµ iPhone 15 Рё 15 Pro</h2>
 <table>
                         <thead>
                             <tr>
-                                <th>Характеристика</th>
+                                <th>РҐР°СЂР°РєС‚РµСЂРёСЃС‚РёРєР°</th>
                                 <th>iPhone 15</th>
                                 <th>iPhone 15 Pro</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td>Материал корпуса</td>
-                                <td>Алюминий и стекло</td>
-                                <td>Титан и стекло</td>
+                                <td>РњР°С‚РµСЂРёР°Р» РєРѕСЂРїСѓСЃР°</td>
+                                <td>РђР»СЋРјРёРЅРёР№ Рё СЃС‚РµРєР»Рѕ</td>
+                                <td>РўРёС‚Р°РЅ Рё СЃС‚РµРєР»Рѕ</td>
                             </tr>
                             <tr>
-                                <td>Процессор</td>
+                                <td>РџСЂРѕС†РµСЃСЃРѕСЂ</td>
                                 <td>A16 Bionic</td>
                                 <td>A17 Pro</td>
                             </tr>
                             <tr>
-                                <td>Дисплей</td>
-                                <td>6,1/6,7" Super Retina XDR, 60 Гц</td>
-                                <td>6,1/6,7" Super Retina XDR, 120 Гц (ProMotion)</td>
+                                <td>Р”РёСЃРїР»РµР№</td>
+                                <td>6,1/6,7" Super Retina XDR, 60 Р“С†</td>
+                                <td>6,1/6,7" Super Retina XDR, 120 Р“С† (ProMotion)</td>
                             </tr>
                             <tr>
-                                <td>Камера</td>
-                                <td>48 Мп + 12 Мп</td>
-                                <td>48 Мп + 12 Мп + 12 Мп (телеобъектив)</td>
+                                <td>РљР°РјРµСЂР°</td>
+                                <td>48 РњРї + 12 РњРї</td>
+                                <td>48 РњРї + 12 РњРї + 12 РњРї (С‚РµР»РµРѕР±СЉРµРєС‚РёРІ)</td>
                             </tr>
                             <tr>
-                                <td>Порт</td>
+                                <td>РџРѕСЂС‚</td>
                                 <td>USB-C (USB 2.0)</td>
                                 <td>USB-C (USB 3.0)</td>
                             </tr>
                             <tr>
-                                <td>Цена</td>
-                                <td>от $799</td>
-                                <td>от $999</td>
+                                <td>Р¦РµРЅР°</td>
+                                <td>РѕС‚ $799</td>
+                                <td>РѕС‚ $999</td>
                             </tr>
                         </tbody>
                     </table>
                     
-                    <h2>Заключение</h2>
-                    <p>iPhone 15 и iPhone 15 Pro — это не просто очередное обновление, а значительный шаг вперёд в развитии мобильных технологий Apple. Новые материалы, мощные процессоры, улучшенные камеры и переход на USB-C делают эти устройства одними из самых привлекательных на рынке. Благодаря глубокой интеграции с экосистемой Apple, новые iPhone становятся неотъемлемой частью цифровой жизни пользователей, предлагая максимальный комфорт, безопасность и производительность.</p>
-                    <p>С выходом iPhone 15 и 15 Pro Apple вновь подтверждает статус технологического лидера, предлагая пользователям не только стильные, но и по-настоящему инновационные устройства, которые будут актуальны ещё много лет.</p>
+                    <h2>Р—Р°РєР»СЋС‡РµРЅРёРµ</h2>
+                    <p>iPhone 15 Рё iPhone 15 Pro вЂ” СЌС‚Рѕ РЅРµ РїСЂРѕСЃС‚Рѕ РѕС‡РµСЂРµРґРЅРѕРµ РѕР±РЅРѕРІР»РµРЅРёРµ, Р° Р·РЅР°С‡РёС‚РµР»СЊРЅС‹Р№ С€Р°Рі РІРїРµСЂС‘Рґ РІ СЂР°Р·РІРёС‚РёРё РјРѕР±РёР»СЊРЅС‹С… С‚РµС…РЅРѕР»РѕРіРёР№ Apple. РќРѕРІС‹Рµ РјР°С‚РµСЂРёР°Р»С‹, РјРѕС‰РЅС‹Рµ РїСЂРѕС†РµСЃСЃРѕСЂС‹, СѓР»СѓС‡С€РµРЅРЅС‹Рµ РєР°РјРµСЂС‹ Рё РїРµСЂРµС…РѕРґ РЅР° USB-C РґРµР»Р°СЋС‚ СЌС‚Рё СѓСЃС‚СЂРѕР№СЃС‚РІР° РѕРґРЅРёРјРё РёР· СЃР°РјС‹С… РїСЂРёРІР»РµРєР°С‚РµР»СЊРЅС‹С… РЅР° СЂС‹РЅРєРµ. Р‘Р»Р°РіРѕРґР°СЂСЏ РіР»СѓР±РѕРєРѕР№ РёРЅС‚РµРіСЂР°С†РёРё СЃ СЌРєРѕСЃРёСЃС‚РµРјРѕР№ Apple, РЅРѕРІС‹Рµ iPhone СЃС‚Р°РЅРѕРІСЏС‚СЃСЏ РЅРµРѕС‚СЉРµРјР»РµРјРѕР№ С‡Р°СЃС‚СЊСЋ С†РёС„СЂРѕРІРѕР№ Р¶РёР·РЅРё РїРѕР»СЊР·РѕРІР°С‚РµР»РµР№, РїСЂРµРґР»Р°РіР°СЏ РјР°РєСЃРёРјР°Р»СЊРЅС‹Р№ РєРѕРјС„РѕСЂС‚, Р±РµР·РѕРїР°СЃРЅРѕСЃС‚СЊ Рё РїСЂРѕРёР·РІРѕРґРёС‚РµР»СЊРЅРѕСЃС‚СЊ.</p>
+                    <p>РЎ РІС‹С…РѕРґРѕРј iPhone 15 Рё 15 Pro Apple РІРЅРѕРІСЊ РїРѕРґС‚РІРµСЂР¶РґР°РµС‚ СЃС‚Р°С‚СѓСЃ С‚РµС…РЅРѕР»РѕРіРёС‡РµСЃРєРѕРіРѕ Р»РёРґРµСЂР°, РїСЂРµРґР»Р°РіР°СЏ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏРј РЅРµ С‚РѕР»СЊРєРѕ СЃС‚РёР»СЊРЅС‹Рµ, РЅРѕ Рё РїРѕ-РЅР°СЃС‚РѕСЏС‰РµРјСѓ РёРЅРЅРѕРІР°С†РёРѕРЅРЅС‹Рµ СѓСЃС‚СЂРѕР№СЃС‚РІР°, РєРѕС‚РѕСЂС‹Рµ Р±СѓРґСѓС‚ Р°РєС‚СѓР°Р»СЊРЅС‹ РµС‰С‘ РјРЅРѕРіРѕ Р»РµС‚.</p>
                 </div>
 
-        <!-- Telegram рекламный баннер -->
+        <!-- Telegram СЂРµРєР»Р°РјРЅС‹Р№ Р±Р°РЅРЅРµСЂ -->
         <a href="https://t.me/RepairoRU" target="_blank" rel="noopener noreferrer" class="telegram-banner">
           <div class="telegram-banner-container">
             <div class="telegram-logo">
@@ -465,10 +726,10 @@
               </svg>
             </div>
             <div class="telegram-content">
-              <div class="telegram-title">Новости из мира технологий</div>
-              <div class="telegram-subtitle">В нашем новом Telegram-канале. Подписывайтесь и будьте в числе первых!</div>
+              <div class="telegram-title">РќРѕРІРѕСЃС‚Рё РёР· РјРёСЂР° С‚РµС…РЅРѕР»РѕРіРёР№</div>
+              <div class="telegram-subtitle">Р’ РЅР°С€РµРј РЅРѕРІРѕРј Telegram-РєР°РЅР°Р»Рµ. РџРѕРґРїРёСЃС‹РІР°Р№С‚РµСЃСЊ Рё Р±СѓРґСЊС‚Рµ РІ С‡РёСЃР»Рµ РїРµСЂРІС‹С…!</div>
               <div class="telegram-button">
-                Подписаться
+                РџРѕРґРїРёСЃР°С‚СЊСЃСЏ
                 <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.56c-.21 2.22-1.12 7.58-1.58 10.06-.19 1.07-.57 1.43-.94 1.46-.8.07-1.4-.52-2.17-1.03-1.21-.79-1.89-1.28-3.06-2.05-1.35-.87-.47-1.35.3-2.13.2-.21 3.71-3.39 3.77-3.68.01-.04.01-.18-.07-.26s-.2-.05-.29-.03c-.12.03-2.11 1.34-5.95 3.93-.56.38-1.07.57-1.53.56-.5-.01-1.47-.28-2.19-.51-.88-.28-1.58-.43-1.52-.91.03-.25.38-.51 1.04-.78 4.07-1.77 6.78-2.94 8.13-3.51 3.88-1.62 4.68-1.9 5.19-1.91.12 0 .37.03.54.17.14.12.18.28.2.44-.01.06 0 .11-.01.17z"/>
                 </svg>
@@ -494,45 +755,45 @@
                         </span>
                         <span class="logo__text">Repairo</span>
                     </a>
-                    <p class="footer__text">Помогаем ремонтировать электронику с 2024 года</p>
+                    <p class="footer__text">РџРѕРјРѕРіР°РµРј СЂРµРјРѕРЅС‚РёСЂРѕРІР°С‚СЊ СЌР»РµРєС‚СЂРѕРЅРёРєСѓ СЃ 2024 РіРѕРґР°</p>
                 </div>
                 <div class="footer__col">
-                    <h3 class="footer__title">Разделы</h3>
+                    <h3 class="footer__title">Р Р°Р·РґРµР»С‹</h3>
                     <ul class="footer__links">
-                        <li><a href="../index.html" class="footer__link">Главная</a></li>
-                        <li><a href="../index.html#categories" class="footer__link">Все гайды</a></li>
-                        <li><a href="../contacts.html" class="footer__link">Контакты</a></li>
+                        <li><a href="../index.html" class="footer__link">Р“Р»Р°РІРЅР°СЏ</a></li>
+                        <li><a href="../index.html#categories" class="footer__link">Р’СЃРµ РіР°Р№РґС‹</a></li>
+                        <li><a href="../contacts.html" class="footer__link">РљРѕРЅС‚Р°РєС‚С‹</a></li>
                     </ul>
                 </div>
                 <div class="footer__col">
-                    <h3 class="footer__title">Категории</h3>
+                    <h3 class="footer__title">РљР°С‚РµРіРѕСЂРёРё</h3>
                     <ul class="footer__links">
-                        <li><a href="../tv.html" class="nav__link">Телевизоры</a></li>
-                        <li><a href="../cameras.html" class="nav__link">Фотоаппараты</a></li>
-                        <li><a href="../consoles.html" class="nav__link">Приставки</a></li>
-                        <li><a href="../laptops.html" class="nav__link">Ноутбуки</a></li>
-                        <li><a href="../smartphones.html" class="nav__link">Смартфоны</a></li>
-                        <li><a href="../small-appliances.html" class="nav__link">Мелкая техника</a></li>
-                        <li><a href="../large-appliances.html" class="nav__link">Бытовая техника</a></li>
-                        <li><a href="../auto-electronics.html" class="nav__link">Авто-Электроника</a></li>
+                        <li><a href="../tv.html" class="nav__link">РўРµР»РµРІРёР·РѕСЂС‹</a></li>
+                        <li><a href="../cameras.html" class="nav__link">Р¤РѕС‚РѕР°РїРїР°СЂР°С‚С‹</a></li>
+                        <li><a href="../consoles.html" class="nav__link">РџСЂРёСЃС‚Р°РІРєРё</a></li>
+                        <li><a href="../laptops.html" class="nav__link">РќРѕСѓС‚Р±СѓРєРё</a></li>
+                        <li><a href="../smartphones.html" class="nav__link">РЎРјР°СЂС‚С„РѕРЅС‹</a></li>
+                        <li><a href="../small-appliances.html" class="nav__link">РњРµР»РєР°СЏ С‚РµС…РЅРёРєР°</a></li>
+                        <li><a href="../large-appliances.html" class="nav__link">Р‘С‹С‚РѕРІР°СЏ С‚РµС…РЅРёРєР°</a></li>
+                        <li><a href="../auto-electronics.html" class="nav__link">РђРІС‚Рѕ-Р­Р»РµРєС‚СЂРѕРЅРёРєР°</a></li>
                     </ul>
                 </div>
                 <div class="footer__col">
-                    <h3 class="footer__title">Контакты</h3>
+                    <h3 class="footer__title">РљРѕРЅС‚Р°РєС‚С‹</h3>
                     <ul class="footer__links">
                         <li><a href="https://t.me/RepairoRU" class="footer__link"><i class="fab fa-telegram"></i> Telegram</a></li>
-                        <li><span class="footer__link">Наша почта: repairo.info@mail.ru</span></li>
+                        <li><span class="footer__link">РќР°С€Р° РїРѕС‡С‚Р°: repairo.info@mail.ru</span></li>
                     </ul>
                 </div>
             </div>
             <div class="footer__bottom">
                 <p class="disclaimer">
-    Администрация сайта не несёт ответственности за возможные повреждения техники
-    и иные последствия, возникшие в результате самостоятельного ремонта по
-    материалам и инструкциям, размещённым на сайте. Все работы вы выполняете
-    на свой страх и риск.
+    РђРґРјРёРЅРёСЃС‚СЂР°С†РёСЏ СЃР°Р№С‚Р° РЅРµ РЅРµСЃС‘С‚ РѕС‚РІРµС‚СЃС‚РІРµРЅРЅРѕСЃС‚Рё Р·Р° РІРѕР·РјРѕР¶РЅС‹Рµ РїРѕРІСЂРµР¶РґРµРЅРёСЏ С‚РµС…РЅРёРєРё
+    Рё РёРЅС‹Рµ РїРѕСЃР»РµРґСЃС‚РІРёСЏ, РІРѕР·РЅРёРєС€РёРµ РІ СЂРµР·СѓР»СЊС‚Р°С‚Рµ СЃР°РјРѕСЃС‚РѕСЏС‚РµР»СЊРЅРѕРіРѕ СЂРµРјРѕРЅС‚Р° РїРѕ
+    РјР°С‚РµСЂРёР°Р»Р°Рј Рё РёРЅСЃС‚СЂСѓРєС†РёСЏРј, СЂР°Р·РјРµС‰С‘РЅРЅС‹Рј РЅР° СЃР°Р№С‚Рµ. Р’СЃРµ СЂР°Р±РѕС‚С‹ РІС‹ РІС‹РїРѕР»РЅСЏРµС‚Рµ
+    РЅР° СЃРІРѕР№ СЃС‚СЂР°С… Рё СЂРёСЃРє.
     </p>
-                <p class="footer__copyright">© 2026 Repairo. Все права защищены.</p>
+                <p class="footer__copyright">В© 2026 Repairo. Р’СЃРµ РїСЂР°РІР° Р·Р°С‰РёС‰РµРЅС‹.</p>
             </div>
         </div>
     </footer>
@@ -541,56 +802,56 @@
 {
   "@context": "https://schema.org",
   "@type": "HowTo",
-  "name": "iPhone 15 и 15 Pro: что нового от Apple",
-  "description": "Пошаговая инструкция: iPhone 15 и 15 Pro: что нового от Apple. Компания Apple представила новые смартфоны iPhone 15 и iPhone 15 Pro, которые по.... Советы эк...",
+  "name": "iPhone 15 Рё 15 Pro: С‡С‚Рѕ РЅРѕРІРѕРіРѕ РѕС‚ Apple",
+  "description": "РџРѕС€Р°РіРѕРІР°СЏ РёРЅСЃС‚СЂСѓРєС†РёСЏ: iPhone 15 Рё 15 Pro: С‡С‚Рѕ РЅРѕРІРѕРіРѕ РѕС‚ Apple. РљРѕРјРїР°РЅРёСЏ Apple РїСЂРµРґСЃС‚Р°РІРёР»Р° РЅРѕРІС‹Рµ СЃРјР°СЂС‚С„РѕРЅС‹ iPhone 15 Рё iPhone 15 Pro, РєРѕС‚РѕСЂС‹Рµ РїРѕ.... РЎРѕРІРµС‚С‹ СЌРє...",
   "totalTime": "PT30M",
   "step": [
     {
       "@type": "HowToStep",
-      "name": "Дизайн и материалы",
-      "text": "Дизайн и материалы",
+      "name": "Р”РёР·Р°Р№РЅ Рё РјР°С‚РµСЂРёР°Р»С‹",
+      "text": "Р”РёР·Р°Р№РЅ Рё РјР°С‚РµСЂРёР°Р»С‹",
       "url": "#step-1"
     },
     {
       "@type": "HowToStep",
-      "name": "Технические характеристики",
-      "text": "Технические характеристики",
+      "name": "РўРµС…РЅРёС‡РµСЃРєРёРµ С…Р°СЂР°РєС‚РµСЂРёСЃС‚РёРєРё",
+      "text": "РўРµС…РЅРёС‡РµСЃРєРёРµ С…Р°СЂР°РєС‚РµСЂРёСЃС‚РёРєРё",
       "url": "#step-2"
     },
     {
       "@type": "HowToStep",
-      "name": "USB-C: новая эра подключения",
-      "text": "USB-C: новая эра подключения",
+      "name": "USB-C: РЅРѕРІР°СЏ СЌСЂР° РїРѕРґРєР»СЋС‡РµРЅРёСЏ",
+      "text": "USB-C: РЅРѕРІР°СЏ СЌСЂР° РїРѕРґРєР»СЋС‡РµРЅРёСЏ",
       "url": "#step-3"
     },
     {
       "@type": "HowToStep",
-      "name": "Программные возможности и iOS 17",
-      "text": "Программные возможности и iOS 17",
+      "name": "РџСЂРѕРіСЂР°РјРјРЅС‹Рµ РІРѕР·РјРѕР¶РЅРѕСЃС‚Рё Рё iOS 17",
+      "text": "РџСЂРѕРіСЂР°РјРјРЅС‹Рµ РІРѕР·РјРѕР¶РЅРѕСЃС‚Рё Рё iOS 17",
       "url": "#step-4"
     },
     {
       "@type": "HowToStep",
-      "name": "Автономность и зарядка",
-      "text": "Автономность и зарядка",
+      "name": "РђРІС‚РѕРЅРѕРјРЅРѕСЃС‚СЊ Рё Р·Р°СЂСЏРґРєР°",
+      "text": "РђРІС‚РѕРЅРѕРјРЅРѕСЃС‚СЊ Рё Р·Р°СЂСЏРґРєР°",
       "url": "#step-5"
     },
     {
       "@type": "HowToStep",
-      "name": "Безопасность и конфиденциальность",
-      "text": "Безопасность и конфиденциальность",
+      "name": "Р‘РµР·РѕРїР°СЃРЅРѕСЃС‚СЊ Рё РєРѕРЅС„РёРґРµРЅС†РёР°Р»СЊРЅРѕСЃС‚СЊ",
+      "text": "Р‘РµР·РѕРїР°СЃРЅРѕСЃС‚СЊ Рё РєРѕРЅС„РёРґРµРЅС†РёР°Р»СЊРЅРѕСЃС‚СЊ",
       "url": "#step-6"
     },
     {
       "@type": "HowToStep",
-      "name": "Экосистема Apple и интеграция с другими устройствами",
-      "text": "Экосистема Apple и интеграция с другими устройствами",
+      "name": "Р­РєРѕСЃРёСЃС‚РµРјР° Apple Рё РёРЅС‚РµРіСЂР°С†РёСЏ СЃ РґСЂСѓРіРёРјРё СѓСЃС‚СЂРѕР№СЃС‚РІР°РјРё",
+      "text": "Р­РєРѕСЃРёСЃС‚РµРјР° Apple Рё РёРЅС‚РµРіСЂР°С†РёСЏ СЃ РґСЂСѓРіРёРјРё СѓСЃС‚СЂРѕР№СЃС‚РІР°РјРё",
       "url": "#step-7"
     },
     {
       "@type": "HowToStep",
-      "name": "Цены и доступность",
-      "text": "Цены и доступность",
+      "name": "Р¦РµРЅС‹ Рё РґРѕСЃС‚СѓРїРЅРѕСЃС‚СЊ",
+      "text": "Р¦РµРЅС‹ Рё РґРѕСЃС‚СѓРїРЅРѕСЃС‚СЊ",
       "url": "#step-8"
     }
   ],
@@ -601,6 +862,4 @@
 <script src="../cookie-consent.js"></script>
 </body>
 </html>
-
-
 

@@ -2,36 +2,43 @@
 <html lang="ru" data-theme="light">
 <head>
 
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Лучшие аккумуляторы и зарядки для фототехники | Repairo</title>
-    <meta name="description" content="">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Р›СѓС‡С€РёРµ Р°РєРєСѓРјСѓР»СЏС‚РѕСЂС‹ Рё Р·Р°СЂСЏРґРєРё РґР»СЏ С„РѕС‚РѕС‚РµС…РЅРёРєРё | Repairo</title>
+    <meta name="description" content="{{ description }}">
+    <meta name="description" content="РџРѕС€Р°РіРѕРІР°СЏ РёРЅСЃС‚СЂСѓРєС†РёСЏ: Р›СѓС‡С€РёРµ Р°РєРєСѓРјСѓР»СЏС‚РѕСЂС‹ Рё Р·Р°СЂСЏРґРєРё РґР»СЏ С„РѕС‚РѕС‚РµС…РЅРёРєРё. Р”Р»СЏ РїСЂРѕС„РµСЃСЃРёРѕРЅР°Р»СЊРЅРѕР№ СЃСЉС‘РјРєРё РІСЃРµРіРґР° Р±РµСЂРёС‚Рµ РјРёРЅРёРјСѓРј РґРІР° РѕСЂРёРіРёРЅР°Р»СЊРЅС‹С… Р°РєРєСѓРјСѓР»СЏС‚РѕСЂР°.... РЎРѕРІРµ...">
 
-  <link rel="stylesheet" href="../styles.css" />
-  <link rel="stylesheet" href="../styles-header.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <style>
-    .guide-content { line-height: 1.7; color: var(--text); }
-    .guide-content h2 { color: var(--primary); margin-top: 30px; margin-bottom: 15px; font-size: 1.5rem; }
-    .guide-content h3 { color: var(--primary-dark); margin-top: 25px; margin-bottom: 12px; font-size: 1.2rem; }
-    .guide-image-block { margin: 20px 0; padding: 15px; background: var(--background); border-radius: var(--border-radius); border: 1px solid var(--border); text-align: center; }
-    .guide-image-block img { max-width: 100%; height: auto; border-radius: 6px; border: 1px solid var(--border); }
-    .image-caption { margin-top: 10px; font-size: 0.85rem; color: var(--text-light); font-style: italic; }
-    .pro-tips { background: rgba(3, 74, 79, 0.05); padding: 15px; border-radius: 6px; margin: 20px 0; }
-    .pro-tips h4 { color: var(--primary); margin-top: 0; margin-bottom: 12px; font-size: 1.1rem; }
-    .tip-item { display: flex; gap: 8px; margin-bottom: 8px; align-items: flex-start; }
-    table { width: 100%; border-collapse: collapse; margin: 20px 0; }
-    th, td { border: 1px solid var(--border); padding: 8px; text-align: left; }
-    th { background: var(--background-light); }
-    .highlight { background: #f5f7fa; border-left: 4px solid #2d9cdb; padding: 10px 15px; margin: 20px 0; }
-    .faq-section ul { margin-left: 1em; }
-    .block-section { margin-bottom: 2em; }
-    @media (max-width: 768px) {
-      .guide-content h2 { font-size: 1.4rem; margin-top: 25px; }
-      .guide-image-block { padding: 12px; margin: 15px 0; }
-      table, th, td { font-size: 0.95rem; }
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../styles-header.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .guide-content { line-height: 1.7; color: var(--text);}
+        .guide-content h2 { color: var(--primary); margin-top: 30px; margin-bottom: 15px; font-size: 1.5rem;}
+        .step-group { margin: 20px 0; padding: 15px; background: var(--background); border-radius: var(--border-radius); border: 1px solid var(--border);}
+        .step { display: flex; gap: 15px; margin: 12px 0; padding: 12px; background: var(--background-alt); border-radius: 6px; align-items: flex-start;}
+        .step-number { background: var(--primary); color: white; width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-weight: bold; font-size: 0.8rem;}
+        .guide-image-block { margin: 20px 0; padding: 15px; background: var(--background); border-radius: var(--border-radius); border: 1px solid var(--border); text-align: center;}
+        .guide-image-block img { max-width: 100%; height: auto; border-radius: 6px; border: 1px solid var(--border);}
+        .recommend-box { background: rgba(3, 74, 79, 0.1); border-left: 4px solid var(--primary); padding: 12px; margin: 15px 0; display: flex; gap: 12px; align-items: flex-start; border-radius: 4px;}
+        .recommend-box i { font-size: 1.2rem; color: var(--primary); margin-top: 2px;}
+        .pro-tips { background: rgba(3, 74, 79, 0.05); padding: 15px; border-radius: 6px; margin: 20px 0;}
+        .pro-tips h4 { color: var(--primary); margin-top: 0; margin-bottom: 12px; font-size: 1.1rem;}
+        .tip-item { display: flex; gap: 8px; margin-bottom: 8px; align-items: flex-start;}
+        @media (max-width: 768px) {
+            .guide-content h2 { font-size: 1.4rem; margin-top: 25px;}
+            .guide-image-block, .step-group { padding: 12px; margin: 15px 0;}
+            .step { padding: 10px;}
+        }
+    /* РЇРЅРґРµРєСЃ РњР°СЂРєРµС‚ СЂРµРєР»Р°РјРЅС‹Р№ Р±Р°РЅРЅРµСЂ */
+    .ym-hero-link {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+      max-width: 100%;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     }
+
     /* Р“РѕСЂРёР·РѕРЅС‚Р°Р»СЊРЅС‹Р№ Р±Р°РЅРЅРµСЂ-РєР°СЂС‚РѕС‡РєР° */
     .ym-hero-banner {
       width: 100%;
@@ -144,11 +151,13 @@
       transition: background 0.15s ease, transform 0.15s ease,
                   box-shadow 0.15s ease;
     }
+
     .ym-hero-button::after {
       content: "в†’";
       margin-left: 6px;
       font-size: 14px;
     }
+
     .ym-hero-button:hover {
       background: #7c3aed;
       transform: translateY(-1px);
@@ -172,19 +181,24 @@
         max-width: 100%;
         margin: 20px 0;
       }
+
       .ym-hero-images {
         height: 100px;
       }
+
       .ym-hero-content {
         padding: 12px 12px;
       }
+
       .ym-hero-title {
         font-size: 13px;
       }
+
       .ym-hero-button {
         font-size: 13px;
         padding: 8px 14px;
       }
+
       .ym-hero-legal {
         font-size: 10px;
       }
@@ -292,22 +306,27 @@
         padding: 15px;
         min-height: 100px;
       }
+
       .telegram-logo {
         width: 50px;
         height: 50px;
         min-width: 50px;
         margin-right: 15px;
       }
+
       .telegram-logo svg {
         width: 26px;
         height: 26px;
       }
+
       .telegram-title {
         font-size: 14px;
       }
+
       .telegram-subtitle {
         font-size: 12px;
       }
+
       .telegram-button {
         font-size: 12px;
         padding: 6px 12px;
@@ -316,204 +335,218 @@
 
 
 
-  </style>
+    </style>
   <script async src="https://timeweb.cloud/api/v1/cloud-ai/agents/3cc03620-d051-4d8d-b5af-f7b6cd083a35/embed.js?collapsed=true"></script>
 </head>
 <body>
-  <header class="header">
-    <div class="container">
-      <div class="header__inner">
-        <a href="../index.html" class="logo">
-          <span class="logo__icon"></span>
-          <span class="logo__text">GeoExpert</span>
-        </a>
-        <nav class="nav">
-          <ul class="nav__list">
-            <li><a href="../cameras.html" class="nav__link">РљР°РјРµСЂС‹</a></li>
-            <li><a href="../drones.html" class="nav__link">Р”СЂРѕРЅС‹</a></li>
-            <li><a href="../workflow.html" class="nav__link">Workflow</a></li>
-          </ul>
-        </nav>
-      </div>
-    </div>
-  </header>
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <a href="../index.html" class="logo">
+                    <span class="logo__icon"></span>
+                    <span class="logo__text">Repairo</span>
+                </a>
+                <nav class="nav">
+                    <ul class="nav__list">
+                        <li><a href="../cameras.html" class="nav__link">Р¤РѕС‚РѕР°РїРїР°СЂР°С‚С‹</a></li>
+                        <li><a href="../tv.html" class="nav__link">РўРµР»РµРІРёР·РѕСЂС‹</a></li>
+                        <li><a href="../laptops.html" class="nav__link">РќРѕСѓС‚Р±СѓРєРё</a></li>
+                        <li><a href="../smartphones.html" class="nav__link">РЎРјР°СЂС‚С„РѕРЅС‹</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
     <section class="guide-page">
         <div class="container">
             <div class="breadcrumbs">
-                <a href="../index.html">Главная</a>
+                <a href="../index.html">Р“Р»Р°РІРЅР°СЏ</a>
                 <i class="fas fa-chevron-right"></i>
-                <a href="../cameras.html">Фотоаппараты</a>
+                <a href="../cameras.html">Р¤РѕС‚РѕР°РїРїР°СЂР°С‚С‹</a>
                 <i class="fas fa-chevron-right"></i>
-                <span>Лучшие аккумуляторы и зарядки для фототехники</span>
+                <span>Р›СѓС‡С€РёРµ Р°РєРєСѓРјСѓР»СЏС‚РѕСЂС‹ Рё Р·Р°СЂСЏРґРєРё РґР»СЏ С„РѕС‚РѕС‚РµС…РЅРёРєРё</span>
             </div>
-            <h1 class="section__title">Лучшие аккумуляторы и зарядки для фототехники</h1>
+            <h1 class="section__title">Р›СѓС‡С€РёРµ Р°РєРєСѓРјСѓР»СЏС‚РѕСЂС‹ Рё Р·Р°СЂСЏРґРєРё РґР»СЏ С„РѕС‚РѕС‚РµС…РЅРёРєРё</h1>
             <div class="guide-meta">
-                <span><i class="fas fa-adjust"></i> Практический гайд</span>
+                <span><i class="fas fa-adjust"></i> РџСЂР°РєС‚РёС‡РµСЃРєРёР№ РіР°Р№Рґ</span>
             </div>
             <div class="guide-image-block">
-                <img src="https://avatars.mds.yandex.net/get-shedevrum/16123700/img_f85b28ce2daf11f0899c228f8b751de6/orig" alt="Лучшие аккумуляторы и зарядки для фототехники">
+                <img src="https://avatars.mds.yandex.net/get-shedevrum/16123700/img_f85b28ce2daf11f0899c228f8b751de6/orig" alt="Р›СѓС‡С€РёРµ Р°РєРєСѓРјСѓР»СЏС‚РѕСЂС‹ Рё Р·Р°СЂСЏРґРєРё РґР»СЏ С„РѕС‚РѕС‚РµС…РЅРёРєРё">
             </div>
             <div class="guide-content">
-        <!-- Яндекс Маркет рекламный блок -->
+        <!-- РЇРЅРґРµРєСЃ РњР°СЂРєРµС‚ СЂРµРєР»Р°РјРЅС‹Р№ Р±Р»РѕРє -->
         <a href="https://market.yandex.ru/catalog--bytovaia-tekhnika/54419/list?hid=198118&rs=eJwzUvjEKMvBILDwEKsEg8Kzbh6Nw4dZNS4D8c7lFhp9c1-wAQC3uAwP&clid=14635360&refid=rbck8fgamv681iu59go3iqxwddedl4x9&erid=5jtCeReNx12oajxS2bzShmZ&mclid=1003&distr_type=7&utm_source=partner_network&pp=900&utm_medium=link_list&utm_campaign=14635360"
            target="_blank"
            rel="noopener noreferrer sponsored"
+           class="ym-hero-link">
+          <div class="ym-hero-banner">
+            <div class="ym-hero-images">
+              <div class="ym-hero-image">
                 <img src="https://avatars.mds.yandex.net/get-mpic/14770882/2a00000197f4dbee777f8afddccaf44faa53/optimize"
-                     alt="Распродажа бытовой электроники 1">
+                     alt="Р Р°СЃРїСЂРѕРґР°Р¶Р° Р±С‹С‚РѕРІРѕР№ СЌР»РµРєС‚СЂРѕРЅРёРєРё 1">
               </div>
+              <div class="ym-hero-image">
                 <img src="https://avatars.mds.yandex.net/get-mpic/15580298/img_id8867318964670654684.jpeg/optimize"
-                     alt="Распродажа бытовой электроники 2">
+                     alt="Р Р°СЃРїСЂРѕРґР°Р¶Р° Р±С‹С‚РѕРІРѕР№ СЌР»РµРєС‚СЂРѕРЅРёРєРё 2">
               </div>
+              <div class="ym-hero-image">
                 <img src="https://avatars.mds.yandex.net/get-mpic/10096780/2a000001953b534fed2494e0b30fadd9b458/optimize"
-                     alt="Распродажа бытовой электроники 3">
+                     alt="Р Р°СЃРїСЂРѕРґР°Р¶Р° Р±С‹С‚РѕРІРѕР№ СЌР»РµРєС‚СЂРѕРЅРёРєРё 3">
               </div>
             </div>
-                  ? Выгодные предложения
+            <div class="ym-hero-content">
+              <h3 class="ym-hero-title">Р Р°СЃРїСЂРѕРґР°Р¶Р° Р±С‹С‚РѕРІРѕР№ СЌР»РµРєС‚СЂРѕРЅРёРєРё РЅР° РЇРЅРґРµРєСЃ РњР°СЂРєРµС‚Рµ</h3>
+              <div class="ym-hero-top">
+                <div class="ym-hero-rating">
+                  в­ђ Р’С‹РіРѕРґРЅС‹Рµ РїСЂРµРґР»РѕР¶РµРЅРёСЏ
+                  <span class="ym-hero-rating-count">РЎРєРёРґРєРё РґРѕ 50%</span>
                 </div>
               </div>
+              <button class="ym-hero-button">Р—Р° СЃРєРёРґРєР°РјРё</button>
             </div>
           </div>
-            Реклама. ООО "ЯНДЕКС", ИНН 7736207543. clid: 14635360, erid: 5jtCeReNx12oajxS2bzShmZ
+          <div class="ym-hero-legal">
+            Р РµРєР»Р°РјР°. РћРћРћ "РЇРќР”Р•РљРЎ", РРќРќ 7736207543. clid: 14635360, erid: 5jtCeReNx12oajxS2bzShmZ
           </div>
         </a>
-                <h2>Какие бывают аккумуляторы для фототехники?</h2>
+                <h2>РљР°РєРёРµ Р±С‹РІР°СЋС‚ Р°РєРєСѓРјСѓР»СЏС‚РѕСЂС‹ РґР»СЏ С„РѕС‚РѕС‚РµС…РЅРёРєРё?</h2>
                 <ul>
-                    <li><strong>Фирменные (оригинальные)</strong> - производятся самим брендом камеры (Canon, Nikon, Sony, Fujifilm и др.), гарантируют максимальную совместимость, стабильную ёмкость, корректную работу индикаторов и долгий срок службы.</li>
-                    <li><strong>Совместимые (аналоговые, неоригинальные)</strong> - выпускаются сторонними производителями (Wasabi, Patona, DSTE, Green Cell, Hahnel, Newell и др.), стоят дешевле, но качество и ёмкость могут отличаться.</li>
-                    <li><strong>AA/AAA аккумуляторы</strong> - используются в некоторых вспышках, старых фотоаппаратах и аксессуарах. Лучший выбор - NiMH-аккумуляторы с низким саморазрядом (Panasonic Eneloop, GP ReCyko, Varta Ready2Use).</li>
+                    <li><strong>Р¤РёСЂРјРµРЅРЅС‹Рµ (РѕСЂРёРіРёРЅР°Р»СЊРЅС‹Рµ)</strong> - РїСЂРѕРёР·РІРѕРґСЏС‚СЃСЏ СЃР°РјРёРј Р±СЂРµРЅРґРѕРј РєР°РјРµСЂС‹ (Canon, Nikon, Sony, Fujifilm Рё РґСЂ.), РіР°СЂР°РЅС‚РёСЂСѓСЋС‚ РјР°РєСЃРёРјР°Р»СЊРЅСѓСЋ СЃРѕРІРјРµСЃС‚РёРјРѕСЃС‚СЊ, СЃС‚Р°Р±РёР»СЊРЅСѓСЋ С‘РјРєРѕСЃС‚СЊ, РєРѕСЂСЂРµРєС‚РЅСѓСЋ СЂР°Р±РѕС‚Сѓ РёРЅРґРёРєР°С‚РѕСЂРѕРІ Рё РґРѕР»РіРёР№ СЃСЂРѕРє СЃР»СѓР¶Р±С‹.</li>
+                    <li><strong>РЎРѕРІРјРµСЃС‚РёРјС‹Рµ (Р°РЅР°Р»РѕРіРѕРІС‹Рµ, РЅРµРѕСЂРёРіРёРЅР°Р»СЊРЅС‹Рµ)</strong> - РІС‹РїСѓСЃРєР°СЋС‚СЃСЏ СЃС‚РѕСЂРѕРЅРЅРёРјРё РїСЂРѕРёР·РІРѕРґРёС‚РµР»СЏРјРё (Wasabi, Patona, DSTE, Green Cell, HГ¤hnel, Newell Рё РґСЂ.), СЃС‚РѕСЏС‚ РґРµС€РµРІР»Рµ, РЅРѕ РєР°С‡РµСЃС‚РІРѕ Рё С‘РјРєРѕСЃС‚СЊ РјРѕРіСѓС‚ РѕС‚Р»РёС‡Р°С‚СЊСЃСЏ.</li>
+                    <li><strong>AA/AAA Р°РєРєСѓРјСѓР»СЏС‚РѕСЂС‹</strong> - РёСЃРїРѕР»СЊР·СѓСЋС‚СЃСЏ РІ РЅРµРєРѕС‚РѕСЂС‹С… РІСЃРїС‹С€РєР°С…, СЃС‚Р°СЂС‹С… С„РѕС‚РѕР°РїРїР°СЂР°С‚Р°С… Рё Р°РєСЃРµСЃСЃСѓР°СЂР°С…. Р›СѓС‡С€РёР№ РІС‹Р±РѕСЂ - NiMH-Р°РєРєСѓРјСѓР»СЏС‚РѕСЂС‹ СЃ РЅРёР·РєРёРј СЃР°РјРѕСЂР°Р·СЂСЏРґРѕРј (Panasonic Eneloop, GP ReCyko, Varta Ready2Use).</li>
                 </ul>
-                <h2>Как выбрать аккумулятор для фотоаппарата?</h2>
+                <h2>РљР°Рє РІС‹Р±СЂР°С‚СЊ Р°РєРєСѓРјСѓР»СЏС‚РѕСЂ РґР»СЏ С„РѕС‚РѕР°РїРїР°СЂР°С‚Р°?</h2>
 <ul>
-                    <li>Проверяйте <strong>точную модель</strong> (например, Canon LP-E6NH, Sony NP-FZ100, Nikon EN-EL15c, Fujifilm NP-W235) - не все аккумуляторы даже одной фирмы взаимозаменяемы.</li>
-                    <li>Оригинальные аккумуляторы обеспечивают <strong>максимальную безопасность</strong>, корректную работу с быстрой зарядкой, отображение процента заряда и защиту от перегрева.</li>
-                    <li>Совместимые аккумуляторы подойдут для экономии, резервных комплектов, путешествий, но лучше выбирать проверенные бренды с отзывами.</li>
-                    <li>Обращайте внимание на <strong>ёмкость (mAh)</strong> - чем выше, тем дольше работает камера. У неоригинальных часто реальная ёмкость ниже заявленной.</li>
-                    <li>Для вспышек и аксессуаров - только NiMH аккумуляторы с низким саморазрядом (Eneloop, GP ReCyko).</li>
+                    <li>РџСЂРѕРІРµСЂСЏР№С‚Рµ <strong>С‚РѕС‡РЅСѓСЋ РјРѕРґРµР»СЊ</strong> (РЅР°РїСЂРёРјРµСЂ, Canon LP-E6NH, Sony NP-FZ100, Nikon EN-EL15c, Fujifilm NP-W235) - РЅРµ РІСЃРµ Р°РєРєСѓРјСѓР»СЏС‚РѕСЂС‹ РґР°Р¶Рµ РѕРґРЅРѕР№ С„РёСЂРјС‹ РІР·Р°РёРјРѕР·Р°РјРµРЅСЏРµРјС‹.</li>
+                    <li>РћСЂРёРіРёРЅР°Р»СЊРЅС‹Рµ Р°РєРєСѓРјСѓР»СЏС‚РѕСЂС‹ РѕР±РµСЃРїРµС‡РёРІР°СЋС‚ <strong>РјР°РєСЃРёРјР°Р»СЊРЅСѓСЋ Р±РµР·РѕРїР°СЃРЅРѕСЃС‚СЊ</strong>, РєРѕСЂСЂРµРєС‚РЅСѓСЋ СЂР°Р±РѕС‚Сѓ СЃ Р±С‹СЃС‚СЂРѕР№ Р·Р°СЂСЏРґРєРѕР№, РѕС‚РѕР±СЂР°Р¶РµРЅРёРµ РїСЂРѕС†РµРЅС‚Р° Р·Р°СЂСЏРґР° Рё Р·Р°С‰РёС‚Сѓ РѕС‚ РїРµСЂРµРіСЂРµРІР°.</li>
+                    <li>РЎРѕРІРјРµСЃС‚РёРјС‹Рµ Р°РєРєСѓРјСѓР»СЏС‚РѕСЂС‹ РїРѕРґРѕР№РґСѓС‚ РґР»СЏ СЌРєРѕРЅРѕРјРёРё, СЂРµР·РµСЂРІРЅС‹С… РєРѕРјРїР»РµРєС‚РѕРІ, РїСѓС‚РµС€РµСЃС‚РІРёР№, РЅРѕ Р»СѓС‡С€Рµ РІС‹Р±РёСЂР°С‚СЊ РїСЂРѕРІРµСЂРµРЅРЅС‹Рµ Р±СЂРµРЅРґС‹ СЃ РѕС‚Р·С‹РІР°РјРё.</li>
+                    <li>РћР±СЂР°С‰Р°Р№С‚Рµ РІРЅРёРјР°РЅРёРµ РЅР° <strong>С‘РјРєРѕСЃС‚СЊ (mAh)</strong> - С‡РµРј РІС‹С€Рµ, С‚РµРј РґРѕР»СЊС€Рµ СЂР°Р±РѕС‚Р°РµС‚ РєР°РјРµСЂР°. РЈ РЅРµРѕСЂРёРіРёРЅР°Р»СЊРЅС‹С… С‡Р°СЃС‚Рѕ СЂРµР°Р»СЊРЅР°СЏ С‘РјРєРѕСЃС‚СЊ РЅРёР¶Рµ Р·Р°СЏРІР»РµРЅРЅРѕР№.</li>
+                    <li>Р”Р»СЏ РІСЃРїС‹С€РµРє Рё Р°РєСЃРµСЃСЃСѓР°СЂРѕРІ - С‚РѕР»СЊРєРѕ NiMH Р°РєРєСѓРјСѓР»СЏС‚РѕСЂС‹ СЃ РЅРёР·РєРёРј СЃР°РјРѕСЂР°Р·СЂСЏРґРѕРј (Eneloop, GP ReCyko).</li>
                 </ul>
-                <h2>Лучшие бренды аккумуляторов для фотоаппаратов</h2>
+                <h2>Р›СѓС‡С€РёРµ Р±СЂРµРЅРґС‹ Р°РєРєСѓРјСѓР»СЏС‚РѕСЂРѕРІ РґР»СЏ С„РѕС‚РѕР°РїРїР°СЂР°С‚РѕРІ</h2>
                 <ul>
-                    <li><strong>Оригинальные:</strong> Canon, Nikon, Sony, Fujifilm, Panasonic, Olympus, GoPro, DJI.</li>
-                    <li><strong>Премиум-совместимые:</strong> Hahnel, Patona Premium, Newell, Wasabi Power, Green Cell Pro, DSTE, Duracell Photo.</li>
+                    <li><strong>РћСЂРёРіРёРЅР°Р»СЊРЅС‹Рµ:</strong> Canon, Nikon, Sony, Fujifilm, Panasonic, Olympus, GoPro, DJI.</li>
+                    <li><strong>РџСЂРµРјРёСѓРј-СЃРѕРІРјРµСЃС‚РёРјС‹Рµ:</strong> HГ¤hnel, Patona Premium, Newell, Wasabi Power, Green Cell Pro, DSTE, Duracell Photo.</li>
                     <li><strong>AA/AAA:</strong> Panasonic Eneloop Pro, GP ReCyko Pro, Varta Ready2Use, Energizer Power Plus.</li>
                 </ul>
-                <h2>Как выбрать зарядное устройство?</h2>
+                <h2>РљР°Рє РІС‹Р±СЂР°С‚СЊ Р·Р°СЂСЏРґРЅРѕРµ СѓСЃС‚СЂРѕР№СЃС‚РІРѕ?</h2>
                 <ul>
-                    <li><strong>Оригинальные зарядки</strong> - гарантируют правильный алгоритм заряда, защиту от перезаряда и перегрева, совместимость с быстрой зарядкой.</li>
-                    <li><strong>Универсальные зарядки</strong> - подходят для разных моделей и типов аккумуляторов (AA/AAA, Li-ion), часто имеют LCD-дисплей, USB-порт, функцию восстановления.</li>
-                    <li><strong>Двойные/многоканальные зарядки</strong> - позволяют заряжать 2 и более аккумулятора одновременно, часто имеют USB-C или microUSB вход, что удобно в поездках.</li>
-                    <li><strong>PowerBank-зарядки</strong> - позволяют заряжать аккумуляторы от внешних аккумуляторов (удобно в полевых условиях).</li>
-                    <li>Для AA/AAA - выбирайте интеллектуальные зарядки с индивидуальным контролем каналов (LiitoKala Lii-500, Nitecore D4, Panasonic BQ-CC65).</li>
+                    <li><strong>РћСЂРёРіРёРЅР°Р»СЊРЅС‹Рµ Р·Р°СЂСЏРґРєРё</strong> - РіР°СЂР°РЅС‚РёСЂСѓСЋС‚ РїСЂР°РІРёР»СЊРЅС‹Р№ Р°Р»РіРѕСЂРёС‚Рј Р·Р°СЂСЏРґР°, Р·Р°С‰РёС‚Сѓ РѕС‚ РїРµСЂРµР·Р°СЂСЏРґР° Рё РїРµСЂРµРіСЂРµРІР°, СЃРѕРІРјРµСЃС‚РёРјРѕСЃС‚СЊ СЃ Р±С‹СЃС‚СЂРѕР№ Р·Р°СЂСЏРґРєРѕР№.</li>
+                    <li><strong>РЈРЅРёРІРµСЂСЃР°Р»СЊРЅС‹Рµ Р·Р°СЂСЏРґРєРё</strong> - РїРѕРґС…РѕРґСЏС‚ РґР»СЏ СЂР°Р·РЅС‹С… РјРѕРґРµР»РµР№ Рё С‚РёРїРѕРІ Р°РєРєСѓРјСѓР»СЏС‚РѕСЂРѕРІ (AA/AAA, Li-ion), С‡Р°СЃС‚Рѕ РёРјРµСЋС‚ LCD-РґРёСЃРїР»РµР№, USB-РїРѕСЂС‚, С„СѓРЅРєС†РёСЋ РІРѕСЃСЃС‚Р°РЅРѕРІР»РµРЅРёСЏ.</li>
+                    <li><strong>Р”РІРѕР№РЅС‹Рµ/РјРЅРѕРіРѕРєР°РЅР°Р»СЊРЅС‹Рµ Р·Р°СЂСЏРґРєРё</strong> - РїРѕР·РІРѕР»СЏСЋС‚ Р·Р°СЂСЏР¶Р°С‚СЊ 2 Рё Р±РѕР»РµРµ Р°РєРєСѓРјСѓР»СЏС‚РѕСЂР° РѕРґРЅРѕРІСЂРµРјРµРЅРЅРѕ, С‡Р°СЃС‚Рѕ РёРјРµСЋС‚ USB-C РёР»Рё microUSB РІС…РѕРґ, С‡С‚Рѕ СѓРґРѕР±РЅРѕ РІ РїРѕРµР·РґРєР°С….</li>
+                    <li><strong>PowerBank-Р·Р°СЂСЏРґРєРё</strong> - РїРѕР·РІРѕР»СЏСЋС‚ Р·Р°СЂСЏР¶Р°С‚СЊ Р°РєРєСѓРјСѓР»СЏС‚РѕСЂС‹ РѕС‚ РІРЅРµС€РЅРёС… Р°РєРєСѓРјСѓР»СЏС‚РѕСЂРѕРІ (СѓРґРѕР±РЅРѕ РІ РїРѕР»РµРІС‹С… СѓСЃР»РѕРІРёСЏС…).</li>
+                    <li>Р”Р»СЏ AA/AAA - РІС‹Р±РёСЂР°Р№С‚Рµ РёРЅС‚РµР»Р»РµРєС‚СѓР°Р»СЊРЅС‹Рµ Р·Р°СЂСЏРґРєРё СЃ РёРЅРґРёРІРёРґСѓР°Р»СЊРЅС‹Рј РєРѕРЅС‚СЂРѕР»РµРј РєР°РЅР°Р»РѕРІ (LiitoKala Lii-500, Nitecore D4, Panasonic BQ-CC65).</li>
                 </ul>
-                <h2>Лучшие бренды зарядок для фототехники</h2>
+                <h2>Р›СѓС‡С€РёРµ Р±СЂРµРЅРґС‹ Р·Р°СЂСЏРґРѕРє РґР»СЏ С„РѕС‚РѕС‚РµС…РЅРёРєРё</h2>
                 <ul>
-                    <li><strong>Оригинальные:</strong> Canon, Nikon, Sony, Fujifilm, Panasonic.</li>
-                    <li><strong>Универсальные и премиум:</strong> Patona, Hahnel, Newell, Nitecore, LiitoKala, XTAR, Ansmann.</li>
-                    <li><strong>Для AA/AAA:</strong> Panasonic, Nitecore, LiitoKala, GP, Varta.</li>
+                    <li><strong>РћСЂРёРіРёРЅР°Р»СЊРЅС‹Рµ:</strong> Canon, Nikon, Sony, Fujifilm, Panasonic.</li>
+                    <li><strong>РЈРЅРёРІРµСЂСЃР°Р»СЊРЅС‹Рµ Рё РїСЂРµРјРёСѓРј:</strong> Patona, HГ¤hnel, Newell, Nitecore, LiitoKala, XTAR, Ansmann.</li>
+                    <li><strong>Р”Р»СЏ AA/AAA:</strong> Panasonic, Nitecore, LiitoKala, GP, Varta.</li>
                 </ul>
-                <h2>Пошаговая инструкция: как выбрать и использовать аккумуляторы и зарядки</h2>
+                <h2>РџРѕС€Р°РіРѕРІР°СЏ РёРЅСЃС‚СЂСѓРєС†РёСЏ: РєР°Рє РІС‹Р±СЂР°С‚СЊ Рё РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ Р°РєРєСѓРјСѓР»СЏС‚РѕСЂС‹ Рё Р·Р°СЂСЏРґРєРё</h2>
                 <div class="step-group">
                     <div class="step">
                         <div class="step-number">1</div>
                         <div>
-                            <strong>Проверьте модель аккумулятора вашей камеры</strong>
+                            <strong>РџСЂРѕРІРµСЂСЊС‚Рµ РјРѕРґРµР»СЊ Р°РєРєСѓРјСѓР»СЏС‚РѕСЂР° РІР°С€РµР№ РєР°РјРµСЂС‹</strong>
                             <ul>
-                                <li>Посмотрите маркировку на старом аккумуляторе или в инструкции.</li>
-                                <li>Покупайте только те модели, которые официально совместимы с вашей камерой.</li>
+                                <li>РџРѕСЃРјРѕС‚СЂРёС‚Рµ РјР°СЂРєРёСЂРѕРІРєСѓ РЅР° СЃС‚Р°СЂРѕРј Р°РєРєСѓРјСѓР»СЏС‚РѕСЂРµ РёР»Рё РІ РёРЅСЃС‚СЂСѓРєС†РёРё.</li>
+                                <li>РџРѕРєСѓРїР°Р№С‚Рµ С‚РѕР»СЊРєРѕ С‚Рµ РјРѕРґРµР»Рё, РєРѕС‚РѕСЂС‹Рµ РѕС„РёС†РёР°Р»СЊРЅРѕ СЃРѕРІРјРµСЃС‚РёРјС‹ СЃ РІР°С€РµР№ РєР°РјРµСЂРѕР№.</li>
                             </ul>
                         </div>
                     </div>
                     <div class="step">
                         <div class="step-number">2</div>
                         <div>
-                            <strong>Выберите оригинальный или премиум-совместимый аккумулятор</strong>
+                            <strong>Р’С‹Р±РµСЂРёС‚Рµ РѕСЂРёРіРёРЅР°Р»СЊРЅС‹Р№ РёР»Рё РїСЂРµРјРёСѓРј-СЃРѕРІРјРµСЃС‚РёРјС‹Р№ Р°РєРєСѓРјСѓР»СЏС‚РѕСЂ</strong>
                             <ul>
-                                <li>Для основной работы - оригинал, для резерва - проверенные бренды совместимых.</li>
+                                <li>Р”Р»СЏ РѕСЃРЅРѕРІРЅРѕР№ СЂР°Р±РѕС‚С‹ - РѕСЂРёРіРёРЅР°Р», РґР»СЏ СЂРµР·РµСЂРІР° - РїСЂРѕРІРµСЂРµРЅРЅС‹Рµ Р±СЂРµРЅРґС‹ СЃРѕРІРјРµСЃС‚РёРјС‹С….</li>
                             </ul>
                         </div>
                     </div>
                     <div class="step">
                         <div class="step-number">3</div>
                         <div>
-                            <strong>Проверьте ёмкость и отзывы</strong>
+                            <strong>РџСЂРѕРІРµСЂСЊС‚Рµ С‘РјРєРѕСЃС‚СЊ Рё РѕС‚Р·С‹РІС‹</strong>
                             <ul>
-                                <li>Сравните ёмкость (mAh) с оригиналом, читайте отзывы о реальном времени работы.</li>
+                                <li>РЎСЂР°РІРЅРёС‚Рµ С‘РјРєРѕСЃС‚СЊ (mAh) СЃ РѕСЂРёРіРёРЅР°Р»РѕРј, С‡РёС‚Р°Р№С‚Рµ РѕС‚Р·С‹РІС‹ Рѕ СЂРµР°Р»СЊРЅРѕРј РІСЂРµРјРµРЅРё СЂР°Р±РѕС‚С‹.</li>
                             </ul>
                         </div>
                     </div>
                     <div class="step">
                         <div class="step-number">4</div>
                         <div>
-                            <strong>Выберите зарядку</strong>
+                            <strong>Р’С‹Р±РµСЂРёС‚Рµ Р·Р°СЂСЏРґРєСѓ</strong>
                             <ul>
-                                <li>Для путешествий - двойная/USB-зарядка, для дома - оригинальная или интеллектуальная.</li>
-                                <li>Для AA/AAA - только интеллектуальные зарядки с контролем каналов.</li>
+                                <li>Р”Р»СЏ РїСѓС‚РµС€РµСЃС‚РІРёР№ - РґРІРѕР№РЅР°СЏ/USB-Р·Р°СЂСЏРґРєР°, РґР»СЏ РґРѕРјР° - РѕСЂРёРіРёРЅР°Р»СЊРЅР°СЏ РёР»Рё РёРЅС‚РµР»Р»РµРєС‚СѓР°Р»СЊРЅР°СЏ.</li>
+                                <li>Р”Р»СЏ AA/AAA - С‚РѕР»СЊРєРѕ РёРЅС‚РµР»Р»РµРєС‚СѓР°Р»СЊРЅС‹Рµ Р·Р°СЂСЏРґРєРё СЃ РєРѕРЅС‚СЂРѕР»РµРј РєР°РЅР°Р»РѕРІ.</li>
                             </ul>
                         </div>
                     </div>
                     <div class="step">
                         <div class="step-number">5</div>
                         <div>
-                            <strong>Используйте правильные режимы зарядки</strong>
+                            <strong>РСЃРїРѕР»СЊР·СѓР№С‚Рµ РїСЂР°РІРёР»СЊРЅС‹Рµ СЂРµР¶РёРјС‹ Р·Р°СЂСЏРґРєРё</strong>
                             <ul>
-                                <li>Не заряжайте аккумуляторы на морозе или жаре, не оставляйте без присмотра.</li>
-                                <li>Для Li-ion: не допускайте глубокого разряда, храните при 40–60% заряда.</li>
+                                <li>РќРµ Р·Р°СЂСЏР¶Р°Р№С‚Рµ Р°РєРєСѓРјСѓР»СЏС‚РѕСЂС‹ РЅР° РјРѕСЂРѕР·Рµ РёР»Рё Р¶Р°СЂРµ, РЅРµ РѕСЃС‚Р°РІР»СЏР№С‚Рµ Р±РµР· РїСЂРёСЃРјРѕС‚СЂР°.</li>
+                                <li>Р”Р»СЏ Li-ion: РЅРµ РґРѕРїСѓСЃРєР°Р№С‚Рµ РіР»СѓР±РѕРєРѕРіРѕ СЂР°Р·СЂСЏРґР°, С…СЂР°РЅРёС‚Рµ РїСЂРё 40вЂ“60% Р·Р°СЂСЏРґР°.</li>
                             </ul>
                         </div>
                     </div>
                 </div>
-                <h2>Особые случаи и дополнительные темы</h2>
+                <h2>РћСЃРѕР±С‹Рµ СЃР»СѓС‡Р°Рё Рё РґРѕРїРѕР»РЅРёС‚РµР»СЊРЅС‹Рµ С‚РµРјС‹</h2>
                 <ul>
-                    <li>Для видеосъёмки, путешествий и длительных проектов берите минимум 2–3 аккумулятора и двойную зарядку.</li>
-                    <li>Для вспышек и аксессуаров используйте только NiMH AA/AAA, не щелочные батарейки.</li>
-                    <li>Покупайте аккумуляторы и зарядки только у проверенных продавцов - много подделок!</li>
-                    <li>Не используйте дешёвые no-name зарядки - они опасны для техники и могут испортить аккумулятор.</li>
+                    <li>Р”Р»СЏ РІРёРґРµРѕСЃСЉС‘РјРєРё, РїСѓС‚РµС€РµСЃС‚РІРёР№ Рё РґР»РёС‚РµР»СЊРЅС‹С… РїСЂРѕРµРєС‚РѕРІ Р±РµСЂРёС‚Рµ РјРёРЅРёРјСѓРј 2вЂ“3 Р°РєРєСѓРјСѓР»СЏС‚РѕСЂР° Рё РґРІРѕР№РЅСѓСЋ Р·Р°СЂСЏРґРєСѓ.</li>
+                    <li>Р”Р»СЏ РІСЃРїС‹С€РµРє Рё Р°РєСЃРµСЃСЃСѓР°СЂРѕРІ РёСЃРїРѕР»СЊР·СѓР№С‚Рµ С‚РѕР»СЊРєРѕ NiMH AA/AAA, РЅРµ С‰РµР»РѕС‡РЅС‹Рµ Р±Р°С‚Р°СЂРµР№РєРё.</li>
+                    <li>РџРѕРєСѓРїР°Р№С‚Рµ Р°РєРєСѓРјСѓР»СЏС‚РѕСЂС‹ Рё Р·Р°СЂСЏРґРєРё С‚РѕР»СЊРєРѕ Сѓ РїСЂРѕРІРµСЂРµРЅРЅС‹С… РїСЂРѕРґР°РІС†РѕРІ - РјРЅРѕРіРѕ РїРѕРґРґРµР»РѕРє!</li>
+                    <li>РќРµ РёСЃРїРѕР»СЊР·СѓР№С‚Рµ РґРµС€С‘РІС‹Рµ no-name Р·Р°СЂСЏРґРєРё - РѕРЅРё РѕРїР°СЃРЅС‹ РґР»СЏ С‚РµС…РЅРёРєРё Рё РјРѕРіСѓС‚ РёСЃРїРѕСЂС‚РёС‚СЊ Р°РєРєСѓРјСѓР»СЏС‚РѕСЂ.</li>
                 </ul>
                 <div class="recommend-box">
                     <i class="fas fa-info-circle"></i>
                     <div>
-                        <strong>Совет:</strong> Для съёмок на природе и в поездках используйте powerbank-зарядки или автомобильные адаптеры - это спасёт при отсутствии розеток.
+                        <strong>РЎРѕРІРµС‚:</strong> Р”Р»СЏ СЃСЉС‘РјРѕРє РЅР° РїСЂРёСЂРѕРґРµ Рё РІ РїРѕРµР·РґРєР°С… РёСЃРїРѕР»СЊР·СѓР№С‚Рµ powerbank-Р·Р°СЂСЏРґРєРё РёР»Рё Р°РІС‚РѕРјРѕР±РёР»СЊРЅС‹Рµ Р°РґР°РїС‚РµСЂС‹ - СЌС‚Рѕ СЃРїР°СЃС‘С‚ РїСЂРё РѕС‚СЃСѓС‚СЃС‚РІРёРё СЂРѕР·РµС‚РѕРє.
                     </div>
                 </div>
-                <h2>Профилактика и эксплуатация</h2>
+                <h2>РџСЂРѕС„РёР»Р°РєС‚РёРєР° Рё СЌРєСЃРїР»СѓР°С‚Р°С†РёСЏ</h2>
                 <ul>
-                    <li>Не допускайте полного разряда Li-ion аккумуляторов.</li>
-                    <li>Храните аккумуляторы при 40–60% заряда, не на жаре и не на морозе.</li>
-                    <li>Периодически используйте все аккумуляторы в ротации - это продлевает срок службы.</li>
-                    <li>Регулярно чистите контакты аккумуляторов и зарядки.</li>
+                    <li>РќРµ РґРѕРїСѓСЃРєР°Р№С‚Рµ РїРѕР»РЅРѕРіРѕ СЂР°Р·СЂСЏРґР° Li-ion Р°РєРєСѓРјСѓР»СЏС‚РѕСЂРѕРІ.</li>
+                    <li>РҐСЂР°РЅРёС‚Рµ Р°РєРєСѓРјСѓР»СЏС‚РѕСЂС‹ РїСЂРё 40вЂ“60% Р·Р°СЂСЏРґР°, РЅРµ РЅР° Р¶Р°СЂРµ Рё РЅРµ РЅР° РјРѕСЂРѕР·Рµ.</li>
+                    <li>РџРµСЂРёРѕРґРёС‡РµСЃРєРё РёСЃРїРѕР»СЊР·СѓР№С‚Рµ РІСЃРµ Р°РєРєСѓРјСѓР»СЏС‚РѕСЂС‹ РІ СЂРѕС‚Р°С†РёРё - СЌС‚Рѕ РїСЂРѕРґР»РµРІР°РµС‚ СЃСЂРѕРє СЃР»СѓР¶Р±С‹.</li>
+                    <li>Р РµРіСѓР»СЏСЂРЅРѕ С‡РёСЃС‚РёС‚Рµ РєРѕРЅС‚Р°РєС‚С‹ Р°РєРєСѓРјСѓР»СЏС‚РѕСЂРѕРІ Рё Р·Р°СЂСЏРґРєРё.</li>
                 </ul>
                 <div class="pro-tips">
-                    <h4>?? Профессиональные советы</h4>
+                    <h4>рџ”№ РџСЂРѕС„РµСЃСЃРёРѕРЅР°Р»СЊРЅС‹Рµ СЃРѕРІРµС‚С‹</h4>
                     <div class="tip-item">
                         <i class="fas fa-lightbulb"></i>
-                        <p>Для профессиональной съёмки всегда берите минимум два оригинальных аккумулятора и одну быструю двойную зарядку.</p>
+                        <p>Р”Р»СЏ РїСЂРѕС„РµСЃСЃРёРѕРЅР°Р»СЊРЅРѕР№ СЃСЉС‘РјРєРё РІСЃРµРіРґР° Р±РµСЂРёС‚Рµ РјРёРЅРёРјСѓРј РґРІР° РѕСЂРёРіРёРЅР°Р»СЊРЅС‹С… Р°РєРєСѓРјСѓР»СЏС‚РѕСЂР° Рё РѕРґРЅСѓ Р±С‹СЃС‚СЂСѓСЋ РґРІРѕР№РЅСѓСЋ Р·Р°СЂСЏРґРєСѓ.</p>
                     </div>
                     <div class="tip-item">
                         <i class="fas fa-lightbulb"></i>
-                        <p>Для вспышек и радиосинхронизаторов используйте только Eneloop или GP ReCyko - они держат заряд месяцами и выдерживают до 2000 циклов.</p>
+                        <p>Р”Р»СЏ РІСЃРїС‹С€РµРє Рё СЂР°РґРёРѕСЃРёРЅС…СЂРѕРЅРёР·Р°С‚РѕСЂРѕРІ РёСЃРїРѕР»СЊР·СѓР№С‚Рµ С‚РѕР»СЊРєРѕ Eneloop РёР»Рё GP ReCyko - РѕРЅРё РґРµСЂР¶Р°С‚ Р·Р°СЂСЏРґ РјРµСЃСЏС†Р°РјРё Рё РІС‹РґРµСЂР¶РёРІР°СЋС‚ РґРѕ 2000 С†РёРєР»РѕРІ.</p>
                     </div>
                     <div class="tip-item">
                         <i class="fas fa-lightbulb"></i>
-                        <p>Не используйте дешёвые no-name зарядки - они могут испортить аккумулятор и даже привести к возгоранию.</p>
+                        <p>РќРµ РёСЃРїРѕР»СЊР·СѓР№С‚Рµ РґРµС€С‘РІС‹Рµ no-name Р·Р°СЂСЏРґРєРё - РѕРЅРё РјРѕРіСѓС‚ РёСЃРїРѕСЂС‚РёС‚СЊ Р°РєРєСѓРјСѓР»СЏС‚РѕСЂ Рё РґР°Р¶Рµ РїСЂРёРІРµСЃС‚Рё Рє РІРѕР·РіРѕСЂР°РЅРёСЋ.</p>
                     </div>
                     <div class="tip-item">
                         <i class="fas fa-lightbulb"></i>
-                        <p>Для экстренной подзарядки в поездках приобретите powerbank с выходом 9–12В и кабелем для вашей зарядки.</p>
+                        <p>Р”Р»СЏ СЌРєСЃС‚СЂРµРЅРЅРѕР№ РїРѕРґР·Р°СЂСЏРґРєРё РІ РїРѕРµР·РґРєР°С… РїСЂРёРѕР±СЂРµС‚РёС‚Рµ powerbank СЃ РІС‹С…РѕРґРѕРј 9вЂ“12Р’ Рё РєР°Р±РµР»РµРј РґР»СЏ РІР°С€РµР№ Р·Р°СЂСЏРґРєРё.</p>
                     </div>
                 </div>
-                <h2>Часто задаваемые вопросы</h2>
+                <h2>Р§Р°СЃС‚Рѕ Р·Р°РґР°РІР°РµРјС‹Рµ РІРѕРїСЂРѕСЃС‹</h2>
                 <ul>
-                    <li><strong>Можно ли использовать неоригинальные аккумуляторы?</strong> - Да, но только проверенных брендов и для резервных задач. Важно: некоторые камеры (Canon, Sony) могут не показывать процент заряда или блокировать работу с no-name аккумуляторами.</li>
-                    <li><strong>Сколько циклов живут аккумуляторы?</strong> - Оригинальные - 500–1000 циклов, премиум-совместимые - 300–700, дешёвые - 100–300.</li>
-                    <li><strong>Можно ли заряжать аккумулятор в пауэрбанке?</strong> - Да, если зарядка поддерживает USB-вход и рассчитана на вашу модель.</li>
-                    <li><strong>Почему аккумулятор быстро садится?</strong> - Износ, неправильное хранение, низкое качество, работа на морозе или перегрев.</li>
+                    <li><strong>РњРѕР¶РЅРѕ Р»Рё РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ РЅРµРѕСЂРёРіРёРЅР°Р»СЊРЅС‹Рµ Р°РєРєСѓРјСѓР»СЏС‚РѕСЂС‹?</strong> - Р”Р°, РЅРѕ С‚РѕР»СЊРєРѕ РїСЂРѕРІРµСЂРµРЅРЅС‹С… Р±СЂРµРЅРґРѕРІ Рё РґР»СЏ СЂРµР·РµСЂРІРЅС‹С… Р·Р°РґР°С‡. Р’Р°Р¶РЅРѕ: РЅРµРєРѕС‚РѕСЂС‹Рµ РєР°РјРµСЂС‹ (Canon, Sony) РјРѕРіСѓС‚ РЅРµ РїРѕРєР°Р·С‹РІР°С‚СЊ РїСЂРѕС†РµРЅС‚ Р·Р°СЂСЏРґР° РёР»Рё Р±Р»РѕРєРёСЂРѕРІР°С‚СЊ СЂР°Р±РѕС‚Сѓ СЃ no-name Р°РєРєСѓРјСѓР»СЏС‚РѕСЂР°РјРё.</li>
+                    <li><strong>РЎРєРѕР»СЊРєРѕ С†РёРєР»РѕРІ Р¶РёРІСѓС‚ Р°РєРєСѓРјСѓР»СЏС‚РѕСЂС‹?</strong> - РћСЂРёРіРёРЅР°Р»СЊРЅС‹Рµ - 500вЂ“1000 С†РёРєР»РѕРІ, РїСЂРµРјРёСѓРј-СЃРѕРІРјРµСЃС‚РёРјС‹Рµ - 300вЂ“700, РґРµС€С‘РІС‹Рµ - 100вЂ“300.</li>
+                    <li><strong>РњРѕР¶РЅРѕ Р»Рё Р·Р°СЂСЏР¶Р°С‚СЊ Р°РєРєСѓРјСѓР»СЏС‚РѕСЂ РІ РїР°СѓСЌСЂР±Р°РЅРєРµ?</strong> - Р”Р°, РµСЃР»Рё Р·Р°СЂСЏРґРєР° РїРѕРґРґРµСЂР¶РёРІР°РµС‚ USB-РІС…РѕРґ Рё СЂР°СЃСЃС‡РёС‚Р°РЅР° РЅР° РІР°С€Сѓ РјРѕРґРµР»СЊ.</li>
+                    <li><strong>РџРѕС‡РµРјСѓ Р°РєРєСѓРјСѓР»СЏС‚РѕСЂ Р±С‹СЃС‚СЂРѕ СЃР°РґРёС‚СЃСЏ?</strong> - РР·РЅРѕСЃ, РЅРµРїСЂР°РІРёР»СЊРЅРѕРµ С…СЂР°РЅРµРЅРёРµ, РЅРёР·РєРѕРµ РєР°С‡РµСЃС‚РІРѕ, СЂР°Р±РѕС‚Р° РЅР° РјРѕСЂРѕР·Рµ РёР»Рё РїРµСЂРµРіСЂРµРІ.</li>
                 </ul>
-                <h2>?? Итог</h2>
+                <h2>рџ“Њ РС‚РѕРі</h2>
                 <p>
-                    Лучшие аккумуляторы для фототехники - оригинальные и премиум-совместимые бренды с реальной ёмкостью и защитой. Для вспышек - только NiMH AA/AAA (Eneloop, GP ReCyko). Зарядки - оригинальные, двойные USB или интеллектуальные для AA/AAA. Не экономьте на питании: это залог надёжной работы вашей фототехники в любой ситуации!
+                    Р›СѓС‡С€РёРµ Р°РєРєСѓРјСѓР»СЏС‚РѕСЂС‹ РґР»СЏ С„РѕС‚РѕС‚РµС…РЅРёРєРё - РѕСЂРёРіРёРЅР°Р»СЊРЅС‹Рµ Рё РїСЂРµРјРёСѓРј-СЃРѕРІРјРµСЃС‚РёРјС‹Рµ Р±СЂРµРЅРґС‹ СЃ СЂРµР°Р»СЊРЅРѕР№ С‘РјРєРѕСЃС‚СЊСЋ Рё Р·Р°С‰РёС‚РѕР№. Р”Р»СЏ РІСЃРїС‹С€РµРє - С‚РѕР»СЊРєРѕ NiMH AA/AAA (Eneloop, GP ReCyko). Р—Р°СЂСЏРґРєРё - РѕСЂРёРіРёРЅР°Р»СЊРЅС‹Рµ, РґРІРѕР№РЅС‹Рµ USB РёР»Рё РёРЅС‚РµР»Р»РµРєС‚СѓР°Р»СЊРЅС‹Рµ РґР»СЏ AA/AAA. РќРµ СЌРєРѕРЅРѕРјСЊС‚Рµ РЅР° РїРёС‚Р°РЅРёРё: СЌС‚Рѕ Р·Р°Р»РѕРі РЅР°РґС‘Р¶РЅРѕР№ СЂР°Р±РѕС‚С‹ РІР°С€РµР№ С„РѕС‚РѕС‚РµС…РЅРёРєРё РІ Р»СЋР±РѕР№ СЃРёС‚СѓР°С†РёРё!
                 </p>
 </div>
 
-        <!-- Telegram рекламный баннер -->
+        <!-- Telegram СЂРµРєР»Р°РјРЅС‹Р№ Р±Р°РЅРЅРµСЂ -->
         <a href="https://t.me/RepairoRU" target="_blank" rel="noopener noreferrer" class="telegram-banner">
           <div class="telegram-banner-container">
             <div class="telegram-logo">
@@ -522,10 +555,10 @@
               </svg>
             </div>
             <div class="telegram-content">
-              <div class="telegram-title">Новости из мира технологий</div>
-              <div class="telegram-subtitle">В нашем новом Telegram-канале. Подписывайтесь и будьте в числе первых!</div>
+              <div class="telegram-title">РќРѕРІРѕСЃС‚Рё РёР· РјРёСЂР° С‚РµС…РЅРѕР»РѕРіРёР№</div>
+              <div class="telegram-subtitle">Р’ РЅР°С€РµРј РЅРѕРІРѕРј Telegram-РєР°РЅР°Р»Рµ. РџРѕРґРїРёСЃС‹РІР°Р№С‚РµСЃСЊ Рё Р±СѓРґСЊС‚Рµ РІ С‡РёСЃР»Рµ РїРµСЂРІС‹С…!</div>
               <div class="telegram-button">
-                Подписаться
+                РџРѕРґРїРёСЃР°С‚СЊСЃСЏ
                 <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.56c-.21 2.22-1.12 7.58-1.58 10.06-.19 1.07-.57 1.43-.94 1.46-.8.07-1.4-.52-2.17-1.03-1.21-.79-1.89-1.28-3.06-2.05-1.35-.87-.47-1.35.3-2.13.2-.21 3.71-3.39 3.77-3.68.01-.04.01-.18-.07-.26s-.2-.05-.29-.03c-.12.03-2.11 1.34-5.95 3.93-.56.38-1.07.57-1.53.56-.5-.01-1.47-.28-2.19-.51-.88-.28-1.58-.43-1.52-.91.03-.25.38-.51 1.04-.78 4.07-1.77 6.78-2.94 8.13-3.51 3.88-1.62 4.68-1.9 5.19-1.91.12 0 .37.03.54.17.14.12.18.28.2.44-.01.06 0 .11-.01.17z"/>
                 </svg>
@@ -550,45 +583,45 @@
                         </span>
                         <span class="logo__text">Repairo</span>
                     </a>
-                    <p class="footer__text">Помогаем ремонтировать электронику с 2024 года</p>
+                    <p class="footer__text">РџРѕРјРѕРіР°РµРј СЂРµРјРѕРЅС‚РёСЂРѕРІР°С‚СЊ СЌР»РµРєС‚СЂРѕРЅРёРєСѓ СЃ 2024 РіРѕРґР°</p>
                 </div>
                 <div class="footer__col">
-                    <h3 class="footer__title">Разделы</h3>
+                    <h3 class="footer__title">Р Р°Р·РґРµР»С‹</h3>
                     <ul class="footer__links">
-                        <li><a href="../index.html" class="footer__link">Главная</a></li>
-                        <li><a href="../index.html#categories" class="footer__link">Все гайды</a></li>
-                        <li><a href="../contacts.html" class="footer__link">Контакты</a></li>
+                        <li><a href="../index.html" class="footer__link">Р“Р»Р°РІРЅР°СЏ</a></li>
+                        <li><a href="../index.html#categories" class="footer__link">Р’СЃРµ РіР°Р№РґС‹</a></li>
+                        <li><a href="../contacts.html" class="footer__link">РљРѕРЅС‚Р°РєС‚С‹</a></li>
                     </ul>
                 </div>
                 <div class="footer__col">
-                    <h3 class="footer__title">Категории</h3>
+                    <h3 class="footer__title">РљР°С‚РµРіРѕСЂРёРё</h3>
                     <ul class="footer__links">
-                        <li><a href="../tv.html" class="nav__link">Телевизоры</a></li>
-                        <li><a href="../cameras.html" class="nav__link">Фотоаппараты</a></li>
-                        <li><a href="../consoles.html" class="nav__link">Приставки</a></li>
-                        <li><a href="../laptops.html" class="nav__link">Ноутбуки</a></li>
-                        <li><a href="../smartphones.html" class="nav__link">Смартфоны</a></li>
-                        <li><a href="../small-appliances.html" class="nav__link">Мелкая техника</a></li>
-                        <li><a href="../large-appliances.html" class="nav__link">Бытовая техника</a></li>
-                        <li><a href="../auto-electronics.html" class="nav__link">Авто-Электроника</a></li>
+                        <li><a href="../tv.html" class="nav__link">РўРµР»РµРІРёР·РѕСЂС‹</a></li>
+                        <li><a href="../cameras.html" class="nav__link">Р¤РѕС‚РѕР°РїРїР°СЂР°С‚С‹</a></li>
+                        <li><a href="../consoles.html" class="nav__link">РџСЂРёСЃС‚Р°РІРєРё</a></li>
+                        <li><a href="../laptops.html" class="nav__link">РќРѕСѓС‚Р±СѓРєРё</a></li>
+                        <li><a href="../smartphones.html" class="nav__link">РЎРјР°СЂС‚С„РѕРЅС‹</a></li>
+                        <li><a href="../small-appliances.html" class="nav__link">РњРµР»РєР°СЏ С‚РµС…РЅРёРєР°</a></li>
+                        <li><a href="../large-appliances.html" class="nav__link">Р‘С‹С‚РѕРІР°СЏ С‚РµС…РЅРёРєР°</a></li>
+                        <li><a href="../auto-electronics.html" class="nav__link">РђРІС‚Рѕ-Р­Р»РµРєС‚СЂРѕРЅРёРєР°</a></li>
                     </ul>
                 </div>
                 <div class="footer__col">
-                    <h3 class="footer__title">Контакты</h3>
+                    <h3 class="footer__title">РљРѕРЅС‚Р°РєС‚С‹</h3>
                     <ul class="footer__links">
                         <li><a href="https://t.me/RepairoRU" class="footer__link"><i class="fab fa-telegram"></i> Telegram</a></li>
-                        <li><span class="footer__link">Наша почта: repairo.info@mail.ru</span></li>
+                        <li><span class="footer__link">РќР°С€Р° РїРѕС‡С‚Р°: repairo.info@mail.ru</span></li>
                     </ul>
                 </div>
             </div>
             <div class="footer__bottom">
                 <p class="disclaimer">
-    Администрация сайта не несёт ответственности за возможные повреждения техники
-    и иные последствия, возникшие в результате самостоятельного ремонта по
-    материалам и инструкциям, размещённым на сайте. Все работы вы выполняете
-    на свой страх и риск.
+    РђРґРјРёРЅРёСЃС‚СЂР°С†РёСЏ СЃР°Р№С‚Р° РЅРµ РЅРµСЃС‘С‚ РѕС‚РІРµС‚СЃС‚РІРµРЅРЅРѕСЃС‚Рё Р·Р° РІРѕР·РјРѕР¶РЅС‹Рµ РїРѕРІСЂРµР¶РґРµРЅРёСЏ С‚РµС…РЅРёРєРё
+    Рё РёРЅС‹Рµ РїРѕСЃР»РµРґСЃС‚РІРёСЏ, РІРѕР·РЅРёРєС€РёРµ РІ СЂРµР·СѓР»СЊС‚Р°С‚Рµ СЃР°РјРѕСЃС‚РѕСЏС‚РµР»СЊРЅРѕРіРѕ СЂРµРјРѕРЅС‚Р° РїРѕ
+    РјР°С‚РµСЂРёР°Р»Р°Рј Рё РёРЅСЃС‚СЂСѓРєС†РёСЏРј, СЂР°Р·РјРµС‰С‘РЅРЅС‹Рј РЅР° СЃР°Р№С‚Рµ. Р’СЃРµ СЂР°Р±РѕС‚С‹ РІС‹ РІС‹РїРѕР»РЅСЏРµС‚Рµ
+    РЅР° СЃРІРѕР№ СЃС‚СЂР°С… Рё СЂРёСЃРє.
     </p>
-                <p class="footer__copyright">© 2026 Repairo. Все права защищены.</p>
+                <p class="footer__copyright">В© 2026 Repairo. Р’СЃРµ РїСЂР°РІР° Р·Р°С‰РёС‰РµРЅС‹.</p>
             </div>
         </div>
     </footer>
@@ -599,56 +632,56 @@
 {
   "@context": "https://schema.org",
   "@type": "HowTo",
-  "name": "Лучшие аккумуляторы и зарядки для фототехники",
-  "description": "Пошаговая инструкция: Лучшие аккумуляторы и зарядки для фототехники. Для профессиональной съёмки всегда берите минимум два оригинальных аккумулятора.... Сове...",
+  "name": "Р›СѓС‡С€РёРµ Р°РєРєСѓРјСѓР»СЏС‚РѕСЂС‹ Рё Р·Р°СЂСЏРґРєРё РґР»СЏ С„РѕС‚РѕС‚РµС…РЅРёРєРё",
+  "description": "РџРѕС€Р°РіРѕРІР°СЏ РёРЅСЃС‚СЂСѓРєС†РёСЏ: Р›СѓС‡С€РёРµ Р°РєРєСѓРјСѓР»СЏС‚РѕСЂС‹ Рё Р·Р°СЂСЏРґРєРё РґР»СЏ С„РѕС‚РѕС‚РµС…РЅРёРєРё. Р”Р»СЏ РїСЂРѕС„РµСЃСЃРёРѕРЅР°Р»СЊРЅРѕР№ СЃСЉС‘РјРєРё РІСЃРµРіРґР° Р±РµСЂРёС‚Рµ РјРёРЅРёРјСѓРј РґРІР° РѕСЂРёРіРёРЅР°Р»СЊРЅС‹С… Р°РєРєСѓРјСѓР»СЏС‚РѕСЂР°.... РЎРѕРІРµ...",
   "totalTime": "PT30M",
   "step": [
     {
       "@type": "HowToStep",
-      "name": "Какие бывают аккумуляторы для фототехники?",
-      "text": "Какие бывают аккумуляторы для фототехники?",
+      "name": "РљР°РєРёРµ Р±С‹РІР°СЋС‚ Р°РєРєСѓРјСѓР»СЏС‚РѕСЂС‹ РґР»СЏ С„РѕС‚РѕС‚РµС…РЅРёРєРё?",
+      "text": "РљР°РєРёРµ Р±С‹РІР°СЋС‚ Р°РєРєСѓРјСѓР»СЏС‚РѕСЂС‹ РґР»СЏ С„РѕС‚РѕС‚РµС…РЅРёРєРё?",
       "url": "#step-1"
     },
     {
       "@type": "HowToStep",
-      "name": "Как выбрать аккумулятор для фотоаппарата?",
-      "text": "Как выбрать аккумулятор для фотоаппарата?",
+      "name": "РљР°Рє РІС‹Р±СЂР°С‚СЊ Р°РєРєСѓРјСѓР»СЏС‚РѕСЂ РґР»СЏ С„РѕС‚РѕР°РїРїР°СЂР°С‚Р°?",
+      "text": "РљР°Рє РІС‹Р±СЂР°С‚СЊ Р°РєРєСѓРјСѓР»СЏС‚РѕСЂ РґР»СЏ С„РѕС‚РѕР°РїРїР°СЂР°С‚Р°?",
       "url": "#step-2"
     },
     {
       "@type": "HowToStep",
-      "name": "Лучшие бренды аккумуляторов для фотоаппаратов",
-      "text": "Лучшие бренды аккумуляторов для фотоаппаратов",
+      "name": "Р›СѓС‡С€РёРµ Р±СЂРµРЅРґС‹ Р°РєРєСѓРјСѓР»СЏС‚РѕСЂРѕРІ РґР»СЏ С„РѕС‚РѕР°РїРїР°СЂР°С‚РѕРІ",
+      "text": "Р›СѓС‡С€РёРµ Р±СЂРµРЅРґС‹ Р°РєРєСѓРјСѓР»СЏС‚РѕСЂРѕРІ РґР»СЏ С„РѕС‚РѕР°РїРїР°СЂР°С‚РѕРІ",
       "url": "#step-3"
     },
     {
       "@type": "HowToStep",
-      "name": "Как выбрать зарядное устройство?",
-      "text": "Как выбрать зарядное устройство?",
+      "name": "РљР°Рє РІС‹Р±СЂР°С‚СЊ Р·Р°СЂСЏРґРЅРѕРµ СѓСЃС‚СЂРѕР№СЃС‚РІРѕ?",
+      "text": "РљР°Рє РІС‹Р±СЂР°С‚СЊ Р·Р°СЂСЏРґРЅРѕРµ СѓСЃС‚СЂРѕР№СЃС‚РІРѕ?",
       "url": "#step-4"
     },
     {
       "@type": "HowToStep",
-      "name": "Лучшие бренды зарядок для фототехники",
-      "text": "Лучшие бренды зарядок для фототехники",
+      "name": "Р›СѓС‡С€РёРµ Р±СЂРµРЅРґС‹ Р·Р°СЂСЏРґРѕРє РґР»СЏ С„РѕС‚РѕС‚РµС…РЅРёРєРё",
+      "text": "Р›СѓС‡С€РёРµ Р±СЂРµРЅРґС‹ Р·Р°СЂСЏРґРѕРє РґР»СЏ С„РѕС‚РѕС‚РµС…РЅРёРєРё",
       "url": "#step-5"
     },
     {
       "@type": "HowToStep",
-      "name": "Пошаговая инструкция: как выбрать и использовать аккумуляторы и зарядки",
-      "text": "Пошаговая инструкция: как выбрать и использовать аккумуляторы и зарядки",
+      "name": "РџРѕС€Р°РіРѕРІР°СЏ РёРЅСЃС‚СЂСѓРєС†РёСЏ: РєР°Рє РІС‹Р±СЂР°С‚СЊ Рё РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ Р°РєРєСѓРјСѓР»СЏС‚РѕСЂС‹ Рё Р·Р°СЂСЏРґРєРё",
+      "text": "РџРѕС€Р°РіРѕРІР°СЏ РёРЅСЃС‚СЂСѓРєС†РёСЏ: РєР°Рє РІС‹Р±СЂР°С‚СЊ Рё РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ Р°РєРєСѓРјСѓР»СЏС‚РѕСЂС‹ Рё Р·Р°СЂСЏРґРєРё",
       "url": "#step-6"
     },
     {
       "@type": "HowToStep",
-      "name": "Особые случаи и дополнительные темы",
-      "text": "Особые случаи и дополнительные темы",
+      "name": "РћСЃРѕР±С‹Рµ СЃР»СѓС‡Р°Рё Рё РґРѕРїРѕР»РЅРёС‚РµР»СЊРЅС‹Рµ С‚РµРјС‹",
+      "text": "РћСЃРѕР±С‹Рµ СЃР»СѓС‡Р°Рё Рё РґРѕРїРѕР»РЅРёС‚РµР»СЊРЅС‹Рµ С‚РµРјС‹",
       "url": "#step-7"
     },
     {
       "@type": "HowToStep",
-      "name": "Профилактика и эксплуатация",
-      "text": "Профилактика и эксплуатация",
+      "name": "РџСЂРѕС„РёР»Р°РєС‚РёРєР° Рё СЌРєСЃРїР»СѓР°С‚Р°С†РёСЏ",
+      "text": "РџСЂРѕС„РёР»Р°РєС‚РёРєР° Рё СЌРєСЃРїР»СѓР°С‚Р°С†РёСЏ",
       "url": "#step-8"
     }
   ],
@@ -659,8 +692,4 @@
 <script src="../cookie-consent.js"></script>
 </body>
 </html>
-
-
-
-
 

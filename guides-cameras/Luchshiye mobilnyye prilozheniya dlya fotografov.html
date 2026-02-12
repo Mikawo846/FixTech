@@ -2,36 +2,47 @@
 <html lang="ru" data-theme="light">
 <head>
 
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Лучшие мобильные приложения для фотографов | Repairo</title>
-    <meta name="description" content="">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Р›СѓС‡С€РёРµ РјРѕР±РёР»СЊРЅС‹Рµ РїСЂРёР»РѕР¶РµРЅРёСЏ РґР»СЏ С„РѕС‚РѕРіСЂР°С„РѕРІ | Repairo</title>
+    <meta name="description" content="{{ description }}">
+    <meta name="description" content="РџРѕС€Р°РіРѕРІР°СЏ РёРЅСЃС‚СЂСѓРєС†РёСЏ: Р›СѓС‡С€РёРµ РјРѕР±РёР»СЊРЅС‹Рµ РїСЂРёР»РѕР¶РµРЅРёСЏ РґР»СЏ С„РѕС‚РѕРіСЂР°С„РѕРІ. РСЃРїРѕР»СЊР·СѓР№С‚Рµ РЅРµСЃРєРѕР»СЊРєРѕ РїСЂРёР»РѕР¶РµРЅРёР№: РЅР°РїСЂРёРјРµСЂ, Lightroom РґР»СЏ РѕР±СЂР°Р±РѕС‚РєРё, PhotoRoom Рґ.... РЎРѕРІРµС‚С‹...">
 
-  <link rel="stylesheet" href="../styles.css" />
-  <link rel="stylesheet" href="../styles-header.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <style>
-    .guide-content { line-height: 1.7; color: var(--text); }
-    .guide-content h2 { color: var(--primary); margin-top: 30px; margin-bottom: 15px; font-size: 1.5rem; }
-    .guide-content h3 { color: var(--primary-dark); margin-top: 25px; margin-bottom: 12px; font-size: 1.2rem; }
-    .guide-image-block { margin: 20px 0; padding: 15px; background: var(--background); border-radius: var(--border-radius); border: 1px solid var(--border); text-align: center; }
-    .guide-image-block img { max-width: 100%; height: auto; border-radius: 6px; border: 1px solid var(--border); }
-    .image-caption { margin-top: 10px; font-size: 0.85rem; color: var(--text-light); font-style: italic; }
-    .pro-tips { background: rgba(3, 74, 79, 0.05); padding: 15px; border-radius: 6px; margin: 20px 0; }
-    .pro-tips h4 { color: var(--primary); margin-top: 0; margin-bottom: 12px; font-size: 1.1rem; }
-    .tip-item { display: flex; gap: 8px; margin-bottom: 8px; align-items: flex-start; }
-    table { width: 100%; border-collapse: collapse; margin: 20px 0; }
-    th, td { border: 1px solid var(--border); padding: 8px; text-align: left; }
-    th { background: var(--background-light); }
-    .highlight { background: #f5f7fa; border-left: 4px solid #2d9cdb; padding: 10px 15px; margin: 20px 0; }
-    .faq-section ul { margin-left: 1em; }
-    .block-section { margin-bottom: 2em; }
-    @media (max-width: 768px) {
-      .guide-content h2 { font-size: 1.4rem; margin-top: 25px; }
-      .guide-image-block { padding: 12px; margin: 15px 0; }
-      table, th, td { font-size: 0.95rem; }
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../styles-header.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .guide-content { line-height: 1.7; color: var(--text);}
+        .guide-content h2 { color: var(--primary); margin-top: 30px; margin-bottom: 15px; font-size: 1.5rem;}
+        .step-group { margin: 20px 0; padding: 15px; background: var(--background); border-radius: var(--border-radius); border: 1px solid var(--border);}
+        .step { display: flex; gap: 15px; margin: 12px 0; padding: 12px; background: var(--background-alt); border-radius: 6px; align-items: flex-start;}
+        .step-number { background: var(--primary); color: white; width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-weight: bold; font-size: 0.8rem;}
+        .guide-image-block { margin: 20px 0; padding: 15px; background: var(--background); border-radius: var(--border-radius); border: 1px solid var(--border); text-align: center;}
+        .guide-image-block img { max-width: 100%; height: auto; border-radius: 6px; border: 1px solid var(--border);}
+        .recommend-box { background: rgba(3, 74, 79, 0.1); border-left: 4px solid var(--primary); padding: 12px; margin: 15px 0; display: flex; gap: 12px; align-items: flex-start; border-radius: 4px;}
+        .recommend-box i { font-size: 1.2rem; color: var(--primary); margin-top: 2px;}
+        .pro-tips { background: rgba(3, 74, 79, 0.05); padding: 15px; border-radius: 6px; margin: 20px 0;}
+        .pro-tips h4 { color: var(--primary); margin-top: 0; margin-bottom: 12px; font-size: 1.1rem;}
+        .tip-item { display: flex; gap: 8px; margin-bottom: 8px; align-items: flex-start;}
+        table {width: 100%; border-collapse: collapse; margin: 20px 0;}
+        th, td {border: 1px solid var(--border); padding: 8px 12px; text-align: left;}
+        th {background: var(--background-alt);}
+        @media (max-width: 768px) {
+            .guide-content h2 { font-size: 1.4rem; margin-top: 25px;}
+            .guide-image-block, .step-group { padding: 12px; margin: 15px 0;}
+            .step { padding: 10px;}
+            table, th, td {font-size: 0.9em;}
+        }
+    /* РЇРЅРґРµРєСЃ РњР°СЂРєРµС‚ СЂРµРєР»Р°РјРЅС‹Р№ Р±Р°РЅРЅРµСЂ */
+    .ym-hero-link {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+      max-width: 100%;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     }
+
     /* Р“РѕСЂРёР·РѕРЅС‚Р°Р»СЊРЅС‹Р№ Р±Р°РЅРЅРµСЂ-РєР°СЂС‚РѕС‡РєР° */
     .ym-hero-banner {
       width: 100%;
@@ -144,11 +155,13 @@
       transition: background 0.15s ease, transform 0.15s ease,
                   box-shadow 0.15s ease;
     }
+
     .ym-hero-button::after {
       content: "в†’";
       margin-left: 6px;
       font-size: 14px;
     }
+
     .ym-hero-button:hover {
       background: #7c3aed;
       transform: translateY(-1px);
@@ -172,19 +185,24 @@
         max-width: 100%;
         margin: 20px 0;
       }
+
       .ym-hero-images {
         height: 100px;
       }
+
       .ym-hero-content {
         padding: 12px 12px;
       }
+
       .ym-hero-title {
         font-size: 13px;
       }
+
       .ym-hero-button {
         font-size: 13px;
         padding: 8px 14px;
       }
+
       .ym-hero-legal {
         font-size: 10px;
       }
@@ -292,22 +310,27 @@
         padding: 15px;
         min-height: 100px;
       }
+
       .telegram-logo {
         width: 50px;
         height: 50px;
         min-width: 50px;
         margin-right: 15px;
       }
+
       .telegram-logo svg {
         width: 26px;
         height: 26px;
       }
+
       .telegram-title {
         font-size: 14px;
       }
+
       .telegram-subtitle {
         font-size: 12px;
       }
+
       .telegram-button {
         font-size: 12px;
         padding: 6px 12px;
@@ -316,228 +339,242 @@
 
 
 
-  </style>
+    </style>
   <script async src="https://timeweb.cloud/api/v1/cloud-ai/agents/3cc03620-d051-4d8d-b5af-f7b6cd083a35/embed.js?collapsed=true"></script>
 </head>
 <body>
-  <header class="header">
+<header class="header">
     <div class="container">
-      <div class="header__inner">
-        <a href="../index.html" class="logo">
-          <span class="logo__icon"></span>
-          <span class="logo__text">GeoExpert</span>
-        </a>
-        <nav class="nav">
-          <ul class="nav__list">
-            <li><a href="../cameras.html" class="nav__link">РљР°РјРµСЂС‹</a></li>
-            <li><a href="../drones.html" class="nav__link">Р”СЂРѕРЅС‹</a></li>
-            <li><a href="../workflow.html" class="nav__link">Workflow</a></li>
-          </ul>
-        </nav>
-      </div>
+        <div class="header__inner">
+            <a href="../index.html" class="logo">
+                <span class="logo__icon"></span>
+                <span class="logo__text">Repairo</span>
+            </a>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li><a href="../cameras.html" class="nav__link">Р¤РѕС‚РѕР°РїРїР°СЂР°С‚С‹</a></li>
+                    <li><a href="../tv.html" class="nav__link">РўРµР»РµРІРёР·РѕСЂС‹</a></li>
+                    <li><a href="../laptops.html" class="nav__link">РќРѕСѓС‚Р±СѓРєРё</a></li>
+                    <li><a href="../smartphones.html" class="nav__link">РЎРјР°СЂС‚С„РѕРЅС‹</a></li>
+                </ul>
+            </nav>
+        </div>
     </div>
-  </header>
+</header>
 <section class="guide-page">
     <div class="container">
         <div class="breadcrumbs">
-            <a href="../index.html">Главная</a>
+            <a href="../index.html">Р“Р»Р°РІРЅР°СЏ</a>
             <i class="fas fa-chevron-right"></i>
-            <a href="../cameras.html">Фотоаппараты</a>
+            <a href="../cameras.html">Р¤РѕС‚РѕР°РїРїР°СЂР°С‚С‹</a>
             <i class="fas fa-chevron-right"></i>
-            <span>Лучшие мобильные приложения для фотографов</span>
+            <span>Р›СѓС‡С€РёРµ РјРѕР±РёР»СЊРЅС‹Рµ РїСЂРёР»РѕР¶РµРЅРёСЏ РґР»СЏ С„РѕС‚РѕРіСЂР°С„РѕРІ</span>
         </div>
-        <h1 class="section__title">Лучшие мобильные приложения для фотографов</h1>
+        <h1 class="section__title">Р›СѓС‡С€РёРµ РјРѕР±РёР»СЊРЅС‹Рµ РїСЂРёР»РѕР¶РµРЅРёСЏ РґР»СЏ С„РѕС‚РѕРіСЂР°С„РѕРІ</h1>
         <div class="guide-meta">
-            <span><i class="fas fa-adjust"></i> Практический гайд</span>
+            <span><i class="fas fa-adjust"></i> РџСЂР°РєС‚РёС‡РµСЃРєРёР№ РіР°Р№Рґ</span>
         </div>
         <div class="guide-image-block">
-            <img src="https://avatars.mds.yandex.net/get-shedevrum/14847028/img_b6f6909b2db111f08b337e329d1b2d51/orig" alt="Лучшие мобильные приложения для фотографов">
+            <img src="https://avatars.mds.yandex.net/get-shedevrum/14847028/img_b6f6909b2db111f08b337e329d1b2d51/orig" alt="Р›СѓС‡С€РёРµ РјРѕР±РёР»СЊРЅС‹Рµ РїСЂРёР»РѕР¶РµРЅРёСЏ РґР»СЏ С„РѕС‚РѕРіСЂР°С„РѕРІ">
         </div>
         <div class="guide-content">
-        <!-- Яндекс Маркет рекламный блок -->
+        <!-- РЇРЅРґРµРєСЃ РњР°СЂРєРµС‚ СЂРµРєР»Р°РјРЅС‹Р№ Р±Р»РѕРє -->
         <a href="https://market.yandex.ru/catalog--bytovaia-tekhnika/54419/list?hid=198118&rs=eJwzUvjEKMvBILDwEKsEg8Kzbh6Nw4dZNS4D8c7lFhp9c1-wAQC3uAwP&clid=14635360&refid=rbck8fgamv681iu59go3iqxwddedl4x9&erid=5jtCeReNx12oajxS2bzShmZ&mclid=1003&distr_type=7&utm_source=partner_network&pp=900&utm_medium=link_list&utm_campaign=14635360"
            target="_blank"
            rel="noopener noreferrer sponsored"
+           class="ym-hero-link">
+          <div class="ym-hero-banner">
+            <div class="ym-hero-images">
+              <div class="ym-hero-image">
                 <img src="https://avatars.mds.yandex.net/get-mpic/14770882/2a00000197f4dbee777f8afddccaf44faa53/optimize"
-                     alt="Распродажа бытовой электроники 1">
+                     alt="Р Р°СЃРїСЂРѕРґР°Р¶Р° Р±С‹С‚РѕРІРѕР№ СЌР»РµРєС‚СЂРѕРЅРёРєРё 1">
               </div>
+              <div class="ym-hero-image">
                 <img src="https://avatars.mds.yandex.net/get-mpic/15580298/img_id8867318964670654684.jpeg/optimize"
-                     alt="Распродажа бытовой электроники 2">
+                     alt="Р Р°СЃРїСЂРѕРґР°Р¶Р° Р±С‹С‚РѕРІРѕР№ СЌР»РµРєС‚СЂРѕРЅРёРєРё 2">
               </div>
+              <div class="ym-hero-image">
                 <img src="https://avatars.mds.yandex.net/get-mpic/10096780/2a000001953b534fed2494e0b30fadd9b458/optimize"
-                     alt="Распродажа бытовой электроники 3">
+                     alt="Р Р°СЃРїСЂРѕРґР°Р¶Р° Р±С‹С‚РѕРІРѕР№ СЌР»РµРєС‚СЂРѕРЅРёРєРё 3">
               </div>
             </div>
-                  ? Выгодные предложения
+            <div class="ym-hero-content">
+              <h3 class="ym-hero-title">Р Р°СЃРїСЂРѕРґР°Р¶Р° Р±С‹С‚РѕРІРѕР№ СЌР»РµРєС‚СЂРѕРЅРёРєРё РЅР° РЇРЅРґРµРєСЃ РњР°СЂРєРµС‚Рµ</h3>
+              <div class="ym-hero-top">
+                <div class="ym-hero-rating">
+                  в­ђ Р’С‹РіРѕРґРЅС‹Рµ РїСЂРµРґР»РѕР¶РµРЅРёСЏ
+                  <span class="ym-hero-rating-count">РЎРєРёРґРєРё РґРѕ 50%</span>
                 </div>
               </div>
+              <button class="ym-hero-button">Р—Р° СЃРєРёРґРєР°РјРё</button>
             </div>
           </div>
-            Реклама. ООО "ЯНДЕКС", ИНН 7736207543. clid: 14635360, erid: 5jtCeReNx12oajxS2bzShmZ
+          <div class="ym-hero-legal">
+            Р РµРєР»Р°РјР°. РћРћРћ "РЇРќР”Р•РљРЎ", РРќРќ 7736207543. clid: 14635360, erid: 5jtCeReNx12oajxS2bzShmZ
           </div>
         </a>
-            <h2>Зачем фотографу мобильные приложения?</h2>
+            <h2>Р—Р°С‡РµРј С„РѕС‚РѕРіСЂР°С„Сѓ РјРѕР±РёР»СЊРЅС‹Рµ РїСЂРёР»РѕР¶РµРЅРёСЏ?</h2>
             <ul>
-                <li>Помогают снимать, редактировать и публиковать фото на профессиональном уровне прямо со смартфона.</li>
-                <li>Упрощают организацию рабочего процесса, обработку, ретушь, планирование и хранение снимков.</li>
-                <li>Позволяют быстро делиться результатами с клиентами и подписчиками, вести портфолио и управлять проектами.</li>
+                <li>РџРѕРјРѕРіР°СЋС‚ СЃРЅРёРјР°С‚СЊ, СЂРµРґР°РєС‚РёСЂРѕРІР°С‚СЊ Рё РїСѓР±Р»РёРєРѕРІР°С‚СЊ С„РѕС‚Рѕ РЅР° РїСЂРѕС„РµСЃСЃРёРѕРЅР°Р»СЊРЅРѕРј СѓСЂРѕРІРЅРµ РїСЂСЏРјРѕ СЃРѕ СЃРјР°СЂС‚С„РѕРЅР°.</li>
+                <li>РЈРїСЂРѕС‰Р°СЋС‚ РѕСЂРіР°РЅРёР·Р°С†РёСЋ СЂР°Р±РѕС‡РµРіРѕ РїСЂРѕС†РµСЃСЃР°, РѕР±СЂР°Р±РѕС‚РєСѓ, СЂРµС‚СѓС€СЊ, РїР»Р°РЅРёСЂРѕРІР°РЅРёРµ Рё С…СЂР°РЅРµРЅРёРµ СЃРЅРёРјРєРѕРІ.</li>
+                <li>РџРѕР·РІРѕР»СЏСЋС‚ Р±С‹СЃС‚СЂРѕ РґРµР»РёС‚СЊСЃСЏ СЂРµР·СѓР»СЊС‚Р°С‚Р°РјРё СЃ РєР»РёРµРЅС‚Р°РјРё Рё РїРѕРґРїРёСЃС‡РёРєР°РјРё, РІРµСЃС‚Рё РїРѕСЂС‚С„РѕР»РёРѕ Рё СѓРїСЂР°РІР»СЏС‚СЊ РїСЂРѕРµРєС‚Р°РјРё.</li>
             </ul>
-            <h2>Таблица: топовые приложения для фотографов (2025)</h2>
+            <h2>РўР°Р±Р»РёС†Р°: С‚РѕРїРѕРІС‹Рµ РїСЂРёР»РѕР¶РµРЅРёСЏ РґР»СЏ С„РѕС‚РѕРіСЂР°С„РѕРІ (2025)</h2>
 <table>
                 <tr>
-                    <th>Название</th>
-                    <th>Платформы</th>
-                    <th>Основные функции</th>
-                    <th>Для кого</th>
+                    <th>РќР°Р·РІР°РЅРёРµ</th>
+                    <th>РџР»Р°С‚С„РѕСЂРјС‹</th>
+                    <th>РћСЃРЅРѕРІРЅС‹Рµ С„СѓРЅРєС†РёРё</th>
+                    <th>Р”Р»СЏ РєРѕРіРѕ</th>
                 </tr>
                 <tr>
                     <td>Adobe Lightroom</td>
                     <td>iOS, Android</td>
-                    <td>Профессиональная цветокоррекция, работа с RAW, пресеты, синхронизация с ПК</td>
-                    <td>Профи и энтузиасты</td>
+                    <td>РџСЂРѕС„РµСЃСЃРёРѕРЅР°Р»СЊРЅР°СЏ С†РІРµС‚РѕРєРѕСЂСЂРµРєС†РёСЏ, СЂР°Р±РѕС‚Р° СЃ RAW, РїСЂРµСЃРµС‚С‹, СЃРёРЅС…СЂРѕРЅРёР·Р°С†РёСЏ СЃ РџРљ</td>
+                    <td>РџСЂРѕС„Рё Рё СЌРЅС‚СѓР·РёР°СЃС‚С‹</td>
                 </tr>
                 <tr>
                     <td>Snapseed</td>
                     <td>iOS, Android</td>
-                    <td>Мощный бесплатный фоторедактор, фильтры, точечная ретушь</td>
-                    <td>Все</td>
+                    <td>РњРѕС‰РЅС‹Р№ Р±РµСЃРїР»Р°С‚РЅС‹Р№ С„РѕС‚РѕСЂРµРґР°РєС‚РѕСЂ, С„РёР»СЊС‚СЂС‹, С‚РѕС‡РµС‡РЅР°СЏ СЂРµС‚СѓС€СЊ</td>
+                    <td>Р’СЃРµ</td>
                 </tr>
                 <tr>
                     <td>VSCO</td>
                     <td>iOS, Android</td>
-                    <td>Креативные фильтры, социальная сеть, тонкая настройка цвета</td>
-                    <td>Любители, блогеры</td>
+                    <td>РљСЂРµР°С‚РёРІРЅС‹Рµ С„РёР»СЊС‚СЂС‹, СЃРѕС†РёР°Р»СЊРЅР°СЏ СЃРµС‚СЊ, С‚РѕРЅРєР°СЏ РЅР°СЃС‚СЂРѕР№РєР° С†РІРµС‚Р°</td>
+                    <td>Р›СЋР±РёС‚РµР»Рё, Р±Р»РѕРіРµСЂС‹</td>
                 </tr>
                 <tr>
                     <td>Halide</td>
                     <td>iOS</td>
-                    <td>Ручные настройки, RAW, фокус-пикинг, портретные эффекты</td>
-                    <td>Профи, энтузиасты</td>
+                    <td>Р СѓС‡РЅС‹Рµ РЅР°СЃС‚СЂРѕР№РєРё, RAW, С„РѕРєСѓСЃ-РїРёРєРёРЅРі, РїРѕСЂС‚СЂРµС‚РЅС‹Рµ СЌС„С„РµРєС‚С‹</td>
+                    <td>РџСЂРѕС„Рё, СЌРЅС‚СѓР·РёР°СЃС‚С‹</td>
                 </tr>
                 <tr>
                     <td>ProCam 5</td>
                     <td>iOS</td>
-                    <td>DSLR-функции, ручная экспозиция, 7 режимов съёмки</td>
-                    <td>Профи, продвинутые</td>
+                    <td>DSLR-С„СѓРЅРєС†РёРё, СЂСѓС‡РЅР°СЏ СЌРєСЃРїРѕР·РёС†РёСЏ, 7 СЂРµР¶РёРјРѕРІ СЃСЉС‘РјРєРё</td>
+                    <td>РџСЂРѕС„Рё, РїСЂРѕРґРІРёРЅСѓС‚С‹Рµ</td>
                 </tr>
                 <tr>
                     <td>PhotoRoom</td>
                     <td>iOS, Android</td>
-                    <td>Удаление/замена фона, предметная съёмка, тени, маркетинг</td>
-                    <td>Коммерция, предметка</td>
+                    <td>РЈРґР°Р»РµРЅРёРµ/Р·Р°РјРµРЅР° С„РѕРЅР°, РїСЂРµРґРјРµС‚РЅР°СЏ СЃСЉС‘РјРєР°, С‚РµРЅРё, РјР°СЂРєРµС‚РёРЅРі</td>
+                    <td>РљРѕРјРјРµСЂС†РёСЏ, РїСЂРµРґРјРµС‚РєР°</td>
                 </tr>
                 <tr>
                     <td>PicsArt</td>
                     <td>iOS, Android</td>
-                    <td>Коллажи, фильтры, эффекты, графика, видеоредактор</td>
-                    <td>Творчество, соцсети</td>
+                    <td>РљРѕР»Р»Р°Р¶Рё, С„РёР»СЊС‚СЂС‹, СЌС„С„РµРєС‚С‹, РіСЂР°С„РёРєР°, РІРёРґРµРѕСЂРµРґР°РєС‚РѕСЂ</td>
+                    <td>РўРІРѕСЂС‡РµСЃС‚РІРѕ, СЃРѕС†СЃРµС‚Рё</td>
                 </tr>
                 <tr>
                     <td>Remini</td>
                     <td>iOS, Android</td>
-                    <td>AI-улучшение качества, реставрация старых фото</td>
-                    <td>Все, ретушь</td>
+                    <td>AI-СѓР»СѓС‡С€РµРЅРёРµ РєР°С‡РµСЃС‚РІР°, СЂРµСЃС‚Р°РІСЂР°С†РёСЏ СЃС‚Р°СЂС‹С… С„РѕС‚Рѕ</td>
+                    <td>Р’СЃРµ, СЂРµС‚СѓС€СЊ</td>
                 </tr>
                 <tr>
                     <td>Instasize</td>
                     <td>iOS, Android</td>
-                    <td>Обрезка под соцсети, фильтры, коллажи, аватары</td>
-                    <td>Instagram, блогеры</td>
+                    <td>РћР±СЂРµР·РєР° РїРѕРґ СЃРѕС†СЃРµС‚Рё, С„РёР»СЊС‚СЂС‹, РєРѕР»Р»Р°Р¶Рё, Р°РІР°С‚Р°СЂС‹</td>
+                    <td>Instagram, Р±Р»РѕРіРµСЂС‹</td>
                 </tr>
                 <tr>
                     <td>Pixlr</td>
                     <td>iOS, Android</td>
-                    <td>Облако, слои, эффекты, ретушь, обмен фото</td>
-                    <td>Все</td>
+                    <td>РћР±Р»Р°РєРѕ, СЃР»РѕРё, СЌС„С„РµРєС‚С‹, СЂРµС‚СѓС€СЊ, РѕР±РјРµРЅ С„РѕС‚Рѕ</td>
+                    <td>Р’СЃРµ</td>
                 </tr>
                 <tr>
                     <td>Focos</td>
                     <td>iOS, Android</td>
-                    <td>AI-портрет, имитация боке, ручная глубина резкости</td>
-                    <td>Портреты, креатив</td>
+                    <td>AI-РїРѕСЂС‚СЂРµС‚, РёРјРёС‚Р°С†РёСЏ Р±РѕРєРµ, СЂСѓС‡РЅР°СЏ РіР»СѓР±РёРЅР° СЂРµР·РєРѕСЃС‚Рё</td>
+                    <td>РџРѕСЂС‚СЂРµС‚С‹, РєСЂРµР°С‚РёРІ</td>
                 </tr>
                 <tr>
                     <td>Prisma</td>
                     <td>iOS, Android</td>
-                    <td>AI-стилизация под картины, художественные эффекты</td>
-                    <td>Творчество</td>
+                    <td>AI-СЃС‚РёР»РёР·Р°С†РёСЏ РїРѕРґ РєР°СЂС‚РёРЅС‹, С…СѓРґРѕР¶РµСЃС‚РІРµРЅРЅС‹Рµ СЌС„С„РµРєС‚С‹</td>
+                    <td>РўРІРѕСЂС‡РµСЃС‚РІРѕ</td>
                 </tr>
                 <tr>
-                    <td>Яндекс.Диск</td>
+                    <td>РЇРЅРґРµРєСЃ.Р”РёСЃРє</td>
                     <td>iOS, Android, Windows, Mac</td>
-                    <td>Облачное хранение, обмен файлами, резервное копирование</td>
-                    <td>Все</td>
+                    <td>РћР±Р»Р°С‡РЅРѕРµ С…СЂР°РЅРµРЅРёРµ, РѕР±РјРµРЅ С„Р°Р№Р»Р°РјРё, СЂРµР·РµСЂРІРЅРѕРµ РєРѕРїРёСЂРѕРІР°РЅРёРµ</td>
+                    <td>Р’СЃРµ</td>
                 </tr>
                 <tr>
-                    <td>Периодика</td>
+                    <td>РџРµСЂРёРѕРґРёРєР°</td>
                     <td>iOS, Android</td>
-                    <td>Планирование, расписание, напоминания для фотосессий</td>
-                    <td>Профи, студии</td>
+                    <td>РџР»Р°РЅРёСЂРѕРІР°РЅРёРµ, СЂР°СЃРїРёСЃР°РЅРёРµ, РЅР°РїРѕРјРёРЅР°РЅРёСЏ РґР»СЏ С„РѕС‚РѕСЃРµСЃСЃРёР№</td>
+                    <td>РџСЂРѕС„Рё, СЃС‚СѓРґРёРё</td>
                 </tr>
             </table>
-            <h2>Подробное описание лучших приложений и их особенностей</h2>
+            <h2>РџРѕРґСЂРѕР±РЅРѕРµ РѕРїРёСЃР°РЅРёРµ Р»СѓС‡С€РёС… РїСЂРёР»РѕР¶РµРЅРёР№ Рё РёС… РѕСЃРѕР±РµРЅРЅРѕСЃС‚РµР№</h2>
             <ul>
-                <li><strong>Adobe Lightroom</strong> - эталон мобильной цветокоррекции и работы с RAW, синхронизируется с ПК, поддерживает пресеты и профессиональные инструменты.</li>
-                <li><strong>Snapseed</strong> - бесплатный и мощный редактор с фильтрами, точечной ретушью и удобным интерфейсом для быстрой обработки.</li>
-                <li><strong>VSCO</strong> - креативные фильтры, социальная сеть для фотографов, тонкая настройка цвета и экспозиции.</li>
-                <li><strong>Halide</strong> - ручные настройки, поддержка RAW, фокус-пикинг, портретные эффекты, идеален для iPhone-фотографов.</li>
-                <li><strong>ProCam 5</strong> - DSLR-функции, ручная экспозиция, 7 режимов, поддержка серийной съёмки и ночных кадров.</li>
-                <li><strong>PhotoRoom</strong> - удаление и замена фона, идеален для предметной съёмки и маркетинга.</li>
-                <li><strong>PicsArt</strong> - редактор с коллажами, фильтрами, графикой и видеомонтажом, отлично подходит для творчества и соцсетей.</li>
-                <li><strong>Remini</strong> - AI-улучшение качества, восстановление старых и нечетких фото, реставрация.</li>
-                <li><strong>Instasize</strong> - обрезка под разные форматы соцсетей, фильтры, коллажи, аватары с помощью ИИ.</li>
-                <li><strong>Pixlr</strong> - облачный редактор с поддержкой слоёв, эффектов и обмена фото.</li>
-                <li><strong>Focos</strong> - AI-портрет, имитация боке, ручная глубина резкости, подходит для портретной и креативной съёмки.</li>
-                <li><strong>Prisma</strong> - AI-стилизация под картины, художественные эффекты на основе нейросетей.</li>
-                <li><strong>Яндекс.Диск</strong> - облачное хранилище для резервного копирования и обмена файлами.</li>
-                <li><strong>Периодика</strong> - приложение для планирования фотосессий, расписания и напоминаний.</li>
+                <li><strong>Adobe Lightroom</strong> - СЌС‚Р°Р»РѕРЅ РјРѕР±РёР»СЊРЅРѕР№ С†РІРµС‚РѕРєРѕСЂСЂРµРєС†РёРё Рё СЂР°Р±РѕС‚С‹ СЃ RAW, СЃРёРЅС…СЂРѕРЅРёР·РёСЂСѓРµС‚СЃСЏ СЃ РџРљ, РїРѕРґРґРµСЂР¶РёРІР°РµС‚ РїСЂРµСЃРµС‚С‹ Рё РїСЂРѕС„РµСЃСЃРёРѕРЅР°Р»СЊРЅС‹Рµ РёРЅСЃС‚СЂСѓРјРµРЅС‚С‹.</li>
+                <li><strong>Snapseed</strong> - Р±РµСЃРїР»Р°С‚РЅС‹Р№ Рё РјРѕС‰РЅС‹Р№ СЂРµРґР°РєС‚РѕСЂ СЃ С„РёР»СЊС‚СЂР°РјРё, С‚РѕС‡РµС‡РЅРѕР№ СЂРµС‚СѓС€СЊСЋ Рё СѓРґРѕР±РЅС‹Рј РёРЅС‚РµСЂС„РµР№СЃРѕРј РґР»СЏ Р±С‹СЃС‚СЂРѕР№ РѕР±СЂР°Р±РѕС‚РєРё.</li>
+                <li><strong>VSCO</strong> - РєСЂРµР°С‚РёРІРЅС‹Рµ С„РёР»СЊС‚СЂС‹, СЃРѕС†РёР°Р»СЊРЅР°СЏ СЃРµС‚СЊ РґР»СЏ С„РѕС‚РѕРіСЂР°С„РѕРІ, С‚РѕРЅРєР°СЏ РЅР°СЃС‚СЂРѕР№РєР° С†РІРµС‚Р° Рё СЌРєСЃРїРѕР·РёС†РёРё.</li>
+                <li><strong>Halide</strong> - СЂСѓС‡РЅС‹Рµ РЅР°СЃС‚СЂРѕР№РєРё, РїРѕРґРґРµСЂР¶РєР° RAW, С„РѕРєСѓСЃ-РїРёРєРёРЅРі, РїРѕСЂС‚СЂРµС‚РЅС‹Рµ СЌС„С„РµРєС‚С‹, РёРґРµР°Р»РµРЅ РґР»СЏ iPhone-С„РѕС‚РѕРіСЂР°С„РѕРІ.</li>
+                <li><strong>ProCam 5</strong> - DSLR-С„СѓРЅРєС†РёРё, СЂСѓС‡РЅР°СЏ СЌРєСЃРїРѕР·РёС†РёСЏ, 7 СЂРµР¶РёРјРѕРІ, РїРѕРґРґРµСЂР¶РєР° СЃРµСЂРёР№РЅРѕР№ СЃСЉС‘РјРєРё Рё РЅРѕС‡РЅС‹С… РєР°РґСЂРѕРІ.</li>
+                <li><strong>PhotoRoom</strong> - СѓРґР°Р»РµРЅРёРµ Рё Р·Р°РјРµРЅР° С„РѕРЅР°, РёРґРµР°Р»РµРЅ РґР»СЏ РїСЂРµРґРјРµС‚РЅРѕР№ СЃСЉС‘РјРєРё Рё РјР°СЂРєРµС‚РёРЅРіР°.</li>
+                <li><strong>PicsArt</strong> - СЂРµРґР°РєС‚РѕСЂ СЃ РєРѕР»Р»Р°Р¶Р°РјРё, С„РёР»СЊС‚СЂР°РјРё, РіСЂР°С„РёРєРѕР№ Рё РІРёРґРµРѕРјРѕРЅС‚Р°Р¶РѕРј, РѕС‚Р»РёС‡РЅРѕ РїРѕРґС…РѕРґРёС‚ РґР»СЏ С‚РІРѕСЂС‡РµСЃС‚РІР° Рё СЃРѕС†СЃРµС‚РµР№.</li>
+                <li><strong>Remini</strong> - AI-СѓР»СѓС‡С€РµРЅРёРµ РєР°С‡РµСЃС‚РІР°, РІРѕСЃСЃС‚Р°РЅРѕРІР»РµРЅРёРµ СЃС‚Р°СЂС‹С… Рё РЅРµС‡РµС‚РєРёС… С„РѕС‚Рѕ, СЂРµСЃС‚Р°РІСЂР°С†РёСЏ.</li>
+                <li><strong>Instasize</strong> - РѕР±СЂРµР·РєР° РїРѕРґ СЂР°Р·РЅС‹Рµ С„РѕСЂРјР°С‚С‹ СЃРѕС†СЃРµС‚РµР№, С„РёР»СЊС‚СЂС‹, РєРѕР»Р»Р°Р¶Рё, Р°РІР°С‚Р°СЂС‹ СЃ РїРѕРјРѕС‰СЊСЋ РР.</li>
+                <li><strong>Pixlr</strong> - РѕР±Р»Р°С‡РЅС‹Р№ СЂРµРґР°РєС‚РѕСЂ СЃ РїРѕРґРґРµСЂР¶РєРѕР№ СЃР»РѕС‘РІ, СЌС„С„РµРєС‚РѕРІ Рё РѕР±РјРµРЅР° С„РѕС‚Рѕ.</li>
+                <li><strong>Focos</strong> - AI-РїРѕСЂС‚СЂРµС‚, РёРјРёС‚Р°С†РёСЏ Р±РѕРєРµ, СЂСѓС‡РЅР°СЏ РіР»СѓР±РёРЅР° СЂРµР·РєРѕСЃС‚Рё, РїРѕРґС…РѕРґРёС‚ РґР»СЏ РїРѕСЂС‚СЂРµС‚РЅРѕР№ Рё РєСЂРµР°С‚РёРІРЅРѕР№ СЃСЉС‘РјРєРё.</li>
+                <li><strong>Prisma</strong> - AI-СЃС‚РёР»РёР·Р°С†РёСЏ РїРѕРґ РєР°СЂС‚РёРЅС‹, С…СѓРґРѕР¶РµСЃС‚РІРµРЅРЅС‹Рµ СЌС„С„РµРєС‚С‹ РЅР° РѕСЃРЅРѕРІРµ РЅРµР№СЂРѕСЃРµС‚РµР№.</li>
+                <li><strong>РЇРЅРґРµРєСЃ.Р”РёСЃРє</strong> - РѕР±Р»Р°С‡РЅРѕРµ С…СЂР°РЅРёР»РёС‰Рµ РґР»СЏ СЂРµР·РµСЂРІРЅРѕРіРѕ РєРѕРїРёСЂРѕРІР°РЅРёСЏ Рё РѕР±РјРµРЅР° С„Р°Р№Р»Р°РјРё.</li>
+                <li><strong>РџРµСЂРёРѕРґРёРєР°</strong> - РїСЂРёР»РѕР¶РµРЅРёРµ РґР»СЏ РїР»Р°РЅРёСЂРѕРІР°РЅРёСЏ С„РѕС‚РѕСЃРµСЃСЃРёР№, СЂР°СЃРїРёСЃР°РЅРёСЏ Рё РЅР°РїРѕРјРёРЅР°РЅРёР№.</li>
             </ul>
-            <h2>Редактирование, ретушь и AI: современные тренды</h2>
+            <h2>Р РµРґР°РєС‚РёСЂРѕРІР°РЅРёРµ, СЂРµС‚СѓС€СЊ Рё AI: СЃРѕРІСЂРµРјРµРЅРЅС‹Рµ С‚СЂРµРЅРґС‹</h2>
             <ul>
-                <li>Мощные AI-инструменты (Remini, Prisma, Focos) позволяют за секунды улучшать качество, стилизовать и творчески изменять снимки.</li>
-                <li>Мобильные версии Adobe Lightroom, Snapseed, VSCO и Pixlr предоставляют почти профессиональные возможности для цветокоррекции, ретуши и работы со слоями.</li>
-                <li>PhotoRoom, Instasize и PicsArt - лидеры по автоматизации работы с фоном, коллажами, подготовкой фото для маркетинга и соцсетей.</li>
+                <li>РњРѕС‰РЅС‹Рµ AI-РёРЅСЃС‚СЂСѓРјРµРЅС‚С‹ (Remini, Prisma, Focos) РїРѕР·РІРѕР»СЏСЋС‚ Р·Р° СЃРµРєСѓРЅРґС‹ СѓР»СѓС‡С€Р°С‚СЊ РєР°С‡РµСЃС‚РІРѕ, СЃС‚РёР»РёР·РѕРІР°С‚СЊ Рё С‚РІРѕСЂС‡РµСЃРєРё РёР·РјРµРЅСЏС‚СЊ СЃРЅРёРјРєРё.</li>
+                <li>РњРѕР±РёР»СЊРЅС‹Рµ РІРµСЂСЃРёРё Adobe Lightroom, Snapseed, VSCO Рё Pixlr РїСЂРµРґРѕСЃС‚Р°РІР»СЏСЋС‚ РїРѕС‡С‚Рё РїСЂРѕС„РµСЃСЃРёРѕРЅР°Р»СЊРЅС‹Рµ РІРѕР·РјРѕР¶РЅРѕСЃС‚Рё РґР»СЏ С†РІРµС‚РѕРєРѕСЂСЂРµРєС†РёРё, СЂРµС‚СѓС€Рё Рё СЂР°Р±РѕС‚С‹ СЃРѕ СЃР»РѕСЏРјРё.</li>
+                <li>PhotoRoom, Instasize Рё PicsArt - Р»РёРґРµСЂС‹ РїРѕ Р°РІС‚РѕРјР°С‚РёР·Р°С†РёРё СЂР°Р±РѕС‚С‹ СЃ С„РѕРЅРѕРј, РєРѕР»Р»Р°Р¶Р°РјРё, РїРѕРґРіРѕС‚РѕРІРєРѕР№ С„РѕС‚Рѕ РґР»СЏ РјР°СЂРєРµС‚РёРЅРіР° Рё СЃРѕС†СЃРµС‚РµР№.</li>
             </ul>
-            <h2>Организация, облако, планирование</h2>
+            <h2>РћСЂРіР°РЅРёР·Р°С†РёСЏ, РѕР±Р»Р°РєРѕ, РїР»Р°РЅРёСЂРѕРІР°РЅРёРµ</h2>
             <ul>
-                <li>Яндекс.Диск, Google Фото, Dropbox - для хранения и быстрой передачи RAW и JPEG, резервного копирования и обмена с клиентами.</li>
-                <li>Периодика и аналоги - для планирования фотосессий, контроля дедлайнов, встреч, задач и напоминаний.</li>
+                <li>РЇРЅРґРµРєСЃ.Р”РёСЃРє, Google Р¤РѕС‚Рѕ, Dropbox - РґР»СЏ С…СЂР°РЅРµРЅРёСЏ Рё Р±С‹СЃС‚СЂРѕР№ РїРµСЂРµРґР°С‡Рё RAW Рё JPEG, СЂРµР·РµСЂРІРЅРѕРіРѕ РєРѕРїРёСЂРѕРІР°РЅРёСЏ Рё РѕР±РјРµРЅР° СЃ РєР»РёРµРЅС‚Р°РјРё.</li>
+                <li>РџРµСЂРёРѕРґРёРєР° Рё Р°РЅР°Р»РѕРіРё - РґР»СЏ РїР»Р°РЅРёСЂРѕРІР°РЅРёСЏ С„РѕС‚РѕСЃРµСЃСЃРёР№, РєРѕРЅС‚СЂРѕР»СЏ РґРµРґР»Р°Р№РЅРѕРІ, РІСЃС‚СЂРµС‡, Р·Р°РґР°С‡ Рё РЅР°РїРѕРјРёРЅР°РЅРёР№.</li>
             </ul>
-            <h2>Профессиональные советы</h2>
+            <h2>РџСЂРѕС„РµСЃСЃРёРѕРЅР°Р»СЊРЅС‹Рµ СЃРѕРІРµС‚С‹</h2>
             <div class="pro-tips">
-                <h4>?? Профессиональные советы</h4>
+                <h4>рџ”№ РџСЂРѕС„РµСЃСЃРёРѕРЅР°Р»СЊРЅС‹Рµ СЃРѕРІРµС‚С‹</h4>
                 <div class="tip-item">
                     <i class="fas fa-lightbulb"></i>
-                    <p>Используйте несколько приложений: например, Lightroom для обработки, PhotoRoom для предметки, Яндекс.Диск для хранения и Периодику для планирования.</p>
+                    <p>РСЃРїРѕР»СЊР·СѓР№С‚Рµ РЅРµСЃРєРѕР»СЊРєРѕ РїСЂРёР»РѕР¶РµРЅРёР№: РЅР°РїСЂРёРјРµСЂ, Lightroom РґР»СЏ РѕР±СЂР°Р±РѕС‚РєРё, PhotoRoom РґР»СЏ РїСЂРµРґРјРµС‚РєРё, РЇРЅРґРµРєСЃ.Р”РёСЃРє РґР»СЏ С…СЂР°РЅРµРЅРёСЏ Рё РџРµСЂРёРѕРґРёРєСѓ РґР»СЏ РїР»Р°РЅРёСЂРѕРІР°РЅРёСЏ.</p>
                 </div>
                 <div class="tip-item">
                     <i class="fas fa-lightbulb"></i>
-                    <p>Пробуйте новые AI-функции: современные приложения быстро развиваются, а автоматизация экономит время на рутине.</p>
+                    <p>РџСЂРѕР±СѓР№С‚Рµ РЅРѕРІС‹Рµ AI-С„СѓРЅРєС†РёРё: СЃРѕРІСЂРµРјРµРЅРЅС‹Рµ РїСЂРёР»РѕР¶РµРЅРёСЏ Р±С‹СЃС‚СЂРѕ СЂР°Р·РІРёРІР°СЋС‚СЃСЏ, Р° Р°РІС‚РѕРјР°С‚РёР·Р°С†РёСЏ СЌРєРѕРЅРѕРјРёС‚ РІСЂРµРјСЏ РЅР° СЂСѓС‚РёРЅРµ.</p>
                 </div>
                 <div class="tip-item">
                     <i class="fas fa-lightbulb"></i>
-                    <p>Делайте резервные копии в облако сразу после съёмки - это защитит ваши снимки от потери данных.</p>
+                    <p>Р”РµР»Р°Р№С‚Рµ СЂРµР·РµСЂРІРЅС‹Рµ РєРѕРїРёРё РІ РѕР±Р»Р°РєРѕ СЃСЂР°Р·Сѓ РїРѕСЃР»Рµ СЃСЉС‘РјРєРё - СЌС‚Рѕ Р·Р°С‰РёС‚РёС‚ РІР°С€Рё СЃРЅРёРјРєРё РѕС‚ РїРѕС‚РµСЂРё РґР°РЅРЅС‹С….</p>
                 </div>
                 <div class="tip-item">
                     <i class="fas fa-lightbulb"></i>
-                    <p>Для сложной ретуши используйте мобильные версии Photoshop, Lightroom, Snapseed или Pixlr с поддержкой слоёв и масок.</p>
+                    <p>Р”Р»СЏ СЃР»РѕР¶РЅРѕР№ СЂРµС‚СѓС€Рё РёСЃРїРѕР»СЊР·СѓР№С‚Рµ РјРѕР±РёР»СЊРЅС‹Рµ РІРµСЂСЃРёРё Photoshop, Lightroom, Snapseed РёР»Рё Pixlr СЃ РїРѕРґРґРµСЂР¶РєРѕР№ СЃР»РѕС‘РІ Рё РјР°СЃРѕРє.</p>
                 </div>
             </div>
-            <h2>Часто задаваемые вопросы</h2>
+            <h2>Р§Р°СЃС‚Рѕ Р·Р°РґР°РІР°РµРјС‹Рµ РІРѕРїСЂРѕСЃС‹</h2>
             <ul>
-                <li><strong>Какое приложение самое универсальное?</strong> - Adobe Lightroom и Snapseed: подходят для большинства задач, бесплатны или имеют пробную версию.</li>
-                <li><strong>Какое приложение для предметной съёмки?</strong> - PhotoRoom: быстро удаляет фон, добавляет тени, готовит фото для маркетплейсов.</li>
-                <li><strong>Что выбрать для творчества?</strong> - VSCO, Prisma, PicsArt, Focos - креативные фильтры, эффекты, AI-стилизация.</li>
-                <li><strong>Как хранить и делиться фото?</strong> - Яндекс.Диск, Google Фото, Dropbox.</li>
-                <li><strong>Чем планировать фотосессии?</strong> - Периодика или любой календарь с напоминаниями.</li>
+                <li><strong>РљР°РєРѕРµ РїСЂРёР»РѕР¶РµРЅРёРµ СЃР°РјРѕРµ СѓРЅРёРІРµСЂСЃР°Р»СЊРЅРѕРµ?</strong> - Adobe Lightroom Рё Snapseed: РїРѕРґС…РѕРґСЏС‚ РґР»СЏ Р±РѕР»СЊС€РёРЅСЃС‚РІР° Р·Р°РґР°С‡, Р±РµСЃРїР»Р°С‚РЅС‹ РёР»Рё РёРјРµСЋС‚ РїСЂРѕР±РЅСѓСЋ РІРµСЂСЃРёСЋ.</li>
+                <li><strong>РљР°РєРѕРµ РїСЂРёР»РѕР¶РµРЅРёРµ РґР»СЏ РїСЂРµРґРјРµС‚РЅРѕР№ СЃСЉС‘РјРєРё?</strong> - PhotoRoom: Р±С‹СЃС‚СЂРѕ СѓРґР°Р»СЏРµС‚ С„РѕРЅ, РґРѕР±Р°РІР»СЏРµС‚ С‚РµРЅРё, РіРѕС‚РѕРІРёС‚ С„РѕС‚Рѕ РґР»СЏ РјР°СЂРєРµС‚РїР»РµР№СЃРѕРІ.</li>
+                <li><strong>Р§С‚Рѕ РІС‹Р±СЂР°С‚СЊ РґР»СЏ С‚РІРѕСЂС‡РµСЃС‚РІР°?</strong> - VSCO, Prisma, PicsArt, Focos - РєСЂРµР°С‚РёРІРЅС‹Рµ С„РёР»СЊС‚СЂС‹, СЌС„С„РµРєС‚С‹, AI-СЃС‚РёР»РёР·Р°С†РёСЏ.</li>
+                <li><strong>РљР°Рє С…СЂР°РЅРёС‚СЊ Рё РґРµР»РёС‚СЊСЃСЏ С„РѕС‚Рѕ?</strong> - РЇРЅРґРµРєСЃ.Р”РёСЃРє, Google Р¤РѕС‚Рѕ, Dropbox.</li>
+                <li><strong>Р§РµРј РїР»Р°РЅРёСЂРѕРІР°С‚СЊ С„РѕС‚РѕСЃРµСЃСЃРёРё?</strong> - РџРµСЂРёРѕРґРёРєР° РёР»Рё Р»СЋР±РѕР№ РєР°Р»РµРЅРґР°СЂСЊ СЃ РЅР°РїРѕРјРёРЅР°РЅРёСЏРјРё.</li>
             </ul>
-            <h2>?? Итог</h2>
+            <h2>рџ“Њ РС‚РѕРі</h2>
             <p>
-                В 2025 году мобильные приложения для фотографов - это не только редакторы, но и инструменты для ретуши, AI-улучшения, планирования, облачного хранения и публикации. Используйте лучшие решения на рынке, комбинируйте их под свои задачи и оставайтесь на пике мобильной фотографии!
+                Р’ 2025 РіРѕРґСѓ РјРѕР±РёР»СЊРЅС‹Рµ РїСЂРёР»РѕР¶РµРЅРёСЏ РґР»СЏ С„РѕС‚РѕРіСЂР°С„РѕРІ - СЌС‚Рѕ РЅРµ С‚РѕР»СЊРєРѕ СЂРµРґР°РєС‚РѕСЂС‹, РЅРѕ Рё РёРЅСЃС‚СЂСѓРјРµРЅС‚С‹ РґР»СЏ СЂРµС‚СѓС€Рё, AI-СѓР»СѓС‡С€РµРЅРёСЏ, РїР»Р°РЅРёСЂРѕРІР°РЅРёСЏ, РѕР±Р»Р°С‡РЅРѕРіРѕ С…СЂР°РЅРµРЅРёСЏ Рё РїСѓР±Р»РёРєР°С†РёРё. РСЃРїРѕР»СЊР·СѓР№С‚Рµ Р»СѓС‡С€РёРµ СЂРµС€РµРЅРёСЏ РЅР° СЂС‹РЅРєРµ, РєРѕРјР±РёРЅРёСЂСѓР№С‚Рµ РёС… РїРѕРґ СЃРІРѕРё Р·Р°РґР°С‡Рё Рё РѕСЃС‚Р°РІР°Р№С‚РµСЃСЊ РЅР° РїРёРєРµ РјРѕР±РёР»СЊРЅРѕР№ С„РѕС‚РѕРіСЂР°С„РёРё!
             </p>
 </div>
 
-        <!-- Telegram рекламный баннер -->
+        <!-- Telegram СЂРµРєР»Р°РјРЅС‹Р№ Р±Р°РЅРЅРµСЂ -->
         <a href="https://t.me/RepairoRU" target="_blank" rel="noopener noreferrer" class="telegram-banner">
           <div class="telegram-banner-container">
             <div class="telegram-logo">
@@ -546,10 +583,10 @@
               </svg>
             </div>
             <div class="telegram-content">
-              <div class="telegram-title">Новости из мира технологий</div>
-              <div class="telegram-subtitle">В нашем новом Telegram-канале. Подписывайтесь и будьте в числе первых!</div>
+              <div class="telegram-title">РќРѕРІРѕСЃС‚Рё РёР· РјРёСЂР° С‚РµС…РЅРѕР»РѕРіРёР№</div>
+              <div class="telegram-subtitle">Р’ РЅР°С€РµРј РЅРѕРІРѕРј Telegram-РєР°РЅР°Р»Рµ. РџРѕРґРїРёСЃС‹РІР°Р№С‚РµСЃСЊ Рё Р±СѓРґСЊС‚Рµ РІ С‡РёСЃР»Рµ РїРµСЂРІС‹С…!</div>
               <div class="telegram-button">
-                Подписаться
+                РџРѕРґРїРёСЃР°С‚СЊСЃСЏ
                 <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.56c-.21 2.22-1.12 7.58-1.58 10.06-.19 1.07-.57 1.43-.94 1.46-.8.07-1.4-.52-2.17-1.03-1.21-.79-1.89-1.28-3.06-2.05-1.35-.87-.47-1.35.3-2.13.2-.21 3.71-3.39 3.77-3.68.01-.04.01-.18-.07-.26s-.2-.05-.29-.03c-.12.03-2.11 1.34-5.95 3.93-.56.38-1.07.57-1.53.56-.5-.01-1.47-.28-2.19-.51-.88-.28-1.58-.43-1.52-.91.03-.25.38-.51 1.04-.78 4.07-1.77 6.78-2.94 8.13-3.51 3.88-1.62 4.68-1.9 5.19-1.91.12 0 .37.03.54.17.14.12.18.28.2.44-.01.06 0 .11-.01.17z"/>
                 </svg>
@@ -574,45 +611,45 @@
                         </span>
                         <span class="logo__text">Repairo</span>
                     </a>
-                    <p class="footer__text">Помогаем ремонтировать электронику с 2024 года</p>
+                    <p class="footer__text">РџРѕРјРѕРіР°РµРј СЂРµРјРѕРЅС‚РёСЂРѕРІР°С‚СЊ СЌР»РµРєС‚СЂРѕРЅРёРєСѓ СЃ 2024 РіРѕРґР°</p>
                 </div>
                 <div class="footer__col">
-                    <h3 class="footer__title">Разделы</h3>
+                    <h3 class="footer__title">Р Р°Р·РґРµР»С‹</h3>
                     <ul class="footer__links">
-                        <li><a href="../index.html" class="footer__link">Главная</a></li>
-                        <li><a href="../index.html#categories" class="footer__link">Все гайды</a></li>
-                        <li><a href="../contacts.html" class="footer__link">Контакты</a></li>
+                        <li><a href="../index.html" class="footer__link">Р“Р»Р°РІРЅР°СЏ</a></li>
+                        <li><a href="../index.html#categories" class="footer__link">Р’СЃРµ РіР°Р№РґС‹</a></li>
+                        <li><a href="../contacts.html" class="footer__link">РљРѕРЅС‚Р°РєС‚С‹</a></li>
                     </ul>
                 </div>
                 <div class="footer__col">
-                    <h3 class="footer__title">Категории</h3>
+                    <h3 class="footer__title">РљР°С‚РµРіРѕСЂРёРё</h3>
                     <ul class="footer__links">
-                        <li><a href="../tv.html" class="nav__link">Телевизоры</a></li>
-                        <li><a href="../cameras.html" class="nav__link">Фотоаппараты</a></li>
-                        <li><a href="../consoles.html" class="nav__link">Приставки</a></li>
-                        <li><a href="../laptops.html" class="nav__link">Ноутбуки</a></li>
-                        <li><a href="../smartphones.html" class="nav__link">Смартфоны</a></li>
-                        <li><a href="../small-appliances.html" class="nav__link">Мелкая техника</a></li>
-                        <li><a href="../large-appliances.html" class="nav__link">Бытовая техника</a></li>
-                        <li><a href="../auto-electronics.html" class="nav__link">Авто-Электроника</a></li>
+                        <li><a href="../tv.html" class="nav__link">РўРµР»РµРІРёР·РѕСЂС‹</a></li>
+                        <li><a href="../cameras.html" class="nav__link">Р¤РѕС‚РѕР°РїРїР°СЂР°С‚С‹</a></li>
+                        <li><a href="../consoles.html" class="nav__link">РџСЂРёСЃС‚Р°РІРєРё</a></li>
+                        <li><a href="../laptops.html" class="nav__link">РќРѕСѓС‚Р±СѓРєРё</a></li>
+                        <li><a href="../smartphones.html" class="nav__link">РЎРјР°СЂС‚С„РѕРЅС‹</a></li>
+                        <li><a href="../small-appliances.html" class="nav__link">РњРµР»РєР°СЏ С‚РµС…РЅРёРєР°</a></li>
+                        <li><a href="../large-appliances.html" class="nav__link">Р‘С‹С‚РѕРІР°СЏ С‚РµС…РЅРёРєР°</a></li>
+                        <li><a href="../auto-electronics.html" class="nav__link">РђРІС‚Рѕ-Р­Р»РµРєС‚СЂРѕРЅРёРєР°</a></li>
                     </ul>
                 </div>
                 <div class="footer__col">
-                    <h3 class="footer__title">Контакты</h3>
+                    <h3 class="footer__title">РљРѕРЅС‚Р°РєС‚С‹</h3>
                     <ul class="footer__links">
                         <li><a href="https://t.me/RepairoRU" class="footer__link"><i class="fab fa-telegram"></i> Telegram</a></li>
-                        <li><span class="footer__link">Наша почта: repairo.info@mail.ru</span></li>
+                        <li><span class="footer__link">РќР°С€Р° РїРѕС‡С‚Р°: repairo.info@mail.ru</span></li>
                     </ul>
                 </div>
             </div>
             <div class="footer__bottom">
                 <p class="disclaimer">
-    Администрация сайта не несёт ответственности за возможные повреждения техники
-    и иные последствия, возникшие в результате самостоятельного ремонта по
-    материалам и инструкциям, размещённым на сайте. Все работы вы выполняете
-    на свой страх и риск.
+    РђРґРјРёРЅРёСЃС‚СЂР°С†РёСЏ СЃР°Р№С‚Р° РЅРµ РЅРµСЃС‘С‚ РѕС‚РІРµС‚СЃС‚РІРµРЅРЅРѕСЃС‚Рё Р·Р° РІРѕР·РјРѕР¶РЅС‹Рµ РїРѕРІСЂРµР¶РґРµРЅРёСЏ С‚РµС…РЅРёРєРё
+    Рё РёРЅС‹Рµ РїРѕСЃР»РµРґСЃС‚РІРёСЏ, РІРѕР·РЅРёРєС€РёРµ РІ СЂРµР·СѓР»СЊС‚Р°С‚Рµ СЃР°РјРѕСЃС‚РѕСЏС‚РµР»СЊРЅРѕРіРѕ СЂРµРјРѕРЅС‚Р° РїРѕ
+    РјР°С‚РµСЂРёР°Р»Р°Рј Рё РёРЅСЃС‚СЂСѓРєС†РёСЏРј, СЂР°Р·РјРµС‰С‘РЅРЅС‹Рј РЅР° СЃР°Р№С‚Рµ. Р’СЃРµ СЂР°Р±РѕС‚С‹ РІС‹ РІС‹РїРѕР»РЅСЏРµС‚Рµ
+    РЅР° СЃРІРѕР№ СЃС‚СЂР°С… Рё СЂРёСЃРє.
     </p>
-                <p class="footer__copyright">© 2026 Repairo. Все права защищены.</p>
+                <p class="footer__copyright">В© 2026 Repairo. Р’СЃРµ РїСЂР°РІР° Р·Р°С‰РёС‰РµРЅС‹.</p>
             </div>
         </div>
     </footer>
@@ -623,56 +660,56 @@
 {
   "@context": "https://schema.org",
   "@type": "HowTo",
-  "name": "Лучшие мобильные приложения для фотографов",
-  "description": "Пошаговая инструкция: Лучшие мобильные приложения для фотографов. Используйте несколько приложений: например, Lightroom для обработки, PhotoRoom д.... Советы...",
+  "name": "Р›СѓС‡С€РёРµ РјРѕР±РёР»СЊРЅС‹Рµ РїСЂРёР»РѕР¶РµРЅРёСЏ РґР»СЏ С„РѕС‚РѕРіСЂР°С„РѕРІ",
+  "description": "РџРѕС€Р°РіРѕРІР°СЏ РёРЅСЃС‚СЂСѓРєС†РёСЏ: Р›СѓС‡С€РёРµ РјРѕР±РёР»СЊРЅС‹Рµ РїСЂРёР»РѕР¶РµРЅРёСЏ РґР»СЏ С„РѕС‚РѕРіСЂР°С„РѕРІ. РСЃРїРѕР»СЊР·СѓР№С‚Рµ РЅРµСЃРєРѕР»СЊРєРѕ РїСЂРёР»РѕР¶РµРЅРёР№: РЅР°РїСЂРёРјРµСЂ, Lightroom РґР»СЏ РѕР±СЂР°Р±РѕС‚РєРё, PhotoRoom Рґ.... РЎРѕРІРµС‚С‹...",
   "totalTime": "PT30M",
   "step": [
     {
       "@type": "HowToStep",
-      "name": "Зачем фотографу мобильные приложения?",
-      "text": "Зачем фотографу мобильные приложения?",
+      "name": "Р—Р°С‡РµРј С„РѕС‚РѕРіСЂР°С„Сѓ РјРѕР±РёР»СЊРЅС‹Рµ РїСЂРёР»РѕР¶РµРЅРёСЏ?",
+      "text": "Р—Р°С‡РµРј С„РѕС‚РѕРіСЂР°С„Сѓ РјРѕР±РёР»СЊРЅС‹Рµ РїСЂРёР»РѕР¶РµРЅРёСЏ?",
       "url": "#step-1"
     },
     {
       "@type": "HowToStep",
-      "name": "Таблица: топовые приложения для фотографов (2025)",
-      "text": "Таблица: топовые приложения для фотографов (2025)",
+      "name": "РўР°Р±Р»РёС†Р°: С‚РѕРїРѕРІС‹Рµ РїСЂРёР»РѕР¶РµРЅРёСЏ РґР»СЏ С„РѕС‚РѕРіСЂР°С„РѕРІ (2025)",
+      "text": "РўР°Р±Р»РёС†Р°: С‚РѕРїРѕРІС‹Рµ РїСЂРёР»РѕР¶РµРЅРёСЏ РґР»СЏ С„РѕС‚РѕРіСЂР°С„РѕРІ (2025)",
       "url": "#step-2"
     },
     {
       "@type": "HowToStep",
-      "name": "Подробное описание лучших приложений и их особенностей",
-      "text": "Подробное описание лучших приложений и их особенностей",
+      "name": "РџРѕРґСЂРѕР±РЅРѕРµ РѕРїРёСЃР°РЅРёРµ Р»СѓС‡С€РёС… РїСЂРёР»РѕР¶РµРЅРёР№ Рё РёС… РѕСЃРѕР±РµРЅРЅРѕСЃС‚РµР№",
+      "text": "РџРѕРґСЂРѕР±РЅРѕРµ РѕРїРёСЃР°РЅРёРµ Р»СѓС‡С€РёС… РїСЂРёР»РѕР¶РµРЅРёР№ Рё РёС… РѕСЃРѕР±РµРЅРЅРѕСЃС‚РµР№",
       "url": "#step-3"
     },
     {
       "@type": "HowToStep",
-      "name": "Редактирование, ретушь и AI: современные тренды",
-      "text": "Редактирование, ретушь и AI: современные тренды",
+      "name": "Р РµРґР°РєС‚РёСЂРѕРІР°РЅРёРµ, СЂРµС‚СѓС€СЊ Рё AI: СЃРѕРІСЂРµРјРµРЅРЅС‹Рµ С‚СЂРµРЅРґС‹",
+      "text": "Р РµРґР°РєС‚РёСЂРѕРІР°РЅРёРµ, СЂРµС‚СѓС€СЊ Рё AI: СЃРѕРІСЂРµРјРµРЅРЅС‹Рµ С‚СЂРµРЅРґС‹",
       "url": "#step-4"
     },
     {
       "@type": "HowToStep",
-      "name": "Организация, облако, планирование",
-      "text": "Организация, облако, планирование",
+      "name": "РћСЂРіР°РЅРёР·Р°С†РёСЏ, РѕР±Р»Р°РєРѕ, РїР»Р°РЅРёСЂРѕРІР°РЅРёРµ",
+      "text": "РћСЂРіР°РЅРёР·Р°С†РёСЏ, РѕР±Р»Р°РєРѕ, РїР»Р°РЅРёСЂРѕРІР°РЅРёРµ",
       "url": "#step-5"
     },
     {
       "@type": "HowToStep",
-      "name": "Профессиональные советы",
-      "text": "Профессиональные советы",
+      "name": "РџСЂРѕС„РµСЃСЃРёРѕРЅР°Р»СЊРЅС‹Рµ СЃРѕРІРµС‚С‹",
+      "text": "РџСЂРѕС„РµСЃСЃРёРѕРЅР°Р»СЊРЅС‹Рµ СЃРѕРІРµС‚С‹",
       "url": "#step-6"
     },
     {
       "@type": "HowToStep",
-      "name": "Часто задаваемые вопросы",
-      "text": "Часто задаваемые вопросы",
+      "name": "Р§Р°СЃС‚Рѕ Р·Р°РґР°РІР°РµРјС‹Рµ РІРѕРїСЂРѕСЃС‹",
+      "text": "Р§Р°СЃС‚Рѕ Р·Р°РґР°РІР°РµРјС‹Рµ РІРѕРїСЂРѕСЃС‹",
       "url": "#step-7"
     },
     {
       "@type": "HowToStep",
-      "name": "?? Итог",
-      "text": "?? Итог",
+      "name": "рџ“Њ РС‚РѕРі",
+      "text": "рџ“Њ РС‚РѕРі",
       "url": "#step-8"
     }
   ],
@@ -683,8 +720,4 @@
 <script src="../cookie-consent.js"></script>
 </body>
 </html>
-
-
-
-
 

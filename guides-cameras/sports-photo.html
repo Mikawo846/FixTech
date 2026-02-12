@@ -2,36 +2,43 @@
 <html lang="ru" data-theme="light">
 <head>
 
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Спортивная фотография: как поймать момент? | Repairo</title>
-    <meta name="description" content="">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>РЎРїРѕСЂС‚РёРІРЅР°СЏ С„РѕС‚РѕРіСЂР°С„РёСЏ: РєР°Рє РїРѕР№РјР°С‚СЊ РјРѕРјРµРЅС‚? | Repairo</title>
+    <meta name="description" content="{{ description }}">
+    <meta name="description" content="РџРѕС€Р°РіРѕРІР°СЏ РёРЅСЃС‚СЂСѓРєС†РёСЏ: РЎРїРѕСЂС‚РёРІРЅР°СЏ С„РѕС‚РѕРіСЂР°С„РёСЏ: РєР°Рє РїРѕР№РјР°С‚СЊ РјРѕРјРµРЅС‚?. РЎРЅРёРјР°Р№С‚Рµ РІ RAW - СЌС‚Рѕ РґР°СЃС‚ Р±РѕР»СЊС€Рµ РІРѕР·РјРѕР¶РЅРѕСЃС‚РµР№ РґР»СЏ РєРѕСЂСЂРµРєС†РёРё СЌРєСЃРїРѕР·РёС†РёРё Рё Р±Р°Р»Р°РЅСЃР°.... РЎРѕРІРµС‚С‹...">
 
-  <link rel="stylesheet" href="../styles.css" />
-  <link rel="stylesheet" href="../styles-header.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <style>
-    .guide-content { line-height: 1.7; color: var(--text); }
-    .guide-content h2 { color: var(--primary); margin-top: 30px; margin-bottom: 15px; font-size: 1.5rem; }
-    .guide-content h3 { color: var(--primary-dark); margin-top: 25px; margin-bottom: 12px; font-size: 1.2rem; }
-    .guide-image-block { margin: 20px 0; padding: 15px; background: var(--background); border-radius: var(--border-radius); border: 1px solid var(--border); text-align: center; }
-    .guide-image-block img { max-width: 100%; height: auto; border-radius: 6px; border: 1px solid var(--border); }
-    .image-caption { margin-top: 10px; font-size: 0.85rem; color: var(--text-light); font-style: italic; }
-    .pro-tips { background: rgba(3, 74, 79, 0.05); padding: 15px; border-radius: 6px; margin: 20px 0; }
-    .pro-tips h4 { color: var(--primary); margin-top: 0; margin-bottom: 12px; font-size: 1.1rem; }
-    .tip-item { display: flex; gap: 8px; margin-bottom: 8px; align-items: flex-start; }
-    table { width: 100%; border-collapse: collapse; margin: 20px 0; }
-    th, td { border: 1px solid var(--border); padding: 8px; text-align: left; }
-    th { background: var(--background-light); }
-    .highlight { background: #f5f7fa; border-left: 4px solid #2d9cdb; padding: 10px 15px; margin: 20px 0; }
-    .faq-section ul { margin-left: 1em; }
-    .block-section { margin-bottom: 2em; }
-    @media (max-width: 768px) {
-      .guide-content h2 { font-size: 1.4rem; margin-top: 25px; }
-      .guide-image-block { padding: 12px; margin: 15px 0; }
-      table, th, td { font-size: 0.95rem; }
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../styles-header.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .guide-content { line-height: 1.7; color: var(--text);}
+        .guide-content h2 { color: var(--primary); margin-top: 30px; margin-bottom: 15px; font-size: 1.5rem;}
+        .step-group { margin: 20px 0; padding: 15px; background: var(--background); border-radius: var(--border-radius); border: 1px solid var(--border);}
+        .step { display: flex; gap: 15px; margin: 12px 0; padding: 12px; background: var(--background-alt); border-radius: 6px; align-items: flex-start;}
+        .step-number { background: var(--primary); color: white; width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-weight: bold; font-size: 0.8rem;}
+        .guide-image-block { margin: 20px 0; padding: 15px; background: var(--background); border-radius: var(--border-radius); border: 1px solid var(--border); text-align: center;}
+        .guide-image-block img { max-width: 100%; height: auto; border-radius: 6px; border: 1px solid var(--border);}
+        .recommend-box { background: rgba(3, 74, 79, 0.1); border-left: 4px solid var(--primary); padding: 12px; margin: 15px 0; display: flex; gap: 12px; align-items: flex-start; border-radius: 4px;}
+        .recommend-box i { font-size: 1.2rem; color: var(--primary); margin-top: 2px;}
+        .pro-tips { background: rgba(3, 74, 79, 0.05); padding: 15px; border-radius: 6px; margin: 20px 0;}
+        .pro-tips h4 { color: var(--primary); margin-top: 0; margin-bottom: 12px; font-size: 1.1rem;}
+        .tip-item { display: flex; gap: 8px; margin-bottom: 8px; align-items: flex-start;}
+        @media (max-width: 768px) {
+            .guide-content h2 { font-size: 1.4rem; margin-top: 25px;}
+            .guide-image-block, .step-group { padding: 12px; margin: 15px 0;}
+            .step { padding: 10px;}
+        }
+    /* РЇРЅРґРµРєСЃ РњР°СЂРєРµС‚ СЂРµРєР»Р°РјРЅС‹Р№ Р±Р°РЅРЅРµСЂ */
+    .ym-hero-link {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+      max-width: 100%;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     }
+
     /* Р“РѕСЂРёР·РѕРЅС‚Р°Р»СЊРЅС‹Р№ Р±Р°РЅРЅРµСЂ-РєР°СЂС‚РѕС‡РєР° */
     .ym-hero-banner {
       width: 100%;
@@ -144,11 +151,13 @@
       transition: background 0.15s ease, transform 0.15s ease,
                   box-shadow 0.15s ease;
     }
+
     .ym-hero-button::after {
       content: "в†’";
       margin-left: 6px;
       font-size: 14px;
     }
+
     .ym-hero-button:hover {
       background: #7c3aed;
       transform: translateY(-1px);
@@ -172,19 +181,24 @@
         max-width: 100%;
         margin: 20px 0;
       }
+
       .ym-hero-images {
         height: 100px;
       }
+
       .ym-hero-content {
         padding: 12px 12px;
       }
+
       .ym-hero-title {
         font-size: 13px;
       }
+
       .ym-hero-button {
         font-size: 13px;
         padding: 8px 14px;
       }
+
       .ym-hero-legal {
         font-size: 10px;
       }
@@ -292,22 +306,27 @@
         padding: 15px;
         min-height: 100px;
       }
+
       .telegram-logo {
         width: 50px;
         height: 50px;
         min-width: 50px;
         margin-right: 15px;
       }
+
       .telegram-logo svg {
         width: 26px;
         height: 26px;
       }
+
       .telegram-title {
         font-size: 14px;
       }
+
       .telegram-subtitle {
         font-size: 12px;
       }
+
       .telegram-button {
         font-size: 12px;
         padding: 6px 12px;
@@ -316,128 +335,142 @@
 
 
 
-  </style>
+    </style>
   <script async src="https://timeweb.cloud/api/v1/cloud-ai/agents/3cc03620-d051-4d8d-b5af-f7b6cd083a35/embed.js?collapsed=true"></script>
 </head>
 <body>
-  <header class="header">
-    <div class="container">
-      <div class="header__inner">
-        <a href="../index.html" class="logo">
-          <span class="logo__icon"></span>
-          <span class="logo__text">GeoExpert</span>
-        </a>
-        <nav class="nav">
-          <ul class="nav__list">
-            <li><a href="../cameras.html" class="nav__link">РљР°РјРµСЂС‹</a></li>
-            <li><a href="../drones.html" class="nav__link">Р”СЂРѕРЅС‹</a></li>
-            <li><a href="../workflow.html" class="nav__link">Workflow</a></li>
-          </ul>
-        </nav>
-      </div>
-    </div>
-  </header>
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <a href="../index.html" class="logo">
+                    <span class="logo__icon"></span>
+                    <span class="logo__text">Repairo</span>
+                </a>
+                <nav class="nav">
+                    <ul class="nav__list">
+                        <li><a href="../cameras.html" class="nav__link">Р¤РѕС‚РѕР°РїРїР°СЂР°С‚С‹</a></li>
+                        <li><a href="../tv.html" class="nav__link">РўРµР»РµРІРёР·РѕСЂС‹</a></li>
+                        <li><a href="../laptops.html" class="nav__link">РќРѕСѓС‚Р±СѓРєРё</a></li>
+                        <li><a href="../smartphones.html" class="nav__link">РЎРјР°СЂС‚С„РѕРЅС‹</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
     <section class="guide-page">
         <div class="container">
             <div class="breadcrumbs">
-                <a href="../index.html">Главная</a>
+                <a href="../index.html">Р“Р»Р°РІРЅР°СЏ</a>
                 <i class="fas fa-chevron-right"></i>
-                <a href="../cameras.html">Фотоаппараты</a>
+                <a href="../cameras.html">Р¤РѕС‚РѕР°РїРїР°СЂР°С‚С‹</a>
                 <i class="fas fa-chevron-right"></i>
-                <span>Спортивная фотография: как поймать момент?</span>
+                <span>РЎРїРѕСЂС‚РёРІРЅР°СЏ С„РѕС‚РѕРіСЂР°С„РёСЏ: РєР°Рє РїРѕР№РјР°С‚СЊ РјРѕРјРµРЅС‚?</span>
             </div>
-            <h1 class="section__title">Спортивная фотография: как поймать момент?</h1>
+            <h1 class="section__title">РЎРїРѕСЂС‚РёРІРЅР°СЏ С„РѕС‚РѕРіСЂР°С„РёСЏ: РєР°Рє РїРѕР№РјР°С‚СЊ РјРѕРјРµРЅС‚?</h1>
             <div class="guide-meta">
-                <span><i class="fas fa-adjust"></i> Практический гайд</span>
+                <span><i class="fas fa-adjust"></i> РџСЂР°РєС‚РёС‡РµСЃРєРёР№ РіР°Р№Рґ</span>
             </div>
             <div class="guide-image-block">
                 <img src="https://avatars.mds.yandex.net/get-shedevrum/15236108/img_634513cb2d7711f084706aa9af691ef4/orig">
             </div>
             <div class="guide-content">
-        <!-- Яндекс Маркет рекламный блок -->
+        <!-- РЇРЅРґРµРєСЃ РњР°СЂРєРµС‚ СЂРµРєР»Р°РјРЅС‹Р№ Р±Р»РѕРє -->
         <a href="https://market.yandex.ru/catalog--bytovaia-tekhnika/54419/list?hid=198118&rs=eJwzUvjEKMvBILDwEKsEg8Kzbh6Nw4dZNS4D8c7lFhp9c1-wAQC3uAwP&clid=14635360&refid=rbck8fgamv681iu59go3iqxwddedl4x9&erid=5jtCeReNx12oajxS2bzShmZ&mclid=1003&distr_type=7&utm_source=partner_network&pp=900&utm_medium=link_list&utm_campaign=14635360"
            target="_blank"
            rel="noopener noreferrer sponsored"
+           class="ym-hero-link">
+          <div class="ym-hero-banner">
+            <div class="ym-hero-images">
+              <div class="ym-hero-image">
                 <img src="https://avatars.mds.yandex.net/get-mpic/14770882/2a00000197f4dbee777f8afddccaf44faa53/optimize"
-                     alt="Распродажа бытовой электроники 1">
+                     alt="Р Р°СЃРїСЂРѕРґР°Р¶Р° Р±С‹С‚РѕРІРѕР№ СЌР»РµРєС‚СЂРѕРЅРёРєРё 1">
               </div>
+              <div class="ym-hero-image">
                 <img src="https://avatars.mds.yandex.net/get-mpic/15580298/img_id8867318964670654684.jpeg/optimize"
-                     alt="Распродажа бытовой электроники 2">
+                     alt="Р Р°СЃРїСЂРѕРґР°Р¶Р° Р±С‹С‚РѕРІРѕР№ СЌР»РµРєС‚СЂРѕРЅРёРєРё 2">
               </div>
+              <div class="ym-hero-image">
                 <img src="https://avatars.mds.yandex.net/get-mpic/10096780/2a000001953b534fed2494e0b30fadd9b458/optimize"
-                     alt="Распродажа бытовой электроники 3">
+                     alt="Р Р°СЃРїСЂРѕРґР°Р¶Р° Р±С‹С‚РѕРІРѕР№ СЌР»РµРєС‚СЂРѕРЅРёРєРё 3">
               </div>
             </div>
-                  ? Выгодные предложения
+            <div class="ym-hero-content">
+              <h3 class="ym-hero-title">Р Р°СЃРїСЂРѕРґР°Р¶Р° Р±С‹С‚РѕРІРѕР№ СЌР»РµРєС‚СЂРѕРЅРёРєРё РЅР° РЇРЅРґРµРєСЃ РњР°СЂРєРµС‚Рµ</h3>
+              <div class="ym-hero-top">
+                <div class="ym-hero-rating">
+                  в­ђ Р’С‹РіРѕРґРЅС‹Рµ РїСЂРµРґР»РѕР¶РµРЅРёСЏ
+                  <span class="ym-hero-rating-count">РЎРєРёРґРєРё РґРѕ 50%</span>
                 </div>
               </div>
+              <button class="ym-hero-button">Р—Р° СЃРєРёРґРєР°РјРё</button>
             </div>
           </div>
-            Реклама. ООО "ЯНДЕКС", ИНН 7736207543. clid: 14635360, erid: 5jtCeReNx12oajxS2bzShmZ
+          <div class="ym-hero-legal">
+            Р РµРєР»Р°РјР°. РћРћРћ "РЇРќР”Р•РљРЎ", РРќРќ 7736207543. clid: 14635360, erid: 5jtCeReNx12oajxS2bzShmZ
           </div>
         </a>
-                <h2>Главная задача спортивного фотографа</h2>
+                <h2>Р“Р»Р°РІРЅР°СЏ Р·Р°РґР°С‡Р° СЃРїРѕСЂС‚РёРІРЅРѕРіРѕ С„РѕС‚РѕРіСЂР°С„Р°</h2>
                 <ul>
-                    <li>Поймать динамику, эмоции и ключевые моменты соревнования.</li>
-                    <li>Заморозить быстрое движение без смаза.</li>
-                    <li>Передать атмосферу и энергию события.</li>
+                    <li>РџРѕР№РјР°С‚СЊ РґРёРЅР°РјРёРєСѓ, СЌРјРѕС†РёРё Рё РєР»СЋС‡РµРІС‹Рµ РјРѕРјРµРЅС‚С‹ СЃРѕСЂРµРІРЅРѕРІР°РЅРёСЏ.</li>
+                    <li>Р—Р°РјРѕСЂРѕР·РёС‚СЊ Р±С‹СЃС‚СЂРѕРµ РґРІРёР¶РµРЅРёРµ Р±РµР· СЃРјР°Р·Р°.</li>
+                    <li>РџРµСЂРµРґР°С‚СЊ Р°С‚РјРѕСЃС„РµСЂСѓ Рё СЌРЅРµСЂРіРёСЋ СЃРѕР±С‹С‚РёСЏ.</li>
                 </ul>
-                <h2>Настройки камеры для спорта</h2>
+                <h2>РќР°СЃС‚СЂРѕР№РєРё РєР°РјРµСЂС‹ РґР»СЏ СЃРїРѕСЂС‚Р°</h2>
 <ul>
-                    <li><strong>Режим:</strong> Серийная съёмка (Burst/Continuous) - чтобы не упустить важный момент.</li>
-                    <li><strong>Выдержка:</strong> Короткая, не длиннее 1/1000 с, для заморозки движения (иногда 1/2000–1/4000 с для очень быстрых видов спорта).</li>
-                    <li><strong>Диафрагма:</strong> Открытая (f/2.8–f/5.6) - для большего количества света и размытия фона.</li>
-                    <li><strong>ISO:</strong> Авто или вручную, чтобы получить нужную экспозицию при короткой выдержке (иногда 800–3200 и выше).</li>
-                    <li><strong>Фокусировка:</strong> Следящий автофокус (AF-C, AI Servo) и точка или зона фокусировки по движущемуся объекту.</li>
+                    <li><strong>Р РµР¶РёРј:</strong> РЎРµСЂРёР№РЅР°СЏ СЃСЉС‘РјРєР° (Burst/Continuous) - С‡С‚РѕР±С‹ РЅРµ СѓРїСѓСЃС‚РёС‚СЊ РІР°Р¶РЅС‹Р№ РјРѕРјРµРЅС‚.</li>
+                    <li><strong>Р’С‹РґРµСЂР¶РєР°:</strong> РљРѕСЂРѕС‚РєР°СЏ, РЅРµ РґР»РёРЅРЅРµРµ 1/1000 СЃ, РґР»СЏ Р·Р°РјРѕСЂРѕР·РєРё РґРІРёР¶РµРЅРёСЏ (РёРЅРѕРіРґР° 1/2000вЂ“1/4000 СЃ РґР»СЏ РѕС‡РµРЅСЊ Р±С‹СЃС‚СЂС‹С… РІРёРґРѕРІ СЃРїРѕСЂС‚Р°).</li>
+                    <li><strong>Р”РёР°С„СЂР°РіРјР°:</strong> РћС‚РєСЂС‹С‚Р°СЏ (f/2.8вЂ“f/5.6) - РґР»СЏ Р±РѕР»СЊС€РµРіРѕ РєРѕР»РёС‡РµСЃС‚РІР° СЃРІРµС‚Р° Рё СЂР°Р·РјС‹С‚РёСЏ С„РѕРЅР°.</li>
+                    <li><strong>ISO:</strong> РђРІС‚Рѕ РёР»Рё РІСЂСѓС‡РЅСѓСЋ, С‡С‚РѕР±С‹ РїРѕР»СѓС‡РёС‚СЊ РЅСѓР¶РЅСѓСЋ СЌРєСЃРїРѕР·РёС†РёСЋ РїСЂРё РєРѕСЂРѕС‚РєРѕР№ РІС‹РґРµСЂР¶РєРµ (РёРЅРѕРіРґР° 800вЂ“3200 Рё РІС‹С€Рµ).</li>
+                    <li><strong>Р¤РѕРєСѓСЃРёСЂРѕРІРєР°:</strong> РЎР»РµРґСЏС‰РёР№ Р°РІС‚РѕС„РѕРєСѓСЃ (AF-C, AI Servo) Рё С‚РѕС‡РєР° РёР»Рё Р·РѕРЅР° С„РѕРєСѓСЃРёСЂРѕРІРєРё РїРѕ РґРІРёР¶СѓС‰РµРјСѓСЃСЏ РѕР±СЉРµРєС‚Сѓ.</li>
                 </ul>
-                <h2>Пошаговая инструкция: как поймать момент</h2>
+                <h2>РџРѕС€Р°РіРѕРІР°СЏ РёРЅСЃС‚СЂСѓРєС†РёСЏ: РєР°Рє РїРѕР№РјР°С‚СЊ РјРѕРјРµРЅС‚</h2>
                 <div class="step-group">
                     <div class="step">
                         <div class="step-number">1</div>
                         <div>
-                            <strong>Выберите правильную точку съёмки</strong>
+                            <strong>Р’С‹Р±РµСЂРёС‚Рµ РїСЂР°РІРёР»СЊРЅСѓСЋ С‚РѕС‡РєСѓ СЃСЉС‘РјРєРё</strong>
                             <ul>
-                                <li>Оцените площадку, выберите место с хорошим обзором и светом.</li>
-                                <li>Старайтесь предугадать, где развернутся самые интересные события.</li>
+                                <li>РћС†РµРЅРёС‚Рµ РїР»РѕС‰Р°РґРєСѓ, РІС‹Р±РµСЂРёС‚Рµ РјРµСЃС‚Рѕ СЃ С…РѕСЂРѕС€РёРј РѕР±Р·РѕСЂРѕРј Рё СЃРІРµС‚РѕРј.</li>
+                                <li>РЎС‚Р°СЂР°Р№С‚РµСЃСЊ РїСЂРµРґСѓРіР°РґР°С‚СЊ, РіРґРµ СЂР°Р·РІРµСЂРЅСѓС‚СЃСЏ СЃР°РјС‹Рµ РёРЅС‚РµСЂРµСЃРЅС‹Рµ СЃРѕР±С‹С‚РёСЏ.</li>
                             </ul>
                         </div>
                     </div>
                     <div class="step">
                         <div class="step-number">2</div>
                         <div>
-                            <strong>Настройте камеру заранее</strong>
+                            <strong>РќР°СЃС‚СЂРѕР№С‚Рµ РєР°РјРµСЂСѓ Р·Р°СЂР°РЅРµРµ</strong>
                             <ul>
-                                <li>Включите серийную съёмку и следящий автофокус.</li>
-                                <li>Проверьте, чтобы выдержка была достаточно короткой для заморозки движения.</li>
+                                <li>Р’РєР»СЋС‡РёС‚Рµ СЃРµСЂРёР№РЅСѓСЋ СЃСЉС‘РјРєСѓ Рё СЃР»РµРґСЏС‰РёР№ Р°РІС‚РѕС„РѕРєСѓСЃ.</li>
+                                <li>РџСЂРѕРІРµСЂСЊС‚Рµ, С‡С‚РѕР±С‹ РІС‹РґРµСЂР¶РєР° Р±С‹Р»Р° РґРѕСЃС‚Р°С‚РѕС‡РЅРѕ РєРѕСЂРѕС‚РєРѕР№ РґР»СЏ Р·Р°РјРѕСЂРѕР·РєРё РґРІРёР¶РµРЅРёСЏ.</li>
                             </ul>
                         </div>
                     </div>
                     <div class="step">
                         <div class="step-number">3</div>
                         <div>
-                            <strong>Следите за сюжетом и предугадывайте действия</strong>
+                            <strong>РЎР»РµРґРёС‚Рµ Р·Р° СЃСЋР¶РµС‚РѕРј Рё РїСЂРµРґСѓРіР°РґС‹РІР°Р№С‚Рµ РґРµР№СЃС‚РІРёСЏ</strong>
                             <ul>
-                                <li>Изучите динамику игры или соревнования, чтобы заранее знать, где и когда будет пик эмоций.</li>
-                                <li>Держите палец на спуске и будьте готовы к серии кадров.</li>
+                                <li>РР·СѓС‡РёС‚Рµ РґРёРЅР°РјРёРєСѓ РёРіСЂС‹ РёР»Рё СЃРѕСЂРµРІРЅРѕРІР°РЅРёСЏ, С‡С‚РѕР±С‹ Р·Р°СЂР°РЅРµРµ Р·РЅР°С‚СЊ, РіРґРµ Рё РєРѕРіРґР° Р±СѓРґРµС‚ РїРёРє СЌРјРѕС†РёР№.</li>
+                                <li>Р”РµСЂР¶РёС‚Рµ РїР°Р»РµС† РЅР° СЃРїСѓСЃРєРµ Рё Р±СѓРґСЊС‚Рµ РіРѕС‚РѕРІС‹ Рє СЃРµСЂРёРё РєР°РґСЂРѕРІ.</li>
                             </ul>
                         </div>
                     </div>
                     <div class="step">
                         <div class="step-number">4</div>
                         <div>
-                            <strong>Используйте длиннофокусные объективы</strong>
+                            <strong>РСЃРїРѕР»СЊР·СѓР№С‚Рµ РґР»РёРЅРЅРѕС„РѕРєСѓСЃРЅС‹Рµ РѕР±СЉРµРєС‚РёРІС‹</strong>
                             <ul>
-                                <li>Телеобъективы (70–200 мм, 100–400 мм и больше) позволяют снимать спортсменов крупно даже с расстояния.</li>
+                                <li>РўРµР»РµРѕР±СЉРµРєС‚РёРІС‹ (70вЂ“200 РјРј, 100вЂ“400 РјРј Рё Р±РѕР»СЊС€Рµ) РїРѕР·РІРѕР»СЏСЋС‚ СЃРЅРёРјР°С‚СЊ СЃРїРѕСЂС‚СЃРјРµРЅРѕРІ РєСЂСѓРїРЅРѕ РґР°Р¶Рµ СЃ СЂР°СЃСЃС‚РѕСЏРЅРёСЏ.</li>
                             </ul>
                         </div>
                     </div>
                     <div class="step">
                         <div class="step-number">5</div>
                         <div>
-                            <strong>Проверяйте и корректируйте настройки по ходу съёмки</strong>
+                            <strong>РџСЂРѕРІРµСЂСЏР№С‚Рµ Рё РєРѕСЂСЂРµРєС‚РёСЂСѓР№С‚Рµ РЅР°СЃС‚СЂРѕР№РєРё РїРѕ С…РѕРґСѓ СЃСЉС‘РјРєРё</strong>
                             <ul>
-                                <li>Меняйте ISO и выдержку при изменении освещения.</li>
-                                <li>Проверяйте резкость и экспозицию на экране камеры.</li>
+                                <li>РњРµРЅСЏР№С‚Рµ ISO Рё РІС‹РґРµСЂР¶РєСѓ РїСЂРё РёР·РјРµРЅРµРЅРёРё РѕСЃРІРµС‰РµРЅРёСЏ.</li>
+                                <li>РџСЂРѕРІРµСЂСЏР№С‚Рµ СЂРµР·РєРѕСЃС‚СЊ Рё СЌРєСЃРїРѕР·РёС†РёСЋ РЅР° СЌРєСЂР°РЅРµ РєР°РјРµСЂС‹.</li>
                             </ul>
                         </div>
                     </div>
@@ -445,37 +478,37 @@
                 <div class="recommend-box">
                     <i class="fas fa-info-circle"></i>
                     <div>
-                        <strong>Совет:</strong> Используйте режим предзаписи (pre-capture) или буфер, если он есть в камере - это поможет не упустить самый важный момент даже при задержке реакции.
+                        <strong>РЎРѕРІРµС‚:</strong> РСЃРїРѕР»СЊР·СѓР№С‚Рµ СЂРµР¶РёРј РїСЂРµРґР·Р°РїРёСЃРё (pre-capture) РёР»Рё Р±СѓС„РµСЂ, РµСЃР»Рё РѕРЅ РµСЃС‚СЊ РІ РєР°РјРµСЂРµ - СЌС‚Рѕ РїРѕРјРѕР¶РµС‚ РЅРµ СѓРїСѓСЃС‚РёС‚СЊ СЃР°РјС‹Р№ РІР°Р¶РЅС‹Р№ РјРѕРјРµРЅС‚ РґР°Р¶Рµ РїСЂРё Р·Р°РґРµСЂР¶РєРµ СЂРµР°РєС†РёРё.
                     </div>
                 </div>
                 <div class="pro-tips">
-                    <h4>?? Профессиональные советы</h4>
+                    <h4>рџ”№ РџСЂРѕС„РµСЃСЃРёРѕРЅР°Р»СЊРЅС‹Рµ СЃРѕРІРµС‚С‹</h4>
                     <div class="tip-item">
                         <i class="fas fa-lightbulb"></i>
-                        <p>Снимайте в RAW - это даст больше возможностей для коррекции экспозиции и баланса белого.</p>
+                        <p>РЎРЅРёРјР°Р№С‚Рµ РІ RAW - СЌС‚Рѕ РґР°СЃС‚ Р±РѕР»СЊС€Рµ РІРѕР·РјРѕР¶РЅРѕСЃС‚РµР№ РґР»СЏ РєРѕСЂСЂРµРєС†РёРё СЌРєСЃРїРѕР·РёС†РёРё Рё Р±Р°Р»Р°РЅСЃР° Р±РµР»РѕРіРѕ.</p>
                     </div>
                     <div class="tip-item">
                         <i class="fas fa-lightbulb"></i>
-                        <p>Следите за фоном: старайтесь избегать лишних деталей и отвлекающих объектов за спиной спортсмена.</p>
+                        <p>РЎР»РµРґРёС‚Рµ Р·Р° С„РѕРЅРѕРј: СЃС‚Р°СЂР°Р№С‚РµСЃСЊ РёР·Р±РµРіР°С‚СЊ Р»РёС€РЅРёС… РґРµС‚Р°Р»РµР№ Рё РѕС‚РІР»РµРєР°СЋС‰РёС… РѕР±СЉРµРєС‚РѕРІ Р·Р° СЃРїРёРЅРѕР№ СЃРїРѕСЂС‚СЃРјРµРЅР°.</p>
                     </div>
                     <div class="tip-item">
                         <i class="fas fa-lightbulb"></i>
-                        <p>Не бойтесь снимать "в лоб" - эмоции на лицах спортсменов делают кадр живым.</p>
+                        <p>РќРµ Р±РѕР№С‚РµСЃСЊ СЃРЅРёРјР°С‚СЊ "РІ Р»РѕР±" - СЌРјРѕС†РёРё РЅР° Р»РёС†Р°С… СЃРїРѕСЂС‚СЃРјРµРЅРѕРІ РґРµР»Р°СЋС‚ РєР°РґСЂ Р¶РёРІС‹Рј.</p>
                     </div>
                 </div>
-                <h2>Часто задаваемые вопросы</h2>
+                <h2>Р§Р°СЃС‚Рѕ Р·Р°РґР°РІР°РµРјС‹Рµ РІРѕРїСЂРѕСЃС‹</h2>
                 <ul>
-                    <li><strong>Можно ли снимать спорт на смартфон?</strong> - Да, если есть режим серийной съёмки и быстрый автофокус, но результат будет уступать камере с длиннофокусным объективом.</li>
-                    <li><strong>Что важнее: выдержка или ISO?</strong> - Для спорта выдержка важнее - лучше немного повысить ISO, чем получить смазанный кадр.</li>
-                    <li><strong>Какой объектив выбрать для спорта?</strong> - Универсальный вариант - 70–200 мм f/2.8, для крупных арен и динамики - 100–400 мм и больше.</li>
+                    <li><strong>РњРѕР¶РЅРѕ Р»Рё СЃРЅРёРјР°С‚СЊ СЃРїРѕСЂС‚ РЅР° СЃРјР°СЂС‚С„РѕРЅ?</strong> - Р”Р°, РµСЃР»Рё РµСЃС‚СЊ СЂРµР¶РёРј СЃРµСЂРёР№РЅРѕР№ СЃСЉС‘РјРєРё Рё Р±С‹СЃС‚СЂС‹Р№ Р°РІС‚РѕС„РѕРєСѓСЃ, РЅРѕ СЂРµР·СѓР»СЊС‚Р°С‚ Р±СѓРґРµС‚ СѓСЃС‚СѓРїР°С‚СЊ РєР°РјРµСЂРµ СЃ РґР»РёРЅРЅРѕС„РѕРєСѓСЃРЅС‹Рј РѕР±СЉРµРєС‚РёРІРѕРј.</li>
+                    <li><strong>Р§С‚Рѕ РІР°Р¶РЅРµРµ: РІС‹РґРµСЂР¶РєР° РёР»Рё ISO?</strong> - Р”Р»СЏ СЃРїРѕСЂС‚Р° РІС‹РґРµСЂР¶РєР° РІР°Р¶РЅРµРµ - Р»СѓС‡С€Рµ РЅРµРјРЅРѕРіРѕ РїРѕРІС‹СЃРёС‚СЊ ISO, С‡РµРј РїРѕР»СѓС‡РёС‚СЊ СЃРјР°Р·Р°РЅРЅС‹Р№ РєР°РґСЂ.</li>
+                    <li><strong>РљР°РєРѕР№ РѕР±СЉРµРєС‚РёРІ РІС‹Р±СЂР°С‚СЊ РґР»СЏ СЃРїРѕСЂС‚Р°?</strong> - РЈРЅРёРІРµСЂСЃР°Р»СЊРЅС‹Р№ РІР°СЂРёР°РЅС‚ - 70вЂ“200 РјРј f/2.8, РґР»СЏ РєСЂСѓРїРЅС‹С… Р°СЂРµРЅ Рё РґРёРЅР°РјРёРєРё - 100вЂ“400 РјРј Рё Р±РѕР»СЊС€Рµ.</li>
                 </ul>
-                <h2>?? Итог</h2>
+                <h2>рџ“Њ РС‚РѕРі</h2>
                 <p>
-                    Спортивная фотография требует быстрой реакции, знания техники и умения предугадывать развитие событий. Используйте серийную съёмку, короткие выдержки, следящий автофокус и длиннофокусную оптику - и вы обязательно поймаете свой идеальный спортивный момент!
+                    РЎРїРѕСЂС‚РёРІРЅР°СЏ С„РѕС‚РѕРіСЂР°С„РёСЏ С‚СЂРµР±СѓРµС‚ Р±С‹СЃС‚СЂРѕР№ СЂРµР°РєС†РёРё, Р·РЅР°РЅРёСЏ С‚РµС…РЅРёРєРё Рё СѓРјРµРЅРёСЏ РїСЂРµРґСѓРіР°РґС‹РІР°С‚СЊ СЂР°Р·РІРёС‚РёРµ СЃРѕР±С‹С‚РёР№. РСЃРїРѕР»СЊР·СѓР№С‚Рµ СЃРµСЂРёР№РЅСѓСЋ СЃСЉС‘РјРєСѓ, РєРѕСЂРѕС‚РєРёРµ РІС‹РґРµСЂР¶РєРё, СЃР»РµРґСЏС‰РёР№ Р°РІС‚РѕС„РѕРєСѓСЃ Рё РґР»РёРЅРЅРѕС„РѕРєСѓСЃРЅСѓСЋ РѕРїС‚РёРєСѓ - Рё РІС‹ РѕР±СЏР·Р°С‚РµР»СЊРЅРѕ РїРѕР№РјР°РµС‚Рµ СЃРІРѕР№ РёРґРµР°Р»СЊРЅС‹Р№ СЃРїРѕСЂС‚РёРІРЅС‹Р№ РјРѕРјРµРЅС‚!
                 </p>
 </div>
 
-        <!-- Telegram рекламный баннер -->
+        <!-- Telegram СЂРµРєР»Р°РјРЅС‹Р№ Р±Р°РЅРЅРµСЂ -->
         <a href="https://t.me/RepairoRU" target="_blank" rel="noopener noreferrer" class="telegram-banner">
           <div class="telegram-banner-container">
             <div class="telegram-logo">
@@ -484,10 +517,10 @@
               </svg>
             </div>
             <div class="telegram-content">
-              <div class="telegram-title">Новости из мира технологий</div>
-              <div class="telegram-subtitle">В нашем новом Telegram-канале. Подписывайтесь и будьте в числе первых!</div>
+              <div class="telegram-title">РќРѕРІРѕСЃС‚Рё РёР· РјРёСЂР° С‚РµС…РЅРѕР»РѕРіРёР№</div>
+              <div class="telegram-subtitle">Р’ РЅР°С€РµРј РЅРѕРІРѕРј Telegram-РєР°РЅР°Р»Рµ. РџРѕРґРїРёСЃС‹РІР°Р№С‚РµСЃСЊ Рё Р±СѓРґСЊС‚Рµ РІ С‡РёСЃР»Рµ РїРµСЂРІС‹С…!</div>
               <div class="telegram-button">
-                Подписаться
+                РџРѕРґРїРёСЃР°С‚СЊСЃСЏ
                 <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.56c-.21 2.22-1.12 7.58-1.58 10.06-.19 1.07-.57 1.43-.94 1.46-.8.07-1.4-.52-2.17-1.03-1.21-.79-1.89-1.28-3.06-2.05-1.35-.87-.47-1.35.3-2.13.2-.21 3.71-3.39 3.77-3.68.01-.04.01-.18-.07-.26s-.2-.05-.29-.03c-.12.03-2.11 1.34-5.95 3.93-.56.38-1.07.57-1.53.56-.5-.01-1.47-.28-2.19-.51-.88-.28-1.58-.43-1.52-.91.03-.25.38-.51 1.04-.78 4.07-1.77 6.78-2.94 8.13-3.51 3.88-1.62 4.68-1.9 5.19-1.91.12 0 .37.03.54.17.14.12.18.28.2.44-.01.06 0 .11-.01.17z"/>
                 </svg>
@@ -512,45 +545,45 @@
                         </span>
                         <span class="logo__text">Repairo</span>
                     </a>
-                    <p class="footer__text">Помогаем ремонтировать электронику с 2024 года</p>
+                    <p class="footer__text">РџРѕРјРѕРіР°РµРј СЂРµРјРѕРЅС‚РёСЂРѕРІР°С‚СЊ СЌР»РµРєС‚СЂРѕРЅРёРєСѓ СЃ 2024 РіРѕРґР°</p>
                 </div>
                 <div class="footer__col">
-                    <h3 class="footer__title">Разделы</h3>
+                    <h3 class="footer__title">Р Р°Р·РґРµР»С‹</h3>
                     <ul class="footer__links">
-                        <li><a href="../index.html" class="footer__link">Главная</a></li>
-                        <li><a href="../index.html#categories" class="footer__link">Все гайды</a></li>
-                        <li><a href="../contacts.html" class="footer__link">Контакты</a></li>
+                        <li><a href="../index.html" class="footer__link">Р“Р»Р°РІРЅР°СЏ</a></li>
+                        <li><a href="../index.html#categories" class="footer__link">Р’СЃРµ РіР°Р№РґС‹</a></li>
+                        <li><a href="../contacts.html" class="footer__link">РљРѕРЅС‚Р°РєС‚С‹</a></li>
                     </ul>
                 </div>
                 <div class="footer__col">
-                    <h3 class="footer__title">Категории</h3>
+                    <h3 class="footer__title">РљР°С‚РµРіРѕСЂРёРё</h3>
                     <ul class="footer__links">
-                        <li><a href="../tv.html" class="nav__link">Телевизоры</a></li>
-                        <li><a href="../cameras.html" class="nav__link">Фотоаппараты</a></li>
-                        <li><a href="../consoles.html" class="nav__link">Приставки</a></li>
-                        <li><a href="../laptops.html" class="nav__link">Ноутбуки</a></li>
-                        <li><a href="../smartphones.html" class="nav__link">Смартфоны</a></li>
-                        <li><a href="../small-appliances.html" class="nav__link">Мелкая техника</a></li>
-                        <li><a href="../large-appliances.html" class="nav__link">Бытовая техника</a></li>
-                        <li><a href="../auto-electronics.html" class="nav__link">Авто-Электроника</a></li>
+                        <li><a href="../tv.html" class="nav__link">РўРµР»РµРІРёР·РѕСЂС‹</a></li>
+                        <li><a href="../cameras.html" class="nav__link">Р¤РѕС‚РѕР°РїРїР°СЂР°С‚С‹</a></li>
+                        <li><a href="../consoles.html" class="nav__link">РџСЂРёСЃС‚Р°РІРєРё</a></li>
+                        <li><a href="../laptops.html" class="nav__link">РќРѕСѓС‚Р±СѓРєРё</a></li>
+                        <li><a href="../smartphones.html" class="nav__link">РЎРјР°СЂС‚С„РѕРЅС‹</a></li>
+                        <li><a href="../small-appliances.html" class="nav__link">РњРµР»РєР°СЏ С‚РµС…РЅРёРєР°</a></li>
+                        <li><a href="../large-appliances.html" class="nav__link">Р‘С‹С‚РѕРІР°СЏ С‚РµС…РЅРёРєР°</a></li>
+                        <li><a href="../auto-electronics.html" class="nav__link">РђРІС‚Рѕ-Р­Р»РµРєС‚СЂРѕРЅРёРєР°</a></li>
                     </ul>
                 </div>
                 <div class="footer__col">
-                    <h3 class="footer__title">Контакты</h3>
+                    <h3 class="footer__title">РљРѕРЅС‚Р°РєС‚С‹</h3>
                     <ul class="footer__links">
                         <li><a href="https://t.me/RepairoRU" class="footer__link"><i class="fab fa-telegram"></i> Telegram</a></li>
-                        <li><span class="footer__link">Наша почта: repairo.info@mail.ru</span></li>
+                        <li><span class="footer__link">РќР°С€Р° РїРѕС‡С‚Р°: repairo.info@mail.ru</span></li>
                     </ul>
                 </div>
             </div>
             <div class="footer__bottom">
                 <p class="disclaimer">
-    Администрация сайта не несёт ответственности за возможные повреждения техники
-    и иные последствия, возникшие в результате самостоятельного ремонта по
-    материалам и инструкциям, размещённым на сайте. Все работы вы выполняете
-    на свой страх и риск.
+    РђРґРјРёРЅРёСЃС‚СЂР°С†РёСЏ СЃР°Р№С‚Р° РЅРµ РЅРµСЃС‘С‚ РѕС‚РІРµС‚СЃС‚РІРµРЅРЅРѕСЃС‚Рё Р·Р° РІРѕР·РјРѕР¶РЅС‹Рµ РїРѕРІСЂРµР¶РґРµРЅРёСЏ С‚РµС…РЅРёРєРё
+    Рё РёРЅС‹Рµ РїРѕСЃР»РµРґСЃС‚РІРёСЏ, РІРѕР·РЅРёРєС€РёРµ РІ СЂРµР·СѓР»СЊС‚Р°С‚Рµ СЃР°РјРѕСЃС‚РѕСЏС‚РµР»СЊРЅРѕРіРѕ СЂРµРјРѕРЅС‚Р° РїРѕ
+    РјР°С‚РµСЂРёР°Р»Р°Рј Рё РёРЅСЃС‚СЂСѓРєС†РёСЏРј, СЂР°Р·РјРµС‰С‘РЅРЅС‹Рј РЅР° СЃР°Р№С‚Рµ. Р’СЃРµ СЂР°Р±РѕС‚С‹ РІС‹ РІС‹РїРѕР»РЅСЏРµС‚Рµ
+    РЅР° СЃРІРѕР№ СЃС‚СЂР°С… Рё СЂРёСЃРє.
     </p>
-                <p class="footer__copyright">© 2026 Repairo. Все права защищены.</p>
+                <p class="footer__copyright">В© 2026 Repairo. Р’СЃРµ РїСЂР°РІР° Р·Р°С‰РёС‰РµРЅС‹.</p>
             </div>
         </div>
     </footer>
@@ -561,38 +594,38 @@
 {
   "@context": "https://schema.org",
   "@type": "HowTo",
-  "name": "Спортивная фотография: как поймать момент?",
-  "description": "Пошаговая инструкция: Спортивная фотография: как поймать момент?. Снимайте в RAW - это даст больше возможностей для коррекции экспозиции и баланса.... Советы...",
+  "name": "РЎРїРѕСЂС‚РёРІРЅР°СЏ С„РѕС‚РѕРіСЂР°С„РёСЏ: РєР°Рє РїРѕР№РјР°С‚СЊ РјРѕРјРµРЅС‚?",
+  "description": "РџРѕС€Р°РіРѕРІР°СЏ РёРЅСЃС‚СЂСѓРєС†РёСЏ: РЎРїРѕСЂС‚РёРІРЅР°СЏ С„РѕС‚РѕРіСЂР°С„РёСЏ: РєР°Рє РїРѕР№РјР°С‚СЊ РјРѕРјРµРЅС‚?. РЎРЅРёРјР°Р№С‚Рµ РІ RAW - СЌС‚Рѕ РґР°СЃС‚ Р±РѕР»СЊС€Рµ РІРѕР·РјРѕР¶РЅРѕСЃС‚РµР№ РґР»СЏ РєРѕСЂСЂРµРєС†РёРё СЌРєСЃРїРѕР·РёС†РёРё Рё Р±Р°Р»Р°РЅСЃР°.... РЎРѕРІРµС‚С‹...",
   "totalTime": "PT30M",
   "step": [
     {
       "@type": "HowToStep",
-      "name": "Главная задача спортивного фотографа",
-      "text": "Главная задача спортивного фотографа",
+      "name": "Р“Р»Р°РІРЅР°СЏ Р·Р°РґР°С‡Р° СЃРїРѕСЂС‚РёРІРЅРѕРіРѕ С„РѕС‚РѕРіСЂР°С„Р°",
+      "text": "Р“Р»Р°РІРЅР°СЏ Р·Р°РґР°С‡Р° СЃРїРѕСЂС‚РёРІРЅРѕРіРѕ С„РѕС‚РѕРіСЂР°С„Р°",
       "url": "#step-1"
     },
     {
       "@type": "HowToStep",
-      "name": "Настройки камеры для спорта",
-      "text": "Настройки камеры для спорта",
+      "name": "РќР°СЃС‚СЂРѕР№РєРё РєР°РјРµСЂС‹ РґР»СЏ СЃРїРѕСЂС‚Р°",
+      "text": "РќР°СЃС‚СЂРѕР№РєРё РєР°РјРµСЂС‹ РґР»СЏ СЃРїРѕСЂС‚Р°",
       "url": "#step-2"
     },
     {
       "@type": "HowToStep",
-      "name": "Пошаговая инструкция: как поймать момент",
-      "text": "Пошаговая инструкция: как поймать момент",
+      "name": "РџРѕС€Р°РіРѕРІР°СЏ РёРЅСЃС‚СЂСѓРєС†РёСЏ: РєР°Рє РїРѕР№РјР°С‚СЊ РјРѕРјРµРЅС‚",
+      "text": "РџРѕС€Р°РіРѕРІР°СЏ РёРЅСЃС‚СЂСѓРєС†РёСЏ: РєР°Рє РїРѕР№РјР°С‚СЊ РјРѕРјРµРЅС‚",
       "url": "#step-3"
     },
     {
       "@type": "HowToStep",
-      "name": "Часто задаваемые вопросы",
-      "text": "Часто задаваемые вопросы",
+      "name": "Р§Р°СЃС‚Рѕ Р·Р°РґР°РІР°РµРјС‹Рµ РІРѕРїСЂРѕСЃС‹",
+      "text": "Р§Р°СЃС‚Рѕ Р·Р°РґР°РІР°РµРјС‹Рµ РІРѕРїСЂРѕСЃС‹",
       "url": "#step-4"
     },
     {
       "@type": "HowToStep",
-      "name": "?? Итог",
-      "text": "?? Итог",
+      "name": "рџ“Њ РС‚РѕРі",
+      "text": "рџ“Њ РС‚РѕРі",
       "url": "#step-5"
     }
   ],
@@ -603,8 +636,4 @@
 <script src="../cookie-consent.js"></script>
 </body>
 </html>
-
-
-
-
 

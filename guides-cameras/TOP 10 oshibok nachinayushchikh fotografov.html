@@ -2,36 +2,43 @@
 <html lang="ru" data-theme="light">
 <head>
 
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>ТОП-10 ошибок начинающих фотографов | Repairo</title>
-    <meta name="description" content="">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>РўРћРџ-10 РѕС€РёР±РѕРє РЅР°С‡РёРЅР°СЋС‰РёС… С„РѕС‚РѕРіСЂР°С„РѕРІ | Repairo</title>
+    <meta name="description" content="{{ description }}">
+    <meta name="description" content="РџРѕС€Р°РіРѕРІР°СЏ РёРЅСЃС‚СЂСѓРєС†РёСЏ: РўРћРџ-10 РѕС€РёР±РѕРє РЅР°С‡РёРЅР°СЋС‰РёС… С„РѕС‚РѕРіСЂР°С„РѕРІ. РћС€РёР±РєРё - РµСЃС‚РµСЃС‚РІРµРЅРЅР°СЏ С‡Р°СЃС‚СЊ РѕР±СѓС‡РµРЅРёСЏ С„РѕС‚РѕРіСЂР°С„РёРё. РќРѕ РµСЃР»Рё Р·РЅР°С‚СЊ Рѕ РЅРёС… Р·Р°СЂР°РЅРµРµ, РјРѕ.... РЎРѕРІРµС‚С‹ СЌРєСЃРїРµСЂ...">
 
-  <link rel="stylesheet" href="../styles.css" />
-  <link rel="stylesheet" href="../styles-header.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <style>
-    .guide-content { line-height: 1.7; color: var(--text); }
-    .guide-content h2 { color: var(--primary); margin-top: 30px; margin-bottom: 15px; font-size: 1.5rem; }
-    .guide-content h3 { color: var(--primary-dark); margin-top: 25px; margin-bottom: 12px; font-size: 1.2rem; }
-    .guide-image-block { margin: 20px 0; padding: 15px; background: var(--background); border-radius: var(--border-radius); border: 1px solid var(--border); text-align: center; }
-    .guide-image-block img { max-width: 100%; height: auto; border-radius: 6px; border: 1px solid var(--border); }
-    .image-caption { margin-top: 10px; font-size: 0.85rem; color: var(--text-light); font-style: italic; }
-    .pro-tips { background: rgba(3, 74, 79, 0.05); padding: 15px; border-radius: 6px; margin: 20px 0; }
-    .pro-tips h4 { color: var(--primary); margin-top: 0; margin-bottom: 12px; font-size: 1.1rem; }
-    .tip-item { display: flex; gap: 8px; margin-bottom: 8px; align-items: flex-start; }
-    table { width: 100%; border-collapse: collapse; margin: 20px 0; }
-    th, td { border: 1px solid var(--border); padding: 8px; text-align: left; }
-    th { background: var(--background-light); }
-    .highlight { background: #f5f7fa; border-left: 4px solid #2d9cdb; padding: 10px 15px; margin: 20px 0; }
-    .faq-section ul { margin-left: 1em; }
-    .block-section { margin-bottom: 2em; }
-    @media (max-width: 768px) {
-      .guide-content h2 { font-size: 1.4rem; margin-top: 25px; }
-      .guide-image-block { padding: 12px; margin: 15px 0; }
-      table, th, td { font-size: 0.95rem; }
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../styles-header.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .guide-content { line-height: 1.7; color: var(--text);}
+        .guide-content h2 { color: var(--primary); margin-top: 30px; margin-bottom: 15px; font-size: 1.5rem;}
+        .step-group { margin: 20px 0; padding: 15px; background: var(--background); border-radius: var(--border-radius); border: 1px solid var(--border);}
+        .step { display: flex; gap: 15px; margin: 12px 0; padding: 12px; background: var(--background-alt); border-radius: 6px; align-items: flex-start;}
+        .step-number { background: var(--primary); color: white; width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-weight: bold; font-size: 0.8rem;}
+        .guide-image-block { margin: 20px 0; padding: 15px; background: var(--background); border-radius: var(--border-radius); border: 1px solid var(--border); text-align: center;}
+        .guide-image-block img { max-width: 100%; height: auto; border-radius: 6px; border: 1px solid var(--border);}
+        .recommend-box { background: rgba(3, 74, 79, 0.1); border-left: 4px solid var(--primary); padding: 12px; margin: 15px 0; display: flex; gap: 12px; align-items: flex-start; border-radius: 4px;}
+        .recommend-box i { font-size: 1.2rem; color: var(--primary); margin-top: 2px;}
+        .pro-tips { background: rgba(3, 74, 79, 0.05); padding: 15px; border-radius: 6px; margin: 20px 0;}
+        .pro-tips h4 { color: var(--primary); margin-top: 0; margin-bottom: 12px; font-size: 1.1rem;}
+        .tip-item { display: flex; gap: 8px; margin-bottom: 8px; align-items: flex-start;}
+        @media (max-width: 768px) {
+            .guide-content h2 { font-size: 1.4rem; margin-top: 25px;}
+            .guide-image-block, .step-group { padding: 12px; margin: 15px 0;}
+            .step { padding: 10px;}
+        }
+    /* РЇРЅРґРµРєСЃ РњР°СЂРєРµС‚ СЂРµРєР»Р°РјРЅС‹Р№ Р±Р°РЅРЅРµСЂ */
+    .ym-hero-link {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+      max-width: 100%;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     }
+
     /* Р“РѕСЂРёР·РѕРЅС‚Р°Р»СЊРЅС‹Р№ Р±Р°РЅРЅРµСЂ-РєР°СЂС‚РѕС‡РєР° */
     .ym-hero-banner {
       width: 100%;
@@ -144,11 +151,13 @@
       transition: background 0.15s ease, transform 0.15s ease,
                   box-shadow 0.15s ease;
     }
+
     .ym-hero-button::after {
       content: "в†’";
       margin-left: 6px;
       font-size: 14px;
     }
+
     .ym-hero-button:hover {
       background: #7c3aed;
       transform: translateY(-1px);
@@ -172,19 +181,24 @@
         max-width: 100%;
         margin: 20px 0;
       }
+
       .ym-hero-images {
         height: 100px;
       }
+
       .ym-hero-content {
         padding: 12px 12px;
       }
+
       .ym-hero-title {
         font-size: 13px;
       }
+
       .ym-hero-button {
         font-size: 13px;
         padding: 8px 14px;
       }
+
       .ym-hero-legal {
         font-size: 10px;
       }
@@ -292,22 +306,27 @@
         padding: 15px;
         min-height: 100px;
       }
+
       .telegram-logo {
         width: 50px;
         height: 50px;
         min-width: 50px;
         margin-right: 15px;
       }
+
       .telegram-logo svg {
         width: 26px;
         height: 26px;
       }
+
       .telegram-title {
         font-size: 14px;
       }
+
       .telegram-subtitle {
         font-size: 12px;
       }
+
       .telegram-button {
         font-size: 12px;
         padding: 6px 12px;
@@ -316,218 +335,232 @@
 
 
 
-  </style>
+    </style>
   <script async src="https://timeweb.cloud/api/v1/cloud-ai/agents/3cc03620-d051-4d8d-b5af-f7b6cd083a35/embed.js?collapsed=true"></script>
 </head>
 <body>
-  <header class="header">
+<header class="header">
     <div class="container">
-      <div class="header__inner">
-        <a href="../index.html" class="logo">
-          <span class="logo__icon"></span>
-          <span class="logo__text">GeoExpert</span>
-        </a>
-        <nav class="nav">
-          <ul class="nav__list">
-            <li><a href="../cameras.html" class="nav__link">РљР°РјРµСЂС‹</a></li>
-            <li><a href="../drones.html" class="nav__link">Р”СЂРѕРЅС‹</a></li>
-            <li><a href="../workflow.html" class="nav__link">Workflow</a></li>
-          </ul>
-        </nav>
-      </div>
+        <div class="header__inner">
+            <a href="../index.html" class="logo">
+                <span class="logo__icon"></span>
+                <span class="logo__text">Repairo</span>
+            </a>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li><a href="../cameras.html" class="nav__link">Р¤РѕС‚РѕР°РїРїР°СЂР°С‚С‹</a></li>
+                    <li><a href="../tv.html" class="nav__link">РўРµР»РµРІРёР·РѕСЂС‹</a></li>
+                    <li><a href="../laptops.html" class="nav__link">РќРѕСѓС‚Р±СѓРєРё</a></li>
+                    <li><a href="../smartphones.html" class="nav__link">РЎРјР°СЂС‚С„РѕРЅС‹</a></li>
+                </ul>
+            </nav>
+        </div>
     </div>
-  </header>
+</header>
 <section class="guide-page">
     <div class="container">
         <div class="breadcrumbs">
-            <a href="../index.html">Главная</a>
+            <a href="../index.html">Р“Р»Р°РІРЅР°СЏ</a>
             <i class="fas fa-chevron-right"></i>
-            <a href="../cameras.html">Фотоаппараты</a>
+            <a href="../cameras.html">Р¤РѕС‚РѕР°РїРїР°СЂР°С‚С‹</a>
             <i class="fas fa-chevron-right"></i>
-            <span>ТОП-10 ошибок начинающих фотографов</span>
+            <span>РўРћРџ-10 РѕС€РёР±РѕРє РЅР°С‡РёРЅР°СЋС‰РёС… С„РѕС‚РѕРіСЂР°С„РѕРІ</span>
         </div>
-        <h1 class="section__title">ТОП-10 ошибок начинающих фотографов</h1>
+        <h1 class="section__title">РўРћРџ-10 РѕС€РёР±РѕРє РЅР°С‡РёРЅР°СЋС‰РёС… С„РѕС‚РѕРіСЂР°С„РѕРІ</h1>
         <div class="guide-meta">
-            <span><i class="fas fa-adjust"></i> Практический гайд</span>
+            <span><i class="fas fa-adjust"></i> РџСЂР°РєС‚РёС‡РµСЃРєРёР№ РіР°Р№Рґ</span>
         </div>
         <div class="guide-image-block">
-            <img src="https://avatars.mds.yandex.net/get-shedevrum/15407285/img_43e0ad322db311f0973bda5bcae0c751/orig" alt="ТОП-10 ошибок начинающих фотографов">
+            <img src="https://avatars.mds.yandex.net/get-shedevrum/15407285/img_43e0ad322db311f0973bda5bcae0c751/orig" alt="РўРћРџ-10 РѕС€РёР±РѕРє РЅР°С‡РёРЅР°СЋС‰РёС… С„РѕС‚РѕРіСЂР°С„РѕРІ">
         </div>
         <div class="guide-content">
-        <!-- Яндекс Маркет рекламный блок -->
+        <!-- РЇРЅРґРµРєСЃ РњР°СЂРєРµС‚ СЂРµРєР»Р°РјРЅС‹Р№ Р±Р»РѕРє -->
         <a href="https://market.yandex.ru/catalog--bytovaia-tekhnika/54419/list?hid=198118&rs=eJwzUvjEKMvBILDwEKsEg8Kzbh6Nw4dZNS4D8c7lFhp9c1-wAQC3uAwP&clid=14635360&refid=rbck8fgamv681iu59go3iqxwddedl4x9&erid=5jtCeReNx12oajxS2bzShmZ&mclid=1003&distr_type=7&utm_source=partner_network&pp=900&utm_medium=link_list&utm_campaign=14635360"
            target="_blank"
            rel="noopener noreferrer sponsored"
+           class="ym-hero-link">
+          <div class="ym-hero-banner">
+            <div class="ym-hero-images">
+              <div class="ym-hero-image">
                 <img src="https://avatars.mds.yandex.net/get-mpic/14770882/2a00000197f4dbee777f8afddccaf44faa53/optimize"
-                     alt="Распродажа бытовой электроники 1">
+                     alt="Р Р°СЃРїСЂРѕРґР°Р¶Р° Р±С‹С‚РѕРІРѕР№ СЌР»РµРєС‚СЂРѕРЅРёРєРё 1">
               </div>
+              <div class="ym-hero-image">
                 <img src="https://avatars.mds.yandex.net/get-mpic/15580298/img_id8867318964670654684.jpeg/optimize"
-                     alt="Распродажа бытовой электроники 2">
+                     alt="Р Р°СЃРїСЂРѕРґР°Р¶Р° Р±С‹С‚РѕРІРѕР№ СЌР»РµРєС‚СЂРѕРЅРёРєРё 2">
               </div>
+              <div class="ym-hero-image">
                 <img src="https://avatars.mds.yandex.net/get-mpic/10096780/2a000001953b534fed2494e0b30fadd9b458/optimize"
-                     alt="Распродажа бытовой электроники 3">
+                     alt="Р Р°СЃРїСЂРѕРґР°Р¶Р° Р±С‹С‚РѕРІРѕР№ СЌР»РµРєС‚СЂРѕРЅРёРєРё 3">
               </div>
             </div>
-                  ? Выгодные предложения
+            <div class="ym-hero-content">
+              <h3 class="ym-hero-title">Р Р°СЃРїСЂРѕРґР°Р¶Р° Р±С‹С‚РѕРІРѕР№ СЌР»РµРєС‚СЂРѕРЅРёРєРё РЅР° РЇРЅРґРµРєСЃ РњР°СЂРєРµС‚Рµ</h3>
+              <div class="ym-hero-top">
+                <div class="ym-hero-rating">
+                  в­ђ Р’С‹РіРѕРґРЅС‹Рµ РїСЂРµРґР»РѕР¶РµРЅРёСЏ
+                  <span class="ym-hero-rating-count">РЎРєРёРґРєРё РґРѕ 50%</span>
                 </div>
               </div>
+              <button class="ym-hero-button">Р—Р° СЃРєРёРґРєР°РјРё</button>
             </div>
           </div>
-            Реклама. ООО "ЯНДЕКС", ИНН 7736207543. clid: 14635360, erid: 5jtCeReNx12oajxS2bzShmZ
+          <div class="ym-hero-legal">
+            Р РµРєР»Р°РјР°. РћРћРћ "РЇРќР”Р•РљРЎ", РРќРќ 7736207543. clid: 14635360, erid: 5jtCeReNx12oajxS2bzShmZ
           </div>
         </a>
-            <h2>Введение: почему важно знать свои ошибки?</h2>
+            <h2>Р’РІРµРґРµРЅРёРµ: РїРѕС‡РµРјСѓ РІР°Р¶РЅРѕ Р·РЅР°С‚СЊ СЃРІРѕРё РѕС€РёР±РєРё?</h2>
             <p>
-                Ошибки - естественная часть обучения фотографии. Но если знать о них заранее, можно быстрее расти, получать удовольствие от процесса и создавать более качественные и выразительные снимки.
+                РћС€РёР±РєРё - РµСЃС‚РµСЃС‚РІРµРЅРЅР°СЏ С‡Р°СЃС‚СЊ РѕР±СѓС‡РµРЅРёСЏ С„РѕС‚РѕРіСЂР°С„РёРё. РќРѕ РµСЃР»Рё Р·РЅР°С‚СЊ Рѕ РЅРёС… Р·Р°СЂР°РЅРµРµ, РјРѕР¶РЅРѕ Р±С‹СЃС‚СЂРµРµ СЂР°СЃС‚Рё, РїРѕР»СѓС‡Р°С‚СЊ СѓРґРѕРІРѕР»СЊСЃС‚РІРёРµ РѕС‚ РїСЂРѕС†РµСЃСЃР° Рё СЃРѕР·РґР°РІР°С‚СЊ Р±РѕР»РµРµ РєР°С‡РµСЃС‚РІРµРЅРЅС‹Рµ Рё РІС‹СЂР°Р·РёС‚РµР»СЊРЅС‹Рµ СЃРЅРёРјРєРё.
             </p>
-            <h2>ТОП-10 ошибок начинающих фотографов</h2>
+            <h2>РўРћРџ-10 РѕС€РёР±РѕРє РЅР°С‡РёРЅР°СЋС‰РёС… С„РѕС‚РѕРіСЂР°С„РѕРІ</h2>
 <div class="step-group">
                 <div class="step">
                     <div class="step-number">1</div>
                     <div>
-                        <strong>Съёмка на автомате и игнорирование ручных настроек</strong>
+                        <strong>РЎСЉС‘РјРєР° РЅР° Р°РІС‚РѕРјР°С‚Рµ Рё РёРіРЅРѕСЂРёСЂРѕРІР°РЅРёРµ СЂСѓС‡РЅС‹С… РЅР°СЃС‚СЂРѕРµРє</strong>
                         <ul>
-                            <li>Автоматический режим не учитывает творческие задачи и условия съёмки. Учитесь работать с выдержкой, диафрагмой, ISO и экспокоррекцией.</li>
+                            <li>РђРІС‚РѕРјР°С‚РёС‡РµСЃРєРёР№ СЂРµР¶РёРј РЅРµ СѓС‡РёС‚С‹РІР°РµС‚ С‚РІРѕСЂС‡РµСЃРєРёРµ Р·Р°РґР°С‡Рё Рё СѓСЃР»РѕРІРёСЏ СЃСЉС‘РјРєРё. РЈС‡РёС‚РµСЃСЊ СЂР°Р±РѕС‚Р°С‚СЊ СЃ РІС‹РґРµСЂР¶РєРѕР№, РґРёР°С„СЂР°РіРјРѕР№, ISO Рё СЌРєСЃРїРѕРєРѕСЂСЂРµРєС†РёРµР№.</li>
                         </ul>
                     </div>
                 </div>
                 <div class="step">
                     <div class="step-number">2</div>
                     <div>
-                        <strong>Неправильный фокус и размытые кадры</strong>
+                        <strong>РќРµРїСЂР°РІРёР»СЊРЅС‹Р№ С„РѕРєСѓСЃ Рё СЂР°Р·РјС‹С‚С‹Рµ РєР°РґСЂС‹</strong>
                         <ul>
-                            <li>Часто новички не контролируют, куда наводится фокус, или снимают с длинной выдержкой без штатива.</li>
-                            <li>Используйте точечный автофокус, следите за выдержкой и стабилизацией.</li>
+                            <li>Р§Р°СЃС‚Рѕ РЅРѕРІРёС‡РєРё РЅРµ РєРѕРЅС‚СЂРѕР»РёСЂСѓСЋС‚, РєСѓРґР° РЅР°РІРѕРґРёС‚СЃСЏ С„РѕРєСѓСЃ, РёР»Рё СЃРЅРёРјР°СЋС‚ СЃ РґР»РёРЅРЅРѕР№ РІС‹РґРµСЂР¶РєРѕР№ Р±РµР· С€С‚Р°С‚РёРІР°.</li>
+                            <li>РСЃРїРѕР»СЊР·СѓР№С‚Рµ С‚РѕС‡РµС‡РЅС‹Р№ Р°РІС‚РѕС„РѕРєСѓСЃ, СЃР»РµРґРёС‚Рµ Р·Р° РІС‹РґРµСЂР¶РєРѕР№ Рё СЃС‚Р°Р±РёР»РёР·Р°С†РёРµР№.</li>
                         </ul>
                     </div>
                 </div>
                 <div class="step">
                     <div class="step-number">3</div>
                     <div>
-                        <strong>Нарушение композиции</strong>
+                        <strong>РќР°СЂСѓС€РµРЅРёРµ РєРѕРјРїРѕР·РёС†РёРё</strong>
                         <ul>
-                            <li>Центровка объекта, отсутствие баланса, "заваленный" горизонт, лишние детали на фоне - всё это портит кадр.</li>
-                            <li>Освойте правило третей, золотое сечение, следите за линиями и фоном.</li>
+                            <li>Р¦РµРЅС‚СЂРѕРІРєР° РѕР±СЉРµРєС‚Р°, РѕС‚СЃСѓС‚СЃС‚РІРёРµ Р±Р°Р»Р°РЅСЃР°, "Р·Р°РІР°Р»РµРЅРЅС‹Р№" РіРѕСЂРёР·РѕРЅС‚, Р»РёС€РЅРёРµ РґРµС‚Р°Р»Рё РЅР° С„РѕРЅРµ - РІСЃС‘ СЌС‚Рѕ РїРѕСЂС‚РёС‚ РєР°РґСЂ.</li>
+                            <li>РћСЃРІРѕР№С‚Рµ РїСЂР°РІРёР»Рѕ С‚СЂРµС‚РµР№, Р·РѕР»РѕС‚РѕРµ СЃРµС‡РµРЅРёРµ, СЃР»РµРґРёС‚Рµ Р·Р° Р»РёРЅРёСЏРјРё Рё С„РѕРЅРѕРј.</li>
                         </ul>
                     </div>
                 </div>
                 <div class="step">
                     <div class="step-number">4</div>
                     <div>
-                        <strong>Неправильная экспозиция (пересвет/недосвет)</strong>
+                        <strong>РќРµРїСЂР°РІРёР»СЊРЅР°СЏ СЌРєСЃРїРѕР·РёС†РёСЏ (РїРµСЂРµСЃРІРµС‚/РЅРµРґРѕСЃРІРµС‚)</strong>
                         <ul>
-                            <li>Автомат не всегда "угадывает" свет. Проверяйте гистограмму, используйте экспокоррекцию, снимайте в RAW для возможности коррекции.</li>
+                            <li>РђРІС‚РѕРјР°С‚ РЅРµ РІСЃРµРіРґР° "СѓРіР°РґС‹РІР°РµС‚" СЃРІРµС‚. РџСЂРѕРІРµСЂСЏР№С‚Рµ РіРёСЃС‚РѕРіСЂР°РјРјСѓ, РёСЃРїРѕР»СЊР·СѓР№С‚Рµ СЌРєСЃРїРѕРєРѕСЂСЂРµРєС†РёСЋ, СЃРЅРёРјР°Р№С‚Рµ РІ RAW РґР»СЏ РІРѕР·РјРѕР¶РЅРѕСЃС‚Рё РєРѕСЂСЂРµРєС†РёРё.</li>
                         </ul>
                     </div>
                 </div>
                 <div class="step">
                     <div class="step-number">5</div>
                     <div>
-                        <strong>Игнорирование света и времени суток</strong>
+                        <strong>РРіРЅРѕСЂРёСЂРѕРІР°РЅРёРµ СЃРІРµС‚Р° Рё РІСЂРµРјРµРЅРё СЃСѓС‚РѕРє</strong>
                         <ul>
-                            <li>Плоский свет, жёсткие тени, съёмка в полдень - всё это делает фото невыразительными.</li>
-                            <li>Снимайте утром, вечером, в пасмурную погоду или ищите интересный свет и тени.</li>
+                            <li>РџР»РѕСЃРєРёР№ СЃРІРµС‚, Р¶С‘СЃС‚РєРёРµ С‚РµРЅРё, СЃСЉС‘РјРєР° РІ РїРѕР»РґРµРЅСЊ - РІСЃС‘ СЌС‚Рѕ РґРµР»Р°РµС‚ С„РѕС‚Рѕ РЅРµРІС‹СЂР°Р·РёС‚РµР»СЊРЅС‹РјРё.</li>
+                            <li>РЎРЅРёРјР°Р№С‚Рµ СѓС‚СЂРѕРј, РІРµС‡РµСЂРѕРј, РІ РїР°СЃРјСѓСЂРЅСѓСЋ РїРѕРіРѕРґСѓ РёР»Рё РёС‰РёС‚Рµ РёРЅС‚РµСЂРµСЃРЅС‹Р№ СЃРІРµС‚ Рё С‚РµРЅРё.</li>
                         </ul>
                     </div>
                 </div>
                 <div class="step">
                     <div class="step-number">6</div>
                     <div>
-                        <strong>Плохая работа с цветом и балансом белого</strong>
+                        <strong>РџР»РѕС…Р°СЏ СЂР°Р±РѕС‚Р° СЃ С†РІРµС‚РѕРј Рё Р±Р°Р»Р°РЅСЃРѕРј Р±РµР»РѕРіРѕ</strong>
                         <ul>
-                            <li>Автоматический баланс белого часто ошибается, особенно при искусственном освещении.</li>
-                            <li>Настраивайте баланс вручную, снимайте в RAW для гибкой коррекции цвета.</li>
+                            <li>РђРІС‚РѕРјР°С‚РёС‡РµСЃРєРёР№ Р±Р°Р»Р°РЅСЃ Р±РµР»РѕРіРѕ С‡Р°СЃС‚Рѕ РѕС€РёР±Р°РµС‚СЃСЏ, РѕСЃРѕР±РµРЅРЅРѕ РїСЂРё РёСЃРєСѓСЃСЃС‚РІРµРЅРЅРѕРј РѕСЃРІРµС‰РµРЅРёРё.</li>
+                            <li>РќР°СЃС‚СЂР°РёРІР°Р№С‚Рµ Р±Р°Р»Р°РЅСЃ РІСЂСѓС‡РЅСѓСЋ, СЃРЅРёРјР°Р№С‚Рµ РІ RAW РґР»СЏ РіРёР±РєРѕР№ РєРѕСЂСЂРµРєС†РёРё С†РІРµС‚Р°.</li>
                         </ul>
                     </div>
                 </div>
                 <div class="step">
                     <div class="step-number">7</div>
                     <div>
-                        <strong>Избыток обработки или её отсутствие</strong>
+                        <strong>РР·Р±С‹С‚РѕРє РѕР±СЂР°Р±РѕС‚РєРё РёР»Рё РµС‘ РѕС‚СЃСѓС‚СЃС‚РІРёРµ</strong>
                         <ul>
-                            <li>Чрезмерная резкость, насыщенность, фильтры, "HDR-эффект" портят снимок. Но и отсутствие базовой коррекции (контраст, кадрирование, цвет) делает фото "сырым".</li>
-                            <li>Учитесь работать с Lightroom, Snapseed, VSCO - обработка должна подчёркивать, а не портить кадр.</li>
+                            <li>Р§СЂРµР·РјРµСЂРЅР°СЏ СЂРµР·РєРѕСЃС‚СЊ, РЅР°СЃС‹С‰РµРЅРЅРѕСЃС‚СЊ, С„РёР»СЊС‚СЂС‹, "HDR-СЌС„С„РµРєС‚" РїРѕСЂС‚СЏС‚ СЃРЅРёРјРѕРє. РќРѕ Рё РѕС‚СЃСѓС‚СЃС‚РІРёРµ Р±Р°Р·РѕРІРѕР№ РєРѕСЂСЂРµРєС†РёРё (РєРѕРЅС‚СЂР°СЃС‚, РєР°РґСЂРёСЂРѕРІР°РЅРёРµ, С†РІРµС‚) РґРµР»Р°РµС‚ С„РѕС‚Рѕ "СЃС‹СЂС‹Рј".</li>
+                            <li>РЈС‡РёС‚РµСЃСЊ СЂР°Р±РѕС‚Р°С‚СЊ СЃ Lightroom, Snapseed, VSCO - РѕР±СЂР°Р±РѕС‚РєР° РґРѕР»Р¶РЅР° РїРѕРґС‡С‘СЂРєРёРІР°С‚СЊ, Р° РЅРµ РїРѕСЂС‚РёС‚СЊ РєР°РґСЂ.</li>
                         </ul>
                     </div>
                 </div>
                 <div class="step">
                     <div class="step-number">8</div>
                     <div>
-                        <strong>Погоня за техникой вместо развития навыков</strong>
+                        <strong>РџРѕРіРѕРЅСЏ Р·Р° С‚РµС…РЅРёРєРѕР№ РІРјРµСЃС‚Рѕ СЂР°Р·РІРёС‚РёСЏ РЅР°РІС‹РєРѕРІ</strong>
                         <ul>
-                            <li>Дорогая камера не заменит знаний о композиции, свете и обработке.</li>
-                            <li>Тратьте больше времени на практику, анализ работ, обучение, а не на апгрейд техники.</li>
+                            <li>Р”РѕСЂРѕРіР°СЏ РєР°РјРµСЂР° РЅРµ Р·Р°РјРµРЅРёС‚ Р·РЅР°РЅРёР№ Рѕ РєРѕРјРїРѕР·РёС†РёРё, СЃРІРµС‚Рµ Рё РѕР±СЂР°Р±РѕС‚РєРµ.</li>
+                            <li>РўСЂР°С‚СЊС‚Рµ Р±РѕР»СЊС€Рµ РІСЂРµРјРµРЅРё РЅР° РїСЂР°РєС‚РёРєСѓ, Р°РЅР°Р»РёР· СЂР°Р±РѕС‚, РѕР±СѓС‡РµРЅРёРµ, Р° РЅРµ РЅР° Р°РїРіСЂРµР№Рґ С‚РµС…РЅРёРєРё.</li>
                         </ul>
                     </div>
                 </div>
                 <div class="step">
                     <div class="step-number">9</div>
                     <div>
-                        <strong>Отсутствие отбора и критики своих работ</strong>
+                        <strong>РћС‚СЃСѓС‚СЃС‚РІРёРµ РѕС‚Р±РѕСЂР° Рё РєСЂРёС‚РёРєРё СЃРІРѕРёС… СЂР°Р±РѕС‚</strong>
                         <ul>
-                            <li>Публикация всех кадров подряд, без отбора и анализа ошибок, мешает развитию.</li>
-                            <li>Учитесь выбирать лучшие снимки, анализировать неудачи, спрашивать мнение у опытных коллег.</li>
+                            <li>РџСѓР±Р»РёРєР°С†РёСЏ РІСЃРµС… РєР°РґСЂРѕРІ РїРѕРґСЂСЏРґ, Р±РµР· РѕС‚Р±РѕСЂР° Рё Р°РЅР°Р»РёР·Р° РѕС€РёР±РѕРє, РјРµС€Р°РµС‚ СЂР°Р·РІРёС‚РёСЋ.</li>
+                            <li>РЈС‡РёС‚РµСЃСЊ РІС‹Р±РёСЂР°С‚СЊ Р»СѓС‡С€РёРµ СЃРЅРёРјРєРё, Р°РЅР°Р»РёР·РёСЂРѕРІР°С‚СЊ РЅРµСѓРґР°С‡Рё, СЃРїСЂР°С€РёРІР°С‚СЊ РјРЅРµРЅРёРµ Сѓ РѕРїС‹С‚РЅС‹С… РєРѕР»Р»РµРі.</li>
                         </ul>
                     </div>
                 </div>
                 <div class="step">
                     <div class="step-number">10</div>
                     <div>
-                        <strong>Страх экспериментов и копирование чужого стиля</strong>
+                        <strong>РЎС‚СЂР°С… СЌРєСЃРїРµСЂРёРјРµРЅС‚РѕРІ Рё РєРѕРїРёСЂРѕРІР°РЅРёРµ С‡СѓР¶РѕРіРѕ СЃС‚РёР»СЏ</strong>
                         <ul>
-                            <li>Боязнь пробовать новое, слепое копирование чужих идей тормозят творческий рост.</li>
-                            <li>Не бойтесь ошибаться, ищите свой почерк, экспериментируйте с жанрами, светом, обработкой.</li>
+                            <li>Р‘РѕСЏР·РЅСЊ РїСЂРѕР±РѕРІР°С‚СЊ РЅРѕРІРѕРµ, СЃР»РµРїРѕРµ РєРѕРїРёСЂРѕРІР°РЅРёРµ С‡СѓР¶РёС… РёРґРµР№ С‚РѕСЂРјРѕР·СЏС‚ С‚РІРѕСЂС‡РµСЃРєРёР№ СЂРѕСЃС‚.</li>
+                            <li>РќРµ Р±РѕР№С‚РµСЃСЊ РѕС€РёР±Р°С‚СЊСЃСЏ, РёС‰РёС‚Рµ СЃРІРѕР№ РїРѕС‡РµСЂРє, СЌРєСЃРїРµСЂРёРјРµРЅС‚РёСЂСѓР№С‚Рµ СЃ Р¶Р°РЅСЂР°РјРё, СЃРІРµС‚РѕРј, РѕР±СЂР°Р±РѕС‚РєРѕР№.</li>
                         </ul>
                     </div>
                 </div>
             </div>
-            <h2>Дополнительные ошибки и темы для роста</h2>
+            <h2>Р”РѕРїРѕР»РЅРёС‚РµР»СЊРЅС‹Рµ РѕС€РёР±РєРё Рё С‚РµРјС‹ РґР»СЏ СЂРѕСЃС‚Р°</h2>
             <ul>
-                <li>Неправильное хранение и уход за техникой (пыль, влага, отсутствие чистки оптики).</li>
-                <li>Работа без резервного копирования - потеря файлов из-за сбоя карты памяти или диска.</li>
-                <li>Съёмка без сценария или идеи - "бессмысленные" кадры.</li>
-                <li>Плохая коммуникация с моделями и клиентами.</li>
-                <li>Отсутствие планирования (место, время, реквизит, погода).</li>
+                <li>РќРµРїСЂР°РІРёР»СЊРЅРѕРµ С…СЂР°РЅРµРЅРёРµ Рё СѓС…РѕРґ Р·Р° С‚РµС…РЅРёРєРѕР№ (РїС‹Р»СЊ, РІР»Р°РіР°, РѕС‚СЃСѓС‚СЃС‚РІРёРµ С‡РёСЃС‚РєРё РѕРїС‚РёРєРё).</li>
+                <li>Р Р°Р±РѕС‚Р° Р±РµР· СЂРµР·РµСЂРІРЅРѕРіРѕ РєРѕРїРёСЂРѕРІР°РЅРёСЏ - РїРѕС‚РµСЂСЏ С„Р°Р№Р»РѕРІ РёР·-Р·Р° СЃР±РѕСЏ РєР°СЂС‚С‹ РїР°РјСЏС‚Рё РёР»Рё РґРёСЃРєР°.</li>
+                <li>РЎСЉС‘РјРєР° Р±РµР· СЃС†РµРЅР°СЂРёСЏ РёР»Рё РёРґРµРё - "Р±РµСЃСЃРјС‹СЃР»РµРЅРЅС‹Рµ" РєР°РґСЂС‹.</li>
+                <li>РџР»РѕС…Р°СЏ РєРѕРјРјСѓРЅРёРєР°С†РёСЏ СЃ РјРѕРґРµР»СЏРјРё Рё РєР»РёРµРЅС‚Р°РјРё.</li>
+                <li>РћС‚СЃСѓС‚СЃС‚РІРёРµ РїР»Р°РЅРёСЂРѕРІР°РЅРёСЏ (РјРµСЃС‚Рѕ, РІСЂРµРјСЏ, СЂРµРєРІРёР·РёС‚, РїРѕРіРѕРґР°).</li>
             </ul>
             <div class="recommend-box">
                 <i class="fas fa-info-circle"></i>
                 <div>
-                    <strong>Совет:</strong> Ведите дневник съёмок - записывайте настройки, идеи, что удалось и что нет. Это ускоряет рост и помогает избежать повторения ошибок.
+                    <strong>РЎРѕРІРµС‚:</strong> Р’РµРґРёС‚Рµ РґРЅРµРІРЅРёРє СЃСЉС‘РјРѕРє - Р·Р°РїРёСЃС‹РІР°Р№С‚Рµ РЅР°СЃС‚СЂРѕР№РєРё, РёРґРµРё, С‡С‚Рѕ СѓРґР°Р»РѕСЃСЊ Рё С‡С‚Рѕ РЅРµС‚. Р­С‚Рѕ СѓСЃРєРѕСЂСЏРµС‚ СЂРѕСЃС‚ Рё РїРѕРјРѕРіР°РµС‚ РёР·Р±РµР¶Р°С‚СЊ РїРѕРІС‚РѕСЂРµРЅРёСЏ РѕС€РёР±РѕРє.
                 </div>
             </div>
             <div class="pro-tips">
-                <h4>?? Профессиональные советы</h4>
+                <h4>рџ”№ РџСЂРѕС„РµСЃСЃРёРѕРЅР°Р»СЊРЅС‹Рµ СЃРѕРІРµС‚С‹</h4>
                 <div class="tip-item">
                     <i class="fas fa-lightbulb"></i>
-                    <p>Изучайте гистограмму - это лучший инструмент для контроля экспозиции.</p>
+                    <p>РР·СѓС‡Р°Р№С‚Рµ РіРёСЃС‚РѕРіСЂР°РјРјСѓ - СЌС‚Рѕ Р»СѓС‡С€РёР№ РёРЅСЃС‚СЂСѓРјРµРЅС‚ РґР»СЏ РєРѕРЅС‚СЂРѕР»СЏ СЌРєСЃРїРѕР·РёС†РёРё.</p>
                 </div>
                 <div class="tip-item">
                     <i class="fas fa-lightbulb"></i>
-                    <p>Сравнивайте свои работы с работами профи, но не копируйте - анализируйте, что делает их сильными.</p>
+                    <p>РЎСЂР°РІРЅРёРІР°Р№С‚Рµ СЃРІРѕРё СЂР°Р±РѕС‚С‹ СЃ СЂР°Р±РѕС‚Р°РјРё РїСЂРѕС„Рё, РЅРѕ РЅРµ РєРѕРїРёСЂСѓР№С‚Рµ - Р°РЅР°Р»РёР·РёСЂСѓР№С‚Рµ, С‡С‚Рѕ РґРµР»Р°РµС‚ РёС… СЃРёР»СЊРЅС‹РјРё.</p>
                 </div>
                 <div class="tip-item">
                     <i class="fas fa-lightbulb"></i>
-                    <p>Снимайте чаще, пробуйте разные жанры и техники - только практика даёт результат.</p>
+                    <p>РЎРЅРёРјР°Р№С‚Рµ С‡Р°С‰Рµ, РїСЂРѕР±СѓР№С‚Рµ СЂР°Р·РЅС‹Рµ Р¶Р°РЅСЂС‹ Рё С‚РµС…РЅРёРєРё - С‚РѕР»СЊРєРѕ РїСЂР°РєС‚РёРєР° РґР°С‘С‚ СЂРµР·СѓР»СЊС‚Р°С‚.</p>
                 </div>
                 <div class="tip-item">
                     <i class="fas fa-lightbulb"></i>
-                    <p>Не бойтесь критики - она помогает расти быстрее, чем похвала.</p>
+                    <p>РќРµ Р±РѕР№С‚РµСЃСЊ РєСЂРёС‚РёРєРё - РѕРЅР° РїРѕРјРѕРіР°РµС‚ СЂР°СЃС‚Рё Р±С‹СЃС‚СЂРµРµ, С‡РµРј РїРѕС…РІР°Р»Р°.</p>
                 </div>
             </div>
-            <h2>Часто задаваемые вопросы</h2>
+            <h2>Р§Р°СЃС‚Рѕ Р·Р°РґР°РІР°РµРјС‹Рµ РІРѕРїСЂРѕСЃС‹</h2>
             <ul>
-                <li><strong>Что делать, если фото не получаются?</strong> - Анализируйте ошибки, спрашивайте советы, не бросайте после неудач.</li>
-                <li><strong>Как понять, что фото хорошее?</strong> - Хорошее фото вызывает эмоции, имеет ясную идею, грамотную композицию и техническое качество.</li>
-                <li><strong>Сколько нужно практиковаться для прогресса?</strong> - Чем больше, тем лучше. Даже 10 минут в день дают результат через месяц.</li>
-                <li><strong>Нужно ли учиться у профессионалов?</strong> - Да, мастер-классы, разборы портфолио, книги и блоги ускоряют рост.</li>
+                <li><strong>Р§С‚Рѕ РґРµР»Р°С‚СЊ, РµСЃР»Рё С„РѕС‚Рѕ РЅРµ РїРѕР»СѓС‡Р°СЋС‚СЃСЏ?</strong> - РђРЅР°Р»РёР·РёСЂСѓР№С‚Рµ РѕС€РёР±РєРё, СЃРїСЂР°С€РёРІР°Р№С‚Рµ СЃРѕРІРµС‚С‹, РЅРµ Р±СЂРѕСЃР°Р№С‚Рµ РїРѕСЃР»Рµ РЅРµСѓРґР°С‡.</li>
+                <li><strong>РљР°Рє РїРѕРЅСЏС‚СЊ, С‡С‚Рѕ С„РѕС‚Рѕ С…РѕСЂРѕС€РµРµ?</strong> - РҐРѕСЂРѕС€РµРµ С„РѕС‚Рѕ РІС‹Р·С‹РІР°РµС‚ СЌРјРѕС†РёРё, РёРјРµРµС‚ СЏСЃРЅСѓСЋ РёРґРµСЋ, РіСЂР°РјРѕС‚РЅСѓСЋ РєРѕРјРїРѕР·РёС†РёСЋ Рё С‚РµС…РЅРёС‡РµСЃРєРѕРµ РєР°С‡РµСЃС‚РІРѕ.</li>
+                <li><strong>РЎРєРѕР»СЊРєРѕ РЅСѓР¶РЅРѕ РїСЂР°РєС‚РёРєРѕРІР°С‚СЊСЃСЏ РґР»СЏ РїСЂРѕРіСЂРµСЃСЃР°?</strong> - Р§РµРј Р±РѕР»СЊС€Рµ, С‚РµРј Р»СѓС‡С€Рµ. Р”Р°Р¶Рµ 10 РјРёРЅСѓС‚ РІ РґРµРЅСЊ РґР°СЋС‚ СЂРµР·СѓР»СЊС‚Р°С‚ С‡РµСЂРµР· РјРµСЃСЏС†.</li>
+                <li><strong>РќСѓР¶РЅРѕ Р»Рё СѓС‡РёС‚СЊСЃСЏ Сѓ РїСЂРѕС„РµСЃСЃРёРѕРЅР°Р»РѕРІ?</strong> - Р”Р°, РјР°СЃС‚РµСЂ-РєР»Р°СЃСЃС‹, СЂР°Р·Р±РѕСЂС‹ РїРѕСЂС‚С„РѕР»РёРѕ, РєРЅРёРіРё Рё Р±Р»РѕРіРё СѓСЃРєРѕСЂСЏСЋС‚ СЂРѕСЃС‚.</li>
             </ul>
-            <h2>?? Итог</h2>
+            <h2>рџ“Њ РС‚РѕРі</h2>
             <p>
-                Ошибки - не повод сдаваться, а возможность учиться и расти. Главное - осознанность, практика, анализ и желание искать свой путь в фотографии. Не бойтесь пробовать новое, учитесь на ошибках - и ваши снимки будут становиться лучше с каждым днём!
+                РћС€РёР±РєРё - РЅРµ РїРѕРІРѕРґ СЃРґР°РІР°С‚СЊСЃСЏ, Р° РІРѕР·РјРѕР¶РЅРѕСЃС‚СЊ СѓС‡РёС‚СЊСЃСЏ Рё СЂР°СЃС‚Рё. Р“Р»Р°РІРЅРѕРµ - РѕСЃРѕР·РЅР°РЅРЅРѕСЃС‚СЊ, РїСЂР°РєС‚РёРєР°, Р°РЅР°Р»РёР· Рё Р¶РµР»Р°РЅРёРµ РёСЃРєР°С‚СЊ СЃРІРѕР№ РїСѓС‚СЊ РІ С„РѕС‚РѕРіСЂР°С„РёРё. РќРµ Р±РѕР№С‚РµСЃСЊ РїСЂРѕР±РѕРІР°С‚СЊ РЅРѕРІРѕРµ, СѓС‡РёС‚РµСЃСЊ РЅР° РѕС€РёР±РєР°С… - Рё РІР°С€Рё СЃРЅРёРјРєРё Р±СѓРґСѓС‚ СЃС‚Р°РЅРѕРІРёС‚СЊСЃСЏ Р»СѓС‡С€Рµ СЃ РєР°Р¶РґС‹Рј РґРЅС‘Рј!
             </p>
 </div>
 
-        <!-- Telegram рекламный баннер -->
+        <!-- Telegram СЂРµРєР»Р°РјРЅС‹Р№ Р±Р°РЅРЅРµСЂ -->
         <a href="https://t.me/RepairoRU" target="_blank" rel="noopener noreferrer" class="telegram-banner">
           <div class="telegram-banner-container">
             <div class="telegram-logo">
@@ -536,10 +569,10 @@
               </svg>
             </div>
             <div class="telegram-content">
-              <div class="telegram-title">Новости из мира технологий</div>
-              <div class="telegram-subtitle">В нашем новом Telegram-канале. Подписывайтесь и будьте в числе первых!</div>
+              <div class="telegram-title">РќРѕРІРѕСЃС‚Рё РёР· РјРёСЂР° С‚РµС…РЅРѕР»РѕРіРёР№</div>
+              <div class="telegram-subtitle">Р’ РЅР°С€РµРј РЅРѕРІРѕРј Telegram-РєР°РЅР°Р»Рµ. РџРѕРґРїРёСЃС‹РІР°Р№С‚РµСЃСЊ Рё Р±СѓРґСЊС‚Рµ РІ С‡РёСЃР»Рµ РїРµСЂРІС‹С…!</div>
               <div class="telegram-button">
-                Подписаться
+                РџРѕРґРїРёСЃР°С‚СЊСЃСЏ
                 <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.56c-.21 2.22-1.12 7.58-1.58 10.06-.19 1.07-.57 1.43-.94 1.46-.8.07-1.4-.52-2.17-1.03-1.21-.79-1.89-1.28-3.06-2.05-1.35-.87-.47-1.35.3-2.13.2-.21 3.71-3.39 3.77-3.68.01-.04.01-.18-.07-.26s-.2-.05-.29-.03c-.12.03-2.11 1.34-5.95 3.93-.56.38-1.07.57-1.53.56-.5-.01-1.47-.28-2.19-.51-.88-.28-1.58-.43-1.52-.91.03-.25.38-.51 1.04-.78 4.07-1.77 6.78-2.94 8.13-3.51 3.88-1.62 4.68-1.9 5.19-1.91.12 0 .37.03.54.17.14.12.18.28.2.44-.01.06 0 .11-.01.17z"/>
                 </svg>
@@ -564,45 +597,45 @@
                         </span>
                         <span class="logo__text">Repairo</span>
                     </a>
-                    <p class="footer__text">Помогаем ремонтировать электронику с 2024 года</p>
+                    <p class="footer__text">РџРѕРјРѕРіР°РµРј СЂРµРјРѕРЅС‚РёСЂРѕРІР°С‚СЊ СЌР»РµРєС‚СЂРѕРЅРёРєСѓ СЃ 2024 РіРѕРґР°</p>
                 </div>
                 <div class="footer__col">
-                    <h3 class="footer__title">Разделы</h3>
+                    <h3 class="footer__title">Р Р°Р·РґРµР»С‹</h3>
                     <ul class="footer__links">
-                        <li><a href="../index.html" class="footer__link">Главная</a></li>
-                        <li><a href="../index.html#categories" class="footer__link">Все гайды</a></li>
-                        <li><a href="../contacts.html" class="footer__link">Контакты</a></li>
+                        <li><a href="../index.html" class="footer__link">Р“Р»Р°РІРЅР°СЏ</a></li>
+                        <li><a href="../index.html#categories" class="footer__link">Р’СЃРµ РіР°Р№РґС‹</a></li>
+                        <li><a href="../contacts.html" class="footer__link">РљРѕРЅС‚Р°РєС‚С‹</a></li>
                     </ul>
                 </div>
                 <div class="footer__col">
-                    <h3 class="footer__title">Категории</h3>
+                    <h3 class="footer__title">РљР°С‚РµРіРѕСЂРёРё</h3>
                     <ul class="footer__links">
-                        <li><a href="../tv.html" class="nav__link">Телевизоры</a></li>
-                        <li><a href="../cameras.html" class="nav__link">Фотоаппараты</a></li>
-                        <li><a href="../consoles.html" class="nav__link">Приставки</a></li>
-                        <li><a href="../laptops.html" class="nav__link">Ноутбуки</a></li>
-                        <li><a href="../smartphones.html" class="nav__link">Смартфоны</a></li>
-                        <li><a href="../small-appliances.html" class="nav__link">Мелкая техника</a></li>
-                        <li><a href="../large-appliances.html" class="nav__link">Бытовая техника</a></li>
-                        <li><a href="../auto-electronics.html" class="nav__link">Авто-Электроника</a></li>
+                        <li><a href="../tv.html" class="nav__link">РўРµР»РµРІРёР·РѕСЂС‹</a></li>
+                        <li><a href="../cameras.html" class="nav__link">Р¤РѕС‚РѕР°РїРїР°СЂР°С‚С‹</a></li>
+                        <li><a href="../consoles.html" class="nav__link">РџСЂРёСЃС‚Р°РІРєРё</a></li>
+                        <li><a href="../laptops.html" class="nav__link">РќРѕСѓС‚Р±СѓРєРё</a></li>
+                        <li><a href="../smartphones.html" class="nav__link">РЎРјР°СЂС‚С„РѕРЅС‹</a></li>
+                        <li><a href="../small-appliances.html" class="nav__link">РњРµР»РєР°СЏ С‚РµС…РЅРёРєР°</a></li>
+                        <li><a href="../large-appliances.html" class="nav__link">Р‘С‹С‚РѕРІР°СЏ С‚РµС…РЅРёРєР°</a></li>
+                        <li><a href="../auto-electronics.html" class="nav__link">РђРІС‚Рѕ-Р­Р»РµРєС‚СЂРѕРЅРёРєР°</a></li>
                     </ul>
                 </div>
                 <div class="footer__col">
-                    <h3 class="footer__title">Контакты</h3>
+                    <h3 class="footer__title">РљРѕРЅС‚Р°РєС‚С‹</h3>
                     <ul class="footer__links">
                         <li><a href="https://t.me/RepairoRU" class="footer__link"><i class="fab fa-telegram"></i> Telegram</a></li>
-                        <li><span class="footer__link">Наша почта: repairo.info@mail.ru</span></li>
+                        <li><span class="footer__link">РќР°С€Р° РїРѕС‡С‚Р°: repairo.info@mail.ru</span></li>
                     </ul>
                 </div>
             </div>
             <div class="footer__bottom">
                 <p class="disclaimer">
-    Администрация сайта не несёт ответственности за возможные повреждения техники
-    и иные последствия, возникшие в результате самостоятельного ремонта по
-    материалам и инструкциям, размещённым на сайте. Все работы вы выполняете
-    на свой страх и риск.
+    РђРґРјРёРЅРёСЃС‚СЂР°С†РёСЏ СЃР°Р№С‚Р° РЅРµ РЅРµСЃС‘С‚ РѕС‚РІРµС‚СЃС‚РІРµРЅРЅРѕСЃС‚Рё Р·Р° РІРѕР·РјРѕР¶РЅС‹Рµ РїРѕРІСЂРµР¶РґРµРЅРёСЏ С‚РµС…РЅРёРєРё
+    Рё РёРЅС‹Рµ РїРѕСЃР»РµРґСЃС‚РІРёСЏ, РІРѕР·РЅРёРєС€РёРµ РІ СЂРµР·СѓР»СЊС‚Р°С‚Рµ СЃР°РјРѕСЃС‚РѕСЏС‚РµР»СЊРЅРѕРіРѕ СЂРµРјРѕРЅС‚Р° РїРѕ
+    РјР°С‚РµСЂРёР°Р»Р°Рј Рё РёРЅСЃС‚СЂСѓРєС†РёСЏРј, СЂР°Р·РјРµС‰С‘РЅРЅС‹Рј РЅР° СЃР°Р№С‚Рµ. Р’СЃРµ СЂР°Р±РѕС‚С‹ РІС‹ РІС‹РїРѕР»РЅСЏРµС‚Рµ
+    РЅР° СЃРІРѕР№ СЃС‚СЂР°С… Рё СЂРёСЃРє.
     </p>
-                <p class="footer__copyright">© 2026 Repairo. Все права защищены.</p>
+                <p class="footer__copyright">В© 2026 Repairo. Р’СЃРµ РїСЂР°РІР° Р·Р°С‰РёС‰РµРЅС‹.</p>
             </div>
         </div>
     </footer>
@@ -613,38 +646,38 @@
 {
   "@context": "https://schema.org",
   "@type": "HowTo",
-  "name": "ТОП-10 ошибок начинающих фотографов",
-  "description": "Пошаговая инструкция: ТОП-10 ошибок начинающих фотографов. Ошибки - естественная часть обучения фотографии. Но если знать о них заранее, мо.... Советы экспер...",
+  "name": "РўРћРџ-10 РѕС€РёР±РѕРє РЅР°С‡РёРЅР°СЋС‰РёС… С„РѕС‚РѕРіСЂР°С„РѕРІ",
+  "description": "РџРѕС€Р°РіРѕРІР°СЏ РёРЅСЃС‚СЂСѓРєС†РёСЏ: РўРћРџ-10 РѕС€РёР±РѕРє РЅР°С‡РёРЅР°СЋС‰РёС… С„РѕС‚РѕРіСЂР°С„РѕРІ. РћС€РёР±РєРё - РµСЃС‚РµСЃС‚РІРµРЅРЅР°СЏ С‡Р°СЃС‚СЊ РѕР±СѓС‡РµРЅРёСЏ С„РѕС‚РѕРіСЂР°С„РёРё. РќРѕ РµСЃР»Рё Р·РЅР°С‚СЊ Рѕ РЅРёС… Р·Р°СЂР°РЅРµРµ, РјРѕ.... РЎРѕРІРµС‚С‹ СЌРєСЃРїРµСЂ...",
   "totalTime": "PT30M",
   "step": [
     {
       "@type": "HowToStep",
-      "name": "Введение: почему важно знать свои ошибки?",
-      "text": "Введение: почему важно знать свои ошибки?",
+      "name": "Р’РІРµРґРµРЅРёРµ: РїРѕС‡РµРјСѓ РІР°Р¶РЅРѕ Р·РЅР°С‚СЊ СЃРІРѕРё РѕС€РёР±РєРё?",
+      "text": "Р’РІРµРґРµРЅРёРµ: РїРѕС‡РµРјСѓ РІР°Р¶РЅРѕ Р·РЅР°С‚СЊ СЃРІРѕРё РѕС€РёР±РєРё?",
       "url": "#step-1"
     },
     {
       "@type": "HowToStep",
-      "name": "ТОП-10 ошибок начинающих фотографов",
-      "text": "ТОП-10 ошибок начинающих фотографов",
+      "name": "РўРћРџ-10 РѕС€РёР±РѕРє РЅР°С‡РёРЅР°СЋС‰РёС… С„РѕС‚РѕРіСЂР°С„РѕРІ",
+      "text": "РўРћРџ-10 РѕС€РёР±РѕРє РЅР°С‡РёРЅР°СЋС‰РёС… С„РѕС‚РѕРіСЂР°С„РѕРІ",
       "url": "#step-2"
     },
     {
       "@type": "HowToStep",
-      "name": "Дополнительные ошибки и темы для роста",
-      "text": "Дополнительные ошибки и темы для роста",
+      "name": "Р”РѕРїРѕР»РЅРёС‚РµР»СЊРЅС‹Рµ РѕС€РёР±РєРё Рё С‚РµРјС‹ РґР»СЏ СЂРѕСЃС‚Р°",
+      "text": "Р”РѕРїРѕР»РЅРёС‚РµР»СЊРЅС‹Рµ РѕС€РёР±РєРё Рё С‚РµРјС‹ РґР»СЏ СЂРѕСЃС‚Р°",
       "url": "#step-3"
     },
     {
       "@type": "HowToStep",
-      "name": "Часто задаваемые вопросы",
-      "text": "Часто задаваемые вопросы",
+      "name": "Р§Р°СЃС‚Рѕ Р·Р°РґР°РІР°РµРјС‹Рµ РІРѕРїСЂРѕСЃС‹",
+      "text": "Р§Р°СЃС‚Рѕ Р·Р°РґР°РІР°РµРјС‹Рµ РІРѕРїСЂРѕСЃС‹",
       "url": "#step-4"
     },
     {
       "@type": "HowToStep",
-      "name": "?? Итог",
-      "text": "?? Итог",
+      "name": "рџ“Њ РС‚РѕРі",
+      "text": "рџ“Њ РС‚РѕРі",
       "url": "#step-5"
     }
   ],
@@ -655,8 +688,4 @@
 <script src="../cookie-consent.js"></script>
 </body>
 </html>
-
-
-
-
 

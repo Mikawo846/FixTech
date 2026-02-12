@@ -4,8 +4,9 @@
 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Какие игры выйдут на Nintendo Switch 2 в первый год? | Экспе</title>
-    <meta name="description" content="">
+  <title>РљР°РєРёРµ РёРіСЂС‹ РІС‹Р№РґСѓС‚ РЅР° Nintendo Switch 2 РІ РїРµСЂРІС‹Р№ РіРѕРґ? | Р­РєСЃРїРµСЂС‚РЅС‹Р№ РјРµРіР°РіР°Р№Рґ</title>
+    <meta name="description" content="{{ description }}">
+    <meta name="description" content="РџРѕС€Р°РіРѕРІР°СЏ РёРЅСЃС‚СЂСѓРєС†РёСЏ: РљР°РєРёРµ РёРіСЂС‹ РІС‹Р№РґСѓС‚ РЅР° Nintendo Switch 2 РІ РїРµСЂРІС‹Р№ РіРѕРґ?. 2025 РіРѕРґ вЂ” РјРѕРјРµРЅС‚ РёСЃС‚РёРЅС‹ РґР»СЏ Nintendo: РЅРѕРІС‹Р№ Switch 2 СЃС‚Р°РЅРѕРІРёС‚СЃСЏ РіР»Р°РІРЅС‹Рј Р·Р°РїСѓСЃРєРѕ....">
 
   <link rel="stylesheet" href="../styles.css" />
   <link rel="stylesheet" href="../styles-header.css" />
@@ -21,17 +22,30 @@
     .pro-tips { background: rgba(3, 74, 79, 0.05); padding: 15px; border-radius: 6px; margin: 20px 0; }
     .pro-tips h4 { color: var(--primary); margin-top: 0; margin-bottom: 12px; font-size: 1.1rem; }
     .tip-item { display: flex; gap: 8px; margin-bottom: 8px; align-items: flex-start; }
+    .warning-block {
+      background: #fff3e0;
+      border-left: 5px solid #ff9100;
+      padding: 15px 18px;
+      margin: 22px 0;
+      border-radius: 7px;
+    }
     table { width: 100%; border-collapse: collapse; margin: 20px 0; }
     th, td { border: 1px solid var(--border); padding: 8px; text-align: left; }
     th { background: var(--background-light); }
-    .highlight { background: #f5f7fa; border-left: 4px solid #2d9cdb; padding: 10px 15px; margin: 20px 0; }
-    .faq-section ul { margin-left: 1em; }
-    .block-section { margin-bottom: 2em; }
     @media (max-width: 768px) {
       .guide-content h2 { font-size: 1.4rem; margin-top: 25px; }
       .guide-image-block { padding: 12px; margin: 15px 0; }
       table, th, td { font-size: 0.95rem; }
     }
+    /* РЇРЅРґРµРєСЃ РњР°СЂРєРµС‚ СЂРµРєР»Р°РјРЅС‹Р№ Р±Р°РЅРЅРµСЂ */
+    .ym-hero-link {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+      max-width: 100%;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
     /* Р“РѕСЂРёР·РѕРЅС‚Р°Р»СЊРЅС‹Р№ Р±Р°РЅРЅРµСЂ-РєР°СЂС‚РѕС‡РєР° */
     .ym-hero-banner {
       width: 100%;
@@ -144,11 +158,13 @@
       transition: background 0.15s ease, transform 0.15s ease,
                   box-shadow 0.15s ease;
     }
+
     .ym-hero-button::after {
       content: "в†’";
       margin-left: 6px;
       font-size: 14px;
     }
+
     .ym-hero-button:hover {
       background: #7c3aed;
       transform: translateY(-1px);
@@ -172,19 +188,24 @@
         max-width: 100%;
         margin: 20px 0;
       }
+
       .ym-hero-images {
         height: 100px;
       }
+
       .ym-hero-content {
         padding: 12px 12px;
       }
+
       .ym-hero-title {
         font-size: 13px;
       }
+
       .ym-hero-button {
         font-size: 13px;
         padding: 8px 14px;
       }
+
       .ym-hero-legal {
         font-size: 10px;
       }
@@ -292,22 +313,27 @@
         padding: 15px;
         min-height: 100px;
       }
+
       .telegram-logo {
         width: 50px;
         height: 50px;
         min-width: 50px;
         margin-right: 15px;
       }
+
       .telegram-logo svg {
         width: 26px;
         height: 26px;
       }
+
       .telegram-title {
         font-size: 14px;
       }
+
       .telegram-subtitle {
         font-size: 12px;
       }
+
       .telegram-button {
         font-size: 12px;
         padding: 6px 12px;
@@ -325,13 +351,15 @@
       <div class="header__inner">
         <a href="../index.html" class="logo">
           <span class="logo__icon"></span>
-          <span class="logo__text">GeoExpert</span>
+          <span class="logo__text">Repairo</span>
         </a>
         <nav class="nav">
           <ul class="nav__list">
-            <li><a href="../cameras.html" class="nav__link">РљР°РјРµСЂС‹</a></li>
-            <li><a href="../drones.html" class="nav__link">Р”СЂРѕРЅС‹</a></li>
-            <li><a href="../workflow.html" class="nav__link">Workflow</a></li>
+            <li><a href="../tv.html" class="nav__link">РўРµР»РµРІРёР·РѕСЂС‹</a></li>
+            <li><a href="../cameras.html" class="nav__link">Р¤РѕС‚РѕР°РїРїР°СЂР°С‚С‹</a></li>
+            <li><a href="../consoles.html" class="nav__link">РџСЂРёСЃС‚Р°РІРєРё</a></li>
+            <li><a href="../laptops.html" class="nav__link">РќРѕСѓС‚Р±СѓРєРё</a></li>
+            <li><a href="../smartphones.html" class="nav__link">РЎРјР°СЂС‚С„РѕРЅС‹</a></li>
           </ul>
         </nav>
       </div>
@@ -341,351 +369,364 @@
   <section class="guide-page">
     <div class="container">
       <div class="breadcrumbs">
-        <a href="../index.html">Главная</a>
+        <a href="../index.html">Р“Р»Р°РІРЅР°СЏ</a>
         <i class="fas fa-chevron-right"></i>
-        <a href="../consoles.html">Приставки</a>
+        <a href="../consoles.html">РџСЂРёСЃС‚Р°РІРєРё</a>
         <i class="fas fa-chevron-right"></i>
-        <span>Какие игры выйдут на Nintendo Switch 2 в первый год?</span>
+        <span>РљР°РєРёРµ РёРіСЂС‹ РІС‹Р№РґСѓС‚ РЅР° Nintendo Switch 2 РІ РїРµСЂРІС‹Р№ РіРѕРґ?</span>
       </div>
 
-      <h1 class="section__title">Какие игры выйдут на Nintendo Switch 2 в первый год?</h1>
+      <h1 class="section__title">РљР°РєРёРµ РёРіСЂС‹ РІС‹Р№РґСѓС‚ РЅР° Nintendo Switch 2 РІ РїРµСЂРІС‹Р№ РіРѕРґ?</h1>
 
       <div class="guide-meta">
-        <span><i class="fas fa-rocket"></i> Экспертный гид: стартовые и ожидаемые релизы Switch 2, эксклюзивы, мультиплатформа, советы, лайфхаки, FAQ, таблицы, иллюстрация.</span>
+        <span><i class="fas fa-rocket"></i> Р­РєСЃРїРµСЂС‚РЅС‹Р№ РіРёРґ: СЃС‚Р°СЂС‚РѕРІС‹Рµ Рё РѕР¶РёРґР°РµРјС‹Рµ СЂРµР»РёР·С‹ Switch 2, СЌРєСЃРєР»СЋР·РёРІС‹, РјСѓР»СЊС‚РёРїР»Р°С‚С„РѕСЂРјР°, СЃРѕРІРµС‚С‹, Р»Р°Р№С„С…Р°РєРё, FAQ, С‚Р°Р±Р»РёС†С‹, РёР»Р»СЋСЃС‚СЂР°С†РёСЏ.</span>
       </div>
 
       <div class="guide-image-block">
-        <img src="https://avatars.mds.yandex.net/get-shedevrum/15067795/img_80cd1d283c8111f0a12ebe1f098d7bb4/orig" alt="Игры первого года Nintendo Switch 2">
+        <img src="https://avatars.mds.yandex.net/get-shedevrum/15067795/img_80cd1d283c8111f0a12ebe1f098d7bb4/orig" alt="РРіСЂС‹ РїРµСЂРІРѕРіРѕ РіРѕРґР° Nintendo Switch 2">
         <div class="image-caption">
-          Все ключевые игры первого года Nintendo Switch 2: эксклюзивы, ремейки, мультиплатформа и новые франшизы, которые определят 2025 год для Nintendo.
+          Р’СЃРµ РєР»СЋС‡РµРІС‹Рµ РёРіСЂС‹ РїРµСЂРІРѕРіРѕ РіРѕРґР° Nintendo Switch 2: СЌРєСЃРєР»СЋР·РёРІС‹, СЂРµРјРµР№РєРё, РјСѓР»СЊС‚РёРїР»Р°С‚С„РѕСЂРјР° Рё РЅРѕРІС‹Рµ С„СЂР°РЅС€РёР·С‹, РєРѕС‚РѕСЂС‹Рµ РѕРїСЂРµРґРµР»СЏС‚ 2025 РіРѕРґ РґР»СЏ Nintendo.
         </div>
       </div>
 
       <div class="guide-content">
-        <!-- Яндекс Маркет рекламный блок -->
+        <!-- РЇРЅРґРµРєСЃ РњР°СЂРєРµС‚ СЂРµРєР»Р°РјРЅС‹Р№ Р±Р»РѕРє -->
         <a href="https://market.yandex.ru/catalog--bytovaia-tekhnika/54419/list?hid=198118&rs=eJwzUvjEKMvBILDwEKsEg8Kzbh6Nw4dZNS4D8c7lFhp9c1-wAQC3uAwP&clid=14635360&refid=rbck8fgamv681iu59go3iqxwddedl4x9&erid=5jtCeReNx12oajxS2bzShmZ&mclid=1003&distr_type=7&utm_source=partner_network&pp=900&utm_medium=link_list&utm_campaign=14635360"
            target="_blank"
            rel="noopener noreferrer sponsored"
+           class="ym-hero-link">
+          <div class="ym-hero-banner">
+            <div class="ym-hero-images">
+              <div class="ym-hero-image">
                 <img src="https://avatars.mds.yandex.net/get-mpic/14770882/2a00000197f4dbee777f8afddccaf44faa53/optimize"
-                     alt="Распродажа бытовой электроники 1">
+                     alt="Р Р°СЃРїСЂРѕРґР°Р¶Р° Р±С‹С‚РѕРІРѕР№ СЌР»РµРєС‚СЂРѕРЅРёРєРё 1">
               </div>
+              <div class="ym-hero-image">
                 <img src="https://avatars.mds.yandex.net/get-mpic/15580298/img_id8867318964670654684.jpeg/optimize"
-                     alt="Распродажа бытовой электроники 2">
+                     alt="Р Р°СЃРїСЂРѕРґР°Р¶Р° Р±С‹С‚РѕРІРѕР№ СЌР»РµРєС‚СЂРѕРЅРёРєРё 2">
               </div>
+              <div class="ym-hero-image">
                 <img src="https://avatars.mds.yandex.net/get-mpic/10096780/2a000001953b534fed2494e0b30fadd9b458/optimize"
-                     alt="Распродажа бытовой электроники 3">
+                     alt="Р Р°СЃРїСЂРѕРґР°Р¶Р° Р±С‹С‚РѕРІРѕР№ СЌР»РµРєС‚СЂРѕРЅРёРєРё 3">
               </div>
             </div>
-                  ? Выгодные предложения
+            <div class="ym-hero-content">
+              <h3 class="ym-hero-title">Р Р°СЃРїСЂРѕРґР°Р¶Р° Р±С‹С‚РѕРІРѕР№ СЌР»РµРєС‚СЂРѕРЅРёРєРё РЅР° РЇРЅРґРµРєСЃ РњР°СЂРєРµС‚Рµ</h3>
+              <div class="ym-hero-top">
+                <div class="ym-hero-rating">
+                  в­ђ Р’С‹РіРѕРґРЅС‹Рµ РїСЂРµРґР»РѕР¶РµРЅРёСЏ
+                  <span class="ym-hero-rating-count">РЎРєРёРґРєРё РґРѕ 50%</span>
                 </div>
               </div>
+              <button class="ym-hero-button">Р—Р° СЃРєРёРґРєР°РјРё</button>
             </div>
           </div>
-            Реклама. ООО "ЯНДЕКС", ИНН 7736207543. clid: 14635360, erid: 5jtCeReNx12oajxS2bzShmZ
+          <div class="ym-hero-legal">
+            Р РµРєР»Р°РјР°. РћРћРћ "РЇРќР”Р•РљРЎ", РРќРќ 7736207543. clid: 14635360, erid: 5jtCeReNx12oajxS2bzShmZ
           </div>
         </a>
 
-        <h2>Введение: почему стартовый год Switch 2 — важнейший для Nintendo?</h2>
+        <h2>Р’РІРµРґРµРЅРёРµ: РїРѕС‡РµРјСѓ СЃС‚Р°СЂС‚РѕРІС‹Р№ РіРѕРґ Switch 2 вЂ” РІР°Р¶РЅРµР№С€РёР№ РґР»СЏ Nintendo?</h2>
         <p>
-          2025 год — момент истины для Nintendo: новый Switch 2 становится главным запуском года, а его стартовая линейка и последующие релизы способны сделать платформу доминирующей на фоне конкурентов. Разнообразие жанров, культовые франшизы и поддержка крупных издателей — всё это формирует уникальный первый год для Switch 2.
+          2025 РіРѕРґ вЂ” РјРѕРјРµРЅС‚ РёСЃС‚РёРЅС‹ РґР»СЏ Nintendo: РЅРѕРІС‹Р№ Switch 2 СЃС‚Р°РЅРѕРІРёС‚СЃСЏ РіР»Р°РІРЅС‹Рј Р·Р°РїСѓСЃРєРѕРј РіРѕРґР°, Р° РµРіРѕ СЃС‚Р°СЂС‚РѕРІР°СЏ Р»РёРЅРµР№РєР° Рё РїРѕСЃР»РµРґСѓСЋС‰РёРµ СЂРµР»РёР·С‹ СЃРїРѕСЃРѕР±РЅС‹ СЃРґРµР»Р°С‚СЊ РїР»Р°С‚С„РѕСЂРјСѓ РґРѕРјРёРЅРёСЂСѓСЋС‰РµР№ РЅР° С„РѕРЅРµ РєРѕРЅРєСѓСЂРµРЅС‚РѕРІ. Р Р°Р·РЅРѕРѕР±СЂР°Р·РёРµ Р¶Р°РЅСЂРѕРІ, РєСѓР»СЊС‚РѕРІС‹Рµ С„СЂР°РЅС€РёР·С‹ Рё РїРѕРґРґРµСЂР¶РєР° РєСЂСѓРїРЅС‹С… РёР·РґР°С‚РµР»РµР№ вЂ” РІСЃС‘ СЌС‚Рѕ С„РѕСЂРјРёСЂСѓРµС‚ СѓРЅРёРєР°Р»СЊРЅС‹Р№ РїРµСЂРІС‹Р№ РіРѕРґ РґР»СЏ Switch 2.
         </p>
 
-        <h2>Таблица: стартовые игры Nintendo Switch 2 (5 июня 2025)</h2>
+        <h2>РўР°Р±Р»РёС†Р°: СЃС‚Р°СЂС‚РѕРІС‹Рµ РёРіСЂС‹ Nintendo Switch 2 (5 РёСЋРЅСЏ 2025)</h2>
 <table>
           <thead>
             <tr>
-              <th>Название</th>
-              <th>Жанр</th>
-              <th>Тип</th>
-              <th>Описание</th>
+              <th>РќР°Р·РІР°РЅРёРµ</th>
+              <th>Р–Р°РЅСЂ</th>
+              <th>РўРёРї</th>
+              <th>РћРїРёСЃР°РЅРёРµ</th>
             </tr>
           </thead>
           <tbody>
             <tr>
               <td><b>Mario Kart World</b></td>
-              <td>Гоночная аркада</td>
-              <td>Эксклюзив</td>
-              <td>Открытый мир, новые Grand Prix, Knockout Tours, 24 игрока на трассе</td>
+              <td>Р“РѕРЅРѕС‡РЅР°СЏ Р°СЂРєР°РґР°</td>
+              <td>Р­РєСЃРєР»СЋР·РёРІ</td>
+              <td>РћС‚РєСЂС‹С‚С‹Р№ РјРёСЂ, РЅРѕРІС‹Рµ Grand Prix, Knockout Tours, 24 РёРіСЂРѕРєР° РЅР° С‚СЂР°СЃСЃРµ</td>
             </tr>
             <tr>
               <td>Bravely Default: Flying Fairy HD Remaster</td>
               <td>JRPG</td>
-              <td>Эксклюзив</td>
-              <td>HD-ремастер культовой JRPG от Square Enix</td>
+              <td>Р­РєСЃРєР»СЋР·РёРІ</td>
+              <td>HD-СЂРµРјР°СЃС‚РµСЂ РєСѓР»СЊС‚РѕРІРѕР№ JRPG РѕС‚ Square Enix</td>
             </tr>
             <tr>
               <td>Fast Fusion</td>
-              <td>Аркадные гонки</td>
-              <td>Эксклюзив</td>
-              <td>Новая футуристическая серия, быстрый геймплей</td>
+              <td>РђСЂРєР°РґРЅС‹Рµ РіРѕРЅРєРё</td>
+              <td>Р­РєСЃРєР»СЋР·РёРІ</td>
+              <td>РќРѕРІР°СЏ С„СѓС‚СѓСЂРёСЃС‚РёС‡РµСЃРєР°СЏ СЃРµСЂРёСЏ, Р±С‹СЃС‚СЂС‹Р№ РіРµР№РјРїР»РµР№</td>
             </tr>
             <tr>
               <td>Survival Kids</td>
-              <td>Приключения/выживание</td>
-              <td>Эксклюзив</td>
-              <td>Возвращение классики Konami, ремейк с новыми механиками</td>
+              <td>РџСЂРёРєР»СЋС‡РµРЅРёСЏ/РІС‹Р¶РёРІР°РЅРёРµ</td>
+              <td>Р­РєСЃРєР»СЋР·РёРІ</td>
+              <td>Р’РѕР·РІСЂР°С‰РµРЅРёРµ РєР»Р°СЃСЃРёРєРё Konami, СЂРµРјРµР№Рє СЃ РЅРѕРІС‹РјРё РјРµС…Р°РЅРёРєР°РјРё</td>
             </tr>
             <tr>
               <td>Nintendo Switch 2 Welcome Tour</td>
-              <td>Платформер/Party</td>
-              <td>Эксклюзив</td>
-              <td>Party-игра для знакомства с новыми функциями консоли</td>
+              <td>РџР»Р°С‚С„РѕСЂРјРµСЂ/Party</td>
+              <td>Р­РєСЃРєР»СЋР·РёРІ</td>
+              <td>Party-РёРіСЂР° РґР»СЏ Р·РЅР°РєРѕРјСЃС‚РІР° СЃ РЅРѕРІС‹РјРё С„СѓРЅРєС†РёСЏРјРё РєРѕРЅСЃРѕР»Рё</td>
             </tr>
             <tr>
               <td>Fantasy Life i: The Girl Who Steals Time</td>
-              <td>RPG/симулятор</td>
-              <td>Мультиплатформа</td>
-              <td>Улучшенная версия с новыми возможностями</td>
+              <td>RPG/СЃРёРјСѓР»СЏС‚РѕСЂ</td>
+              <td>РњСѓР»СЊС‚РёРїР»Р°С‚С„РѕСЂРјР°</td>
+              <td>РЈР»СѓС‡С€РµРЅРЅР°СЏ РІРµСЂСЃРёСЏ СЃ РЅРѕРІС‹РјРё РІРѕР·РјРѕР¶РЅРѕСЃС‚СЏРјРё</td>
             </tr>
             <tr>
               <td>Cyberpunk 2077: Ultimate Edition</td>
               <td>RPG</td>
-              <td>Мультиплатформа</td>
-              <td>Полная версия с DLC, оптимизирована для Switch 2</td>
+              <td>РњСѓР»СЊС‚РёРїР»Р°С‚С„РѕСЂРјР°</td>
+              <td>РџРѕР»РЅР°СЏ РІРµСЂСЃРёСЏ СЃ DLC, РѕРїС‚РёРјРёР·РёСЂРѕРІР°РЅР° РґР»СЏ Switch 2</td>
             </tr>
             <tr>
               <td>Hogwarts Legacy</td>
               <td>RPG</td>
-              <td>Мультиплатформа</td>
-              <td>Волшебный мир, адаптация под новое железо</td>
+              <td>РњСѓР»СЊС‚РёРїР»Р°С‚С„РѕСЂРјР°</td>
+              <td>Р’РѕР»С€РµР±РЅС‹Р№ РјРёСЂ, Р°РґР°РїС‚Р°С†РёСЏ РїРѕРґ РЅРѕРІРѕРµ Р¶РµР»РµР·Рѕ</td>
             </tr>
             <tr>
               <td>Sonic x Shadow Generations</td>
-              <td>Платформер</td>
-              <td>Мультиплатформа</td>
-              <td>Новая часть с двумя главными героями</td>
+              <td>РџР»Р°С‚С„РѕСЂРјРµСЂ</td>
+              <td>РњСѓР»СЊС‚РёРїР»Р°С‚С„РѕСЂРјР°</td>
+              <td>РќРѕРІР°СЏ С‡Р°СЃС‚СЊ СЃ РґРІСѓРјСЏ РіР»Р°РІРЅС‹РјРё РіРµСЂРѕСЏРјРё</td>
             </tr>
             <tr>
               <td>Hitman World of Assassination: Signature Edition</td>
-              <td>Стелс-экшен</td>
-              <td>Мультиплатформа</td>
-              <td>Полная коллекция миссий</td>
+              <td>РЎС‚РµР»СЃ-СЌРєС€РµРЅ</td>
+              <td>РњСѓР»СЊС‚РёРїР»Р°С‚С„РѕСЂРјР°</td>
+              <td>РџРѕР»РЅР°СЏ РєРѕР»Р»РµРєС†РёСЏ РјРёСЃСЃРёР№</td>
             </tr>
             <tr>
-              <td>The Legend of Zelda: Breath of the Wild – Switch 2 Edition</td>
-              <td>Экшен/RPG</td>
-              <td>Ремастер</td>
-              <td>Улучшенная графика, быстрые загрузки</td>
+              <td>The Legend of Zelda: Breath of the Wild вЂ“ Switch 2 Edition</td>
+              <td>Р­РєС€РµРЅ/RPG</td>
+              <td>Р РµРјР°СЃС‚РµСЂ</td>
+              <td>РЈР»СѓС‡С€РµРЅРЅР°СЏ РіСЂР°С„РёРєР°, Р±С‹СЃС‚СЂС‹Рµ Р·Р°РіСЂСѓР·РєРё</td>
             </tr>
             <tr>
-              <td>The Legend of Zelda: Tears of the Kingdom – Switch 2 Edition</td>
-              <td>Экшен/RPG</td>
-              <td>Ремастер</td>
-              <td>Оптимизация под новое железо, улучшения графики</td>
+              <td>The Legend of Zelda: Tears of the Kingdom вЂ“ Switch 2 Edition</td>
+              <td>Р­РєС€РµРЅ/RPG</td>
+              <td>Р РµРјР°СЃС‚РµСЂ</td>
+              <td>РћРїС‚РёРјРёР·Р°С†РёСЏ РїРѕРґ РЅРѕРІРѕРµ Р¶РµР»РµР·Рѕ, СѓР»СѓС‡С€РµРЅРёСЏ РіСЂР°С„РёРєРё</td>
             </tr>
             <tr>
               <td>Fortnite</td>
-              <td>Королевская битва</td>
-              <td>Мультиплатформа</td>
-              <td>Массовый онлайн, кроссплей</td>
+              <td>РљРѕСЂРѕР»РµРІСЃРєР°СЏ Р±РёС‚РІР°</td>
+              <td>РњСѓР»СЊС‚РёРїР»Р°С‚С„РѕСЂРјР°</td>
+              <td>РњР°СЃСЃРѕРІС‹Р№ РѕРЅР»Р°Р№РЅ, РєСЂРѕСЃСЃРїР»РµР№</td>
             </tr>
             <tr>
               <td>Street Fighter 6: Years 1-2 Fighters Edition</td>
-              <td>Файтинг</td>
-              <td>Мультиплатформа</td>
-              <td>Все бойцы и арены, сетевой режим</td>
+              <td>Р¤Р°Р№С‚РёРЅРі</td>
+              <td>РњСѓР»СЊС‚РёРїР»Р°С‚С„РѕСЂРјР°</td>
+              <td>Р’СЃРµ Р±РѕР№С†С‹ Рё Р°СЂРµРЅС‹, СЃРµС‚РµРІРѕР№ СЂРµР¶РёРј</td>
             </tr>
             <tr>
-              <td>Sid Meier’s Civilization VII</td>
-              <td>Стратегия</td>
-              <td>Мультиплатформа</td>
-              <td>Новая часть легендарной серии</td>
+              <td>Sid MeierвЂ™s Civilization VII</td>
+              <td>РЎС‚СЂР°С‚РµРіРёСЏ</td>
+              <td>РњСѓР»СЊС‚РёРїР»Р°С‚С„РѕСЂРјР°</td>
+              <td>РќРѕРІР°СЏ С‡Р°СЃС‚СЊ Р»РµРіРµРЅРґР°СЂРЅРѕР№ СЃРµСЂРёРё</td>
             </tr>
             <tr>
               <td>Arcade Archives 2: Ridge Racer</td>
-              <td>Гонки</td>
-              <td>Мультиплатформа</td>
-              <td>Классика Namco, обновлённая версия</td>
+              <td>Р“РѕРЅРєРё</td>
+              <td>РњСѓР»СЊС‚РёРїР»Р°С‚С„РѕСЂРјР°</td>
+              <td>РљР»Р°СЃСЃРёРєР° Namco, РѕР±РЅРѕРІР»С‘РЅРЅР°СЏ РІРµСЂСЃРёСЏ</td>
             </tr>
             <tr>
               <td>Rune Factory: Guardians of Azuma</td>
-              <td>RPG/ферма</td>
-              <td>Мультиплатформа</td>
-              <td>Фэнтези-ферма, приключения</td>
+              <td>RPG/С„РµСЂРјР°</td>
+              <td>РњСѓР»СЊС‚РёРїР»Р°С‚С„РѕСЂРјР°</td>
+              <td>Р¤СЌРЅС‚РµР·Рё-С„РµСЂРјР°, РїСЂРёРєР»СЋС‡РµРЅРёСЏ</td>
             </tr>
             <tr>
-              <td>Yakuza 0: Director’s Cut</td>
-              <td>Экшен</td>
-              <td>Мультиплатформа</td>
-              <td>Культовый боевик, полная версия</td>
+              <td>Yakuza 0: DirectorвЂ™s Cut</td>
+              <td>Р­РєС€РµРЅ</td>
+              <td>РњСѓР»СЊС‚РёРїР»Р°С‚С„РѕСЂРјР°</td>
+              <td>РљСѓР»СЊС‚РѕРІС‹Р№ Р±РѕРµРІРёРє, РїРѕР»РЅР°СЏ РІРµСЂСЃРёСЏ</td>
             </tr>
             <tr>
               <td>Suikoden I&II HD Remaster</td>
               <td>JRPG</td>
-              <td>Мультиплатформа</td>
-              <td>Две классики в одном сборнике</td>
+              <td>РњСѓР»СЊС‚РёРїР»Р°С‚С„РѕСЂРјР°</td>
+              <td>Р”РІРµ РєР»Р°СЃСЃРёРєРё РІ РѕРґРЅРѕРј СЃР±РѕСЂРЅРёРєРµ</td>
             </tr>
           </tbody>
         </table>
 
-        <h2>Крупные эксклюзивы и ожидаемые релизы Switch 2 в 2025 году</h2>
+        <h2>РљСЂСѓРїРЅС‹Рµ СЌРєСЃРєР»СЋР·РёРІС‹ Рё РѕР¶РёРґР°РµРјС‹Рµ СЂРµР»РёР·С‹ Switch 2 РІ 2025 РіРѕРґСѓ</h2>
         <ul>
-          <li><b>Donkey Kong Bananza</b> — новая часть платформера, релиз 17 июля 2025.</li>
-          <li><b>Super Mario Party Jamboree – Switch 2 Edition</b> — самая масштабная Mario Party, 24 июля 2025.</li>
-          <li><b>Kirby Air Riders</b> — долгожданное продолжение Kirby Air Ride, дата TBA 2025.</li>
-          <li><b>Drag x Drive</b> — инновационный спортивный проект, TBA 2025.</li>
-          <li><b>Hyrule Warriors: Age of Imprisonment</b> — новая часть Warriors-серии по Zelda, зима 2025.</li>
-          <li><b>Pokemon Legends: Z-A</b> — новая RPG по Pokemon, 16 октября 2025.</li>
-          <li><b>Metroid Prime 4: Beyond</b> — возвращение Самус, TBA 2025.</li>
-          <li><b>Daemon X Machina: Titanic Scion</b> — меха-экшен, 5 сентября 2025.</li>
-          <li><b>Elden Ring: Tarnished Edition</b> — адаптация хита FromSoftware, TBA 2025.</li>
-          <li><b>Borderlands 4</b> — новая часть лутер-шутера, TBA 2025.</li>
-          <li><b>Hollow Knight: Silksong</b> — долгожданная метроидвания, TBA 2025.</li>
-          <li><b>Witchbrook</b> — уютный симулятор жизни, зима 2025.</li>
-          <li><b>Star Wars Outlaws</b> — приключенческий экшен, 4 сентября 2025.</li>
+          <li><b>Donkey Kong Bananza</b> вЂ” РЅРѕРІР°СЏ С‡Р°СЃС‚СЊ РїР»Р°С‚С„РѕСЂРјРµСЂР°, СЂРµР»РёР· 17 РёСЋР»СЏ 2025.</li>
+          <li><b>Super Mario Party Jamboree вЂ“ Switch 2 Edition</b> вЂ” СЃР°РјР°СЏ РјР°СЃС€С‚Р°Р±РЅР°СЏ Mario Party, 24 РёСЋР»СЏ 2025.</li>
+          <li><b>Kirby Air Riders</b> вЂ” РґРѕР»РіРѕР¶РґР°РЅРЅРѕРµ РїСЂРѕРґРѕР»Р¶РµРЅРёРµ Kirby Air Ride, РґР°С‚Р° TBA 2025.</li>
+          <li><b>Drag x Drive</b> вЂ” РёРЅРЅРѕРІР°С†РёРѕРЅРЅС‹Р№ СЃРїРѕСЂС‚РёРІРЅС‹Р№ РїСЂРѕРµРєС‚, TBA 2025.</li>
+          <li><b>Hyrule Warriors: Age of Imprisonment</b> вЂ” РЅРѕРІР°СЏ С‡Р°СЃС‚СЊ Warriors-СЃРµСЂРёРё РїРѕ Zelda, Р·РёРјР° 2025.</li>
+          <li><b>PokГ©mon Legends: Z-A</b> вЂ” РЅРѕРІР°СЏ RPG РїРѕ PokГ©mon, 16 РѕРєС‚СЏР±СЂСЏ 2025.</li>
+          <li><b>Metroid Prime 4: Beyond</b> вЂ” РІРѕР·РІСЂР°С‰РµРЅРёРµ РЎР°РјСѓСЃ, TBA 2025.</li>
+          <li><b>Daemon X Machina: Titanic Scion</b> вЂ” РјРµС…Р°-СЌРєС€РµРЅ, 5 СЃРµРЅС‚СЏР±СЂСЏ 2025.</li>
+          <li><b>Elden Ring: Tarnished Edition</b> вЂ” Р°РґР°РїС‚Р°С†РёСЏ С…РёС‚Р° FromSoftware, TBA 2025.</li>
+          <li><b>Borderlands 4</b> вЂ” РЅРѕРІР°СЏ С‡Р°СЃС‚СЊ Р»СѓС‚РµСЂ-С€СѓС‚РµСЂР°, TBA 2025.</li>
+          <li><b>Hollow Knight: Silksong</b> вЂ” РґРѕР»РіРѕР¶РґР°РЅРЅР°СЏ РјРµС‚СЂРѕРёРґРІР°РЅРёСЏ, TBA 2025.</li>
+          <li><b>Witchbrook</b> вЂ” СѓСЋС‚РЅС‹Р№ СЃРёРјСѓР»СЏС‚РѕСЂ Р¶РёР·РЅРё, Р·РёРјР° 2025.</li>
+          <li><b>Star Wars Outlaws</b> вЂ” РїСЂРёРєР»СЋС‡РµРЅС‡РµСЃРєРёР№ СЌРєС€РµРЅ, 4 СЃРµРЅС‚СЏР±СЂСЏ 2025.</li>
         </ul>
 
-        <h2>Таблица: топ-10 самых ожидаемых игр первого года Switch 2</h2>
+        <h2>РўР°Р±Р»РёС†Р°: С‚РѕРї-10 СЃР°РјС‹С… РѕР¶РёРґР°РµРјС‹С… РёРіСЂ РїРµСЂРІРѕРіРѕ РіРѕРґР° Switch 2</h2>
         <table>
           <thead>
             <tr>
-              <th>Игра</th>
-              <th>Жанр</th>
-              <th>Дата</th>
-              <th>Эксклюзив?</th>
+              <th>РРіСЂР°</th>
+              <th>Р–Р°РЅСЂ</th>
+              <th>Р”Р°С‚Р°</th>
+              <th>Р­РєСЃРєР»СЋР·РёРІ?</th>
             </tr>
           </thead>
           <tbody>
             <tr>
               <td>Mario Kart World</td>
-              <td>Гонки</td>
-              <td>5 июня 2025</td>
-              <td>Да</td>
+              <td>Р“РѕРЅРєРё</td>
+              <td>5 РёСЋРЅСЏ 2025</td>
+              <td>Р”Р°</td>
             </tr>
             <tr>
-              <td>Pokemon Legends: Z-A</td>
+              <td>PokГ©mon Legends: Z-A</td>
               <td>RPG</td>
-              <td>16 октября 2025</td>
-              <td>Да</td>
+              <td>16 РѕРєС‚СЏР±СЂСЏ 2025</td>
+              <td>Р”Р°</td>
             </tr>
             <tr>
               <td>Metroid Prime 4: Beyond</td>
-              <td>Шутер/приключение</td>
+              <td>РЁСѓС‚РµСЂ/РїСЂРёРєР»СЋС‡РµРЅРёРµ</td>
               <td>TBA 2025</td>
-              <td>Да</td>
+              <td>Р”Р°</td>
             </tr>
             <tr>
               <td>Donkey Kong Bananza</td>
-              <td>Платформер</td>
-              <td>17 июля 2025</td>
-              <td>Да</td>
+              <td>РџР»Р°С‚С„РѕСЂРјРµСЂ</td>
+              <td>17 РёСЋР»СЏ 2025</td>
+              <td>Р”Р°</td>
             </tr>
             <tr>
               <td>Kirby Air Riders</td>
-              <td>Гонки</td>
+              <td>Р“РѕРЅРєРё</td>
               <td>TBA 2025</td>
-              <td>Да</td>
+              <td>Р”Р°</td>
             </tr>
             <tr>
               <td>Super Mario Party Jamboree</td>
               <td>Party</td>
-              <td>24 июля 2025</td>
-              <td>Да</td>
+              <td>24 РёСЋР»СЏ 2025</td>
+              <td>Р”Р°</td>
             </tr>
             <tr>
               <td>Hyrule Warriors: Age of Imprisonment</td>
-              <td>Экшен</td>
-              <td>Зима 2025</td>
-              <td>Да</td>
+              <td>Р­РєС€РµРЅ</td>
+              <td>Р—РёРјР° 2025</td>
+              <td>Р”Р°</td>
             </tr>
             <tr>
               <td>Daemon X Machina: Titanic Scion</td>
-              <td>Экшен</td>
-              <td>5 сентября 2025</td>
-              <td>Нет</td>
+              <td>Р­РєС€РµРЅ</td>
+              <td>5 СЃРµРЅС‚СЏР±СЂСЏ 2025</td>
+              <td>РќРµС‚</td>
             </tr>
             <tr>
               <td>Elden Ring: Tarnished Edition</td>
               <td>RPG</td>
               <td>TBA 2025</td>
-              <td>Нет</td>
+              <td>РќРµС‚</td>
             </tr>
             <tr>
               <td>Hollow Knight: Silksong</td>
-              <td>Метроидвания</td>
+              <td>РњРµС‚СЂРѕРёРґРІР°РЅРёСЏ</td>
               <td>TBA 2025</td>
-              <td>Нет</td>
+              <td>РќРµС‚</td>
             </tr>
           </tbody>
         </table>
 
-        <h2>Какие ещё крупные мультиплатформенные релизы выйдут на Switch 2 в 2025?</h2>
+        <h2>РљР°РєРёРµ РµС‰С‘ РєСЂСѓРїРЅС‹Рµ РјСѓР»СЊС‚РёРїР»Р°С‚С„РѕСЂРјРµРЅРЅС‹Рµ СЂРµР»РёР·С‹ РІС‹Р№РґСѓС‚ РЅР° Switch 2 РІ 2025?</h2>
         <ul>
           <li>Cyberpunk 2077: Ultimate Edition</li>
           <li>Hogwarts Legacy</li>
           <li>Street Fighter 6</li>
-          <li>Sid Meier’s Civilization VII</li>
-          <li>Yakuza 0: Director’s Cut</li>
+          <li>Sid MeierвЂ™s Civilization VII</li>
+          <li>Yakuza 0: DirectorвЂ™s Cut</li>
           <li>Suikoden I&II HD Remaster</li>
           <li>Rune Factory: Guardians of Azuma</li>
           <li>Arcade Archives 2: Ridge Racer</li>
           <li>Fantasy Life i: The Girl Who Steals Time</li>
         </ul>
 
-        <h2>Лайфхаки и советы для владельцев Switch 2 в 2025 году</h2>
+        <h2>Р›Р°Р№С„С…Р°РєРё Рё СЃРѕРІРµС‚С‹ РґР»СЏ РІР»Р°РґРµР»СЊС†РµРІ Switch 2 РІ 2025 РіРѕРґСѓ</h2>
         <div class="pro-tips">
-          <h4>?? Практические советы</h4>
+          <h4>рџ”№ РџСЂР°РєС‚РёС‡РµСЃРєРёРµ СЃРѕРІРµС‚С‹</h4>
           <div class="tip-item">
             <i class="fas fa-lightbulb"></i>
-            <p>Оформите подписку Nintendo Switch Online + Expansion Pack — получите доступ к библиотеке GameCube (F-Zero GX, Zelda: Wind Waker, Soulcalibur II).</p>
+            <p>РћС„РѕСЂРјРёС‚Рµ РїРѕРґРїРёСЃРєСѓ Nintendo Switch Online + Expansion Pack вЂ” РїРѕР»СѓС‡РёС‚Рµ РґРѕСЃС‚СѓРї Рє Р±РёР±Р»РёРѕС‚РµРєРµ GameCube (F-Zero GX, Zelda: Wind Waker, Soulcalibur II).</p>
           </div>
           <div class="tip-item">
             <i class="fas fa-lightbulb"></i>
-            <p>Следите за анонсами Nintendo Direct — новые эксклюзивы и даты релизов часто объявляют летом и осенью.</p>
+            <p>РЎР»РµРґРёС‚Рµ Р·Р° Р°РЅРѕРЅСЃР°РјРё Nintendo Direct вЂ” РЅРѕРІС‹Рµ СЌРєСЃРєР»СЋР·РёРІС‹ Рё РґР°С‚С‹ СЂРµР»РёР·РѕРІ С‡Р°СЃС‚Рѕ РѕР±СЉСЏРІР»СЏСЋС‚ Р»РµС‚РѕРј Рё РѕСЃРµРЅСЊСЋ.</p>
           </div>
           <div class="tip-item">
             <i class="fas fa-lightbulb"></i>
-            <p>Пробуйте ремастеры и обновлённые версии — многие хиты Switch 1 получили улучшения на Switch 2 (Breath of the Wild, Tears of the Kingdom, Kirby and the Forgotten Land).</p>
+            <p>РџСЂРѕР±СѓР№С‚Рµ СЂРµРјР°СЃС‚РµСЂС‹ Рё РѕР±РЅРѕРІР»С‘РЅРЅС‹Рµ РІРµСЂСЃРёРё вЂ” РјРЅРѕРіРёРµ С…РёС‚С‹ Switch 1 РїРѕР»СѓС‡РёР»Рё СѓР»СѓС‡С€РµРЅРёСЏ РЅР° Switch 2 (Breath of the Wild, Tears of the Kingdom, Kirby and the Forgotten Land).</p>
           </div>
           <div class="tip-item">
             <i class="fas fa-lightbulb"></i>
-            <p>Не пропустите инди-проекты: Witchbrook, Hollow Knight: Silksong, Human Fall Flat 2 выйдут в первый год.</p>
+            <p>РќРµ РїСЂРѕРїСѓСЃС‚РёС‚Рµ РёРЅРґРё-РїСЂРѕРµРєС‚С‹: Witchbrook, Hollow Knight: Silksong, Human Fall Flat 2 РІС‹Р№РґСѓС‚ РІ РїРµСЂРІС‹Р№ РіРѕРґ.</p>
           </div>
         </div>
 
-        <h2>FAQ – часто задаваемые вопросы о релизах Switch 2</h2>
+        <h2>FAQ вЂ“ С‡Р°СЃС‚Рѕ Р·Р°РґР°РІР°РµРјС‹Рµ РІРѕРїСЂРѕСЃС‹ Рѕ СЂРµР»РёР·Р°С… Switch 2</h2>
         <ul>
           <li>
-            <strong>Какая самая крупная игра запуска Switch 2?</strong><br>
-            Mario Kart World — главный стартовый эксклюзив, открывающий новую эру Mario Kart.
+            <strong>РљР°РєР°СЏ СЃР°РјР°СЏ РєСЂСѓРїРЅР°СЏ РёРіСЂР° Р·Р°РїСѓСЃРєР° Switch 2?</strong><br>
+            Mario Kart World вЂ” РіР»Р°РІРЅС‹Р№ СЃС‚Р°СЂС‚РѕРІС‹Р№ СЌРєСЃРєР»СЋР·РёРІ, РѕС‚РєСЂС‹РІР°СЋС‰РёР№ РЅРѕРІСѓСЋ СЌСЂСѓ Mario Kart.
           </li>
           <li>
-            <strong>Выйдет ли новая Zelda в первый год?</strong><br>
-            В первый год выйдут улучшенные версии Breath of the Wild и Tears of the Kingdom, а также Hyrule Warriors: Age of Imprisonment.
+            <strong>Р’С‹Р№РґРµС‚ Р»Рё РЅРѕРІР°СЏ Zelda РІ РїРµСЂРІС‹Р№ РіРѕРґ?</strong><br>
+            Р’ РїРµСЂРІС‹Р№ РіРѕРґ РІС‹Р№РґСѓС‚ СѓР»СѓС‡С€РµРЅРЅС‹Рµ РІРµСЂСЃРёРё Breath of the Wild Рё Tears of the Kingdom, Р° С‚Р°РєР¶Рµ Hyrule Warriors: Age of Imprisonment.
           </li>
           <li>
-            <strong>Когда ждать Metroid Prime 4: Beyond?</strong><br>
-            Игра заявлена на 2025 год, точная дата будет объявлена позже.
+            <strong>РљРѕРіРґР° Р¶РґР°С‚СЊ Metroid Prime 4: Beyond?</strong><br>
+            РРіСЂР° Р·Р°СЏРІР»РµРЅР° РЅР° 2025 РіРѕРґ, С‚РѕС‡РЅР°СЏ РґР°С‚Р° Р±СѓРґРµС‚ РѕР±СЉСЏРІР»РµРЅР° РїРѕР·Р¶Рµ.
           </li>
           <li>
-            <strong>Будут ли мультиплатформенные хиты на старте?</strong><br>
-            Да, Cyberpunk 2077, Hogwarts Legacy, Sonic x Shadow Generations, Street Fighter 6 и другие.
+            <strong>Р‘СѓРґСѓС‚ Р»Рё РјСѓР»СЊС‚РёРїР»Р°С‚С„РѕСЂРјРµРЅРЅС‹Рµ С…РёС‚С‹ РЅР° СЃС‚Р°СЂС‚Рµ?</strong><br>
+            Р”Р°, Cyberpunk 2077, Hogwarts Legacy, Sonic x Shadow Generations, Street Fighter 6 Рё РґСЂСѓРіРёРµ.
           </li>
           <li>
-            <strong>Какие эксклюзивы выйдут после запуска?</strong><br>
-            Donkey Kong Bananza, Pokemon Legends: Z-A, Kirby Air Riders, Drag x Drive, Metroid Prime 4: Beyond, Hyrule Warriors: Age of Imprisonment.
+            <strong>РљР°РєРёРµ СЌРєСЃРєР»СЋР·РёРІС‹ РІС‹Р№РґСѓС‚ РїРѕСЃР»Рµ Р·Р°РїСѓСЃРєР°?</strong><br>
+            Donkey Kong Bananza, PokГ©mon Legends: Z-A, Kirby Air Riders, Drag x Drive, Metroid Prime 4: Beyond, Hyrule Warriors: Age of Imprisonment.
           </li>
         </ul>
 
         <div class="warning-block">
-          <strong>Внимание!</strong> Даты релизов могут меняться, часть игр может быть перенесена на 2026 год. Следите за Nintendo Direct и официальными анонсами!
+          <strong>Р’РЅРёРјР°РЅРёРµ!</strong> Р”Р°С‚С‹ СЂРµР»РёР·РѕРІ РјРѕРіСѓС‚ РјРµРЅСЏС‚СЊСЃСЏ, С‡Р°СЃС‚СЊ РёРіСЂ РјРѕР¶РµС‚ Р±С‹С‚СЊ РїРµСЂРµРЅРµСЃРµРЅР° РЅР° 2026 РіРѕРґ. РЎР»РµРґРёС‚Рµ Р·Р° Nintendo Direct Рё РѕС„РёС†РёР°Р»СЊРЅС‹РјРё Р°РЅРѕРЅСЃР°РјРё!
         </div>
 
-        <h2>Пошаговая инструкция: как не пропустить важные релизы Switch 2</h2>
+        <h2>РџРѕС€Р°РіРѕРІР°СЏ РёРЅСЃС‚СЂСѓРєС†РёСЏ: РєР°Рє РЅРµ РїСЂРѕРїСѓСЃС‚РёС‚СЊ РІР°Р¶РЅС‹Рµ СЂРµР»РёР·С‹ Switch 2</h2>
         <ol>
-          <li>Оформите подписку Nintendo Switch Online + Expansion Pack для доступа к классике и мультиплееру.</li>
-          <li>Добавьте понравившиеся игры в список желаемого в eShop.</li>
-          <li>Установите приложение Nintendo Switch Online на смартфон для уведомлений о релизах.</li>
-          <li>Следите за новостями Nintendo Direct и профильных изданий.</li>
+          <li>РћС„РѕСЂРјРёС‚Рµ РїРѕРґРїРёСЃРєСѓ Nintendo Switch Online + Expansion Pack РґР»СЏ РґРѕСЃС‚СѓРїР° Рє РєР»Р°СЃСЃРёРєРµ Рё РјСѓР»СЊС‚РёРїР»РµРµСЂСѓ.</li>
+          <li>Р”РѕР±Р°РІСЊС‚Рµ РїРѕРЅСЂР°РІРёРІС€РёРµСЃСЏ РёРіСЂС‹ РІ СЃРїРёСЃРѕРє Р¶РµР»Р°РµРјРѕРіРѕ РІ eShop.</li>
+          <li>РЈСЃС‚Р°РЅРѕРІРёС‚Рµ РїСЂРёР»РѕР¶РµРЅРёРµ Nintendo Switch Online РЅР° СЃРјР°СЂС‚С„РѕРЅ РґР»СЏ СѓРІРµРґРѕРјР»РµРЅРёР№ Рѕ СЂРµР»РёР·Р°С….</li>
+          <li>РЎР»РµРґРёС‚Рµ Р·Р° РЅРѕРІРѕСЃС‚СЏРјРё Nintendo Direct Рё РїСЂРѕС„РёР»СЊРЅС‹С… РёР·РґР°РЅРёР№.</li>
         </ol>
 
-        <h2>?? Итог: какие игры выйдут на Nintendo Switch 2 в первый год?</h2>
+        <h2>рџ“Њ РС‚РѕРі: РєР°РєРёРµ РёРіСЂС‹ РІС‹Р№РґСѓС‚ РЅР° Nintendo Switch 2 РІ РїРµСЂРІС‹Р№ РіРѕРґ?</h2>
         <p>
-          В первый год Switch 2 ожидается более 30 крупных релизов: стартовые эксклюзивы (Mario Kart World, Bravely Default HD, Fast Fusion, Survival Kids, Welcome Tour), ремастеры (Breath of the Wild, Tears of the Kingdom), топовые мультиплатформенные хиты (Cyberpunk 2077, Hogwarts Legacy, Sonic x Shadow Generations), а также десятки ожидаемых игр до конца 2025 года — Pokemon Legends: Z-A, Metroid Prime 4: Beyond, Donkey Kong Bananza, Kirby Air Riders, Drag x Drive, Hyrule Warriors: Age of Imprisonment, Daemon X Machina: Titanic Scion, Elden Ring: Tarnished Edition, Borderlands 4, Hollow Knight: Silksong, Witchbrook и другие. 2025 год станет самым насыщенным для Nintendo за последние годы!
+          Р’ РїРµСЂРІС‹Р№ РіРѕРґ Switch 2 РѕР¶РёРґР°РµС‚СЃСЏ Р±РѕР»РµРµ 30 РєСЂСѓРїРЅС‹С… СЂРµР»РёР·РѕРІ: СЃС‚Р°СЂС‚РѕРІС‹Рµ СЌРєСЃРєР»СЋР·РёРІС‹ (Mario Kart World, Bravely Default HD, Fast Fusion, Survival Kids, Welcome Tour), СЂРµРјР°СЃС‚РµСЂС‹ (Breath of the Wild, Tears of the Kingdom), С‚РѕРїРѕРІС‹Рµ РјСѓР»СЊС‚РёРїР»Р°С‚С„РѕСЂРјРµРЅРЅС‹Рµ С…РёС‚С‹ (Cyberpunk 2077, Hogwarts Legacy, Sonic x Shadow Generations), Р° С‚Р°РєР¶Рµ РґРµСЃСЏС‚РєРё РѕР¶РёРґР°РµРјС‹С… РёРіСЂ РґРѕ РєРѕРЅС†Р° 2025 РіРѕРґР° вЂ” PokГ©mon Legends: Z-A, Metroid Prime 4: Beyond, Donkey Kong Bananza, Kirby Air Riders, Drag x Drive, Hyrule Warriors: Age of Imprisonment, Daemon X Machina: Titanic Scion, Elden Ring: Tarnished Edition, Borderlands 4, Hollow Knight: Silksong, Witchbrook Рё РґСЂСѓРіРёРµ. 2025 РіРѕРґ СЃС‚Р°РЅРµС‚ СЃР°РјС‹Рј РЅР°СЃС‹С‰РµРЅРЅС‹Рј РґР»СЏ Nintendo Р·Р° РїРѕСЃР»РµРґРЅРёРµ РіРѕРґС‹!
         </p>
 </div>
 
-        <!-- Telegram рекламный баннер -->
+        <!-- Telegram СЂРµРєР»Р°РјРЅС‹Р№ Р±Р°РЅРЅРµСЂ -->
         <a href="https://t.me/RepairoRU" target="_blank" rel="noopener noreferrer" class="telegram-banner">
           <div class="telegram-banner-container">
             <div class="telegram-logo">
@@ -694,10 +735,10 @@
               </svg>
             </div>
             <div class="telegram-content">
-              <div class="telegram-title">Новости из мира технологий</div>
-              <div class="telegram-subtitle">В нашем новом Telegram-канале. Подписывайтесь и будьте в числе первых!</div>
+              <div class="telegram-title">РќРѕРІРѕСЃС‚Рё РёР· РјРёСЂР° С‚РµС…РЅРѕР»РѕРіРёР№</div>
+              <div class="telegram-subtitle">Р’ РЅР°С€РµРј РЅРѕРІРѕРј Telegram-РєР°РЅР°Р»Рµ. РџРѕРґРїРёСЃС‹РІР°Р№С‚РµСЃСЊ Рё Р±СѓРґСЊС‚Рµ РІ С‡РёСЃР»Рµ РїРµСЂРІС‹С…!</div>
               <div class="telegram-button">
-                Подписаться
+                РџРѕРґРїРёСЃР°С‚СЊСЃСЏ
                 <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.56c-.21 2.22-1.12 7.58-1.58 10.06-.19 1.07-.57 1.43-.94 1.46-.8.07-1.4-.52-2.17-1.03-1.21-.79-1.89-1.28-3.06-2.05-1.35-.87-.47-1.35.3-2.13.2-.21 3.71-3.39 3.77-3.68.01-.04.01-.18-.07-.26s-.2-.05-.29-.03c-.12.03-2.11 1.34-5.95 3.93-.56.38-1.07.57-1.53.56-.5-.01-1.47-.28-2.19-.51-.88-.28-1.58-.43-1.52-.91.03-.25.38-.51 1.04-.78 4.07-1.77 6.78-2.94 8.13-3.51 3.88-1.62 4.68-1.9 5.19-1.91.12 0 .37.03.54.17.14.12.18.28.2.44-.01.06 0 .11-.01.17z"/>
                 </svg>
@@ -722,45 +763,45 @@
                         </span>
                         <span class="logo__text">Repairo</span>
                     </a>
-                    <p class="footer__text">Помогаем ремонтировать электронику с 2024 года</p>
+                    <p class="footer__text">РџРѕРјРѕРіР°РµРј СЂРµРјРѕРЅС‚РёСЂРѕРІР°С‚СЊ СЌР»РµРєС‚СЂРѕРЅРёРєСѓ СЃ 2024 РіРѕРґР°</p>
                 </div>
                 <div class="footer__col">
-                    <h3 class="footer__title">Разделы</h3>
+                    <h3 class="footer__title">Р Р°Р·РґРµР»С‹</h3>
                     <ul class="footer__links">
-                        <li><a href="../index.html" class="footer__link">Главная</a></li>
-                        <li><a href="../index.html#categories" class="footer__link">Все гайды</a></li>
-                        <li><a href="../contacts.html" class="footer__link">Контакты</a></li>
+                        <li><a href="../index.html" class="footer__link">Р“Р»Р°РІРЅР°СЏ</a></li>
+                        <li><a href="../index.html#categories" class="footer__link">Р’СЃРµ РіР°Р№РґС‹</a></li>
+                        <li><a href="../contacts.html" class="footer__link">РљРѕРЅС‚Р°РєС‚С‹</a></li>
                     </ul>
                 </div>
                 <div class="footer__col">
-                    <h3 class="footer__title">Категории</h3>
+                    <h3 class="footer__title">РљР°С‚РµРіРѕСЂРёРё</h3>
                     <ul class="footer__links">
-                        <li><a href="../tv.html" class="nav__link">Телевизоры</a></li>
-                        <li><a href="../cameras.html" class="nav__link">Фотоаппараты</a></li>
-                        <li><a href="../consoles.html" class="nav__link">Приставки</a></li>
-                        <li><a href="../laptops.html" class="nav__link">Ноутбуки</a></li>
-                        <li><a href="../smartphones.html" class="nav__link">Смартфоны</a></li>
-                        <li><a href="../small-appliances.html" class="nav__link">Мелкая техника</a></li>
-                        <li><a href="../large-appliances.html" class="nav__link">Бытовая техника</a></li>
-                        <li><a href="../auto-electronics.html" class="nav__link">Авто-Электроника</a></li>
+                        <li><a href="../tv.html" class="nav__link">РўРµР»РµРІРёР·РѕСЂС‹</a></li>
+                        <li><a href="../cameras.html" class="nav__link">Р¤РѕС‚РѕР°РїРїР°СЂР°С‚С‹</a></li>
+                        <li><a href="../consoles.html" class="nav__link">РџСЂРёСЃС‚Р°РІРєРё</a></li>
+                        <li><a href="../laptops.html" class="nav__link">РќРѕСѓС‚Р±СѓРєРё</a></li>
+                        <li><a href="../smartphones.html" class="nav__link">РЎРјР°СЂС‚С„РѕРЅС‹</a></li>
+                        <li><a href="../small-appliances.html" class="nav__link">РњРµР»РєР°СЏ С‚РµС…РЅРёРєР°</a></li>
+                        <li><a href="../large-appliances.html" class="nav__link">Р‘С‹С‚РѕРІР°СЏ С‚РµС…РЅРёРєР°</a></li>
+                        <li><a href="../auto-electronics.html" class="nav__link">РђРІС‚Рѕ-Р­Р»РµРєС‚СЂРѕРЅРёРєР°</a></li>
                     </ul>
                 </div>
                 <div class="footer__col">
-                    <h3 class="footer__title">Контакты</h3>
+                    <h3 class="footer__title">РљРѕРЅС‚Р°РєС‚С‹</h3>
                     <ul class="footer__links">
                         <li><a href="https://t.me/RepairoRU" class="footer__link"><i class="fab fa-telegram"></i> Telegram</a></li>
-                        <li><span class="footer__link">Наша почта: repairo.info@mail.ru</span></li>
+                        <li><span class="footer__link">РќР°С€Р° РїРѕС‡С‚Р°: repairo.info@mail.ru</span></li>
                     </ul>
                 </div>
             </div>
             <div class="footer__bottom">
                 <p class="disclaimer">
-    Администрация сайта не несёт ответственности за возможные повреждения техники
-    и иные последствия, возникшие в результате самостоятельного ремонта по
-    материалам и инструкциям, размещённым на сайте. Все работы вы выполняете
-    на свой страх и риск.
+    РђРґРјРёРЅРёСЃС‚СЂР°С†РёСЏ СЃР°Р№С‚Р° РЅРµ РЅРµСЃС‘С‚ РѕС‚РІРµС‚СЃС‚РІРµРЅРЅРѕСЃС‚Рё Р·Р° РІРѕР·РјРѕР¶РЅС‹Рµ РїРѕРІСЂРµР¶РґРµРЅРёСЏ С‚РµС…РЅРёРєРё
+    Рё РёРЅС‹Рµ РїРѕСЃР»РµРґСЃС‚РІРёСЏ, РІРѕР·РЅРёРєС€РёРµ РІ СЂРµР·СѓР»СЊС‚Р°С‚Рµ СЃР°РјРѕСЃС‚РѕСЏС‚РµР»СЊРЅРѕРіРѕ СЂРµРјРѕРЅС‚Р° РїРѕ
+    РјР°С‚РµСЂРёР°Р»Р°Рј Рё РёРЅСЃС‚СЂСѓРєС†РёСЏРј, СЂР°Р·РјРµС‰С‘РЅРЅС‹Рј РЅР° СЃР°Р№С‚Рµ. Р’СЃРµ СЂР°Р±РѕС‚С‹ РІС‹ РІС‹РїРѕР»РЅСЏРµС‚Рµ
+    РЅР° СЃРІРѕР№ СЃС‚СЂР°С… Рё СЂРёСЃРє.
     </p>
-                <p class="footer__copyright">© 2026 Repairo. Все права защищены.</p>
+                <p class="footer__copyright">В© 2026 Repairo. Р’СЃРµ РїСЂР°РІР° Р·Р°С‰РёС‰РµРЅС‹.</p>
             </div>
         </div>
     </footer>
@@ -771,56 +812,56 @@
 {
   "@context": "https://schema.org",
   "@type": "HowTo",
-  "name": "Какие игры выйдут на Nintendo Switch 2 в первый год?",
-  "description": "Пошаговая инструкция: Какие игры выйдут на Nintendo Switch 2 в первый год?. 2025 год — момент истины для Nintendo: новый Switch 2 становится главным запуско....",
+  "name": "РљР°РєРёРµ РёРіСЂС‹ РІС‹Р№РґСѓС‚ РЅР° Nintendo Switch 2 РІ РїРµСЂРІС‹Р№ РіРѕРґ?",
+  "description": "РџРѕС€Р°РіРѕРІР°СЏ РёРЅСЃС‚СЂСѓРєС†РёСЏ: РљР°РєРёРµ РёРіСЂС‹ РІС‹Р№РґСѓС‚ РЅР° Nintendo Switch 2 РІ РїРµСЂРІС‹Р№ РіРѕРґ?. 2025 РіРѕРґ вЂ” РјРѕРјРµРЅС‚ РёСЃС‚РёРЅС‹ РґР»СЏ Nintendo: РЅРѕРІС‹Р№ Switch 2 СЃС‚Р°РЅРѕРІРёС‚СЃСЏ РіР»Р°РІРЅС‹Рј Р·Р°РїСѓСЃРєРѕ....",
   "totalTime": "PT30M",
   "step": [
     {
       "@type": "HowToStep",
-      "name": "Введение: почему стартовый год Switch 2 — важнейший для Nintendo?",
-      "text": "Введение: почему стартовый год Switch 2 — важнейший для Nintendo?",
+      "name": "Р’РІРµРґРµРЅРёРµ: РїРѕС‡РµРјСѓ СЃС‚Р°СЂС‚РѕРІС‹Р№ РіРѕРґ Switch 2 вЂ” РІР°Р¶РЅРµР№С€РёР№ РґР»СЏ Nintendo?",
+      "text": "Р’РІРµРґРµРЅРёРµ: РїРѕС‡РµРјСѓ СЃС‚Р°СЂС‚РѕРІС‹Р№ РіРѕРґ Switch 2 вЂ” РІР°Р¶РЅРµР№С€РёР№ РґР»СЏ Nintendo?",
       "url": "#step-1"
     },
     {
       "@type": "HowToStep",
-      "name": "Таблица: стартовые игры Nintendo Switch 2 (5 июня 2025)",
-      "text": "Таблица: стартовые игры Nintendo Switch 2 (5 июня 2025)",
+      "name": "РўР°Р±Р»РёС†Р°: СЃС‚Р°СЂС‚РѕРІС‹Рµ РёРіСЂС‹ Nintendo Switch 2 (5 РёСЋРЅСЏ 2025)",
+      "text": "РўР°Р±Р»РёС†Р°: СЃС‚Р°СЂС‚РѕРІС‹Рµ РёРіСЂС‹ Nintendo Switch 2 (5 РёСЋРЅСЏ 2025)",
       "url": "#step-2"
     },
     {
       "@type": "HowToStep",
-      "name": "Крупные эксклюзивы и ожидаемые релизы Switch 2 в 2025 году",
-      "text": "Крупные эксклюзивы и ожидаемые релизы Switch 2 в 2025 году",
+      "name": "РљСЂСѓРїРЅС‹Рµ СЌРєСЃРєР»СЋР·РёРІС‹ Рё РѕР¶РёРґР°РµРјС‹Рµ СЂРµР»РёР·С‹ Switch 2 РІ 2025 РіРѕРґСѓ",
+      "text": "РљСЂСѓРїРЅС‹Рµ СЌРєСЃРєР»СЋР·РёРІС‹ Рё РѕР¶РёРґР°РµРјС‹Рµ СЂРµР»РёР·С‹ Switch 2 РІ 2025 РіРѕРґСѓ",
       "url": "#step-3"
     },
     {
       "@type": "HowToStep",
-      "name": "Таблица: топ-10 самых ожидаемых игр первого года Switch 2",
-      "text": "Таблица: топ-10 самых ожидаемых игр первого года Switch 2",
+      "name": "РўР°Р±Р»РёС†Р°: С‚РѕРї-10 СЃР°РјС‹С… РѕР¶РёРґР°РµРјС‹С… РёРіСЂ РїРµСЂРІРѕРіРѕ РіРѕРґР° Switch 2",
+      "text": "РўР°Р±Р»РёС†Р°: С‚РѕРї-10 СЃР°РјС‹С… РѕР¶РёРґР°РµРјС‹С… РёРіСЂ РїРµСЂРІРѕРіРѕ РіРѕРґР° Switch 2",
       "url": "#step-4"
     },
     {
       "@type": "HowToStep",
-      "name": "Какие ещё крупные мультиплатформенные релизы выйдут на Switch 2 в 2025?",
-      "text": "Какие ещё крупные мультиплатформенные релизы выйдут на Switch 2 в 2025?",
+      "name": "РљР°РєРёРµ РµС‰С‘ РєСЂСѓРїРЅС‹Рµ РјСѓР»СЊС‚РёРїР»Р°С‚С„РѕСЂРјРµРЅРЅС‹Рµ СЂРµР»РёР·С‹ РІС‹Р№РґСѓС‚ РЅР° Switch 2 РІ 2025?",
+      "text": "РљР°РєРёРµ РµС‰С‘ РєСЂСѓРїРЅС‹Рµ РјСѓР»СЊС‚РёРїР»Р°С‚С„РѕСЂРјРµРЅРЅС‹Рµ СЂРµР»РёР·С‹ РІС‹Р№РґСѓС‚ РЅР° Switch 2 РІ 2025?",
       "url": "#step-5"
     },
     {
       "@type": "HowToStep",
-      "name": "Лайфхаки и советы для владельцев Switch 2 в 2025 году",
-      "text": "Лайфхаки и советы для владельцев Switch 2 в 2025 году",
+      "name": "Р›Р°Р№С„С…Р°РєРё Рё СЃРѕРІРµС‚С‹ РґР»СЏ РІР»Р°РґРµР»СЊС†РµРІ Switch 2 РІ 2025 РіРѕРґСѓ",
+      "text": "Р›Р°Р№С„С…Р°РєРё Рё СЃРѕРІРµС‚С‹ РґР»СЏ РІР»Р°РґРµР»СЊС†РµРІ Switch 2 РІ 2025 РіРѕРґСѓ",
       "url": "#step-6"
     },
     {
       "@type": "HowToStep",
-      "name": "FAQ – часто задаваемые вопросы о релизах Switch 2",
-      "text": "FAQ – часто задаваемые вопросы о релизах Switch 2",
+      "name": "FAQ вЂ“ С‡Р°СЃС‚Рѕ Р·Р°РґР°РІР°РµРјС‹Рµ РІРѕРїСЂРѕСЃС‹ Рѕ СЂРµР»РёР·Р°С… Switch 2",
+      "text": "FAQ вЂ“ С‡Р°СЃС‚Рѕ Р·Р°РґР°РІР°РµРјС‹Рµ РІРѕРїСЂРѕСЃС‹ Рѕ СЂРµР»РёР·Р°С… Switch 2",
       "url": "#step-7"
     },
     {
       "@type": "HowToStep",
-      "name": "Пошаговая инструкция: как не пропустить важные релизы Switch 2",
-      "text": "Пошаговая инструкция: как не пропустить важные релизы Switch 2",
+      "name": "РџРѕС€Р°РіРѕРІР°СЏ РёРЅСЃС‚СЂСѓРєС†РёСЏ: РєР°Рє РЅРµ РїСЂРѕРїСѓСЃС‚РёС‚СЊ РІР°Р¶РЅС‹Рµ СЂРµР»РёР·С‹ Switch 2",
+      "text": "РџРѕС€Р°РіРѕРІР°СЏ РёРЅСЃС‚СЂСѓРєС†РёСЏ: РєР°Рє РЅРµ РїСЂРѕРїСѓСЃС‚РёС‚СЊ РІР°Р¶РЅС‹Рµ СЂРµР»РёР·С‹ Switch 2",
       "url": "#step-8"
     }
   ],
@@ -831,8 +872,4 @@
 <script src="../cookie-consent.js"></script>
 </body>
 </html>
-
-
-
-
 

@@ -4,8 +4,9 @@
 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Рейтинг беспроводных наушников 2025 | Экспертный гид</title>
+  <title>Р РµР№С‚РёРЅРі Р±РµСЃРїСЂРѕРІРѕРґРЅС‹С… РЅР°СѓС€РЅРёРєРѕРІ 2025 | Р­РєСЃРїРµСЂС‚РЅС‹Р№ РіРёРґ</title>
     <meta name="description" content="{{ description }}">
+    <meta name="description" content="РџРѕС€Р°РіРѕРІР°СЏ РёРЅСЃС‚СЂСѓРєС†РёСЏ: Р РµР№С‚РёРЅРі Р±РµСЃРїСЂРѕРІРѕРґРЅС‹С… РЅР°СѓС€РЅРёРєРѕРІ 2025. Р”Р»СЏ РјСѓР·С‹РєРё Рё С„РёР»СЊРјРѕРІ РІС‹Р±РёСЂР°Р№С‚Рµ РјРѕРґРµР»Рё СЃ РїРѕРґРґРµСЂР¶РєРѕР№ Hi-Res Audio Рё LDAC/aptX Adap.... РЎРѕРІРµС‚С‹ СЌРєСЃРїРµСЂ...">
 
   <link rel="stylesheet" href="../styles.css" />
   <link rel="stylesheet" href="../styles-header.css" />
@@ -21,17 +22,40 @@
     .pro-tips { background: rgba(3, 74, 79, 0.05); padding: 15px; border-radius: 6px; margin: 20px 0; }
     .pro-tips h4 { color: var(--primary); margin-top: 0; margin-bottom: 12px; font-size: 1.1rem; }
     .tip-item { display: flex; gap: 8px; margin-bottom: 8px; align-items: flex-start; }
-    table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+    .table-wrap { overflow-x: auto; margin: 20px 0; background: #fff; border-radius: 6px; }
+    table { width: 100%; border-collapse: collapse; min-width: 600px; }
     th, td { border: 1px solid var(--border); padding: 8px; text-align: left; }
     th { background: var(--background-light); }
-    .highlight { background: #f5f7fa; border-left: 4px solid #2d9cdb; padding: 10px 15px; margin: 20px 0; }
-    .faq-section ul { margin-left: 1em; }
-    .block-section { margin-bottom: 2em; }
     @media (max-width: 768px) {
       .guide-content h2 { font-size: 1.4rem; margin-top: 25px; }
       .guide-image-block { padding: 12px; margin: 15px 0; }
       table, th, td { font-size: 0.95rem; }
+      .table-wrap { min-width: 0; }
     }
+    @media (max-width: 600px) {
+      table, thead, tbody, th, td, tr { display: block; }
+      table { min-width: unset; }
+      th { display: none; }
+      td { position: relative; padding-left: 50%; border: none; border-bottom: 1px solid #eee; }
+      td:before {
+        position: absolute;
+        left: 10px;
+        top: 8px;
+        white-space: nowrap;
+        font-weight: bold;
+        color: #888;
+        content: attr(data-label);
+      }
+    }
+    /* РЇРЅРґРµРєСЃ РњР°СЂРєРµС‚ СЂРµРєР»Р°РјРЅС‹Р№ Р±Р°РЅРЅРµСЂ */
+    .ym-hero-link {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+      max-width: 100%;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
     /* Р“РѕСЂРёР·РѕРЅС‚Р°Р»СЊРЅС‹Р№ Р±Р°РЅРЅРµСЂ-РєР°СЂС‚РѕС‡РєР° */
     .ym-hero-banner {
       width: 100%;
@@ -144,11 +168,13 @@
       transition: background 0.15s ease, transform 0.15s ease,
                   box-shadow 0.15s ease;
     }
+
     .ym-hero-button::after {
       content: "в†’";
       margin-left: 6px;
       font-size: 14px;
     }
+
     .ym-hero-button:hover {
       background: #7c3aed;
       transform: translateY(-1px);
@@ -172,19 +198,24 @@
         max-width: 100%;
         margin: 20px 0;
       }
+
       .ym-hero-images {
         height: 100px;
       }
+
       .ym-hero-content {
         padding: 12px 12px;
       }
+
       .ym-hero-title {
         font-size: 13px;
       }
+
       .ym-hero-button {
         font-size: 13px;
         padding: 8px 14px;
       }
+
       .ym-hero-legal {
         font-size: 10px;
       }
@@ -292,22 +323,27 @@
         padding: 15px;
         min-height: 100px;
       }
+
       .telegram-logo {
         width: 50px;
         height: 50px;
         min-width: 50px;
         margin-right: 15px;
       }
+
       .telegram-logo svg {
         width: 26px;
         height: 26px;
       }
+
       .telegram-title {
         font-size: 14px;
       }
+
       .telegram-subtitle {
         font-size: 12px;
       }
+
       .telegram-button {
         font-size: 12px;
         padding: 6px 12px;
@@ -325,13 +361,15 @@
       <div class="header__inner">
         <a href="../index.html" class="logo">
           <span class="logo__icon"></span>
-          <span class="logo__text">GeoExpert</span>
+          <span class="logo__text">Repairo</span>
         </a>
         <nav class="nav">
           <ul class="nav__list">
-            <li><a href="../cameras.html" class="nav__link">РљР°РјРµСЂС‹</a></li>
-            <li><a href="../drones.html" class="nav__link">Р”СЂРѕРЅС‹</a></li>
-            <li><a href="../workflow.html" class="nav__link">Workflow</a></li>
+            <li><a href="../tv.html" class="nav__link">РўРµР»РµРІРёР·РѕСЂС‹</a></li>
+            <li><a href="../cameras.html" class="nav__link">Р¤РѕС‚РѕР°РїРїР°СЂР°С‚С‹</a></li>
+            <li><a href="../consoles.html" class="nav__link">РџСЂРёСЃС‚Р°РІРєРё</a></li>
+            <li><a href="../laptops.html" class="nav__link">РќРѕСѓС‚Р±СѓРєРё</a></li>
+            <li><a href="../smartphones.html" class="nav__link">РЎРјР°СЂС‚С„РѕРЅС‹</a></li>
           </ul>
         </nav>
       </div>
@@ -341,332 +379,345 @@
   <section class="guide-page">
     <div class="container">
       <div class="breadcrumbs">
-        <a href="../index.html">Главная</a>
+        <a href="../index.html">Р“Р»Р°РІРЅР°СЏ</a>
         <i class="fas fa-chevron-right"></i>
-        <a href="../smartphones.html">Смартфоны</a>
+        <a href="../smartphones.html">РЎРјР°СЂС‚С„РѕРЅС‹</a>
         <i class="fas fa-chevron-right"></i>
-        <span>Рейтинг беспроводных наушников 2025</span>
+        <span>Р РµР№С‚РёРЅРі Р±РµСЃРїСЂРѕРІРѕРґРЅС‹С… РЅР°СѓС€РЅРёРєРѕРІ 2025</span>
       </div>
 
-      <h1 class="section__title">Рейтинг беспроводных наушников 2025</h1>
+      <h1 class="section__title">Р РµР№С‚РёРЅРі Р±РµСЃРїСЂРѕРІРѕРґРЅС‹С… РЅР°СѓС€РЅРёРєРѕРІ 2025</h1>
 
       <div class="guide-meta">
-        <span><i class="fas fa-headphones"></i> ТОП-2025: лучшие TWS, накладные, игровые, бюджетные и премиум-наушники. Сравнения, советы, FAQ, иллюстрация.</span>
+        <span><i class="fas fa-headphones"></i> РўРћРџ-2025: Р»СѓС‡С€РёРµ TWS, РЅР°РєР»Р°РґРЅС‹Рµ, РёРіСЂРѕРІС‹Рµ, Р±СЋРґР¶РµС‚РЅС‹Рµ Рё РїСЂРµРјРёСѓРј-РЅР°СѓС€РЅРёРєРё. РЎСЂР°РІРЅРµРЅРёСЏ, СЃРѕРІРµС‚С‹, FAQ, РёР»Р»СЋСЃС‚СЂР°С†РёСЏ.</span>
       </div>
 
       <div class="guide-image-block">
-        <img src="https://avatars.mds.yandex.net/get-shedevrum/15342086/img_b4a48c0d409411f09ac4a2c0f545d8b1/orig" alt="Рейтинг беспроводных наушников 2025">
+        <img src="https://avatars.mds.yandex.net/get-shedevrum/15342086/img_b4a48c0d409411f09ac4a2c0f545d8b1/orig" alt="Р РµР№С‚РёРЅРі Р±РµСЃРїСЂРѕРІРѕРґРЅС‹С… РЅР°СѓС€РЅРёРєРѕРІ 2025">
         <div class="image-caption">
-          Лучшие беспроводные наушники 2025 года: топовые модели для музыки, спорта, игр и работы.
+          Р›СѓС‡С€РёРµ Р±РµСЃРїСЂРѕРІРѕРґРЅС‹Рµ РЅР°СѓС€РЅРёРєРё 2025 РіРѕРґР°: С‚РѕРїРѕРІС‹Рµ РјРѕРґРµР»Рё РґР»СЏ РјСѓР·С‹РєРё, СЃРїРѕСЂС‚Р°, РёРіСЂ Рё СЂР°Р±РѕС‚С‹.
         </div>
       </div>
 
       <div class="guide-content">
-        <!-- Яндекс Маркет рекламный блок -->
+        <!-- РЇРЅРґРµРєСЃ РњР°СЂРєРµС‚ СЂРµРєР»Р°РјРЅС‹Р№ Р±Р»РѕРє -->
         <a href="https://market.yandex.ru/catalog--bytovaia-tekhnika/54419/list?hid=198118&rs=eJwzUvjEKMvBILDwEKsEg8Kzbh6Nw4dZNS4D8c7lFhp9c1-wAQC3uAwP&clid=14635360&refid=rbck8fgamv681iu59go3iqxwddedl4x9&erid=5jtCeReNx12oajxS2bzShmZ&mclid=1003&distr_type=7&utm_source=partner_network&pp=900&utm_medium=link_list&utm_campaign=14635360"
            target="_blank"
            rel="noopener noreferrer sponsored"
+           class="ym-hero-link">
+          <div class="ym-hero-banner">
+            <div class="ym-hero-images">
+              <div class="ym-hero-image">
                 <img src="https://avatars.mds.yandex.net/get-mpic/14770882/2a00000197f4dbee777f8afddccaf44faa53/optimize"
-                     alt="Распродажа бытовой электроники 1">
+                     alt="Р Р°СЃРїСЂРѕРґР°Р¶Р° Р±С‹С‚РѕРІРѕР№ СЌР»РµРєС‚СЂРѕРЅРёРєРё 1">
               </div>
+              <div class="ym-hero-image">
                 <img src="https://avatars.mds.yandex.net/get-mpic/15580298/img_id8867318964670654684.jpeg/optimize"
-                     alt="Распродажа бытовой электроники 2">
+                     alt="Р Р°СЃРїСЂРѕРґР°Р¶Р° Р±С‹С‚РѕРІРѕР№ СЌР»РµРєС‚СЂРѕРЅРёРєРё 2">
               </div>
+              <div class="ym-hero-image">
                 <img src="https://avatars.mds.yandex.net/get-mpic/10096780/2a000001953b534fed2494e0b30fadd9b458/optimize"
-                     alt="Распродажа бытовой электроники 3">
+                     alt="Р Р°СЃРїСЂРѕРґР°Р¶Р° Р±С‹С‚РѕРІРѕР№ СЌР»РµРєС‚СЂРѕРЅРёРєРё 3">
               </div>
             </div>
-                  ? Выгодные предложения
+            <div class="ym-hero-content">
+              <h3 class="ym-hero-title">Р Р°СЃРїСЂРѕРґР°Р¶Р° Р±С‹С‚РѕРІРѕР№ СЌР»РµРєС‚СЂРѕРЅРёРєРё РЅР° РЇРЅРґРµРєСЃ РњР°СЂРєРµС‚Рµ</h3>
+              <div class="ym-hero-top">
+                <div class="ym-hero-rating">
+                  в­ђ Р’С‹РіРѕРґРЅС‹Рµ РїСЂРµРґР»РѕР¶РµРЅРёСЏ
+                  <span class="ym-hero-rating-count">РЎРєРёРґРєРё РґРѕ 50%</span>
                 </div>
               </div>
+              <button class="ym-hero-button">Р—Р° СЃРєРёРґРєР°РјРё</button>
             </div>
           </div>
-            Реклама. ООО "ЯНДЕКС", ИНН 7736207543. clid: 14635360, erid: 5jtCeReNx12oajxS2bzShmZ
+          <div class="ym-hero-legal">
+            Р РµРєР»Р°РјР°. РћРћРћ "РЇРќР”Р•РљРЎ", РРќРќ 7736207543. clid: 14635360, erid: 5jtCeReNx12oajxS2bzShmZ
           </div>
         </a>
 
-        <h2>ТОП-10 лучших беспроводных наушников 2025 года</h2>
+        <h2>РўРћРџ-10 Р»СѓС‡С€РёС… Р±РµСЃРїСЂРѕРІРѕРґРЅС‹С… РЅР°СѓС€РЅРёРєРѕРІ 2025 РіРѕРґР°</h2>
         <div class="table-wrap">
           <table>
             <thead>
               <tr>
-                <th>Модель</th>
-                <th>Тип</th>
-                <th>Шумоподавление</th>
-                <th>Автономность</th>
-                <th>Особенности</th>
+                <th>РњРѕРґРµР»СЊ</th>
+                <th>РўРёРї</th>
+                <th>РЁСѓРјРѕРїРѕРґР°РІР»РµРЅРёРµ</th>
+                <th>РђРІС‚РѕРЅРѕРјРЅРѕСЃС‚СЊ</th>
+                <th>РћСЃРѕР±РµРЅРЅРѕСЃС‚Рё</th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <td>Sony WF-1000XM5</td>
-                <td>TWS, внутриканальные</td>
-                <td>Да</td>
-                <td>8 ч</td>
-                <td>Лучшая ANC, Hi-Res Audio, LDAC, адаптивный звук</td>
+                <td>TWS, РІРЅСѓС‚СЂРёРєР°РЅР°Р»СЊРЅС‹Рµ</td>
+                <td>Р”Р°</td>
+                <td>8 С‡</td>
+                <td>Р›СѓС‡С€Р°СЏ ANC, Hi-Res Audio, LDAC, Р°РґР°РїС‚РёРІРЅС‹Р№ Р·РІСѓРє</td>
               </tr>
               <tr>
                 <td>Apple AirPods Pro 2 / AirPods 4</td>
-                <td>TWS, вкладыши</td>
-                <td>Да</td>
-                <td>6 ч</td>
-                <td>Пространственное аудио, интеграция с iOS, MagSafe</td>
+                <td>TWS, РІРєР»Р°РґС‹С€Рё</td>
+                <td>Р”Р°</td>
+                <td>6 С‡</td>
+                <td>РџСЂРѕСЃС‚СЂР°РЅСЃС‚РІРµРЅРЅРѕРµ Р°СѓРґРёРѕ, РёРЅС‚РµРіСЂР°С†РёСЏ СЃ iOS, MagSafe</td>
               </tr>
               <tr>
                 <td>Samsung Galaxy Buds 2 Pro / Buds3 Pro</td>
-                <td>TWS, внутриканальные</td>
-                <td>Да</td>
-                <td>5 ч</td>
-                <td>360-градусный звук, идеальны для Samsung</td>
+                <td>TWS, РІРЅСѓС‚СЂРёРєР°РЅР°Р»СЊРЅС‹Рµ</td>
+                <td>Р”Р°</td>
+                <td>5 С‡</td>
+                <td>360-РіСЂР°РґСѓСЃРЅС‹Р№ Р·РІСѓРє, РёРґРµР°Р»СЊРЅС‹ РґР»СЏ Samsung</td>
               </tr>
               <tr>
                 <td>Huawei FreeBuds Pro 4</td>
-                <td>TWS, внутриканальные</td>
-                <td>Да</td>
-                <td>7 ч</td>
-                <td>Интеллектуальное ANC, детализированный звук</td>
+                <td>TWS, РІРЅСѓС‚СЂРёРєР°РЅР°Р»СЊРЅС‹Рµ</td>
+                <td>Р”Р°</td>
+                <td>7 С‡</td>
+                <td>РРЅС‚РµР»Р»РµРєС‚СѓР°Р»СЊРЅРѕРµ ANC, РґРµС‚Р°Р»РёР·РёСЂРѕРІР°РЅРЅС‹Р№ Р·РІСѓРє</td>
               </tr>
               <tr>
                 <td>Sennheiser Momentum True Wireless 4</td>
-                <td>TWS, внутриканальные</td>
-                <td>Да</td>
-                <td>7 ч</td>
-                <td>Hi-Fi звук, aptX Adaptive, до 30 ч с кейсом</td>
+                <td>TWS, РІРЅСѓС‚СЂРёРєР°РЅР°Р»СЊРЅС‹Рµ</td>
+                <td>Р”Р°</td>
+                <td>7 С‡</td>
+                <td>Hi-Fi Р·РІСѓРє, aptX Adaptive, РґРѕ 30 С‡ СЃ РєРµР№СЃРѕРј</td>
               </tr>
               <tr>
                 <td>Nothing Ear (2024) / Ear 3</td>
-                <td>TWS, внутриканальные</td>
-                <td>Да</td>
-                <td>6 ч</td>
-                <td>Прозрачный корпус, керамические драйверы</td>
+                <td>TWS, РІРЅСѓС‚СЂРёРєР°РЅР°Р»СЊРЅС‹Рµ</td>
+                <td>Р”Р°</td>
+                <td>6 С‡</td>
+                <td>РџСЂРѕР·СЂР°С‡РЅС‹Р№ РєРѕСЂРїСѓСЃ, РєРµСЂР°РјРёС‡РµСЃРєРёРµ РґСЂР°Р№РІРµСЂС‹</td>
               </tr>
               <tr>
                 <td>OnePlus Buds 3</td>
-                <td>TWS, внутриканальные</td>
-                <td>Да</td>
-                <td>9 ч</td>
-                <td>Высокая автономность, динамичный звук</td>
+                <td>TWS, РІРЅСѓС‚СЂРёРєР°РЅР°Р»СЊРЅС‹Рµ</td>
+                <td>Р”Р°</td>
+                <td>9 С‡</td>
+                <td>Р’С‹СЃРѕРєР°СЏ Р°РІС‚РѕРЅРѕРјРЅРѕСЃС‚СЊ, РґРёРЅР°РјРёС‡РЅС‹Р№ Р·РІСѓРє</td>
               </tr>
               <tr>
                 <td>Marshall Motif II A.N.C.</td>
-                <td>TWS, внутриканальные</td>
-                <td>Да</td>
-                <td>6 ч</td>
-                <td>Фирменный звук, премиальный дизайн</td>
+                <td>TWS, РІРЅСѓС‚СЂРёРєР°РЅР°Р»СЊРЅС‹Рµ</td>
+                <td>Р”Р°</td>
+                <td>6 С‡</td>
+                <td>Р¤РёСЂРјРµРЅРЅС‹Р№ Р·РІСѓРє, РїСЂРµРјРёР°Р»СЊРЅС‹Р№ РґРёР·Р°Р№РЅ</td>
               </tr>
               <tr>
                 <td>Realme Buds Air 5 Pro</td>
-                <td>TWS, вкладыши</td>
-                <td>Да</td>
-                <td>8 ч</td>
-                <td>Доступная цена, 6 микрофонов, быстрая зарядка</td>
+                <td>TWS, РІРєР»Р°РґС‹С€Рё</td>
+                <td>Р”Р°</td>
+                <td>8 С‡</td>
+                <td>Р”РѕСЃС‚СѓРїРЅР°СЏ С†РµРЅР°, 6 РјРёРєСЂРѕС„РѕРЅРѕРІ, Р±С‹СЃС‚СЂР°СЏ Р·Р°СЂСЏРґРєР°</td>
               </tr>
               <tr>
                 <td>Soundcore Liberty 3 Pro</td>
-                <td>TWS, внутриканальные</td>
-                <td>Да</td>
-                <td>8 ч</td>
-                <td>Премиальный звук, LDAC, мультипоинт</td>
+                <td>TWS, РІРЅСѓС‚СЂРёРєР°РЅР°Р»СЊРЅС‹Рµ</td>
+                <td>Р”Р°</td>
+                <td>8 С‡</td>
+                <td>РџСЂРµРјРёР°Р»СЊРЅС‹Р№ Р·РІСѓРє, LDAC, РјСѓР»СЊС‚РёРїРѕРёРЅС‚</td>
               </tr>
             </tbody>
           </table>
         </div>
 
-        <h2>Лучшие накладные и полноразмерные беспроводные наушники 2025</h2>
+        <h2>Р›СѓС‡С€РёРµ РЅР°РєР»Р°РґРЅС‹Рµ Рё РїРѕР»РЅРѕСЂР°Р·РјРµСЂРЅС‹Рµ Р±РµСЃРїСЂРѕРІРѕРґРЅС‹Рµ РЅР°СѓС€РЅРёРєРё 2025</h2>
 <ul>
-          <li><b>Sony WH-1000XM4/XM5</b> — эталонный шумодав, до 30 ч работы, Hi-Res Audio, мультипоинт, сенсорное управление.</li>
-          <li><b>Marshall Major V</b> — культовый дизайн, до 100 ч автономности, мощный бас, мультипоинт, быстрая зарядка.</li>
-          <li><b>JBL Tune 520BT</b> — бюджетная классика, до 57 ч работы, чистый звук, лёгкие и удобные.</li>
-          <li><b>Sennheiser Momentum 4 Wireless</b> — Hi-Fi качество, до 60 ч работы, премиальные материалы.</li>
-          <li><b>Defunc Mondo Freestyle</b> — стиль, мультипоинт, комфортные амбушюры.</li>
+          <li><b>Sony WH-1000XM4/XM5</b> вЂ” СЌС‚Р°Р»РѕРЅРЅС‹Р№ С€СѓРјРѕРґР°РІ, РґРѕ 30 С‡ СЂР°Р±РѕС‚С‹, Hi-Res Audio, РјСѓР»СЊС‚РёРїРѕРёРЅС‚, СЃРµРЅСЃРѕСЂРЅРѕРµ СѓРїСЂР°РІР»РµРЅРёРµ.</li>
+          <li><b>Marshall Major V</b> вЂ” РєСѓР»СЊС‚РѕРІС‹Р№ РґРёР·Р°Р№РЅ, РґРѕ 100 С‡ Р°РІС‚РѕРЅРѕРјРЅРѕСЃС‚Рё, РјРѕС‰РЅС‹Р№ Р±Р°СЃ, РјСѓР»СЊС‚РёРїРѕРёРЅС‚, Р±С‹СЃС‚СЂР°СЏ Р·Р°СЂСЏРґРєР°.</li>
+          <li><b>JBL Tune 520BT</b> вЂ” Р±СЋРґР¶РµС‚РЅР°СЏ РєР»Р°СЃСЃРёРєР°, РґРѕ 57 С‡ СЂР°Р±РѕС‚С‹, С‡РёСЃС‚С‹Р№ Р·РІСѓРє, Р»С‘РіРєРёРµ Рё СѓРґРѕР±РЅС‹Рµ.</li>
+          <li><b>Sennheiser Momentum 4 Wireless</b> вЂ” Hi-Fi РєР°С‡РµСЃС‚РІРѕ, РґРѕ 60 С‡ СЂР°Р±РѕС‚С‹, РїСЂРµРјРёР°Р»СЊРЅС‹Рµ РјР°С‚РµСЂРёР°Р»С‹.</li>
+          <li><b>Defunc Mondo Freestyle</b> вЂ” СЃС‚РёР»СЊ, РјСѓР»СЊС‚РёРїРѕРёРЅС‚, РєРѕРјС„РѕСЂС‚РЅС‹Рµ Р°РјР±СѓС€СЋСЂС‹.</li>
         </ul>
 
-        <h2>Лучшие бюджетные беспроводные наушники 2025</h2>
+        <h2>Р›СѓС‡С€РёРµ Р±СЋРґР¶РµС‚РЅС‹Рµ Р±РµСЃРїСЂРѕРІРѕРґРЅС‹Рµ РЅР°СѓС€РЅРёРєРё 2025</h2>
         <ul>
-          <li><b>Xiaomi Redmi Buds 6 / 5 Pro</b> — отличный баланс цены и качества, до 40 ч работы, быстрая зарядка, стабильное соединение.</li>
-          <li><b>Huawei FreeBuds SE 2</b> — до 40 ч с кейсом, лёгкие, хороший звук за свои деньги.</li>
-          <li><b>Edifier W800BT Plus</b> — накладные, до 55 ч работы, комфортная посадка, чистый звук.</li>
-          <li><b>Realme Buds Air 6 Pro</b> — ANC, 40 ч работы, 6 микрофонов, быстрый Bluetooth 5.3.</li>
-          <li><b>CMF Buds Pro 2 Global</b> — стильный дизайн, хорошая автономность, мультипоинт.</li>
+          <li><b>Xiaomi Redmi Buds 6 / 5 Pro</b> вЂ” РѕС‚Р»РёС‡РЅС‹Р№ Р±Р°Р»Р°РЅСЃ С†РµРЅС‹ Рё РєР°С‡РµСЃС‚РІР°, РґРѕ 40 С‡ СЂР°Р±РѕС‚С‹, Р±С‹СЃС‚СЂР°СЏ Р·Р°СЂСЏРґРєР°, СЃС‚Р°Р±РёР»СЊРЅРѕРµ СЃРѕРµРґРёРЅРµРЅРёРµ.</li>
+          <li><b>Huawei FreeBuds SE 2</b> вЂ” РґРѕ 40 С‡ СЃ РєРµР№СЃРѕРј, Р»С‘РіРєРёРµ, С…РѕСЂРѕС€РёР№ Р·РІСѓРє Р·Р° СЃРІРѕРё РґРµРЅСЊРіРё.</li>
+          <li><b>Edifier W800BT Plus</b> вЂ” РЅР°РєР»Р°РґРЅС‹Рµ, РґРѕ 55 С‡ СЂР°Р±РѕС‚С‹, РєРѕРјС„РѕСЂС‚РЅР°СЏ РїРѕСЃР°РґРєР°, С‡РёСЃС‚С‹Р№ Р·РІСѓРє.</li>
+          <li><b>Realme Buds Air 6 Pro</b> вЂ” ANC, 40 С‡ СЂР°Р±РѕС‚С‹, 6 РјРёРєСЂРѕС„РѕРЅРѕРІ, Р±С‹СЃС‚СЂС‹Р№ Bluetooth 5.3.</li>
+          <li><b>CMF Buds Pro 2 Global</b> вЂ” СЃС‚РёР»СЊРЅС‹Р№ РґРёР·Р°Р№РЅ, С…РѕСЂРѕС€Р°СЏ Р°РІС‚РѕРЅРѕРјРЅРѕСЃС‚СЊ, РјСѓР»СЊС‚РёРїРѕРёРЅС‚.</li>
         </ul>
 
-        <h2>Лучшие игровые беспроводные наушники 2025</h2>
+        <h2>Р›СѓС‡С€РёРµ РёРіСЂРѕРІС‹Рµ Р±РµСЃРїСЂРѕРІРѕРґРЅС‹Рµ РЅР°СѓС€РЅРёРєРё 2025</h2>
         <ul>
-          <li><b>Sony PULSE Explore Wireless</b> — игровой звук, высокая детализация, до 10 ч работы, низкая задержка.</li>
-          <li><b>Razer Hammerhead Pro Hyperspeed</b> — мультиплатформенность, ANC, до 30 ч с кейсом, RGB-подсветка.</li>
-          <li><b>A4Tech Bloody MR720 NARAKA</b> — накладные, быстрый отклик, оптимизированы для киберспорта.</li>
+          <li><b>Sony PULSE Explore Wireless</b> вЂ” РёРіСЂРѕРІРѕР№ Р·РІСѓРє, РІС‹СЃРѕРєР°СЏ РґРµС‚Р°Р»РёР·Р°С†РёСЏ, РґРѕ 10 С‡ СЂР°Р±РѕС‚С‹, РЅРёР·РєР°СЏ Р·Р°РґРµСЂР¶РєР°.</li>
+          <li><b>Razer Hammerhead Pro Hyperspeed</b> вЂ” РјСѓР»СЊС‚РёРїР»Р°С‚С„РѕСЂРјРµРЅРЅРѕСЃС‚СЊ, ANC, РґРѕ 30 С‡ СЃ РєРµР№СЃРѕРј, RGB-РїРѕРґСЃРІРµС‚РєР°.</li>
+          <li><b>A4Tech Bloody MR720 NARAKA</b> вЂ” РЅР°РєР»Р°РґРЅС‹Рµ, Р±С‹СЃС‚СЂС‹Р№ РѕС‚РєР»РёРє, РѕРїС‚РёРјРёР·РёСЂРѕРІР°РЅС‹ РґР»СЏ РєРёР±РµСЂСЃРїРѕСЂС‚Р°.</li>
         </ul>
 
-        <h2>Премиальные Hi-Fi беспроводные наушники</h2>
+        <h2>РџСЂРµРјРёР°Р»СЊРЅС‹Рµ Hi-Fi Р±РµСЃРїСЂРѕРІРѕРґРЅС‹Рµ РЅР°СѓС€РЅРёРєРё</h2>
         <ul>
-          <li><b>Bowers & Wilkins Pi7 S2</b> — Hi-Fi звук, aptX Adaptive, уникальный дизайн, до 6 ч работы.</li>
-          <li><b>Sennheiser MOMENTUM True Wireless 4</b> — детализированный звук, aptX Adaptive, до 30 ч с кейсом.</li>
-          <li><b>Beats Studio Buds</b> — мощный бас, поддержка Apple и Android, до 8 ч работы.</li>
-          <li><b>Apple AirPods Max</b> — полноразмерные, премиум-материалы, пространственное аудио, до 20 ч работы.</li>
+          <li><b>Bowers & Wilkins Pi7 S2</b> вЂ” Hi-Fi Р·РІСѓРє, aptX Adaptive, СѓРЅРёРєР°Р»СЊРЅС‹Р№ РґРёР·Р°Р№РЅ, РґРѕ 6 С‡ СЂР°Р±РѕС‚С‹.</li>
+          <li><b>Sennheiser MOMENTUM True Wireless 4</b> вЂ” РґРµС‚Р°Р»РёР·РёСЂРѕРІР°РЅРЅС‹Р№ Р·РІСѓРє, aptX Adaptive, РґРѕ 30 С‡ СЃ РєРµР№СЃРѕРј.</li>
+          <li><b>Beats Studio Buds</b> вЂ” РјРѕС‰РЅС‹Р№ Р±Р°СЃ, РїРѕРґРґРµСЂР¶РєР° Apple Рё Android, РґРѕ 8 С‡ СЂР°Р±РѕС‚С‹.</li>
+          <li><b>Apple AirPods Max</b> вЂ” РїРѕР»РЅРѕСЂР°Р·РјРµСЂРЅС‹Рµ, РїСЂРµРјРёСѓРј-РјР°С‚РµСЂРёР°Р»С‹, РїСЂРѕСЃС‚СЂР°РЅСЃС‚РІРµРЅРЅРѕРµ Р°СѓРґРёРѕ, РґРѕ 20 С‡ СЂР°Р±РѕС‚С‹.</li>
         </ul>
 
-        <h2>Сравнительная таблица популярных моделей</h2>
+        <h2>РЎСЂР°РІРЅРёС‚РµР»СЊРЅР°СЏ С‚Р°Р±Р»РёС†Р° РїРѕРїСѓР»СЏСЂРЅС‹С… РјРѕРґРµР»РµР№</h2>
         <div class="table-wrap">
           <table>
             <thead>
               <tr>
-                <th>Модель</th>
-                <th>Тип</th>
-                <th>Шумоподавление</th>
-                <th>Автономность (без кейса)</th>
-                <th>Особенности</th>
-                <th>Цена, ?</th>
+                <th>РњРѕРґРµР»СЊ</th>
+                <th>РўРёРї</th>
+                <th>РЁСѓРјРѕРїРѕРґР°РІР»РµРЅРёРµ</th>
+                <th>РђРІС‚РѕРЅРѕРјРЅРѕСЃС‚СЊ (Р±РµР· РєРµР№СЃР°)</th>
+                <th>РћСЃРѕР±РµРЅРЅРѕСЃС‚Рё</th>
+                <th>Р¦РµРЅР°, в‚Ѕ</th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <td>Sony WF-1000XM5</td>
                 <td>TWS</td>
-                <td>Да</td>
-                <td>8 ч</td>
-                <td>Hi-Res, LDAC, адаптивный ANC</td>
+                <td>Р”Р°</td>
+                <td>8 С‡</td>
+                <td>Hi-Res, LDAC, Р°РґР°РїС‚РёРІРЅС‹Р№ ANC</td>
                 <td>~28 000</td>
               </tr>
               <tr>
                 <td>Apple AirPods Pro 2</td>
                 <td>TWS</td>
-                <td>Да</td>
-                <td>6 ч</td>
-                <td>Пространственное аудио, MagSafe</td>
+                <td>Р”Р°</td>
+                <td>6 С‡</td>
+                <td>РџСЂРѕСЃС‚СЂР°РЅСЃС‚РІРµРЅРЅРѕРµ Р°СѓРґРёРѕ, MagSafe</td>
                 <td>~26 000</td>
               </tr>
               <tr>
                 <td>Samsung Galaxy Buds 2 Pro</td>
                 <td>TWS</td>
-                <td>Да</td>
-                <td>5 ч</td>
-                <td>360 Audio, идеальны для Samsung</td>
+                <td>Р”Р°</td>
+                <td>5 С‡</td>
+                <td>360 Audio, РёРґРµР°Р»СЊРЅС‹ РґР»СЏ Samsung</td>
                 <td>~21 000</td>
               </tr>
               <tr>
                 <td>HUAWEI FreeBuds Pro 4</td>
                 <td>TWS</td>
-                <td>Да</td>
-                <td>7 ч</td>
-                <td>Интеллектуальное ANC</td>
+                <td>Р”Р°</td>
+                <td>7 С‡</td>
+                <td>РРЅС‚РµР»Р»РµРєС‚СѓР°Р»СЊРЅРѕРµ ANC</td>
                 <td>~19 000</td>
               </tr>
               <tr>
                 <td>Xiaomi Buds 5 Pro</td>
                 <td>TWS</td>
-                <td>Да</td>
-                <td>10 ч</td>
-                <td>LDAC, Hi-Res, 40 ч с кейсом</td>
+                <td>Р”Р°</td>
+                <td>10 С‡</td>
+                <td>LDAC, Hi-Res, 40 С‡ СЃ РєРµР№СЃРѕРј</td>
                 <td>~25 000</td>
               </tr>
               <tr>
                 <td>Sennheiser Momentum True Wireless 4</td>
                 <td>TWS</td>
-                <td>Да</td>
-                <td>7 ч</td>
-                <td>aptX Adaptive, до 30 ч с кейсом</td>
+                <td>Р”Р°</td>
+                <td>7 С‡</td>
+                <td>aptX Adaptive, РґРѕ 30 С‡ СЃ РєРµР№СЃРѕРј</td>
                 <td>~26 000</td>
               </tr>
               <tr>
                 <td>Marshall Major V</td>
-                <td>Накладные</td>
-                <td>Нет</td>
-                <td>100 ч</td>
-                <td>Фирменный звук, мультипоинт</td>
+                <td>РќР°РєР»Р°РґРЅС‹Рµ</td>
+                <td>РќРµС‚</td>
+                <td>100 С‡</td>
+                <td>Р¤РёСЂРјРµРЅРЅС‹Р№ Р·РІСѓРє, РјСѓР»СЊС‚РёРїРѕРёРЅС‚</td>
                 <td>~19 000</td>
               </tr>
               <tr>
                 <td>JBL Tune 520BT</td>
-                <td>Накладные</td>
-                <td>Нет</td>
-                <td>57 ч</td>
-                <td>Бюджет, чистый звук</td>
+                <td>РќР°РєР»Р°РґРЅС‹Рµ</td>
+                <td>РќРµС‚</td>
+                <td>57 С‡</td>
+                <td>Р‘СЋРґР¶РµС‚, С‡РёСЃС‚С‹Р№ Р·РІСѓРє</td>
                 <td>~7 000</td>
               </tr>
               <tr>
                 <td>Realme Buds Air 5 Pro</td>
                 <td>TWS</td>
-                <td>Да</td>
-                <td>8 ч</td>
-                <td>ANC, 6 микрофонов, 40 ч с кейсом</td>
+                <td>Р”Р°</td>
+                <td>8 С‡</td>
+                <td>ANC, 6 РјРёРєСЂРѕС„РѕРЅРѕРІ, 40 С‡ СЃ РєРµР№СЃРѕРј</td>
                 <td>~9 000</td>
               </tr>
               <tr>
                 <td>Beats Studio Buds</td>
                 <td>TWS</td>
-                <td>Да</td>
-                <td>8 ч</td>
-                <td>Мощный бас, Android/iOS</td>
+                <td>Р”Р°</td>
+                <td>8 С‡</td>
+                <td>РњРѕС‰РЅС‹Р№ Р±Р°СЃ, Android/iOS</td>
                 <td>~15 000</td>
               </tr>
             </tbody>
           </table>
         </div>
 
-        <h2>Лайфхаки и советы по выбору беспроводных наушников</h2>
+        <h2>Р›Р°Р№С„С…Р°РєРё Рё СЃРѕРІРµС‚С‹ РїРѕ РІС‹Р±РѕСЂСѓ Р±РµСЃРїСЂРѕРІРѕРґРЅС‹С… РЅР°СѓС€РЅРёРєРѕРІ</h2>
         <div class="pro-tips">
-          <h4><i class="fas fa-lightbulb"></i> Практические советы</h4>
+          <h4><i class="fas fa-lightbulb"></i> РџСЂР°РєС‚РёС‡РµСЃРєРёРµ СЃРѕРІРµС‚С‹</h4>
           <div class="tip-item">
             <i class="fas fa-volume-up"></i>
-            <p><b>Для музыки и фильмов выбирайте модели с поддержкой Hi-Res Audio и LDAC/aptX Adaptive.</b> Это обеспечит максимальное качество звука.</p>
+            <p><b>Р”Р»СЏ РјСѓР·С‹РєРё Рё С„РёР»СЊРјРѕРІ РІС‹Р±РёСЂР°Р№С‚Рµ РјРѕРґРµР»Рё СЃ РїРѕРґРґРµСЂР¶РєРѕР№ Hi-Res Audio Рё LDAC/aptX Adaptive.</b> Р­С‚Рѕ РѕР±РµСЃРїРµС‡РёС‚ РјР°РєСЃРёРјР°Р»СЊРЅРѕРµ РєР°С‡РµСЃС‚РІРѕ Р·РІСѓРєР°.</p>
           </div>
           <div class="tip-item">
             <i class="fas fa-bolt"></i>
-            <p><b>Для спорта и прогулок обратите внимание на влагозащиту (IPX4 и выше) и автономность не менее 7–8 ч.</b></p>
+            <p><b>Р”Р»СЏ СЃРїРѕСЂС‚Р° Рё РїСЂРѕРіСѓР»РѕРє РѕР±СЂР°С‚РёС‚Рµ РІРЅРёРјР°РЅРёРµ РЅР° РІР»Р°РіРѕР·Р°С‰РёС‚Сѓ (IPX4 Рё РІС‹С€Рµ) Рё Р°РІС‚РѕРЅРѕРјРЅРѕСЃС‚СЊ РЅРµ РјРµРЅРµРµ 7вЂ“8 С‡.</b></p>
           </div>
           <div class="tip-item">
             <i class="fas fa-gamepad"></i>
-            <p><b>Геймерам подойдут модели с низкой задержкой и игровым режимом (Sony PULSE Explore, Razer Hammerhead Pro Hyperspeed).</b></p>
+            <p><b>Р“РµР№РјРµСЂР°Рј РїРѕРґРѕР№РґСѓС‚ РјРѕРґРµР»Рё СЃ РЅРёР·РєРѕР№ Р·Р°РґРµСЂР¶РєРѕР№ Рё РёРіСЂРѕРІС‹Рј СЂРµР¶РёРјРѕРј (Sony PULSE Explore, Razer Hammerhead Pro Hyperspeed).</b></p>
           </div>
           <div class="tip-item">
             <i class="fas fa-battery-half"></i>
-            <p><b>Если важна автономность — выбирайте накладные модели (Marshall Major V, JBL Tune 520BT), они работают до 100 ч без подзарядки.</b></p>
+            <p><b>Р•СЃР»Рё РІР°Р¶РЅР° Р°РІС‚РѕРЅРѕРјРЅРѕСЃС‚СЊ вЂ” РІС‹Р±РёСЂР°Р№С‚Рµ РЅР°РєР»Р°РґРЅС‹Рµ РјРѕРґРµР»Рё (Marshall Major V, JBL Tune 520BT), РѕРЅРё СЂР°Р±РѕС‚Р°СЋС‚ РґРѕ 100 С‡ Р±РµР· РїРѕРґР·Р°СЂСЏРґРєРё.</b></p>
           </div>
           <div class="tip-item">
             <i class="fas fa-volume-mute"></i>
-            <p><b>Для шумных мест и путешествий — только модели с активным шумоподавлением (ANC).</b></p>
+            <p><b>Р”Р»СЏ С€СѓРјРЅС‹С… РјРµСЃС‚ Рё РїСѓС‚РµС€РµСЃС‚РІРёР№ вЂ” С‚РѕР»СЊРєРѕ РјРѕРґРµР»Рё СЃ Р°РєС‚РёРІРЅС‹Рј С€СѓРјРѕРїРѕРґР°РІР»РµРЅРёРµРј (ANC).</b></p>
           </div>
         </div>
 
-        <h2>FAQ — Часто задаваемые вопросы</h2>
+        <h2>FAQ вЂ” Р§Р°СЃС‚Рѕ Р·Р°РґР°РІР°РµРјС‹Рµ РІРѕРїСЂРѕСЃС‹</h2>
         <ul>
           <li>
-            <strong>Какие наушники лучше для iPhone?</strong><br>
-            Apple AirPods Pro 2/4, Beats Studio Buds, Bowers & Wilkins Pi7 S2 — полная интеграция с iOS и пространственное аудио.
+            <strong>РљР°РєРёРµ РЅР°СѓС€РЅРёРєРё Р»СѓС‡С€Рµ РґР»СЏ iPhone?</strong><br>
+            Apple AirPods Pro 2/4, Beats Studio Buds, Bowers & Wilkins Pi7 S2 вЂ” РїРѕР»РЅР°СЏ РёРЅС‚РµРіСЂР°С†РёСЏ СЃ iOS Рё РїСЂРѕСЃС‚СЂР°РЅСЃС‚РІРµРЅРЅРѕРµ Р°СѓРґРёРѕ.
           </li>
           <li>
-            <strong>Какие наушники выбрать для Android?</strong><br>
-            Sony WF-1000XM5, Samsung Galaxy Buds 2 Pro, Nothing Ear 3, OnePlus Buds 3, Xiaomi Buds 5 Pro — поддержка LDAC/aptX, быстрый Bluetooth 5.3.
+            <strong>РљР°РєРёРµ РЅР°СѓС€РЅРёРєРё РІС‹Р±СЂР°С‚СЊ РґР»СЏ Android?</strong><br>
+            Sony WF-1000XM5, Samsung Galaxy Buds 2 Pro, Nothing Ear 3, OnePlus Buds 3, Xiaomi Buds 5 Pro вЂ” РїРѕРґРґРµСЂР¶РєР° LDAC/aptX, Р±С‹СЃС‚СЂС‹Р№ Bluetooth 5.3.
           </li>
           <li>
-            <strong>Что выбрать для звонков и работы?</strong><br>
-            Huawei FreeBuds Pro 4, Sennheiser Momentum True Wireless 4, Soundcore Liberty 3 Pro — отличная система микрофонов и шумоподавления.
+            <strong>Р§С‚Рѕ РІС‹Р±СЂР°С‚СЊ РґР»СЏ Р·РІРѕРЅРєРѕРІ Рё СЂР°Р±РѕС‚С‹?</strong><br>
+            Huawei FreeBuds Pro 4, Sennheiser Momentum True Wireless 4, Soundcore Liberty 3 Pro вЂ” РѕС‚Р»РёС‡РЅР°СЏ СЃРёСЃС‚РµРјР° РјРёРєСЂРѕС„РѕРЅРѕРІ Рё С€СѓРјРѕРїРѕРґР°РІР»РµРЅРёСЏ.
           </li>
           <li>
-            <strong>Какая модель самая автономная?</strong><br>
-            Marshall Major V — до 100 ч работы, Xiaomi Buds 5 Pro и Huawei FreeBuds Pro 4 — до 40 ч с кейсом.
+            <strong>РљР°РєР°СЏ РјРѕРґРµР»СЊ СЃР°РјР°СЏ Р°РІС‚РѕРЅРѕРјРЅР°СЏ?</strong><br>
+            Marshall Major V вЂ” РґРѕ 100 С‡ СЂР°Р±РѕС‚С‹, Xiaomi Buds 5 Pro Рё Huawei FreeBuds Pro 4 вЂ” РґРѕ 40 С‡ СЃ РєРµР№СЃРѕРј.
           </li>
           <li>
-            <strong>Есть ли хорошие бюджетные модели?</strong><br>
-            Xiaomi Redmi Buds 6/5 Pro, Realme Buds Air 5 Pro, Edifier W800BT Plus, Huawei FreeBuds SE 2 — оптимальное соотношение цены и качества.
+            <strong>Р•СЃС‚СЊ Р»Рё С…РѕСЂРѕС€РёРµ Р±СЋРґР¶РµС‚РЅС‹Рµ РјРѕРґРµР»Рё?</strong><br>
+            Xiaomi Redmi Buds 6/5 Pro, Realme Buds Air 5 Pro, Edifier W800BT Plus, Huawei FreeBuds SE 2 вЂ” РѕРїС‚РёРјР°Р»СЊРЅРѕРµ СЃРѕРѕС‚РЅРѕС€РµРЅРёРµ С†РµРЅС‹ Рё РєР°С‡РµСЃС‚РІР°.
           </li>
         </ul>
 
-        <h2>Профилактика: как продлить жизнь беспроводных наушников</h2>
+        <h2>РџСЂРѕС„РёР»Р°РєС‚РёРєР°: РєР°Рє РїСЂРѕРґР»РёС‚СЊ Р¶РёР·РЅСЊ Р±РµСЃРїСЂРѕРІРѕРґРЅС‹С… РЅР°СѓС€РЅРёРєРѕРІ</h2>
         <ul>
-          <li>Храните наушники в кейсе, не оставляйте под дождём или на солнце.</li>
-          <li>Регулярно очищайте амбушюры и сетки от пыли и серы.</li>
-          <li>Не используйте быструю зарядку слишком часто — это продлит срок службы аккумулятора.</li>
-          <li>Обновляйте прошивку через фирменное приложение.</li>
+          <li>РҐСЂР°РЅРёС‚Рµ РЅР°СѓС€РЅРёРєРё РІ РєРµР№СЃРµ, РЅРµ РѕСЃС‚Р°РІР»СЏР№С‚Рµ РїРѕРґ РґРѕР¶РґС‘Рј РёР»Рё РЅР° СЃРѕР»РЅС†Рµ.</li>
+          <li>Р РµРіСѓР»СЏСЂРЅРѕ РѕС‡РёС‰Р°Р№С‚Рµ Р°РјР±СѓС€СЋСЂС‹ Рё СЃРµС‚РєРё РѕС‚ РїС‹Р»Рё Рё СЃРµСЂС‹.</li>
+          <li>РќРµ РёСЃРїРѕР»СЊР·СѓР№С‚Рµ Р±С‹СЃС‚СЂСѓСЋ Р·Р°СЂСЏРґРєСѓ СЃР»РёС€РєРѕРј С‡Р°СЃС‚Рѕ вЂ” СЌС‚Рѕ РїСЂРѕРґР»РёС‚ СЃСЂРѕРє СЃР»СѓР¶Р±С‹ Р°РєРєСѓРјСѓР»СЏС‚РѕСЂР°.</li>
+          <li>РћР±РЅРѕРІР»СЏР№С‚Рµ РїСЂРѕС€РёРІРєСѓ С‡РµСЂРµР· С„РёСЂРјРµРЅРЅРѕРµ РїСЂРёР»РѕР¶РµРЅРёРµ.</li>
         </ul>
 
-        <h2>?? Итог: какие беспроводные наушники выбрать в 2025 году?</h2>
+        <h2>рџ“Њ РС‚РѕРі: РєР°РєРёРµ Р±РµСЃРїСЂРѕРІРѕРґРЅС‹Рµ РЅР°СѓС€РЅРёРєРё РІС‹Р±СЂР°С‚СЊ РІ 2025 РіРѕРґСѓ?</h2>
         <p>
-          В 2025 году рынок предлагает огромный выбор: от премиальных Sony WF-1000XM5 и Sennheiser до доступных Xiaomi и Realme. Для музыки и фильмов — Sony, Sennheiser, Apple, для спорта — Realme, OnePlus, для геймеров — Sony PULSE Explore, Razer Hammerhead Pro. Ориентируйтесь на свои задачи: звук, автономность, комфорт, ANC, бюджет — и вы точно найдёте идеальные наушники!
+          Р’ 2025 РіРѕРґСѓ СЂС‹РЅРѕРє РїСЂРµРґР»Р°РіР°РµС‚ РѕРіСЂРѕРјРЅС‹Р№ РІС‹Р±РѕСЂ: РѕС‚ РїСЂРµРјРёР°Р»СЊРЅС‹С… Sony WF-1000XM5 Рё Sennheiser РґРѕ РґРѕСЃС‚СѓРїРЅС‹С… Xiaomi Рё Realme. Р”Р»СЏ РјСѓР·С‹РєРё Рё С„РёР»СЊРјРѕРІ вЂ” Sony, Sennheiser, Apple, РґР»СЏ СЃРїРѕСЂС‚Р° вЂ” Realme, OnePlus, РґР»СЏ РіРµР№РјРµСЂРѕРІ вЂ” Sony PULSE Explore, Razer Hammerhead Pro. РћСЂРёРµРЅС‚РёСЂСѓР№С‚РµСЃСЊ РЅР° СЃРІРѕРё Р·Р°РґР°С‡Рё: Р·РІСѓРє, Р°РІС‚РѕРЅРѕРјРЅРѕСЃС‚СЊ, РєРѕРјС„РѕСЂС‚, ANC, Р±СЋРґР¶РµС‚ вЂ” Рё РІС‹ С‚РѕС‡РЅРѕ РЅР°Р№РґС‘С‚Рµ РёРґРµР°Р»СЊРЅС‹Рµ РЅР°СѓС€РЅРёРєРё!
         </p>
 </div>
 
-        <!-- Telegram рекламный баннер -->
+        <!-- Telegram СЂРµРєР»Р°РјРЅС‹Р№ Р±Р°РЅРЅРµСЂ -->
         <a href="https://t.me/RepairoRU" target="_blank" rel="noopener noreferrer" class="telegram-banner">
           <div class="telegram-banner-container">
             <div class="telegram-logo">
@@ -675,10 +726,10 @@
               </svg>
             </div>
             <div class="telegram-content">
-              <div class="telegram-title">Новости из мира технологий</div>
-              <div class="telegram-subtitle">В нашем новом Telegram-канале. Подписывайтесь и будьте в числе первых!</div>
+              <div class="telegram-title">РќРѕРІРѕСЃС‚Рё РёР· РјРёСЂР° С‚РµС…РЅРѕР»РѕРіРёР№</div>
+              <div class="telegram-subtitle">Р’ РЅР°С€РµРј РЅРѕРІРѕРј Telegram-РєР°РЅР°Р»Рµ. РџРѕРґРїРёСЃС‹РІР°Р№С‚РµСЃСЊ Рё Р±СѓРґСЊС‚Рµ РІ С‡РёСЃР»Рµ РїРµСЂРІС‹С…!</div>
               <div class="telegram-button">
-                Подписаться
+                РџРѕРґРїРёСЃР°С‚СЊСЃСЏ
                 <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.56c-.21 2.22-1.12 7.58-1.58 10.06-.19 1.07-.57 1.43-.94 1.46-.8.07-1.4-.52-2.17-1.03-1.21-.79-1.89-1.28-3.06-2.05-1.35-.87-.47-1.35.3-2.13.2-.21 3.71-3.39 3.77-3.68.01-.04.01-.18-.07-.26s-.2-.05-.29-.03c-.12.03-2.11 1.34-5.95 3.93-.56.38-1.07.57-1.53.56-.5-.01-1.47-.28-2.19-.51-.88-.28-1.58-.43-1.52-.91.03-.25.38-.51 1.04-.78 4.07-1.77 6.78-2.94 8.13-3.51 3.88-1.62 4.68-1.9 5.19-1.91.12 0 .37.03.54.17.14.12.18.28.2.44-.01.06 0 .11-.01.17z"/>
                 </svg>
@@ -703,45 +754,45 @@
                         </span>
                         <span class="logo__text">Repairo</span>
                     </a>
-                    <p class="footer__text">Помогаем ремонтировать электронику с 2024 года</p>
+                    <p class="footer__text">РџРѕРјРѕРіР°РµРј СЂРµРјРѕРЅС‚РёСЂРѕРІР°С‚СЊ СЌР»РµРєС‚СЂРѕРЅРёРєСѓ СЃ 2024 РіРѕРґР°</p>
                 </div>
                 <div class="footer__col">
-                    <h3 class="footer__title">Разделы</h3>
+                    <h3 class="footer__title">Р Р°Р·РґРµР»С‹</h3>
                     <ul class="footer__links">
-                        <li><a href="../index.html" class="footer__link">Главная</a></li>
-                        <li><a href="../index.html#categories" class="footer__link">Все гайды</a></li>
-                        <li><a href="../contacts.html" class="footer__link">Контакты</a></li>
+                        <li><a href="../index.html" class="footer__link">Р“Р»Р°РІРЅР°СЏ</a></li>
+                        <li><a href="../index.html#categories" class="footer__link">Р’СЃРµ РіР°Р№РґС‹</a></li>
+                        <li><a href="../contacts.html" class="footer__link">РљРѕРЅС‚Р°РєС‚С‹</a></li>
                     </ul>
                 </div>
                 <div class="footer__col">
-                    <h3 class="footer__title">Категории</h3>
+                    <h3 class="footer__title">РљР°С‚РµРіРѕСЂРёРё</h3>
                     <ul class="footer__links">
-                        <li><a href="../tv.html" class="nav__link">Телевизоры</a></li>
-                        <li><a href="../cameras.html" class="nav__link">Фотоаппараты</a></li>
-                        <li><a href="../consoles.html" class="nav__link">Приставки</a></li>
-                        <li><a href="../laptops.html" class="nav__link">Ноутбуки</a></li>
-                        <li><a href="../smartphones.html" class="nav__link">Смартфоны</a></li>
-                        <li><a href="../small-appliances.html" class="nav__link">Мелкая техника</a></li>
-                        <li><a href="../large-appliances.html" class="nav__link">Бытовая техника</a></li>
-                        <li><a href="../auto-electronics.html" class="nav__link">Авто-Электроника</a></li>
+                        <li><a href="../tv.html" class="nav__link">РўРµР»РµРІРёР·РѕСЂС‹</a></li>
+                        <li><a href="../cameras.html" class="nav__link">Р¤РѕС‚РѕР°РїРїР°СЂР°С‚С‹</a></li>
+                        <li><a href="../consoles.html" class="nav__link">РџСЂРёСЃС‚Р°РІРєРё</a></li>
+                        <li><a href="../laptops.html" class="nav__link">РќРѕСѓС‚Р±СѓРєРё</a></li>
+                        <li><a href="../smartphones.html" class="nav__link">РЎРјР°СЂС‚С„РѕРЅС‹</a></li>
+                        <li><a href="../small-appliances.html" class="nav__link">РњРµР»РєР°СЏ С‚РµС…РЅРёРєР°</a></li>
+                        <li><a href="../large-appliances.html" class="nav__link">Р‘С‹С‚РѕРІР°СЏ С‚РµС…РЅРёРєР°</a></li>
+                        <li><a href="../auto-electronics.html" class="nav__link">РђРІС‚Рѕ-Р­Р»РµРєС‚СЂРѕРЅРёРєР°</a></li>
                     </ul>
                 </div>
                 <div class="footer__col">
-                    <h3 class="footer__title">Контакты</h3>
+                    <h3 class="footer__title">РљРѕРЅС‚Р°РєС‚С‹</h3>
                     <ul class="footer__links">
                         <li><a href="https://t.me/RepairoRU" class="footer__link"><i class="fab fa-telegram"></i> Telegram</a></li>
-                        <li><span class="footer__link">Наша почта: repairo.info@mail.ru</span></li>
+                        <li><span class="footer__link">РќР°С€Р° РїРѕС‡С‚Р°: repairo.info@mail.ru</span></li>
                     </ul>
                 </div>
             </div>
             <div class="footer__bottom">
                 <p class="disclaimer">
-    Администрация сайта не несёт ответственности за возможные повреждения техники
-    и иные последствия, возникшие в результате самостоятельного ремонта по
-    материалам и инструкциям, размещённым на сайте. Все работы вы выполняете
-    на свой страх и риск.
+    РђРґРјРёРЅРёСЃС‚СЂР°С†РёСЏ СЃР°Р№С‚Р° РЅРµ РЅРµСЃС‘С‚ РѕС‚РІРµС‚СЃС‚РІРµРЅРЅРѕСЃС‚Рё Р·Р° РІРѕР·РјРѕР¶РЅС‹Рµ РїРѕРІСЂРµР¶РґРµРЅРёСЏ С‚РµС…РЅРёРєРё
+    Рё РёРЅС‹Рµ РїРѕСЃР»РµРґСЃС‚РІРёСЏ, РІРѕР·РЅРёРєС€РёРµ РІ СЂРµР·СѓР»СЊС‚Р°С‚Рµ СЃР°РјРѕСЃС‚РѕСЏС‚РµР»СЊРЅРѕРіРѕ СЂРµРјРѕРЅС‚Р° РїРѕ
+    РјР°С‚РµСЂРёР°Р»Р°Рј Рё РёРЅСЃС‚СЂСѓРєС†РёСЏРј, СЂР°Р·РјРµС‰С‘РЅРЅС‹Рј РЅР° СЃР°Р№С‚Рµ. Р’СЃРµ СЂР°Р±РѕС‚С‹ РІС‹ РІС‹РїРѕР»РЅСЏРµС‚Рµ
+    РЅР° СЃРІРѕР№ СЃС‚СЂР°С… Рё СЂРёСЃРє.
     </p>
-                <p class="footer__copyright">© 2026 Repairo. Все права защищены.</p>
+                <p class="footer__copyright">В© 2026 Repairo. Р’СЃРµ РїСЂР°РІР° Р·Р°С‰РёС‰РµРЅС‹.</p>
             </div>
         </div>
     </footer>
@@ -752,56 +803,56 @@
 {
   "@context": "https://schema.org",
   "@type": "HowTo",
-  "name": "Рейтинг беспроводных наушников 2025",
-  "description": "Пошаговая инструкция: Рейтинг беспроводных наушников 2025. Для музыки и фильмов выбирайте модели с поддержкой Hi-Res Audio и LDAC/aptX Adap.... Советы экспер...",
+  "name": "Р РµР№С‚РёРЅРі Р±РµСЃРїСЂРѕРІРѕРґРЅС‹С… РЅР°СѓС€РЅРёРєРѕРІ 2025",
+  "description": "РџРѕС€Р°РіРѕРІР°СЏ РёРЅСЃС‚СЂСѓРєС†РёСЏ: Р РµР№С‚РёРЅРі Р±РµСЃРїСЂРѕРІРѕРґРЅС‹С… РЅР°СѓС€РЅРёРєРѕРІ 2025. Р”Р»СЏ РјСѓР·С‹РєРё Рё С„РёР»СЊРјРѕРІ РІС‹Р±РёСЂР°Р№С‚Рµ РјРѕРґРµР»Рё СЃ РїРѕРґРґРµСЂР¶РєРѕР№ Hi-Res Audio Рё LDAC/aptX Adap.... РЎРѕРІРµС‚С‹ СЌРєСЃРїРµСЂ...",
   "totalTime": "PT30M",
   "step": [
     {
       "@type": "HowToStep",
-      "name": "ТОП-10 лучших беспроводных наушников 2025 года",
-      "text": "ТОП-10 лучших беспроводных наушников 2025 года",
+      "name": "РўРћРџ-10 Р»СѓС‡С€РёС… Р±РµСЃРїСЂРѕРІРѕРґРЅС‹С… РЅР°СѓС€РЅРёРєРѕРІ 2025 РіРѕРґР°",
+      "text": "РўРћРџ-10 Р»СѓС‡С€РёС… Р±РµСЃРїСЂРѕРІРѕРґРЅС‹С… РЅР°СѓС€РЅРёРєРѕРІ 2025 РіРѕРґР°",
       "url": "#step-1"
     },
     {
       "@type": "HowToStep",
-      "name": "Лучшие накладные и полноразмерные беспроводные наушники 2025",
-      "text": "Лучшие накладные и полноразмерные беспроводные наушники 2025",
+      "name": "Р›СѓС‡С€РёРµ РЅР°РєР»Р°РґРЅС‹Рµ Рё РїРѕР»РЅРѕСЂР°Р·РјРµСЂРЅС‹Рµ Р±РµСЃРїСЂРѕРІРѕРґРЅС‹Рµ РЅР°СѓС€РЅРёРєРё 2025",
+      "text": "Р›СѓС‡С€РёРµ РЅР°РєР»Р°РґРЅС‹Рµ Рё РїРѕР»РЅРѕСЂР°Р·РјРµСЂРЅС‹Рµ Р±РµСЃРїСЂРѕРІРѕРґРЅС‹Рµ РЅР°СѓС€РЅРёРєРё 2025",
       "url": "#step-2"
     },
     {
       "@type": "HowToStep",
-      "name": "Лучшие бюджетные беспроводные наушники 2025",
-      "text": "Лучшие бюджетные беспроводные наушники 2025",
+      "name": "Р›СѓС‡С€РёРµ Р±СЋРґР¶РµС‚РЅС‹Рµ Р±РµСЃРїСЂРѕРІРѕРґРЅС‹Рµ РЅР°СѓС€РЅРёРєРё 2025",
+      "text": "Р›СѓС‡С€РёРµ Р±СЋРґР¶РµС‚РЅС‹Рµ Р±РµСЃРїСЂРѕРІРѕРґРЅС‹Рµ РЅР°СѓС€РЅРёРєРё 2025",
       "url": "#step-3"
     },
     {
       "@type": "HowToStep",
-      "name": "Лучшие игровые беспроводные наушники 2025",
-      "text": "Лучшие игровые беспроводные наушники 2025",
+      "name": "Р›СѓС‡С€РёРµ РёРіСЂРѕРІС‹Рµ Р±РµСЃРїСЂРѕРІРѕРґРЅС‹Рµ РЅР°СѓС€РЅРёРєРё 2025",
+      "text": "Р›СѓС‡С€РёРµ РёРіСЂРѕРІС‹Рµ Р±РµСЃРїСЂРѕРІРѕРґРЅС‹Рµ РЅР°СѓС€РЅРёРєРё 2025",
       "url": "#step-4"
     },
     {
       "@type": "HowToStep",
-      "name": "Премиальные Hi-Fi беспроводные наушники",
-      "text": "Премиальные Hi-Fi беспроводные наушники",
+      "name": "РџСЂРµРјРёР°Р»СЊРЅС‹Рµ Hi-Fi Р±РµСЃРїСЂРѕРІРѕРґРЅС‹Рµ РЅР°СѓС€РЅРёРєРё",
+      "text": "РџСЂРµРјРёР°Р»СЊРЅС‹Рµ Hi-Fi Р±РµСЃРїСЂРѕРІРѕРґРЅС‹Рµ РЅР°СѓС€РЅРёРєРё",
       "url": "#step-5"
     },
     {
       "@type": "HowToStep",
-      "name": "Сравнительная таблица популярных моделей",
-      "text": "Сравнительная таблица популярных моделей",
+      "name": "РЎСЂР°РІРЅРёС‚РµР»СЊРЅР°СЏ С‚Р°Р±Р»РёС†Р° РїРѕРїСѓР»СЏСЂРЅС‹С… РјРѕРґРµР»РµР№",
+      "text": "РЎСЂР°РІРЅРёС‚РµР»СЊРЅР°СЏ С‚Р°Р±Р»РёС†Р° РїРѕРїСѓР»СЏСЂРЅС‹С… РјРѕРґРµР»РµР№",
       "url": "#step-6"
     },
     {
       "@type": "HowToStep",
-      "name": "Лайфхаки и советы по выбору беспроводных наушников",
-      "text": "Лайфхаки и советы по выбору беспроводных наушников",
+      "name": "Р›Р°Р№С„С…Р°РєРё Рё СЃРѕРІРµС‚С‹ РїРѕ РІС‹Р±РѕСЂСѓ Р±РµСЃРїСЂРѕРІРѕРґРЅС‹С… РЅР°СѓС€РЅРёРєРѕРІ",
+      "text": "Р›Р°Р№С„С…Р°РєРё Рё СЃРѕРІРµС‚С‹ РїРѕ РІС‹Р±РѕСЂСѓ Р±РµСЃРїСЂРѕРІРѕРґРЅС‹С… РЅР°СѓС€РЅРёРєРѕРІ",
       "url": "#step-7"
     },
     {
       "@type": "HowToStep",
-      "name": "FAQ — Часто задаваемые вопросы",
-      "text": "FAQ — Часто задаваемые вопросы",
+      "name": "FAQ вЂ” Р§Р°СЃС‚Рѕ Р·Р°РґР°РІР°РµРјС‹Рµ РІРѕРїСЂРѕСЃС‹",
+      "text": "FAQ вЂ” Р§Р°СЃС‚Рѕ Р·Р°РґР°РІР°РµРјС‹Рµ РІРѕРїСЂРѕСЃС‹",
       "url": "#step-8"
     }
   ],
@@ -812,6 +863,4 @@
 <script src="../cookie-consent.js"></script>
 </body>
 </html>
-
-
 

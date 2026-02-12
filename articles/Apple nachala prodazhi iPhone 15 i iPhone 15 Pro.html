@@ -1,194 +1,271 @@
 <!DOCTYPE html>
-<html lang="ru" data-theme="light">
+<html lang="ru">
 <head>
 
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Repairo - Apple начала официальные продажи iPhone 15 и iPhone 15 Pro</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repairo - Apple РЅР°С‡Р°Р»Р° РѕС„РёС†РёР°Р»СЊРЅС‹Рµ РїСЂРѕРґР°Р¶Рё iPhone 15 Рё iPhone 15 Pro</title>
     <meta name="description" content="{{ description }}">
+    <meta name="description" content="РЎС‚Р°СЂС‚ РїСЂРѕРґР°Р¶ iPhone 15 Рё 15 Pro: РѕРіСЂРѕРјРЅС‹Рµ РѕС‡РµСЂРµРґРё, РїРµСЂРµС…РѕРґ РЅР° USB-C, С‚РёС‚Р°РЅРѕРІС‹Р№ РєРѕСЂРїСѓСЃ Рё РґРµС„РёС†РёС‚ РјРѕРґРµР»РµР№ Pro Max. РџРѕРґСЂРѕР±РЅС‹Р№ РѕР±Р·РѕСЂ РїРµСЂРІРѕРіРѕ РґРЅСЏ РїСЂРѕРґР°Р¶ Рё РіР»Р°РІРЅС‹С… РЅРѕРІРѕРІРІРµРґРµРЅРёР№.">
 
-  <link rel="stylesheet" href="../styles.css" />
-  <link rel="stylesheet" href="../styles-header.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <style>
-    .guide-content { line-height: 1.7; color: var(--text); }
-    .guide-content h2 { color: var(--primary); margin-top: 30px; margin-bottom: 15px; font-size: 1.5rem; }
-    .guide-content h3 { color: var(--primary-dark); margin-top: 25px; margin-bottom: 12px; font-size: 1.2rem; }
-    .guide-image-block { margin: 20px 0; padding: 15px; background: var(--background); border-radius: var(--border-radius); border: 1px solid var(--border); text-align: center; }
-    .guide-image-block img { max-width: 100%; height: auto; border-radius: 6px; border: 1px solid var(--border); }
-    .image-caption { margin-top: 10px; font-size: 0.85rem; color: var(--text-light); font-style: italic; }
-    .pro-tips { background: rgba(3, 74, 79, 0.05); padding: 15px; border-radius: 6px; margin: 20px 0; }
-    .pro-tips h4 { color: var(--primary); margin-top: 0; margin-bottom: 12px; font-size: 1.1rem; }
-    .tip-item { display: flex; gap: 8px; margin-bottom: 8px; align-items: flex-start; }
-    table { width: 100%; border-collapse: collapse; margin: 20px 0; }
-    th, td { border: 1px solid var(--border); padding: 8px; text-align: left; }
-    th { background: var(--background-light); }
-    .highlight { background: #f5f7fa; border-left: 4px solid #2d9cdb; padding: 10px 15px; margin: 20px 0; }
-    .faq-section ul { margin-left: 1em; }
-    .block-section { margin-bottom: 2em; }
-    @media (max-width: 768px) {
-      .guide-content h2 { font-size: 1.4rem; margin-top: 25px; }
-      .guide-image-block { padding: 12px; margin: 15px 0; }
-      table, th, td { font-size: 0.95rem; }
-    }
-    /* Р“РѕСЂРёР·РѕРЅС‚Р°Р»СЊРЅС‹Р№ Р±Р°РЅРЅРµСЂ-РєР°СЂС‚РѕС‡РєР° */
-    .ym-hero-banner {
-      width: 100%;
-      max-width: 600px;
-      min-height: 140px;
-      border-radius: 16px;
-      background: #ffffff;
-      border: 1px solid #e5e7eb;
-      display: flex;
-      flex-direction: column;
-      box-shadow: 0 4px 16px rgba(15, 23, 42, 0.08);
-      overflow: hidden;
-      box-sizing: border-box;
-      margin: 40px auto;
-    }
+    <style>
+        :root {
+            --gradient-start: #f5f7a0;
+            --gradient-end: #8df1c0;
+            --main-bg: #ffffff;
+            --text-color: #333333;
+            --text-light: #666666;
+            --border-color: #e0e0e0;
+            --shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            --radius: 8px;
+            --nav-height: 60px;
+            --glass-bg: rgba(255, 255, 255, 0.25);
+            --glass-border: 1px solid rgba(255, 255, 255, 0.18);
+            --glass-blur: blur(10px);
+        }
 
-    /* РљРѕРЅС‚РµР№РЅРµСЂ РґР»СЏ РёР·РѕР±СЂР°Р¶РµРЅРёР№ */
-    .ym-hero-images {
-      display: flex;
-      height: 120px;
-      overflow: hidden;
-    }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    .ym-hero-image {
-      flex: 1;
-      min-width: 0;
-      height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-      border-right: 1px solid #e5e7eb;
-      background: #f8f9fa;
-    }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--main-bg);
+            color: var(--text-color);
+            line-height: 1.6;
+            padding-top: var(--nav-height);
+        }
 
-    .ym-hero-image:last-child {
-      border-right: none;
-    }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
 
-    .ym-hero-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-      transition: transform 0.3s ease;
-      background: #f8f9fa;
-    }
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
 
-    .ym-hero-image:hover img {
-      transform: scale(1.02);
-    }
+        header {
+            background: var(--glass-bg);
+            backdrop-filter: var(--glass-blur);
+            -webkit-backdrop-filter: var(--glass-blur);
+            border-bottom: var(--glass-border);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
 
-    /* РџСЂР°РІР°СЏ С‡Р°СЃС‚СЊ: РєРѕРЅС‚РµРЅС‚ */
-    .ym-hero-content {
-      padding: 16px 18px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      gap: 8px;
-    }
+        .header-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: var(--nav-height);
+            position: relative;
+        }
 
-    /* РќР°Р·РІР°РЅРёРµ С‚РѕРІР°СЂР° */
-    .ym-hero-title {
-      font-size: 14px;
-      font-weight: 600;
-      color: #111827;
-      line-height: 1.3;
-      margin: 0 0 4px 0;
-      display: -webkit-box;
-      -webkit-line-clamp: 2;
-      line-clamp: 2;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
-    }
+        .header-image {
+            position: absolute;
+            left: 15px;
+            z-index: 1;
+        }
 
-    /* Р РµР№С‚РёРЅРі */
-    .ym-hero-top {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 8px;
-    }
+        .header-image img {
+            height: 40px;
+            width: auto;
+            object-fit: contain;
+        }
 
-    .ym-hero-rating {
-      font-size: 13px;
-      font-weight: 500;
-      color: #111827;
-      background: #f9fafb;
-      border-radius: 999px;
-      padding: 4px 10px;
-    }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--text-color);
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
 
-    .ym-hero-rating-count {
-      color: #6b7280;
-    }
+        .logo__text {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--text-color);
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
 
-    /* Р¤РёРѕР»РµС‚РѕРІР°СЏ РєРЅРѕРїРєР° */
-    .ym-hero-button {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 9px 16px;
-      border-radius: 999px;
-      border: none;
-      background: #6a00ff;
-      color: #ffffff;
-      font-size: 14px;
-      font-weight: 600;
-      cursor: pointer;
-      box-shadow: 0 2px 6px rgba(88, 28, 135, 0.35);
-      transition: background 0.15s ease, transform 0.15s ease,
-                  box-shadow 0.15s ease;
-    }
-    .ym-hero-button::after {
-      content: "в†’";
-      margin-left: 6px;
-      font-size: 14px;
-    }
-    .ym-hero-button:hover {
-      background: #7c3aed;
-      transform: translateY(-1px);
-      box-shadow: 0 4px 10px rgba(88, 28, 135, 0.45);
-    }
+        .back-btn {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 600;
+            color: var(--text-color);
+            transition: color 0.3s;
+        }
 
-    /* Р®СЂРёРґРёС‡РµСЃРєРёР№ Р±Р»РѕРє */
-    .ym-hero-legal {
-      margin-top: 6px;
-      max-width: 600px;
-      font-size: 11px;
-      line-height: 1.3;
-      color: #6b7280;
-      margin-left: auto;
-      margin-right: auto;
-    }
+        .back-btn:hover {
+            color: var(--gradient-end);
+        }
 
-    /* РђРґР°РїС‚РёРІ */
-    @media (max-width: 480px) {
-      .ym-hero-banner {
-        max-width: 100%;
-        margin: 20px 0;
-      }
-      .ym-hero-images {
-        height: 100px;
-      }
-      .ym-hero-content {
-        padding: 12px 12px;
-      }
-      .ym-hero-title {
-        font-size: 13px;
-      }
-      .ym-hero-button {
-        font-size: 13px;
-        padding: 8px 14px;
-      }
-      .ym-hero-legal {
-        font-size: 10px;
-      }
-    }
+        .back-btn::before {
+            content: "в†ђ";
+            font-size: 20px;
+        }
+
+        .article {
+            padding: 40px 0;
+        }
+
+        .article-header {
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .article-title {
+            font-size: 32px;
+            margin-bottom: 15px;
+            line-height: 1.3;
+        }
+
+        .article-meta {
+            color: var(--text-light);
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        .article-image {
+            width: 100%;
+            max-height: 500px;
+            object-fit: cover;
+            border-radius: var(--radius);
+            margin-bottom: 30px;
+            box-shadow: var(--shadow);
+        }
+
+        .article-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .article-content p {
+            margin-bottom: 20px;
+            font-size: 18px;
+            line-height: 1.7;
+        }
+
+        .article-content h2,
+        .article-content h3 {
+            margin: 30px 0 20px;
+            line-height: 1.4;
+        }
+
+        .article-content h2 {
+            font-size: 28px;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 10px;
+        }
+
+        .article-content h3 {
+            font-size: 24px;
+        }
+
+        .article-content img {
+            max-width: 100%;
+            height: auto;
+            border-radius: var(--radius);
+            margin: 25px 0;
+            box-shadow: var(--shadow);
+        }
+
+        .button {
+            display: inline-block;
+            padding: 12px 24px;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            border: none;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(90deg, var(--gradient-start), var(--gradient-end));
+            color: var(--text-color);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        footer {
+            background: #f5f5f5;
+            padding: 50px 0 20px;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .footer-column h3 {
+            font-size: 18px;
+            margin-bottom: 15px;
+            color: var(--text-color);
+            font-weight: 600;
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column li {
+            margin-bottom: 10px;
+        }
+
+        .footer-column a {
+            color: var(--text-light);
+            transition: color 0.3s;
+        }
+
+        .footer-column a:hover {
+            color: var(--gradient-end);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+            color: var(--text-light);
+            font-size: 14px;
+        }
+
+        @media (max-width: 768px) {
+            .article-title {
+                font-size: 26px;
+            }
+
+            .article-content p {
+                font-size: 16px;
+            }
+
+            .article-content h2 {
+                font-size: 24px;
+            }
+
+            .article-content h3 {
+                font-size: 20px;
+            }
+        }
     /* Telegram СЂРµРєР»Р°РјРЅС‹Р№ Р±Р°РЅРЅРµСЂ */
     .telegram-banner {
       display: flex;
@@ -292,22 +369,27 @@
         padding: 15px;
         min-height: 100px;
       }
+
       .telegram-logo {
         width: 50px;
         height: 50px;
         min-width: 50px;
         margin-right: 15px;
       }
+
       .telegram-logo svg {
         width: 26px;
         height: 26px;
       }
+
       .telegram-title {
         font-size: 14px;
       }
+
       .telegram-subtitle {
         font-size: 12px;
       }
+
       .telegram-button {
         font-size: 12px;
         padding: 6px 12px;
@@ -315,75 +397,68 @@
     }
 
 
-
-  </style>
+    </style>
   <script async src="https://timeweb.cloud/api/v1/cloud-ai/agents/3cc03620-d051-4d8d-b5af-f7b6cd083a35/embed.js?collapsed=true"></script>
 </head>
+
 <body>
-  <header class="header">
-    <div class="container">
-      <div class="header__inner">
-        <a href="../index.html" class="logo">
-          <span class="logo__icon"></span>
-          <span class="logo__text">GeoExpert</span>
-        </a>
-        <nav class="nav">
-          <ul class="nav__list">
-            <li><a href="../cameras.html" class="nav__link">РљР°РјРµСЂС‹</a></li>
-            <li><a href="../drones.html" class="nav__link">Р”СЂРѕРЅС‹</a></li>
-            <li><a href="../workflow.html" class="nav__link">Workflow</a></li>
-          </ul>
-        </nav>
-      </div>
-    </div>
-  </header>
+    <header>
+        <div class="container header-container">
+            <div class="header-image">
+                <img src="https://i.postimg.cc/q7H0JS0t/8d9ca2d0-7483-40bd-b92d-73c88a196afb-removebg-preview.png" alt="Header Image">
+            </div>
+            <a href="../articles.html" class="logo">
+                <span class="logo__text">Repairo</span>
+            </a>
+        </div>
+    </header>
 
     <main class="article">
         <div class="container">
             <article>
                 <div class="article-header">
-                    <h1 class="article-title">Apple начала продажи iPhone 15 и iPhone 15 Pro: революция USB-C и Титана</h1>
+                    <h1 class="article-title">Apple РЅР°С‡Р°Р»Р° РїСЂРѕРґР°Р¶Рё iPhone 15 Рё iPhone 15 Pro: СЂРµРІРѕР»СЋС†РёСЏ USB-C Рё РўРёС‚Р°РЅР°</h1>
 
-                    <!-- ВАЖНО: Одно единственное изображение сверху над текстом -->
+                    <!-- Р’РђР–РќРћ: РћРґРЅРѕ РµРґРёРЅСЃС‚РІРµРЅРЅРѕРµ РёР·РѕР±СЂР°Р¶РµРЅРёРµ СЃРІРµСЂС…Сѓ РЅР°Рґ С‚РµРєСЃС‚РѕРј -->
                     <img src="https://i7.imageban.ru/out/2026/02/04/392208039abbdb5c0f3f2a847e49b953.png"
-                         alt="iPhone 15 и 15 Pro старт продаж"
+                         alt="iPhone 15 Рё 15 Pro СЃС‚Р°СЂС‚ РїСЂРѕРґР°Р¶"
                          class="article-image">
                 </div>
 
-                <div class="article-meta">изображение: Apple Inc.</div>
+                <div class="article-meta">РёР·РѕР±СЂР°Р¶РµРЅРёРµ: Apple Inc.</div>
 
                 <div class="article-content">
-                    <p>Этот день настал. Сегодня, 22 сентября, компания Apple официально запустила розничные продажи новой линейки смартфонов — iPhone 15, iPhone 15 Plus, iPhone 15 Pro и iPhone 15 Pro Max. Флагманские магазины Apple Store по всему миру, от Сиднея и Токио до Нью-Йорка и Лондона, вновь увидели огромные очереди, которые, казалось, ушли в прошлое. Ажиотаж вокруг новинок 2023 года оказался одним из самых высоких за последние несколько лет, и виной тому несколько кардинальных изменений, которые навсегда меняют облик самого популярного смартфона в мире.</p>
+                    <p>Р­С‚РѕС‚ РґРµРЅСЊ РЅР°СЃС‚Р°Р». РЎРµРіРѕРґРЅСЏ, 22 СЃРµРЅС‚СЏР±СЂСЏ, РєРѕРјРїР°РЅРёСЏ Apple РѕС„РёС†РёР°Р»СЊРЅРѕ Р·Р°РїСѓСЃС‚РёР»Р° СЂРѕР·РЅРёС‡РЅС‹Рµ РїСЂРѕРґР°Р¶Рё РЅРѕРІРѕР№ Р»РёРЅРµР№РєРё СЃРјР°СЂС‚С„РѕРЅРѕРІ вЂ” iPhone 15, iPhone 15 Plus, iPhone 15 Pro Рё iPhone 15 Pro Max. Р¤Р»Р°РіРјР°РЅСЃРєРёРµ РјР°РіР°Р·РёРЅС‹ Apple Store РїРѕ РІСЃРµРјСѓ РјРёСЂСѓ, РѕС‚ РЎРёРґРЅРµСЏ Рё РўРѕРєРёРѕ РґРѕ РќСЊСЋ-Р™РѕСЂРєР° Рё Р›РѕРЅРґРѕРЅР°, РІРЅРѕРІСЊ СѓРІРёРґРµР»Рё РѕРіСЂРѕРјРЅС‹Рµ РѕС‡РµСЂРµРґРё, РєРѕС‚РѕСЂС‹Рµ, РєР°Р·Р°Р»РѕСЃСЊ, СѓС€Р»Рё РІ РїСЂРѕС€Р»РѕРµ. РђР¶РёРѕС‚Р°Р¶ РІРѕРєСЂСѓРі РЅРѕРІРёРЅРѕРє 2023 РіРѕРґР° РѕРєР°Р·Р°Р»СЃСЏ РѕРґРЅРёРј РёР· СЃР°РјС‹С… РІС‹СЃРѕРєРёС… Р·Р° РїРѕСЃР»РµРґРЅРёРµ РЅРµСЃРєРѕР»СЊРєРѕ Р»РµС‚, Рё РІРёРЅРѕР№ С‚РѕРјСѓ РЅРµСЃРєРѕР»СЊРєРѕ РєР°СЂРґРёРЅР°Р»СЊРЅС‹С… РёР·РјРµРЅРµРЅРёР№, РєРѕС‚РѕСЂС‹Рµ РЅР°РІСЃРµРіРґР° РјРµРЅСЏСЋС‚ РѕР±Р»РёРє СЃР°РјРѕРіРѕ РїРѕРїСѓР»СЏСЂРЅРѕРіРѕ СЃРјР°СЂС‚С„РѕРЅР° РІ РјРёСЂРµ.</p>
 
-                    <h2 id="step-1">Прощай, Lightning: эра USB-C наступила</h2>
-                    <p>Главная новость, которая обсуждается всеми техноблогерами и простыми пользователями — смерть порта Lightning. Спустя 11 лет Apple, под давлением законодательства Евросоюза, перевела всю линейку iPhone 15 на универсальный разъем USB-C. Это исторический момент: теперь одним кабелем можно заряжать MacBook, iPad и iPhone. Пользователи ликуют, но есть нюанс.</p>
-                    <p>Базовые модели iPhone 15 и 15 Plus получили порт USB-C, но скорость передачи данных осталась на уровне старого стандарта USB 2.0 (до 480 Мбит/с), как и у Lightning. А вот модели iPhone 15 Pro и Pro Max оснащены контроллером USB 3, обеспечивающим скорость до 10 Гбит/с. Это открывает невероятные возможности для профессионалов: теперь можно снимать видео в формате ProRes и записывать его напрямую на внешний SSD-диск в реальном времени. Такой функционал превращает «прошку» в настоящую кинокамеру.</p>
+                    <h2 id="step-1">РџСЂРѕС‰Р°Р№, Lightning: СЌСЂР° USB-C РЅР°СЃС‚СѓРїРёР»Р°</h2>
+                    <p>Р“Р»Р°РІРЅР°СЏ РЅРѕРІРѕСЃС‚СЊ, РєРѕС‚РѕСЂР°СЏ РѕР±СЃСѓР¶РґР°РµС‚СЃСЏ РІСЃРµРјРё С‚РµС…РЅРѕР±Р»РѕРіРµСЂР°РјРё Рё РїСЂРѕСЃС‚С‹РјРё РїРѕР»СЊР·РѕРІР°С‚РµР»СЏРјРё вЂ” СЃРјРµСЂС‚СЊ РїРѕСЂС‚Р° Lightning. РЎРїСѓСЃС‚СЏ 11 Р»РµС‚ Apple, РїРѕРґ РґР°РІР»РµРЅРёРµРј Р·Р°РєРѕРЅРѕРґР°С‚РµР»СЊСЃС‚РІР° Р•РІСЂРѕСЃРѕСЋР·Р°, РїРµСЂРµРІРµР»Р° РІСЃСЋ Р»РёРЅРµР№РєСѓ iPhone 15 РЅР° СѓРЅРёРІРµСЂСЃР°Р»СЊРЅС‹Р№ СЂР°Р·СЉРµРј USB-C. Р­С‚Рѕ РёСЃС‚РѕСЂРёС‡РµСЃРєРёР№ РјРѕРјРµРЅС‚: С‚РµРїРµСЂСЊ РѕРґРЅРёРј РєР°Р±РµР»РµРј РјРѕР¶РЅРѕ Р·Р°СЂСЏР¶Р°С‚СЊ MacBook, iPad Рё iPhone. РџРѕР»СЊР·РѕРІР°С‚РµР»Рё Р»РёРєСѓСЋС‚, РЅРѕ РµСЃС‚СЊ РЅСЋР°РЅСЃ.</p>
+                    <p>Р‘Р°Р·РѕРІС‹Рµ РјРѕРґРµР»Рё iPhone 15 Рё 15 Plus РїРѕР»СѓС‡РёР»Рё РїРѕСЂС‚ USB-C, РЅРѕ СЃРєРѕСЂРѕСЃС‚СЊ РїРµСЂРµРґР°С‡Рё РґР°РЅРЅС‹С… РѕСЃС‚Р°Р»Р°СЃСЊ РЅР° СѓСЂРѕРІРЅРµ СЃС‚Р°СЂРѕРіРѕ СЃС‚Р°РЅРґР°СЂС‚Р° USB 2.0 (РґРѕ 480 РњР±РёС‚/СЃ), РєР°Рє Рё Сѓ Lightning. Рђ РІРѕС‚ РјРѕРґРµР»Рё iPhone 15 Pro Рё Pro Max РѕСЃРЅР°С‰РµРЅС‹ РєРѕРЅС‚СЂРѕР»Р»РµСЂРѕРј USB 3, РѕР±РµСЃРїРµС‡РёРІР°СЋС‰РёРј СЃРєРѕСЂРѕСЃС‚СЊ РґРѕ 10 Р“Р±РёС‚/СЃ. Р­С‚Рѕ РѕС‚РєСЂС‹РІР°РµС‚ РЅРµРІРµСЂРѕСЏС‚РЅС‹Рµ РІРѕР·РјРѕР¶РЅРѕСЃС‚Рё РґР»СЏ РїСЂРѕС„РµСЃСЃРёРѕРЅР°Р»РѕРІ: С‚РµРїРµСЂСЊ РјРѕР¶РЅРѕ СЃРЅРёРјР°С‚СЊ РІРёРґРµРѕ РІ С„РѕСЂРјР°С‚Рµ ProRes Рё Р·Р°РїРёСЃС‹РІР°С‚СЊ РµРіРѕ РЅР°РїСЂСЏРјСѓСЋ РЅР° РІРЅРµС€РЅРёР№ SSD-РґРёСЃРє РІ СЂРµР°Р»СЊРЅРѕРј РІСЂРµРјРµРЅРё. РўР°РєРѕР№ С„СѓРЅРєС†РёРѕРЅР°Р» РїСЂРµРІСЂР°С‰Р°РµС‚ В«РїСЂРѕС€РєСѓВ» РІ РЅР°СЃС‚РѕСЏС‰СѓСЋ РєРёРЅРѕРєР°РјРµСЂСѓ.</p>
 
-                    <h2 id="step-2">Титан: легче, прочнее, премиальнее</h2>
-                    <p>Второе ключевое отличие Pro-версий, которое бросается в глаза (и чувствуется в руке) — это материал корпуса. На смену тяжелой и маркой хирургической стали пришел аэрокосмический титан Grade 5. Это позволило сделать iPhone 15 Pro и Pro Max самыми легкими моделями в линейке Pro за всю историю. Разница в весе составляет около 20 граммов, но тактильно смартфон ощущается значительно легче и сбалансированнее.</p>
-                    <p>Кроме того, Apple изменила дизайн граней. Они стали более скругленными, благодаря чему телефон больше не впивается в ладонь, как это было с «рублеными» формами iPhone 12–14. Новые цвета «Natural Titanium» и «Blue Titanium» уже стали хитами предзаказов, а сроки доставки модели Pro Max в цвете натурального титана уже сдвинулись на ноябрь.</p>
+                    <h2 id="step-2">РўРёС‚Р°РЅ: Р»РµРіС‡Рµ, РїСЂРѕС‡РЅРµРµ, РїСЂРµРјРёР°Р»СЊРЅРµРµ</h2>
+                    <p>Р’С‚РѕСЂРѕРµ РєР»СЋС‡РµРІРѕРµ РѕС‚Р»РёС‡РёРµ Pro-РІРµСЂСЃРёР№, РєРѕС‚РѕСЂРѕРµ Р±СЂРѕСЃР°РµС‚СЃСЏ РІ РіР»Р°Р·Р° (Рё С‡СѓРІСЃС‚РІСѓРµС‚СЃСЏ РІ СЂСѓРєРµ) вЂ” СЌС‚Рѕ РјР°С‚РµСЂРёР°Р» РєРѕСЂРїСѓСЃР°. РќР° СЃРјРµРЅСѓ С‚СЏР¶РµР»РѕР№ Рё РјР°СЂРєРѕР№ С…РёСЂСѓСЂРіРёС‡РµСЃРєРѕР№ СЃС‚Р°Р»Рё РїСЂРёС€РµР» Р°СЌСЂРѕРєРѕСЃРјРёС‡РµСЃРєРёР№ С‚РёС‚Р°РЅ Grade 5. Р­С‚Рѕ РїРѕР·РІРѕР»РёР»Рѕ СЃРґРµР»Р°С‚СЊ iPhone 15 Pro Рё Pro Max СЃР°РјС‹РјРё Р»РµРіРєРёРјРё РјРѕРґРµР»СЏРјРё РІ Р»РёРЅРµР№РєРµ Pro Р·Р° РІСЃСЋ РёСЃС‚РѕСЂРёСЋ. Р Р°Р·РЅРёС†Р° РІ РІРµСЃРµ СЃРѕСЃС‚Р°РІР»СЏРµС‚ РѕРєРѕР»Рѕ 20 РіСЂР°РјРјРѕРІ, РЅРѕ С‚Р°РєС‚РёР»СЊРЅРѕ СЃРјР°СЂС‚С„РѕРЅ РѕС‰СѓС‰Р°РµС‚СЃСЏ Р·РЅР°С‡РёС‚РµР»СЊРЅРѕ Р»РµРіС‡Рµ Рё СЃР±Р°Р»Р°РЅСЃРёСЂРѕРІР°РЅРЅРµРµ.</p>
+                    <p>РљСЂРѕРјРµ С‚РѕРіРѕ, Apple РёР·РјРµРЅРёР»Р° РґРёР·Р°Р№РЅ РіСЂР°РЅРµР№. РћРЅРё СЃС‚Р°Р»Рё Р±РѕР»РµРµ СЃРєСЂСѓРіР»РµРЅРЅС‹РјРё, Р±Р»Р°РіРѕРґР°СЂСЏ С‡РµРјСѓ С‚РµР»РµС„РѕРЅ Р±РѕР»СЊС€Рµ РЅРµ РІРїРёРІР°РµС‚СЃСЏ РІ Р»Р°РґРѕРЅСЊ, РєР°Рє СЌС‚Рѕ Р±С‹Р»Рѕ СЃ В«СЂСѓР±Р»РµРЅС‹РјРёВ» С„РѕСЂРјР°РјРё iPhone 12вЂ“14. РќРѕРІС‹Рµ С†РІРµС‚Р° В«Natural TitaniumВ» Рё В«Blue TitaniumВ» СѓР¶Рµ СЃС‚Р°Р»Рё С…РёС‚Р°РјРё РїСЂРµРґР·Р°РєР°Р·РѕРІ, Р° СЃСЂРѕРєРё РґРѕСЃС‚Р°РІРєРё РјРѕРґРµР»Рё Pro Max РІ С†РІРµС‚Рµ РЅР°С‚СѓСЂР°Р»СЊРЅРѕРіРѕ С‚РёС‚Р°РЅР° СѓР¶Рµ СЃРґРІРёРЅСѓР»РёСЃСЊ РЅР° РЅРѕСЏР±СЂСЊ.</p>
 
-                    <h2 id="step-3">Action Button: кнопка действия вместо переключателя</h2>
-                    <p>Еще одна жертва прогресса — легендарный рычажок переключения беззвучного режима, который был с нами с самого первого iPhone 2007 года. В Pro-моделях его заменила программируемая кнопка Action Button. По умолчанию она все так же включает и выключает звук, но теперь пользователь может назначить на нее практически любое действие.</p>
-<p>Хотите мгновенно запустить камеру? Включить фонарик? Записать голосовую заметку? Или, может быть, запустить сложный сценарий через приложение «Команды» (Shortcuts), например, открыть ворота гаража или заказать кофе? Все это теперь доступно по одному нажатию. Это маленькое изменение кардинально меняет опыт взаимодействия с устройством.</p>
+                    <h2 id="step-3">Action Button: РєРЅРѕРїРєР° РґРµР№СЃС‚РІРёСЏ РІРјРµСЃС‚Рѕ РїРµСЂРµРєР»СЋС‡Р°С‚РµР»СЏ</h2>
+                    <p>Р•С‰Рµ РѕРґРЅР° Р¶РµСЂС‚РІР° РїСЂРѕРіСЂРµСЃСЃР° вЂ” Р»РµРіРµРЅРґР°СЂРЅС‹Р№ СЂС‹С‡Р°Р¶РѕРє РїРµСЂРµРєР»СЋС‡РµРЅРёСЏ Р±РµР·Р·РІСѓС‡РЅРѕРіРѕ СЂРµР¶РёРјР°, РєРѕС‚РѕСЂС‹Р№ Р±С‹Р» СЃ РЅР°РјРё СЃ СЃР°РјРѕРіРѕ РїРµСЂРІРѕРіРѕ iPhone 2007 РіРѕРґР°. Р’ Pro-РјРѕРґРµР»СЏС… РµРіРѕ Р·Р°РјРµРЅРёР»Р° РїСЂРѕРіСЂР°РјРјРёСЂСѓРµРјР°СЏ РєРЅРѕРїРєР° Action Button. РџРѕ СѓРјРѕР»С‡Р°РЅРёСЋ РѕРЅР° РІСЃРµ С‚Р°Рє Р¶Рµ РІРєР»СЋС‡Р°РµС‚ Рё РІС‹РєР»СЋС‡Р°РµС‚ Р·РІСѓРє, РЅРѕ С‚РµРїРµСЂСЊ РїРѕР»СЊР·РѕРІР°С‚РµР»СЊ РјРѕР¶РµС‚ РЅР°Р·РЅР°С‡РёС‚СЊ РЅР° РЅРµРµ РїСЂР°РєС‚РёС‡РµСЃРєРё Р»СЋР±РѕРµ РґРµР№СЃС‚РІРёРµ.</p>
+<p>РҐРѕС‚РёС‚Рµ РјРіРЅРѕРІРµРЅРЅРѕ Р·Р°РїСѓСЃС‚РёС‚СЊ РєР°РјРµСЂСѓ? Р’РєР»СЋС‡РёС‚СЊ С„РѕРЅР°СЂРёРє? Р—Р°РїРёСЃР°С‚СЊ РіРѕР»РѕСЃРѕРІСѓСЋ Р·Р°РјРµС‚РєСѓ? РР»Рё, РјРѕР¶РµС‚ Р±С‹С‚СЊ, Р·Р°РїСѓСЃС‚РёС‚СЊ СЃР»РѕР¶РЅС‹Р№ СЃС†РµРЅР°СЂРёР№ С‡РµСЂРµР· РїСЂРёР»РѕР¶РµРЅРёРµ В«РљРѕРјР°РЅРґС‹В» (Shortcuts), РЅР°РїСЂРёРјРµСЂ, РѕС‚РєСЂС‹С‚СЊ РІРѕСЂРѕС‚Р° РіР°СЂР°Р¶Р° РёР»Рё Р·Р°РєР°Р·Р°С‚СЊ РєРѕС„Рµ? Р’СЃРµ СЌС‚Рѕ С‚РµРїРµСЂСЊ РґРѕСЃС‚СѓРїРЅРѕ РїРѕ РѕРґРЅРѕРјСѓ РЅР°Р¶Р°С‚РёСЋ. Р­С‚Рѕ РјР°Р»РµРЅСЊРєРѕРµ РёР·РјРµРЅРµРЅРёРµ РєР°СЂРґРёРЅР°Р»СЊРЅРѕ РјРµРЅСЏРµС‚ РѕРїС‹С‚ РІР·Р°РёРјРѕРґРµР№СЃС‚РІРёСЏ СЃ СѓСЃС‚СЂРѕР№СЃС‚РІРѕРј.</p>
 
-                    <h2 id="step-4">Камеры: 5-кратный зум и 48 мегапикселей для всех</h2>
-                    <p>В этом году Apple наконец-то разделила фотовозможности Pro и Pro Max. Самый большой и дорогой iPhone 15 Pro Max получил эксклюзивный телеобъектив с 5-кратным оптическим зумом, реализованный через уникальную систему тетрапризмы (свет внутри объектива отражается четыре раза). Это позволяет делать потрясающие снимки удаленных объектов и портреты с красивым боке на большом расстоянии.</p>
-                    <p>Но и базовые iPhone 15 не остались в обиде. Они унаследовали основной сенсор на 48 Мп от прошлогодних «прошек». Теперь даже обычный айфон снимает с невероятной детализацией, поддерживает 2-кратный зум без потери качества (кроп с матрицы) и автоматически переходит в портретный режим, если видит в кадре человека или животное. Dynamic Island (динамический остров) теперь тоже есть во всех моделях, окончательно отправив «челку» на свалку истории.</p>
+                    <h2 id="step-4">РљР°РјРµСЂС‹: 5-РєСЂР°С‚РЅС‹Р№ Р·СѓРј Рё 48 РјРµРіР°РїРёРєСЃРµР»РµР№ РґР»СЏ РІСЃРµС…</h2>
+                    <p>Р’ СЌС‚РѕРј РіРѕРґСѓ Apple РЅР°РєРѕРЅРµС†-С‚Рѕ СЂР°Р·РґРµР»РёР»Р° С„РѕС‚РѕРІРѕР·РјРѕР¶РЅРѕСЃС‚Рё Pro Рё Pro Max. РЎР°РјС‹Р№ Р±РѕР»СЊС€РѕР№ Рё РґРѕСЂРѕРіРѕР№ iPhone 15 Pro Max РїРѕР»СѓС‡РёР» СЌРєСЃРєР»СЋР·РёРІРЅС‹Р№ С‚РµР»РµРѕР±СЉРµРєС‚РёРІ СЃ 5-РєСЂР°С‚РЅС‹Рј РѕРїС‚РёС‡РµСЃРєРёРј Р·СѓРјРѕРј, СЂРµР°Р»РёР·РѕРІР°РЅРЅС‹Р№ С‡РµСЂРµР· СѓРЅРёРєР°Р»СЊРЅСѓСЋ СЃРёСЃС‚РµРјСѓ С‚РµС‚СЂР°РїСЂРёР·РјС‹ (СЃРІРµС‚ РІРЅСѓС‚СЂРё РѕР±СЉРµРєС‚РёРІР° РѕС‚СЂР°Р¶Р°РµС‚СЃСЏ С‡РµС‚С‹СЂРµ СЂР°Р·Р°). Р­С‚Рѕ РїРѕР·РІРѕР»СЏРµС‚ РґРµР»Р°С‚СЊ РїРѕС‚СЂСЏСЃР°СЋС‰РёРµ СЃРЅРёРјРєРё СѓРґР°Р»РµРЅРЅС‹С… РѕР±СЉРµРєС‚РѕРІ Рё РїРѕСЂС‚СЂРµС‚С‹ СЃ РєСЂР°СЃРёРІС‹Рј Р±РѕРєРµ РЅР° Р±РѕР»СЊС€РѕРј СЂР°СЃСЃС‚РѕСЏРЅРёРё.</p>
+                    <p>РќРѕ Рё Р±Р°Р·РѕРІС‹Рµ iPhone 15 РЅРµ РѕСЃС‚Р°Р»РёСЃСЊ РІ РѕР±РёРґРµ. РћРЅРё СѓРЅР°СЃР»РµРґРѕРІР°Р»Рё РѕСЃРЅРѕРІРЅРѕР№ СЃРµРЅСЃРѕСЂ РЅР° 48 РњРї РѕС‚ РїСЂРѕС€Р»РѕРіРѕРґРЅРёС… В«РїСЂРѕС€РµРєВ». РўРµРїРµСЂСЊ РґР°Р¶Рµ РѕР±С‹С‡РЅС‹Р№ Р°Р№С„РѕРЅ СЃРЅРёРјР°РµС‚ СЃ РЅРµРІРµСЂРѕСЏС‚РЅРѕР№ РґРµС‚Р°Р»РёР·Р°С†РёРµР№, РїРѕРґРґРµСЂР¶РёРІР°РµС‚ 2-РєСЂР°С‚РЅС‹Р№ Р·СѓРј Р±РµР· РїРѕС‚РµСЂРё РєР°С‡РµСЃС‚РІР° (РєСЂРѕРї СЃ РјР°С‚СЂРёС†С‹) Рё Р°РІС‚РѕРјР°С‚РёС‡РµСЃРєРё РїРµСЂРµС…РѕРґРёС‚ РІ РїРѕСЂС‚СЂРµС‚РЅС‹Р№ СЂРµР¶РёРј, РµСЃР»Рё РІРёРґРёС‚ РІ РєР°РґСЂРµ С‡РµР»РѕРІРµРєР° РёР»Рё Р¶РёРІРѕС‚РЅРѕРµ. Dynamic Island (РґРёРЅР°РјРёС‡РµСЃРєРёР№ РѕСЃС‚СЂРѕРІ) С‚РµРїРµСЂСЊ С‚РѕР¶Рµ РµСЃС‚СЊ РІРѕ РІСЃРµС… РјРѕРґРµР»СЏС…, РѕРєРѕРЅС‡Р°С‚РµР»СЊРЅРѕ РѕС‚РїСЂР°РІРёРІ В«С‡РµР»РєСѓВ» РЅР° СЃРІР°Р»РєСѓ РёСЃС‚РѕСЂРёРё.</p>
 
-                    <h2 id="step-5">Производительность: консольные игры в кармане</h2>
-                    <p>Сердцем Pro-версий стал новейший чип A17 Pro — первый в мире процессор, выполненный по 3-нанометровому техпроцессу. Помимо прироста производительности и энергоэффективности, он получил аппаратную поддержку трассировки лучей (ray tracing). Apple сделала громкое заявление: iPhone 15 Pro сможет запускать полноценные консольные игры, такие как Resident Evil Village, Resident Evil 4 Remake, Death Stranding и Assassin’s Creed Mirage.</p>
-                    <p>Это не мобильные порты, а полноценные версии игр, которые мы привыкли видеть на PS5 или мощных ПК. Если обещания Apple оправдаются, это может перевернуть индустрию мобильного гейминга.</p>
+                    <h2 id="step-5">РџСЂРѕРёР·РІРѕРґРёС‚РµР»СЊРЅРѕСЃС‚СЊ: РєРѕРЅСЃРѕР»СЊРЅС‹Рµ РёРіСЂС‹ РІ РєР°СЂРјР°РЅРµ</h2>
+                    <p>РЎРµСЂРґС†РµРј Pro-РІРµСЂСЃРёР№ СЃС‚Р°Р» РЅРѕРІРµР№С€РёР№ С‡РёРї A17 Pro вЂ” РїРµСЂРІС‹Р№ РІ РјРёСЂРµ РїСЂРѕС†РµСЃСЃРѕСЂ, РІС‹РїРѕР»РЅРµРЅРЅС‹Р№ РїРѕ 3-РЅР°РЅРѕРјРµС‚СЂРѕРІРѕРјСѓ С‚РµС…РїСЂРѕС†РµСЃСЃСѓ. РџРѕРјРёРјРѕ РїСЂРёСЂРѕСЃС‚Р° РїСЂРѕРёР·РІРѕРґРёС‚РµР»СЊРЅРѕСЃС‚Рё Рё СЌРЅРµСЂРіРѕСЌС„С„РµРєС‚РёРІРЅРѕСЃС‚Рё, РѕРЅ РїРѕР»СѓС‡РёР» Р°РїРїР°СЂР°С‚РЅСѓСЋ РїРѕРґРґРµСЂР¶РєСѓ С‚СЂР°СЃСЃРёСЂРѕРІРєРё Р»СѓС‡РµР№ (ray tracing). Apple СЃРґРµР»Р°Р»Р° РіСЂРѕРјРєРѕРµ Р·Р°СЏРІР»РµРЅРёРµ: iPhone 15 Pro СЃРјРѕР¶РµС‚ Р·Р°РїСѓСЃРєР°С‚СЊ РїРѕР»РЅРѕС†РµРЅРЅС‹Рµ РєРѕРЅСЃРѕР»СЊРЅС‹Рµ РёРіСЂС‹, С‚Р°РєРёРµ РєР°Рє Resident Evil Village, Resident Evil 4 Remake, Death Stranding Рё AssassinвЂ™s Creed Mirage.</p>
+                    <p>Р­С‚Рѕ РЅРµ РјРѕР±РёР»СЊРЅС‹Рµ РїРѕСЂС‚С‹, Р° РїРѕР»РЅРѕС†РµРЅРЅС‹Рµ РІРµСЂСЃРёРё РёРіСЂ, РєРѕС‚РѕСЂС‹Рµ РјС‹ РїСЂРёРІС‹РєР»Рё РІРёРґРµС‚СЊ РЅР° PS5 РёР»Рё РјРѕС‰РЅС‹С… РџРљ. Р•СЃР»Рё РѕР±РµС‰Р°РЅРёСЏ Apple РѕРїСЂР°РІРґР°СЋС‚СЃСЏ, СЌС‚Рѕ РјРѕР¶РµС‚ РїРµСЂРµРІРµСЂРЅСѓС‚СЊ РёРЅРґСѓСЃС‚СЂРёСЋ РјРѕР±РёР»СЊРЅРѕРіРѕ РіРµР№РјРёРЅРіР°.</p>
 
-                    <h2 id="step-6">Цены и доступность</h2>
-                    <p>Вопреки слухам, Apple сохранила цены в США на прежнем уровне для большинства моделей. iPhone 15 стартует от $799, iPhone 15 Pro — от $999. Однако iPhone 15 Pro Max подорожал: теперь он стоит от $1199, но и минимальный объем памяти для него теперь составляет 256 ГБ (версии на 128 ГБ больше нет).</p>
-                    <p>В России, несмотря на отсутствие официальных поставок, ритейлеры и маркетплейсы уже начали продажи по схеме параллельного импорта. Цены, разумеется, выше: за базовый iPhone 15 просят от 125 000 рублей, а топовый Pro Max на 1 ТБ может обойтись в 250 000 рублей и выше. Тем не менее, спрос остается высоким, и многие готовы переплачивать, чтобы получить новинку в первые дни.</p>
+                    <h2 id="step-6">Р¦РµРЅС‹ Рё РґРѕСЃС‚СѓРїРЅРѕСЃС‚СЊ</h2>
+                    <p>Р’РѕРїСЂРµРєРё СЃР»СѓС…Р°Рј, Apple СЃРѕС…СЂР°РЅРёР»Р° С†РµРЅС‹ РІ РЎРЁРђ РЅР° РїСЂРµР¶РЅРµРј СѓСЂРѕРІРЅРµ РґР»СЏ Р±РѕР»СЊС€РёРЅСЃС‚РІР° РјРѕРґРµР»РµР№. iPhone 15 СЃС‚Р°СЂС‚СѓРµС‚ РѕС‚ $799, iPhone 15 Pro вЂ” РѕС‚ $999. РћРґРЅР°РєРѕ iPhone 15 Pro Max РїРѕРґРѕСЂРѕР¶Р°Р»: С‚РµРїРµСЂСЊ РѕРЅ СЃС‚РѕРёС‚ РѕС‚ $1199, РЅРѕ Рё РјРёРЅРёРјР°Р»СЊРЅС‹Р№ РѕР±СЉРµРј РїР°РјСЏС‚Рё РґР»СЏ РЅРµРіРѕ С‚РµРїРµСЂСЊ СЃРѕСЃС‚Р°РІР»СЏРµС‚ 256 Р“Р‘ (РІРµСЂСЃРёРё РЅР° 128 Р“Р‘ Р±РѕР»СЊС€Рµ РЅРµС‚).</p>
+                    <p>Р’ Р РѕСЃСЃРёРё, РЅРµСЃРјРѕС‚СЂСЏ РЅР° РѕС‚СЃСѓС‚СЃС‚РІРёРµ РѕС„РёС†РёР°Р»СЊРЅС‹С… РїРѕСЃС‚Р°РІРѕРє, СЂРёС‚РµР№Р»РµСЂС‹ Рё РјР°СЂРєРµС‚РїР»РµР№СЃС‹ СѓР¶Рµ РЅР°С‡Р°Р»Рё РїСЂРѕРґР°Р¶Рё РїРѕ СЃС…РµРјРµ РїР°СЂР°Р»Р»РµР»СЊРЅРѕРіРѕ РёРјРїРѕСЂС‚Р°. Р¦РµРЅС‹, СЂР°Р·СѓРјРµРµС‚СЃСЏ, РІС‹С€Рµ: Р·Р° Р±Р°Р·РѕРІС‹Р№ iPhone 15 РїСЂРѕСЃСЏС‚ РѕС‚ 125 000 СЂСѓР±Р»РµР№, Р° С‚РѕРїРѕРІС‹Р№ Pro Max РЅР° 1 РўР‘ РјРѕР¶РµС‚ РѕР±РѕР№С‚РёСЃСЊ РІ 250 000 СЂСѓР±Р»РµР№ Рё РІС‹С€Рµ. РўРµРј РЅРµ РјРµРЅРµРµ, СЃРїСЂРѕСЃ РѕСЃС‚Р°РµС‚СЃСЏ РІС‹СЃРѕРєРёРј, Рё РјРЅРѕРіРёРµ РіРѕС‚РѕРІС‹ РїРµСЂРµРїР»Р°С‡РёРІР°С‚СЊ, С‡С‚РѕР±С‹ РїРѕР»СѓС‡РёС‚СЊ РЅРѕРІРёРЅРєСѓ РІ РїРµСЂРІС‹Рµ РґРЅРё.</p>
 
-                    <h2 id="step-7">Первые впечатления</h2>
-                    <p>iPhone 15 ощущается как одно из самых значимых обновлений за последние годы. Переход на USB-C делает жизнь удобнее, титановый корпус решает проблему веса, а камеры выходят на новый уровень. Очереди у магазинов подтверждают: магия Apple все еще работает, и даже в 2023 году смартфон остается самым желанным гаджетом на планете.</p>
+                    <h2 id="step-7">РџРµСЂРІС‹Рµ РІРїРµС‡Р°С‚Р»РµРЅРёСЏ</h2>
+                    <p>iPhone 15 РѕС‰СѓС‰Р°РµС‚СЃСЏ РєР°Рє РѕРґРЅРѕ РёР· СЃР°РјС‹С… Р·РЅР°С‡РёРјС‹С… РѕР±РЅРѕРІР»РµРЅРёР№ Р·Р° РїРѕСЃР»РµРґРЅРёРµ РіРѕРґС‹. РџРµСЂРµС…РѕРґ РЅР° USB-C РґРµР»Р°РµС‚ Р¶РёР·РЅСЊ СѓРґРѕР±РЅРµРµ, С‚РёС‚Р°РЅРѕРІС‹Р№ РєРѕСЂРїСѓСЃ СЂРµС€Р°РµС‚ РїСЂРѕР±Р»РµРјСѓ РІРµСЃР°, Р° РєР°РјРµСЂС‹ РІС‹С…РѕРґСЏС‚ РЅР° РЅРѕРІС‹Р№ СѓСЂРѕРІРµРЅСЊ. РћС‡РµСЂРµРґРё Сѓ РјР°РіР°Р·РёРЅРѕРІ РїРѕРґС‚РІРµСЂР¶РґР°СЋС‚: РјР°РіРёСЏ Apple РІСЃРµ РµС‰Рµ СЂР°Р±РѕС‚Р°РµС‚, Рё РґР°Р¶Рµ РІ 2023 РіРѕРґСѓ СЃРјР°СЂС‚С„РѕРЅ РѕСЃС‚Р°РµС‚СЃСЏ СЃР°РјС‹Рј Р¶РµР»Р°РЅРЅС‹Рј РіР°РґР¶РµС‚РѕРј РЅР° РїР»Р°РЅРµС‚Рµ.</p>
 </div>
 
-        <!-- Telegram рекламный баннер -->
+        <!-- Telegram СЂРµРєР»Р°РјРЅС‹Р№ Р±Р°РЅРЅРµСЂ -->
         <a href="https://t.me/RepairoRU" target="_blank" rel="noopener noreferrer" class="telegram-banner">
           <div class="telegram-banner-container">
             <div class="telegram-logo">
@@ -392,10 +467,10 @@
               </svg>
             </div>
             <div class="telegram-content">
-              <div class="telegram-title">Новости из мира технологий</div>
-              <div class="telegram-subtitle">В нашем новом Telegram-канале. Подписывайтесь и будьте в числе первых!</div>
+              <div class="telegram-title">РќРѕРІРѕСЃС‚Рё РёР· РјРёСЂР° С‚РµС…РЅРѕР»РѕРіРёР№</div>
+              <div class="telegram-subtitle">Р’ РЅР°С€РµРј РЅРѕРІРѕРј Telegram-РєР°РЅР°Р»Рµ. РџРѕРґРїРёСЃС‹РІР°Р№С‚РµСЃСЊ Рё Р±СѓРґСЊС‚Рµ РІ С‡РёСЃР»Рµ РїРµСЂРІС‹С…!</div>
               <div class="telegram-button">
-                Подписаться
+                РџРѕРґРїРёСЃР°С‚СЊСЃСЏ
                 <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.56c-.21 2.22-1.12 7.58-1.58 10.06-.19 1.07-.57 1.43-.94 1.46-.8.07-1.4-.52-2.17-1.03-1.21-.79-1.89-1.28-3.06-2.05-1.35-.87-.47-1.35.3-2.13.2-.21 3.71-3.39 3.77-3.68.01-.04.01-.18-.07-.26s-.2-.05-.29-.03c-.12.03-2.11 1.34-5.95 3.93-.56.38-1.07.57-1.53.56-.5-.01-1.47-.28-2.19-.51-.88-.28-1.58-.43-1.52-.91.03-.25.38-.51 1.04-.78 4.07-1.77 6.78-2.94 8.13-3.51 3.88-1.62 4.68-1.9 5.19-1.91.12 0 .37.03.54.17.14.12.18.28.2.44-.01.06 0 .11-.01.17z"/>
                 </svg>
@@ -421,45 +496,45 @@
                         </span>
                         <span class="logo__text">Repairo</span>
                     </a>
-                    <p class="footer__text">Помогаем ремонтировать электронику с 2024 года</p>
+                    <p class="footer__text">РџРѕРјРѕРіР°РµРј СЂРµРјРѕРЅС‚РёСЂРѕРІР°С‚СЊ СЌР»РµРєС‚СЂРѕРЅРёРєСѓ СЃ 2024 РіРѕРґР°</p>
                 </div>
                 <div class="footer__col">
-                    <h3 class="footer__title">Разделы</h3>
+                    <h3 class="footer__title">Р Р°Р·РґРµР»С‹</h3>
                     <ul class="footer__links">
-                        <li><a href="../index.html" class="footer__link">Главная</a></li>
-                        <li><a href="../index.html#categories" class="footer__link">Все гайды</a></li>
-                        <li><a href="../contacts.html" class="footer__link">Контакты</a></li>
+                        <li><a href="../index.html" class="footer__link">Р“Р»Р°РІРЅР°СЏ</a></li>
+                        <li><a href="../index.html#categories" class="footer__link">Р’СЃРµ РіР°Р№РґС‹</a></li>
+                        <li><a href="../contacts.html" class="footer__link">РљРѕРЅС‚Р°РєС‚С‹</a></li>
                     </ul>
                 </div>
                 <div class="footer__col">
-                    <h3 class="footer__title">Категории</h3>
+                    <h3 class="footer__title">РљР°С‚РµРіРѕСЂРёРё</h3>
                     <ul class="footer__links">
-                        <li><a href="../tv.html" class="nav__link">Телевизоры</a></li>
-                        <li><a href="../cameras.html" class="nav__link">Фотоаппараты</a></li>
-                        <li><a href="../consoles.html" class="nav__link">Приставки</a></li>
-                        <li><a href="../laptops.html" class="nav__link">Ноутбуки</a></li>
-                        <li><a href="../smartphones.html" class="nav__link">Смартфоны</a></li>
-                        <li><a href="../small-appliances.html" class="nav__link">Мелкая техника</a></li>
-                        <li><a href="../large-appliances.html" class="nav__link">Бытовая техника</a></li>
-                        <li><a href="../auto-electronics.html" class="nav__link">Авто-Электроника</a></li>
+                        <li><a href="../tv.html" class="nav__link">РўРµР»РµРІРёР·РѕСЂС‹</a></li>
+                        <li><a href="../cameras.html" class="nav__link">Р¤РѕС‚РѕР°РїРїР°СЂР°С‚С‹</a></li>
+                        <li><a href="../consoles.html" class="nav__link">РџСЂРёСЃС‚Р°РІРєРё</a></li>
+                        <li><a href="../laptops.html" class="nav__link">РќРѕСѓС‚Р±СѓРєРё</a></li>
+                        <li><a href="../smartphones.html" class="nav__link">РЎРјР°СЂС‚С„РѕРЅС‹</a></li>
+                        <li><a href="../small-appliances.html" class="nav__link">РњРµР»РєР°СЏ С‚РµС…РЅРёРєР°</a></li>
+                        <li><a href="../large-appliances.html" class="nav__link">Р‘С‹С‚РѕРІР°СЏ С‚РµС…РЅРёРєР°</a></li>
+                        <li><a href="../auto-electronics.html" class="nav__link">РђРІС‚Рѕ-Р­Р»РµРєС‚СЂРѕРЅРёРєР°</a></li>
                     </ul>
                 </div>
                 <div class="footer__col">
-                    <h3 class="footer__title">Контакты</h3>
+                    <h3 class="footer__title">РљРѕРЅС‚Р°РєС‚С‹</h3>
                     <ul class="footer__links">
                         <li><a href="https://t.me/RepairoRU" class="footer__link"><i class="fab fa-telegram"></i> Telegram</a></li>
-                        <li><span class="footer__link">Наша почта: repairo.info@mail.ru</span></li>
+                        <li><span class="footer__link">РќР°С€Р° РїРѕС‡С‚Р°: repairo.info@mail.ru</span></li>
                     </ul>
                 </div>
             </div>
             <div class="footer__bottom">
                 <p class="disclaimer">
-    Администрация сайта не несёт ответственности за возможные повреждения техники
-    и иные последствия, возникшие в результате самостоятельного ремонта по
-    материалам и инструкциям, размещённым на сайте. Все работы вы выполняете
-    на свой страх и риск.
+    РђРґРјРёРЅРёСЃС‚СЂР°С†РёСЏ СЃР°Р№С‚Р° РЅРµ РЅРµСЃС‘С‚ РѕС‚РІРµС‚СЃС‚РІРµРЅРЅРѕСЃС‚Рё Р·Р° РІРѕР·РјРѕР¶РЅС‹Рµ РїРѕРІСЂРµР¶РґРµРЅРёСЏ С‚РµС…РЅРёРєРё
+    Рё РёРЅС‹Рµ РїРѕСЃР»РµРґСЃС‚РІРёСЏ, РІРѕР·РЅРёРєС€РёРµ РІ СЂРµР·СѓР»СЊС‚Р°С‚Рµ СЃР°РјРѕСЃС‚РѕСЏС‚РµР»СЊРЅРѕРіРѕ СЂРµРјРѕРЅС‚Р° РїРѕ
+    РјР°С‚РµСЂРёР°Р»Р°Рј Рё РёРЅСЃС‚СЂСѓРєС†РёСЏРј, СЂР°Р·РјРµС‰С‘РЅРЅС‹Рј РЅР° СЃР°Р№С‚Рµ. Р’СЃРµ СЂР°Р±РѕС‚С‹ РІС‹ РІС‹РїРѕР»РЅСЏРµС‚Рµ
+    РЅР° СЃРІРѕР№ СЃС‚СЂР°С… Рё СЂРёСЃРє.
     </p>
-                <p class="footer__copyright">© 2026 Repairo. Все права защищены.</p>
+                <p class="footer__copyright">В© 2026 Repairo. Р’СЃРµ РїСЂР°РІР° Р·Р°С‰РёС‰РµРЅС‹.</p>
             </div>
         </div>
     </footer>
@@ -468,50 +543,50 @@
 {
   "@context": "https://schema.org",
   "@type": "HowTo",
-  "name": "Apple начала продажи iPhone 15 и iPhone 15 Pro",
-  "description": "Старт продаж iPhone 15 и 15 Pro: огромные очереди, переход на USB-C, титановый корпус и дефицит моделей Pro Max. Подробный обзор первого дня продаж и главных нововведений.",
+  "name": "Apple РЅР°С‡Р°Р»Р° РїСЂРѕРґР°Р¶Рё iPhone 15 Рё iPhone 15 Pro",
+  "description": "РЎС‚Р°СЂС‚ РїСЂРѕРґР°Р¶ iPhone 15 Рё 15 Pro: РѕРіСЂРѕРјРЅС‹Рµ РѕС‡РµСЂРµРґРё, РїРµСЂРµС…РѕРґ РЅР° USB-C, С‚РёС‚Р°РЅРѕРІС‹Р№ РєРѕСЂРїСѓСЃ Рё РґРµС„РёС†РёС‚ РјРѕРґРµР»РµР№ Pro Max. РџРѕРґСЂРѕР±РЅС‹Р№ РѕР±Р·РѕСЂ РїРµСЂРІРѕРіРѕ РґРЅСЏ РїСЂРѕРґР°Р¶ Рё РіР»Р°РІРЅС‹С… РЅРѕРІРѕРІРІРµРґРµРЅРёР№.",
   "totalTime": "PT30M",
   "step": [
     {
       "@type": "HowToStep",
-      "name": "Эра USB-C",
-      "text": "Прощай, Lightning: эра USB-C наступила",
+      "name": "Р­СЂР° USB-C",
+      "text": "РџСЂРѕС‰Р°Р№, Lightning: СЌСЂР° USB-C РЅР°СЃС‚СѓРїРёР»Р°",
       "url": "#step-1"
     },
     {
       "@type": "HowToStep",
-      "name": "Титановый корпус",
-      "text": "Титан: легче, прочнее, премиальнее",
+      "name": "РўРёС‚Р°РЅРѕРІС‹Р№ РєРѕСЂРїСѓСЃ",
+      "text": "РўРёС‚Р°РЅ: Р»РµРіС‡Рµ, РїСЂРѕС‡РЅРµРµ, РїСЂРµРјРёР°Р»СЊРЅРµРµ",
       "url": "#step-2"
     },
     {
       "@type": "HowToStep",
       "name": "Action Button",
-      "text": "Action Button: кнопка действия вместо переключателя",
+      "text": "Action Button: РєРЅРѕРїРєР° РґРµР№СЃС‚РІРёСЏ РІРјРµСЃС‚Рѕ РїРµСЂРµРєР»СЋС‡Р°С‚РµР»СЏ",
       "url": "#step-3"
     },
     {
       "@type": "HowToStep",
-      "name": "Камеры",
-      "text": "Камеры: 5-кратный зум и 48 мегапикселей для всех",
+      "name": "РљР°РјРµСЂС‹",
+      "text": "РљР°РјРµСЂС‹: 5-РєСЂР°С‚РЅС‹Р№ Р·СѓРј Рё 48 РјРµРіР°РїРёРєСЃРµР»РµР№ РґР»СЏ РІСЃРµС…",
       "url": "#step-4"
     },
     {
       "@type": "HowToStep",
-      "name": "Производительность",
-      "text": "Производительность: консольные игры в кармане",
+      "name": "РџСЂРѕРёР·РІРѕРґРёС‚РµР»СЊРЅРѕСЃС‚СЊ",
+      "text": "РџСЂРѕРёР·РІРѕРґРёС‚РµР»СЊРЅРѕСЃС‚СЊ: РєРѕРЅСЃРѕР»СЊРЅС‹Рµ РёРіСЂС‹ РІ РєР°СЂРјР°РЅРµ",
       "url": "#step-5"
     },
     {
       "@type": "HowToStep",
-      "name": "Цены и доступность",
-      "text": "Цены и доступность",
+      "name": "Р¦РµРЅС‹ Рё РґРѕСЃС‚СѓРїРЅРѕСЃС‚СЊ",
+      "text": "Р¦РµРЅС‹ Рё РґРѕСЃС‚СѓРїРЅРѕСЃС‚СЊ",
       "url": "#step-6"
     },
     {
       "@type": "HowToStep",
-      "name": "Первые впечатления",
-      "text": "Первые впечатления",
+      "name": "РџРµСЂРІС‹Рµ РІРїРµС‡Р°С‚Р»РµРЅРёСЏ",
+      "text": "РџРµСЂРІС‹Рµ РІРїРµС‡Р°С‚Р»РµРЅРёСЏ",
       "url": "#step-7"
     }
   ],
@@ -522,6 +597,4 @@
 <script src="../cookie-consent.js"></script>
 </body>
 </html>
-
-
 

@@ -1,194 +1,271 @@
 <!DOCTYPE html>
-<html lang="ru" data-theme="light">
+<html lang="ru">
 <head>
 
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Repairo - Новые iPad Pro с чипом M3: что известно и чего ждать в 2024 году</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repairo - РќРѕРІС‹Рµ iPad Pro СЃ С‡РёРїРѕРј M3: С‡С‚Рѕ РёР·РІРµСЃС‚РЅРѕ Рё С‡РµРіРѕ Р¶РґР°С‚СЊ РІ 2024 РіРѕРґСѓ</title>
     <meta name="description" content="{{ description }}">
+    <meta name="description" content="РџРѕР»РЅС‹Р№ РѕР±Р·РѕСЂ СЃР»СѓС…РѕРІ Рё СѓС‚РµС‡РµРє Рѕ РіСЂСЏРґСѓС‰РёС… iPad Pro СЃ РїСЂРѕС†РµСЃСЃРѕСЂРѕРј M3: OLED-РґРёСЃРїР»РµРё, РЅРѕРІС‹Р№ РґРёР·Р°Р№РЅ, РїРѕРІС‹С€РµРЅРёРµ С†РµРЅ Рё РІРѕР·РјРѕР¶РЅР°СЏ РґР°С‚Р° РІС‹С…РѕРґР° РІРµСЃРЅРѕР№ 2024 РіРѕРґР°.">
 
-  <link rel="stylesheet" href="../styles.css" />
-  <link rel="stylesheet" href="../styles-header.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <style>
-    .guide-content { line-height: 1.7; color: var(--text); }
-    .guide-content h2 { color: var(--primary); margin-top: 30px; margin-bottom: 15px; font-size: 1.5rem; }
-    .guide-content h3 { color: var(--primary-dark); margin-top: 25px; margin-bottom: 12px; font-size: 1.2rem; }
-    .guide-image-block { margin: 20px 0; padding: 15px; background: var(--background); border-radius: var(--border-radius); border: 1px solid var(--border); text-align: center; }
-    .guide-image-block img { max-width: 100%; height: auto; border-radius: 6px; border: 1px solid var(--border); }
-    .image-caption { margin-top: 10px; font-size: 0.85rem; color: var(--text-light); font-style: italic; }
-    .pro-tips { background: rgba(3, 74, 79, 0.05); padding: 15px; border-radius: 6px; margin: 20px 0; }
-    .pro-tips h4 { color: var(--primary); margin-top: 0; margin-bottom: 12px; font-size: 1.1rem; }
-    .tip-item { display: flex; gap: 8px; margin-bottom: 8px; align-items: flex-start; }
-    table { width: 100%; border-collapse: collapse; margin: 20px 0; }
-    th, td { border: 1px solid var(--border); padding: 8px; text-align: left; }
-    th { background: var(--background-light); }
-    .highlight { background: #f5f7fa; border-left: 4px solid #2d9cdb; padding: 10px 15px; margin: 20px 0; }
-    .faq-section ul { margin-left: 1em; }
-    .block-section { margin-bottom: 2em; }
-    @media (max-width: 768px) {
-      .guide-content h2 { font-size: 1.4rem; margin-top: 25px; }
-      .guide-image-block { padding: 12px; margin: 15px 0; }
-      table, th, td { font-size: 0.95rem; }
-    }
-    /* Р“РѕСЂРёР·РѕРЅС‚Р°Р»СЊРЅС‹Р№ Р±Р°РЅРЅРµСЂ-РєР°СЂС‚РѕС‡РєР° */
-    .ym-hero-banner {
-      width: 100%;
-      max-width: 600px;
-      min-height: 140px;
-      border-radius: 16px;
-      background: #ffffff;
-      border: 1px solid #e5e7eb;
-      display: flex;
-      flex-direction: column;
-      box-shadow: 0 4px 16px rgba(15, 23, 42, 0.08);
-      overflow: hidden;
-      box-sizing: border-box;
-      margin: 40px auto;
-    }
+    <style>
+        :root {
+            --gradient-start: #f5f7a0;
+            --gradient-end: #8df1c0;
+            --main-bg: #ffffff;
+            --text-color: #333333;
+            --text-light: #666666;
+            --border-color: #e0e0e0;
+            --shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            --radius: 8px;
+            --nav-height: 60px;
+            --glass-bg: rgba(255, 255, 255, 0.25);
+            --glass-border: 1px solid rgba(255, 255, 255, 0.18);
+            --glass-blur: blur(10px);
+        }
 
-    /* РљРѕРЅС‚РµР№РЅРµСЂ РґР»СЏ РёР·РѕР±СЂР°Р¶РµРЅРёР№ */
-    .ym-hero-images {
-      display: flex;
-      height: 120px;
-      overflow: hidden;
-    }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    .ym-hero-image {
-      flex: 1;
-      min-width: 0;
-      height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-      border-right: 1px solid #e5e7eb;
-      background: #f8f9fa;
-    }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--main-bg);
+            color: var(--text-color);
+            line-height: 1.6;
+            padding-top: var(--nav-height);
+        }
 
-    .ym-hero-image:last-child {
-      border-right: none;
-    }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
 
-    .ym-hero-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-      transition: transform 0.3s ease;
-      background: #f8f9fa;
-    }
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
 
-    .ym-hero-image:hover img {
-      transform: scale(1.02);
-    }
+        header {
+            background: var(--glass-bg);
+            backdrop-filter: var(--glass-blur);
+            -webkit-backdrop-filter: var(--glass-blur);
+            border-bottom: var(--glass-border);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
 
-    /* РџСЂР°РІР°СЏ С‡Р°СЃС‚СЊ: РєРѕРЅС‚РµРЅС‚ */
-    .ym-hero-content {
-      padding: 16px 18px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      gap: 8px;
-    }
+        .header-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: var(--nav-height);
+            position: relative;
+        }
 
-    /* РќР°Р·РІР°РЅРёРµ С‚РѕРІР°СЂР° */
-    .ym-hero-title {
-      font-size: 14px;
-      font-weight: 600;
-      color: #111827;
-      line-height: 1.3;
-      margin: 0 0 4px 0;
-      display: -webkit-box;
-      -webkit-line-clamp: 2;
-      line-clamp: 2;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
-    }
+        .header-image {
+            position: absolute;
+            left: 15px;
+            z-index: 1;
+        }
 
-    /* Р РµР№С‚РёРЅРі */
-    .ym-hero-top {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 8px;
-    }
+        .header-image img {
+            height: 40px;
+            width: auto;
+            object-fit: contain;
+        }
 
-    .ym-hero-rating {
-      font-size: 13px;
-      font-weight: 500;
-      color: #111827;
-      background: #f9fafb;
-      border-radius: 999px;
-      padding: 4px 10px;
-    }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--text-color);
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
 
-    .ym-hero-rating-count {
-      color: #6b7280;
-    }
+        .logo__text {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--text-color);
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
 
-    /* Р¤РёРѕР»РµС‚РѕРІР°СЏ РєРЅРѕРїРєР° */
-    .ym-hero-button {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 9px 16px;
-      border-radius: 999px;
-      border: none;
-      background: #6a00ff;
-      color: #ffffff;
-      font-size: 14px;
-      font-weight: 600;
-      cursor: pointer;
-      box-shadow: 0 2px 6px rgba(88, 28, 135, 0.35);
-      transition: background 0.15s ease, transform 0.15s ease,
-                  box-shadow 0.15s ease;
-    }
-    .ym-hero-button::after {
-      content: "в†’";
-      margin-left: 6px;
-      font-size: 14px;
-    }
-    .ym-hero-button:hover {
-      background: #7c3aed;
-      transform: translateY(-1px);
-      box-shadow: 0 4px 10px rgba(88, 28, 135, 0.45);
-    }
+        .back-btn {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 600;
+            color: var(--text-color);
+            transition: color 0.3s;
+        }
 
-    /* Р®СЂРёРґРёС‡РµСЃРєРёР№ Р±Р»РѕРє */
-    .ym-hero-legal {
-      margin-top: 6px;
-      max-width: 600px;
-      font-size: 11px;
-      line-height: 1.3;
-      color: #6b7280;
-      margin-left: auto;
-      margin-right: auto;
-    }
+        .back-btn:hover {
+            color: var(--gradient-end);
+        }
 
-    /* РђРґР°РїС‚РёРІ */
-    @media (max-width: 480px) {
-      .ym-hero-banner {
-        max-width: 100%;
-        margin: 20px 0;
-      }
-      .ym-hero-images {
-        height: 100px;
-      }
-      .ym-hero-content {
-        padding: 12px 12px;
-      }
-      .ym-hero-title {
-        font-size: 13px;
-      }
-      .ym-hero-button {
-        font-size: 13px;
-        padding: 8px 14px;
-      }
-      .ym-hero-legal {
-        font-size: 10px;
-      }
-    }
+        .back-btn::before {
+            content: "в†ђ";
+            font-size: 20px;
+        }
+
+        .article {
+            padding: 40px 0;
+        }
+
+        .article-header {
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .article-title {
+            font-size: 32px;
+            margin-bottom: 15px;
+            line-height: 1.3;
+        }
+
+        .article-meta {
+            color: var(--text-light);
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        .article-image {
+            width: 100%;
+            max-height: 500px;
+            object-fit: cover;
+            border-radius: var(--radius);
+            margin-bottom: 30px;
+            box-shadow: var(--shadow);
+        }
+
+        .article-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .article-content p {
+            margin-bottom: 20px;
+            font-size: 18px;
+            line-height: 1.7;
+        }
+
+        .article-content h2,
+        .article-content h3 {
+            margin: 30px 0 20px;
+            line-height: 1.4;
+        }
+
+        .article-content h2 {
+            font-size: 28px;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 10px;
+        }
+
+        .article-content h3 {
+            font-size: 24px;
+        }
+
+        .article-content img {
+            max-width: 100%;
+            height: auto;
+            border-radius: var(--radius);
+            margin: 25px 0;
+            box-shadow: var(--shadow);
+        }
+
+        .button {
+            display: inline-block;
+            padding: 12px 24px;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            border: none;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(90deg, var(--gradient-start), var(--gradient-end));
+            color: var(--text-color);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        footer {
+            background: #f5f5f5;
+            padding: 50px 0 20px;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .footer-column h3 {
+            font-size: 18px;
+            margin-bottom: 15px;
+            color: var(--text-color);
+            font-weight: 600;
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column li {
+            margin-bottom: 10px;
+        }
+
+        .footer-column a {
+            color: var(--text-light);
+            transition: color 0.3s;
+        }
+
+        .footer-column a:hover {
+            color: var(--gradient-end);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+            color: var(--text-light);
+            font-size: 14px;
+        }
+
+        @media (max-width: 768px) {
+            .article-title {
+                font-size: 26px;
+            }
+
+            .article-content p {
+                font-size: 16px;
+            }
+
+            .article-content h2 {
+                font-size: 24px;
+            }
+
+            .article-content h3 {
+                font-size: 20px;
+            }
+        }
     /* Telegram СЂРµРєР»Р°РјРЅС‹Р№ Р±Р°РЅРЅРµСЂ */
     .telegram-banner {
       display: flex;
@@ -292,22 +369,27 @@
         padding: 15px;
         min-height: 100px;
       }
+
       .telegram-logo {
         width: 50px;
         height: 50px;
         min-width: 50px;
         margin-right: 15px;
       }
+
       .telegram-logo svg {
         width: 26px;
         height: 26px;
       }
+
       .telegram-title {
         font-size: 14px;
       }
+
       .telegram-subtitle {
         font-size: 12px;
       }
+
       .telegram-button {
         font-size: 12px;
         padding: 6px 12px;
@@ -315,66 +397,59 @@
     }
 
 
-
-  </style>
+    </style>
   <script async src="https://timeweb.cloud/api/v1/cloud-ai/agents/3cc03620-d051-4d8d-b5af-f7b6cd083a35/embed.js?collapsed=true"></script>
 </head>
+
 <body>
-  <header class="header">
-    <div class="container">
-      <div class="header__inner">
-        <a href="../index.html" class="logo">
-          <span class="logo__icon"></span>
-          <span class="logo__text">GeoExpert</span>
-        </a>
-        <nav class="nav">
-          <ul class="nav__list">
-            <li><a href="../cameras.html" class="nav__link">РљР°РјРµСЂС‹</a></li>
-            <li><a href="../drones.html" class="nav__link">Р”СЂРѕРЅС‹</a></li>
-            <li><a href="../workflow.html" class="nav__link">Workflow</a></li>
-          </ul>
-        </nav>
-      </div>
-    </div>
-  </header>
+    <header>
+        <div class="container header-container">
+            <div class="header-image">
+                <img src="https://i.postimg.cc/q7H0JS0t/8d9ca2d0-7483-40bd-b92d-73c88a196afb-removebg-preview.png" alt="Header Image">
+            </div>
+            <a href="../articles.html" class="logo">
+                <span class="logo__text">Repairo</span>
+            </a>
+        </div>
+    </header>
 
     <main class="article">
         <div class="container">
             <article>
                 <div class="article-header">
-                    <h1 class="article-title">Новые iPad Pro с чипом M3 от Apple: OLED-революция и заоблачные цены?</h1>
+                    <h1 class="article-title">РќРѕРІС‹Рµ iPad Pro СЃ С‡РёРїРѕРј M3 РѕС‚ Apple: OLED-СЂРµРІРѕР»СЋС†РёСЏ Рё Р·Р°РѕР±Р»Р°С‡РЅС‹Рµ С†РµРЅС‹?</h1>
 
-                    <!-- ВАЖНО: Одно единственное изображение сверху над текстом -->
+                    <!-- Р’РђР–РќРћ: РћРґРЅРѕ РµРґРёРЅСЃС‚РІРµРЅРЅРѕРµ РёР·РѕР±СЂР°Р¶РµРЅРёРµ СЃРІРµСЂС…Сѓ РЅР°Рґ С‚РµРєСЃС‚РѕРј -->
                     <img src="https://i4.imageban.ru/out/2026/02/04/cfd14ff9ccfac8f011044046f893b15f.jpg"
-                         alt="iPad Pro M3 концепт"
+                         alt="iPad Pro M3 РєРѕРЅС†РµРїС‚"
                          class="article-image">
                 </div>
 
-                <div class="article-meta">изображение: концепт-арт</div>
+                <div class="article-meta">РёР·РѕР±СЂР°Р¶РµРЅРёРµ: РєРѕРЅС†РµРїС‚-Р°СЂС‚</div>
 
                 <div class="article-content">
-                    <p>Пока владельцы актуальных моделей iPad Pro наслаждаются мощностью чипа M2, индустрия замерла в ожидании следующего большого скачка. Слухи о новом поколении планшетов Apple циркулируют уже давно, и с каждым месяцем картина становится всё яснее. Ожидается, что весной 2024 года Apple представит самые продвинутые (и, вероятно, самые дорогие) планшеты в своей истории. Главные козыри новинок — процессор M3, выполненный по 3-нанометровому техпроцессу, и долгожданный переход на OLED-дисплеи.</p>
+                    <p>РџРѕРєР° РІР»Р°РґРµР»СЊС†С‹ Р°РєС‚СѓР°Р»СЊРЅС‹С… РјРѕРґРµР»РµР№ iPad Pro РЅР°СЃР»Р°Р¶РґР°СЋС‚СЃСЏ РјРѕС‰РЅРѕСЃС‚СЊСЋ С‡РёРїР° M2, РёРЅРґСѓСЃС‚СЂРёСЏ Р·Р°РјРµСЂР»Р° РІ РѕР¶РёРґР°РЅРёРё СЃР»РµРґСѓСЋС‰РµРіРѕ Р±РѕР»СЊС€РѕРіРѕ СЃРєР°С‡РєР°. РЎР»СѓС…Рё Рѕ РЅРѕРІРѕРј РїРѕРєРѕР»РµРЅРёРё РїР»Р°РЅС€РµС‚РѕРІ Apple С†РёСЂРєСѓР»РёСЂСѓСЋС‚ СѓР¶Рµ РґР°РІРЅРѕ, Рё СЃ РєР°Р¶РґС‹Рј РјРµСЃСЏС†РµРј РєР°СЂС‚РёРЅР° СЃС‚Р°РЅРѕРІРёС‚СЃСЏ РІСЃС‘ СЏСЃРЅРµРµ. РћР¶РёРґР°РµС‚СЃСЏ, С‡С‚Рѕ РІРµСЃРЅРѕР№ 2024 РіРѕРґР° Apple РїСЂРµРґСЃС‚Р°РІРёС‚ СЃР°РјС‹Рµ РїСЂРѕРґРІРёРЅСѓС‚С‹Рµ (Рё, РІРµСЂРѕСЏС‚РЅРѕ, СЃР°РјС‹Рµ РґРѕСЂРѕРіРёРµ) РїР»Р°РЅС€РµС‚С‹ РІ СЃРІРѕРµР№ РёСЃС‚РѕСЂРёРё. Р“Р»Р°РІРЅС‹Рµ РєРѕР·С‹СЂРё РЅРѕРІРёРЅРѕРє вЂ” РїСЂРѕС†РµСЃСЃРѕСЂ M3, РІС‹РїРѕР»РЅРµРЅРЅС‹Р№ РїРѕ 3-РЅР°РЅРѕРјРµС‚СЂРѕРІРѕРјСѓ С‚РµС…РїСЂРѕС†РµСЃСЃСѓ, Рё РґРѕР»РіРѕР¶РґР°РЅРЅС‹Р№ РїРµСЂРµС…РѕРґ РЅР° OLED-РґРёСЃРїР»РµРё.</p>
 
-                    <h2 id="step-1">Процессор M3: мощь настольного компьютера в планшете</h2>
-                    <p>Сердцем новых iPad Pro станет чип M3, который уже дебютировал в MacBook Pro и iMac в конце 2023 года. Этот процессор обещает значительный прирост производительности и энергоэффективности по сравнению с M2. Благодаря новой архитектуре GPU с поддержкой аппаратной трассировки лучей (Ray Tracing) и технологии Dynamic Caching, iPad Pro может превратиться в ультимативную машину для игр и профессиональной работы с 3D-графикой. Вопрос лишь в том, позволит ли iPadOS раскрыть этот потенциал, ведь ограничения системы давно являются «бутылочным горлышком» для мощного железа Apple.</p>
+                    <h2 id="step-1">РџСЂРѕС†РµСЃСЃРѕСЂ M3: РјРѕС‰СЊ РЅР°СЃС‚РѕР»СЊРЅРѕРіРѕ РєРѕРјРїСЊСЋС‚РµСЂР° РІ РїР»Р°РЅС€РµС‚Рµ</h2>
+                    <p>РЎРµСЂРґС†РµРј РЅРѕРІС‹С… iPad Pro СЃС‚Р°РЅРµС‚ С‡РёРї M3, РєРѕС‚РѕСЂС‹Р№ СѓР¶Рµ РґРµР±СЋС‚РёСЂРѕРІР°Р» РІ MacBook Pro Рё iMac РІ РєРѕРЅС†Рµ 2023 РіРѕРґР°. Р­С‚РѕС‚ РїСЂРѕС†РµСЃСЃРѕСЂ РѕР±РµС‰Р°РµС‚ Р·РЅР°С‡РёС‚РµР»СЊРЅС‹Р№ РїСЂРёСЂРѕСЃС‚ РїСЂРѕРёР·РІРѕРґРёС‚РµР»СЊРЅРѕСЃС‚Рё Рё СЌРЅРµСЂРіРѕСЌС„С„РµРєС‚РёРІРЅРѕСЃС‚Рё РїРѕ СЃСЂР°РІРЅРµРЅРёСЋ СЃ M2. Р‘Р»Р°РіРѕРґР°СЂСЏ РЅРѕРІРѕР№ Р°СЂС…РёС‚РµРєС‚СѓСЂРµ GPU СЃ РїРѕРґРґРµСЂР¶РєРѕР№ Р°РїРїР°СЂР°С‚РЅРѕР№ С‚СЂР°СЃСЃРёСЂРѕРІРєРё Р»СѓС‡РµР№ (Ray Tracing) Рё С‚РµС…РЅРѕР»РѕРіРёРё Dynamic Caching, iPad Pro РјРѕР¶РµС‚ РїСЂРµРІСЂР°С‚РёС‚СЊСЃСЏ РІ СѓР»СЊС‚РёРјР°С‚РёРІРЅСѓСЋ РјР°С€РёРЅСѓ РґР»СЏ РёРіСЂ Рё РїСЂРѕС„РµСЃСЃРёРѕРЅР°Р»СЊРЅРѕР№ СЂР°Р±РѕС‚С‹ СЃ 3D-РіСЂР°С„РёРєРѕР№. Р’РѕРїСЂРѕСЃ Р»РёС€СЊ РІ С‚РѕРј, РїРѕР·РІРѕР»РёС‚ Р»Рё iPadOS СЂР°СЃРєСЂС‹С‚СЊ СЌС‚РѕС‚ РїРѕС‚РµРЅС†РёР°Р», РІРµРґСЊ РѕРіСЂР°РЅРёС‡РµРЅРёСЏ СЃРёСЃС‚РµРјС‹ РґР°РІРЅРѕ СЏРІР»СЏСЋС‚СЃСЏ В«Р±СѓС‚С‹Р»РѕС‡РЅС‹Рј РіРѕСЂР»С‹С€РєРѕРјВ» РґР»СЏ РјРѕС‰РЅРѕРіРѕ Р¶РµР»РµР·Р° Apple.</p>
 
-                    <h2 id="step-2">OLED-дисплеи: конец эпохи mini-LED?</h2>
-                    <p>Самое значимое изменение коснется экранов. Впервые в истории линейки iPad Pro обе модели (11 и 13 дюймов) получат OLED-матрицы. Это означает идеальный черный цвет, бесконечную контрастность и отсутствие эффекта «блуминга» (свечения вокруг ярких объектов на темном фоне), который иногда был заметен на mini-LED экранах 12.9-дюймовых моделей.</p>
-                    <p>По слухам, Apple будет использовать особую «тандемную» структуру OLED-панелей (two-stack tandem OLED), которая удваивает яркость и продлевает срок службы экрана в 4 раза по сравнению с обычными OLED-дисплеями. Это также позволит сделать новые планшеты еще тоньше и легче, так как OLED не требует слоя подсветки.</p>
+                    <h2 id="step-2">OLED-РґРёСЃРїР»РµРё: РєРѕРЅРµС† СЌРїРѕС…Рё mini-LED?</h2>
+                    <p>РЎР°РјРѕРµ Р·РЅР°С‡РёРјРѕРµ РёР·РјРµРЅРµРЅРёРµ РєРѕСЃРЅРµС‚СЃСЏ СЌРєСЂР°РЅРѕРІ. Р’РїРµСЂРІС‹Рµ РІ РёСЃС‚РѕСЂРёРё Р»РёРЅРµР№РєРё iPad Pro РѕР±Рµ РјРѕРґРµР»Рё (11 Рё 13 РґСЋР№РјРѕРІ) РїРѕР»СѓС‡Р°С‚ OLED-РјР°С‚СЂРёС†С‹. Р­С‚Рѕ РѕР·РЅР°С‡Р°РµС‚ РёРґРµР°Р»СЊРЅС‹Р№ С‡РµСЂРЅС‹Р№ С†РІРµС‚, Р±РµСЃРєРѕРЅРµС‡РЅСѓСЋ РєРѕРЅС‚СЂР°СЃС‚РЅРѕСЃС‚СЊ Рё РѕС‚СЃСѓС‚СЃС‚РІРёРµ СЌС„С„РµРєС‚Р° В«Р±Р»СѓРјРёРЅРіР°В» (СЃРІРµС‡РµРЅРёСЏ РІРѕРєСЂСѓРі СЏСЂРєРёС… РѕР±СЉРµРєС‚РѕРІ РЅР° С‚РµРјРЅРѕРј С„РѕРЅРµ), РєРѕС‚РѕСЂС‹Р№ РёРЅРѕРіРґР° Р±С‹Р» Р·Р°РјРµС‚РµРЅ РЅР° mini-LED СЌРєСЂР°РЅР°С… 12.9-РґСЋР№РјРѕРІС‹С… РјРѕРґРµР»РµР№.</p>
+                    <p>РџРѕ СЃР»СѓС…Р°Рј, Apple Р±СѓРґРµС‚ РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ РѕСЃРѕР±СѓСЋ В«С‚Р°РЅРґРµРјРЅСѓСЋВ» СЃС‚СЂСѓРєС‚СѓСЂСѓ OLED-РїР°РЅРµР»РµР№ (two-stack tandem OLED), РєРѕС‚РѕСЂР°СЏ СѓРґРІР°РёРІР°РµС‚ СЏСЂРєРѕСЃС‚СЊ Рё РїСЂРѕРґР»РµРІР°РµС‚ СЃСЂРѕРє СЃР»СѓР¶Р±С‹ СЌРєСЂР°РЅР° РІ 4 СЂР°Р·Р° РїРѕ СЃСЂР°РІРЅРµРЅРёСЋ СЃ РѕР±С‹С‡РЅС‹РјРё OLED-РґРёСЃРїР»РµСЏРјРё. Р­С‚Рѕ С‚Р°РєР¶Рµ РїРѕР·РІРѕР»РёС‚ СЃРґРµР»Р°С‚СЊ РЅРѕРІС‹Рµ РїР»Р°РЅС€РµС‚С‹ РµС‰Рµ С‚РѕРЅСЊС€Рµ Рё Р»РµРіС‡Рµ, С‚Р°Рє РєР°Рє OLED РЅРµ С‚СЂРµР±СѓРµС‚ СЃР»РѕСЏ РїРѕРґСЃРІРµС‚РєРё.</p>
 
-                    <h2 id="step-3">Дизайн и аксессуары: новый Magic Keyboard</h2>
-                    <p>Вместе с новыми планшетами ожидается и обновление аксессуаров. Инсайдер Марк Гурман утверждает, что Apple готовит полностью переработанную клавиатуру Magic Keyboard. Она получит алюминиевый корпус (вместо полиуретанового), более крупный трекпад и сделает iPad Pro еще больше похожим на MacBook. Это может стать решающим аргументом для тех, кто пытается заменить ноутбук планшетом.</p>
-<p>Также ходят слухи о перемещении фронтальной камеры и датчиков Face ID на длинную сторону устройства (ландшафтную ориентацию), как это уже сделано в базовом iPad 10-го поколения. Это логичный шаг, учитывая, что большинство пользователей используют Pro-версии именно в горизонтальном режиме с клавиатурой.</p>
+                    <h2 id="step-3">Р”РёР·Р°Р№РЅ Рё Р°РєСЃРµСЃСЃСѓР°СЂС‹: РЅРѕРІС‹Р№ Magic Keyboard</h2>
+                    <p>Р’РјРµСЃС‚Рµ СЃ РЅРѕРІС‹РјРё РїР»Р°РЅС€РµС‚Р°РјРё РѕР¶РёРґР°РµС‚СЃСЏ Рё РѕР±РЅРѕРІР»РµРЅРёРµ Р°РєСЃРµСЃСЃСѓР°СЂРѕРІ. РРЅСЃР°Р№РґРµСЂ РњР°СЂРє Р“СѓСЂРјР°РЅ СѓС‚РІРµСЂР¶РґР°РµС‚, С‡С‚Рѕ Apple РіРѕС‚РѕРІРёС‚ РїРѕР»РЅРѕСЃС‚СЊСЋ РїРµСЂРµСЂР°Р±РѕС‚Р°РЅРЅСѓСЋ РєР»Р°РІРёР°С‚СѓСЂСѓ Magic Keyboard. РћРЅР° РїРѕР»СѓС‡РёС‚ Р°Р»СЋРјРёРЅРёРµРІС‹Р№ РєРѕСЂРїСѓСЃ (РІРјРµСЃС‚Рѕ РїРѕР»РёСѓСЂРµС‚Р°РЅРѕРІРѕРіРѕ), Р±РѕР»РµРµ РєСЂСѓРїРЅС‹Р№ С‚СЂРµРєРїР°Рґ Рё СЃРґРµР»Р°РµС‚ iPad Pro РµС‰Рµ Р±РѕР»СЊС€Рµ РїРѕС…РѕР¶РёРј РЅР° MacBook. Р­С‚Рѕ РјРѕР¶РµС‚ СЃС‚Р°С‚СЊ СЂРµС€Р°СЋС‰РёРј Р°СЂРіСѓРјРµРЅС‚РѕРј РґР»СЏ С‚РµС…, РєС‚Рѕ РїС‹С‚Р°РµС‚СЃСЏ Р·Р°РјРµРЅРёС‚СЊ РЅРѕСѓС‚Р±СѓРє РїР»Р°РЅС€РµС‚РѕРј.</p>
+<p>РўР°РєР¶Рµ С…РѕРґСЏС‚ СЃР»СѓС…Рё Рѕ РїРµСЂРµРјРµС‰РµРЅРёРё С„СЂРѕРЅС‚Р°Р»СЊРЅРѕР№ РєР°РјРµСЂС‹ Рё РґР°С‚С‡РёРєРѕРІ Face ID РЅР° РґР»РёРЅРЅСѓСЋ СЃС‚РѕСЂРѕРЅСѓ СѓСЃС‚СЂРѕР№СЃС‚РІР° (Р»Р°РЅРґС€Р°С„С‚РЅСѓСЋ РѕСЂРёРµРЅС‚Р°С†РёСЋ), РєР°Рє СЌС‚Рѕ СѓР¶Рµ СЃРґРµР»Р°РЅРѕ РІ Р±Р°Р·РѕРІРѕРј iPad 10-РіРѕ РїРѕРєРѕР»РµРЅРёСЏ. Р­С‚Рѕ Р»РѕРіРёС‡РЅС‹Р№ С€Р°Рі, СѓС‡РёС‚С‹РІР°СЏ, С‡С‚Рѕ Р±РѕР»СЊС€РёРЅСЃС‚РІРѕ РїРѕР»СЊР·РѕРІР°С‚РµР»РµР№ РёСЃРїРѕР»СЊР·СѓСЋС‚ Pro-РІРµСЂСЃРёРё РёРјРµРЅРЅРѕ РІ РіРѕСЂРёР·РѕРЅС‚Р°Р»СЊРЅРѕРј СЂРµР¶РёРјРµ СЃ РєР»Р°РІРёР°С‚СѓСЂРѕР№.</p>
 
-                    <h2 id="step-4">Цена вопроса: готовим кошельки</h2>
-                    <p>Все эти инновации имеют свою цену. Аналитики предупреждают, что переход на OLED и использование передового 3-нм чипа неизбежно приведет к повышению стоимости. Если текущий iPad Pro 11" стартует от $799, то новая модель может перешагнуть отметку в $959 или даже $999. Старшая 13-дюймовая версия рискует приблизиться по цене к MacBook Pro 14", что поставит покупателей перед сложным выбором: планшет или полноценный ноутбук?</p>
+                    <h2 id="step-4">Р¦РµРЅР° РІРѕРїСЂРѕСЃР°: РіРѕС‚РѕРІРёРј РєРѕС€РµР»СЊРєРё</h2>
+                    <p>Р’СЃРµ СЌС‚Рё РёРЅРЅРѕРІР°С†РёРё РёРјРµСЋС‚ СЃРІРѕСЋ С†РµРЅСѓ. РђРЅР°Р»РёС‚РёРєРё РїСЂРµРґСѓРїСЂРµР¶РґР°СЋС‚, С‡С‚Рѕ РїРµСЂРµС…РѕРґ РЅР° OLED Рё РёСЃРїРѕР»СЊР·РѕРІР°РЅРёРµ РїРµСЂРµРґРѕРІРѕРіРѕ 3-РЅРј С‡РёРїР° РЅРµРёР·Р±РµР¶РЅРѕ РїСЂРёРІРµРґРµС‚ Рє РїРѕРІС‹С€РµРЅРёСЋ СЃС‚РѕРёРјРѕСЃС‚Рё. Р•СЃР»Рё С‚РµРєСѓС‰РёР№ iPad Pro 11" СЃС‚Р°СЂС‚СѓРµС‚ РѕС‚ $799, С‚Рѕ РЅРѕРІР°СЏ РјРѕРґРµР»СЊ РјРѕР¶РµС‚ РїРµСЂРµС€Р°РіРЅСѓС‚СЊ РѕС‚РјРµС‚РєСѓ РІ $959 РёР»Рё РґР°Р¶Рµ $999. РЎС‚Р°СЂС€Р°СЏ 13-РґСЋР№РјРѕРІР°СЏ РІРµСЂСЃРёСЏ СЂРёСЃРєСѓРµС‚ РїСЂРёР±Р»РёР·РёС‚СЊСЃСЏ РїРѕ С†РµРЅРµ Рє MacBook Pro 14", С‡С‚Рѕ РїРѕСЃС‚Р°РІРёС‚ РїРѕРєСѓРїР°С‚РµР»РµР№ РїРµСЂРµРґ СЃР»РѕР¶РЅС‹Рј РІС‹Р±РѕСЂРѕРј: РїР»Р°РЅС€РµС‚ РёР»Рё РїРѕР»РЅРѕС†РµРЅРЅС‹Р№ РЅРѕСѓС‚Р±СѓРє?</p>
 
-                    <h2 id="step-5">Дата выхода</h2>
-                    <p>Большинство источников, включая Bloomberg и аналитика Минг-Чи Куо, сходятся во мнении, что массовое производство новых iPad Pro начнется в первом квартале 2024 года. Это означает, что официальный анонс и старт продаж стоит ждать в марте или апреле. Apple часто проводит весенние презентации, и обновление линейки iPad станет идеальным поводом для такого мероприятия.</p>
-<p>Стоит ли ждать? Если вам нужен лучший экран на рынке и максимальная производительность для профессиональных задач — однозначно да. Если же вы используете планшет для просмотра видео и серфинга в интернете, текущих моделей на M1 или M2 хватит еще на долгие годы, и, возможно, стоит присмотреться к ним, пока они не исчезли из продажи или не подорожали на вторичном рынке.</p>
+                    <h2 id="step-5">Р”Р°С‚Р° РІС‹С…РѕРґР°</h2>
+                    <p>Р‘РѕР»СЊС€РёРЅСЃС‚РІРѕ РёСЃС‚РѕС‡РЅРёРєРѕРІ, РІРєР»СЋС‡Р°СЏ Bloomberg Рё Р°РЅР°Р»РёС‚РёРєР° РњРёРЅРі-Р§Рё РљСѓРѕ, СЃС…РѕРґСЏС‚СЃСЏ РІРѕ РјРЅРµРЅРёРё, С‡С‚Рѕ РјР°СЃСЃРѕРІРѕРµ РїСЂРѕРёР·РІРѕРґСЃС‚РІРѕ РЅРѕРІС‹С… iPad Pro РЅР°С‡РЅРµС‚СЃСЏ РІ РїРµСЂРІРѕРј РєРІР°СЂС‚Р°Р»Рµ 2024 РіРѕРґР°. Р­С‚Рѕ РѕР·РЅР°С‡Р°РµС‚, С‡С‚Рѕ РѕС„РёС†РёР°Р»СЊРЅС‹Р№ Р°РЅРѕРЅСЃ Рё СЃС‚Р°СЂС‚ РїСЂРѕРґР°Р¶ СЃС‚РѕРёС‚ Р¶РґР°С‚СЊ РІ РјР°СЂС‚Рµ РёР»Рё Р°РїСЂРµР»Рµ. Apple С‡Р°СЃС‚Рѕ РїСЂРѕРІРѕРґРёС‚ РІРµСЃРµРЅРЅРёРµ РїСЂРµР·РµРЅС‚Р°С†РёРё, Рё РѕР±РЅРѕРІР»РµРЅРёРµ Р»РёРЅРµР№РєРё iPad СЃС‚Р°РЅРµС‚ РёРґРµР°Р»СЊРЅС‹Рј РїРѕРІРѕРґРѕРј РґР»СЏ С‚Р°РєРѕРіРѕ РјРµСЂРѕРїСЂРёСЏС‚РёСЏ.</p>
+<p>РЎС‚РѕРёС‚ Р»Рё Р¶РґР°С‚СЊ? Р•СЃР»Рё РІР°Рј РЅСѓР¶РµРЅ Р»СѓС‡С€РёР№ СЌРєСЂР°РЅ РЅР° СЂС‹РЅРєРµ Рё РјР°РєСЃРёРјР°Р»СЊРЅР°СЏ РїСЂРѕРёР·РІРѕРґРёС‚РµР»СЊРЅРѕСЃС‚СЊ РґР»СЏ РїСЂРѕС„РµСЃСЃРёРѕРЅР°Р»СЊРЅС‹С… Р·Р°РґР°С‡ вЂ” РѕРґРЅРѕР·РЅР°С‡РЅРѕ РґР°. Р•СЃР»Рё Р¶Рµ РІС‹ РёСЃРїРѕР»СЊР·СѓРµС‚Рµ РїР»Р°РЅС€РµС‚ РґР»СЏ РїСЂРѕСЃРјРѕС‚СЂР° РІРёРґРµРѕ Рё СЃРµСЂС„РёРЅРіР° РІ РёРЅС‚РµСЂРЅРµС‚Рµ, С‚РµРєСѓС‰РёС… РјРѕРґРµР»РµР№ РЅР° M1 РёР»Рё M2 С…РІР°С‚РёС‚ РµС‰Рµ РЅР° РґРѕР»РіРёРµ РіРѕРґС‹, Рё, РІРѕР·РјРѕР¶РЅРѕ, СЃС‚РѕРёС‚ РїСЂРёСЃРјРѕС‚СЂРµС‚СЊСЃСЏ Рє РЅРёРј, РїРѕРєР° РѕРЅРё РЅРµ РёСЃС‡РµР·Р»Рё РёР· РїСЂРѕРґР°Р¶Рё РёР»Рё РЅРµ РїРѕРґРѕСЂРѕР¶Р°Р»Рё РЅР° РІС‚РѕСЂРёС‡РЅРѕРј СЂС‹РЅРєРµ.</p>
                 </div>
 
-        <!-- Telegram рекламный баннер -->
+        <!-- Telegram СЂРµРєР»Р°РјРЅС‹Р№ Р±Р°РЅРЅРµСЂ -->
         <a href="https://t.me/RepairoRU" target="_blank" rel="noopener noreferrer" class="telegram-banner">
           <div class="telegram-banner-container">
             <div class="telegram-logo">
@@ -383,10 +458,10 @@
               </svg>
             </div>
             <div class="telegram-content">
-              <div class="telegram-title">Новости из мира технологий</div>
-              <div class="telegram-subtitle">В нашем новом Telegram-канале. Подписывайтесь и будьте в числе первых!</div>
+              <div class="telegram-title">РќРѕРІРѕСЃС‚Рё РёР· РјРёСЂР° С‚РµС…РЅРѕР»РѕРіРёР№</div>
+              <div class="telegram-subtitle">Р’ РЅР°С€РµРј РЅРѕРІРѕРј Telegram-РєР°РЅР°Р»Рµ. РџРѕРґРїРёСЃС‹РІР°Р№С‚РµСЃСЊ Рё Р±СѓРґСЊС‚Рµ РІ С‡РёСЃР»Рµ РїРµСЂРІС‹С…!</div>
               <div class="telegram-button">
-                Подписаться
+                РџРѕРґРїРёСЃР°С‚СЊСЃСЏ
                 <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.56c-.21 2.22-1.12 7.58-1.58 10.06-.19 1.07-.57 1.43-.94 1.46-.8.07-1.4-.52-2.17-1.03-1.21-.79-1.89-1.28-3.06-2.05-1.35-.87-.47-1.35.3-2.13.2-.21 3.71-3.39 3.77-3.68.01-.04.01-.18-.07-.26s-.2-.05-.29-.03c-.12.03-2.11 1.34-5.95 3.93-.56.38-1.07.57-1.53.56-.5-.01-1.47-.28-2.19-.51-.88-.28-1.58-.43-1.52-.91.03-.25.38-.51 1.04-.78 4.07-1.77 6.78-2.94 8.13-3.51 3.88-1.62 4.68-1.9 5.19-1.91.12 0 .37.03.54.17.14.12.18.28.2.44-.01.06 0 .11-.01.17z"/>
                 </svg>
@@ -412,45 +487,45 @@
                         </span>
                         <span class="logo__text">Repairo</span>
                     </a>
-                    <p class="footer__text">Помогаем ремонтировать электронику с 2024 года</p>
+                    <p class="footer__text">РџРѕРјРѕРіР°РµРј СЂРµРјРѕРЅС‚РёСЂРѕРІР°С‚СЊ СЌР»РµРєС‚СЂРѕРЅРёРєСѓ СЃ 2024 РіРѕРґР°</p>
                 </div>
                 <div class="footer__col">
-                    <h3 class="footer__title">Разделы</h3>
+                    <h3 class="footer__title">Р Р°Р·РґРµР»С‹</h3>
                     <ul class="footer__links">
-                        <li><a href="../index.html" class="footer__link">Главная</a></li>
-                        <li><a href="../index.html#categories" class="footer__link">Все гайды</a></li>
-                        <li><a href="../contacts.html" class="footer__link">Контакты</a></li>
+                        <li><a href="../index.html" class="footer__link">Р“Р»Р°РІРЅР°СЏ</a></li>
+                        <li><a href="../index.html#categories" class="footer__link">Р’СЃРµ РіР°Р№РґС‹</a></li>
+                        <li><a href="../contacts.html" class="footer__link">РљРѕРЅС‚Р°РєС‚С‹</a></li>
                     </ul>
                 </div>
                 <div class="footer__col">
-                    <h3 class="footer__title">Категории</h3>
+                    <h3 class="footer__title">РљР°С‚РµРіРѕСЂРёРё</h3>
                     <ul class="footer__links">
-                        <li><a href="../tv.html" class="nav__link">Телевизоры</a></li>
-                        <li><a href="../cameras.html" class="nav__link">Фотоаппараты</a></li>
-                        <li><a href="../consoles.html" class="nav__link">Приставки</a></li>
-                        <li><a href="../laptops.html" class="nav__link">Ноутбуки</a></li>
-                        <li><a href="../smartphones.html" class="nav__link">Смартфоны</a></li>
-                        <li><a href="../small-appliances.html" class="nav__link">Мелкая техника</a></li>
-                        <li><a href="../large-appliances.html" class="nav__link">Бытовая техника</a></li>
-                        <li><a href="../auto-electronics.html" class="nav__link">Авто-Электроника</a></li>
+                        <li><a href="../tv.html" class="nav__link">РўРµР»РµРІРёР·РѕСЂС‹</a></li>
+                        <li><a href="../cameras.html" class="nav__link">Р¤РѕС‚РѕР°РїРїР°СЂР°С‚С‹</a></li>
+                        <li><a href="../consoles.html" class="nav__link">РџСЂРёСЃС‚Р°РІРєРё</a></li>
+                        <li><a href="../laptops.html" class="nav__link">РќРѕСѓС‚Р±СѓРєРё</a></li>
+                        <li><a href="../smartphones.html" class="nav__link">РЎРјР°СЂС‚С„РѕРЅС‹</a></li>
+                        <li><a href="../small-appliances.html" class="nav__link">РњРµР»РєР°СЏ С‚РµС…РЅРёРєР°</a></li>
+                        <li><a href="../large-appliances.html" class="nav__link">Р‘С‹С‚РѕРІР°СЏ С‚РµС…РЅРёРєР°</a></li>
+                        <li><a href="../auto-electronics.html" class="nav__link">РђРІС‚Рѕ-Р­Р»РµРєС‚СЂРѕРЅРёРєР°</a></li>
                     </ul>
                 </div>
                 <div class="footer__col">
-                    <h3 class="footer__title">Контакты</h3>
+                    <h3 class="footer__title">РљРѕРЅС‚Р°РєС‚С‹</h3>
                     <ul class="footer__links">
                         <li><a href="https://t.me/RepairoRU" class="footer__link"><i class="fab fa-telegram"></i> Telegram</a></li>
-                        <li><span class="footer__link">Наша почта: repairo.info@mail.ru</span></li>
+                        <li><span class="footer__link">РќР°С€Р° РїРѕС‡С‚Р°: repairo.info@mail.ru</span></li>
                     </ul>
                 </div>
             </div>
             <div class="footer__bottom">
                 <p class="disclaimer">
-    Администрация сайта не несёт ответственности за возможные повреждения техники
-    и иные последствия, возникшие в результате самостоятельного ремонта по
-    материалам и инструкциям, размещённым на сайте. Все работы вы выполняете
-    на свой страх и риск.
+    РђРґРјРёРЅРёСЃС‚СЂР°С†РёСЏ СЃР°Р№С‚Р° РЅРµ РЅРµСЃС‘С‚ РѕС‚РІРµС‚СЃС‚РІРµРЅРЅРѕСЃС‚Рё Р·Р° РІРѕР·РјРѕР¶РЅС‹Рµ РїРѕРІСЂРµР¶РґРµРЅРёСЏ С‚РµС…РЅРёРєРё
+    Рё РёРЅС‹Рµ РїРѕСЃР»РµРґСЃС‚РІРёСЏ, РІРѕР·РЅРёРєС€РёРµ РІ СЂРµР·СѓР»СЊС‚Р°С‚Рµ СЃР°РјРѕСЃС‚РѕСЏС‚РµР»СЊРЅРѕРіРѕ СЂРµРјРѕРЅС‚Р° РїРѕ
+    РјР°С‚РµСЂРёР°Р»Р°Рј Рё РёРЅСЃС‚СЂСѓРєС†РёСЏРј, СЂР°Р·РјРµС‰С‘РЅРЅС‹Рј РЅР° СЃР°Р№С‚Рµ. Р’СЃРµ СЂР°Р±РѕС‚С‹ РІС‹ РІС‹РїРѕР»РЅСЏРµС‚Рµ
+    РЅР° СЃРІРѕР№ СЃС‚СЂР°С… Рё СЂРёСЃРє.
     </p>
-                <p class="footer__copyright">© 2026 Repairo. Все права защищены.</p>
+                <p class="footer__copyright">В© 2026 Repairo. Р’СЃРµ РїСЂР°РІР° Р·Р°С‰РёС‰РµРЅС‹.</p>
             </div>
         </div>
     </footer>
@@ -459,38 +534,38 @@
 {
   "@context": "https://schema.org",
   "@type": "HowTo",
-  "name": "Новые iPad Pro с чипом M3 от Apple",
-  "description": "Полный обзор слухов и утечек о грядущих iPad Pro с процессором M3: OLED-дисплеи, новый дизайн, повышение цен и возможная дата выхода весной 2024 года.",
+  "name": "РќРѕРІС‹Рµ iPad Pro СЃ С‡РёРїРѕРј M3 РѕС‚ Apple",
+  "description": "РџРѕР»РЅС‹Р№ РѕР±Р·РѕСЂ СЃР»СѓС…РѕРІ Рё СѓС‚РµС‡РµРє Рѕ РіСЂСЏРґСѓС‰РёС… iPad Pro СЃ РїСЂРѕС†РµСЃСЃРѕСЂРѕРј M3: OLED-РґРёСЃРїР»РµРё, РЅРѕРІС‹Р№ РґРёР·Р°Р№РЅ, РїРѕРІС‹С€РµРЅРёРµ С†РµРЅ Рё РІРѕР·РјРѕР¶РЅР°СЏ РґР°С‚Р° РІС‹С…РѕРґР° РІРµСЃРЅРѕР№ 2024 РіРѕРґР°.",
   "totalTime": "PT30M",
   "step": [
     {
       "@type": "HowToStep",
-      "name": "Процессор M3",
-      "text": "Процессор M3: мощь настольного компьютера в планшете",
+      "name": "РџСЂРѕС†РµСЃСЃРѕСЂ M3",
+      "text": "РџСЂРѕС†РµСЃСЃРѕСЂ M3: РјРѕС‰СЊ РЅР°СЃС‚РѕР»СЊРЅРѕРіРѕ РєРѕРјРїСЊСЋС‚РµСЂР° РІ РїР»Р°РЅС€РµС‚Рµ",
       "url": "#step-1"
     },
     {
       "@type": "HowToStep",
-      "name": "OLED-дисплеи",
-      "text": "OLED-дисплеи: конец эпохи mini-LED?",
+      "name": "OLED-РґРёСЃРїР»РµРё",
+      "text": "OLED-РґРёСЃРїР»РµРё: РєРѕРЅРµС† СЌРїРѕС…Рё mini-LED?",
       "url": "#step-2"
     },
     {
       "@type": "HowToStep",
-      "name": "Дизайн и аксессуары",
-      "text": "Дизайн и аксессуары: новый Magic Keyboard",
+      "name": "Р”РёР·Р°Р№РЅ Рё Р°РєСЃРµСЃСЃСѓР°СЂС‹",
+      "text": "Р”РёР·Р°Р№РЅ Рё Р°РєСЃРµСЃСЃСѓР°СЂС‹: РЅРѕРІС‹Р№ Magic Keyboard",
       "url": "#step-3"
     },
     {
       "@type": "HowToStep",
-      "name": "Цена вопроса",
-      "text": "Цена вопроса: готовим кошельки",
+      "name": "Р¦РµРЅР° РІРѕРїСЂРѕСЃР°",
+      "text": "Р¦РµРЅР° РІРѕРїСЂРѕСЃР°: РіРѕС‚РѕРІРёРј РєРѕС€РµР»СЊРєРё",
       "url": "#step-4"
     },
     {
       "@type": "HowToStep",
-      "name": "Дата выхода",
-      "text": "Дата выхода",
+      "name": "Р”Р°С‚Р° РІС‹С…РѕРґР°",
+      "text": "Р”Р°С‚Р° РІС‹С…РѕРґР°",
       "url": "#step-5"
     }
   ],
@@ -501,6 +576,4 @@
 <script src="../cookie-consent.js"></script>
 </body>
 </html>
-
-
 

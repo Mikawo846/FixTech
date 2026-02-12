@@ -2,36 +2,44 @@
 <html lang="ru" data-theme="light">
 <head>
 
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Как выбрать внешнюю вспышку? Руководство для новичков | Repa</title>
-    <meta name="description" content="">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>РљР°Рє РІС‹Р±СЂР°С‚СЊ РІРЅРµС€РЅСЋСЋ РІСЃРїС‹С€РєСѓ? Р СѓРєРѕРІРѕРґСЃС‚РІРѕ РґР»СЏ РЅРѕРІРёС‡РєРѕРІ | Repairo</title>
+    <meta name="description" content="{{ description }}">
+    <meta name="description" content="РџРѕС€Р°РіРѕРІР°СЏ РёРЅСЃС‚СЂСѓРєС†РёСЏ: РљР°Рє РІС‹Р±СЂР°С‚СЊ РІРЅРµС€РЅСЋСЋ РІСЃРїС‹С€РєСѓ? Р СѓРєРѕРІРѕРґСЃС‚РІРѕ РґР»СЏ РЅРѕРІРёС‡РєРѕРІ. РСЃРїРѕР»СЊР·СѓР№С‚Рµ СЂР°СЃСЃРµРёРІР°С‚РµР»Рё (softbox, bounce card) РґР»СЏ Р±РѕР»РµРµ РјСЏРіРєРѕРіРѕ СЃРІРµС‚Р° Рё РµСЃС‚РµСЃС‚...">
 
-  <link rel="stylesheet" href="../styles.css" />
-  <link rel="stylesheet" href="../styles-header.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <style>
-    .guide-content { line-height: 1.7; color: var(--text); }
-    .guide-content h2 { color: var(--primary); margin-top: 30px; margin-bottom: 15px; font-size: 1.5rem; }
-    .guide-content h3 { color: var(--primary-dark); margin-top: 25px; margin-bottom: 12px; font-size: 1.2rem; }
-    .guide-image-block { margin: 20px 0; padding: 15px; background: var(--background); border-radius: var(--border-radius); border: 1px solid var(--border); text-align: center; }
-    .guide-image-block img { max-width: 100%; height: auto; border-radius: 6px; border: 1px solid var(--border); }
-    .image-caption { margin-top: 10px; font-size: 0.85rem; color: var(--text-light); font-style: italic; }
-    .pro-tips { background: rgba(3, 74, 79, 0.05); padding: 15px; border-radius: 6px; margin: 20px 0; }
-    .pro-tips h4 { color: var(--primary); margin-top: 0; margin-bottom: 12px; font-size: 1.1rem; }
-    .tip-item { display: flex; gap: 8px; margin-bottom: 8px; align-items: flex-start; }
-    table { width: 100%; border-collapse: collapse; margin: 20px 0; }
-    th, td { border: 1px solid var(--border); padding: 8px; text-align: left; }
-    th { background: var(--background-light); }
-    .highlight { background: #f5f7fa; border-left: 4px solid #2d9cdb; padding: 10px 15px; margin: 20px 0; }
-    .faq-section ul { margin-left: 1em; }
-    .block-section { margin-bottom: 2em; }
-    @media (max-width: 768px) {
-      .guide-content h2 { font-size: 1.4rem; margin-top: 25px; }
-      .guide-image-block { padding: 12px; margin: 15px 0; }
-      table, th, td { font-size: 0.95rem; }
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../styles-header.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .guide-content { line-height: 1.7; color: var(--text);}
+        .guide-content h2 { color: var(--primary); margin-top: 30px; margin-bottom: 15px; font-size: 1.5rem;}
+        .step-group { margin: 20px 0; padding: 15px; background: var(--background); border-radius: var(--border-radius); border: 1px solid var(--border);}
+        .step { display: flex; gap: 15px; margin: 12px 0; padding: 12px; background: var(--background-alt); border-radius: 6px; align-items: flex-start;}
+        .step-number { background: var(--primary); color: white; width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-weight: bold; font-size: 0.8rem;}
+        .guide-image-block { margin: 20px 0; padding: 15px; background: var(--background); border-radius: var(--border-radius); border: 1px solid var(--border); text-align: center;}
+        .guide-image-block img { max-width: 100%; height: auto; border-radius: 6px; border: 1px solid var(--border);}
+        .image-caption { margin-top: 10px; font-size: 0.85rem; color: var(--text-light); font-style: italic;}
+        .recommend-box { background: rgba(3, 74, 79, 0.1); border-left: 4px solid var(--primary); padding: 12px; margin: 15px 0; display: flex; gap: 12px; align-items: flex-start; border-radius: 4px;}
+        .recommend-box i { font-size: 1.2rem; color: var(--primary); margin-top: 2px;}
+        .pro-tips { background: rgba(3, 74, 79, 0.05); padding: 15px; border-radius: 6px; margin: 20px 0;}
+        .pro-tips h4 { color: var(--primary); margin-top: 0; margin-bottom: 12px; font-size: 1.1rem;}
+        .tip-item { display: flex; gap: 8px; margin-bottom: 8px; align-items: flex-start;}
+        @media (max-width: 768px) {
+            .guide-content h2 { font-size: 1.4rem; margin-top: 25px;}
+            .guide-image-block, .step-group { padding: 12px; margin: 15px 0;}
+            .step { padding: 10px;}
+        }
+    /* РЇРЅРґРµРєСЃ РњР°СЂРєРµС‚ СЂРµРєР»Р°РјРЅС‹Р№ Р±Р°РЅРЅРµСЂ */
+    .ym-hero-link {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+      max-width: 100%;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     }
+
     /* Р“РѕСЂРёР·РѕРЅС‚Р°Р»СЊРЅС‹Р№ Р±Р°РЅРЅРµСЂ-РєР°СЂС‚РѕС‡РєР° */
     .ym-hero-banner {
       width: 100%;
@@ -144,11 +152,13 @@
       transition: background 0.15s ease, transform 0.15s ease,
                   box-shadow 0.15s ease;
     }
+
     .ym-hero-button::after {
       content: "в†’";
       margin-left: 6px;
       font-size: 14px;
     }
+
     .ym-hero-button:hover {
       background: #7c3aed;
       transform: translateY(-1px);
@@ -172,19 +182,24 @@
         max-width: 100%;
         margin: 20px 0;
       }
+
       .ym-hero-images {
         height: 100px;
       }
+
       .ym-hero-content {
         padding: 12px 12px;
       }
+
       .ym-hero-title {
         font-size: 13px;
       }
+
       .ym-hero-button {
         font-size: 13px;
         padding: 8px 14px;
       }
+
       .ym-hero-legal {
         font-size: 10px;
       }
@@ -292,22 +307,27 @@
         padding: 15px;
         min-height: 100px;
       }
+
       .telegram-logo {
         width: 50px;
         height: 50px;
         min-width: 50px;
         margin-right: 15px;
       }
+
       .telegram-logo svg {
         width: 26px;
         height: 26px;
       }
+
       .telegram-title {
         font-size: 14px;
       }
+
       .telegram-subtitle {
         font-size: 12px;
       }
+
       .telegram-button {
         font-size: 12px;
         padding: 6px 12px;
@@ -316,128 +336,142 @@
 
 
 
-  </style>
+    </style>
   <script async src="https://timeweb.cloud/api/v1/cloud-ai/agents/3cc03620-d051-4d8d-b5af-f7b6cd083a35/embed.js?collapsed=true"></script>
 </head>
 <body>
-  <header class="header">
-    <div class="container">
-      <div class="header__inner">
-        <a href="../index.html" class="logo">
-          <span class="logo__icon"></span>
-          <span class="logo__text">GeoExpert</span>
-        </a>
-        <nav class="nav">
-          <ul class="nav__list">
-            <li><a href="../cameras.html" class="nav__link">РљР°РјРµСЂС‹</a></li>
-            <li><a href="../drones.html" class="nav__link">Р”СЂРѕРЅС‹</a></li>
-            <li><a href="../workflow.html" class="nav__link">Workflow</a></li>
-          </ul>
-        </nav>
-      </div>
-    </div>
-  </header>
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <a href="../index.html" class="logo">
+                    <span class="logo__icon"></span>
+                    <span class="logo__text">Repairo</span>
+                </a>
+                <nav class="nav">
+                    <ul class="nav__list">
+                        <li><a href="../cameras.html" class="nav__link">Р¤РѕС‚РѕР°РїРїР°СЂР°С‚С‹</a></li>
+                        <li><a href="../tv.html" class="nav__link">РўРµР»РµРІРёР·РѕСЂС‹</a></li>
+                        <li><a href="../laptops.html" class="nav__link">РќРѕСѓС‚Р±СѓРєРё</a></li>
+                        <li><a href="../smartphones.html" class="nav__link">РЎРјР°СЂС‚С„РѕРЅС‹</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
     <section class="guide-page">
         <div class="container">
             <div class="breadcrumbs">
-                <a href="../index.html">Главная</a>
+                <a href="../index.html">Р“Р»Р°РІРЅР°СЏ</a>
                 <i class="fas fa-chevron-right"></i>
-                <a href="../cameras.html">Фотоаппараты</a>
+                <a href="../cameras.html">Р¤РѕС‚РѕР°РїРїР°СЂР°С‚С‹</a>
                 <i class="fas fa-chevron-right"></i>
-                <span>Как выбрать внешнюю вспышку? Руководство для новичков</span>
+                <span>РљР°Рє РІС‹Р±СЂР°С‚СЊ РІРЅРµС€РЅСЋСЋ РІСЃРїС‹С€РєСѓ? Р СѓРєРѕРІРѕРґСЃС‚РІРѕ РґР»СЏ РЅРѕРІРёС‡РєРѕРІ</span>
             </div>
-            <h1 class="section__title">Как выбрать внешнюю вспышку? Руководство для новичков</h1>
+            <h1 class="section__title">РљР°Рє РІС‹Р±СЂР°С‚СЊ РІРЅРµС€РЅСЋСЋ РІСЃРїС‹С€РєСѓ? Р СѓРєРѕРІРѕРґСЃС‚РІРѕ РґР»СЏ РЅРѕРІРёС‡РєРѕРІ</h1>
             <div class="guide-meta">
-                <span><i class="fas fa-adjust"></i> Практический гайд</span>
+                <span><i class="fas fa-adjust"></i> РџСЂР°РєС‚РёС‡РµСЃРєРёР№ РіР°Р№Рґ</span>
             </div>
             <div class="guide-image-block">
-                <img src="https://avatars.mds.yandex.net/get-shedevrum/15247318/img_e30f3b042d7411f0ba9982872adeaf38/orig" alt="Внешняя вспышка на фотоаппарате">
-                <div class="image-caption">Внешняя вспышка открывает новые возможности для творческой съёмки</div>
+                <img src="https://avatars.mds.yandex.net/get-shedevrum/15247318/img_e30f3b042d7411f0ba9982872adeaf38/orig" alt="Р’РЅРµС€РЅСЏСЏ РІСЃРїС‹С€РєР° РЅР° С„РѕС‚РѕР°РїРїР°СЂР°С‚Рµ">
+                <div class="image-caption">Р’РЅРµС€РЅСЏСЏ РІСЃРїС‹С€РєР° РѕС‚РєСЂС‹РІР°РµС‚ РЅРѕРІС‹Рµ РІРѕР·РјРѕР¶РЅРѕСЃС‚Рё РґР»СЏ С‚РІРѕСЂС‡РµСЃРєРѕР№ СЃСЉС‘РјРєРё</div>
             </div>
             <div class="guide-content">
-        <!-- Яндекс Маркет рекламный блок -->
+        <!-- РЇРЅРґРµРєСЃ РњР°СЂРєРµС‚ СЂРµРєР»Р°РјРЅС‹Р№ Р±Р»РѕРє -->
         <a href="https://market.yandex.ru/catalog--bytovaia-tekhnika/54419/list?hid=198118&rs=eJwzUvjEKMvBILDwEKsEg8Kzbh6Nw4dZNS4D8c7lFhp9c1-wAQC3uAwP&clid=14635360&refid=rbck8fgamv681iu59go3iqxwddedl4x9&erid=5jtCeReNx12oajxS2bzShmZ&mclid=1003&distr_type=7&utm_source=partner_network&pp=900&utm_medium=link_list&utm_campaign=14635360"
            target="_blank"
            rel="noopener noreferrer sponsored"
+           class="ym-hero-link">
+          <div class="ym-hero-banner">
+            <div class="ym-hero-images">
+              <div class="ym-hero-image">
                 <img src="https://avatars.mds.yandex.net/get-mpic/14770882/2a00000197f4dbee777f8afddccaf44faa53/optimize"
-                     alt="Распродажа бытовой электроники 1">
+                     alt="Р Р°СЃРїСЂРѕРґР°Р¶Р° Р±С‹С‚РѕРІРѕР№ СЌР»РµРєС‚СЂРѕРЅРёРєРё 1">
               </div>
+              <div class="ym-hero-image">
                 <img src="https://avatars.mds.yandex.net/get-mpic/15580298/img_id8867318964670654684.jpeg/optimize"
-                     alt="Распродажа бытовой электроники 2">
+                     alt="Р Р°СЃРїСЂРѕРґР°Р¶Р° Р±С‹С‚РѕРІРѕР№ СЌР»РµРєС‚СЂРѕРЅРёРєРё 2">
               </div>
+              <div class="ym-hero-image">
                 <img src="https://avatars.mds.yandex.net/get-mpic/10096780/2a000001953b534fed2494e0b30fadd9b458/optimize"
-                     alt="Распродажа бытовой электроники 3">
+                     alt="Р Р°СЃРїСЂРѕРґР°Р¶Р° Р±С‹С‚РѕРІРѕР№ СЌР»РµРєС‚СЂРѕРЅРёРєРё 3">
               </div>
             </div>
-                  ? Выгодные предложения
+            <div class="ym-hero-content">
+              <h3 class="ym-hero-title">Р Р°СЃРїСЂРѕРґР°Р¶Р° Р±С‹С‚РѕРІРѕР№ СЌР»РµРєС‚СЂРѕРЅРёРєРё РЅР° РЇРЅРґРµРєСЃ РњР°СЂРєРµС‚Рµ</h3>
+              <div class="ym-hero-top">
+                <div class="ym-hero-rating">
+                  в­ђ Р’С‹РіРѕРґРЅС‹Рµ РїСЂРµРґР»РѕР¶РµРЅРёСЏ
+                  <span class="ym-hero-rating-count">РЎРєРёРґРєРё РґРѕ 50%</span>
                 </div>
               </div>
+              <button class="ym-hero-button">Р—Р° СЃРєРёРґРєР°РјРё</button>
             </div>
           </div>
-            Реклама. ООО "ЯНДЕКС", ИНН 7736207543. clid: 14635360, erid: 5jtCeReNx12oajxS2bzShmZ
+          <div class="ym-hero-legal">
+            Р РµРєР»Р°РјР°. РћРћРћ "РЇРќР”Р•РљРЎ", РРќРќ 7736207543. clid: 14635360, erid: 5jtCeReNx12oajxS2bzShmZ
           </div>
         </a>
-                <h2>Зачем нужна внешняя вспышка?</h2>
+                <h2>Р—Р°С‡РµРј РЅСѓР¶РЅР° РІРЅРµС€РЅСЏСЏ РІСЃРїС‹С€РєР°?</h2>
                 <ul>
-                    <li>Позволяет получить качественный свет при съёмке в помещении и на улице в сложных условиях.</li>
-                    <li>Управляет направлением и характером света - можно избежать жёстких теней и "плоских" лиц.</li>
-                    <li>Расширяет творческие возможности: отражение света, работа с несколькими вспышками, моделирование света.</li>
+                    <li>РџРѕР·РІРѕР»СЏРµС‚ РїРѕР»СѓС‡РёС‚СЊ РєР°С‡РµСЃС‚РІРµРЅРЅС‹Р№ СЃРІРµС‚ РїСЂРё СЃСЉС‘РјРєРµ РІ РїРѕРјРµС‰РµРЅРёРё Рё РЅР° СѓР»РёС†Рµ РІ СЃР»РѕР¶РЅС‹С… СѓСЃР»РѕРІРёСЏС….</li>
+                    <li>РЈРїСЂР°РІР»СЏРµС‚ РЅР°РїСЂР°РІР»РµРЅРёРµРј Рё С…Р°СЂР°РєС‚РµСЂРѕРј СЃРІРµС‚Р° - РјРѕР¶РЅРѕ РёР·Р±РµР¶Р°С‚СЊ Р¶С‘СЃС‚РєРёС… С‚РµРЅРµР№ Рё "РїР»РѕСЃРєРёС…" Р»РёС†.</li>
+                    <li>Р Р°СЃС€РёСЂСЏРµС‚ С‚РІРѕСЂС‡РµСЃРєРёРµ РІРѕР·РјРѕР¶РЅРѕСЃС‚Рё: РѕС‚СЂР°Р¶РµРЅРёРµ СЃРІРµС‚Р°, СЂР°Р±РѕС‚Р° СЃ РЅРµСЃРєРѕР»СЊРєРёРјРё РІСЃРїС‹С€РєР°РјРё, РјРѕРґРµР»РёСЂРѕРІР°РЅРёРµ СЃРІРµС‚Р°.</li>
                 </ul>
-                <h2>Ключевые параметры при выборе вспышки</h2>
+                <h2>РљР»СЋС‡РµРІС‹Рµ РїР°СЂР°РјРµС‚СЂС‹ РїСЂРё РІС‹Р±РѕСЂРµ РІСЃРїС‹С€РєРё</h2>
 <ul>
-                    <li><strong>Ведущее число (GN)</strong> - показатель мощности. Для универсального использования подойдут значения GN 36–60 (на ISO 100).</li>
-                    <li><strong>Поворотная головка</strong> - позволяет направлять свет в потолок или стены для мягкого освещения.</li>
-                    <li><strong>TTL-режим</strong> - автоматическая настройка мощности вспышки по экспозиции камеры (важно для новичков).</li>
-                    <li><strong>Совместимость с вашей камерой</strong> - вспышка должна поддерживать ваш байонет и протокол (Canon, Nikon, Sony и т.д.).</li>
-                    <li><strong>Скорость перезарядки</strong> - чем быстрее, тем удобнее работать на мероприятиях и в репортаже.</li>
-                    <li><strong>Дополнительные функции</strong> - синхронизация по второй шторке, стробоскоп, управление другими вспышками, наличие беспроводного управления.</li>
+                    <li><strong>Р’РµРґСѓС‰РµРµ С‡РёСЃР»Рѕ (GN)</strong> - РїРѕРєР°Р·Р°С‚РµР»СЊ РјРѕС‰РЅРѕСЃС‚Рё. Р”Р»СЏ СѓРЅРёРІРµСЂСЃР°Р»СЊРЅРѕРіРѕ РёСЃРїРѕР»СЊР·РѕРІР°РЅРёСЏ РїРѕРґРѕР№РґСѓС‚ Р·РЅР°С‡РµРЅРёСЏ GN 36вЂ“60 (РЅР° ISO 100).</li>
+                    <li><strong>РџРѕРІРѕСЂРѕС‚РЅР°СЏ РіРѕР»РѕРІРєР°</strong> - РїРѕР·РІРѕР»СЏРµС‚ РЅР°РїСЂР°РІР»СЏС‚СЊ СЃРІРµС‚ РІ РїРѕС‚РѕР»РѕРє РёР»Рё СЃС‚РµРЅС‹ РґР»СЏ РјСЏРіРєРѕРіРѕ РѕСЃРІРµС‰РµРЅРёСЏ.</li>
+                    <li><strong>TTL-СЂРµР¶РёРј</strong> - Р°РІС‚РѕРјР°С‚РёС‡РµСЃРєР°СЏ РЅР°СЃС‚СЂРѕР№РєР° РјРѕС‰РЅРѕСЃС‚Рё РІСЃРїС‹С€РєРё РїРѕ СЌРєСЃРїРѕР·РёС†РёРё РєР°РјРµСЂС‹ (РІР°Р¶РЅРѕ РґР»СЏ РЅРѕРІРёС‡РєРѕРІ).</li>
+                    <li><strong>РЎРѕРІРјРµСЃС‚РёРјРѕСЃС‚СЊ СЃ РІР°С€РµР№ РєР°РјРµСЂРѕР№</strong> - РІСЃРїС‹С€РєР° РґРѕР»Р¶РЅР° РїРѕРґРґРµСЂР¶РёРІР°С‚СЊ РІР°С€ Р±Р°Р№РѕРЅРµС‚ Рё РїСЂРѕС‚РѕРєРѕР» (Canon, Nikon, Sony Рё С‚.Рґ.).</li>
+                    <li><strong>РЎРєРѕСЂРѕСЃС‚СЊ РїРµСЂРµР·Р°СЂСЏРґРєРё</strong> - С‡РµРј Р±С‹СЃС‚СЂРµРµ, С‚РµРј СѓРґРѕР±РЅРµРµ СЂР°Р±РѕС‚Р°С‚СЊ РЅР° РјРµСЂРѕРїСЂРёСЏС‚РёСЏС… Рё РІ СЂРµРїРѕСЂС‚Р°Р¶Рµ.</li>
+                    <li><strong>Р”РѕРїРѕР»РЅРёС‚РµР»СЊРЅС‹Рµ С„СѓРЅРєС†РёРё</strong> - СЃРёРЅС…СЂРѕРЅРёР·Р°С†РёСЏ РїРѕ РІС‚РѕСЂРѕР№ С€С‚РѕСЂРєРµ, СЃС‚СЂРѕР±РѕСЃРєРѕРї, СѓРїСЂР°РІР»РµРЅРёРµ РґСЂСѓРіРёРјРё РІСЃРїС‹С€РєР°РјРё, РЅР°Р»РёС‡РёРµ Р±РµСЃРїСЂРѕРІРѕРґРЅРѕРіРѕ СѓРїСЂР°РІР»РµРЅРёСЏ.</li>
                 </ul>
-                <h2>Пошаговая инструкция: как выбрать внешнюю вспышку</h2>
+                <h2>РџРѕС€Р°РіРѕРІР°СЏ РёРЅСЃС‚СЂСѓРєС†РёСЏ: РєР°Рє РІС‹Р±СЂР°С‚СЊ РІРЅРµС€РЅСЋСЋ РІСЃРїС‹С€РєСѓ</h2>
                 <div class="step-group">
                     <div class="step">
                         <div class="step-number">1</div>
                         <div>
-                            <strong>Определите совместимость</strong>
+                            <strong>РћРїСЂРµРґРµР»РёС‚Рµ СЃРѕРІРјРµСЃС‚РёРјРѕСЃС‚СЊ</strong>
                             <ul>
-                                <li>Проверьте, чтобы вспышка поддерживала вашу камеру (байонет и протокол TTL).</li>
-                                <li>Универсальные вспышки (Godox, Yongnuo) часто выпускаются в версиях для разных брендов.</li>
+                                <li>РџСЂРѕРІРµСЂСЊС‚Рµ, С‡С‚РѕР±С‹ РІСЃРїС‹С€РєР° РїРѕРґРґРµСЂР¶РёРІР°Р»Р° РІР°С€Сѓ РєР°РјРµСЂСѓ (Р±Р°Р№РѕРЅРµС‚ Рё РїСЂРѕС‚РѕРєРѕР» TTL).</li>
+                                <li>РЈРЅРёРІРµСЂСЃР°Р»СЊРЅС‹Рµ РІСЃРїС‹С€РєРё (Godox, Yongnuo) С‡Р°СЃС‚Рѕ РІС‹РїСѓСЃРєР°СЋС‚СЃСЏ РІ РІРµСЂСЃРёСЏС… РґР»СЏ СЂР°Р·РЅС‹С… Р±СЂРµРЅРґРѕРІ.</li>
                             </ul>
                         </div>
                     </div>
                     <div class="step">
                         <div class="step-number">2</div>
                         <div>
-                            <strong>Выберите мощность</strong>
+                            <strong>Р’С‹Р±РµСЂРёС‚Рµ РјРѕС‰РЅРѕСЃС‚СЊ</strong>
                             <ul>
-                                <li>Для портретов и репортажей - GN 36–60.</li>
-                                <li>Для больших залов или улицы - чем больше GN, тем лучше.</li>
+                                <li>Р”Р»СЏ РїРѕСЂС‚СЂРµС‚РѕРІ Рё СЂРµРїРѕСЂС‚Р°Р¶РµР№ - GN 36вЂ“60.</li>
+                                <li>Р”Р»СЏ Р±РѕР»СЊС€РёС… Р·Р°Р»РѕРІ РёР»Рё СѓР»РёС†С‹ - С‡РµРј Р±РѕР»СЊС€Рµ GN, С‚РµРј Р»СѓС‡С€Рµ.</li>
                             </ul>
                         </div>
                     </div>
                     <div class="step">
                         <div class="step-number">3</div>
                         <div>
-                            <strong>Проверьте наличие поворотной головки</strong>
+                            <strong>РџСЂРѕРІРµСЂСЊС‚Рµ РЅР°Р»РёС‡РёРµ РїРѕРІРѕСЂРѕС‚РЅРѕР№ РіРѕР»РѕРІРєРё</strong>
                             <ul>
-                                <li>Она позволит отражать свет от потолка и стен для мягкого освещения.</li>
+                                <li>РћРЅР° РїРѕР·РІРѕР»РёС‚ РѕС‚СЂР°Р¶Р°С‚СЊ СЃРІРµС‚ РѕС‚ РїРѕС‚РѕР»РєР° Рё СЃС‚РµРЅ РґР»СЏ РјСЏРіРєРѕРіРѕ РѕСЃРІРµС‰РµРЅРёСЏ.</li>
                             </ul>
                         </div>
                     </div>
                     <div class="step">
                         <div class="step-number">4</div>
                         <div>
-                            <strong>Обратите внимание на TTL и ручной режим</strong>
+                            <strong>РћР±СЂР°С‚РёС‚Рµ РІРЅРёРјР°РЅРёРµ РЅР° TTL Рё СЂСѓС‡РЅРѕР№ СЂРµР¶РёРј</strong>
                             <ul>
-                                <li>TTL-режим - удобно для новичков, ручной - для творческих задач.</li>
+                                <li>TTL-СЂРµР¶РёРј - СѓРґРѕР±РЅРѕ РґР»СЏ РЅРѕРІРёС‡РєРѕРІ, СЂСѓС‡РЅРѕР№ - РґР»СЏ С‚РІРѕСЂС‡РµСЃРєРёС… Р·Р°РґР°С‡.</li>
                             </ul>
                         </div>
                     </div>
                     <div class="step">
                         <div class="step-number">5</div>
                         <div>
-                            <strong>Узнайте о дополнительных возможностях</strong>
+                            <strong>РЈР·РЅР°Р№С‚Рµ Рѕ РґРѕРїРѕР»РЅРёС‚РµР»СЊРЅС‹С… РІРѕР·РјРѕР¶РЅРѕСЃС‚СЏС…</strong>
                             <ul>
-                                <li>Беспроводное управление, светодиодная подсветка, синхронизация по второй шторке, стробоскоп.</li>
+                                <li>Р‘РµСЃРїСЂРѕРІРѕРґРЅРѕРµ СѓРїСЂР°РІР»РµРЅРёРµ, СЃРІРµС‚РѕРґРёРѕРґРЅР°СЏ РїРѕРґСЃРІРµС‚РєР°, СЃРёРЅС…СЂРѕРЅРёР·Р°С†РёСЏ РїРѕ РІС‚РѕСЂРѕР№ С€С‚РѕСЂРєРµ, СЃС‚СЂРѕР±РѕСЃРєРѕРї.</li>
                             </ul>
                         </div>
                     </div>
@@ -445,37 +479,37 @@
                 <div class="recommend-box">
                     <i class="fas fa-info-circle"></i>
                     <div>
-                        <strong>Совет:</strong> Для первых шагов отлично подойдут модели Yongnuo YN560 IV, Godox TT685, Canon Speedlite 430EX III-RT, Nikon SB-700 или их аналоги для вашей системы.
+                        <strong>РЎРѕРІРµС‚:</strong> Р”Р»СЏ РїРµСЂРІС‹С… С€Р°РіРѕРІ РѕС‚Р»РёС‡РЅРѕ РїРѕРґРѕР№РґСѓС‚ РјРѕРґРµР»Рё Yongnuo YN560 IV, Godox TT685, Canon Speedlite 430EX III-RT, Nikon SB-700 РёР»Рё РёС… Р°РЅР°Р»РѕРіРё РґР»СЏ РІР°С€РµР№ СЃРёСЃС‚РµРјС‹.
                     </div>
                 </div>
                 <div class="pro-tips">
-                    <h4>?? Профессиональные советы</h4>
+                    <h4>рџ”№ РџСЂРѕС„РµСЃСЃРёРѕРЅР°Р»СЊРЅС‹Рµ СЃРѕРІРµС‚С‹</h4>
                     <div class="tip-item">
                         <i class="fas fa-lightbulb"></i>
-                        <p>Используйте рассеиватели (softbox, bounce card) для более мягкого света и естественных портретов.</p>
+                        <p>РСЃРїРѕР»СЊР·СѓР№С‚Рµ СЂР°СЃСЃРµРёРІР°С‚РµР»Рё (softbox, bounce card) РґР»СЏ Р±РѕР»РµРµ РјСЏРіРєРѕРіРѕ СЃРІРµС‚Р° Рё РµСЃС‚РµСЃС‚РІРµРЅРЅС‹С… РїРѕСЂС‚СЂРµС‚РѕРІ.</p>
                     </div>
                     <div class="tip-item">
                         <i class="fas fa-lightbulb"></i>
-                        <p>Батарейки типа AA - удобнее, их можно быстро заменить на мероприятии. Для частой съёмки рассмотрите вспышки с литиевым аккумулятором.</p>
+                        <p>Р‘Р°С‚Р°СЂРµР№РєРё С‚РёРїР° AA - СѓРґРѕР±РЅРµРµ, РёС… РјРѕР¶РЅРѕ Р±С‹СЃС‚СЂРѕ Р·Р°РјРµРЅРёС‚СЊ РЅР° РјРµСЂРѕРїСЂРёСЏС‚РёРё. Р”Р»СЏ С‡Р°СЃС‚РѕР№ СЃСЉС‘РјРєРё СЂР°СЃСЃРјРѕС‚СЂРёС‚Рµ РІСЃРїС‹С€РєРё СЃ Р»РёС‚РёРµРІС‹Рј Р°РєРєСѓРјСѓР»СЏС‚РѕСЂРѕРј.</p>
                     </div>
                     <div class="tip-item">
                         <i class="fas fa-lightbulb"></i>
-                        <p>Тренируйтесь с отражением света от потолка - это самый простой способ получить мягкое освещение без лишних теней.</p>
+                        <p>РўСЂРµРЅРёСЂСѓР№С‚РµСЃСЊ СЃ РѕС‚СЂР°Р¶РµРЅРёРµРј СЃРІРµС‚Р° РѕС‚ РїРѕС‚РѕР»РєР° - СЌС‚Рѕ СЃР°РјС‹Р№ РїСЂРѕСЃС‚РѕР№ СЃРїРѕСЃРѕР± РїРѕР»СѓС‡РёС‚СЊ РјСЏРіРєРѕРµ РѕСЃРІРµС‰РµРЅРёРµ Р±РµР· Р»РёС€РЅРёС… С‚РµРЅРµР№.</p>
                     </div>
                 </div>
-                <h2>Часто задаваемые вопросы</h2>
+                <h2>Р§Р°СЃС‚Рѕ Р·Р°РґР°РІР°РµРјС‹Рµ РІРѕРїСЂРѕСЃС‹</h2>
                 <ul>
-                    <li><strong>Можно ли использовать вспышку другого бренда?</strong> - Да, если она поддерживает ваш протокол TTL или работает в ручном режиме.</li>
-                    <li><strong>Что важнее: мощность или функциональность?</strong> - Для новичка важнее удобство, TTL и поворотная головка. Мощность важна для больших помещений.</li>
-                    <li><strong>Зачем нужен внешний рассеиватель?</strong> - Он делает свет мягче, устраняет резкие тени и блики.</li>
+                    <li><strong>РњРѕР¶РЅРѕ Р»Рё РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ РІСЃРїС‹С€РєСѓ РґСЂСѓРіРѕРіРѕ Р±СЂРµРЅРґР°?</strong> - Р”Р°, РµСЃР»Рё РѕРЅР° РїРѕРґРґРµСЂР¶РёРІР°РµС‚ РІР°С€ РїСЂРѕС‚РѕРєРѕР» TTL РёР»Рё СЂР°Р±РѕС‚Р°РµС‚ РІ СЂСѓС‡РЅРѕРј СЂРµР¶РёРјРµ.</li>
+                    <li><strong>Р§С‚Рѕ РІР°Р¶РЅРµРµ: РјРѕС‰РЅРѕСЃС‚СЊ РёР»Рё С„СѓРЅРєС†РёРѕРЅР°Р»СЊРЅРѕСЃС‚СЊ?</strong> - Р”Р»СЏ РЅРѕРІРёС‡РєР° РІР°Р¶РЅРµРµ СѓРґРѕР±СЃС‚РІРѕ, TTL Рё РїРѕРІРѕСЂРѕС‚РЅР°СЏ РіРѕР»РѕРІРєР°. РњРѕС‰РЅРѕСЃС‚СЊ РІР°Р¶РЅР° РґР»СЏ Р±РѕР»СЊС€РёС… РїРѕРјРµС‰РµРЅРёР№.</li>
+                    <li><strong>Р—Р°С‡РµРј РЅСѓР¶РµРЅ РІРЅРµС€РЅРёР№ СЂР°СЃСЃРµРёРІР°С‚РµР»СЊ?</strong> - РћРЅ РґРµР»Р°РµС‚ СЃРІРµС‚ РјСЏРіС‡Рµ, СѓСЃС‚СЂР°РЅСЏРµС‚ СЂРµР·РєРёРµ С‚РµРЅРё Рё Р±Р»РёРєРё.</li>
                 </ul>
-                <h2>?? Итог</h2>
+                <h2>рџ“Њ РС‚РѕРі</h2>
                 <p>
-                    Внешняя вспышка - отличный инструмент для качественных фотографий в любых условиях. Главное - совместимость, поворотная головка и TTL-режим. Начните с универсальной модели, изучите возможности отражённого света и не бойтесь экспериментировать!
+                    Р’РЅРµС€РЅСЏСЏ РІСЃРїС‹С€РєР° - РѕС‚Р»РёС‡РЅС‹Р№ РёРЅСЃС‚СЂСѓРјРµРЅС‚ РґР»СЏ РєР°С‡РµСЃС‚РІРµРЅРЅС‹С… С„РѕС‚РѕРіСЂР°С„РёР№ РІ Р»СЋР±С‹С… СѓСЃР»РѕРІРёСЏС…. Р“Р»Р°РІРЅРѕРµ - СЃРѕРІРјРµСЃС‚РёРјРѕСЃС‚СЊ, РїРѕРІРѕСЂРѕС‚РЅР°СЏ РіРѕР»РѕРІРєР° Рё TTL-СЂРµР¶РёРј. РќР°С‡РЅРёС‚Рµ СЃ СѓРЅРёРІРµСЂСЃР°Р»СЊРЅРѕР№ РјРѕРґРµР»Рё, РёР·СѓС‡РёС‚Рµ РІРѕР·РјРѕР¶РЅРѕСЃС‚Рё РѕС‚СЂР°Р¶С‘РЅРЅРѕРіРѕ СЃРІРµС‚Р° Рё РЅРµ Р±РѕР№С‚РµСЃСЊ СЌРєСЃРїРµСЂРёРјРµРЅС‚РёСЂРѕРІР°С‚СЊ!
                 </p>
 </div>
 
-        <!-- Telegram рекламный баннер -->
+        <!-- Telegram СЂРµРєР»Р°РјРЅС‹Р№ Р±Р°РЅРЅРµСЂ -->
         <a href="https://t.me/RepairoRU" target="_blank" rel="noopener noreferrer" class="telegram-banner">
           <div class="telegram-banner-container">
             <div class="telegram-logo">
@@ -484,10 +518,10 @@
               </svg>
             </div>
             <div class="telegram-content">
-              <div class="telegram-title">Новости из мира технологий</div>
-              <div class="telegram-subtitle">В нашем новом Telegram-канале. Подписывайтесь и будьте в числе первых!</div>
+              <div class="telegram-title">РќРѕРІРѕСЃС‚Рё РёР· РјРёСЂР° С‚РµС…РЅРѕР»РѕРіРёР№</div>
+              <div class="telegram-subtitle">Р’ РЅР°С€РµРј РЅРѕРІРѕРј Telegram-РєР°РЅР°Р»Рµ. РџРѕРґРїРёСЃС‹РІР°Р№С‚РµСЃСЊ Рё Р±СѓРґСЊС‚Рµ РІ С‡РёСЃР»Рµ РїРµСЂРІС‹С…!</div>
               <div class="telegram-button">
-                Подписаться
+                РџРѕРґРїРёСЃР°С‚СЊСЃСЏ
                 <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.56c-.21 2.22-1.12 7.58-1.58 10.06-.19 1.07-.57 1.43-.94 1.46-.8.07-1.4-.52-2.17-1.03-1.21-.79-1.89-1.28-3.06-2.05-1.35-.87-.47-1.35.3-2.13.2-.21 3.71-3.39 3.77-3.68.01-.04.01-.18-.07-.26s-.2-.05-.29-.03c-.12.03-2.11 1.34-5.95 3.93-.56.38-1.07.57-1.53.56-.5-.01-1.47-.28-2.19-.51-.88-.28-1.58-.43-1.52-.91.03-.25.38-.51 1.04-.78 4.07-1.77 6.78-2.94 8.13-3.51 3.88-1.62 4.68-1.9 5.19-1.91.12 0 .37.03.54.17.14.12.18.28.2.44-.01.06 0 .11-.01.17z"/>
                 </svg>
@@ -512,45 +546,45 @@
                         </span>
                         <span class="logo__text">Repairo</span>
                     </a>
-                    <p class="footer__text">Помогаем ремонтировать электронику с 2024 года</p>
+                    <p class="footer__text">РџРѕРјРѕРіР°РµРј СЂРµРјРѕРЅС‚РёСЂРѕРІР°С‚СЊ СЌР»РµРєС‚СЂРѕРЅРёРєСѓ СЃ 2024 РіРѕРґР°</p>
                 </div>
                 <div class="footer__col">
-                    <h3 class="footer__title">Разделы</h3>
+                    <h3 class="footer__title">Р Р°Р·РґРµР»С‹</h3>
                     <ul class="footer__links">
-                        <li><a href="../index.html" class="footer__link">Главная</a></li>
-                        <li><a href="../index.html#categories" class="footer__link">Все гайды</a></li>
-                        <li><a href="../contacts.html" class="footer__link">Контакты</a></li>
+                        <li><a href="../index.html" class="footer__link">Р“Р»Р°РІРЅР°СЏ</a></li>
+                        <li><a href="../index.html#categories" class="footer__link">Р’СЃРµ РіР°Р№РґС‹</a></li>
+                        <li><a href="../contacts.html" class="footer__link">РљРѕРЅС‚Р°РєС‚С‹</a></li>
                     </ul>
                 </div>
                 <div class="footer__col">
-                    <h3 class="footer__title">Категории</h3>
+                    <h3 class="footer__title">РљР°С‚РµРіРѕСЂРёРё</h3>
                     <ul class="footer__links">
-                        <li><a href="../tv.html" class="nav__link">Телевизоры</a></li>
-                        <li><a href="../cameras.html" class="nav__link">Фотоаппараты</a></li>
-                        <li><a href="../consoles.html" class="nav__link">Приставки</a></li>
-                        <li><a href="../laptops.html" class="nav__link">Ноутбуки</a></li>
-                        <li><a href="../smartphones.html" class="nav__link">Смартфоны</a></li>
-                        <li><a href="../small-appliances.html" class="nav__link">Мелкая техника</a></li>
-                        <li><a href="../large-appliances.html" class="nav__link">Бытовая техника</a></li>
-                        <li><a href="../auto-electronics.html" class="nav__link">Авто-Электроника</a></li>
+                        <li><a href="../tv.html" class="nav__link">РўРµР»РµРІРёР·РѕСЂС‹</a></li>
+                        <li><a href="../cameras.html" class="nav__link">Р¤РѕС‚РѕР°РїРїР°СЂР°С‚С‹</a></li>
+                        <li><a href="../consoles.html" class="nav__link">РџСЂРёСЃС‚Р°РІРєРё</a></li>
+                        <li><a href="../laptops.html" class="nav__link">РќРѕСѓС‚Р±СѓРєРё</a></li>
+                        <li><a href="../smartphones.html" class="nav__link">РЎРјР°СЂС‚С„РѕРЅС‹</a></li>
+                        <li><a href="../small-appliances.html" class="nav__link">РњРµР»РєР°СЏ С‚РµС…РЅРёРєР°</a></li>
+                        <li><a href="../large-appliances.html" class="nav__link">Р‘С‹С‚РѕРІР°СЏ С‚РµС…РЅРёРєР°</a></li>
+                        <li><a href="../auto-electronics.html" class="nav__link">РђРІС‚Рѕ-Р­Р»РµРєС‚СЂРѕРЅРёРєР°</a></li>
                     </ul>
                 </div>
                 <div class="footer__col">
-                    <h3 class="footer__title">Контакты</h3>
+                    <h3 class="footer__title">РљРѕРЅС‚Р°РєС‚С‹</h3>
                     <ul class="footer__links">
                         <li><a href="https://t.me/RepairoRU" class="footer__link"><i class="fab fa-telegram"></i> Telegram</a></li>
-                        <li><span class="footer__link">Наша почта: repairo.info@mail.ru</span></li>
+                        <li><span class="footer__link">РќР°С€Р° РїРѕС‡С‚Р°: repairo.info@mail.ru</span></li>
                     </ul>
                 </div>
             </div>
             <div class="footer__bottom">
                 <p class="disclaimer">
-    Администрация сайта не несёт ответственности за возможные повреждения техники
-    и иные последствия, возникшие в результате самостоятельного ремонта по
-    материалам и инструкциям, размещённым на сайте. Все работы вы выполняете
-    на свой страх и риск.
+    РђРґРјРёРЅРёСЃС‚СЂР°С†РёСЏ СЃР°Р№С‚Р° РЅРµ РЅРµСЃС‘С‚ РѕС‚РІРµС‚СЃС‚РІРµРЅРЅРѕСЃС‚Рё Р·Р° РІРѕР·РјРѕР¶РЅС‹Рµ РїРѕРІСЂРµР¶РґРµРЅРёСЏ С‚РµС…РЅРёРєРё
+    Рё РёРЅС‹Рµ РїРѕСЃР»РµРґСЃС‚РІРёСЏ, РІРѕР·РЅРёРєС€РёРµ РІ СЂРµР·СѓР»СЊС‚Р°С‚Рµ СЃР°РјРѕСЃС‚РѕСЏС‚РµР»СЊРЅРѕРіРѕ СЂРµРјРѕРЅС‚Р° РїРѕ
+    РјР°С‚РµСЂРёР°Р»Р°Рј Рё РёРЅСЃС‚СЂСѓРєС†РёСЏРј, СЂР°Р·РјРµС‰С‘РЅРЅС‹Рј РЅР° СЃР°Р№С‚Рµ. Р’СЃРµ СЂР°Р±РѕС‚С‹ РІС‹ РІС‹РїРѕР»РЅСЏРµС‚Рµ
+    РЅР° СЃРІРѕР№ СЃС‚СЂР°С… Рё СЂРёСЃРє.
     </p>
-                <p class="footer__copyright">© 2026 Repairo. Все права защищены.</p>
+                <p class="footer__copyright">В© 2026 Repairo. Р’СЃРµ РїСЂР°РІР° Р·Р°С‰РёС‰РµРЅС‹.</p>
             </div>
         </div>
     </footer>
@@ -561,38 +595,38 @@
 {
   "@context": "https://schema.org",
   "@type": "HowTo",
-  "name": "Как выбрать внешнюю вспышку? Руководство для новичков",
-  "description": "Пошаговая инструкция: Как выбрать внешнюю вспышку? Руководство для новичков. Используйте рассеиватели (softbox, bounce card) для более мягкого света и естест...",
+  "name": "РљР°Рє РІС‹Р±СЂР°С‚СЊ РІРЅРµС€РЅСЋСЋ РІСЃРїС‹С€РєСѓ? Р СѓРєРѕРІРѕРґСЃС‚РІРѕ РґР»СЏ РЅРѕРІРёС‡РєРѕРІ",
+  "description": "РџРѕС€Р°РіРѕРІР°СЏ РёРЅСЃС‚СЂСѓРєС†РёСЏ: РљР°Рє РІС‹Р±СЂР°С‚СЊ РІРЅРµС€РЅСЋСЋ РІСЃРїС‹С€РєСѓ? Р СѓРєРѕРІРѕРґСЃС‚РІРѕ РґР»СЏ РЅРѕРІРёС‡РєРѕРІ. РСЃРїРѕР»СЊР·СѓР№С‚Рµ СЂР°СЃСЃРµРёРІР°С‚РµР»Рё (softbox, bounce card) РґР»СЏ Р±РѕР»РµРµ РјСЏРіРєРѕРіРѕ СЃРІРµС‚Р° Рё РµСЃС‚РµСЃС‚...",
   "totalTime": "PT30M",
   "step": [
     {
       "@type": "HowToStep",
-      "name": "Зачем нужна внешняя вспышка?",
-      "text": "Зачем нужна внешняя вспышка?",
+      "name": "Р—Р°С‡РµРј РЅСѓР¶РЅР° РІРЅРµС€РЅСЏСЏ РІСЃРїС‹С€РєР°?",
+      "text": "Р—Р°С‡РµРј РЅСѓР¶РЅР° РІРЅРµС€РЅСЏСЏ РІСЃРїС‹С€РєР°?",
       "url": "#step-1"
     },
     {
       "@type": "HowToStep",
-      "name": "Ключевые параметры при выборе вспышки",
-      "text": "Ключевые параметры при выборе вспышки",
+      "name": "РљР»СЋС‡РµРІС‹Рµ РїР°СЂР°РјРµС‚СЂС‹ РїСЂРё РІС‹Р±РѕСЂРµ РІСЃРїС‹С€РєРё",
+      "text": "РљР»СЋС‡РµРІС‹Рµ РїР°СЂР°РјРµС‚СЂС‹ РїСЂРё РІС‹Р±РѕСЂРµ РІСЃРїС‹С€РєРё",
       "url": "#step-2"
     },
     {
       "@type": "HowToStep",
-      "name": "Пошаговая инструкция: как выбрать внешнюю вспышку",
-      "text": "Пошаговая инструкция: как выбрать внешнюю вспышку",
+      "name": "РџРѕС€Р°РіРѕРІР°СЏ РёРЅСЃС‚СЂСѓРєС†РёСЏ: РєР°Рє РІС‹Р±СЂР°С‚СЊ РІРЅРµС€РЅСЋСЋ РІСЃРїС‹С€РєСѓ",
+      "text": "РџРѕС€Р°РіРѕРІР°СЏ РёРЅСЃС‚СЂСѓРєС†РёСЏ: РєР°Рє РІС‹Р±СЂР°С‚СЊ РІРЅРµС€РЅСЋСЋ РІСЃРїС‹С€РєСѓ",
       "url": "#step-3"
     },
     {
       "@type": "HowToStep",
-      "name": "Часто задаваемые вопросы",
-      "text": "Часто задаваемые вопросы",
+      "name": "Р§Р°СЃС‚Рѕ Р·Р°РґР°РІР°РµРјС‹Рµ РІРѕРїСЂРѕСЃС‹",
+      "text": "Р§Р°СЃС‚Рѕ Р·Р°РґР°РІР°РµРјС‹Рµ РІРѕРїСЂРѕСЃС‹",
       "url": "#step-4"
     },
     {
       "@type": "HowToStep",
-      "name": "?? Итог",
-      "text": "?? Итог",
+      "name": "рџ“Њ РС‚РѕРі",
+      "text": "рџ“Њ РС‚РѕРі",
       "url": "#step-5"
     }
   ],
@@ -603,8 +637,4 @@
 <script src="../cookie-consent.js"></script>
 </body>
 </html>
-
-
-
-
 

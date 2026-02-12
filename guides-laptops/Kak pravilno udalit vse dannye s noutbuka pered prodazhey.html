@@ -4,34 +4,69 @@
 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Удаление всех данных с ноутбука перед продажей | Полное руко</title>
-    <meta name="description" content="">
+  <title>РЈРґР°Р»РµРЅРёРµ РІСЃРµС… РґР°РЅРЅС‹С… СЃ РЅРѕСѓС‚Р±СѓРєР° РїРµСЂРµРґ РїСЂРѕРґР°Р¶РµР№ | РџРѕР»РЅРѕРµ СЂСѓРєРѕРІРѕРґСЃС‚РІРѕ РїРѕ РѕС‡РёСЃС‚РєРµ</title>
+    <meta name="description" content="{{ description }}">
+    <meta name="description" content="РџРѕС€Р°РіРѕРІР°СЏ РёРЅСЃС‚СЂСѓРєС†РёСЏ: РљР°Рє РїСЂР°РІРёР»СЊРЅРѕ РѕС‡РёСЃС‚РёС‚СЊ РЅРѕСѓС‚Р±СѓРє РїРµСЂРµРґ РїСЂРѕРґР°Р¶РµР№, С‡С‚РѕР±С‹ РґР°РЅРЅС‹Рµ РЅРµР»СЊР·СЏ Р±С‹Р»Рѕ РІРѕСЃСЃС‚Р°РЅРѕРІРёС‚СЊ. РџРѕР»РЅРѕРµ СЂСѓРєРѕРІРѕРґСЃС‚РІРѕ РїРѕ Р±РµР·РѕРїР°СЃРЅРѕРјСѓ СѓРґР°Р»РµРЅРёСЋ РёРЅС„РѕСЂРјР°С†РёРё Рё СЃР±СЂРѕСЃСѓ СЃРёСЃС‚РµРјС‹.">
 
   <link rel="stylesheet" href="../styles.css" />
   <link rel="stylesheet" href="../styles-header.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
   <style>
     .guide-content { line-height: 1.7; color: var(--text); }
-    .guide-content h2 { color: var(--primary); margin-top: 30px; margin-bottom: 15px; font-size: 1.5rem; }
-    .guide-content h3 { color: var(--primary-dark); margin-top: 25px; margin-bottom: 12px; font-size: 1.2rem; }
+    .guide-content h2 { color: var(--primary); margin-top: 30px; margin-bottom: 15px; font-size: 1.6rem; }
+    .guide-content h3 { color: var(--primary-dark); margin-top: 25px; margin-bottom: 12px; font-size: 1.25rem; }
     .guide-image-block { margin: 20px 0; padding: 15px; background: var(--background); border-radius: var(--border-radius); border: 1px solid var(--border); text-align: center; }
     .guide-image-block img { max-width: 100%; height: auto; border-radius: 6px; border: 1px solid var(--border); }
     .image-caption { margin-top: 10px; font-size: 0.85rem; color: var(--text-light); font-style: italic; }
+    table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+    th, td { border: 1px solid var(--border); padding: 8px; text-align: left; vertical-align: top; }
+    th { background: var(--background-light); }
+    code { background: rgba(0,0,0,0.04); padding: 1px 4px; border-radius: 3px; }
+    ul, ol { padding-left: 18px; }
+    .check-section { padding: 15px; border-radius: 6px; border: 1px dashed var(--border); margin: 18px 0; background: rgba(0,0,0,0.01); }
+    .check-title { font-weight: 600; margin-bottom: 8px; }
     .pro-tips { background: rgba(3, 74, 79, 0.05); padding: 15px; border-radius: 6px; margin: 20px 0; }
     .pro-tips h4 { color: var(--primary); margin-top: 0; margin-bottom: 12px; font-size: 1.1rem; }
     .tip-item { display: flex; gap: 8px; margin-bottom: 8px; align-items: flex-start; }
-    table { width: 100%; border-collapse: collapse; margin: 20px 0; }
-    th, td { border: 1px solid var(--border); padding: 8px; text-align: left; }
-    th { background: var(--background-light); }
-    .highlight { background: #f5f7fa; border-left: 4px solid #2d9cdb; padding: 10px 15px; margin: 20px 0; }
-    .faq-section ul { margin-left: 1em; }
-    .block-section { margin-bottom: 2em; }
+    .ok { color: #0a8f3c; font-weight: 600; }
+    .warn { color: #c97a00; font-weight: 600; }
+    .bad { color: #c62828; font-weight: 600; }
+    .alert-box { padding: 20px; border-radius: 8px; margin: 25px 0; }
+    .alert-danger { background: rgba(198, 40, 40, 0.1); border-left: 4px solid #c62828; }
+    .alert-warning { background: rgba(201, 122, 0, 0.1); border-left: 4px solid #c97a00; }
+    .alert-success { background: rgba(10, 143, 60, 0.1); border-left: 4px solid #0a8f3c; }
+    .alert-info { background: rgba(3, 74, 79, 0.1); border-left: 4px solid var(--primary); }
+    .method-comparison { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin: 20px 0; }
+    .method-card { padding: 20px; border-radius: 8px; background: var(--background); border: 1px solid var(--border); }
+    .method-card h4 { color: var(--primary-dark); margin-top: 0; margin-bottom: 15px; }
+    .method-card .security-level { display: inline-block; padding: 4px 8px; border-radius: 4px; font-size: 0.85rem; font-weight: 600; margin-bottom: 10px; }
+    .security-high { background: rgba(10, 143, 60, 0.2); color: #0a8f3c; }
+    .security-medium { background: rgba(201, 122, 0, 0.2); color: #c97a00; }
+    .security-low { background: rgba(198, 40, 40, 0.2); color: #c62828; }
+    .step-by-step { counter-reset: step-counter; }
+    .step-by-step .step-item { position: relative; padding-left: 50px; margin-bottom: 20px; }
+    .step-by-step .step-item::before { counter-increment: step-counter; content: counter(step-counter); position: absolute; left: 0; top: 0; width: 35px; height: 35px; background: var(--primary); color: white; text-align: center; line-height: 35px; border-radius: 50%; font-weight: bold; }
+    .software-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; margin: 20px 0; }
+    .software-card { padding: 15px; border-radius: 6px; background: var(--background); border: 1px solid var(--border); text-align: center; }
+    .software-card h4 { color: var(--primary-dark); margin-top: 0; margin-bottom: 8px; }
+    .software-card .price { color: var(--primary); font-weight: 600; margin-bottom: 8px; }
     @media (max-width: 768px) {
       .guide-content h2 { font-size: 1.4rem; margin-top: 25px; }
       .guide-image-block { padding: 12px; margin: 15px 0; }
       table, th, td { font-size: 0.95rem; }
+      .method-comparison { grid-template-columns: 1fr; }
     }
+    /* РЇРЅРґРµРєСЃ РњР°СЂРєРµС‚ СЂРµРєР»Р°РјРЅС‹Р№ Р±Р°РЅРЅРµСЂ */
+    .ym-hero-link {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+      max-width: 100%;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
     /* Р“РѕСЂРёР·РѕРЅС‚Р°Р»СЊРЅС‹Р№ Р±Р°РЅРЅРµСЂ-РєР°СЂС‚РѕС‡РєР° */
     .ym-hero-banner {
       width: 100%;
@@ -83,257 +118,63 @@
       transform: scale(1.02);
     }
 
-    /* РџСЂР°РІР°СЏ С‡Р°СЃС‚СЊ: РєРѕРЅС‚РµРЅС‚ */
+    /* РўРµРєСЃС‚РѕРІР°СЏ С‡Р°СЃС‚СЊ Р±Р°РЅРЅРµСЂР° */
     .ym-hero-content {
-      padding: 16px 18px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      gap: 8px;
+      padding: 12px 16px;
+      text-align: center;
     }
 
-    /* РќР°Р·РІР°РЅРёРµ С‚РѕРІР°СЂР° */
     .ym-hero-title {
-      font-size: 14px;
-      font-weight: 600;
-      color: #111827;
-      line-height: 1.3;
-      margin: 0 0 4px 0;
-      display: -webkit-box;
-      -webkit-line-clamp: 2;
-      line-clamp: 2;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
-    }
-
-    /* Р РµР№С‚РёРЅРі */
-    .ym-hero-top {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 8px;
-    }
-
-    .ym-hero-rating {
       font-size: 13px;
-      font-weight: 500;
-      color: #111827;
-      background: #f9fafb;
-      border-radius: 999px;
-      padding: 4px 10px;
-    }
-
-    .ym-hero-rating-count {
-      color: #6b7280;
-    }
-
-    /* Р¤РёРѕР»РµС‚РѕРІР°СЏ РєРЅРѕРїРєР° */
-    .ym-hero-button {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 9px 16px;
-      border-radius: 999px;
-      border: none;
-      background: #6a00ff;
-      color: #ffffff;
-      font-size: 14px;
       font-weight: 600;
-      cursor: pointer;
-      box-shadow: 0 2px 6px rgba(88, 28, 135, 0.35);
-      transition: background 0.15s ease, transform 0.15s ease,
-                  box-shadow 0.15s ease;
-    }
-    .ym-hero-button::after {
-      content: "в†’";
-      margin-left: 6px;
-      font-size: 14px;
-    }
-    .ym-hero-button:hover {
-      background: #7c3aed;
-      transform: translateY(-1px);
-      box-shadow: 0 4px 10px rgba(88, 28, 135, 0.45);
-    }
-
-    /* Р®СЂРёРґРёС‡РµСЃРєРёР№ Р±Р»РѕРє */
-    .ym-hero-legal {
-      margin-top: 6px;
-      max-width: 600px;
-      font-size: 11px;
+      color: #1f2937;
+      margin: 0 0 4px 0;
       line-height: 1.3;
-      color: #6b7280;
-      margin-left: auto;
-      margin-right: auto;
     }
 
-    /* РђРґР°РїС‚РёРІ */
+    .ym-hero-desc {
+      font-size: 11px;
+      color: #6b7280;
+      margin: 0;
+      line-height: 1.3;
+    }
+
     @media (max-width: 480px) {
       .ym-hero-banner {
-        max-width: 100%;
-        margin: 20px 0;
+        min-height: 120px;
       }
       .ym-hero-images {
         height: 100px;
       }
-      .ym-hero-content {
-        padding: 12px 12px;
-      }
       .ym-hero-title {
-        font-size: 13px;
+        font-size: 12px;
       }
-      .ym-hero-button {
-        font-size: 13px;
-        padding: 8px 14px;
-      }
-      .ym-hero-legal {
+      .ym-hero-desc {
         font-size: 10px;
       }
     }
-    /* Telegram СЂРµРєР»Р°РјРЅС‹Р№ Р±Р°РЅРЅРµСЂ */
-    .telegram-banner {
-      display: flex;
-      justify-content: center;
-      text-decoration: none;
-      color: inherit;
-      width: 100%;
-      margin: 40px 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    }
-
-    .telegram-banner-container {
-      width: 100%;
-      max-width: 500px;
-      min-height: 120px;
-      border-radius: 16px;
-      background: linear-gradient(135deg, #0088cc 0%, #005f8f 100%);
-      border: 1px solid #005f8f;
-      display: flex;
-      align-items: center;
-      padding: 20px;
-      box-shadow: 0 4px 16px rgba(0, 136, 204, 0.2);
-      overflow: hidden;
-      box-sizing: border-box;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-
-    .telegram-banner-container:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(0, 136, 204, 0.3);
-    }
-
-    .telegram-logo {
-      width: 60px;
-      height: 60px;
-      min-width: 60px;
-      background: #ffffff;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-right: 20px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    }
-
-    .telegram-logo svg {
-      width: 32px;
-      height: 32px;
-      fill: #0088cc;
-    }
-
-    .telegram-content {
-      flex: 1;
-      color: #ffffff;
-    }
-
-    .telegram-title {
-      font-size: 16px;
-      font-weight: 600;
-      margin: 0 0 8px 0;
-      line-height: 1.3;
-    }
-
-    .telegram-subtitle {
-      font-size: 14px;
-      opacity: 0.9;
-      margin: 0 0 12px 0;
-      line-height: 1.4;
-    }
-
-    .telegram-button {
-      display: inline-flex;
-      align-items: center;
-      padding: 8px 16px;
-      background: #ffffff;
-      color: #0088cc;
-      border-radius: 20px;
-      font-size: 14px;
-      font-weight: 600;
-      text-decoration: none;
-      transition: background 0.2s ease, transform 0.2s ease;
-    }
-
-    .telegram-button:hover {
-      background: #f0f8ff;
-      transform: scale(1.05);
-    }
-
-    .telegram-button svg {
-      width: 16px;
-      height: 16px;
-      margin-left: 6px;
-      fill: #0088cc;
-    }
-
-    /* РђРґР°РїС‚РёРІ РґР»СЏ РјРѕР±РёР»СЊРЅС‹С… */
-    @media (max-width: 480px) {
-      .telegram-banner-container {
-        max-width: 100%;
-        margin: 20px 0;
-        padding: 15px;
-        min-height: 100px;
-      }
-      .telegram-logo {
-        width: 50px;
-        height: 50px;
-        min-width: 50px;
-        margin-right: 15px;
-      }
-      .telegram-logo svg {
-        width: 26px;
-        height: 26px;
-      }
-      .telegram-title {
-        font-size: 14px;
-      }
-      .telegram-subtitle {
-        font-size: 12px;
-      }
-      .telegram-button {
-        font-size: 12px;
-        padding: 6px 12px;
-      }
-    }
-
-
-
   </style>
-  <script async src="https://timeweb.cloud/api/v1/cloud-ai/agents/3cc03620-d051-4d8d-b5af-f7b6cd083a35/embed.js?collapsed=true"></script>
 </head>
 <body>
+
   <header class="header">
     <div class="container">
       <div class="header__inner">
         <a href="../index.html" class="logo">
-          <span class="logo__icon"></span>
-          <span class="logo__text">GeoExpert</span>
+          <img src="../logo.svg" alt="Repairo" width="40" height="40">
+          <span>Repairo</span>
         </a>
         <nav class="nav">
-          <ul class="nav__list">
-            <li><a href="../cameras.html" class="nav__link">РљР°РјРµСЂС‹</a></li>
-            <li><a href="../drones.html" class="nav__link">Р”СЂРѕРЅС‹</a></li>
-            <li><a href="../workflow.html" class="nav__link">Workflow</a></li>
-          </ul>
+          <a href="../index.html">Р“Р»Р°РІРЅР°СЏ</a>
+          <a href="../laptops.html">РќРѕСѓС‚Р±СѓРєРё</a>
+          <a href="../smartphones.html">РЎРјР°СЂС‚С„РѕРЅС‹</a>
+          <a href="../consoles.html">РљРѕРЅСЃРѕР»Рё</a>
+          <a href="../cameras.html">Р¤РѕС‚РѕР°РїРїР°СЂР°С‚С‹</a>
+          <a href="../tv.html">РўРµР»РµРІРёР·РѕСЂС‹</a>
         </nav>
+        <button class="theme-toggle" aria-label="РџРµСЂРµРєР»СЋС‡РёС‚СЊ С‚РµРјСѓ">
+          <i class="fas fa-moon"></i>
+        </button>
       </div>
     </div>
   </header>
@@ -341,300 +182,308 @@
   <main class="main">
     <div class="container">
       <div class="guide-content">
-        <h1>Как правильно удалить все данные с ноутбука перед продажей</h1>
+        <h1>РљР°Рє РїСЂР°РІРёР»СЊРЅРѕ СѓРґР°Р»РёС‚СЊ РІСЃРµ РґР°РЅРЅС‹Рµ СЃ РЅРѕСѓС‚Р±СѓРєР° РїРµСЂРµРґ РїСЂРѕРґР°Р¶РµР№</h1>
         
-        <p>Продажа ноутбука требует тщательной очистки всех личных данных. Простое удаление файлов или форматирование диска недостаточно — опытные пользователи могут восстановить информацию. В этом руководстве мы рассмотрим, как надежно удалить все данные, чтобы они не попали в чужие руки.</p>
+        <p>РџСЂРѕРґР°Р¶Р° РЅРѕСѓС‚Р±СѓРєР° С‚СЂРµР±СѓРµС‚ С‚С‰Р°С‚РµР»СЊРЅРѕР№ РѕС‡РёСЃС‚РєРё РІСЃРµС… Р»РёС‡РЅС‹С… РґР°РЅРЅС‹С…. РџСЂРѕСЃС‚РѕРµ СѓРґР°Р»РµРЅРёРµ С„Р°Р№Р»РѕРІ РёР»Рё С„РѕСЂРјР°С‚РёСЂРѕРІР°РЅРёРµ РґРёСЃРєР° РЅРµРґРѕСЃС‚Р°С‚РѕС‡РЅРѕ вЂ” РѕРїС‹С‚РЅС‹Рµ РїРѕР»СЊР·РѕРІР°С‚РµР»Рё РјРѕРіСѓС‚ РІРѕСЃСЃС‚Р°РЅРѕРІРёС‚СЊ РёРЅС„РѕСЂРјР°С†РёСЋ. Р’ СЌС‚РѕРј СЂСѓРєРѕРІРѕРґСЃС‚РІРµ РјС‹ СЂР°СЃСЃРјРѕС‚СЂРёРј, РєР°Рє РЅР°РґРµР¶РЅРѕ СѓРґР°Р»РёС‚СЊ РІСЃРµ РґР°РЅРЅС‹Рµ, С‡С‚РѕР±С‹ РѕРЅРё РЅРµ РїРѕРїР°Р»Рё РІ С‡СѓР¶РёРµ СЂСѓРєРё.</p>
 
         <div class="guide-image-block">
-          <img src="https://avatars.mds.yandex.net/get-shedevrum/15034947/img_d569a60337b611f082d942434bf12543/orig" alt="Удалить все данные с ноутбука перед продажей">
-          <div class="image-caption">Процесс безопасного удаления данных с ноутбука</div>
+          <img src="https://avatars.mds.yandex.net/get-shedevrum/15034947/img_d569a60337b611f082d942434bf12543/orig" alt="РЈРґР°Р»РёС‚СЊ РІСЃРµ РґР°РЅРЅС‹Рµ СЃ РЅРѕСѓС‚Р±СѓРєР° РїРµСЂРµРґ РїСЂРѕРґР°Р¶РµР№">
+          <div class="image-caption">РџСЂРѕС†РµСЃСЃ Р±РµР·РѕРїР°СЃРЅРѕРіРѕ СѓРґР°Р»РµРЅРёСЏ РґР°РЅРЅС‹С… СЃ РЅРѕСѓС‚Р±СѓРєР°</div>
         </div>
 
         <div class="alert-danger">
-          <h4><i class="fas fa-exclamation-triangle"></i> ВНИМАНИЕ: Почему простое удаление недостаточно</h4>
-          <p>Когда вы удаляете файлы или форматируете диск, данные физически остаются на накопителе. Специализированные программы могут восстановить их даже после переустановки Windows. Для полной защиты необходимо использовать методы безопасного удаления.</p>
+          <h4><i class="fas fa-exclamation-triangle"></i> Р’РќРРњРђРќРР•: РџРѕС‡РµРјСѓ РїСЂРѕСЃС‚РѕРµ СѓРґР°Р»РµРЅРёРµ РЅРµРґРѕСЃС‚Р°С‚РѕС‡РЅРѕ</h4>
+          <p>РљРѕРіРґР° РІС‹ СѓРґР°Р»СЏРµС‚Рµ С„Р°Р№Р»С‹ РёР»Рё С„РѕСЂРјР°С‚РёСЂСѓРµС‚Рµ РґРёСЃРє, РґР°РЅРЅС‹Рµ С„РёР·РёС‡РµСЃРєРё РѕСЃС‚Р°СЋС‚СЃСЏ РЅР° РЅР°РєРѕРїРёС‚РµР»Рµ. РЎРїРµС†РёР°Р»РёР·РёСЂРѕРІР°РЅРЅС‹Рµ РїСЂРѕРіСЂР°РјРјС‹ РјРѕРіСѓС‚ РІРѕСЃСЃС‚Р°РЅРѕРІРёС‚СЊ РёС… РґР°Р¶Рµ РїРѕСЃР»Рµ РїРµСЂРµСѓСЃС‚Р°РЅРѕРІРєРё Windows. Р”Р»СЏ РїРѕР»РЅРѕР№ Р·Р°С‰РёС‚С‹ РЅРµРѕР±С…РѕРґРёРјРѕ РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ РјРµС‚РѕРґС‹ Р±РµР·РѕРїР°СЃРЅРѕРіРѕ СѓРґР°Р»РµРЅРёСЏ.</p>
         </div>
 
-        <h2>Подготовка к очистке данных</h2>
+        <h2>РџРѕРґРіРѕС‚РѕРІРєР° Рє РѕС‡РёСЃС‚РєРµ РґР°РЅРЅС‹С…</h2>
 
-        <h3>Шаг 1: Создание резервных копий</h3>
+        <h3>РЁР°Рі 1: РЎРѕР·РґР°РЅРёРµ СЂРµР·РµСЂРІРЅС‹С… РєРѕРїРёР№</h3>
 
         <div class="alert-success">
-          <h4><i class="fas fa-check-circle"></i> Обязательно сделайте перед очисткой:</h4>
-          <p>После безопасного удаления данных восстановить их будет невозможно. Убедитесь, что все важное сохранено.</p>
+          <h4><i class="fas fa-check-circle"></i> РћР±СЏР·Р°С‚РµР»СЊРЅРѕ СЃРґРµР»Р°Р№С‚Рµ РїРµСЂРµРґ РѕС‡РёСЃС‚РєРѕР№:</h4>
+          <p>РџРѕСЃР»Рµ Р±РµР·РѕРїР°СЃРЅРѕРіРѕ СѓРґР°Р»РµРЅРёСЏ РґР°РЅРЅС‹С… РІРѕСЃСЃС‚Р°РЅРѕРІРёС‚СЊ РёС… Р±СѓРґРµС‚ РЅРµРІРѕР·РјРѕР¶РЅРѕ. РЈР±РµРґРёС‚РµСЃСЊ, С‡С‚Рѕ РІСЃРµ РІР°Р¶РЅРѕРµ СЃРѕС…СЂР°РЅРµРЅРѕ.</p>
         </div>
 
         <div class="check-section">
-          <div class="check-title">Что нужно скопировать:</div>
+          <div class="check-title">Р§С‚Рѕ РЅСѓР¶РЅРѕ СЃРєРѕРїРёСЂРѕРІР°С‚СЊ:</div>
           <ul>
-            <li><strong>Документы и рабочие файлы</strong> — Word, Excel, PDF, проекты</li>
-            <li><strong>Фотографии и видео</strong> — личные и семейные медиафайлы</li>
-            <li><strong>Пароли и данные браузеров</strong> — экспорт закладок и сохраненных паролей</li>
-            <li><strong>Лицензионные ключи</strong> от программ и игр</li>
-            <li><strong>Контакты и переписка</strong> из мессенджеров и почтовых клиентов</li>
-            <li><strong>Настройки программ</strong> и конфигурационные файлы</li>
+            <li><strong>Р”РѕРєСѓРјРµРЅС‚С‹ Рё СЂР°Р±РѕС‡РёРµ С„Р°Р№Р»С‹</strong> вЂ” Word, Excel, PDF, РїСЂРѕРµРєС‚С‹</li>
+            <li><strong>Р¤РѕС‚РѕРіСЂР°С„РёРё Рё РІРёРґРµРѕ</strong> вЂ” Р»РёС‡РЅС‹Рµ Рё СЃРµРјРµР№РЅС‹Рµ РјРµРґРёР°С„Р°Р№Р»С‹</li>
+            <li><strong>РџР°СЂРѕР»Рё Рё РґР°РЅРЅС‹Рµ Р±СЂР°СѓР·РµСЂРѕРІ</strong> вЂ” СЌРєСЃРїРѕСЂС‚ Р·Р°РєР»Р°РґРѕРє Рё СЃРѕС…СЂР°РЅРµРЅРЅС‹С… РїР°СЂРѕР»РµР№</li>
+            <li><strong>Р›РёС†РµРЅР·РёРѕРЅРЅС‹Рµ РєР»СЋС‡Рё</strong> РѕС‚ РїСЂРѕРіСЂР°РјРј Рё РёРіСЂ</li>
+            <li><strong>РљРѕРЅС‚Р°РєС‚С‹ Рё РїРµСЂРµРїРёСЃРєР°</strong> РёР· РјРµСЃСЃРµРЅРґР¶РµСЂРѕРІ Рё РїРѕС‡С‚РѕРІС‹С… РєР»РёРµРЅС‚РѕРІ</li>
+            <li><strong>РќР°СЃС‚СЂРѕР№РєРё РїСЂРѕРіСЂР°РјРј</strong> Рё РєРѕРЅС„РёРіСѓСЂР°С†РёРѕРЅРЅС‹Рµ С„Р°Р№Р»С‹</li>
           </ul>
         </div>
 
-        <h3>Шаг 2: Отключение учетных записей и сервисов</h3>
+        <h3>РЁР°Рі 2: РћС‚РєР»СЋС‡РµРЅРёРµ СѓС‡РµС‚РЅС‹С… Р·Р°РїРёСЃРµР№ Рё СЃРµСЂРІРёСЃРѕРІ</h3>
 
         <div class="pro-tips">
-          <h4>Перед очисткой системы:</h4>
+          <h4>РџРµСЂРµРґ РѕС‡РёСЃС‚РєРѕР№ СЃРёСЃС‚РµРјС‹:</h4>
           <ul>
-            <li><strong>Выйдите из всех учетных записей</strong> — Microsoft, Google, Apple ID</li>
-            <li><strong>Отключите привязку устройств</strong> в сервисах типа Find My Device</li>
-            <li><strong>Деактивируйте лицензии</strong> на программное обеспечение</li>
-            <li><strong>Удалите данные из облачных синхронизаций</strong> — OneDrive, Dropbox</li>
-            <li><strong>Сотрите данные из браузеров</strong> — кэш, cookies, история</li>
+            <li><strong>Р’С‹Р№РґРёС‚Рµ РёР· РІСЃРµС… СѓС‡РµС‚РЅС‹С… Р·Р°РїРёСЃРµР№</strong> вЂ” Microsoft, Google, Apple ID</li>
+            <li><strong>РћС‚РєР»СЋС‡РёС‚Рµ РїСЂРёРІСЏР·РєСѓ СѓСЃС‚СЂРѕР№СЃС‚РІ</strong> РІ СЃРµСЂРІРёСЃР°С… С‚РёРїР° Find My Device</li>
+            <li><strong>Р”РµР°РєС‚РёРІРёСЂСѓР№С‚Рµ Р»РёС†РµРЅР·РёРё</strong> РЅР° РїСЂРѕРіСЂР°РјРјРЅРѕРµ РѕР±РµСЃРїРµС‡РµРЅРёРµ</li>
+            <li><strong>РЈРґР°Р»РёС‚Рµ РґР°РЅРЅС‹Рµ РёР· РѕР±Р»Р°С‡РЅС‹С… СЃРёРЅС…СЂРѕРЅРёР·Р°С†РёР№</strong> вЂ” OneDrive, Dropbox</li>
+            <li><strong>РЎРѕС‚СЂРёС‚Рµ РґР°РЅРЅС‹Рµ РёР· Р±СЂР°СѓР·РµСЂРѕРІ</strong> вЂ” РєСЌС€, cookies, РёСЃС‚РѕСЂРёСЏ</li>
           </ul>
         </div>
 
-        <h2>Методы безопасного удаления данных</h2>
+        <h2>РњРµС‚РѕРґС‹ Р±РµР·РѕРїР°СЃРЅРѕРіРѕ СѓРґР°Р»РµРЅРёСЏ РґР°РЅРЅС‹С…</h2>
 
         <div class="method-comparison">
           <div class="method-card">
-            <h4><i class="fas fa-shield-alt"></i> Полное форматирование с очисткой</h4>
-            <span class="security-level security-high">Высокая безопасность</span>
-            <p>Использование встроенных средств Windows для полного форматирования диска с перезаписью данных.</p>
+            <h4><i class="fas fa-shield-alt"></i> РџРѕР»РЅРѕРµ С„РѕСЂРјР°С‚РёСЂРѕРІР°РЅРёРµ СЃ РѕС‡РёСЃС‚РєРѕР№</h4>
+            <span class="security-level security-high">Р’С‹СЃРѕРєР°СЏ Р±РµР·РѕРїР°СЃРЅРѕСЃС‚СЊ</span>
+            <p>РСЃРїРѕР»СЊР·РѕРІР°РЅРёРµ РІСЃС‚СЂРѕРµРЅРЅС‹С… СЃСЂРµРґСЃС‚РІ Windows РґР»СЏ РїРѕР»РЅРѕРіРѕ С„РѕСЂРјР°С‚РёСЂРѕРІР°РЅРёСЏ РґРёСЃРєР° СЃ РїРµСЂРµР·Р°РїРёСЃСЊСЋ РґР°РЅРЅС‹С….</p>
             <ul>
-              <li>Надежная защита данных</li>
-              <li>Встроено в Windows</li>
-              <li>Бесплатно</li>
-              <li>Требует времени</li>
+              <li>РќР°РґРµР¶РЅР°СЏ Р·Р°С‰РёС‚Р° РґР°РЅРЅС‹С…</li>
+              <li>Р’СЃС‚СЂРѕРµРЅРѕ РІ Windows</li>
+              <li>Р‘РµСЃРїР»Р°С‚РЅРѕ</li>
+              <li>РўСЂРµР±СѓРµС‚ РІСЂРµРјРµРЅРё</li>
             </ul>
           </div>
           <div class="method-card">
-            <h4><i class="fas fa-tools"></i> Специализированные программы</h4>
-            <span class="security-level security-high">Высокая безопасность</span>
-            <p>Профессиональные утилиты для многократной перезаписи диска по стандартам безопасности.</p>
+            <h4><i class="fas fa-tools"></i> РЎРїРµС†РёР°Р»РёР·РёСЂРѕРІР°РЅРЅС‹Рµ РїСЂРѕРіСЂР°РјРјС‹</h4>
+            <span class="security-level security-high">Р’С‹СЃРѕРєР°СЏ Р±РµР·РѕРїР°СЃРЅРѕСЃС‚СЊ</span>
+            <p>РџСЂРѕС„РµСЃСЃРёРѕРЅР°Р»СЊРЅС‹Рµ СѓС‚РёР»РёС‚С‹ РґР»СЏ РјРЅРѕРіРѕРєСЂР°С‚РЅРѕР№ РїРµСЂРµР·Р°РїРёСЃРё РґРёСЃРєР° РїРѕ СЃС‚Р°РЅРґР°СЂС‚Р°Рј Р±РµР·РѕРїР°СЃРЅРѕСЃС‚Рё.</p>
             <ul>
-              <li>Соответствие стандартам</li>
-              <li>Гибкие настройки</li>
-              <li>Проверка результатов</li>
-              <li>Требует установки</li>
+              <li>РЎРѕРѕС‚РІРµС‚СЃС‚РІРёРµ СЃС‚Р°РЅРґР°СЂС‚Р°Рј</li>
+              <li>Р“РёР±РєРёРµ РЅР°СЃС‚СЂРѕР№РєРё</li>
+              <li>РџСЂРѕРІРµСЂРєР° СЂРµР·СѓР»СЊС‚Р°С‚РѕРІ</li>
+              <li>РўСЂРµР±СѓРµС‚ СѓСЃС‚Р°РЅРѕРІРєРё</li>
             </ul>
           </div>
           <div class="method-card">
-            <h4><i class="fas fa-sync"></i> Сброс системы Windows</h4>
-            <span class="security-level security-medium">Средняя безопасность</span>
-            <p>Встроенная функция Windows 10/11 для сброса системы с удалением файлов.</p>
+            <h4><i class="fas fa-sync"></i> РЎР±СЂРѕСЃ СЃРёСЃС‚РµРјС‹ Windows</h4>
+            <span class="security-level security-medium">РЎСЂРµРґРЅСЏСЏ Р±РµР·РѕРїР°СЃРЅРѕСЃС‚СЊ</span>
+            <p>Р’СЃС‚СЂРѕРµРЅРЅР°СЏ С„СѓРЅРєС†РёСЏ Windows 10/11 РґР»СЏ СЃР±СЂРѕСЃР° СЃРёСЃС‚РµРјС‹ СЃ СѓРґР°Р»РµРЅРёРµРј С„Р°Р№Р»РѕРІ.</p>
             <ul>
-              <li>Простота использования</li>
-              <li>Автоматический процесс</li>
-              <li>Встроено в систему</li>
-              <li>Менее надежно</li>
+              <li>РџСЂРѕСЃС‚РѕС‚Р° РёСЃРїРѕР»СЊР·РѕРІР°РЅРёСЏ</li>
+              <li>РђРІС‚РѕРјР°С‚РёС‡РµСЃРєРёР№ РїСЂРѕС†РµСЃСЃ</li>
+              <li>Р’СЃС‚СЂРѕРµРЅРѕ РІ СЃРёСЃС‚РµРјСѓ</li>
+              <li>РњРµРЅРµРµ РЅР°РґРµР¶РЅРѕ</li>
             </ul>
           </div>
         </div>
 
-        <h2>Метод 1: Полное форматирование диска (рекомендуется)</h2>
+        <h2>РњРµС‚РѕРґ 1: РџРѕР»РЅРѕРµ С„РѕСЂРјР°С‚РёСЂРѕРІР°РЅРёРµ РґРёСЃРєР° (СЂРµРєРѕРјРµРЅРґСѓРµС‚СЃСЏ)</h2>
 
-        <h3>Использование загрузочного диска Windows</h3>
+        <h3>РСЃРїРѕР»СЊР·РѕРІР°РЅРёРµ Р·Р°РіСЂСѓР·РѕС‡РЅРѕРіРѕ РґРёСЃРєР° Windows</h3>
 
         <div class="step-by-step">
           <div class="step-item">
-            <h4>Создание загрузочной флешки</h4>
-            <p>Скачайте Media Creation Tool с сайта Microsoft и создайте загрузочную флешку с Windows 10/11.</p>
+            <h4>РЎРѕР·РґР°РЅРёРµ Р·Р°РіСЂСѓР·РѕС‡РЅРѕР№ С„Р»РµС€РєРё</h4>
+            <p>РЎРєР°С‡Р°Р№С‚Рµ Media Creation Tool СЃ СЃР°Р№С‚Р° Microsoft Рё СЃРѕР·РґР°Р№С‚Рµ Р·Р°РіСЂСѓР·РѕС‡РЅСѓСЋ С„Р»РµС€РєСѓ СЃ Windows 10/11.</p>
           </div>
           <div class="step-item">
-            <h4>Загрузка с флешки</h4>
-            <p>Перезагрузите ноутбук, войдите в BIOS (обычно F2, F10, Del) и выберите загрузку с USB-устройства.</p>
+            <h4>Р—Р°РіСЂСѓР·РєР° СЃ С„Р»РµС€РєРё</h4>
+            <p>РџРµСЂРµР·Р°РіСЂСѓР·РёС‚Рµ РЅРѕСѓС‚Р±СѓРє, РІРѕР№РґРёС‚Рµ РІ BIOS (РѕР±С‹С‡РЅРѕ F2, F10, Del) Рё РІС‹Р±РµСЂРёС‚Рµ Р·Р°РіСЂСѓР·РєСѓ СЃ USB-СѓСЃС‚СЂРѕР№СЃС‚РІР°.</p>
           </div>
           <div class="step-item">
-            <h4>Запуск установки Windows</h4>
-            <p>Следуйте инструкциям установщика до экрана выбора типа установки.</p>
+            <h4>Р—Р°РїСѓСЃРє СѓСЃС‚Р°РЅРѕРІРєРё Windows</h4>
+            <p>РЎР»РµРґСѓР№С‚Рµ РёРЅСЃС‚СЂСѓРєС†РёСЏРј СѓСЃС‚Р°РЅРѕРІС‰РёРєР° РґРѕ СЌРєСЂР°РЅР° РІС‹Р±РѕСЂР° С‚РёРїР° СѓСЃС‚Р°РЅРѕРІРєРё.</p>
           </div>
           <div class="step-item">
-            <h4>Выбор пользовательской установки</h4>
-            <p>Выберите "Пользовательская: только установка Windows" (не "Обновить").</p>
+            <h4>Р’С‹Р±РѕСЂ РїРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєРѕР№ СѓСЃС‚Р°РЅРѕРІРєРё</h4>
+            <p>Р’С‹Р±РµСЂРёС‚Рµ "РџРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєР°СЏ: С‚РѕР»СЊРєРѕ СѓСЃС‚Р°РЅРѕРІРєР° Windows" (РЅРµ "РћР±РЅРѕРІРёС‚СЊ").</p>
           </div>
           <div class="step-item">
-            <h4>Форматирование диска</h4>
-            <p>Выберите системный раздел, нажмите "Форматировать", затем "Удалить". Повторите для всех разделов.</p>
+            <h4>Р¤РѕСЂРјР°С‚РёСЂРѕРІР°РЅРёРµ РґРёСЃРєР°</h4>
+            <p>Р’С‹Р±РµСЂРёС‚Рµ СЃРёСЃС‚РµРјРЅС‹Р№ СЂР°Р·РґРµР», РЅР°Р¶РјРёС‚Рµ "Р¤РѕСЂРјР°С‚РёСЂРѕРІР°С‚СЊ", Р·Р°С‚РµРј "РЈРґР°Р»РёС‚СЊ". РџРѕРІС‚РѕСЂРёС‚Рµ РґР»СЏ РІСЃРµС… СЂР°Р·РґРµР»РѕРІ.</p>
           </div>
           <div class="step-item">
-            <h4>Создание нового раздела</h4>
-            <p>Выберите незанятое пространство и нажмите "Создать" для создания нового раздела.</p>
+            <h4>РЎРѕР·РґР°РЅРёРµ РЅРѕРІРѕРіРѕ СЂР°Р·РґРµР»Р°</h4>
+            <p>Р’С‹Р±РµСЂРёС‚Рµ РЅРµР·Р°РЅСЏС‚РѕРµ РїСЂРѕСЃС‚СЂР°РЅСЃС‚РІРѕ Рё РЅР°Р¶РјРёС‚Рµ "РЎРѕР·РґР°С‚СЊ" РґР»СЏ СЃРѕР·РґР°РЅРёСЏ РЅРѕРІРѕРіРѕ СЂР°Р·РґРµР»Р°.</p>
           </div>
           <div class="step-item">
-            <h4>Установка Windows</h4>
-            <p>Установите Windows на новый раздел. После установки можно выключить ноутбук.</p>
+            <h4>РЈСЃС‚Р°РЅРѕРІРєР° Windows</h4>
+            <p>РЈСЃС‚Р°РЅРѕРІРёС‚Рµ Windows РЅР° РЅРѕРІС‹Р№ СЂР°Р·РґРµР». РџРѕСЃР»Рµ СѓСЃС‚Р°РЅРѕРІРєРё РјРѕР¶РЅРѕ РІС‹РєР»СЋС‡РёС‚СЊ РЅРѕСѓС‚Р±СѓРє.</p>
           </div>
         </div>
 
         <div class="pro-tips">
-          <h4>Дополнительные меры безопасности:</h4>
+          <h4>Р”РѕРїРѕР»РЅРёС‚РµР»СЊРЅС‹Рµ РјРµСЂС‹ Р±РµР·РѕРїР°СЃРЅРѕСЃС‚Рё:</h4>
           <ul>
-            <li><strong>Используйте команду format с параметром /p</strong> для многократной перезаписи</li>
-            <li><strong>Заполните диск случайными данными</strong> перед форматированием</li>
-            <li><strong>Используйте программу DBAN</strong> для военной стирки данных</li>
+            <li><strong>РСЃРїРѕР»СЊР·СѓР№С‚Рµ РєРѕРјР°РЅРґСѓ format СЃ РїР°СЂР°РјРµС‚СЂРѕРј /p</strong> РґР»СЏ РјРЅРѕРіРѕРєСЂР°С‚РЅРѕР№ РїРµСЂРµР·Р°РїРёСЃРё</li>
+            <li><strong>Р—Р°РїРѕР»РЅРёС‚Рµ РґРёСЃРє СЃР»СѓС‡Р°Р№РЅС‹РјРё РґР°РЅРЅС‹РјРё</strong> РїРµСЂРµРґ С„РѕСЂРјР°С‚РёСЂРѕРІР°РЅРёРµРј</li>
+            <li><strong>РСЃРїРѕР»СЊР·СѓР№С‚Рµ РїСЂРѕРіСЂР°РјРјСѓ DBAN</strong> РґР»СЏ РІРѕРµРЅРЅРѕР№ СЃС‚РёСЂРєРё РґР°РЅРЅС‹С…</li>
           </ul>
         </div>
 
-        <h2>Метод 2: Специализированные программы для безопасного удаления</h2>
+        <h2>РњРµС‚РѕРґ 2: РЎРїРµС†РёР°Р»РёР·РёСЂРѕРІР°РЅРЅС‹Рµ РїСЂРѕРіСЂР°РјРјС‹ РґР»СЏ Р±РµР·РѕРїР°СЃРЅРѕРіРѕ СѓРґР°Р»РµРЅРёСЏ</h2>
 
         <div class="software-grid">
           <div class="software-card">
             <h4>DBAN (Darik's Boot and Nuke)</h4>
-            <p class="price">Бесплатно</p>
-            <p>Профессиональная утилита для полного уничтожения данных с жестких дисков.</p>
+            <p class="price">Р‘РµСЃРїР»Р°С‚РЅРѕ</p>
+            <p>РџСЂРѕС„РµСЃСЃРёРѕРЅР°Р»СЊРЅР°СЏ СѓС‚РёР»РёС‚Р° РґР»СЏ РїРѕР»РЅРѕРіРѕ СѓРЅРёС‡С‚РѕР¶РµРЅРёСЏ РґР°РЅРЅС‹С… СЃ Р¶РµСЃС‚РєРёС… РґРёСЃРєРѕРІ.</p>
           </div>
           <div class="software-card">
             <h4>Eraser</h4>
-            <p class="price">Бесплатно</p>
-            <p>Надежное средство для безопасного удаления файлов и свободного места.</p>
+            <p class="price">Р‘РµСЃРїР»Р°С‚РЅРѕ</p>
+            <p>РќР°РґРµР¶РЅРѕРµ СЃСЂРµРґСЃС‚РІРѕ РґР»СЏ Р±РµР·РѕРїР°СЃРЅРѕРіРѕ СѓРґР°Р»РµРЅРёСЏ С„Р°Р№Р»РѕРІ Рё СЃРІРѕР±РѕРґРЅРѕРіРѕ РјРµСЃС‚Р°.</p>
           </div>
           <div class="software-card">
             <h4>CCleaner Professional</h4>
-            <p class="price">От 2000?/год</p>
-            <p>Включает функцию безопасного удаления диска с перезаписью данных.</p>
+            <p class="price">РћС‚ 2000в‚Ѕ/РіРѕРґ</p>
+            <p>Р’РєР»СЋС‡Р°РµС‚ С„СѓРЅРєС†РёСЋ Р±РµР·РѕРїР°СЃРЅРѕРіРѕ СѓРґР°Р»РµРЅРёСЏ РґРёСЃРєР° СЃ РїРµСЂРµР·Р°РїРёСЃСЊСЋ РґР°РЅРЅС‹С….</p>
           </div>
           <div class="software-card">
             <h4>Parted Magic</h4>
-            <p class="price">От 2500?</p>
-            <p>Комплексный инструмент с функцией безопасного стирания дисков.</p>
+            <p class="price">РћС‚ 2500в‚Ѕ</p>
+            <p>РљРѕРјРїР»РµРєСЃРЅС‹Р№ РёРЅСЃС‚СЂСѓРјРµРЅС‚ СЃ С„СѓРЅРєС†РёРµР№ Р±РµР·РѕРїР°СЃРЅРѕРіРѕ СЃС‚РёСЂР°РЅРёСЏ РґРёСЃРєРѕРІ.</p>
           </div>
         </div>
 
-        <h3>Использование DBAN для военной стирки</h3>
+        <h3>РСЃРїРѕР»СЊР·РѕРІР°РЅРёРµ DBAN РґР»СЏ РІРѕРµРЅРЅРѕР№ СЃС‚РёСЂРєРё</h3>
 
         <div class="check-section">
-          <div class="check-title">Процесс использования DBAN:</div>
+          <div class="check-title">РџСЂРѕС†РµСЃСЃ РёСЃРїРѕР»СЊР·РѕРІР°РЅРёСЏ DBAN:</div>
           <ol>
-            <li><strong>Скачайте DBAN</strong> с официального сайта</li>
-            <li><strong>Создайте загрузочную флешку</strong> с программой</li>
-            <li><strong>Загрузитесь с флешки</strong> и выберите диск для очистки</li>
-            <li><strong>Выберите метод стирания</strong> — DoD 5220.22-M или Gutmann</li>
-            <li><strong>Запустите процесс</strong> и дождитесь завершения (может занять часы)</li>
+            <li><strong>РЎРєР°С‡Р°Р№С‚Рµ DBAN</strong> СЃ РѕС„РёС†РёР°Р»СЊРЅРѕРіРѕ СЃР°Р№С‚Р°</li>
+            <li><strong>РЎРѕР·РґР°Р№С‚Рµ Р·Р°РіСЂСѓР·РѕС‡РЅСѓСЋ С„Р»РµС€РєСѓ</strong> СЃ РїСЂРѕРіСЂР°РјРјРѕР№</li>
+            <li><strong>Р—Р°РіСЂСѓР·РёС‚РµСЃСЊ СЃ С„Р»РµС€РєРё</strong> Рё РІС‹Р±РµСЂРёС‚Рµ РґРёСЃРє РґР»СЏ РѕС‡РёСЃС‚РєРё</li>
+            <li><strong>Р’С‹Р±РµСЂРёС‚Рµ РјРµС‚РѕРґ СЃС‚РёСЂР°РЅРёСЏ</strong> вЂ” DoD 5220.22-M РёР»Рё Gutmann</li>
+            <li><strong>Р—Р°РїСѓСЃС‚РёС‚Рµ РїСЂРѕС†РµСЃСЃ</strong> Рё РґРѕР¶РґРёС‚РµСЃСЊ Р·Р°РІРµСЂС€РµРЅРёСЏ (РјРѕР¶РµС‚ Р·Р°РЅСЏС‚СЊ С‡Р°СЃС‹)</li>
           </ol>
         </div>
 
-        <h2>Метод 3: Сброс системы Windows 10/11</h2>
+        <h2>РњРµС‚РѕРґ 3: РЎР±СЂРѕСЃ СЃРёСЃС‚РµРјС‹ Windows 10/11</h2>
 
         <div class="alert-warning">
-          <h4><i class="fas fa-info-circle"></i> Важно:</h4>
-          <p>Этот метод менее надежен, чем полное форматирование, но подходит для большинства случаев продажи ноутбука.</p>
+          <h4><i class="fas fa-info-circle"></i> Р’Р°Р¶РЅРѕ:</h4>
+          <p>Р­С‚РѕС‚ РјРµС‚РѕРґ РјРµРЅРµРµ РЅР°РґРµР¶РµРЅ, С‡РµРј РїРѕР»РЅРѕРµ С„РѕСЂРјР°С‚РёСЂРѕРІР°РЅРёРµ, РЅРѕ РїРѕРґС…РѕРґРёС‚ РґР»СЏ Р±РѕР»СЊС€РёРЅСЃС‚РІР° СЃР»СѓС‡Р°РµРІ РїСЂРѕРґР°Р¶Рё РЅРѕСѓС‚Р±СѓРєР°.</p>
         </div>
 
-        <h3>Сброс через Параметры Windows</h3>
+        <h3>РЎР±СЂРѕСЃ С‡РµСЂРµР· РџР°СЂР°РјРµС‚СЂС‹ Windows</h3>
 
         <div class="step-by-step">
           <div class="step-item">
-            <h4>Открытие параметров</h4>
-            <p>Зайдите в "Пуск" > "Параметры" > "Обновление и безопасность".</p>
+            <h4>РћС‚РєСЂС‹С‚РёРµ РїР°СЂР°РјРµС‚СЂРѕРІ</h4>
+            <p>Р—Р°Р№РґРёС‚Рµ РІ "РџСѓСЃРє" в†’ "РџР°СЂР°РјРµС‚СЂС‹" в†’ "РћР±РЅРѕРІР»РµРЅРёРµ Рё Р±РµР·РѕРїР°СЃРЅРѕСЃС‚СЊ".</p>
           </div>
           <div class="step-item">
-            <h4>Выбор сброса</h4>
-            <p>В разделе "Восстановление" нажмите "Сброс этого компьютера".</p>
+            <h4>Р’С‹Р±РѕСЂ СЃР±СЂРѕСЃР°</h4>
+            <p>Р’ СЂР°Р·РґРµР»Рµ "Р’РѕСЃСЃС‚Р°РЅРѕРІР»РµРЅРёРµ" РЅР°Р¶РјРёС‚Рµ "РЎР±СЂРѕСЃ СЌС‚РѕРіРѕ РєРѕРјРїСЊСЋС‚РµСЂР°".</p>
           </div>
           <div class="step-item">
-            <h4>Выбор опции удаления</h4>
-            <p>Выберите "Удалить все" — это удалит файлы, настройки и приложения.</p>
+            <h4>Р’С‹Р±РѕСЂ РѕРїС†РёРё СѓРґР°Р»РµРЅРёСЏ</h4>
+            <p>Р’С‹Р±РµСЂРёС‚Рµ "РЈРґР°Р»РёС‚СЊ РІСЃРµ" вЂ” СЌС‚Рѕ СѓРґР°Р»РёС‚ С„Р°Р№Р»С‹, РЅР°СЃС‚СЂРѕР№РєРё Рё РїСЂРёР»РѕР¶РµРЅРёСЏ.</p>
           </div>
           <div class="step-item">
-            <h4>Выбор уровня очистки</h4>
-            <p>Выберите "Удалить файлы и очистить диск" для дополнительной безопасности.</p>
+            <h4>Р’С‹Р±РѕСЂ СѓСЂРѕРІРЅСЏ РѕС‡РёСЃС‚РєРё</h4>
+            <p>Р’С‹Р±РµСЂРёС‚Рµ "РЈРґР°Р»РёС‚СЊ С„Р°Р№Р»С‹ Рё РѕС‡РёСЃС‚РёС‚СЊ РґРёСЃРє" РґР»СЏ РґРѕРїРѕР»РЅРёС‚РµР»СЊРЅРѕР№ Р±РµР·РѕРїР°СЃРЅРѕСЃС‚Рё.</p>
           </div>
           <div class="step-item">
-            <h4>Подтверждение и запуск</h4>
-            <p>Подтвердите выбор и дождитесь завершения процесса сброса.</p>
+            <h4>РџРѕРґС‚РІРµСЂР¶РґРµРЅРёРµ Рё Р·Р°РїСѓСЃРє</h4>
+            <p>РџРѕРґС‚РІРµСЂРґРёС‚Рµ РІС‹Р±РѕСЂ Рё РґРѕР¶РґРёС‚РµСЃСЊ Р·Р°РІРµСЂС€РµРЅРёСЏ РїСЂРѕС†РµСЃСЃР° СЃР±СЂРѕСЃР°.</p>
           </div>
         </div>
 
-        <h2>Дополнительные меры безопасности</h2>
+        <h2>Р”РѕРїРѕР»РЅРёС‚РµР»СЊРЅС‹Рµ РјРµСЂС‹ Р±РµР·РѕРїР°СЃРЅРѕСЃС‚Рё</h2>
 
-        <h3>Очистка SSD накопителей</h3>
+        <h3>РћС‡РёСЃС‚РєР° SSD РЅР°РєРѕРїРёС‚РµР»РµР№</h3>
 
         <div class="pro-tips">
-          <h4>Особенности SSD:</h4>
+          <h4>РћСЃРѕР±РµРЅРЅРѕСЃС‚Рё SSD:</h4>
           <ul>
-            <li><strong>Используйте команду Secure Erase</strong> через утилиту производителя</li>
-            <li><strong>ATA Secure Erase</strong> — встроенная функция большинства SSD</li>
-            <li><strong>Parted Magic</strong> — поддерживает Secure Erase для SSD</li>
-            <li><strong>Утилиты производителей</strong> — Samsung Magician, Crucial Storage Executive</li>
+            <li><strong>РСЃРїРѕР»СЊР·СѓР№С‚Рµ РєРѕРјР°РЅРґСѓ Secure Erase</strong> С‡РµСЂРµР· СѓС‚РёР»РёС‚Сѓ РїСЂРѕРёР·РІРѕРґРёС‚РµР»СЏ</li>
+            <li><strong>ATA Secure Erase</strong> вЂ” РІСЃС‚СЂРѕРµРЅРЅР°СЏ С„СѓРЅРєС†РёСЏ Р±РѕР»СЊС€РёРЅСЃС‚РІР° SSD</li>
+            <li><strong>Parted Magic</strong> вЂ” РїРѕРґРґРµСЂР¶РёРІР°РµС‚ Secure Erase РґР»СЏ SSD</li>
+            <li><strong>РЈС‚РёР»РёС‚С‹ РїСЂРѕРёР·РІРѕРґРёС‚РµР»РµР№</strong> вЂ” Samsung Magician, Crucial Storage Executive</li>
           </ul>
         </div>
 
-        <h3>Физическая защита данных</h3>
+        <h3>Р¤РёР·РёС‡РµСЃРєР°СЏ Р·Р°С‰РёС‚Р° РґР°РЅРЅС‹С…</h3>
 
         <div class="alert-info">
-          <h4><i class="fas fa-lock"></i> Для максимальной безопасности:</h4>
+          <h4><i class="fas fa-lock"></i> Р”Р»СЏ РјР°РєСЃРёРјР°Р»СЊРЅРѕР№ Р±РµР·РѕРїР°СЃРЅРѕСЃС‚Рё:</h4>
           <ul>
-            <li><strong>Шифрование диска перед форматированием</strong> — BitLocker или VeraCrypt</li>
-            <li><strong>Многократная перезапись</strong> — 3-7 проходов случайными данными</li>
-            <li><strong>Проверка результатов</strong> — использование программ для восстановления данных</li>
-            <li><strong>Физическое уничтожение</strong> — для критически важных данных</li>
+            <li><strong>РЁРёС„СЂРѕРІР°РЅРёРµ РґРёСЃРєР° РїРµСЂРµРґ С„РѕСЂРјР°С‚РёСЂРѕРІР°РЅРёРµРј</strong> вЂ” BitLocker РёР»Рё VeraCrypt</li>
+            <li><strong>РњРЅРѕРіРѕРєСЂР°С‚РЅР°СЏ РїРµСЂРµР·Р°РїРёСЃСЊ</strong> вЂ” 3-7 РїСЂРѕС…РѕРґРѕРІ СЃР»СѓС‡Р°Р№РЅС‹РјРё РґР°РЅРЅС‹РјРё</li>
+            <li><strong>РџСЂРѕРІРµСЂРєР° СЂРµР·СѓР»СЊС‚Р°С‚РѕРІ</strong> вЂ” РёСЃРїРѕР»СЊР·РѕРІР°РЅРёРµ РїСЂРѕРіСЂР°РјРј РґР»СЏ РІРѕСЃСЃС‚Р°РЅРѕРІР»РµРЅРёСЏ РґР°РЅРЅС‹С…</li>
+            <li><strong>Р¤РёР·РёС‡РµСЃРєРѕРµ СѓРЅРёС‡С‚РѕР¶РµРЅРёРµ</strong> вЂ” РґР»СЏ РєСЂРёС‚РёС‡РµСЃРєРё РІР°Р¶РЅС‹С… РґР°РЅРЅС‹С…</li>
           </ul>
         </div>
 
-        <h2>Проверка качества очистки</h2>
+        <h2>РџСЂРѕРІРµСЂРєР° РєР°С‡РµСЃС‚РІР° РѕС‡РёСЃС‚РєРё</h2>
 
-        <h3>Тестирование восстановления данных</h3>
+        <h3>РўРµСЃС‚РёСЂРѕРІР°РЅРёРµ РІРѕСЃСЃС‚Р°РЅРѕРІР»РµРЅРёСЏ РґР°РЅРЅС‹С…</h3>
 
         <div class="check-section">
-          <div class="check-title">Как проверить надежность очистки:</div>
+          <div class="check-title">РљР°Рє РїСЂРѕРІРµСЂРёС‚СЊ РЅР°РґРµР¶РЅРѕСЃС‚СЊ РѕС‡РёСЃС‚РєРё:</div>
           <ul>
-            <li><strong>Используйте Recuva</strong> — попробуйте восстановить удаленные файлы</li>
-            <li><strong>PhotoRec или TestDisk</strong> — проверьте наличие восстанавливаемых данных</li>
-            <li><strong>Hex-редактор</strong> — проверьте sectors диска на остаточные данные</li>
-            <li><strong>Профессиональные сервисы</strong> — для критически важных случаев</li>
+            <li><strong>РСЃРїРѕР»СЊР·СѓР№С‚Рµ Recuva</strong> вЂ” РїРѕРїСЂРѕР±СѓР№С‚Рµ РІРѕСЃСЃС‚Р°РЅРѕРІРёС‚СЊ СѓРґР°Р»РµРЅРЅС‹Рµ С„Р°Р№Р»С‹</li>
+            <li><strong>PhotoRec РёР»Рё TestDisk</strong> вЂ” РїСЂРѕРІРµСЂСЊС‚Рµ РЅР°Р»РёС‡РёРµ РІРѕСЃСЃС‚Р°РЅР°РІР»РёРІР°РµРјС‹С… РґР°РЅРЅС‹С…</li>
+            <li><strong>Hex-СЂРµРґР°РєС‚РѕСЂ</strong> вЂ” РїСЂРѕРІРµСЂСЊС‚Рµ sectors РґРёСЃРєР° РЅР° РѕСЃС‚Р°С‚РѕС‡РЅС‹Рµ РґР°РЅРЅС‹Рµ</li>
+            <li><strong>РџСЂРѕС„РµСЃСЃРёРѕРЅР°Р»СЊРЅС‹Рµ СЃРµСЂРІРёСЃС‹</strong> вЂ” РґР»СЏ РєСЂРёС‚РёС‡РµСЃРєРё РІР°Р¶РЅС‹С… СЃР»СѓС‡Р°РµРІ</li>
           </ul>
         </div>
 
-        <h2>Подготовка ноутбука к продаже после очистки</h2>
+        <h2>РџРѕРґРіРѕС‚РѕРІРєР° РЅРѕСѓС‚Р±СѓРєР° Рє РїСЂРѕРґР°Р¶Рµ РїРѕСЃР»Рµ РѕС‡РёСЃС‚РєРё</h2>
 
-        <h3>Финальная подготовка</h3>
+        <h3>Р¤РёРЅР°Р»СЊРЅР°СЏ РїРѕРґРіРѕС‚РѕРІРєР°</h3>
 
         <div class="pro-tips">
-          <h4>После очистки данных:</h4>
+          <h4>РџРѕСЃР»Рµ РѕС‡РёСЃС‚РєРё РґР°РЅРЅС‹С…:</h4>
           <ul>
-            <li><strong>Установите чистую Windows</strong> для привлекательности товара</li>
-            <li><strong>Установите драйверы</strong> для корректной работы оборудования</li>
-            <li><strong>Проверьте работу всех компонентов</strong> — экран, клавиатура, тачпад</li>
-            <li><strong>Очистите корпус</strong> от пыли и отпечатков</li>
-            <li><strong>Сделайте качественные фото</strong> для объявления о продаже</li>
+            <li><strong>РЈСЃС‚Р°РЅРѕРІРёС‚Рµ С‡РёСЃС‚СѓСЋ Windows</strong> РґР»СЏ РїСЂРёРІР»РµРєР°С‚РµР»СЊРЅРѕСЃС‚Рё С‚РѕРІР°СЂР°</li>
+            <li><strong>РЈСЃС‚Р°РЅРѕРІРёС‚Рµ РґСЂР°Р№РІРµСЂС‹</strong> РґР»СЏ РєРѕСЂСЂРµРєС‚РЅРѕР№ СЂР°Р±РѕС‚С‹ РѕР±РѕСЂСѓРґРѕРІР°РЅРёСЏ</li>
+            <li><strong>РџСЂРѕРІРµСЂСЊС‚Рµ СЂР°Р±РѕС‚Сѓ РІСЃРµС… РєРѕРјРїРѕРЅРµРЅС‚РѕРІ</strong> вЂ” СЌРєСЂР°РЅ, РєР»Р°РІРёР°С‚СѓСЂР°, С‚Р°С‡РїР°Рґ</li>
+            <li><strong>РћС‡РёСЃС‚РёС‚Рµ РєРѕСЂРїСѓСЃ</strong> РѕС‚ РїС‹Р»Рё Рё РѕС‚РїРµС‡Р°С‚РєРѕРІ</li>
+            <li><strong>РЎРґРµР»Р°Р№С‚Рµ РєР°С‡РµСЃС‚РІРµРЅРЅС‹Рµ С„РѕС‚Рѕ</strong> РґР»СЏ РѕР±СЉСЏРІР»РµРЅРёСЏ Рѕ РїСЂРѕРґР°Р¶Рµ</li>
           </ul>
         </div>
 
-        <h3>Документация для покупателя</h3>
+        <h3>Р”РѕРєСѓРјРµРЅС‚Р°С†РёСЏ РґР»СЏ РїРѕРєСѓРїР°С‚РµР»СЏ</h3>
 
         <div class="alert-success">
-          <h4><i class="fas fa-file-alt"></i> Что предоставить покупателю:</h4>
+          <h4><i class="fas fa-file-alt"></i> Р§С‚Рѕ РїСЂРµРґРѕСЃС‚Р°РІРёС‚СЊ РїРѕРєСѓРїР°С‚РµР»СЋ:</h4>
           <ul>
-            <li><strong>Оригинальная коробка</strong> и документация</li>
-            <li><strong>Зарядное устройство</strong> и аксессуары</li>
-            <li><strong>Чеки о покупке</strong> (если есть)</li>
-            <li><strong>Информация о гарантии</strong> и сервисном обслуживании</li>
+            <li><strong>РћСЂРёРіРёРЅР°Р»СЊРЅР°СЏ РєРѕСЂРѕР±РєР°</strong> Рё РґРѕРєСѓРјРµРЅС‚Р°С†РёСЏ</li>
+            <li><strong>Р—Р°СЂСЏРґРЅРѕРµ СѓСЃС‚СЂРѕР№СЃС‚РІРѕ</strong> Рё Р°РєСЃРµСЃСЃСѓР°СЂС‹</li>
+            <li><strong>Р§РµРєРё Рѕ РїРѕРєСѓРїРєРµ</strong> (РµСЃР»Рё РµСЃС‚СЊ)</li>
+            <li><strong>РРЅС„РѕСЂРјР°С†РёСЏ Рѕ РіР°СЂР°РЅС‚РёРё</strong> Рё СЃРµСЂРІРёСЃРЅРѕРј РѕР±СЃР»СѓР¶РёРІР°РЅРёРё</li>
           </ul>
         </div>
 
-        <h2>Распространенные ошибки при очистке данных</h2>
+        <h2>Р Р°СЃРїСЂРѕСЃС‚СЂР°РЅРµРЅРЅС‹Рµ РѕС€РёР±РєРё РїСЂРё РѕС‡РёСЃС‚РєРµ РґР°РЅРЅС‹С…</h2>
 
         <div class="alert-danger">
-          <h4><i class="fas fa-ban"></i> Чего НЕЛЬЗЯ делать:</h4>
+          <h4><i class="fas fa-ban"></i> Р§РµРіРѕ РќР•Р›Р¬Р—РЇ РґРµР»Р°С‚СЊ:</h4>
           <ul>
-            <li><strong>Только удалять файлы</strong> — они легко восстанавливаются</li>
-            <li><strong>Быстрое форматирование</strong> — не удаляет данные физически</li>
-            <li><strong>Игнорировать скрытые разделы</strong> — там могут остаться данные</li>
-            <li><strong>Забывать про облачные аккаунты</strong> — данные могут синхронизироваться</li>
-            <li><strong>Продавать ноутбук с учетной записью</strong> — покупатель получит доступ</li>
+            <li><strong>РўРѕР»СЊРєРѕ СѓРґР°Р»СЏС‚СЊ С„Р°Р№Р»С‹</strong> вЂ” РѕРЅРё Р»РµРіРєРѕ РІРѕСЃСЃС‚Р°РЅР°РІР»РёРІР°СЋС‚СЃСЏ</li>
+            <li><strong>Р‘С‹СЃС‚СЂРѕРµ С„РѕСЂРјР°С‚РёСЂРѕРІР°РЅРёРµ</strong> вЂ” РЅРµ СѓРґР°Р»СЏРµС‚ РґР°РЅРЅС‹Рµ С„РёР·РёС‡РµСЃРєРё</li>
+            <li><strong>РРіРЅРѕСЂРёСЂРѕРІР°С‚СЊ СЃРєСЂС‹С‚С‹Рµ СЂР°Р·РґРµР»С‹</strong> вЂ” С‚Р°Рј РјРѕРіСѓС‚ РѕСЃС‚Р°С‚СЊСЃСЏ РґР°РЅРЅС‹Рµ</li>
+            <li><strong>Р—Р°Р±С‹РІР°С‚СЊ РїСЂРѕ РѕР±Р»Р°С‡РЅС‹Рµ Р°РєРєР°СѓРЅС‚С‹</strong> вЂ” РґР°РЅРЅС‹Рµ РјРѕРіСѓС‚ СЃРёРЅС…СЂРѕРЅРёР·РёСЂРѕРІР°С‚СЊСЃСЏ</li>
+            <li><strong>РџСЂРѕРґР°РІР°С‚СЊ РЅРѕСѓС‚Р±СѓРє СЃ СѓС‡РµС‚РЅРѕР№ Р·Р°РїРёСЃСЊСЋ</strong> вЂ” РїРѕРєСѓРїР°С‚РµР»СЊ РїРѕР»СѓС‡РёС‚ РґРѕСЃС‚СѓРї</li>
           </ul>
         </div>
 
-        <h2>Заключение</h2>
+        <h2>Р—Р°РєР»СЋС‡РµРЅРёРµ</h2>
 
-        <p>Правильное удаление данных с ноутбука перед продажей — это не просто техническая процедура, а защита вашей личной информации и конфиденциальности. Используйте надежные методы очистки, особенно если на ноутбуке хранились важные рабочие документы, финансовые данные или личная информация.</p>
+        <p>РџСЂР°РІРёР»СЊРЅРѕРµ СѓРґР°Р»РµРЅРёРµ РґР°РЅРЅС‹С… СЃ РЅРѕСѓС‚Р±СѓРєР° РїРµСЂРµРґ РїСЂРѕРґР°Р¶РµР№ вЂ” СЌС‚Рѕ РЅРµ РїСЂРѕСЃС‚Рѕ С‚РµС…РЅРёС‡РµСЃРєР°СЏ РїСЂРѕС†РµРґСѓСЂР°, Р° Р·Р°С‰РёС‚Р° РІР°С€РµР№ Р»РёС‡РЅРѕР№ РёРЅС„РѕСЂРјР°С†РёРё Рё РєРѕРЅС„РёРґРµРЅС†РёР°Р»СЊРЅРѕСЃС‚Рё. РСЃРїРѕР»СЊР·СѓР№С‚Рµ РЅР°РґРµР¶РЅС‹Рµ РјРµС‚РѕРґС‹ РѕС‡РёСЃС‚РєРё, РѕСЃРѕР±РµРЅРЅРѕ РµСЃР»Рё РЅР° РЅРѕСѓС‚Р±СѓРєРµ С…СЂР°РЅРёР»РёСЃСЊ РІР°Р¶РЅС‹Рµ СЂР°Р±РѕС‡РёРµ РґРѕРєСѓРјРµРЅС‚С‹, С„РёРЅР°РЅСЃРѕРІС‹Рµ РґР°РЅРЅС‹Рµ РёР»Рё Р»РёС‡РЅР°СЏ РёРЅС„РѕСЂРјР°С†РёСЏ.</p>
 
-        <p>Помните, что затраты времени на качественную очистку данных несравнимы с потенциальным ущербом от попадания личной информации в чужие руки. Лучше потратить несколько часов на правильную очистку, чем потом столкнуться с последствиями.</p>
+        <p>РџРѕРјРЅРёС‚Рµ, С‡С‚Рѕ Р·Р°С‚СЂР°С‚С‹ РІСЂРµРјРµРЅРё РЅР° РєР°С‡РµСЃС‚РІРµРЅРЅСѓСЋ РѕС‡РёСЃС‚РєСѓ РґР°РЅРЅС‹С… РЅРµСЃСЂР°РІРЅРёРјС‹ СЃ РїРѕС‚РµРЅС†РёР°Р»СЊРЅС‹Рј СѓС‰РµСЂР±РѕРј РѕС‚ РїРѕРїР°РґР°РЅРёСЏ Р»РёС‡РЅРѕР№ РёРЅС„РѕСЂРјР°С†РёРё РІ С‡СѓР¶РёРµ СЂСѓРєРё. Р›СѓС‡С€Рµ РїРѕС‚СЂР°С‚РёС‚СЊ РЅРµСЃРєРѕР»СЊРєРѕ С‡Р°СЃРѕРІ РЅР° РїСЂР°РІРёР»СЊРЅСѓСЋ РѕС‡РёСЃС‚РєСѓ, С‡РµРј РїРѕС‚РѕРј СЃС‚РѕР»РєРЅСѓС‚СЊСЃСЏ СЃ РїРѕСЃР»РµРґСЃС‚РІРёСЏРјРё.</p>
 
-        <p>После выполнения всех рекомендаций из этого руководства вы можете быть уверены, что ваши данные надежно удалены и не могут быть восстановлены.</p>
+        <p>РџРѕСЃР»Рµ РІС‹РїРѕР»РЅРµРЅРёСЏ РІСЃРµС… СЂРµРєРѕРјРµРЅРґР°С†РёР№ РёР· СЌС‚РѕРіРѕ СЂСѓРєРѕРІРѕРґСЃС‚РІР° РІС‹ РјРѕР¶РµС‚Рµ Р±С‹С‚СЊ СѓРІРµСЂРµРЅС‹, С‡С‚Рѕ РІР°С€Рё РґР°РЅРЅС‹Рµ РЅР°РґРµР¶РЅРѕ СѓРґР°Р»РµРЅС‹ Рё РЅРµ РјРѕРіСѓС‚ Р±С‹С‚СЊ РІРѕСЃСЃС‚Р°РЅРѕРІР»РµРЅС‹.</p>
 
-        <!-- Яндекс Маркет рекламный баннер -->
-                <img src="https://avatars.mds.yandex.net/get-market-ugc/12573871/2a0000018f2a5a8b8c0b7d9d9c4b6c5c/orig" alt="Внешний жесткий диск для бэкапа">
+        <!-- РЇРЅРґРµРєСЃ РњР°СЂРєРµС‚ СЂРµРєР»Р°РјРЅС‹Р№ Р±Р°РЅРЅРµСЂ -->
+        <a href="https://market.yandex.ru/search?text=РІРЅРµС€РЅРёР№%20Р¶РµСЃС‚РєРёР№%20РґРёСЃРє%20РґР»СЏ%20СЂРµР·РµСЂРІРЅРѕРіРѕ%20РєРѕРїРёСЂРѕРІР°РЅРёСЏ&local-offers-first=0" class="ym-hero-link" target="_blank" rel="noopener noreferrer">
+          <div class="ym-hero-banner">
+            <div class="ym-hero-images">
+              <div class="ym-hero-image">
+                <img src="https://avatars.mds.yandex.net/get-market-ugc/12573871/2a0000018f2a5a8b8c0b7d9d9c4b6c5c/orig" alt="Р’РЅРµС€РЅРёР№ Р¶РµСЃС‚РєРёР№ РґРёСЃРє РґР»СЏ Р±СЌРєР°РїР°">
               </div>
-                <img src="https://avatars.mds.yandex.net/get-market-ugc/15377961/2a0000018f2a5a8b8c0b7d9d9c4b6c5d/orig" alt="USB флешка для загрузки">
+              <div class="ym-hero-image">
+                <img src="https://avatars.mds.yandex.net/get-market-ugc/15377961/2a0000018f2a5a8b8c0b7d9d9c4b6c5d/orig" alt="USB С„Р»РµС€РєР° РґР»СЏ Р·Р°РіСЂСѓР·РєРё">
               </div>
             </div>
+            <div class="ym-hero-content">
+              <div class="ym-hero-title">РќР°РєРѕРїРёС‚РµР»Рё РґР»СЏ СЂРµР·РµСЂРІРЅРѕРіРѕ РєРѕРїРёСЂРѕРІР°РЅРёСЏ</div>
+              <div class="ym-hero-desc">Р’РЅРµС€РЅРёРµ РґРёСЃРєРё Рё С„Р»РµС€РєРё РґР»СЏ Р±РµР·РѕРїР°СЃРЅРѕРіРѕ С…СЂР°РЅРµРЅРёСЏ РґР°РЅРЅС‹С…</div>
             </div>
           </div>
         </a>
@@ -648,24 +497,24 @@
       <div class="footer__content">
         <div class="footer__section">
           <h4>Repairo</h4>
-          <p>Экспертные руководства по ремонту и обслуживанию техники</p>
+          <p>Р­РєСЃРїРµСЂС‚РЅС‹Рµ СЂСѓРєРѕРІРѕРґСЃС‚РІР° РїРѕ СЂРµРјРѕРЅС‚Сѓ Рё РѕР±СЃР»СѓР¶РёРІР°РЅРёСЋ С‚РµС…РЅРёРєРё</p>
         </div>
         <div class="footer__section">
-          <h4>Разделы</h4>
+          <h4>Р Р°Р·РґРµР»С‹</h4>
           <ul>
-            <li><a href="../laptops.html">Ноутбуки</a></li>
-            <li><a href="../smartphones.html">Смартфоны</a></li>
-            <li><a href="../consoles.html">Консоли</a></li>
-            <li><a href="../cameras.html">Фотоаппараты</a></li>
+            <li><a href="../laptops.html">РќРѕСѓС‚Р±СѓРєРё</a></li>
+            <li><a href="../smartphones.html">РЎРјР°СЂС‚С„РѕРЅС‹</a></li>
+            <li><a href="../consoles.html">РљРѕРЅСЃРѕР»Рё</a></li>
+            <li><a href="../cameras.html">Р¤РѕС‚РѕР°РїРїР°СЂР°С‚С‹</a></li>
           </ul>
         </div>
         <div class="footer__section">
-          <h4>Контакты</h4>
+          <h4>РљРѕРЅС‚Р°РєС‚С‹</h4>
           <p>support@repairo.ru</p>
         </div>
       </div>
       <div class="footer__bottom">
-        <p>&copy; 2024 Repairo. Все права защищены.</p>
+        <p>&copy; 2024 Repairo. Р’СЃРµ РїСЂР°РІР° Р·Р°С‰РёС‰РµРЅС‹.</p>
       </div>
     </div>
   </footer>
@@ -675,9 +524,3 @@
 
 </body>
 </html>
-
-
-
-
-
-

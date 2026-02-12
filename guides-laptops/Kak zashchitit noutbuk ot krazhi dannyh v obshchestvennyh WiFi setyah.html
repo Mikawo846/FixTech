@@ -4,34 +4,75 @@
 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Защита ноутбука от кражи данных в общественных Wi-Fi сетях |</title>
-    <meta name="description" content="">
+  <title>Р—Р°С‰РёС‚Р° РЅРѕСѓС‚Р±СѓРєР° РѕС‚ РєСЂР°Р¶Рё РґР°РЅРЅС‹С… РІ РѕР±С‰РµСЃС‚РІРµРЅРЅС‹С… Wi-Fi СЃРµС‚СЏС… | РџРѕР»РЅРѕРµ СЂСѓРєРѕРІРѕРґСЃС‚РІРѕ</title>
+    <meta name="description" content="{{ description }}">
+    <meta name="description" content="РџРѕС€Р°РіРѕРІР°СЏ РёРЅСЃС‚СЂСѓРєС†РёСЏ: РљР°Рє Р·Р°С‰РёС‚РёС‚СЊ РЅРѕСѓС‚Р±СѓРє РѕС‚ РєСЂР°Р¶Рё РґР°РЅРЅС‹С… РІ РѕР±С‰РµСЃС‚РІРµРЅРЅС‹С… Wi-Fi СЃРµС‚СЏС…. РџРѕР»РЅРѕРµ СЂСѓРєРѕРІРѕРґСЃС‚РІРѕ РїРѕ Р±РµР·РѕРїР°СЃРЅРѕСЃС‚Рё РІ РєР°С„Рµ, Р°СЌСЂРѕРїРѕСЂС‚Р°С…, РѕС‚РµР»СЏС… Рё РґСЂСѓРіРёС… РїСѓР±Р»РёС‡РЅС‹С… РјРµСЃС‚Р°С….">
 
   <link rel="stylesheet" href="../styles.css" />
   <link rel="stylesheet" href="../styles-header.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
   <style>
     .guide-content { line-height: 1.7; color: var(--text); }
-    .guide-content h2 { color: var(--primary); margin-top: 30px; margin-bottom: 15px; font-size: 1.5rem; }
-    .guide-content h3 { color: var(--primary-dark); margin-top: 25px; margin-bottom: 12px; font-size: 1.2rem; }
+    .guide-content h2 { color: var(--primary); margin-top: 30px; margin-bottom: 15px; font-size: 1.6rem; }
+    .guide-content h3 { color: var(--primary-dark); margin-top: 25px; margin-bottom: 12px; font-size: 1.25rem; }
     .guide-image-block { margin: 20px 0; padding: 15px; background: var(--background); border-radius: var(--border-radius); border: 1px solid var(--border); text-align: center; }
     .guide-image-block img { max-width: 100%; height: auto; border-radius: 6px; border: 1px solid var(--border); }
     .image-caption { margin-top: 10px; font-size: 0.85rem; color: var(--text-light); font-style: italic; }
+    table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+    th, td { border: 1px solid var(--border); padding: 8px; text-align: left; vertical-align: top; }
+    th { background: var(--background-light); }
+    code { background: rgba(0,0,0,0.04); padding: 1px 4px; border-radius: 3px; }
+    ul, ol { padding-left: 18px; }
+    .check-section { padding: 15px; border-radius: 6px; border: 1px dashed var(--border); margin: 18px 0; background: rgba(0,0,0,0.01); }
+    .check-title { font-weight: 600; margin-bottom: 8px; }
     .pro-tips { background: rgba(3, 74, 79, 0.05); padding: 15px; border-radius: 6px; margin: 20px 0; }
     .pro-tips h4 { color: var(--primary); margin-top: 0; margin-bottom: 12px; font-size: 1.1rem; }
     .tip-item { display: flex; gap: 8px; margin-bottom: 8px; align-items: flex-start; }
-    table { width: 100%; border-collapse: collapse; margin: 20px 0; }
-    th, td { border: 1px solid var(--border); padding: 8px; text-align: left; }
-    th { background: var(--background-light); }
-    .highlight { background: #f5f7fa; border-left: 4px solid #2d9cdb; padding: 10px 15px; margin: 20px 0; }
-    .faq-section ul { margin-left: 1em; }
-    .block-section { margin-bottom: 2em; }
+    .ok { color: #0a8f3c; font-weight: 600; }
+    .warn { color: #c97a00; font-weight: 600; }
+    .bad { color: #c62828; font-weight: 600; }
+    .alert-box { padding: 20px; border-radius: 8px; margin: 25px 0; }
+    .alert-danger { background: rgba(198, 40, 40, 0.1); border-left: 4px solid #c62828; }
+    .alert-warning { background: rgba(201, 122, 0, 0.1); border-left: 4px solid #c97a00; }
+    .alert-success { background: rgba(10, 143, 60, 0.1); border-left: 4px solid #0a8f3c; }
+    .alert-info { background: rgba(3, 74, 79, 0.1); border-left: 4px solid var(--primary); }
+    .threat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin: 20px 0; }
+    .threat-card { padding: 20px; border-radius: 8px; background: var(--background); border: 1px solid var(--border); }
+    .threat-card h4 { color: var(--primary-dark); margin-top: 0; margin-bottom: 15px; }
+    .threat-card .severity { display: inline-block; padding: 4px 8px; border-radius: 4px; font-size: 0.85rem; font-weight: 600; margin-bottom: 10px; }
+    .severity-high { background: rgba(198, 40, 40, 0.2); color: #c62828; }
+    .severity-medium { background: rgba(201, 122, 0, 0.2); color: #c97a00; }
+    .severity-low { background: rgba(10, 143, 60, 0.2); color: #0a8f3c; }
+    .protection-steps { counter-reset: step-counter; }
+    .protection-steps .step-item { position: relative; padding-left: 50px; margin-bottom: 20px; }
+    .protection-steps .step-item::before { counter-increment: step-counter; content: counter(step-counter); position: absolute; left: 0; top: 0; width: 35px; height: 35px; background: var(--primary); color: white; text-align: center; line-height: 35px; border-radius: 50%; font-weight: bold; }
+    .tools-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; margin: 20px 0; }
+    .tool-card { padding: 15px; border-radius: 6px; background: var(--background); border: 1px solid var(--border); text-align: center; }
+    .tool-card h4 { color: var(--primary-dark); margin-top: 0; margin-bottom: 8px; }
+    .tool-card .price { color: var(--primary); font-weight: 600; margin-bottom: 8px; }
+    .location-tips { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 20px 0; }
+    .location-tip { padding: 15px; border-radius: 6px; }
+    .location-tip.cafe { background: rgba(3, 74, 79, 0.1); border-left: 4px solid var(--primary); }
+    .location-tip.hotel { background: rgba(10, 143, 60, 0.1); border-left: 4px solid #0a8f3c; }
+    .location-tip h4 { margin-top: 0; margin-bottom: 10px; }
     @media (max-width: 768px) {
       .guide-content h2 { font-size: 1.4rem; margin-top: 25px; }
       .guide-image-block { padding: 12px; margin: 15px 0; }
       table, th, td { font-size: 0.95rem; }
+      .threat-grid { grid-template-columns: 1fr; }
+      .location-tips { grid-template-columns: 1fr; }
     }
+    /* РЇРЅРґРµРєСЃ РњР°СЂРєРµС‚ СЂРµРєР»Р°РјРЅС‹Р№ Р±Р°РЅРЅРµСЂ */
+    .ym-hero-link {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+      max-width: 100%;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
     /* Р“РѕСЂРёР·РѕРЅС‚Р°Р»СЊРЅС‹Р№ Р±Р°РЅРЅРµСЂ-РєР°СЂС‚РѕС‡РєР° */
     .ym-hero-banner {
       width: 100%;
@@ -83,257 +124,63 @@
       transform: scale(1.02);
     }
 
-    /* РџСЂР°РІР°СЏ С‡Р°СЃС‚СЊ: РєРѕРЅС‚РµРЅС‚ */
+    /* РўРµРєСЃС‚РѕРІР°СЏ С‡Р°СЃС‚СЊ Р±Р°РЅРЅРµСЂР° */
     .ym-hero-content {
-      padding: 16px 18px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      gap: 8px;
+      padding: 12px 16px;
+      text-align: center;
     }
 
-    /* РќР°Р·РІР°РЅРёРµ С‚РѕРІР°СЂР° */
     .ym-hero-title {
-      font-size: 14px;
-      font-weight: 600;
-      color: #111827;
-      line-height: 1.3;
-      margin: 0 0 4px 0;
-      display: -webkit-box;
-      -webkit-line-clamp: 2;
-      line-clamp: 2;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
-    }
-
-    /* Р РµР№С‚РёРЅРі */
-    .ym-hero-top {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 8px;
-    }
-
-    .ym-hero-rating {
       font-size: 13px;
-      font-weight: 500;
-      color: #111827;
-      background: #f9fafb;
-      border-radius: 999px;
-      padding: 4px 10px;
-    }
-
-    .ym-hero-rating-count {
-      color: #6b7280;
-    }
-
-    /* Р¤РёРѕР»РµС‚РѕРІР°СЏ РєРЅРѕРїРєР° */
-    .ym-hero-button {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 9px 16px;
-      border-radius: 999px;
-      border: none;
-      background: #6a00ff;
-      color: #ffffff;
-      font-size: 14px;
       font-weight: 600;
-      cursor: pointer;
-      box-shadow: 0 2px 6px rgba(88, 28, 135, 0.35);
-      transition: background 0.15s ease, transform 0.15s ease,
-                  box-shadow 0.15s ease;
-    }
-    .ym-hero-button::after {
-      content: "в†’";
-      margin-left: 6px;
-      font-size: 14px;
-    }
-    .ym-hero-button:hover {
-      background: #7c3aed;
-      transform: translateY(-1px);
-      box-shadow: 0 4px 10px rgba(88, 28, 135, 0.45);
-    }
-
-    /* Р®СЂРёРґРёС‡РµСЃРєРёР№ Р±Р»РѕРє */
-    .ym-hero-legal {
-      margin-top: 6px;
-      max-width: 600px;
-      font-size: 11px;
+      color: #1f2937;
+      margin: 0 0 4px 0;
       line-height: 1.3;
-      color: #6b7280;
-      margin-left: auto;
-      margin-right: auto;
     }
 
-    /* РђРґР°РїС‚РёРІ */
+    .ym-hero-desc {
+      font-size: 11px;
+      color: #6b7280;
+      margin: 0;
+      line-height: 1.3;
+    }
+
     @media (max-width: 480px) {
       .ym-hero-banner {
-        max-width: 100%;
-        margin: 20px 0;
+        min-height: 120px;
       }
       .ym-hero-images {
         height: 100px;
       }
-      .ym-hero-content {
-        padding: 12px 12px;
-      }
       .ym-hero-title {
-        font-size: 13px;
+        font-size: 12px;
       }
-      .ym-hero-button {
-        font-size: 13px;
-        padding: 8px 14px;
-      }
-      .ym-hero-legal {
+      .ym-hero-desc {
         font-size: 10px;
       }
     }
-    /* Telegram СЂРµРєР»Р°РјРЅС‹Р№ Р±Р°РЅРЅРµСЂ */
-    .telegram-banner {
-      display: flex;
-      justify-content: center;
-      text-decoration: none;
-      color: inherit;
-      width: 100%;
-      margin: 40px 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    }
-
-    .telegram-banner-container {
-      width: 100%;
-      max-width: 500px;
-      min-height: 120px;
-      border-radius: 16px;
-      background: linear-gradient(135deg, #0088cc 0%, #005f8f 100%);
-      border: 1px solid #005f8f;
-      display: flex;
-      align-items: center;
-      padding: 20px;
-      box-shadow: 0 4px 16px rgba(0, 136, 204, 0.2);
-      overflow: hidden;
-      box-sizing: border-box;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-
-    .telegram-banner-container:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(0, 136, 204, 0.3);
-    }
-
-    .telegram-logo {
-      width: 60px;
-      height: 60px;
-      min-width: 60px;
-      background: #ffffff;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-right: 20px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    }
-
-    .telegram-logo svg {
-      width: 32px;
-      height: 32px;
-      fill: #0088cc;
-    }
-
-    .telegram-content {
-      flex: 1;
-      color: #ffffff;
-    }
-
-    .telegram-title {
-      font-size: 16px;
-      font-weight: 600;
-      margin: 0 0 8px 0;
-      line-height: 1.3;
-    }
-
-    .telegram-subtitle {
-      font-size: 14px;
-      opacity: 0.9;
-      margin: 0 0 12px 0;
-      line-height: 1.4;
-    }
-
-    .telegram-button {
-      display: inline-flex;
-      align-items: center;
-      padding: 8px 16px;
-      background: #ffffff;
-      color: #0088cc;
-      border-radius: 20px;
-      font-size: 14px;
-      font-weight: 600;
-      text-decoration: none;
-      transition: background 0.2s ease, transform 0.2s ease;
-    }
-
-    .telegram-button:hover {
-      background: #f0f8ff;
-      transform: scale(1.05);
-    }
-
-    .telegram-button svg {
-      width: 16px;
-      height: 16px;
-      margin-left: 6px;
-      fill: #0088cc;
-    }
-
-    /* РђРґР°РїС‚РёРІ РґР»СЏ РјРѕР±РёР»СЊРЅС‹С… */
-    @media (max-width: 480px) {
-      .telegram-banner-container {
-        max-width: 100%;
-        margin: 20px 0;
-        padding: 15px;
-        min-height: 100px;
-      }
-      .telegram-logo {
-        width: 50px;
-        height: 50px;
-        min-width: 50px;
-        margin-right: 15px;
-      }
-      .telegram-logo svg {
-        width: 26px;
-        height: 26px;
-      }
-      .telegram-title {
-        font-size: 14px;
-      }
-      .telegram-subtitle {
-        font-size: 12px;
-      }
-      .telegram-button {
-        font-size: 12px;
-        padding: 6px 12px;
-      }
-    }
-
-
-
   </style>
-  <script async src="https://timeweb.cloud/api/v1/cloud-ai/agents/3cc03620-d051-4d8d-b5af-f7b6cd083a35/embed.js?collapsed=true"></script>
 </head>
 <body>
+
   <header class="header">
     <div class="container">
       <div class="header__inner">
         <a href="../index.html" class="logo">
-          <span class="logo__icon"></span>
-          <span class="logo__text">GeoExpert</span>
+          <img src="../logo.svg" alt="Repairo" width="40" height="40">
+          <span>Repairo</span>
         </a>
         <nav class="nav">
-          <ul class="nav__list">
-            <li><a href="../cameras.html" class="nav__link">РљР°РјРµСЂС‹</a></li>
-            <li><a href="../drones.html" class="nav__link">Р”СЂРѕРЅС‹</a></li>
-            <li><a href="../workflow.html" class="nav__link">Workflow</a></li>
-          </ul>
+          <a href="../index.html">Р“Р»Р°РІРЅР°СЏ</a>
+          <a href="../laptops.html">РќРѕСѓС‚Р±СѓРєРё</a>
+          <a href="../smartphones.html">РЎРјР°СЂС‚С„РѕРЅС‹</a>
+          <a href="../consoles.html">РљРѕРЅСЃРѕР»Рё</a>
+          <a href="../cameras.html">Р¤РѕС‚РѕР°РїРїР°СЂР°С‚С‹</a>
+          <a href="../tv.html">РўРµР»РµРІРёР·РѕСЂС‹</a>
         </nav>
+        <button class="theme-toggle" aria-label="РџРµСЂРµРєР»СЋС‡РёС‚СЊ С‚РµРјСѓ">
+          <i class="fas fa-moon"></i>
+        </button>
       </div>
     </div>
   </header>
@@ -341,360 +188,368 @@
   <main class="main">
     <div class="container">
       <div class="guide-content">
-        <h1>Как защитить ноутбук от кражи данных в общественных Wi-Fi сетях</h1>
+        <h1>РљР°Рє Р·Р°С‰РёС‚РёС‚СЊ РЅРѕСѓС‚Р±СѓРє РѕС‚ РєСЂР°Р¶Рё РґР°РЅРЅС‹С… РІ РѕР±С‰РµСЃС‚РІРµРЅРЅС‹С… Wi-Fi СЃРµС‚СЏС…</h1>
         
-        <p>Общественные Wi-Fi сети в кафе, аэропортах, отелях и других местах создают удобство, но представляют серьезную угрозу безопасности ваших данных. Злоумышленники могут перехватывать передаваемую информацию и получать доступ к вашим личным данным. В этом руководстве мы рассмотрим комплексные меры защиты для безопасной работы в публичных сетях.</p>
+        <p>РћР±С‰РµСЃС‚РІРµРЅРЅС‹Рµ Wi-Fi СЃРµС‚Рё РІ РєР°С„Рµ, Р°СЌСЂРѕРїРѕСЂС‚Р°С…, РѕС‚РµР»СЏС… Рё РґСЂСѓРіРёС… РјРµСЃС‚Р°С… СЃРѕР·РґР°СЋС‚ СѓРґРѕР±СЃС‚РІРѕ, РЅРѕ РїСЂРµРґСЃС‚Р°РІР»СЏСЋС‚ СЃРµСЂСЊРµР·РЅСѓСЋ СѓРіСЂРѕР·Сѓ Р±РµР·РѕРїР°СЃРЅРѕСЃС‚Рё РІР°С€РёС… РґР°РЅРЅС‹С…. Р—Р»РѕСѓРјС‹С€Р»РµРЅРЅРёРєРё РјРѕРіСѓС‚ РїРµСЂРµС…РІР°С‚С‹РІР°С‚СЊ РїРµСЂРµРґР°РІР°РµРјСѓСЋ РёРЅС„РѕСЂРјР°С†РёСЋ Рё РїРѕР»СѓС‡Р°С‚СЊ РґРѕСЃС‚СѓРї Рє РІР°С€РёРј Р»РёС‡РЅС‹Рј РґР°РЅРЅС‹Рј. Р’ СЌС‚РѕРј СЂСѓРєРѕРІРѕРґСЃС‚РІРµ РјС‹ СЂР°СЃСЃРјРѕС‚СЂРёРј РєРѕРјРїР»РµРєСЃРЅС‹Рµ РјРµСЂС‹ Р·Р°С‰РёС‚С‹ РґР»СЏ Р±РµР·РѕРїР°СЃРЅРѕР№ СЂР°Р±РѕС‚С‹ РІ РїСѓР±Р»РёС‡РЅС‹С… СЃРµС‚СЏС….</p>
 
         <div class="guide-image-block">
-          <img src="https://avatars.mds.yandex.net/get-shedevrum/15377961/img_9c83113e37b611f0a4318e338d696586/orig" alt="Защита ноутбука в общественных Wi-Fi сетях">
-          <div class="image-caption">Безопасная работа в общественной Wi-Fi сети</div>
+          <img src="https://avatars.mds.yandex.net/get-shedevrum/15377961/img_9c83113e37b611f0a4318e338d696586/orig" alt="Р—Р°С‰РёС‚Р° РЅРѕСѓС‚Р±СѓРєР° РІ РѕР±С‰РµСЃС‚РІРµРЅРЅС‹С… Wi-Fi СЃРµС‚СЏС…">
+          <div class="image-caption">Р‘РµР·РѕРїР°СЃРЅР°СЏ СЂР°Р±РѕС‚Р° РІ РѕР±С‰РµСЃС‚РІРµРЅРЅРѕР№ Wi-Fi СЃРµС‚Рё</div>
         </div>
 
         <div class="alert-danger">
-          <h4><i class="fas fa-exclamation-triangle"></i> КРИТИЧЕСКИ ВАЖНО</h4>
-          <p>Общественный Wi-Fi — это основная среда для киберпреступников по краже данных. Никогда не доверяйте таким сетям без дополнительной защиты.</p>
+          <h4><i class="fas fa-exclamation-triangle"></i> РљР РРўРР§Р•РЎРљР Р’РђР–РќРћ</h4>
+          <p>РћР±С‰РµСЃС‚РІРµРЅРЅС‹Р№ Wi-Fi вЂ” СЌС‚Рѕ РѕСЃРЅРѕРІРЅР°СЏ СЃСЂРµРґР° РґР»СЏ РєРёР±РµСЂРїСЂРµСЃС‚СѓРїРЅРёРєРѕРІ РїРѕ РєСЂР°Р¶Рµ РґР°РЅРЅС‹С…. РќРёРєРѕРіРґР° РЅРµ РґРѕРІРµСЂСЏР№С‚Рµ С‚Р°РєРёРј СЃРµС‚СЏРј Р±РµР· РґРѕРїРѕР»РЅРёС‚РµР»СЊРЅРѕР№ Р·Р°С‰РёС‚С‹.</p>
         </div>
 
-        <h2>Основные угрозы в общественных Wi-Fi сетях</h2>
+        <h2>РћСЃРЅРѕРІРЅС‹Рµ СѓРіСЂРѕР·С‹ РІ РѕР±С‰РµСЃС‚РІРµРЅРЅС‹С… Wi-Fi СЃРµС‚СЏС…</h2>
 
-        <h3>Типы атак и методы кражи данных</h3>
+        <h3>РўРёРїС‹ Р°С‚Р°Рє Рё РјРµС‚РѕРґС‹ РєСЂР°Р¶Рё РґР°РЅРЅС‹С…</h3>
 
         <div class="threat-grid">
           <div class="threat-card">
             <h4><i class="fas fa-user-secret"></i> Man-in-the-Middle</h4>
-            <span class="severity severity-high">Высокая опасность</span>
-            <p>Злоумышленник перехватывает трафик между вашим ноутбуком и точкой доступа, получая доступ ко всем передаваемым данным.</p>
+            <span class="severity severity-high">Р’С‹СЃРѕРєР°СЏ РѕРїР°СЃРЅРѕСЃС‚СЊ</span>
+            <p>Р—Р»РѕСѓРјС‹С€Р»РµРЅРЅРёРє РїРµСЂРµС…РІР°С‚С‹РІР°РµС‚ С‚СЂР°С„РёРє РјРµР¶РґСѓ РІР°С€РёРј РЅРѕСѓС‚Р±СѓРєРѕРј Рё С‚РѕС‡РєРѕР№ РґРѕСЃС‚СѓРїР°, РїРѕР»СѓС‡Р°СЏ РґРѕСЃС‚СѓРї РєРѕ РІСЃРµРј РїРµСЂРµРґР°РІР°РµРјС‹Рј РґР°РЅРЅС‹Рј.</p>
             <ul>
-              <li>Перехват паролей и логинов</li>
-              <li>Кража банковских данных</li>
-              <li>Чтение личной переписки</li>
-              <li>Модификация передаваемых данных</li>
+              <li>РџРµСЂРµС…РІР°С‚ РїР°СЂРѕР»РµР№ Рё Р»РѕРіРёРЅРѕРІ</li>
+              <li>РљСЂР°Р¶Р° Р±Р°РЅРєРѕРІСЃРєРёС… РґР°РЅРЅС‹С…</li>
+              <li>Р§С‚РµРЅРёРµ Р»РёС‡РЅРѕР№ РїРµСЂРµРїРёСЃРєРё</li>
+              <li>РњРѕРґРёС„РёРєР°С†РёСЏ РїРµСЂРµРґР°РІР°РµРјС‹С… РґР°РЅРЅС‹С…</li>
             </ul>
           </div>
           <div class="threat-card">
             <h4><i class="fas fa-wifi"></i> Evil Twin</h4>
-            <span class="severity severity-high">Высокая опасность</span>
-            <p>Создание поддельной точки доступа с именем, похожим на легитимную сеть (например, "Starbucks_Free_WiFi").</p>
+            <span class="severity severity-high">Р’С‹СЃРѕРєР°СЏ РѕРїР°СЃРЅРѕСЃС‚СЊ</span>
+            <p>РЎРѕР·РґР°РЅРёРµ РїРѕРґРґРµР»СЊРЅРѕР№ С‚РѕС‡РєРё РґРѕСЃС‚СѓРїР° СЃ РёРјРµРЅРµРј, РїРѕС…РѕР¶РёРј РЅР° Р»РµРіРёС‚РёРјРЅСѓСЋ СЃРµС‚СЊ (РЅР°РїСЂРёРјРµСЂ, "Starbucks_Free_WiFi").</p>
             <ul>
-              <li>Полный контроль над соединением</li>
-              <li>Перенаправление на фишинговые сайты</li>
-              <li>Внедрение вредоносного ПО</li>
-              <li>Кража учетных данных</li>
+              <li>РџРѕР»РЅС‹Р№ РєРѕРЅС‚СЂРѕР»СЊ РЅР°Рґ СЃРѕРµРґРёРЅРµРЅРёРµРј</li>
+              <li>РџРµСЂРµРЅР°РїСЂР°РІР»РµРЅРёРµ РЅР° С„РёС€РёРЅРіРѕРІС‹Рµ СЃР°Р№С‚С‹</li>
+              <li>Р’РЅРµРґСЂРµРЅРёРµ РІСЂРµРґРѕРЅРѕСЃРЅРѕРіРѕ РџРћ</li>
+              <li>РљСЂР°Р¶Р° СѓС‡РµС‚РЅС‹С… РґР°РЅРЅС‹С…</li>
             </ul>
           </div>
           <div class="threat-card">
             <h4><i class="fas fa-network-wired"></i> Sniffing</h4>
-            <span class="severity severity-medium">Средняя опасность</span>
-            <p>Прослушивание сетевого трафика с использованием специального программного обеспечения.</p>
+            <span class="severity severity-medium">РЎСЂРµРґРЅСЏСЏ РѕРїР°СЃРЅРѕСЃС‚СЊ</span>
+            <p>РџСЂРѕСЃР»СѓС€РёРІР°РЅРёРµ СЃРµС‚РµРІРѕРіРѕ С‚СЂР°С„РёРєР° СЃ РёСЃРїРѕР»СЊР·РѕРІР°РЅРёРµРј СЃРїРµС†РёР°Р»СЊРЅРѕРіРѕ РїСЂРѕРіСЂР°РјРјРЅРѕРіРѕ РѕР±РµСЃРїРµС‡РµРЅРёСЏ.</p>
             <ul>
-              <li>Перехват незащищенного трафика</li>
-              <li>Анализ сетевых пакетов</li>
-              <li>Поиск уязвимостей в протоколах</li>
-              <li>Сбор информации о пользователях</li>
+              <li>РџРµСЂРµС…РІР°С‚ РЅРµР·Р°С‰РёС‰РµРЅРЅРѕРіРѕ С‚СЂР°С„РёРєР°</li>
+              <li>РђРЅР°Р»РёР· СЃРµС‚РµРІС‹С… РїР°РєРµС‚РѕРІ</li>
+              <li>РџРѕРёСЃРє СѓСЏР·РІРёРјРѕСЃС‚РµР№ РІ РїСЂРѕС‚РѕРєРѕР»Р°С…</li>
+              <li>РЎР±РѕСЂ РёРЅС„РѕСЂРјР°С†РёРё Рѕ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏС…</li>
             </ul>
           </div>
           <div class="threat-card">
             <h4><i class="fas fa-bug"></i> Malware Injection</h4>
-            <span class="severity severity-high">Высокая опасность</span>
-            <p>Внедрение вредоносного ПО через уязвимости в сети или при подключении к зараженной точке доступа.</p>
+            <span class="severity severity-high">Р’С‹СЃРѕРєР°СЏ РѕРїР°СЃРЅРѕСЃС‚СЊ</span>
+            <p>Р’РЅРµРґСЂРµРЅРёРµ РІСЂРµРґРѕРЅРѕСЃРЅРѕРіРѕ РџРћ С‡РµСЂРµР· СѓСЏР·РІРёРјРѕСЃС‚Рё РІ СЃРµС‚Рё РёР»Рё РїСЂРё РїРѕРґРєР»СЋС‡РµРЅРёРё Рє Р·Р°СЂР°Р¶РµРЅРЅРѕР№ С‚РѕС‡РєРµ РґРѕСЃС‚СѓРїР°.</p>
             <ul>
-              <li>Установка шпионских программ</li>
-              <li>Создание бэкдоров</li>
+              <li>РЈСЃС‚Р°РЅРѕРІРєР° С€РїРёРѕРЅСЃРєРёС… РїСЂРѕРіСЂР°РјРј</li>
+              <li>РЎРѕР·РґР°РЅРёРµ Р±СЌРєРґРѕСЂРѕРІ</li>
             </ul>
           </div>
         </div>
 
-        <h2>Комплексная защита ноутбука</h2>
+        <h2>РљРѕРјРїР»РµРєСЃРЅР°СЏ Р·Р°С‰РёС‚Р° РЅРѕСѓС‚Р±СѓРєР°</h2>
 
-        <h3>Шаг 1: Базовая настройка безопасности</h3>
+        <h3>РЁР°Рі 1: Р‘Р°Р·РѕРІР°СЏ РЅР°СЃС‚СЂРѕР№РєР° Р±РµР·РѕРїР°СЃРЅРѕСЃС‚Рё</h3>
 
         <div class="protection-steps">
           <div class="step-item">
-            <h4>Включите брандмауэр Windows</h4>
-            <p>Убедитесь, что брандмауэр активен и настроен на блокировку нежелательных подключений.</p>
+            <h4>Р’РєР»СЋС‡РёС‚Рµ Р±СЂР°РЅРґРјР°СѓСЌСЂ Windows</h4>
+            <p>РЈР±РµРґРёС‚РµСЃСЊ, С‡С‚Рѕ Р±СЂР°РЅРґРјР°СѓСЌСЂ Р°РєС‚РёРІРµРЅ Рё РЅР°СЃС‚СЂРѕРµРЅ РЅР° Р±Р»РѕРєРёСЂРѕРІРєСѓ РЅРµР¶РµР»Р°С‚РµР»СЊРЅС‹С… РїРѕРґРєР»СЋС‡РµРЅРёР№.</p>
             <div class="check-section">
-              <div class="check-title">Проверка брандмауэра:</div>
+              <div class="check-title">РџСЂРѕРІРµСЂРєР° Р±СЂР°РЅРґРјР°СѓСЌСЂР°:</div>
               <ul>
-                <li>Откройте "Панель управления" > "Брандмауэр Защитника Windows"</li>
-                <li>Убедитесь, что брандмауэр включен для всех типов сетей</li>
-                <li>Настройте блокировку входящих подключений</li>
+                <li>РћС‚РєСЂРѕР№С‚Рµ "РџР°РЅРµР»СЊ СѓРїСЂР°РІР»РµРЅРёСЏ" в†’ "Р‘СЂР°РЅРґРјР°СѓСЌСЂ Р—Р°С‰РёС‚РЅРёРєР° Windows"</li>
+                <li>РЈР±РµРґРёС‚РµСЃСЊ, С‡С‚Рѕ Р±СЂР°РЅРґРјР°СѓСЌСЂ РІРєР»СЋС‡РµРЅ РґР»СЏ РІСЃРµС… С‚РёРїРѕРІ СЃРµС‚РµР№</li>
+                <li>РќР°СЃС‚СЂРѕР№С‚Рµ Р±Р»РѕРєРёСЂРѕРІРєСѓ РІС…РѕРґСЏС‰РёС… РїРѕРґРєР»СЋС‡РµРЅРёР№</li>
               </ul>
             </div>
           </div>
           <div class="step-item">
-            <h4>Отключите общий доступ к файлам</h4>
-            <p>Предотвратите возможность доступа к вашим файлам из сети.</p>
+            <h4>РћС‚РєР»СЋС‡РёС‚Рµ РѕР±С‰РёР№ РґРѕСЃС‚СѓРї Рє С„Р°Р№Р»Р°Рј</h4>
+            <p>РџСЂРµРґРѕС‚РІСЂР°С‚РёС‚Рµ РІРѕР·РјРѕР¶РЅРѕСЃС‚СЊ РґРѕСЃС‚СѓРїР° Рє РІР°С€РёРј С„Р°Р№Р»Р°Рј РёР· СЃРµС‚Рё.</p>
             <div class="check-section">
-              <div class="check-title">Отключение общего доступа:</div>
+              <div class="check-title">РћС‚РєР»СЋС‡РµРЅРёРµ РѕР±С‰РµРіРѕ РґРѕСЃС‚СѓРїР°:</div>
               <ul>
-                <li>Зайдите в "Параметры" > "Сеть и Интернет" > "Wi-Fi"</li>
-                <li>Выберите "Управление известными сетями"</li>
-                <li>Для общественных сетей установите профиль "Общедоступная"</li>
-                <li>Отключите "Общий доступ к файлам и принтерам"</li>
+                <li>Р—Р°Р№РґРёС‚Рµ РІ "РџР°СЂР°РјРµС‚СЂС‹" в†’ "РЎРµС‚СЊ Рё РРЅС‚РµСЂРЅРµС‚" в†’ "Wi-Fi"</li>
+                <li>Р’С‹Р±РµСЂРёС‚Рµ "РЈРїСЂР°РІР»РµРЅРёРµ РёР·РІРµСЃС‚РЅС‹РјРё СЃРµС‚СЏРјРё"</li>
+                <li>Р”Р»СЏ РѕР±С‰РµСЃС‚РІРµРЅРЅС‹С… СЃРµС‚РµР№ СѓСЃС‚Р°РЅРѕРІРёС‚Рµ РїСЂРѕС„РёР»СЊ "РћР±С‰РµРґРѕСЃС‚СѓРїРЅР°СЏ"</li>
+                <li>РћС‚РєР»СЋС‡РёС‚Рµ "РћР±С‰РёР№ РґРѕСЃС‚СѓРї Рє С„Р°Р№Р»Р°Рј Рё РїСЂРёРЅС‚РµСЂР°Рј"</li>
               </ul>
             </div>
           </div>
           <div class="step-item">
-            <h4>Обновите систему и программы</h4>
-            <p>Установите все обновления безопасности для защиты от известных уязвимостей.</p>
+            <h4>РћР±РЅРѕРІРёС‚Рµ СЃРёСЃС‚РµРјСѓ Рё РїСЂРѕРіСЂР°РјРјС‹</h4>
+            <p>РЈСЃС‚Р°РЅРѕРІРёС‚Рµ РІСЃРµ РѕР±РЅРѕРІР»РµРЅРёСЏ Р±РµР·РѕРїР°СЃРЅРѕСЃС‚Рё РґР»СЏ Р·Р°С‰РёС‚С‹ РѕС‚ РёР·РІРµСЃС‚РЅС‹С… СѓСЏР·РІРёРјРѕСЃС‚РµР№.</p>
           </div>
         </div>
 
-        <h3>Шаг 2: Использование VPN</h3>
+        <h3>РЁР°Рі 2: РСЃРїРѕР»СЊР·РѕРІР°РЅРёРµ VPN</h3>
 
         <div class="alert-success">
-          <h4><i class="fas fa-shield-alt"></i> VPN — ОБЯЗАТЕЛЬНОЕ УСЛОВИЕ</h4>
-          <p>Виртуальная частная сеть (VPN) шифрует весь трафик между вашим ноутбуком и интернетом, делая перехват данных невозможным.</p>
+          <h4><i class="fas fa-shield-alt"></i> VPN вЂ” РћР‘РЇР—РђРўР•Р›Р¬РќРћР• РЈРЎР›РћР’РР•</h4>
+          <p>Р’РёСЂС‚СѓР°Р»СЊРЅР°СЏ С‡Р°СЃС‚РЅР°СЏ СЃРµС‚СЊ (VPN) С€РёС„СЂСѓРµС‚ РІРµСЃСЊ С‚СЂР°С„РёРє РјРµР¶РґСѓ РІР°С€РёРј РЅРѕСѓС‚Р±СѓРєРѕРј Рё РёРЅС‚РµСЂРЅРµС‚РѕРј, РґРµР»Р°СЏ РїРµСЂРµС…РІР°С‚ РґР°РЅРЅС‹С… РЅРµРІРѕР·РјРѕР¶РЅС‹Рј.</p>
         </div>
 
-        <h4>Как работает VPN в общественных сетях:</h4>
+        <h4>РљР°Рє СЂР°Р±РѕС‚Р°РµС‚ VPN РІ РѕР±С‰РµСЃС‚РІРµРЅРЅС‹С… СЃРµС‚СЏС…:</h4>
 
         <div class="pro-tips">
-          <h4>Преимущества VPN:</h4>
+          <h4>РџСЂРµРёРјСѓС‰РµСЃС‚РІР° VPN:</h4>
           <ul>
-            <li><strong>Шифрование трафика</strong> — все данные передаются в зашифрованном виде</li>
-            <li><strong>Скрытие реального IP-адреса</strong> — анонимность в сети</li>
-            <li><strong>Защита от DNS-утечек</strong> — запросы к DNS также шифруются</li>
-            <li><strong>Обход географических ограничений</strong> — доступ к контенту из разных стран</li>
-            <li><strong>Защита от ISP-слежки</strong> — провайдер не видит ваш трафик</li>
+            <li><strong>РЁРёС„СЂРѕРІР°РЅРёРµ С‚СЂР°С„РёРєР°</strong> вЂ” РІСЃРµ РґР°РЅРЅС‹Рµ РїРµСЂРµРґР°СЋС‚СЃСЏ РІ Р·Р°С€РёС„СЂРѕРІР°РЅРЅРѕРј РІРёРґРµ</li>
+            <li><strong>РЎРєСЂС‹С‚РёРµ СЂРµР°Р»СЊРЅРѕРіРѕ IP-Р°РґСЂРµСЃР°</strong> вЂ” Р°РЅРѕРЅРёРјРЅРѕСЃС‚СЊ РІ СЃРµС‚Рё</li>
+            <li><strong>Р—Р°С‰РёС‚Р° РѕС‚ DNS-СѓС‚РµС‡РµРє</strong> вЂ” Р·Р°РїСЂРѕСЃС‹ Рє DNS С‚Р°РєР¶Рµ С€РёС„СЂСѓСЋС‚СЃСЏ</li>
+            <li><strong>РћР±С…РѕРґ РіРµРѕРіСЂР°С„РёС‡РµСЃРєРёС… РѕРіСЂР°РЅРёС‡РµРЅРёР№</strong> вЂ” РґРѕСЃС‚СѓРї Рє РєРѕРЅС‚РµРЅС‚Сѓ РёР· СЂР°Р·РЅС‹С… СЃС‚СЂР°РЅ</li>
+            <li><strong>Р—Р°С‰РёС‚Р° РѕС‚ ISP-СЃР»РµР¶РєРё</strong> вЂ” РїСЂРѕРІР°Р№РґРµСЂ РЅРµ РІРёРґРёС‚ РІР°С€ С‚СЂР°С„РёРє</li>
           </ul>
         </div>
 
         <div class="tools-grid">
           <div class="tool-card">
             <h4>NordVPN</h4>
-            <p class="price">От 400?/мес</p>
-            <p>Один из самых надежных VPN-сервисов с военным шифрованием</p>
+            <p class="price">РћС‚ 400в‚Ѕ/РјРµСЃ</p>
+            <p>РћРґРёРЅ РёР· СЃР°РјС‹С… РЅР°РґРµР¶РЅС‹С… VPN-СЃРµСЂРІРёСЃРѕРІ СЃ РІРѕРµРЅРЅС‹Рј С€РёС„СЂРѕРІР°РЅРёРµРј</p>
           </div>
           <div class="tool-card">
             <h4>ExpressVPN</h4>
-            <p class="price">От 500?/мес</p>
-            <p>Высокоскоростной VPN с отличной защитой</p>
+            <p class="price">РћС‚ 500в‚Ѕ/РјРµСЃ</p>
+            <p>Р’С‹СЃРѕРєРѕСЃРєРѕСЂРѕСЃС‚РЅРѕР№ VPN СЃ РѕС‚Р»РёС‡РЅРѕР№ Р·Р°С‰РёС‚РѕР№</p>
           </div>
           <div class="tool-card">
             <h4>ProtonVPN</h4>
-            <p class="price">От 350?/мес</p>
-            <p>Швейцарский VPN с фокусом на приватность</p>
+            <p class="price">РћС‚ 350в‚Ѕ/РјРµСЃ</p>
+            <p>РЁРІРµР№С†Р°СЂСЃРєРёР№ VPN СЃ С„РѕРєСѓСЃРѕРј РЅР° РїСЂРёРІР°С‚РЅРѕСЃС‚СЊ</p>
           </div>
           <div class="tool-card">
             <h4>Windscribe</h4>
-            <p class="price">От 300?/мес</p>
-            <p>Бесплатный тариф до 10 ГБ в месяц</p>
+            <p class="price">РћС‚ 300в‚Ѕ/РјРµСЃ</p>
+            <p>Р‘РµСЃРїР»Р°С‚РЅС‹Р№ С‚Р°СЂРёС„ РґРѕ 10 Р“Р‘ РІ РјРµСЃСЏС†</p>
           </div>
         </div>
 
-        <h3>Шаг 3: Настройка безопасного соединения</h3>
+        <h3>РЁР°Рі 3: РќР°СЃС‚СЂРѕР№РєР° Р±РµР·РѕРїР°СЃРЅРѕРіРѕ СЃРѕРµРґРёРЅРµРЅРёСЏ</h3>
 
         <div class="protection-steps">
           <div class="step-item">
-            <h4>Используйте HTTPS везде</h4>
-            <p>Убедитесь, что все сайты используют защищенное соединение HTTPS.</p>
+            <h4>РСЃРїРѕР»СЊР·СѓР№С‚Рµ HTTPS РІРµР·РґРµ</h4>
+            <p>РЈР±РµРґРёС‚РµСЃСЊ, С‡С‚Рѕ РІСЃРµ СЃР°Р№С‚С‹ РёСЃРїРѕР»СЊР·СѓСЋС‚ Р·Р°С‰РёС‰РµРЅРЅРѕРµ СЃРѕРµРґРёРЅРµРЅРёРµ HTTPS.</p>
             <div class="check-section">
-              <div class="check-title">Проверка HTTPS:</div>
+              <div class="check-title">РџСЂРѕРІРµСЂРєР° HTTPS:</div>
               <ul>
-                <li>Ищите замок в адресной строке браузера</li>
-                <li>Используйте расширения типа HTTPS Everywhere</li>
-                <li>Избегайте сайтов с HTTP в общественных сетях</li>
+                <li>РС‰РёС‚Рµ Р·Р°РјРѕРє РІ Р°РґСЂРµСЃРЅРѕР№ СЃС‚СЂРѕРєРµ Р±СЂР°СѓР·РµСЂР°</li>
+                <li>РСЃРїРѕР»СЊР·СѓР№С‚Рµ СЂР°СЃС€РёСЂРµРЅРёСЏ С‚РёРїР° HTTPS Everywhere</li>
+                <li>РР·Р±РµРіР°Р№С‚Рµ СЃР°Р№С‚РѕРІ СЃ HTTP РІ РѕР±С‰РµСЃС‚РІРµРЅРЅС‹С… СЃРµС‚СЏС…</li>
               </ul>
             </div>
           </div>
           <div class="step-item">
-            <h4>Настройте DNS</h4>
-            <p>Используйте защищенные DNS-серверы для предотвращения DNS-спуфинга.</p>
+            <h4>РќР°СЃС‚СЂРѕР№С‚Рµ DNS</h4>
+            <p>РСЃРїРѕР»СЊР·СѓР№С‚Рµ Р·Р°С‰РёС‰РµРЅРЅС‹Рµ DNS-СЃРµСЂРІРµСЂС‹ РґР»СЏ РїСЂРµРґРѕС‚РІСЂР°С‰РµРЅРёСЏ DNS-СЃРїСѓС„РёРЅРіР°.</p>
             <div class="pro-tips">
-              <h4>Рекомендуемые DNS:</h4>
+              <h4>Р РµРєРѕРјРµРЅРґСѓРµРјС‹Рµ DNS:</h4>
               <ul>
-                <li><strong>Cloudflare DNS</strong> — 1.1.1.1 и 1.0.0.1</li>
-                <li><strong>Google DNS</strong> — 8.8.8.8 и 8.8.4.4</li>
-                <li><strong>OpenDNS</strong> — 208.67.222.222 и 208.67.220.220</li>
+                <li><strong>Cloudflare DNS</strong> вЂ” 1.1.1.1 Рё 1.0.0.1</li>
+                <li><strong>Google DNS</strong> вЂ” 8.8.8.8 Рё 8.8.4.4</li>
+                <li><strong>OpenDNS</strong> вЂ” 208.67.222.222 Рё 208.67.220.220</li>
               </ul>
             </div>
           </div>
           <div class="step-item">
-            <h4>Отключите автоматическое подключение</h4>
-            <p>Предотвратите подключение к незнакомым сетям без вашего ведома.</p>
+            <h4>РћС‚РєР»СЋС‡РёС‚Рµ Р°РІС‚РѕРјР°С‚РёС‡РµСЃРєРѕРµ РїРѕРґРєР»СЋС‡РµРЅРёРµ</h4>
+            <p>РџСЂРµРґРѕС‚РІСЂР°С‚РёС‚Рµ РїРѕРґРєР»СЋС‡РµРЅРёРµ Рє РЅРµР·РЅР°РєРѕРјС‹Рј СЃРµС‚СЏРј Р±РµР· РІР°С€РµРіРѕ РІРµРґРѕРјР°.</p>
           </div>
         </div>
 
-        <h2>Защита конкретных типов данных</h2>
+        <h2>Р—Р°С‰РёС‚Р° РєРѕРЅРєСЂРµС‚РЅС‹С… С‚РёРїРѕРІ РґР°РЅРЅС‹С…</h2>
 
-        <h3>Защита банковской и финансовой информации</h3>
+        <h3>Р—Р°С‰РёС‚Р° Р±Р°РЅРєРѕРІСЃРєРѕР№ Рё С„РёРЅР°РЅСЃРѕРІРѕР№ РёРЅС„РѕСЂРјР°С†РёРё</h3>
 
         <div class="alert-danger">
-          <h4><i class="fas fa-ban"></i> КАТЕГОРИЧЕСКИ ЗАПРЕЩЕНО</h4>
-          <p>Никогда не выполняйте банковские операции, не вводите данные кредитных карт и не заходите в онлайн-банкинг через общественный Wi-Fi, даже с VPN.</p>
+          <h4><i class="fas fa-ban"></i> РљРђРўР•Р“РћР РР§Р•РЎРљР Р—РђРџР Р•Р©Р•РќРћ</h4>
+          <p>РќРёРєРѕРіРґР° РЅРµ РІС‹РїРѕР»РЅСЏР№С‚Рµ Р±Р°РЅРєРѕРІСЃРєРёРµ РѕРїРµСЂР°С†РёРё, РЅРµ РІРІРѕРґРёС‚Рµ РґР°РЅРЅС‹Рµ РєСЂРµРґРёС‚РЅС‹С… РєР°СЂС‚ Рё РЅРµ Р·Р°С…РѕРґРёС‚Рµ РІ РѕРЅР»Р°Р№РЅ-Р±Р°РЅРєРёРЅРі С‡РµСЂРµР· РѕР±С‰РµСЃС‚РІРµРЅРЅС‹Р№ Wi-Fi, РґР°Р¶Рµ СЃ VPN.</p>
         </div>
 
-        <h3>Защита рабочих документов и почты</h3>
+        <h3>Р—Р°С‰РёС‚Р° СЂР°Р±РѕС‡РёС… РґРѕРєСѓРјРµРЅС‚РѕРІ Рё РїРѕС‡С‚С‹</h3>
 
         <div class="pro-tips">
-          <h4>Рекомендации для работы:</h4>
+          <h4>Р РµРєРѕРјРµРЅРґР°С†РёРё РґР»СЏ СЂР°Р±РѕС‚С‹:</h4>
           <ul>
-            <li><strong>Используйте корпоративный VPN</strong> от вашей компании</li>
-            <li><strong>Включите двухфакторную аутентификацию</strong> для почты</li>
-            <li><strong>Работайте с документами офлайн</strong> и синхронизируйте позже</li>
-            <li><strong>Используйте зашифрованные облачные хранилища</strong></li>
+            <li><strong>РСЃРїРѕР»СЊР·СѓР№С‚Рµ РєРѕСЂРїРѕСЂР°С‚РёРІРЅС‹Р№ VPN</strong> РѕС‚ РІР°С€РµР№ РєРѕРјРїР°РЅРёРё</li>
+            <li><strong>Р’РєР»СЋС‡РёС‚Рµ РґРІСѓС…С„Р°РєС‚РѕСЂРЅСѓСЋ Р°СѓС‚РµРЅС‚РёС„РёРєР°С†РёСЋ</strong> РґР»СЏ РїРѕС‡С‚С‹</li>
+            <li><strong>Р Р°Р±РѕС‚Р°Р№С‚Рµ СЃ РґРѕРєСѓРјРµРЅС‚Р°РјРё РѕС„Р»Р°Р№РЅ</strong> Рё СЃРёРЅС…СЂРѕРЅРёР·РёСЂСѓР№С‚Рµ РїРѕР·Р¶Рµ</li>
+            <li><strong>РСЃРїРѕР»СЊР·СѓР№С‚Рµ Р·Р°С€РёС„СЂРѕРІР°РЅРЅС‹Рµ РѕР±Р»Р°С‡РЅС‹Рµ С…СЂР°РЅРёР»РёС‰Р°</strong></li>
           </ul>
         </div>
 
-        <h3>Защита социальных сетей и мессенджеров</h3>
+        <h3>Р—Р°С‰РёС‚Р° СЃРѕС†РёР°Р»СЊРЅС‹С… СЃРµС‚РµР№ Рё РјРµСЃСЃРµРЅРґР¶РµСЂРѕРІ</h3>
 
         <div class="check-section">
-          <div class="check-title">Безопасное использование:</div>
+          <div class="check-title">Р‘РµР·РѕРїР°СЃРЅРѕРµ РёСЃРїРѕР»СЊР·РѕРІР°РЅРёРµ:</div>
           <ul>
-            <li><strong>Включите двухфакторную аутентификацию</strong> везде, где возможно</li>
-            <li><strong>Используйте приложения с end-to-end шифрованием</strong> (Signal, Telegram)</li>
-            <li><strong>Избегайте передачи чувствительной информации</strong> через мессенджеры</li>
-            <li><strong>Регулярно проверяйте активные сессии</strong> в аккаунтах</li>
+            <li><strong>Р’РєР»СЋС‡РёС‚Рµ РґРІСѓС…С„Р°РєС‚РѕСЂРЅСѓСЋ Р°СѓС‚РµРЅС‚РёС„РёРєР°С†РёСЋ</strong> РІРµР·РґРµ, РіРґРµ РІРѕР·РјРѕР¶РЅРѕ</li>
+            <li><strong>РСЃРїРѕР»СЊР·СѓР№С‚Рµ РїСЂРёР»РѕР¶РµРЅРёСЏ СЃ end-to-end С€РёС„СЂРѕРІР°РЅРёРµРј</strong> (Signal, Telegram)</li>
+            <li><strong>РР·Р±РµРіР°Р№С‚Рµ РїРµСЂРµРґР°С‡Рё С‡СѓРІСЃС‚РІРёС‚РµР»СЊРЅРѕР№ РёРЅС„РѕСЂРјР°С†РёРё</strong> С‡РµСЂРµР· РјРµСЃСЃРµРЅРґР¶РµСЂС‹</li>
+            <li><strong>Р РµРіСѓР»СЏСЂРЅРѕ РїСЂРѕРІРµСЂСЏР№С‚Рµ Р°РєС‚РёРІРЅС‹Рµ СЃРµСЃСЃРёРё</strong> РІ Р°РєРєР°СѓРЅС‚Р°С…</li>
           </ul>
         </div>
 
-        <h2>Специфические места и риски</h2>
+        <h2>РЎРїРµС†РёС„РёС‡РµСЃРєРёРµ РјРµСЃС‚Р° Рё СЂРёСЃРєРё</h2>
 
-        <h3>Кафе и рестораны</h3>
+        <h3>РљР°С„Рµ Рё СЂРµСЃС‚РѕСЂР°РЅС‹</h3>
 
         <div class="location-tips">
           <div class="location-tip cafe">
-            <h4><i class="fas fa-coffee"></i> Особенности кафе</h4>
+            <h4><i class="fas fa-coffee"></i> РћСЃРѕР±РµРЅРЅРѕСЃС‚Рё РєР°С„Рµ</h4>
             <ul>
-              <li><strong>Высокая концентрация пользователей</strong> — больше целей для злоумышленников</li>
-              <li><strong>Долгое пребывание</strong> — увеличивает время для атаки</li>
-              <li><strong>Неформальная обстановка</strong> — пользователи менее осторожны</li>
-              <li><strong>Рекомендация:</strong> используйте мобильный интернет вместо Wi-Fi</li>
+              <li><strong>Р’С‹СЃРѕРєР°СЏ РєРѕРЅС†РµРЅС‚СЂР°С†РёСЏ РїРѕР»СЊР·РѕРІР°С‚РµР»РµР№</strong> вЂ” Р±РѕР»СЊС€Рµ С†РµР»РµР№ РґР»СЏ Р·Р»РѕСѓРјС‹С€Р»РµРЅРЅРёРєРѕРІ</li>
+              <li><strong>Р”РѕР»РіРѕРµ РїСЂРµР±С‹РІР°РЅРёРµ</strong> вЂ” СѓРІРµР»РёС‡РёРІР°РµС‚ РІСЂРµРјСЏ РґР»СЏ Р°С‚Р°РєРё</li>
+              <li><strong>РќРµС„РѕСЂРјР°Р»СЊРЅР°СЏ РѕР±СЃС‚Р°РЅРѕРІРєР°</strong> вЂ” РїРѕР»СЊР·РѕРІР°С‚РµР»Рё РјРµРЅРµРµ РѕСЃС‚РѕСЂРѕР¶РЅС‹</li>
+              <li><strong>Р РµРєРѕРјРµРЅРґР°С†РёСЏ:</strong> РёСЃРїРѕР»СЊР·СѓР№С‚Рµ РјРѕР±РёР»СЊРЅС‹Р№ РёРЅС‚РµСЂРЅРµС‚ РІРјРµСЃС‚Рѕ Wi-Fi</li>
             </ul>
           </div>
           <div class="location-tip hotel">
-            <h4><i class="fas fa-bed"></i> Отели и хостелы</h4>
+            <h4><i class="fas fa-bed"></i> РћС‚РµР»Рё Рё С…РѕСЃС‚РµР»С‹</h4>
             <ul>
-              <li><strong>Стационарные сети</strong> — злоумышленники могут установить оборудование</li>
-              <li><strong>Международные гости</strong> — меньше внимания к безопасности</li>
-              <li><strong>Долгосрочное проживание</strong> — больше времени для атак</li>
-              <li><strong>Рекомендация:</strong> используйте мобильный hotspot или VPN</li>
+              <li><strong>РЎС‚Р°С†РёРѕРЅР°СЂРЅС‹Рµ СЃРµС‚Рё</strong> вЂ” Р·Р»РѕСѓРјС‹С€Р»РµРЅРЅРёРєРё РјРѕРіСѓС‚ СѓСЃС‚Р°РЅРѕРІРёС‚СЊ РѕР±РѕСЂСѓРґРѕРІР°РЅРёРµ</li>
+              <li><strong>РњРµР¶РґСѓРЅР°СЂРѕРґРЅС‹Рµ РіРѕСЃС‚Рё</strong> вЂ” РјРµРЅСЊС€Рµ РІРЅРёРјР°РЅРёСЏ Рє Р±РµР·РѕРїР°СЃРЅРѕСЃС‚Рё</li>
+              <li><strong>Р”РѕР»РіРѕСЃСЂРѕС‡РЅРѕРµ РїСЂРѕР¶РёРІР°РЅРёРµ</strong> вЂ” Р±РѕР»СЊС€Рµ РІСЂРµРјРµРЅРё РґР»СЏ Р°С‚Р°Рє</li>
+              <li><strong>Р РµРєРѕРјРµРЅРґР°С†РёСЏ:</strong> РёСЃРїРѕР»СЊР·СѓР№С‚Рµ РјРѕР±РёР»СЊРЅС‹Р№ hotspot РёР»Рё VPN</li>
             </ul>
           </div>
         </div>
 
-        <h3>Аэропорты и транспорт</h3>
+        <h3>РђСЌСЂРѕРїРѕСЂС‚С‹ Рё С‚СЂР°РЅСЃРїРѕСЂС‚</h3>
 
         <div class="alert-warning">
-          <h4><i class="fas fa-plane"></i> Особенности транспортных узлов</h4>
+          <h4><i class="fas fa-plane"></i> РћСЃРѕР±РµРЅРЅРѕСЃС‚Рё С‚СЂР°РЅСЃРїРѕСЂС‚РЅС‹С… СѓР·Р»РѕРІ</h4>
           <ul>
-            <li><strong>Множество бесплатных сетей</strong> — сложно отличить легитимные</li>
-            <li><strong>Высокий трафик</strong> — злоумышленники маскируются среди пользователей</li>
-            <li><strong>Ограниченное время</strong> — пользователи торопятся и менее внимательны</li>
-            <li><strong>Рекомендация:</strong> заранее скачайте контент для офлайн-работы</li>
+            <li><strong>РњРЅРѕР¶РµСЃС‚РІРѕ Р±РµСЃРїР»Р°С‚РЅС‹С… СЃРµС‚РµР№</strong> вЂ” СЃР»РѕР¶РЅРѕ РѕС‚Р»РёС‡РёС‚СЊ Р»РµРіРёС‚РёРјРЅС‹Рµ</li>
+            <li><strong>Р’С‹СЃРѕРєРёР№ С‚СЂР°С„РёРє</strong> вЂ” Р·Р»РѕСѓРјС‹С€Р»РµРЅРЅРёРєРё РјР°СЃРєРёСЂСѓСЋС‚СЃСЏ СЃСЂРµРґРё РїРѕР»СЊР·РѕРІР°С‚РµР»РµР№</li>
+            <li><strong>РћРіСЂР°РЅРёС‡РµРЅРЅРѕРµ РІСЂРµРјСЏ</strong> вЂ” РїРѕР»СЊР·РѕРІР°С‚РµР»Рё С‚РѕСЂРѕРїСЏС‚СЃСЏ Рё РјРµРЅРµРµ РІРЅРёРјР°С‚РµР»СЊРЅС‹</li>
+            <li><strong>Р РµРєРѕРјРµРЅРґР°С†РёСЏ:</strong> Р·Р°СЂР°РЅРµРµ СЃРєР°С‡Р°Р№С‚Рµ РєРѕРЅС‚РµРЅС‚ РґР»СЏ РѕС„Р»Р°Р№РЅ-СЂР°Р±РѕС‚С‹</li>
           </ul>
         </div>
 
-        <h2>Инструменты для дополнительной защиты</h2>
+        <h2>РРЅСЃС‚СЂСѓРјРµРЅС‚С‹ РґР»СЏ РґРѕРїРѕР»РЅРёС‚РµР»СЊРЅРѕР№ Р·Р°С‰РёС‚С‹</h2>
 
-        <h3>Программное обеспечение</h3>
+        <h3>РџСЂРѕРіСЂР°РјРјРЅРѕРµ РѕР±РµСЃРїРµС‡РµРЅРёРµ</h3>
 
         <div class="tools-grid">
           <div class="tool-card">
             <h4>Malwarebytes</h4>
-            <p class="price">От 2000?/год</p>
-            <p>Защита от вредоносного ПО и шпионских программ</p>
+            <p class="price">РћС‚ 2000в‚Ѕ/РіРѕРґ</p>
+            <p>Р—Р°С‰РёС‚Р° РѕС‚ РІСЂРµРґРѕРЅРѕСЃРЅРѕРіРѕ РџРћ Рё С€РїРёРѕРЅСЃРєРёС… РїСЂРѕРіСЂР°РјРј</p>
           </div>
           <div class="tool-card">
             <h4>Bitdefender Total Security</h4>
-            <p class="price">От 2500?/год</p>
-            <p>Комплексная защита с встроенным VPN</p>
+            <p class="price">РћС‚ 2500в‚Ѕ/РіРѕРґ</p>
+            <p>РљРѕРјРїР»РµРєСЃРЅР°СЏ Р·Р°С‰РёС‚Р° СЃ РІСЃС‚СЂРѕРµРЅРЅС‹Рј VPN</p>
           </div>
           <div class="tool-card">
             <h4>HTTPS Everywhere</h4>
-            <p class="price">Бесплатно</p>
-            <p>Расширение для браузера для принудительного HTTPS</p>
+            <p class="price">Р‘РµСЃРїР»Р°С‚РЅРѕ</p>
+            <p>Р Р°СЃС€РёСЂРµРЅРёРµ РґР»СЏ Р±СЂР°СѓР·РµСЂР° РґР»СЏ РїСЂРёРЅСѓРґРёС‚РµР»СЊРЅРѕРіРѕ HTTPS</p>
           </div>
           <div class="tool-card">
             <h4>uBlock Origin</h4>
-            <p class="price">Бесплатно</p>
-            <p>Блокировщик рекламы и трекеров</p>
+            <p class="price">Р‘РµСЃРїР»Р°С‚РЅРѕ</p>
+            <p>Р‘Р»РѕРєРёСЂРѕРІС‰РёРє СЂРµРєР»Р°РјС‹ Рё С‚СЂРµРєРµСЂРѕРІ</p>
           </div>
         </div>
 
-        <h3>Аппаратные решения</h3>
+        <h3>РђРїРїР°СЂР°С‚РЅС‹Рµ СЂРµС€РµРЅРёСЏ</h3>
 
         <div class="pro-tips">
-          <h4>Физическая защита:</h4>
+          <h4>Р¤РёР·РёС‡РµСЃРєР°СЏ Р·Р°С‰РёС‚Р°:</h4>
           <ul>
-            <li><strong>Защитный экран</strong> — предотвращает подсмотр с боков</li>
-            <li><strong>Веб-камера с крышкой</strong> — защита от шпионажа</li>
-            <li><strong>Физический выключатель Wi-Fi</strong> — полное отключение беспроводных модулей</li>
-            <li><strong>USB-блокировщик</strong> — предотвращает подключение вредоносных устройств</li>
+            <li><strong>Р—Р°С‰РёС‚РЅС‹Р№ СЌРєСЂР°РЅ</strong> вЂ” РїСЂРµРґРѕС‚РІСЂР°С‰Р°РµС‚ РїРѕРґСЃРјРѕС‚СЂ СЃ Р±РѕРєРѕРІ</li>
+            <li><strong>Р’РµР±-РєР°РјРµСЂР° СЃ РєСЂС‹С€РєРѕР№</strong> вЂ” Р·Р°С‰РёС‚Р° РѕС‚ С€РїРёРѕРЅР°Р¶Р°</li>
+            <li><strong>Р¤РёР·РёС‡РµСЃРєРёР№ РІС‹РєР»СЋС‡Р°С‚РµР»СЊ Wi-Fi</strong> вЂ” РїРѕР»РЅРѕРµ РѕС‚РєР»СЋС‡РµРЅРёРµ Р±РµСЃРїСЂРѕРІРѕРґРЅС‹С… РјРѕРґСѓР»РµР№</li>
+            <li><strong>USB-Р±Р»РѕРєРёСЂРѕРІС‰РёРє</strong> вЂ” РїСЂРµРґРѕС‚РІСЂР°С‰Р°РµС‚ РїРѕРґРєР»СЋС‡РµРЅРёРµ РІСЂРµРґРѕРЅРѕСЃРЅС‹С… СѓСЃС‚СЂРѕР№СЃС‚РІ</li>
           </ul>
         </div>
 
-        <h2>Проверка безопасности сети</h2>
+        <h2>РџСЂРѕРІРµСЂРєР° Р±РµР·РѕРїР°СЃРЅРѕСЃС‚Рё СЃРµС‚Рё</h2>
 
-        <h3>Как определить безопасную сеть</h3>
+        <h3>РљР°Рє РѕРїСЂРµРґРµР»РёС‚СЊ Р±РµР·РѕРїР°СЃРЅСѓСЋ СЃРµС‚СЊ</h3>
 
         <div class="check-section">
-          <div class="check-title">Критерии оценки:</div>
+          <div class="check-title">РљСЂРёС‚РµСЂРёРё РѕС†РµРЅРєРё:</div>
           <ul>
-            <li><strong>Официальное название сети</strong> — соответствует названию заведения</li>
-            <li><strong>Защищенное подключение</strong> — требует пароль или регистрацию</li>
-            <li><strong>HTTPS captive portal</strong> — страница входа использует HTTPS</li>
-            <li><strong>Отсутствие подозрительных имен</strong> — "Free_WiFi", "HackMe"</li>
-            <li><strong>Спрос у персонала</strong> — уточните официальное название сети</li>
+            <li><strong>РћС„РёС†РёР°Р»СЊРЅРѕРµ РЅР°Р·РІР°РЅРёРµ СЃРµС‚Рё</strong> вЂ” СЃРѕРѕС‚РІРµС‚СЃС‚РІСѓРµС‚ РЅР°Р·РІР°РЅРёСЋ Р·Р°РІРµРґРµРЅРёСЏ</li>
+            <li><strong>Р—Р°С‰РёС‰РµРЅРЅРѕРµ РїРѕРґРєР»СЋС‡РµРЅРёРµ</strong> вЂ” С‚СЂРµР±СѓРµС‚ РїР°СЂРѕР»СЊ РёР»Рё СЂРµРіРёСЃС‚СЂР°С†РёСЋ</li>
+            <li><strong>HTTPS captive portal</strong> вЂ” СЃС‚СЂР°РЅРёС†Р° РІС…РѕРґР° РёСЃРїРѕР»СЊР·СѓРµС‚ HTTPS</li>
+            <li><strong>РћС‚СЃСѓС‚СЃС‚РІРёРµ РїРѕРґРѕР·СЂРёС‚РµР»СЊРЅС‹С… РёРјРµРЅ</strong> вЂ” "Free_WiFi", "HackMe"</li>
+            <li><strong>РЎРїСЂРѕСЃ Сѓ РїРµСЂСЃРѕРЅР°Р»Р°</strong> вЂ” СѓС‚РѕС‡РЅРёС‚Рµ РѕС„РёС†РёР°Р»СЊРЅРѕРµ РЅР°Р·РІР°РЅРёРµ СЃРµС‚Рё</li>
           </ul>
         </div>
 
-        <h3>Инструменты для проверки сети</h3>
+        <h3>РРЅСЃС‚СЂСѓРјРµРЅС‚С‹ РґР»СЏ РїСЂРѕРІРµСЂРєРё СЃРµС‚Рё</h3>
 
         <div class="pro-tips">
-          <h4>Программы для анализа:</h4>
+          <h4>РџСЂРѕРіСЂР°РјРјС‹ РґР»СЏ Р°РЅР°Р»РёР·Р°:</h4>
           <ul>
-            <li><strong>Wireshark</strong> — анализ сетевого трафика</li>
-            <li><strong>Fing</strong> — сканирование сети и обнаружение устройств</li>
-            <li><strong>Angry IP Scanner</strong> — поиск активных устройств в сети</li>
-            <li><strong>NetSpot</strong> — анализ Wi-Fi сетей</li>
+            <li><strong>Wireshark</strong> вЂ” Р°РЅР°Р»РёР· СЃРµС‚РµРІРѕРіРѕ С‚СЂР°С„РёРєР°</li>
+            <li><strong>Fing</strong> вЂ” СЃРєР°РЅРёСЂРѕРІР°РЅРёРµ СЃРµС‚Рё Рё РѕР±РЅР°СЂСѓР¶РµРЅРёРµ СѓСЃС‚СЂРѕР№СЃС‚РІ</li>
+            <li><strong>Angry IP Scanner</strong> вЂ” РїРѕРёСЃРє Р°РєС‚РёРІРЅС‹С… СѓСЃС‚СЂРѕР№СЃС‚РІ РІ СЃРµС‚Рё</li>
+            <li><strong>NetSpot</strong> вЂ” Р°РЅР°Р»РёР· Wi-Fi СЃРµС‚РµР№</li>
           </ul>
         </div>
 
-        <h2>Что делать при подозрении на атаку</h2>
+        <h2>Р§С‚Рѕ РґРµР»Р°С‚СЊ РїСЂРё РїРѕРґРѕР·СЂРµРЅРёРё РЅР° Р°С‚Р°РєСѓ</h2>
 
-        <h3>Экстренные действия</h3>
+        <h3>Р­РєСЃС‚СЂРµРЅРЅС‹Рµ РґРµР№СЃС‚РІРёСЏ</h3>
 
         <div class="alert-danger">
-          <h4><i class="fas fa-exclamation-triangle"></i> ПРИ ПОДОЗРЕНИИ НА АТАКУ:</h4>
+          <h4><i class="fas fa-exclamation-triangle"></i> РџР Р РџРћР”РћР—Р Р•РќРР РќРђ РђРўРђРљРЈ:</h4>
           <ol>
-            <li><strong>Немедленно отключитесь от Wi-Fi</strong></li>
-            <li><strong>Включите авиарежим</strong> на ноутбуке</li>
-            <li><strong>Закройте все браузеры и программы</strong></li>
-            <li><strong>Запустите антивирусное сканирование</strong></li>
-            <li><strong>Смените все важные пароли</strong> через безопасное соединение</li>
-            <li><strong>Проверьте финансовые счета</strong> на подозрительные операции</li>
+            <li><strong>РќРµРјРµРґР»РµРЅРЅРѕ РѕС‚РєР»СЋС‡РёС‚РµСЃСЊ РѕС‚ Wi-Fi</strong></li>
+            <li><strong>Р’РєР»СЋС‡РёС‚Рµ Р°РІРёР°СЂРµР¶РёРј</strong> РЅР° РЅРѕСѓС‚Р±СѓРєРµ</li>
+            <li><strong>Р—Р°РєСЂРѕР№С‚Рµ РІСЃРµ Р±СЂР°СѓР·РµСЂС‹ Рё РїСЂРѕРіСЂР°РјРјС‹</strong></li>
+            <li><strong>Р—Р°РїСѓСЃС‚РёС‚Рµ Р°РЅС‚РёРІРёСЂСѓСЃРЅРѕРµ СЃРєР°РЅРёСЂРѕРІР°РЅРёРµ</strong></li>
+            <li><strong>РЎРјРµРЅРёС‚Рµ РІСЃРµ РІР°Р¶РЅС‹Рµ РїР°СЂРѕР»Рё</strong> С‡РµСЂРµР· Р±РµР·РѕРїР°СЃРЅРѕРµ СЃРѕРµРґРёРЅРµРЅРёРµ</li>
+            <li><strong>РџСЂРѕРІРµСЂСЊС‚Рµ С„РёРЅР°РЅСЃРѕРІС‹Рµ СЃС‡РµС‚Р°</strong> РЅР° РїРѕРґРѕР·СЂРёС‚РµР»СЊРЅС‹Рµ РѕРїРµСЂР°С†РёРё</li>
           </ol>
         </div>
 
-        <h3>Признаки компрометации</h3>
+        <h3>РџСЂРёР·РЅР°РєРё РєРѕРјРїСЂРѕРјРµС‚Р°С†РёРё</h3>
 
         <div class="alert-warning">
-          <h4><i class="fas fa-bug"></i> Симптомы взлома:</h4>
+          <h4><i class="fas fa-bug"></i> РЎРёРјРїС‚РѕРјС‹ РІР·Р»РѕРјР°:</h4>
           <ul>
-            <li><strong>Медленная работа интернета</strong> — трафик перехватывается</li>
-            <li><strong>Странные перенаправления</strong> на другие сайты</li>
-            <li><strong>Всплывающие окна</strong> с просьбой ввести данные</li>
-            <li><strong>Подозрительные активности</strong> в аккаунтах</li>
-            <li><strong>Необычные сетевые подключения</strong></li>
+            <li><strong>РњРµРґР»РµРЅРЅР°СЏ СЂР°Р±РѕС‚Р° РёРЅС‚РµСЂРЅРµС‚Р°</strong> вЂ” С‚СЂР°С„РёРє РїРµСЂРµС…РІР°С‚С‹РІР°РµС‚СЃСЏ</li>
+            <li><strong>РЎС‚СЂР°РЅРЅС‹Рµ РїРµСЂРµРЅР°РїСЂР°РІР»РµРЅРёСЏ</strong> РЅР° РґСЂСѓРіРёРµ СЃР°Р№С‚С‹</li>
+            <li><strong>Р’СЃРїР»С‹РІР°СЋС‰РёРµ РѕРєРЅР°</strong> СЃ РїСЂРѕСЃСЊР±РѕР№ РІРІРµСЃС‚Рё РґР°РЅРЅС‹Рµ</li>
+            <li><strong>РџРѕРґРѕР·СЂРёС‚РµР»СЊРЅС‹Рµ Р°РєС‚РёРІРЅРѕСЃС‚Рё</strong> РІ Р°РєРєР°СѓРЅС‚Р°С…</li>
+            <li><strong>РќРµРѕР±С‹С‡РЅС‹Рµ СЃРµС‚РµРІС‹Рµ РїРѕРґРєР»СЋС‡РµРЅРёСЏ</strong></li>
           </ul>
         </div>
 
-        <h2>Заключение</h2>
+        <h2>Р—Р°РєР»СЋС‡РµРЅРёРµ</h2>
 
-        <p>Защита ноутбука в общественных Wi-Fi сетях требует комплексного подхода. Никогда не доверяйте публичным сетям без дополнительной защиты. VPN — это минимальное необходимое условие для безопасной работы.</p>
+        <p>Р—Р°С‰РёС‚Р° РЅРѕСѓС‚Р±СѓРєР° РІ РѕР±С‰РµСЃС‚РІРµРЅРЅС‹С… Wi-Fi СЃРµС‚СЏС… С‚СЂРµР±СѓРµС‚ РєРѕРјРїР»РµРєСЃРЅРѕРіРѕ РїРѕРґС…РѕРґР°. РќРёРєРѕРіРґР° РЅРµ РґРѕРІРµСЂСЏР№С‚Рµ РїСѓР±Р»РёС‡РЅС‹Рј СЃРµС‚СЏРј Р±РµР· РґРѕРїРѕР»РЅРёС‚РµР»СЊРЅРѕР№ Р·Р°С‰РёС‚С‹. VPN вЂ” СЌС‚Рѕ РјРёРЅРёРјР°Р»СЊРЅРѕРµ РЅРµРѕР±С…РѕРґРёРјРѕРµ СѓСЃР»РѕРІРёРµ РґР»СЏ Р±РµР·РѕРїР°СЃРЅРѕР№ СЂР°Р±РѕС‚С‹.</p>
 
-        <p>Помните, что удобство общественного Wi-Fi никогда не стоит compromises с безопасностью ваших данных. Лучше использовать мобильный интернет или заранее подготовить контент для офлайн-работы.</p>
+        <p>РџРѕРјРЅРёС‚Рµ, С‡С‚Рѕ СѓРґРѕР±СЃС‚РІРѕ РѕР±С‰РµСЃС‚РІРµРЅРЅРѕРіРѕ Wi-Fi РЅРёРєРѕРіРґР° РЅРµ СЃС‚РѕРёС‚ compromises СЃ Р±РµР·РѕРїР°СЃРЅРѕСЃС‚СЊСЋ РІР°С€РёС… РґР°РЅРЅС‹С…. Р›СѓС‡С€Рµ РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ РјРѕР±РёР»СЊРЅС‹Р№ РёРЅС‚РµСЂРЅРµС‚ РёР»Рё Р·Р°СЂР°РЅРµРµ РїРѕРґРіРѕС‚РѕРІРёС‚СЊ РєРѕРЅС‚РµРЅС‚ РґР»СЏ РѕС„Р»Р°Р№РЅ-СЂР°Р±РѕС‚С‹.</p>
 
-        <p>Регулярно обновляйте защитное ПО, используйте сложные пароли с двухфакторной аутентификацией, и всегда будьте бдительны при подключении к незнакомым сетям. Ваша безопасность в ваших руках.</p>
+        <p>Р РµРіСѓР»СЏСЂРЅРѕ РѕР±РЅРѕРІР»СЏР№С‚Рµ Р·Р°С‰РёС‚РЅРѕРµ РџРћ, РёСЃРїРѕР»СЊР·СѓР№С‚Рµ СЃР»РѕР¶РЅС‹Рµ РїР°СЂРѕР»Рё СЃ РґРІСѓС…С„Р°РєС‚РѕСЂРЅРѕР№ Р°СѓС‚РµРЅС‚РёС„РёРєР°С†РёРµР№, Рё РІСЃРµРіРґР° Р±СѓРґСЊС‚Рµ Р±РґРёС‚РµР»СЊРЅС‹ РїСЂРё РїРѕРґРєР»СЋС‡РµРЅРёРё Рє РЅРµР·РЅР°РєРѕРјС‹Рј СЃРµС‚СЏРј. Р’Р°С€Р° Р±РµР·РѕРїР°СЃРЅРѕСЃС‚СЊ РІ РІР°С€РёС… СЂСѓРєР°С….</p>
 
-        <!-- Яндекс Маркет рекламный баннер -->
-                <img src="https://avatars.mds.yandex.net/get-market-ugc/12573871/2a0000018f2a5a8b8c0b7d9d9c4b6c5c/orig" alt="VPN сервис для защиты">
+        <!-- РЇРЅРґРµРєСЃ РњР°СЂРєРµС‚ СЂРµРєР»Р°РјРЅС‹Р№ Р±Р°РЅРЅРµСЂ -->
+        <a href="https://market.yandex.ru/search?text=VPN%20РїРѕРґРїРёСЃРєР°%202024&local-offers-first=0" class="ym-hero-link" target="_blank" rel="noopener noreferrer">
+          <div class="ym-hero-banner">
+            <div class="ym-hero-images">
+              <div class="ym-hero-image">
+                <img src="https://avatars.mds.yandex.net/get-market-ugc/12573871/2a0000018f2a5a8b8c0b7d9d9c4b6c5c/orig" alt="VPN СЃРµСЂРІРёСЃ РґР»СЏ Р·Р°С‰РёС‚С‹">
               </div>
-                <img src="https://avatars.mds.yandex.net/get-market-ugc/15377961/2a0000018f2a5a8b8c0b7d9d9c4b6c5d/orig" alt="Антивирус для ноутбука">
+              <div class="ym-hero-image">
+                <img src="https://avatars.mds.yandex.net/get-market-ugc/15377961/2a0000018f2a5a8b8c0b7d9d9c4b6c5d/orig" alt="РђРЅС‚РёРІРёСЂСѓСЃ РґР»СЏ РЅРѕСѓС‚Р±СѓРєР°">
               </div>
             </div>
+            <div class="ym-hero-content">
+              <div class="ym-hero-title">VPN Рё Р°РЅС‚РёРІРёСЂСѓСЃС‹ РґР»СЏ Р·Р°С‰РёС‚С‹</div>
+              <div class="ym-hero-desc">РќР°РґРµР¶РЅС‹Рµ СЃРµСЂРІРёСЃС‹ РґР»СЏ Р±РµР·РѕРїР°СЃРЅРѕР№ СЂР°Р±РѕС‚С‹ РІ РїСѓР±Р»РёС‡РЅС‹С… СЃРµС‚СЏС…</div>
             </div>
           </div>
         </a>
@@ -708,24 +563,24 @@
       <div class="footer__content">
         <div class="footer__section">
           <h4>Repairo</h4>
-          <p>Экспертные руководства по ремонту и обслуживанию техники</p>
+          <p>Р­РєСЃРїРµСЂС‚РЅС‹Рµ СЂСѓРєРѕРІРѕРґСЃС‚РІР° РїРѕ СЂРµРјРѕРЅС‚Сѓ Рё РѕР±СЃР»СѓР¶РёРІР°РЅРёСЋ С‚РµС…РЅРёРєРё</p>
         </div>
         <div class="footer__section">
-          <h4>Разделы</h4>
+          <h4>Р Р°Р·РґРµР»С‹</h4>
           <ul>
-            <li><a href="../laptops.html">Ноутбуки</a></li>
-            <li><a href="../smartphones.html">Смартфоны</a></li>
-            <li><a href="../consoles.html">Консоли</a></li>
-            <li><a href="../cameras.html">Фотоаппараты</a></li>
+            <li><a href="../laptops.html">РќРѕСѓС‚Р±СѓРєРё</a></li>
+            <li><a href="../smartphones.html">РЎРјР°СЂС‚С„РѕРЅС‹</a></li>
+            <li><a href="../consoles.html">РљРѕРЅСЃРѕР»Рё</a></li>
+            <li><a href="../cameras.html">Р¤РѕС‚РѕР°РїРїР°СЂР°С‚С‹</a></li>
           </ul>
         </div>
         <div class="footer__section">
-          <h4>Контакты</h4>
+          <h4>РљРѕРЅС‚Р°РєС‚С‹</h4>
           <p>support@repairo.ru</p>
         </div>
       </div>
       <div class="footer__bottom">
-        <p>&copy; 2024 Repairo. Все права защищены.</p>
+        <p>&copy; 2024 Repairo. Р’СЃРµ РїСЂР°РІР° Р·Р°С‰РёС‰РµРЅС‹.</p>
       </div>
     </div>
   </footer>
@@ -735,9 +590,3 @@
 
 </body>
 </html>
-
-
-
-
-
-

@@ -4,8 +4,9 @@
 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Windows 11 блокирует подключение смартфона через USB ноутбук</title>
-    <meta name="description" content="">
+  <title>Windows 11 Р±Р»РѕРєРёСЂСѓРµС‚ РїРѕРґРєР»СЋС‡РµРЅРёРµ СЃРјР°СЂС‚С„РѕРЅР° С‡РµСЂРµР· USB РЅРѕСѓС‚Р±СѓРє | Р­РєСЃРїРµСЂС‚РЅС‹Р№ РјРµРіР°РіР°Р№Рґ</title>
+    <meta name="description" content="{{ description }}">
+    <meta name="description" content="РџРѕС€Р°РіРѕРІР°СЏ РёРЅСЃС‚СЂСѓРєС†РёСЏ: Windows 11 Р±Р»РѕРєРёСЂСѓРµС‚ РїРѕРґРєР»СЋС‡РµРЅРёРµ СЃРјР°СЂС‚С„РѕРЅР° С‡РµСЂРµР· USB РЅРѕСѓС‚Р±СѓРє вЂ” Р­РєСЃРїРµСЂС‚РЅС‹Р№ РјРµРіР°РіР°Р№Рґ. РџСЂРёС‡РёРЅС‹ Р±Р»РѕРєРёСЂРѕРІРєРё: Р°РЅС‚РёРІРёСЂСѓСЃ, С„Р°РµСЂРІРѕР», РЅР°СЃС‚СЂРѕР№РєРё Р±РµР·РѕРїР°СЃРЅРѕСЃС‚Рё, РґСЂР°Р№РІРµСЂС‹. Р РµС€РµРЅРёСЏ: РѕС‚РєР»СЋС‡РµРЅРёРµ Р·Р°С‰РёС‚С‹, РѕР±РЅРѕРІР»РµРЅРёРµ РґСЂР°Р№РІРµСЂРѕРІ, СЃР±СЂРѕСЃ РЅР°СЃС‚СЂРѕРµРє, С‡РёСЃС‚Р°СЏ Р·Р°РіСЂСѓР·РєР°.">
 
   <link rel="stylesheet" href="../styles.css" />
   <link rel="stylesheet" href="../styles-header.css" />
@@ -13,25 +14,36 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <style>
     .guide-content { line-height: 1.7; color: var(--text); }
-    .guide-content h2 { color: var(--primary); margin-top: 30px; margin-bottom: 15px; font-size: 1.5rem; }
-    .guide-content h3 { color: var(--primary-dark); margin-top: 25px; margin-bottom: 12px; font-size: 1.2rem; }
+    .guide-content h2 { color: var(--primary); margin-top: 30px; margin-bottom: 15px; font-size: 1.6rem; }
+    .guide-content h3 { color: var(--primary-dark); margin-top: 25px; margin-bottom: 12px; font-size: 1.25rem; }
     .guide-image-block { margin: 20px 0; padding: 15px; background: var(--background); border-radius: var(--border-radius); border: 1px solid var(--border); text-align: center; }
     .guide-image-block img { max-width: 100%; height: auto; border-radius: 6px; border: 1px solid var(--border); }
     .image-caption { margin-top: 10px; font-size: 0.85rem; color: var(--text-light); font-style: italic; }
-    .pro-tips { background: rgba(3, 74, 79, 0.05); padding: 15px; border-radius: 6px; margin: 20px 0; }
-    .pro-tips h4 { color: var(--primary); margin-top: 0; margin-bottom: 12px; font-size: 1.1rem; }
-    .tip-item { display: flex; gap: 8px; margin-bottom: 8px; align-items: flex-start; }
+    .pro-tips { background: rgba(3, 74, 79, 0.05); padding: 18px; border-radius: 8px; margin: 25px 0; }
+    .pro-tips h4 { color: var(--primary); margin-top: 0; margin-bottom: 12px; font-size: 1.15rem; }
+    .tip-item { display: flex; gap: 10px; margin-bottom: 10px; align-items: flex-start; }
+    .tip-item i { margin-top: 3px; }
     table { width: 100%; border-collapse: collapse; margin: 20px 0; }
-    th, td { border: 1px solid var(--border); padding: 8px; text-align: left; }
+    th, td { border: 1px solid var(--border); padding: 8px; text-align: left; vertical-align: top; }
     th { background: var(--background-light); }
-    .highlight { background: #f5f7fa; border-left: 4px solid #2d9cdb; padding: 10px 15px; margin: 20px 0; }
-    .faq-section ul { margin-left: 1em; }
-    .block-section { margin-bottom: 2em; }
+    code { background: var(--background-light); padding: 2px 4px; border-radius: 4px; font-size: 0.9em; }
+    ul, ol { margin-left: 18px; }
     @media (max-width: 768px) {
       .guide-content h2 { font-size: 1.4rem; margin-top: 25px; }
+      .guide-content h3 { font-size: 1.15rem; }
       .guide-image-block { padding: 12px; margin: 15px 0; }
       table, th, td { font-size: 0.95rem; }
     }
+
+    /* РЇРЅРґРµРєСЃ РњР°СЂРєРµС‚ СЂРµРєР»Р°РјРЅС‹Р№ Р±Р°РЅРЅРµСЂ */
+    .ym-hero-link {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+      max-width: 100%;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
     /* Р“РѕСЂРёР·РѕРЅС‚Р°Р»СЊРЅС‹Р№ Р±Р°РЅРЅРµСЂ-РєР°СЂС‚РѕС‡РєР° */
     .ym-hero-banner {
       width: 100%;
@@ -107,587 +119,362 @@
     }
 
     /* Р РµР№С‚РёРЅРі */
-    .ym-hero-top {
+    .ym-hero-rating {
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      gap: 8px;
-    }
-
-    .ym-hero-rating {
-      font-size: 13px;
-      font-weight: 500;
-      color: #111827;
-      background: #f9fafb;
-      border-radius: 999px;
-      padding: 4px 10px;
-    }
-
-    .ym-hero-rating-count {
+      gap: 4px;
+      font-size: 12px;
       color: #6b7280;
     }
 
-    /* Р¤РёРѕР»РµС‚РѕРІР°СЏ РєРЅРѕРїРєР° */
-    .ym-hero-button {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 9px 16px;
-      border-radius: 999px;
-      border: none;
-      background: #6a00ff;
-      color: #ffffff;
-      font-size: 14px;
-      font-weight: 600;
-      cursor: pointer;
-      box-shadow: 0 2px 6px rgba(88, 28, 135, 0.35);
-      transition: background 0.15s ease, transform 0.15s ease,
-                  box-shadow 0.15s ease;
-    }
-    .ym-hero-button::after {
-      content: "в†’";
-      margin-left: 6px;
-      font-size: 14px;
-    }
-    .ym-hero-button:hover {
-      background: #7c3aed;
-      transform: translateY(-1px);
-      box-shadow: 0 4px 10px rgba(88, 28, 135, 0.45);
+    .ym-hero-stars {
+      display: flex;
+      gap: 1px;
     }
 
-    /* Р®СЂРёРґРёС‡РµСЃРєРёР№ Р±Р»РѕРє */
-    .ym-hero-legal {
-      margin-top: 6px;
-      max-width: 600px;
+    .ym-hero-star {
+      width: 12px;
+      height: 12px;
+      fill: #fbbf24;
+    }
+
+    .ym-hero-reviews {
       font-size: 11px;
-      line-height: 1.3;
-      color: #6b7280;
-      margin-left: auto;
-      margin-right: auto;
+      color: #9ca3af;
     }
 
-    /* РђРґР°РїС‚РёРІ */
-    @media (max-width: 480px) {
+    /* Р¦РµРЅР° */
+    .ym-hero-price {
+      font-size: 16px;
+      font-weight: 700;
+      color: #111827;
+      margin: 0;
+    }
+
+    /* РљРЅРѕРїРєР° */
+    .ym-hero-button {
+      background: #007bff;
+      color: #ffffff;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background 0.2s ease;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .ym-hero-button:hover {
+      background: #0056b3;
+    }
+
+    /* РђРґР°РїС‚РёРІРЅРѕСЃС‚СЊ */
+    @media (max-width: 768px) {
       .ym-hero-banner {
-        max-width: 100%;
-        margin: 20px 0;
+        flex-direction: row;
+        min-height: auto;
       }
+
       .ym-hero-images {
-        height: 100px;
+        width: 120px;
+        height: auto;
+        flex-shrink: 0;
       }
+
       .ym-hero-content {
-        padding: 12px 12px;
+        flex: 1;
+        padding: 12px 16px;
       }
+
       .ym-hero-title {
         font-size: 13px;
       }
+
+      .ym-hero-price {
+        font-size: 15px;
+      }
+
       .ym-hero-button {
-        font-size: 13px;
-        padding: 8px 14px;
-      }
-      .ym-hero-legal {
-        font-size: 10px;
-      }
-    }
-    /* Telegram СЂРµРєР»Р°РјРЅС‹Р№ Р±Р°РЅРЅРµСЂ */
-    .telegram-banner {
-      display: flex;
-      justify-content: center;
-      text-decoration: none;
-      color: inherit;
-      width: 100%;
-      margin: 40px 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    }
-
-    .telegram-banner-container {
-      width: 100%;
-      max-width: 500px;
-      min-height: 120px;
-      border-radius: 16px;
-      background: linear-gradient(135deg, #0088cc 0%, #005f8f 100%);
-      border: 1px solid #005f8f;
-      display: flex;
-      align-items: center;
-      padding: 20px;
-      box-shadow: 0 4px 16px rgba(0, 136, 204, 0.2);
-      overflow: hidden;
-      box-sizing: border-box;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-
-    .telegram-banner-container:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(0, 136, 204, 0.3);
-    }
-
-    .telegram-logo {
-      width: 60px;
-      height: 60px;
-      min-width: 60px;
-      background: #ffffff;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-right: 20px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    }
-
-    .telegram-logo svg {
-      width: 32px;
-      height: 32px;
-      fill: #0088cc;
-    }
-
-    .telegram-content {
-      flex: 1;
-      color: #ffffff;
-    }
-
-    .telegram-title {
-      font-size: 16px;
-      font-weight: 600;
-      margin: 0 0 8px 0;
-      line-height: 1.3;
-    }
-
-    .telegram-subtitle {
-      font-size: 14px;
-      opacity: 0.9;
-      margin: 0 0 12px 0;
-      line-height: 1.4;
-    }
-
-    .telegram-button {
-      display: inline-flex;
-      align-items: center;
-      padding: 8px 16px;
-      background: #ffffff;
-      color: #0088cc;
-      border-radius: 20px;
-      font-size: 14px;
-      font-weight: 600;
-      text-decoration: none;
-      transition: background 0.2s ease, transform 0.2s ease;
-    }
-
-    .telegram-button:hover {
-      background: #f0f8ff;
-      transform: scale(1.05);
-    }
-
-    .telegram-button svg {
-      width: 16px;
-      height: 16px;
-      margin-left: 6px;
-      fill: #0088cc;
-    }
-
-    /* РђРґР°РїС‚РёРІ РґР»СЏ РјРѕР±РёР»СЊРЅС‹С… */
-    @media (max-width: 480px) {
-      .telegram-banner-container {
-        max-width: 100%;
-        margin: 20px 0;
-        padding: 15px;
-        min-height: 100px;
-      }
-      .telegram-logo {
-        width: 50px;
-        height: 50px;
-        min-width: 50px;
-        margin-right: 15px;
-      }
-      .telegram-logo svg {
-        width: 26px;
-        height: 26px;
-      }
-      .telegram-title {
-        font-size: 14px;
-      }
-      .telegram-subtitle {
-        font-size: 12px;
-      }
-      .telegram-button {
-        font-size: 12px;
-        padding: 6px 12px;
+        padding: 6px 10px;
+        font-size: 11px;
       }
     }
 
-
-
+    /* РЎРєСЂС‹С‚С‹Р№ Р±Р°РЅРЅРµСЂ РґР»СЏ РґРµСЃРєС‚РѕРїР° */
+    @media (min-width: 769px) {
+      .ym-hero-link {
+        display: none !important;
+      }
+    }
   </style>
   <script async src="https://timeweb.cloud/api/v1/cloud-ai/agents/3cc03620-d051-4d8d-b5af-f7b6cd083a35/embed.js?collapsed=true"></script>
 </head>
 <body>
-  <header class="header">
-    <div class="container">
-      <div class="header__inner">
-        <a href="../index.html" class="logo">
-          <span class="logo__icon"></span>
-          <span class="logo__text">GeoExpert</span>
-        </a>
-        <nav class="nav">
-          <ul class="nav__list">
-            <li><a href="../cameras.html" class="nav__link">РљР°РјРµСЂС‹</a></li>
-            <li><a href="../drones.html" class="nav__link">Р”СЂРѕРЅС‹</a></li>
-            <li><a href="../workflow.html" class="nav__link">Workflow</a></li>
-          </ul>
-        </nav>
+  <header>
+    <div class="header-content">
+      <a href="/" class="logo">
+        <i class="fas fa-tools"></i>
+        FixTech
+      </a>
+      <nav class="nav-links">
+        <a href="/">Р“Р»Р°РІРЅР°СЏ</a>
+        <a href="/articles">Р’СЃРµ СЃС‚Р°С‚СЊРё</a>
+        <a href="/smartphones">РЎРјР°СЂС‚С„РѕРЅС‹</a>
+        <a href="/laptops">РќРѕСѓС‚Р±СѓРєРё</a>
+        <a href="/tv">РўРµР»РµРІРёР·РѕСЂС‹</a>
+        <a href="/cameras">РљР°РјРµСЂС‹</a>
+        <a href="/consoles">РљРѕРЅСЃРѕР»Рё</a>
+        <a href="/auto-electronics">РђРІС‚РѕСЌР»РµРєС‚СЂРѕРЅРёРєР°</a>
+        <a href="/small-appliances">РњРµР»РєР°СЏ С‚РµС…РЅРёРєР°</a>
+        <a href="/large-appliances">РљСЂСѓРїРЅР°СЏ С‚РµС…РЅРёРєР°</a>
+      </nav>
+      <div class="search-container">
+        <input type="text" id="search-input" placeholder="РџРѕРёСЃРє РїРѕ СЃР°Р№С‚Сѓ..." />
+        <button id="search-button"><i class="fas fa-search"></i></button>
       </div>
     </div>
   </header>
 
   <main class="guide-container">
     <div class="guide-content">
-      <h1>Windows 11 блокирует подключение смартфона через USB на ноутбуке</h1>
-      <p>Когда Windows 11 блокирует подключение смартфона через USB, это обычно связано с настройками безопасности, антивирусом или системными политиками. В этом экспертном мегагайде мы рассмотрим все возможные причины блокировки и предоставим пошаговые решения для восстановления доступа к смартфону через USB подключение.</p>
+      <h1>Windows 11 Р±Р»РѕРєРёСЂСѓРµС‚ РїРѕРґРєР»СЋС‡РµРЅРёРµ СЃРјР°СЂС‚С„РѕРЅР° С‡РµСЂРµР· USB РЅР° РЅРѕСѓС‚Р±СѓРєРµ</h1>
+      <p>РљРѕРіРґР° Windows 11 Р±Р»РѕРєРёСЂСѓРµС‚ РїРѕРґРєР»СЋС‡РµРЅРёРµ СЃРјР°СЂС‚С„РѕРЅР° С‡РµСЂРµР· USB, СЌС‚Рѕ РѕР±С‹С‡РЅРѕ СЃРІСЏР·Р°РЅРѕ СЃ РЅР°СЃС‚СЂРѕР№РєР°РјРё Р±РµР·РѕРїР°СЃРЅРѕСЃС‚Рё, Р°РЅС‚РёРІРёСЂСѓСЃРѕРј РёР»Рё СЃРёСЃС‚РµРјРЅС‹РјРё РїРѕР»РёС‚РёРєР°РјРё. Р’ СЌС‚РѕРј СЌРєСЃРїРµСЂС‚РЅРѕРј РјРµРіР°РіР°Р№РґРµ РјС‹ СЂР°СЃСЃРјРѕС‚СЂРёРј РІСЃРµ РІРѕР·РјРѕР¶РЅС‹Рµ РїСЂРёС‡РёРЅС‹ Р±Р»РѕРєРёСЂРѕРІРєРё Рё РїСЂРµРґРѕСЃС‚Р°РІРёРј РїРѕС€Р°РіРѕРІС‹Рµ СЂРµС€РµРЅРёСЏ РґР»СЏ РІРѕСЃСЃС‚Р°РЅРѕРІР»РµРЅРёСЏ РґРѕСЃС‚СѓРїР° Рє СЃРјР°СЂС‚С„РѕРЅСѓ С‡РµСЂРµР· USB РїРѕРґРєР»СЋС‡РµРЅРёРµ.</p>
 
-      <h2>Симптомы блокировки</h2>
+      <h2>РЎРёРјРїС‚РѕРјС‹ Р±Р»РѕРєРёСЂРѕРІРєРё</h2>
       <ul>
-        <li>Смартфон не определяется в проводнике</li>
-        <li>Ошибка "Доступ запрещен" при попытке подключения</li>
-        <li>Уведомление о заблокированном устройстве</li>
-        <li>Смартфон заряжается, но нет передачи данных</li>
-        <li>В диспетчере устройств устройство отключено</li>
+        <li>РЎРјР°СЂС‚С„РѕРЅ РЅРµ РѕРїСЂРµРґРµР»СЏРµС‚СЃСЏ РІ РїСЂРѕРІРѕРґРЅРёРєРµ</li>
+        <li>РћС€РёР±РєР° "Р”РѕСЃС‚СѓРї Р·Р°РїСЂРµС‰РµРЅ" РїСЂРё РїРѕРїС‹С‚РєРµ РїРѕРґРєР»СЋС‡РµРЅРёСЏ</li>
+        <li>РЈРІРµРґРѕРјР»РµРЅРёРµ Рѕ Р·Р°Р±Р»РѕРєРёСЂРѕРІР°РЅРЅРѕРј СѓСЃС‚СЂРѕР№СЃС‚РІРµ</li>
+        <li>РЎРјР°СЂС‚С„РѕРЅ Р·Р°СЂСЏР¶Р°РµС‚СЃСЏ, РЅРѕ РЅРµС‚ РїРµСЂРµРґР°С‡Рё РґР°РЅРЅС‹С…</li>
+        <li>Р’ РґРёСЃРїРµС‚С‡РµСЂРµ СѓСЃС‚СЂРѕР№СЃС‚РІ СѓСЃС‚СЂРѕР№СЃС‚РІРѕ РѕС‚РєР»СЋС‡РµРЅРѕ</li>
       </ul>
 
-      <h2>Возможные причины блокировки</h2>
+      <h2>Р’РѕР·РјРѕР¶РЅС‹Рµ РїСЂРёС‡РёРЅС‹ Р±Р»РѕРєРёСЂРѕРІРєРё</h2>
       <table>
         <tr>
-          <th>Причина</th>
-          <th>Вероятность</th>
-          <th>Характерные признаки</th>
+          <th>РџСЂРёС‡РёРЅР°</th>
+          <th>Р’РµСЂРѕСЏС‚РЅРѕСЃС‚СЊ</th>
+          <th>РҐР°СЂР°РєС‚РµСЂРЅС‹Рµ РїСЂРёР·РЅР°РєРё</th>
         </tr>
         <tr>
-          <td>Антивирус блокирует устройство</td>
+          <td>РђРЅС‚РёРІРёСЂСѓСЃ Р±Р»РѕРєРёСЂСѓРµС‚ СѓСЃС‚СЂРѕР№СЃС‚РІРѕ</td>
           <td>40%</td>
-          <td>Работает при отключении антивируса</td>
+          <td>Р Р°Р±РѕС‚Р°РµС‚ РїСЂРё РѕС‚РєР»СЋС‡РµРЅРёРё Р°РЅС‚РёРІРёСЂСѓСЃР°</td>
         </tr>
         <tr>
           <td>Windows Defender Security</td>
           <td>30%</td>
-          <td>Встроенная защита Windows</td>
+          <td>Р’СЃС‚СЂРѕРµРЅРЅР°СЏ Р·Р°С‰РёС‚Р° Windows</td>
         </tr>
         <tr>
-          <td>Политики безопасности</td>
+          <td>РџРѕР»РёС‚РёРєРё Р±РµР·РѕРїР°СЃРЅРѕСЃС‚Рё</td>
           <td>15%</td>
-          <td>Корпоративные настройки</td>
+          <td>РљРѕСЂРїРѕСЂР°С‚РёРІРЅС‹Рµ РЅР°СЃС‚СЂРѕР№РєРё</td>
         </tr>
         <tr>
-          <td>Брандмауэр блокирует подключение</td>
+          <td>Р‘СЂР°РЅРґРјР°СѓСЌСЂ Р±Р»РѕРєРёСЂСѓРµС‚ РїРѕРґРєР»СЋС‡РµРЅРёРµ</td>
           <td>10%</td>
-          <td>Правила фаервола</td>
+          <td>РџСЂР°РІРёР»Р° С„Р°РµСЂРІРѕР»Р°</td>
         </tr>
         <tr>
-          <td>Настройки USB безопасности</td>
+          <td>РќР°СЃС‚СЂРѕР№РєРё USB Р±РµР·РѕРїР°СЃРЅРѕСЃС‚Рё</td>
           <td>3%</td>
-          <td>BIOS/UEFI настройки</td>
+          <td>BIOS/UEFI РЅР°СЃС‚СЂРѕР№РєРё</td>
         </tr>
         <tr>
-          <td>Поврежденные системные файлы</td>
+          <td>РџРѕРІСЂРµР¶РґРµРЅРЅС‹Рµ СЃРёСЃС‚РµРјРЅС‹Рµ С„Р°Р№Р»С‹</td>
           <td>2%</td>
-          <td>Требуется восстановление</td>
+          <td>РўСЂРµР±СѓРµС‚СЃСЏ РІРѕСЃСЃС‚Р°РЅРѕРІР»РµРЅРёРµ</td>
         </tr>
       </table>
 
-      <h2>Диагностика проблемы</h2>
-      <h3>Проверка в диспетчере устройств</h3>
+      <h2>Р”РёР°РіРЅРѕСЃС‚РёРєР° РїСЂРѕР±Р»РµРјС‹</h2>
+      <h3>РџСЂРѕРІРµСЂРєР° РІ РґРёСЃРїРµС‚С‡РµСЂРµ СѓСЃС‚СЂРѕР№СЃС‚РІ</h3>
       <ol>
-        <li>Win + X > Диспетчер устройств</li>
-        <li>Разверните раздел "Портативные устройства"</li>
-        <li>Ищите смартфон с желтым восклицательным знаком</li>
-        <li>Щелкните правой кнопкой > "Свойства"</li>
-        <li>Посмотрите код ошибки на вкладке "Общие"</li>
+        <li>Win + X в†’ Р”РёСЃРїРµС‚С‡РµСЂ СѓСЃС‚СЂРѕР№СЃС‚РІ</li>
+        <li>Р Р°Р·РІРµСЂРЅРёС‚Рµ СЂР°Р·РґРµР» "РџРѕСЂС‚Р°С‚РёРІРЅС‹Рµ СѓСЃС‚СЂРѕР№СЃС‚РІР°"</li>
+        <li>РС‰РёС‚Рµ СЃРјР°СЂС‚С„РѕРЅ СЃ Р¶РµР»С‚С‹Рј РІРѕСЃРєР»РёС†Р°С‚РµР»СЊРЅС‹Рј Р·РЅР°РєРѕРј</li>
+        <li>Р©РµР»РєРЅРёС‚Рµ РїСЂР°РІРѕР№ РєРЅРѕРїРєРѕР№ в†’ "РЎРІРѕР№СЃС‚РІР°"</li>
+        <li>РџРѕСЃРјРѕС‚СЂРёС‚Рµ РєРѕРґ РѕС€РёР±РєРё РЅР° РІРєР»Р°РґРєРµ "РћР±С‰РёРµ"</li>
       </ol>
 
-      <h3>Проверка уведомлений безопасности</h3>
+      <h3>РџСЂРѕРІРµСЂРєР° СѓРІРµРґРѕРјР»РµРЅРёР№ Р±РµР·РѕРїР°СЃРЅРѕСЃС‚Рё</h3>
       <ol>
-        <li>Центр уведомлений (Win + N)</li>
-        <li>Ищите сообщения о заблокированных устройствах</li>
-        <li>Нажмите "Разрешить" если есть такая опция</li>
+        <li>Р¦РµРЅС‚СЂ СѓРІРµРґРѕРјР»РµРЅРёР№ (Win + N)</li>
+        <li>РС‰РёС‚Рµ СЃРѕРѕР±С‰РµРЅРёСЏ Рѕ Р·Р°Р±Р»РѕРєРёСЂРѕРІР°РЅРЅС‹С… СѓСЃС‚СЂРѕР№СЃС‚РІР°С…</li>
+        <li>РќР°Р¶РјРёС‚Рµ "Р Р°Р·СЂРµС€РёС‚СЊ" РµСЃР»Рё РµСЃС‚СЊ С‚Р°РєР°СЏ РѕРїС†РёСЏ</li>
       </ol>
 
-      <h2>Решение 1: Отключение Windows Defender</h2>
-      <h3>Временное отключение защиты</h3>
+      <h2>Р РµС€РµРЅРёРµ 1: РћС‚РєР»СЋС‡РµРЅРёРµ Windows Defender</h2>
+      <h3>Р’СЂРµРјРµРЅРЅРѕРµ РѕС‚РєР»СЋС‡РµРЅРёРµ Р·Р°С‰РёС‚С‹</h3>
       <ol>
-        <li>Параметры > Обновление и безопасность > Защита от вирусов и угроз</li>
-        <li>Управление параметрами > Выключить защиту в реальном времени</li>
-        <li>Подключите смартфон</li>
-        <li>Если работает, настройте исключения</li>
+        <li>РџР°СЂР°РјРµС‚СЂС‹ в†’ РћР±РЅРѕРІР»РµРЅРёРµ Рё Р±РµР·РѕРїР°СЃРЅРѕСЃС‚СЊ в†’ Р—Р°С‰РёС‚Р° РѕС‚ РІРёСЂСѓСЃРѕРІ Рё СѓРіСЂРѕР·</li>
+        <li>РЈРїСЂР°РІР»РµРЅРёРµ РїР°СЂР°РјРµС‚СЂР°РјРё в†’ Р’С‹РєР»СЋС‡РёС‚СЊ Р·Р°С‰РёС‚Сѓ РІ СЂРµР°Р»СЊРЅРѕРј РІСЂРµРјРµРЅРё</li>
+        <li>РџРѕРґРєР»СЋС‡РёС‚Рµ СЃРјР°СЂС‚С„РѕРЅ</li>
+        <li>Р•СЃР»Рё СЂР°Р±РѕС‚Р°РµС‚, РЅР°СЃС‚СЂРѕР№С‚Рµ РёСЃРєР»СЋС‡РµРЅРёСЏ</li>
       </ol>
 
-      <h3>Добавление исключений</h3>
+      <h3>Р”РѕР±Р°РІР»РµРЅРёРµ РёСЃРєР»СЋС‡РµРЅРёР№</h3>
       <ol>
-        <li>В разделе "Защита от вирусов и угроз"</li>
-        <li>Нажмите "Управление исключениями"</li>
-        <li>Добавьте папку смартфона или весь диск</li>
-        <li>Добавьте процесс проводника или Total Commander</li>
+        <li>Р’ СЂР°Р·РґРµР»Рµ "Р—Р°С‰РёС‚Р° РѕС‚ РІРёСЂСѓСЃРѕРІ Рё СѓРіСЂРѕР·"</li>
+        <li>РќР°Р¶РјРёС‚Рµ "РЈРїСЂР°РІР»РµРЅРёРµ РёСЃРєР»СЋС‡РµРЅРёСЏРјРё"</li>
+        <li>Р”РѕР±Р°РІСЊС‚Рµ РїР°РїРєСѓ СЃРјР°СЂС‚С„РѕРЅР° РёР»Рё РІРµСЃСЊ РґРёСЃРє</li>
+        <li>Р”РѕР±Р°РІСЊС‚Рµ РїСЂРѕС†РµСЃСЃ РїСЂРѕРІРѕРґРЅРёРєР° РёР»Рё Total Commander</li>
       </ol>
 
-      <h2>Решение 2: Настройка антивируса</h2>
-      <h3>Временное отключение</h3>
+      <h2>Р РµС€РµРЅРёРµ 2: РќР°СЃС‚СЂРѕР№РєР° Р°РЅС‚РёРІРёСЂСѓСЃР°</h2>
+      <h3>Р’СЂРµРјРµРЅРЅРѕРµ РѕС‚РєР»СЋС‡РµРЅРёРµ</h3>
       <ol>
-        <li>Откройте интерфейс антивируса</li>
-        <li>Найдите опцию отключения защиты</li>
-        <li>Выберите временное отключение (10-15 минут)</li>
-        <li>Подключите смартфон и протестируйте</li>
+        <li>РћС‚РєСЂРѕР№С‚Рµ РёРЅС‚РµСЂС„РµР№СЃ Р°РЅС‚РёРІРёСЂСѓСЃР°</li>
+        <li>РќР°Р№РґРёС‚Рµ РѕРїС†РёСЋ РѕС‚РєР»СЋС‡РµРЅРёСЏ Р·Р°С‰РёС‚С‹</li>
+        <li>Р’С‹Р±РµСЂРёС‚Рµ РІСЂРµРјРµРЅРЅРѕРµ РѕС‚РєР»СЋС‡РµРЅРёРµ (10-15 РјРёРЅСѓС‚)</li>
+        <li>РџРѕРґРєР»СЋС‡РёС‚Рµ СЃРјР°СЂС‚С„РѕРЅ Рё РїСЂРѕС‚РµСЃС‚РёСЂСѓР№С‚Рµ</li>
       </ol>
 
-      <h3>Настройка исключений</h3>
+      <h3>РќР°СЃС‚СЂРѕР№РєР° РёСЃРєР»СЋС‡РµРЅРёР№</h3>
       <ul>
-        <li>Добавьте VID/PID смартфона в исключения</li>
-        <li>Исключите USB порты от сканирования</li>
-        <li>Отключите USB защиту в настройках антивируса</li>
+        <li>Р”РѕР±Р°РІСЊС‚Рµ VID/PID СЃРјР°СЂС‚С„РѕРЅР° РІ РёСЃРєР»СЋС‡РµРЅРёСЏ</li>
+        <li>РСЃРєР»СЋС‡РёС‚Рµ USB РїРѕСЂС‚С‹ РѕС‚ СЃРєР°РЅРёСЂРѕРІР°РЅРёСЏ</li>
+        <li>РћС‚РєР»СЋС‡РёС‚Рµ USB Р·Р°С‰РёС‚Сѓ РІ РЅР°СЃС‚СЂРѕР№РєР°С… Р°РЅС‚РёРІРёСЂСѓСЃР°</li>
       </ul>
 
-      <h2>Решение 3: Настройка брандмауэра</h2>
-      <h3>Отключение брандмауэра</h3>
+      <h2>Р РµС€РµРЅРёРµ 3: РќР°СЃС‚СЂРѕР№РєР° Р±СЂР°РЅРґРјР°СѓСЌСЂР°</h2>
+      <h3>РћС‚РєР»СЋС‡РµРЅРёРµ Р±СЂР°РЅРґРјР°СѓСЌСЂР°</h3>
       <ol>
-        <li>Параметры > Обновление и безопасность > Защита от вирусов и угроз</li>
-        <li>Управление параметрами > Брандмауэр и защита сети</li>
-        <li>Отключите брандмауэр для частной и общественной сети</li>
+        <li>РџР°СЂР°РјРµС‚СЂС‹ в†’ РћР±РЅРѕРІР»РµРЅРёРµ Рё Р±РµР·РѕРїР°СЃРЅРѕСЃС‚СЊ в†’ Р—Р°С‰РёС‚Р° РѕС‚ РІРёСЂСѓСЃРѕРІ Рё СѓРіСЂРѕР·</li>
+        <li>РЈРїСЂР°РІР»РµРЅРёРµ РїР°СЂР°РјРµС‚СЂР°РјРё в†’ Р‘СЂР°РЅРґРјР°СѓСЌСЂ Рё Р·Р°С‰РёС‚Р° СЃРµС‚Рё</li>
+        <li>РћС‚РєР»СЋС‡РёС‚Рµ Р±СЂР°РЅРґРјР°СѓСЌСЂ РґР»СЏ С‡Р°СЃС‚РЅРѕР№ Рё РѕР±С‰РµСЃС‚РІРµРЅРЅРѕР№ СЃРµС‚Рё</li>
       </ol>
 
-      <h3>Создание правила разрешения</h3>
+      <h3>РЎРѕР·РґР°РЅРёРµ РїСЂР°РІРёР»Р° СЂР°Р·СЂРµС€РµРЅРёСЏ</h3>
       <ol>
-        <li>Win + R > wf.msc</li>
-        <li>Действующие правила > Исходящие правила</li>
-        <li>Создать правило > Для программы</li>
-        <li>Выберите проводник или приложение для работы со смартфоном</li>
-        <li>Разрешить подключение</li>
+        <li>Win + R в†’ wf.msc</li>
+        <li>Р”РµР№СЃС‚РІСѓСЋС‰РёРµ РїСЂР°РІРёР»Р° в†’ РСЃС…РѕРґСЏС‰РёРµ РїСЂР°РІРёР»Р°</li>
+        <li>РЎРѕР·РґР°С‚СЊ РїСЂР°РІРёР»Рѕ в†’ Р”Р»СЏ РїСЂРѕРіСЂР°РјРјС‹</li>
+        <li>Р’С‹Р±РµСЂРёС‚Рµ РїСЂРѕРІРѕРґРЅРёРє РёР»Рё РїСЂРёР»РѕР¶РµРЅРёРµ РґР»СЏ СЂР°Р±РѕС‚С‹ СЃРѕ СЃРјР°СЂС‚С„РѕРЅРѕРј</li>
+        <li>Р Р°Р·СЂРµС€РёС‚СЊ РїРѕРґРєР»СЋС‡РµРЅРёРµ</li>
       </ol>
 
-      <h2>Решение 4: Сброс политик безопасности</h2>
-      <h3>Сброс групповых политик</h3>
+      <h2>Р РµС€РµРЅРёРµ 4: РЎР±СЂРѕСЃ РїРѕР»РёС‚РёРє Р±РµР·РѕРїР°СЃРЅРѕСЃС‚Рё</h2>
+      <h3>РЎР±СЂРѕСЃ РіСЂСѓРїРїРѕРІС‹С… РїРѕР»РёС‚РёРє</h3>
       <code>gpupdate /force</code>
 
-      <h3>Проверка локальных политик</h3>
+      <h3>РџСЂРѕРІРµСЂРєР° Р»РѕРєР°Р»СЊРЅС‹С… РїРѕР»РёС‚РёРє</h3>
       <ol>
-        <li>Win + R > gpedit.msc</li>
-        <li>Конфигурация компьютера > Административные шаблоны</li>
-        <li>Система > Установка устройства > Ограничения на установку устройства</li>
-        <li>Убедитесь, что политики не блокируют USB устройства</li>
+        <li>Win + R в†’ gpedit.msc</li>
+        <li>РљРѕРЅС„РёРіСѓСЂР°С†РёСЏ РєРѕРјРїСЊСЋС‚РµСЂР° в†’ РђРґРјРёРЅРёСЃС‚СЂР°С‚РёРІРЅС‹Рµ С€Р°Р±Р»РѕРЅС‹</li>
+        <li>РЎРёСЃС‚РµРјР° в†’ РЈСЃС‚Р°РЅРѕРІРєР° СѓСЃС‚СЂРѕР№СЃС‚РІР° в†’ РћРіСЂР°РЅРёС‡РµРЅРёСЏ РЅР° СѓСЃС‚Р°РЅРѕРІРєСѓ СѓСЃС‚СЂРѕР№СЃС‚РІР°</li>
+        <li>РЈР±РµРґРёС‚РµСЃСЊ, С‡С‚Рѕ РїРѕР»РёС‚РёРєРё РЅРµ Р±Р»РѕРєРёСЂСѓСЋС‚ USB СѓСЃС‚СЂРѕР№СЃС‚РІР°</li>
       </ol>
 
-      <h2>Решение 5: Настройки USB безопасности</h2>
-      <h3>В BIOS/UEFI</h3>
+      <h2>Р РµС€РµРЅРёРµ 5: РќР°СЃС‚СЂРѕР№РєРё USB Р±РµР·РѕРїР°СЃРЅРѕСЃС‚Рё</h2>
+      <h3>Р’ BIOS/UEFI</h3>
       <ol>
-        <li>Перезагрузите ноутбук и войдите в BIOS</li>
-        <li>Найдите раздел Security или USB Configuration</li>
-        <li>Отключите USB Port Security или подобные опции</li>
-        <li>Сохраните изменения</li>
+        <li>РџРµСЂРµР·Р°РіСЂСѓР·РёС‚Рµ РЅРѕСѓС‚Р±СѓРє Рё РІРѕР№РґРёС‚Рµ РІ BIOS</li>
+        <li>РќР°Р№РґРёС‚Рµ СЂР°Р·РґРµР» Security РёР»Рё USB Configuration</li>
+        <li>РћС‚РєР»СЋС‡РёС‚Рµ USB Port Security РёР»Рё РїРѕРґРѕР±РЅС‹Рµ РѕРїС†РёРё</li>
+        <li>РЎРѕС…СЂР°РЅРёС‚Рµ РёР·РјРµРЅРµРЅРёСЏ</li>
       </ol>
 
-      <h3>В реестре (осторожно)</h3>
+      <h3>Р’ СЂРµРµСЃС‚СЂРµ (РѕСЃС‚РѕСЂРѕР¶РЅРѕ)</h3>
       <ol>
-        <li>Win + R > regedit</li>
+        <li>Win + R в†’ regedit</li>
         <li>HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\usbflags</li>
-        <li>Удалите ключи устройств (сделайте резервную копию)</li>
+        <li>РЈРґР°Р»РёС‚Рµ РєР»СЋС‡Рё СѓСЃС‚СЂРѕР№СЃС‚РІ (СЃРґРµР»Р°Р№С‚Рµ СЂРµР·РµСЂРІРЅСѓСЋ РєРѕРїРёСЋ)</li>
       </ol>
 
-      <h2>Решение 6: Восстановление системы</h2>
-      <h3>Точка восстановления</h3>
+      <h2>Р РµС€РµРЅРёРµ 6: Р’РѕСЃСЃС‚Р°РЅРѕРІР»РµРЅРёРµ СЃРёСЃС‚РµРјС‹</h2>
+      <h3>РўРѕС‡РєР° РІРѕСЃСЃС‚Р°РЅРѕРІР»РµРЅРёСЏ</h3>
       <ol>
-        <li>Параметры > Система > Восстановление</li>
-        <li>Вернуть компьютер в исходное состояние</li>
-        <li>Сохранить мои файлы</li>
+        <li>РџР°СЂР°РјРµС‚СЂС‹ в†’ РЎРёСЃС‚РµРјР° в†’ Р’РѕСЃСЃС‚Р°РЅРѕРІР»РµРЅРёРµ</li>
+        <li>Р’РµСЂРЅСѓС‚СЊ РєРѕРјРїСЊСЋС‚РµСЂ РІ РёСЃС…РѕРґРЅРѕРµ СЃРѕСЃС‚РѕСЏРЅРёРµ</li>
+        <li>РЎРѕС…СЂР°РЅРёС‚СЊ РјРѕРё С„Р°Р№Р»С‹</li>
       </ol>
 
-      <h3>Сброс Windows Security</h3>
+      <h3>РЎР±СЂРѕСЃ Windows Security</h3>
       <ol>
-        <li>Параметры > Конфиденциальность и безопасность</li>
-        <li>Устройства > Разрешить приложениям доступ к устройствам</li>
-        <li>Включите доступ для нужных приложений</li>
+        <li>РџР°СЂР°РјРµС‚СЂС‹ в†’ РљРѕРЅС„РёРґРµРЅС†РёР°Р»СЊРЅРѕСЃС‚СЊ Рё Р±РµР·РѕРїР°СЃРЅРѕСЃС‚СЊ</li>
+        <li>РЈСЃС‚СЂРѕР№СЃС‚РІР° в†’ Р Р°Р·СЂРµС€РёС‚СЊ РїСЂРёР»РѕР¶РµРЅРёСЏРј РґРѕСЃС‚СѓРї Рє СѓСЃС‚СЂРѕР№СЃС‚РІР°Рј</li>
+        <li>Р’РєР»СЋС‡РёС‚Рµ РґРѕСЃС‚СѓРї РґР»СЏ РЅСѓР¶РЅС‹С… РїСЂРёР»РѕР¶РµРЅРёР№</li>
       </ol>
 
       <div class="pro-tips">
-        <h4><i class="fas fa-lightbulb"></i> Профессиональные рекомендации</h4>
+        <h4><i class="fas fa-lightbulb"></i> РџСЂРѕС„РµСЃСЃРёРѕРЅР°Р»СЊРЅС‹Рµ СЂРµРєРѕРјРµРЅРґР°С†РёРё</h4>
         <div class="tip-item">
           <i class="fas fa-shield-alt"></i>
-          <span>После решения проблемы настройте исключения в антивирусе, не отключайте защиту полностью</span>
+          <span>РџРѕСЃР»Рµ СЂРµС€РµРЅРёСЏ РїСЂРѕР±Р»РµРјС‹ РЅР°СЃС‚СЂРѕР№С‚Рµ РёСЃРєР»СЋС‡РµРЅРёСЏ РІ Р°РЅС‚РёРІРёСЂСѓСЃРµ, РЅРµ РѕС‚РєР»СЋС‡Р°Р№С‚Рµ Р·Р°С‰РёС‚Сѓ РїРѕР»РЅРѕСЃС‚СЊСЋ</span>
         </div>
         <div class="tip-item">
           <i class="fas fa-mobile-alt"></i>
-          <span>Используйте оригинальный кабель смартфона для надежного подключения</span>
+          <span>РСЃРїРѕР»СЊР·СѓР№С‚Рµ РѕСЂРёРіРёРЅР°Р»СЊРЅС‹Р№ РєР°Р±РµР»СЊ СЃРјР°СЂС‚С„РѕРЅР° РґР»СЏ РЅР°РґРµР¶РЅРѕРіРѕ РїРѕРґРєР»СЋС‡РµРЅРёСЏ</span>
         </div>
         <div class="tip-item">
           <i class="fas fa-tools"></i>
-          <span>Создайте правило в брандмауэре для постоянного разрешения подключения</span>
+          <span>РЎРѕР·РґР°Р№С‚Рµ РїСЂР°РІРёР»Рѕ РІ Р±СЂР°РЅРґРјР°СѓСЌСЂРµ РґР»СЏ РїРѕСЃС‚РѕСЏРЅРЅРѕРіРѕ СЂР°Р·СЂРµС€РµРЅРёСЏ РїРѕРґРєР»СЋС‡РµРЅРёСЏ</span>
         </div>
         <div class="tip-item">
           <i class="fas fa-keyboard"></i>
-          <span>Для корпоративных ноутбуков обратитесь к системному администратору</span>
+          <span>Р”Р»СЏ РєРѕСЂРїРѕСЂР°С‚РёРІРЅС‹С… РЅРѕСѓС‚Р±СѓРєРѕРІ РѕР±СЂР°С‚РёС‚РµСЃСЊ Рє СЃРёСЃС‚РµРјРЅРѕРјСѓ Р°РґРјРёРЅРёСЃС‚СЂР°С‚РѕСЂСѓ</span>
         </div>
       </div>
 
-      <h2>Расширенные решения</h2>
-      <h3>Чистая загрузка Windows</h3>
+      <h2>Р Р°СЃС€РёСЂРµРЅРЅС‹Рµ СЂРµС€РµРЅРёСЏ</h2>
+      <h3>Р§РёСЃС‚Р°СЏ Р·Р°РіСЂСѓР·РєР° Windows</h3>
       <ol>
-        <li>Win + R > msconfig</li>
-        <li>Вкладка "Службы" > "Не загружать службы Майкрософт"</li>
-        <li>Вкладка "Автозагрузка" > "Отключить все"</li>
-        <li>Перезагрузите и проверьте подключение</li>
+        <li>Win + R в†’ msconfig</li>
+        <li>Р’РєР»Р°РґРєР° "РЎР»СѓР¶Р±С‹" в†’ "РќРµ Р·Р°РіСЂСѓР¶Р°С‚СЊ СЃР»СѓР¶Р±С‹ РњР°Р№РєСЂРѕСЃРѕС„С‚"</li>
+        <li>Р’РєР»Р°РґРєР° "РђРІС‚РѕР·Р°РіСЂСѓР·РєР°" в†’ "РћС‚РєР»СЋС‡РёС‚СЊ РІСЃРµ"</li>
+        <li>РџРµСЂРµР·Р°РіСЂСѓР·РёС‚Рµ Рё РїСЂРѕРІРµСЂСЊС‚Рµ РїРѕРґРєР»СЋС‡РµРЅРёРµ</li>
       </ol>
 
-      <h3>Использование командной строки</h3>
+      <h3>РСЃРїРѕР»СЊР·РѕРІР°РЅРёРµ РєРѕРјР°РЅРґРЅРѕР№ СЃС‚СЂРѕРєРё</h3>
       <code>
 sc config mpssvc start= disabled
 sc stop mpssvc
       </code>
-      <p>Отключает Защитник Windows (временно)</p>
+      <p>РћС‚РєР»СЋС‡Р°РµС‚ Р—Р°С‰РёС‚РЅРёРє Windows (РІСЂРµРјРµРЅРЅРѕ)</p>
 
-      <h3>Сброс настроек Windows Security</h3>
+      <h3>РЎР±СЂРѕСЃ РЅР°СЃС‚СЂРѕРµРє Windows Security</h3>
       <code>Get-AppxPackage Microsoft.SecHealthUI -AllUsers | Reset-AppxPackage</code>
-      <p>Выполните в PowerShell от имени администратора</p>
+      <p>Р’С‹РїРѕР»РЅРёС‚Рµ РІ PowerShell РѕС‚ РёРјРµРЅРё Р°РґРјРёРЅРёСЃС‚СЂР°С‚РѕСЂР°</p>
 
-      <h2>Частые вопросы</h2>
-      <h3>Почему Windows 11 блокирует мой смартфон?</h3>
-      <p>Windows 11 имеет усиленную защиту от вредоносных USB устройств. Иногда система ошибочно принимает смартфон за угрозу.</p>
+      <h2>Р§Р°СЃС‚С‹Рµ РІРѕРїСЂРѕСЃС‹</h2>
+      <h3>РџРѕС‡РµРјСѓ Windows 11 Р±Р»РѕРєРёСЂСѓРµС‚ РјРѕР№ СЃРјР°СЂС‚С„РѕРЅ?</h3>
+      <p>Windows 11 РёРјРµРµС‚ СѓСЃРёР»РµРЅРЅСѓСЋ Р·Р°С‰РёС‚Сѓ РѕС‚ РІСЂРµРґРѕРЅРѕСЃРЅС‹С… USB СѓСЃС‚СЂРѕР№СЃС‚РІ. РРЅРѕРіРґР° СЃРёСЃС‚РµРјР° РѕС€РёР±РѕС‡РЅРѕ РїСЂРёРЅРёРјР°РµС‚ СЃРјР°СЂС‚С„РѕРЅ Р·Р° СѓРіСЂРѕР·Сѓ.</p>
 
-      <h3>Можно ли навсегда отключить блокировку?</h3>
-      <p>Да, настроив исключения в антивирусе и брандмауэре. Но это снижает безопасность системы.</p>
+      <h3>РњРѕР¶РЅРѕ Р»Рё РЅР°РІСЃРµРіРґР° РѕС‚РєР»СЋС‡РёС‚СЊ Р±Р»РѕРєРёСЂРѕРІРєСѓ?</h3>
+      <p>Р”Р°, РЅР°СЃС‚СЂРѕРёРІ РёСЃРєР»СЋС‡РµРЅРёСЏ РІ Р°РЅС‚РёРІРёСЂСѓСЃРµ Рё Р±СЂР°РЅРґРјР°СѓСЌСЂРµ. РќРѕ СЌС‚Рѕ СЃРЅРёР¶Р°РµС‚ Р±РµР·РѕРїР°СЃРЅРѕСЃС‚СЊ СЃРёСЃС‚РµРјС‹.</p>
 
-      <h3>Что делать, если проблема только с определенным смартфоном?</h3>
-      <p>Проверьте настройки смартфона, сбросьте подключения USB, попробуйте другой USB порт или кабель.</p>
+      <h3>Р§С‚Рѕ РґРµР»Р°С‚СЊ, РµСЃР»Рё РїСЂРѕР±Р»РµРјР° С‚РѕР»СЊРєРѕ СЃ РѕРїСЂРµРґРµР»РµРЅРЅС‹Рј СЃРјР°СЂС‚С„РѕРЅРѕРј?</h3>
+      <p>РџСЂРѕРІРµСЂСЊС‚Рµ РЅР°СЃС‚СЂРѕР№РєРё СЃРјР°СЂС‚С„РѕРЅР°, СЃР±СЂРѕСЃСЊС‚Рµ РїРѕРґРєР»СЋС‡РµРЅРёСЏ USB, РїРѕРїСЂРѕР±СѓР№С‚Рµ РґСЂСѓРіРѕР№ USB РїРѕСЂС‚ РёР»Рё РєР°Р±РµР»СЊ.</p>
 
-      <h2>Когда нужна помощь специалиста</h2>
+      <h2>РљРѕРіРґР° РЅСѓР¶РЅР° РїРѕРјРѕС‰СЊ СЃРїРµС†РёР°Р»РёСЃС‚Р°</h2>
       <ul>
-        <li>Проблема на корпоративном ноутбуке с политиками безопасности</li>
-        <li>Все решения не помогли</li>
-        <li>Необходимо сохранить высокий уровень безопасности</li>
-        <li>Проблема затрагивает несколько устройств</li>
+        <li>РџСЂРѕР±Р»РµРјР° РЅР° РєРѕСЂРїРѕСЂР°С‚РёРІРЅРѕРј РЅРѕСѓС‚Р±СѓРєРµ СЃ РїРѕР»РёС‚РёРєР°РјРё Р±РµР·РѕРїР°СЃРЅРѕСЃС‚Рё</li>
+        <li>Р’СЃРµ СЂРµС€РµРЅРёСЏ РЅРµ РїРѕРјРѕРіР»Рё</li>
+        <li>РќРµРѕР±С…РѕРґРёРјРѕ СЃРѕС…СЂР°РЅРёС‚СЊ РІС‹СЃРѕРєРёР№ СѓСЂРѕРІРµРЅСЊ Р±РµР·РѕРїР°СЃРЅРѕСЃС‚Рё</li>
+        <li>РџСЂРѕР±Р»РµРјР° Р·Р°С‚СЂР°РіРёРІР°РµС‚ РЅРµСЃРєРѕР»СЊРєРѕ СѓСЃС‚СЂРѕР№СЃС‚РІ</li>
       </ul>
 
-      <p>В большинстве случаев проблема решается отключением защиты или настройкой исключений. Начните с временного отключения антивируса и проверьте работу, затем настройте постоянные исключения.</p>
+      <p>Р’ Р±РѕР»СЊС€РёРЅСЃС‚РІРµ СЃР»СѓС‡Р°РµРІ РїСЂРѕР±Р»РµРјР° СЂРµС€Р°РµС‚СЃСЏ РѕС‚РєР»СЋС‡РµРЅРёРµРј Р·Р°С‰РёС‚С‹ РёР»Рё РЅР°СЃС‚СЂРѕР№РєРѕР№ РёСЃРєР»СЋС‡РµРЅРёР№. РќР°С‡РЅРёС‚Рµ СЃ РІСЂРµРјРµРЅРЅРѕРіРѕ РѕС‚РєР»СЋС‡РµРЅРёСЏ Р°РЅС‚РёРІРёСЂСѓСЃР° Рё РїСЂРѕРІРµСЂСЊС‚Рµ СЂР°Р±РѕС‚Сѓ, Р·Р°С‚РµРј РЅР°СЃС‚СЂРѕР№С‚Рµ РїРѕСЃС‚РѕСЏРЅРЅС‹Рµ РёСЃРєР»СЋС‡РµРЅРёСЏ.</p>
     </div>
   </main>
 
-      <footer class="footer">
-        <div class="container">
-            <div class="footer__grid">
-                <div class="footer__col footer__col--logo">
-                    <a href="../index.html" class="footer-logo">
-                        <span class="logo__icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M12 15L7 10H17L12 15Z" fill="currentColor"/>
-                                <path d="M12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3ZM12 19C8.13401 19 5 15.866 5 12C5 8.13401 8.13401 5 12 5C15.866 5 19 8.13401 19 12C19 15.866 15.866 19 12 19Z" fill="currentColor"/>
-                            </svg>
-                        </span>
-                        <span class="logo__text">Repairo</span>
-                    </a>
-                    <p class="footer__text">Помогаем ремонтировать электронику с 2024 года</p>
-                </div>
-                <div class="footer__col">
-                    <h3 class="footer__title">Разделы</h3>
-                    <ul class="footer__links">
-                        <li><a href="../index.html" class="footer__link">Главная</a></li>
-                        <li><a href="../index.html#categories" class="footer__link">Все гайды</a></li>
-                        <li><a href="../contacts.html" class="footer__link">Контакты</a></li>
-                    </ul>
-                </div>
-                <div class="footer__col">
-                    <h3 class="footer__title">Категории</h3>
-                    <ul class="footer__links">
-                        <li><a href="../tv.html" class="nav__link">Телевизоры</a></li>
-                        <li><a href="../cameras.html" class="nav__link">Фотоаппараты</a></li>
-                        <li><a href="../consoles.html" class="nav__link">Приставки</a></li>
-                        <li><a href="../laptops.html" class="nav__link">Ноутбуки</a></li>
-                        <li><a href="../smartphones.html" class="nav__link">Смартфоны</a></li>
-                        <li><a href="../small-appliances.html" class="nav__link">Мелкая техника</a></li>
-                        <li><a href="../large-appliances.html" class="nav__link">Бытовая техника</a></li>
-                        <li><a href="../auto-electronics.html" class="nav__link">Авто-Электроника</a></li>
-                    </ul>
-                </div>
-                <div class="footer__col">
-                    <h3 class="footer__title">Контакты</h3>
-                    <ul class="footer__links">
-                        <li><a href="https://t.me/RepairoRU" class="footer__link"><i class="fab fa-telegram"></i> Telegram</a></li>
-                        <li><span class="footer__link">Наша почта: repairo.info@mail.ru</span></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer__bottom">
-                <p class="disclaimer">
-    Администрация сайта не несёт ответственности за возможные повреждения техники
-    и иные последствия, возникшие в результате самостоятельного ремонта по
-    материалам и инструкциям, размещённым на сайте. Все работы вы выполняете
-    на свой страх и риск.
-    </p>
-                <p class="footer__copyright">© 2026 Repairo. Все права защищены.</p>
-            </div>
-        </div>
-    </footer>
-    <!-- Cookie Consent Banner -->
-    <script src="../script.js"></script>
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2024 FixTech. Р’СЃРµ РїСЂР°РІР° Р·Р°С‰РёС‰РµРЅС‹.</p>
+      <div class="footer-links">
+        <a href="/privacy">РљРѕРЅС„РёРґРµРЅС†РёР°Р»СЊРЅРѕСЃС‚СЊ</a>
+        <a href="/terms">РЈСЃР»РѕРІРёСЏ РёСЃРїРѕР»СЊР·РѕРІР°РЅРёСЏ</a>
+        <a href="/contact">РљРѕРЅС‚Р°РєС‚С‹</a>
+      </div>
+    </div>
+  </footer>
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "HowTo",
-  "name": "Windows 11 блокирует подключение смартфона через USB ноутбук | Экспертный мегагайд",
-  "description": "",
-  "totalTime": "PT30M",
-  "step": [
-    {
-      "@type": "HowToStep",
-      "name": "Введение: почему Cyberpunk 2077 может тормозить на PS5 после патчей?",
-      "text": "Введение: почему Cyberpunk 2077 может тормозить на PS5 после патчей?",
-      "url": "#step-1"
-    },
-    {
-      "@type": "HowToStep",
-      "name": "Таблица: основные причины лагов и просадок FPS в Cyberpunk 2077 на PS5 после обновлений",
-      "text": "Таблица: основные причины лагов и просадок FPS в Cyberpunk 2077 на PS5 после обновлений",
-      "url": "#step-2"
-    },
-    {
-      "@type": "HowToStep",
-      "name": "Пошаговая инструкция: что делать, если Cyberpunk 2077 тормозит на PS5 после обновления",
-      "text": "Пошаговая инструкция: что делать, если Cyberpunk 2077 тормозит на PS5 после обновления",
-      "url": "#step-3"
-    },
-    {
-      "@type": "HowToStep",
-      "name": "Таблица: сравнение режимов графики и FPS в Cyberpunk 2077 на PS5",
-      "text": "Таблица: сравнение режимов графики и FPS в Cyberpunk 2077 на PS5",
-      "url": "#step-4"
-    },
-    {
-      "@type": "HowToStep",
-      "name": "Отзывы игроков и тесты Digital Foundry",
-      "text": "Отзывы игроков и тесты Digital Foundry",
-      "url": "#step-5"
-    },
-    {
-      "@type": "HowToStep",
-      "name": "Лайфхаки и советы по оптимизации Cyberpunk 2077 на PS5",
-      "text": "Лайфхаки и советы по оптимизации Cyberpunk 2077 на PS5",
-      "url": "#step-6"
-    },
-    {
-      "@type": "HowToStep",
-      "name": "FAQ – часто задаваемые вопросы о тормозах Cyberpunk 2077 на PS5",
-      "text": "FAQ – часто задаваемые вопросы о тормозах Cyberpunk 2077 на PS5",
-      "url": "#step-7"
-    },
-    {
-      "@type": "HowToStep",
-      "name": "Пошаговая инструкция: как восстановить базу данных PS5",
-      "text": "Пошаговая инструкция: как восстановить базу данных PS5",
-      "url": "#step-8"
-    }
-  ],
-  "image": "https://repairo.ru/https://mc.yandex.ru/watch/106225686"
-}
-</script>
-<!-- Cookie Consent Script -->
-<script src="../cookie-consent.js"></script>
+  <script src="../script.js"></script>
+  <script src="../search.js"></script>
 </body>
 </html>
-
-
-
-
-
-

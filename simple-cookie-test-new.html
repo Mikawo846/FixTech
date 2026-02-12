@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Простой тест Cookie</title>
+    <title>РџСЂРѕСЃС‚РѕР№ С‚РµСЃС‚ Cookie</title>
     <style>
         body { font-family: Arial, sans-serif; padding: 20px; }
         .debug { background: #f0f0f0; padding: 10px; margin: 10px 0; }
@@ -11,22 +11,22 @@
     </style>
 </head>
 <body>
-    <h1>Простой тест Cookie Banner</h1>
+    <h1>РџСЂРѕСЃС‚РѕР№ С‚РµСЃС‚ Cookie Banner</h1>
     <div class="debug">
-        <p>Статус cookie: <span id="cookie-status">Проверка...</span></p>
-        <p>Баннер существует: <span id="banner-exists">Нет</span></p>
+        <p>РЎС‚Р°С‚СѓСЃ cookie: <span id="cookie-status">РџСЂРѕРІРµСЂРєР°...</span></p>
+        <p>Р‘Р°РЅРЅРµСЂ СЃСѓС‰РµСЃС‚РІСѓРµС‚: <span id="banner-exists">РќРµС‚</span></p>
     </div>
     
-    <button onclick="checkCookie()">Проверить cookie</button>
-    <button onclick="clearCookie()">Очистить cookie</button>
-    <button onclick="forceShowBanner()">Показать баннер</button>
+    <button onclick="checkCookie()">РџСЂРѕРІРµСЂРёС‚СЊ cookie</button>
+    <button onclick="clearCookie()">РћС‡РёСЃС‚РёС‚СЊ cookie</button>
+    <button onclick="forceShowBanner()">РџРѕРєР°Р·Р°С‚СЊ Р±Р°РЅРЅРµСЂ</button>
 
     <script src="cookie-consent.js"></script>
     
     <script>
         function checkCookie() {
             const value = document.cookie.split('; ').find(row => row.startsWith('cookie_consent='));
-            document.getElementById('cookie-status').textContent = value ? value.split('=')[1] : 'Не найдено';
+            document.getElementById('cookie-status').textContent = value ? value.split('=')[1] : 'РќРµ РЅР°Р№РґРµРЅРѕ';
         }
         
         function clearCookie() {
@@ -41,22 +41,20 @@
                 banner.style.opacity = '1';
                 banner.style.visibility = 'visible';
                 banner.style.transform = 'translateX(-50%) translateY(0)';
-                document.getElementById('banner-exists').textContent = 'Да (показан принудительно)';
+                document.getElementById('banner-exists').textContent = 'Р”Р° (РїРѕРєР°Р·Р°РЅ РїСЂРёРЅСѓРґРёС‚РµР»СЊРЅРѕ)';
             } else {
-                document.getElementById('banner-exists').textContent = 'Нет';
+                document.getElementById('banner-exists').textContent = 'РќРµС‚';
             }
         }
         
-        // Проверка каждые 2 секунды
+        // РџСЂРѕРІРµСЂРєР° РєР°Р¶РґС‹Рµ 2 СЃРµРєСѓРЅРґС‹
         setInterval(() => {
             const banner = document.getElementById('cookie-banner');
-            document.getElementById('banner-exists').textContent = banner ? 'Да' : 'Нет';
+            document.getElementById('banner-exists').textContent = banner ? 'Р”Р°' : 'РќРµС‚';
         }, 2000);
         
-        // Начальная проверка
+        // РќР°С‡Р°Р»СЊРЅР°СЏ РїСЂРѕРІРµСЂРєР°
         setTimeout(checkCookie, 1500);
     </script>
 </body>
 </html>
-
-

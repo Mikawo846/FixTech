@@ -4,8 +4,9 @@
 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Совместимость старых ноутбуков с Windows 11 | Проверка и обн</title>
-    <meta name="description" content="">
+  <title>РЎРѕРІРјРµСЃС‚РёРјРѕСЃС‚СЊ СЃС‚Р°СЂС‹С… РЅРѕСѓС‚Р±СѓРєРѕРІ СЃ Windows 11 | РџСЂРѕРІРµСЂРєР° Рё РѕР±РЅРѕРІР»РµРЅРёРµ</title>
+    <meta name="description" content="{{ description }}">
+    <meta name="description" content="РљР°Рє РїСЂРѕРІРµСЂРёС‚СЊ СЃРѕРІРјРµСЃС‚РёРјРѕСЃС‚СЊ СЃС‚Р°СЂРѕРіРѕ РЅРѕСѓС‚Р±СѓРєР° СЃ Windows 11. РџРѕС€Р°РіРѕРІРѕРµ СЂСѓРєРѕРІРѕРґСЃС‚РІРѕ РїРѕ РїСЂРѕРІРµСЂРєРµ С‚СЂРµР±РѕРІР°РЅРёР№, РѕР±РЅРѕРІР»РµРЅРёСЋ BIOS Рё СЂРµС€РµРЅРёСЋ РїСЂРѕР±Р»РµРј СЃРѕРІРјРµСЃС‚РёРјРѕСЃС‚Рё.">
 
   <link rel="stylesheet" href="../styles.css" />
   <link rel="stylesheet" href="../styles-header.css" />
@@ -24,525 +25,246 @@
     table { width: 100%; border-collapse: collapse; margin: 20px 0; }
     th, td { border: 1px solid var(--border); padding: 8px; text-align: left; }
     th { background: var(--background-light); }
-    .highlight { background: #f5f7fa; border-left: 4px solid #2d9cdb; padding: 10px 15px; margin: 20px 0; }
-    .faq-section ul { margin-left: 1em; }
-    .block-section { margin-bottom: 2em; }
     @media (max-width: 768px) {
       .guide-content h2 { font-size: 1.4rem; margin-top: 25px; }
       .guide-image-block { padding: 12px; margin: 15px 0; }
       table, th, td { font-size: 0.95rem; }
     }
-    /* Р“РѕСЂРёР·РѕРЅС‚Р°Р»СЊРЅС‹Р№ Р±Р°РЅРЅРµСЂ-РєР°СЂС‚РѕС‡РєР° */
-    .ym-hero-banner {
-      width: 100%;
-      max-width: 600px;
-      min-height: 140px;
-      border-radius: 16px;
-      background: #ffffff;
-      border: 1px solid #e5e7eb;
-      display: flex;
-      flex-direction: column;
-      box-shadow: 0 4px 16px rgba(15, 23, 42, 0.08);
-      overflow: hidden;
-      box-sizing: border-box;
-      margin: 40px auto;
-    }
-
-    /* РљРѕРЅС‚РµР№РЅРµСЂ РґР»СЏ РёР·РѕР±СЂР°Р¶РµРЅРёР№ */
-    .ym-hero-images {
-      display: flex;
-      height: 120px;
-      overflow: hidden;
-    }
-
-    .ym-hero-image {
-      flex: 1;
-      min-width: 0;
-      height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-      border-right: 1px solid #e5e7eb;
-      background: #f8f9fa;
-    }
-
-    .ym-hero-image:last-child {
-      border-right: none;
-    }
-
-    .ym-hero-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-      transition: transform 0.3s ease;
-      background: #f8f9fa;
-    }
-
-    .ym-hero-image:hover img {
-      transform: scale(1.02);
-    }
-
-    /* РџСЂР°РІР°СЏ С‡Р°СЃС‚СЊ: РєРѕРЅС‚РµРЅС‚ */
-    .ym-hero-content {
-      padding: 16px 18px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      gap: 8px;
-    }
-
-    /* РќР°Р·РІР°РЅРёРµ С‚РѕРІР°СЂР° */
-    .ym-hero-title {
-      font-size: 14px;
-      font-weight: 600;
-      color: #111827;
-      line-height: 1.3;
-      margin: 0 0 4px 0;
-      display: -webkit-box;
-      -webkit-line-clamp: 2;
-      line-clamp: 2;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
-    }
-
-    /* Р РµР№С‚РёРЅРі */
-    .ym-hero-top {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 8px;
-    }
-
-    .ym-hero-rating {
-      font-size: 13px;
-      font-weight: 500;
-      color: #111827;
-      background: #f9fafb;
-      border-radius: 999px;
-      padding: 4px 10px;
-    }
-
-    .ym-hero-rating-count {
-      color: #6b7280;
-    }
-
-    /* Р¤РёРѕР»РµС‚РѕРІР°СЏ РєРЅРѕРїРєР° */
-    .ym-hero-button {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 9px 16px;
-      border-radius: 999px;
-      border: none;
-      background: #6a00ff;
-      color: #ffffff;
-      font-size: 14px;
-      font-weight: 600;
-      cursor: pointer;
-      box-shadow: 0 2px 6px rgba(88, 28, 135, 0.35);
-      transition: background 0.15s ease, transform 0.15s ease,
-                  box-shadow 0.15s ease;
-    }
-    .ym-hero-button::after {
-      content: "в†’";
-      margin-left: 6px;
-      font-size: 14px;
-    }
-    .ym-hero-button:hover {
-      background: #7c3aed;
-      transform: translateY(-1px);
-      box-shadow: 0 4px 10px rgba(88, 28, 135, 0.45);
-    }
-
-    /* Р®СЂРёРґРёС‡РµСЃРєРёР№ Р±Р»РѕРє */
-    .ym-hero-legal {
-      margin-top: 6px;
-      max-width: 600px;
-      font-size: 11px;
-      line-height: 1.3;
-      color: #6b7280;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    /* РђРґР°РїС‚РёРІ */
-    @media (max-width: 480px) {
-      .ym-hero-banner {
-        max-width: 100%;
-        margin: 20px 0;
-      }
-      .ym-hero-images {
-        height: 100px;
-      }
-      .ym-hero-content {
-        padding: 12px 12px;
-      }
-      .ym-hero-title {
-        font-size: 13px;
-      }
-      .ym-hero-button {
-        font-size: 13px;
-        padding: 8px 14px;
-      }
-      .ym-hero-legal {
-        font-size: 10px;
-      }
-    }
-    /* Telegram СЂРµРєР»Р°РјРЅС‹Р№ Р±Р°РЅРЅРµСЂ */
-    .telegram-banner {
-      display: flex;
-      justify-content: center;
-      text-decoration: none;
-      color: inherit;
-      width: 100%;
-      margin: 40px 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    }
-
-    .telegram-banner-container {
-      width: 100%;
-      max-width: 500px;
-      min-height: 120px;
-      border-radius: 16px;
-      background: linear-gradient(135deg, #0088cc 0%, #005f8f 100%);
-      border: 1px solid #005f8f;
-      display: flex;
-      align-items: center;
-      padding: 20px;
-      box-shadow: 0 4px 16px rgba(0, 136, 204, 0.2);
-      overflow: hidden;
-      box-sizing: border-box;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-
-    .telegram-banner-container:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(0, 136, 204, 0.3);
-    }
-
-    .telegram-logo {
-      width: 60px;
-      height: 60px;
-      min-width: 60px;
-      background: #ffffff;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-right: 20px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    }
-
-    .telegram-logo svg {
-      width: 32px;
-      height: 32px;
-      fill: #0088cc;
-    }
-
-    .telegram-content {
-      flex: 1;
-      color: #ffffff;
-    }
-
-    .telegram-title {
-      font-size: 16px;
-      font-weight: 600;
-      margin: 0 0 8px 0;
-      line-height: 1.3;
-    }
-
-    .telegram-subtitle {
-      font-size: 14px;
-      opacity: 0.9;
-      margin: 0 0 12px 0;
-      line-height: 1.4;
-    }
-
-    .telegram-button {
-      display: inline-flex;
-      align-items: center;
-      padding: 8px 16px;
-      background: #ffffff;
-      color: #0088cc;
-      border-radius: 20px;
-      font-size: 14px;
-      font-weight: 600;
-      text-decoration: none;
-      transition: background 0.2s ease, transform 0.2s ease;
-    }
-
-    .telegram-button:hover {
-      background: #f0f8ff;
-      transform: scale(1.05);
-    }
-
-    .telegram-button svg {
-      width: 16px;
-      height: 16px;
-      margin-left: 6px;
-      fill: #0088cc;
-    }
-
-    /* РђРґР°РїС‚РёРІ РґР»СЏ РјРѕР±РёР»СЊРЅС‹С… */
-    @media (max-width: 480px) {
-      .telegram-banner-container {
-        max-width: 100%;
-        margin: 20px 0;
-        padding: 15px;
-        min-height: 100px;
-      }
-      .telegram-logo {
-        width: 50px;
-        height: 50px;
-        min-width: 50px;
-        margin-right: 15px;
-      }
-      .telegram-logo svg {
-        width: 26px;
-        height: 26px;
-      }
-      .telegram-title {
-        font-size: 14px;
-      }
-      .telegram-subtitle {
-        font-size: 12px;
-      }
-      .telegram-button {
-        font-size: 12px;
-        padding: 6px 12px;
-      }
-    }
-
-
-
   </style>
-  <script async src="https://timeweb.cloud/api/v1/cloud-ai/agents/3cc03620-d051-4d8d-b5af-f7b6cd083a35/embed.js?collapsed=true"></script>
+
 </head>
 <body>
-  <header class="header">
-    <div class="container">
-      <div class="header__inner">
-        <a href="../index.html" class="logo">
-          <span class="logo__icon"></span>
-          <span class="logo__text">GeoExpert</span>
-        </a>
-        <nav class="nav">
-          <ul class="nav__list">
-            <li><a href="../cameras.html" class="nav__link">РљР°РјРµСЂС‹</a></li>
-            <li><a href="../drones.html" class="nav__link">Р”СЂРѕРЅС‹</a></li>
-            <li><a href="../workflow.html" class="nav__link">Workflow</a></li>
-          </ul>
-        </nav>
-      </div>
-    </div>
-  </header>
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <a href="../index.html" class="logo">
+                    <span class="logo__icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 15L7 10H17L12 15Z" fill="currentColor"/>
+                            <path d="M12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3ZM12 19C8.13401 19 5 15.866 5 12C5 8.13401 8.13401 5 12 5C15.866 5 19 8.13401 19 12C19 15.866 15.866 19 12 19Z" fill="currentColor"/>
+                        </svg>
+                    </span>
+                    <span class="logo__text">Repairo</span>
+                </a>
+                <nav class="nav">
+                    <ul class="nav__list">
+                       <li><a href="../tv.html" class="nav__link">РўРµР»РµРІРёР·РѕСЂС‹</a></li>
+                        <li><a href="../auto-electronics.html" class="nav__link">РђРІС‚РѕСЌР»РµРєС‚СЂРѕРЅРёРєР°</a></li>
+                        <li><a href="../consoles.html" class="nav__link">РџСЂРёСЃС‚Р°РІРєРё</a></li>
+                        <li><a href="../laptops.html" class="nav__link">РќРѕСѓС‚Р±СѓРєРё</a></li>
+                        <li><a href="../smartphones.html" class="nav__link">РЎРјР°СЂС‚С„РѕРЅС‹</a></li>
+                        <li><a href="../index.html#categories" class="nav__link">Р’СЃРµ РєР°С‚РµРіРѕСЂРёРё</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
 
     <main class="container">
         <div class="guide-content">
-            <h1>Совместимость старых ноутбуков с Windows 11</h1>
-            <p>Windows 11 предлагает современный интерфейс и улучшенную безопасность, но многие старые ноутбуки могут не соответствовать системным требованиям. В этом руководстве мы подробно рассмотрим, как проверить совместимость вашего устройства с Windows 11, какие проблемы могут возникнуть и как их решить.</p>
+            <h1>РЎРѕРІРјРµСЃС‚РёРјРѕСЃС‚СЊ СЃС‚Р°СЂС‹С… РЅРѕСѓС‚Р±СѓРєРѕРІ СЃ Windows 11</h1>
+            <p>Windows 11 РїСЂРµРґР»Р°РіР°РµС‚ СЃРѕРІСЂРµРјРµРЅРЅС‹Р№ РёРЅС‚РµСЂС„РµР№СЃ Рё СѓР»СѓС‡С€РµРЅРЅСѓСЋ Р±РµР·РѕРїР°СЃРЅРѕСЃС‚СЊ, РЅРѕ РјРЅРѕРіРёРµ СЃС‚Р°СЂС‹Рµ РЅРѕСѓС‚Р±СѓРєРё РјРѕРіСѓС‚ РЅРµ СЃРѕРѕС‚РІРµС‚СЃС‚РІРѕРІР°С‚СЊ СЃРёСЃС‚РµРјРЅС‹Рј С‚СЂРµР±РѕРІР°РЅРёСЏРј. Р’ СЌС‚РѕРј СЂСѓРєРѕРІРѕРґСЃС‚РІРµ РјС‹ РїРѕРґСЂРѕР±РЅРѕ СЂР°СЃСЃРјРѕС‚СЂРёРј, РєР°Рє РїСЂРѕРІРµСЂРёС‚СЊ СЃРѕРІРјРµСЃС‚РёРјРѕСЃС‚СЊ РІР°С€РµРіРѕ СѓСЃС‚СЂРѕР№СЃС‚РІР° СЃ Windows 11, РєР°РєРёРµ РїСЂРѕР±Р»РµРјС‹ РјРѕРіСѓС‚ РІРѕР·РЅРёРєРЅСѓС‚СЊ Рё РєР°Рє РёС… СЂРµС€РёС‚СЊ.</p>
 
-            <h2>Минимальные требования Windows 11</h2>
-            <p>Для установки Windows 11 ваш ноутбук должен соответствовать следующим требованиям:</p>
+            <h2>РњРёРЅРёРјР°Р»СЊРЅС‹Рµ С‚СЂРµР±РѕРІР°РЅРёСЏ Windows 11</h2>
+            <p>Р”Р»СЏ СѓСЃС‚Р°РЅРѕРІРєРё Windows 11 РІР°С€ РЅРѕСѓС‚Р±СѓРє РґРѕР»Р¶РµРЅ СЃРѕРѕС‚РІРµС‚СЃС‚РІРѕРІР°С‚СЊ СЃР»РµРґСѓСЋС‰РёРј С‚СЂРµР±РѕРІР°РЅРёСЏРј:</p>
             <table>
                 <tr>
-                    <th>Компонент</th>
-                    <th>Минимальные требования</th>
-                    <th>Рекомендуемые</th>
+                    <th>РљРѕРјРїРѕРЅРµРЅС‚</th>
+                    <th>РњРёРЅРёРјР°Р»СЊРЅС‹Рµ С‚СЂРµР±РѕРІР°РЅРёСЏ</th>
+                    <th>Р РµРєРѕРјРµРЅРґСѓРµРјС‹Рµ</th>
                 </tr>
                 <tr>
-                    <td>Процессор</td>
-                    <td>1 ГГц, 2 ядра (64-bit)</td>
-                    <td>Intel Core i5 8-го поколения или аналог</td>
+                    <td>РџСЂРѕС†РµСЃСЃРѕСЂ</td>
+                    <td>1 Р“Р“С†, 2 СЏРґСЂР° (64-bit)</td>
+                    <td>Intel Core i5 8-РіРѕ РїРѕРєРѕР»РµРЅРёСЏ РёР»Рё Р°РЅР°Р»РѕРі</td>
                 </tr>
                 <tr>
-                    <td>Оперативная память</td>
-                    <td>4 ГБ</td>
-                    <td>8 ГБ или больше</td>
+                    <td>РћРїРµСЂР°С‚РёРІРЅР°СЏ РїР°РјСЏС‚СЊ</td>
+                    <td>4 Р“Р‘</td>
+                    <td>8 Р“Р‘ РёР»Рё Р±РѕР»СЊС€Рµ</td>
                 </tr>
                 <tr>
-                    <td>Хранение</td>
-                    <td>64 ГБ</td>
-                    <td>SSD 128 ГБ или больше</td>
+                    <td>РҐСЂР°РЅРµРЅРёРµ</td>
+                    <td>64 Р“Р‘</td>
+                    <td>SSD 128 Р“Р‘ РёР»Рё Р±РѕР»СЊС€Рµ</td>
                 </tr>
                 <tr>
-                    <td>Графика</td>
-                    <td>DirectX 12 с WDDM 2.0</td>
-                    <td>Современная дискретная или интегрированная</td>
+                    <td>Р“СЂР°С„РёРєР°</td>
+                    <td>DirectX 12 СЃ WDDM 2.0</td>
+                    <td>РЎРѕРІСЂРµРјРµРЅРЅР°СЏ РґРёСЃРєСЂРµС‚РЅР°СЏ РёР»Рё РёРЅС‚РµРіСЂРёСЂРѕРІР°РЅРЅР°СЏ</td>
                 </tr>
                 <tr>
-                    <td>Экран</td>
-                    <td>720p, 9" диагональ</td>
-                    <td>1080p, 13" или больше</td>
+                    <td>Р­РєСЂР°РЅ</td>
+                    <td>720p, 9" РґРёР°РіРѕРЅР°Р»СЊ</td>
+                    <td>1080p, 13" РёР»Рё Р±РѕР»СЊС€Рµ</td>
                 </tr>
                 <tr>
-                    <td>Безопасность</td>
+                    <td>Р‘РµР·РѕРїР°СЃРЅРѕСЃС‚СЊ</td>
                     <td>TPM 2.0</td>
-                    <td>TPM 2.0 или firmware TPM</td>
+                    <td>TPM 2.0 РёР»Рё firmware TPM</td>
                 </tr>
             </table>
 
-            <h2>Как проверить совместимость ноутбука</h2>
-            <h3>Использование приложения PC Health Check</h3>
-            <p>Microsoft предоставляет официальное приложение для проверки совместимости:</p>
+            <h2>РљР°Рє РїСЂРѕРІРµСЂРёС‚СЊ СЃРѕРІРјРµСЃС‚РёРјРѕСЃС‚СЊ РЅРѕСѓС‚Р±СѓРєР°</h2>
+            <h3>РСЃРїРѕР»СЊР·РѕРІР°РЅРёРµ РїСЂРёР»РѕР¶РµРЅРёСЏ PC Health Check</h3>
+            <p>Microsoft РїСЂРµРґРѕСЃС‚Р°РІР»СЏРµС‚ РѕС„РёС†РёР°Р»СЊРЅРѕРµ РїСЂРёР»РѕР¶РµРЅРёРµ РґР»СЏ РїСЂРѕРІРµСЂРєРё СЃРѕРІРјРµСЃС‚РёРјРѕСЃС‚Рё:</p>
             <ol>
-                <li>Скачайте PC Health Check с официального сайта Microsoft</li>
-                <li>Запустите приложение</li>
-                <li>Выберите "Check now for Windows 11"</li>
-                <li>Просмотрите результаты проверки</li>
+                <li>РЎРєР°С‡Р°Р№С‚Рµ PC Health Check СЃ РѕС„РёС†РёР°Р»СЊРЅРѕРіРѕ СЃР°Р№С‚Р° Microsoft</li>
+                <li>Р—Р°РїСѓСЃС‚РёС‚Рµ РїСЂРёР»РѕР¶РµРЅРёРµ</li>
+                <li>Р’С‹Р±РµСЂРёС‚Рµ "Check now for Windows 11"</li>
+                <li>РџСЂРѕСЃРјРѕС‚СЂРёС‚Рµ СЂРµР·СѓР»СЊС‚Р°С‚С‹ РїСЂРѕРІРµСЂРєРё</li>
             </ol>
 
-            <h3>Проверка характеристик системы</h3>
+            <h3>РџСЂРѕРІРµСЂРєР° С…Р°СЂР°РєС‚РµСЂРёСЃС‚РёРє СЃРёСЃС‚РµРјС‹</h3>
             <ol>
-                <li>Нажмите Win + R, введите "msinfo32"</li>
-                <li>В разделе "Система" проверьте версию BIOS и TPM</li>
-                <li>В разделе "Процессор" посмотрите модель и частоту</li>
-                <li>Проверьте объем оперативной памяти</li>
+                <li>РќР°Р¶РјРёС‚Рµ Win + R, РІРІРµРґРёС‚Рµ "msinfo32"</li>
+                <li>Р’ СЂР°Р·РґРµР»Рµ "РЎРёСЃС‚РµРјР°" РїСЂРѕРІРµСЂСЊС‚Рµ РІРµСЂСЃРёСЋ BIOS Рё TPM</li>
+                <li>Р’ СЂР°Р·РґРµР»Рµ "РџСЂРѕС†РµСЃСЃРѕСЂ" РїРѕСЃРјРѕС‚СЂРёС‚Рµ РјРѕРґРµР»СЊ Рё С‡Р°СЃС‚РѕС‚Сѓ</li>
+                <li>РџСЂРѕРІРµСЂСЊС‚Рµ РѕР±СЉРµРј РѕРїРµСЂР°С‚РёРІРЅРѕР№ РїР°РјСЏС‚Рё</li>
             </ol>
 
-            <h3>Проверка TPM</h3>
-            <p>TPM (Trusted Platform Module) обязателен для Windows 11:</p>
+            <h3>РџСЂРѕРІРµСЂРєР° TPM</h3>
+            <p>TPM (Trusted Platform Module) РѕР±СЏР·Р°С‚РµР»РµРЅ РґР»СЏ Windows 11:</p>
             <ol>
-                <li>Откройте "Параметры" > "Обновление и безопасность" > "Безопасность устройства"</li>
-                <li>Найдите раздел "Безопасность процессора"</li>
-                <li>Если TPM не найден, проверьте в BIOS</li>
+                <li>РћС‚РєСЂРѕР№С‚Рµ "РџР°СЂР°РјРµС‚СЂС‹" в†’ "РћР±РЅРѕРІР»РµРЅРёРµ Рё Р±РµР·РѕРїР°СЃРЅРѕСЃС‚СЊ" в†’ "Р‘РµР·РѕРїР°СЃРЅРѕСЃС‚СЊ СѓСЃС‚СЂРѕР№СЃС‚РІР°"</li>
+                <li>РќР°Р№РґРёС‚Рµ СЂР°Р·РґРµР» "Р‘РµР·РѕРїР°СЃРЅРѕСЃС‚СЊ РїСЂРѕС†РµСЃСЃРѕСЂР°"</li>
+                <li>Р•СЃР»Рё TPM РЅРµ РЅР°Р№РґРµРЅ, РїСЂРѕРІРµСЂСЊС‚Рµ РІ BIOS</li>
             </ol>
 
-            <h2>Что делать, если ноутбук несовместим</h2>
-            <h3>Обновление BIOS</h3>
-            <p>Многие проблемы совместимости решаются обновлением BIOS:</p>
+            <h2>Р§С‚Рѕ РґРµР»Р°С‚СЊ, РµСЃР»Рё РЅРѕСѓС‚Р±СѓРє РЅРµСЃРѕРІРјРµСЃС‚РёРј</h2>
+            <h3>РћР±РЅРѕРІР»РµРЅРёРµ BIOS</h3>
+            <p>РњРЅРѕРіРёРµ РїСЂРѕР±Р»РµРјС‹ СЃРѕРІРјРµСЃС‚РёРјРѕСЃС‚Рё СЂРµС€Р°СЋС‚СЃСЏ РѕР±РЅРѕРІР»РµРЅРёРµРј BIOS:</p>
             <ol>
-                <li>Определите модель ноутбука (на наклейке или в документации)</li>
-                <li>Посетите сайт производителя (Dell, HP, Lenovo и т.д.)</li>
-                <li>Найдите раздел поддержки и драйверы</li>
-                <li>Скачайте и установите последнюю версию BIOS</li>
-                <li>Перезагрузите и проверьте совместимость</li>
+                <li>РћРїСЂРµРґРµР»РёС‚Рµ РјРѕРґРµР»СЊ РЅРѕСѓС‚Р±СѓРєР° (РЅР° РЅР°РєР»РµР№РєРµ РёР»Рё РІ РґРѕРєСѓРјРµРЅС‚Р°С†РёРё)</li>
+                <li>РџРѕСЃРµС‚РёС‚Рµ СЃР°Р№С‚ РїСЂРѕРёР·РІРѕРґРёС‚РµР»СЏ (Dell, HP, Lenovo Рё С‚.Рґ.)</li>
+                <li>РќР°Р№РґРёС‚Рµ СЂР°Р·РґРµР» РїРѕРґРґРµСЂР¶РєРё Рё РґСЂР°Р№РІРµСЂС‹</li>
+                <li>РЎРєР°С‡Р°Р№С‚Рµ Рё СѓСЃС‚Р°РЅРѕРІРёС‚Рµ РїРѕСЃР»РµРґРЅСЋСЋ РІРµСЂСЃРёСЋ BIOS</li>
+                <li>РџРµСЂРµР·Р°РіСЂСѓР·РёС‚Рµ Рё РїСЂРѕРІРµСЂСЊС‚Рµ СЃРѕРІРјРµСЃС‚РёРјРѕСЃС‚СЊ</li>
             </ol>
 
             <div class="pro-tips">
-                <h4>Важно при обновлении BIOS</h4>
+                <h4>Р’Р°Р¶РЅРѕ РїСЂРё РѕР±РЅРѕРІР»РµРЅРёРё BIOS</h4>
                 <div class="tip-item">
                     <i class="fas fa-exclamation-triangle"></i>
-                    <span>Подключите ноутбук к сети, чтобы избежать потери питания</span>
+                    <span>РџРѕРґРєР»СЋС‡РёС‚Рµ РЅРѕСѓС‚Р±СѓРє Рє СЃРµС‚Рё, С‡С‚РѕР±С‹ РёР·Р±РµР¶Р°С‚СЊ РїРѕС‚РµСЂРё РїРёС‚Р°РЅРёСЏ</span>
                 </div>
                 <div class="tip-item">
                     <i class="fas fa-exclamation-triangle"></i>
-                    <span>Не прерывайте процесс обновления</span>
+                    <span>РќРµ РїСЂРµСЂС‹РІР°Р№С‚Рµ РїСЂРѕС†РµСЃСЃ РѕР±РЅРѕРІР»РµРЅРёСЏ</span>
                 </div>
                 <div class="tip-item">
                     <i class="fas fa-exclamation-triangle"></i>
-                    <span>Создайте резервную копию важных данных</span>
+                    <span>РЎРѕР·РґР°Р№С‚Рµ СЂРµР·РµСЂРІРЅСѓСЋ РєРѕРїРёСЋ РІР°Р¶РЅС‹С… РґР°РЅРЅС‹С…</span>
                 </div>
             </div>
 
-            <h3>Включение TPM в BIOS</h3>
-            <p>Если TPM присутствует, но отключен:</p>
+            <h3>Р’РєР»СЋС‡РµРЅРёРµ TPM РІ BIOS</h3>
+            <p>Р•СЃР»Рё TPM РїСЂРёСЃСѓС‚СЃС‚РІСѓРµС‚, РЅРѕ РѕС‚РєР»СЋС‡РµРЅ:</p>
             <ol>
-                <li>Перезагрузите ноутбук и войдите в BIOS (обычно Del, F2 или F10)</li>
-                <li>Найдите раздел Security или Advanced</li>
-                <li>Включите TPM или PTT (Intel) / fTPM (AMD)</li>
-                <li>Сохраните изменения и выйдите</li>
+                <li>РџРµСЂРµР·Р°РіСЂСѓР·РёС‚Рµ РЅРѕСѓС‚Р±СѓРє Рё РІРѕР№РґРёС‚Рµ РІ BIOS (РѕР±С‹С‡РЅРѕ Del, F2 РёР»Рё F10)</li>
+                <li>РќР°Р№РґРёС‚Рµ СЂР°Р·РґРµР» Security РёР»Рё Advanced</li>
+                <li>Р’РєР»СЋС‡РёС‚Рµ TPM РёР»Рё PTT (Intel) / fTPM (AMD)</li>
+                <li>РЎРѕС…СЂР°РЅРёС‚Рµ РёР·РјРµРЅРµРЅРёСЏ Рё РІС‹Р№РґРёС‚Рµ</li>
             </ol>
 
-            <h3>Обход требований для тестирования</h3>
-            <p>Для тестирования Windows 11 на несовместимом устройстве:</p>
+            <h3>РћР±С…РѕРґ С‚СЂРµР±РѕРІР°РЅРёР№ РґР»СЏ С‚РµСЃС‚РёСЂРѕРІР°РЅРёСЏ</h3>
+            <p>Р”Р»СЏ С‚РµСЃС‚РёСЂРѕРІР°РЅРёСЏ Windows 11 РЅР° РЅРµСЃРѕРІРјРµСЃС‚РёРјРѕРј СѓСЃС‚СЂРѕР№СЃС‚РІРµ:</p>
             <ol>
-                <li>Создайте загрузочную флешку с Windows 11</li>
-                <li>Во время установки нажмите Shift + F10</li>
-                <li>Введите команду: regedit</li>
-                <li>Перейдите к HKEY_LOCAL_MACHINE\SYSTEM\Setup\LabConfig</li>
-                <li>Создайте DWORD значения: BypassTPMCheck=1, BypassSecureBootCheck=1, BypassRAMCheck=1</li>
-                <li>Продолжите установку</li>
+                <li>РЎРѕР·РґР°Р№С‚Рµ Р·Р°РіСЂСѓР·РѕС‡РЅСѓСЋ С„Р»РµС€РєСѓ СЃ Windows 11</li>
+                <li>Р’Рѕ РІСЂРµРјСЏ СѓСЃС‚Р°РЅРѕРІРєРё РЅР°Р¶РјРёС‚Рµ Shift + F10</li>
+                <li>Р’РІРµРґРёС‚Рµ РєРѕРјР°РЅРґСѓ: regedit</li>
+                <li>РџРµСЂРµР№РґРёС‚Рµ Рє HKEY_LOCAL_MACHINE\SYSTEM\Setup\LabConfig</li>
+                <li>РЎРѕР·РґР°Р№С‚Рµ DWORD Р·РЅР°С‡РµРЅРёСЏ: BypassTPMCheck=1, BypassSecureBootCheck=1, BypassRAMCheck=1</li>
+                <li>РџСЂРѕРґРѕР»Р¶РёС‚Рµ СѓСЃС‚Р°РЅРѕРІРєСѓ</li>
             </ol>
 
-            <h2>Альтернативные решения</h2>
-            <h3>Установка Windows 10 LTSC</h3>
-            <p>Если Windows 11 не подходит, рассмотрите Windows 10 Long Term Servicing Channel:</p>
+            <h2>РђР»СЊС‚РµСЂРЅР°С‚РёРІРЅС‹Рµ СЂРµС€РµРЅРёСЏ</h2>
+            <h3>РЈСЃС‚Р°РЅРѕРІРєР° Windows 10 LTSC</h3>
+            <p>Р•СЃР»Рё Windows 11 РЅРµ РїРѕРґС…РѕРґРёС‚, СЂР°СЃСЃРјРѕС‚СЂРёС‚Рµ Windows 10 Long Term Servicing Channel:</p>
             <ul>
-                <li>Долгосрочная поддержка (10 лет)</li>
-                <li>Отсутствие встроенных приложений Microsoft</li>
-                <li>Регулярные обновления безопасности</li>
+                <li>Р”РѕР»РіРѕСЃСЂРѕС‡РЅР°СЏ РїРѕРґРґРµСЂР¶РєР° (10 Р»РµС‚)</li>
+                <li>РћС‚СЃСѓС‚СЃС‚РІРёРµ РІСЃС‚СЂРѕРµРЅРЅС‹С… РїСЂРёР»РѕР¶РµРЅРёР№ Microsoft</li>
+                <li>Р РµРіСѓР»СЏСЂРЅС‹Рµ РѕР±РЅРѕРІР»РµРЅРёСЏ Р±РµР·РѕРїР°СЃРЅРѕСЃС‚Рё</li>
             </ul>
 
-            <h3>Обновление компонентов</h3>
-            <p>Если возможно, апгрейдите:</p>
+            <h3>РћР±РЅРѕРІР»РµРЅРёРµ РєРѕРјРїРѕРЅРµРЅС‚РѕРІ</h3>
+            <p>Р•СЃР»Рё РІРѕР·РјРѕР¶РЅРѕ, Р°РїРіСЂРµР№РґРёС‚Рµ:</p>
             <ul>
-                <li>Установите дополнительную оперативную память</li>
-                <li>Замените HDD на SSD</li>
-                <li>Обновите процессор (если слот позволяет)</li>
+                <li>РЈСЃС‚Р°РЅРѕРІРёС‚Рµ РґРѕРїРѕР»РЅРёС‚РµР»СЊРЅСѓСЋ РѕРїРµСЂР°С‚РёРІРЅСѓСЋ РїР°РјСЏС‚СЊ</li>
+                <li>Р—Р°РјРµРЅРёС‚Рµ HDD РЅР° SSD</li>
+                <li>РћР±РЅРѕРІРёС‚Рµ РїСЂРѕС†РµСЃСЃРѕСЂ (РµСЃР»Рё СЃР»РѕС‚ РїРѕР·РІРѕР»СЏРµС‚)</li>
             </ul>
 
-            <h2>Распространенные проблемы и решения</h2>
-            <h3>Ошибка "Этот компьютер не может запустить Windows 11"</h3>
-            <p>Причины:</p>
+            <h2>Р Р°СЃРїСЂРѕСЃС‚СЂР°РЅРµРЅРЅС‹Рµ РїСЂРѕР±Р»РµРјС‹ Рё СЂРµС€РµРЅРёСЏ</h2>
+            <h3>РћС€РёР±РєР° "Р­С‚РѕС‚ РєРѕРјРїСЊСЋС‚РµСЂ РЅРµ РјРѕР¶РµС‚ Р·Р°РїСѓСЃС‚РёС‚СЊ Windows 11"</h3>
+            <p>РџСЂРёС‡РёРЅС‹:</p>
             <ul>
-                <li>Несоответствие требованиям процессора</li>
-                <li>Отсутствие или отключенный TPM</li>
-                <li>Недостаточно оперативной памяти</li>
+                <li>РќРµСЃРѕРѕС‚РІРµС‚СЃС‚РІРёРµ С‚СЂРµР±РѕРІР°РЅРёСЏРј РїСЂРѕС†РµСЃСЃРѕСЂР°</li>
+                <li>РћС‚СЃСѓС‚СЃС‚РІРёРµ РёР»Рё РѕС‚РєР»СЋС‡РµРЅРЅС‹Р№ TPM</li>
+                <li>РќРµРґРѕСЃС‚Р°С‚РѕС‡РЅРѕ РѕРїРµСЂР°С‚РёРІРЅРѕР№ РїР°РјСЏС‚Рё</li>
             </ul>
-            <p>Решения: Обновите BIOS, включите TPM, проверьте память.</p>
+            <p>Р РµС€РµРЅРёСЏ: РћР±РЅРѕРІРёС‚Рµ BIOS, РІРєР»СЋС‡РёС‚Рµ TPM, РїСЂРѕРІРµСЂСЊС‚Рµ РїР°РјСЏС‚СЊ.</p>
 
-            <h3>Проблемы с драйверами</h3>
-            <p>После обновления могут отсутствовать драйверы:</p>
+            <h3>РџСЂРѕР±Р»РµРјС‹ СЃ РґСЂР°Р№РІРµСЂР°РјРё</h3>
+            <p>РџРѕСЃР»Рµ РѕР±РЅРѕРІР»РµРЅРёСЏ РјРѕРіСѓС‚ РѕС‚СЃСѓС‚СЃС‚РІРѕРІР°С‚СЊ РґСЂР°Р№РІРµСЂС‹:</p>
             <ol>
-                <li>Посетите сайт производителя ноутбука</li>
-                <li>Скачайте драйверы для Windows 11</li>
-                <li>Установите в порядке: чипсет, видео, аудио, сеть</li>
+                <li>РџРѕСЃРµС‚РёС‚Рµ СЃР°Р№С‚ РїСЂРѕРёР·РІРѕРґРёС‚РµР»СЏ РЅРѕСѓС‚Р±СѓРєР°</li>
+                <li>РЎРєР°С‡Р°Р№С‚Рµ РґСЂР°Р№РІРµСЂС‹ РґР»СЏ Windows 11</li>
+                <li>РЈСЃС‚Р°РЅРѕРІРёС‚Рµ РІ РїРѕСЂСЏРґРєРµ: С‡РёРїСЃРµС‚, РІРёРґРµРѕ, Р°СѓРґРёРѕ, СЃРµС‚СЊ</li>
             </ol>
 
-            <h3>Падение производительности</h3>
-            <p>Если после обновления ноутбук тормозит:</p>
+            <h3>РџР°РґРµРЅРёРµ РїСЂРѕРёР·РІРѕРґРёС‚РµР»СЊРЅРѕСЃС‚Рё</h3>
+            <p>Р•СЃР»Рё РїРѕСЃР»Рµ РѕР±РЅРѕРІР»РµРЅРёСЏ РЅРѕСѓС‚Р±СѓРє С‚РѕСЂРјРѕР·РёС‚:</p>
             <ul>
-                <li>Отключите визуальные эффекты</li>
-                <li>Оптимизируйте автозагрузку</li>
-                <li>Обновите все драйверы</li>
+                <li>РћС‚РєР»СЋС‡РёС‚Рµ РІРёР·СѓР°Р»СЊРЅС‹Рµ СЌС„С„РµРєС‚С‹</li>
+                <li>РћРїС‚РёРјРёР·РёСЂСѓР№С‚Рµ Р°РІС‚РѕР·Р°РіСЂСѓР·РєСѓ</li>
+                <li>РћР±РЅРѕРІРёС‚Рµ РІСЃРµ РґСЂР°Р№РІРµСЂС‹</li>
             </ul>
 
-            <h2>Проверка совместимости перед покупкой</h2>
-            <h3>Для нового ноутбука</h3>
+            <h2>РџСЂРѕРІРµСЂРєР° СЃРѕРІРјРµСЃС‚РёРјРѕСЃС‚Рё РїРµСЂРµРґ РїРѕРєСѓРїРєРѕР№</h2>
+            <h3>Р”Р»СЏ РЅРѕРІРѕРіРѕ РЅРѕСѓС‚Р±СѓРєР°</h3>
             <ul>
-                <li>Проверьте список совместимых моделей на сайте Microsoft</li>
-                <li>Убедитесь в наличии TPM 2.0</li>
-                <li>Проверьте версию BIOS</li>
+                <li>РџСЂРѕРІРµСЂСЊС‚Рµ СЃРїРёСЃРѕРє СЃРѕРІРјРµСЃС‚РёРјС‹С… РјРѕРґРµР»РµР№ РЅР° СЃР°Р№С‚Рµ Microsoft</li>
+                <li>РЈР±РµРґРёС‚РµСЃСЊ РІ РЅР°Р»РёС‡РёРё TPM 2.0</li>
+                <li>РџСЂРѕРІРµСЂСЊС‚Рµ РІРµСЂСЃРёСЋ BIOS</li>
             </ul>
 
-            <h3>Для подержанного ноутбука</h3>
+            <h3>Р”Р»СЏ РїРѕРґРµСЂР¶Р°РЅРЅРѕРіРѕ РЅРѕСѓС‚Р±СѓРєР°</h3>
             <ul>
-                <li>Запустите PC Health Check</li>
-                <li>Проверьте характеристики в системной информации</li>
-                <li>Протестируйте производительность</li>
+                <li>Р—Р°РїСѓСЃС‚РёС‚Рµ PC Health Check</li>
+                <li>РџСЂРѕРІРµСЂСЊС‚Рµ С…Р°СЂР°РєС‚РµСЂРёСЃС‚РёРєРё РІ СЃРёСЃС‚РµРјРЅРѕР№ РёРЅС„РѕСЂРјР°С†РёРё</li>
+                <li>РџСЂРѕС‚РµСЃС‚РёСЂСѓР№С‚Рµ РїСЂРѕРёР·РІРѕРґРёС‚РµР»СЊРЅРѕСЃС‚СЊ</li>
             </ul>
 
             <div class="pro-tips">
-                <h4>Советы по выбору ноутбука под Windows 11</h4>
+                <h4>РЎРѕРІРµС‚С‹ РїРѕ РІС‹Р±РѕСЂСѓ РЅРѕСѓС‚Р±СѓРєР° РїРѕРґ Windows 11</h4>
                 <div class="tip-item">
                     <i class="fas fa-lightbulb"></i>
-                    <span>Выбирайте модели 2018 года выпуска и новее</span>
+                    <span>Р’С‹Р±РёСЂР°Р№С‚Рµ РјРѕРґРµР»Рё 2018 РіРѕРґР° РІС‹РїСѓСЃРєР° Рё РЅРѕРІРµРµ</span>
                 </div>
                 <div class="tip-item">
                     <i class="fas fa-lightbulb"></i>
-                    <span>Предпочтение SSD и минимум 8 ГБ RAM</span>
+                    <span>РџСЂРµРґРїРѕС‡С‚РµРЅРёРµ SSD Рё РјРёРЅРёРјСѓРј 8 Р“Р‘ RAM</span>
                 </div>
                 <div class="tip-item">
                     <i class="fas fa-lightbulb"></i>
-                    <span>Проверяйте наличие TPM в характеристиках</span>
+                    <span>РџСЂРѕРІРµСЂСЏР№С‚Рµ РЅР°Р»РёС‡РёРµ TPM РІ С…Р°СЂР°РєС‚РµСЂРёСЃС‚РёРєР°С…</span>
                 </div>
                 <div class="tip-item">
                     <i class="fas fa-lightbulb"></i>
-                    <span>Тестируйте ноутбук перед покупкой</span>
+                    <span>РўРµСЃС‚РёСЂСѓР№С‚Рµ РЅРѕСѓС‚Р±СѓРє РїРµСЂРµРґ РїРѕРєСѓРїРєРѕР№</span>
                 </div>
             </div>
 
-            <h2>Заключение</h2>
-            <p>Проверка совместимости старого ноутбука с Windows 11 - важный шаг перед обновлением. Следуя этому руководству, вы сможете определить, готов ли ваш компьютер к новой ОС, и решить возможные проблемы. Если обновление невозможно, рассмотрите альтернативы или апгрейд компонентов. Помните, что принудительная установка Windows 11 на несовместимом устройстве может привести к нестабильной работе и потере гарантии.</p>
+            <h2>Р—Р°РєР»СЋС‡РµРЅРёРµ</h2>
+            <p>РџСЂРѕРІРµСЂРєР° СЃРѕРІРјРµСЃС‚РёРјРѕСЃС‚Рё СЃС‚Р°СЂРѕРіРѕ РЅРѕСѓС‚Р±СѓРєР° СЃ Windows 11 - РІР°Р¶РЅС‹Р№ С€Р°Рі РїРµСЂРµРґ РѕР±РЅРѕРІР»РµРЅРёРµРј. РЎР»РµРґСѓСЏ СЌС‚РѕРјСѓ СЂСѓРєРѕРІРѕРґСЃС‚РІСѓ, РІС‹ СЃРјРѕР¶РµС‚Рµ РѕРїСЂРµРґРµР»РёС‚СЊ, РіРѕС‚РѕРІ Р»Рё РІР°С€ РєРѕРјРїСЊСЋС‚РµСЂ Рє РЅРѕРІРѕР№ РћРЎ, Рё СЂРµС€РёС‚СЊ РІРѕР·РјРѕР¶РЅС‹Рµ РїСЂРѕР±Р»РµРјС‹. Р•СЃР»Рё РѕР±РЅРѕРІР»РµРЅРёРµ РЅРµРІРѕР·РјРѕР¶РЅРѕ, СЂР°СЃСЃРјРѕС‚СЂРёС‚Рµ Р°Р»СЊС‚РµСЂРЅР°С‚РёРІС‹ РёР»Рё Р°РїРіСЂРµР№Рґ РєРѕРјРїРѕРЅРµРЅС‚РѕРІ. РџРѕРјРЅРёС‚Рµ, С‡С‚Рѕ РїСЂРёРЅСѓРґРёС‚РµР»СЊРЅР°СЏ СѓСЃС‚Р°РЅРѕРІРєР° Windows 11 РЅР° РЅРµСЃРѕРІРјРµСЃС‚РёРјРѕРј СѓСЃС‚СЂРѕР№СЃС‚РІРµ РјРѕР¶РµС‚ РїСЂРёРІРµСЃС‚Рё Рє РЅРµСЃС‚Р°Р±РёР»СЊРЅРѕР№ СЂР°Р±РѕС‚Рµ Рё РїРѕС‚РµСЂРµ РіР°СЂР°РЅС‚РёРё.</p>
         </div>
     </main>
 
     <footer class="footer">
         <div class="container">
             <div class="footer__content">
-                <p>&copy; 2024 Repairo. Все права защищены.</p>
+                <p>&copy; 2024 Repairo. Р’СЃРµ РїСЂР°РІР° Р·Р°С‰РёС‰РµРЅС‹.</p>
             </div>
         </div>
     </footer>
@@ -551,9 +273,3 @@
     <script src="../cookie-consent.js"></script>
 </body>
 </html>
-
-
-
-
-
-

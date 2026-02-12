@@ -1,194 +1,271 @@
 <!DOCTYPE html>
-<html lang="ru" data-theme="light">
+<html lang="ru">
 <head>
 
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Repairo - Diablo IV: начало тестирования на консолях и ПК</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repairo - Diablo IV: РЅР°С‡Р°Р»Рѕ С‚РµСЃС‚РёСЂРѕРІР°РЅРёСЏ РЅР° РєРѕРЅСЃРѕР»СЏС… Рё РџРљ</title>
     <meta name="description" content="{{ description }}">
+    <meta name="description" content="РџРѕР»РЅС‹Р№ РіР°Р№Рґ РїРѕ Р±РµС‚Р°-С‚РµСЃС‚РёСЂРѕРІР°РЅРёСЋ Diablo IV (РјР°СЂС‚ 2023): РєР°Рє РїРѕРїР°СЃС‚СЊ РІ СЂР°РЅРЅРёР№ РґРѕСЃС‚СѓРї РЅР° PlayStation, Xbox Рё РџРљ, РєР°РєРёРµ РЅР°РіСЂР°РґС‹ РјРѕР¶РЅРѕ РїРѕР»СѓС‡РёС‚СЊ Рё С‡С‚Рѕ РїСЂРёРіРѕС‚РѕРІРёР»Р° Blizzard РІ РђРєС‚Рµ I.">
 
-  <link rel="stylesheet" href="../styles.css" />
-  <link rel="stylesheet" href="../styles-header.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <style>
-    .guide-content { line-height: 1.7; color: var(--text); }
-    .guide-content h2 { color: var(--primary); margin-top: 30px; margin-bottom: 15px; font-size: 1.5rem; }
-    .guide-content h3 { color: var(--primary-dark); margin-top: 25px; margin-bottom: 12px; font-size: 1.2rem; }
-    .guide-image-block { margin: 20px 0; padding: 15px; background: var(--background); border-radius: var(--border-radius); border: 1px solid var(--border); text-align: center; }
-    .guide-image-block img { max-width: 100%; height: auto; border-radius: 6px; border: 1px solid var(--border); }
-    .image-caption { margin-top: 10px; font-size: 0.85rem; color: var(--text-light); font-style: italic; }
-    .pro-tips { background: rgba(3, 74, 79, 0.05); padding: 15px; border-radius: 6px; margin: 20px 0; }
-    .pro-tips h4 { color: var(--primary); margin-top: 0; margin-bottom: 12px; font-size: 1.1rem; }
-    .tip-item { display: flex; gap: 8px; margin-bottom: 8px; align-items: flex-start; }
-    table { width: 100%; border-collapse: collapse; margin: 20px 0; }
-    th, td { border: 1px solid var(--border); padding: 8px; text-align: left; }
-    th { background: var(--background-light); }
-    .highlight { background: #f5f7fa; border-left: 4px solid #2d9cdb; padding: 10px 15px; margin: 20px 0; }
-    .faq-section ul { margin-left: 1em; }
-    .block-section { margin-bottom: 2em; }
-    @media (max-width: 768px) {
-      .guide-content h2 { font-size: 1.4rem; margin-top: 25px; }
-      .guide-image-block { padding: 12px; margin: 15px 0; }
-      table, th, td { font-size: 0.95rem; }
-    }
-    /* Р“РѕСЂРёР·РѕРЅС‚Р°Р»СЊРЅС‹Р№ Р±Р°РЅРЅРµСЂ-РєР°СЂС‚РѕС‡РєР° */
-    .ym-hero-banner {
-      width: 100%;
-      max-width: 600px;
-      min-height: 140px;
-      border-radius: 16px;
-      background: #ffffff;
-      border: 1px solid #e5e7eb;
-      display: flex;
-      flex-direction: column;
-      box-shadow: 0 4px 16px rgba(15, 23, 42, 0.08);
-      overflow: hidden;
-      box-sizing: border-box;
-      margin: 40px auto;
-    }
+    <style>
+        :root {
+            --gradient-start: #f5f7a0;
+            --gradient-end: #8df1c0;
+            --main-bg: #ffffff;
+            --text-color: #333333;
+            --text-light: #666666;
+            --border-color: #e0e0e0;
+            --shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            --radius: 8px;
+            --nav-height: 60px;
+            --glass-bg: rgba(255, 255, 255, 0.25);
+            --glass-border: 1px solid rgba(255, 255, 255, 0.18);
+            --glass-blur: blur(10px);
+        }
 
-    /* РљРѕРЅС‚РµР№РЅРµСЂ РґР»СЏ РёР·РѕР±СЂР°Р¶РµРЅРёР№ */
-    .ym-hero-images {
-      display: flex;
-      height: 120px;
-      overflow: hidden;
-    }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    .ym-hero-image {
-      flex: 1;
-      min-width: 0;
-      height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-      border-right: 1px solid #e5e7eb;
-      background: #f8f9fa;
-    }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--main-bg);
+            color: var(--text-color);
+            line-height: 1.6;
+            padding-top: var(--nav-height);
+        }
 
-    .ym-hero-image:last-child {
-      border-right: none;
-    }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
 
-    .ym-hero-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-      transition: transform 0.3s ease;
-      background: #f8f9fa;
-    }
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
 
-    .ym-hero-image:hover img {
-      transform: scale(1.02);
-    }
+        header {
+            background: var(--glass-bg);
+            backdrop-filter: var(--glass-blur);
+            -webkit-backdrop-filter: var(--glass-blur);
+            border-bottom: var(--glass-border);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
 
-    /* РџСЂР°РІР°СЏ С‡Р°СЃС‚СЊ: РєРѕРЅС‚РµРЅС‚ */
-    .ym-hero-content {
-      padding: 16px 18px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      gap: 8px;
-    }
+        .header-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: var(--nav-height);
+            position: relative;
+        }
 
-    /* РќР°Р·РІР°РЅРёРµ С‚РѕРІР°СЂР° */
-    .ym-hero-title {
-      font-size: 14px;
-      font-weight: 600;
-      color: #111827;
-      line-height: 1.3;
-      margin: 0 0 4px 0;
-      display: -webkit-box;
-      -webkit-line-clamp: 2;
-      line-clamp: 2;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
-    }
+        .header-image {
+            position: absolute;
+            left: 15px;
+            z-index: 1;
+        }
 
-    /* Р РµР№С‚РёРЅРі */
-    .ym-hero-top {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 8px;
-    }
+        .header-image img {
+            height: 40px;
+            width: auto;
+            object-fit: contain;
+        }
 
-    .ym-hero-rating {
-      font-size: 13px;
-      font-weight: 500;
-      color: #111827;
-      background: #f9fafb;
-      border-radius: 999px;
-      padding: 4px 10px;
-    }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--text-color);
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
 
-    .ym-hero-rating-count {
-      color: #6b7280;
-    }
+        .logo__text {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--text-color);
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
 
-    /* Р¤РёРѕР»РµС‚РѕРІР°СЏ РєРЅРѕРїРєР° */
-    .ym-hero-button {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 9px 16px;
-      border-radius: 999px;
-      border: none;
-      background: #6a00ff;
-      color: #ffffff;
-      font-size: 14px;
-      font-weight: 600;
-      cursor: pointer;
-      box-shadow: 0 2px 6px rgba(88, 28, 135, 0.35);
-      transition: background 0.15s ease, transform 0.15s ease,
-                  box-shadow 0.15s ease;
-    }
-    .ym-hero-button::after {
-      content: "в†’";
-      margin-left: 6px;
-      font-size: 14px;
-    }
-    .ym-hero-button:hover {
-      background: #7c3aed;
-      transform: translateY(-1px);
-      box-shadow: 0 4px 10px rgba(88, 28, 135, 0.45);
-    }
+        .back-btn {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 600;
+            color: var(--text-color);
+            transition: color 0.3s;
+        }
 
-    /* Р®СЂРёРґРёС‡РµСЃРєРёР№ Р±Р»РѕРє */
-    .ym-hero-legal {
-      margin-top: 6px;
-      max-width: 600px;
-      font-size: 11px;
-      line-height: 1.3;
-      color: #6b7280;
-      margin-left: auto;
-      margin-right: auto;
-    }
+        .back-btn:hover {
+            color: var(--gradient-end);
+        }
 
-    /* РђРґР°РїС‚РёРІ */
-    @media (max-width: 480px) {
-      .ym-hero-banner {
-        max-width: 100%;
-        margin: 20px 0;
-      }
-      .ym-hero-images {
-        height: 100px;
-      }
-      .ym-hero-content {
-        padding: 12px 12px;
-      }
-      .ym-hero-title {
-        font-size: 13px;
-      }
-      .ym-hero-button {
-        font-size: 13px;
-        padding: 8px 14px;
-      }
-      .ym-hero-legal {
-        font-size: 10px;
-      }
-    }
+        .back-btn::before {
+            content: "в†ђ";
+            font-size: 20px;
+        }
+
+        .article {
+            padding: 40px 0;
+        }
+
+        .article-header {
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .article-title {
+            font-size: 32px;
+            margin-bottom: 15px;
+            line-height: 1.3;
+        }
+
+        .article-meta {
+            color: var(--text-light);
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        .article-image {
+            width: 100%;
+            max-height: 500px;
+            object-fit: cover;
+            border-radius: var(--radius);
+            margin-bottom: 30px;
+            box-shadow: var(--shadow);
+        }
+
+        .article-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .article-content p {
+            margin-bottom: 20px;
+            font-size: 18px;
+            line-height: 1.7;
+        }
+
+        .article-content h2,
+        .article-content h3 {
+            margin: 30px 0 20px;
+            line-height: 1.4;
+        }
+
+        .article-content h2 {
+            font-size: 28px;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 10px;
+        }
+
+        .article-content h3 {
+            font-size: 24px;
+        }
+
+        .article-content img {
+            max-width: 100%;
+            height: auto;
+            border-radius: var(--radius);
+            margin: 25px 0;
+            box-shadow: var(--shadow);
+        }
+
+        .button {
+            display: inline-block;
+            padding: 12px 24px;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            border: none;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(90deg, var(--gradient-start), var(--gradient-end));
+            color: var(--text-color);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        footer {
+            background: #f5f5f5;
+            padding: 50px 0 20px;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .footer-column h3 {
+            font-size: 18px;
+            margin-bottom: 15px;
+            color: var(--text-color);
+            font-weight: 600;
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column li {
+            margin-bottom: 10px;
+        }
+
+        .footer-column a {
+            color: var(--text-light);
+            transition: color 0.3s;
+        }
+
+        .footer-column a:hover {
+            color: var(--gradient-end);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+            color: var(--text-light);
+            font-size: 14px;
+        }
+
+        @media (max-width: 768px) {
+            .article-title {
+                font-size: 26px;
+            }
+
+            .article-content p {
+                font-size: 16px;
+            }
+
+            .article-content h2 {
+                font-size: 24px;
+            }
+
+            .article-content h3 {
+                font-size: 20px;
+            }
+        }
     /* Telegram СЂРµРєР»Р°РјРЅС‹Р№ Р±Р°РЅРЅРµСЂ */
     .telegram-banner {
       display: flex;
@@ -292,22 +369,27 @@
         padding: 15px;
         min-height: 100px;
       }
+
       .telegram-logo {
         width: 50px;
         height: 50px;
         min-width: 50px;
         margin-right: 15px;
       }
+
       .telegram-logo svg {
         width: 26px;
         height: 26px;
       }
+
       .telegram-title {
         font-size: 14px;
       }
+
       .telegram-subtitle {
         font-size: 12px;
       }
+
       .telegram-button {
         font-size: 12px;
         padding: 6px 12px;
@@ -315,82 +397,75 @@
     }
 
 
-
-  </style>
+    </style>
   <script async src="https://timeweb.cloud/api/v1/cloud-ai/agents/3cc03620-d051-4d8d-b5af-f7b6cd083a35/embed.js?collapsed=true"></script>
 </head>
+
 <body>
-  <header class="header">
-    <div class="container">
-      <div class="header__inner">
-        <a href="../index.html" class="logo">
-          <span class="logo__icon"></span>
-          <span class="logo__text">GeoExpert</span>
-        </a>
-        <nav class="nav">
-          <ul class="nav__list">
-            <li><a href="../cameras.html" class="nav__link">РљР°РјРµСЂС‹</a></li>
-            <li><a href="../drones.html" class="nav__link">Р”СЂРѕРЅС‹</a></li>
-            <li><a href="../workflow.html" class="nav__link">Workflow</a></li>
-          </ul>
-        </nav>
-      </div>
-    </div>
-  </header>
+    <header>
+        <div class="container header-container">
+            <div class="header-image">
+                <img src="https://i.postimg.cc/q7H0JS0t/8d9ca2d0-7483-40bd-b92d-73c88a196afb-removebg-preview.png" alt="Header Image">
+            </div>
+            <a href="../articles.html" class="logo">
+                <span class="logo__text">Repairo</span>
+            </a>
+        </div>
+    </header>
 
     <main class="article">
         <div class="container">
             <article>
                 <div class="article-header">
-                    <h1 class="article-title">Diablo IV: начало тестирования на консолях и ПК — всё, что нужно знать</h1>
+                    <h1 class="article-title">Diablo IV: РЅР°С‡Р°Р»Рѕ С‚РµСЃС‚РёСЂРѕРІР°РЅРёСЏ РЅР° РєРѕРЅСЃРѕР»СЏС… Рё РџРљ вЂ” РІСЃС‘, С‡С‚Рѕ РЅСѓР¶РЅРѕ Р·РЅР°С‚СЊ</h1>
 
-                    <!-- ВАЖНО: Одно единственное изображение сверху над текстом -->
+                    <!-- Р’РђР–РќРћ: РћРґРЅРѕ РµРґРёРЅСЃС‚РІРµРЅРЅРѕРµ РёР·РѕР±СЂР°Р¶РµРЅРёРµ СЃРІРµСЂС…Сѓ РЅР°Рґ С‚РµРєСЃС‚РѕРј -->
                     <img src="https://i3.imageban.ru/out/2026/02/04/4aa3ac03dd729677b48717e6c0de3472.jpg"
-                         alt="Diablo IV Лилит"
+                         alt="Diablo IV Р›РёР»РёС‚"
                          class="article-image">
                 </div>
 
-                <div class="article-meta">изображение: Blizzard Entertainment</div>
+                <div class="article-meta">РёР·РѕР±СЂР°Р¶РµРЅРёРµ: Blizzard Entertainment</div>
 
                 <div class="article-content">
-                    <p>Врата Преисподней вот-вот распахнутся. Blizzard Entertainment официально объявила даты долгожданного открытого бета-тестирования Diablo IV, которое впервые даст возможность миллионам игроков опробовать новую часть легендарной Action/RPG еще до её летнего релиза. Самое важное: тестирование не ограничено ПК-боярами. Владельцы PlayStation и Xbox вступают в битву с Лилит на равных правах, с полной поддержкой кросс-плея и кросс-прогрессии уже на этапе беты. Готовьте геймпады и клавиатуры — март 2023 года будет жарким.</p>
+                    <p>Р’СЂР°С‚Р° РџСЂРµРёСЃРїРѕРґРЅРµР№ РІРѕС‚-РІРѕС‚ СЂР°СЃРїР°С…РЅСѓС‚СЃСЏ. Blizzard Entertainment РѕС„РёС†РёР°Р»СЊРЅРѕ РѕР±СЉСЏРІРёР»Р° РґР°С‚С‹ РґРѕР»РіРѕР¶РґР°РЅРЅРѕРіРѕ РѕС‚РєСЂС‹С‚РѕРіРѕ Р±РµС‚Р°-С‚РµСЃС‚РёСЂРѕРІР°РЅРёСЏ Diablo IV, РєРѕС‚РѕСЂРѕРµ РІРїРµСЂРІС‹Рµ РґР°СЃС‚ РІРѕР·РјРѕР¶РЅРѕСЃС‚СЊ РјРёР»Р»РёРѕРЅР°Рј РёРіСЂРѕРєРѕРІ РѕРїСЂРѕР±РѕРІР°С‚СЊ РЅРѕРІСѓСЋ С‡Р°СЃС‚СЊ Р»РµРіРµРЅРґР°СЂРЅРѕР№ Action/RPG РµС‰Рµ РґРѕ РµС‘ Р»РµС‚РЅРµРіРѕ СЂРµР»РёР·Р°. РЎР°РјРѕРµ РІР°Р¶РЅРѕРµ: С‚РµСЃС‚РёСЂРѕРІР°РЅРёРµ РЅРµ РѕРіСЂР°РЅРёС‡РµРЅРѕ РџРљ-Р±РѕСЏСЂР°РјРё. Р’Р»Р°РґРµР»СЊС†С‹ PlayStation Рё Xbox РІСЃС‚СѓРїР°СЋС‚ РІ Р±РёС‚РІСѓ СЃ Р›РёР»РёС‚ РЅР° СЂР°РІРЅС‹С… РїСЂР°РІР°С…, СЃ РїРѕР»РЅРѕР№ РїРѕРґРґРµСЂР¶РєРѕР№ РєСЂРѕСЃСЃ-РїР»РµСЏ Рё РєСЂРѕСЃСЃ-РїСЂРѕРіСЂРµСЃСЃРёРё СѓР¶Рµ РЅР° СЌС‚Р°РїРµ Р±РµС‚С‹. Р“РѕС‚РѕРІСЊС‚Рµ РіРµР№РјРїР°РґС‹ Рё РєР»Р°РІРёР°С‚СѓСЂС‹ вЂ” РјР°СЂС‚ 2023 РіРѕРґР° Р±СѓРґРµС‚ Р¶Р°СЂРєРёРј.</p>
 
-                    <h2 id="step-1">Даты и этапы тестирования: когда можно играть?</h2>
-                    <p>Blizzard разделила тестирование на два этапа, чтобы серверы (и нервы разработчиков) выдержали наплыв желающих.</p>
+                    <h2 id="step-1">Р”Р°С‚С‹ Рё СЌС‚Р°РїС‹ С‚РµСЃС‚РёСЂРѕРІР°РЅРёСЏ: РєРѕРіРґР° РјРѕР¶РЅРѕ РёРіСЂР°С‚СЊ?</h2>
+                    <p>Blizzard СЂР°Р·РґРµР»РёР»Р° С‚РµСЃС‚РёСЂРѕРІР°РЅРёРµ РЅР° РґРІР° СЌС‚Р°РїР°, С‡С‚РѕР±С‹ СЃРµСЂРІРµСЂС‹ (Рё РЅРµСЂРІС‹ СЂР°Р·СЂР°Р±РѕС‚С‡РёРєРѕРІ) РІС‹РґРµСЂР¶Р°Р»Рё РЅР°РїР»С‹РІ Р¶РµР»Р°СЋС‰РёС….</p>
 
-                    <h3>Ранний доступ (Early Access)</h3>
-                    <p><strong>17–19 марта 2023 года.</strong> Этот уикенд предназначен для тех, кто оформил предварительный заказ игры на любой платформе. Если вы купили игру в PS Store, Xbox Store или Battle.net, доступ откроется автоматически. Если у вас есть код (например, из акции с KFC), его нужно активировать в учетной записи Battle.net. Это ваш шанс увидеть Санктуарий одним из первых и избежать потенциальных очередей, которые почти гарантированы на следующей неделе.</p>
+                    <h3>Р Р°РЅРЅРёР№ РґРѕСЃС‚СѓРї (Early Access)</h3>
+                    <p><strong>17вЂ“19 РјР°СЂС‚Р° 2023 РіРѕРґР°.</strong> Р­С‚РѕС‚ СѓРёРєРµРЅРґ РїСЂРµРґРЅР°Р·РЅР°С‡РµРЅ РґР»СЏ С‚РµС…, РєС‚Рѕ РѕС„РѕСЂРјРёР» РїСЂРµРґРІР°СЂРёС‚РµР»СЊРЅС‹Р№ Р·Р°РєР°Р· РёРіСЂС‹ РЅР° Р»СЋР±РѕР№ РїР»Р°С‚С„РѕСЂРјРµ. Р•СЃР»Рё РІС‹ РєСѓРїРёР»Рё РёРіСЂСѓ РІ PS Store, Xbox Store РёР»Рё Battle.net, РґРѕСЃС‚СѓРї РѕС‚РєСЂРѕРµС‚СЃСЏ Р°РІС‚РѕРјР°С‚РёС‡РµСЃРєРё. Р•СЃР»Рё Сѓ РІР°СЃ РµСЃС‚СЊ РєРѕРґ (РЅР°РїСЂРёРјРµСЂ, РёР· Р°РєС†РёРё СЃ KFC), РµРіРѕ РЅСѓР¶РЅРѕ Р°РєС‚РёРІРёСЂРѕРІР°С‚СЊ РІ СѓС‡РµС‚РЅРѕР№ Р·Р°РїРёСЃРё Battle.net. Р­С‚Рѕ РІР°С€ С€Р°РЅСЃ СѓРІРёРґРµС‚СЊ РЎР°РЅРєС‚СѓР°СЂРёР№ РѕРґРЅРёРј РёР· РїРµСЂРІС‹С… Рё РёР·Р±РµР¶Р°С‚СЊ РїРѕС‚РµРЅС†РёР°Р»СЊРЅС‹С… РѕС‡РµСЂРµРґРµР№, РєРѕС‚РѕСЂС‹Рµ РїРѕС‡С‚Рё РіР°СЂР°РЅС‚РёСЂРѕРІР°РЅС‹ РЅР° СЃР»РµРґСѓСЋС‰РµР№ РЅРµРґРµР»Рµ.</p>
 
-                    <h3>Открытая бета (Open Beta)</h3>
-                    <p><strong>24–26 марта 2023 года.</strong> В эти дни игра станет доступна абсолютно всем. Не нужно ничего покупать или предзаказывать. Просто скачайте клиент и играйте. Это будет настоящий стресс-тест для серверов Blizzard, так что будьте готовы к возможным очередям на вход (вспомним запуск Diablo III, да).</p>
+                    <h3>РћС‚РєСЂС‹С‚Р°СЏ Р±РµС‚Р° (Open Beta)</h3>
+                    <p><strong>24вЂ“26 РјР°СЂС‚Р° 2023 РіРѕРґР°.</strong> Р’ СЌС‚Рё РґРЅРё РёРіСЂР° СЃС‚Р°РЅРµС‚ РґРѕСЃС‚СѓРїРЅР° Р°Р±СЃРѕР»СЋС‚РЅРѕ РІСЃРµРј. РќРµ РЅСѓР¶РЅРѕ РЅРёС‡РµРіРѕ РїРѕРєСѓРїР°С‚СЊ РёР»Рё РїСЂРµРґР·Р°РєР°Р·С‹РІР°С‚СЊ. РџСЂРѕСЃС‚Рѕ СЃРєР°С‡Р°Р№С‚Рµ РєР»РёРµРЅС‚ Рё РёРіСЂР°Р№С‚Рµ. Р­С‚Рѕ Р±СѓРґРµС‚ РЅР°СЃС‚РѕСЏС‰РёР№ СЃС‚СЂРµСЃСЃ-С‚РµСЃС‚ РґР»СЏ СЃРµСЂРІРµСЂРѕРІ Blizzard, С‚Р°Рє С‡С‚Рѕ Р±СѓРґСЊС‚Рµ РіРѕС‚РѕРІС‹ Рє РІРѕР·РјРѕР¶РЅС‹Рј РѕС‡РµСЂРµРґСЏРј РЅР° РІС…РѕРґ (РІСЃРїРѕРјРЅРёРј Р·Р°РїСѓСЃРє Diablo III, РґР°).</p>
 
-                    <h2 id="step-2">Что будет доступно в бете?</h2>
-                    <p>Разработчики не поскупились на контент. Игрокам дадут доступ к <strong>Прологу и всему Акту I</strong>. Это значит, что вы сможете исследовать первую крупную зону — «Расколотые вершины» (Fractured Peaks). Это мрачная, заснеженная горная местность, полная готических руин, вампиров и культистов.</p>
-                    <p>Вы сможете прокачать своих персонажей до <strong>25-го уровня</strong>. Этого вполне достаточно, чтобы открыть основные навыки в древе умений, попробовать первые легендарные предметы и понять, как работает синергия способностей. Важно: прогресс с раннего доступа перенесется в открытую бету, но <strong>не перенесется</strong> в полную версию игры на релизе. Так что не привязывайтесь к своим героям слишком сильно.</p>
+                    <h2 id="step-2">Р§С‚Рѕ Р±СѓРґРµС‚ РґРѕСЃС‚СѓРїРЅРѕ РІ Р±РµС‚Рµ?</h2>
+                    <p>Р Р°Р·СЂР°Р±РѕС‚С‡РёРєРё РЅРµ РїРѕСЃРєСѓРїРёР»РёСЃСЊ РЅР° РєРѕРЅС‚РµРЅС‚. РРіСЂРѕРєР°Рј РґР°РґСѓС‚ РґРѕСЃС‚СѓРї Рє <strong>РџСЂРѕР»РѕРіСѓ Рё РІСЃРµРјСѓ РђРєС‚Сѓ I</strong>. Р­С‚Рѕ Р·РЅР°С‡РёС‚, С‡С‚Рѕ РІС‹ СЃРјРѕР¶РµС‚Рµ РёСЃСЃР»РµРґРѕРІР°С‚СЊ РїРµСЂРІСѓСЋ РєСЂСѓРїРЅСѓСЋ Р·РѕРЅСѓ вЂ” В«Р Р°СЃРєРѕР»РѕС‚С‹Рµ РІРµСЂС€РёРЅС‹В» (Fractured Peaks). Р­С‚Рѕ РјСЂР°С‡РЅР°СЏ, Р·Р°СЃРЅРµР¶РµРЅРЅР°СЏ РіРѕСЂРЅР°СЏ РјРµСЃС‚РЅРѕСЃС‚СЊ, РїРѕР»РЅР°СЏ РіРѕС‚РёС‡РµСЃРєРёС… СЂСѓРёРЅ, РІР°РјРїРёСЂРѕРІ Рё РєСѓР»СЊС‚РёСЃС‚РѕРІ.</p>
+                    <p>Р’С‹ СЃРјРѕР¶РµС‚Рµ РїСЂРѕРєР°С‡Р°С‚СЊ СЃРІРѕРёС… РїРµСЂСЃРѕРЅР°Р¶РµР№ РґРѕ <strong>25-РіРѕ СѓСЂРѕРІРЅСЏ</strong>. Р­С‚РѕРіРѕ РІРїРѕР»РЅРµ РґРѕСЃС‚Р°С‚РѕС‡РЅРѕ, С‡С‚РѕР±С‹ РѕС‚РєСЂС‹С‚СЊ РѕСЃРЅРѕРІРЅС‹Рµ РЅР°РІС‹РєРё РІ РґСЂРµРІРµ СѓРјРµРЅРёР№, РїРѕРїСЂРѕР±РѕРІР°С‚СЊ РїРµСЂРІС‹Рµ Р»РµРіРµРЅРґР°СЂРЅС‹Рµ РїСЂРµРґРјРµС‚С‹ Рё РїРѕРЅСЏС‚СЊ, РєР°Рє СЂР°Р±РѕС‚Р°РµС‚ СЃРёРЅРµСЂРіРёСЏ СЃРїРѕСЃРѕР±РЅРѕСЃС‚РµР№. Р’Р°Р¶РЅРѕ: РїСЂРѕРіСЂРµСЃСЃ СЃ СЂР°РЅРЅРµРіРѕ РґРѕСЃС‚СѓРїР° РїРµСЂРµРЅРµСЃРµС‚СЃСЏ РІ РѕС‚РєСЂС‹С‚СѓСЋ Р±РµС‚Сѓ, РЅРѕ <strong>РЅРµ РїРµСЂРµРЅРµСЃРµС‚СЃСЏ</strong> РІ РїРѕР»РЅСѓСЋ РІРµСЂСЃРёСЋ РёРіСЂС‹ РЅР° СЂРµР»РёР·Рµ. РўР°Рє С‡С‚Рѕ РЅРµ РїСЂРёРІСЏР·С‹РІР°Р№С‚РµСЃСЊ Рє СЃРІРѕРёРј РіРµСЂРѕСЏРј СЃР»РёС€РєРѕРј СЃРёР»СЊРЅРѕ.</p>
 
-                    <h2 id="step-3">Классы: кем можно играть?</h2>
-                    <p>В раннем доступе (17–19 марта) будут доступны три класса: <strong>Варвар, Разбойник и Волшебник</strong>. Это классическое трио, позволяющее оценить ближний бой, ловкость и магию.</p>
-<p>На открытой бете (24–26 марта) к ним присоединятся еще два класса: <strong>Друид и Некромант</strong>. Если вы хотите призывать скелетов или превращаться в медведя, вам придется подождать второго уикенда. Blizzard также разрешает создавать до 10 персонажей на аккаунте, так что можно смело пробовать всех.</p>
+                    <h2 id="step-3">РљР»Р°СЃСЃС‹: РєРµРј РјРѕР¶РЅРѕ РёРіСЂР°С‚СЊ?</h2>
+                    <p>Р’ СЂР°РЅРЅРµРј РґРѕСЃС‚СѓРїРµ (17вЂ“19 РјР°СЂС‚Р°) Р±СѓРґСѓС‚ РґРѕСЃС‚СѓРїРЅС‹ С‚СЂРё РєР»Р°СЃСЃР°: <strong>Р’Р°СЂРІР°СЂ, Р Р°Р·Р±РѕР№РЅРёРє Рё Р’РѕР»С€РµР±РЅРёРє</strong>. Р­С‚Рѕ РєР»Р°СЃСЃРёС‡РµСЃРєРѕРµ С‚СЂРёРѕ, РїРѕР·РІРѕР»СЏСЋС‰РµРµ РѕС†РµРЅРёС‚СЊ Р±Р»РёР¶РЅРёР№ Р±РѕР№, Р»РѕРІРєРѕСЃС‚СЊ Рё РјР°РіРёСЋ.</p>
+<p>РќР° РѕС‚РєСЂС‹С‚РѕР№ Р±РµС‚Рµ (24вЂ“26 РјР°СЂС‚Р°) Рє РЅРёРј РїСЂРёСЃРѕРµРґРёРЅСЏС‚СЃСЏ РµС‰Рµ РґРІР° РєР»Р°СЃСЃР°: <strong>Р”СЂСѓРёРґ Рё РќРµРєСЂРѕРјР°РЅС‚</strong>. Р•СЃР»Рё РІС‹ С…РѕС‚РёС‚Рµ РїСЂРёР·С‹РІР°С‚СЊ СЃРєРµР»РµС‚РѕРІ РёР»Рё РїСЂРµРІСЂР°С‰Р°С‚СЊСЃСЏ РІ РјРµРґРІРµРґСЏ, РІР°Рј РїСЂРёРґРµС‚СЃСЏ РїРѕРґРѕР¶РґР°С‚СЊ РІС‚РѕСЂРѕРіРѕ СѓРёРєРµРЅРґР°. Blizzard С‚Р°РєР¶Рµ СЂР°Р·СЂРµС€Р°РµС‚ СЃРѕР·РґР°РІР°С‚СЊ РґРѕ 10 РїРµСЂСЃРѕРЅР°Р¶РµР№ РЅР° Р°РєРєР°СѓРЅС‚Рµ, С‚Р°Рє С‡С‚Рѕ РјРѕР¶РЅРѕ СЃРјРµР»Рѕ РїСЂРѕР±РѕРІР°С‚СЊ РІСЃРµС….</p>
 
-                    <h2 id="step-4">Уникальная награда: Рюкзак с волчонком</h2>
-                    <p>Чтобы мотивировать игроков не просто «побегать 5 минут», а реально протестировать контент, Blizzard ввела эксклюзивные косметические награды. Если вы достигнете <strong>20-го уровня</strong> любым персонажем во время беты, вы получите в полной версии игры предмет «Beta Wolf Pack». Это рюкзак, в котором сидит живой, анимированный волчонок. Интернет уже сошел с ума от этой милоты, и «волк в рюкзаке» стал главным мемом беты.</p>
-                    <p>Кроме того, за достижение 20-го уровня и просто за прибытие в город Киовашад (Kyovashad) выдадут уникальные звания (Titles) для профиля игрока.</p>
+                    <h2 id="step-4">РЈРЅРёРєР°Р»СЊРЅР°СЏ РЅР°РіСЂР°РґР°: Р СЋРєР·Р°Рє СЃ РІРѕР»С‡РѕРЅРєРѕРј</h2>
+                    <p>Р§С‚РѕР±С‹ РјРѕС‚РёРІРёСЂРѕРІР°С‚СЊ РёРіСЂРѕРєРѕРІ РЅРµ РїСЂРѕСЃС‚Рѕ В«РїРѕР±РµРіР°С‚СЊ 5 РјРёРЅСѓС‚В», Р° СЂРµР°Р»СЊРЅРѕ РїСЂРѕС‚РµСЃС‚РёСЂРѕРІР°С‚СЊ РєРѕРЅС‚РµРЅС‚, Blizzard РІРІРµР»Р° СЌРєСЃРєР»СЋР·РёРІРЅС‹Рµ РєРѕСЃРјРµС‚РёС‡РµСЃРєРёРµ РЅР°РіСЂР°РґС‹. Р•СЃР»Рё РІС‹ РґРѕСЃС‚РёРіРЅРµС‚Рµ <strong>20-РіРѕ СѓСЂРѕРІРЅСЏ</strong> Р»СЋР±С‹Рј РїРµСЂСЃРѕРЅР°Р¶РµРј РІРѕ РІСЂРµРјСЏ Р±РµС‚С‹, РІС‹ РїРѕР»СѓС‡РёС‚Рµ РІ РїРѕР»РЅРѕР№ РІРµСЂСЃРёРё РёРіСЂС‹ РїСЂРµРґРјРµС‚ В«Beta Wolf PackВ». Р­С‚Рѕ СЂСЋРєР·Р°Рє, РІ РєРѕС‚РѕСЂРѕРј СЃРёРґРёС‚ Р¶РёРІРѕР№, Р°РЅРёРјРёСЂРѕРІР°РЅРЅС‹Р№ РІРѕР»С‡РѕРЅРѕРє. РРЅС‚РµСЂРЅРµС‚ СѓР¶Рµ СЃРѕС€РµР» СЃ СѓРјР° РѕС‚ СЌС‚РѕР№ РјРёР»РѕС‚С‹, Рё В«РІРѕР»Рє РІ СЂСЋРєР·Р°РєРµВ» СЃС‚Р°Р» РіР»Р°РІРЅС‹Рј РјРµРјРѕРј Р±РµС‚С‹.</p>
+                    <p>РљСЂРѕРјРµ С‚РѕРіРѕ, Р·Р° РґРѕСЃС‚РёР¶РµРЅРёРµ 20-РіРѕ СѓСЂРѕРІРЅСЏ Рё РїСЂРѕСЃС‚Рѕ Р·Р° РїСЂРёР±С‹С‚РёРµ РІ РіРѕСЂРѕРґ РљРёРѕРІР°С€Р°Рґ (Kyovashad) РІС‹РґР°РґСѓС‚ СѓРЅРёРєР°Р»СЊРЅС‹Рµ Р·РІР°РЅРёСЏ (Titles) РґР»СЏ РїСЂРѕС„РёР»СЏ РёРіСЂРѕРєР°.</p>
 
-                    <h2 id="step-5">Мировой босс: Ашава Чумная</h2>
-                    <p>Для самых смелых подготовлен челлендж — мировой босс <strong>Ашава (Ashava)</strong>. Это гигантский ядовитый монстр, которого невозможно убить в одиночку. Он будет появляться в определенное время (в субботу и воскресенье) в специальной зоне. Для победы потребуется группа из 12 игроков (игра автоматически подберет вам союзников, когда вы войдете в зону). Битва обещает быть сложной, особенно с учетом ограничения уровня, так что готовьтесь к вайпам и ремонту экипировки.</p>
+                    <h2 id="step-5">РњРёСЂРѕРІРѕР№ Р±РѕСЃСЃ: РђС€Р°РІР° Р§СѓРјРЅР°СЏ</h2>
+                    <p>Р”Р»СЏ СЃР°РјС‹С… СЃРјРµР»С‹С… РїРѕРґРіРѕС‚РѕРІР»РµРЅ С‡РµР»Р»РµРЅРґР¶ вЂ” РјРёСЂРѕРІРѕР№ Р±РѕСЃСЃ <strong>РђС€Р°РІР° (Ashava)</strong>. Р­С‚Рѕ РіРёРіР°РЅС‚СЃРєРёР№ СЏРґРѕРІРёС‚С‹Р№ РјРѕРЅСЃС‚СЂ, РєРѕС‚РѕСЂРѕРіРѕ РЅРµРІРѕР·РјРѕР¶РЅРѕ СѓР±РёС‚СЊ РІ РѕРґРёРЅРѕС‡РєСѓ. РћРЅ Р±СѓРґРµС‚ РїРѕСЏРІР»СЏС‚СЊСЃСЏ РІ РѕРїСЂРµРґРµР»РµРЅРЅРѕРµ РІСЂРµРјСЏ (РІ СЃСѓР±Р±РѕС‚Сѓ Рё РІРѕСЃРєСЂРµСЃРµРЅСЊРµ) РІ СЃРїРµС†РёР°Р»СЊРЅРѕР№ Р·РѕРЅРµ. Р”Р»СЏ РїРѕР±РµРґС‹ РїРѕС‚СЂРµР±СѓРµС‚СЃСЏ РіСЂСѓРїРїР° РёР· 12 РёРіСЂРѕРєРѕРІ (РёРіСЂР° Р°РІС‚РѕРјР°С‚РёС‡РµСЃРєРё РїРѕРґР±РµСЂРµС‚ РІР°Рј СЃРѕСЋР·РЅРёРєРѕРІ, РєРѕРіРґР° РІС‹ РІРѕР№РґРµС‚Рµ РІ Р·РѕРЅСѓ). Р‘РёС‚РІР° РѕР±РµС‰Р°РµС‚ Р±С‹С‚СЊ СЃР»РѕР¶РЅРѕР№, РѕСЃРѕР±РµРЅРЅРѕ СЃ СѓС‡РµС‚РѕРј РѕРіСЂР°РЅРёС‡РµРЅРёСЏ СѓСЂРѕРІРЅСЏ, С‚Р°Рє С‡С‚Рѕ РіРѕС‚РѕРІСЊС‚РµСЃСЊ Рє РІР°Р№РїР°Рј Рё СЂРµРјРѕРЅС‚Сѓ СЌРєРёРїРёСЂРѕРІРєРё.</p>
 
-                    <h2 id="step-6">Техническая часть: консоли и системные требования</h2>
-                    <p>Одна из главных особенностей Diablo IV — это полноценный кросс-плей и кросс-прогрессия. Вы можете начать играть на ПК, а потом продолжить на Xbox Series X, лежа на диване (при условии покупки игры на обеих платформах, конечно). В бете это тоже работает: игроки с PlayStation, Xbox и ПК могут быть в одной группе.</p>
-                    <p>На консолях прошлого поколения (PS4, Xbox One) игра тоже работает, но визуально будет уступать версиям для PS5 и Series X. Однако Blizzard заявляет, что оптимизация была приоритетом. Также на консолях доступен <strong>локальный кооператив на двоих (couch co-op)</strong> — фишка, которую обожают фанаты консольной версии Diablo III. На ПК, увы, такой функции нет.</p>
+                    <h2 id="step-6">РўРµС…РЅРёС‡РµСЃРєР°СЏ С‡Р°СЃС‚СЊ: РєРѕРЅСЃРѕР»Рё Рё СЃРёСЃС‚РµРјРЅС‹Рµ С‚СЂРµР±РѕРІР°РЅРёСЏ</h2>
+                    <p>РћРґРЅР° РёР· РіР»Р°РІРЅС‹С… РѕСЃРѕР±РµРЅРЅРѕСЃС‚РµР№ Diablo IV вЂ” СЌС‚Рѕ РїРѕР»РЅРѕС†РµРЅРЅС‹Р№ РєСЂРѕСЃСЃ-РїР»РµР№ Рё РєСЂРѕСЃСЃ-РїСЂРѕРіСЂРµСЃСЃРёСЏ. Р’С‹ РјРѕР¶РµС‚Рµ РЅР°С‡Р°С‚СЊ РёРіСЂР°С‚СЊ РЅР° РџРљ, Р° РїРѕС‚РѕРј РїСЂРѕРґРѕР»Р¶РёС‚СЊ РЅР° Xbox Series X, Р»РµР¶Р° РЅР° РґРёРІР°РЅРµ (РїСЂРё СѓСЃР»РѕРІРёРё РїРѕРєСѓРїРєРё РёРіСЂС‹ РЅР° РѕР±РµРёС… РїР»Р°С‚С„РѕСЂРјР°С…, РєРѕРЅРµС‡РЅРѕ). Р’ Р±РµС‚Рµ СЌС‚Рѕ С‚РѕР¶Рµ СЂР°Р±РѕС‚Р°РµС‚: РёРіСЂРѕРєРё СЃ PlayStation, Xbox Рё РџРљ РјРѕРіСѓС‚ Р±С‹С‚СЊ РІ РѕРґРЅРѕР№ РіСЂСѓРїРїРµ.</p>
+                    <p>РќР° РєРѕРЅСЃРѕР»СЏС… РїСЂРѕС€Р»РѕРіРѕ РїРѕРєРѕР»РµРЅРёСЏ (PS4, Xbox One) РёРіСЂР° С‚РѕР¶Рµ СЂР°Р±РѕС‚Р°РµС‚, РЅРѕ РІРёР·СѓР°Р»СЊРЅРѕ Р±СѓРґРµС‚ СѓСЃС‚СѓРїР°С‚СЊ РІРµСЂСЃРёСЏРј РґР»СЏ PS5 Рё Series X. РћРґРЅР°РєРѕ Blizzard Р·Р°СЏРІР»СЏРµС‚, С‡С‚Рѕ РѕРїС‚РёРјРёР·Р°С†РёСЏ Р±С‹Р»Р° РїСЂРёРѕСЂРёС‚РµС‚РѕРј. РўР°РєР¶Рµ РЅР° РєРѕРЅСЃРѕР»СЏС… РґРѕСЃС‚СѓРїРµРЅ <strong>Р»РѕРєР°Р»СЊРЅС‹Р№ РєРѕРѕРїРµСЂР°С‚РёРІ РЅР° РґРІРѕРёС… (couch co-op)</strong> вЂ” С„РёС€РєР°, РєРѕС‚РѕСЂСѓСЋ РѕР±РѕР¶Р°СЋС‚ С„Р°РЅР°С‚С‹ РєРѕРЅСЃРѕР»СЊРЅРѕР№ РІРµСЂСЃРёРё Diablo III. РќР° РџРљ, СѓРІС‹, С‚Р°РєРѕР№ С„СѓРЅРєС†РёРё РЅРµС‚.</p>
 
-                    <h3>Системные требования для ПК</h3>
-                    <p>Они на удивление демократичны. Для минималок (1080p, 30 fps, низкие настройки) хватит Core i5-2500K и GTX 660. Но для комфортной игры (1080p, 60 fps, средние) рекомендуется хотя бы GTX 970 или RX 470 и 16 ГБ оперативной памяти. Обязательное требование — SSD. На обычном жестком диске игра может работать, но загрузки будут мучительно долгими.</p>
+                    <h3>РЎРёСЃС‚РµРјРЅС‹Рµ С‚СЂРµР±РѕРІР°РЅРёСЏ РґР»СЏ РџРљ</h3>
+                    <p>РћРЅРё РЅР° СѓРґРёРІР»РµРЅРёРµ РґРµРјРѕРєСЂР°С‚РёС‡РЅС‹. Р”Р»СЏ РјРёРЅРёРјР°Р»РѕРє (1080p, 30 fps, РЅРёР·РєРёРµ РЅР°СЃС‚СЂРѕР№РєРё) С…РІР°С‚РёС‚ Core i5-2500K Рё GTX 660. РќРѕ РґР»СЏ РєРѕРјС„РѕСЂС‚РЅРѕР№ РёРіСЂС‹ (1080p, 60 fps, СЃСЂРµРґРЅРёРµ) СЂРµРєРѕРјРµРЅРґСѓРµС‚СЃСЏ С…РѕС‚СЏ Р±С‹ GTX 970 РёР»Рё RX 470 Рё 16 Р“Р‘ РѕРїРµСЂР°С‚РёРІРЅРѕР№ РїР°РјСЏС‚Рё. РћР±СЏР·Р°С‚РµР»СЊРЅРѕРµ С‚СЂРµР±РѕРІР°РЅРёРµ вЂ” SSD. РќР° РѕР±С‹С‡РЅРѕРј Р¶РµСЃС‚РєРѕРј РґРёСЃРєРµ РёРіСЂР° РјРѕР¶РµС‚ СЂР°Р±РѕС‚Р°С‚СЊ, РЅРѕ Р·Р°РіСЂСѓР·РєРё Р±СѓРґСѓС‚ РјСѓС‡РёС‚РµР»СЊРЅРѕ РґРѕР»РіРёРјРё.</p>
 
-                    <h2 id="step-7">Заключение: стоит ли участвовать?</h2>
-                    <p>Безусловно. Это не просто демо-версия, а возможность бесплатно пощупать один из главных релизов 2023 года. Diablo IV выглядит мрачнее, чем третья часть, возвращаясь к стилистике Diablo II, но с современным геймплеем и открытым миром в стиле MMO-lite. Даже если вы не фанат серии, стоит зайти хотя бы ради того, чтобы получить того самого волчонка в рюкзаке. Увидимся в Санктуарии!</p>
+                    <h2 id="step-7">Р—Р°РєР»СЋС‡РµРЅРёРµ: СЃС‚РѕРёС‚ Р»Рё СѓС‡Р°СЃС‚РІРѕРІР°С‚СЊ?</h2>
+                    <p>Р‘РµР·СѓСЃР»РѕРІРЅРѕ. Р­С‚Рѕ РЅРµ РїСЂРѕСЃС‚Рѕ РґРµРјРѕ-РІРµСЂСЃРёСЏ, Р° РІРѕР·РјРѕР¶РЅРѕСЃС‚СЊ Р±РµСЃРїР»Р°С‚РЅРѕ РїРѕС‰СѓРїР°С‚СЊ РѕРґРёРЅ РёР· РіР»Р°РІРЅС‹С… СЂРµР»РёР·РѕРІ 2023 РіРѕРґР°. Diablo IV РІС‹РіР»СЏРґРёС‚ РјСЂР°С‡РЅРµРµ, С‡РµРј С‚СЂРµС‚СЊСЏ С‡Р°СЃС‚СЊ, РІРѕР·РІСЂР°С‰Р°СЏСЃСЊ Рє СЃС‚РёР»РёСЃС‚РёРєРµ Diablo II, РЅРѕ СЃ СЃРѕРІСЂРµРјРµРЅРЅС‹Рј РіРµР№РјРїР»РµРµРј Рё РѕС‚РєСЂС‹С‚С‹Рј РјРёСЂРѕРј РІ СЃС‚РёР»Рµ MMO-lite. Р”Р°Р¶Рµ РµСЃР»Рё РІС‹ РЅРµ С„Р°РЅР°С‚ СЃРµСЂРёРё, СЃС‚РѕРёС‚ Р·Р°Р№С‚Рё С…РѕС‚СЏ Р±С‹ СЂР°РґРё С‚РѕРіРѕ, С‡С‚РѕР±С‹ РїРѕР»СѓС‡РёС‚СЊ С‚РѕРіРѕ СЃР°РјРѕРіРѕ РІРѕР»С‡РѕРЅРєР° РІ СЂСЋРєР·Р°РєРµ. РЈРІРёРґРёРјСЃСЏ РІ РЎР°РЅРєС‚СѓР°СЂРёРё!</p>
 </div>
 
-        <!-- Telegram рекламный баннер -->
+        <!-- Telegram СЂРµРєР»Р°РјРЅС‹Р№ Р±Р°РЅРЅРµСЂ -->
         <a href="https://t.me/RepairoRU" target="_blank" rel="noopener noreferrer" class="telegram-banner">
           <div class="telegram-banner-container">
             <div class="telegram-logo">
@@ -399,10 +474,10 @@
               </svg>
             </div>
             <div class="telegram-content">
-              <div class="telegram-title">Новости из мира технологий</div>
-              <div class="telegram-subtitle">В нашем новом Telegram-канале. Подписывайтесь и будьте в числе первых!</div>
+              <div class="telegram-title">РќРѕРІРѕСЃС‚Рё РёР· РјРёСЂР° С‚РµС…РЅРѕР»РѕРіРёР№</div>
+              <div class="telegram-subtitle">Р’ РЅР°С€РµРј РЅРѕРІРѕРј Telegram-РєР°РЅР°Р»Рµ. РџРѕРґРїРёСЃС‹РІР°Р№С‚РµСЃСЊ Рё Р±СѓРґСЊС‚Рµ РІ С‡РёСЃР»Рµ РїРµСЂРІС‹С…!</div>
               <div class="telegram-button">
-                Подписаться
+                РџРѕРґРїРёСЃР°С‚СЊСЃСЏ
                 <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.56c-.21 2.22-1.12 7.58-1.58 10.06-.19 1.07-.57 1.43-.94 1.46-.8.07-1.4-.52-2.17-1.03-1.21-.79-1.89-1.28-3.06-2.05-1.35-.87-.47-1.35.3-2.13.2-.21 3.71-3.39 3.77-3.68.01-.04.01-.18-.07-.26s-.2-.05-.29-.03c-.12.03-2.11 1.34-5.95 3.93-.56.38-1.07.57-1.53.56-.5-.01-1.47-.28-2.19-.51-.88-.28-1.58-.43-1.52-.91.03-.25.38-.51 1.04-.78 4.07-1.77 6.78-2.94 8.13-3.51 3.88-1.62 4.68-1.9 5.19-1.91.12 0 .37.03.54.17.14.12.18.28.2.44-.01.06 0 .11-.01.17z"/>
                 </svg>
@@ -428,45 +503,45 @@
                         </span>
                         <span class="logo__text">Repairo</span>
                     </a>
-                    <p class="footer__text">Помогаем ремонтировать электронику с 2024 года</p>
+                    <p class="footer__text">РџРѕРјРѕРіР°РµРј СЂРµРјРѕРЅС‚РёСЂРѕРІР°С‚СЊ СЌР»РµРєС‚СЂРѕРЅРёРєСѓ СЃ 2024 РіРѕРґР°</p>
                 </div>
                 <div class="footer__col">
-                    <h3 class="footer__title">Разделы</h3>
+                    <h3 class="footer__title">Р Р°Р·РґРµР»С‹</h3>
                     <ul class="footer__links">
-                        <li><a href="../index.html" class="footer__link">Главная</a></li>
-                        <li><a href="../index.html#categories" class="footer__link">Все гайды</a></li>
-                        <li><a href="../contacts.html" class="footer__link">Контакты</a></li>
+                        <li><a href="../index.html" class="footer__link">Р“Р»Р°РІРЅР°СЏ</a></li>
+                        <li><a href="../index.html#categories" class="footer__link">Р’СЃРµ РіР°Р№РґС‹</a></li>
+                        <li><a href="../contacts.html" class="footer__link">РљРѕРЅС‚Р°РєС‚С‹</a></li>
                     </ul>
                 </div>
                 <div class="footer__col">
-                    <h3 class="footer__title">Категории</h3>
+                    <h3 class="footer__title">РљР°С‚РµРіРѕСЂРёРё</h3>
                     <ul class="footer__links">
-                        <li><a href="../tv.html" class="nav__link">Телевизоры</a></li>
-                        <li><a href="../cameras.html" class="nav__link">Фотоаппараты</a></li>
-                        <li><a href="../consoles.html" class="nav__link">Приставки</a></li>
-                        <li><a href="../laptops.html" class="nav__link">Ноутбуки</a></li>
-                        <li><a href="../smartphones.html" class="nav__link">Смартфоны</a></li>
-                        <li><a href="../small-appliances.html" class="nav__link">Мелкая техника</a></li>
-                        <li><a href="../large-appliances.html" class="nav__link">Бытовая техника</a></li>
-                        <li><a href="../auto-electronics.html" class="nav__link">Авто-Электроника</a></li>
+                        <li><a href="../tv.html" class="nav__link">РўРµР»РµРІРёР·РѕСЂС‹</a></li>
+                        <li><a href="../cameras.html" class="nav__link">Р¤РѕС‚РѕР°РїРїР°СЂР°С‚С‹</a></li>
+                        <li><a href="../consoles.html" class="nav__link">РџСЂРёСЃС‚Р°РІРєРё</a></li>
+                        <li><a href="../laptops.html" class="nav__link">РќРѕСѓС‚Р±СѓРєРё</a></li>
+                        <li><a href="../smartphones.html" class="nav__link">РЎРјР°СЂС‚С„РѕРЅС‹</a></li>
+                        <li><a href="../small-appliances.html" class="nav__link">РњРµР»РєР°СЏ С‚РµС…РЅРёРєР°</a></li>
+                        <li><a href="../large-appliances.html" class="nav__link">Р‘С‹С‚РѕРІР°СЏ С‚РµС…РЅРёРєР°</a></li>
+                        <li><a href="../auto-electronics.html" class="nav__link">РђРІС‚Рѕ-Р­Р»РµРєС‚СЂРѕРЅРёРєР°</a></li>
                     </ul>
                 </div>
                 <div class="footer__col">
-                    <h3 class="footer__title">Контакты</h3>
+                    <h3 class="footer__title">РљРѕРЅС‚Р°РєС‚С‹</h3>
                     <ul class="footer__links">
                         <li><a href="https://t.me/RepairoRU" class="footer__link"><i class="fab fa-telegram"></i> Telegram</a></li>
-                        <li><span class="footer__link">Наша почта: repairo.info@mail.ru</span></li>
+                        <li><span class="footer__link">РќР°С€Р° РїРѕС‡С‚Р°: repairo.info@mail.ru</span></li>
                     </ul>
                 </div>
             </div>
             <div class="footer__bottom">
                 <p class="disclaimer">
-    Администрация сайта не несёт ответственности за возможные повреждения техники
-    и иные последствия, возникшие в результате самостоятельного ремонта по
-    материалам и инструкциям, размещённым на сайте. Все работы вы выполняете
-    на свой страх и риск.
+    РђРґРјРёРЅРёСЃС‚СЂР°С†РёСЏ СЃР°Р№С‚Р° РЅРµ РЅРµСЃС‘С‚ РѕС‚РІРµС‚СЃС‚РІРµРЅРЅРѕСЃС‚Рё Р·Р° РІРѕР·РјРѕР¶РЅС‹Рµ РїРѕРІСЂРµР¶РґРµРЅРёСЏ С‚РµС…РЅРёРєРё
+    Рё РёРЅС‹Рµ РїРѕСЃР»РµРґСЃС‚РІРёСЏ, РІРѕР·РЅРёРєС€РёРµ РІ СЂРµР·СѓР»СЊС‚Р°С‚Рµ СЃР°РјРѕСЃС‚РѕСЏС‚РµР»СЊРЅРѕРіРѕ СЂРµРјРѕРЅС‚Р° РїРѕ
+    РјР°С‚РµСЂРёР°Р»Р°Рј Рё РёРЅСЃС‚СЂСѓРєС†РёСЏРј, СЂР°Р·РјРµС‰С‘РЅРЅС‹Рј РЅР° СЃР°Р№С‚Рµ. Р’СЃРµ СЂР°Р±РѕС‚С‹ РІС‹ РІС‹РїРѕР»РЅСЏРµС‚Рµ
+    РЅР° СЃРІРѕР№ СЃС‚СЂР°С… Рё СЂРёСЃРє.
     </p>
-                <p class="footer__copyright">© 2026 Repairo. Все права защищены.</p>
+                <p class="footer__copyright">В© 2026 Repairo. Р’СЃРµ РїСЂР°РІР° Р·Р°С‰РёС‰РµРЅС‹.</p>
             </div>
         </div>
     </footer>
@@ -475,50 +550,50 @@
 {
   "@context": "https://schema.org",
   "@type": "HowTo",
-  "name": "Diablo IV: начало тестирования на консолях",
-  "description": "Полный гайд по бета-тестированию Diablo IV (март 2023): как попасть в ранний доступ на PlayStation, Xbox и ПК, какие награды можно получить и что приготовила Blizzard в Акте I.",
+  "name": "Diablo IV: РЅР°С‡Р°Р»Рѕ С‚РµСЃС‚РёСЂРѕРІР°РЅРёСЏ РЅР° РєРѕРЅСЃРѕР»СЏС…",
+  "description": "РџРѕР»РЅС‹Р№ РіР°Р№Рґ РїРѕ Р±РµС‚Р°-С‚РµСЃС‚РёСЂРѕРІР°РЅРёСЋ Diablo IV (РјР°СЂС‚ 2023): РєР°Рє РїРѕРїР°СЃС‚СЊ РІ СЂР°РЅРЅРёР№ РґРѕСЃС‚СѓРї РЅР° PlayStation, Xbox Рё РџРљ, РєР°РєРёРµ РЅР°РіСЂР°РґС‹ РјРѕР¶РЅРѕ РїРѕР»СѓС‡РёС‚СЊ Рё С‡С‚Рѕ РїСЂРёРіРѕС‚РѕРІРёР»Р° Blizzard РІ РђРєС‚Рµ I.",
   "totalTime": "PT30M",
   "step": [
     {
       "@type": "HowToStep",
-      "name": "Даты тестирования",
-      "text": "Даты и этапы тестирования: когда можно играть?",
+      "name": "Р”Р°С‚С‹ С‚РµСЃС‚РёСЂРѕРІР°РЅРёСЏ",
+      "text": "Р”Р°С‚С‹ Рё СЌС‚Р°РїС‹ С‚РµСЃС‚РёСЂРѕРІР°РЅРёСЏ: РєРѕРіРґР° РјРѕР¶РЅРѕ РёРіСЂР°С‚СЊ?",
       "url": "#step-1"
     },
     {
       "@type": "HowToStep",
-      "name": "Контент беты",
-      "text": "Что будет доступно в бете?",
+      "name": "РљРѕРЅС‚РµРЅС‚ Р±РµС‚С‹",
+      "text": "Р§С‚Рѕ Р±СѓРґРµС‚ РґРѕСЃС‚СѓРїРЅРѕ РІ Р±РµС‚Рµ?",
       "url": "#step-2"
     },
     {
       "@type": "HowToStep",
-      "name": "Доступные классы",
-      "text": "Классы: кем можно играть?",
+      "name": "Р”РѕСЃС‚СѓРїРЅС‹Рµ РєР»Р°СЃСЃС‹",
+      "text": "РљР»Р°СЃСЃС‹: РєРµРј РјРѕР¶РЅРѕ РёРіСЂР°С‚СЊ?",
       "url": "#step-3"
     },
     {
       "@type": "HowToStep",
-      "name": "Награды",
-      "text": "Уникальная награда: Рюкзак с волчонком",
+      "name": "РќР°РіСЂР°РґС‹",
+      "text": "РЈРЅРёРєР°Р»СЊРЅР°СЏ РЅР°РіСЂР°РґР°: Р СЋРєР·Р°Рє СЃ РІРѕР»С‡РѕРЅРєРѕРј",
       "url": "#step-4"
     },
     {
       "@type": "HowToStep",
-      "name": "Мировой босс",
-      "text": "Мировой босс: Ашава Чумная",
+      "name": "РњРёСЂРѕРІРѕР№ Р±РѕСЃСЃ",
+      "text": "РњРёСЂРѕРІРѕР№ Р±РѕСЃСЃ: РђС€Р°РІР° Р§СѓРјРЅР°СЏ",
       "url": "#step-5"
     },
     {
       "@type": "HowToStep",
-      "name": "Технические детали",
-      "text": "Техническая часть: консоли и системные требования",
+      "name": "РўРµС…РЅРёС‡РµСЃРєРёРµ РґРµС‚Р°Р»Рё",
+      "text": "РўРµС…РЅРёС‡РµСЃРєР°СЏ С‡Р°СЃС‚СЊ: РєРѕРЅСЃРѕР»Рё Рё СЃРёСЃС‚РµРјРЅС‹Рµ С‚СЂРµР±РѕРІР°РЅРёСЏ",
       "url": "#step-6"
     },
     {
       "@type": "HowToStep",
-      "name": "Заключение",
-      "text": "Заключение: стоит ли участвовать?",
+      "name": "Р—Р°РєР»СЋС‡РµРЅРёРµ",
+      "text": "Р—Р°РєР»СЋС‡РµРЅРёРµ: СЃС‚РѕРёС‚ Р»Рё СѓС‡Р°СЃС‚РІРѕРІР°С‚СЊ?",
       "url": "#step-7"
     }
   ],
@@ -529,6 +604,4 @@
 <script src="../cookie-consent.js"></script>
 </body>
 </html>
-
-
 

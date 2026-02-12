@@ -4,8 +4,9 @@
 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Куда делать резервные копии: облако или внешний диск | Сравн</title>
-    <meta name="description" content="">
+  <title>РљР’Рњ РїРµСЂРµРєР»СЋС‡Р°С‚РµР»СЊ РЅРµ РїРµСЂРµРєР»СЋС‡Р°РµС‚ РЅРѕСѓС‚Р±СѓРє РЅР° РјРѕРЅРёС‚РѕСЂ Рё РїРµСЂРёС„РµСЂРёСЋ | Р­РєСЃРїРµСЂС‚РЅС‹Р№ РјРµРіР°РіР°Р№Рґ</title>
+    <meta name="description" content="{{ description }}">
+    <meta name="description" content="РџРѕС€Р°РіРѕРІР°СЏ РёРЅСЃС‚СЂСѓРєС†РёСЏ: РљР’Рњ РїРµСЂРµРєР»СЋС‡Р°С‚РµР»СЊ РЅРµ РїРµСЂРµРєР»СЋС‡Р°РµС‚ РЅРѕСѓС‚Р±СѓРє РЅР° РјРѕРЅРёС‚РѕСЂ Рё РїРµСЂРёС„РµСЂРёСЋ вЂ” Р­РєСЃРїРµСЂС‚РЅС‹Р№ РјРµРіР°РіР°Р№Рґ. РџСЂРёС‡РёРЅС‹ РЅРµСЂР°Р±РѕС‚С‹ KVM: РґСЂР°Р№РІРµСЂС‹, РЅР°СЃС‚СЂРѕР№РєРё, СЃРѕРІРјРµСЃС‚РёРјРѕСЃС‚СЊ, РїРёС‚Р°РЅРёРµ. Р РµС€РµРЅРёСЏ: РѕР±РЅРѕРІР»РµРЅРёРµ РґСЂР°Р№РІРµСЂРѕРІ, РЅР°СЃС‚СЂРѕР№РєР° BIOS, РїСЂРѕРІРµСЂРєР° РєР°Р±РµР»РµР№, СЃР±СЂРѕСЃ РЅР°СЃС‚СЂРѕРµРє.">
 
   <link rel="stylesheet" href="../styles.css" />
   <link rel="stylesheet" href="../styles-header.css" />
@@ -13,25 +14,36 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <style>
     .guide-content { line-height: 1.7; color: var(--text); }
-    .guide-content h2 { color: var(--primary); margin-top: 30px; margin-bottom: 15px; font-size: 1.5rem; }
-    .guide-content h3 { color: var(--primary-dark); margin-top: 25px; margin-bottom: 12px; font-size: 1.2rem; }
+    .guide-content h2 { color: var(--primary); margin-top: 30px; margin-bottom: 15px; font-size: 1.6rem; }
+    .guide-content h3 { color: var(--primary-dark); margin-top: 25px; margin-bottom: 12px; font-size: 1.25rem; }
     .guide-image-block { margin: 20px 0; padding: 15px; background: var(--background); border-radius: var(--border-radius); border: 1px solid var(--border); text-align: center; }
     .guide-image-block img { max-width: 100%; height: auto; border-radius: 6px; border: 1px solid var(--border); }
     .image-caption { margin-top: 10px; font-size: 0.85rem; color: var(--text-light); font-style: italic; }
-    .pro-tips { background: rgba(3, 74, 79, 0.05); padding: 15px; border-radius: 6px; margin: 20px 0; }
-    .pro-tips h4 { color: var(--primary); margin-top: 0; margin-bottom: 12px; font-size: 1.1rem; }
-    .tip-item { display: flex; gap: 8px; margin-bottom: 8px; align-items: flex-start; }
+    .pro-tips { background: rgba(3, 74, 79, 0.05); padding: 18px; border-radius: 8px; margin: 25px 0; }
+    .pro-tips h4 { color: var(--primary); margin-top: 0; margin-bottom: 12px; font-size: 1.15rem; }
+    .tip-item { display: flex; gap: 10px; margin-bottom: 10px; align-items: flex-start; }
+    .tip-item i { margin-top: 3px; }
     table { width: 100%; border-collapse: collapse; margin: 20px 0; }
-    th, td { border: 1px solid var(--border); padding: 8px; text-align: left; }
+    th, td { border: 1px solid var(--border); padding: 8px; text-align: left; vertical-align: top; }
     th { background: var(--background-light); }
-    .highlight { background: #f5f7fa; border-left: 4px solid #2d9cdb; padding: 10px 15px; margin: 20px 0; }
-    .faq-section ul { margin-left: 1em; }
-    .block-section { margin-bottom: 2em; }
+    code { background: var(--background-light); padding: 2px 4px; border-radius: 4px; font-size: 0.9em; }
+    ul, ol { margin-left: 18px; }
     @media (max-width: 768px) {
       .guide-content h2 { font-size: 1.4rem; margin-top: 25px; }
+      .guide-content h3 { font-size: 1.15rem; }
       .guide-image-block { padding: 12px; margin: 15px 0; }
       table, th, td { font-size: 0.95rem; }
     }
+
+    /* РЇРЅРґРµРєСЃ РњР°СЂРєРµС‚ СЂРµРєР»Р°РјРЅС‹Р№ Р±Р°РЅРЅРµСЂ */
+    .ym-hero-link {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+      max-width: 100%;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
     /* Р“РѕСЂРёР·РѕРЅС‚Р°Р»СЊРЅС‹Р№ Р±Р°РЅРЅРµСЂ-РєР°СЂС‚РѕС‡РєР° */
     .ym-hero-banner {
       width: 100%;
@@ -107,590 +119,365 @@
     }
 
     /* Р РµР№С‚РёРЅРі */
-    .ym-hero-top {
+    .ym-hero-rating {
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      gap: 8px;
-    }
-
-    .ym-hero-rating {
-      font-size: 13px;
-      font-weight: 500;
-      color: #111827;
-      background: #f9fafb;
-      border-radius: 999px;
-      padding: 4px 10px;
-    }
-
-    .ym-hero-rating-count {
+      gap: 4px;
+      font-size: 12px;
       color: #6b7280;
     }
 
-    /* Р¤РёРѕР»РµС‚РѕРІР°СЏ РєРЅРѕРїРєР° */
-    .ym-hero-button {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 9px 16px;
-      border-radius: 999px;
-      border: none;
-      background: #6a00ff;
-      color: #ffffff;
-      font-size: 14px;
-      font-weight: 600;
-      cursor: pointer;
-      box-shadow: 0 2px 6px rgba(88, 28, 135, 0.35);
-      transition: background 0.15s ease, transform 0.15s ease,
-                  box-shadow 0.15s ease;
-    }
-    .ym-hero-button::after {
-      content: "в†’";
-      margin-left: 6px;
-      font-size: 14px;
-    }
-    .ym-hero-button:hover {
-      background: #7c3aed;
-      transform: translateY(-1px);
-      box-shadow: 0 4px 10px rgba(88, 28, 135, 0.45);
+    .ym-hero-stars {
+      display: flex;
+      gap: 1px;
     }
 
-    /* Р®СЂРёРґРёС‡РµСЃРєРёР№ Р±Р»РѕРє */
-    .ym-hero-legal {
-      margin-top: 6px;
-      max-width: 600px;
+    .ym-hero-star {
+      width: 12px;
+      height: 12px;
+      fill: #fbbf24;
+    }
+
+    .ym-hero-reviews {
       font-size: 11px;
-      line-height: 1.3;
-      color: #6b7280;
-      margin-left: auto;
-      margin-right: auto;
+      color: #9ca3af;
     }
 
-    /* РђРґР°РїС‚РёРІ */
-    @media (max-width: 480px) {
+    /* Р¦РµРЅР° */
+    .ym-hero-price {
+      font-size: 16px;
+      font-weight: 700;
+      color: #111827;
+      margin: 0;
+    }
+
+    /* РљРЅРѕРїРєР° */
+    .ym-hero-button {
+      background: #007bff;
+      color: #ffffff;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background 0.2s ease;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .ym-hero-button:hover {
+      background: #0056b3;
+    }
+
+    /* РђРґР°РїС‚РёРІРЅРѕСЃС‚СЊ */
+    @media (max-width: 768px) {
       .ym-hero-banner {
-        max-width: 100%;
-        margin: 20px 0;
+        flex-direction: row;
+        min-height: auto;
       }
+
       .ym-hero-images {
-        height: 100px;
+        width: 120px;
+        height: auto;
+        flex-shrink: 0;
       }
+
       .ym-hero-content {
-        padding: 12px 12px;
+        flex: 1;
+        padding: 12px 16px;
       }
+
       .ym-hero-title {
         font-size: 13px;
       }
+
+      .ym-hero-price {
+        font-size: 15px;
+      }
+
       .ym-hero-button {
-        font-size: 13px;
-        padding: 8px 14px;
-      }
-      .ym-hero-legal {
-        font-size: 10px;
-      }
-    }
-    /* Telegram СЂРµРєР»Р°РјРЅС‹Р№ Р±Р°РЅРЅРµСЂ */
-    .telegram-banner {
-      display: flex;
-      justify-content: center;
-      text-decoration: none;
-      color: inherit;
-      width: 100%;
-      margin: 40px 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    }
-
-    .telegram-banner-container {
-      width: 100%;
-      max-width: 500px;
-      min-height: 120px;
-      border-radius: 16px;
-      background: linear-gradient(135deg, #0088cc 0%, #005f8f 100%);
-      border: 1px solid #005f8f;
-      display: flex;
-      align-items: center;
-      padding: 20px;
-      box-shadow: 0 4px 16px rgba(0, 136, 204, 0.2);
-      overflow: hidden;
-      box-sizing: border-box;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-
-    .telegram-banner-container:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(0, 136, 204, 0.3);
-    }
-
-    .telegram-logo {
-      width: 60px;
-      height: 60px;
-      min-width: 60px;
-      background: #ffffff;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-right: 20px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    }
-
-    .telegram-logo svg {
-      width: 32px;
-      height: 32px;
-      fill: #0088cc;
-    }
-
-    .telegram-content {
-      flex: 1;
-      color: #ffffff;
-    }
-
-    .telegram-title {
-      font-size: 16px;
-      font-weight: 600;
-      margin: 0 0 8px 0;
-      line-height: 1.3;
-    }
-
-    .telegram-subtitle {
-      font-size: 14px;
-      opacity: 0.9;
-      margin: 0 0 12px 0;
-      line-height: 1.4;
-    }
-
-    .telegram-button {
-      display: inline-flex;
-      align-items: center;
-      padding: 8px 16px;
-      background: #ffffff;
-      color: #0088cc;
-      border-radius: 20px;
-      font-size: 14px;
-      font-weight: 600;
-      text-decoration: none;
-      transition: background 0.2s ease, transform 0.2s ease;
-    }
-
-    .telegram-button:hover {
-      background: #f0f8ff;
-      transform: scale(1.05);
-    }
-
-    .telegram-button svg {
-      width: 16px;
-      height: 16px;
-      margin-left: 6px;
-      fill: #0088cc;
-    }
-
-    /* РђРґР°РїС‚РёРІ РґР»СЏ РјРѕР±РёР»СЊРЅС‹С… */
-    @media (max-width: 480px) {
-      .telegram-banner-container {
-        max-width: 100%;
-        margin: 20px 0;
-        padding: 15px;
-        min-height: 100px;
-      }
-      .telegram-logo {
-        width: 50px;
-        height: 50px;
-        min-width: 50px;
-        margin-right: 15px;
-      }
-      .telegram-logo svg {
-        width: 26px;
-        height: 26px;
-      }
-      .telegram-title {
-        font-size: 14px;
-      }
-      .telegram-subtitle {
-        font-size: 12px;
-      }
-      .telegram-button {
-        font-size: 12px;
-        padding: 6px 12px;
+        padding: 6px 10px;
+        font-size: 11px;
       }
     }
 
-
-
+    /* РЎРєСЂС‹С‚С‹Р№ Р±Р°РЅРЅРµСЂ РґР»СЏ РґРµСЃРєС‚РѕРїР° */
+    @media (min-width: 769px) {
+      .ym-hero-link {
+        display: none !important;
+      }
+    }
   </style>
   <script async src="https://timeweb.cloud/api/v1/cloud-ai/agents/3cc03620-d051-4d8d-b5af-f7b6cd083a35/embed.js?collapsed=true"></script>
 </head>
 <body>
-  <header class="header">
-    <div class="container">
-      <div class="header__inner">
-        <a href="../index.html" class="logo">
-          <span class="logo__icon"></span>
-          <span class="logo__text">GeoExpert</span>
-        </a>
-        <nav class="nav">
-          <ul class="nav__list">
-            <li><a href="../cameras.html" class="nav__link">РљР°РјРµСЂС‹</a></li>
-            <li><a href="../drones.html" class="nav__link">Р”СЂРѕРЅС‹</a></li>
-            <li><a href="../workflow.html" class="nav__link">Workflow</a></li>
-          </ul>
-        </nav>
+  <header>
+    <div class="header-content">
+      <a href="/" class="logo">
+        <i class="fas fa-tools"></i>
+        FixTech
+      </a>
+      <nav class="nav-links">
+        <a href="/">Р“Р»Р°РІРЅР°СЏ</a>
+        <a href="/articles">Р’СЃРµ СЃС‚Р°С‚СЊРё</a>
+        <a href="/smartphones">РЎРјР°СЂС‚С„РѕРЅС‹</a>
+        <a href="/laptops">РќРѕСѓС‚Р±СѓРєРё</a>
+        <a href="/tv">РўРµР»РµРІРёР·РѕСЂС‹</a>
+        <a href="/cameras">РљР°РјРµСЂС‹</a>
+        <a href="/consoles">РљРѕРЅСЃРѕР»Рё</a>
+        <a href="/auto-electronics">РђРІС‚РѕСЌР»РµРєС‚СЂРѕРЅРёРєР°</a>
+        <a href="/small-appliances">РњРµР»РєР°СЏ С‚РµС…РЅРёРєР°</a>
+        <a href="/large-appliances">РљСЂСѓРїРЅР°СЏ С‚РµС…РЅРёРєР°</a>
+      </nav>
+      <div class="search-container">
+        <input type="text" id="search-input" placeholder="РџРѕРёСЃРє РїРѕ СЃР°Р№С‚Сѓ..." />
+        <button id="search-button"><i class="fas fa-search"></i></button>
       </div>
     </div>
   </header>
 
   <main class="guide-container">
     <div class="guide-content">
-      <h1>КВМ переключатель не переключает ноутбук на монитор и периферию</h1>
-      <p>Когда КВМ переключатель (KVM - Keyboard, Video, Mouse) не переключает ноутбук на подключенный монитор и периферийные устройства, это может быть вызвано проблемами с драйверами, настройками или аппаратными неисправностями. В этом экспертном мегагайде мы разберем все причины отсутствия переключения и предоставим эффективные решения.</p>
+      <h1>РљР’Рњ РїРµСЂРµРєР»СЋС‡Р°С‚РµР»СЊ РЅРµ РїРµСЂРµРєР»СЋС‡Р°РµС‚ РЅРѕСѓС‚Р±СѓРє РЅР° РјРѕРЅРёС‚РѕСЂ Рё РїРµСЂРёС„РµСЂРёСЋ</h1>
+      <p>РљРѕРіРґР° РљР’Рњ РїРµСЂРµРєР»СЋС‡Р°С‚РµР»СЊ (KVM - Keyboard, Video, Mouse) РЅРµ РїРµСЂРµРєР»СЋС‡Р°РµС‚ РЅРѕСѓС‚Р±СѓРє РЅР° РїРѕРґРєР»СЋС‡РµРЅРЅС‹Р№ РјРѕРЅРёС‚РѕСЂ Рё РїРµСЂРёС„РµСЂРёР№РЅС‹Рµ СѓСЃС‚СЂРѕР№СЃС‚РІР°, СЌС‚Рѕ РјРѕР¶РµС‚ Р±С‹С‚СЊ РІС‹Р·РІР°РЅРѕ РїСЂРѕР±Р»РµРјР°РјРё СЃ РґСЂР°Р№РІРµСЂР°РјРё, РЅР°СЃС‚СЂРѕР№РєР°РјРё РёР»Рё Р°РїРїР°СЂР°С‚РЅС‹РјРё РЅРµРёСЃРїСЂР°РІРЅРѕСЃС‚СЏРјРё. Р’ СЌС‚РѕРј СЌРєСЃРїРµСЂС‚РЅРѕРј РјРµРіР°РіР°Р№РґРµ РјС‹ СЂР°Р·Р±РµСЂРµРј РІСЃРµ РїСЂРёС‡РёРЅС‹ РѕС‚СЃСѓС‚СЃС‚РІРёСЏ РїРµСЂРµРєР»СЋС‡РµРЅРёСЏ Рё РїСЂРµРґРѕСЃС‚Р°РІРёРј СЌС„С„РµРєС‚РёРІРЅС‹Рµ СЂРµС€РµРЅРёСЏ.</p>
 
-      <h2>Признаки проблемы</h2>
+      <h2>РџСЂРёР·РЅР°РєРё РїСЂРѕР±Р»РµРјС‹</h2>
       <ul>
-        <li>Кнопка переключения не работает для ноутбука</li>
-        <li>Монитор остается черным при переключении</li>
-        <li>Клавиатура и мышь не реагируют</li>
-        <li>Работает переключение на другие устройства</li>
-        <li>Ноутбук не распознает KVM как устройство</li>
+        <li>РљРЅРѕРїРєР° РїРµСЂРµРєР»СЋС‡РµРЅРёСЏ РЅРµ СЂР°Р±РѕС‚Р°РµС‚ РґР»СЏ РЅРѕСѓС‚Р±СѓРєР°</li>
+        <li>РњРѕРЅРёС‚РѕСЂ РѕСЃС‚Р°РµС‚СЃСЏ С‡РµСЂРЅС‹Рј РїСЂРё РїРµСЂРµРєР»СЋС‡РµРЅРёРё</li>
+        <li>РљР»Р°РІРёР°С‚СѓСЂР° Рё РјС‹С€СЊ РЅРµ СЂРµР°РіРёСЂСѓСЋС‚</li>
+        <li>Р Р°Р±РѕС‚Р°РµС‚ РїРµСЂРµРєР»СЋС‡РµРЅРёРµ РЅР° РґСЂСѓРіРёРµ СѓСЃС‚СЂРѕР№СЃС‚РІР°</li>
+        <li>РќРѕСѓС‚Р±СѓРє РЅРµ СЂР°СЃРїРѕР·РЅР°РµС‚ KVM РєР°Рє СѓСЃС‚СЂРѕР№СЃС‚РІРѕ</li>
       </ul>
 
-      <h2>Основные причины</h2>
+      <h2>РћСЃРЅРѕРІРЅС‹Рµ РїСЂРёС‡РёРЅС‹</h2>
       <table>
         <tr>
-          <th>Причина</th>
-          <th>Вероятность</th>
-          <th>Типичные проявления</th>
+          <th>РџСЂРёС‡РёРЅР°</th>
+          <th>Р’РµСЂРѕСЏС‚РЅРѕСЃС‚СЊ</th>
+          <th>РўРёРїРёС‡РЅС‹Рµ РїСЂРѕСЏРІР»РµРЅРёСЏ</th>
         </tr>
         <tr>
-          <td>Отсутствующие драйверы KVM</td>
+          <td>РћС‚СЃСѓС‚СЃС‚РІСѓСЋС‰РёРµ РґСЂР°Р№РІРµСЂС‹ KVM</td>
           <td>40%</td>
-          <td>Устройство определяется как неизвестное</td>
+          <td>РЈСЃС‚СЂРѕР№СЃС‚РІРѕ РѕРїСЂРµРґРµР»СЏРµС‚СЃСЏ РєР°Рє РЅРµРёР·РІРµСЃС‚РЅРѕРµ</td>
         </tr>
         <tr>
-          <td>Несовместимость с ноутбуком</td>
+          <td>РќРµСЃРѕРІРјРµСЃС‚РёРјРѕСЃС‚СЊ СЃ РЅРѕСѓС‚Р±СѓРєРѕРј</td>
           <td>25%</td>
-          <td>Работает с другими устройствами</td>
+          <td>Р Р°Р±РѕС‚Р°РµС‚ СЃ РґСЂСѓРіРёРјРё СѓСЃС‚СЂРѕР№СЃС‚РІР°РјРё</td>
         </tr>
         <tr>
-          <td>Настройки BIOS/UEFI</td>
+          <td>РќР°СЃС‚СЂРѕР№РєРё BIOS/UEFI</td>
           <td>15%</td>
-          <td>Не работает после изменения BIOS</td>
+          <td>РќРµ СЂР°Р±РѕС‚Р°РµС‚ РїРѕСЃР»Рµ РёР·РјРµРЅРµРЅРёСЏ BIOS</td>
         </tr>
         <tr>
-          <td>Поврежденные кабели</td>
+          <td>РџРѕРІСЂРµР¶РґРµРЅРЅС‹Рµ РєР°Р±РµР»Рё</td>
           <td>10%</td>
-          <td>Не работает с определенным кабелем</td>
+          <td>РќРµ СЂР°Р±РѕС‚Р°РµС‚ СЃ РѕРїСЂРµРґРµР»РµРЅРЅС‹Рј РєР°Р±РµР»РµРј</td>
         </tr>
         <tr>
-          <td>Проблемы с питанием</td>
+          <td>РџСЂРѕР±Р»РµРјС‹ СЃ РїРёС‚Р°РЅРёРµРј</td>
           <td>5%</td>
-          <td>Не работает на батарее</td>
+          <td>РќРµ СЂР°Р±РѕС‚Р°РµС‚ РЅР° Р±Р°С‚Р°СЂРµРµ</td>
         </tr>
         <tr>
-          <td>Поврежденный KVM</td>
+          <td>РџРѕРІСЂРµР¶РґРµРЅРЅС‹Р№ KVM</td>
           <td>5%</td>
-          <td>Не работает ни с одним устройством</td>
+          <td>РќРµ СЂР°Р±РѕС‚Р°РµС‚ РЅРё СЃ РѕРґРЅРёРј СѓСЃС‚СЂРѕР№СЃС‚РІРѕРј</td>
         </tr>
       </table>
 
-      <h2>Диагностика проблемы</h2>
-      <h3>Проверка подключения</h3>
+      <h2>Р”РёР°РіРЅРѕСЃС‚РёРєР° РїСЂРѕР±Р»РµРјС‹</h2>
+      <h3>РџСЂРѕРІРµСЂРєР° РїРѕРґРєР»СЋС‡РµРЅРёСЏ</h3>
       <ol>
-        <li>Убедитесь, что все кабели подключены правильно</li>
-        <li>Для видео: HDMI, DisplayPort или VGA</li>
-        <li>Для периферии: USB кабели к KVM</li>
-        <li>Проверьте индикаторы на KVM</li>
+        <li>РЈР±РµРґРёС‚РµСЃСЊ, С‡С‚Рѕ РІСЃРµ РєР°Р±РµР»Рё РїРѕРґРєР»СЋС‡РµРЅС‹ РїСЂР°РІРёР»СЊРЅРѕ</li>
+        <li>Р”Р»СЏ РІРёРґРµРѕ: HDMI, DisplayPort РёР»Рё VGA</li>
+        <li>Р”Р»СЏ РїРµСЂРёС„РµСЂРёРё: USB РєР°Р±РµР»Рё Рє KVM</li>
+        <li>РџСЂРѕРІРµСЂСЊС‚Рµ РёРЅРґРёРєР°С‚РѕСЂС‹ РЅР° KVM</li>
       </ol>
 
-      <h3>Тестирование на других устройствах</h3>
+      <h3>РўРµСЃС‚РёСЂРѕРІР°РЅРёРµ РЅР° РґСЂСѓРіРёС… СѓСЃС‚СЂРѕР№СЃС‚РІР°С…</h3>
       <ol>
-        <li>Подключите KVM к другому компьютеру</li>
-        <li>Если работает, проблема в ноутбуке</li>
-        <li>Если не работает, проблема в KVM</li>
+        <li>РџРѕРґРєР»СЋС‡РёС‚Рµ KVM Рє РґСЂСѓРіРѕРјСѓ РєРѕРјРїСЊСЋС‚РµСЂСѓ</li>
+        <li>Р•СЃР»Рё СЂР°Р±РѕС‚Р°РµС‚, РїСЂРѕР±Р»РµРјР° РІ РЅРѕСѓС‚Р±СѓРєРµ</li>
+        <li>Р•СЃР»Рё РЅРµ СЂР°Р±РѕС‚Р°РµС‚, РїСЂРѕР±Р»РµРјР° РІ KVM</li>
       </ol>
 
-      <h2>Решение 1: Установка драйверов KVM</h2>
-      <h3>Автоматическая установка</h3>
+      <h2>Р РµС€РµРЅРёРµ 1: РЈСЃС‚Р°РЅРѕРІРєР° РґСЂР°Р№РІРµСЂРѕРІ KVM</h2>
+      <h3>РђРІС‚РѕРјР°С‚РёС‡РµСЃРєР°СЏ СѓСЃС‚Р°РЅРѕРІРєР°</h3>
       <ol>
-        <li>Диспетчер устройств > Универсальная последовательная шина контроллеры</li>
-        <li>Найдите устройства KVM (могут быть как HID или USB)</li>
-        <li>Щелкните правой кнопкой > Обновить драйвер</li>
-        <li>Автоматический поиск</li>
+        <li>Р”РёСЃРїРµС‚С‡РµСЂ СѓСЃС‚СЂРѕР№СЃС‚РІ в†’ РЈРЅРёРІРµСЂСЃР°Р»СЊРЅР°СЏ РїРѕСЃР»РµРґРѕРІР°С‚РµР»СЊРЅР°СЏ С€РёРЅР° РєРѕРЅС‚СЂРѕР»Р»РµСЂС‹</li>
+        <li>РќР°Р№РґРёС‚Рµ СѓСЃС‚СЂРѕР№СЃС‚РІР° KVM (РјРѕРіСѓС‚ Р±С‹С‚СЊ РєР°Рє HID РёР»Рё USB)</li>
+        <li>Р©РµР»РєРЅРёС‚Рµ РїСЂР°РІРѕР№ РєРЅРѕРїРєРѕР№ в†’ РћР±РЅРѕРІРёС‚СЊ РґСЂР°Р№РІРµСЂ</li>
+        <li>РђРІС‚РѕРјР°С‚РёС‡РµСЃРєРёР№ РїРѕРёСЃРє</li>
       </ol>
 
-      <h3>Ручная установка драйверов</h3>
+      <h3>Р СѓС‡РЅР°СЏ СѓСЃС‚Р°РЅРѕРІРєР° РґСЂР°Р№РІРµСЂРѕРІ</h3>
       <ol>
-        <li>Найдите модель KVM (Iogear, Aten, Tesmart и т.д.)</li>
-        <li>Скачайте драйверы с официального сайта</li>
-        <li>Установите драйверы в режиме совместимости</li>
-        <li>Перезагрузите компьютер</li>
+        <li>РќР°Р№РґРёС‚Рµ РјРѕРґРµР»СЊ KVM (Iogear, Aten, Tesmart Рё С‚.Рґ.)</li>
+        <li>РЎРєР°С‡Р°Р№С‚Рµ РґСЂР°Р№РІРµСЂС‹ СЃ РѕС„РёС†РёР°Р»СЊРЅРѕРіРѕ СЃР°Р№С‚Р°</li>
+        <li>РЈСЃС‚Р°РЅРѕРІРёС‚Рµ РґСЂР°Р№РІРµСЂС‹ РІ СЂРµР¶РёРјРµ СЃРѕРІРјРµСЃС‚РёРјРѕСЃС‚Рё</li>
+        <li>РџРµСЂРµР·Р°РіСЂСѓР·РёС‚Рµ РєРѕРјРїСЊСЋС‚РµСЂ</li>
       </ol>
 
-      <h2>Решение 2: Настройки BIOS/UEFI</h2>
-      <h3>Включение USB в BIOS</h3>
+      <h2>Р РµС€РµРЅРёРµ 2: РќР°СЃС‚СЂРѕР№РєРё BIOS/UEFI</h2>
+      <h3>Р’РєР»СЋС‡РµРЅРёРµ USB РІ BIOS</h3>
       <ol>
-        <li>Перезагрузите ноутбук и войдите в BIOS (Del, F2, F10)</li>
-        <li>Найдите раздел Advanced > USB Configuration</li>
-        <li>Убедитесь, что USB Controller включен</li>
-        <li>Установите USB 2.0/3.0 Support в Auto или Enabled</li>
-        <li>Сохраните изменения</li>
+        <li>РџРµСЂРµР·Р°РіСЂСѓР·РёС‚Рµ РЅРѕСѓС‚Р±СѓРє Рё РІРѕР№РґРёС‚Рµ РІ BIOS (Del, F2, F10)</li>
+        <li>РќР°Р№РґРёС‚Рµ СЂР°Р·РґРµР» Advanced в†’ USB Configuration</li>
+        <li>РЈР±РµРґРёС‚РµСЃСЊ, С‡С‚Рѕ USB Controller РІРєР»СЋС‡РµРЅ</li>
+        <li>РЈСЃС‚Р°РЅРѕРІРёС‚Рµ USB 2.0/3.0 Support РІ Auto РёР»Рё Enabled</li>
+        <li>РЎРѕС…СЂР°РЅРёС‚Рµ РёР·РјРµРЅРµРЅРёСЏ</li>
       </ol>
 
-      <h3>Настройки видеовыхода</h3>
+      <h3>РќР°СЃС‚СЂРѕР№РєРё РІРёРґРµРѕРІС‹С…РѕРґР°</h3>
       <ol>
-        <li>В BIOS найдите Video Settings</li>
-        <li>Установите Primary Display в Auto или PCIE</li>
-        <li>Отключите Secure Boot если KVM не поддерживает</li>
+        <li>Р’ BIOS РЅР°Р№РґРёС‚Рµ Video Settings</li>
+        <li>РЈСЃС‚Р°РЅРѕРІРёС‚Рµ Primary Display РІ Auto РёР»Рё PCIE</li>
+        <li>РћС‚РєР»СЋС‡РёС‚Рµ Secure Boot РµСЃР»Рё KVM РЅРµ РїРѕРґРґРµСЂР¶РёРІР°РµС‚</li>
       </ol>
 
-      <h2>Решение 3: Проверка совместимости</h2>
-      <h3>USB версии</h3>
-      <p>Убедитесь в совместимости:</p>
+      <h2>Р РµС€РµРЅРёРµ 3: РџСЂРѕРІРµСЂРєР° СЃРѕРІРјРµСЃС‚РёРјРѕСЃС‚Рё</h2>
+      <h3>USB РІРµСЂСЃРёРё</h3>
+      <p>РЈР±РµРґРёС‚РµСЃСЊ РІ СЃРѕРІРјРµСЃС‚РёРјРѕСЃС‚Рё:</p>
       <ul>
-        <li>USB 2.0 KVM работает с USB 3.0 портами</li>
-        <li>USB 3.0 KVM требует USB 3.0 портов</li>
-        <li>Проверьте цвет разъемов на ноутбуке</li>
+        <li>USB 2.0 KVM СЂР°Р±РѕС‚Р°РµС‚ СЃ USB 3.0 РїРѕСЂС‚Р°РјРё</li>
+        <li>USB 3.0 KVM С‚СЂРµР±СѓРµС‚ USB 3.0 РїРѕСЂС‚РѕРІ</li>
+        <li>РџСЂРѕРІРµСЂСЊС‚Рµ С†РІРµС‚ СЂР°Р·СЉРµРјРѕРІ РЅР° РЅРѕСѓС‚Р±СѓРєРµ</li>
       </ul>
 
-      <h3>Видео интерфейсы</h3>
+      <h3>Р’РёРґРµРѕ РёРЅС‚РµСЂС„РµР№СЃС‹</h3>
       <ul>
-        <li>HDMI KVM требует HDMI портов</li>
-        <li>DisplayPort KVM требует DP портов</li>
-        <li>VGA KVM работает с любыми портами через адаптер</li>
+        <li>HDMI KVM С‚СЂРµР±СѓРµС‚ HDMI РїРѕСЂС‚РѕРІ</li>
+        <li>DisplayPort KVM С‚СЂРµР±СѓРµС‚ DP РїРѕСЂС‚РѕРІ</li>
+        <li>VGA KVM СЂР°Р±РѕС‚Р°РµС‚ СЃ Р»СЋР±С‹РјРё РїРѕСЂС‚Р°РјРё С‡РµСЂРµР· Р°РґР°РїС‚РµСЂ</li>
       </ul>
 
-      <h2>Решение 4: Сброс настроек</h2>
-      <h3>Переустановка USB контроллеров</h3>
+      <h2>Р РµС€РµРЅРёРµ 4: РЎР±СЂРѕСЃ РЅР°СЃС‚СЂРѕРµРє</h2>
+      <h3>РџРµСЂРµСѓСЃС‚Р°РЅРѕРІРєР° USB РєРѕРЅС‚СЂРѕР»Р»РµСЂРѕРІ</h3>
       <ol>
-        <li>Диспетчер устройств > Универсальная последовательная шина контроллеры</li>
-        <li>Удалите все контроллеры (галочка на удаление драйверов)</li>
-        <li>Перезагрузите ноутбук</li>
-        <li>Windows переустановит драйверы</li>
+        <li>Р”РёСЃРїРµС‚С‡РµСЂ СѓСЃС‚СЂРѕР№СЃС‚РІ в†’ РЈРЅРёРІРµСЂСЃР°Р»СЊРЅР°СЏ РїРѕСЃР»РµРґРѕРІР°С‚РµР»СЊРЅР°СЏ С€РёРЅР° РєРѕРЅС‚СЂРѕР»Р»РµСЂС‹</li>
+        <li>РЈРґР°Р»РёС‚Рµ РІСЃРµ РєРѕРЅС‚СЂРѕР»Р»РµСЂС‹ (РіР°Р»РѕС‡РєР° РЅР° СѓРґР°Р»РµРЅРёРµ РґСЂР°Р№РІРµСЂРѕРІ)</li>
+        <li>РџРµСЂРµР·Р°РіСЂСѓР·РёС‚Рµ РЅРѕСѓС‚Р±СѓРє</li>
+        <li>Windows РїРµСЂРµСѓСЃС‚Р°РЅРѕРІРёС‚ РґСЂР°Р№РІРµСЂС‹</li>
       </ol>
 
-      <h3>Очистка реестра</h3>
+      <h3>РћС‡РёСЃС‚РєР° СЂРµРµСЃС‚СЂР°</h3>
       <code>reg delete "HKLM\SYSTEM\CurrentControlSet\Control\usbflags" /f</code>
 
-      <h2>Решение 5: Настройки энергосбережения</h2>
-      <h3>Отключение USB power management</h3>
+      <h2>Р РµС€РµРЅРёРµ 5: РќР°СЃС‚СЂРѕР№РєРё СЌРЅРµСЂРіРѕСЃР±РµСЂРµР¶РµРЅРёСЏ</h2>
+      <h3>РћС‚РєР»СЋС‡РµРЅРёРµ USB power management</h3>
       <ol>
-        <li>Диспетчер устройств > Контроллеры запоминающих устройств</li>
-        <li>Свойства каждого USB контроллера</li>
-        <li>Вкладка "Управление электропитанием"</li>
-        <li>Снимите галочку "Разрешить отключение для экономии энергии"</li>
+        <li>Р”РёСЃРїРµС‚С‡РµСЂ СѓСЃС‚СЂРѕР№СЃС‚РІ в†’ РљРѕРЅС‚СЂРѕР»Р»РµСЂС‹ Р·Р°РїРѕРјРёРЅР°СЋС‰РёС… СѓСЃС‚СЂРѕР№СЃС‚РІ</li>
+        <li>РЎРІРѕР№СЃС‚РІР° РєР°Р¶РґРѕРіРѕ USB РєРѕРЅС‚СЂРѕР»Р»РµСЂР°</li>
+        <li>Р’РєР»Р°РґРєР° "РЈРїСЂР°РІР»РµРЅРёРµ СЌР»РµРєС‚СЂРѕРїРёС‚Р°РЅРёРµРј"</li>
+        <li>РЎРЅРёРјРёС‚Рµ РіР°Р»РѕС‡РєСѓ "Р Р°Р·СЂРµС€РёС‚СЊ РѕС‚РєР»СЋС‡РµРЅРёРµ РґР»СЏ СЌРєРѕРЅРѕРјРёРё СЌРЅРµСЂРіРёРё"</li>
       </ol>
 
-      <h3>Настройки плана питания</h3>
+      <h3>РќР°СЃС‚СЂРѕР№РєРё РїР»Р°РЅР° РїРёС‚Р°РЅРёСЏ</h3>
       <ol>
-        <li>Панель управления > Электропитание</li>
-        <li>Изменить параметры плана > Изменить дополнительные параметры</li>
-        <li>USB настройки > Отключить экономию энергии</li>
+        <li>РџР°РЅРµР»СЊ СѓРїСЂР°РІР»РµРЅРёСЏ в†’ Р­Р»РµРєС‚СЂРѕРїРёС‚Р°РЅРёРµ</li>
+        <li>РР·РјРµРЅРёС‚СЊ РїР°СЂР°РјРµС‚СЂС‹ РїР»Р°РЅР° в†’ РР·РјРµРЅРёС‚СЊ РґРѕРїРѕР»РЅРёС‚РµР»СЊРЅС‹Рµ РїР°СЂР°РјРµС‚СЂС‹</li>
+        <li>USB РЅР°СЃС‚СЂРѕР№РєРё в†’ РћС‚РєР»СЋС‡РёС‚СЊ СЌРєРѕРЅРѕРјРёСЋ СЌРЅРµСЂРіРёРё</li>
       </ol>
 
-      <h2>Решение 6: Обновление Windows</h2>
-      <h3>Установка обновлений</h3>
+      <h2>Р РµС€РµРЅРёРµ 6: РћР±РЅРѕРІР»РµРЅРёРµ Windows</h2>
+      <h3>РЈСЃС‚Р°РЅРѕРІРєР° РѕР±РЅРѕРІР»РµРЅРёР№</h3>
       <ol>
-        <li>Параметры > Обновление и безопасность > Центр обновления Windows</li>
-        <li>Проверьте наличие обновлений</li>
-        <li>Установите все доступные обновления</li>
+        <li>РџР°СЂР°РјРµС‚СЂС‹ в†’ РћР±РЅРѕРІР»РµРЅРёРµ Рё Р±РµР·РѕРїР°СЃРЅРѕСЃС‚СЊ в†’ Р¦РµРЅС‚СЂ РѕР±РЅРѕРІР»РµРЅРёСЏ Windows</li>
+        <li>РџСЂРѕРІРµСЂСЊС‚Рµ РЅР°Р»РёС‡РёРµ РѕР±РЅРѕРІР»РµРЅРёР№</li>
+        <li>РЈСЃС‚Р°РЅРѕРІРёС‚Рµ РІСЃРµ РґРѕСЃС‚СѓРїРЅС‹Рµ РѕР±РЅРѕРІР»РµРЅРёСЏ</li>
       </ol>
 
-      <h3>Включение режима разработчика</h3>
+      <h3>Р’РєР»СЋС‡РµРЅРёРµ СЂРµР¶РёРјР° СЂР°Р·СЂР°Р±РѕС‚С‡РёРєР°</h3>
       <ol>
-        <li>Параметры > Обновление и безопасность > Для разработчиков</li>
-        <li>Включите "Режим разработчика"</li>
-        <li>Это может помочь с распознаванием устройств</li>
+        <li>РџР°СЂР°РјРµС‚СЂС‹ в†’ РћР±РЅРѕРІР»РµРЅРёРµ Рё Р±РµР·РѕРїР°СЃРЅРѕСЃС‚СЊ в†’ Р”Р»СЏ СЂР°Р·СЂР°Р±РѕС‚С‡РёРєРѕРІ</li>
+        <li>Р’РєР»СЋС‡РёС‚Рµ "Р РµР¶РёРј СЂР°Р·СЂР°Р±РѕС‚С‡РёРєР°"</li>
+        <li>Р­С‚Рѕ РјРѕР¶РµС‚ РїРѕРјРѕС‡СЊ СЃ СЂР°СЃРїРѕР·РЅР°РІР°РЅРёРµРј СѓСЃС‚СЂРѕР№СЃС‚РІ</li>
       </ol>
 
       <div class="pro-tips">
-        <h4><i class="fas fa-lightbulb"></i> Профессиональные советы</h4>
+        <h4><i class="fas fa-lightbulb"></i> РџСЂРѕС„РµСЃСЃРёРѕРЅР°Р»СЊРЅС‹Рµ СЃРѕРІРµС‚С‹</h4>
         <div class="tip-item">
           <i class="fas fa-desktop"></i>
-          <span>Выбирайте KVM с поддержкой hotkey switching для быстрого переключения</span>
+          <span>Р’С‹Р±РёСЂР°Р№С‚Рµ KVM СЃ РїРѕРґРґРµСЂР¶РєРѕР№ hotkey switching РґР»СЏ Р±С‹СЃС‚СЂРѕРіРѕ РїРµСЂРµРєР»СЋС‡РµРЅРёСЏ</span>
         </div>
         <div class="tip-item">
           <i class="fas fa-plug"></i>
-          <span>Подключайте ноутбук к KVM после полной загрузки Windows</span>
+          <span>РџРѕРґРєР»СЋС‡Р°Р№С‚Рµ РЅРѕСѓС‚Р±СѓРє Рє KVM РїРѕСЃР»Рµ РїРѕР»РЅРѕР№ Р·Р°РіСЂСѓР·РєРё Windows</span>
         </div>
         <div class="tip-item">
           <i class="fas fa-keyboard"></i>
-          <span>Используйте KVM с дополнительным питанием для ноутбуков</span>
+          <span>РСЃРїРѕР»СЊР·СѓР№С‚Рµ KVM СЃ РґРѕРїРѕР»РЅРёС‚РµР»СЊРЅС‹Рј РїРёС‚Р°РЅРёРµРј РґР»СЏ РЅРѕСѓС‚Р±СѓРєРѕРІ</span>
         </div>
         <div class="tip-item">
           <i class="fas fa-shield-alt"></i>
-          <span>Отключайте Secure Boot в BIOS для старых KVM переключателей</span>
+          <span>РћС‚РєР»СЋС‡Р°Р№С‚Рµ Secure Boot РІ BIOS РґР»СЏ СЃС‚Р°СЂС‹С… KVM РїРµСЂРµРєР»СЋС‡Р°С‚РµР»РµР№</span>
         </div>
       </div>
 
-      <h2>Расширенные решения</h2>
-      <h3>Восстановление системы</h3>
+      <h2>Р Р°СЃС€РёСЂРµРЅРЅС‹Рµ СЂРµС€РµРЅРёСЏ</h2>
+      <h3>Р’РѕСЃСЃС‚Р°РЅРѕРІР»РµРЅРёРµ СЃРёСЃС‚РµРјС‹</h3>
       <ol>
-        <li>Win + R > rstrui</li>
-        <li>Выберите точку восстановления</li>
-        <li>Восстановите систему</li>
+        <li>Win + R в†’ rstrui</li>
+        <li>Р’С‹Р±РµСЂРёС‚Рµ С‚РѕС‡РєСѓ РІРѕСЃСЃС‚Р°РЅРѕРІР»РµРЅРёСЏ</li>
+        <li>Р’РѕСЃСЃС‚Р°РЅРѕРІРёС‚Рµ СЃРёСЃС‚РµРјСѓ</li>
       </ol>
 
-      <h3>Чистая загрузка Windows</h3>
+      <h3>Р§РёСЃС‚Р°СЏ Р·Р°РіСЂСѓР·РєР° Windows</h3>
       <ol>
-        <li>msconfig > вкладка "Службы"</li>
-        <li>"Не загружать службы Майкрософт"</li>
-        <li>Вкладка "Автозагрузка" > "Отключить все"</li>
-        <li>Перезагрузите и протестируйте</li>
+        <li>msconfig в†’ РІРєР»Р°РґРєР° "РЎР»СѓР¶Р±С‹"</li>
+        <li>"РќРµ Р·Р°РіСЂСѓР¶Р°С‚СЊ СЃР»СѓР¶Р±С‹ РњР°Р№РєСЂРѕСЃРѕС„С‚"</li>
+        <li>Р’РєР»Р°РґРєР° "РђРІС‚РѕР·Р°РіСЂСѓР·РєР°" в†’ "РћС‚РєР»СЋС‡РёС‚СЊ РІСЃРµ"</li>
+        <li>РџРµСЂРµР·Р°РіСЂСѓР·РёС‚Рµ Рё РїСЂРѕС‚РµСЃС‚РёСЂСѓР№С‚Рµ</li>
       </ol>
 
-      <h3>Использование эмуляторов</h3>
-      <p>Если KVM не поддерживает ноутбуки:</p>
+      <h3>РСЃРїРѕР»СЊР·РѕРІР°РЅРёРµ СЌРјСѓР»СЏС‚РѕСЂРѕРІ</h3>
+      <p>Р•СЃР»Рё KVM РЅРµ РїРѕРґРґРµСЂР¶РёРІР°РµС‚ РЅРѕСѓС‚Р±СѓРєРё:</p>
       <ul>
-        <li>Используйте программные KVM (Microsoft Garage Mouse without Borders)</li>
-        <li>Настройте сетевую клавиатуру и мышь</li>
-        <li>Используйте TeamViewer для управления</li>
+        <li>РСЃРїРѕР»СЊР·СѓР№С‚Рµ РїСЂРѕРіСЂР°РјРјРЅС‹Рµ KVM (Microsoft Garage Mouse without Borders)</li>
+        <li>РќР°СЃС‚СЂРѕР№С‚Рµ СЃРµС‚РµРІСѓСЋ РєР»Р°РІРёР°С‚СѓСЂСѓ Рё РјС‹С€СЊ</li>
+        <li>РСЃРїРѕР»СЊР·СѓР№С‚Рµ TeamViewer РґР»СЏ СѓРїСЂР°РІР»РµРЅРёСЏ</li>
       </ul>
 
-      <h2>Частые вопросы</h2>
-      <h3>Почему KVM работает с ПК, но не с ноутбуком?</h3>
-      <p>Ноутбуки имеют специфические настройки энергосбережения и BIOS, которые могут конфликтовать с KVM. Также ноутбуки часто имеют комбинированные видео порты.</p>
+      <h2>Р§Р°СЃС‚С‹Рµ РІРѕРїСЂРѕСЃС‹</h2>
+      <h3>РџРѕС‡РµРјСѓ KVM СЂР°Р±РѕС‚Р°РµС‚ СЃ РџРљ, РЅРѕ РЅРµ СЃ РЅРѕСѓС‚Р±СѓРєРѕРј?</h3>
+      <p>РќРѕСѓС‚Р±СѓРєРё РёРјРµСЋС‚ СЃРїРµС†РёС„РёС‡РµСЃРєРёРµ РЅР°СЃС‚СЂРѕР№РєРё СЌРЅРµСЂРіРѕСЃР±РµСЂРµР¶РµРЅРёСЏ Рё BIOS, РєРѕС‚РѕСЂС‹Рµ РјРѕРіСѓС‚ РєРѕРЅС„Р»РёРєС‚РѕРІР°С‚СЊ СЃ KVM. РўР°РєР¶Рµ РЅРѕСѓС‚Р±СѓРєРё С‡Р°СЃС‚Рѕ РёРјРµСЋС‚ РєРѕРјР±РёРЅРёСЂРѕРІР°РЅРЅС‹Рµ РІРёРґРµРѕ РїРѕСЂС‚С‹.</p>
 
-      <h3>Можно ли использовать KVM с ноутбуком без док-станции?</h3>
-      <p>Да, но потребуется соответствующие кабели и адаптеры. Для некоторых ноутбуков нужны специальные KVM с поддержкой ноутбуков.</p>
+      <h3>РњРѕР¶РЅРѕ Р»Рё РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ KVM СЃ РЅРѕСѓС‚Р±СѓРєРѕРј Р±РµР· РґРѕРє-СЃС‚Р°РЅС†РёРё?</h3>
+      <p>Р”Р°, РЅРѕ РїРѕС‚СЂРµР±СѓРµС‚СЃСЏ СЃРѕРѕС‚РІРµС‚СЃС‚РІСѓСЋС‰РёРµ РєР°Р±РµР»Рё Рё Р°РґР°РїС‚РµСЂС‹. Р”Р»СЏ РЅРµРєРѕС‚РѕСЂС‹С… РЅРѕСѓС‚Р±СѓРєРѕРІ РЅСѓР¶РЅС‹ СЃРїРµС†РёР°Р»СЊРЅС‹Рµ KVM СЃ РїРѕРґРґРµСЂР¶РєРѕР№ РЅРѕСѓС‚Р±СѓРєРѕРІ.</p>
 
-      <h3>Что делать, если видео переключается, но периферия нет?</h3>
-      <p>Проверьте USB подключение к KVM. Возможно, проблема в USB портах ноутбука или кабелях периферии.</p>
+      <h3>Р§С‚Рѕ РґРµР»Р°С‚СЊ, РµСЃР»Рё РІРёРґРµРѕ РїРµСЂРµРєР»СЋС‡Р°РµС‚СЃСЏ, РЅРѕ РїРµСЂРёС„РµСЂРёСЏ РЅРµС‚?</h3>
+      <p>РџСЂРѕРІРµСЂСЊС‚Рµ USB РїРѕРґРєР»СЋС‡РµРЅРёРµ Рє KVM. Р’РѕР·РјРѕР¶РЅРѕ, РїСЂРѕР±Р»РµРјР° РІ USB РїРѕСЂС‚Р°С… РЅРѕСѓС‚Р±СѓРєР° РёР»Рё РєР°Р±РµР»СЏС… РїРµСЂРёС„РµСЂРёРё.</p>
 
-      <h2>Когда нужна замена KVM</h2>
+      <h2>РљРѕРіРґР° РЅСѓР¶РЅР° Р·Р°РјРµРЅР° KVM</h2>
       <ul>
-        <li>KVM не работает ни с одним устройством</li>
-        <li>Физическое повреждение корпуса или кабелей</li>
-        <li>Устаревшая модель без поддержки современных интерфейсов</li>
-        <li>Все решения не помогли</li>
+        <li>KVM РЅРµ СЂР°Р±РѕС‚Р°РµС‚ РЅРё СЃ РѕРґРЅРёРј СѓСЃС‚СЂРѕР№СЃС‚РІРѕРј</li>
+        <li>Р¤РёР·РёС‡РµСЃРєРѕРµ РїРѕРІСЂРµР¶РґРµРЅРёРµ РєРѕСЂРїСѓСЃР° РёР»Рё РєР°Р±РµР»РµР№</li>
+        <li>РЈСЃС‚Р°СЂРµРІС€Р°СЏ РјРѕРґРµР»СЊ Р±РµР· РїРѕРґРґРµСЂР¶РєРё СЃРѕРІСЂРµРјРµРЅРЅС‹С… РёРЅС‚РµСЂС„РµР№СЃРѕРІ</li>
+        <li>Р’СЃРµ СЂРµС€РµРЅРёСЏ РЅРµ РїРѕРјРѕРіР»Рё</li>
       </ul>
 
-      <p>В большинстве случаев проблема решается установкой драйверов или настройкой BIOS. Начните с проверки совместимости KVM с вашим ноутбуком и обновления драйверов.</p>
+      <p>Р’ Р±РѕР»СЊС€РёРЅСЃС‚РІРµ СЃР»СѓС‡Р°РµРІ РїСЂРѕР±Р»РµРјР° СЂРµС€Р°РµС‚СЃСЏ СѓСЃС‚Р°РЅРѕРІРєРѕР№ РґСЂР°Р№РІРµСЂРѕРІ РёР»Рё РЅР°СЃС‚СЂРѕР№РєРѕР№ BIOS. РќР°С‡РЅРёС‚Рµ СЃ РїСЂРѕРІРµСЂРєРё СЃРѕРІРјРµСЃС‚РёРјРѕСЃС‚Рё KVM СЃ РІР°С€РёРј РЅРѕСѓС‚Р±СѓРєРѕРј Рё РѕР±РЅРѕРІР»РµРЅРёСЏ РґСЂР°Р№РІРµСЂРѕРІ.</p>
     </div>
   </main>
 
-      <footer class="footer">
-        <div class="container">
-            <div class="footer__grid">
-                <div class="footer__col footer__col--logo">
-                    <a href="../index.html" class="footer-logo">
-                        <span class="logo__icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M12 15L7 10H17L12 15Z" fill="currentColor"/>
-                                <path d="M12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3ZM12 19C8.13401 19 5 15.866 5 12C5 8.13401 8.13401 5 12 5C15.866 5 19 8.13401 19 12C19 15.866 15.866 19 12 19Z" fill="currentColor"/>
-                            </svg>
-                        </span>
-                        <span class="logo__text">Repairo</span>
-                    </a>
-                    <p class="footer__text">Помогаем ремонтировать электронику с 2024 года</p>
-                </div>
-                <div class="footer__col">
-                    <h3 class="footer__title">Разделы</h3>
-                    <ul class="footer__links">
-                        <li><a href="../index.html" class="footer__link">Главная</a></li>
-                        <li><a href="../index.html#categories" class="footer__link">Все гайды</a></li>
-                        <li><a href="../contacts.html" class="footer__link">Контакты</a></li>
-                    </ul>
-                </div>
-                <div class="footer__col">
-                    <h3 class="footer__title">Категории</h3>
-                    <ul class="footer__links">
-                        <li><a href="../tv.html" class="nav__link">Телевизоры</a></li>
-                        <li><a href="../cameras.html" class="nav__link">Фотоаппараты</a></li>
-                        <li><a href="../consoles.html" class="nav__link">Приставки</a></li>
-                        <li><a href="../laptops.html" class="nav__link">Ноутбуки</a></li>
-                        <li><a href="../smartphones.html" class="nav__link">Смартфоны</a></li>
-                        <li><a href="../small-appliances.html" class="nav__link">Мелкая техника</a></li>
-                        <li><a href="../large-appliances.html" class="nav__link">Бытовая техника</a></li>
-                        <li><a href="../auto-electronics.html" class="nav__link">Авто-Электроника</a></li>
-                    </ul>
-                </div>
-                <div class="footer__col">
-                    <h3 class="footer__title">Контакты</h3>
-                    <ul class="footer__links">
-                        <li><a href="https://t.me/RepairoRU" class="footer__link"><i class="fab fa-telegram"></i> Telegram</a></li>
-                        <li><span class="footer__link">Наша почта: repairo.info@mail.ru</span></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer__bottom">
-                <p class="disclaimer">
-    Администрация сайта не несёт ответственности за возможные повреждения техники
-    и иные последствия, возникшие в результате самостоятельного ремонта по
-    материалам и инструкциям, размещённым на сайте. Все работы вы выполняете
-    на свой страх и риск.
-    </p>
-                <p class="footer__copyright">© 2026 Repairo. Все права защищены.</p>
-            </div>
-        </div>
-    </footer>
-    <!-- Cookie Consent Banner -->
-    <script src="../script.js"></script>
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2024 FixTech. Р’СЃРµ РїСЂР°РІР° Р·Р°С‰РёС‰РµРЅС‹.</p>
+      <div class="footer-links">
+        <a href="/privacy">РљРѕРЅС„РёРґРµРЅС†РёР°Р»СЊРЅРѕСЃС‚СЊ</a>
+        <a href="/terms">РЈСЃР»РѕРІРёСЏ РёСЃРїРѕР»СЊР·РѕРІР°РЅРёСЏ</a>
+        <a href="/contact">РљРѕРЅС‚Р°РєС‚С‹</a>
+      </div>
+    </div>
+  </footer>
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "HowTo",
-  "name": "КВМ переключатель не переключает ноутбук на монитор и периферию | Экспертный мегагайд",
-  "description": "",
-  "totalTime": "PT30M",
-  "step": [
-    {
-      "@type": "HowToStep",
-      "name": "Введение: почему Cyberpunk 2077 может тормозить на PS5 после патчей?",
-      "text": "Введение: почему Cyberpunk 2077 может тормозить на PS5 после патчей?",
-      "url": "#step-1"
-    },
-    {
-      "@type": "HowToStep",
-      "name": "Таблица: основные причины лагов и просадок FPS в Cyberpunk 2077 на PS5 после обновлений",
-      "text": "Таблица: основные причины лагов и просадок FPS в Cyberpunk 2077 на PS5 после обновлений",
-      "url": "#step-2"
-    },
-    {
-      "@type": "HowToStep",
-      "name": "Пошаговая инструкция: что делать, если Cyberpunk 2077 тормозит на PS5 после обновления",
-      "text": "Пошаговая инструкция: что делать, если Cyberpunk 2077 тормозит на PS5 после обновления",
-      "url": "#step-3"
-    },
-    {
-      "@type": "HowToStep",
-      "name": "Таблица: сравнение режимов графики и FPS в Cyberpunk 2077 на PS5",
-      "text": "Таблица: сравнение режимов графики и FPS в Cyberpunk 2077 на PS5",
-      "url": "#step-4"
-    },
-    {
-      "@type": "HowToStep",
-      "name": "Отзывы игроков и тесты Digital Foundry",
-      "text": "Отзывы игроков и тесты Digital Foundry",
-      "url": "#step-5"
-    },
-    {
-      "@type": "HowToStep",
-      "name": "Лайфхаки и советы по оптимизации Cyberpunk 2077 на PS5",
-      "text": "Лайфхаки и советы по оптимизации Cyberpunk 2077 на PS5",
-      "url": "#step-6"
-    },
-    {
-      "@type": "HowToStep",
-      "name": "FAQ – часто задаваемые вопросы о тормозах Cyberpunk 2077 на PS5",
-      "text": "FAQ – часто задаваемые вопросы о тормозах Cyberpunk 2077 на PS5",
-      "url": "#step-7"
-    },
-    {
-      "@type": "HowToStep",
-      "name": "Пошаговая инструкция: как восстановить базу данных PS5",
-      "text": "Пошаговая инструкция: как восстановить базу данных PS5",
-      "url": "#step-8"
-    }
-  ],
-  "image": "https://repairo.ru/https://mc.yandex.ru/watch/106225686"
-}
-</script>
-<!-- Cookie Consent Script -->
-<script src="../cookie-consent.js"></script>
+  <script src="../script.js"></script>
+  <script src="../search.js"></script>
 </body>
 </html>
-
-
-
-
-
-

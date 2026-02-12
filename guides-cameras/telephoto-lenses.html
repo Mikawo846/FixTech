@@ -2,36 +2,43 @@
 <html lang="ru" data-theme="light">
 <head>
 
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Телеобъективы: для спорта и дикой природы | Repairo</title>
-    <meta name="description" content="">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>РўРµР»РµРѕР±СЉРµРєС‚РёРІС‹: РґР»СЏ СЃРїРѕСЂС‚Р° Рё РґРёРєРѕР№ РїСЂРёСЂРѕРґС‹ | Repairo</title>
+    <meta name="description" content="{{ description }}">
+    <meta name="description" content="РџРѕС€Р°РіРѕРІР°СЏ РёРЅСЃС‚СЂСѓРєС†РёСЏ: РўРµР»РµРѕР±СЉРµРєС‚РёРІС‹: РґР»СЏ СЃРїРѕСЂС‚Р° Рё РґРёРєРѕР№ РїСЂРёСЂРѕРґС‹. РСЃРїРѕР»СЊР·СѓР№С‚Рµ СЃРµСЂРёР№РЅСѓСЋ СЃСЉС‘РјРєСѓ Рё СЃР»РµРґСЏС‰РёР№ Р°РІС‚РѕС„РѕРєСѓСЃ РґР»СЏ РґРёРЅР°РјРёС‡РЅС‹С… СЃС†РµРЅ - С‚Р°Рє РІС‹ РЅРµ.... РЎРѕРІРµС‚С‹...">
 
-  <link rel="stylesheet" href="../styles.css" />
-  <link rel="stylesheet" href="../styles-header.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <style>
-    .guide-content { line-height: 1.7; color: var(--text); }
-    .guide-content h2 { color: var(--primary); margin-top: 30px; margin-bottom: 15px; font-size: 1.5rem; }
-    .guide-content h3 { color: var(--primary-dark); margin-top: 25px; margin-bottom: 12px; font-size: 1.2rem; }
-    .guide-image-block { margin: 20px 0; padding: 15px; background: var(--background); border-radius: var(--border-radius); border: 1px solid var(--border); text-align: center; }
-    .guide-image-block img { max-width: 100%; height: auto; border-radius: 6px; border: 1px solid var(--border); }
-    .image-caption { margin-top: 10px; font-size: 0.85rem; color: var(--text-light); font-style: italic; }
-    .pro-tips { background: rgba(3, 74, 79, 0.05); padding: 15px; border-radius: 6px; margin: 20px 0; }
-    .pro-tips h4 { color: var(--primary); margin-top: 0; margin-bottom: 12px; font-size: 1.1rem; }
-    .tip-item { display: flex; gap: 8px; margin-bottom: 8px; align-items: flex-start; }
-    table { width: 100%; border-collapse: collapse; margin: 20px 0; }
-    th, td { border: 1px solid var(--border); padding: 8px; text-align: left; }
-    th { background: var(--background-light); }
-    .highlight { background: #f5f7fa; border-left: 4px solid #2d9cdb; padding: 10px 15px; margin: 20px 0; }
-    .faq-section ul { margin-left: 1em; }
-    .block-section { margin-bottom: 2em; }
-    @media (max-width: 768px) {
-      .guide-content h2 { font-size: 1.4rem; margin-top: 25px; }
-      .guide-image-block { padding: 12px; margin: 15px 0; }
-      table, th, td { font-size: 0.95rem; }
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../styles-header.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .guide-content { line-height: 1.7; color: var(--text);}
+        .guide-content h2 { color: var(--primary); margin-top: 30px; margin-bottom: 15px; font-size: 1.5rem;}
+        .step-group { margin: 20px 0; padding: 15px; background: var(--background); border-radius: var(--border-radius); border: 1px solid var(--border);}
+        .step { display: flex; gap: 15px; margin: 12px 0; padding: 12px; background: var(--background-alt); border-radius: 6px; align-items: flex-start;}
+        .step-number { background: var(--primary); color: white; width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-weight: bold; font-size: 0.8rem;}
+        .guide-image-block { margin: 20px 0; padding: 15px; background: var(--background); border-radius: var(--border-radius); border: 1px solid var(--border); text-align: center;}
+        .guide-image-block img { max-width: 100%; height: auto; border-radius: 6px; border: 1px solid var(--border);}
+        .recommend-box { background: rgba(3, 74, 79, 0.1); border-left: 4px solid var(--primary); padding: 12px; margin: 15px 0; display: flex; gap: 12px; align-items: flex-start; border-radius: 4px;}
+        .recommend-box i { font-size: 1.2rem; color: var(--primary); margin-top: 2px;}
+        .pro-tips { background: rgba(3, 74, 79, 0.05); padding: 15px; border-radius: 6px; margin: 20px 0;}
+        .pro-tips h4 { color: var(--primary); margin-top: 0; margin-bottom: 12px; font-size: 1.1rem;}
+        .tip-item { display: flex; gap: 8px; margin-bottom: 8px; align-items: flex-start;}
+        @media (max-width: 768px) {
+            .guide-content h2 { font-size: 1.4rem; margin-top: 25px;}
+            .guide-image-block, .step-group { padding: 12px; margin: 15px 0;}
+            .step { padding: 10px;}
+        }
+    /* РЇРЅРґРµРєСЃ РњР°СЂРєРµС‚ СЂРµРєР»Р°РјРЅС‹Р№ Р±Р°РЅРЅРµСЂ */
+    .ym-hero-link {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+      max-width: 100%;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     }
+
     /* Р“РѕСЂРёР·РѕРЅС‚Р°Р»СЊРЅС‹Р№ Р±Р°РЅРЅРµСЂ-РєР°СЂС‚РѕС‡РєР° */
     .ym-hero-banner {
       width: 100%;
@@ -144,11 +151,13 @@
       transition: background 0.15s ease, transform 0.15s ease,
                   box-shadow 0.15s ease;
     }
+
     .ym-hero-button::after {
       content: "в†’";
       margin-left: 6px;
       font-size: 14px;
     }
+
     .ym-hero-button:hover {
       background: #7c3aed;
       transform: translateY(-1px);
@@ -172,19 +181,24 @@
         max-width: 100%;
         margin: 20px 0;
       }
+
       .ym-hero-images {
         height: 100px;
       }
+
       .ym-hero-content {
         padding: 12px 12px;
       }
+
       .ym-hero-title {
         font-size: 13px;
       }
+
       .ym-hero-button {
         font-size: 13px;
         padding: 8px 14px;
       }
+
       .ym-hero-legal {
         font-size: 10px;
       }
@@ -292,22 +306,27 @@
         padding: 15px;
         min-height: 100px;
       }
+
       .telegram-logo {
         width: 50px;
         height: 50px;
         min-width: 50px;
         margin-right: 15px;
       }
+
       .telegram-logo svg {
         width: 26px;
         height: 26px;
       }
+
       .telegram-title {
         font-size: 14px;
       }
+
       .telegram-subtitle {
         font-size: 12px;
       }
+
       .telegram-button {
         font-size: 12px;
         padding: 6px 12px;
@@ -316,126 +335,140 @@
 
 
 
-  </style>
+    </style>
   <script async src="https://timeweb.cloud/api/v1/cloud-ai/agents/3cc03620-d051-4d8d-b5af-f7b6cd083a35/embed.js?collapsed=true"></script>
 </head>
 <body>
-  <header class="header">
-    <div class="container">
-      <div class="header__inner">
-        <a href="../index.html" class="logo">
-          <span class="logo__icon"></span>
-          <span class="logo__text">GeoExpert</span>
-        </a>
-        <nav class="nav">
-          <ul class="nav__list">
-            <li><a href="../cameras.html" class="nav__link">РљР°РјРµСЂС‹</a></li>
-            <li><a href="../drones.html" class="nav__link">Р”СЂРѕРЅС‹</a></li>
-            <li><a href="../workflow.html" class="nav__link">Workflow</a></li>
-          </ul>
-        </nav>
-      </div>
-    </div>
-  </header>
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <a href="../index.html" class="logo">
+                    <span class="logo__icon"></span>
+                    <span class="logo__text">Repairo</span>
+                </a>
+                <nav class="nav">
+                    <ul class="nav__list">
+                        <li><a href="../cameras.html" class="nav__link">Р¤РѕС‚РѕР°РїРїР°СЂР°С‚С‹</a></li>
+                        <li><a href="../tv.html" class="nav__link">РўРµР»РµРІРёР·РѕСЂС‹</a></li>
+                        <li><a href="../laptops.html" class="nav__link">РќРѕСѓС‚Р±СѓРєРё</a></li>
+                        <li><a href="../smartphones.html" class="nav__link">РЎРјР°СЂС‚С„РѕРЅС‹</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
     <section class="guide-page">
         <div class="container">
             <div class="breadcrumbs">
-                <a href="../index.html">Главная</a>
+                <a href="../index.html">Р“Р»Р°РІРЅР°СЏ</a>
                 <i class="fas fa-chevron-right"></i>
-                <a href="../cameras.html">Фотоаппараты</a>
+                <a href="../cameras.html">Р¤РѕС‚РѕР°РїРїР°СЂР°С‚С‹</a>
                 <i class="fas fa-chevron-right"></i>
-                <span>Телеобъективы: для спорта и дикой природы</span>
+                <span>РўРµР»РµРѕР±СЉРµРєС‚РёРІС‹: РґР»СЏ СЃРїРѕСЂС‚Р° Рё РґРёРєРѕР№ РїСЂРёСЂРѕРґС‹</span>
             </div>
-            <h1 class="section__title">Телеобъективы: для спорта и дикой природы</h1>
+            <h1 class="section__title">РўРµР»РµРѕР±СЉРµРєС‚РёРІС‹: РґР»СЏ СЃРїРѕСЂС‚Р° Рё РґРёРєРѕР№ РїСЂРёСЂРѕРґС‹</h1>
             <div class="guide-meta">
-                <span><i class="fas fa-adjust"></i> Практический гайд</span>
+                <span><i class="fas fa-adjust"></i> РџСЂР°РєС‚РёС‡РµСЃРєРёР№ РіР°Р№Рґ</span>
             </div>
             <div class="guide-image-block">
                 <img src="https://avatars.mds.yandex.net/get-shedevrum/15247318/img_35f2d71c2d7311f0800ea21f0ff6afac/orig">
             </div>
             <div class="guide-content">
-        <!-- Яндекс Маркет рекламный блок -->
+        <!-- РЇРЅРґРµРєСЃ РњР°СЂРєРµС‚ СЂРµРєР»Р°РјРЅС‹Р№ Р±Р»РѕРє -->
         <a href="https://market.yandex.ru/catalog--bytovaia-tekhnika/54419/list?hid=198118&rs=eJwzUvjEKMvBILDwEKsEg8Kzbh6Nw4dZNS4D8c7lFhp9c1-wAQC3uAwP&clid=14635360&refid=rbck8fgamv681iu59go3iqxwddedl4x9&erid=5jtCeReNx12oajxS2bzShmZ&mclid=1003&distr_type=7&utm_source=partner_network&pp=900&utm_medium=link_list&utm_campaign=14635360"
            target="_blank"
            rel="noopener noreferrer sponsored"
+           class="ym-hero-link">
+          <div class="ym-hero-banner">
+            <div class="ym-hero-images">
+              <div class="ym-hero-image">
                 <img src="https://avatars.mds.yandex.net/get-mpic/14770882/2a00000197f4dbee777f8afddccaf44faa53/optimize"
-                     alt="Распродажа бытовой электроники 1">
+                     alt="Р Р°СЃРїСЂРѕРґР°Р¶Р° Р±С‹С‚РѕРІРѕР№ СЌР»РµРєС‚СЂРѕРЅРёРєРё 1">
               </div>
+              <div class="ym-hero-image">
                 <img src="https://avatars.mds.yandex.net/get-mpic/15580298/img_id8867318964670654684.jpeg/optimize"
-                     alt="Распродажа бытовой электроники 2">
+                     alt="Р Р°СЃРїСЂРѕРґР°Р¶Р° Р±С‹С‚РѕРІРѕР№ СЌР»РµРєС‚СЂРѕРЅРёРєРё 2">
               </div>
+              <div class="ym-hero-image">
                 <img src="https://avatars.mds.yandex.net/get-mpic/10096780/2a000001953b534fed2494e0b30fadd9b458/optimize"
-                     alt="Распродажа бытовой электроники 3">
+                     alt="Р Р°СЃРїСЂРѕРґР°Р¶Р° Р±С‹С‚РѕРІРѕР№ СЌР»РµРєС‚СЂРѕРЅРёРєРё 3">
               </div>
             </div>
-                  ? Выгодные предложения
+            <div class="ym-hero-content">
+              <h3 class="ym-hero-title">Р Р°СЃРїСЂРѕРґР°Р¶Р° Р±С‹С‚РѕРІРѕР№ СЌР»РµРєС‚СЂРѕРЅРёРєРё РЅР° РЇРЅРґРµРєСЃ РњР°СЂРєРµС‚Рµ</h3>
+              <div class="ym-hero-top">
+                <div class="ym-hero-rating">
+                  в­ђ Р’С‹РіРѕРґРЅС‹Рµ РїСЂРµРґР»РѕР¶РµРЅРёСЏ
+                  <span class="ym-hero-rating-count">РЎРєРёРґРєРё РґРѕ 50%</span>
                 </div>
               </div>
+              <button class="ym-hero-button">Р—Р° СЃРєРёРґРєР°РјРё</button>
             </div>
           </div>
-            Реклама. ООО "ЯНДЕКС", ИНН 7736207543. clid: 14635360, erid: 5jtCeReNx12oajxS2bzShmZ
+          <div class="ym-hero-legal">
+            Р РµРєР»Р°РјР°. РћРћРћ "РЇРќР”Р•РљРЎ", РРќРќ 7736207543. clid: 14635360, erid: 5jtCeReNx12oajxS2bzShmZ
           </div>
         </a>
-                <h2>Зачем нужны телеобъективы?</h2>
+                <h2>Р—Р°С‡РµРј РЅСѓР¶РЅС‹ С‚РµР»РµРѕР±СЉРµРєС‚РёРІС‹?</h2>
                 <ul>
-                    <li>Позволяют снимать удалённые объекты крупным планом, не приближаясь к ним физически.</li>
-                    <li>Идеальны для спортивных событий, съёмки дикой природы, птиц и животных.</li>
-                    <li>Создают эффект "сжатия" пространства и красиво размывают фон.</li>
+                    <li>РџРѕР·РІРѕР»СЏСЋС‚ СЃРЅРёРјР°С‚СЊ СѓРґР°Р»С‘РЅРЅС‹Рµ РѕР±СЉРµРєС‚С‹ РєСЂСѓРїРЅС‹Рј РїР»Р°РЅРѕРј, РЅРµ РїСЂРёР±Р»РёР¶Р°СЏСЃСЊ Рє РЅРёРј С„РёР·РёС‡РµСЃРєРё.</li>
+                    <li>РРґРµР°Р»СЊРЅС‹ РґР»СЏ СЃРїРѕСЂС‚РёРІРЅС‹С… СЃРѕР±С‹С‚РёР№, СЃСЉС‘РјРєРё РґРёРєРѕР№ РїСЂРёСЂРѕРґС‹, РїС‚РёС† Рё Р¶РёРІРѕС‚РЅС‹С….</li>
+                    <li>РЎРѕР·РґР°СЋС‚ СЌС„С„РµРєС‚ "СЃР¶Р°С‚РёСЏ" РїСЂРѕСЃС‚СЂР°РЅСЃС‚РІР° Рё РєСЂР°СЃРёРІРѕ СЂР°Р·РјС‹РІР°СЋС‚ С„РѕРЅ.</li>
                 </ul>
-                <h2>Основные параметры телеобъективов</h2>
+                <h2>РћСЃРЅРѕРІРЅС‹Рµ РїР°СЂР°РјРµС‚СЂС‹ С‚РµР»РµРѕР±СЉРµРєС‚РёРІРѕРІ</h2>
 <ul>
-                    <li><strong>Фокусное расстояние:</strong> Обычно от 70 мм и выше, для спорта и природы оптимальны 200–600 мм.</li>
-                    <li><strong>Светосила:</strong> Чем ниже f/число (например, f/2.8–f/5.6), тем лучше для съёмки в сложных условиях и для размытия фона.</li>
-                    <li><strong>Стабилизация:</strong> Встроенная стабилизация помогает избежать смаза при длинных фокусах.</li>
-                    <li><strong>Скорость автофокуса:</strong> Важно для динамичных сцен - быстрый и точный автофокус позволит не упустить момент.</li>
+                    <li><strong>Р¤РѕРєСѓСЃРЅРѕРµ СЂР°СЃСЃС‚РѕСЏРЅРёРµ:</strong> РћР±С‹С‡РЅРѕ РѕС‚ 70 РјРј Рё РІС‹С€Рµ, РґР»СЏ СЃРїРѕСЂС‚Р° Рё РїСЂРёСЂРѕРґС‹ РѕРїС‚РёРјР°Р»СЊРЅС‹ 200вЂ“600 РјРј.</li>
+                    <li><strong>РЎРІРµС‚РѕСЃРёР»Р°:</strong> Р§РµРј РЅРёР¶Рµ f/С‡РёСЃР»Рѕ (РЅР°РїСЂРёРјРµСЂ, f/2.8вЂ“f/5.6), С‚РµРј Р»СѓС‡С€Рµ РґР»СЏ СЃСЉС‘РјРєРё РІ СЃР»РѕР¶РЅС‹С… СѓСЃР»РѕРІРёСЏС… Рё РґР»СЏ СЂР°Р·РјС‹С‚РёСЏ С„РѕРЅР°.</li>
+                    <li><strong>РЎС‚Р°Р±РёР»РёР·Р°С†РёСЏ:</strong> Р’СЃС‚СЂРѕРµРЅРЅР°СЏ СЃС‚Р°Р±РёР»РёР·Р°С†РёСЏ РїРѕРјРѕРіР°РµС‚ РёР·Р±РµР¶Р°С‚СЊ СЃРјР°Р·Р° РїСЂРё РґР»РёРЅРЅС‹С… С„РѕРєСѓСЃР°С….</li>
+                    <li><strong>РЎРєРѕСЂРѕСЃС‚СЊ Р°РІС‚РѕС„РѕРєСѓСЃР°:</strong> Р’Р°Р¶РЅРѕ РґР»СЏ РґРёРЅР°РјРёС‡РЅС‹С… СЃС†РµРЅ - Р±С‹СЃС‚СЂС‹Р№ Рё С‚РѕС‡РЅС‹Р№ Р°РІС‚РѕС„РѕРєСѓСЃ РїРѕР·РІРѕР»РёС‚ РЅРµ СѓРїСѓСЃС‚РёС‚СЊ РјРѕРјРµРЅС‚.</li>
                 </ul>
-                <h2>Пошаговая инструкция по выбору телеобъектива</h2>
+                <h2>РџРѕС€Р°РіРѕРІР°СЏ РёРЅСЃС‚СЂСѓРєС†РёСЏ РїРѕ РІС‹Р±РѕСЂСѓ С‚РµР»РµРѕР±СЉРµРєС‚РёРІР°</h2>
                 <div class="step-group">
                     <div class="step">
                         <div class="step-number">1</div>
                         <div>
-                            <strong>Определите задачи съёмки</strong>
+                            <strong>РћРїСЂРµРґРµР»РёС‚Рµ Р·Р°РґР°С‡Рё СЃСЉС‘РјРєРё</strong>
                             <ul>
-                                <li>Для спорта подойдут объективы 70–200 мм или 100–400 мм с быстрой фокусировкой.</li>
-                                <li>Для дикой природы и птиц - 300 мм, 400 мм, 500 мм и более.</li>
+                                <li>Р”Р»СЏ СЃРїРѕСЂС‚Р° РїРѕРґРѕР№РґСѓС‚ РѕР±СЉРµРєС‚РёРІС‹ 70вЂ“200 РјРј РёР»Рё 100вЂ“400 РјРј СЃ Р±С‹СЃС‚СЂРѕР№ С„РѕРєСѓСЃРёСЂРѕРІРєРѕР№.</li>
+                                <li>Р”Р»СЏ РґРёРєРѕР№ РїСЂРёСЂРѕРґС‹ Рё РїС‚РёС† - 300 РјРј, 400 РјРј, 500 РјРј Рё Р±РѕР»РµРµ.</li>
                             </ul>
                         </div>
                     </div>
                     <div class="step">
                         <div class="step-number">2</div>
                         <div>
-                            <strong>Обратите внимание на светосилу</strong>
+                            <strong>РћР±СЂР°С‚РёС‚Рµ РІРЅРёРјР°РЅРёРµ РЅР° СЃРІРµС‚РѕСЃРёР»Сѓ</strong>
                             <ul>
-                                <li>f/2.8–f/4 - профессиональные модели, отлично работают в сумерках и на стадионах.</li>
-                                <li>f/5.6–f/6.3 - более доступные и лёгкие, подходят для дневной съёмки.</li>
+                                <li>f/2.8вЂ“f/4 - РїСЂРѕС„РµСЃСЃРёРѕРЅР°Р»СЊРЅС‹Рµ РјРѕРґРµР»Рё, РѕС‚Р»РёС‡РЅРѕ СЂР°Р±РѕС‚Р°СЋС‚ РІ СЃСѓРјРµСЂРєР°С… Рё РЅР° СЃС‚Р°РґРёРѕРЅР°С….</li>
+                                <li>f/5.6вЂ“f/6.3 - Р±РѕР»РµРµ РґРѕСЃС‚СѓРїРЅС‹Рµ Рё Р»С‘РіРєРёРµ, РїРѕРґС…РѕРґСЏС‚ РґР»СЏ РґРЅРµРІРЅРѕР№ СЃСЉС‘РјРєРё.</li>
                             </ul>
                         </div>
                     </div>
                     <div class="step">
                         <div class="step-number">3</div>
                         <div>
-                            <strong>Проверьте наличие стабилизации</strong>
+                            <strong>РџСЂРѕРІРµСЂСЊС‚Рµ РЅР°Р»РёС‡РёРµ СЃС‚Р°Р±РёР»РёР·Р°С†РёРё</strong>
                             <ul>
-                                <li>Стабилизация особенно важна при съёмке с рук на длинных фокусах.</li>
+                                <li>РЎС‚Р°Р±РёР»РёР·Р°С†РёСЏ РѕСЃРѕР±РµРЅРЅРѕ РІР°Р¶РЅР° РїСЂРё СЃСЉС‘РјРєРµ СЃ СЂСѓРє РЅР° РґР»РёРЅРЅС‹С… С„РѕРєСѓСЃР°С….</li>
                             </ul>
                         </div>
                     </div>
                     <div class="step">
                         <div class="step-number">4</div>
                         <div>
-                            <strong>Выберите между фикс- и зум-объективом</strong>
+                            <strong>Р’С‹Р±РµСЂРёС‚Рµ РјРµР¶РґСѓ С„РёРєСЃ- Рё Р·СѓРј-РѕР±СЉРµРєС‚РёРІРѕРј</strong>
                             <ul>
-                                <li>Фиксы (например, 300 мм, 400 мм) обычно светосильнее и резче.</li>
-                                <li>Зумы (70–200 мм, 100–400 мм, 150–600 мм) универсальнее, позволяют быстро менять композицию.</li>
+                                <li>Р¤РёРєСЃС‹ (РЅР°РїСЂРёРјРµСЂ, 300 РјРј, 400 РјРј) РѕР±С‹С‡РЅРѕ СЃРІРµС‚РѕСЃРёР»СЊРЅРµРµ Рё СЂРµР·С‡Рµ.</li>
+                                <li>Р—СѓРјС‹ (70вЂ“200 РјРј, 100вЂ“400 РјРј, 150вЂ“600 РјРј) СѓРЅРёРІРµСЂСЃР°Р»СЊРЅРµРµ, РїРѕР·РІРѕР»СЏСЋС‚ Р±С‹СЃС‚СЂРѕ РјРµРЅСЏС‚СЊ РєРѕРјРїРѕР·РёС†РёСЋ.</li>
                             </ul>
                         </div>
                     </div>
                     <div class="step">
                         <div class="step-number">5</div>
                         <div>
-                            <strong>Оцените вес и размер</strong>
+                            <strong>РћС†РµРЅРёС‚Рµ РІРµСЃ Рё СЂР°Р·РјРµСЂ</strong>
                             <ul>
-                                <li>Длиннофокусные объективы могут быть тяжёлыми - для длительных съёмок пригодится штатив или монопод.</li>
+                                <li>Р”Р»РёРЅРЅРѕС„РѕРєСѓСЃРЅС‹Рµ РѕР±СЉРµРєС‚РёРІС‹ РјРѕРіСѓС‚ Р±С‹С‚СЊ С‚СЏР¶С‘Р»С‹РјРё - РґР»СЏ РґР»РёС‚РµР»СЊРЅС‹С… СЃСЉС‘РјРѕРє РїСЂРёРіРѕРґРёС‚СЃСЏ С€С‚Р°С‚РёРІ РёР»Рё РјРѕРЅРѕРїРѕРґ.</li>
                             </ul>
                         </div>
                     </div>
@@ -443,37 +476,37 @@
                 <div class="recommend-box">
                     <i class="fas fa-info-circle"></i>
                     <div>
-                        <strong>Совет:</strong> Для начала подойдёт универсальный зум 70–300 мм - он лёгкий, доступный и подходит для большинства сюжетов на природе и стадионе.
+                        <strong>РЎРѕРІРµС‚:</strong> Р”Р»СЏ РЅР°С‡Р°Р»Р° РїРѕРґРѕР№РґС‘С‚ СѓРЅРёРІРµСЂСЃР°Р»СЊРЅС‹Р№ Р·СѓРј 70вЂ“300 РјРј - РѕРЅ Р»С‘РіРєРёР№, РґРѕСЃС‚СѓРїРЅС‹Р№ Рё РїРѕРґС…РѕРґРёС‚ РґР»СЏ Р±РѕР»СЊС€РёРЅСЃС‚РІР° СЃСЋР¶РµС‚РѕРІ РЅР° РїСЂРёСЂРѕРґРµ Рё СЃС‚Р°РґРёРѕРЅРµ.
                     </div>
                 </div>
                 <div class="pro-tips">
-                    <h4>?? Профессиональные советы</h4>
+                    <h4>рџ”№ РџСЂРѕС„РµСЃСЃРёРѕРЅР°Р»СЊРЅС‹Рµ СЃРѕРІРµС‚С‹</h4>
                     <div class="tip-item">
                         <i class="fas fa-lightbulb"></i>
-                        <p>Используйте серийную съёмку и следящий автофокус для динамичных сцен - так вы не упустите лучший момент.</p>
+                        <p>РСЃРїРѕР»СЊР·СѓР№С‚Рµ СЃРµСЂРёР№РЅСѓСЋ СЃСЉС‘РјРєСѓ Рё СЃР»РµРґСЏС‰РёР№ Р°РІС‚РѕС„РѕРєСѓСЃ РґР»СЏ РґРёРЅР°РјРёС‡РЅС‹С… СЃС†РµРЅ - С‚Р°Рє РІС‹ РЅРµ СѓРїСѓСЃС‚РёС‚Рµ Р»СѓС‡С€РёР№ РјРѕРјРµРЅС‚.</p>
                     </div>
                     <div class="tip-item">
                         <i class="fas fa-lightbulb"></i>
-                        <p>Для съёмки птиц и животных выбирайте объективы с фокусным расстоянием 400 мм и больше, желательно с поддержкой телеконвертеров.</p>
+                        <p>Р”Р»СЏ СЃСЉС‘РјРєРё РїС‚РёС† Рё Р¶РёРІРѕС‚РЅС‹С… РІС‹Р±РёСЂР°Р№С‚Рµ РѕР±СЉРµРєС‚РёРІС‹ СЃ С„РѕРєСѓСЃРЅС‹Рј СЂР°СЃСЃС‚РѕСЏРЅРёРµРј 400 РјРј Рё Р±РѕР»СЊС€Рµ, Р¶РµР»Р°С‚РµР»СЊРЅРѕ СЃ РїРѕРґРґРµСЂР¶РєРѕР№ С‚РµР»РµРєРѕРЅРІРµСЂС‚РµСЂРѕРІ.</p>
                     </div>
                     <div class="tip-item">
                         <i class="fas fa-lightbulb"></i>
-                        <p>При съёмке с рук используйте короткие выдержки (1/1000 с и быстрее) для предотвращения смаза.</p>
+                        <p>РџСЂРё СЃСЉС‘РјРєРµ СЃ СЂСѓРє РёСЃРїРѕР»СЊР·СѓР№С‚Рµ РєРѕСЂРѕС‚РєРёРµ РІС‹РґРµСЂР¶РєРё (1/1000 СЃ Рё Р±С‹СЃС‚СЂРµРµ) РґР»СЏ РїСЂРµРґРѕС‚РІСЂР°С‰РµРЅРёСЏ СЃРјР°Р·Р°.</p>
                     </div>
                 </div>
-                <h2>Часто задаваемые вопросы</h2>
+                <h2>Р§Р°СЃС‚Рѕ Р·Р°РґР°РІР°РµРјС‹Рµ РІРѕРїСЂРѕСЃС‹</h2>
                 <ul>
-                    <li><strong>Можно ли использовать телеконвертер?</strong> - Да, это увеличит фокусное расстояние, но немного снизит светосилу и резкость.</li>
-                    <li><strong>Что важнее - светосила или фокусное расстояние?</strong> - Для спорта - светосила, для дикой природы - фокусное расстояние.</li>
-                    <li><strong>Подойдут ли бюджетные зумы для спорта?</strong> - Да, современные 70–300 мм и 100–400 мм дают отличные результаты при хорошем освещении.</li>
+                    <li><strong>РњРѕР¶РЅРѕ Р»Рё РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ С‚РµР»РµРєРѕРЅРІРµСЂС‚РµСЂ?</strong> - Р”Р°, СЌС‚Рѕ СѓРІРµР»РёС‡РёС‚ С„РѕРєСѓСЃРЅРѕРµ СЂР°СЃСЃС‚РѕСЏРЅРёРµ, РЅРѕ РЅРµРјРЅРѕРіРѕ СЃРЅРёР·РёС‚ СЃРІРµС‚РѕСЃРёР»Сѓ Рё СЂРµР·РєРѕСЃС‚СЊ.</li>
+                    <li><strong>Р§С‚Рѕ РІР°Р¶РЅРµРµ - СЃРІРµС‚РѕСЃРёР»Р° РёР»Рё С„РѕРєСѓСЃРЅРѕРµ СЂР°СЃСЃС‚РѕСЏРЅРёРµ?</strong> - Р”Р»СЏ СЃРїРѕСЂС‚Р° - СЃРІРµС‚РѕСЃРёР»Р°, РґР»СЏ РґРёРєРѕР№ РїСЂРёСЂРѕРґС‹ - С„РѕРєСѓСЃРЅРѕРµ СЂР°СЃСЃС‚РѕСЏРЅРёРµ.</li>
+                    <li><strong>РџРѕРґРѕР№РґСѓС‚ Р»Рё Р±СЋРґР¶РµС‚РЅС‹Рµ Р·СѓРјС‹ РґР»СЏ СЃРїРѕСЂС‚Р°?</strong> - Р”Р°, СЃРѕРІСЂРµРјРµРЅРЅС‹Рµ 70вЂ“300 РјРј Рё 100вЂ“400 РјРј РґР°СЋС‚ РѕС‚Р»РёС‡РЅС‹Рµ СЂРµР·СѓР»СЊС‚Р°С‚С‹ РїСЂРё С…РѕСЂРѕС€РµРј РѕСЃРІРµС‰РµРЅРёРё.</li>
                 </ul>
-                <h2>?? Итог</h2>
+                <h2>рџ“Њ РС‚РѕРі</h2>
                 <p>
-                    Телеобъективы - лучший выбор для съёмки спорта и дикой природы. Они приближают удалённые объекты, позволяют снимать незаметно и создавать выразительные кадры с размытым фоном. Выбирайте объектив под свои задачи, учитывайте светосилу, автофокус и вес - и ваши снимки будут яркими и динамичными!
+                    РўРµР»РµРѕР±СЉРµРєС‚РёРІС‹ - Р»СѓС‡С€РёР№ РІС‹Р±РѕСЂ РґР»СЏ СЃСЉС‘РјРєРё СЃРїРѕСЂС‚Р° Рё РґРёРєРѕР№ РїСЂРёСЂРѕРґС‹. РћРЅРё РїСЂРёР±Р»РёР¶Р°СЋС‚ СѓРґР°Р»С‘РЅРЅС‹Рµ РѕР±СЉРµРєС‚С‹, РїРѕР·РІРѕР»СЏСЋС‚ СЃРЅРёРјР°С‚СЊ РЅРµР·Р°РјРµС‚РЅРѕ Рё СЃРѕР·РґР°РІР°С‚СЊ РІС‹СЂР°Р·РёС‚РµР»СЊРЅС‹Рµ РєР°РґСЂС‹ СЃ СЂР°Р·РјС‹С‚С‹Рј С„РѕРЅРѕРј. Р’С‹Р±РёСЂР°Р№С‚Рµ РѕР±СЉРµРєС‚РёРІ РїРѕРґ СЃРІРѕРё Р·Р°РґР°С‡Рё, СѓС‡РёС‚С‹РІР°Р№С‚Рµ СЃРІРµС‚РѕСЃРёР»Сѓ, Р°РІС‚РѕС„РѕРєСѓСЃ Рё РІРµСЃ - Рё РІР°С€Рё СЃРЅРёРјРєРё Р±СѓРґСѓС‚ СЏСЂРєРёРјРё Рё РґРёРЅР°РјРёС‡РЅС‹РјРё!
                 </p>
 </div>
 
-        <!-- Telegram рекламный баннер -->
+        <!-- Telegram СЂРµРєР»Р°РјРЅС‹Р№ Р±Р°РЅРЅРµСЂ -->
         <a href="https://t.me/RepairoRU" target="_blank" rel="noopener noreferrer" class="telegram-banner">
           <div class="telegram-banner-container">
             <div class="telegram-logo">
@@ -482,10 +515,10 @@
               </svg>
             </div>
             <div class="telegram-content">
-              <div class="telegram-title">Новости из мира технологий</div>
-              <div class="telegram-subtitle">В нашем новом Telegram-канале. Подписывайтесь и будьте в числе первых!</div>
+              <div class="telegram-title">РќРѕРІРѕСЃС‚Рё РёР· РјРёСЂР° С‚РµС…РЅРѕР»РѕРіРёР№</div>
+              <div class="telegram-subtitle">Р’ РЅР°С€РµРј РЅРѕРІРѕРј Telegram-РєР°РЅР°Р»Рµ. РџРѕРґРїРёСЃС‹РІР°Р№С‚РµСЃСЊ Рё Р±СѓРґСЊС‚Рµ РІ С‡РёСЃР»Рµ РїРµСЂРІС‹С…!</div>
               <div class="telegram-button">
-                Подписаться
+                РџРѕРґРїРёСЃР°С‚СЊСЃСЏ
                 <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.56c-.21 2.22-1.12 7.58-1.58 10.06-.19 1.07-.57 1.43-.94 1.46-.8.07-1.4-.52-2.17-1.03-1.21-.79-1.89-1.28-3.06-2.05-1.35-.87-.47-1.35.3-2.13.2-.21 3.71-3.39 3.77-3.68.01-.04.01-.18-.07-.26s-.2-.05-.29-.03c-.12.03-2.11 1.34-5.95 3.93-.56.38-1.07.57-1.53.56-.5-.01-1.47-.28-2.19-.51-.88-.28-1.58-.43-1.52-.91.03-.25.38-.51 1.04-.78 4.07-1.77 6.78-2.94 8.13-3.51 3.88-1.62 4.68-1.9 5.19-1.91.12 0 .37.03.54.17.14.12.18.28.2.44-.01.06 0 .11-.01.17z"/>
                 </svg>
@@ -510,45 +543,45 @@
                         </span>
                         <span class="logo__text">Repairo</span>
                     </a>
-                    <p class="footer__text">Помогаем ремонтировать электронику с 2024 года</p>
+                    <p class="footer__text">РџРѕРјРѕРіР°РµРј СЂРµРјРѕРЅС‚РёСЂРѕРІР°С‚СЊ СЌР»РµРєС‚СЂРѕРЅРёРєСѓ СЃ 2024 РіРѕРґР°</p>
                 </div>
                 <div class="footer__col">
-                    <h3 class="footer__title">Разделы</h3>
+                    <h3 class="footer__title">Р Р°Р·РґРµР»С‹</h3>
                     <ul class="footer__links">
-                        <li><a href="../index.html" class="footer__link">Главная</a></li>
-                        <li><a href="../index.html#categories" class="footer__link">Все гайды</a></li>
-                        <li><a href="../contacts.html" class="footer__link">Контакты</a></li>
+                        <li><a href="../index.html" class="footer__link">Р“Р»Р°РІРЅР°СЏ</a></li>
+                        <li><a href="../index.html#categories" class="footer__link">Р’СЃРµ РіР°Р№РґС‹</a></li>
+                        <li><a href="../contacts.html" class="footer__link">РљРѕРЅС‚Р°РєС‚С‹</a></li>
                     </ul>
                 </div>
                 <div class="footer__col">
-                    <h3 class="footer__title">Категории</h3>
+                    <h3 class="footer__title">РљР°С‚РµРіРѕСЂРёРё</h3>
                     <ul class="footer__links">
-                        <li><a href="../tv.html" class="nav__link">Телевизоры</a></li>
-                        <li><a href="../cameras.html" class="nav__link">Фотоаппараты</a></li>
-                        <li><a href="../consoles.html" class="nav__link">Приставки</a></li>
-                        <li><a href="../laptops.html" class="nav__link">Ноутбуки</a></li>
-                        <li><a href="../smartphones.html" class="nav__link">Смартфоны</a></li>
-                        <li><a href="../small-appliances.html" class="nav__link">Мелкая техника</a></li>
-                        <li><a href="../large-appliances.html" class="nav__link">Бытовая техника</a></li>
-                        <li><a href="../auto-electronics.html" class="nav__link">Авто-Электроника</a></li>
+                        <li><a href="../tv.html" class="nav__link">РўРµР»РµРІРёР·РѕСЂС‹</a></li>
+                        <li><a href="../cameras.html" class="nav__link">Р¤РѕС‚РѕР°РїРїР°СЂР°С‚С‹</a></li>
+                        <li><a href="../consoles.html" class="nav__link">РџСЂРёСЃС‚Р°РІРєРё</a></li>
+                        <li><a href="../laptops.html" class="nav__link">РќРѕСѓС‚Р±СѓРєРё</a></li>
+                        <li><a href="../smartphones.html" class="nav__link">РЎРјР°СЂС‚С„РѕРЅС‹</a></li>
+                        <li><a href="../small-appliances.html" class="nav__link">РњРµР»РєР°СЏ С‚РµС…РЅРёРєР°</a></li>
+                        <li><a href="../large-appliances.html" class="nav__link">Р‘С‹С‚РѕРІР°СЏ С‚РµС…РЅРёРєР°</a></li>
+                        <li><a href="../auto-electronics.html" class="nav__link">РђРІС‚Рѕ-Р­Р»РµРєС‚СЂРѕРЅРёРєР°</a></li>
                     </ul>
                 </div>
                 <div class="footer__col">
-                    <h3 class="footer__title">Контакты</h3>
+                    <h3 class="footer__title">РљРѕРЅС‚Р°РєС‚С‹</h3>
                     <ul class="footer__links">
                         <li><a href="https://t.me/RepairoRU" class="footer__link"><i class="fab fa-telegram"></i> Telegram</a></li>
-                        <li><span class="footer__link">Наша почта: repairo.info@mail.ru</span></li>
+                        <li><span class="footer__link">РќР°С€Р° РїРѕС‡С‚Р°: repairo.info@mail.ru</span></li>
                     </ul>
                 </div>
             </div>
             <div class="footer__bottom">
                 <p class="disclaimer">
-    Администрация сайта не несёт ответственности за возможные повреждения техники
-    и иные последствия, возникшие в результате самостоятельного ремонта по
-    материалам и инструкциям, размещённым на сайте. Все работы вы выполняете
-    на свой страх и риск.
+    РђРґРјРёРЅРёСЃС‚СЂР°С†РёСЏ СЃР°Р№С‚Р° РЅРµ РЅРµСЃС‘С‚ РѕС‚РІРµС‚СЃС‚РІРµРЅРЅРѕСЃС‚Рё Р·Р° РІРѕР·РјРѕР¶РЅС‹Рµ РїРѕРІСЂРµР¶РґРµРЅРёСЏ С‚РµС…РЅРёРєРё
+    Рё РёРЅС‹Рµ РїРѕСЃР»РµРґСЃС‚РІРёСЏ, РІРѕР·РЅРёРєС€РёРµ РІ СЂРµР·СѓР»СЊС‚Р°С‚Рµ СЃР°РјРѕСЃС‚РѕСЏС‚РµР»СЊРЅРѕРіРѕ СЂРµРјРѕРЅС‚Р° РїРѕ
+    РјР°С‚РµСЂРёР°Р»Р°Рј Рё РёРЅСЃС‚СЂСѓРєС†РёСЏРј, СЂР°Р·РјРµС‰С‘РЅРЅС‹Рј РЅР° СЃР°Р№С‚Рµ. Р’СЃРµ СЂР°Р±РѕС‚С‹ РІС‹ РІС‹РїРѕР»РЅСЏРµС‚Рµ
+    РЅР° СЃРІРѕР№ СЃС‚СЂР°С… Рё СЂРёСЃРє.
     </p>
-                <p class="footer__copyright">© 2026 Repairo. Все права защищены.</p>
+                <p class="footer__copyright">В© 2026 Repairo. Р’СЃРµ РїСЂР°РІР° Р·Р°С‰РёС‰РµРЅС‹.</p>
             </div>
         </div>
     </footer>
@@ -559,38 +592,38 @@
 {
   "@context": "https://schema.org",
   "@type": "HowTo",
-  "name": "Телеобъективы: для спорта и дикой природы",
-  "description": "Пошаговая инструкция: Телеобъективы: для спорта и дикой природы. Используйте серийную съёмку и следящий автофокус для динамичных сцен - так вы не.... Советы...",
+  "name": "РўРµР»РµРѕР±СЉРµРєС‚РёРІС‹: РґР»СЏ СЃРїРѕСЂС‚Р° Рё РґРёРєРѕР№ РїСЂРёСЂРѕРґС‹",
+  "description": "РџРѕС€Р°РіРѕРІР°СЏ РёРЅСЃС‚СЂСѓРєС†РёСЏ: РўРµР»РµРѕР±СЉРµРєС‚РёРІС‹: РґР»СЏ СЃРїРѕСЂС‚Р° Рё РґРёРєРѕР№ РїСЂРёСЂРѕРґС‹. РСЃРїРѕР»СЊР·СѓР№С‚Рµ СЃРµСЂРёР№РЅСѓСЋ СЃСЉС‘РјРєСѓ Рё СЃР»РµРґСЏС‰РёР№ Р°РІС‚РѕС„РѕРєСѓСЃ РґР»СЏ РґРёРЅР°РјРёС‡РЅС‹С… СЃС†РµРЅ - С‚Р°Рє РІС‹ РЅРµ.... РЎРѕРІРµС‚С‹...",
   "totalTime": "PT30M",
   "step": [
     {
       "@type": "HowToStep",
-      "name": "Зачем нужны телеобъективы?",
-      "text": "Зачем нужны телеобъективы?",
+      "name": "Р—Р°С‡РµРј РЅСѓР¶РЅС‹ С‚РµР»РµРѕР±СЉРµРєС‚РёРІС‹?",
+      "text": "Р—Р°С‡РµРј РЅСѓР¶РЅС‹ С‚РµР»РµРѕР±СЉРµРєС‚РёРІС‹?",
       "url": "#step-1"
     },
     {
       "@type": "HowToStep",
-      "name": "Основные параметры телеобъективов",
-      "text": "Основные параметры телеобъективов",
+      "name": "РћСЃРЅРѕРІРЅС‹Рµ РїР°СЂР°РјРµС‚СЂС‹ С‚РµР»РµРѕР±СЉРµРєС‚РёРІРѕРІ",
+      "text": "РћСЃРЅРѕРІРЅС‹Рµ РїР°СЂР°РјРµС‚СЂС‹ С‚РµР»РµРѕР±СЉРµРєС‚РёРІРѕРІ",
       "url": "#step-2"
     },
     {
       "@type": "HowToStep",
-      "name": "Пошаговая инструкция по выбору телеобъектива",
-      "text": "Пошаговая инструкция по выбору телеобъектива",
+      "name": "РџРѕС€Р°РіРѕРІР°СЏ РёРЅСЃС‚СЂСѓРєС†РёСЏ РїРѕ РІС‹Р±РѕСЂСѓ С‚РµР»РµРѕР±СЉРµРєС‚РёРІР°",
+      "text": "РџРѕС€Р°РіРѕРІР°СЏ РёРЅСЃС‚СЂСѓРєС†РёСЏ РїРѕ РІС‹Р±РѕСЂСѓ С‚РµР»РµРѕР±СЉРµРєС‚РёРІР°",
       "url": "#step-3"
     },
     {
       "@type": "HowToStep",
-      "name": "Часто задаваемые вопросы",
-      "text": "Часто задаваемые вопросы",
+      "name": "Р§Р°СЃС‚Рѕ Р·Р°РґР°РІР°РµРјС‹Рµ РІРѕРїСЂРѕСЃС‹",
+      "text": "Р§Р°СЃС‚Рѕ Р·Р°РґР°РІР°РµРјС‹Рµ РІРѕРїСЂРѕСЃС‹",
       "url": "#step-4"
     },
     {
       "@type": "HowToStep",
-      "name": "?? Итог",
-      "text": "?? Итог",
+      "name": "рџ“Њ РС‚РѕРі",
+      "text": "рџ“Њ РС‚РѕРі",
       "url": "#step-5"
     }
   ],
@@ -601,8 +634,4 @@
 <script src="../cookie-consent.js"></script>
 </body>
 </html>
-
-
-
-
 

@@ -2,36 +2,44 @@
 <html lang="ru" data-theme="light">
 <head>
 
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Настройка автоспуска и интервалометра | Repairo</title>
-    <meta name="description" content="">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>РќР°СЃС‚СЂРѕР№РєР° Р°РІС‚РѕСЃРїСѓСЃРєР° Рё РёРЅС‚РµСЂРІР°Р»РѕРјРµС‚СЂР° | Repairo</title>
+    <meta name="description" content="{{ description }}">
+    <meta name="description" content="РџРѕС€Р°РіРѕРІР°СЏ РёРЅСЃС‚СЂСѓРєС†РёСЏ: РќР°СЃС‚СЂРѕР№РєР° Р°РІС‚РѕСЃРїСѓСЃРєР° Рё РёРЅС‚РµСЂРІР°Р»РѕРјРµС‚СЂР°. Р•СЃР»Рё РєР°РјРµСЂР° РЅРµ РїРѕРґРґРµСЂР¶РёРІР°РµС‚ РёРЅС‚РµСЂРІР°Р»РѕРјРµС‚СЂ - РєСѓРїРёС‚Рµ РІРЅРµС€РЅРёР№ РїСѓР»СЊС‚ РёР»Рё РёСЃРїРѕР»СЊР·СѓР№С‚Рµ.... РЎРѕРІРµС‚С‹ СЌРєСЃРї...">
 
-  <link rel="stylesheet" href="../styles.css" />
-  <link rel="stylesheet" href="../styles-header.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <style>
-    .guide-content { line-height: 1.7; color: var(--text); }
-    .guide-content h2 { color: var(--primary); margin-top: 30px; margin-bottom: 15px; font-size: 1.5rem; }
-    .guide-content h3 { color: var(--primary-dark); margin-top: 25px; margin-bottom: 12px; font-size: 1.2rem; }
-    .guide-image-block { margin: 20px 0; padding: 15px; background: var(--background); border-radius: var(--border-radius); border: 1px solid var(--border); text-align: center; }
-    .guide-image-block img { max-width: 100%; height: auto; border-radius: 6px; border: 1px solid var(--border); }
-    .image-caption { margin-top: 10px; font-size: 0.85rem; color: var(--text-light); font-style: italic; }
-    .pro-tips { background: rgba(3, 74, 79, 0.05); padding: 15px; border-radius: 6px; margin: 20px 0; }
-    .pro-tips h4 { color: var(--primary); margin-top: 0; margin-bottom: 12px; font-size: 1.1rem; }
-    .tip-item { display: flex; gap: 8px; margin-bottom: 8px; align-items: flex-start; }
-    table { width: 100%; border-collapse: collapse; margin: 20px 0; }
-    th, td { border: 1px solid var(--border); padding: 8px; text-align: left; }
-    th { background: var(--background-light); }
-    .highlight { background: #f5f7fa; border-left: 4px solid #2d9cdb; padding: 10px 15px; margin: 20px 0; }
-    .faq-section ul { margin-left: 1em; }
-    .block-section { margin-bottom: 2em; }
-    @media (max-width: 768px) {
-      .guide-content h2 { font-size: 1.4rem; margin-top: 25px; }
-      .guide-image-block { padding: 12px; margin: 15px 0; }
-      table, th, td { font-size: 0.95rem; }
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../styles-header.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .guide-content { line-height: 1.7; color: var(--text);}
+        .guide-content h2 { color: var(--primary); margin-top: 30px; margin-bottom: 15px; font-size: 1.5rem;}
+        .step-group { margin: 20px 0; padding: 15px; background: var(--background); border-radius: var(--border-radius); border: 1px solid var(--border);}
+        .step { display: flex; gap: 15px; margin: 12px 0; padding: 12px; background: var(--background-alt); border-radius: 6px; align-items: flex-start;}
+        .step-number { background: var(--primary); color: white; width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-weight: bold; font-size: 0.8rem;}
+        .guide-image-block { margin: 20px 0; padding: 15px; background: var(--background); border-radius: var(--border-radius); border: 1px solid var(--border); text-align: center;}
+        .guide-image-block img { max-width: 100%; height: auto; border-radius: 6px; border: 1px solid var(--border);}
+        .image-caption { margin-top: 10px; font-size: 0.85rem; color: var(--text-light); font-style: italic;}
+        .recommend-box { background: rgba(3, 74, 79, 0.1); border-left: 4px solid var(--primary); padding: 12px; margin: 15px 0; display: flex; gap: 12px; align-items: flex-start; border-radius: 4px;}
+        .recommend-box i { font-size: 1.2rem; color: var(--primary); margin-top: 2px;}
+        .pro-tips { background: rgba(3, 74, 79, 0.05); padding: 15px; border-radius: 6px; margin: 20px 0;}
+        .pro-tips h4 { color: var(--primary); margin-top: 0; margin-bottom: 12px; font-size: 1.1rem;}
+        .tip-item { display: flex; gap: 8px; margin-bottom: 8px; align-items: flex-start;}
+        @media (max-width: 768px) {
+            .guide-content h2 { font-size: 1.4rem; margin-top: 25px;}
+            .guide-image-block, .step-group { padding: 12px; margin: 15px 0;}
+            .step { padding: 10px;}
+        }
+    /* РЇРЅРґРµРєСЃ РњР°СЂРєРµС‚ СЂРµРєР»Р°РјРЅС‹Р№ Р±Р°РЅРЅРµСЂ */
+    .ym-hero-link {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+      max-width: 100%;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     }
+
     /* Р“РѕСЂРёР·РѕРЅС‚Р°Р»СЊРЅС‹Р№ Р±Р°РЅРЅРµСЂ-РєР°СЂС‚РѕС‡РєР° */
     .ym-hero-banner {
       width: 100%;
@@ -144,11 +152,13 @@
       transition: background 0.15s ease, transform 0.15s ease,
                   box-shadow 0.15s ease;
     }
+
     .ym-hero-button::after {
       content: "в†’";
       margin-left: 6px;
       font-size: 14px;
     }
+
     .ym-hero-button:hover {
       background: #7c3aed;
       transform: translateY(-1px);
@@ -172,19 +182,24 @@
         max-width: 100%;
         margin: 20px 0;
       }
+
       .ym-hero-images {
         height: 100px;
       }
+
       .ym-hero-content {
         padding: 12px 12px;
       }
+
       .ym-hero-title {
         font-size: 13px;
       }
+
       .ym-hero-button {
         font-size: 13px;
         padding: 8px 14px;
       }
+
       .ym-hero-legal {
         font-size: 10px;
       }
@@ -292,22 +307,27 @@
         padding: 15px;
         min-height: 100px;
       }
+
       .telegram-logo {
         width: 50px;
         height: 50px;
         min-width: 50px;
         margin-right: 15px;
       }
+
       .telegram-logo svg {
         width: 26px;
         height: 26px;
       }
+
       .telegram-title {
         font-size: 14px;
       }
+
       .telegram-subtitle {
         font-size: 12px;
       }
+
       .telegram-button {
         font-size: 12px;
         padding: 6px 12px;
@@ -316,138 +336,152 @@
 
 
 
-  </style>
+    </style>
   <script async src="https://timeweb.cloud/api/v1/cloud-ai/agents/3cc03620-d051-4d8d-b5af-f7b6cd083a35/embed.js?collapsed=true"></script>
 </head>
 <body>
-  <header class="header">
-    <div class="container">
-      <div class="header__inner">
-        <a href="../index.html" class="logo">
-          <span class="logo__icon"></span>
-          <span class="logo__text">GeoExpert</span>
-        </a>
-        <nav class="nav">
-          <ul class="nav__list">
-            <li><a href="../cameras.html" class="nav__link">РљР°РјРµСЂС‹</a></li>
-            <li><a href="../drones.html" class="nav__link">Р”СЂРѕРЅС‹</a></li>
-            <li><a href="../workflow.html" class="nav__link">Workflow</a></li>
-          </ul>
-        </nav>
-      </div>
-    </div>
-  </header>
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <a href="../index.html" class="logo">
+                    <span class="logo__icon"></span>
+                    <span class="logo__text">Repairo</span>
+                </a>
+                <nav class="nav">
+                    <ul class="nav__list">
+                        <li><a href="../cameras.html" class="nav__link">Р¤РѕС‚РѕР°РїРїР°СЂР°С‚С‹</a></li>
+                        <li><a href="../tv.html" class="nav__link">РўРµР»РµРІРёР·РѕСЂС‹</a></li>
+                        <li><a href="../laptops.html" class="nav__link">РќРѕСѓС‚Р±СѓРєРё</a></li>
+                        <li><a href="../smartphones.html" class="nav__link">РЎРјР°СЂС‚С„РѕРЅС‹</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
     <section class="guide-page">
         <div class="container">
             <div class="breadcrumbs">
-                <a href="../index.html">Главная</a>
+                <a href="../index.html">Р“Р»Р°РІРЅР°СЏ</a>
                 <i class="fas fa-chevron-right"></i>
-                <a href="../cameras.html">Фотоаппараты</a>
+                <a href="../cameras.html">Р¤РѕС‚РѕР°РїРїР°СЂР°С‚С‹</a>
                 <i class="fas fa-chevron-right"></i>
-                <span>Настройка автоспуска и интервалометра</span>
+                <span>РќР°СЃС‚СЂРѕР№РєР° Р°РІС‚РѕСЃРїСѓСЃРєР° Рё РёРЅС‚РµСЂРІР°Р»РѕРјРµС‚СЂР°</span>
             </div>
-            <h1 class="section__title">Настройка автоспуска и интервалометра</h1>
+            <h1 class="section__title">РќР°СЃС‚СЂРѕР№РєР° Р°РІС‚РѕСЃРїСѓСЃРєР° Рё РёРЅС‚РµСЂРІР°Р»РѕРјРµС‚СЂР°</h1>
             <div class="guide-meta">
-                <span><i class="fas fa-clock"></i> Практический гайд</span>
+                <span><i class="fas fa-clock"></i> РџСЂР°РєС‚РёС‡РµСЃРєРёР№ РіР°Р№Рґ</span>
             </div>
             <div class="guide-image-block">
                 <img src="https://avatars.mds.yandex.net/get-shedevrum/16123700/img_88f38f232cb511f095a69691d4d527bb/orig">
             </div>
             <div class="guide-content">
-        <!-- Яндекс Маркет рекламный блок -->
+        <!-- РЇРЅРґРµРєСЃ РњР°СЂРєРµС‚ СЂРµРєР»Р°РјРЅС‹Р№ Р±Р»РѕРє -->
         <a href="https://market.yandex.ru/catalog--bytovaia-tekhnika/54419/list?hid=198118&rs=eJwzUvjEKMvBILDwEKsEg8Kzbh6Nw4dZNS4D8c7lFhp9c1-wAQC3uAwP&clid=14635360&refid=rbck8fgamv681iu59go3iqxwddedl4x9&erid=5jtCeReNx12oajxS2bzShmZ&mclid=1003&distr_type=7&utm_source=partner_network&pp=900&utm_medium=link_list&utm_campaign=14635360"
            target="_blank"
            rel="noopener noreferrer sponsored"
+           class="ym-hero-link">
+          <div class="ym-hero-banner">
+            <div class="ym-hero-images">
+              <div class="ym-hero-image">
                 <img src="https://avatars.mds.yandex.net/get-mpic/14770882/2a00000197f4dbee777f8afddccaf44faa53/optimize"
-                     alt="Распродажа бытовой электроники 1">
+                     alt="Р Р°СЃРїСЂРѕРґР°Р¶Р° Р±С‹С‚РѕРІРѕР№ СЌР»РµРєС‚СЂРѕРЅРёРєРё 1">
               </div>
+              <div class="ym-hero-image">
                 <img src="https://avatars.mds.yandex.net/get-mpic/15580298/img_id8867318964670654684.jpeg/optimize"
-                     alt="Распродажа бытовой электроники 2">
+                     alt="Р Р°СЃРїСЂРѕРґР°Р¶Р° Р±С‹С‚РѕРІРѕР№ СЌР»РµРєС‚СЂРѕРЅРёРєРё 2">
               </div>
+              <div class="ym-hero-image">
                 <img src="https://avatars.mds.yandex.net/get-mpic/10096780/2a000001953b534fed2494e0b30fadd9b458/optimize"
-                     alt="Распродажа бытовой электроники 3">
+                     alt="Р Р°СЃРїСЂРѕРґР°Р¶Р° Р±С‹С‚РѕРІРѕР№ СЌР»РµРєС‚СЂРѕРЅРёРєРё 3">
               </div>
             </div>
-                  ? Выгодные предложения
+            <div class="ym-hero-content">
+              <h3 class="ym-hero-title">Р Р°СЃРїСЂРѕРґР°Р¶Р° Р±С‹С‚РѕРІРѕР№ СЌР»РµРєС‚СЂРѕРЅРёРєРё РЅР° РЇРЅРґРµРєСЃ РњР°СЂРєРµС‚Рµ</h3>
+              <div class="ym-hero-top">
+                <div class="ym-hero-rating">
+                  в­ђ Р’С‹РіРѕРґРЅС‹Рµ РїСЂРµРґР»РѕР¶РµРЅРёСЏ
+                  <span class="ym-hero-rating-count">РЎРєРёРґРєРё РґРѕ 50%</span>
                 </div>
               </div>
+              <button class="ym-hero-button">Р—Р° СЃРєРёРґРєР°РјРё</button>
             </div>
           </div>
-            Реклама. ООО "ЯНДЕКС", ИНН 7736207543. clid: 14635360, erid: 5jtCeReNx12oajxS2bzShmZ
+          <div class="ym-hero-legal">
+            Р РµРєР»Р°РјР°. РћРћРћ "РЇРќР”Р•РљРЎ", РРќРќ 7736207543. clid: 14635360, erid: 5jtCeReNx12oajxS2bzShmZ
           </div>
         </a>
-                <h2>Что такое автоспуск и интервалометр?</h2>
+                <h2>Р§С‚Рѕ С‚Р°РєРѕРµ Р°РІС‚РѕСЃРїСѓСЃРє Рё РёРЅС‚РµСЂРІР°Р»РѕРјРµС‚СЂ?</h2>
                 <ul>
-                    <li><strong>Автоспуск</strong> - функция, при которой камера делает снимок с задержкой (обычно 2, 5 или 10 секунд) после нажатия на спуск.</li>
-                    <li><strong>Интервалометр</strong> - устройство или функция, позволяющая автоматически делать серию снимков через заданные интервалы времени (например, для таймлапса).</li>
+                    <li><strong>РђРІС‚РѕСЃРїСѓСЃРє</strong> - С„СѓРЅРєС†РёСЏ, РїСЂРё РєРѕС‚РѕСЂРѕР№ РєР°РјРµСЂР° РґРµР»Р°РµС‚ СЃРЅРёРјРѕРє СЃ Р·Р°РґРµСЂР¶РєРѕР№ (РѕР±С‹С‡РЅРѕ 2, 5 РёР»Рё 10 СЃРµРєСѓРЅРґ) РїРѕСЃР»Рµ РЅР°Р¶Р°С‚РёСЏ РЅР° СЃРїСѓСЃРє.</li>
+                    <li><strong>РРЅС‚РµСЂРІР°Р»РѕРјРµС‚СЂ</strong> - СѓСЃС‚СЂРѕР№СЃС‚РІРѕ РёР»Рё С„СѓРЅРєС†РёСЏ, РїРѕР·РІРѕР»СЏСЋС‰Р°СЏ Р°РІС‚РѕРјР°С‚РёС‡РµСЃРєРё РґРµР»Р°С‚СЊ СЃРµСЂРёСЋ СЃРЅРёРјРєРѕРІ С‡РµСЂРµР· Р·Р°РґР°РЅРЅС‹Рµ РёРЅС‚РµСЂРІР°Р»С‹ РІСЂРµРјРµРЅРё (РЅР°РїСЂРёРјРµСЂ, РґР»СЏ С‚Р°Р№РјР»Р°РїСЃР°).</li>
                 </ul>
-                <h2>Зачем использовать автоспуск и интервалометр?</h2>
+                <h2>Р—Р°С‡РµРј РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ Р°РІС‚РѕСЃРїСѓСЃРє Рё РёРЅС‚РµСЂРІР°Р»РѕРјРµС‚СЂ?</h2>
 <ul>
-                    <li>Избежать смаза от нажатия на кнопку (при съёмке со штатива, длинных выдержках).</li>
-                    <li>Сделать автопортрет или групповое фото без посторонней помощи.</li>
-                    <li>Создать таймлапс - серию кадров для ускоренного видео (движение облаков, закат, стройка и т.д.).</li>
-                    <li>Снимать астрономию, макро, ночные сцены без вибраций.</li>
+                    <li>РР·Р±РµР¶Р°С‚СЊ СЃРјР°Р·Р° РѕС‚ РЅР°Р¶Р°С‚РёСЏ РЅР° РєРЅРѕРїРєСѓ (РїСЂРё СЃСЉС‘РјРєРµ СЃРѕ С€С‚Р°С‚РёРІР°, РґР»РёРЅРЅС‹С… РІС‹РґРµСЂР¶РєР°С…).</li>
+                    <li>РЎРґРµР»Р°С‚СЊ Р°РІС‚РѕРїРѕСЂС‚СЂРµС‚ РёР»Рё РіСЂСѓРїРїРѕРІРѕРµ С„РѕС‚Рѕ Р±РµР· РїРѕСЃС‚РѕСЂРѕРЅРЅРµР№ РїРѕРјРѕС‰Рё.</li>
+                    <li>РЎРѕР·РґР°С‚СЊ С‚Р°Р№РјР»Р°РїСЃ - СЃРµСЂРёСЋ РєР°РґСЂРѕРІ РґР»СЏ СѓСЃРєРѕСЂРµРЅРЅРѕРіРѕ РІРёРґРµРѕ (РґРІРёР¶РµРЅРёРµ РѕР±Р»Р°РєРѕРІ, Р·Р°РєР°С‚, СЃС‚СЂРѕР№РєР° Рё С‚.Рґ.).</li>
+                    <li>РЎРЅРёРјР°С‚СЊ Р°СЃС‚СЂРѕРЅРѕРјРёСЋ, РјР°РєСЂРѕ, РЅРѕС‡РЅС‹Рµ СЃС†РµРЅС‹ Р±РµР· РІРёР±СЂР°С†РёР№.</li>
                 </ul>
-                <h2>Пошаговая настройка автоспуска</h2>
+                <h2>РџРѕС€Р°РіРѕРІР°СЏ РЅР°СЃС‚СЂРѕР№РєР° Р°РІС‚РѕСЃРїСѓСЃРєР°</h2>
                 <div class="step-group">
                     <div class="step">
                         <div class="step-number">1</div>
                         <div>
-                            <strong>Откройте меню камеры</strong>
+                            <strong>РћС‚РєСЂРѕР№С‚Рµ РјРµРЅСЋ РєР°РјРµСЂС‹</strong>
                             <ul>
-                                <li>Найдите пункт "Автоспуск" или "Self-timer" (обычно значок часов или таймера).</li>
+                                <li>РќР°Р№РґРёС‚Рµ РїСѓРЅРєС‚ "РђРІС‚РѕСЃРїСѓСЃРє" РёР»Рё "Self-timer" (РѕР±С‹С‡РЅРѕ Р·РЅР°С‡РѕРє С‡Р°СЃРѕРІ РёР»Рё С‚Р°Р№РјРµСЂР°).</li>
                             </ul>
                         </div>
                     </div>
                     <div class="step">
                         <div class="step-number">2</div>
                         <div>
-                            <strong>Выберите задержку</strong>
+                            <strong>Р’С‹Р±РµСЂРёС‚Рµ Р·Р°РґРµСЂР¶РєСѓ</strong>
                             <ul>
-                                <li>Стандартные значения - 2, 5 или 10 секунд.</li>
-                                <li>2 секунды - для съёмки со штатива, чтобы избежать смаза.</li>
-                                <li>10 секунд - для автопортретов и групповых фото.</li>
+                                <li>РЎС‚Р°РЅРґР°СЂС‚РЅС‹Рµ Р·РЅР°С‡РµРЅРёСЏ - 2, 5 РёР»Рё 10 СЃРµРєСѓРЅРґ.</li>
+                                <li>2 СЃРµРєСѓРЅРґС‹ - РґР»СЏ СЃСЉС‘РјРєРё СЃРѕ С€С‚Р°С‚РёРІР°, С‡С‚РѕР±С‹ РёР·Р±РµР¶Р°С‚СЊ СЃРјР°Р·Р°.</li>
+                                <li>10 СЃРµРєСѓРЅРґ - РґР»СЏ Р°РІС‚РѕРїРѕСЂС‚СЂРµС‚РѕРІ Рё РіСЂСѓРїРїРѕРІС‹С… С„РѕС‚Рѕ.</li>
                             </ul>
                         </div>
                     </div>
                     <div class="step">
                         <div class="step-number">3</div>
                         <div>
-                            <strong>Активируйте автоспуск</strong>
+                            <strong>РђРєС‚РёРІРёСЂСѓР№С‚Рµ Р°РІС‚РѕСЃРїСѓСЃРє</strong>
                             <ul>
-                                <li>Нажмите спуск - камера начнёт отсчёт и сделает снимок автоматически.</li>
+                                <li>РќР°Р¶РјРёС‚Рµ СЃРїСѓСЃРє - РєР°РјРµСЂР° РЅР°С‡РЅС‘С‚ РѕС‚СЃС‡С‘С‚ Рё СЃРґРµР»Р°РµС‚ СЃРЅРёРјРѕРє Р°РІС‚РѕРјР°С‚РёС‡РµСЃРєРё.</li>
                             </ul>
                         </div>
                     </div>
                 </div>
-                <h2>Пошаговая настройка интервалометра</h2>
+                <h2>РџРѕС€Р°РіРѕРІР°СЏ РЅР°СЃС‚СЂРѕР№РєР° РёРЅС‚РµСЂРІР°Р»РѕРјРµС‚СЂР°</h2>
                 <div class="step-group">
                     <div class="step">
                         <div class="step-number">1</div>
                         <div>
-                            <strong>Откройте меню "Интервалометр" или "Interval Timer Shooting"</strong>
+                            <strong>РћС‚РєСЂРѕР№С‚Рµ РјРµРЅСЋ "РРЅС‚РµСЂРІР°Р»РѕРјРµС‚СЂ" РёР»Рё "Interval Timer Shooting"</strong>
                             <ul>
-                                <li>Некоторые камеры имеют встроенный интервалометр, для других потребуется внешний пульт.</li>
+                                <li>РќРµРєРѕС‚РѕСЂС‹Рµ РєР°РјРµСЂС‹ РёРјРµСЋС‚ РІСЃС‚СЂРѕРµРЅРЅС‹Р№ РёРЅС‚РµСЂРІР°Р»РѕРјРµС‚СЂ, РґР»СЏ РґСЂСѓРіРёС… РїРѕС‚СЂРµР±СѓРµС‚СЃСЏ РІРЅРµС€РЅРёР№ РїСѓР»СЊС‚.</li>
                             </ul>
                         </div>
                     </div>
                     <div class="step">
                         <div class="step-number">2</div>
                         <div>
-                            <strong>Задайте параметры:</strong>
+                            <strong>Р—Р°РґР°Р№С‚Рµ РїР°СЂР°РјРµС‚СЂС‹:</strong>
                             <ul>
-                                <li>Интервал между кадрами (например, 5 секунд).</li>
-                                <li>Количество снимков (например, 120 для 10-минутного таймлапса).</li>
-                                <li>Время старта (можно отложить запуск).</li>
+                                <li>РРЅС‚РµСЂРІР°Р» РјРµР¶РґСѓ РєР°РґСЂР°РјРё (РЅР°РїСЂРёРјРµСЂ, 5 СЃРµРєСѓРЅРґ).</li>
+                                <li>РљРѕР»РёС‡РµСЃС‚РІРѕ СЃРЅРёРјРєРѕРІ (РЅР°РїСЂРёРјРµСЂ, 120 РґР»СЏ 10-РјРёРЅСѓС‚РЅРѕРіРѕ С‚Р°Р№РјР»Р°РїСЃР°).</li>
+                                <li>Р’СЂРµРјСЏ СЃС‚Р°СЂС‚Р° (РјРѕР¶РЅРѕ РѕС‚Р»РѕР¶РёС‚СЊ Р·Р°РїСѓСЃРє).</li>
                             </ul>
                         </div>
                     </div>
                     <div class="step">
                         <div class="step-number">3</div>
                         <div>
-                            <strong>Запустите съёмку</strong>
+                            <strong>Р—Р°РїСѓСЃС‚РёС‚Рµ СЃСЉС‘РјРєСѓ</strong>
                             <ul>
-                                <li>Камера будет автоматически делать снимки по заданному расписанию.</li>
+                                <li>РљР°РјРµСЂР° Р±СѓРґРµС‚ Р°РІС‚РѕРјР°С‚РёС‡РµСЃРєРё РґРµР»Р°С‚СЊ СЃРЅРёРјРєРё РїРѕ Р·Р°РґР°РЅРЅРѕРјСѓ СЂР°СЃРїРёСЃР°РЅРёСЋ.</li>
                             </ul>
                         </div>
                     </div>
@@ -455,37 +489,37 @@
                 <div class="recommend-box">
                     <i class="fas fa-info-circle"></i>
                     <div>
-                        <strong>Совет:</strong> Для таймлапса используйте штатив, ручную фокусировку и одинаковые параметры экспозиции на всех кадрах. Это обеспечит плавность и качество итогового видео.
+                        <strong>РЎРѕРІРµС‚:</strong> Р”Р»СЏ С‚Р°Р№РјР»Р°РїСЃР° РёСЃРїРѕР»СЊР·СѓР№С‚Рµ С€С‚Р°С‚РёРІ, СЂСѓС‡РЅСѓСЋ С„РѕРєСѓСЃРёСЂРѕРІРєСѓ Рё РѕРґРёРЅР°РєРѕРІС‹Рµ РїР°СЂР°РјРµС‚СЂС‹ СЌРєСЃРїРѕР·РёС†РёРё РЅР° РІСЃРµС… РєР°РґСЂР°С…. Р­С‚Рѕ РѕР±РµСЃРїРµС‡РёС‚ РїР»Р°РІРЅРѕСЃС‚СЊ Рё РєР°С‡РµСЃС‚РІРѕ РёС‚РѕРіРѕРІРѕРіРѕ РІРёРґРµРѕ.
                     </div>
                 </div>
                 <div class="pro-tips">
-                    <h4>?? Профессиональные советы</h4>
+                    <h4>рџ”№ РџСЂРѕС„РµСЃСЃРёРѕРЅР°Р»СЊРЅС‹Рµ СЃРѕРІРµС‚С‹</h4>
                     <div class="tip-item">
                         <i class="fas fa-lightbulb"></i>
-                        <p>Если камера не поддерживает интервалометр - купите внешний пульт или используйте приложения для смартфона (если камера поддерживает Wi-Fi/Bluetooth).</p>
+                        <p>Р•СЃР»Рё РєР°РјРµСЂР° РЅРµ РїРѕРґРґРµСЂР¶РёРІР°РµС‚ РёРЅС‚РµСЂРІР°Р»РѕРјРµС‚СЂ - РєСѓРїРёС‚Рµ РІРЅРµС€РЅРёР№ РїСѓР»СЊС‚ РёР»Рё РёСЃРїРѕР»СЊР·СѓР№С‚Рµ РїСЂРёР»РѕР¶РµРЅРёСЏ РґР»СЏ СЃРјР°СЂС‚С„РѕРЅР° (РµСЃР»Рё РєР°РјРµСЂР° РїРѕРґРґРµСЂР¶РёРІР°РµС‚ Wi-Fi/Bluetooth).</p>
                     </div>
                     <div class="tip-item">
                         <i class="fas fa-lightbulb"></i>
-                        <p>Проверьте заряд аккумулятора и место на карте памяти - для таймлапса потребуется много кадров и времени.</p>
+                        <p>РџСЂРѕРІРµСЂСЊС‚Рµ Р·Р°СЂСЏРґ Р°РєРєСѓРјСѓР»СЏС‚РѕСЂР° Рё РјРµСЃС‚Рѕ РЅР° РєР°СЂС‚Рµ РїР°РјСЏС‚Рё - РґР»СЏ С‚Р°Р№РјР»Р°РїСЃР° РїРѕС‚СЂРµР±СѓРµС‚СЃСЏ РјРЅРѕРіРѕ РєР°РґСЂРѕРІ Рё РІСЂРµРјРµРЅРё.</p>
                     </div>
                     <div class="tip-item">
                         <i class="fas fa-lightbulb"></i>
-                        <p>Для астросъёмки и макро используйте автоспуск даже при работе с пультом - это минимизирует вибрации.</p>
+                        <p>Р”Р»СЏ Р°СЃС‚СЂРѕСЃСЉС‘РјРєРё Рё РјР°РєСЂРѕ РёСЃРїРѕР»СЊР·СѓР№С‚Рµ Р°РІС‚РѕСЃРїСѓСЃРє РґР°Р¶Рµ РїСЂРё СЂР°Р±РѕС‚Рµ СЃ РїСѓР»СЊС‚РѕРј - СЌС‚Рѕ РјРёРЅРёРјРёР·РёСЂСѓРµС‚ РІРёР±СЂР°С†РёРё.</p>
                     </div>
                 </div>
-                <h2>Часто задаваемые вопросы</h2>
+                <h2>Р§Р°СЃС‚Рѕ Р·Р°РґР°РІР°РµРјС‹Рµ РІРѕРїСЂРѕСЃС‹</h2>
                 <ul>
-                    <li><strong>Можно ли использовать автоспуск и интервалометр вместе?</strong> - Да, например, автоспуск для первого кадра и интервалометр для серии.</li>
-                    <li><strong>Есть ли интервалометр на смартфоне?</strong> - Да, многие приложения камеры поддерживают таймер и интервальную съёмку.</li>
-                    <li><strong>Что делать, если камера не поддерживает эти функции?</strong> - Используйте внешний пульт или специальные приложения для управления камерой.</li>
+                    <li><strong>РњРѕР¶РЅРѕ Р»Рё РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ Р°РІС‚РѕСЃРїСѓСЃРє Рё РёРЅС‚РµСЂРІР°Р»РѕРјРµС‚СЂ РІРјРµСЃС‚Рµ?</strong> - Р”Р°, РЅР°РїСЂРёРјРµСЂ, Р°РІС‚РѕСЃРїСѓСЃРє РґР»СЏ РїРµСЂРІРѕРіРѕ РєР°РґСЂР° Рё РёРЅС‚РµСЂРІР°Р»РѕРјРµС‚СЂ РґР»СЏ СЃРµСЂРёРё.</li>
+                    <li><strong>Р•СЃС‚СЊ Р»Рё РёРЅС‚РµСЂРІР°Р»РѕРјРµС‚СЂ РЅР° СЃРјР°СЂС‚С„РѕРЅРµ?</strong> - Р”Р°, РјРЅРѕРіРёРµ РїСЂРёР»РѕР¶РµРЅРёСЏ РєР°РјРµСЂС‹ РїРѕРґРґРµСЂР¶РёРІР°СЋС‚ С‚Р°Р№РјРµСЂ Рё РёРЅС‚РµСЂРІР°Р»СЊРЅСѓСЋ СЃСЉС‘РјРєСѓ.</li>
+                    <li><strong>Р§С‚Рѕ РґРµР»Р°С‚СЊ, РµСЃР»Рё РєР°РјРµСЂР° РЅРµ РїРѕРґРґРµСЂР¶РёРІР°РµС‚ СЌС‚Рё С„СѓРЅРєС†РёРё?</strong> - РСЃРїРѕР»СЊР·СѓР№С‚Рµ РІРЅРµС€РЅРёР№ РїСѓР»СЊС‚ РёР»Рё СЃРїРµС†РёР°Р»СЊРЅС‹Рµ РїСЂРёР»РѕР¶РµРЅРёСЏ РґР»СЏ СѓРїСЂР°РІР»РµРЅРёСЏ РєР°РјРµСЂРѕР№.</li>
                 </ul>
-                <h2>?? Итог</h2>
+                <h2>рџ“Њ РС‚РѕРі</h2>
                 <p>
-                    Автоспуск и интервалометр - простые, но мощные инструменты для съёмки автопортретов, групповых фото, таймлапсов и сцен без дрожания. Освойте их - и ваши снимки станут чётче, интереснее и профессиональнее!
+                    РђРІС‚РѕСЃРїСѓСЃРє Рё РёРЅС‚РµСЂРІР°Р»РѕРјРµС‚СЂ - РїСЂРѕСЃС‚С‹Рµ, РЅРѕ РјРѕС‰РЅС‹Рµ РёРЅСЃС‚СЂСѓРјРµРЅС‚С‹ РґР»СЏ СЃСЉС‘РјРєРё Р°РІС‚РѕРїРѕСЂС‚СЂРµС‚РѕРІ, РіСЂСѓРїРїРѕРІС‹С… С„РѕС‚Рѕ, С‚Р°Р№РјР»Р°РїСЃРѕРІ Рё СЃС†РµРЅ Р±РµР· РґСЂРѕР¶Р°РЅРёСЏ. РћСЃРІРѕР№С‚Рµ РёС… - Рё РІР°С€Рё СЃРЅРёРјРєРё СЃС‚Р°РЅСѓС‚ С‡С‘С‚С‡Рµ, РёРЅС‚РµСЂРµСЃРЅРµРµ Рё РїСЂРѕС„РµСЃСЃРёРѕРЅР°Р»СЊРЅРµРµ!
                 </p>
 </div>
 
-        <!-- Telegram рекламный баннер -->
+        <!-- Telegram СЂРµРєР»Р°РјРЅС‹Р№ Р±Р°РЅРЅРµСЂ -->
         <a href="https://t.me/RepairoRU" target="_blank" rel="noopener noreferrer" class="telegram-banner">
           <div class="telegram-banner-container">
             <div class="telegram-logo">
@@ -494,10 +528,10 @@
               </svg>
             </div>
             <div class="telegram-content">
-              <div class="telegram-title">Новости из мира технологий</div>
-              <div class="telegram-subtitle">В нашем новом Telegram-канале. Подписывайтесь и будьте в числе первых!</div>
+              <div class="telegram-title">РќРѕРІРѕСЃС‚Рё РёР· РјРёСЂР° С‚РµС…РЅРѕР»РѕРіРёР№</div>
+              <div class="telegram-subtitle">Р’ РЅР°С€РµРј РЅРѕРІРѕРј Telegram-РєР°РЅР°Р»Рµ. РџРѕРґРїРёСЃС‹РІР°Р№С‚РµСЃСЊ Рё Р±СѓРґСЊС‚Рµ РІ С‡РёСЃР»Рµ РїРµСЂРІС‹С…!</div>
               <div class="telegram-button">
-                Подписаться
+                РџРѕРґРїРёСЃР°С‚СЊСЃСЏ
                 <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.56c-.21 2.22-1.12 7.58-1.58 10.06-.19 1.07-.57 1.43-.94 1.46-.8.07-1.4-.52-2.17-1.03-1.21-.79-1.89-1.28-3.06-2.05-1.35-.87-.47-1.35.3-2.13.2-.21 3.71-3.39 3.77-3.68.01-.04.01-.18-.07-.26s-.2-.05-.29-.03c-.12.03-2.11 1.34-5.95 3.93-.56.38-1.07.57-1.53.56-.5-.01-1.47-.28-2.19-.51-.88-.28-1.58-.43-1.52-.91.03-.25.38-.51 1.04-.78 4.07-1.77 6.78-2.94 8.13-3.51 3.88-1.62 4.68-1.9 5.19-1.91.12 0 .37.03.54.17.14.12.18.28.2.44-.01.06 0 .11-.01.17z"/>
                 </svg>
@@ -522,45 +556,45 @@
                         </span>
                         <span class="logo__text">Repairo</span>
                     </a>
-                    <p class="footer__text">Помогаем ремонтировать электронику с 2024 года</p>
+                    <p class="footer__text">РџРѕРјРѕРіР°РµРј СЂРµРјРѕРЅС‚РёСЂРѕРІР°С‚СЊ СЌР»РµРєС‚СЂРѕРЅРёРєСѓ СЃ 2024 РіРѕРґР°</p>
                 </div>
                 <div class="footer__col">
-                    <h3 class="footer__title">Разделы</h3>
+                    <h3 class="footer__title">Р Р°Р·РґРµР»С‹</h3>
                     <ul class="footer__links">
-                        <li><a href="../index.html" class="footer__link">Главная</a></li>
-                        <li><a href="../index.html#categories" class="footer__link">Все гайды</a></li>
-                        <li><a href="../contacts.html" class="footer__link">Контакты</a></li>
+                        <li><a href="../index.html" class="footer__link">Р“Р»Р°РІРЅР°СЏ</a></li>
+                        <li><a href="../index.html#categories" class="footer__link">Р’СЃРµ РіР°Р№РґС‹</a></li>
+                        <li><a href="../contacts.html" class="footer__link">РљРѕРЅС‚Р°РєС‚С‹</a></li>
                     </ul>
                 </div>
                 <div class="footer__col">
-                    <h3 class="footer__title">Категории</h3>
+                    <h3 class="footer__title">РљР°С‚РµРіРѕСЂРёРё</h3>
                     <ul class="footer__links">
-                        <li><a href="../tv.html" class="nav__link">Телевизоры</a></li>
-                        <li><a href="../cameras.html" class="nav__link">Фотоаппараты</a></li>
-                        <li><a href="../consoles.html" class="nav__link">Приставки</a></li>
-                        <li><a href="../laptops.html" class="nav__link">Ноутбуки</a></li>
-                        <li><a href="../smartphones.html" class="nav__link">Смартфоны</a></li>
-                        <li><a href="../small-appliances.html" class="nav__link">Мелкая техника</a></li>
-                        <li><a href="../large-appliances.html" class="nav__link">Бытовая техника</a></li>
-                        <li><a href="../auto-electronics.html" class="nav__link">Авто-Электроника</a></li>
+                        <li><a href="../tv.html" class="nav__link">РўРµР»РµРІРёР·РѕСЂС‹</a></li>
+                        <li><a href="../cameras.html" class="nav__link">Р¤РѕС‚РѕР°РїРїР°СЂР°С‚С‹</a></li>
+                        <li><a href="../consoles.html" class="nav__link">РџСЂРёСЃС‚Р°РІРєРё</a></li>
+                        <li><a href="../laptops.html" class="nav__link">РќРѕСѓС‚Р±СѓРєРё</a></li>
+                        <li><a href="../smartphones.html" class="nav__link">РЎРјР°СЂС‚С„РѕРЅС‹</a></li>
+                        <li><a href="../small-appliances.html" class="nav__link">РњРµР»РєР°СЏ С‚РµС…РЅРёРєР°</a></li>
+                        <li><a href="../large-appliances.html" class="nav__link">Р‘С‹С‚РѕРІР°СЏ С‚РµС…РЅРёРєР°</a></li>
+                        <li><a href="../auto-electronics.html" class="nav__link">РђРІС‚Рѕ-Р­Р»РµРєС‚СЂРѕРЅРёРєР°</a></li>
                     </ul>
                 </div>
                 <div class="footer__col">
-                    <h3 class="footer__title">Контакты</h3>
+                    <h3 class="footer__title">РљРѕРЅС‚Р°РєС‚С‹</h3>
                     <ul class="footer__links">
                         <li><a href="https://t.me/RepairoRU" class="footer__link"><i class="fab fa-telegram"></i> Telegram</a></li>
-                        <li><span class="footer__link">Наша почта: repairo.info@mail.ru</span></li>
+                        <li><span class="footer__link">РќР°С€Р° РїРѕС‡С‚Р°: repairo.info@mail.ru</span></li>
                     </ul>
                 </div>
             </div>
             <div class="footer__bottom">
                 <p class="disclaimer">
-    Администрация сайта не несёт ответственности за возможные повреждения техники
-    и иные последствия, возникшие в результате самостоятельного ремонта по
-    материалам и инструкциям, размещённым на сайте. Все работы вы выполняете
-    на свой страх и риск.
+    РђРґРјРёРЅРёСЃС‚СЂР°С†РёСЏ СЃР°Р№С‚Р° РЅРµ РЅРµСЃС‘С‚ РѕС‚РІРµС‚СЃС‚РІРµРЅРЅРѕСЃС‚Рё Р·Р° РІРѕР·РјРѕР¶РЅС‹Рµ РїРѕРІСЂРµР¶РґРµРЅРёСЏ С‚РµС…РЅРёРєРё
+    Рё РёРЅС‹Рµ РїРѕСЃР»РµРґСЃС‚РІРёСЏ, РІРѕР·РЅРёРєС€РёРµ РІ СЂРµР·СѓР»СЊС‚Р°С‚Рµ СЃР°РјРѕСЃС‚РѕСЏС‚РµР»СЊРЅРѕРіРѕ СЂРµРјРѕРЅС‚Р° РїРѕ
+    РјР°С‚РµСЂРёР°Р»Р°Рј Рё РёРЅСЃС‚СЂСѓРєС†РёСЏРј, СЂР°Р·РјРµС‰С‘РЅРЅС‹Рј РЅР° СЃР°Р№С‚Рµ. Р’СЃРµ СЂР°Р±РѕС‚С‹ РІС‹ РІС‹РїРѕР»РЅСЏРµС‚Рµ
+    РЅР° СЃРІРѕР№ СЃС‚СЂР°С… Рё СЂРёСЃРє.
     </p>
-                <p class="footer__copyright">© 2026 Repairo. Все права защищены.</p>
+                <p class="footer__copyright">В© 2026 Repairo. Р’СЃРµ РїСЂР°РІР° Р·Р°С‰РёС‰РµРЅС‹.</p>
             </div>
         </div>
     </footer>
@@ -571,44 +605,44 @@
 {
   "@context": "https://schema.org",
   "@type": "HowTo",
-  "name": "Настройка автоспуска и интервалометра",
-  "description": "Пошаговая инструкция: Настройка автоспуска и интервалометра. Если камера не поддерживает интервалометр - купите внешний пульт или используйте.... Советы эксп...",
+  "name": "РќР°СЃС‚СЂРѕР№РєР° Р°РІС‚РѕСЃРїСѓСЃРєР° Рё РёРЅС‚РµСЂРІР°Р»РѕРјРµС‚СЂР°",
+  "description": "РџРѕС€Р°РіРѕРІР°СЏ РёРЅСЃС‚СЂСѓРєС†РёСЏ: РќР°СЃС‚СЂРѕР№РєР° Р°РІС‚РѕСЃРїСѓСЃРєР° Рё РёРЅС‚РµСЂРІР°Р»РѕРјРµС‚СЂР°. Р•СЃР»Рё РєР°РјРµСЂР° РЅРµ РїРѕРґРґРµСЂР¶РёРІР°РµС‚ РёРЅС‚РµСЂРІР°Р»РѕРјРµС‚СЂ - РєСѓРїРёС‚Рµ РІРЅРµС€РЅРёР№ РїСѓР»СЊС‚ РёР»Рё РёСЃРїРѕР»СЊР·СѓР№С‚Рµ.... РЎРѕРІРµС‚С‹ СЌРєСЃРї...",
   "totalTime": "PT30M",
   "step": [
     {
       "@type": "HowToStep",
-      "name": "Что такое автоспуск и интервалометр?",
-      "text": "Что такое автоспуск и интервалометр?",
+      "name": "Р§С‚Рѕ С‚Р°РєРѕРµ Р°РІС‚РѕСЃРїСѓСЃРє Рё РёРЅС‚РµСЂРІР°Р»РѕРјРµС‚СЂ?",
+      "text": "Р§С‚Рѕ С‚Р°РєРѕРµ Р°РІС‚РѕСЃРїСѓСЃРє Рё РёРЅС‚РµСЂРІР°Р»РѕРјРµС‚СЂ?",
       "url": "#step-1"
     },
     {
       "@type": "HowToStep",
-      "name": "Зачем использовать автоспуск и интервалометр?",
-      "text": "Зачем использовать автоспуск и интервалометр?",
+      "name": "Р—Р°С‡РµРј РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ Р°РІС‚РѕСЃРїСѓСЃРє Рё РёРЅС‚РµСЂРІР°Р»РѕРјРµС‚СЂ?",
+      "text": "Р—Р°С‡РµРј РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ Р°РІС‚РѕСЃРїСѓСЃРє Рё РёРЅС‚РµСЂРІР°Р»РѕРјРµС‚СЂ?",
       "url": "#step-2"
     },
     {
       "@type": "HowToStep",
-      "name": "Пошаговая настройка автоспуска",
-      "text": "Пошаговая настройка автоспуска",
+      "name": "РџРѕС€Р°РіРѕРІР°СЏ РЅР°СЃС‚СЂРѕР№РєР° Р°РІС‚РѕСЃРїСѓСЃРєР°",
+      "text": "РџРѕС€Р°РіРѕРІР°СЏ РЅР°СЃС‚СЂРѕР№РєР° Р°РІС‚РѕСЃРїСѓСЃРєР°",
       "url": "#step-3"
     },
     {
       "@type": "HowToStep",
-      "name": "Пошаговая настройка интервалометра",
-      "text": "Пошаговая настройка интервалометра",
+      "name": "РџРѕС€Р°РіРѕРІР°СЏ РЅР°СЃС‚СЂРѕР№РєР° РёРЅС‚РµСЂРІР°Р»РѕРјРµС‚СЂР°",
+      "text": "РџРѕС€Р°РіРѕРІР°СЏ РЅР°СЃС‚СЂРѕР№РєР° РёРЅС‚РµСЂРІР°Р»РѕРјРµС‚СЂР°",
       "url": "#step-4"
     },
     {
       "@type": "HowToStep",
-      "name": "Часто задаваемые вопросы",
-      "text": "Часто задаваемые вопросы",
+      "name": "Р§Р°СЃС‚Рѕ Р·Р°РґР°РІР°РµРјС‹Рµ РІРѕРїСЂРѕСЃС‹",
+      "text": "Р§Р°СЃС‚Рѕ Р·Р°РґР°РІР°РµРјС‹Рµ РІРѕРїСЂРѕСЃС‹",
       "url": "#step-5"
     },
     {
       "@type": "HowToStep",
-      "name": "?? Итог",
-      "text": "?? Итог",
+      "name": "рџ“Њ РС‚РѕРі",
+      "text": "рџ“Њ РС‚РѕРі",
       "url": "#step-6"
     }
   ],
@@ -619,8 +653,4 @@
 <script src="../cookie-consent.js"></script>
 </body>
 </html>
-
-
-
-
 

@@ -2,36 +2,40 @@
 <html lang="ru" data-theme="light">
 <head>
 
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Форматы файлов: JPEG vs RAW – плюсы и минусы | Repairo</title>
-    <meta name="description" content="">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Р¤РѕСЂРјР°С‚С‹ С„Р°Р№Р»РѕРІ: JPEG vs RAW вЂ“ РїР»СЋСЃС‹ Рё РјРёРЅСѓСЃС‹ | Repairo</title>
+    <meta name="description" content="{{ description }}">
+    <meta name="description" content="РџРѕС€Р°РіРѕРІР°СЏ РёРЅСЃС‚СЂСѓРєС†РёСЏ: Р¤РѕСЂРјР°С‚С‹ С„Р°Р№Р»РѕРІ: JPEG vs RAW вЂ“ РїР»СЋСЃС‹ Рё РјРёРЅСѓСЃС‹. Р•СЃР»Рё РЅСѓР¶РЅРѕ Рё РєР°С‡РµСЃС‚РІРѕ, Рё СѓРЅРёРІРµСЂСЃР°Р»СЊРЅРѕСЃС‚СЊ - СЃРЅРёРјР°Р№С‚Рµ РѕРґРЅРѕРІСЂРµРјРµРЅРЅРѕ РІ RAW+JPEG (СЌС‚Р°.... РЎРѕРІРµ...">
 
-  <link rel="stylesheet" href="../styles.css" />
-  <link rel="stylesheet" href="../styles-header.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <style>
-    .guide-content { line-height: 1.7; color: var(--text); }
-    .guide-content h2 { color: var(--primary); margin-top: 30px; margin-bottom: 15px; font-size: 1.5rem; }
-    .guide-content h3 { color: var(--primary-dark); margin-top: 25px; margin-bottom: 12px; font-size: 1.2rem; }
-    .guide-image-block { margin: 20px 0; padding: 15px; background: var(--background); border-radius: var(--border-radius); border: 1px solid var(--border); text-align: center; }
-    .guide-image-block img { max-width: 100%; height: auto; border-radius: 6px; border: 1px solid var(--border); }
-    .image-caption { margin-top: 10px; font-size: 0.85rem; color: var(--text-light); font-style: italic; }
-    .pro-tips { background: rgba(3, 74, 79, 0.05); padding: 15px; border-radius: 6px; margin: 20px 0; }
-    .pro-tips h4 { color: var(--primary); margin-top: 0; margin-bottom: 12px; font-size: 1.1rem; }
-    .tip-item { display: flex; gap: 8px; margin-bottom: 8px; align-items: flex-start; }
-    table { width: 100%; border-collapse: collapse; margin: 20px 0; }
-    th, td { border: 1px solid var(--border); padding: 8px; text-align: left; }
-    th { background: var(--background-light); }
-    .highlight { background: #f5f7fa; border-left: 4px solid #2d9cdb; padding: 10px 15px; margin: 20px 0; }
-    .faq-section ul { margin-left: 1em; }
-    .block-section { margin-bottom: 2em; }
-    @media (max-width: 768px) {
-      .guide-content h2 { font-size: 1.4rem; margin-top: 25px; }
-      .guide-image-block { padding: 12px; margin: 15px 0; }
-      table, th, td { font-size: 0.95rem; }
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../styles-header.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .guide-content { line-height: 1.7; color: var(--text);}
+        .guide-content h2 { color: var(--primary); margin-top: 30px; margin-bottom: 15px; font-size: 1.5rem;}
+        .formats-table { width: 100%; border-collapse: collapse; margin: 25px 0;}
+        .formats-table th, .formats-table td { border: 1px solid var(--border); padding: 8px 12px; text-align: left;}
+        .formats-table th { background: var(--background-alt);}
+        .recommend-box { background: rgba(3, 74, 79, 0.1); border-left: 4px solid var(--primary); padding: 12px; margin: 15px 0; display: flex; gap: 12px; align-items: flex-start; border-radius: 4px;}
+        .recommend-box i { font-size: 1.2rem; color: var(--primary); margin-top: 2px;}
+        .pro-tips { background: rgba(3, 74, 79, 0.05); padding: 15px; border-radius: 6px; margin: 20px 0;}
+        .pro-tips h4 { color: var(--primary); margin-top: 0; margin-bottom: 12px; font-size: 1.1rem;}
+        .tip-item { display: flex; gap: 8px; margin-bottom: 8px; align-items: flex-start;}
+        @media (max-width: 768px) {
+            .guide-content h2 { font-size: 1.4rem; margin-top: 25px;}
+            .formats-table th, .formats-table td { padding: 6px 8px;}
+        }
+    /* РЇРЅРґРµРєСЃ РњР°СЂРєРµС‚ СЂРµРєР»Р°РјРЅС‹Р№ Р±Р°РЅРЅРµСЂ */
+    .ym-hero-link {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+      max-width: 100%;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     }
+
     /* Р“РѕСЂРёР·РѕРЅС‚Р°Р»СЊРЅС‹Р№ Р±Р°РЅРЅРµСЂ-РєР°СЂС‚РѕС‡РєР° */
     .ym-hero-banner {
       width: 100%;
@@ -144,11 +148,13 @@
       transition: background 0.15s ease, transform 0.15s ease,
                   box-shadow 0.15s ease;
     }
+
     .ym-hero-button::after {
       content: "в†’";
       margin-left: 6px;
       font-size: 14px;
     }
+
     .ym-hero-button:hover {
       background: #7c3aed;
       transform: translateY(-1px);
@@ -172,19 +178,24 @@
         max-width: 100%;
         margin: 20px 0;
       }
+
       .ym-hero-images {
         height: 100px;
       }
+
       .ym-hero-content {
         padding: 12px 12px;
       }
+
       .ym-hero-title {
         font-size: 13px;
       }
+
       .ym-hero-button {
         font-size: 13px;
         padding: 8px 14px;
       }
+
       .ym-hero-legal {
         font-size: 10px;
       }
@@ -292,22 +303,27 @@
         padding: 15px;
         min-height: 100px;
       }
+
       .telegram-logo {
         width: 50px;
         height: 50px;
         min-width: 50px;
         margin-right: 15px;
       }
+
       .telegram-logo svg {
         width: 26px;
         height: 26px;
       }
+
       .telegram-title {
         font-size: 14px;
       }
+
       .telegram-subtitle {
         font-size: 12px;
       }
+
       .telegram-button {
         font-size: 12px;
         padding: 6px 12px;
@@ -316,154 +332,168 @@
 
 
 
-  </style>
+    </style>
   <script async src="https://timeweb.cloud/api/v1/cloud-ai/agents/3cc03620-d051-4d8d-b5af-f7b6cd083a35/embed.js?collapsed=true"></script>
 </head>
 <body>
-  <header class="header">
-    <div class="container">
-      <div class="header__inner">
-        <a href="../index.html" class="logo">
-          <span class="logo__icon"></span>
-          <span class="logo__text">GeoExpert</span>
-        </a>
-        <nav class="nav">
-          <ul class="nav__list">
-            <li><a href="../cameras.html" class="nav__link">РљР°РјРµСЂС‹</a></li>
-            <li><a href="../drones.html" class="nav__link">Р”СЂРѕРЅС‹</a></li>
-            <li><a href="../workflow.html" class="nav__link">Workflow</a></li>
-          </ul>
-        </nav>
-      </div>
-    </div>
-  </header>
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <a href="../index.html" class="logo">
+                    <span class="logo__icon"></span>
+                    <span class="logo__text">Repairo</span>
+                </a>
+                <nav class="nav">
+                    <ul class="nav__list">
+                        <li><a href="../cameras.html" class="nav__link">Р¤РѕС‚РѕР°РїРїР°СЂР°С‚С‹</a></li>
+                        <li><a href="../tv.html" class="nav__link">РўРµР»РµРІРёР·РѕСЂС‹</a></li>
+                        <li><a href="../laptops.html" class="nav__link">РќРѕСѓС‚Р±СѓРєРё</a></li>
+                        <li><a href="../smartphones.html" class="nav__link">РЎРјР°СЂС‚С„РѕРЅС‹</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
     <section class="guide-page">
         <div class="container">
             <div class="breadcrumbs">
-                <a href="../index.html">Главная</a>
+                <a href="../index.html">Р“Р»Р°РІРЅР°СЏ</a>
                 <i class="fas fa-chevron-right"></i>
-                <a href="../cameras.html">Фотоаппараты</a>
+                <a href="../cameras.html">Р¤РѕС‚РѕР°РїРїР°СЂР°С‚С‹</a>
                 <i class="fas fa-chevron-right"></i>
-                <span>Форматы файлов: JPEG vs RAW – плюсы и минусы</span>
+                <span>Р¤РѕСЂРјР°С‚С‹ С„Р°Р№Р»РѕРІ: JPEG vs RAW вЂ“ РїР»СЋСЃС‹ Рё РјРёРЅСѓСЃС‹</span>
             </div>
-            <h1 class="section__title">Форматы файлов: JPEG vs RAW – плюсы и минусы</h1>
+            <h1 class="section__title">Р¤РѕСЂРјР°С‚С‹ С„Р°Р№Р»РѕРІ: JPEG vs RAW вЂ“ РїР»СЋСЃС‹ Рё РјРёРЅСѓСЃС‹</h1>
             <div class="guide-meta">
-                <span><i class="fas fa-file-image"></i> Сравнение форматов</span>
+                <span><i class="fas fa-file-image"></i> РЎСЂР°РІРЅРµРЅРёРµ С„РѕСЂРјР°С‚РѕРІ</span>
             </div>
             <div class="guide-image-block">
                 <img src="https://avatars.mds.yandex.net/get-shedevrum/16123700/img_269726d32cb511f0a8fec2e84929c63d/orig">
             </div>
             <div class="guide-content">
-        <!-- Яндекс Маркет рекламный блок -->
+        <!-- РЇРЅРґРµРєСЃ РњР°СЂРєРµС‚ СЂРµРєР»Р°РјРЅС‹Р№ Р±Р»РѕРє -->
         <a href="https://market.yandex.ru/catalog--bytovaia-tekhnika/54419/list?hid=198118&rs=eJwzUvjEKMvBILDwEKsEg8Kzbh6Nw4dZNS4D8c7lFhp9c1-wAQC3uAwP&clid=14635360&refid=rbck8fgamv681iu59go3iqxwddedl4x9&erid=5jtCeReNx12oajxS2bzShmZ&mclid=1003&distr_type=7&utm_source=partner_network&pp=900&utm_medium=link_list&utm_campaign=14635360"
            target="_blank"
            rel="noopener noreferrer sponsored"
+           class="ym-hero-link">
+          <div class="ym-hero-banner">
+            <div class="ym-hero-images">
+              <div class="ym-hero-image">
                 <img src="https://avatars.mds.yandex.net/get-mpic/14770882/2a00000197f4dbee777f8afddccaf44faa53/optimize"
-                     alt="Распродажа бытовой электроники 1">
+                     alt="Р Р°СЃРїСЂРѕРґР°Р¶Р° Р±С‹С‚РѕРІРѕР№ СЌР»РµРєС‚СЂРѕРЅРёРєРё 1">
               </div>
+              <div class="ym-hero-image">
                 <img src="https://avatars.mds.yandex.net/get-mpic/15580298/img_id8867318964670654684.jpeg/optimize"
-                     alt="Распродажа бытовой электроники 2">
+                     alt="Р Р°СЃРїСЂРѕРґР°Р¶Р° Р±С‹С‚РѕРІРѕР№ СЌР»РµРєС‚СЂРѕРЅРёРєРё 2">
               </div>
+              <div class="ym-hero-image">
                 <img src="https://avatars.mds.yandex.net/get-mpic/10096780/2a000001953b534fed2494e0b30fadd9b458/optimize"
-                     alt="Распродажа бытовой электроники 3">
+                     alt="Р Р°СЃРїСЂРѕРґР°Р¶Р° Р±С‹С‚РѕРІРѕР№ СЌР»РµРєС‚СЂРѕРЅРёРєРё 3">
               </div>
             </div>
-                  ? Выгодные предложения
+            <div class="ym-hero-content">
+              <h3 class="ym-hero-title">Р Р°СЃРїСЂРѕРґР°Р¶Р° Р±С‹С‚РѕРІРѕР№ СЌР»РµРєС‚СЂРѕРЅРёРєРё РЅР° РЇРЅРґРµРєСЃ РњР°СЂРєРµС‚Рµ</h3>
+              <div class="ym-hero-top">
+                <div class="ym-hero-rating">
+                  в­ђ Р’С‹РіРѕРґРЅС‹Рµ РїСЂРµРґР»РѕР¶РµРЅРёСЏ
+                  <span class="ym-hero-rating-count">РЎРєРёРґРєРё РґРѕ 50%</span>
                 </div>
               </div>
+              <button class="ym-hero-button">Р—Р° СЃРєРёРґРєР°РјРё</button>
             </div>
           </div>
-            Реклама. ООО "ЯНДЕКС", ИНН 7736207543. clid: 14635360, erid: 5jtCeReNx12oajxS2bzShmZ
+          <div class="ym-hero-legal">
+            Р РµРєР»Р°РјР°. РћРћРћ "РЇРќР”Р•РљРЎ", РРќРќ 7736207543. clid: 14635360, erid: 5jtCeReNx12oajxS2bzShmZ
           </div>
         </a>
-                <h2>Сравнение форматов JPEG и RAW</h2>
+                <h2>РЎСЂР°РІРЅРµРЅРёРµ С„РѕСЂРјР°С‚РѕРІ JPEG Рё RAW</h2>
                 <table class="formats-table">
                     <thead>
                         <tr>
-                            <th>Критерий</th>
+                            <th>РљСЂРёС‚РµСЂРёР№</th>
                             <th>JPEG</th>
                             <th>RAW</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>Качество изображения</td>
-                            <td>Сжатие с потерями, часть данных теряется, возможны артефакты</td>
-                            <td>Максимальное качество, все данные с матрицы сохраняются</td>
+                            <td>РљР°С‡РµСЃС‚РІРѕ РёР·РѕР±СЂР°Р¶РµРЅРёСЏ</td>
+                            <td>РЎР¶Р°С‚РёРµ СЃ РїРѕС‚РµСЂСЏРјРё, С‡Р°СЃС‚СЊ РґР°РЅРЅС‹С… С‚РµСЂСЏРµС‚СЃСЏ, РІРѕР·РјРѕР¶РЅС‹ Р°СЂС‚РµС„Р°РєС‚С‹</td>
+                            <td>РњР°РєСЃРёРјР°Р»СЊРЅРѕРµ РєР°С‡РµСЃС‚РІРѕ, РІСЃРµ РґР°РЅРЅС‹Рµ СЃ РјР°С‚СЂРёС†С‹ СЃРѕС…СЂР°РЅСЏСЋС‚СЃСЏ</td>
                         </tr>
                         <tr>
-                            <td>Размер файла</td>
-                            <td>Маленький (обычно 3–10 МБ)</td>
-                            <td>Большой (20–50 МБ и более)</td>
+                            <td>Р Р°Р·РјРµСЂ С„Р°Р№Р»Р°</td>
+                            <td>РњР°Р»РµРЅСЊРєРёР№ (РѕР±С‹С‡РЅРѕ 3вЂ“10 РњР‘)</td>
+                            <td>Р‘РѕР»СЊС€РѕР№ (20вЂ“50 РњР‘ Рё Р±РѕР»РµРµ)</td>
                         </tr>
                         <tr>
-                            <td>Готовность к использованию</td>
-                            <td>Готов к печати и публикации сразу, обработан камерой</td>
-                            <td>Требует конвертации и обработки на компьютере</td>
+                            <td>Р“РѕС‚РѕРІРЅРѕСЃС‚СЊ Рє РёСЃРїРѕР»СЊР·РѕРІР°РЅРёСЋ</td>
+                            <td>Р“РѕС‚РѕРІ Рє РїРµС‡Р°С‚Рё Рё РїСѓР±Р»РёРєР°С†РёРё СЃСЂР°Р·Сѓ, РѕР±СЂР°Р±РѕС‚Р°РЅ РєР°РјРµСЂРѕР№</td>
+                            <td>РўСЂРµР±СѓРµС‚ РєРѕРЅРІРµСЂС‚Р°С†РёРё Рё РѕР±СЂР°Р±РѕС‚РєРё РЅР° РєРѕРјРїСЊСЋС‚РµСЂРµ</td>
                         </tr>
                         <tr>
-                            <td>Гибкость обработки</td>
-                            <td>Ограничена: малый запас по экспозиции, балансу белого, цвету</td>
-                            <td>Максимальная: можно кардинально менять экспозицию, баланс белого, цвет</td>
+                            <td>Р“РёР±РєРѕСЃС‚СЊ РѕР±СЂР°Р±РѕС‚РєРё</td>
+                            <td>РћРіСЂР°РЅРёС‡РµРЅР°: РјР°Р»С‹Р№ Р·Р°РїР°СЃ РїРѕ СЌРєСЃРїРѕР·РёС†РёРё, Р±Р°Р»Р°РЅСЃСѓ Р±РµР»РѕРіРѕ, С†РІРµС‚Сѓ</td>
+                            <td>РњР°РєСЃРёРјР°Р»СЊРЅР°СЏ: РјРѕР¶РЅРѕ РєР°СЂРґРёРЅР°Р»СЊРЅРѕ РјРµРЅСЏС‚СЊ СЌРєСЃРїРѕР·РёС†РёСЋ, Р±Р°Р»Р°РЅСЃ Р±РµР»РѕРіРѕ, С†РІРµС‚</td>
                         </tr>
                         <tr>
-                            <td>Совместимость</td>
-                            <td>Открывается на любом устройстве (ПК, ТВ, смартфон, проектор)</td>
-                            <td>Требует специального ПО (Lightroom, Photoshop, Capture One и др.)</td>
+                            <td>РЎРѕРІРјРµСЃС‚РёРјРѕСЃС‚СЊ</td>
+                            <td>РћС‚РєСЂС‹РІР°РµС‚СЃСЏ РЅР° Р»СЋР±РѕРј СѓСЃС‚СЂРѕР№СЃС‚РІРµ (РџРљ, РўР’, СЃРјР°СЂС‚С„РѕРЅ, РїСЂРѕРµРєС‚РѕСЂ)</td>
+                            <td>РўСЂРµР±СѓРµС‚ СЃРїРµС†РёР°Р»СЊРЅРѕРіРѕ РџРћ (Lightroom, Photoshop, Capture One Рё РґСЂ.)</td>
                         </tr>
                         <tr>
-                            <td>Скорость съёмки и серийная съёмка</td>
-                            <td>Быстрее, меньше нагрузка на буфер камеры</td>
-                            <td>Медленнее, быстрее заполняется буфер</td>
+                            <td>РЎРєРѕСЂРѕСЃС‚СЊ СЃСЉС‘РјРєРё Рё СЃРµСЂРёР№РЅР°СЏ СЃСЉС‘РјРєР°</td>
+                            <td>Р‘С‹СЃС‚СЂРµРµ, РјРµРЅСЊС€Рµ РЅР°РіСЂСѓР·РєР° РЅР° Р±СѓС„РµСЂ РєР°РјРµСЂС‹</td>
+                            <td>РњРµРґР»РµРЅРЅРµРµ, Р±С‹СЃС‚СЂРµРµ Р·Р°РїРѕР»РЅСЏРµС‚СЃСЏ Р±СѓС„РµСЂ</td>
                         </tr>
                         <tr>
-                            <td>Возможность редактирования без потерь</td>
-                            <td>Редактирование ухудшает качество (каждое сохранение - новые потери)</td>
-                            <td>Редактировать можно сколько угодно без потери качества</td>
+                            <td>Р’РѕР·РјРѕР¶РЅРѕСЃС‚СЊ СЂРµРґР°РєС‚РёСЂРѕРІР°РЅРёСЏ Р±РµР· РїРѕС‚РµСЂСЊ</td>
+                            <td>Р РµРґР°РєС‚РёСЂРѕРІР°РЅРёРµ СѓС…СѓРґС€Р°РµС‚ РєР°С‡РµСЃС‚РІРѕ (РєР°Р¶РґРѕРµ СЃРѕС…СЂР°РЅРµРЅРёРµ - РЅРѕРІС‹Рµ РїРѕС‚РµСЂРё)</td>
+                            <td>Р РµРґР°РєС‚РёСЂРѕРІР°С‚СЊ РјРѕР¶РЅРѕ СЃРєРѕР»СЊРєРѕ СѓРіРѕРґРЅРѕ Р±РµР· РїРѕС‚РµСЂРё РєР°С‡РµСЃС‚РІР°</td>
                         </tr>
                     </tbody>
                 </table>
-                <h2>Плюсы и минусы форматов</h2>
+                <h2>РџР»СЋСЃС‹ Рё РјРёРЅСѓСЃС‹ С„РѕСЂРјР°С‚РѕРІ</h2>
 <ul>
-                    <li><strong>JPEG – плюсы:</strong> компактность, универсальность, мгновенная готовность, высокая совместимость.</li>
-                    <li><strong>JPEG – минусы:</strong> ограниченные возможности обработки, потери качества при редактировании, артефакты сжатия.</li>
-                    <li><strong>RAW – плюсы:</strong> максимальное качество, гибкость обработки, большой запас по экспозиции и цвету, отсутствие потерь при редактировании.</li>
-                    <li><strong>RAW – минусы:</strong> большие файлы, необходимость обработки, требуется специальное ПО, не всегда открывается на бытовых устройствах (например, медиаплеерах и проекторах, которые обычно поддерживают только JPEG, см. ).</li>
+                    <li><strong>JPEG вЂ“ РїР»СЋСЃС‹:</strong> РєРѕРјРїР°РєС‚РЅРѕСЃС‚СЊ, СѓРЅРёРІРµСЂСЃР°Р»СЊРЅРѕСЃС‚СЊ, РјРіРЅРѕРІРµРЅРЅР°СЏ РіРѕС‚РѕРІРЅРѕСЃС‚СЊ, РІС‹СЃРѕРєР°СЏ СЃРѕРІРјРµСЃС‚РёРјРѕСЃС‚СЊ.</li>
+                    <li><strong>JPEG вЂ“ РјРёРЅСѓСЃС‹:</strong> РѕРіСЂР°РЅРёС‡РµРЅРЅС‹Рµ РІРѕР·РјРѕР¶РЅРѕСЃС‚Рё РѕР±СЂР°Р±РѕС‚РєРё, РїРѕС‚РµСЂРё РєР°С‡РµСЃС‚РІР° РїСЂРё СЂРµРґР°РєС‚РёСЂРѕРІР°РЅРёРё, Р°СЂС‚РµС„Р°РєС‚С‹ СЃР¶Р°С‚РёСЏ.</li>
+                    <li><strong>RAW вЂ“ РїР»СЋСЃС‹:</strong> РјР°РєСЃРёРјР°Р»СЊРЅРѕРµ РєР°С‡РµСЃС‚РІРѕ, РіРёР±РєРѕСЃС‚СЊ РѕР±СЂР°Р±РѕС‚РєРё, Р±РѕР»СЊС€РѕР№ Р·Р°РїР°СЃ РїРѕ СЌРєСЃРїРѕР·РёС†РёРё Рё С†РІРµС‚Сѓ, РѕС‚СЃСѓС‚СЃС‚РІРёРµ РїРѕС‚РµСЂСЊ РїСЂРё СЂРµРґР°РєС‚РёСЂРѕРІР°РЅРёРё.</li>
+                    <li><strong>RAW вЂ“ РјРёРЅСѓСЃС‹:</strong> Р±РѕР»СЊС€РёРµ С„Р°Р№Р»С‹, РЅРµРѕР±С…РѕРґРёРјРѕСЃС‚СЊ РѕР±СЂР°Р±РѕС‚РєРё, С‚СЂРµР±СѓРµС‚СЃСЏ СЃРїРµС†РёР°Р»СЊРЅРѕРµ РџРћ, РЅРµ РІСЃРµРіРґР° РѕС‚РєСЂС‹РІР°РµС‚СЃСЏ РЅР° Р±С‹С‚РѕРІС‹С… СѓСЃС‚СЂРѕР№СЃС‚РІР°С… (РЅР°РїСЂРёРјРµСЂ, РјРµРґРёР°РїР»РµРµСЂР°С… Рё РїСЂРѕРµРєС‚РѕСЂР°С…, РєРѕС‚РѕСЂС‹Рµ РѕР±С‹С‡РЅРѕ РїРѕРґРґРµСЂР¶РёРІР°СЋС‚ С‚РѕР»СЊРєРѕ JPEG, СЃРј. ).</li>
                 </ul>
                 <div class="recommend-box">
                     <i class="fas fa-info-circle"></i>
                     <div>
-                        <strong>Совет:</strong> Для повседневной съёмки и быстрой публикации используйте JPEG. Для творческих задач, печати, сложных условий освещения и максимального качества выбирайте RAW.
+                        <strong>РЎРѕРІРµС‚:</strong> Р”Р»СЏ РїРѕРІСЃРµРґРЅРµРІРЅРѕР№ СЃСЉС‘РјРєРё Рё Р±С‹СЃС‚СЂРѕР№ РїСѓР±Р»РёРєР°С†РёРё РёСЃРїРѕР»СЊР·СѓР№С‚Рµ JPEG. Р”Р»СЏ С‚РІРѕСЂС‡РµСЃРєРёС… Р·Р°РґР°С‡, РїРµС‡Р°С‚Рё, СЃР»РѕР¶РЅС‹С… СѓСЃР»РѕРІРёР№ РѕСЃРІРµС‰РµРЅРёСЏ Рё РјР°РєСЃРёРјР°Р»СЊРЅРѕРіРѕ РєР°С‡РµСЃС‚РІР° РІС‹Р±РёСЂР°Р№С‚Рµ RAW.
                     </div>
                 </div>
                 <div class="pro-tips">
-                    <h4>?? Профессиональные советы</h4>
+                    <h4>рџ”№ РџСЂРѕС„РµСЃСЃРёРѕРЅР°Р»СЊРЅС‹Рµ СЃРѕРІРµС‚С‹</h4>
                     <div class="tip-item">
                         <i class="fas fa-lightbulb"></i>
-                        <p>Если нужно и качество, и универсальность - снимайте одновременно в RAW+JPEG (эта функция есть во многих камерах).</p>
+                        <p>Р•СЃР»Рё РЅСѓР¶РЅРѕ Рё РєР°С‡РµСЃС‚РІРѕ, Рё СѓРЅРёРІРµСЂСЃР°Р»СЊРЅРѕСЃС‚СЊ - СЃРЅРёРјР°Р№С‚Рµ РѕРґРЅРѕРІСЂРµРјРµРЅРЅРѕ РІ RAW+JPEG (СЌС‚Р° С„СѓРЅРєС†РёСЏ РµСЃС‚СЊ РІРѕ РјРЅРѕРіРёС… РєР°РјРµСЂР°С…).</p>
                     </div>
                     <div class="tip-item">
                         <i class="fas fa-lightbulb"></i>
-                        <p>Для показа фотографий на телевизорах, проекторах и медиаплеерах используйте JPEG - большинство таких устройств не поддерживают RAW-файлы.</p>
+                        <p>Р”Р»СЏ РїРѕРєР°Р·Р° С„РѕС‚РѕРіСЂР°С„РёР№ РЅР° С‚РµР»РµРІРёР·РѕСЂР°С…, РїСЂРѕРµРєС‚РѕСЂР°С… Рё РјРµРґРёР°РїР»РµРµСЂР°С… РёСЃРїРѕР»СЊР·СѓР№С‚Рµ JPEG - Р±РѕР»СЊС€РёРЅСЃС‚РІРѕ С‚Р°РєРёС… СѓСЃС‚СЂРѕР№СЃС‚РІ РЅРµ РїРѕРґРґРµСЂР¶РёРІР°СЋС‚ RAW-С„Р°Р№Р»С‹.</p>
                     </div>
                     <div class="tip-item">
                         <i class="fas fa-lightbulb"></i>
-                        <p>Обрабатывайте RAW на калиброванном мониторе для получения точных цветов и деталей.</p>
+                        <p>РћР±СЂР°Р±Р°С‚С‹РІР°Р№С‚Рµ RAW РЅР° РєР°Р»РёР±СЂРѕРІР°РЅРЅРѕРј РјРѕРЅРёС‚РѕСЂРµ РґР»СЏ РїРѕР»СѓС‡РµРЅРёСЏ С‚РѕС‡РЅС‹С… С†РІРµС‚РѕРІ Рё РґРµС‚Р°Р»РµР№.</p>
                     </div>
                 </div>
-                <h2>Часто задаваемые вопросы</h2>
+                <h2>Р§Р°СЃС‚Рѕ Р·Р°РґР°РІР°РµРјС‹Рµ РІРѕРїСЂРѕСЃС‹</h2>
                 <ul>
-                    <li><strong>Можно ли конвертировать RAW в JPEG?</strong> – Да, с помощью любого RAW-конвертера (Lightroom, Photoshop, фирменные утилиты производителей камер).</li>
-                    <li><strong>Почему мои RAW-файлы не видит телевизор или проектор?</strong> – Бытовая техника обычно поддерживает только JPEG, PNG и некоторые другие форматы изображений.</li>
-                    <li><strong>RAW всегда лучше JPEG?</strong> – Не всегда: если не планируете обрабатывать снимки, JPEG удобнее и быстрее.</li>
+                    <li><strong>РњРѕР¶РЅРѕ Р»Рё РєРѕРЅРІРµСЂС‚РёСЂРѕРІР°С‚СЊ RAW РІ JPEG?</strong> вЂ“ Р”Р°, СЃ РїРѕРјРѕС‰СЊСЋ Р»СЋР±РѕРіРѕ RAW-РєРѕРЅРІРµСЂС‚РµСЂР° (Lightroom, Photoshop, С„РёСЂРјРµРЅРЅС‹Рµ СѓС‚РёР»РёС‚С‹ РїСЂРѕРёР·РІРѕРґРёС‚РµР»РµР№ РєР°РјРµСЂ).</li>
+                    <li><strong>РџРѕС‡РµРјСѓ РјРѕРё RAW-С„Р°Р№Р»С‹ РЅРµ РІРёРґРёС‚ С‚РµР»РµРІРёР·РѕСЂ РёР»Рё РїСЂРѕРµРєС‚РѕСЂ?</strong> вЂ“ Р‘С‹С‚РѕРІР°СЏ С‚РµС…РЅРёРєР° РѕР±С‹С‡РЅРѕ РїРѕРґРґРµСЂР¶РёРІР°РµС‚ С‚РѕР»СЊРєРѕ JPEG, PNG Рё РЅРµРєРѕС‚РѕСЂС‹Рµ РґСЂСѓРіРёРµ С„РѕСЂРјР°С‚С‹ РёР·РѕР±СЂР°Р¶РµРЅРёР№.</li>
+                    <li><strong>RAW РІСЃРµРіРґР° Р»СѓС‡С€Рµ JPEG?</strong> вЂ“ РќРµ РІСЃРµРіРґР°: РµСЃР»Рё РЅРµ РїР»Р°РЅРёСЂСѓРµС‚Рµ РѕР±СЂР°Р±Р°С‚С‹РІР°С‚СЊ СЃРЅРёРјРєРё, JPEG СѓРґРѕР±РЅРµРµ Рё Р±С‹СЃС‚СЂРµРµ.</li>
                 </ul>
-                <h2>?? Итог</h2>
+                <h2>рџ“Њ РС‚РѕРі</h2>
                 <p>
-                    JPEG - это компактность, универсальность и простота. RAW - это максимум качества и свободы для творчества. Выбор зависит от ваших задач: для быстрой публикации и показа на бытовых устройствах - JPEG, для профессиональной обработки и печати - RAW.
+                    JPEG - СЌС‚Рѕ РєРѕРјРїР°РєС‚РЅРѕСЃС‚СЊ, СѓРЅРёРІРµСЂСЃР°Р»СЊРЅРѕСЃС‚СЊ Рё РїСЂРѕСЃС‚РѕС‚Р°. RAW - СЌС‚Рѕ РјР°РєСЃРёРјСѓРј РєР°С‡РµСЃС‚РІР° Рё СЃРІРѕР±РѕРґС‹ РґР»СЏ С‚РІРѕСЂС‡РµСЃС‚РІР°. Р’С‹Р±РѕСЂ Р·Р°РІРёСЃРёС‚ РѕС‚ РІР°С€РёС… Р·Р°РґР°С‡: РґР»СЏ Р±С‹СЃС‚СЂРѕР№ РїСѓР±Р»РёРєР°С†РёРё Рё РїРѕРєР°Р·Р° РЅР° Р±С‹С‚РѕРІС‹С… СѓСЃС‚СЂРѕР№СЃС‚РІР°С… - JPEG, РґР»СЏ РїСЂРѕС„РµСЃСЃРёРѕРЅР°Р»СЊРЅРѕР№ РѕР±СЂР°Р±РѕС‚РєРё Рё РїРµС‡Р°С‚Рё - RAW.
                 </p>
 </div>
 
-        <!-- Telegram рекламный баннер -->
+        <!-- Telegram СЂРµРєР»Р°РјРЅС‹Р№ Р±Р°РЅРЅРµСЂ -->
         <a href="https://t.me/RepairoRU" target="_blank" rel="noopener noreferrer" class="telegram-banner">
           <div class="telegram-banner-container">
             <div class="telegram-logo">
@@ -472,10 +502,10 @@
               </svg>
             </div>
             <div class="telegram-content">
-              <div class="telegram-title">Новости из мира технологий</div>
-              <div class="telegram-subtitle">В нашем новом Telegram-канале. Подписывайтесь и будьте в числе первых!</div>
+              <div class="telegram-title">РќРѕРІРѕСЃС‚Рё РёР· РјРёСЂР° С‚РµС…РЅРѕР»РѕРіРёР№</div>
+              <div class="telegram-subtitle">Р’ РЅР°С€РµРј РЅРѕРІРѕРј Telegram-РєР°РЅР°Р»Рµ. РџРѕРґРїРёСЃС‹РІР°Р№С‚РµСЃСЊ Рё Р±СѓРґСЊС‚Рµ РІ С‡РёСЃР»Рµ РїРµСЂРІС‹С…!</div>
               <div class="telegram-button">
-                Подписаться
+                РџРѕРґРїРёСЃР°С‚СЊСЃСЏ
                 <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.56c-.21 2.22-1.12 7.58-1.58 10.06-.19 1.07-.57 1.43-.94 1.46-.8.07-1.4-.52-2.17-1.03-1.21-.79-1.89-1.28-3.06-2.05-1.35-.87-.47-1.35.3-2.13.2-.21 3.71-3.39 3.77-3.68.01-.04.01-.18-.07-.26s-.2-.05-.29-.03c-.12.03-2.11 1.34-5.95 3.93-.56.38-1.07.57-1.53.56-.5-.01-1.47-.28-2.19-.51-.88-.28-1.58-.43-1.52-.91.03-.25.38-.51 1.04-.78 4.07-1.77 6.78-2.94 8.13-3.51 3.88-1.62 4.68-1.9 5.19-1.91.12 0 .37.03.54.17.14.12.18.28.2.44-.01.06 0 .11-.01.17z"/>
                 </svg>
@@ -500,45 +530,45 @@
                         </span>
                         <span class="logo__text">Repairo</span>
                     </a>
-                    <p class="footer__text">Помогаем ремонтировать электронику с 2024 года</p>
+                    <p class="footer__text">РџРѕРјРѕРіР°РµРј СЂРµРјРѕРЅС‚РёСЂРѕРІР°С‚СЊ СЌР»РµРєС‚СЂРѕРЅРёРєСѓ СЃ 2024 РіРѕРґР°</p>
                 </div>
                 <div class="footer__col">
-                    <h3 class="footer__title">Разделы</h3>
+                    <h3 class="footer__title">Р Р°Р·РґРµР»С‹</h3>
                     <ul class="footer__links">
-                        <li><a href="../index.html" class="footer__link">Главная</a></li>
-                        <li><a href="../index.html#categories" class="footer__link">Все гайды</a></li>
-                        <li><a href="../contacts.html" class="footer__link">Контакты</a></li>
+                        <li><a href="../index.html" class="footer__link">Р“Р»Р°РІРЅР°СЏ</a></li>
+                        <li><a href="../index.html#categories" class="footer__link">Р’СЃРµ РіР°Р№РґС‹</a></li>
+                        <li><a href="../contacts.html" class="footer__link">РљРѕРЅС‚Р°РєС‚С‹</a></li>
                     </ul>
                 </div>
                 <div class="footer__col">
-                    <h3 class="footer__title">Категории</h3>
+                    <h3 class="footer__title">РљР°С‚РµРіРѕСЂРёРё</h3>
                     <ul class="footer__links">
-                        <li><a href="../tv.html" class="nav__link">Телевизоры</a></li>
-                        <li><a href="../cameras.html" class="nav__link">Фотоаппараты</a></li>
-                        <li><a href="../consoles.html" class="nav__link">Приставки</a></li>
-                        <li><a href="../laptops.html" class="nav__link">Ноутбуки</a></li>
-                        <li><a href="../smartphones.html" class="nav__link">Смартфоны</a></li>
-                        <li><a href="../small-appliances.html" class="nav__link">Мелкая техника</a></li>
-                        <li><a href="../large-appliances.html" class="nav__link">Бытовая техника</a></li>
-                        <li><a href="../auto-electronics.html" class="nav__link">Авто-Электроника</a></li>
+                        <li><a href="../tv.html" class="nav__link">РўРµР»РµРІРёР·РѕСЂС‹</a></li>
+                        <li><a href="../cameras.html" class="nav__link">Р¤РѕС‚РѕР°РїРїР°СЂР°С‚С‹</a></li>
+                        <li><a href="../consoles.html" class="nav__link">РџСЂРёСЃС‚Р°РІРєРё</a></li>
+                        <li><a href="../laptops.html" class="nav__link">РќРѕСѓС‚Р±СѓРєРё</a></li>
+                        <li><a href="../smartphones.html" class="nav__link">РЎРјР°СЂС‚С„РѕРЅС‹</a></li>
+                        <li><a href="../small-appliances.html" class="nav__link">РњРµР»РєР°СЏ С‚РµС…РЅРёРєР°</a></li>
+                        <li><a href="../large-appliances.html" class="nav__link">Р‘С‹С‚РѕРІР°СЏ С‚РµС…РЅРёРєР°</a></li>
+                        <li><a href="../auto-electronics.html" class="nav__link">РђРІС‚Рѕ-Р­Р»РµРєС‚СЂРѕРЅРёРєР°</a></li>
                     </ul>
                 </div>
                 <div class="footer__col">
-                    <h3 class="footer__title">Контакты</h3>
+                    <h3 class="footer__title">РљРѕРЅС‚Р°РєС‚С‹</h3>
                     <ul class="footer__links">
                         <li><a href="https://t.me/RepairoRU" class="footer__link"><i class="fab fa-telegram"></i> Telegram</a></li>
-                        <li><span class="footer__link">Наша почта: repairo.info@mail.ru</span></li>
+                        <li><span class="footer__link">РќР°С€Р° РїРѕС‡С‚Р°: repairo.info@mail.ru</span></li>
                     </ul>
                 </div>
             </div>
             <div class="footer__bottom">
                 <p class="disclaimer">
-    Администрация сайта не несёт ответственности за возможные повреждения техники
-    и иные последствия, возникшие в результате самостоятельного ремонта по
-    материалам и инструкциям, размещённым на сайте. Все работы вы выполняете
-    на свой страх и риск.
+    РђРґРјРёРЅРёСЃС‚СЂР°С†РёСЏ СЃР°Р№С‚Р° РЅРµ РЅРµСЃС‘С‚ РѕС‚РІРµС‚СЃС‚РІРµРЅРЅРѕСЃС‚Рё Р·Р° РІРѕР·РјРѕР¶РЅС‹Рµ РїРѕРІСЂРµР¶РґРµРЅРёСЏ С‚РµС…РЅРёРєРё
+    Рё РёРЅС‹Рµ РїРѕСЃР»РµРґСЃС‚РІРёСЏ, РІРѕР·РЅРёРєС€РёРµ РІ СЂРµР·СѓР»СЊС‚Р°С‚Рµ СЃР°РјРѕСЃС‚РѕСЏС‚РµР»СЊРЅРѕРіРѕ СЂРµРјРѕРЅС‚Р° РїРѕ
+    РјР°С‚РµСЂРёР°Р»Р°Рј Рё РёРЅСЃС‚СЂСѓРєС†РёСЏРј, СЂР°Р·РјРµС‰С‘РЅРЅС‹Рј РЅР° СЃР°Р№С‚Рµ. Р’СЃРµ СЂР°Р±РѕС‚С‹ РІС‹ РІС‹РїРѕР»РЅСЏРµС‚Рµ
+    РЅР° СЃРІРѕР№ СЃС‚СЂР°С… Рё СЂРёСЃРє.
     </p>
-                <p class="footer__copyright">© 2026 Repairo. Все права защищены.</p>
+                <p class="footer__copyright">В© 2026 Repairo. Р’СЃРµ РїСЂР°РІР° Р·Р°С‰РёС‰РµРЅС‹.</p>
             </div>
         </div>
     </footer>
@@ -549,32 +579,32 @@
 {
   "@context": "https://schema.org",
   "@type": "HowTo",
-  "name": "Форматы файлов: JPEG vs RAW – плюсы и минусы",
-  "description": "Пошаговая инструкция: Форматы файлов: JPEG vs RAW – плюсы и минусы. Если нужно и качество, и универсальность - снимайте одновременно в RAW+JPEG (эта.... Сове...",
+  "name": "Р¤РѕСЂРјР°С‚С‹ С„Р°Р№Р»РѕРІ: JPEG vs RAW вЂ“ РїР»СЋСЃС‹ Рё РјРёРЅСѓСЃС‹",
+  "description": "РџРѕС€Р°РіРѕРІР°СЏ РёРЅСЃС‚СЂСѓРєС†РёСЏ: Р¤РѕСЂРјР°С‚С‹ С„Р°Р№Р»РѕРІ: JPEG vs RAW вЂ“ РїР»СЋСЃС‹ Рё РјРёРЅСѓСЃС‹. Р•СЃР»Рё РЅСѓР¶РЅРѕ Рё РєР°С‡РµСЃС‚РІРѕ, Рё СѓРЅРёРІРµСЂСЃР°Р»СЊРЅРѕСЃС‚СЊ - СЃРЅРёРјР°Р№С‚Рµ РѕРґРЅРѕРІСЂРµРјРµРЅРЅРѕ РІ RAW+JPEG (СЌС‚Р°.... РЎРѕРІРµ...",
   "totalTime": "PT30M",
   "step": [
     {
       "@type": "HowToStep",
-      "name": "Сравнение форматов JPEG и RAW",
-      "text": "Сравнение форматов JPEG и RAW",
+      "name": "РЎСЂР°РІРЅРµРЅРёРµ С„РѕСЂРјР°С‚РѕРІ JPEG Рё RAW",
+      "text": "РЎСЂР°РІРЅРµРЅРёРµ С„РѕСЂРјР°С‚РѕРІ JPEG Рё RAW",
       "url": "#step-1"
     },
     {
       "@type": "HowToStep",
-      "name": "Плюсы и минусы форматов",
-      "text": "Плюсы и минусы форматов",
+      "name": "РџР»СЋСЃС‹ Рё РјРёРЅСѓСЃС‹ С„РѕСЂРјР°С‚РѕРІ",
+      "text": "РџР»СЋСЃС‹ Рё РјРёРЅСѓСЃС‹ С„РѕСЂРјР°С‚РѕРІ",
       "url": "#step-2"
     },
     {
       "@type": "HowToStep",
-      "name": "Часто задаваемые вопросы",
-      "text": "Часто задаваемые вопросы",
+      "name": "Р§Р°СЃС‚Рѕ Р·Р°РґР°РІР°РµРјС‹Рµ РІРѕРїСЂРѕСЃС‹",
+      "text": "Р§Р°СЃС‚Рѕ Р·Р°РґР°РІР°РµРјС‹Рµ РІРѕРїСЂРѕСЃС‹",
       "url": "#step-3"
     },
     {
       "@type": "HowToStep",
-      "name": "?? Итог",
-      "text": "?? Итог",
+      "name": "рџ“Њ РС‚РѕРі",
+      "text": "рџ“Њ РС‚РѕРі",
       "url": "#step-4"
     }
   ],
@@ -585,8 +615,4 @@
 <script src="../cookie-consent.js"></script>
 </body>
 </html>
-
-
-
-
 

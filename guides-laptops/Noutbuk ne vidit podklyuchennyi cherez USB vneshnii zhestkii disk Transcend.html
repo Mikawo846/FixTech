@@ -4,8 +4,9 @@
 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Ноутбук не видит подключенный через USB внешний жесткий диск</title>
-    <meta name="description" content="">
+  <title>РќРѕСѓС‚Р±СѓРє РЅРµ РІРёРґРёС‚ РїРѕРґРєР»СЋС‡РµРЅРЅС‹Р№ С‡РµСЂРµР· USB РІРЅРµС€РЅРёР№ Р¶РµСЃС‚РєРёР№ РґРёСЃРє Transcend | Р­РєСЃРїРµСЂС‚РЅС‹Р№ РјРµРіР°РіР°Р№Рґ</title>
+    <meta name="description" content="{{ description }}">
+    <meta name="description" content="РџРѕС€Р°РіРѕРІР°СЏ РёРЅСЃС‚СЂСѓРєС†РёСЏ: РќРѕСѓС‚Р±СѓРє РЅРµ РІРёРґРёС‚ РїРѕРґРєР»СЋС‡РµРЅРЅС‹Р№ С‡РµСЂРµР· USB РІРЅРµС€РЅРёР№ Р¶РµСЃС‚РєРёР№ РґРёСЃРє Transcend вЂ” Р­РєСЃРїРµСЂС‚РЅС‹Р№ РјРµРіР°РіР°Р№Рґ. РџСЂРёС‡РёРЅС‹: РїРёС‚Р°РЅРёРµ, РґСЂР°Р№РІРµСЂС‹, РїРѕРІСЂРµР¶РґРµРЅРёРµ. Р РµС€РµРЅРёСЏ: СЃРјРµРЅР° РїРѕСЂС‚Р°, РѕР±РЅРѕРІР»РµРЅРёРµ РґСЂР°Р№РІРµСЂРѕРІ, С„РѕСЂРјР°С‚РёСЂРѕРІР°РЅРёРµ.">
 
   <link rel="stylesheet" href="../styles.css" />
   <link rel="stylesheet" href="../styles-header.css" />
@@ -13,25 +14,36 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <style>
     .guide-content { line-height: 1.7; color: var(--text); }
-    .guide-content h2 { color: var(--primary); margin-top: 30px; margin-bottom: 15px; font-size: 1.5rem; }
-    .guide-content h3 { color: var(--primary-dark); margin-top: 25px; margin-bottom: 12px; font-size: 1.2rem; }
+    .guide-content h2 { color: var(--primary); margin-top: 30px; margin-bottom: 15px; font-size: 1.6rem; }
+    .guide-content h3 { color: var(--primary-dark); margin-top: 25px; margin-bottom: 12px; font-size: 1.25rem; }
     .guide-image-block { margin: 20px 0; padding: 15px; background: var(--background); border-radius: var(--border-radius); border: 1px solid var(--border); text-align: center; }
     .guide-image-block img { max-width: 100%; height: auto; border-radius: 6px; border: 1px solid var(--border); }
     .image-caption { margin-top: 10px; font-size: 0.85rem; color: var(--text-light); font-style: italic; }
-    .pro-tips { background: rgba(3, 74, 79, 0.05); padding: 15px; border-radius: 6px; margin: 20px 0; }
-    .pro-tips h4 { color: var(--primary); margin-top: 0; margin-bottom: 12px; font-size: 1.1rem; }
-    .tip-item { display: flex; gap: 8px; margin-bottom: 8px; align-items: flex-start; }
+    .pro-tips { background: rgba(3, 74, 79, 0.05); padding: 18px; border-radius: 8px; margin: 25px 0; }
+    .pro-tips h4 { color: var(--primary); margin-top: 0; margin-bottom: 12px; font-size: 1.15rem; }
+    .tip-item { display: flex; gap: 10px; margin-bottom: 10px; align-items: flex-start; }
+    .tip-item i { margin-top: 3px; }
     table { width: 100%; border-collapse: collapse; margin: 20px 0; }
-    th, td { border: 1px solid var(--border); padding: 8px; text-align: left; }
+    th, td { border: 1px solid var(--border); padding: 8px; text-align: left; vertical-align: top; }
     th { background: var(--background-light); }
-    .highlight { background: #f5f7fa; border-left: 4px solid #2d9cdb; padding: 10px 15px; margin: 20px 0; }
-    .faq-section ul { margin-left: 1em; }
-    .block-section { margin-bottom: 2em; }
+    code { background: var(--background-light); padding: 2px 4px; border-radius: 4px; font-size: 0.9em; }
+    ul, ol { margin-left: 18px; }
     @media (max-width: 768px) {
       .guide-content h2 { font-size: 1.4rem; margin-top: 25px; }
+      .guide-content h3 { font-size: 1.15rem; }
       .guide-image-block { padding: 12px; margin: 15px 0; }
       table, th, td { font-size: 0.95rem; }
     }
+
+    /* РЇРЅРґРµРєСЃ РњР°СЂРєРµС‚ СЂРµРєР»Р°РјРЅС‹Р№ Р±Р°РЅРЅРµСЂ */
+    .ym-hero-link {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+      max-width: 100%;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
     /* Р“РѕСЂРёР·РѕРЅС‚Р°Р»СЊРЅС‹Р№ Р±Р°РЅРЅРµСЂ-РєР°СЂС‚РѕС‡РєР° */
     .ym-hero-banner {
       width: 100%;
@@ -107,561 +119,336 @@
     }
 
     /* Р РµР№С‚РёРЅРі */
-    .ym-hero-top {
+    .ym-hero-rating {
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      gap: 8px;
-    }
-
-    .ym-hero-rating {
-      font-size: 13px;
-      font-weight: 500;
-      color: #111827;
-      background: #f9fafb;
-      border-radius: 999px;
-      padding: 4px 10px;
-    }
-
-    .ym-hero-rating-count {
+      gap: 4px;
+      font-size: 12px;
       color: #6b7280;
     }
 
-    /* Р¤РёРѕР»РµС‚РѕРІР°СЏ РєРЅРѕРїРєР° */
-    .ym-hero-button {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 9px 16px;
-      border-radius: 999px;
-      border: none;
-      background: #6a00ff;
-      color: #ffffff;
-      font-size: 14px;
-      font-weight: 600;
-      cursor: pointer;
-      box-shadow: 0 2px 6px rgba(88, 28, 135, 0.35);
-      transition: background 0.15s ease, transform 0.15s ease,
-                  box-shadow 0.15s ease;
-    }
-    .ym-hero-button::after {
-      content: "в†’";
-      margin-left: 6px;
-      font-size: 14px;
-    }
-    .ym-hero-button:hover {
-      background: #7c3aed;
-      transform: translateY(-1px);
-      box-shadow: 0 4px 10px rgba(88, 28, 135, 0.45);
+    .ym-hero-stars {
+      display: flex;
+      gap: 1px;
     }
 
-    /* Р®СЂРёРґРёС‡РµСЃРєРёР№ Р±Р»РѕРє */
-    .ym-hero-legal {
-      margin-top: 6px;
-      max-width: 600px;
+    .ym-hero-star {
+      width: 12px;
+      height: 12px;
+      fill: #fbbf24;
+    }
+
+    .ym-hero-reviews {
       font-size: 11px;
-      line-height: 1.3;
-      color: #6b7280;
-      margin-left: auto;
-      margin-right: auto;
+      color: #9ca3af;
     }
 
-    /* РђРґР°РїС‚РёРІ */
-    @media (max-width: 480px) {
+    /* Р¦РµРЅР° */
+    .ym-hero-price {
+      font-size: 16px;
+      font-weight: 700;
+      color: #111827;
+      margin: 0;
+    }
+
+    /* РљРЅРѕРїРєР° */
+    .ym-hero-button {
+      background: #007bff;
+      color: #ffffff;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background 0.2s ease;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .ym-hero-button:hover {
+      background: #0056b3;
+    }
+
+    /* РђРґР°РїС‚РёРІРЅРѕСЃС‚СЊ */
+    @media (max-width: 768px) {
       .ym-hero-banner {
-        max-width: 100%;
-        margin: 20px 0;
+        flex-direction: row;
+        min-height: auto;
       }
+
       .ym-hero-images {
-        height: 100px;
+        width: 120px;
+        height: auto;
+        flex-shrink: 0;
       }
+
       .ym-hero-content {
-        padding: 12px 12px;
+        flex: 1;
+        padding: 12px 16px;
       }
+
       .ym-hero-title {
         font-size: 13px;
       }
+
+      .ym-hero-price {
+        font-size: 15px;
+      }
+
       .ym-hero-button {
-        font-size: 13px;
-        padding: 8px 14px;
-      }
-      .ym-hero-legal {
-        font-size: 10px;
-      }
-    }
-    /* Telegram СЂРµРєР»Р°РјРЅС‹Р№ Р±Р°РЅРЅРµСЂ */
-    .telegram-banner {
-      display: flex;
-      justify-content: center;
-      text-decoration: none;
-      color: inherit;
-      width: 100%;
-      margin: 40px 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    }
-
-    .telegram-banner-container {
-      width: 100%;
-      max-width: 500px;
-      min-height: 120px;
-      border-radius: 16px;
-      background: linear-gradient(135deg, #0088cc 0%, #005f8f 100%);
-      border: 1px solid #005f8f;
-      display: flex;
-      align-items: center;
-      padding: 20px;
-      box-shadow: 0 4px 16px rgba(0, 136, 204, 0.2);
-      overflow: hidden;
-      box-sizing: border-box;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-
-    .telegram-banner-container:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(0, 136, 204, 0.3);
-    }
-
-    .telegram-logo {
-      width: 60px;
-      height: 60px;
-      min-width: 60px;
-      background: #ffffff;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-right: 20px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    }
-
-    .telegram-logo svg {
-      width: 32px;
-      height: 32px;
-      fill: #0088cc;
-    }
-
-    .telegram-content {
-      flex: 1;
-      color: #ffffff;
-    }
-
-    .telegram-title {
-      font-size: 16px;
-      font-weight: 600;
-      margin: 0 0 8px 0;
-      line-height: 1.3;
-    }
-
-    .telegram-subtitle {
-      font-size: 14px;
-      opacity: 0.9;
-      margin: 0 0 12px 0;
-      line-height: 1.4;
-    }
-
-    .telegram-button {
-      display: inline-flex;
-      align-items: center;
-      padding: 8px 16px;
-      background: #ffffff;
-      color: #0088cc;
-      border-radius: 20px;
-      font-size: 14px;
-      font-weight: 600;
-      text-decoration: none;
-      transition: background 0.2s ease, transform 0.2s ease;
-    }
-
-    .telegram-button:hover {
-      background: #f0f8ff;
-      transform: scale(1.05);
-    }
-
-    .telegram-button svg {
-      width: 16px;
-      height: 16px;
-      margin-left: 6px;
-      fill: #0088cc;
-    }
-
-    /* РђРґР°РїС‚РёРІ РґР»СЏ РјРѕР±РёР»СЊРЅС‹С… */
-    @media (max-width: 480px) {
-      .telegram-banner-container {
-        max-width: 100%;
-        margin: 20px 0;
-        padding: 15px;
-        min-height: 100px;
-      }
-      .telegram-logo {
-        width: 50px;
-        height: 50px;
-        min-width: 50px;
-        margin-right: 15px;
-      }
-      .telegram-logo svg {
-        width: 26px;
-        height: 26px;
-      }
-      .telegram-title {
-        font-size: 14px;
-      }
-      .telegram-subtitle {
-        font-size: 12px;
-      }
-      .telegram-button {
-        font-size: 12px;
-        padding: 6px 12px;
+        padding: 6px 10px;
+        font-size: 11px;
       }
     }
 
-
-
+    /* РЎРєСЂС‹С‚С‹Р№ Р±Р°РЅРЅРµСЂ РґР»СЏ РґРµСЃРєС‚РѕРїР° */
+    @media (min-width: 769px) {
+      .ym-hero-link {
+        display: none !important;
+      }
+    }
   </style>
   <script async src="https://timeweb.cloud/api/v1/cloud-ai/agents/3cc03620-d051-4d8d-b5af-f7b6cd083a35/embed.js?collapsed=true"></script>
 </head>
 <body>
-  <header class="header">
-    <div class="container">
-      <div class="header__inner">
-        <a href="../index.html" class="logo">
-          <span class="logo__icon"></span>
-          <span class="logo__text">GeoExpert</span>
-        </a>
-        <nav class="nav">
-          <ul class="nav__list">
-            <li><a href="../cameras.html" class="nav__link">РљР°РјРµСЂС‹</a></li>
-            <li><a href="../drones.html" class="nav__link">Р”СЂРѕРЅС‹</a></li>
-            <li><a href="../workflow.html" class="nav__link">Workflow</a></li>
-          </ul>
-        </nav>
+  <header>
+    <div class="header-content">
+      <a href="/" class="logo">
+        <i class="fas fa-tools"></i>
+        FixTech
+      </a>
+      <nav class="nav-links">
+        <a href="/">Р“Р»Р°РІРЅР°СЏ</a>
+        <a href="/articles">Р’СЃРµ СЃС‚Р°С‚СЊРё</a>
+        <a href="/smartphones">РЎРјР°СЂС‚С„РѕРЅС‹</a>
+        <a href="/laptops">РќРѕСѓС‚Р±СѓРєРё</a>
+        <a href="/tv">РўРµР»РµРІРёР·РѕСЂС‹</a>
+        <a href="/cameras">РљР°РјРµСЂС‹</a>
+        <a href="/consoles">РљРѕРЅСЃРѕР»Рё</a>
+        <a href="/auto-electronics">РђРІС‚РѕСЌР»РµРєС‚СЂРѕРЅРёРєР°</a>
+        <a href="/small-appliances">РњРµР»РєР°СЏ С‚РµС…РЅРёРєР°</a>
+        <a href="/large-appliances">РљСЂСѓРїРЅР°СЏ С‚РµС…РЅРёРєР°</a>
+      </nav>
+      <div class="search-container">
+        <input type="text" id="search-input" placeholder="РџРѕРёСЃРє РїРѕ СЃР°Р№С‚Сѓ..." />
+        <button id="search-button"><i class="fas fa-search"></i></button>
       </div>
     </div>
   </header>
 
   <main class="guide-container">
     <div class="guide-content">
-      <h1>Ноутбук не видит подключенный через USB внешний жесткий диск Transcend</h1>
-      <p>Когда ноутбук не распознает внешний жесткий диск Transcend, подключенный по USB, проблема может быть в питании, драйверах или повреждении диска. В этом экспертном мегагайде мы рассмотрим все причины отсутствия распознавания Transcend диска и предоставим решения для восстановления доступа к данным.</p>
+      <h1>РќРѕСѓС‚Р±СѓРє РЅРµ РІРёРґРёС‚ РїРѕРґРєР»СЋС‡РµРЅРЅС‹Р№ С‡РµСЂРµР· USB РІРЅРµС€РЅРёР№ Р¶РµСЃС‚РєРёР№ РґРёСЃРє Transcend</h1>
+      <p>РљРѕРіРґР° РЅРѕСѓС‚Р±СѓРє РЅРµ СЂР°СЃРїРѕР·РЅР°РµС‚ РІРЅРµС€РЅРёР№ Р¶РµСЃС‚РєРёР№ РґРёСЃРє Transcend, РїРѕРґРєР»СЋС‡РµРЅРЅС‹Р№ РїРѕ USB, РїСЂРѕР±Р»РµРјР° РјРѕР¶РµС‚ Р±С‹С‚СЊ РІ РїРёС‚Р°РЅРёРё, РґСЂР°Р№РІРµСЂР°С… РёР»Рё РїРѕРІСЂРµР¶РґРµРЅРёРё РґРёСЃРєР°. Р’ СЌС‚РѕРј СЌРєСЃРїРµСЂС‚РЅРѕРј РјРµРіР°РіР°Р№РґРµ РјС‹ СЂР°СЃСЃРјРѕС‚СЂРёРј РІСЃРµ РїСЂРёС‡РёРЅС‹ РѕС‚СЃСѓС‚СЃС‚РІРёСЏ СЂР°СЃРїРѕР·РЅР°РІР°РЅРёСЏ Transcend РґРёСЃРєР° Рё РїСЂРµРґРѕСЃС‚Р°РІРёРј СЂРµС€РµРЅРёСЏ РґР»СЏ РІРѕСЃСЃС‚Р°РЅРѕРІР»РµРЅРёСЏ РґРѕСЃС‚СѓРїР° Рє РґР°РЅРЅС‹Рј.</p>
 
-      <h2>Признаки проблемы</h2>
+      <h2>РџСЂРёР·РЅР°РєРё РїСЂРѕР±Р»РµРјС‹</h2>
       <ul>
-        <li>Диск Transcend подключен, индикатор не горит</li>
-        <li>Не отображается в проводнике</li>
-        <li>Не появляется в управлении дисками</li>
-        <li>Работает на других компьютерах</li>
-        <li>USB порт работает с другими устройствами</li>
+        <li>Р”РёСЃРє Transcend РїРѕРґРєР»СЋС‡РµРЅ, РёРЅРґРёРєР°С‚РѕСЂ РЅРµ РіРѕСЂРёС‚</li>
+        <li>РќРµ РѕС‚РѕР±СЂР°Р¶Р°РµС‚СЃСЏ РІ РїСЂРѕРІРѕРґРЅРёРєРµ</li>
+        <li>РќРµ РїРѕСЏРІР»СЏРµС‚СЃСЏ РІ СѓРїСЂР°РІР»РµРЅРёРё РґРёСЃРєР°РјРё</li>
+        <li>Р Р°Р±РѕС‚Р°РµС‚ РЅР° РґСЂСѓРіРёС… РєРѕРјРїСЊСЋС‚РµСЂР°С…</li>
+        <li>USB РїРѕСЂС‚ СЂР°Р±РѕС‚Р°РµС‚ СЃ РґСЂСѓРіРёРјРё СѓСЃС‚СЂРѕР№СЃС‚РІР°РјРё</li>
       </ul>
 
-      <h2>Основные причины</h2>
+      <h2>РћСЃРЅРѕРІРЅС‹Рµ РїСЂРёС‡РёРЅС‹</h2>
       <table>
         <tr>
-          <th>Причина</th>
-          <th>Вероятность</th>
-          <th>Характерные признаки</th>
+          <th>РџСЂРёС‡РёРЅР°</th>
+          <th>Р’РµСЂРѕСЏС‚РЅРѕСЃС‚СЊ</th>
+          <th>РҐР°СЂР°РєС‚РµСЂРЅС‹Рµ РїСЂРёР·РЅР°РєРё</th>
         </tr>
         <tr>
-          <td>Недостаточное питание</td>
+          <td>РќРµРґРѕСЃС‚Р°С‚РѕС‡РЅРѕРµ РїРёС‚Р°РЅРёРµ</td>
           <td>35%</td>
-          <td>Работает с внешним питанием</td>
+          <td>Р Р°Р±РѕС‚Р°РµС‚ СЃ РІРЅРµС€РЅРёРј РїРёС‚Р°РЅРёРµРј</td>
         </tr>
         <tr>
-          <td>Повреждение диска</td>
+          <td>РџРѕРІСЂРµР¶РґРµРЅРёРµ РґРёСЃРєР°</td>
           <td>30%</td>
-          <td>Не работает на других ПК</td>
+          <td>РќРµ СЂР°Р±РѕС‚Р°РµС‚ РЅР° РґСЂСѓРіРёС… РџРљ</td>
         </tr>
         <tr>
-          <td>USB драйверы</td>
+          <td>USB РґСЂР°Р№РІРµСЂС‹</td>
           <td>20%</td>
-          <td>Работает после сброса USB</td>
+          <td>Р Р°Р±РѕС‚Р°РµС‚ РїРѕСЃР»Рµ СЃР±СЂРѕСЃР° USB</td>
         </tr>
         <tr>
-          <td>Поврежденный порт USB</td>
+          <td>РџРѕРІСЂРµР¶РґРµРЅРЅС‹Р№ РїРѕСЂС‚ USB</td>
           <td>10%</td>
-          <td>Работает в другом порту</td>
+          <td>Р Р°Р±РѕС‚Р°РµС‚ РІ РґСЂСѓРіРѕРј РїРѕСЂС‚Сѓ</td>
         </tr>
         <tr>
-          <td>Файловая система</td>
+          <td>Р¤Р°Р№Р»РѕРІР°СЏ СЃРёСЃС‚РµРјР°</td>
           <td>4%</td>
-          <td>Работает после форматирования</td>
+          <td>Р Р°Р±РѕС‚Р°РµС‚ РїРѕСЃР»Рµ С„РѕСЂРјР°С‚РёСЂРѕРІР°РЅРёСЏ</td>
         </tr>
         <tr>
-          <td>Аппаратная неисправность</td>
+          <td>РђРїРїР°СЂР°С‚РЅР°СЏ РЅРµРёСЃРїСЂР°РІРЅРѕСЃС‚СЊ</td>
           <td>1%</td>
-          <td>Не работает после всех решений</td>
+          <td>РќРµ СЂР°Р±РѕС‚Р°РµС‚ РїРѕСЃР»Рµ РІСЃРµС… СЂРµС€РµРЅРёР№</td>
         </tr>
       </table>
 
-      <h2>Диагностика проблемы</h2>
-      <h3>Проверка питания</h3>
+      <h2>Р”РёР°РіРЅРѕСЃС‚РёРєР° РїСЂРѕР±Р»РµРјС‹</h2>
+      <h3>РџСЂРѕРІРµСЂРєР° РїРёС‚Р°РЅРёСЏ</h3>
       <ol>
-        <li>Посмотрите, есть ли у диска Transcend внешнее питание</li>
-        <li>Если нет - подключите к USB 3.0 порту</li>
-        <li>USB 3.0 предоставляет больше энергии</li>
+        <li>РџРѕСЃРјРѕС‚СЂРёС‚Рµ, РµСЃС‚СЊ Р»Рё Сѓ РґРёСЃРєР° Transcend РІРЅРµС€РЅРµРµ РїРёС‚Р°РЅРёРµ</li>
+        <li>Р•СЃР»Рё РЅРµС‚ - РїРѕРґРєР»СЋС‡РёС‚Рµ Рє USB 3.0 РїРѕСЂС‚Сѓ</li>
+        <li>USB 3.0 РїСЂРµРґРѕСЃС‚Р°РІР»СЏРµС‚ Р±РѕР»СЊС€Рµ СЌРЅРµСЂРіРёРё</li>
       </ol>
 
-      <h3>Тестирование на другом устройстве</h3>
+      <h3>РўРµСЃС‚РёСЂРѕРІР°РЅРёРµ РЅР° РґСЂСѓРіРѕРј СѓСЃС‚СЂРѕР№СЃС‚РІРµ</h3>
       <ol>
-        <li>Подключите диск Transcend к другому компьютеру</li>
-        <li>Если работает - проблема в вашем ноутбуке</li>
-        <li>Если не работает - проблема в диске</li>
+        <li>РџРѕРґРєР»СЋС‡РёС‚Рµ РґРёСЃРє Transcend Рє РґСЂСѓРіРѕРјСѓ РєРѕРјРїСЊСЋС‚РµСЂСѓ</li>
+        <li>Р•СЃР»Рё СЂР°Р±РѕС‚Р°РµС‚ - РїСЂРѕР±Р»РµРјР° РІ РІР°С€РµРј РЅРѕСѓС‚Р±СѓРєРµ</li>
+        <li>Р•СЃР»Рё РЅРµ СЂР°Р±РѕС‚Р°РµС‚ - РїСЂРѕР±Р»РµРјР° РІ РґРёСЃРєРµ</li>
       </ol>
 
-      <h2>Решение 1: Смена USB порта</h2>
-      <h3>Тестирование портов</h3>
+      <h2>Р РµС€РµРЅРёРµ 1: РЎРјРµРЅР° USB РїРѕСЂС‚Р°</h2>
+      <h3>РўРµСЃС‚РёСЂРѕРІР°РЅРёРµ РїРѕСЂС‚РѕРІ</h3>
       <ol>
-        <li>Попробуйте все доступные USB порты</li>
-        <li>Используйте USB 3.0 порты (синие внутри)</li>
-        <li>Избегайте USB хабов</li>
+        <li>РџРѕРїСЂРѕР±СѓР№С‚Рµ РІСЃРµ РґРѕСЃС‚СѓРїРЅС‹Рµ USB РїРѕСЂС‚С‹</li>
+        <li>РСЃРїРѕР»СЊР·СѓР№С‚Рµ USB 3.0 РїРѕСЂС‚С‹ (СЃРёРЅРёРµ РІРЅСѓС‚СЂРё)</li>
+        <li>РР·Р±РµРіР°Р№С‚Рµ USB С…Р°Р±РѕРІ</li>
       </ol>
 
-      <h3>USB хаб с питанием</h3>
+      <h3>USB С…Р°Р± СЃ РїРёС‚Р°РЅРёРµРј</h3>
       <ol>
-        <li>Подключите диск через активный USB хаб</li>
-        <li>Убедитесь, что хаб имеет внешнее питание</li>
+        <li>РџРѕРґРєР»СЋС‡РёС‚Рµ РґРёСЃРє С‡РµСЂРµР· Р°РєС‚РёРІРЅС‹Р№ USB С…Р°Р±</li>
+        <li>РЈР±РµРґРёС‚РµСЃСЊ, С‡С‚Рѕ С…Р°Р± РёРјРµРµС‚ РІРЅРµС€РЅРµРµ РїРёС‚Р°РЅРёРµ</li>
       </ol>
 
-      <h2>Решение 2: Сброс USB контроллеров</h2>
-      <h3>Удаление контроллеров</h3>
+      <h2>Р РµС€РµРЅРёРµ 2: РЎР±СЂРѕСЃ USB РєРѕРЅС‚СЂРѕР»Р»РµСЂРѕРІ</h2>
+      <h3>РЈРґР°Р»РµРЅРёРµ РєРѕРЅС‚СЂРѕР»Р»РµСЂРѕРІ</h3>
       <ol>
-        <li>Диспетчер устройств > Универсальные последовательные шины</li>
-        <li>Удалите все USB контроллеры</li>
-        <li>Перезагрузите компьютер</li>
+        <li>Р”РёСЃРїРµС‚С‡РµСЂ СѓСЃС‚СЂРѕР№СЃС‚РІ в†’ РЈРЅРёРІРµСЂСЃР°Р»СЊРЅС‹Рµ РїРѕСЃР»РµРґРѕРІР°С‚РµР»СЊРЅС‹Рµ С€РёРЅС‹</li>
+        <li>РЈРґР°Р»РёС‚Рµ РІСЃРµ USB РєРѕРЅС‚СЂРѕР»Р»РµСЂС‹</li>
+        <li>РџРµСЂРµР·Р°РіСЂСѓР·РёС‚Рµ РєРѕРјРїСЊСЋС‚РµСЂ</li>
       </ol>
 
-      <h3>Переподключение диска</h3>
+      <h3>РџРµСЂРµРїРѕРґРєР»СЋС‡РµРЅРёРµ РґРёСЃРєР°</h3>
       <ol>
-        <li>Отключите диск Transcend</li>
-        <li>Подождите 30 секунд</li>
-        <li>Подключите заново</li>
+        <li>РћС‚РєР»СЋС‡РёС‚Рµ РґРёСЃРє Transcend</li>
+        <li>РџРѕРґРѕР¶РґРёС‚Рµ 30 СЃРµРєСѓРЅРґ</li>
+        <li>РџРѕРґРєР»СЋС‡РёС‚Рµ Р·Р°РЅРѕРІРѕ</li>
       </ol>
 
-      <h2>Решение 3: Проверка в управлении дисками</h2>
+      <h2>Р РµС€РµРЅРёРµ 3: РџСЂРѕРІРµСЂРєР° РІ СѓРїСЂР°РІР»РµРЅРёРё РґРёСЃРєР°РјРё</h2>
       <h3>diskmgmt.msc</h3>
       <ol>
-        <li>Win + R > diskmgmt.msc</li>
-        <li>Найдите диск Transcend в списке</li>
-        <li>Если есть - назначьте букву диска</li>
+        <li>Win + R в†’ diskmgmt.msc</li>
+        <li>РќР°Р№РґРёС‚Рµ РґРёСЃРє Transcend РІ СЃРїРёСЃРєРµ</li>
+        <li>Р•СЃР»Рё РµСЃС‚СЊ - РЅР°Р·РЅР°С‡СЊС‚Рµ Р±СѓРєРІСѓ РґРёСЃРєР°</li>
       </ol>
 
-      <h3>Инициализация диска</h3>
+      <h3>РРЅРёС†РёР°Р»РёР·Р°С†РёСЏ РґРёСЃРєР°</h3>
       <ol>
-        <li>Правой кнопкой на диске</li>
-        <li>Инициализировать диск</li>
-        <li>Создать простой том</li>
+        <li>РџСЂР°РІРѕР№ РєРЅРѕРїРєРѕР№ РЅР° РґРёСЃРєРµ</li>
+        <li>РРЅРёС†РёР°Р»РёР·РёСЂРѕРІР°С‚СЊ РґРёСЃРє</li>
+        <li>РЎРѕР·РґР°С‚СЊ РїСЂРѕСЃС‚РѕР№ С‚РѕРј</li>
       </ol>
 
-      <h2>Решение 4: Форматирование диска</h2>
-      <h3>Если данные не нужны</h3>
+      <h2>Р РµС€РµРЅРёРµ 4: Р¤РѕСЂРјР°С‚РёСЂРѕРІР°РЅРёРµ РґРёСЃРєР°</h2>
+      <h3>Р•СЃР»Рё РґР°РЅРЅС‹Рµ РЅРµ РЅСѓР¶РЅС‹</h3>
       <ol>
-        <li>diskmgmt.msc > Найдите диск Transcend</li>
-        <li>Правой кнопкой > Форматировать</li>
-        <li>NTFS или exFAT</li>
+        <li>diskmgmt.msc в†’ РќР°Р№РґРёС‚Рµ РґРёСЃРє Transcend</li>
+        <li>РџСЂР°РІРѕР№ РєРЅРѕРїРєРѕР№ в†’ Р¤РѕСЂРјР°С‚РёСЂРѕРІР°С‚СЊ</li>
+        <li>NTFS РёР»Рё exFAT</li>
       </ol>
 
-      <h3>Если данные важны</h3>
+      <h3>Р•СЃР»Рё РґР°РЅРЅС‹Рµ РІР°Р¶РЅС‹</h3>
       <ol>
-        <li>Скопируйте данные на другой диск</li>
-        <li>Затем отформатируйте</li>
+        <li>РЎРєРѕРїРёСЂСѓР№С‚Рµ РґР°РЅРЅС‹Рµ РЅР° РґСЂСѓРіРѕР№ РґРёСЃРє</li>
+        <li>Р—Р°С‚РµРј РѕС‚С„РѕСЂРјР°С‚РёСЂСѓР№С‚Рµ</li>
       </ol>
 
-      <h2>Решение 5: Обновление драйверов</h2>
-      <h3>Драйверы чипсета</h3>
+      <h2>Р РµС€РµРЅРёРµ 5: РћР±РЅРѕРІР»РµРЅРёРµ РґСЂР°Р№РІРµСЂРѕРІ</h2>
+      <h3>Р”СЂР°Р№РІРµСЂС‹ С‡РёРїСЃРµС‚Р°</h3>
       <ol>
-        <li>Скачайте Intel Chipset Device Software</li>
-        <li>Установите последние версии</li>
-        <li>Перезагрузите систему</li>
+        <li>РЎРєР°С‡Р°Р№С‚Рµ Intel Chipset Device Software</li>
+        <li>РЈСЃС‚Р°РЅРѕРІРёС‚Рµ РїРѕСЃР»РµРґРЅРёРµ РІРµСЂСЃРёРё</li>
+        <li>РџРµСЂРµР·Р°РіСЂСѓР·РёС‚Рµ СЃРёСЃС‚РµРјСѓ</li>
       </ol>
 
-      <h2>Решение 6: Восстановление данных</h2>
-      <h3>Если диск поврежден</h3>
+      <h2>Р РµС€РµРЅРёРµ 6: Р’РѕСЃСЃС‚Р°РЅРѕРІР»РµРЅРёРµ РґР°РЅРЅС‹С…</h2>
+      <h3>Р•СЃР»Рё РґРёСЃРє РїРѕРІСЂРµР¶РґРµРЅ</h3>
       <ol>
-        <li>Используйте Recuva или EaseUS Data Recovery</li>
-        <li>Восстановите данные</li>
-        <li>Затем отформатируйте диск</li>
+        <li>РСЃРїРѕР»СЊР·СѓР№С‚Рµ Recuva РёР»Рё EaseUS Data Recovery</li>
+        <li>Р’РѕСЃСЃС‚Р°РЅРѕРІРёС‚Рµ РґР°РЅРЅС‹Рµ</li>
+        <li>Р—Р°С‚РµРј РѕС‚С„РѕСЂРјР°С‚РёСЂСѓР№С‚Рµ РґРёСЃРє</li>
       </ol>
 
       <div class="pro-tips">
-        <h4><i class="fas fa-lightbulb"></i> Профессиональные советы</h4>
+        <h4><i class="fas fa-lightbulb"></i> РџСЂРѕС„РµСЃСЃРёРѕРЅР°Р»СЊРЅС‹Рµ СЃРѕРІРµС‚С‹</h4>
         <div class="tip-item">
           <i class="fas fa-plug"></i>
-          <span>Всегда используйте USB 3.0 порты для внешних жестких дисков Transcend</span>
+          <span>Р’СЃРµРіРґР° РёСЃРїРѕР»СЊР·СѓР№С‚Рµ USB 3.0 РїРѕСЂС‚С‹ РґР»СЏ РІРЅРµС€РЅРёС… Р¶РµСЃС‚РєРёС… РґРёСЃРєРѕРІ Transcend</span>
         </div>
         <div class="tip-item">
           <i class="fas fa-save"></i>
-          <span>Создавайте резервные копии данных перед диагностикой</span>
+          <span>РЎРѕР·РґР°РІР°Р№С‚Рµ СЂРµР·РµСЂРІРЅС‹Рµ РєРѕРїРёРё РґР°РЅРЅС‹С… РїРµСЂРµРґ РґРёР°РіРЅРѕСЃС‚РёРєРѕР№</span>
         </div>
         <div class="tip-item">
           <i class="fas fa-tools"></i>
-          <span>Регулярно обновляйте драйверы чипсета для совместимости</span>
+          <span>Р РµРіСѓР»СЏСЂРЅРѕ РѕР±РЅРѕРІР»СЏР№С‚Рµ РґСЂР°Р№РІРµСЂС‹ С‡РёРїСЃРµС‚Р° РґР»СЏ СЃРѕРІРјРµСЃС‚РёРјРѕСЃС‚Рё</span>
         </div>
         <div class="tip-item">
           <i class="fas fa-hdd"></i>
-          <span>Избегайте резких отключений внешних дисков Transcend</span>
+          <span>РР·Р±РµРіР°Р№С‚Рµ СЂРµР·РєРёС… РѕС‚РєР»СЋС‡РµРЅРёР№ РІРЅРµС€РЅРёС… РґРёСЃРєРѕРІ Transcend</span>
         </div>
       </div>
 
-      <h2>Расширенные решения</h2>
-      <h3>Восстановление системы</h3>
+      <h2>Р Р°СЃС€РёСЂРµРЅРЅС‹Рµ СЂРµС€РµРЅРёСЏ</h2>
+      <h3>Р’РѕСЃСЃС‚Р°РЅРѕРІР»РµРЅРёРµ СЃРёСЃС‚РµРјС‹</h3>
       <ol>
-        <li>Win + R > rstrui</li>
-        <li>Выберите точку восстановления</li>
-        <li>Восстановите до появления проблемы</li>
+        <li>Win + R в†’ rstrui</li>
+        <li>Р’С‹Р±РµСЂРёС‚Рµ С‚РѕС‡РєСѓ РІРѕСЃСЃС‚Р°РЅРѕРІР»РµРЅРёСЏ</li>
+        <li>Р’РѕСЃСЃС‚Р°РЅРѕРІРёС‚Рµ РґРѕ РїРѕСЏРІР»РµРЅРёСЏ РїСЂРѕР±Р»РµРјС‹</li>
       </ol>
 
-      <h3>Замена диска</h3>
+      <h3>Р—Р°РјРµРЅР° РґРёСЃРєР°</h3>
       <ol>
-        <li>Если диск Transcend поврежден</li>
-        <li>Купите новый внешний HDD</li>
-        <li>Восстановите данные из бэкапа</li>
+        <li>Р•СЃР»Рё РґРёСЃРє Transcend РїРѕРІСЂРµР¶РґРµРЅ</li>
+        <li>РљСѓРїРёС‚Рµ РЅРѕРІС‹Р№ РІРЅРµС€РЅРёР№ HDD</li>
+        <li>Р’РѕСЃСЃС‚Р°РЅРѕРІРёС‚Рµ РґР°РЅРЅС‹Рµ РёР· Р±СЌРєР°РїР°</li>
       </ol>
 
-      <h2>Частые вопросы</h2>
-      <h3>Почему ноутбук не видит диск Transcend?</h3>
-      <p>Недостаточное питание, поврежденный порт или драйверы. Попробуйте другой порт и сбросьте USB контроллеры.</p>
+      <h2>Р§Р°СЃС‚С‹Рµ РІРѕРїСЂРѕСЃС‹</h2>
+      <h3>РџРѕС‡РµРјСѓ РЅРѕСѓС‚Р±СѓРє РЅРµ РІРёРґРёС‚ РґРёСЃРє Transcend?</h3>
+      <p>РќРµРґРѕСЃС‚Р°С‚РѕС‡РЅРѕРµ РїРёС‚Р°РЅРёРµ, РїРѕРІСЂРµР¶РґРµРЅРЅС‹Р№ РїРѕСЂС‚ РёР»Рё РґСЂР°Р№РІРµСЂС‹. РџРѕРїСЂРѕР±СѓР№С‚Рµ РґСЂСѓРіРѕР№ РїРѕСЂС‚ Рё СЃР±СЂРѕСЃСЊС‚Рµ USB РєРѕРЅС‚СЂРѕР»Р»РµСЂС‹.</p>
 
-      <h3>Можно ли спасти данные с невидимого диска Transcend?</h3>
-      <p>Да, используйте программы восстановления данных.</p>
+      <h3>РњРѕР¶РЅРѕ Р»Рё СЃРїР°СЃС‚Рё РґР°РЅРЅС‹Рµ СЃ РЅРµРІРёРґРёРјРѕРіРѕ РґРёСЃРєР° Transcend?</h3>
+      <p>Р”Р°, РёСЃРїРѕР»СЊР·СѓР№С‚Рµ РїСЂРѕРіСЂР°РјРјС‹ РІРѕСЃСЃС‚Р°РЅРѕРІР»РµРЅРёСЏ РґР°РЅРЅС‹С….</p>
 
-      <h3>Что делать, если диск Transcend работает на одном ПК, но не на другом?</h3>
-      <p>Проблема в драйверах второго ПК. Обновите драйверы или сбросьте USB контроллеры.</p>
+      <h3>Р§С‚Рѕ РґРµР»Р°С‚СЊ, РµСЃР»Рё РґРёСЃРє Transcend СЂР°Р±РѕС‚Р°РµС‚ РЅР° РѕРґРЅРѕРј РџРљ, РЅРѕ РЅРµ РЅР° РґСЂСѓРіРѕРј?</h3>
+      <p>РџСЂРѕР±Р»РµРјР° РІ РґСЂР°Р№РІРµСЂР°С… РІС‚РѕСЂРѕРіРѕ РџРљ. РћР±РЅРѕРІРёС‚Рµ РґСЂР°Р№РІРµСЂС‹ РёР»Рё СЃР±СЂРѕСЃСЊС‚Рµ USB РєРѕРЅС‚СЂРѕР»Р»РµСЂС‹.</p>
 
-      <h2>Когда нужна замена</h2>
+      <h2>РљРѕРіРґР° РЅСѓР¶РЅР° Р·Р°РјРµРЅР°</h2>
       <ul>
-        <li>Диск Transcend не работает ни на одном устройстве</li>
-        <li>Поврежден USB кабель диска</li>
-        <li>Электроника диска вышла из строя</li>
-        <li>Все решения не помогли</li>
+        <li>Р”РёСЃРє Transcend РЅРµ СЂР°Р±РѕС‚Р°РµС‚ РЅРё РЅР° РѕРґРЅРѕРј СѓСЃС‚СЂРѕР№СЃС‚РІРµ</li>
+        <li>РџРѕРІСЂРµР¶РґРµРЅ USB РєР°Р±РµР»СЊ РґРёСЃРєР°</li>
+        <li>Р­Р»РµРєС‚СЂРѕРЅРёРєР° РґРёСЃРєР° РІС‹С€Р»Р° РёР· СЃС‚СЂРѕСЏ</li>
+        <li>Р’СЃРµ СЂРµС€РµРЅРёСЏ РЅРµ РїРѕРјРѕРіР»Рё</li>
       </ul>
 
-      <p>В большинстве случаев проблема решается сменой USB порта или сбросом контроллеров. Начните с проверки питания и тестирования на другом устройстве.</p>
+      <p>Р’ Р±РѕР»СЊС€РёРЅСЃС‚РІРµ СЃР»СѓС‡Р°РµРІ РїСЂРѕР±Р»РµРјР° СЂРµС€Р°РµС‚СЃСЏ СЃРјРµРЅРѕР№ USB РїРѕСЂС‚Р° РёР»Рё СЃР±СЂРѕСЃРѕРј РєРѕРЅС‚СЂРѕР»Р»РµСЂРѕРІ. РќР°С‡РЅРёС‚Рµ СЃ РїСЂРѕРІРµСЂРєРё РїРёС‚Р°РЅРёСЏ Рё С‚РµСЃС‚РёСЂРѕРІР°РЅРёСЏ РЅР° РґСЂСѓРіРѕРј СѓСЃС‚СЂРѕР№СЃС‚РІРµ.</p>
     </div>
   </main>
 
-      <footer class="footer">
-        <div class="container">
-            <div class="footer__grid">
-                <div class="footer__col footer__col--logo">
-                    <a href="../index.html" class="footer-logo">
-                        <span class="logo__icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M12 15L7 10H17L12 15Z" fill="currentColor"/>
-                                <path d="M12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3ZM12 19C8.13401 19 5 15.866 5 12C5 8.13401 8.13401 5 12 5C15.866 5 19 8.13401 19 12C19 15.866 15.866 19 12 19Z" fill="currentColor"/>
-                            </svg>
-                        </span>
-                        <span class="logo__text">Repairo</span>
-                    </a>
-                    <p class="footer__text">Помогаем ремонтировать электронику с 2024 года</p>
-                </div>
-                <div class="footer__col">
-                    <h3 class="footer__title">Разделы</h3>
-                    <ul class="footer__links">
-                        <li><a href="../index.html" class="footer__link">Главная</a></li>
-                        <li><a href="../index.html#categories" class="footer__link">Все гайды</a></li>
-                        <li><a href="../contacts.html" class="footer__link">Контакты</a></li>
-                    </ul>
-                </div>
-                <div class="footer__col">
-                    <h3 class="footer__title">Категории</h3>
-                    <ul class="footer__links">
-                        <li><a href="../tv.html" class="nav__link">Телевизоры</a></li>
-                        <li><a href="../cameras.html" class="nav__link">Фотоаппараты</a></li>
-                        <li><a href="../consoles.html" class="nav__link">Приставки</a></li>
-                        <li><a href="../laptops.html" class="nav__link">Ноутбуки</a></li>
-                        <li><a href="../smartphones.html" class="nav__link">Смартфоны</a></li>
-                        <li><a href="../small-appliances.html" class="nav__link">Мелкая техника</a></li>
-                        <li><a href="../large-appliances.html" class="nav__link">Бытовая техника</a></li>
-                        <li><a href="../auto-electronics.html" class="nav__link">Авто-Электроника</a></li>
-                    </ul>
-                </div>
-                <div class="footer__col">
-                    <h3 class="footer__title">Контакты</h3>
-                    <ul class="footer__links">
-                        <li><a href="https://t.me/RepairoRU" class="footer__link"><i class="fab fa-telegram"></i> Telegram</a></li>
-                        <li><span class="footer__link">Наша почта: repairo.info@mail.ru</span></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer__bottom">
-                <p class="disclaimer">
-    Администрация сайта не несёт ответственности за возможные повреждения техники
-    и иные последствия, возникшие в результате самостоятельного ремонта по
-    материалам и инструкциям, размещённым на сайте. Все работы вы выполняете
-    на свой страх и риск.
-    </p>
-                <p class="footer__copyright">© 2026 Repairo. Все права защищены.</p>
-            </div>
-        </div>
-    </footer>
-    <!-- Cookie Consent Banner -->
-    <script src="../script.js"></script>
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2024 FixTech. Р’СЃРµ РїСЂР°РІР° Р·Р°С‰РёС‰РµРЅС‹.</p>
+      <div class="footer-links">
+        <a href="/privacy">РљРѕРЅС„РёРґРµРЅС†РёР°Р»СЊРЅРѕСЃС‚СЊ</a>
+        <a href="/terms">РЈСЃР»РѕРІРёСЏ РёСЃРїРѕР»СЊР·РѕРІР°РЅРёСЏ</a>
+        <a href="/contact">РљРѕРЅС‚Р°РєС‚С‹</a>
+      </div>
+    </div>
+  </footer>
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "HowTo",
-  "name": "Ноутбук не видит подключенный через USB внешний жесткий диск Transcend | Экспертный мегагайд",
-  "description": "",
-  "totalTime": "PT30M",
-  "step": [
-    {
-      "@type": "HowToStep",
-      "name": "Введение: почему Cyberpunk 2077 может тормозить на PS5 после патчей?",
-      "text": "Введение: почему Cyberpunk 2077 может тормозить на PS5 после патчей?",
-      "url": "#step-1"
-    },
-    {
-      "@type": "HowToStep",
-      "name": "Таблица: основные причины лагов и просадок FPS в Cyberpunk 2077 на PS5 после обновлений",
-      "text": "Таблица: основные причины лагов и просадок FPS в Cyberpunk 2077 на PS5 после обновлений",
-      "url": "#step-2"
-    },
-    {
-      "@type": "HowToStep",
-      "name": "Пошаговая инструкция: что делать, если Cyberpunk 2077 тормозит на PS5 после обновления",
-      "text": "Пошаговая инструкция: что делать, если Cyberpunk 2077 тормозит на PS5 после обновления",
-      "url": "#step-3"
-    },
-    {
-      "@type": "HowToStep",
-      "name": "Таблица: сравнение режимов графики и FPS в Cyberpunk 2077 на PS5",
-      "text": "Таблица: сравнение режимов графики и FPS в Cyberpunk 2077 на PS5",
-      "url": "#step-4"
-    },
-    {
-      "@type": "HowToStep",
-      "name": "Отзывы игроков и тесты Digital Foundry",
-      "text": "Отзывы игроков и тесты Digital Foundry",
-      "url": "#step-5"
-    },
-    {
-      "@type": "HowToStep",
-      "name": "Лайфхаки и советы по оптимизации Cyberpunk 2077 на PS5",
-      "text": "Лайфхаки и советы по оптимизации Cyberpunk 2077 на PS5",
-      "url": "#step-6"
-    },
-    {
-      "@type": "HowToStep",
-      "name": "FAQ – часто задаваемые вопросы о тормозах Cyberpunk 2077 на PS5",
-      "text": "FAQ – часто задаваемые вопросы о тормозах Cyberpunk 2077 на PS5",
-      "url": "#step-7"
-    },
-    {
-      "@type": "HowToStep",
-      "name": "Пошаговая инструкция: как восстановить базу данных PS5",
-      "text": "Пошаговая инструкция: как восстановить базу данных PS5",
-      "url": "#step-8"
-    }
-  ],
-  "image": "https://repairo.ru/https://mc.yandex.ru/watch/106225686"
-}
-</script>
-<!-- Cookie Consent Script -->
-<script src="../cookie-consent.js"></script>
+  <script src="../script.js"></script>
+  <script src="../search.js"></script>
 </body>
 </html>
-
-
-
-
-
-

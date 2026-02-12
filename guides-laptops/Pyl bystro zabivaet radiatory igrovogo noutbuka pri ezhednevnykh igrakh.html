@@ -4,8 +4,9 @@
 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Пыль быстро забивает радиаторы игрового ноутбука при ежеднев</title>
-    <meta name="description" content="">
+  <title>РџС‹Р»СЊ Р±С‹СЃС‚СЂРѕ Р·Р°Р±РёРІР°РµС‚ СЂР°РґРёР°С‚РѕСЂС‹ РёРіСЂРѕРІРѕРіРѕ РЅРѕСѓС‚Р±СѓРєР° РїСЂРё РµР¶РµРґРЅРµРІРЅС‹С… РёРіСЂР°С… | Р­РєСЃРїРµСЂС‚РЅС‹Р№ РјРµРіР°РіР°Р№Рґ</title>
+    <meta name="description" content="{{ description }}">
+    <meta name="description" content="РџРѕС€Р°РіРѕРІР°СЏ РёРЅСЃС‚СЂСѓРєС†РёСЏ: РџС‹Р»СЊ Р±С‹СЃС‚СЂРѕ Р·Р°Р±РёРІР°РµС‚ СЂР°РґРёР°С‚РѕСЂС‹ РёРіСЂРѕРІРѕРіРѕ РЅРѕСѓС‚Р±СѓРєР° РїСЂРё РµР¶РµРґРЅРµРІРЅС‹С… РёРіСЂР°С… вЂ” Р­РєСЃРїРµСЂС‚РЅС‹Р№ РјРµРіР°РіР°Р№Рґ. РџСЂРёС‡РёРЅС‹: РїРµСЂРµРіСЂРµРІ, РІРµРЅС‚РёР»СЏС†РёСЏ. Р РµС€РµРЅРёСЏ: С‡РёСЃС‚РєР°, РїСЂРѕС„РёР»Р°РєС‚РёРєР°, РѕР±СЃР»СѓР¶РёРІР°РЅРёРµ.">
 
   <link rel="stylesheet" href="../styles.css" />
   <link rel="stylesheet" href="../styles-header.css" />
@@ -13,25 +14,36 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <style>
     .guide-content { line-height: 1.7; color: var(--text); }
-    .guide-content h2 { color: var(--primary); margin-top: 30px; margin-bottom: 15px; font-size: 1.5rem; }
-    .guide-content h3 { color: var(--primary-dark); margin-top: 25px; margin-bottom: 12px; font-size: 1.2rem; }
+    .guide-content h2 { color: var(--primary); margin-top: 30px; margin-bottom: 15px; font-size: 1.6rem; }
+    .guide-content h3 { color: var(--primary-dark); margin-top: 25px; margin-bottom: 12px; font-size: 1.25rem; }
     .guide-image-block { margin: 20px 0; padding: 15px; background: var(--background); border-radius: var(--border-radius); border: 1px solid var(--border); text-align: center; }
     .guide-image-block img { max-width: 100%; height: auto; border-radius: 6px; border: 1px solid var(--border); }
     .image-caption { margin-top: 10px; font-size: 0.85rem; color: var(--text-light); font-style: italic; }
-    .pro-tips { background: rgba(3, 74, 79, 0.05); padding: 15px; border-radius: 6px; margin: 20px 0; }
-    .pro-tips h4 { color: var(--primary); margin-top: 0; margin-bottom: 12px; font-size: 1.1rem; }
-    .tip-item { display: flex; gap: 8px; margin-bottom: 8px; align-items: flex-start; }
+    .pro-tips { background: rgba(3, 74, 79, 0.05); padding: 18px; border-radius: 8px; margin: 25px 0; }
+    .pro-tips h4 { color: var(--primary); margin-top: 0; margin-bottom: 12px; font-size: 1.15rem; }
+    .tip-item { display: flex; gap: 10px; margin-bottom: 10px; align-items: flex-start; }
+    .tip-item i { margin-top: 3px; }
     table { width: 100%; border-collapse: collapse; margin: 20px 0; }
-    th, td { border: 1px solid var(--border); padding: 8px; text-align: left; }
+    th, td { border: 1px solid var(--border); padding: 8px; text-align: left; vertical-align: top; }
     th { background: var(--background-light); }
-    .highlight { background: #f5f7fa; border-left: 4px solid #2d9cdb; padding: 10px 15px; margin: 20px 0; }
-    .faq-section ul { margin-left: 1em; }
-    .block-section { margin-bottom: 2em; }
+    code { background: var(--background-light); padding: 2px 4px; border-radius: 4px; font-size: 0.9em; }
+    ul, ol { margin-left: 18px; }
     @media (max-width: 768px) {
       .guide-content h2 { font-size: 1.4rem; margin-top: 25px; }
+      .guide-content h3 { font-size: 1.15rem; }
       .guide-image-block { padding: 12px; margin: 15px 0; }
       table, th, td { font-size: 0.95rem; }
     }
+
+    /* РЇРЅРґРµРєСЃ РњР°СЂРєРµС‚ СЂРµРєР»Р°РјРЅС‹Р№ Р±Р°РЅРЅРµСЂ */
+    .ym-hero-link {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+      max-width: 100%;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
     /* Р“РѕСЂРёР·РѕРЅС‚Р°Р»СЊРЅС‹Р№ Р±Р°РЅРЅРµСЂ-РєР°СЂС‚РѕС‡РєР° */
     .ym-hero-banner {
       width: 100%;
@@ -107,490 +119,265 @@
     }
 
     /* Р РµР№С‚РёРЅРі */
-    .ym-hero-top {
+    .ym-hero-rating {
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      gap: 8px;
-    }
-
-    .ym-hero-rating {
-      font-size: 13px;
-      font-weight: 500;
-      color: #111827;
-      background: #f9fafb;
-      border-radius: 999px;
-      padding: 4px 10px;
-    }
-
-    .ym-hero-rating-count {
+      gap: 4px;
+      font-size: 12px;
       color: #6b7280;
     }
 
-    /* Р¤РёРѕР»РµС‚РѕРІР°СЏ РєРЅРѕРїРєР° */
-    .ym-hero-button {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 9px 16px;
-      border-radius: 999px;
-      border: none;
-      background: #6a00ff;
-      color: #ffffff;
-      font-size: 14px;
-      font-weight: 600;
-      cursor: pointer;
-      box-shadow: 0 2px 6px rgba(88, 28, 135, 0.35);
-      transition: background 0.15s ease, transform 0.15s ease,
-                  box-shadow 0.15s ease;
-    }
-    .ym-hero-button::after {
-      content: "в†’";
-      margin-left: 6px;
-      font-size: 14px;
-    }
-    .ym-hero-button:hover {
-      background: #7c3aed;
-      transform: translateY(-1px);
-      box-shadow: 0 4px 10px rgba(88, 28, 135, 0.45);
+    .ym-hero-stars {
+      display: flex;
+      gap: 1px;
     }
 
-    /* Р®СЂРёРґРёС‡РµСЃРєРёР№ Р±Р»РѕРє */
-    .ym-hero-legal {
-      margin-top: 6px;
-      max-width: 600px;
+    .ym-hero-star {
+      width: 12px;
+      height: 12px;
+      fill: #fbbf24;
+    }
+
+    .ym-hero-reviews {
       font-size: 11px;
-      line-height: 1.3;
-      color: #6b7280;
-      margin-left: auto;
-      margin-right: auto;
+      color: #9ca3af;
     }
 
-    /* РђРґР°РїС‚РёРІ */
-    @media (max-width: 480px) {
+    /* Р¦РµРЅР° */
+    .ym-hero-price {
+      font-size: 16px;
+      font-weight: 700;
+      color: #111827;
+      margin: 0;
+    }
+
+    /* РљРЅРѕРїРєР° */
+    .ym-hero-button {
+      background: #007bff;
+      color: #ffffff;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background 0.2s ease;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .ym-hero-button:hover {
+      background: #0056b3;
+    }
+
+    /* РђРґР°РїС‚РёРІРЅРѕСЃС‚СЊ */
+    @media (max-width: 768px) {
       .ym-hero-banner {
-        max-width: 100%;
-        margin: 20px 0;
+        flex-direction: row;
+        min-height: auto;
       }
+
       .ym-hero-images {
-        height: 100px;
+        width: 120px;
+        height: auto;
+        flex-shrink: 0;
       }
+
       .ym-hero-content {
-        padding: 12px 12px;
+        flex: 1;
+        padding: 12px 16px;
       }
+
       .ym-hero-title {
         font-size: 13px;
       }
+
+      .ym-hero-price {
+        font-size: 15px;
+      }
+
       .ym-hero-button {
-        font-size: 13px;
-        padding: 8px 14px;
-      }
-      .ym-hero-legal {
-        font-size: 10px;
-      }
-    }
-    /* Telegram СЂРµРєР»Р°РјРЅС‹Р№ Р±Р°РЅРЅРµСЂ */
-    .telegram-banner {
-      display: flex;
-      justify-content: center;
-      text-decoration: none;
-      color: inherit;
-      width: 100%;
-      margin: 40px 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    }
-
-    .telegram-banner-container {
-      width: 100%;
-      max-width: 500px;
-      min-height: 120px;
-      border-radius: 16px;
-      background: linear-gradient(135deg, #0088cc 0%, #005f8f 100%);
-      border: 1px solid #005f8f;
-      display: flex;
-      align-items: center;
-      padding: 20px;
-      box-shadow: 0 4px 16px rgba(0, 136, 204, 0.2);
-      overflow: hidden;
-      box-sizing: border-box;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-
-    .telegram-banner-container:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(0, 136, 204, 0.3);
-    }
-
-    .telegram-logo {
-      width: 60px;
-      height: 60px;
-      min-width: 60px;
-      background: #ffffff;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-right: 20px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    }
-
-    .telegram-logo svg {
-      width: 32px;
-      height: 32px;
-      fill: #0088cc;
-    }
-
-    .telegram-content {
-      flex: 1;
-      color: #ffffff;
-    }
-
-    .telegram-title {
-      font-size: 16px;
-      font-weight: 600;
-      margin: 0 0 8px 0;
-      line-height: 1.3;
-    }
-
-    .telegram-subtitle {
-      font-size: 14px;
-      opacity: 0.9;
-      margin: 0 0 12px 0;
-      line-height: 1.4;
-    }
-
-    .telegram-button {
-      display: inline-flex;
-      align-items: center;
-      padding: 8px 16px;
-      background: #ffffff;
-      color: #0088cc;
-      border-radius: 20px;
-      font-size: 14px;
-      font-weight: 600;
-      text-decoration: none;
-      transition: background 0.2s ease, transform 0.2s ease;
-    }
-
-    .telegram-button:hover {
-      background: #f0f8ff;
-      transform: scale(1.05);
-    }
-
-    .telegram-button svg {
-      width: 16px;
-      height: 16px;
-      margin-left: 6px;
-      fill: #0088cc;
-    }
-
-    /* РђРґР°РїС‚РёРІ РґР»СЏ РјРѕР±РёР»СЊРЅС‹С… */
-    @media (max-width: 480px) {
-      .telegram-banner-container {
-        max-width: 100%;
-        margin: 20px 0;
-        padding: 15px;
-        min-height: 100px;
-      }
-      .telegram-logo {
-        width: 50px;
-        height: 50px;
-        min-width: 50px;
-        margin-right: 15px;
-      }
-      .telegram-logo svg {
-        width: 26px;
-        height: 26px;
-      }
-      .telegram-title {
-        font-size: 14px;
-      }
-      .telegram-subtitle {
-        font-size: 12px;
-      }
-      .telegram-button {
-        font-size: 12px;
-        padding: 6px 12px;
+        padding: 6px 10px;
+        font-size: 11px;
       }
     }
 
-
-
+    /* РЎРєСЂС‹С‚С‹Р№ Р±Р°РЅРЅРµСЂ РґР»СЏ РґРµСЃРєС‚РѕРїР° */
+    @media (min-width: 769px) {
+      .ym-hero-link {
+        display: none !important;
+      }
+    }
   </style>
   <script async src="https://timeweb.cloud/api/v1/cloud-ai/agents/3cc03620-d051-4d8d-b5af-f7b6cd083a35/embed.js?collapsed=true"></script>
 </head>
 <body>
-  <header class="header">
-    <div class="container">
-      <div class="header__inner">
-        <a href="../index.html" class="logo">
-          <span class="logo__icon"></span>
-          <span class="logo__text">GeoExpert</span>
-        </a>
-        <nav class="nav">
-          <ul class="nav__list">
-            <li><a href="../cameras.html" class="nav__link">РљР°РјРµСЂС‹</a></li>
-            <li><a href="../drones.html" class="nav__link">Р”СЂРѕРЅС‹</a></li>
-            <li><a href="../workflow.html" class="nav__link">Workflow</a></li>
-          </ul>
-        </nav>
+  <header>
+    <div class="header-content">
+      <a href="/" class="logo">
+        <i class="fas fa-tools"></i>
+        FixTech
+      </a>
+      <nav class="nav-links">
+        <a href="/">Р“Р»Р°РІРЅР°СЏ</a>
+        <a href="/articles">Р’СЃРµ СЃС‚Р°С‚СЊРё</a>
+        <a href="/smartphones">РЎРјР°СЂС‚С„РѕРЅС‹</a>
+        <a href="/laptops">РќРѕСѓС‚Р±СѓРєРё</a>
+        <a href="/tv">РўРµР»РµРІРёР·РѕСЂС‹</a>
+        <a href="/cameras">РљР°РјРµСЂС‹</a>
+        <a href="/consoles">РљРѕРЅСЃРѕР»Рё</a>
+        <a href="/auto-electronics">РђРІС‚РѕСЌР»РµРєС‚СЂРѕРЅРёРєР°</a>
+        <a href="/small-appliances">РњРµР»РєР°СЏ С‚РµС…РЅРёРєР°</a>
+        <a href="/large-appliances">РљСЂСѓРїРЅР°СЏ С‚РµС…РЅРёРєР°</a>
+      </nav>
+      <div class="search-container">
+        <input type="text" id="search-input" placeholder="РџРѕРёСЃРє РїРѕ СЃР°Р№С‚Сѓ..." />
+        <button id="search-button"><i class="fas fa-search"></i></button>
       </div>
     </div>
   </header>
 
   <main class="guide-container">
     <div class="guide-content">
-      <h1>Пыль быстро забивает радиаторы игрового ноутбука при ежедневных играх</h1>
-      <p>Когда пыль быстро забивает радиаторы игрового ноутбука при ежедневных играх, проблема связана с перегревом и вентиляцией. В этом экспертном мегагайде мы разберем все причины быстрого засорения и предоставим решения для чистоты системы охлаждения.</p>
+      <h1>РџС‹Р»СЊ Р±С‹СЃС‚СЂРѕ Р·Р°Р±РёРІР°РµС‚ СЂР°РґРёР°С‚РѕСЂС‹ РёРіСЂРѕРІРѕРіРѕ РЅРѕСѓС‚Р±СѓРєР° РїСЂРё РµР¶РµРґРЅРµРІРЅС‹С… РёРіСЂР°С…</h1>
+      <p>РљРѕРіРґР° РїС‹Р»СЊ Р±С‹СЃС‚СЂРѕ Р·Р°Р±РёРІР°РµС‚ СЂР°РґРёР°С‚РѕСЂС‹ РёРіСЂРѕРІРѕРіРѕ РЅРѕСѓС‚Р±СѓРєР° РїСЂРё РµР¶РµРґРЅРµРІРЅС‹С… РёРіСЂР°С…, РїСЂРѕР±Р»РµРјР° СЃРІСЏР·Р°РЅР° СЃ РїРµСЂРµРіСЂРµРІРѕРј Рё РІРµРЅС‚РёР»СЏС†РёРµР№. Р’ СЌС‚РѕРј СЌРєСЃРїРµСЂС‚РЅРѕРј РјРµРіР°РіР°Р№РґРµ РјС‹ СЂР°Р·Р±РµСЂРµРј РІСЃРµ РїСЂРёС‡РёРЅС‹ Р±С‹СЃС‚СЂРѕРіРѕ Р·Р°СЃРѕСЂРµРЅРёСЏ Рё РїСЂРµРґРѕСЃС‚Р°РІРёРј СЂРµС€РµРЅРёСЏ РґР»СЏ С‡РёСЃС‚РѕС‚С‹ СЃРёСЃС‚РµРјС‹ РѕС…Р»Р°Р¶РґРµРЅРёСЏ.</p>
 
-      <h2>Признаки проблемы</h2>
+      <h2>РџСЂРёР·РЅР°РєРё РїСЂРѕР±Р»РµРјС‹</h2>
       <ul>
-        <li>Быстрое засорение радиаторов</li>
-        <li>Перегрев при играх</li>
-        <li>Шум вентиляторов</li>
-        <li>Падение производительности</li>
-        <li>Ежедневное использование</li>
+        <li>Р‘С‹СЃС‚СЂРѕРµ Р·Р°СЃРѕСЂРµРЅРёРµ СЂР°РґРёР°С‚РѕСЂРѕРІ</li>
+        <li>РџРµСЂРµРіСЂРµРІ РїСЂРё РёРіСЂР°С…</li>
+        <li>РЁСѓРј РІРµРЅС‚РёР»СЏС‚РѕСЂРѕРІ</li>
+        <li>РџР°РґРµРЅРёРµ РїСЂРѕРёР·РІРѕРґРёС‚РµР»СЊРЅРѕСЃС‚Рё</li>
+        <li>Р•Р¶РµРґРЅРµРІРЅРѕРµ РёСЃРїРѕР»СЊР·РѕРІР°РЅРёРµ</li>
       </ul>
 
-      <h2>Основные причины</h2>
+      <h2>РћСЃРЅРѕРІРЅС‹Рµ РїСЂРёС‡РёРЅС‹</h2>
       <table>
         <tr>
-          <th>Причина</th>
-          <th>Вероятность</th>
-          <th>Характерные признаки</th>
+          <th>РџСЂРёС‡РёРЅР°</th>
+          <th>Р’РµСЂРѕСЏС‚РЅРѕСЃС‚СЊ</th>
+          <th>РҐР°СЂР°РєС‚РµСЂРЅС‹Рµ РїСЂРёР·РЅР°РєРё</th>
         </tr>
         <tr>
-          <td>Интенсивное использование</td>
+          <td>РРЅС‚РµРЅСЃРёРІРЅРѕРµ РёСЃРїРѕР»СЊР·РѕРІР°РЅРёРµ</td>
           <td>60%</td>
-          <td>Ежедневные игры</td>
+          <td>Р•Р¶РµРґРЅРµРІРЅС‹Рµ РёРіСЂС‹</td>
         </tr>
         <tr>
-          <td>Пыльная среда</td>
+          <td>РџС‹Р»СЊРЅР°СЏ СЃСЂРµРґР°</td>
           <td>25%</td>
-          <td>Работает после чистки</td>
+          <td>Р Р°Р±РѕС‚Р°РµС‚ РїРѕСЃР»Рµ С‡РёСЃС‚РєРё</td>
         </tr>
         <tr>
-          <td>Дизайн ноутбука</td>
+          <td>Р”РёР·Р°Р№РЅ РЅРѕСѓС‚Р±СѓРєР°</td>
           <td>10%</td>
-          <td>Слабая вентиляция</td>
+          <td>РЎР»Р°Р±Р°СЏ РІРµРЅС‚РёР»СЏС†РёСЏ</td>
         </tr>
         <tr>
-          <td>Качество сборки</td>
+          <td>РљР°С‡РµСЃС‚РІРѕ СЃР±РѕСЂРєРё</td>
           <td>3%</td>
-          <td>Известная проблема модели</td>
+          <td>РР·РІРµСЃС‚РЅР°СЏ РїСЂРѕР±Р»РµРјР° РјРѕРґРµР»Рё</td>
         </tr>
         <tr>
-          <td>Перегрев</td>
+          <td>РџРµСЂРµРіСЂРµРІ</td>
           <td>2%</td>
-          <td>Привлекает больше пыли</td>
+          <td>РџСЂРёРІР»РµРєР°РµС‚ Р±РѕР»СЊС€Рµ РїС‹Р»Рё</td>
         </tr>
       </table>
 
-      <h2>Диагностика проблемы</h2>
-      <h3>Визуальный осмотр</h3>
+      <h2>Р”РёР°РіРЅРѕСЃС‚РёРєР° РїСЂРѕР±Р»РµРјС‹</h2>
+      <h3>Р’РёР·СѓР°Р»СЊРЅС‹Р№ РѕСЃРјРѕС‚СЂ</h3>
       <ol>
-        <li>Посмотреть решетки</li>
-        <li>Проверить на пыль</li>
-        <li>Если забиты - проблема</li>
+        <li>РџРѕСЃРјРѕС‚СЂРµС‚СЊ СЂРµС€РµС‚РєРё</li>
+        <li>РџСЂРѕРІРµСЂРёС‚СЊ РЅР° РїС‹Р»СЊ</li>
+        <li>Р•СЃР»Рё Р·Р°Р±РёС‚С‹ - РїСЂРѕР±Р»РµРјР°</li>
       </ol>
 
-      <h2>Решение 1: Регулярная чистка</h2>
-      <h3>Профилактика</h3>
+      <h2>Р РµС€РµРЅРёРµ 1: Р РµРіСѓР»СЏСЂРЅР°СЏ С‡РёСЃС‚РєР°</h2>
+      <h3>РџСЂРѕС„РёР»Р°РєС‚РёРєР°</h3>
       <ol>
-        <li>Чистить каждые 3-6 месяцев</li>
-        <li>Продуть сжатым воздухом</li>
-        <li>Разобрать и почистить</li>
+        <li>Р§РёСЃС‚РёС‚СЊ РєР°Р¶РґС‹Рµ 3-6 РјРµСЃСЏС†РµРІ</li>
+        <li>РџСЂРѕРґСѓС‚СЊ СЃР¶Р°С‚С‹Рј РІРѕР·РґСѓС…РѕРј</li>
+        <li>Р Р°Р·РѕР±СЂР°С‚СЊ Рё РїРѕС‡РёСЃС‚РёС‚СЊ</li>
       </ol>
 
-      <h2>Решение 2: Улучшение вентиляции</h2>
-      <h3>Охлаждающая подставка</h3>
+      <h2>Р РµС€РµРЅРёРµ 2: РЈР»СѓС‡С€РµРЅРёРµ РІРµРЅС‚РёР»СЏС†РёРё</h2>
+      <h3>РћС…Р»Р°Р¶РґР°СЋС‰Р°СЏ РїРѕРґСЃС‚Р°РІРєР°</h3>
       <ol>
-        <li>Использовать подставку с вентиляторами</li>
-        <li>Поднять ноутбук</li>
-        <li>Улучшить циркуляцию воздуха</li>
+        <li>РСЃРїРѕР»СЊР·РѕРІР°С‚СЊ РїРѕРґСЃС‚Р°РІРєСѓ СЃ РІРµРЅС‚РёР»СЏС‚РѕСЂР°РјРё</li>
+        <li>РџРѕРґРЅСЏС‚СЊ РЅРѕСѓС‚Р±СѓРє</li>
+        <li>РЈР»СѓС‡С€РёС‚СЊ С†РёСЂРєСѓР»СЏС†РёСЋ РІРѕР·РґСѓС…Р°</li>
       </ol>
 
-      <h2>Решение 3: Замена фильтров</h2>
-      <h3>Если есть</h3>
+      <h2>Р РµС€РµРЅРёРµ 3: Р—Р°РјРµРЅР° С„РёР»СЊС‚СЂРѕРІ</h2>
+      <h3>Р•СЃР»Рё РµСЃС‚СЊ</h3>
       <ol>
-        <li>Купить новые фильтры</li>
-        <li>Заменить в сервисе</li>
+        <li>РљСѓРїРёС‚СЊ РЅРѕРІС‹Рµ С„РёР»СЊС‚СЂС‹</li>
+        <li>Р—Р°РјРµРЅРёС‚СЊ РІ СЃРµСЂРІРёСЃРµ</li>
       </ol>
 
       <div class="pro-tips">
-        <h4><i class="fas fa-lightbulb"></i> Профессиональные советы</h4>
+        <h4><i class="fas fa-lightbulb"></i> РџСЂРѕС„РµСЃСЃРёРѕРЅР°Р»СЊРЅС‹Рµ СЃРѕРІРµС‚С‹</h4>
         <div class="tip-item">
           <i class="fas fa-broom"></i>
-          <span>Чистите ноутбук от пыли регулярно</span>
+          <span>Р§РёСЃС‚РёС‚Рµ РЅРѕСѓС‚Р±СѓРє РѕС‚ РїС‹Р»Рё СЂРµРіСѓР»СЏСЂРЅРѕ</span>
         </div>
         <div class="tip-item">
           <i class="fas fa-wind"></i>
-          <span>Используйте охлаждающие подставки</span>
+          <span>РСЃРїРѕР»СЊР·СѓР№С‚Рµ РѕС…Р»Р°Р¶РґР°СЋС‰РёРµ РїРѕРґСЃС‚Р°РІРєРё</span>
         </div>
         <div class="tip-item">
           <i class="fas fa-home"></i>
-          <span>Держите ноутбук в чистой среде</span>
+          <span>Р”РµСЂР¶РёС‚Рµ РЅРѕСѓС‚Р±СѓРє РІ С‡РёСЃС‚РѕР№ СЃСЂРµРґРµ</span>
         </div>
         <div class="tip-item">
           <i class="fas fa-tools"></i>
-          <span>Профессиональная чистка каждые 6 месяцев</span>
+          <span>РџСЂРѕС„РµСЃСЃРёРѕРЅР°Р»СЊРЅР°СЏ С‡РёСЃС‚РєР° РєР°Р¶РґС‹Рµ 6 РјРµСЃСЏС†РµРІ</span>
         </div>
       </div>
 
-      <h2>Расширенные решения</h2>
-      <h3>Апгрейд охлаждения</h3>
+      <h2>Р Р°СЃС€РёСЂРµРЅРЅС‹Рµ СЂРµС€РµРЅРёСЏ</h2>
+      <h3>РђРїРіСЂРµР№Рґ РѕС…Р»Р°Р¶РґРµРЅРёСЏ</h3>
       <ol>
-        <li>Заменить термопасту</li>
-        <li>Добавить дополнительные кулеры</li>
-        <li>Улучшить вентиляцию</li>
+        <li>Р—Р°РјРµРЅРёС‚СЊ С‚РµСЂРјРѕРїР°СЃС‚Сѓ</li>
+        <li>Р”РѕР±Р°РІРёС‚СЊ РґРѕРїРѕР»РЅРёС‚РµР»СЊРЅС‹Рµ РєСѓР»РµСЂС‹</li>
+        <li>РЈР»СѓС‡С€РёС‚СЊ РІРµРЅС‚РёР»СЏС†РёСЋ</li>
       </ol>
 
-      <h2>Частые вопросы</h2>
-      <h3>Почему пыль быстро забивает радиаторы игрового ноутбука при ежедневных играх?</h3>
-      <p>Перегрев притягивает пыль, интенсивное использование ускоряет засорение. Чистите регулярно и используйте подставки.</p>
+      <h2>Р§Р°СЃС‚С‹Рµ РІРѕРїСЂРѕСЃС‹</h2>
+      <h3>РџРѕС‡РµРјСѓ РїС‹Р»СЊ Р±С‹СЃС‚СЂРѕ Р·Р°Р±РёРІР°РµС‚ СЂР°РґРёР°С‚РѕСЂС‹ РёРіСЂРѕРІРѕРіРѕ РЅРѕСѓС‚Р±СѓРєР° РїСЂРё РµР¶РµРґРЅРµРІРЅС‹С… РёРіСЂР°С…?</h3>
+      <p>РџРµСЂРµРіСЂРµРІ РїСЂРёС‚СЏРіРёРІР°РµС‚ РїС‹Р»СЊ, РёРЅС‚РµРЅСЃРёРІРЅРѕРµ РёСЃРїРѕР»СЊР·РѕРІР°РЅРёРµ СѓСЃРєРѕСЂСЏРµС‚ Р·Р°СЃРѕСЂРµРЅРёРµ. Р§РёСЃС‚РёС‚Рµ СЂРµРіСѓР»СЏСЂРЅРѕ Рё РёСЃРїРѕР»СЊР·СѓР№С‚Рµ РїРѕРґСЃС‚Р°РІРєРё.</p>
 
-      <h3>Как часто чистить?</h3>
-      <p>Каждые 3-6 месяцев при ежедневном использовании.</p>
+      <h3>РљР°Рє С‡Р°СЃС‚Рѕ С‡РёСЃС‚РёС‚СЊ?</h3>
+      <p>РљР°Р¶РґС‹Рµ 3-6 РјРµСЃСЏС†РµРІ РїСЂРё РµР¶РµРґРЅРµРІРЅРѕРј РёСЃРїРѕР»СЊР·РѕРІР°РЅРёРё.</p>
 
-      <h3>Что делать, если уже забиты?</h3>
-      <p>Продуйте сжатым воздухом или отнесите в сервис.</p>
+      <h3>Р§С‚Рѕ РґРµР»Р°С‚СЊ, РµСЃР»Рё СѓР¶Рµ Р·Р°Р±РёС‚С‹?</h3>
+      <p>РџСЂРѕРґСѓР№С‚Рµ СЃР¶Р°С‚С‹Рј РІРѕР·РґСѓС…РѕРј РёР»Рё РѕС‚РЅРµСЃРёС‚Рµ РІ СЃРµСЂРІРёСЃ.</p>
 
-      <h2>Когда нужна замена</h2>
+      <h2>РљРѕРіРґР° РЅСѓР¶РЅР° Р·Р°РјРµРЅР°</h2>
       <ul>
-        <li>Поврежденные радиаторы</li>
-        <li>Не помогает чистка</li>
-        <li>Постоянный перегрев</li>
+        <li>РџРѕРІСЂРµР¶РґРµРЅРЅС‹Рµ СЂР°РґРёР°С‚РѕСЂС‹</li>
+        <li>РќРµ РїРѕРјРѕРіР°РµС‚ С‡РёСЃС‚РєР°</li>
+        <li>РџРѕСЃС‚РѕСЏРЅРЅС‹Р№ РїРµСЂРµРіСЂРµРІ</li>
       </ul>
 
-      <p>В большинстве случаев проблема решается регулярной чисткой. Начните с профилактики.</p>
+      <p>Р’ Р±РѕР»СЊС€РёРЅСЃС‚РІРµ СЃР»СѓС‡Р°РµРІ РїСЂРѕР±Р»РµРјР° СЂРµС€Р°РµС‚СЃСЏ СЂРµРіСѓР»СЏСЂРЅРѕР№ С‡РёСЃС‚РєРѕР№. РќР°С‡РЅРёС‚Рµ СЃ РїСЂРѕС„РёР»Р°РєС‚РёРєРё.</p>
     </div>
   </main>
 
-      <footer class="footer">
-        <div class="container">
-            <div class="footer__grid">
-                <div class="footer__col footer__col--logo">
-                    <a href="../index.html" class="footer-logo">
-                        <span class="logo__icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M12 15L7 10H17L12 15Z" fill="currentColor"/>
-                                <path d="M12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3ZM12 19C8.13401 19 5 15.866 5 12C5 8.13401 8.13401 5 12 5C15.866 5 19 8.13401 19 12C19 15.866 15.866 19 12 19Z" fill="currentColor"/>
-                            </svg>
-                        </span>
-                        <span class="logo__text">Repairo</span>
-                    </a>
-                    <p class="footer__text">Помогаем ремонтировать электронику с 2024 года</p>
-                </div>
-                <div class="footer__col">
-                    <h3 class="footer__title">Разделы</h3>
-                    <ul class="footer__links">
-                        <li><a href="../index.html" class="footer__link">Главная</a></li>
-                        <li><a href="../index.html#categories" class="footer__link">Все гайды</a></li>
-                        <li><a href="../contacts.html" class="footer__link">Контакты</a></li>
-                    </ul>
-                </div>
-                <div class="footer__col">
-                    <h3 class="footer__title">Категории</h3>
-                    <ul class="footer__links">
-                        <li><a href="../tv.html" class="nav__link">Телевизоры</a></li>
-                        <li><a href="../cameras.html" class="nav__link">Фотоаппараты</a></li>
-                        <li><a href="../consoles.html" class="nav__link">Приставки</a></li>
-                        <li><a href="../laptops.html" class="nav__link">Ноутбуки</a></li>
-                        <li><a href="../smartphones.html" class="nav__link">Смартфоны</a></li>
-                        <li><a href="../small-appliances.html" class="nav__link">Мелкая техника</a></li>
-                        <li><a href="../large-appliances.html" class="nav__link">Бытовая техника</a></li>
-                        <li><a href="../auto-electronics.html" class="nav__link">Авто-Электроника</a></li>
-                    </ul>
-                </div>
-                <div class="footer__col">
-                    <h3 class="footer__title">Контакты</h3>
-                    <ul class="footer__links">
-                        <li><a href="https://t.me/RepairoRU" class="footer__link"><i class="fab fa-telegram"></i> Telegram</a></li>
-                        <li><span class="footer__link">Наша почта: repairo.info@mail.ru</span></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer__bottom">
-                <p class="disclaimer">
-    Администрация сайта не несёт ответственности за возможные повреждения техники
-    и иные последствия, возникшие в результате самостоятельного ремонта по
-    материалам и инструкциям, размещённым на сайте. Все работы вы выполняете
-    на свой страх и риск.
-    </p>
-                <p class="footer__copyright">© 2026 Repairo. Все права защищены.</p>
-            </div>
-        </div>
-    </footer>
-    <!-- Cookie Consent Banner -->
-    <script src="../script.js"></script>
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2024 FixTech. Р’СЃРµ РїСЂР°РІР° Р·Р°С‰РёС‰РµРЅС‹.</p>
+      <div class="footer-links">
+        <a href="/privacy">РљРѕРЅС„РёРґРµРЅС†РёР°Р»СЊРЅРѕСЃС‚СЊ</a>
+        <a href="/terms">РЈСЃР»РѕРІРёСЏ РёСЃРїРѕР»СЊР·РѕРІР°РЅРёСЏ</a>
+        <a href="/contact">РљРѕРЅС‚Р°РєС‚С‹</a>
+      </div>
+    </div>
+  </footer>
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "HowTo",
-  "name": "Пыль быстро забивает радиаторы игрового ноутбука при ежедневных играх | Экспертный мегагайд",
-  "description": "",
-  "totalTime": "PT30M",
-  "step": [
-    {
-      "@type": "HowToStep",
-      "name": "Введение: почему Cyberpunk 2077 может тормозить на PS5 после патчей?",
-      "text": "Введение: почему Cyberpunk 2077 может тормозить на PS5 после патчей?",
-      "url": "#step-1"
-    },
-    {
-      "@type": "HowToStep",
-      "name": "Таблица: основные причины лагов и просадок FPS в Cyberpunk 2077 на PS5 после обновлений",
-      "text": "Таблица: основные причины лагов и просадок FPS в Cyberpunk 2077 на PS5 после обновлений",
-      "url": "#step-2"
-    },
-    {
-      "@type": "HowToStep",
-      "name": "Пошаговая инструкция: что делать, если Cyberpunk 2077 тормозит на PS5 после обновления",
-      "text": "Пошаговая инструкция: что делать, если Cyberpunk 2077 тормозит на PS5 после обновления",
-      "url": "#step-3"
-    },
-    {
-      "@type": "HowToStep",
-      "name": "Таблица: сравнение режимов графики и FPS в Cyberpunk 2077 на PS5",
-      "text": "Таблица: сравнение режимов графики и FPS в Cyberpunk 2077 на PS5",
-      "url": "#step-4"
-    },
-    {
-      "@type": "HowToStep",
-      "name": "Отзывы игроков и тесты Digital Foundry",
-      "text": "Отзывы игроков и тесты Digital Foundry",
-      "url": "#step-5"
-    },
-    {
-      "@type": "HowToStep",
-      "name": "Лайфхаки и советы по оптимизации Cyberpunk 2077 на PS5",
-      "text": "Лайфхаки и советы по оптимизации Cyberpunk 2077 на PS5",
-      "url": "#step-6"
-    },
-    {
-      "@type": "HowToStep",
-      "name": "FAQ – часто задаваемые вопросы о тормозах Cyberpunk 2077 на PS5",
-      "text": "FAQ – часто задаваемые вопросы о тормозах Cyberpunk 2077 на PS5",
-      "url": "#step-7"
-    },
-    {
-      "@type": "HowToStep",
-      "name": "Пошаговая инструкция: как восстановить базу данных PS5",
-      "text": "Пошаговая инструкция: как восстановить базу данных PS5",
-      "url": "#step-8"
-    }
-  ],
-  "image": "https://repairo.ru/https://mc.yandex.ru/watch/106225686"
-}
-</script>
-<!-- Cookie Consent Script -->
-<script src="../cookie-consent.js"></script>
+  <script src="../script.js"></script>
+  <script src="../search.js"></script>
 </body>
 </html>
-
-
-
-
-
-

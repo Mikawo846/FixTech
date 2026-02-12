@@ -4,8 +4,9 @@
 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Ноутбук не подключается к Bluetooth устройствам | Экспертный</title>
-    <meta name="description" content="">
+  <title>РќРѕСѓС‚Р±СѓРє РЅРµ РїРѕРґРєР»СЋС‡Р°РµС‚СЃСЏ Рє Bluetooth СѓСЃС‚СЂРѕР№СЃС‚РІР°Рј | Р­РєСЃРїРµСЂС‚РЅС‹Р№ РјРµРіР°РіР°Р№Рґ</title>
+    <meta name="description" content="{{ description }}">
+    <meta name="description" content="РџРѕС€Р°РіРѕРІР°СЏ РёРЅСЃС‚СЂСѓРєС†РёСЏ: РќРѕСѓС‚Р±СѓРє РЅРµ РїРѕРґРєР»СЋС‡Р°РµС‚СЃСЏ Рє Bluetooth СѓСЃС‚СЂРѕР№СЃС‚РІР°Рј вЂ” Р­РєСЃРїРµСЂС‚РЅС‹Р№ РјРµРіР°РіР°Р№Рґ. РџСЂРёС‡РёРЅС‹: РґСЂР°Р№РІРµСЂС‹, Р°РґР°РїС‚РµСЂ, РЅР°СЃС‚СЂРѕР№РєРё. Р РµС€РµРЅРёСЏ: РѕР±РЅРѕРІР»РµРЅРёРµ, РІРєР»СЋС‡РµРЅРёРµ, Р·Р°РјРµРЅР°.">
 
   <link rel="stylesheet" href="../styles.css" />
   <link rel="stylesheet" href="../styles-header.css" />
@@ -13,25 +14,36 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <style>
     .guide-content { line-height: 1.7; color: var(--text); }
-    .guide-content h2 { color: var(--primary); margin-top: 30px; margin-bottom: 15px; font-size: 1.5rem; }
-    .guide-content h3 { color: var(--primary-dark); margin-top: 25px; margin-bottom: 12px; font-size: 1.2rem; }
+    .guide-content h2 { color: var(--primary); margin-top: 30px; margin-bottom: 15px; font-size: 1.6rem; }
+    .guide-content h3 { color: var(--primary-dark); margin-top: 25px; margin-bottom: 12px; font-size: 1.25rem; }
     .guide-image-block { margin: 20px 0; padding: 15px; background: var(--background); border-radius: var(--border-radius); border: 1px solid var(--border); text-align: center; }
     .guide-image-block img { max-width: 100%; height: auto; border-radius: 6px; border: 1px solid var(--border); }
     .image-caption { margin-top: 10px; font-size: 0.85rem; color: var(--text-light); font-style: italic; }
-    .pro-tips { background: rgba(3, 74, 79, 0.05); padding: 15px; border-radius: 6px; margin: 20px 0; }
-    .pro-tips h4 { color: var(--primary); margin-top: 0; margin-bottom: 12px; font-size: 1.1rem; }
-    .tip-item { display: flex; gap: 8px; margin-bottom: 8px; align-items: flex-start; }
+    .pro-tips { background: rgba(3, 74, 79, 0.05); padding: 18px; border-radius: 8px; margin: 25px 0; }
+    .pro-tips h4 { color: var(--primary); margin-top: 0; margin-bottom: 12px; font-size: 1.15rem; }
+    .tip-item { display: flex; gap: 10px; margin-bottom: 10px; align-items: flex-start; }
+    .tip-item i { margin-top: 3px; }
     table { width: 100%; border-collapse: collapse; margin: 20px 0; }
-    th, td { border: 1px solid var(--border); padding: 8px; text-align: left; }
+    th, td { border: 1px solid var(--border); padding: 8px; text-align: left; vertical-align: top; }
     th { background: var(--background-light); }
-    .highlight { background: #f5f7fa; border-left: 4px solid #2d9cdb; padding: 10px 15px; margin: 20px 0; }
-    .faq-section ul { margin-left: 1em; }
-    .block-section { margin-bottom: 2em; }
+    code { background: var(--background-light); padding: 2px 4px; border-radius: 4px; font-size: 0.9em; }
+    ul, ol { margin-left: 18px; }
     @media (max-width: 768px) {
       .guide-content h2 { font-size: 1.4rem; margin-top: 25px; }
+      .guide-content h3 { font-size: 1.15rem; }
       .guide-image-block { padding: 12px; margin: 15px 0; }
       table, th, td { font-size: 0.95rem; }
     }
+
+    /* РЇРЅРґРµРєСЃ РњР°СЂРєРµС‚ СЂРµРєР»Р°РјРЅС‹Р№ Р±Р°РЅРЅРµСЂ */
+    .ym-hero-link {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+      max-width: 100%;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
     /* Р“РѕСЂРёР·РѕРЅС‚Р°Р»СЊРЅС‹Р№ Р±Р°РЅРЅРµСЂ-РєР°СЂС‚РѕС‡РєР° */
     .ym-hero-banner {
       width: 100%;
@@ -107,548 +119,323 @@
     }
 
     /* Р РµР№С‚РёРЅРі */
-    .ym-hero-top {
+    .ym-hero-rating {
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      gap: 8px;
-    }
-
-    .ym-hero-rating {
-      font-size: 13px;
-      font-weight: 500;
-      color: #111827;
-      background: #f9fafb;
-      border-radius: 999px;
-      padding: 4px 10px;
-    }
-
-    .ym-hero-rating-count {
+      gap: 4px;
+      font-size: 12px;
       color: #6b7280;
     }
 
-    /* Р¤РёРѕР»РµС‚РѕРІР°СЏ РєРЅРѕРїРєР° */
-    .ym-hero-button {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 9px 16px;
-      border-radius: 999px;
-      border: none;
-      background: #6a00ff;
-      color: #ffffff;
-      font-size: 14px;
-      font-weight: 600;
-      cursor: pointer;
-      box-shadow: 0 2px 6px rgba(88, 28, 135, 0.35);
-      transition: background 0.15s ease, transform 0.15s ease,
-                  box-shadow 0.15s ease;
-    }
-    .ym-hero-button::after {
-      content: "в†’";
-      margin-left: 6px;
-      font-size: 14px;
-    }
-    .ym-hero-button:hover {
-      background: #7c3aed;
-      transform: translateY(-1px);
-      box-shadow: 0 4px 10px rgba(88, 28, 135, 0.45);
+    .ym-hero-stars {
+      display: flex;
+      gap: 1px;
     }
 
-    /* Р®СЂРёРґРёС‡РµСЃРєРёР№ Р±Р»РѕРє */
-    .ym-hero-legal {
-      margin-top: 6px;
-      max-width: 600px;
+    .ym-hero-star {
+      width: 12px;
+      height: 12px;
+      fill: #fbbf24;
+    }
+
+    .ym-hero-reviews {
       font-size: 11px;
-      line-height: 1.3;
-      color: #6b7280;
-      margin-left: auto;
-      margin-right: auto;
+      color: #9ca3af;
     }
 
-    /* РђРґР°РїС‚РёРІ */
-    @media (max-width: 480px) {
+    /* Р¦РµРЅР° */
+    .ym-hero-price {
+      font-size: 16px;
+      font-weight: 700;
+      color: #111827;
+      margin: 0;
+    }
+
+    /* РљРЅРѕРїРєР° */
+    .ym-hero-button {
+      background: #007bff;
+      color: #ffffff;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background 0.2s ease;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .ym-hero-button:hover {
+      background: #0056b3;
+    }
+
+    /* РђРґР°РїС‚РёРІРЅРѕСЃС‚СЊ */
+    @media (max-width: 768px) {
       .ym-hero-banner {
-        max-width: 100%;
-        margin: 20px 0;
+        flex-direction: row;
+        min-height: auto;
       }
+
       .ym-hero-images {
-        height: 100px;
+        width: 120px;
+        height: auto;
+        flex-shrink: 0;
       }
+
       .ym-hero-content {
-        padding: 12px 12px;
+        flex: 1;
+        padding: 12px 16px;
       }
+
       .ym-hero-title {
         font-size: 13px;
       }
+
+      .ym-hero-price {
+        font-size: 15px;
+      }
+
       .ym-hero-button {
-        font-size: 13px;
-        padding: 8px 14px;
-      }
-      .ym-hero-legal {
-        font-size: 10px;
-      }
-    }
-    /* Telegram СЂРµРєР»Р°РјРЅС‹Р№ Р±Р°РЅРЅРµСЂ */
-    .telegram-banner {
-      display: flex;
-      justify-content: center;
-      text-decoration: none;
-      color: inherit;
-      width: 100%;
-      margin: 40px 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    }
-
-    .telegram-banner-container {
-      width: 100%;
-      max-width: 500px;
-      min-height: 120px;
-      border-radius: 16px;
-      background: linear-gradient(135deg, #0088cc 0%, #005f8f 100%);
-      border: 1px solid #005f8f;
-      display: flex;
-      align-items: center;
-      padding: 20px;
-      box-shadow: 0 4px 16px rgba(0, 136, 204, 0.2);
-      overflow: hidden;
-      box-sizing: border-box;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-
-    .telegram-banner-container:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(0, 136, 204, 0.3);
-    }
-
-    .telegram-logo {
-      width: 60px;
-      height: 60px;
-      min-width: 60px;
-      background: #ffffff;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-right: 20px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    }
-
-    .telegram-logo svg {
-      width: 32px;
-      height: 32px;
-      fill: #0088cc;
-    }
-
-    .telegram-content {
-      flex: 1;
-      color: #ffffff;
-    }
-
-    .telegram-title {
-      font-size: 16px;
-      font-weight: 600;
-      margin: 0 0 8px 0;
-      line-height: 1.3;
-    }
-
-    .telegram-subtitle {
-      font-size: 14px;
-      opacity: 0.9;
-      margin: 0 0 12px 0;
-      line-height: 1.4;
-    }
-
-    .telegram-button {
-      display: inline-flex;
-      align-items: center;
-      padding: 8px 16px;
-      background: #ffffff;
-      color: #0088cc;
-      border-radius: 20px;
-      font-size: 14px;
-      font-weight: 600;
-      text-decoration: none;
-      transition: background 0.2s ease, transform 0.2s ease;
-    }
-
-    .telegram-button:hover {
-      background: #f0f8ff;
-      transform: scale(1.05);
-    }
-
-    .telegram-button svg {
-      width: 16px;
-      height: 16px;
-      margin-left: 6px;
-      fill: #0088cc;
-    }
-
-    /* РђРґР°РїС‚РёРІ РґР»СЏ РјРѕР±РёР»СЊРЅС‹С… */
-    @media (max-width: 480px) {
-      .telegram-banner-container {
-        max-width: 100%;
-        margin: 20px 0;
-        padding: 15px;
-        min-height: 100px;
-      }
-      .telegram-logo {
-        width: 50px;
-        height: 50px;
-        min-width: 50px;
-        margin-right: 15px;
-      }
-      .telegram-logo svg {
-        width: 26px;
-        height: 26px;
-      }
-      .telegram-title {
-        font-size: 14px;
-      }
-      .telegram-subtitle {
-        font-size: 12px;
-      }
-      .telegram-button {
-        font-size: 12px;
-        padding: 6px 12px;
+        padding: 6px 10px;
+        font-size: 11px;
       }
     }
 
-
-
+    /* РЎРєСЂС‹С‚С‹Р№ Р±Р°РЅРЅРµСЂ РґР»СЏ РґРµСЃРєС‚РѕРїР° */
+    @media (min-width: 769px) {
+      .ym-hero-link {
+        display: none !important;
+      }
+    }
   </style>
   <script async src="https://timeweb.cloud/api/v1/cloud-ai/agents/3cc03620-d051-4d8d-b5af-f7b6cd083a35/embed.js?collapsed=true"></script>
 </head>
 <body>
-  <header class="header">
-    <div class="container">
-      <div class="header__inner">
-        <a href="../index.html" class="logo">
-          <span class="logo__icon"></span>
-          <span class="logo__text">GeoExpert</span>
-        </a>
-        <nav class="nav">
-          <ul class="nav__list">
-            <li><a href="../cameras.html" class="nav__link">РљР°РјРµСЂС‹</a></li>
-            <li><a href="../drones.html" class="nav__link">Р”СЂРѕРЅС‹</a></li>
-            <li><a href="../workflow.html" class="nav__link">Workflow</a></li>
-          </ul>
-        </nav>
+  <header>
+    <div class="header-content">
+      <a href="/" class="logo">
+        <i class="fas fa-tools"></i>
+        FixTech
+      </a>
+      <nav class="nav-links">
+        <a href="/">Р“Р»Р°РІРЅР°СЏ</a>
+        <a href="/articles">Р’СЃРµ СЃС‚Р°С‚СЊРё</a>
+        <a href="/smartphones">РЎРјР°СЂС‚С„РѕРЅС‹</a>
+        <a href="/laptops">РќРѕСѓС‚Р±СѓРєРё</a>
+        <a href="/tv">РўРµР»РµРІРёР·РѕСЂС‹</a>
+        <a href="/cameras">РљР°РјРµСЂС‹</a>
+        <a href="/consoles">РљРѕРЅСЃРѕР»Рё</a>
+        <a href="/auto-electronics">РђРІС‚РѕСЌР»РµРєС‚СЂРѕРЅРёРєР°</a>
+        <a href="/small-appliances">РњРµР»РєР°СЏ С‚РµС…РЅРёРєР°</a>
+        <a href="/large-appliances">РљСЂСѓРїРЅР°СЏ С‚РµС…РЅРёРєР°</a>
+      </nav>
+      <div class="search-container">
+        <input type="text" id="search-input" placeholder="РџРѕРёСЃРє РїРѕ СЃР°Р№С‚Сѓ..." />
+        <button id="search-button"><i class="fas fa-search"></i></button>
       </div>
     </div>
   </header>
 
   <main class="guide-container">
     <div class="guide-content">
-      <h1>Ноутбук не подключается к Bluetooth устройствам</h1>
-      <p>Когда ноутбук не подключается к Bluetooth устройствам, проблема связана с драйверами, адаптером или настройками. В этом экспертном мегагайде мы разберем все причины отсутствия подключения и предоставим решения для корректной работы Bluetooth.</p>
+      <h1>РќРѕСѓС‚Р±СѓРє РЅРµ РїРѕРґРєР»СЋС‡Р°РµС‚СЃСЏ Рє Bluetooth СѓСЃС‚СЂРѕР№СЃС‚РІР°Рј</h1>
+      <p>РљРѕРіРґР° РЅРѕСѓС‚Р±СѓРє РЅРµ РїРѕРґРєР»СЋС‡Р°РµС‚СЃСЏ Рє Bluetooth СѓСЃС‚СЂРѕР№СЃС‚РІР°Рј, РїСЂРѕР±Р»РµРјР° СЃРІСЏР·Р°РЅР° СЃ РґСЂР°Р№РІРµСЂР°РјРё, Р°РґР°РїС‚РµСЂРѕРј РёР»Рё РЅР°СЃС‚СЂРѕР№РєР°РјРё. Р’ СЌС‚РѕРј СЌРєСЃРїРµСЂС‚РЅРѕРј РјРµРіР°РіР°Р№РґРµ РјС‹ СЂР°Р·Р±РµСЂРµРј РІСЃРµ РїСЂРёС‡РёРЅС‹ РѕС‚СЃСѓС‚СЃС‚РІРёСЏ РїРѕРґРєР»СЋС‡РµРЅРёСЏ Рё РїСЂРµРґРѕСЃС‚Р°РІРёРј СЂРµС€РµРЅРёСЏ РґР»СЏ РєРѕСЂСЂРµРєС‚РЅРѕР№ СЂР°Р±РѕС‚С‹ Bluetooth.</p>
 
-      <h2>Признаки проблемы</h2>
+      <h2>РџСЂРёР·РЅР°РєРё РїСЂРѕР±Р»РµРјС‹</h2>
       <ul>
-        <li>Bluetooth устройства не обнаруживаются</li>
-        <li>Не удается подключить наушники/мышь</li>
-        <li>Работает на другом ноутбуке</li>
-        <li>Bluetooth адаптер не виден</li>
-        <li>Устройства не сопрягаются</li>
+        <li>Bluetooth СѓСЃС‚СЂРѕР№СЃС‚РІР° РЅРµ РѕР±РЅР°СЂСѓР¶РёРІР°СЋС‚СЃСЏ</li>
+        <li>РќРµ СѓРґР°РµС‚СЃСЏ РїРѕРґРєР»СЋС‡РёС‚СЊ РЅР°СѓС€РЅРёРєРё/РјС‹С€СЊ</li>
+        <li>Р Р°Р±РѕС‚Р°РµС‚ РЅР° РґСЂСѓРіРѕРј РЅРѕСѓС‚Р±СѓРєРµ</li>
+        <li>Bluetooth Р°РґР°РїС‚РµСЂ РЅРµ РІРёРґРµРЅ</li>
+        <li>РЈСЃС‚СЂРѕР№СЃС‚РІР° РЅРµ СЃРѕРїСЂСЏРіР°СЋС‚СЃСЏ</li>
       </ul>
 
-      <h2>Основные причины</h2>
+      <h2>РћСЃРЅРѕРІРЅС‹Рµ РїСЂРёС‡РёРЅС‹</h2>
       <table>
         <tr>
-          <th>Причина</th>
-          <th>Вероятность</th>
-          <th>Характерные признаки</th>
+          <th>РџСЂРёС‡РёРЅР°</th>
+          <th>Р’РµСЂРѕСЏС‚РЅРѕСЃС‚СЊ</th>
+          <th>РҐР°СЂР°РєС‚РµСЂРЅС‹Рµ РїСЂРёР·РЅР°РєРё</th>
         </tr>
         <tr>
-          <td>Драйверы Bluetooth</td>
+          <td>Р”СЂР°Р№РІРµСЂС‹ Bluetooth</td>
           <td>40%</td>
-          <td>Работает после обновления</td>
+          <td>Р Р°Р±РѕС‚Р°РµС‚ РїРѕСЃР»Рµ РѕР±РЅРѕРІР»РµРЅРёСЏ</td>
         </tr>
         <tr>
-          <td>Отключенный Bluetooth</td>
+          <td>РћС‚РєР»СЋС‡РµРЅРЅС‹Р№ Bluetooth</td>
           <td>25%</td>
-          <td>Работает после включения</td>
+          <td>Р Р°Р±РѕС‚Р°РµС‚ РїРѕСЃР»Рµ РІРєР»СЋС‡РµРЅРёСЏ</td>
         </tr>
         <tr>
-          <td>Поврежденный адаптер</td>
+          <td>РџРѕРІСЂРµР¶РґРµРЅРЅС‹Р№ Р°РґР°РїС‚РµСЂ</td>
           <td>20%</td>
-          <td>Работает после замены</td>
+          <td>Р Р°Р±РѕС‚Р°РµС‚ РїРѕСЃР»Рµ Р·Р°РјРµРЅС‹</td>
         </tr>
         <tr>
-          <td>Конфликты устройств</td>
+          <td>РљРѕРЅС„Р»РёРєС‚С‹ СѓСЃС‚СЂРѕР№СЃС‚РІ</td>
           <td>10%</td>
-          <td>Работает после сброса</td>
+          <td>Р Р°Р±РѕС‚Р°РµС‚ РїРѕСЃР»Рµ СЃР±СЂРѕСЃР°</td>
         </tr>
         <tr>
-          <td>BIOS настройки</td>
+          <td>BIOS РЅР°СЃС‚СЂРѕР№РєРё</td>
           <td>4%</td>
-          <td>Работает после изменения</td>
+          <td>Р Р°Р±РѕС‚Р°РµС‚ РїРѕСЃР»Рµ РёР·РјРµРЅРµРЅРёСЏ</td>
         </tr>
         <tr>
-          <td>Повреждение</td>
+          <td>РџРѕРІСЂРµР¶РґРµРЅРёРµ</td>
           <td>1%</td>
-          <td>Не работает после всех решений</td>
+          <td>РќРµ СЂР°Р±РѕС‚Р°РµС‚ РїРѕСЃР»Рµ РІСЃРµС… СЂРµС€РµРЅРёР№</td>
         </tr>
       </table>
 
-      <h2>Диагностика проблемы</h2>
-      <h3>Проверка Bluetooth</h3>
+      <h2>Р”РёР°РіРЅРѕСЃС‚РёРєР° РїСЂРѕР±Р»РµРјС‹</h2>
+      <h3>РџСЂРѕРІРµСЂРєР° Bluetooth</h3>
       <ol>
-        <li>Параметры > Устройства > Bluetooth</li>
-        <li>Посмотрите, включен ли Bluetooth</li>
-        <li>Проверьте список устройств</li>
+        <li>РџР°СЂР°РјРµС‚СЂС‹ в†’ РЈСЃС‚СЂРѕР№СЃС‚РІР° в†’ Bluetooth</li>
+        <li>РџРѕСЃРјРѕС‚СЂРёС‚Рµ, РІРєР»СЋС‡РµРЅ Р»Рё Bluetooth</li>
+        <li>РџСЂРѕРІРµСЂСЊС‚Рµ СЃРїРёСЃРѕРє СѓСЃС‚СЂРѕР№СЃС‚РІ</li>
       </ol>
 
-      <h3>Диспетчер устройств</h3>
+      <h3>Р”РёСЃРїРµС‚С‡РµСЂ СѓСЃС‚СЂРѕР№СЃС‚РІ</h3>
       <ol>
-        <li>devmgmt.msc > Bluetooth</li>
-        <li>Посмотрите статус адаптера</li>
-        <li>Проверьте на ошибки</li>
+        <li>devmgmt.msc в†’ Bluetooth</li>
+        <li>РџРѕСЃРјРѕС‚СЂРёС‚Рµ СЃС‚Р°С‚СѓСЃ Р°РґР°РїС‚РµСЂР°</li>
+        <li>РџСЂРѕРІРµСЂСЊС‚Рµ РЅР° РѕС€РёР±РєРё</li>
       </ol>
 
-      <h2>Решение 1: Включение Bluetooth</h2>
-      <h3>Параметры Windows</h3>
+      <h2>Р РµС€РµРЅРёРµ 1: Р’РєР»СЋС‡РµРЅРёРµ Bluetooth</h2>
+      <h3>РџР°СЂР°РјРµС‚СЂС‹ Windows</h3>
       <ol>
-        <li>Параметры > Устройства > Bluetooth</li>
-        <li>Включить Bluetooth</li>
-        <li>Сделать видимым</li>
+        <li>РџР°СЂР°РјРµС‚СЂС‹ в†’ РЈСЃС‚СЂРѕР№СЃС‚РІР° в†’ Bluetooth</li>
+        <li>Р’РєР»СЋС‡РёС‚СЊ Bluetooth</li>
+        <li>РЎРґРµР»Р°С‚СЊ РІРёРґРёРјС‹Рј</li>
       </ol>
 
-      <h3>Горячие клавиши</h3>
+      <h3>Р“РѕСЂСЏС‡РёРµ РєР»Р°РІРёС€Рё</h3>
       <ol>
-        <li>Fn + F8 (зависит от модели)</li>
-        <li>Иконка Bluetooth в трее</li>
+        <li>Fn + F8 (Р·Р°РІРёСЃРёС‚ РѕС‚ РјРѕРґРµР»Рё)</li>
+        <li>РРєРѕРЅРєР° Bluetooth РІ С‚СЂРµРµ</li>
       </ol>
 
-      <h2>Решение 2: Обновление драйверов</h2>
-      <h3>Драйверы Bluetooth</h3>
+      <h2>Р РµС€РµРЅРёРµ 2: РћР±РЅРѕРІР»РµРЅРёРµ РґСЂР°Р№РІРµСЂРѕРІ</h2>
+      <h3>Р”СЂР°Р№РІРµСЂС‹ Bluetooth</h3>
       <ol>
-        <li>Диспетчер устройств > Bluetooth</li>
-        <li>Обновить драйвер</li>
-        <li>Установить с сайта производителя</li>
+        <li>Р”РёСЃРїРµС‚С‡РµСЂ СѓСЃС‚СЂРѕР№СЃС‚РІ в†’ Bluetooth</li>
+        <li>РћР±РЅРѕРІРёС‚СЊ РґСЂР°Р№РІРµСЂ</li>
+        <li>РЈСЃС‚Р°РЅРѕРІРёС‚СЊ СЃ СЃР°Р№С‚Р° РїСЂРѕРёР·РІРѕРґРёС‚РµР»СЏ</li>
       </ol>
 
-      <h3>Драйверы чипсета</h3>
+      <h3>Р”СЂР°Р№РІРµСЂС‹ С‡РёРїСЃРµС‚Р°</h3>
       <ol>
-        <li>Скачать Intel Wireless Bluetooth</li>
-        <li>Установить последние версии</li>
+        <li>РЎРєР°С‡Р°С‚СЊ Intel Wireless Bluetooth</li>
+        <li>РЈСЃС‚Р°РЅРѕРІРёС‚СЊ РїРѕСЃР»РµРґРЅРёРµ РІРµСЂСЃРёРё</li>
       </ol>
 
-      <h2>Решение 3: Сброс Bluetooth</h2>
-      <h3>Удаление устройств</h3>
+      <h2>Р РµС€РµРЅРёРµ 3: РЎР±СЂРѕСЃ Bluetooth</h2>
+      <h3>РЈРґР°Р»РµРЅРёРµ СѓСЃС‚СЂРѕР№СЃС‚РІ</h3>
       <ol>
-        <li>Параметры > Устройства > Bluetooth</li>
-        <li>Удалить все сопряженные устройства</li>
-        <li>Перезагрузить ноутбук</li>
-        <li>Подключить заново</li>
+        <li>РџР°СЂР°РјРµС‚СЂС‹ в†’ РЈСЃС‚СЂРѕР№СЃС‚РІР° в†’ Bluetooth</li>
+        <li>РЈРґР°Р»РёС‚СЊ РІСЃРµ СЃРѕРїСЂСЏР¶РµРЅРЅС‹Рµ СѓСЃС‚СЂРѕР№СЃС‚РІР°</li>
+        <li>РџРµСЂРµР·Р°РіСЂСѓР·РёС‚СЊ РЅРѕСѓС‚Р±СѓРє</li>
+        <li>РџРѕРґРєР»СЋС‡РёС‚СЊ Р·Р°РЅРѕРІРѕ</li>
       </ol>
 
-      <h2>Решение 4: BIOS настройки</h2>
+      <h2>Р РµС€РµРЅРёРµ 4: BIOS РЅР°СЃС‚СЂРѕР№РєРё</h2>
       <h3>Wireless Settings</h3>
       <ol>
-        <li>Войти в BIOS</li>
-        <li>Найти настройки Bluetooth</li>
-        <li>Включить Bluetooth</li>
-        <li>Сохранить изменения</li>
+        <li>Р’РѕР№С‚Рё РІ BIOS</li>
+        <li>РќР°Р№С‚Рё РЅР°СЃС‚СЂРѕР№РєРё Bluetooth</li>
+        <li>Р’РєР»СЋС‡РёС‚СЊ Bluetooth</li>
+        <li>РЎРѕС…СЂР°РЅРёС‚СЊ РёР·РјРµРЅРµРЅРёСЏ</li>
       </ol>
 
-      <h2>Решение 5: Внешний адаптер</h2>
+      <h2>Р РµС€РµРЅРёРµ 5: Р’РЅРµС€РЅРёР№ Р°РґР°РїС‚РµСЂ</h2>
       <h3>USB Bluetooth</h3>
       <ol>
-        <li>Купить USB Bluetooth 5.0 адаптер</li>
-        <li>Подключить к USB порту</li>
-        <li>Установить драйверы</li>
+        <li>РљСѓРїРёС‚СЊ USB Bluetooth 5.0 Р°РґР°РїС‚РµСЂ</li>
+        <li>РџРѕРґРєР»СЋС‡РёС‚СЊ Рє USB РїРѕСЂС‚Сѓ</li>
+        <li>РЈСЃС‚Р°РЅРѕРІРёС‚СЊ РґСЂР°Р№РІРµСЂС‹</li>
       </ol>
 
-      <h2>Решение 6: Устранение неполадок</h2>
-      <h3>Службы Windows</h3>
+      <h2>Р РµС€РµРЅРёРµ 6: РЈСЃС‚СЂР°РЅРµРЅРёРµ РЅРµРїРѕР»Р°РґРѕРє</h2>
+      <h3>РЎР»СѓР¶Р±С‹ Windows</h3>
       <ol>
-        <li>services.msc > Bluetooth Support Service</li>
-        <li>Запустить службу</li>
-        <li>Установить автоматический запуск</li>
+        <li>services.msc в†’ Bluetooth Support Service</li>
+        <li>Р—Р°РїСѓСЃС‚РёС‚СЊ СЃР»СѓР¶Р±Сѓ</li>
+        <li>РЈСЃС‚Р°РЅРѕРІРёС‚СЊ Р°РІС‚РѕРјР°С‚РёС‡РµСЃРєРёР№ Р·Р°РїСѓСЃРє</li>
       </ol>
 
       <div class="pro-tips">
-        <h4><i class="fas fa-lightbulb"></i> Профессиональные советы</h4>
+        <h4><i class="fas fa-lightbulb"></i> РџСЂРѕС„РµСЃСЃРёРѕРЅР°Р»СЊРЅС‹Рµ СЃРѕРІРµС‚С‹</h4>
         <div class="tip-item">
           <i class="fas fa-tools"></i>
-          <span>Всегда обновляйте драйверы Bluetooth с официального сайта</span>
+          <span>Р’СЃРµРіРґР° РѕР±РЅРѕРІР»СЏР№С‚Рµ РґСЂР°Р№РІРµСЂС‹ Bluetooth СЃ РѕС„РёС†РёР°Р»СЊРЅРѕРіРѕ СЃР°Р№С‚Р°</span>
         </div>
         <div class="tip-item">
           <i class="fas fa-bluetooth"></i>
-          <span>Сбрасывайте сопряжение устройств при проблемах подключения</span>
+          <span>РЎР±СЂР°СЃС‹РІР°Р№С‚Рµ СЃРѕРїСЂСЏР¶РµРЅРёРµ СѓСЃС‚СЂРѕР№СЃС‚РІ РїСЂРё РїСЂРѕР±Р»РµРјР°С… РїРѕРґРєР»СЋС‡РµРЅРёСЏ</span>
         </div>
         <div class="tip-item">
           <i class="fas fa-sync-alt"></i>
-          <span>Включайте Bluetooth в BIOS для правильной работы</span>
+          <span>Р’РєР»СЋС‡Р°Р№С‚Рµ Bluetooth РІ BIOS РґР»СЏ РїСЂР°РІРёР»СЊРЅРѕР№ СЂР°Р±РѕС‚С‹</span>
         </div>
         <div class="tip-item">
           <i class="fas fa-plug"></i>
-          <span>Используйте качественные USB Bluetooth адаптеры при необходимости</span>
+          <span>РСЃРїРѕР»СЊР·СѓР№С‚Рµ РєР°С‡РµСЃС‚РІРµРЅРЅС‹Рµ USB Bluetooth Р°РґР°РїС‚РµСЂС‹ РїСЂРё РЅРµРѕР±С…РѕРґРёРјРѕСЃС‚Рё</span>
         </div>
       </div>
 
-      <h2>Расширенные решения</h2>
-      <h3>Восстановление системы</h3>
+      <h2>Р Р°СЃС€РёСЂРµРЅРЅС‹Рµ СЂРµС€РµРЅРёСЏ</h2>
+      <h3>Р’РѕСЃСЃС‚Р°РЅРѕРІР»РµРЅРёРµ СЃРёСЃС‚РµРјС‹</h3>
       <ol>
-        <li>Win + R > rstrui</li>
-        <li>Выберите точку восстановления</li>
-        <li>Восстановите систему</li>
+        <li>Win + R в†’ rstrui</li>
+        <li>Р’С‹Р±РµСЂРёС‚Рµ С‚РѕС‡РєСѓ РІРѕСЃСЃС‚Р°РЅРѕРІР»РµРЅРёСЏ</li>
+        <li>Р’РѕСЃСЃС‚Р°РЅРѕРІРёС‚Рµ СЃРёСЃС‚РµРјСѓ</li>
       </ol>
 
-      <h3>Замена адаптера</h3>
+      <h3>Р—Р°РјРµРЅР° Р°РґР°РїС‚РµСЂР°</h3>
       <ol>
-        <li>Если Bluetooth поврежден</li>
-        <li>Обратитесь в сервис</li>
-        <li>Замените модуль</li>
+        <li>Р•СЃР»Рё Bluetooth РїРѕРІСЂРµР¶РґРµРЅ</li>
+        <li>РћР±СЂР°С‚РёС‚РµСЃСЊ РІ СЃРµСЂРІРёСЃ</li>
+        <li>Р—Р°РјРµРЅРёС‚Рµ РјРѕРґСѓР»СЊ</li>
       </ol>
 
-      <h2>Частые вопросы</h2>
-      <h3>Почему ноутбук не подключается к Bluetooth?</h3>
-      <p>Отключен Bluetooth или устаревшие драйверы. Включите и обновите драйверы.</p>
+      <h2>Р§Р°СЃС‚С‹Рµ РІРѕРїСЂРѕСЃС‹</h2>
+      <h3>РџРѕС‡РµРјСѓ РЅРѕСѓС‚Р±СѓРє РЅРµ РїРѕРґРєР»СЋС‡Р°РµС‚СЃСЏ Рє Bluetooth?</h3>
+      <p>РћС‚РєР»СЋС‡РµРЅ Bluetooth РёР»Рё СѓСЃС‚Р°СЂРµРІС€РёРµ РґСЂР°Р№РІРµСЂС‹. Р’РєР»СЋС‡РёС‚Рµ Рё РѕР±РЅРѕРІРёС‚Рµ РґСЂР°Р№РІРµСЂС‹.</p>
 
-      <h3>Можно ли добавить Bluetooth?</h3>
-      <p>Да, с помощью USB адаптера.</p>
+      <h3>РњРѕР¶РЅРѕ Р»Рё РґРѕР±Р°РІРёС‚СЊ Bluetooth?</h3>
+      <p>Р”Р°, СЃ РїРѕРјРѕС‰СЊСЋ USB Р°РґР°РїС‚РµСЂР°.</p>
 
-      <h3>Что делать, если устройства не сопрягаются?</h3>
-      <p>Сбросьте Bluetooth и попробуйте заново.</p>
+      <h3>Р§С‚Рѕ РґРµР»Р°С‚СЊ, РµСЃР»Рё СѓСЃС‚СЂРѕР№СЃС‚РІР° РЅРµ СЃРѕРїСЂСЏРіР°СЋС‚СЃСЏ?</h3>
+      <p>РЎР±СЂРѕСЃСЊС‚Рµ Bluetooth Рё РїРѕРїСЂРѕР±СѓР№С‚Рµ Р·Р°РЅРѕРІРѕ.</p>
 
-      <h2>Когда нужна замена</h2>
+      <h2>РљРѕРіРґР° РЅСѓР¶РЅР° Р·Р°РјРµРЅР°</h2>
       <ul>
-        <li>Bluetooth адаптер поврежден</li>
-        <li>BIOS не позволяет настройки</li>
-        <li>Все решения не помогли</li>
+        <li>Bluetooth Р°РґР°РїС‚РµСЂ РїРѕРІСЂРµР¶РґРµРЅ</li>
+        <li>BIOS РЅРµ РїРѕР·РІРѕР»СЏРµС‚ РЅР°СЃС‚СЂРѕР№РєРё</li>
+        <li>Р’СЃРµ СЂРµС€РµРЅРёСЏ РЅРµ РїРѕРјРѕРіР»Рё</li>
       </ul>
 
-      <p>В большинстве случаев проблема решается включением Bluetooth и обновлением драйверов. Начните с проверки настроек.</p>
+      <p>Р’ Р±РѕР»СЊС€РёРЅСЃС‚РІРµ СЃР»СѓС‡Р°РµРІ РїСЂРѕР±Р»РµРјР° СЂРµС€Р°РµС‚СЃСЏ РІРєР»СЋС‡РµРЅРёРµРј Bluetooth Рё РѕР±РЅРѕРІР»РµРЅРёРµРј РґСЂР°Р№РІРµСЂРѕРІ. РќР°С‡РЅРёС‚Рµ СЃ РїСЂРѕРІРµСЂРєРё РЅР°СЃС‚СЂРѕРµРє.</p>
     </div>
   </main>
 
-      <footer class="footer">
-        <div class="container">
-            <div class="footer__grid">
-                <div class="footer__col footer__col--logo">
-                    <a href="../index.html" class="footer-logo">
-                        <span class="logo__icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M12 15L7 10H17L12 15Z" fill="currentColor"/>
-                                <path d="M12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3ZM12 19C8.13401 19 5 15.866 5 12C5 8.13401 8.13401 5 12 5C15.866 5 19 8.13401 19 12C19 15.866 15.866 19 12 19Z" fill="currentColor"/>
-                            </svg>
-                        </span>
-                        <span class="logo__text">Repairo</span>
-                    </a>
-                    <p class="footer__text">Помогаем ремонтировать электронику с 2024 года</p>
-                </div>
-                <div class="footer__col">
-                    <h3 class="footer__title">Разделы</h3>
-                    <ul class="footer__links">
-                        <li><a href="../index.html" class="footer__link">Главная</a></li>
-                        <li><a href="../index.html#categories" class="footer__link">Все гайды</a></li>
-                        <li><a href="../contacts.html" class="footer__link">Контакты</a></li>
-                    </ul>
-                </div>
-                <div class="footer__col">
-                    <h3 class="footer__title">Категории</h3>
-                    <ul class="footer__links">
-                        <li><a href="../tv.html" class="nav__link">Телевизоры</a></li>
-                        <li><a href="../cameras.html" class="nav__link">Фотоаппараты</a></li>
-                        <li><a href="../consoles.html" class="nav__link">Приставки</a></li>
-                        <li><a href="../laptops.html" class="nav__link">Ноутбуки</a></li>
-                        <li><a href="../smartphones.html" class="nav__link">Смартфоны</a></li>
-                        <li><a href="../small-appliances.html" class="nav__link">Мелкая техника</a></li>
-                        <li><a href="../large-appliances.html" class="nav__link">Бытовая техника</a></li>
-                        <li><a href="../auto-electronics.html" class="nav__link">Авто-Электроника</a></li>
-                    </ul>
-                </div>
-                <div class="footer__col">
-                    <h3 class="footer__title">Контакты</h3>
-                    <ul class="footer__links">
-                        <li><a href="https://t.me/RepairoRU" class="footer__link"><i class="fab fa-telegram"></i> Telegram</a></li>
-                        <li><span class="footer__link">Наша почта: repairo.info@mail.ru</span></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer__bottom">
-                <p class="disclaimer">
-    Администрация сайта не несёт ответственности за возможные повреждения техники
-    и иные последствия, возникшие в результате самостоятельного ремонта по
-    материалам и инструкциям, размещённым на сайте. Все работы вы выполняете
-    на свой страх и риск.
-    </p>
-                <p class="footer__copyright">© 2026 Repairo. Все права защищены.</p>
-            </div>
-        </div>
-    </footer>
-    <!-- Cookie Consent Banner -->
-    <script src="../script.js"></script>
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2024 FixTech. Р’СЃРµ РїСЂР°РІР° Р·Р°С‰РёС‰РµРЅС‹.</p>
+      <div class="footer-links">
+        <a href="/privacy">РљРѕРЅС„РёРґРµРЅС†РёР°Р»СЊРЅРѕСЃС‚СЊ</a>
+        <a href="/terms">РЈСЃР»РѕРІРёСЏ РёСЃРїРѕР»СЊР·РѕРІР°РЅРёСЏ</a>
+        <a href="/contact">РљРѕРЅС‚Р°РєС‚С‹</a>
+      </div>
+    </div>
+  </footer>
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "HowTo",
-  "name": "Ноутбук не подключается к Bluetooth устройствам | Экспертный мегагайд",
-  "description": "",
-  "totalTime": "PT30M",
-  "step": [
-    {
-      "@type": "HowToStep",
-      "name": "Введение: почему Cyberpunk 2077 может тормозить на PS5 после патчей?",
-      "text": "Введение: почему Cyberpunk 2077 может тормозить на PS5 после патчей?",
-      "url": "#step-1"
-    },
-    {
-      "@type": "HowToStep",
-      "name": "Таблица: основные причины лагов и просадок FPS в Cyberpunk 2077 на PS5 после обновлений",
-      "text": "Таблица: основные причины лагов и просадок FPS в Cyberpunk 2077 на PS5 после обновлений",
-      "url": "#step-2"
-    },
-    {
-      "@type": "HowToStep",
-      "name": "Пошаговая инструкция: что делать, если Cyberpunk 2077 тормозит на PS5 после обновления",
-      "text": "Пошаговая инструкция: что делать, если Cyberpunk 2077 тормозит на PS5 после обновления",
-      "url": "#step-3"
-    },
-    {
-      "@type": "HowToStep",
-      "name": "Таблица: сравнение режимов графики и FPS в Cyberpunk 2077 на PS5",
-      "text": "Таблица: сравнение режимов графики и FPS в Cyberpunk 2077 на PS5",
-      "url": "#step-4"
-    },
-    {
-      "@type": "HowToStep",
-      "name": "Отзывы игроков и тесты Digital Foundry",
-      "text": "Отзывы игроков и тесты Digital Foundry",
-      "url": "#step-5"
-    },
-    {
-      "@type": "HowToStep",
-      "name": "Лайфхаки и советы по оптимизации Cyberpunk 2077 на PS5",
-      "text": "Лайфхаки и советы по оптимизации Cyberpunk 2077 на PS5",
-      "url": "#step-6"
-    },
-    {
-      "@type": "HowToStep",
-      "name": "FAQ – часто задаваемые вопросы о тормозах Cyberpunk 2077 на PS5",
-      "text": "FAQ – часто задаваемые вопросы о тормозах Cyberpunk 2077 на PS5",
-      "url": "#step-7"
-    },
-    {
-      "@type": "HowToStep",
-      "name": "Пошаговая инструкция: как восстановить базу данных PS5",
-      "text": "Пошаговая инструкция: как восстановить базу данных PS5",
-      "url": "#step-8"
-    }
-  ],
-  "image": "https://repairo.ru/https://mc.yandex.ru/watch/106225686"
-}
-</script>
-<!-- Cookie Consent Script -->
-<script src="../cookie-consent.js"></script>
+  <script src="../script.js"></script>
+  <script src="../search.js"></script>
 </body>
 </html>
-
-
-
-
-
-

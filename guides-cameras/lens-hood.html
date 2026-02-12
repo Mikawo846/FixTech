@@ -2,36 +2,43 @@
 <html lang="ru" data-theme="light">
 <head>
 
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Зачем нужен бленда и как ее выбрать? | Repairo</title>
-    <meta name="description" content="">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Р—Р°С‡РµРј РЅСѓР¶РµРЅ Р±Р»РµРЅРґР° Рё РєР°Рє РµРµ РІС‹Р±СЂР°С‚СЊ? | Repairo</title>
+    <meta name="description" content="{{ description }}">
+    <meta name="description" content="РџРѕС€Р°РіРѕРІР°СЏ РёРЅСЃС‚СЂСѓРєС†РёСЏ: Р—Р°С‡РµРј РЅСѓР¶РµРЅ Р±Р»РµРЅРґР° Рё РєР°Рє РµРµ РІС‹Р±СЂР°С‚СЊ?. Р‘Р»РµРЅРґР° РјРѕР¶РµС‚ РѕСЃС‚Р°РІР°С‚СЊСЃСЏ РЅР° РѕР±СЉРµРєС‚РёРІРµ РїРѕСЃС‚РѕСЏРЅРЅРѕ - РѕРЅР° РЅРµ РјРµС€Р°РµС‚ Рё Р·Р°С‰РёС‰Р°РµС‚ СЃС‚РµРєР»Рѕ.... РЎРѕРІРµС‚С‹ СЌРєСЃРїРµ...">
 
-  <link rel="stylesheet" href="../styles.css" />
-  <link rel="stylesheet" href="../styles-header.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <style>
-    .guide-content { line-height: 1.7; color: var(--text); }
-    .guide-content h2 { color: var(--primary); margin-top: 30px; margin-bottom: 15px; font-size: 1.5rem; }
-    .guide-content h3 { color: var(--primary-dark); margin-top: 25px; margin-bottom: 12px; font-size: 1.2rem; }
-    .guide-image-block { margin: 20px 0; padding: 15px; background: var(--background); border-radius: var(--border-radius); border: 1px solid var(--border); text-align: center; }
-    .guide-image-block img { max-width: 100%; height: auto; border-radius: 6px; border: 1px solid var(--border); }
-    .image-caption { margin-top: 10px; font-size: 0.85rem; color: var(--text-light); font-style: italic; }
-    .pro-tips { background: rgba(3, 74, 79, 0.05); padding: 15px; border-radius: 6px; margin: 20px 0; }
-    .pro-tips h4 { color: var(--primary); margin-top: 0; margin-bottom: 12px; font-size: 1.1rem; }
-    .tip-item { display: flex; gap: 8px; margin-bottom: 8px; align-items: flex-start; }
-    table { width: 100%; border-collapse: collapse; margin: 20px 0; }
-    th, td { border: 1px solid var(--border); padding: 8px; text-align: left; }
-    th { background: var(--background-light); }
-    .highlight { background: #f5f7fa; border-left: 4px solid #2d9cdb; padding: 10px 15px; margin: 20px 0; }
-    .faq-section ul { margin-left: 1em; }
-    .block-section { margin-bottom: 2em; }
-    @media (max-width: 768px) {
-      .guide-content h2 { font-size: 1.4rem; margin-top: 25px; }
-      .guide-image-block { padding: 12px; margin: 15px 0; }
-      table, th, td { font-size: 0.95rem; }
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../styles-header.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .guide-content { line-height: 1.7; color: var(--text);}
+        .guide-content h2 { color: var(--primary); margin-top: 30px; margin-bottom: 15px; font-size: 1.5rem;}
+        .step-group { margin: 20px 0; padding: 15px; background: var(--background); border-radius: var(--border-radius); border: 1px solid var(--border);}
+        .step { display: flex; gap: 15px; margin: 12px 0; padding: 12px; background: var(--background-alt); border-radius: 6px; align-items: flex-start;}
+        .step-number { background: var(--primary); color: white; width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-weight: bold; font-size: 0.8rem;}
+        .guide-image-block { margin: 20px 0; padding: 15px; background: var(--background); border-radius: var(--border-radius); border: 1px solid var(--border); text-align: center;}
+        .guide-image-block img { max-width: 100%; height: auto; border-radius: 6px; border: 1px solid var(--border);}
+        .recommend-box { background: rgba(3, 74, 79, 0.1); border-left: 4px solid var(--primary); padding: 12px; margin: 15px 0; display: flex; gap: 12px; align-items: flex-start; border-radius: 4px;}
+        .recommend-box i { font-size: 1.2rem; color: var(--primary); margin-top: 2px;}
+        .pro-tips { background: rgba(3, 74, 79, 0.05); padding: 15px; border-radius: 6px; margin: 20px 0;}
+        .pro-tips h4 { color: var(--primary); margin-top: 0; margin-bottom: 12px; font-size: 1.1rem;}
+        .tip-item { display: flex; gap: 8px; margin-bottom: 8px; align-items: flex-start;}
+        @media (max-width: 768px) {
+            .guide-content h2 { font-size: 1.4rem; margin-top: 25px;}
+            .guide-image-block, .step-group { padding: 12px; margin: 15px 0;}
+            .step { padding: 10px;}
+        }
+    /* РЇРЅРґРµРєСЃ РњР°СЂРєРµС‚ СЂРµРєР»Р°РјРЅС‹Р№ Р±Р°РЅРЅРµСЂ */
+    .ym-hero-link {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+      max-width: 100%;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     }
+
     /* Р“РѕСЂРёР·РѕРЅС‚Р°Р»СЊРЅС‹Р№ Р±Р°РЅРЅРµСЂ-РєР°СЂС‚РѕС‡РєР° */
     .ym-hero-banner {
       width: 100%;
@@ -144,11 +151,13 @@
       transition: background 0.15s ease, transform 0.15s ease,
                   box-shadow 0.15s ease;
     }
+
     .ym-hero-button::after {
       content: "в†’";
       margin-left: 6px;
       font-size: 14px;
     }
+
     .ym-hero-button:hover {
       background: #7c3aed;
       transform: translateY(-1px);
@@ -172,19 +181,24 @@
         max-width: 100%;
         margin: 20px 0;
       }
+
       .ym-hero-images {
         height: 100px;
       }
+
       .ym-hero-content {
         padding: 12px 12px;
       }
+
       .ym-hero-title {
         font-size: 13px;
       }
+
       .ym-hero-button {
         font-size: 13px;
         padding: 8px 14px;
       }
+
       .ym-hero-legal {
         font-size: 10px;
       }
@@ -292,22 +306,27 @@
         padding: 15px;
         min-height: 100px;
       }
+
       .telegram-logo {
         width: 50px;
         height: 50px;
         min-width: 50px;
         margin-right: 15px;
       }
+
       .telegram-logo svg {
         width: 26px;
         height: 26px;
       }
+
       .telegram-title {
         font-size: 14px;
       }
+
       .telegram-subtitle {
         font-size: 12px;
       }
+
       .telegram-button {
         font-size: 12px;
         padding: 6px 12px;
@@ -316,118 +335,132 @@
 
 
 
-  </style>
+    </style>
   <script async src="https://timeweb.cloud/api/v1/cloud-ai/agents/3cc03620-d051-4d8d-b5af-f7b6cd083a35/embed.js?collapsed=true"></script>
 </head>
 <body>
-  <header class="header">
-    <div class="container">
-      <div class="header__inner">
-        <a href="../index.html" class="logo">
-          <span class="logo__icon"></span>
-          <span class="logo__text">GeoExpert</span>
-        </a>
-        <nav class="nav">
-          <ul class="nav__list">
-            <li><a href="../cameras.html" class="nav__link">РљР°РјРµСЂС‹</a></li>
-            <li><a href="../drones.html" class="nav__link">Р”СЂРѕРЅС‹</a></li>
-            <li><a href="../workflow.html" class="nav__link">Workflow</a></li>
-          </ul>
-        </nav>
-      </div>
-    </div>
-  </header>
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <a href="../index.html" class="logo">
+                    <span class="logo__icon"></span>
+                    <span class="logo__text">Repairo</span>
+                </a>
+                <nav class="nav">
+                    <ul class="nav__list">
+                        <li><a href="../cameras.html" class="nav__link">Р¤РѕС‚РѕР°РїРїР°СЂР°С‚С‹</a></li>
+                        <li><a href="../tv.html" class="nav__link">РўРµР»РµРІРёР·РѕСЂС‹</a></li>
+                        <li><a href="../laptops.html" class="nav__link">РќРѕСѓС‚Р±СѓРєРё</a></li>
+                        <li><a href="../smartphones.html" class="nav__link">РЎРјР°СЂС‚С„РѕРЅС‹</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
     <section class="guide-page">
         <div class="container">
             <div class="breadcrumbs">
-                <a href="../index.html">Главная</a>
+                <a href="../index.html">Р“Р»Р°РІРЅР°СЏ</a>
                 <i class="fas fa-chevron-right"></i>
-                <a href="../cameras.html">Фотоаппараты</a>
+                <a href="../cameras.html">Р¤РѕС‚РѕР°РїРїР°СЂР°С‚С‹</a>
                 <i class="fas fa-chevron-right"></i>
-                <span>Зачем нужен бленда и как ее выбрать?</span>
+                <span>Р—Р°С‡РµРј РЅСѓР¶РµРЅ Р±Р»РµРЅРґР° Рё РєР°Рє РµРµ РІС‹Р±СЂР°С‚СЊ?</span>
             </div>
-            <h1 class="section__title">Зачем нужен бленда и как ее выбрать?</h1>
+            <h1 class="section__title">Р—Р°С‡РµРј РЅСѓР¶РµРЅ Р±Р»РµРЅРґР° Рё РєР°Рє РµРµ РІС‹Р±СЂР°С‚СЊ?</h1>
             <div class="guide-meta">
-                <span><i class="fas fa-adjust"></i> Практический гайд</span>
+                <span><i class="fas fa-adjust"></i> РџСЂР°РєС‚РёС‡РµСЃРєРёР№ РіР°Р№Рґ</span>
             </div>
             <div class="guide-image-block">
                 <img src="https://avatars.mds.yandex.net/get-shedevrum/13110292/img_2e39603c2d7411f09aa43268489cbacc/orig">
             </div>
             <div class="guide-content">
-        <!-- Яндекс Маркет рекламный блок -->
+        <!-- РЇРЅРґРµРєСЃ РњР°СЂРєРµС‚ СЂРµРєР»Р°РјРЅС‹Р№ Р±Р»РѕРє -->
         <a href="https://market.yandex.ru/catalog--bytovaia-tekhnika/54419/list?hid=198118&rs=eJwzUvjEKMvBILDwEKsEg8Kzbh6Nw4dZNS4D8c7lFhp9c1-wAQC3uAwP&clid=14635360&refid=rbck8fgamv681iu59go3iqxwddedl4x9&erid=5jtCeReNx12oajxS2bzShmZ&mclid=1003&distr_type=7&utm_source=partner_network&pp=900&utm_medium=link_list&utm_campaign=14635360"
            target="_blank"
            rel="noopener noreferrer sponsored"
+           class="ym-hero-link">
+          <div class="ym-hero-banner">
+            <div class="ym-hero-images">
+              <div class="ym-hero-image">
                 <img src="https://avatars.mds.yandex.net/get-mpic/14770882/2a00000197f4dbee777f8afddccaf44faa53/optimize"
-                     alt="Распродажа бытовой электроники 1">
+                     alt="Р Р°СЃРїСЂРѕРґР°Р¶Р° Р±С‹С‚РѕРІРѕР№ СЌР»РµРєС‚СЂРѕРЅРёРєРё 1">
               </div>
+              <div class="ym-hero-image">
                 <img src="https://avatars.mds.yandex.net/get-mpic/15580298/img_id8867318964670654684.jpeg/optimize"
-                     alt="Распродажа бытовой электроники 2">
+                     alt="Р Р°СЃРїСЂРѕРґР°Р¶Р° Р±С‹С‚РѕРІРѕР№ СЌР»РµРєС‚СЂРѕРЅРёРєРё 2">
               </div>
+              <div class="ym-hero-image">
                 <img src="https://avatars.mds.yandex.net/get-mpic/10096780/2a000001953b534fed2494e0b30fadd9b458/optimize"
-                     alt="Распродажа бытовой электроники 3">
+                     alt="Р Р°СЃРїСЂРѕРґР°Р¶Р° Р±С‹С‚РѕРІРѕР№ СЌР»РµРєС‚СЂРѕРЅРёРєРё 3">
               </div>
             </div>
-                  ? Выгодные предложения
+            <div class="ym-hero-content">
+              <h3 class="ym-hero-title">Р Р°СЃРїСЂРѕРґР°Р¶Р° Р±С‹С‚РѕРІРѕР№ СЌР»РµРєС‚СЂРѕРЅРёРєРё РЅР° РЇРЅРґРµРєСЃ РњР°СЂРєРµС‚Рµ</h3>
+              <div class="ym-hero-top">
+                <div class="ym-hero-rating">
+                  в­ђ Р’С‹РіРѕРґРЅС‹Рµ РїСЂРµРґР»РѕР¶РµРЅРёСЏ
+                  <span class="ym-hero-rating-count">РЎРєРёРґРєРё РґРѕ 50%</span>
                 </div>
               </div>
+              <button class="ym-hero-button">Р—Р° СЃРєРёРґРєР°РјРё</button>
             </div>
           </div>
-            Реклама. ООО "ЯНДЕКС", ИНН 7736207543. clid: 14635360, erid: 5jtCeReNx12oajxS2bzShmZ
+          <div class="ym-hero-legal">
+            Р РµРєР»Р°РјР°. РћРћРћ "РЇРќР”Р•РљРЎ", РРќРќ 7736207543. clid: 14635360, erid: 5jtCeReNx12oajxS2bzShmZ
           </div>
         </a>
-                <h2>Что такое бленда и зачем она нужна?</h2>
+                <h2>Р§С‚Рѕ С‚Р°РєРѕРµ Р±Р»РµРЅРґР° Рё Р·Р°С‡РµРј РѕРЅР° РЅСѓР¶РЅР°?</h2>
                 <ul>
-                    <li>Бленда - это аксессуар, который надевается на переднюю часть объектива и защищает его от бокового света.</li>
-                    <li>Основная функция бленды - предотвращать появление бликов, засветок и снижение контраста на снимках.</li>
-                    <li>Бленда также защищает объектив от случайных ударов, капель дождя и пыли.</li>
+                    <li>Р‘Р»РµРЅРґР° - СЌС‚Рѕ Р°РєСЃРµСЃСЃСѓР°СЂ, РєРѕС‚РѕСЂС‹Р№ РЅР°РґРµРІР°РµС‚СЃСЏ РЅР° РїРµСЂРµРґРЅСЋСЋ С‡Р°СЃС‚СЊ РѕР±СЉРµРєС‚РёРІР° Рё Р·Р°С‰РёС‰Р°РµС‚ РµРіРѕ РѕС‚ Р±РѕРєРѕРІРѕРіРѕ СЃРІРµС‚Р°.</li>
+                    <li>РћСЃРЅРѕРІРЅР°СЏ С„СѓРЅРєС†РёСЏ Р±Р»РµРЅРґС‹ - РїСЂРµРґРѕС‚РІСЂР°С‰Р°С‚СЊ РїРѕСЏРІР»РµРЅРёРµ Р±Р»РёРєРѕРІ, Р·Р°СЃРІРµС‚РѕРє Рё СЃРЅРёР¶РµРЅРёРµ РєРѕРЅС‚СЂР°СЃС‚Р° РЅР° СЃРЅРёРјРєР°С….</li>
+                    <li>Р‘Р»РµРЅРґР° С‚Р°РєР¶Рµ Р·Р°С‰РёС‰Р°РµС‚ РѕР±СЉРµРєС‚РёРІ РѕС‚ СЃР»СѓС‡Р°Р№РЅС‹С… СѓРґР°СЂРѕРІ, РєР°РїРµР»СЊ РґРѕР¶РґСЏ Рё РїС‹Р»Рё.</li>
                 </ul>
-                <h2>Какие бывают виды бленд?</h2>
+                <h2>РљР°РєРёРµ Р±С‹РІР°СЋС‚ РІРёРґС‹ Р±Р»РµРЅРґ?</h2>
 <ul>
-                    <li><strong>Лепестковая (тюльпан)</strong> - универсальна для широкоугольных и стандартных объективов, эффективно блокирует лишний свет.</li>
-                    <li><strong>Круглая</strong> - чаще используется для телеобъективов и фикс-объективов, простая форма.</li>
-                    <li><strong>Гибкая (резиновая)</strong> - компактна и подходит для путешествий, легко складывается.</li>
-                    <li><strong>Прямоугольная</strong> - применяется на профессиональных телеобъективах и видеокамерах.</li>
+                    <li><strong>Р›РµРїРµСЃС‚РєРѕРІР°СЏ (С‚СЋР»СЊРїР°РЅ)</strong> - СѓРЅРёРІРµСЂСЃР°Р»СЊРЅР° РґР»СЏ С€РёСЂРѕРєРѕСѓРіРѕР»СЊРЅС‹С… Рё СЃС‚Р°РЅРґР°СЂС‚РЅС‹С… РѕР±СЉРµРєС‚РёРІРѕРІ, СЌС„С„РµРєС‚РёРІРЅРѕ Р±Р»РѕРєРёСЂСѓРµС‚ Р»РёС€РЅРёР№ СЃРІРµС‚.</li>
+                    <li><strong>РљСЂСѓРіР»Р°СЏ</strong> - С‡Р°С‰Рµ РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ РґР»СЏ С‚РµР»РµРѕР±СЉРµРєС‚РёРІРѕРІ Рё С„РёРєСЃ-РѕР±СЉРµРєС‚РёРІРѕРІ, РїСЂРѕСЃС‚Р°СЏ С„РѕСЂРјР°.</li>
+                    <li><strong>Р“РёР±РєР°СЏ (СЂРµР·РёРЅРѕРІР°СЏ)</strong> - РєРѕРјРїР°РєС‚РЅР° Рё РїРѕРґС…РѕРґРёС‚ РґР»СЏ РїСѓС‚РµС€РµСЃС‚РІРёР№, Р»РµРіРєРѕ СЃРєР»Р°РґС‹РІР°РµС‚СЃСЏ.</li>
+                    <li><strong>РџСЂСЏРјРѕСѓРіРѕР»СЊРЅР°СЏ</strong> - РїСЂРёРјРµРЅСЏРµС‚СЃСЏ РЅР° РїСЂРѕС„РµСЃСЃРёРѕРЅР°Р»СЊРЅС‹С… С‚РµР»РµРѕР±СЉРµРєС‚РёРІР°С… Рё РІРёРґРµРѕРєР°РјРµСЂР°С….</li>
                 </ul>
-                <h2>Пошаговая инструкция: как выбрать бленду</h2>
+                <h2>РџРѕС€Р°РіРѕРІР°СЏ РёРЅСЃС‚СЂСѓРєС†РёСЏ: РєР°Рє РІС‹Р±СЂР°С‚СЊ Р±Р»РµРЅРґСѓ</h2>
                 <div class="step-group">
                     <div class="step">
                         <div class="step-number">1</div>
                         <div>
-                            <strong>Проверьте диаметр резьбы объектива</strong>
+                            <strong>РџСЂРѕРІРµСЂСЊС‚Рµ РґРёР°РјРµС‚СЂ СЂРµР·СЊР±С‹ РѕР±СЉРµРєС‚РёРІР°</strong>
                             <ul>
-                                <li>Он указан на передней части объектива (например, O67mm).</li>
-                                <li>Бленда должна подходить по диаметру и креплению.</li>
+                                <li>РћРЅ СѓРєР°Р·Р°РЅ РЅР° РїРµСЂРµРґРЅРµР№ С‡Р°СЃС‚Рё РѕР±СЉРµРєС‚РёРІР° (РЅР°РїСЂРёРјРµСЂ, Г67mm).</li>
+                                <li>Р‘Р»РµРЅРґР° РґРѕР»Р¶РЅР° РїРѕРґС…РѕРґРёС‚СЊ РїРѕ РґРёР°РјРµС‚СЂСѓ Рё РєСЂРµРїР»РµРЅРёСЋ.</li>
                             </ul>
                         </div>
                     </div>
                     <div class="step">
                         <div class="step-number">2</div>
                         <div>
-                            <strong>Учитывайте фокусное расстояние</strong>
+                            <strong>РЈС‡РёС‚С‹РІР°Р№С‚Рµ С„РѕРєСѓСЃРЅРѕРµ СЂР°СЃСЃС‚РѕСЏРЅРёРµ</strong>
                             <ul>
-                                <li>Для широкоугольных объективов выбирайте лепестковую бленду - она не даст виньетирования.</li>
-                                <li>Для телеобъективов подойдут круглые или глубокие бленды.</li>
+                                <li>Р”Р»СЏ С€РёСЂРѕРєРѕСѓРіРѕР»СЊРЅС‹С… РѕР±СЉРµРєС‚РёРІРѕРІ РІС‹Р±РёСЂР°Р№С‚Рµ Р»РµРїРµСЃС‚РєРѕРІСѓСЋ Р±Р»РµРЅРґСѓ - РѕРЅР° РЅРµ РґР°СЃС‚ РІРёРЅСЊРµС‚РёСЂРѕРІР°РЅРёСЏ.</li>
+                                <li>Р”Р»СЏ С‚РµР»РµРѕР±СЉРµРєС‚РёРІРѕРІ РїРѕРґРѕР№РґСѓС‚ РєСЂСѓРіР»С‹Рµ РёР»Рё РіР»СѓР±РѕРєРёРµ Р±Р»РµРЅРґС‹.</li>
                             </ul>
                         </div>
                     </div>
                     <div class="step">
                         <div class="step-number">3</div>
                         <div>
-                            <strong>Проверьте совместимость</strong>
+                            <strong>РџСЂРѕРІРµСЂСЊС‚Рµ СЃРѕРІРјРµСЃС‚РёРјРѕСЃС‚СЊ</strong>
                             <ul>
-                                <li>Лучше всего использовать фирменные бленды или качественные аналоги, подходящие к вашей модели объектива.</li>
-                                <li>Универсальные бленды могут не всегда идеально подходить по форме и креплению.</li>
+                                <li>Р›СѓС‡С€Рµ РІСЃРµРіРѕ РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ С„РёСЂРјРµРЅРЅС‹Рµ Р±Р»РµРЅРґС‹ РёР»Рё РєР°С‡РµСЃС‚РІРµРЅРЅС‹Рµ Р°РЅР°Р»РѕРіРё, РїРѕРґС…РѕРґСЏС‰РёРµ Рє РІР°С€РµР№ РјРѕРґРµР»Рё РѕР±СЉРµРєС‚РёРІР°.</li>
+                                <li>РЈРЅРёРІРµСЂСЃР°Р»СЊРЅС‹Рµ Р±Р»РµРЅРґС‹ РјРѕРіСѓС‚ РЅРµ РІСЃРµРіРґР° РёРґРµР°Р»СЊРЅРѕ РїРѕРґС…РѕРґРёС‚СЊ РїРѕ С„РѕСЂРјРµ Рё РєСЂРµРїР»РµРЅРёСЋ.</li>
                             </ul>
                         </div>
                     </div>
                     <div class="step">
                         <div class="step-number">4</div>
                         <div>
-                            <strong>Обратите внимание на материал</strong>
+                            <strong>РћР±СЂР°С‚РёС‚Рµ РІРЅРёРјР°РЅРёРµ РЅР° РјР°С‚РµСЂРёР°Р»</strong>
                             <ul>
-                                <li>Пластиковые - лёгкие и прочные, подходят для большинства задач.</li>
-                                <li>Резиновые - гибкие и компактные, удобно брать в поездки.</li>
+                                <li>РџР»Р°СЃС‚РёРєРѕРІС‹Рµ - Р»С‘РіРєРёРµ Рё РїСЂРѕС‡РЅС‹Рµ, РїРѕРґС…РѕРґСЏС‚ РґР»СЏ Р±РѕР»СЊС€РёРЅСЃС‚РІР° Р·Р°РґР°С‡.</li>
+                                <li>Р РµР·РёРЅРѕРІС‹Рµ - РіРёР±РєРёРµ Рё РєРѕРјРїР°РєС‚РЅС‹Рµ, СѓРґРѕР±РЅРѕ Р±СЂР°С‚СЊ РІ РїРѕРµР·РґРєРё.</li>
                             </ul>
                         </div>
                     </div>
@@ -435,37 +468,37 @@
                 <div class="recommend-box">
                     <i class="fas fa-info-circle"></i>
                     <div>
-                        <strong>Совет:</strong> Всегда используйте бленду при съёмке на улице и при ярком боковом свете - это поможет избежать бликов и защитит объектив.
+                        <strong>РЎРѕРІРµС‚:</strong> Р’СЃРµРіРґР° РёСЃРїРѕР»СЊР·СѓР№С‚Рµ Р±Р»РµРЅРґСѓ РїСЂРё СЃСЉС‘РјРєРµ РЅР° СѓР»РёС†Рµ Рё РїСЂРё СЏСЂРєРѕРј Р±РѕРєРѕРІРѕРј СЃРІРµС‚Рµ - СЌС‚Рѕ РїРѕРјРѕР¶РµС‚ РёР·Р±РµР¶Р°С‚СЊ Р±Р»РёРєРѕРІ Рё Р·Р°С‰РёС‚РёС‚ РѕР±СЉРµРєС‚РёРІ.
                     </div>
                 </div>
                 <div class="pro-tips">
-                    <h4>?? Профессиональные советы</h4>
+                    <h4>рџ”№ РџСЂРѕС„РµСЃСЃРёРѕРЅР°Р»СЊРЅС‹Рµ СЃРѕРІРµС‚С‹</h4>
                     <div class="tip-item">
                         <i class="fas fa-lightbulb"></i>
-                        <p>Бленда может оставаться на объективе постоянно - она не мешает и защищает стекло от случайных царапин.</p>
+                        <p>Р‘Р»РµРЅРґР° РјРѕР¶РµС‚ РѕСЃС‚Р°РІР°С‚СЊСЃСЏ РЅР° РѕР±СЉРµРєС‚РёРІРµ РїРѕСЃС‚РѕСЏРЅРЅРѕ - РѕРЅР° РЅРµ РјРµС€Р°РµС‚ Рё Р·Р°С‰РёС‰Р°РµС‚ СЃС‚РµРєР»Рѕ РѕС‚ СЃР»СѓС‡Р°Р№РЅС‹С… С†Р°СЂР°РїРёРЅ.</p>
                     </div>
                     <div class="tip-item">
                         <i class="fas fa-lightbulb"></i>
-                        <p>Если появляется виньетирование (тёмные углы), попробуйте снять бленду или заменить на подходящую по размеру.</p>
+                        <p>Р•СЃР»Рё РїРѕСЏРІР»СЏРµС‚СЃСЏ РІРёРЅСЊРµС‚РёСЂРѕРІР°РЅРёРµ (С‚С‘РјРЅС‹Рµ СѓРіР»С‹), РїРѕРїСЂРѕР±СѓР№С‚Рµ СЃРЅСЏС‚СЊ Р±Р»РµРЅРґСѓ РёР»Рё Р·Р°РјРµРЅРёС‚СЊ РЅР° РїРѕРґС…РѕРґСЏС‰СѓСЋ РїРѕ СЂР°Р·РјРµСЂСѓ.</p>
                     </div>
                     <div class="tip-item">
                         <i class="fas fa-lightbulb"></i>
-                        <p>Для съёмки со вспышкой иногда бленду лучше снять, чтобы не появлялась тень на фото.</p>
+                        <p>Р”Р»СЏ СЃСЉС‘РјРєРё СЃРѕ РІСЃРїС‹С€РєРѕР№ РёРЅРѕРіРґР° Р±Р»РµРЅРґСѓ Р»СѓС‡С€Рµ СЃРЅСЏС‚СЊ, С‡С‚РѕР±С‹ РЅРµ РїРѕСЏРІР»СЏР»Р°СЃСЊ С‚РµРЅСЊ РЅР° С„РѕС‚Рѕ.</p>
                     </div>
                 </div>
-                <h2>Часто задаваемые вопросы</h2>
+                <h2>Р§Р°СЃС‚Рѕ Р·Р°РґР°РІР°РµРјС‹Рµ РІРѕРїСЂРѕСЃС‹</h2>
                 <ul>
-                    <li><strong>Можно ли использовать универсальную бленду?</strong> - Да, но фирменная обычно эффективнее и меньше даёт виньетирование.</li>
-                    <li><strong>Нужна ли бленда в помещении?</strong> - В большинстве случаев нет, но она может защитить объектив от случайных прикосновений.</li>
-                    <li><strong>Как хранить бленду?</strong> - Многие бленды можно ставить "вверх ногами" на объектив для компактности при транспортировке.</li>
+                    <li><strong>РњРѕР¶РЅРѕ Р»Рё РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ СѓРЅРёРІРµСЂСЃР°Р»СЊРЅСѓСЋ Р±Р»РµРЅРґСѓ?</strong> - Р”Р°, РЅРѕ С„РёСЂРјРµРЅРЅР°СЏ РѕР±С‹С‡РЅРѕ СЌС„С„РµРєС‚РёРІРЅРµРµ Рё РјРµРЅСЊС€Рµ РґР°С‘С‚ РІРёРЅСЊРµС‚РёСЂРѕРІР°РЅРёРµ.</li>
+                    <li><strong>РќСѓР¶РЅР° Р»Рё Р±Р»РµРЅРґР° РІ РїРѕРјРµС‰РµРЅРёРё?</strong> - Р’ Р±РѕР»СЊС€РёРЅСЃС‚РІРµ СЃР»СѓС‡Р°РµРІ РЅРµС‚, РЅРѕ РѕРЅР° РјРѕР¶РµС‚ Р·Р°С‰РёС‚РёС‚СЊ РѕР±СЉРµРєС‚РёРІ РѕС‚ СЃР»СѓС‡Р°Р№РЅС‹С… РїСЂРёРєРѕСЃРЅРѕРІРµРЅРёР№.</li>
+                    <li><strong>РљР°Рє С…СЂР°РЅРёС‚СЊ Р±Р»РµРЅРґСѓ?</strong> - РњРЅРѕРіРёРµ Р±Р»РµРЅРґС‹ РјРѕР¶РЅРѕ СЃС‚Р°РІРёС‚СЊ "РІРІРµСЂС… РЅРѕРіР°РјРё" РЅР° РѕР±СЉРµРєС‚РёРІ РґР»СЏ РєРѕРјРїР°РєС‚РЅРѕСЃС‚Рё РїСЂРё С‚СЂР°РЅСЃРїРѕСЂС‚РёСЂРѕРІРєРµ.</li>
                 </ul>
-                <h2>?? Итог</h2>
+                <h2>рџ“Њ РС‚РѕРі</h2>
                 <p>
-                    Бленда - простой, но очень полезный аксессуар для любого фотографа. Она защищает объектив, улучшает качество снимков и помогает избежать бликов. Выбирайте бленду под свой объектив и не забывайте использовать её при съёмке на улице!
+                    Р‘Р»РµРЅРґР° - РїСЂРѕСЃС‚РѕР№, РЅРѕ РѕС‡РµРЅСЊ РїРѕР»РµР·РЅС‹Р№ Р°РєСЃРµСЃСЃСѓР°СЂ РґР»СЏ Р»СЋР±РѕРіРѕ С„РѕС‚РѕРіСЂР°С„Р°. РћРЅР° Р·Р°С‰РёС‰Р°РµС‚ РѕР±СЉРµРєС‚РёРІ, СѓР»СѓС‡С€Р°РµС‚ РєР°С‡РµСЃС‚РІРѕ СЃРЅРёРјРєРѕРІ Рё РїРѕРјРѕРіР°РµС‚ РёР·Р±РµР¶Р°С‚СЊ Р±Р»РёРєРѕРІ. Р’С‹Р±РёСЂР°Р№С‚Рµ Р±Р»РµРЅРґСѓ РїРѕРґ СЃРІРѕР№ РѕР±СЉРµРєС‚РёРІ Рё РЅРµ Р·Р°Р±С‹РІР°Р№С‚Рµ РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ РµС‘ РїСЂРё СЃСЉС‘РјРєРµ РЅР° СѓР»РёС†Рµ!
                 </p>
 </div>
 
-        <!-- Telegram рекламный баннер -->
+        <!-- Telegram СЂРµРєР»Р°РјРЅС‹Р№ Р±Р°РЅРЅРµСЂ -->
         <a href="https://t.me/RepairoRU" target="_blank" rel="noopener noreferrer" class="telegram-banner">
           <div class="telegram-banner-container">
             <div class="telegram-logo">
@@ -474,10 +507,10 @@
               </svg>
             </div>
             <div class="telegram-content">
-              <div class="telegram-title">Новости из мира технологий</div>
-              <div class="telegram-subtitle">В нашем новом Telegram-канале. Подписывайтесь и будьте в числе первых!</div>
+              <div class="telegram-title">РќРѕРІРѕСЃС‚Рё РёР· РјРёСЂР° С‚РµС…РЅРѕР»РѕРіРёР№</div>
+              <div class="telegram-subtitle">Р’ РЅР°С€РµРј РЅРѕРІРѕРј Telegram-РєР°РЅР°Р»Рµ. РџРѕРґРїРёСЃС‹РІР°Р№С‚РµСЃСЊ Рё Р±СѓРґСЊС‚Рµ РІ С‡РёСЃР»Рµ РїРµСЂРІС‹С…!</div>
               <div class="telegram-button">
-                Подписаться
+                РџРѕРґРїРёСЃР°С‚СЊСЃСЏ
                 <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.56c-.21 2.22-1.12 7.58-1.58 10.06-.19 1.07-.57 1.43-.94 1.46-.8.07-1.4-.52-2.17-1.03-1.21-.79-1.89-1.28-3.06-2.05-1.35-.87-.47-1.35.3-2.13.2-.21 3.71-3.39 3.77-3.68.01-.04.01-.18-.07-.26s-.2-.05-.29-.03c-.12.03-2.11 1.34-5.95 3.93-.56.38-1.07.57-1.53.56-.5-.01-1.47-.28-2.19-.51-.88-.28-1.58-.43-1.52-.91.03-.25.38-.51 1.04-.78 4.07-1.77 6.78-2.94 8.13-3.51 3.88-1.62 4.68-1.9 5.19-1.91.12 0 .37.03.54.17.14.12.18.28.2.44-.01.06 0 .11-.01.17z"/>
                 </svg>
@@ -502,45 +535,45 @@
                         </span>
                         <span class="logo__text">Repairo</span>
                     </a>
-                    <p class="footer__text">Помогаем ремонтировать электронику с 2024 года</p>
+                    <p class="footer__text">РџРѕРјРѕРіР°РµРј СЂРµРјРѕРЅС‚РёСЂРѕРІР°С‚СЊ СЌР»РµРєС‚СЂРѕРЅРёРєСѓ СЃ 2024 РіРѕРґР°</p>
                 </div>
                 <div class="footer__col">
-                    <h3 class="footer__title">Разделы</h3>
+                    <h3 class="footer__title">Р Р°Р·РґРµР»С‹</h3>
                     <ul class="footer__links">
-                        <li><a href="../index.html" class="footer__link">Главная</a></li>
-                        <li><a href="../index.html#categories" class="footer__link">Все гайды</a></li>
-                        <li><a href="../contacts.html" class="footer__link">Контакты</a></li>
+                        <li><a href="../index.html" class="footer__link">Р“Р»Р°РІРЅР°СЏ</a></li>
+                        <li><a href="../index.html#categories" class="footer__link">Р’СЃРµ РіР°Р№РґС‹</a></li>
+                        <li><a href="../contacts.html" class="footer__link">РљРѕРЅС‚Р°РєС‚С‹</a></li>
                     </ul>
                 </div>
                 <div class="footer__col">
-                    <h3 class="footer__title">Категории</h3>
+                    <h3 class="footer__title">РљР°С‚РµРіРѕСЂРёРё</h3>
                     <ul class="footer__links">
-                        <li><a href="../tv.html" class="nav__link">Телевизоры</a></li>
-                        <li><a href="../cameras.html" class="nav__link">Фотоаппараты</a></li>
-                        <li><a href="../consoles.html" class="nav__link">Приставки</a></li>
-                        <li><a href="../laptops.html" class="nav__link">Ноутбуки</a></li>
-                        <li><a href="../smartphones.html" class="nav__link">Смартфоны</a></li>
-                        <li><a href="../small-appliances.html" class="nav__link">Мелкая техника</a></li>
-                        <li><a href="../large-appliances.html" class="nav__link">Бытовая техника</a></li>
-                        <li><a href="../auto-electronics.html" class="nav__link">Авто-Электроника</a></li>
+                        <li><a href="../tv.html" class="nav__link">РўРµР»РµРІРёР·РѕСЂС‹</a></li>
+                        <li><a href="../cameras.html" class="nav__link">Р¤РѕС‚РѕР°РїРїР°СЂР°С‚С‹</a></li>
+                        <li><a href="../consoles.html" class="nav__link">РџСЂРёСЃС‚Р°РІРєРё</a></li>
+                        <li><a href="../laptops.html" class="nav__link">РќРѕСѓС‚Р±СѓРєРё</a></li>
+                        <li><a href="../smartphones.html" class="nav__link">РЎРјР°СЂС‚С„РѕРЅС‹</a></li>
+                        <li><a href="../small-appliances.html" class="nav__link">РњРµР»РєР°СЏ С‚РµС…РЅРёРєР°</a></li>
+                        <li><a href="../large-appliances.html" class="nav__link">Р‘С‹С‚РѕРІР°СЏ С‚РµС…РЅРёРєР°</a></li>
+                        <li><a href="../auto-electronics.html" class="nav__link">РђРІС‚Рѕ-Р­Р»РµРєС‚СЂРѕРЅРёРєР°</a></li>
                     </ul>
                 </div>
                 <div class="footer__col">
-                    <h3 class="footer__title">Контакты</h3>
+                    <h3 class="footer__title">РљРѕРЅС‚Р°РєС‚С‹</h3>
                     <ul class="footer__links">
                         <li><a href="https://t.me/RepairoRU" class="footer__link"><i class="fab fa-telegram"></i> Telegram</a></li>
-                        <li><span class="footer__link">Наша почта: repairo.info@mail.ru</span></li>
+                        <li><span class="footer__link">РќР°С€Р° РїРѕС‡С‚Р°: repairo.info@mail.ru</span></li>
                     </ul>
                 </div>
             </div>
             <div class="footer__bottom">
                 <p class="disclaimer">
-    Администрация сайта не несёт ответственности за возможные повреждения техники
-    и иные последствия, возникшие в результате самостоятельного ремонта по
-    материалам и инструкциям, размещённым на сайте. Все работы вы выполняете
-    на свой страх и риск.
+    РђРґРјРёРЅРёСЃС‚СЂР°С†РёСЏ СЃР°Р№С‚Р° РЅРµ РЅРµСЃС‘С‚ РѕС‚РІРµС‚СЃС‚РІРµРЅРЅРѕСЃС‚Рё Р·Р° РІРѕР·РјРѕР¶РЅС‹Рµ РїРѕРІСЂРµР¶РґРµРЅРёСЏ С‚РµС…РЅРёРєРё
+    Рё РёРЅС‹Рµ РїРѕСЃР»РµРґСЃС‚РІРёСЏ, РІРѕР·РЅРёРєС€РёРµ РІ СЂРµР·СѓР»СЊС‚Р°С‚Рµ СЃР°РјРѕСЃС‚РѕСЏС‚РµР»СЊРЅРѕРіРѕ СЂРµРјРѕРЅС‚Р° РїРѕ
+    РјР°С‚РµСЂРёР°Р»Р°Рј Рё РёРЅСЃС‚СЂСѓРєС†РёСЏРј, СЂР°Р·РјРµС‰С‘РЅРЅС‹Рј РЅР° СЃР°Р№С‚Рµ. Р’СЃРµ СЂР°Р±РѕС‚С‹ РІС‹ РІС‹РїРѕР»РЅСЏРµС‚Рµ
+    РЅР° СЃРІРѕР№ СЃС‚СЂР°С… Рё СЂРёСЃРє.
     </p>
-                <p class="footer__copyright">© 2026 Repairo. Все права защищены.</p>
+                <p class="footer__copyright">В© 2026 Repairo. Р’СЃРµ РїСЂР°РІР° Р·Р°С‰РёС‰РµРЅС‹.</p>
             </div>
         </div>
     </footer>
@@ -551,38 +584,38 @@
 {
   "@context": "https://schema.org",
   "@type": "HowTo",
-  "name": "Зачем нужен бленда и как ее выбрать?",
-  "description": "Пошаговая инструкция: Зачем нужен бленда и как ее выбрать?. Бленда может оставаться на объективе постоянно - она не мешает и защищает стекло.... Советы экспе...",
+  "name": "Р—Р°С‡РµРј РЅСѓР¶РµРЅ Р±Р»РµРЅРґР° Рё РєР°Рє РµРµ РІС‹Р±СЂР°С‚СЊ?",
+  "description": "РџРѕС€Р°РіРѕРІР°СЏ РёРЅСЃС‚СЂСѓРєС†РёСЏ: Р—Р°С‡РµРј РЅСѓР¶РµРЅ Р±Р»РµРЅРґР° Рё РєР°Рє РµРµ РІС‹Р±СЂР°С‚СЊ?. Р‘Р»РµРЅРґР° РјРѕР¶РµС‚ РѕСЃС‚Р°РІР°С‚СЊСЃСЏ РЅР° РѕР±СЉРµРєС‚РёРІРµ РїРѕСЃС‚РѕСЏРЅРЅРѕ - РѕРЅР° РЅРµ РјРµС€Р°РµС‚ Рё Р·Р°С‰РёС‰Р°РµС‚ СЃС‚РµРєР»Рѕ.... РЎРѕРІРµС‚С‹ СЌРєСЃРїРµ...",
   "totalTime": "PT30M",
   "step": [
     {
       "@type": "HowToStep",
-      "name": "Что такое бленда и зачем она нужна?",
-      "text": "Что такое бленда и зачем она нужна?",
+      "name": "Р§С‚Рѕ С‚Р°РєРѕРµ Р±Р»РµРЅРґР° Рё Р·Р°С‡РµРј РѕРЅР° РЅСѓР¶РЅР°?",
+      "text": "Р§С‚Рѕ С‚Р°РєРѕРµ Р±Р»РµРЅРґР° Рё Р·Р°С‡РµРј РѕРЅР° РЅСѓР¶РЅР°?",
       "url": "#step-1"
     },
     {
       "@type": "HowToStep",
-      "name": "Какие бывают виды бленд?",
-      "text": "Какие бывают виды бленд?",
+      "name": "РљР°РєРёРµ Р±С‹РІР°СЋС‚ РІРёРґС‹ Р±Р»РµРЅРґ?",
+      "text": "РљР°РєРёРµ Р±С‹РІР°СЋС‚ РІРёРґС‹ Р±Р»РµРЅРґ?",
       "url": "#step-2"
     },
     {
       "@type": "HowToStep",
-      "name": "Пошаговая инструкция: как выбрать бленду",
-      "text": "Пошаговая инструкция: как выбрать бленду",
+      "name": "РџРѕС€Р°РіРѕРІР°СЏ РёРЅСЃС‚СЂСѓРєС†РёСЏ: РєР°Рє РІС‹Р±СЂР°С‚СЊ Р±Р»РµРЅРґСѓ",
+      "text": "РџРѕС€Р°РіРѕРІР°СЏ РёРЅСЃС‚СЂСѓРєС†РёСЏ: РєР°Рє РІС‹Р±СЂР°С‚СЊ Р±Р»РµРЅРґСѓ",
       "url": "#step-3"
     },
     {
       "@type": "HowToStep",
-      "name": "Часто задаваемые вопросы",
-      "text": "Часто задаваемые вопросы",
+      "name": "Р§Р°СЃС‚Рѕ Р·Р°РґР°РІР°РµРјС‹Рµ РІРѕРїСЂРѕСЃС‹",
+      "text": "Р§Р°СЃС‚Рѕ Р·Р°РґР°РІР°РµРјС‹Рµ РІРѕРїСЂРѕСЃС‹",
       "url": "#step-4"
     },
     {
       "@type": "HowToStep",
-      "name": "?? Итог",
-      "text": "?? Итог",
+      "name": "рџ“Њ РС‚РѕРі",
+      "text": "рџ“Њ РС‚РѕРі",
       "url": "#step-5"
     }
   ],
@@ -593,8 +626,4 @@
 <script src="../cookie-consent.js"></script>
 </body>
 </html>
-
-
-
-
 

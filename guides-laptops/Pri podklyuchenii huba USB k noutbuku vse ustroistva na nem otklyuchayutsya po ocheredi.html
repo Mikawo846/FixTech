@@ -4,8 +4,9 @@
 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>При подключении хаба USB к ноутбуку все устройства на нем от</title>
-    <meta name="description" content="">
+  <title>РџСЂРё РїРѕРґРєР»СЋС‡РµРЅРёРё С…Р°Р±Р° USB Рє РЅРѕСѓС‚Р±СѓРєСѓ РІСЃРµ СѓСЃС‚СЂРѕР№СЃС‚РІР° РЅР° РЅРµРј РѕС‚РєР»СЋС‡Р°СЋС‚СЃСЏ РїРѕ РѕС‡РµСЂРµРґРё | Р­РєСЃРїРµСЂС‚РЅС‹Р№ РјРµРіР°РіР°Р№Рґ</title>
+    <meta name="description" content="{{ description }}">
+    <meta name="description" content="РџРѕС€Р°РіРѕРІР°СЏ РёРЅСЃС‚СЂСѓРєС†РёСЏ: РџСЂРё РїРѕРґРєР»СЋС‡РµРЅРёРё С…Р°Р±Р° USB Рє РЅРѕСѓС‚Р±СѓРєСѓ РІСЃРµ СѓСЃС‚СЂРѕР№СЃС‚РІР° РЅР° РЅРµРј РѕС‚РєР»СЋС‡Р°СЋС‚СЃСЏ РїРѕ РѕС‡РµСЂРµРґРё вЂ” Р­РєСЃРїРµСЂС‚РЅС‹Р№ РјРµРіР°РіР°Р№Рґ. РџСЂРёС‡РёРЅС‹: РїРёС‚Р°РЅРёРµ, РґСЂР°Р№РІРµСЂС‹. Р РµС€РµРЅРёСЏ: РІРЅРµС€РЅРµРµ РїРёС‚Р°РЅРёРµ, СЃР±СЂРѕСЃ USB, РѕС‚РєР»СЋС‡РµРЅРёРµ СЌРєРѕРЅРѕРјРёРё.">
 
   <link rel="stylesheet" href="../styles.css" />
   <link rel="stylesheet" href="../styles-header.css" />
@@ -13,25 +14,36 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <style>
     .guide-content { line-height: 1.7; color: var(--text); }
-    .guide-content h2 { color: var(--primary); margin-top: 30px; margin-bottom: 15px; font-size: 1.5rem; }
-    .guide-content h3 { color: var(--primary-dark); margin-top: 25px; margin-bottom: 12px; font-size: 1.2rem; }
+    .guide-content h2 { color: var(--primary); margin-top: 30px; margin-bottom: 15px; font-size: 1.6rem; }
+    .guide-content h3 { color: var(--primary-dark); margin-top: 25px; margin-bottom: 12px; font-size: 1.25rem; }
     .guide-image-block { margin: 20px 0; padding: 15px; background: var(--background); border-radius: var(--border-radius); border: 1px solid var(--border); text-align: center; }
     .guide-image-block img { max-width: 100%; height: auto; border-radius: 6px; border: 1px solid var(--border); }
     .image-caption { margin-top: 10px; font-size: 0.85rem; color: var(--text-light); font-style: italic; }
-    .pro-tips { background: rgba(3, 74, 79, 0.05); padding: 15px; border-radius: 6px; margin: 20px 0; }
-    .pro-tips h4 { color: var(--primary); margin-top: 0; margin-bottom: 12px; font-size: 1.1rem; }
-    .tip-item { display: flex; gap: 8px; margin-bottom: 8px; align-items: flex-start; }
+    .pro-tips { background: rgba(3, 74, 79, 0.05); padding: 18px; border-radius: 8px; margin: 25px 0; }
+    .pro-tips h4 { color: var(--primary); margin-top: 0; margin-bottom: 12px; font-size: 1.15rem; }
+    .tip-item { display: flex; gap: 10px; margin-bottom: 10px; align-items: flex-start; }
+    .tip-item i { margin-top: 3px; }
     table { width: 100%; border-collapse: collapse; margin: 20px 0; }
-    th, td { border: 1px solid var(--border); padding: 8px; text-align: left; }
+    th, td { border: 1px solid var(--border); padding: 8px; text-align: left; vertical-align: top; }
     th { background: var(--background-light); }
-    .highlight { background: #f5f7fa; border-left: 4px solid #2d9cdb; padding: 10px 15px; margin: 20px 0; }
-    .faq-section ul { margin-left: 1em; }
-    .block-section { margin-bottom: 2em; }
+    code { background: var(--background-light); padding: 2px 4px; border-radius: 4px; font-size: 0.9em; }
+    ul, ol { margin-left: 18px; }
     @media (max-width: 768px) {
       .guide-content h2 { font-size: 1.4rem; margin-top: 25px; }
+      .guide-content h3 { font-size: 1.15rem; }
       .guide-image-block { padding: 12px; margin: 15px 0; }
       table, th, td { font-size: 0.95rem; }
     }
+
+    /* РЇРЅРґРµРєСЃ РњР°СЂРєРµС‚ СЂРµРєР»Р°РјРЅС‹Р№ Р±Р°РЅРЅРµСЂ */
+    .ym-hero-link {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+      max-width: 100%;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
     /* Р“РѕСЂРёР·РѕРЅС‚Р°Р»СЊРЅС‹Р№ Р±Р°РЅРЅРµСЂ-РєР°СЂС‚РѕС‡РєР° */
     .ym-hero-banner {
       width: 100%;
@@ -107,567 +119,342 @@
     }
 
     /* Р РµР№С‚РёРЅРі */
-    .ym-hero-top {
+    .ym-hero-rating {
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      gap: 8px;
-    }
-
-    .ym-hero-rating {
-      font-size: 13px;
-      font-weight: 500;
-      color: #111827;
-      background: #f9fafb;
-      border-radius: 999px;
-      padding: 4px 10px;
-    }
-
-    .ym-hero-rating-count {
+      gap: 4px;
+      font-size: 12px;
       color: #6b7280;
     }
 
-    /* Р¤РёРѕР»РµС‚РѕРІР°СЏ РєРЅРѕРїРєР° */
-    .ym-hero-button {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 9px 16px;
-      border-radius: 999px;
-      border: none;
-      background: #6a00ff;
-      color: #ffffff;
-      font-size: 14px;
-      font-weight: 600;
-      cursor: pointer;
-      box-shadow: 0 2px 6px rgba(88, 28, 135, 0.35);
-      transition: background 0.15s ease, transform 0.15s ease,
-                  box-shadow 0.15s ease;
-    }
-    .ym-hero-button::after {
-      content: "в†’";
-      margin-left: 6px;
-      font-size: 14px;
-    }
-    .ym-hero-button:hover {
-      background: #7c3aed;
-      transform: translateY(-1px);
-      box-shadow: 0 4px 10px rgba(88, 28, 135, 0.45);
+    .ym-hero-stars {
+      display: flex;
+      gap: 1px;
     }
 
-    /* Р®СЂРёРґРёС‡РµСЃРєРёР№ Р±Р»РѕРє */
-    .ym-hero-legal {
-      margin-top: 6px;
-      max-width: 600px;
+    .ym-hero-star {
+      width: 12px;
+      height: 12px;
+      fill: #fbbf24;
+    }
+
+    .ym-hero-reviews {
       font-size: 11px;
-      line-height: 1.3;
-      color: #6b7280;
-      margin-left: auto;
-      margin-right: auto;
+      color: #9ca3af;
     }
 
-    /* РђРґР°РїС‚РёРІ */
-    @media (max-width: 480px) {
+    /* Р¦РµРЅР° */
+    .ym-hero-price {
+      font-size: 16px;
+      font-weight: 700;
+      color: #111827;
+      margin: 0;
+    }
+
+    /* РљРЅРѕРїРєР° */
+    .ym-hero-button {
+      background: #007bff;
+      color: #ffffff;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background 0.2s ease;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .ym-hero-button:hover {
+      background: #0056b3;
+    }
+
+    /* РђРґР°РїС‚РёРІРЅРѕСЃС‚СЊ */
+    @media (max-width: 768px) {
       .ym-hero-banner {
-        max-width: 100%;
-        margin: 20px 0;
+        flex-direction: row;
+        min-height: auto;
       }
+
       .ym-hero-images {
-        height: 100px;
+        width: 120px;
+        height: auto;
+        flex-shrink: 0;
       }
+
       .ym-hero-content {
-        padding: 12px 12px;
+        flex: 1;
+        padding: 12px 16px;
       }
+
       .ym-hero-title {
         font-size: 13px;
       }
+
+      .ym-hero-price {
+        font-size: 15px;
+      }
+
       .ym-hero-button {
-        font-size: 13px;
-        padding: 8px 14px;
-      }
-      .ym-hero-legal {
-        font-size: 10px;
-      }
-    }
-    /* Telegram СЂРµРєР»Р°РјРЅС‹Р№ Р±Р°РЅРЅРµСЂ */
-    .telegram-banner {
-      display: flex;
-      justify-content: center;
-      text-decoration: none;
-      color: inherit;
-      width: 100%;
-      margin: 40px 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    }
-
-    .telegram-banner-container {
-      width: 100%;
-      max-width: 500px;
-      min-height: 120px;
-      border-radius: 16px;
-      background: linear-gradient(135deg, #0088cc 0%, #005f8f 100%);
-      border: 1px solid #005f8f;
-      display: flex;
-      align-items: center;
-      padding: 20px;
-      box-shadow: 0 4px 16px rgba(0, 136, 204, 0.2);
-      overflow: hidden;
-      box-sizing: border-box;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-
-    .telegram-banner-container:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(0, 136, 204, 0.3);
-    }
-
-    .telegram-logo {
-      width: 60px;
-      height: 60px;
-      min-width: 60px;
-      background: #ffffff;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-right: 20px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    }
-
-    .telegram-logo svg {
-      width: 32px;
-      height: 32px;
-      fill: #0088cc;
-    }
-
-    .telegram-content {
-      flex: 1;
-      color: #ffffff;
-    }
-
-    .telegram-title {
-      font-size: 16px;
-      font-weight: 600;
-      margin: 0 0 8px 0;
-      line-height: 1.3;
-    }
-
-    .telegram-subtitle {
-      font-size: 14px;
-      opacity: 0.9;
-      margin: 0 0 12px 0;
-      line-height: 1.4;
-    }
-
-    .telegram-button {
-      display: inline-flex;
-      align-items: center;
-      padding: 8px 16px;
-      background: #ffffff;
-      color: #0088cc;
-      border-radius: 20px;
-      font-size: 14px;
-      font-weight: 600;
-      text-decoration: none;
-      transition: background 0.2s ease, transform 0.2s ease;
-    }
-
-    .telegram-button:hover {
-      background: #f0f8ff;
-      transform: scale(1.05);
-    }
-
-    .telegram-button svg {
-      width: 16px;
-      height: 16px;
-      margin-left: 6px;
-      fill: #0088cc;
-    }
-
-    /* РђРґР°РїС‚РёРІ РґР»СЏ РјРѕР±РёР»СЊРЅС‹С… */
-    @media (max-width: 480px) {
-      .telegram-banner-container {
-        max-width: 100%;
-        margin: 20px 0;
-        padding: 15px;
-        min-height: 100px;
-      }
-      .telegram-logo {
-        width: 50px;
-        height: 50px;
-        min-width: 50px;
-        margin-right: 15px;
-      }
-      .telegram-logo svg {
-        width: 26px;
-        height: 26px;
-      }
-      .telegram-title {
-        font-size: 14px;
-      }
-      .telegram-subtitle {
-        font-size: 12px;
-      }
-      .telegram-button {
-        font-size: 12px;
-        padding: 6px 12px;
+        padding: 6px 10px;
+        font-size: 11px;
       }
     }
 
-
-
+    /* РЎРєСЂС‹С‚С‹Р№ Р±Р°РЅРЅРµСЂ РґР»СЏ РґРµСЃРєС‚РѕРїР° */
+    @media (min-width: 769px) {
+      .ym-hero-link {
+        display: none !important;
+      }
+    }
   </style>
   <script async src="https://timeweb.cloud/api/v1/cloud-ai/agents/3cc03620-d051-4d8d-b5af-f7b6cd083a35/embed.js?collapsed=true"></script>
 </head>
 <body>
-  <header class="header">
-    <div class="container">
-      <div class="header__inner">
-        <a href="../index.html" class="logo">
-          <span class="logo__icon"></span>
-          <span class="logo__text">GeoExpert</span>
-        </a>
-        <nav class="nav">
-          <ul class="nav__list">
-            <li><a href="../cameras.html" class="nav__link">РљР°РјРµСЂС‹</a></li>
-            <li><a href="../drones.html" class="nav__link">Р”СЂРѕРЅС‹</a></li>
-            <li><a href="../workflow.html" class="nav__link">Workflow</a></li>
-          </ul>
-        </nav>
+  <header>
+    <div class="header-content">
+      <a href="/" class="logo">
+        <i class="fas fa-tools"></i>
+        FixTech
+      </a>
+      <nav class="nav-links">
+        <a href="/">Р“Р»Р°РІРЅР°СЏ</a>
+        <a href="/articles">Р’СЃРµ СЃС‚Р°С‚СЊРё</a>
+        <a href="/smartphones">РЎРјР°СЂС‚С„РѕРЅС‹</a>
+        <a href="/laptops">РќРѕСѓС‚Р±СѓРєРё</a>
+        <a href="/tv">РўРµР»РµРІРёР·РѕСЂС‹</a>
+        <a href="/cameras">РљР°РјРµСЂС‹</a>
+        <a href="/consoles">РљРѕРЅСЃРѕР»Рё</a>
+        <a href="/auto-electronics">РђРІС‚РѕСЌР»РµРєС‚СЂРѕРЅРёРєР°</a>
+        <a href="/small-appliances">РњРµР»РєР°СЏ С‚РµС…РЅРёРєР°</a>
+        <a href="/large-appliances">РљСЂСѓРїРЅР°СЏ С‚РµС…РЅРёРєР°</a>
+      </nav>
+      <div class="search-container">
+        <input type="text" id="search-input" placeholder="РџРѕРёСЃРє РїРѕ СЃР°Р№С‚Сѓ..." />
+        <button id="search-button"><i class="fas fa-search"></i></button>
       </div>
     </div>
   </header>
 
   <main class="guide-container">
     <div class="guide-content">
-      <h1>При подключении хаба USB к ноутбуку все устройства на нем отключаются по очереди</h1>
-      <p>Когда при подключении USB хаба к ноутбуку устройства на нем начинают отключаться по очереди, это указывает на проблему с питанием или перегрузкой порта. В этом экспертном мегагайде мы разберем все причины последовательного отключения USB устройств и предоставим решения для стабильной работы хаба.</p>
+      <h1>РџСЂРё РїРѕРґРєР»СЋС‡РµРЅРёРё С…Р°Р±Р° USB Рє РЅРѕСѓС‚Р±СѓРєСѓ РІСЃРµ СѓСЃС‚СЂРѕР№СЃС‚РІР° РЅР° РЅРµРј РѕС‚РєР»СЋС‡Р°СЋС‚СЃСЏ РїРѕ РѕС‡РµСЂРµРґРё</h1>
+      <p>РљРѕРіРґР° РїСЂРё РїРѕРґРєР»СЋС‡РµРЅРёРё USB С…Р°Р±Р° Рє РЅРѕСѓС‚Р±СѓРєСѓ СѓСЃС‚СЂРѕР№СЃС‚РІР° РЅР° РЅРµРј РЅР°С‡РёРЅР°СЋС‚ РѕС‚РєР»СЋС‡Р°С‚СЊСЃСЏ РїРѕ РѕС‡РµСЂРµРґРё, СЌС‚Рѕ СѓРєР°Р·С‹РІР°РµС‚ РЅР° РїСЂРѕР±Р»РµРјСѓ СЃ РїРёС‚Р°РЅРёРµРј РёР»Рё РїРµСЂРµРіСЂСѓР·РєРѕР№ РїРѕСЂС‚Р°. Р’ СЌС‚РѕРј СЌРєСЃРїРµСЂС‚РЅРѕРј РјРµРіР°РіР°Р№РґРµ РјС‹ СЂР°Р·Р±РµСЂРµРј РІСЃРµ РїСЂРёС‡РёРЅС‹ РїРѕСЃР»РµРґРѕРІР°С‚РµР»СЊРЅРѕРіРѕ РѕС‚РєР»СЋС‡РµРЅРёСЏ USB СѓСЃС‚СЂРѕР№СЃС‚РІ Рё РїСЂРµРґРѕСЃС‚Р°РІРёРј СЂРµС€РµРЅРёСЏ РґР»СЏ СЃС‚Р°Р±РёР»СЊРЅРѕР№ СЂР°Р±РѕС‚С‹ С…Р°Р±Р°.</p>
 
-      <h2>Признаки проблемы</h2>
+      <h2>РџСЂРёР·РЅР°РєРё РїСЂРѕР±Р»РµРјС‹</h2>
       <ul>
-        <li>USB хаб подключается к ноутбуку</li>
-        <li>Устройства на хабе работают по очереди</li>
-        <li>Одно устройство работает, другие отключаются</li>
-        <li>Хаб мигает или издает звуки</li>
-        <li>Работает на других компьютерах</li>
+        <li>USB С…Р°Р± РїРѕРґРєР»СЋС‡Р°РµС‚СЃСЏ Рє РЅРѕСѓС‚Р±СѓРєСѓ</li>
+        <li>РЈСЃС‚СЂРѕР№СЃС‚РІР° РЅР° С…Р°Р±Рµ СЂР°Р±РѕС‚Р°СЋС‚ РїРѕ РѕС‡РµСЂРµРґРё</li>
+        <li>РћРґРЅРѕ СѓСЃС‚СЂРѕР№СЃС‚РІРѕ СЂР°Р±РѕС‚Р°РµС‚, РґСЂСѓРіРёРµ РѕС‚РєР»СЋС‡Р°СЋС‚СЃСЏ</li>
+        <li>РҐР°Р± РјРёРіР°РµС‚ РёР»Рё РёР·РґР°РµС‚ Р·РІСѓРєРё</li>
+        <li>Р Р°Р±РѕС‚Р°РµС‚ РЅР° РґСЂСѓРіРёС… РєРѕРјРїСЊСЋС‚РµСЂР°С…</li>
       </ul>
 
-      <h2>Основные причины</h2>
+      <h2>РћСЃРЅРѕРІРЅС‹Рµ РїСЂРёС‡РёРЅС‹</h2>
       <table>
         <tr>
-          <th>Причина</th>
-          <th>Вероятность</th>
-          <th>Характерные признаки</th>
+          <th>РџСЂРёС‡РёРЅР°</th>
+          <th>Р’РµСЂРѕСЏС‚РЅРѕСЃС‚СЊ</th>
+          <th>РҐР°СЂР°РєС‚РµСЂРЅС‹Рµ РїСЂРёР·РЅР°РєРё</th>
         </tr>
         <tr>
-          <td>Недостаточное питание</td>
+          <td>РќРµРґРѕСЃС‚Р°С‚РѕС‡РЅРѕРµ РїРёС‚Р°РЅРёРµ</td>
           <td>50%</td>
-          <td>Работает с внешним питанием</td>
+          <td>Р Р°Р±РѕС‚Р°РµС‚ СЃ РІРЅРµС€РЅРёРј РїРёС‚Р°РЅРёРµРј</td>
         </tr>
         <tr>
-          <td>Перегрузка USB порта</td>
+          <td>РџРµСЂРµРіСЂСѓР·РєР° USB РїРѕСЂС‚Р°</td>
           <td>25%</td>
-          <td>Работает при подключении меньшего количества устройств</td>
+          <td>Р Р°Р±РѕС‚Р°РµС‚ РїСЂРё РїРѕРґРєР»СЋС‡РµРЅРёРё РјРµРЅСЊС€РµРіРѕ РєРѕР»РёС‡РµСЃС‚РІР° СѓСЃС‚СЂРѕР№СЃС‚РІ</td>
         </tr>
         <tr>
-          <td>Поврежденный хаб</td>
+          <td>РџРѕРІСЂРµР¶РґРµРЅРЅС‹Р№ С…Р°Р±</td>
           <td>15%</td>
-          <td>Не работает на других ПК</td>
+          <td>РќРµ СЂР°Р±РѕС‚Р°РµС‚ РЅР° РґСЂСѓРіРёС… РџРљ</td>
         </tr>
         <tr>
-          <td>Драйверы USB</td>
+          <td>Р”СЂР°Р№РІРµСЂС‹ USB</td>
           <td>7%</td>
-          <td>Работает после сброса USB</td>
+          <td>Р Р°Р±РѕС‚Р°РµС‚ РїРѕСЃР»Рµ СЃР±СЂРѕСЃР° USB</td>
         </tr>
         <tr>
-          <td>Конфликт устройств</td>
+          <td>РљРѕРЅС„Р»РёРєС‚ СѓСЃС‚СЂРѕР№СЃС‚РІ</td>
           <td>2%</td>
-          <td>Работает при подключении устройств по одному</td>
+          <td>Р Р°Р±РѕС‚Р°РµС‚ РїСЂРё РїРѕРґРєР»СЋС‡РµРЅРёРё СѓСЃС‚СЂРѕР№СЃС‚РІ РїРѕ РѕРґРЅРѕРјСѓ</td>
         </tr>
         <tr>
-          <td>Аппаратная неисправность</td>
+          <td>РђРїРїР°СЂР°С‚РЅР°СЏ РЅРµРёСЃРїСЂР°РІРЅРѕСЃС‚СЊ</td>
           <td>1%</td>
-          <td>Не работает нигде</td>
+          <td>РќРµ СЂР°Р±РѕС‚Р°РµС‚ РЅРёРіРґРµ</td>
         </tr>
       </table>
 
-      <h2>Диагностика проблемы</h2>
-      <h3>Проверка питания хаба</h3>
+      <h2>Р”РёР°РіРЅРѕСЃС‚РёРєР° РїСЂРѕР±Р»РµРјС‹</h2>
+      <h3>РџСЂРѕРІРµСЂРєР° РїРёС‚Р°РЅРёСЏ С…Р°Р±Р°</h3>
       <ol>
-        <li>Посмотрите, есть ли у хаба внешнее питание</li>
-        <li>Если нет - подключите адаптер питания</li>
-        <li>USB порты ноутбука могут не обеспечивать достаточную мощность</li>
+        <li>РџРѕСЃРјРѕС‚СЂРёС‚Рµ, РµСЃС‚СЊ Р»Рё Сѓ С…Р°Р±Р° РІРЅРµС€РЅРµРµ РїРёС‚Р°РЅРёРµ</li>
+        <li>Р•СЃР»Рё РЅРµС‚ - РїРѕРґРєР»СЋС‡РёС‚Рµ Р°РґР°РїС‚РµСЂ РїРёС‚Р°РЅРёСЏ</li>
+        <li>USB РїРѕСЂС‚С‹ РЅРѕСѓС‚Р±СѓРєР° РјРѕРіСѓС‚ РЅРµ РѕР±РµСЃРїРµС‡РёРІР°С‚СЊ РґРѕСЃС‚Р°С‚РѕС‡РЅСѓСЋ РјРѕС‰РЅРѕСЃС‚СЊ</li>
       </ol>
 
-      <h3>Тестирование устройств</h3>
+      <h3>РўРµСЃС‚РёСЂРѕРІР°РЅРёРµ СѓСЃС‚СЂРѕР№СЃС‚РІ</h3>
       <ol>
-        <li>Подключите устройства по одному</li>
-        <li>Если работают по отдельности - проблема в перегрузке</li>
-        <li>Если не работают - проблема в питании</li>
+        <li>РџРѕРґРєР»СЋС‡РёС‚Рµ СѓСЃС‚СЂРѕР№СЃС‚РІР° РїРѕ РѕРґРЅРѕРјСѓ</li>
+        <li>Р•СЃР»Рё СЂР°Р±РѕС‚Р°СЋС‚ РїРѕ РѕС‚РґРµР»СЊРЅРѕСЃС‚Рё - РїСЂРѕР±Р»РµРјР° РІ РїРµСЂРµРіСЂСѓР·РєРµ</li>
+        <li>Р•СЃР»Рё РЅРµ СЂР°Р±РѕС‚Р°СЋС‚ - РїСЂРѕР±Р»РµРјР° РІ РїРёС‚Р°РЅРёРё</li>
       </ol>
 
-      <h2>Решение 1: Подключение внешнего питания</h2>
-      <h3>Адаптер питания</h3>
+      <h2>Р РµС€РµРЅРёРµ 1: РџРѕРґРєР»СЋС‡РµРЅРёРµ РІРЅРµС€РЅРµРіРѕ РїРёС‚Р°РЅРёСЏ</h2>
+      <h3>РђРґР°РїС‚РµСЂ РїРёС‚Р°РЅРёСЏ</h3>
       <ol>
-        <li>Найдите подходящий адаптер для вашего хаба</li>
-        <li>Подключите его к хабу</li>
-        <li>Теперь хаб питается от сети, а не от USB порта</li>
+        <li>РќР°Р№РґРёС‚Рµ РїРѕРґС…РѕРґСЏС‰РёР№ Р°РґР°РїС‚РµСЂ РґР»СЏ РІР°С€РµРіРѕ С…Р°Р±Р°</li>
+        <li>РџРѕРґРєР»СЋС‡РёС‚Рµ РµРіРѕ Рє С…Р°Р±Сѓ</li>
+        <li>РўРµРїРµСЂСЊ С…Р°Р± РїРёС‚Р°РµС‚СЃСЏ РѕС‚ СЃРµС‚Рё, Р° РЅРµ РѕС‚ USB РїРѕСЂС‚Р°</li>
       </ol>
 
-      <h3>USB 3.0 порт</h3>
+      <h3>USB 3.0 РїРѕСЂС‚</h3>
       <ol>
-        <li>Подключите хаб к USB 3.0 порту</li>
-        <li>USB 3.0 предоставляет больше энергии</li>
-        <li>До 900 мА вместо 500 мА у USB 2.0</li>
+        <li>РџРѕРґРєР»СЋС‡РёС‚Рµ С…Р°Р± Рє USB 3.0 РїРѕСЂС‚Сѓ</li>
+        <li>USB 3.0 РїСЂРµРґРѕСЃС‚Р°РІР»СЏРµС‚ Р±РѕР»СЊС€Рµ СЌРЅРµСЂРіРёРё</li>
+        <li>Р”Рѕ 900 РјРђ РІРјРµСЃС‚Рѕ 500 РјРђ Сѓ USB 2.0</li>
       </ol>
 
-      <h2>Решение 2: Снижение нагрузки</h2>
-      <h3>Подключение по одному</h3>
+      <h2>Р РµС€РµРЅРёРµ 2: РЎРЅРёР¶РµРЅРёРµ РЅР°РіСЂСѓР·РєРё</h2>
+      <h3>РџРѕРґРєР»СЋС‡РµРЅРёРµ РїРѕ РѕРґРЅРѕРјСѓ</h3>
       <ol>
-        <li>Подключайте устройства по одному</li>
-        <li>Проверьте, сколько устройств выдерживает хаб</li>
-        <li>Используйте активный хаб для большего количества устройств</li>
+        <li>РџРѕРґРєР»СЋС‡Р°Р№С‚Рµ СѓСЃС‚СЂРѕР№СЃС‚РІР° РїРѕ РѕРґРЅРѕРјСѓ</li>
+        <li>РџСЂРѕРІРµСЂСЊС‚Рµ, СЃРєРѕР»СЊРєРѕ СѓСЃС‚СЂРѕР№СЃС‚РІ РІС‹РґРµСЂР¶РёРІР°РµС‚ С…Р°Р±</li>
+        <li>РСЃРїРѕР»СЊР·СѓР№С‚Рµ Р°РєС‚РёРІРЅС‹Р№ С…Р°Р± РґР»СЏ Р±РѕР»СЊС€РµРіРѕ РєРѕР»РёС‡РµСЃС‚РІР° СѓСЃС‚СЂРѕР№СЃС‚РІ</li>
       </ol>
 
-      <h3>Распределение нагрузки</h3>
+      <h3>Р Р°СЃРїСЂРµРґРµР»РµРЅРёРµ РЅР°РіСЂСѓР·РєРё</h3>
       <ol>
-        <li>Разделите устройства между несколькими хабами</li>
-        <li>Подключите энергоемкие устройства напрямую</li>
-        <li>Оставьте на хабе только низкопотребляющие устройства</li>
+        <li>Р Р°Р·РґРµР»РёС‚Рµ СѓСЃС‚СЂРѕР№СЃС‚РІР° РјРµР¶РґСѓ РЅРµСЃРєРѕР»СЊРєРёРјРё С…Р°Р±Р°РјРё</li>
+        <li>РџРѕРґРєР»СЋС‡РёС‚Рµ СЌРЅРµСЂРіРѕРµРјРєРёРµ СѓСЃС‚СЂРѕР№СЃС‚РІР° РЅР°РїСЂСЏРјСѓСЋ</li>
+        <li>РћСЃС‚Р°РІСЊС‚Рµ РЅР° С…Р°Р±Рµ С‚РѕР»СЊРєРѕ РЅРёР·РєРѕРїРѕС‚СЂРµР±Р»СЏСЋС‰РёРµ СѓСЃС‚СЂРѕР№СЃС‚РІР°</li>
       </ol>
 
-      <h2>Решение 3: Сброс USB контроллеров</h2>
-      <h3>Удаление контроллеров</h3>
+      <h2>Р РµС€РµРЅРёРµ 3: РЎР±СЂРѕСЃ USB РєРѕРЅС‚СЂРѕР»Р»РµСЂРѕРІ</h2>
+      <h3>РЈРґР°Р»РµРЅРёРµ РєРѕРЅС‚СЂРѕР»Р»РµСЂРѕРІ</h3>
       <ol>
-        <li>Диспетчер устройств > Универсальные последовательные шины</li>
-        <li>Удалите все USB контроллеры</li>
-        <li>Перезагрузите компьютер</li>
+        <li>Р”РёСЃРїРµС‚С‡РµСЂ СѓСЃС‚СЂРѕР№СЃС‚РІ в†’ РЈРЅРёРІРµСЂСЃР°Р»СЊРЅС‹Рµ РїРѕСЃР»РµРґРѕРІР°С‚РµР»СЊРЅС‹Рµ С€РёРЅС‹</li>
+        <li>РЈРґР°Р»РёС‚Рµ РІСЃРµ USB РєРѕРЅС‚СЂРѕР»Р»РµСЂС‹</li>
+        <li>РџРµСЂРµР·Р°РіСЂСѓР·РёС‚Рµ РєРѕРјРїСЊСЋС‚РµСЂ</li>
       </ol>
 
-      <h3>Переустановка</h3>
+      <h3>РџРµСЂРµСѓСЃС‚Р°РЅРѕРІРєР°</h3>
       <ol>
-        <li>Windows автоматически переустановит драйверы</li>
-        <li>Подключите хаб заново</li>
+        <li>Windows Р°РІС‚РѕРјР°С‚РёС‡РµСЃРєРё РїРµСЂРµСѓСЃС‚Р°РЅРѕРІРёС‚ РґСЂР°Р№РІРµСЂС‹</li>
+        <li>РџРѕРґРєР»СЋС‡РёС‚Рµ С…Р°Р± Р·Р°РЅРѕРІРѕ</li>
       </ol>
 
-      <h2>Решение 4: Отключение энергосбережения</h2>
-      <h3>USB настройки</h3>
+      <h2>Р РµС€РµРЅРёРµ 4: РћС‚РєР»СЋС‡РµРЅРёРµ СЌРЅРµСЂРіРѕСЃР±РµСЂРµР¶РµРЅРёСЏ</h2>
+      <h3>USB РЅР°СЃС‚СЂРѕР№РєРё</h3>
       <ol>
-        <li>Диспетчер устройств > Универсальные последовательные шины</li>
-        <li>Свойства каждого контроллера</li>
-        <li>Отключить "Разрешить отключение для экономии энергии"</li>
+        <li>Р”РёСЃРїРµС‚С‡РµСЂ СѓСЃС‚СЂРѕР№СЃС‚РІ в†’ РЈРЅРёРІРµСЂСЃР°Р»СЊРЅС‹Рµ РїРѕСЃР»РµРґРѕРІР°С‚РµР»СЊРЅС‹Рµ С€РёРЅС‹</li>
+        <li>РЎРІРѕР№СЃС‚РІР° РєР°Р¶РґРѕРіРѕ РєРѕРЅС‚СЂРѕР»Р»РµСЂР°</li>
+        <li>РћС‚РєР»СЋС‡РёС‚СЊ "Р Р°Р·СЂРµС€РёС‚СЊ РѕС‚РєР»СЋС‡РµРЅРёРµ РґР»СЏ СЌРєРѕРЅРѕРјРёРё СЌРЅРµСЂРіРёРё"</li>
       </ol>
 
-      <h3>План питания</h3>
+      <h3>РџР»Р°РЅ РїРёС‚Р°РЅРёСЏ</h3>
       <ol>
-        <li>Панель управления > Электропитание</li>
-        <li>Изменить параметры плана</li>
-        <li>Отключить USB приостановку</li>
+        <li>РџР°РЅРµР»СЊ СѓРїСЂР°РІР»РµРЅРёСЏ в†’ Р­Р»РµРєС‚СЂРѕРїРёС‚Р°РЅРёРµ</li>
+        <li>РР·РјРµРЅРёС‚СЊ РїР°СЂР°РјРµС‚СЂС‹ РїР»Р°РЅР°</li>
+        <li>РћС‚РєР»СЋС‡РёС‚СЊ USB РїСЂРёРѕСЃС‚Р°РЅРѕРІРєСѓ</li>
       </ol>
 
-      <h2>Решение 5: Замена хаба</h2>
-      <h3>Активный хаб</h3>
+      <h2>Р РµС€РµРЅРёРµ 5: Р—Р°РјРµРЅР° С…Р°Р±Р°</h2>
+      <h3>РђРєС‚РёРІРЅС‹Р№ С…Р°Р±</h3>
       <ol>
-        <li>Купите USB хаб с внешним питанием</li>
-        <li>Такие хабы обеспечивают стабильное питание для всех портов</li>
-        <li>Поддерживают большее количество устройств</li>
+        <li>РљСѓРїРёС‚Рµ USB С…Р°Р± СЃ РІРЅРµС€РЅРёРј РїРёС‚Р°РЅРёРµРј</li>
+        <li>РўР°РєРёРµ С…Р°Р±С‹ РѕР±РµСЃРїРµС‡РёРІР°СЋС‚ СЃС‚Р°Р±РёР»СЊРЅРѕРµ РїРёС‚Р°РЅРёРµ РґР»СЏ РІСЃРµС… РїРѕСЂС‚РѕРІ</li>
+        <li>РџРѕРґРґРµСЂР¶РёРІР°СЋС‚ Р±РѕР»СЊС€РµРµ РєРѕР»РёС‡РµСЃС‚РІРѕ СѓСЃС‚СЂРѕР№СЃС‚РІ</li>
       </ol>
 
-      <h3>USB 3.0 хаб</h3>
+      <h3>USB 3.0 С…Р°Р±</h3>
       <ol>
-        <li>Используйте хаб с USB 3.0 для большей скорости и мощности</li>
-        <li>Совместим с USB 2.0 устройствами</li>
+        <li>РСЃРїРѕР»СЊР·СѓР№С‚Рµ С…Р°Р± СЃ USB 3.0 РґР»СЏ Р±РѕР»СЊС€РµР№ СЃРєРѕСЂРѕСЃС‚Рё Рё РјРѕС‰РЅРѕСЃС‚Рё</li>
+        <li>РЎРѕРІРјРµСЃС‚РёРј СЃ USB 2.0 СѓСЃС‚СЂРѕР№СЃС‚РІР°РјРё</li>
       </ol>
 
-      <h2>Решение 6: Проверка устройств</h2>
-      <h3>Тестирование по отдельности</h3>
+      <h2>Р РµС€РµРЅРёРµ 6: РџСЂРѕРІРµСЂРєР° СѓСЃС‚СЂРѕР№СЃС‚РІ</h2>
+      <h3>РўРµСЃС‚РёСЂРѕРІР°РЅРёРµ РїРѕ РѕС‚РґРµР»СЊРЅРѕСЃС‚Рё</h3>
       <ol>
-        <li>Подключите каждое устройство напрямую к ноутбуку</li>
-        <li>Определите, какие устройства вызывают проблемы</li>
-        <li>Замените или обновите проблемные устройства</li>
+        <li>РџРѕРґРєР»СЋС‡РёС‚Рµ РєР°Р¶РґРѕРµ СѓСЃС‚СЂРѕР№СЃС‚РІРѕ РЅР°РїСЂСЏРјСѓСЋ Рє РЅРѕСѓС‚Р±СѓРєСѓ</li>
+        <li>РћРїСЂРµРґРµР»РёС‚Рµ, РєР°РєРёРµ СѓСЃС‚СЂРѕР№СЃС‚РІР° РІС‹Р·С‹РІР°СЋС‚ РїСЂРѕР±Р»РµРјС‹</li>
+        <li>Р—Р°РјРµРЅРёС‚Рµ РёР»Рё РѕР±РЅРѕРІРёС‚Рµ РїСЂРѕР±Р»РµРјРЅС‹Рµ СѓСЃС‚СЂРѕР№СЃС‚РІР°</li>
       </ol>
 
       <div class="pro-tips">
-        <h4><i class="fas fa-lightbulb"></i> Профессиональные советы</h4>
+        <h4><i class="fas fa-lightbulb"></i> РџСЂРѕС„РµСЃСЃРёРѕРЅР°Р»СЊРЅС‹Рµ СЃРѕРІРµС‚С‹</h4>
         <div class="tip-item">
           <i class="fas fa-plug"></i>
-          <span>Всегда используйте USB хабы с внешним питанием для нескольких устройств</span>
+          <span>Р’СЃРµРіРґР° РёСЃРїРѕР»СЊР·СѓР№С‚Рµ USB С…Р°Р±С‹ СЃ РІРЅРµС€РЅРёРј РїРёС‚Р°РЅРёРµРј РґР»СЏ РЅРµСЃРєРѕР»СЊРєРёС… СѓСЃС‚СЂРѕР№СЃС‚РІ</span>
         </div>
         <div class="tip-item">
           <i class="fas fa-bolt"></i>
-          <span>Подключайте USB хабы к USB 3.0 портам для большей мощности</span>
+          <span>РџРѕРґРєР»СЋС‡Р°Р№С‚Рµ USB С…Р°Р±С‹ Рє USB 3.0 РїРѕСЂС‚Р°Рј РґР»СЏ Р±РѕР»СЊС€РµР№ РјРѕС‰РЅРѕСЃС‚Рё</span>
         </div>
         <div class="tip-item">
           <i class="fas fa-tools"></i>
-          <span>Регулярно очищайте USB порты от пыли для стабильного контакта</span>
+          <span>Р РµРіСѓР»СЏСЂРЅРѕ РѕС‡РёС‰Р°Р№С‚Рµ USB РїРѕСЂС‚С‹ РѕС‚ РїС‹Р»Рё РґР»СЏ СЃС‚Р°Р±РёР»СЊРЅРѕРіРѕ РєРѕРЅС‚Р°РєС‚Р°</span>
         </div>
         <div class="tip-item">
           <i class="fas fa-shopping-cart"></i>
-          <span>Выбирайте качественные USB хабы от надежных производителей</span>
+          <span>Р’С‹Р±РёСЂР°Р№С‚Рµ РєР°С‡РµСЃС‚РІРµРЅРЅС‹Рµ USB С…Р°Р±С‹ РѕС‚ РЅР°РґРµР¶РЅС‹С… РїСЂРѕРёР·РІРѕРґРёС‚РµР»РµР№</span>
         </div>
       </div>
 
-      <h2>Расширенные решения</h2>
-      <h3>Восстановление системы</h3>
+      <h2>Р Р°СЃС€РёСЂРµРЅРЅС‹Рµ СЂРµС€РµРЅРёСЏ</h2>
+      <h3>Р’РѕСЃСЃС‚Р°РЅРѕРІР»РµРЅРёРµ СЃРёСЃС‚РµРјС‹</h3>
       <ol>
-        <li>Win + R > rstrui</li>
-        <li>Выберите точку восстановления</li>
-        <li>Восстановите до появления проблемы</li>
+        <li>Win + R в†’ rstrui</li>
+        <li>Р’С‹Р±РµСЂРёС‚Рµ С‚РѕС‡РєСѓ РІРѕСЃСЃС‚Р°РЅРѕРІР»РµРЅРёСЏ</li>
+        <li>Р’РѕСЃСЃС‚Р°РЅРѕРІРёС‚Рµ РґРѕ РїРѕСЏРІР»РµРЅРёСЏ РїСЂРѕР±Р»РµРјС‹</li>
       </ol>
 
-      <h3>Чистая загрузка</h3>
+      <h3>Р§РёСЃС‚Р°СЏ Р·Р°РіСЂСѓР·РєР°</h3>
       <ol>
-        <li>msconfig > Службы > Отключить все</li>
-        <li>Протестируйте работу хаба</li>
+        <li>msconfig в†’ РЎР»СѓР¶Р±С‹ в†’ РћС‚РєР»СЋС‡РёС‚СЊ РІСЃРµ</li>
+        <li>РџСЂРѕС‚РµСЃС‚РёСЂСѓР№С‚Рµ СЂР°Р±РѕС‚Сѓ С…Р°Р±Р°</li>
       </ol>
 
-      <h2>Частые вопросы</h2>
-      <h3>Почему устройства на хабе отключаются по очереди?</h3>
-      <p>Недостаточное питание. USB порт не может обеспечить энергию для всех устройств одновременно.</p>
+      <h2>Р§Р°СЃС‚С‹Рµ РІРѕРїСЂРѕСЃС‹</h2>
+      <h3>РџРѕС‡РµРјСѓ СѓСЃС‚СЂРѕР№СЃС‚РІР° РЅР° С…Р°Р±Рµ РѕС‚РєР»СЋС‡Р°СЋС‚СЃСЏ РїРѕ РѕС‡РµСЂРµРґРё?</h3>
+      <p>РќРµРґРѕСЃС‚Р°С‚РѕС‡РЅРѕРµ РїРёС‚Р°РЅРёРµ. USB РїРѕСЂС‚ РЅРµ РјРѕР¶РµС‚ РѕР±РµСЃРїРµС‡РёС‚СЊ СЌРЅРµСЂРіРёСЋ РґР»СЏ РІСЃРµС… СѓСЃС‚СЂРѕР№СЃС‚РІ РѕРґРЅРѕРІСЂРµРјРµРЅРЅРѕ.</p>
 
-      <h3>Можно ли использовать пассивный хаб?</h3>
-      <p>Да, но только для 1-2 низкопотребляющих устройств. Для большего количества нужен активный хаб.</p>
+      <h3>РњРѕР¶РЅРѕ Р»Рё РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ РїР°СЃСЃРёРІРЅС‹Р№ С…Р°Р±?</h3>
+      <p>Р”Р°, РЅРѕ С‚РѕР»СЊРєРѕ РґР»СЏ 1-2 РЅРёР·РєРѕРїРѕС‚СЂРµР±Р»СЏСЋС‰РёС… СѓСЃС‚СЂРѕР№СЃС‚РІ. Р”Р»СЏ Р±РѕР»СЊС€РµРіРѕ РєРѕР»РёС‡РµСЃС‚РІР° РЅСѓР¶РµРЅ Р°РєС‚РёРІРЅС‹Р№ С…Р°Р±.</p>
 
-      <h3>Что делать, если внешнее питание не помогает?</h3>
-      <p>Проверьте хаб на другом компьютере. Возможно, он поврежден и требует замены.</p>
+      <h3>Р§С‚Рѕ РґРµР»Р°С‚СЊ, РµСЃР»Рё РІРЅРµС€РЅРµРµ РїРёС‚Р°РЅРёРµ РЅРµ РїРѕРјРѕРіР°РµС‚?</h3>
+      <p>РџСЂРѕРІРµСЂСЊС‚Рµ С…Р°Р± РЅР° РґСЂСѓРіРѕРј РєРѕРјРїСЊСЋС‚РµСЂРµ. Р’РѕР·РјРѕР¶РЅРѕ, РѕРЅ РїРѕРІСЂРµР¶РґРµРЅ Рё С‚СЂРµР±СѓРµС‚ Р·Р°РјРµРЅС‹.</p>
 
-      <h2>Когда нужна замена хаба</h2>
+      <h2>РљРѕРіРґР° РЅСѓР¶РЅР° Р·Р°РјРµРЅР° С…Р°Р±Р°</h2>
       <ul>
-        <li>Хаб не работает даже с питанием</li>
-        <li>Повреждены USB порты</li>
-        <li>Не поддерживает нужное количество устройств</li>
-        <li>Все решения не помогли</li>
+        <li>РҐР°Р± РЅРµ СЂР°Р±РѕС‚Р°РµС‚ РґР°Р¶Рµ СЃ РїРёС‚Р°РЅРёРµРј</li>
+        <li>РџРѕРІСЂРµР¶РґРµРЅС‹ USB РїРѕСЂС‚С‹</li>
+        <li>РќРµ РїРѕРґРґРµСЂР¶РёРІР°РµС‚ РЅСѓР¶РЅРѕРµ РєРѕР»РёС‡РµСЃС‚РІРѕ СѓСЃС‚СЂРѕР№СЃС‚РІ</li>
+        <li>Р’СЃРµ СЂРµС€РµРЅРёСЏ РЅРµ РїРѕРјРѕРіР»Рё</li>
       </ul>
 
-      <p>В большинстве случаев проблема решается подключением внешнего питания или заменой хаба на активный. Начните с проверки питания и подключения устройств по одному.</p>
+      <p>Р’ Р±РѕР»СЊС€РёРЅСЃС‚РІРµ СЃР»СѓС‡Р°РµРІ РїСЂРѕР±Р»РµРјР° СЂРµС€Р°РµС‚СЃСЏ РїРѕРґРєР»СЋС‡РµРЅРёРµРј РІРЅРµС€РЅРµРіРѕ РїРёС‚Р°РЅРёСЏ РёР»Рё Р·Р°РјРµРЅРѕР№ С…Р°Р±Р° РЅР° Р°РєС‚РёРІРЅС‹Р№. РќР°С‡РЅРёС‚Рµ СЃ РїСЂРѕРІРµСЂРєРё РїРёС‚Р°РЅРёСЏ Рё РїРѕРґРєР»СЋС‡РµРЅРёСЏ СѓСЃС‚СЂРѕР№СЃС‚РІ РїРѕ РѕРґРЅРѕРјСѓ.</p>
     </div>
   </main>
 
-      <footer class="footer">
-        <div class="container">
-            <div class="footer__grid">
-                <div class="footer__col footer__col--logo">
-                    <a href="../index.html" class="footer-logo">
-                        <span class="logo__icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M12 15L7 10H17L12 15Z" fill="currentColor"/>
-                                <path d="M12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3ZM12 19C8.13401 19 5 15.866 5 12C5 8.13401 8.13401 5 12 5C15.866 5 19 8.13401 19 12C19 15.866 15.866 19 12 19Z" fill="currentColor"/>
-                            </svg>
-                        </span>
-                        <span class="logo__text">Repairo</span>
-                    </a>
-                    <p class="footer__text">Помогаем ремонтировать электронику с 2024 года</p>
-                </div>
-                <div class="footer__col">
-                    <h3 class="footer__title">Разделы</h3>
-                    <ul class="footer__links">
-                        <li><a href="../index.html" class="footer__link">Главная</a></li>
-                        <li><a href="../index.html#categories" class="footer__link">Все гайды</a></li>
-                        <li><a href="../contacts.html" class="footer__link">Контакты</a></li>
-                    </ul>
-                </div>
-                <div class="footer__col">
-                    <h3 class="footer__title">Категории</h3>
-                    <ul class="footer__links">
-                        <li><a href="../tv.html" class="nav__link">Телевизоры</a></li>
-                        <li><a href="../cameras.html" class="nav__link">Фотоаппараты</a></li>
-                        <li><a href="../consoles.html" class="nav__link">Приставки</a></li>
-                        <li><a href="../laptops.html" class="nav__link">Ноутбуки</a></li>
-                        <li><a href="../smartphones.html" class="nav__link">Смартфоны</a></li>
-                        <li><a href="../small-appliances.html" class="nav__link">Мелкая техника</a></li>
-                        <li><a href="../large-appliances.html" class="nav__link">Бытовая техника</a></li>
-                        <li><a href="../auto-electronics.html" class="nav__link">Авто-Электроника</a></li>
-                    </ul>
-                </div>
-                <div class="footer__col">
-                    <h3 class="footer__title">Контакты</h3>
-                    <ul class="footer__links">
-                        <li><a href="https://t.me/RepairoRU" class="footer__link"><i class="fab fa-telegram"></i> Telegram</a></li>
-                        <li><span class="footer__link">Наша почта: repairo.info@mail.ru</span></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer__bottom">
-                <p class="disclaimer">
-    Администрация сайта не несёт ответственности за возможные повреждения техники
-    и иные последствия, возникшие в результате самостоятельного ремонта по
-    материалам и инструкциям, размещённым на сайте. Все работы вы выполняете
-    на свой страх и риск.
-    </p>
-                <p class="footer__copyright">© 2026 Repairo. Все права защищены.</p>
-            </div>
-        </div>
-    </footer>
-    <!-- Cookie Consent Banner -->
-    <script src="../script.js"></script>
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2024 FixTech. Р’СЃРµ РїСЂР°РІР° Р·Р°С‰РёС‰РµРЅС‹.</p>
+      <div class="footer-links">
+        <a href="/privacy">РљРѕРЅС„РёРґРµРЅС†РёР°Р»СЊРЅРѕСЃС‚СЊ</a>
+        <a href="/terms">РЈСЃР»РѕРІРёСЏ РёСЃРїРѕР»СЊР·РѕРІР°РЅРёСЏ</a>
+        <a href="/contact">РљРѕРЅС‚Р°РєС‚С‹</a>
+      </div>
+    </div>
+  </footer>
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "HowTo",
-  "name": "При подключении хаба USB к ноутбуку все устройства на нем отключаются по очереди | Экспертный мегагайд",
-  "description": "",
-  "totalTime": "PT30M",
-  "step": [
-    {
-      "@type": "HowToStep",
-      "name": "Введение: почему Cyberpunk 2077 может тормозить на PS5 после патчей?",
-      "text": "Введение: почему Cyberpunk 2077 может тормозить на PS5 после патчей?",
-      "url": "#step-1"
-    },
-    {
-      "@type": "HowToStep",
-      "name": "Таблица: основные причины лагов и просадок FPS в Cyberpunk 2077 на PS5 после обновлений",
-      "text": "Таблица: основные причины лагов и просадок FPS в Cyberpunk 2077 на PS5 после обновлений",
-      "url": "#step-2"
-    },
-    {
-      "@type": "HowToStep",
-      "name": "Пошаговая инструкция: что делать, если Cyberpunk 2077 тормозит на PS5 после обновления",
-      "text": "Пошаговая инструкция: что делать, если Cyberpunk 2077 тормозит на PS5 после обновления",
-      "url": "#step-3"
-    },
-    {
-      "@type": "HowToStep",
-      "name": "Таблица: сравнение режимов графики и FPS в Cyberpunk 2077 на PS5",
-      "text": "Таблица: сравнение режимов графики и FPS в Cyberpunk 2077 на PS5",
-      "url": "#step-4"
-    },
-    {
-      "@type": "HowToStep",
-      "name": "Отзывы игроков и тесты Digital Foundry",
-      "text": "Отзывы игроков и тесты Digital Foundry",
-      "url": "#step-5"
-    },
-    {
-      "@type": "HowToStep",
-      "name": "Лайфхаки и советы по оптимизации Cyberpunk 2077 на PS5",
-      "text": "Лайфхаки и советы по оптимизации Cyberpunk 2077 на PS5",
-      "url": "#step-6"
-    },
-    {
-      "@type": "HowToStep",
-      "name": "FAQ – часто задаваемые вопросы о тормозах Cyberpunk 2077 на PS5",
-      "text": "FAQ – часто задаваемые вопросы о тормозах Cyberpunk 2077 на PS5",
-      "url": "#step-7"
-    },
-    {
-      "@type": "HowToStep",
-      "name": "Пошаговая инструкция: как восстановить базу данных PS5",
-      "text": "Пошаговая инструкция: как восстановить базу данных PS5",
-      "url": "#step-8"
-    }
-  ],
-  "image": "https://repairo.ru/https://mc.yandex.ru/watch/106225686"
-}
-</script>
-<!-- Cookie Consent Script -->
-<script src="../cookie-consent.js"></script>
+  <script src="../script.js"></script>
+  <script src="../search.js"></script>
 </body>
 </html>
-
-
-
-
-
-

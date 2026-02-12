@@ -4,8 +4,9 @@
 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Windows не может отобразить правильное изменение яркости экр</title>
-    <meta name="description" content="">
+  <title>Windows РЅРµ РјРѕР¶РµС‚ РѕС‚РѕР±СЂР°Р·РёС‚СЊ РїСЂР°РІРёР»СЊРЅРѕРµ РёР·РјРµРЅРµРЅРёРµ СЏСЂРєРѕСЃС‚Рё СЌРєСЂР°РЅР° РЅРѕСѓС‚Р±СѓРєР° | Р­РєСЃРїРµСЂС‚РЅС‹Р№ РјРµРіР°РіР°Р№Рґ</title>
+    <meta name="description" content="{{ description }}">
+    <meta name="description" content="РџРѕС€Р°РіРѕРІР°СЏ РёРЅСЃС‚СЂСѓРєС†РёСЏ: Windows РЅРµ РјРѕР¶РµС‚ РѕС‚РѕР±СЂР°Р·РёС‚СЊ РїСЂР°РІРёР»СЊРЅРѕРµ РёР·РјРµРЅРµРЅРёРµ СЏСЂРєРѕСЃС‚Рё СЌРєСЂР°РЅР° РЅРѕСѓС‚Р±СѓРєР° вЂ” Р­РєСЃРїРµСЂС‚РЅС‹Р№ РјРµРіР°РіР°Р№Рґ. РџСЂРёС‡РёРЅС‹: РґСЂР°Р№РІРµСЂС‹, РЅР°СЃС‚СЂРѕР№РєРё, РґР°С‚С‡РёРє. Р РµС€РµРЅРёСЏ: РѕР±РЅРѕРІР»РµРЅРёРµ РґСЂР°Р№РІРµСЂРѕРІ, РєР°Р»РёР±СЂРѕРІРєР°, СЃР±СЂРѕСЃ РЅР°СЃС‚СЂРѕРµРє.">
 
   <link rel="stylesheet" href="../styles.css" />
   <link rel="stylesheet" href="../styles-header.css" />
@@ -13,25 +14,36 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <style>
     .guide-content { line-height: 1.7; color: var(--text); }
-    .guide-content h2 { color: var(--primary); margin-top: 30px; margin-bottom: 15px; font-size: 1.5rem; }
-    .guide-content h3 { color: var(--primary-dark); margin-top: 25px; margin-bottom: 12px; font-size: 1.2rem; }
+    .guide-content h2 { color: var(--primary); margin-top: 30px; margin-bottom: 15px; font-size: 1.6rem; }
+    .guide-content h3 { color: var(--primary-dark); margin-top: 25px; margin-bottom: 12px; font-size: 1.25rem; }
     .guide-image-block { margin: 20px 0; padding: 15px; background: var(--background); border-radius: var(--border-radius); border: 1px solid var(--border); text-align: center; }
     .guide-image-block img { max-width: 100%; height: auto; border-radius: 6px; border: 1px solid var(--border); }
     .image-caption { margin-top: 10px; font-size: 0.85rem; color: var(--text-light); font-style: italic; }
-    .pro-tips { background: rgba(3, 74, 79, 0.05); padding: 15px; border-radius: 6px; margin: 20px 0; }
-    .pro-tips h4 { color: var(--primary); margin-top: 0; margin-bottom: 12px; font-size: 1.1rem; }
-    .tip-item { display: flex; gap: 8px; margin-bottom: 8px; align-items: flex-start; }
+    .pro-tips { background: rgba(3, 74, 79, 0.05); padding: 18px; border-radius: 8px; margin: 25px 0; }
+    .pro-tips h4 { color: var(--primary); margin-top: 0; margin-bottom: 12px; font-size: 1.15rem; }
+    .tip-item { display: flex; gap: 10px; margin-bottom: 10px; align-items: flex-start; }
+    .tip-item i { margin-top: 3px; }
     table { width: 100%; border-collapse: collapse; margin: 20px 0; }
-    th, td { border: 1px solid var(--border); padding: 8px; text-align: left; }
+    th, td { border: 1px solid var(--border); padding: 8px; text-align: left; vertical-align: top; }
     th { background: var(--background-light); }
-    .highlight { background: #f5f7fa; border-left: 4px solid #2d9cdb; padding: 10px 15px; margin: 20px 0; }
-    .faq-section ul { margin-left: 1em; }
-    .block-section { margin-bottom: 2em; }
+    code { background: var(--background-light); padding: 2px 4px; border-radius: 4px; font-size: 0.9em; }
+    ul, ol { margin-left: 18px; }
     @media (max-width: 768px) {
       .guide-content h2 { font-size: 1.4rem; margin-top: 25px; }
+      .guide-content h3 { font-size: 1.15rem; }
       .guide-image-block { padding: 12px; margin: 15px 0; }
       table, th, td { font-size: 0.95rem; }
     }
+
+    /* РЇРЅРґРµРєСЃ РњР°СЂРєРµС‚ СЂРµРєР»Р°РјРЅС‹Р№ Р±Р°РЅРЅРµСЂ */
+    .ym-hero-link {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+      max-width: 100%;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
     /* Р“РѕСЂРёР·РѕРЅС‚Р°Р»СЊРЅС‹Р№ Р±Р°РЅРЅРµСЂ-РєР°СЂС‚РѕС‡РєР° */
     .ym-hero-banner {
       width: 100%;
@@ -107,569 +119,344 @@
     }
 
     /* Р РµР№С‚РёРЅРі */
-    .ym-hero-top {
+    .ym-hero-rating {
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      gap: 8px;
-    }
-
-    .ym-hero-rating {
-      font-size: 13px;
-      font-weight: 500;
-      color: #111827;
-      background: #f9fafb;
-      border-radius: 999px;
-      padding: 4px 10px;
-    }
-
-    .ym-hero-rating-count {
+      gap: 4px;
+      font-size: 12px;
       color: #6b7280;
     }
 
-    /* Р¤РёРѕР»РµС‚РѕРІР°СЏ РєРЅРѕРїРєР° */
-    .ym-hero-button {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 9px 16px;
-      border-radius: 999px;
-      border: none;
-      background: #6a00ff;
-      color: #ffffff;
-      font-size: 14px;
-      font-weight: 600;
-      cursor: pointer;
-      box-shadow: 0 2px 6px rgba(88, 28, 135, 0.35);
-      transition: background 0.15s ease, transform 0.15s ease,
-                  box-shadow 0.15s ease;
-    }
-    .ym-hero-button::after {
-      content: "в†’";
-      margin-left: 6px;
-      font-size: 14px;
-    }
-    .ym-hero-button:hover {
-      background: #7c3aed;
-      transform: translateY(-1px);
-      box-shadow: 0 4px 10px rgba(88, 28, 135, 0.45);
+    .ym-hero-stars {
+      display: flex;
+      gap: 1px;
     }
 
-    /* Р®СЂРёРґРёС‡РµСЃРєРёР№ Р±Р»РѕРє */
-    .ym-hero-legal {
-      margin-top: 6px;
-      max-width: 600px;
+    .ym-hero-star {
+      width: 12px;
+      height: 12px;
+      fill: #fbbf24;
+    }
+
+    .ym-hero-reviews {
       font-size: 11px;
-      line-height: 1.3;
-      color: #6b7280;
-      margin-left: auto;
-      margin-right: auto;
+      color: #9ca3af;
     }
 
-    /* РђРґР°РїС‚РёРІ */
-    @media (max-width: 480px) {
+    /* Р¦РµРЅР° */
+    .ym-hero-price {
+      font-size: 16px;
+      font-weight: 700;
+      color: #111827;
+      margin: 0;
+    }
+
+    /* РљРЅРѕРїРєР° */
+    .ym-hero-button {
+      background: #007bff;
+      color: #ffffff;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background 0.2s ease;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .ym-hero-button:hover {
+      background: #0056b3;
+    }
+
+    /* РђРґР°РїС‚РёРІРЅРѕСЃС‚СЊ */
+    @media (max-width: 768px) {
       .ym-hero-banner {
-        max-width: 100%;
-        margin: 20px 0;
+        flex-direction: row;
+        min-height: auto;
       }
+
       .ym-hero-images {
-        height: 100px;
+        width: 120px;
+        height: auto;
+        flex-shrink: 0;
       }
+
       .ym-hero-content {
-        padding: 12px 12px;
+        flex: 1;
+        padding: 12px 16px;
       }
+
       .ym-hero-title {
         font-size: 13px;
       }
+
+      .ym-hero-price {
+        font-size: 15px;
+      }
+
       .ym-hero-button {
-        font-size: 13px;
-        padding: 8px 14px;
-      }
-      .ym-hero-legal {
-        font-size: 10px;
-      }
-    }
-    /* Telegram СЂРµРєР»Р°РјРЅС‹Р№ Р±Р°РЅРЅРµСЂ */
-    .telegram-banner {
-      display: flex;
-      justify-content: center;
-      text-decoration: none;
-      color: inherit;
-      width: 100%;
-      margin: 40px 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    }
-
-    .telegram-banner-container {
-      width: 100%;
-      max-width: 500px;
-      min-height: 120px;
-      border-radius: 16px;
-      background: linear-gradient(135deg, #0088cc 0%, #005f8f 100%);
-      border: 1px solid #005f8f;
-      display: flex;
-      align-items: center;
-      padding: 20px;
-      box-shadow: 0 4px 16px rgba(0, 136, 204, 0.2);
-      overflow: hidden;
-      box-sizing: border-box;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-
-    .telegram-banner-container:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(0, 136, 204, 0.3);
-    }
-
-    .telegram-logo {
-      width: 60px;
-      height: 60px;
-      min-width: 60px;
-      background: #ffffff;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-right: 20px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    }
-
-    .telegram-logo svg {
-      width: 32px;
-      height: 32px;
-      fill: #0088cc;
-    }
-
-    .telegram-content {
-      flex: 1;
-      color: #ffffff;
-    }
-
-    .telegram-title {
-      font-size: 16px;
-      font-weight: 600;
-      margin: 0 0 8px 0;
-      line-height: 1.3;
-    }
-
-    .telegram-subtitle {
-      font-size: 14px;
-      opacity: 0.9;
-      margin: 0 0 12px 0;
-      line-height: 1.4;
-    }
-
-    .telegram-button {
-      display: inline-flex;
-      align-items: center;
-      padding: 8px 16px;
-      background: #ffffff;
-      color: #0088cc;
-      border-radius: 20px;
-      font-size: 14px;
-      font-weight: 600;
-      text-decoration: none;
-      transition: background 0.2s ease, transform 0.2s ease;
-    }
-
-    .telegram-button:hover {
-      background: #f0f8ff;
-      transform: scale(1.05);
-    }
-
-    .telegram-button svg {
-      width: 16px;
-      height: 16px;
-      margin-left: 6px;
-      fill: #0088cc;
-    }
-
-    /* РђРґР°РїС‚РёРІ РґР»СЏ РјРѕР±РёР»СЊРЅС‹С… */
-    @media (max-width: 480px) {
-      .telegram-banner-container {
-        max-width: 100%;
-        margin: 20px 0;
-        padding: 15px;
-        min-height: 100px;
-      }
-      .telegram-logo {
-        width: 50px;
-        height: 50px;
-        min-width: 50px;
-        margin-right: 15px;
-      }
-      .telegram-logo svg {
-        width: 26px;
-        height: 26px;
-      }
-      .telegram-title {
-        font-size: 14px;
-      }
-      .telegram-subtitle {
-        font-size: 12px;
-      }
-      .telegram-button {
-        font-size: 12px;
-        padding: 6px 12px;
+        padding: 6px 10px;
+        font-size: 11px;
       }
     }
 
-
-
+    /* РЎРєСЂС‹С‚С‹Р№ Р±Р°РЅРЅРµСЂ РґР»СЏ РґРµСЃРєС‚РѕРїР° */
+    @media (min-width: 769px) {
+      .ym-hero-link {
+        display: none !important;
+      }
+    }
   </style>
   <script async src="https://timeweb.cloud/api/v1/cloud-ai/agents/3cc03620-d051-4d8d-b5af-f7b6cd083a35/embed.js?collapsed=true"></script>
 </head>
 <body>
-  <header class="header">
-    <div class="container">
-      <div class="header__inner">
-        <a href="../index.html" class="logo">
-          <span class="logo__icon"></span>
-          <span class="logo__text">GeoExpert</span>
-        </a>
-        <nav class="nav">
-          <ul class="nav__list">
-            <li><a href="../cameras.html" class="nav__link">РљР°РјРµСЂС‹</a></li>
-            <li><a href="../drones.html" class="nav__link">Р”СЂРѕРЅС‹</a></li>
-            <li><a href="../workflow.html" class="nav__link">Workflow</a></li>
-          </ul>
-        </nav>
+  <header>
+    <div class="header-content">
+      <a href="/" class="logo">
+        <i class="fas fa-tools"></i>
+        FixTech
+      </a>
+      <nav class="nav-links">
+        <a href="/">Р“Р»Р°РІРЅР°СЏ</a>
+        <a href="/articles">Р’СЃРµ СЃС‚Р°С‚СЊРё</a>
+        <a href="/smartphones">РЎРјР°СЂС‚С„РѕРЅС‹</a>
+        <a href="/laptops">РќРѕСѓС‚Р±СѓРєРё</a>
+        <a href="/tv">РўРµР»РµРІРёР·РѕСЂС‹</a>
+        <a href="/cameras">РљР°РјРµСЂС‹</a>
+        <a href="/consoles">РљРѕРЅСЃРѕР»Рё</a>
+        <a href="/auto-electronics">РђРІС‚РѕСЌР»РµРєС‚СЂРѕРЅРёРєР°</a>
+        <a href="/small-appliances">РњРµР»РєР°СЏ С‚РµС…РЅРёРєР°</a>
+        <a href="/large-appliances">РљСЂСѓРїРЅР°СЏ С‚РµС…РЅРёРєР°</a>
+      </nav>
+      <div class="search-container">
+        <input type="text" id="search-input" placeholder="РџРѕРёСЃРє РїРѕ СЃР°Р№С‚Сѓ..." />
+        <button id="search-button"><i class="fas fa-search"></i></button>
       </div>
     </div>
   </header>
 
   <main class="guide-container">
     <div class="guide-content">
-      <h1>Windows не может отобразить правильное изменение яркости экрана ноутбука</h1>
-      <p>Когда Windows не может корректно отобразить изменение яркости экрана ноутбука, проблема обычно связана с драйверами видеокарты или настройками адаптивной яркости. В этом экспертном мегагайде мы разберем все причины неправильного отображения яркости и предоставим решения для восстановления корректного управления подсветкой.</p>
+      <h1>Windows РЅРµ РјРѕР¶РµС‚ РѕС‚РѕР±СЂР°Р·РёС‚СЊ РїСЂР°РІРёР»СЊРЅРѕРµ РёР·РјРµРЅРµРЅРёРµ СЏСЂРєРѕСЃС‚Рё СЌРєСЂР°РЅР° РЅРѕСѓС‚Р±СѓРєР°</h1>
+      <p>РљРѕРіРґР° Windows РЅРµ РјРѕР¶РµС‚ РєРѕСЂСЂРµРєС‚РЅРѕ РѕС‚РѕР±СЂР°Р·РёС‚СЊ РёР·РјРµРЅРµРЅРёРµ СЏСЂРєРѕСЃС‚Рё СЌРєСЂР°РЅР° РЅРѕСѓС‚Р±СѓРєР°, РїСЂРѕР±Р»РµРјР° РѕР±С‹С‡РЅРѕ СЃРІСЏР·Р°РЅР° СЃ РґСЂР°Р№РІРµСЂР°РјРё РІРёРґРµРѕРєР°СЂС‚С‹ РёР»Рё РЅР°СЃС‚СЂРѕР№РєР°РјРё Р°РґР°РїС‚РёРІРЅРѕР№ СЏСЂРєРѕСЃС‚Рё. Р’ СЌС‚РѕРј СЌРєСЃРїРµСЂС‚РЅРѕРј РјРµРіР°РіР°Р№РґРµ РјС‹ СЂР°Р·Р±РµСЂРµРј РІСЃРµ РїСЂРёС‡РёРЅС‹ РЅРµРїСЂР°РІРёР»СЊРЅРѕРіРѕ РѕС‚РѕР±СЂР°Р¶РµРЅРёСЏ СЏСЂРєРѕСЃС‚Рё Рё РїСЂРµРґРѕСЃС‚Р°РІРёРј СЂРµС€РµРЅРёСЏ РґР»СЏ РІРѕСЃСЃС‚Р°РЅРѕРІР»РµРЅРёСЏ РєРѕСЂСЂРµРєС‚РЅРѕРіРѕ СѓРїСЂР°РІР»РµРЅРёСЏ РїРѕРґСЃРІРµС‚РєРѕР№.</p>
 
-      <h2>Признаки проблемы</h2>
+      <h2>РџСЂРёР·РЅР°РєРё РїСЂРѕР±Р»РµРјС‹</h2>
       <ul>
-        <li>Ползунок яркости не влияет на экран</li>
-        <li>Яркость остается постоянной</li>
-        <li>Адаптивная яркость не работает</li>
-        <li>Кнопки Fn + F5/F6 не меняют яркость</li>
-        <li>Экран слишком яркий или темный</li>
+        <li>РџРѕР»Р·СѓРЅРѕРє СЏСЂРєРѕСЃС‚Рё РЅРµ РІР»РёСЏРµС‚ РЅР° СЌРєСЂР°РЅ</li>
+        <li>РЇСЂРєРѕСЃС‚СЊ РѕСЃС‚Р°РµС‚СЃСЏ РїРѕСЃС‚РѕСЏРЅРЅРѕР№</li>
+        <li>РђРґР°РїС‚РёРІРЅР°СЏ СЏСЂРєРѕСЃС‚СЊ РЅРµ СЂР°Р±РѕС‚Р°РµС‚</li>
+        <li>РљРЅРѕРїРєРё Fn + F5/F6 РЅРµ РјРµРЅСЏСЋС‚ СЏСЂРєРѕСЃС‚СЊ</li>
+        <li>Р­РєСЂР°РЅ СЃР»РёС€РєРѕРј СЏСЂРєРёР№ РёР»Рё С‚РµРјРЅС‹Р№</li>
       </ul>
 
-      <h2>Основные причины</h2>
+      <h2>РћСЃРЅРѕРІРЅС‹Рµ РїСЂРёС‡РёРЅС‹</h2>
       <table>
         <tr>
-          <th>Причина</th>
-          <th>Вероятность</th>
-          <th>Характерные признаки</th>
+          <th>РџСЂРёС‡РёРЅР°</th>
+          <th>Р’РµСЂРѕСЏС‚РЅРѕСЃС‚СЊ</th>
+          <th>РҐР°СЂР°РєС‚РµСЂРЅС‹Рµ РїСЂРёР·РЅР°РєРё</th>
         </tr>
         <tr>
-          <td>Драйверы видеокарты</td>
+          <td>Р”СЂР°Р№РІРµСЂС‹ РІРёРґРµРѕРєР°СЂС‚С‹</td>
           <td>40%</td>
-          <td>Работает после обновления</td>
+          <td>Р Р°Р±РѕС‚Р°РµС‚ РїРѕСЃР»Рµ РѕР±РЅРѕРІР»РµРЅРёСЏ</td>
         </tr>
         <tr>
-          <td>Адаптивная яркость</td>
+          <td>РђРґР°РїС‚РёРІРЅР°СЏ СЏСЂРєРѕСЃС‚СЊ</td>
           <td>30%</td>
-          <td>Работает после отключения</td>
+          <td>Р Р°Р±РѕС‚Р°РµС‚ РїРѕСЃР»Рµ РѕС‚РєР»СЋС‡РµРЅРёСЏ</td>
         </tr>
         <tr>
-          <td>Драйверы монитора</td>
+          <td>Р”СЂР°Р№РІРµСЂС‹ РјРѕРЅРёС‚РѕСЂР°</td>
           <td>15%</td>
-          <td>Работает после установки драйверов</td>
+          <td>Р Р°Р±РѕС‚Р°РµС‚ РїРѕСЃР»Рµ СѓСЃС‚Р°РЅРѕРІРєРё РґСЂР°Р№РІРµСЂРѕРІ</td>
         </tr>
         <tr>
-          <td>Поврежденный реестр</td>
+          <td>РџРѕРІСЂРµР¶РґРµРЅРЅС‹Р№ СЂРµРµСЃС‚СЂ</td>
           <td>10%</td>
-          <td>Работает после сброса настроек</td>
+          <td>Р Р°Р±РѕС‚Р°РµС‚ РїРѕСЃР»Рµ СЃР±СЂРѕСЃР° РЅР°СЃС‚СЂРѕРµРє</td>
         </tr>
         <tr>
-          <td>BIOS настройки</td>
+          <td>BIOS РЅР°СЃС‚СЂРѕР№РєРё</td>
           <td>4%</td>
-          <td>Работает после сброса BIOS</td>
+          <td>Р Р°Р±РѕС‚Р°РµС‚ РїРѕСЃР»Рµ СЃР±СЂРѕСЃР° BIOS</td>
         </tr>
         <tr>
-          <td>Аппаратная неисправность</td>
+          <td>РђРїРїР°СЂР°С‚РЅР°СЏ РЅРµРёСЃРїСЂР°РІРЅРѕСЃС‚СЊ</td>
           <td>1%</td>
-          <td>Не работает после всех решений</td>
+          <td>РќРµ СЂР°Р±РѕС‚Р°РµС‚ РїРѕСЃР»Рµ РІСЃРµС… СЂРµС€РµРЅРёР№</td>
         </tr>
       </table>
 
-      <h2>Диагностика проблемы</h2>
-      <h3>Проверка ползунка</h3>
+      <h2>Р”РёР°РіРЅРѕСЃС‚РёРєР° РїСЂРѕР±Р»РµРјС‹</h2>
+      <h3>РџСЂРѕРІРµСЂРєР° РїРѕР»Р·СѓРЅРєР°</h3>
       <ol>
-        <li>Параметры > Система > Дисплей</li>
-        <li>Ползунок "Изменить яркость"</li>
-        <li>Если не работает - проблема с драйверами</li>
+        <li>РџР°СЂР°РјРµС‚СЂС‹ в†’ РЎРёСЃС‚РµРјР° в†’ Р”РёСЃРїР»РµР№</li>
+        <li>РџРѕР»Р·СѓРЅРѕРє "РР·РјРµРЅРёС‚СЊ СЏСЂРєРѕСЃС‚СЊ"</li>
+        <li>Р•СЃР»Рё РЅРµ СЂР°Р±РѕС‚Р°РµС‚ - РїСЂРѕР±Р»РµРјР° СЃ РґСЂР°Р№РІРµСЂР°РјРё</li>
       </ol>
 
-      <h3>Горячие клавиши</h3>
+      <h3>Р“РѕСЂСЏС‡РёРµ РєР»Р°РІРёС€Рё</h3>
       <ol>
-        <li>Fn + F5/F6 (или другие клавиши)</li>
-        <li>Если не работают - проблема с ПО ноутбука</li>
+        <li>Fn + F5/F6 (РёР»Рё РґСЂСѓРіРёРµ РєР»Р°РІРёС€Рё)</li>
+        <li>Р•СЃР»Рё РЅРµ СЂР°Р±РѕС‚Р°СЋС‚ - РїСЂРѕР±Р»РµРјР° СЃ РџРћ РЅРѕСѓС‚Р±СѓРєР°</li>
       </ol>
 
-      <h2>Решение 1: Обновление драйверов</h2>
-      <h3>Драйверы видеокарты</h3>
+      <h2>Р РµС€РµРЅРёРµ 1: РћР±РЅРѕРІР»РµРЅРёРµ РґСЂР°Р№РІРµСЂРѕРІ</h2>
+      <h3>Р”СЂР°Р№РІРµСЂС‹ РІРёРґРµРѕРєР°СЂС‚С‹</h3>
       <ol>
-        <li>GeForce Experience или AMD Radeon Software</li>
-        <li>Обновить драйверы</li>
-        <li>Или скачать с сайта NVIDIA/AMD</li>
+        <li>GeForce Experience РёР»Рё AMD Radeon Software</li>
+        <li>РћР±РЅРѕРІРёС‚СЊ РґСЂР°Р№РІРµСЂС‹</li>
+        <li>РР»Рё СЃРєР°С‡Р°С‚СЊ СЃ СЃР°Р№С‚Р° NVIDIA/AMD</li>
       </ol>
 
-      <h3>Драйверы Intel</h3>
+      <h3>Р”СЂР°Р№РІРµСЂС‹ Intel</h3>
       <ol>
         <li>Intel Graphics Command Center</li>
-        <li>Обновить драйверы</li>
+        <li>РћР±РЅРѕРІРёС‚СЊ РґСЂР°Р№РІРµСЂС‹</li>
       </ol>
 
-      <h2>Решение 2: Отключение адаптивной яркости</h2>
-      <h3>Настройки электропитания</h3>
+      <h2>Р РµС€РµРЅРёРµ 2: РћС‚РєР»СЋС‡РµРЅРёРµ Р°РґР°РїС‚РёРІРЅРѕР№ СЏСЂРєРѕСЃС‚Рё</h2>
+      <h3>РќР°СЃС‚СЂРѕР№РєРё СЌР»РµРєС‚СЂРѕРїРёС‚Р°РЅРёСЏ</h3>
       <ol>
-        <li>Панель управления > Электропитание</li>
-        <li>Изменить параметры плана</li>
-        <li>Изменить дополнительные параметры питания</li>
-        <li>Экран > Включить адаптивную яркость > Выключить</li>
+        <li>РџР°РЅРµР»СЊ СѓРїСЂР°РІР»РµРЅРёСЏ в†’ Р­Р»РµРєС‚СЂРѕРїРёС‚Р°РЅРёРµ</li>
+        <li>РР·РјРµРЅРёС‚СЊ РїР°СЂР°РјРµС‚СЂС‹ РїР»Р°РЅР°</li>
+        <li>РР·РјРµРЅРёС‚СЊ РґРѕРїРѕР»РЅРёС‚РµР»СЊРЅС‹Рµ РїР°СЂР°РјРµС‚СЂС‹ РїРёС‚Р°РЅРёСЏ</li>
+        <li>Р­РєСЂР°РЅ в†’ Р’РєР»СЋС‡РёС‚СЊ Р°РґР°РїС‚РёРІРЅСѓСЋ СЏСЂРєРѕСЃС‚СЊ в†’ Р’С‹РєР»СЋС‡РёС‚СЊ</li>
       </ol>
 
-      <h3>Центр мобильности</h3>
+      <h3>Р¦РµРЅС‚СЂ РјРѕР±РёР»СЊРЅРѕСЃС‚Рё</h3>
       <ol>
-        <li>Если есть ПО ноутбука (ASUS, Lenovo)</li>
-        <li>Отключить адаптивную подсветку</li>
+        <li>Р•СЃР»Рё РµСЃС‚СЊ РџРћ РЅРѕСѓС‚Р±СѓРєР° (ASUS, Lenovo)</li>
+        <li>РћС‚РєР»СЋС‡РёС‚СЊ Р°РґР°РїС‚РёРІРЅСѓСЋ РїРѕРґСЃРІРµС‚РєСѓ</li>
       </ol>
 
-      <h2>Решение 3: Сброс настроек дисплея</h2>
-      <h3>Восстановление по умолчанию</h3>
+      <h2>Р РµС€РµРЅРёРµ 3: РЎР±СЂРѕСЃ РЅР°СЃС‚СЂРѕРµРє РґРёСЃРїР»РµСЏ</h2>
+      <h3>Р’РѕСЃСЃС‚Р°РЅРѕРІР»РµРЅРёРµ РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ</h3>
       <ol>
-        <li>Параметры > Система > Дисплей</li>
-        <li>Дополнительные параметры дисплея</li>
-        <li>Свойства адаптера дисплея > Свойства</li>
-        <li>Вкладка "Монитор" > Сбросить уровни</li>
+        <li>РџР°СЂР°РјРµС‚СЂС‹ в†’ РЎРёСЃС‚РµРјР° в†’ Р”РёСЃРїР»РµР№</li>
+        <li>Р”РѕРїРѕР»РЅРёС‚РµР»СЊРЅС‹Рµ РїР°СЂР°РјРµС‚СЂС‹ РґРёСЃРїР»РµСЏ</li>
+        <li>РЎРІРѕР№СЃС‚РІР° Р°РґР°РїС‚РµСЂР° РґРёСЃРїР»РµСЏ в†’ РЎРІРѕР№СЃС‚РІР°</li>
+        <li>Р’РєР»Р°РґРєР° "РњРѕРЅРёС‚РѕСЂ" в†’ РЎР±СЂРѕСЃРёС‚СЊ СѓСЂРѕРІРЅРё</li>
       </ol>
 
-      <h3>Калибровка</h3>
+      <h3>РљР°Р»РёР±СЂРѕРІРєР°</h3>
       <ol>
-        <li>Панель управления > Оформление и персонализация</li>
-        <li>Калибровка цвета</li>
-        <li>Следуйте инструкциям</li>
+        <li>РџР°РЅРµР»СЊ СѓРїСЂР°РІР»РµРЅРёСЏ в†’ РћС„РѕСЂРјР»РµРЅРёРµ Рё РїРµСЂСЃРѕРЅР°Р»РёР·Р°С†РёСЏ</li>
+        <li>РљР°Р»РёР±СЂРѕРІРєР° С†РІРµС‚Р°</li>
+        <li>РЎР»РµРґСѓР№С‚Рµ РёРЅСЃС‚СЂСѓРєС†РёСЏРј</li>
       </ol>
 
-      <h2>Решение 4: Установка ПО ноутбука</h2>
-      <h3>Программное обеспечение производителя</h3>
+      <h2>Р РµС€РµРЅРёРµ 4: РЈСЃС‚Р°РЅРѕРІРєР° РџРћ РЅРѕСѓС‚Р±СѓРєР°</h2>
+      <h3>РџСЂРѕРіСЂР°РјРјРЅРѕРµ РѕР±РµСЃРїРµС‡РµРЅРёРµ РїСЂРѕРёР·РІРѕРґРёС‚РµР»СЏ</h3>
       <ol>
         <li>ASUS Armory Crate, Lenovo Vantage</li>
         <li>HP Command Center, Dell Power Manager</li>
-        <li>Установите и настройте управление яркостью</li>
+        <li>РЈСЃС‚Р°РЅРѕРІРёС‚Рµ Рё РЅР°СЃС‚СЂРѕР№С‚Рµ СѓРїСЂР°РІР»РµРЅРёРµ СЏСЂРєРѕСЃС‚СЊСЋ</li>
       </ol>
 
-      <h3>Обновление ПО</h3>
+      <h3>РћР±РЅРѕРІР»РµРЅРёРµ РџРћ</h3>
       <ol>
-        <li>Обновите ПО до последней версии</li>
-        <li>Это исправит совместимость с Windows</li>
+        <li>РћР±РЅРѕРІРёС‚Рµ РџРћ РґРѕ РїРѕСЃР»РµРґРЅРµР№ РІРµСЂСЃРёРё</li>
+        <li>Р­С‚Рѕ РёСЃРїСЂР°РІРёС‚ СЃРѕРІРјРµСЃС‚РёРјРѕСЃС‚СЊ СЃ Windows</li>
       </ol>
 
-      <h2>Решение 5: BIOS настройки</h2>
-      <h3>Включение подсветки</h3>
+      <h2>Р РµС€РµРЅРёРµ 5: BIOS РЅР°СЃС‚СЂРѕР№РєРё</h2>
+      <h3>Р’РєР»СЋС‡РµРЅРёРµ РїРѕРґСЃРІРµС‚РєРё</h3>
       <ol>
-        <li>Войдите в BIOS (F2, Del)</li>
-        <li>Найдите раздел Video или Display</li>
-        <li>Убедитесь, что подсветка включена</li>
-        <li>Сбросьте настройки к заводским</li>
+        <li>Р’РѕР№РґРёС‚Рµ РІ BIOS (F2, Del)</li>
+        <li>РќР°Р№РґРёС‚Рµ СЂР°Р·РґРµР» Video РёР»Рё Display</li>
+        <li>РЈР±РµРґРёС‚РµСЃСЊ, С‡С‚Рѕ РїРѕРґСЃРІРµС‚РєР° РІРєР»СЋС‡РµРЅР°</li>
+        <li>РЎР±СЂРѕСЃСЊС‚Рµ РЅР°СЃС‚СЂРѕР№РєРё Рє Р·Р°РІРѕРґСЃРєРёРј</li>
       </ol>
 
-      <h2>Решение 6: Чистка реестра</h2>
-      <h3>Редактор реестра</h3>
+      <h2>Р РµС€РµРЅРёРµ 6: Р§РёСЃС‚РєР° СЂРµРµСЃС‚СЂР°</h2>
+      <h3>Р РµРґР°РєС‚РѕСЂ СЂРµРµСЃС‚СЂР°</h3>
       <ol>
-        <li>Win + R > regedit</li>
+        <li>Win + R в†’ regedit</li>
         <li>HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize</li>
-        <li>Найдите AppsUseLightTheme</li>
-        <li>Измените значение</li>
+        <li>РќР°Р№РґРёС‚Рµ AppsUseLightTheme</li>
+        <li>РР·РјРµРЅРёС‚Рµ Р·РЅР°С‡РµРЅРёРµ</li>
       </ol>
 
-      <h3>Использование CCleaner</h3>
+      <h3>РСЃРїРѕР»СЊР·РѕРІР°РЅРёРµ CCleaner</h3>
       <ol>
-        <li>Инструменты > Очистка реестра</li>
-        <li>Найдите записи о яркости</li>
+        <li>РРЅСЃС‚СЂСѓРјРµРЅС‚С‹ в†’ РћС‡РёСЃС‚РєР° СЂРµРµСЃС‚СЂР°</li>
+        <li>РќР°Р№РґРёС‚Рµ Р·Р°РїРёСЃРё Рѕ СЏСЂРєРѕСЃС‚Рё</li>
       </ol>
 
       <div class="pro-tips">
-        <h4><i class="fas fa-lightbulb"></i> Профессиональные советы</h4>
+        <h4><i class="fas fa-lightbulb"></i> РџСЂРѕС„РµСЃСЃРёРѕРЅР°Р»СЊРЅС‹Рµ СЃРѕРІРµС‚С‹</h4>
         <div class="tip-item">
           <i class="fas fa-tools"></i>
-          <span>Всегда обновляйте драйверы видеокарты после обновлений Windows</span>
+          <span>Р’СЃРµРіРґР° РѕР±РЅРѕРІР»СЏР№С‚Рµ РґСЂР°Р№РІРµСЂС‹ РІРёРґРµРѕРєР°СЂС‚С‹ РїРѕСЃР»Рµ РѕР±РЅРѕРІР»РµРЅРёР№ Windows</span>
         </div>
         <div class="tip-item">
           <i class="fas fa-adjust"></i>
-          <span>Отключайте адаптивную яркость для стабильного управления подсветкой</span>
+          <span>РћС‚РєР»СЋС‡Р°Р№С‚Рµ Р°РґР°РїС‚РёРІРЅСѓСЋ СЏСЂРєРѕСЃС‚СЊ РґР»СЏ СЃС‚Р°Р±РёР»СЊРЅРѕРіРѕ СѓРїСЂР°РІР»РµРЅРёСЏ РїРѕРґСЃРІРµС‚РєРѕР№</span>
         </div>
         <div class="tip-item">
           <i class="fas fa-laptop"></i>
-          <span>Устанавливайте фирменное ПО ноутбука для лучшего управления яркостью</span>
+          <span>РЈСЃС‚Р°РЅР°РІР»РёРІР°Р№С‚Рµ С„РёСЂРјРµРЅРЅРѕРµ РџРћ РЅРѕСѓС‚Р±СѓРєР° РґР»СЏ Р»СѓС‡С€РµРіРѕ СѓРїСЂР°РІР»РµРЅРёСЏ СЏСЂРєРѕСЃС‚СЊСЋ</span>
         </div>
         <div class="tip-item">
           <i class="fas fa-sync-alt"></i>
-          <span>Регулярно калибруйте экран для точного отображения яркости</span>
+          <span>Р РµРіСѓР»СЏСЂРЅРѕ РєР°Р»РёР±СЂСѓР№С‚Рµ СЌРєСЂР°РЅ РґР»СЏ С‚РѕС‡РЅРѕРіРѕ РѕС‚РѕР±СЂР°Р¶РµРЅРёСЏ СЏСЂРєРѕСЃС‚Рё</span>
         </div>
       </div>
 
-      <h2>Расширенные решения</h2>
-      <h3>Восстановление системы</h3>
+      <h2>Р Р°СЃС€РёСЂРµРЅРЅС‹Рµ СЂРµС€РµРЅРёСЏ</h2>
+      <h3>Р’РѕСЃСЃС‚Р°РЅРѕРІР»РµРЅРёРµ СЃРёСЃС‚РµРјС‹</h3>
       <ol>
-        <li>Win + R > rstrui</li>
-        <li>Выберите точку восстановления</li>
-        <li>Восстановите до появления проблемы</li>
+        <li>Win + R в†’ rstrui</li>
+        <li>Р’С‹Р±РµСЂРёС‚Рµ С‚РѕС‡РєСѓ РІРѕСЃСЃС‚Р°РЅРѕРІР»РµРЅРёСЏ</li>
+        <li>Р’РѕСЃСЃС‚Р°РЅРѕРІРёС‚Рµ РґРѕ РїРѕСЏРІР»РµРЅРёСЏ РїСЂРѕР±Р»РµРјС‹</li>
       </ol>
 
-      <h3>Чистая установка Windows</h3>
+      <h3>Р§РёСЃС‚Р°СЏ СѓСЃС‚Р°РЅРѕРІРєР° Windows</h3>
       <ol>
-        <li>Если ничего не помогает</li>
-        <li>Переустановите Windows</li>
-        <li>Установите все драйверы заново</li>
+        <li>Р•СЃР»Рё РЅРёС‡РµРіРѕ РЅРµ РїРѕРјРѕРіР°РµС‚</li>
+        <li>РџРµСЂРµСѓСЃС‚Р°РЅРѕРІРёС‚Рµ Windows</li>
+        <li>РЈСЃС‚Р°РЅРѕРІРёС‚Рµ РІСЃРµ РґСЂР°Р№РІРµСЂС‹ Р·Р°РЅРѕРІРѕ</li>
       </ol>
 
-      <h2>Частые вопросы</h2>
-      <h3>Почему не меняется яркость экрана в Windows?</h3>
-      <p>Включена адаптивная яркость или старые драйверы. Отключите адаптивную яркость и обновите драйверы.</p>
+      <h2>Р§Р°СЃС‚С‹Рµ РІРѕРїСЂРѕСЃС‹</h2>
+      <h3>РџРѕС‡РµРјСѓ РЅРµ РјРµРЅСЏРµС‚СЃСЏ СЏСЂРєРѕСЃС‚СЊ СЌРєСЂР°РЅР° РІ Windows?</h3>
+      <p>Р’РєР»СЋС‡РµРЅР° Р°РґР°РїС‚РёРІРЅР°СЏ СЏСЂРєРѕСЃС‚СЊ РёР»Рё СЃС‚Р°СЂС‹Рµ РґСЂР°Р№РІРµСЂС‹. РћС‚РєР»СЋС‡РёС‚Рµ Р°РґР°РїС‚РёРІРЅСѓСЋ СЏСЂРєРѕСЃС‚СЊ Рё РѕР±РЅРѕРІРёС‚Рµ РґСЂР°Р№РІРµСЂС‹.</p>
 
-      <h3>Можно ли отключить адаптивную яркость?</h3>
-      <p>Да, в настройках электропитания > Изменить параметры плана > Изменить дополнительные параметры.</p>
+      <h3>РњРѕР¶РЅРѕ Р»Рё РѕС‚РєР»СЋС‡РёС‚СЊ Р°РґР°РїС‚РёРІРЅСѓСЋ СЏСЂРєРѕСЃС‚СЊ?</h3>
+      <p>Р”Р°, РІ РЅР°СЃС‚СЂРѕР№РєР°С… СЌР»РµРєС‚СЂРѕРїРёС‚Р°РЅРёСЏ в†’ РР·РјРµРЅРёС‚СЊ РїР°СЂР°РјРµС‚СЂС‹ РїР»Р°РЅР° в†’ РР·РјРµРЅРёС‚СЊ РґРѕРїРѕР»РЅРёС‚РµР»СЊРЅС‹Рµ РїР°СЂР°РјРµС‚СЂС‹.</p>
 
-      <h3>Что делать, если яркость не меняется с клавиатуры?</h3>
-      <p>Установите ПО ноутбука или обновите драйверы. Горячие клавиши могут не работать без правильных драйверов.</p>
+      <h3>Р§С‚Рѕ РґРµР»Р°С‚СЊ, РµСЃР»Рё СЏСЂРєРѕСЃС‚СЊ РЅРµ РјРµРЅСЏРµС‚СЃСЏ СЃ РєР»Р°РІРёР°С‚СѓСЂС‹?</h3>
+      <p>РЈСЃС‚Р°РЅРѕРІРёС‚Рµ РџРћ РЅРѕСѓС‚Р±СѓРєР° РёР»Рё РѕР±РЅРѕРІРёС‚Рµ РґСЂР°Р№РІРµСЂС‹. Р“РѕСЂСЏС‡РёРµ РєР»Р°РІРёС€Рё РјРѕРіСѓС‚ РЅРµ СЂР°Р±РѕС‚Р°С‚СЊ Р±РµР· РїСЂР°РІРёР»СЊРЅС‹С… РґСЂР°Р№РІРµСЂРѕРІ.</p>
 
-      <h2>Когда нужна замена</h2>
+      <h2>РљРѕРіРґР° РЅСѓР¶РЅР° Р·Р°РјРµРЅР°</h2>
       <ul>
-        <li>Матрица экрана повреждена</li>
-        <li>Неисправен инвертор подсветки</li>
-        <li>Повреждена материнская плата</li>
-        <li>Все решения не помогли</li>
+        <li>РњР°С‚СЂРёС†Р° СЌРєСЂР°РЅР° РїРѕРІСЂРµР¶РґРµРЅР°</li>
+        <li>РќРµРёСЃРїСЂР°РІРµРЅ РёРЅРІРµСЂС‚РѕСЂ РїРѕРґСЃРІРµС‚РєРё</li>
+        <li>РџРѕРІСЂРµР¶РґРµРЅР° РјР°С‚РµСЂРёРЅСЃРєР°СЏ РїР»Р°С‚Р°</li>
+        <li>Р’СЃРµ СЂРµС€РµРЅРёСЏ РЅРµ РїРѕРјРѕРіР»Рё</li>
       </ul>
 
-      <p>В большинстве случаев проблема решается обновлением драйверов или отключением адаптивной яркости. Начните с проверки настроек электропитания и обновления драйверов видеокарты.</p>
+      <p>Р’ Р±РѕР»СЊС€РёРЅСЃС‚РІРµ СЃР»СѓС‡Р°РµРІ РїСЂРѕР±Р»РµРјР° СЂРµС€Р°РµС‚СЃСЏ РѕР±РЅРѕРІР»РµРЅРёРµРј РґСЂР°Р№РІРµСЂРѕРІ РёР»Рё РѕС‚РєР»СЋС‡РµРЅРёРµРј Р°РґР°РїС‚РёРІРЅРѕР№ СЏСЂРєРѕСЃС‚Рё. РќР°С‡РЅРёС‚Рµ СЃ РїСЂРѕРІРµСЂРєРё РЅР°СЃС‚СЂРѕРµРє СЌР»РµРєС‚СЂРѕРїРёС‚Р°РЅРёСЏ Рё РѕР±РЅРѕРІР»РµРЅРёСЏ РґСЂР°Р№РІРµСЂРѕРІ РІРёРґРµРѕРєР°СЂС‚С‹.</p>
     </div>
   </main>
 
-      <footer class="footer">
-        <div class="container">
-            <div class="footer__grid">
-                <div class="footer__col footer__col--logo">
-                    <a href="../index.html" class="footer-logo">
-                        <span class="logo__icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M12 15L7 10H17L12 15Z" fill="currentColor"/>
-                                <path d="M12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3ZM12 19C8.13401 19 5 15.866 5 12C5 8.13401 8.13401 5 12 5C15.866 5 19 8.13401 19 12C19 15.866 15.866 19 12 19Z" fill="currentColor"/>
-                            </svg>
-                        </span>
-                        <span class="logo__text">Repairo</span>
-                    </a>
-                    <p class="footer__text">Помогаем ремонтировать электронику с 2024 года</p>
-                </div>
-                <div class="footer__col">
-                    <h3 class="footer__title">Разделы</h3>
-                    <ul class="footer__links">
-                        <li><a href="../index.html" class="footer__link">Главная</a></li>
-                        <li><a href="../index.html#categories" class="footer__link">Все гайды</a></li>
-                        <li><a href="../contacts.html" class="footer__link">Контакты</a></li>
-                    </ul>
-                </div>
-                <div class="footer__col">
-                    <h3 class="footer__title">Категории</h3>
-                    <ul class="footer__links">
-                        <li><a href="../tv.html" class="nav__link">Телевизоры</a></li>
-                        <li><a href="../cameras.html" class="nav__link">Фотоаппараты</a></li>
-                        <li><a href="../consoles.html" class="nav__link">Приставки</a></li>
-                        <li><a href="../laptops.html" class="nav__link">Ноутбуки</a></li>
-                        <li><a href="../smartphones.html" class="nav__link">Смартфоны</a></li>
-                        <li><a href="../small-appliances.html" class="nav__link">Мелкая техника</a></li>
-                        <li><a href="../large-appliances.html" class="nav__link">Бытовая техника</a></li>
-                        <li><a href="../auto-electronics.html" class="nav__link">Авто-Электроника</a></li>
-                    </ul>
-                </div>
-                <div class="footer__col">
-                    <h3 class="footer__title">Контакты</h3>
-                    <ul class="footer__links">
-                        <li><a href="https://t.me/RepairoRU" class="footer__link"><i class="fab fa-telegram"></i> Telegram</a></li>
-                        <li><span class="footer__link">Наша почта: repairo.info@mail.ru</span></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer__bottom">
-                <p class="disclaimer">
-    Администрация сайта не несёт ответственности за возможные повреждения техники
-    и иные последствия, возникшие в результате самостоятельного ремонта по
-    материалам и инструкциям, размещённым на сайте. Все работы вы выполняете
-    на свой страх и риск.
-    </p>
-                <p class="footer__copyright">© 2026 Repairo. Все права защищены.</p>
-            </div>
-        </div>
-    </footer>
-    <!-- Cookie Consent Banner -->
-    <script src="../script.js"></script>
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2024 FixTech. Р’СЃРµ РїСЂР°РІР° Р·Р°С‰РёС‰РµРЅС‹.</p>
+      <div class="footer-links">
+        <a href="/privacy">РљРѕРЅС„РёРґРµРЅС†РёР°Р»СЊРЅРѕСЃС‚СЊ</a>
+        <a href="/terms">РЈСЃР»РѕРІРёСЏ РёСЃРїРѕР»СЊР·РѕРІР°РЅРёСЏ</a>
+        <a href="/contact">РљРѕРЅС‚Р°РєС‚С‹</a>
+      </div>
+    </div>
+  </footer>
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "HowTo",
-  "name": "Windows не может отобразить правильное изменение яркости экрана ноутбука | Экспертный мегагайд",
-  "description": "",
-  "totalTime": "PT30M",
-  "step": [
-    {
-      "@type": "HowToStep",
-      "name": "Введение: почему Cyberpunk 2077 может тормозить на PS5 после патчей?",
-      "text": "Введение: почему Cyberpunk 2077 может тормозить на PS5 после патчей?",
-      "url": "#step-1"
-    },
-    {
-      "@type": "HowToStep",
-      "name": "Таблица: основные причины лагов и просадок FPS в Cyberpunk 2077 на PS5 после обновлений",
-      "text": "Таблица: основные причины лагов и просадок FPS в Cyberpunk 2077 на PS5 после обновлений",
-      "url": "#step-2"
-    },
-    {
-      "@type": "HowToStep",
-      "name": "Пошаговая инструкция: что делать, если Cyberpunk 2077 тормозит на PS5 после обновления",
-      "text": "Пошаговая инструкция: что делать, если Cyberpunk 2077 тормозит на PS5 после обновления",
-      "url": "#step-3"
-    },
-    {
-      "@type": "HowToStep",
-      "name": "Таблица: сравнение режимов графики и FPS в Cyberpunk 2077 на PS5",
-      "text": "Таблица: сравнение режимов графики и FPS в Cyberpunk 2077 на PS5",
-      "url": "#step-4"
-    },
-    {
-      "@type": "HowToStep",
-      "name": "Отзывы игроков и тесты Digital Foundry",
-      "text": "Отзывы игроков и тесты Digital Foundry",
-      "url": "#step-5"
-    },
-    {
-      "@type": "HowToStep",
-      "name": "Лайфхаки и советы по оптимизации Cyberpunk 2077 на PS5",
-      "text": "Лайфхаки и советы по оптимизации Cyberpunk 2077 на PS5",
-      "url": "#step-6"
-    },
-    {
-      "@type": "HowToStep",
-      "name": "FAQ – часто задаваемые вопросы о тормозах Cyberpunk 2077 на PS5",
-      "text": "FAQ – часто задаваемые вопросы о тормозах Cyberpunk 2077 на PS5",
-      "url": "#step-7"
-    },
-    {
-      "@type": "HowToStep",
-      "name": "Пошаговая инструкция: как восстановить базу данных PS5",
-      "text": "Пошаговая инструкция: как восстановить базу данных PS5",
-      "url": "#step-8"
-    }
-  ],
-  "image": "https://repairo.ru/https://mc.yandex.ru/watch/106225686"
-}
-</script>
-<!-- Cookie Consent Script -->
-<script src="../cookie-consent.js"></script>
+  <script src="../script.js"></script>
+  <script src="../search.js"></script>
 </body>
 </html>
-
-
-
-
-
-

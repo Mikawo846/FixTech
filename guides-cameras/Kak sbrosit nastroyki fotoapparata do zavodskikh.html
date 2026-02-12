@@ -2,36 +2,43 @@
 <html lang="ru" data-theme="light">
 <head>
 
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Как сбросить настройки фотоаппарата до заводских? | Repairo</title>
-    <meta name="description" content="">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>РљР°Рє СЃР±СЂРѕСЃРёС‚СЊ РЅР°СЃС‚СЂРѕР№РєРё С„РѕС‚РѕР°РїРїР°СЂР°С‚Р° РґРѕ Р·Р°РІРѕРґСЃРєРёС…? | Repairo</title>
+    <meta name="description" content="{{ description }}">
+    <meta name="description" content="РџРѕС€Р°РіРѕРІР°СЏ РёРЅСЃС‚СЂСѓРєС†РёСЏ: РљР°Рє СЃР±СЂРѕСЃРёС‚СЊ РЅР°СЃС‚СЂРѕР№РєРё С„РѕС‚РѕР°РїРїР°СЂР°С‚Р° РґРѕ Р·Р°РІРѕРґСЃРєРёС…?. Р•СЃР»Рё РїРѕСЃР»Рµ СЃР±СЂРѕСЃР° РєР°РјРµСЂР° РїСЂРѕРґРѕР»Р¶Р°РµС‚ СЂР°Р±РѕС‚Р°С‚СЊ РЅРµРєРѕСЂСЂРµРєС‚РЅРѕ - РїСЂРѕРІРµСЂСЊС‚Рµ РєР°СЂС‚Сѓ РїР°РјСЏС‚.......">
 
-  <link rel="stylesheet" href="../styles.css" />
-  <link rel="stylesheet" href="../styles-header.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <style>
-    .guide-content { line-height: 1.7; color: var(--text); }
-    .guide-content h2 { color: var(--primary); margin-top: 30px; margin-bottom: 15px; font-size: 1.5rem; }
-    .guide-content h3 { color: var(--primary-dark); margin-top: 25px; margin-bottom: 12px; font-size: 1.2rem; }
-    .guide-image-block { margin: 20px 0; padding: 15px; background: var(--background); border-radius: var(--border-radius); border: 1px solid var(--border); text-align: center; }
-    .guide-image-block img { max-width: 100%; height: auto; border-radius: 6px; border: 1px solid var(--border); }
-    .image-caption { margin-top: 10px; font-size: 0.85rem; color: var(--text-light); font-style: italic; }
-    .pro-tips { background: rgba(3, 74, 79, 0.05); padding: 15px; border-radius: 6px; margin: 20px 0; }
-    .pro-tips h4 { color: var(--primary); margin-top: 0; margin-bottom: 12px; font-size: 1.1rem; }
-    .tip-item { display: flex; gap: 8px; margin-bottom: 8px; align-items: flex-start; }
-    table { width: 100%; border-collapse: collapse; margin: 20px 0; }
-    th, td { border: 1px solid var(--border); padding: 8px; text-align: left; }
-    th { background: var(--background-light); }
-    .highlight { background: #f5f7fa; border-left: 4px solid #2d9cdb; padding: 10px 15px; margin: 20px 0; }
-    .faq-section ul { margin-left: 1em; }
-    .block-section { margin-bottom: 2em; }
-    @media (max-width: 768px) {
-      .guide-content h2 { font-size: 1.4rem; margin-top: 25px; }
-      .guide-image-block { padding: 12px; margin: 15px 0; }
-      table, th, td { font-size: 0.95rem; }
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../styles-header.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .guide-content { line-height: 1.7; color: var(--text);}
+        .guide-content h2 { color: var(--primary); margin-top: 30px; margin-bottom: 15px; font-size: 1.5rem;}
+        .step-group { margin: 20px 0; padding: 15px; background: var(--background); border-radius: var(--border-radius); border: 1px solid var(--border);}
+        .step { display: flex; gap: 15px; margin: 12px 0; padding: 12px; background: var(--background-alt); border-radius: 6px; align-items: flex-start;}
+        .step-number { background: var(--primary); color: white; width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-weight: bold; font-size: 0.8rem;}
+        .guide-image-block { margin: 20px 0; padding: 15px; background: var(--background); border-radius: var(--border-radius); border: 1px solid var(--border); text-align: center;}
+        .guide-image-block img { max-width: 100%; height: auto; border-radius: 6px; border: 1px solid var(--border);}
+        .recommend-box { background: rgba(3, 74, 79, 0.1); border-left: 4px solid var(--primary); padding: 12px; margin: 15px 0; display: flex; gap: 12px; align-items: flex-start; border-radius: 4px;}
+        .recommend-box i { font-size: 1.2rem; color: var(--primary); margin-top: 2px;}
+        .pro-tips { background: rgba(3, 74, 79, 0.05); padding: 15px; border-radius: 6px; margin: 20px 0;}
+        .pro-tips h4 { color: var(--primary); margin-top: 0; margin-bottom: 12px; font-size: 1.1rem;}
+        .tip-item { display: flex; gap: 8px; margin-bottom: 8px; align-items: flex-start;}
+        @media (max-width: 768px) {
+            .guide-content h2 { font-size: 1.4rem; margin-top: 25px;}
+            .guide-image-block, .step-group { padding: 12px; margin: 15px 0;}
+            .step { padding: 10px;}
+        }
+    /* РЇРЅРґРµРєСЃ РњР°СЂРєРµС‚ СЂРµРєР»Р°РјРЅС‹Р№ Р±Р°РЅРЅРµСЂ */
+    .ym-hero-link {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+      max-width: 100%;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     }
+
     /* Р“РѕСЂРёР·РѕРЅС‚Р°Р»СЊРЅС‹Р№ Р±Р°РЅРЅРµСЂ-РєР°СЂС‚РѕС‡РєР° */
     .ym-hero-banner {
       width: 100%;
@@ -144,11 +151,13 @@
       transition: background 0.15s ease, transform 0.15s ease,
                   box-shadow 0.15s ease;
     }
+
     .ym-hero-button::after {
       content: "в†’";
       margin-left: 6px;
       font-size: 14px;
     }
+
     .ym-hero-button:hover {
       background: #7c3aed;
       transform: translateY(-1px);
@@ -172,19 +181,24 @@
         max-width: 100%;
         margin: 20px 0;
       }
+
       .ym-hero-images {
         height: 100px;
       }
+
       .ym-hero-content {
         padding: 12px 12px;
       }
+
       .ym-hero-title {
         font-size: 13px;
       }
+
       .ym-hero-button {
         font-size: 13px;
         padding: 8px 14px;
       }
+
       .ym-hero-legal {
         font-size: 10px;
       }
@@ -292,22 +306,27 @@
         padding: 15px;
         min-height: 100px;
       }
+
       .telegram-logo {
         width: 50px;
         height: 50px;
         min-width: 50px;
         margin-right: 15px;
       }
+
       .telegram-logo svg {
         width: 26px;
         height: 26px;
       }
+
       .telegram-title {
         font-size: 14px;
       }
+
       .telegram-subtitle {
         font-size: 12px;
       }
+
       .telegram-button {
         font-size: 12px;
         padding: 6px 12px;
@@ -316,171 +335,185 @@
 
 
 
-  </style>
+    </style>
   <script async src="https://timeweb.cloud/api/v1/cloud-ai/agents/3cc03620-d051-4d8d-b5af-f7b6cd083a35/embed.js?collapsed=true"></script>
 </head>
 <body>
-  <header class="header">
+<header class="header">
     <div class="container">
-      <div class="header__inner">
-        <a href="../index.html" class="logo">
-          <span class="logo__icon"></span>
-          <span class="logo__text">GeoExpert</span>
-        </a>
-        <nav class="nav">
-          <ul class="nav__list">
-            <li><a href="../cameras.html" class="nav__link">РљР°РјРµСЂС‹</a></li>
-            <li><a href="../drones.html" class="nav__link">Р”СЂРѕРЅС‹</a></li>
-            <li><a href="../workflow.html" class="nav__link">Workflow</a></li>
-          </ul>
-        </nav>
-      </div>
+        <div class="header__inner">
+            <a href="../index.html" class="logo">
+                <span class="logo__icon"></span>
+                <span class="logo__text">Repairo</span>
+            </a>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li><a href="../cameras.html" class="nav__link">Р¤РѕС‚РѕР°РїРїР°СЂР°С‚С‹</a></li>
+                    <li><a href="../tv.html" class="nav__link">РўРµР»РµРІРёР·РѕСЂС‹</a></li>
+                    <li><a href="../laptops.html" class="nav__link">РќРѕСѓС‚Р±СѓРєРё</a></li>
+                    <li><a href="../smartphones.html" class="nav__link">РЎРјР°СЂС‚С„РѕРЅС‹</a></li>
+                </ul>
+            </nav>
+        </div>
     </div>
-  </header>
+</header>
 <section class="guide-page">
     <div class="container">
         <div class="breadcrumbs">
-            <a href="../index.html">Главная</a>
+            <a href="../index.html">Р“Р»Р°РІРЅР°СЏ</a>
             <i class="fas fa-chevron-right"></i>
-            <a href="../cameras.html">Фотоаппараты</a>
+            <a href="../cameras.html">Р¤РѕС‚РѕР°РїРїР°СЂР°С‚С‹</a>
             <i class="fas fa-chevron-right"></i>
-            <span>Как сбросить настройки фотоаппарата до заводских?</span>
+            <span>РљР°Рє СЃР±СЂРѕСЃРёС‚СЊ РЅР°СЃС‚СЂРѕР№РєРё С„РѕС‚РѕР°РїРїР°СЂР°С‚Р° РґРѕ Р·Р°РІРѕРґСЃРєРёС…?</span>
         </div>
-        <h1 class="section__title">Как сбросить настройки фотоаппарата до заводских?</h1>
+        <h1 class="section__title">РљР°Рє СЃР±СЂРѕСЃРёС‚СЊ РЅР°СЃС‚СЂРѕР№РєРё С„РѕС‚РѕР°РїРїР°СЂР°С‚Р° РґРѕ Р·Р°РІРѕРґСЃРєРёС…?</h1>
         <div class="guide-meta">
-            <span><i class="fas fa-adjust"></i> Практический гайд</span>
+            <span><i class="fas fa-adjust"></i> РџСЂР°РєС‚РёС‡РµСЃРєРёР№ РіР°Р№Рґ</span>
         </div>
         <div class="guide-image-block">
-            <img src="https://avatars.mds.yandex.net/get-shedevrum/16295926/img_b3c238942e3711f0a6457e3b74b724b2/orig" alt="Как сбросить настройки фотоаппарата до заводских?">
+            <img src="https://avatars.mds.yandex.net/get-shedevrum/16295926/img_b3c238942e3711f0a6457e3b74b724b2/orig" alt="РљР°Рє СЃР±СЂРѕСЃРёС‚СЊ РЅР°СЃС‚СЂРѕР№РєРё С„РѕС‚РѕР°РїРїР°СЂР°С‚Р° РґРѕ Р·Р°РІРѕРґСЃРєРёС…?">
         </div>
         <div class="guide-content">
-        <!-- Яндекс Маркет рекламный блок -->
+        <!-- РЇРЅРґРµРєСЃ РњР°СЂРєРµС‚ СЂРµРєР»Р°РјРЅС‹Р№ Р±Р»РѕРє -->
         <a href="https://market.yandex.ru/catalog--bytovaia-tekhnika/54419/list?hid=198118&rs=eJwzUvjEKMvBILDwEKsEg8Kzbh6Nw4dZNS4D8c7lFhp9c1-wAQC3uAwP&clid=14635360&refid=rbck8fgamv681iu59go3iqxwddedl4x9&erid=5jtCeReNx12oajxS2bzShmZ&mclid=1003&distr_type=7&utm_source=partner_network&pp=900&utm_medium=link_list&utm_campaign=14635360"
            target="_blank"
            rel="noopener noreferrer sponsored"
+           class="ym-hero-link">
+          <div class="ym-hero-banner">
+            <div class="ym-hero-images">
+              <div class="ym-hero-image">
                 <img src="https://avatars.mds.yandex.net/get-mpic/14770882/2a00000197f4dbee777f8afddccaf44faa53/optimize"
-                     alt="Распродажа бытовой электроники 1">
+                     alt="Р Р°СЃРїСЂРѕРґР°Р¶Р° Р±С‹С‚РѕРІРѕР№ СЌР»РµРєС‚СЂРѕРЅРёРєРё 1">
               </div>
+              <div class="ym-hero-image">
                 <img src="https://avatars.mds.yandex.net/get-mpic/15580298/img_id8867318964670654684.jpeg/optimize"
-                     alt="Распродажа бытовой электроники 2">
+                     alt="Р Р°СЃРїСЂРѕРґР°Р¶Р° Р±С‹С‚РѕРІРѕР№ СЌР»РµРєС‚СЂРѕРЅРёРєРё 2">
               </div>
+              <div class="ym-hero-image">
                 <img src="https://avatars.mds.yandex.net/get-mpic/10096780/2a000001953b534fed2494e0b30fadd9b458/optimize"
-                     alt="Распродажа бытовой электроники 3">
+                     alt="Р Р°СЃРїСЂРѕРґР°Р¶Р° Р±С‹С‚РѕРІРѕР№ СЌР»РµРєС‚СЂРѕРЅРёРєРё 3">
               </div>
             </div>
-                  ? Выгодные предложения
+            <div class="ym-hero-content">
+              <h3 class="ym-hero-title">Р Р°СЃРїСЂРѕРґР°Р¶Р° Р±С‹С‚РѕРІРѕР№ СЌР»РµРєС‚СЂРѕРЅРёРєРё РЅР° РЇРЅРґРµРєСЃ РњР°СЂРєРµС‚Рµ</h3>
+              <div class="ym-hero-top">
+                <div class="ym-hero-rating">
+                  в­ђ Р’С‹РіРѕРґРЅС‹Рµ РїСЂРµРґР»РѕР¶РµРЅРёСЏ
+                  <span class="ym-hero-rating-count">РЎРєРёРґРєРё РґРѕ 50%</span>
                 </div>
               </div>
+              <button class="ym-hero-button">Р—Р° СЃРєРёРґРєР°РјРё</button>
             </div>
           </div>
-            Реклама. ООО "ЯНДЕКС", ИНН 7736207543. clid: 14635360, erid: 5jtCeReNx12oajxS2bzShmZ
+          <div class="ym-hero-legal">
+            Р РµРєР»Р°РјР°. РћРћРћ "РЇРќР”Р•РљРЎ", РРќРќ 7736207543. clid: 14635360, erid: 5jtCeReNx12oajxS2bzShmZ
           </div>
         </a>
-            <h2>Зачем нужен сброс настроек до заводских?</h2>
+            <h2>Р—Р°С‡РµРј РЅСѓР¶РµРЅ СЃР±СЂРѕСЃ РЅР°СЃС‚СЂРѕРµРє РґРѕ Р·Р°РІРѕРґСЃРєРёС…?</h2>
             <ul>
-                <li>Восстанавливает стандартные параметры камеры после экспериментов или ошибок в настройках.</li>
-                <li>Помогает при сбоях, зависаниях, странном поведении или ошибках меню.</li>
-                <li>Рекомендуется перед продажей, передачей другому пользователю или после обновления прошивки.</li>
-                <li>Позволяет быстро устранить накопленные программные конфликты и вернуть камеру к исходному состоянию.</li>
+                <li>Р’РѕСЃСЃС‚Р°РЅР°РІР»РёРІР°РµС‚ СЃС‚Р°РЅРґР°СЂС‚РЅС‹Рµ РїР°СЂР°РјРµС‚СЂС‹ РєР°РјРµСЂС‹ РїРѕСЃР»Рµ СЌРєСЃРїРµСЂРёРјРµРЅС‚РѕРІ РёР»Рё РѕС€РёР±РѕРє РІ РЅР°СЃС‚СЂРѕР№РєР°С….</li>
+                <li>РџРѕРјРѕРіР°РµС‚ РїСЂРё СЃР±РѕСЏС…, Р·Р°РІРёСЃР°РЅРёСЏС…, СЃС‚СЂР°РЅРЅРѕРј РїРѕРІРµРґРµРЅРёРё РёР»Рё РѕС€РёР±РєР°С… РјРµРЅСЋ.</li>
+                <li>Р РµРєРѕРјРµРЅРґСѓРµС‚СЃСЏ РїРµСЂРµРґ РїСЂРѕРґР°Р¶РµР№, РїРµСЂРµРґР°С‡РµР№ РґСЂСѓРіРѕРјСѓ РїРѕР»СЊР·РѕРІР°С‚РµР»СЋ РёР»Рё РїРѕСЃР»Рµ РѕР±РЅРѕРІР»РµРЅРёСЏ РїСЂРѕС€РёРІРєРё.</li>
+                <li>РџРѕР·РІРѕР»СЏРµС‚ Р±С‹СЃС‚СЂРѕ СѓСЃС‚СЂР°РЅРёС‚СЊ РЅР°РєРѕРїР»РµРЅРЅС‹Рµ РїСЂРѕРіСЂР°РјРјРЅС‹Рµ РєРѕРЅС„Р»РёРєС‚С‹ Рё РІРµСЂРЅСѓС‚СЊ РєР°РјРµСЂСѓ Рє РёСЃС…РѕРґРЅРѕРјСѓ СЃРѕСЃС‚РѕСЏРЅРёСЋ.</li>
             </ul>
-            <h2>Что сбрасывается при возврате к заводским настройкам?</h2>
+            <h2>Р§С‚Рѕ СЃР±СЂР°СЃС‹РІР°РµС‚СЃСЏ РїСЂРё РІРѕР·РІСЂР°С‚Рµ Рє Р·Р°РІРѕРґСЃРєРёРј РЅР°СЃС‚СЂРѕР№РєР°Рј?</h2>
 <ul>
-                <li>Параметры съёмки (режимы, ISO, баланс белого, Picture Style/Creative Style, автофокус и т.д.).</li>
-                <li>Пользовательские настройки кнопок, меню, профили, сетки, брекетинг, настройки вспышки.</li>
-                <li>Дата, время, язык, Wi-Fi/Bluetooth-подключения (на большинстве камер).</li>
-                <li>Сброс НЕ удаляет фотографии и видео с карты памяти!</li>
+                <li>РџР°СЂР°РјРµС‚СЂС‹ СЃСЉС‘РјРєРё (СЂРµР¶РёРјС‹, ISO, Р±Р°Р»Р°РЅСЃ Р±РµР»РѕРіРѕ, Picture Style/Creative Style, Р°РІС‚РѕС„РѕРєСѓСЃ Рё С‚.Рґ.).</li>
+                <li>РџРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєРёРµ РЅР°СЃС‚СЂРѕР№РєРё РєРЅРѕРїРѕРє, РјРµРЅСЋ, РїСЂРѕС„РёР»Рё, СЃРµС‚РєРё, Р±СЂРµРєРµС‚РёРЅРі, РЅР°СЃС‚СЂРѕР№РєРё РІСЃРїС‹С€РєРё.</li>
+                <li>Р”Р°С‚Р°, РІСЂРµРјСЏ, СЏР·С‹Рє, Wi-Fi/Bluetooth-РїРѕРґРєР»СЋС‡РµРЅРёСЏ (РЅР° Р±РѕР»СЊС€РёРЅСЃС‚РІРµ РєР°РјРµСЂ).</li>
+                <li>РЎР±СЂРѕСЃ РќР• СѓРґР°Р»СЏРµС‚ С„РѕС‚РѕРіСЂР°С„РёРё Рё РІРёРґРµРѕ СЃ РєР°СЂС‚С‹ РїР°РјСЏС‚Рё!</li>
             </ul>
-            <h2>Пошаговая инструкция: как сбросить настройки фотоаппарата</h2>
+            <h2>РџРѕС€Р°РіРѕРІР°СЏ РёРЅСЃС‚СЂСѓРєС†РёСЏ: РєР°Рє СЃР±СЂРѕСЃРёС‚СЊ РЅР°СЃС‚СЂРѕР№РєРё С„РѕС‚РѕР°РїРїР°СЂР°С‚Р°</h2>
             <div class="step-group">
                 <div class="step">
                     <div class="step-number">1</div>
                     <div>
-                        <strong>Включите фотоаппарат и перейдите в меню</strong>
+                        <strong>Р’РєР»СЋС‡РёС‚Рµ С„РѕС‚РѕР°РїРїР°СЂР°С‚ Рё РїРµСЂРµР№РґРёС‚Рµ РІ РјРµРЅСЋ</strong>
                         <ul>
-                            <li>Откройте основное меню камеры с помощью кнопки MENU.</li>
+                            <li>РћС‚РєСЂРѕР№С‚Рµ РѕСЃРЅРѕРІРЅРѕРµ РјРµРЅСЋ РєР°РјРµСЂС‹ СЃ РїРѕРјРѕС‰СЊСЋ РєРЅРѕРїРєРё MENU.</li>
                         </ul>
                     </div>
                 </div>
                 <div class="step">
                     <div class="step-number">2</div>
                     <div>
-                        <strong>Найдите пункт сброса настроек</strong>
+                        <strong>РќР°Р№РґРёС‚Рµ РїСѓРЅРєС‚ СЃР±СЂРѕСЃР° РЅР°СЃС‚СЂРѕРµРє</strong>
                         <ul>
-                            <li>На большинстве камер это раздел «Настройки», «Сервис», «Setup» или «Инструменты» (иконка гаечного ключа или шестерёнки).</li>
-                            <li>Пункты могут называться: «Сброс настроек», «Reset», «Clear Settings», «Восстановить заводские», «Factory Reset», «Initial Setup».</li>
+                            <li>РќР° Р±РѕР»СЊС€РёРЅСЃС‚РІРµ РєР°РјРµСЂ СЌС‚Рѕ СЂР°Р·РґРµР» В«РќР°СЃС‚СЂРѕР№РєРёВ», В«РЎРµСЂРІРёСЃВ», В«SetupВ» РёР»Рё В«РРЅСЃС‚СЂСѓРјРµРЅС‚С‹В» (РёРєРѕРЅРєР° РіР°РµС‡РЅРѕРіРѕ РєР»СЋС‡Р° РёР»Рё С€РµСЃС‚РµСЂС‘РЅРєРё).</li>
+                            <li>РџСѓРЅРєС‚С‹ РјРѕРіСѓС‚ РЅР°Р·С‹РІР°С‚СЊСЃСЏ: В«РЎР±СЂРѕСЃ РЅР°СЃС‚СЂРѕРµРєВ», В«ResetВ», В«Clear SettingsВ», В«Р’РѕСЃСЃС‚Р°РЅРѕРІРёС‚СЊ Р·Р°РІРѕРґСЃРєРёРµВ», В«Factory ResetВ», В«Initial SetupВ».</li>
                         </ul>
                     </div>
                 </div>
                 <div class="step">
                     <div class="step-number">3</div>
                     <div>
-                        <strong>Выберите тип сброса</strong>
+                        <strong>Р’С‹Р±РµСЂРёС‚Рµ С‚РёРї СЃР±СЂРѕСЃР°</strong>
                         <ul>
-                            <li>Обычно предлагается сбросить только параметры съёмки или полный сброс (включая пользовательские и сетевые настройки).</li>
-                            <li>Для полного возврата к заводским - выберите «Сбросить все настройки» или «Reset all settings».</li>
+                            <li>РћР±С‹С‡РЅРѕ РїСЂРµРґР»Р°РіР°РµС‚СЃСЏ СЃР±СЂРѕСЃРёС‚СЊ С‚РѕР»СЊРєРѕ РїР°СЂР°РјРµС‚СЂС‹ СЃСЉС‘РјРєРё РёР»Рё РїРѕР»РЅС‹Р№ СЃР±СЂРѕСЃ (РІРєР»СЋС‡Р°СЏ РїРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєРёРµ Рё СЃРµС‚РµРІС‹Рµ РЅР°СЃС‚СЂРѕР№РєРё).</li>
+                            <li>Р”Р»СЏ РїРѕР»РЅРѕРіРѕ РІРѕР·РІСЂР°С‚Р° Рє Р·Р°РІРѕРґСЃРєРёРј - РІС‹Р±РµСЂРёС‚Рµ В«РЎР±СЂРѕСЃРёС‚СЊ РІСЃРµ РЅР°СЃС‚СЂРѕР№РєРёВ» РёР»Рё В«Reset all settingsВ».</li>
                         </ul>
                     </div>
                 </div>
                 <div class="step">
                     <div class="step-number">4</div>
                     <div>
-                        <strong>Подтвердите действие</strong>
+                        <strong>РџРѕРґС‚РІРµСЂРґРёС‚Рµ РґРµР№СЃС‚РІРёРµ</strong>
                         <ul>
-                            <li>Камера запросит подтверждение («Да»/«Yes»).</li>
-                            <li>После подтверждения произойдёт перезагрузка или возврат в меню.</li>
+                            <li>РљР°РјРµСЂР° Р·Р°РїСЂРѕСЃРёС‚ РїРѕРґС‚РІРµСЂР¶РґРµРЅРёРµ (В«Р”Р°В»/В«YesВ»).</li>
+                            <li>РџРѕСЃР»Рµ РїРѕРґС‚РІРµСЂР¶РґРµРЅРёСЏ РїСЂРѕРёР·РѕР№РґС‘С‚ РїРµСЂРµР·Р°РіСЂСѓР·РєР° РёР»Рё РІРѕР·РІСЂР°С‚ РІ РјРµРЅСЋ.</li>
                         </ul>
                     </div>
                 </div>
             </div>
-            <h2>Особенности сброса на популярных марках</h2>
+            <h2>РћСЃРѕР±РµРЅРЅРѕСЃС‚Рё СЃР±СЂРѕСЃР° РЅР° РїРѕРїСѓР»СЏСЂРЅС‹С… РјР°СЂРєР°С…</h2>
             <ul>
-                <li><strong>Canon:</strong> Меню > «Настройки» (жёлтая вкладка) > «Сброс настроек камеры» («Clear all camera settings»). Для сброса пользовательских функций: «Clear Custom Functions».</li>
-                <li><strong>Nikon:</strong> Меню > «Сброс меню съёмки» и «Сброс пользовательских настроек» (две отдельные функции), либо удержание двух кнопок с зелёной точкой.</li>
-                <li><strong>Sony:</strong> Меню > «Настройки» > «Инициализация» > «Сбросить настройки» или «Восстановить заводские».</li>
-                <li><strong>Fujifilm:</strong> Меню > «Настройки» > «Сбросить» > «Сбросить все» или «Reset all».</li>
-                <li><strong>Panasonic, Olympus:</strong> Меню > «Настройки» > «Сброс» или «Reset».</li>
+                <li><strong>Canon:</strong> РњРµРЅСЋ в†’ В«РќР°СЃС‚СЂРѕР№РєРёВ» (Р¶С‘Р»С‚Р°СЏ РІРєР»Р°РґРєР°) в†’ В«РЎР±СЂРѕСЃ РЅР°СЃС‚СЂРѕРµРє РєР°РјРµСЂС‹В» (В«Clear all camera settingsВ»). Р”Р»СЏ СЃР±СЂРѕСЃР° РїРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєРёС… С„СѓРЅРєС†РёР№: В«Clear Custom FunctionsВ».</li>
+                <li><strong>Nikon:</strong> РњРµРЅСЋ в†’ В«РЎР±СЂРѕСЃ РјРµРЅСЋ СЃСЉС‘РјРєРёВ» Рё В«РЎР±СЂРѕСЃ РїРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєРёС… РЅР°СЃС‚СЂРѕРµРєВ» (РґРІРµ РѕС‚РґРµР»СЊРЅС‹Рµ С„СѓРЅРєС†РёРё), Р»РёР±Рѕ СѓРґРµСЂР¶Р°РЅРёРµ РґРІСѓС… РєРЅРѕРїРѕРє СЃ Р·РµР»С‘РЅРѕР№ С‚РѕС‡РєРѕР№.</li>
+                <li><strong>Sony:</strong> РњРµРЅСЋ в†’ В«РќР°СЃС‚СЂРѕР№РєРёВ» в†’ В«РРЅРёС†РёР°Р»РёР·Р°С†РёСЏВ» в†’ В«РЎР±СЂРѕСЃРёС‚СЊ РЅР°СЃС‚СЂРѕР№РєРёВ» РёР»Рё В«Р’РѕСЃСЃС‚Р°РЅРѕРІРёС‚СЊ Р·Р°РІРѕРґСЃРєРёРµВ».</li>
+                <li><strong>Fujifilm:</strong> РњРµРЅСЋ в†’ В«РќР°СЃС‚СЂРѕР№РєРёВ» в†’ В«РЎР±СЂРѕСЃРёС‚СЊВ» в†’ В«РЎР±СЂРѕСЃРёС‚СЊ РІСЃРµВ» РёР»Рё В«Reset allВ».</li>
+                <li><strong>Panasonic, Olympus:</strong> РњРµРЅСЋ в†’ В«РќР°СЃС‚СЂРѕР№РєРёВ» в†’ В«РЎР±СЂРѕСЃВ» РёР»Рё В«ResetВ».</li>
             </ul>
-            <h2>Альтернативные способы сброса</h2>
+            <h2>РђР»СЊС‚РµСЂРЅР°С‚РёРІРЅС‹Рµ СЃРїРѕСЃРѕР±С‹ СЃР±СЂРѕСЃР°</h2>
             <ul>
-                <li>На некоторых камерах (Nikon, Canon) можно зажать две специальные кнопки с зелёной точкой на 2–3 секунды - произойдёт быстрый сброс параметров съёмки.</li>
-                <li>Если камера не включается или зависла - извлеките аккумулятор на 10–15 минут, затем попробуйте снова.</li>
-                <li>В случае серьёзных сбоев - обновите прошивку или обратитесь в сервис.</li>
+                <li>РќР° РЅРµРєРѕС‚РѕСЂС‹С… РєР°РјРµСЂР°С… (Nikon, Canon) РјРѕР¶РЅРѕ Р·Р°Р¶Р°С‚СЊ РґРІРµ СЃРїРµС†РёР°Р»СЊРЅС‹Рµ РєРЅРѕРїРєРё СЃ Р·РµР»С‘РЅРѕР№ С‚РѕС‡РєРѕР№ РЅР° 2вЂ“3 СЃРµРєСѓРЅРґС‹ - РїСЂРѕРёР·РѕР№РґС‘С‚ Р±С‹СЃС‚СЂС‹Р№ СЃР±СЂРѕСЃ РїР°СЂР°РјРµС‚СЂРѕРІ СЃСЉС‘РјРєРё.</li>
+                <li>Р•СЃР»Рё РєР°РјРµСЂР° РЅРµ РІРєР»СЋС‡Р°РµС‚СЃСЏ РёР»Рё Р·Р°РІРёСЃР»Р° - РёР·РІР»РµРєРёС‚Рµ Р°РєРєСѓРјСѓР»СЏС‚РѕСЂ РЅР° 10вЂ“15 РјРёРЅСѓС‚, Р·Р°С‚РµРј РїРѕРїСЂРѕР±СѓР№С‚Рµ СЃРЅРѕРІР°.</li>
+                <li>Р’ СЃР»СѓС‡Р°Рµ СЃРµСЂСЊС‘Р·РЅС‹С… СЃР±РѕРµРІ - РѕР±РЅРѕРІРёС‚Рµ РїСЂРѕС€РёРІРєСѓ РёР»Рё РѕР±СЂР°С‚РёС‚РµСЃСЊ РІ СЃРµСЂРІРёСЃ.</li>
             </ul>
             <div class="recommend-box">
                 <i class="fas fa-info-circle"></i>
                 <div>
-                    <strong>Совет:</strong> Перед сбросом сфотографируйте или запишите важные пользовательские настройки - после возврата к заводским их придётся настраивать заново.
+                    <strong>РЎРѕРІРµС‚:</strong> РџРµСЂРµРґ СЃР±СЂРѕСЃРѕРј СЃС„РѕС‚РѕРіСЂР°С„РёСЂСѓР№С‚Рµ РёР»Рё Р·Р°РїРёС€РёС‚Рµ РІР°Р¶РЅС‹Рµ РїРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєРёРµ РЅР°СЃС‚СЂРѕР№РєРё - РїРѕСЃР»Рµ РІРѕР·РІСЂР°С‚Р° Рє Р·Р°РІРѕРґСЃРєРёРј РёС… РїСЂРёРґС‘С‚СЃСЏ РЅР°СЃС‚СЂР°РёРІР°С‚СЊ Р·Р°РЅРѕРІРѕ.
                 </div>
             </div>
             <div class="pro-tips">
-                <h4>?? Профессиональные советы</h4>
+                <h4>рџ”№ РџСЂРѕС„РµСЃСЃРёРѕРЅР°Р»СЊРЅС‹Рµ СЃРѕРІРµС‚С‹</h4>
                 <div class="tip-item">
                     <i class="fas fa-lightbulb"></i>
-                    <p>Если после сброса камера продолжает работать некорректно - проверьте карту памяти, аккумулятор и обновите прошивку до последней версии.</p>
+                    <p>Р•СЃР»Рё РїРѕСЃР»Рµ СЃР±СЂРѕСЃР° РєР°РјРµСЂР° РїСЂРѕРґРѕР»Р¶Р°РµС‚ СЂР°Р±РѕС‚Р°С‚СЊ РЅРµРєРѕСЂСЂРµРєС‚РЅРѕ - РїСЂРѕРІРµСЂСЊС‚Рµ РєР°СЂС‚Сѓ РїР°РјСЏС‚Рё, Р°РєРєСѓРјСѓР»СЏС‚РѕСЂ Рё РѕР±РЅРѕРІРёС‚Рµ РїСЂРѕС€РёРІРєСѓ РґРѕ РїРѕСЃР»РµРґРЅРµР№ РІРµСЂСЃРёРё.</p>
                 </div>
                 <div class="tip-item">
                     <i class="fas fa-lightbulb"></i>
-                    <p>Для полного сброса сетевых настроек (Wi-Fi, Bluetooth) используйте отдельный пункт меню или сбросьте их вручную.</p>
+                    <p>Р”Р»СЏ РїРѕР»РЅРѕРіРѕ СЃР±СЂРѕСЃР° СЃРµС‚РµРІС‹С… РЅР°СЃС‚СЂРѕРµРє (Wi-Fi, Bluetooth) РёСЃРїРѕР»СЊР·СѓР№С‚Рµ РѕС‚РґРµР»СЊРЅС‹Р№ РїСѓРЅРєС‚ РјРµРЅСЋ РёР»Рё СЃР±СЂРѕСЃСЊС‚Рµ РёС… РІСЂСѓС‡РЅСѓСЋ.</p>
                 </div>
                 <div class="tip-item">
                     <i class="fas fa-lightbulb"></i>
-                    <p>После сброса обязательно проверьте дату, время, язык и регион - они могут сброситься к дефолтным значениям.</p>
+                    <p>РџРѕСЃР»Рµ СЃР±СЂРѕСЃР° РѕР±СЏР·Р°С‚РµР»СЊРЅРѕ РїСЂРѕРІРµСЂСЊС‚Рµ РґР°С‚Сѓ, РІСЂРµРјСЏ, СЏР·С‹Рє Рё СЂРµРіРёРѕРЅ - РѕРЅРё РјРѕРіСѓС‚ СЃР±СЂРѕСЃРёС‚СЊСЃСЏ Рє РґРµС„РѕР»С‚РЅС‹Рј Р·РЅР°С‡РµРЅРёСЏРј.</p>
                 </div>
             </div>
-            <h2>Часто задаваемые вопросы</h2>
+            <h2>Р§Р°СЃС‚Рѕ Р·Р°РґР°РІР°РµРјС‹Рµ РІРѕРїСЂРѕСЃС‹</h2>
             <ul>
-                <li><strong>Удалятся ли фото и видео при сбросе?</strong> - Нет, сброс настроек не затрагивает файлы на карте памяти.</li>
-                <li><strong>Можно ли отменить сброс?</strong> - Нет, после подтверждения возврат к прежним настройкам невозможен.</li>
-                <li><strong>Что делать, если камера не сбрасывается?</strong> - Проверьте заряд аккумулятора, попробуйте альтернативные способы или обратитесь в сервис.</li>
-                <li><strong>Нужно ли сбрасывать камеру после обновления прошивки?</strong> - Рекомендуется, чтобы избежать конфликтов старых и новых настроек.</li>
+                <li><strong>РЈРґР°Р»СЏС‚СЃСЏ Р»Рё С„РѕС‚Рѕ Рё РІРёРґРµРѕ РїСЂРё СЃР±СЂРѕСЃРµ?</strong> - РќРµС‚, СЃР±СЂРѕСЃ РЅР°СЃС‚СЂРѕРµРє РЅРµ Р·Р°С‚СЂР°РіРёРІР°РµС‚ С„Р°Р№Р»С‹ РЅР° РєР°СЂС‚Рµ РїР°РјСЏС‚Рё.</li>
+                <li><strong>РњРѕР¶РЅРѕ Р»Рё РѕС‚РјРµРЅРёС‚СЊ СЃР±СЂРѕСЃ?</strong> - РќРµС‚, РїРѕСЃР»Рµ РїРѕРґС‚РІРµСЂР¶РґРµРЅРёСЏ РІРѕР·РІСЂР°С‚ Рє РїСЂРµР¶РЅРёРј РЅР°СЃС‚СЂРѕР№РєР°Рј РЅРµРІРѕР·РјРѕР¶РµРЅ.</li>
+                <li><strong>Р§С‚Рѕ РґРµР»Р°С‚СЊ, РµСЃР»Рё РєР°РјРµСЂР° РЅРµ СЃР±СЂР°СЃС‹РІР°РµС‚СЃСЏ?</strong> - РџСЂРѕРІРµСЂСЊС‚Рµ Р·Р°СЂСЏРґ Р°РєРєСѓРјСѓР»СЏС‚РѕСЂР°, РїРѕРїСЂРѕР±СѓР№С‚Рµ Р°Р»СЊС‚РµСЂРЅР°С‚РёРІРЅС‹Рµ СЃРїРѕСЃРѕР±С‹ РёР»Рё РѕР±СЂР°С‚РёС‚РµСЃСЊ РІ СЃРµСЂРІРёСЃ.</li>
+                <li><strong>РќСѓР¶РЅРѕ Р»Рё СЃР±СЂР°СЃС‹РІР°С‚СЊ РєР°РјРµСЂСѓ РїРѕСЃР»Рµ РѕР±РЅРѕРІР»РµРЅРёСЏ РїСЂРѕС€РёРІРєРё?</strong> - Р РµРєРѕРјРµРЅРґСѓРµС‚СЃСЏ, С‡С‚РѕР±С‹ РёР·Р±РµР¶Р°С‚СЊ РєРѕРЅС„Р»РёРєС‚РѕРІ СЃС‚Р°СЂС‹С… Рё РЅРѕРІС‹С… РЅР°СЃС‚СЂРѕРµРє.</li>
             </ul>
-            <h2>?? Итог</h2>
+            <h2>рџ“Њ РС‚РѕРі</h2>
             <p>
-                Сброс настроек фотоаппарата до заводских - простой и эффективный способ устранить сбои, вернуть стандартные параметры и подготовить камеру к продаже или новому пользователю. Делайте это осознанно, предварительно сохранив важные пользовательские настройки!
+                РЎР±СЂРѕСЃ РЅР°СЃС‚СЂРѕРµРє С„РѕС‚РѕР°РїРїР°СЂР°С‚Р° РґРѕ Р·Р°РІРѕРґСЃРєРёС… - РїСЂРѕСЃС‚РѕР№ Рё СЌС„С„РµРєС‚РёРІРЅС‹Р№ СЃРїРѕСЃРѕР± СѓСЃС‚СЂР°РЅРёС‚СЊ СЃР±РѕРё, РІРµСЂРЅСѓС‚СЊ СЃС‚Р°РЅРґР°СЂС‚РЅС‹Рµ РїР°СЂР°РјРµС‚СЂС‹ Рё РїРѕРґРіРѕС‚РѕРІРёС‚СЊ РєР°РјРµСЂСѓ Рє РїСЂРѕРґР°Р¶Рµ РёР»Рё РЅРѕРІРѕРјСѓ РїРѕР»СЊР·РѕРІР°С‚РµР»СЋ. Р”РµР»Р°Р№С‚Рµ СЌС‚Рѕ РѕСЃРѕР·РЅР°РЅРЅРѕ, РїСЂРµРґРІР°СЂРёС‚РµР»СЊРЅРѕ СЃРѕС…СЂР°РЅРёРІ РІР°Р¶РЅС‹Рµ РїРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєРёРµ РЅР°СЃС‚СЂРѕР№РєРё!
             </p>
 </div>
 
-        <!-- Telegram рекламный баннер -->
+        <!-- Telegram СЂРµРєР»Р°РјРЅС‹Р№ Р±Р°РЅРЅРµСЂ -->
         <a href="https://t.me/RepairoRU" target="_blank" rel="noopener noreferrer" class="telegram-banner">
           <div class="telegram-banner-container">
             <div class="telegram-logo">
@@ -489,10 +522,10 @@
               </svg>
             </div>
             <div class="telegram-content">
-              <div class="telegram-title">Новости из мира технологий</div>
-              <div class="telegram-subtitle">В нашем новом Telegram-канале. Подписывайтесь и будьте в числе первых!</div>
+              <div class="telegram-title">РќРѕРІРѕСЃС‚Рё РёР· РјРёСЂР° С‚РµС…РЅРѕР»РѕРіРёР№</div>
+              <div class="telegram-subtitle">Р’ РЅР°С€РµРј РЅРѕРІРѕРј Telegram-РєР°РЅР°Р»Рµ. РџРѕРґРїРёСЃС‹РІР°Р№С‚РµСЃСЊ Рё Р±СѓРґСЊС‚Рµ РІ С‡РёСЃР»Рµ РїРµСЂРІС‹С…!</div>
               <div class="telegram-button">
-                Подписаться
+                РџРѕРґРїРёСЃР°С‚СЊСЃСЏ
                 <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.56c-.21 2.22-1.12 7.58-1.58 10.06-.19 1.07-.57 1.43-.94 1.46-.8.07-1.4-.52-2.17-1.03-1.21-.79-1.89-1.28-3.06-2.05-1.35-.87-.47-1.35.3-2.13.2-.21 3.71-3.39 3.77-3.68.01-.04.01-.18-.07-.26s-.2-.05-.29-.03c-.12.03-2.11 1.34-5.95 3.93-.56.38-1.07.57-1.53.56-.5-.01-1.47-.28-2.19-.51-.88-.28-1.58-.43-1.52-.91.03-.25.38-.51 1.04-.78 4.07-1.77 6.78-2.94 8.13-3.51 3.88-1.62 4.68-1.9 5.19-1.91.12 0 .37.03.54.17.14.12.18.28.2.44-.01.06 0 .11-.01.17z"/>
                 </svg>
@@ -517,45 +550,45 @@
                         </span>
                         <span class="logo__text">Repairo</span>
                     </a>
-                    <p class="footer__text">Помогаем ремонтировать электронику с 2024 года</p>
+                    <p class="footer__text">РџРѕРјРѕРіР°РµРј СЂРµРјРѕРЅС‚РёСЂРѕРІР°С‚СЊ СЌР»РµРєС‚СЂРѕРЅРёРєСѓ СЃ 2024 РіРѕРґР°</p>
                 </div>
                 <div class="footer__col">
-                    <h3 class="footer__title">Разделы</h3>
+                    <h3 class="footer__title">Р Р°Р·РґРµР»С‹</h3>
                     <ul class="footer__links">
-                        <li><a href="../index.html" class="footer__link">Главная</a></li>
-                        <li><a href="../index.html#categories" class="footer__link">Все гайды</a></li>
-                        <li><a href="../contacts.html" class="footer__link">Контакты</a></li>
+                        <li><a href="../index.html" class="footer__link">Р“Р»Р°РІРЅР°СЏ</a></li>
+                        <li><a href="../index.html#categories" class="footer__link">Р’СЃРµ РіР°Р№РґС‹</a></li>
+                        <li><a href="../contacts.html" class="footer__link">РљРѕРЅС‚Р°РєС‚С‹</a></li>
                     </ul>
                 </div>
                 <div class="footer__col">
-                    <h3 class="footer__title">Категории</h3>
+                    <h3 class="footer__title">РљР°С‚РµРіРѕСЂРёРё</h3>
                     <ul class="footer__links">
-                        <li><a href="../tv.html" class="nav__link">Телевизоры</a></li>
-                        <li><a href="../cameras.html" class="nav__link">Фотоаппараты</a></li>
-                        <li><a href="../consoles.html" class="nav__link">Приставки</a></li>
-                        <li><a href="../laptops.html" class="nav__link">Ноутбуки</a></li>
-                        <li><a href="../smartphones.html" class="nav__link">Смартфоны</a></li>
-                        <li><a href="../small-appliances.html" class="nav__link">Мелкая техника</a></li>
-                        <li><a href="../large-appliances.html" class="nav__link">Бытовая техника</a></li>
-                        <li><a href="../auto-electronics.html" class="nav__link">Авто-Электроника</a></li>
+                        <li><a href="../tv.html" class="nav__link">РўРµР»РµРІРёР·РѕСЂС‹</a></li>
+                        <li><a href="../cameras.html" class="nav__link">Р¤РѕС‚РѕР°РїРїР°СЂР°С‚С‹</a></li>
+                        <li><a href="../consoles.html" class="nav__link">РџСЂРёСЃС‚Р°РІРєРё</a></li>
+                        <li><a href="../laptops.html" class="nav__link">РќРѕСѓС‚Р±СѓРєРё</a></li>
+                        <li><a href="../smartphones.html" class="nav__link">РЎРјР°СЂС‚С„РѕРЅС‹</a></li>
+                        <li><a href="../small-appliances.html" class="nav__link">РњРµР»РєР°СЏ С‚РµС…РЅРёРєР°</a></li>
+                        <li><a href="../large-appliances.html" class="nav__link">Р‘С‹С‚РѕРІР°СЏ С‚РµС…РЅРёРєР°</a></li>
+                        <li><a href="../auto-electronics.html" class="nav__link">РђРІС‚Рѕ-Р­Р»РµРєС‚СЂРѕРЅРёРєР°</a></li>
                     </ul>
                 </div>
                 <div class="footer__col">
-                    <h3 class="footer__title">Контакты</h3>
+                    <h3 class="footer__title">РљРѕРЅС‚Р°РєС‚С‹</h3>
                     <ul class="footer__links">
                         <li><a href="https://t.me/RepairoRU" class="footer__link"><i class="fab fa-telegram"></i> Telegram</a></li>
-                        <li><span class="footer__link">Наша почта: repairo.info@mail.ru</span></li>
+                        <li><span class="footer__link">РќР°С€Р° РїРѕС‡С‚Р°: repairo.info@mail.ru</span></li>
                     </ul>
                 </div>
             </div>
             <div class="footer__bottom">
                 <p class="disclaimer">
-    Администрация сайта не несёт ответственности за возможные повреждения техники
-    и иные последствия, возникшие в результате самостоятельного ремонта по
-    материалам и инструкциям, размещённым на сайте. Все работы вы выполняете
-    на свой страх и риск.
+    РђРґРјРёРЅРёСЃС‚СЂР°С†РёСЏ СЃР°Р№С‚Р° РЅРµ РЅРµСЃС‘С‚ РѕС‚РІРµС‚СЃС‚РІРµРЅРЅРѕСЃС‚Рё Р·Р° РІРѕР·РјРѕР¶РЅС‹Рµ РїРѕРІСЂРµР¶РґРµРЅРёСЏ С‚РµС…РЅРёРєРё
+    Рё РёРЅС‹Рµ РїРѕСЃР»РµРґСЃС‚РІРёСЏ, РІРѕР·РЅРёРєС€РёРµ РІ СЂРµР·СѓР»СЊС‚Р°С‚Рµ СЃР°РјРѕСЃС‚РѕСЏС‚РµР»СЊРЅРѕРіРѕ СЂРµРјРѕРЅС‚Р° РїРѕ
+    РјР°С‚РµСЂРёР°Р»Р°Рј Рё РёРЅСЃС‚СЂСѓРєС†РёСЏРј, СЂР°Р·РјРµС‰С‘РЅРЅС‹Рј РЅР° СЃР°Р№С‚Рµ. Р’СЃРµ СЂР°Р±РѕС‚С‹ РІС‹ РІС‹РїРѕР»РЅСЏРµС‚Рµ
+    РЅР° СЃРІРѕР№ СЃС‚СЂР°С… Рё СЂРёСЃРє.
     </p>
-                <p class="footer__copyright">© 2026 Repairo. Все права защищены.</p>
+                <p class="footer__copyright">В© 2026 Repairo. Р’СЃРµ РїСЂР°РІР° Р·Р°С‰РёС‰РµРЅС‹.</p>
             </div>
         </div>
     </footer>
@@ -566,50 +599,50 @@
 {
   "@context": "https://schema.org",
   "@type": "HowTo",
-  "name": "Как сбросить настройки фотоаппарата до заводских?",
-  "description": "Пошаговая инструкция: Как сбросить настройки фотоаппарата до заводских?. Если после сброса камера продолжает работать некорректно - проверьте карту памят.......",
+  "name": "РљР°Рє СЃР±СЂРѕСЃРёС‚СЊ РЅР°СЃС‚СЂРѕР№РєРё С„РѕС‚РѕР°РїРїР°СЂР°С‚Р° РґРѕ Р·Р°РІРѕРґСЃРєРёС…?",
+  "description": "РџРѕС€Р°РіРѕРІР°СЏ РёРЅСЃС‚СЂСѓРєС†РёСЏ: РљР°Рє СЃР±СЂРѕСЃРёС‚СЊ РЅР°СЃС‚СЂРѕР№РєРё С„РѕС‚РѕР°РїРїР°СЂР°С‚Р° РґРѕ Р·Р°РІРѕРґСЃРєРёС…?. Р•СЃР»Рё РїРѕСЃР»Рµ СЃР±СЂРѕСЃР° РєР°РјРµСЂР° РїСЂРѕРґРѕР»Р¶Р°РµС‚ СЂР°Р±РѕС‚Р°С‚СЊ РЅРµРєРѕСЂСЂРµРєС‚РЅРѕ - РїСЂРѕРІРµСЂСЊС‚Рµ РєР°СЂС‚Сѓ РїР°РјСЏС‚.......",
   "totalTime": "PT30M",
   "step": [
     {
       "@type": "HowToStep",
-      "name": "Зачем нужен сброс настроек до заводских?",
-      "text": "Зачем нужен сброс настроек до заводских?",
+      "name": "Р—Р°С‡РµРј РЅСѓР¶РµРЅ СЃР±СЂРѕСЃ РЅР°СЃС‚СЂРѕРµРє РґРѕ Р·Р°РІРѕРґСЃРєРёС…?",
+      "text": "Р—Р°С‡РµРј РЅСѓР¶РµРЅ СЃР±СЂРѕСЃ РЅР°СЃС‚СЂРѕРµРє РґРѕ Р·Р°РІРѕРґСЃРєРёС…?",
       "url": "#step-1"
     },
     {
       "@type": "HowToStep",
-      "name": "Что сбрасывается при возврате к заводским настройкам?",
-      "text": "Что сбрасывается при возврате к заводским настройкам?",
+      "name": "Р§С‚Рѕ СЃР±СЂР°СЃС‹РІР°РµС‚СЃСЏ РїСЂРё РІРѕР·РІСЂР°С‚Рµ Рє Р·Р°РІРѕРґСЃРєРёРј РЅР°СЃС‚СЂРѕР№РєР°Рј?",
+      "text": "Р§С‚Рѕ СЃР±СЂР°СЃС‹РІР°РµС‚СЃСЏ РїСЂРё РІРѕР·РІСЂР°С‚Рµ Рє Р·Р°РІРѕРґСЃРєРёРј РЅР°СЃС‚СЂРѕР№РєР°Рј?",
       "url": "#step-2"
     },
     {
       "@type": "HowToStep",
-      "name": "Пошаговая инструкция: как сбросить настройки фотоаппарата",
-      "text": "Пошаговая инструкция: как сбросить настройки фотоаппарата",
+      "name": "РџРѕС€Р°РіРѕРІР°СЏ РёРЅСЃС‚СЂСѓРєС†РёСЏ: РєР°Рє СЃР±СЂРѕСЃРёС‚СЊ РЅР°СЃС‚СЂРѕР№РєРё С„РѕС‚РѕР°РїРїР°СЂР°С‚Р°",
+      "text": "РџРѕС€Р°РіРѕРІР°СЏ РёРЅСЃС‚СЂСѓРєС†РёСЏ: РєР°Рє СЃР±СЂРѕСЃРёС‚СЊ РЅР°СЃС‚СЂРѕР№РєРё С„РѕС‚РѕР°РїРїР°СЂР°С‚Р°",
       "url": "#step-3"
     },
     {
       "@type": "HowToStep",
-      "name": "Особенности сброса на популярных марках",
-      "text": "Особенности сброса на популярных марках",
+      "name": "РћСЃРѕР±РµРЅРЅРѕСЃС‚Рё СЃР±СЂРѕСЃР° РЅР° РїРѕРїСѓР»СЏСЂРЅС‹С… РјР°СЂРєР°С…",
+      "text": "РћСЃРѕР±РµРЅРЅРѕСЃС‚Рё СЃР±СЂРѕСЃР° РЅР° РїРѕРїСѓР»СЏСЂРЅС‹С… РјР°СЂРєР°С…",
       "url": "#step-4"
     },
     {
       "@type": "HowToStep",
-      "name": "Альтернативные способы сброса",
-      "text": "Альтернативные способы сброса",
+      "name": "РђР»СЊС‚РµСЂРЅР°С‚РёРІРЅС‹Рµ СЃРїРѕСЃРѕР±С‹ СЃР±СЂРѕСЃР°",
+      "text": "РђР»СЊС‚РµСЂРЅР°С‚РёРІРЅС‹Рµ СЃРїРѕСЃРѕР±С‹ СЃР±СЂРѕСЃР°",
       "url": "#step-5"
     },
     {
       "@type": "HowToStep",
-      "name": "Часто задаваемые вопросы",
-      "text": "Часто задаваемые вопросы",
+      "name": "Р§Р°СЃС‚Рѕ Р·Р°РґР°РІР°РµРјС‹Рµ РІРѕРїСЂРѕСЃС‹",
+      "text": "Р§Р°СЃС‚Рѕ Р·Р°РґР°РІР°РµРјС‹Рµ РІРѕРїСЂРѕСЃС‹",
       "url": "#step-6"
     },
     {
       "@type": "HowToStep",
-      "name": "?? Итог",
-      "text": "?? Итог",
+      "name": "рџ“Њ РС‚РѕРі",
+      "text": "рџ“Њ РС‚РѕРі",
       "url": "#step-7"
     }
   ],
@@ -620,8 +653,4 @@
 <script src="../cookie-consent.js"></script>
 </body>
 </html>
-
-
-
-
 

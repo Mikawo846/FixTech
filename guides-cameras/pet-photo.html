@@ -2,36 +2,43 @@
 <html lang="ru" data-theme="light">
 <head>
 
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Фотография животных: настройки и хитрости | Repairo</title>
-    <meta name="description" content="">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Р¤РѕС‚РѕРіСЂР°С„РёСЏ Р¶РёРІРѕС‚РЅС‹С…: РЅР°СЃС‚СЂРѕР№РєРё Рё С…РёС‚СЂРѕСЃС‚Рё | Repairo</title>
+    <meta name="description" content="{{ description }}">
+    <meta name="description" content="РџРѕС€Р°РіРѕРІР°СЏ РёРЅСЃС‚СЂСѓРєС†РёСЏ: Р¤РѕС‚РѕРіСЂР°С„РёСЏ Р¶РёРІРѕС‚РЅС‹С…: РЅР°СЃС‚СЂРѕР№РєРё Рё С…РёС‚СЂРѕСЃС‚Рё. РСЃРїРѕР»СЊР·СѓР№С‚Рµ С‚РёС…РёР№ Р·Р°С‚РІРѕСЂ РёР»Рё Р±РµР·Р·РІСѓС‡РЅС‹Р№ СЂРµР¶РёРј, С‡С‚РѕР±С‹ РЅРµ СЃРїСѓРіРЅСѓС‚СЊ Р¶РёРІРѕС‚РЅРѕРµ.. РЎРѕРІРµС‚С‹ СЌРєСЃРїРµСЂС‚РѕРІ...">
 
-  <link rel="stylesheet" href="../styles.css" />
-  <link rel="stylesheet" href="../styles-header.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <style>
-    .guide-content { line-height: 1.7; color: var(--text); }
-    .guide-content h2 { color: var(--primary); margin-top: 30px; margin-bottom: 15px; font-size: 1.5rem; }
-    .guide-content h3 { color: var(--primary-dark); margin-top: 25px; margin-bottom: 12px; font-size: 1.2rem; }
-    .guide-image-block { margin: 20px 0; padding: 15px; background: var(--background); border-radius: var(--border-radius); border: 1px solid var(--border); text-align: center; }
-    .guide-image-block img { max-width: 100%; height: auto; border-radius: 6px; border: 1px solid var(--border); }
-    .image-caption { margin-top: 10px; font-size: 0.85rem; color: var(--text-light); font-style: italic; }
-    .pro-tips { background: rgba(3, 74, 79, 0.05); padding: 15px; border-radius: 6px; margin: 20px 0; }
-    .pro-tips h4 { color: var(--primary); margin-top: 0; margin-bottom: 12px; font-size: 1.1rem; }
-    .tip-item { display: flex; gap: 8px; margin-bottom: 8px; align-items: flex-start; }
-    table { width: 100%; border-collapse: collapse; margin: 20px 0; }
-    th, td { border: 1px solid var(--border); padding: 8px; text-align: left; }
-    th { background: var(--background-light); }
-    .highlight { background: #f5f7fa; border-left: 4px solid #2d9cdb; padding: 10px 15px; margin: 20px 0; }
-    .faq-section ul { margin-left: 1em; }
-    .block-section { margin-bottom: 2em; }
-    @media (max-width: 768px) {
-      .guide-content h2 { font-size: 1.4rem; margin-top: 25px; }
-      .guide-image-block { padding: 12px; margin: 15px 0; }
-      table, th, td { font-size: 0.95rem; }
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../styles-header.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .guide-content { line-height: 1.7; color: var(--text);}
+        .guide-content h2 { color: var(--primary); margin-top: 30px; margin-bottom: 15px; font-size: 1.5rem;}
+        .step-group { margin: 20px 0; padding: 15px; background: var(--background); border-radius: var(--border-radius); border: 1px solid var(--border);}
+        .step { display: flex; gap: 15px; margin: 12px 0; padding: 12px; background: var(--background-alt); border-radius: 6px; align-items: flex-start;}
+        .step-number { background: var(--primary); color: white; width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-weight: bold; font-size: 0.8rem;}
+        .guide-image-block { margin: 20px 0; padding: 15px; background: var(--background); border-radius: var(--border-radius); border: 1px solid var(--border); text-align: center;}
+        .guide-image-block img { max-width: 100%; height: auto; border-radius: 6px; border: 1px solid var(--border);}
+        .recommend-box { background: rgba(3, 74, 79, 0.1); border-left: 4px solid var(--primary); padding: 12px; margin: 15px 0; display: flex; gap: 12px; align-items: flex-start; border-radius: 4px;}
+        .recommend-box i { font-size: 1.2rem; color: var(--primary); margin-top: 2px;}
+        .pro-tips { background: rgba(3, 74, 79, 0.05); padding: 15px; border-radius: 6px; margin: 20px 0;}
+        .pro-tips h4 { color: var(--primary); margin-top: 0; margin-bottom: 12px; font-size: 1.1rem;}
+        .tip-item { display: flex; gap: 8px; margin-bottom: 8px; align-items: flex-start;}
+        @media (max-width: 768px) {
+            .guide-content h2 { font-size: 1.4rem; margin-top: 25px;}
+            .guide-image-block, .step-group { padding: 12px; margin: 15px 0;}
+            .step { padding: 10px;}
+        }
+    /* РЇРЅРґРµРєСЃ РњР°СЂРєРµС‚ СЂРµРєР»Р°РјРЅС‹Р№ Р±Р°РЅРЅРµСЂ */
+    .ym-hero-link {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+      max-width: 100%;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     }
+
     /* Р“РѕСЂРёР·РѕРЅС‚Р°Р»СЊРЅС‹Р№ Р±Р°РЅРЅРµСЂ-РєР°СЂС‚РѕС‡РєР° */
     .ym-hero-banner {
       width: 100%;
@@ -144,11 +151,13 @@
       transition: background 0.15s ease, transform 0.15s ease,
                   box-shadow 0.15s ease;
     }
+
     .ym-hero-button::after {
       content: "в†’";
       margin-left: 6px;
       font-size: 14px;
     }
+
     .ym-hero-button:hover {
       background: #7c3aed;
       transform: translateY(-1px);
@@ -172,19 +181,24 @@
         max-width: 100%;
         margin: 20px 0;
       }
+
       .ym-hero-images {
         height: 100px;
       }
+
       .ym-hero-content {
         padding: 12px 12px;
       }
+
       .ym-hero-title {
         font-size: 13px;
       }
+
       .ym-hero-button {
         font-size: 13px;
         padding: 8px 14px;
       }
+
       .ym-hero-legal {
         font-size: 10px;
       }
@@ -292,22 +306,27 @@
         padding: 15px;
         min-height: 100px;
       }
+
       .telegram-logo {
         width: 50px;
         height: 50px;
         min-width: 50px;
         margin-right: 15px;
       }
+
       .telegram-logo svg {
         width: 26px;
         height: 26px;
       }
+
       .telegram-title {
         font-size: 14px;
       }
+
       .telegram-subtitle {
         font-size: 12px;
       }
+
       .telegram-button {
         font-size: 12px;
         padding: 6px 12px;
@@ -316,129 +335,143 @@
 
 
 
-  </style>
+    </style>
   <script async src="https://timeweb.cloud/api/v1/cloud-ai/agents/3cc03620-d051-4d8d-b5af-f7b6cd083a35/embed.js?collapsed=true"></script>
 </head>
 <body>
-  <header class="header">
-    <div class="container">
-      <div class="header__inner">
-        <a href="../index.html" class="logo">
-          <span class="logo__icon"></span>
-          <span class="logo__text">GeoExpert</span>
-        </a>
-        <nav class="nav">
-          <ul class="nav__list">
-            <li><a href="../cameras.html" class="nav__link">РљР°РјРµСЂС‹</a></li>
-            <li><a href="../drones.html" class="nav__link">Р”СЂРѕРЅС‹</a></li>
-            <li><a href="../workflow.html" class="nav__link">Workflow</a></li>
-          </ul>
-        </nav>
-      </div>
-    </div>
-  </header>
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <a href="../index.html" class="logo">
+                    <span class="logo__icon"></span>
+                    <span class="logo__text">Repairo</span>
+                </a>
+                <nav class="nav">
+                    <ul class="nav__list">
+                        <li><a href="../cameras.html" class="nav__link">Р¤РѕС‚РѕР°РїРїР°СЂР°С‚С‹</a></li>
+                        <li><a href="../tv.html" class="nav__link">РўРµР»РµРІРёР·РѕСЂС‹</a></li>
+                        <li><a href="../laptops.html" class="nav__link">РќРѕСѓС‚Р±СѓРєРё</a></li>
+                        <li><a href="../smartphones.html" class="nav__link">РЎРјР°СЂС‚С„РѕРЅС‹</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
     <section class="guide-page">
         <div class="container">
             <div class="breadcrumbs">
-                <a href="../index.html">Главная</a>
+                <a href="../index.html">Р“Р»Р°РІРЅР°СЏ</a>
                 <i class="fas fa-chevron-right"></i>
-                <a href="../cameras.html">Фотоаппараты</a>
+                <a href="../cameras.html">Р¤РѕС‚РѕР°РїРїР°СЂР°С‚С‹</a>
                 <i class="fas fa-chevron-right"></i>
-                <span>Фотография животных: настройки и хитрости</span>
+                <span>Р¤РѕС‚РѕРіСЂР°С„РёСЏ Р¶РёРІРѕС‚РЅС‹С…: РЅР°СЃС‚СЂРѕР№РєРё Рё С…РёС‚СЂРѕСЃС‚Рё</span>
             </div>
-            <h1 class="section__title">Фотография животных: настройки и хитрости</h1>
+            <h1 class="section__title">Р¤РѕС‚РѕРіСЂР°С„РёСЏ Р¶РёРІРѕС‚РЅС‹С…: РЅР°СЃС‚СЂРѕР№РєРё Рё С…РёС‚СЂРѕСЃС‚Рё</h1>
             <div class="guide-meta">
-                <span><i class="fas fa-adjust"></i> Практический гайд</span>
+                <span><i class="fas fa-adjust"></i> РџСЂР°РєС‚РёС‡РµСЃРєРёР№ РіР°Р№Рґ</span>
             </div>
             <div class="guide-image-block">
                 <img src="https://avatars.mds.yandex.net/get-shedevrum/13110292/img_89ef042a2d7811f08ac6924a17ef2954/orig">
             </div>
             <div class="guide-content">
-        <!-- Яндекс Маркет рекламный блок -->
+        <!-- РЇРЅРґРµРєСЃ РњР°СЂРєРµС‚ СЂРµРєР»Р°РјРЅС‹Р№ Р±Р»РѕРє -->
         <a href="https://market.yandex.ru/catalog--bytovaia-tekhnika/54419/list?hid=198118&rs=eJwzUvjEKMvBILDwEKsEg8Kzbh6Nw4dZNS4D8c7lFhp9c1-wAQC3uAwP&clid=14635360&refid=rbck8fgamv681iu59go3iqxwddedl4x9&erid=5jtCeReNx12oajxS2bzShmZ&mclid=1003&distr_type=7&utm_source=partner_network&pp=900&utm_medium=link_list&utm_campaign=14635360"
            target="_blank"
            rel="noopener noreferrer sponsored"
+           class="ym-hero-link">
+          <div class="ym-hero-banner">
+            <div class="ym-hero-images">
+              <div class="ym-hero-image">
                 <img src="https://avatars.mds.yandex.net/get-mpic/14770882/2a00000197f4dbee777f8afddccaf44faa53/optimize"
-                     alt="Распродажа бытовой электроники 1">
+                     alt="Р Р°СЃРїСЂРѕРґР°Р¶Р° Р±С‹С‚РѕРІРѕР№ СЌР»РµРєС‚СЂРѕРЅРёРєРё 1">
               </div>
+              <div class="ym-hero-image">
                 <img src="https://avatars.mds.yandex.net/get-mpic/15580298/img_id8867318964670654684.jpeg/optimize"
-                     alt="Распродажа бытовой электроники 2">
+                     alt="Р Р°СЃРїСЂРѕРґР°Р¶Р° Р±С‹С‚РѕРІРѕР№ СЌР»РµРєС‚СЂРѕРЅРёРєРё 2">
               </div>
+              <div class="ym-hero-image">
                 <img src="https://avatars.mds.yandex.net/get-mpic/10096780/2a000001953b534fed2494e0b30fadd9b458/optimize"
-                     alt="Распродажа бытовой электроники 3">
+                     alt="Р Р°СЃРїСЂРѕРґР°Р¶Р° Р±С‹С‚РѕРІРѕР№ СЌР»РµРєС‚СЂРѕРЅРёРєРё 3">
               </div>
             </div>
-                  ? Выгодные предложения
+            <div class="ym-hero-content">
+              <h3 class="ym-hero-title">Р Р°СЃРїСЂРѕРґР°Р¶Р° Р±С‹С‚РѕРІРѕР№ СЌР»РµРєС‚СЂРѕРЅРёРєРё РЅР° РЇРЅРґРµРєСЃ РњР°СЂРєРµС‚Рµ</h3>
+              <div class="ym-hero-top">
+                <div class="ym-hero-rating">
+                  в­ђ Р’С‹РіРѕРґРЅС‹Рµ РїСЂРµРґР»РѕР¶РµРЅРёСЏ
+                  <span class="ym-hero-rating-count">РЎРєРёРґРєРё РґРѕ 50%</span>
                 </div>
               </div>
+              <button class="ym-hero-button">Р—Р° СЃРєРёРґРєР°РјРё</button>
             </div>
           </div>
-            Реклама. ООО "ЯНДЕКС", ИНН 7736207543. clid: 14635360, erid: 5jtCeReNx12oajxS2bzShmZ
+          <div class="ym-hero-legal">
+            Р РµРєР»Р°РјР°. РћРћРћ "РЇРќР”Р•РљРЎ", РРќРќ 7736207543. clid: 14635360, erid: 5jtCeReNx12oajxS2bzShmZ
           </div>
         </a>
-                <h2>Особенности съёмки животных</h2>
+                <h2>РћСЃРѕР±РµРЅРЅРѕСЃС‚Рё СЃСЉС‘РјРєРё Р¶РёРІРѕС‚РЅС‹С…</h2>
                 <ul>
-                    <li>Животные часто двигаются непредсказуемо, поэтому нужна быстрая реакция и готовность к моменту.</li>
-                    <li>Лучшие кадры получаются при естественном поведении питомца или дикого зверя.</li>
-                    <li>Важно не пугать животное: снимайте с расстояния, используйте длиннофокусную оптику и ведите себя спокойно.</li>
+                    <li>Р–РёРІРѕС‚РЅС‹Рµ С‡Р°СЃС‚Рѕ РґРІРёРіР°СЋС‚СЃСЏ РЅРµРїСЂРµРґСЃРєР°Р·СѓРµРјРѕ, РїРѕСЌС‚РѕРјСѓ РЅСѓР¶РЅР° Р±С‹СЃС‚СЂР°СЏ СЂРµР°РєС†РёСЏ Рё РіРѕС‚РѕРІРЅРѕСЃС‚СЊ Рє РјРѕРјРµРЅС‚Сѓ.</li>
+                    <li>Р›СѓС‡С€РёРµ РєР°РґСЂС‹ РїРѕР»СѓС‡Р°СЋС‚СЃСЏ РїСЂРё РµСЃС‚РµСЃС‚РІРµРЅРЅРѕРј РїРѕРІРµРґРµРЅРёРё РїРёС‚РѕРјС†Р° РёР»Рё РґРёРєРѕРіРѕ Р·РІРµСЂСЏ.</li>
+                    <li>Р’Р°Р¶РЅРѕ РЅРµ РїСѓРіР°С‚СЊ Р¶РёРІРѕС‚РЅРѕРµ: СЃРЅРёРјР°Р№С‚Рµ СЃ СЂР°СЃСЃС‚РѕСЏРЅРёСЏ, РёСЃРїРѕР»СЊР·СѓР№С‚Рµ РґР»РёРЅРЅРѕС„РѕРєСѓСЃРЅСѓСЋ РѕРїС‚РёРєСѓ Рё РІРµРґРёС‚Рµ СЃРµР±СЏ СЃРїРѕРєРѕР№РЅРѕ.</li>
                 </ul>
-                <h2>Рекомендуемые настройки камеры</h2>
+                <h2>Р РµРєРѕРјРµРЅРґСѓРµРјС‹Рµ РЅР°СЃС‚СЂРѕР№РєРё РєР°РјРµСЂС‹</h2>
 <ul>
-                    <li><strong>Режим:</strong> Серийная съёмка (Burst/Continuous) - чтобы не упустить удачный момент.</li>
-                    <li><strong>Выдержка:</strong> Короткая - не длиннее 1/500 с, для быстрых животных - 1/1000–1/2000 с.</li>
-                    <li><strong>Диафрагма:</strong> Открытая (f/2.8–f/5.6) - для размытия фона и акцента на животном.</li>
-                    <li><strong>ISO:</strong> Авто или вручную, чтобы выдержка была достаточно короткой (иногда 800–3200 и выше).</li>
-                    <li><strong>Фокусировка:</strong> Следящий автофокус (AF-C, AI Servo), точка или зона по глазам животного.</li>
+                    <li><strong>Р РµР¶РёРј:</strong> РЎРµСЂРёР№РЅР°СЏ СЃСЉС‘РјРєР° (Burst/Continuous) - С‡С‚РѕР±С‹ РЅРµ СѓРїСѓСЃС‚РёС‚СЊ СѓРґР°С‡РЅС‹Р№ РјРѕРјРµРЅС‚.</li>
+                    <li><strong>Р’С‹РґРµСЂР¶РєР°:</strong> РљРѕСЂРѕС‚РєР°СЏ - РЅРµ РґР»РёРЅРЅРµРµ 1/500 СЃ, РґР»СЏ Р±С‹СЃС‚СЂС‹С… Р¶РёРІРѕС‚РЅС‹С… - 1/1000вЂ“1/2000 СЃ.</li>
+                    <li><strong>Р”РёР°С„СЂР°РіРјР°:</strong> РћС‚РєСЂС‹С‚Р°СЏ (f/2.8вЂ“f/5.6) - РґР»СЏ СЂР°Р·РјС‹С‚РёСЏ С„РѕРЅР° Рё Р°РєС†РµРЅС‚Р° РЅР° Р¶РёРІРѕС‚РЅРѕРј.</li>
+                    <li><strong>ISO:</strong> РђРІС‚Рѕ РёР»Рё РІСЂСѓС‡РЅСѓСЋ, С‡С‚РѕР±С‹ РІС‹РґРµСЂР¶РєР° Р±С‹Р»Р° РґРѕСЃС‚Р°С‚РѕС‡РЅРѕ РєРѕСЂРѕС‚РєРѕР№ (РёРЅРѕРіРґР° 800вЂ“3200 Рё РІС‹С€Рµ).</li>
+                    <li><strong>Р¤РѕРєСѓСЃРёСЂРѕРІРєР°:</strong> РЎР»РµРґСЏС‰РёР№ Р°РІС‚РѕС„РѕРєСѓСЃ (AF-C, AI Servo), С‚РѕС‡РєР° РёР»Рё Р·РѕРЅР° РїРѕ РіР»Р°Р·Р°Рј Р¶РёРІРѕС‚РЅРѕРіРѕ.</li>
                 </ul>
-                <h2>Пошаговая инструкция: как снимать животных</h2>
+                <h2>РџРѕС€Р°РіРѕРІР°СЏ РёРЅСЃС‚СЂСѓРєС†РёСЏ: РєР°Рє СЃРЅРёРјР°С‚СЊ Р¶РёРІРѕС‚РЅС‹С…</h2>
                 <div class="step-group">
                     <div class="step">
                         <div class="step-number">1</div>
                         <div>
-                            <strong>Выберите подходящий объектив</strong>
+                            <strong>Р’С‹Р±РµСЂРёС‚Рµ РїРѕРґС…РѕРґСЏС‰РёР№ РѕР±СЉРµРєС‚РёРІ</strong>
                             <ul>
-                                <li>Для домашних животных и зоопарка подойдут 50–135 мм, для дикой природы - телеобъективы 200–600 мм.</li>
-                                <li>Чем дальше объект - тем длиннее фокусное расстояние.</li>
+                                <li>Р”Р»СЏ РґРѕРјР°С€РЅРёС… Р¶РёРІРѕС‚РЅС‹С… Рё Р·РѕРѕРїР°СЂРєР° РїРѕРґРѕР№РґСѓС‚ 50вЂ“135 РјРј, РґР»СЏ РґРёРєРѕР№ РїСЂРёСЂРѕРґС‹ - С‚РµР»РµРѕР±СЉРµРєС‚РёРІС‹ 200вЂ“600 РјРј.</li>
+                                <li>Р§РµРј РґР°Р»СЊС€Рµ РѕР±СЉРµРєС‚ - С‚РµРј РґР»РёРЅРЅРµРµ С„РѕРєСѓСЃРЅРѕРµ СЂР°СЃСЃС‚РѕСЏРЅРёРµ.</li>
                             </ul>
                         </div>
                     </div>
                     <div class="step">
                         <div class="step-number">2</div>
                         <div>
-                            <strong>Настройте камеру заранее</strong>
+                            <strong>РќР°СЃС‚СЂРѕР№С‚Рµ РєР°РјРµСЂСѓ Р·Р°СЂР°РЅРµРµ</strong>
                             <ul>
-                                <li>Включите серийную съёмку и следящий автофокус.</li>
-                                <li>Проверьте, чтобы выдержка была достаточно короткой для заморозки движения.</li>
+                                <li>Р’РєР»СЋС‡РёС‚Рµ СЃРµСЂРёР№РЅСѓСЋ СЃСЉС‘РјРєСѓ Рё СЃР»РµРґСЏС‰РёР№ Р°РІС‚РѕС„РѕРєСѓСЃ.</li>
+                                <li>РџСЂРѕРІРµСЂСЊС‚Рµ, С‡С‚РѕР±С‹ РІС‹РґРµСЂР¶РєР° Р±С‹Р»Р° РґРѕСЃС‚Р°С‚РѕС‡РЅРѕ РєРѕСЂРѕС‚РєРѕР№ РґР»СЏ Р·Р°РјРѕСЂРѕР·РєРё РґРІРёР¶РµРЅРёСЏ.</li>
                             </ul>
                         </div>
                     </div>
                     <div class="step">
                         <div class="step-number">3</div>
                         <div>
-                            <strong>Снимайте на уровне глаз животного</strong>
+                            <strong>РЎРЅРёРјР°Р№С‚Рµ РЅР° СѓСЂРѕРІРЅРµ РіР»Р°Р· Р¶РёРІРѕС‚РЅРѕРіРѕ</strong>
                             <ul>
-                                <li>Так снимки будут более выразительными и "живыми".</li>
-                                <li>Фокусируйтесь на глазах - они должны быть резкими.</li>
+                                <li>РўР°Рє СЃРЅРёРјРєРё Р±СѓРґСѓС‚ Р±РѕР»РµРµ РІС‹СЂР°Р·РёС‚РµР»СЊРЅС‹РјРё Рё "Р¶РёРІС‹РјРё".</li>
+                                <li>Р¤РѕРєСѓСЃРёСЂСѓР№С‚РµСЃСЊ РЅР° РіР»Р°Р·Р°С… - РѕРЅРё РґРѕР»Р¶РЅС‹ Р±С‹С‚СЊ СЂРµР·РєРёРјРё.</li>
                             </ul>
                         </div>
                     </div>
                     <div class="step">
                         <div class="step-number">4</div>
                         <div>
-                            <strong>Будьте терпеливы и наблюдательны</strong>
+                            <strong>Р‘СѓРґСЊС‚Рµ С‚РµСЂРїРµР»РёРІС‹ Рё РЅР°Р±Р»СЋРґР°С‚РµР»СЊРЅС‹</strong>
                             <ul>
-                                <li>Ждите интересного поведения, эмоций, прыжков, игры.</li>
-                                <li>Не торопитесь - лучшие кадры часто получаются после долгого ожидания.</li>
+                                <li>Р–РґРёС‚Рµ РёРЅС‚РµСЂРµСЃРЅРѕРіРѕ РїРѕРІРµРґРµРЅРёСЏ, СЌРјРѕС†РёР№, РїСЂС‹Р¶РєРѕРІ, РёРіСЂС‹.</li>
+                                <li>РќРµ С‚РѕСЂРѕРїРёС‚РµСЃСЊ - Р»СѓС‡С€РёРµ РєР°РґСЂС‹ С‡Р°СЃС‚Рѕ РїРѕР»СѓС‡Р°СЋС‚СЃСЏ РїРѕСЃР»Рµ РґРѕР»РіРѕРіРѕ РѕР¶РёРґР°РЅРёСЏ.</li>
                             </ul>
                         </div>
                     </div>
                     <div class="step">
                         <div class="step-number">5</div>
                         <div>
-                            <strong>Используйте естественный свет</strong>
+                            <strong>РСЃРїРѕР»СЊР·СѓР№С‚Рµ РµСЃС‚РµСЃС‚РІРµРЅРЅС‹Р№ СЃРІРµС‚</strong>
                             <ul>
-                                <li>Снимайте утром или вечером - мягкий свет делает шерсть и оперение выразительнее.</li>
-                                <li>Избегайте вспышки - она может напугать животное и испортить кадр.</li>
+                                <li>РЎРЅРёРјР°Р№С‚Рµ СѓС‚СЂРѕРј РёР»Рё РІРµС‡РµСЂРѕРј - РјСЏРіРєРёР№ СЃРІРµС‚ РґРµР»Р°РµС‚ С€РµСЂСЃС‚СЊ Рё РѕРїРµСЂРµРЅРёРµ РІС‹СЂР°Р·РёС‚РµР»СЊРЅРµРµ.</li>
+                                <li>РР·Р±РµРіР°Р№С‚Рµ РІСЃРїС‹С€РєРё - РѕРЅР° РјРѕР¶РµС‚ РЅР°РїСѓРіР°С‚СЊ Р¶РёРІРѕС‚РЅРѕРµ Рё РёСЃРїРѕСЂС‚РёС‚СЊ РєР°РґСЂ.</li>
                             </ul>
                         </div>
                     </div>
@@ -446,37 +479,37 @@
                 <div class="recommend-box">
                     <i class="fas fa-info-circle"></i>
                     <div>
-                        <strong>Совет:</strong> Снимайте в RAW - это даст больше возможностей для коррекции экспозиции и цвета при обработке.
+                        <strong>РЎРѕРІРµС‚:</strong> РЎРЅРёРјР°Р№С‚Рµ РІ RAW - СЌС‚Рѕ РґР°СЃС‚ Р±РѕР»СЊС€Рµ РІРѕР·РјРѕР¶РЅРѕСЃС‚РµР№ РґР»СЏ РєРѕСЂСЂРµРєС†РёРё СЌРєСЃРїРѕР·РёС†РёРё Рё С†РІРµС‚Р° РїСЂРё РѕР±СЂР°Р±РѕС‚РєРµ.
                     </div>
                 </div>
                 <div class="pro-tips">
-                    <h4>?? Профессиональные советы</h4>
+                    <h4>рџ”№ РџСЂРѕС„РµСЃСЃРёРѕРЅР°Р»СЊРЅС‹Рµ СЃРѕРІРµС‚С‹</h4>
                     <div class="tip-item">
                         <i class="fas fa-lightbulb"></i>
-                        <p>Используйте тихий затвор или беззвучный режим, чтобы не спугнуть животное.</p>
+                        <p>РСЃРїРѕР»СЊР·СѓР№С‚Рµ С‚РёС…РёР№ Р·Р°С‚РІРѕСЂ РёР»Рё Р±РµР·Р·РІСѓС‡РЅС‹Р№ СЂРµР¶РёРј, С‡С‚РѕР±С‹ РЅРµ СЃРїСѓРіРЅСѓС‚СЊ Р¶РёРІРѕС‚РЅРѕРµ.</p>
                     </div>
                     <div class="tip-item">
                         <i class="fas fa-lightbulb"></i>
-                        <p>Для съёмки птиц и диких зверей - надевайте нейтральную одежду, используйте укрытия и снимайте с большого расстояния.</p>
+                        <p>Р”Р»СЏ СЃСЉС‘РјРєРё РїС‚РёС† Рё РґРёРєРёС… Р·РІРµСЂРµР№ - РЅР°РґРµРІР°Р№С‚Рµ РЅРµР№С‚СЂР°Р»СЊРЅСѓСЋ РѕРґРµР¶РґСѓ, РёСЃРїРѕР»СЊР·СѓР№С‚Рµ СѓРєСЂС‹С‚РёСЏ Рё СЃРЅРёРјР°Р№С‚Рµ СЃ Р±РѕР»СЊС€РѕРіРѕ СЂР°СЃСЃС‚РѕСЏРЅРёСЏ.</p>
                     </div>
                     <div class="tip-item">
                         <i class="fas fa-lightbulb"></i>
-                        <p>Экспериментируйте с ракурсами, отражениями в воде, деталями (лапки, усы, шерсть).</p>
+                        <p>Р­РєСЃРїРµСЂРёРјРµРЅС‚РёСЂСѓР№С‚Рµ СЃ СЂР°РєСѓСЂСЃР°РјРё, РѕС‚СЂР°Р¶РµРЅРёСЏРјРё РІ РІРѕРґРµ, РґРµС‚Р°Р»СЏРјРё (Р»Р°РїРєРё, СѓСЃС‹, С€РµСЂСЃС‚СЊ).</p>
                     </div>
                 </div>
-                <h2>Часто задаваемые вопросы</h2>
+                <h2>Р§Р°СЃС‚Рѕ Р·Р°РґР°РІР°РµРјС‹Рµ РІРѕРїСЂРѕСЃС‹</h2>
                 <ul>
-                    <li><strong>Можно ли снимать животных на смартфон?</strong> - Да, особенно домашних, но для дикой природы лучше использовать камеру с длиннофокусным объективом.</li>
-                    <li><strong>Что важнее: выдержка или ISO?</strong> - Для животных выдержка важнее - лучше немного повысить ISO, чем получить смазанный кадр.</li>
-                    <li><strong>Как поймать эмоцию?</strong> - Терпение, наблюдение и серийная съёмка - ваш лучший инструмент.</li>
+                    <li><strong>РњРѕР¶РЅРѕ Р»Рё СЃРЅРёРјР°С‚СЊ Р¶РёРІРѕС‚РЅС‹С… РЅР° СЃРјР°СЂС‚С„РѕРЅ?</strong> - Р”Р°, РѕСЃРѕР±РµРЅРЅРѕ РґРѕРјР°С€РЅРёС…, РЅРѕ РґР»СЏ РґРёРєРѕР№ РїСЂРёСЂРѕРґС‹ Р»СѓС‡С€Рµ РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ РєР°РјРµСЂСѓ СЃ РґР»РёРЅРЅРѕС„РѕРєСѓСЃРЅС‹Рј РѕР±СЉРµРєС‚РёРІРѕРј.</li>
+                    <li><strong>Р§С‚Рѕ РІР°Р¶РЅРµРµ: РІС‹РґРµСЂР¶РєР° РёР»Рё ISO?</strong> - Р”Р»СЏ Р¶РёРІРѕС‚РЅС‹С… РІС‹РґРµСЂР¶РєР° РІР°Р¶РЅРµРµ - Р»СѓС‡С€Рµ РЅРµРјРЅРѕРіРѕ РїРѕРІС‹СЃРёС‚СЊ ISO, С‡РµРј РїРѕР»СѓС‡РёС‚СЊ СЃРјР°Р·Р°РЅРЅС‹Р№ РєР°РґСЂ.</li>
+                    <li><strong>РљР°Рє РїРѕР№РјР°С‚СЊ СЌРјРѕС†РёСЋ?</strong> - РўРµСЂРїРµРЅРёРµ, РЅР°Р±Р»СЋРґРµРЅРёРµ Рё СЃРµСЂРёР№РЅР°СЏ СЃСЉС‘РјРєР° - РІР°С€ Р»СѓС‡С€РёР№ РёРЅСЃС‚СЂСѓРјРµРЅС‚.</li>
                 </ul>
-                <h2>?? Итог</h2>
+                <h2>рџ“Њ РС‚РѕРі</h2>
                 <p>
-                    Фотография животных - это сочетание техники, терпения и наблюдательности. Используйте короткие выдержки, следящий автофокус, снимайте на уровне глаз и не бойтесь ждать - и ваши снимки будут живыми и выразительными!
+                    Р¤РѕС‚РѕРіСЂР°С„РёСЏ Р¶РёРІРѕС‚РЅС‹С… - СЌС‚Рѕ СЃРѕС‡РµС‚Р°РЅРёРµ С‚РµС…РЅРёРєРё, С‚РµСЂРїРµРЅРёСЏ Рё РЅР°Р±Р»СЋРґР°С‚РµР»СЊРЅРѕСЃС‚Рё. РСЃРїРѕР»СЊР·СѓР№С‚Рµ РєРѕСЂРѕС‚РєРёРµ РІС‹РґРµСЂР¶РєРё, СЃР»РµРґСЏС‰РёР№ Р°РІС‚РѕС„РѕРєСѓСЃ, СЃРЅРёРјР°Р№С‚Рµ РЅР° СѓСЂРѕРІРЅРµ РіР»Р°Р· Рё РЅРµ Р±РѕР№С‚РµСЃСЊ Р¶РґР°С‚СЊ - Рё РІР°С€Рё СЃРЅРёРјРєРё Р±СѓРґСѓС‚ Р¶РёРІС‹РјРё Рё РІС‹СЂР°Р·РёС‚РµР»СЊРЅС‹РјРё!
                 </p>
 </div>
 
-        <!-- Telegram рекламный баннер -->
+        <!-- Telegram СЂРµРєР»Р°РјРЅС‹Р№ Р±Р°РЅРЅРµСЂ -->
         <a href="https://t.me/RepairoRU" target="_blank" rel="noopener noreferrer" class="telegram-banner">
           <div class="telegram-banner-container">
             <div class="telegram-logo">
@@ -485,10 +518,10 @@
               </svg>
             </div>
             <div class="telegram-content">
-              <div class="telegram-title">Новости из мира технологий</div>
-              <div class="telegram-subtitle">В нашем новом Telegram-канале. Подписывайтесь и будьте в числе первых!</div>
+              <div class="telegram-title">РќРѕРІРѕСЃС‚Рё РёР· РјРёСЂР° С‚РµС…РЅРѕР»РѕРіРёР№</div>
+              <div class="telegram-subtitle">Р’ РЅР°С€РµРј РЅРѕРІРѕРј Telegram-РєР°РЅР°Р»Рµ. РџРѕРґРїРёСЃС‹РІР°Р№С‚РµСЃСЊ Рё Р±СѓРґСЊС‚Рµ РІ С‡РёСЃР»Рµ РїРµСЂРІС‹С…!</div>
               <div class="telegram-button">
-                Подписаться
+                РџРѕРґРїРёСЃР°С‚СЊСЃСЏ
                 <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.56c-.21 2.22-1.12 7.58-1.58 10.06-.19 1.07-.57 1.43-.94 1.46-.8.07-1.4-.52-2.17-1.03-1.21-.79-1.89-1.28-3.06-2.05-1.35-.87-.47-1.35.3-2.13.2-.21 3.71-3.39 3.77-3.68.01-.04.01-.18-.07-.26s-.2-.05-.29-.03c-.12.03-2.11 1.34-5.95 3.93-.56.38-1.07.57-1.53.56-.5-.01-1.47-.28-2.19-.51-.88-.28-1.58-.43-1.52-.91.03-.25.38-.51 1.04-.78 4.07-1.77 6.78-2.94 8.13-3.51 3.88-1.62 4.68-1.9 5.19-1.91.12 0 .37.03.54.17.14.12.18.28.2.44-.01.06 0 .11-.01.17z"/>
                 </svg>
@@ -513,45 +546,45 @@
                         </span>
                         <span class="logo__text">Repairo</span>
                     </a>
-                    <p class="footer__text">Помогаем ремонтировать электронику с 2024 года</p>
+                    <p class="footer__text">РџРѕРјРѕРіР°РµРј СЂРµРјРѕРЅС‚РёСЂРѕРІР°С‚СЊ СЌР»РµРєС‚СЂРѕРЅРёРєСѓ СЃ 2024 РіРѕРґР°</p>
                 </div>
                 <div class="footer__col">
-                    <h3 class="footer__title">Разделы</h3>
+                    <h3 class="footer__title">Р Р°Р·РґРµР»С‹</h3>
                     <ul class="footer__links">
-                        <li><a href="../index.html" class="footer__link">Главная</a></li>
-                        <li><a href="../index.html#categories" class="footer__link">Все гайды</a></li>
-                        <li><a href="../contacts.html" class="footer__link">Контакты</a></li>
+                        <li><a href="../index.html" class="footer__link">Р“Р»Р°РІРЅР°СЏ</a></li>
+                        <li><a href="../index.html#categories" class="footer__link">Р’СЃРµ РіР°Р№РґС‹</a></li>
+                        <li><a href="../contacts.html" class="footer__link">РљРѕРЅС‚Р°РєС‚С‹</a></li>
                     </ul>
                 </div>
                 <div class="footer__col">
-                    <h3 class="footer__title">Категории</h3>
+                    <h3 class="footer__title">РљР°С‚РµРіРѕСЂРёРё</h3>
                     <ul class="footer__links">
-                        <li><a href="../tv.html" class="nav__link">Телевизоры</a></li>
-                        <li><a href="../cameras.html" class="nav__link">Фотоаппараты</a></li>
-                        <li><a href="../consoles.html" class="nav__link">Приставки</a></li>
-                        <li><a href="../laptops.html" class="nav__link">Ноутбуки</a></li>
-                        <li><a href="../smartphones.html" class="nav__link">Смартфоны</a></li>
-                        <li><a href="../small-appliances.html" class="nav__link">Мелкая техника</a></li>
-                        <li><a href="../large-appliances.html" class="nav__link">Бытовая техника</a></li>
-                        <li><a href="../auto-electronics.html" class="nav__link">Авто-Электроника</a></li>
+                        <li><a href="../tv.html" class="nav__link">РўРµР»РµРІРёР·РѕСЂС‹</a></li>
+                        <li><a href="../cameras.html" class="nav__link">Р¤РѕС‚РѕР°РїРїР°СЂР°С‚С‹</a></li>
+                        <li><a href="../consoles.html" class="nav__link">РџСЂРёСЃС‚Р°РІРєРё</a></li>
+                        <li><a href="../laptops.html" class="nav__link">РќРѕСѓС‚Р±СѓРєРё</a></li>
+                        <li><a href="../smartphones.html" class="nav__link">РЎРјР°СЂС‚С„РѕРЅС‹</a></li>
+                        <li><a href="../small-appliances.html" class="nav__link">РњРµР»РєР°СЏ С‚РµС…РЅРёРєР°</a></li>
+                        <li><a href="../large-appliances.html" class="nav__link">Р‘С‹С‚РѕРІР°СЏ С‚РµС…РЅРёРєР°</a></li>
+                        <li><a href="../auto-electronics.html" class="nav__link">РђРІС‚Рѕ-Р­Р»РµРєС‚СЂРѕРЅРёРєР°</a></li>
                     </ul>
                 </div>
                 <div class="footer__col">
-                    <h3 class="footer__title">Контакты</h3>
+                    <h3 class="footer__title">РљРѕРЅС‚Р°РєС‚С‹</h3>
                     <ul class="footer__links">
                         <li><a href="https://t.me/RepairoRU" class="footer__link"><i class="fab fa-telegram"></i> Telegram</a></li>
-                        <li><span class="footer__link">Наша почта: repairo.info@mail.ru</span></li>
+                        <li><span class="footer__link">РќР°С€Р° РїРѕС‡С‚Р°: repairo.info@mail.ru</span></li>
                     </ul>
                 </div>
             </div>
             <div class="footer__bottom">
                 <p class="disclaimer">
-    Администрация сайта не несёт ответственности за возможные повреждения техники
-    и иные последствия, возникшие в результате самостоятельного ремонта по
-    материалам и инструкциям, размещённым на сайте. Все работы вы выполняете
-    на свой страх и риск.
+    РђРґРјРёРЅРёСЃС‚СЂР°С†РёСЏ СЃР°Р№С‚Р° РЅРµ РЅРµСЃС‘С‚ РѕС‚РІРµС‚СЃС‚РІРµРЅРЅРѕСЃС‚Рё Р·Р° РІРѕР·РјРѕР¶РЅС‹Рµ РїРѕРІСЂРµР¶РґРµРЅРёСЏ С‚РµС…РЅРёРєРё
+    Рё РёРЅС‹Рµ РїРѕСЃР»РµРґСЃС‚РІРёСЏ, РІРѕР·РЅРёРєС€РёРµ РІ СЂРµР·СѓР»СЊС‚Р°С‚Рµ СЃР°РјРѕСЃС‚РѕСЏС‚РµР»СЊРЅРѕРіРѕ СЂРµРјРѕРЅС‚Р° РїРѕ
+    РјР°С‚РµСЂРёР°Р»Р°Рј Рё РёРЅСЃС‚СЂСѓРєС†РёСЏРј, СЂР°Р·РјРµС‰С‘РЅРЅС‹Рј РЅР° СЃР°Р№С‚Рµ. Р’СЃРµ СЂР°Р±РѕС‚С‹ РІС‹ РІС‹РїРѕР»РЅСЏРµС‚Рµ
+    РЅР° СЃРІРѕР№ СЃС‚СЂР°С… Рё СЂРёСЃРє.
     </p>
-                <p class="footer__copyright">© 2026 Repairo. Все права защищены.</p>
+                <p class="footer__copyright">В© 2026 Repairo. Р’СЃРµ РїСЂР°РІР° Р·Р°С‰РёС‰РµРЅС‹.</p>
             </div>
         </div>
     </footer>
@@ -562,38 +595,38 @@
 {
   "@context": "https://schema.org",
   "@type": "HowTo",
-  "name": "Фотография животных: настройки и хитрости",
-  "description": "Пошаговая инструкция: Фотография животных: настройки и хитрости. Используйте тихий затвор или беззвучный режим, чтобы не спугнуть животное.. Советы экспертов...",
+  "name": "Р¤РѕС‚РѕРіСЂР°С„РёСЏ Р¶РёРІРѕС‚РЅС‹С…: РЅР°СЃС‚СЂРѕР№РєРё Рё С…РёС‚СЂРѕСЃС‚Рё",
+  "description": "РџРѕС€Р°РіРѕРІР°СЏ РёРЅСЃС‚СЂСѓРєС†РёСЏ: Р¤РѕС‚РѕРіСЂР°С„РёСЏ Р¶РёРІРѕС‚РЅС‹С…: РЅР°СЃС‚СЂРѕР№РєРё Рё С…РёС‚СЂРѕСЃС‚Рё. РСЃРїРѕР»СЊР·СѓР№С‚Рµ С‚РёС…РёР№ Р·Р°С‚РІРѕСЂ РёР»Рё Р±РµР·Р·РІСѓС‡РЅС‹Р№ СЂРµР¶РёРј, С‡С‚РѕР±С‹ РЅРµ СЃРїСѓРіРЅСѓС‚СЊ Р¶РёРІРѕС‚РЅРѕРµ.. РЎРѕРІРµС‚С‹ СЌРєСЃРїРµСЂС‚РѕРІ...",
   "totalTime": "PT30M",
   "step": [
     {
       "@type": "HowToStep",
-      "name": "Особенности съёмки животных",
-      "text": "Особенности съёмки животных",
+      "name": "РћСЃРѕР±РµРЅРЅРѕСЃС‚Рё СЃСЉС‘РјРєРё Р¶РёРІРѕС‚РЅС‹С…",
+      "text": "РћСЃРѕР±РµРЅРЅРѕСЃС‚Рё СЃСЉС‘РјРєРё Р¶РёРІРѕС‚РЅС‹С…",
       "url": "#step-1"
     },
     {
       "@type": "HowToStep",
-      "name": "Рекомендуемые настройки камеры",
-      "text": "Рекомендуемые настройки камеры",
+      "name": "Р РµРєРѕРјРµРЅРґСѓРµРјС‹Рµ РЅР°СЃС‚СЂРѕР№РєРё РєР°РјРµСЂС‹",
+      "text": "Р РµРєРѕРјРµРЅРґСѓРµРјС‹Рµ РЅР°СЃС‚СЂРѕР№РєРё РєР°РјРµСЂС‹",
       "url": "#step-2"
     },
     {
       "@type": "HowToStep",
-      "name": "Пошаговая инструкция: как снимать животных",
-      "text": "Пошаговая инструкция: как снимать животных",
+      "name": "РџРѕС€Р°РіРѕРІР°СЏ РёРЅСЃС‚СЂСѓРєС†РёСЏ: РєР°Рє СЃРЅРёРјР°С‚СЊ Р¶РёРІРѕС‚РЅС‹С…",
+      "text": "РџРѕС€Р°РіРѕРІР°СЏ РёРЅСЃС‚СЂСѓРєС†РёСЏ: РєР°Рє СЃРЅРёРјР°С‚СЊ Р¶РёРІРѕС‚РЅС‹С…",
       "url": "#step-3"
     },
     {
       "@type": "HowToStep",
-      "name": "Часто задаваемые вопросы",
-      "text": "Часто задаваемые вопросы",
+      "name": "Р§Р°СЃС‚Рѕ Р·Р°РґР°РІР°РµРјС‹Рµ РІРѕРїСЂРѕСЃС‹",
+      "text": "Р§Р°СЃС‚Рѕ Р·Р°РґР°РІР°РµРјС‹Рµ РІРѕРїСЂРѕСЃС‹",
       "url": "#step-4"
     },
     {
       "@type": "HowToStep",
-      "name": "?? Итог",
-      "text": "?? Итог",
+      "name": "рџ“Њ РС‚РѕРі",
+      "text": "рџ“Њ РС‚РѕРі",
       "url": "#step-5"
     }
   ],
@@ -604,8 +637,4 @@
 <script src="../cookie-consent.js"></script>
 </body>
 </html>
-
-
-
-
 

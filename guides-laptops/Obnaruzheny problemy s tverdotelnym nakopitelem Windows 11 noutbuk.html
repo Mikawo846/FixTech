@@ -4,8 +4,9 @@
 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Обнаружены проблемы с твердотельным накопителем Windows 11 н</title>
-    <meta name="description" content="">
+  <title>РћР±РЅР°СЂСѓР¶РµРЅС‹ РїСЂРѕР±Р»РµРјС‹ СЃ С‚РІРµСЂРґРѕС‚РµР»СЊРЅС‹Рј РЅР°РєРѕРїРёС‚РµР»РµРј Windows 11 РЅРѕСѓС‚Р±СѓРє | Р РµС€РµРЅРёРµ РїСЂРѕР±Р»РµРјС‹</title>
+    <meta name="description" content="{{ description }}">
+    <meta name="description" content="РћР±РЅР°СЂСѓР¶РµРЅС‹ РїСЂРѕР±Р»РµРјС‹ СЃ С‚РІРµСЂРґРѕС‚РµР»СЊРЅС‹Рј РЅР°РєРѕРїРёС‚РµР»РµРј Windows 11 РЅРѕСѓС‚Р±СѓРє. РџСЂРёС‡РёРЅС‹ РїСЂРѕР±Р»РµРј СЃ SSD Рё СЃРїРѕСЃРѕР±С‹ РёСЃРїСЂР°РІР»РµРЅРёСЏ РЅРµРёСЃРїСЂР°РІРЅРѕСЃС‚РµР№ С‚РІРµСЂРґРѕС‚РµР»СЊРЅРѕРіРѕ РЅР°РєРѕРїРёС‚РµР»СЏ РЅР° РЅРѕСѓС‚Р±СѓРєРµ.">
 
   <link rel="stylesheet" href="../styles.css" />
   <link rel="stylesheet" href="../styles-header.css" />
@@ -24,536 +25,257 @@
     table { width: 100%; border-collapse: collapse; margin: 20px 0; }
     th, td { border: 1px solid var(--border); padding: 8px; text-align: left; }
     th { background: var(--background-light); }
-    .highlight { background: #f5f7fa; border-left: 4px solid #2d9cdb; padding: 10px 15px; margin: 20px 0; }
-    .faq-section ul { margin-left: 1em; }
-    .block-section { margin-bottom: 2em; }
     @media (max-width: 768px) {
       .guide-content h2 { font-size: 1.4rem; margin-top: 25px; }
       .guide-image-block { padding: 12px; margin: 15px 0; }
       table, th, td { font-size: 0.95rem; }
     }
-    /* Р“РѕСЂРёР·РѕРЅС‚Р°Р»СЊРЅС‹Р№ Р±Р°РЅРЅРµСЂ-РєР°СЂС‚РѕС‡РєР° */
-    .ym-hero-banner {
-      width: 100%;
-      max-width: 600px;
-      min-height: 140px;
-      border-radius: 16px;
-      background: #ffffff;
-      border: 1px solid #e5e7eb;
-      display: flex;
-      flex-direction: column;
-      box-shadow: 0 4px 16px rgba(15, 23, 42, 0.08);
-      overflow: hidden;
-      box-sizing: border-box;
-      margin: 40px auto;
-    }
-
-    /* РљРѕРЅС‚РµР№РЅРµСЂ РґР»СЏ РёР·РѕР±СЂР°Р¶РµРЅРёР№ */
-    .ym-hero-images {
-      display: flex;
-      height: 120px;
-      overflow: hidden;
-    }
-
-    .ym-hero-image {
-      flex: 1;
-      min-width: 0;
-      height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-      border-right: 1px solid #e5e7eb;
-      background: #f8f9fa;
-    }
-
-    .ym-hero-image:last-child {
-      border-right: none;
-    }
-
-    .ym-hero-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-      transition: transform 0.3s ease;
-      background: #f8f9fa;
-    }
-
-    .ym-hero-image:hover img {
-      transform: scale(1.02);
-    }
-
-    /* РџСЂР°РІР°СЏ С‡Р°СЃС‚СЊ: РєРѕРЅС‚РµРЅС‚ */
-    .ym-hero-content {
-      padding: 16px 18px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      gap: 8px;
-    }
-
-    /* РќР°Р·РІР°РЅРёРµ С‚РѕРІР°СЂР° */
-    .ym-hero-title {
-      font-size: 14px;
-      font-weight: 600;
-      color: #111827;
-      line-height: 1.3;
-      margin: 0 0 4px 0;
-      display: -webkit-box;
-      -webkit-line-clamp: 2;
-      line-clamp: 2;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
-    }
-
-    /* Р РµР№С‚РёРЅРі */
-    .ym-hero-top {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 8px;
-    }
-
-    .ym-hero-rating {
-      font-size: 13px;
-      font-weight: 500;
-      color: #111827;
-      background: #f9fafb;
-      border-radius: 999px;
-      padding: 4px 10px;
-    }
-
-    .ym-hero-rating-count {
-      color: #6b7280;
-    }
-
-    /* Р¤РёРѕР»РµС‚РѕРІР°СЏ РєРЅРѕРїРєР° */
-    .ym-hero-button {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 9px 16px;
-      border-radius: 999px;
-      border: none;
-      background: #6a00ff;
-      color: #ffffff;
-      font-size: 14px;
-      font-weight: 600;
-      cursor: pointer;
-      box-shadow: 0 2px 6px rgba(88, 28, 135, 0.35);
-      transition: background 0.15s ease, transform 0.15s ease,
-                  box-shadow 0.15s ease;
-    }
-    .ym-hero-button::after {
-      content: "в†’";
-      margin-left: 6px;
-      font-size: 14px;
-    }
-    .ym-hero-button:hover {
-      background: #7c3aed;
-      transform: translateY(-1px);
-      box-shadow: 0 4px 10px rgba(88, 28, 135, 0.45);
-    }
-
-    /* Р®СЂРёРґРёС‡РµСЃРєРёР№ Р±Р»РѕРє */
-    .ym-hero-legal {
-      margin-top: 6px;
-      max-width: 600px;
-      font-size: 11px;
-      line-height: 1.3;
-      color: #6b7280;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    /* РђРґР°РїС‚РёРІ */
-    @media (max-width: 480px) {
-      .ym-hero-banner {
-        max-width: 100%;
-        margin: 20px 0;
-      }
-      .ym-hero-images {
-        height: 100px;
-      }
-      .ym-hero-content {
-        padding: 12px 12px;
-      }
-      .ym-hero-title {
-        font-size: 13px;
-      }
-      .ym-hero-button {
-        font-size: 13px;
-        padding: 8px 14px;
-      }
-      .ym-hero-legal {
-        font-size: 10px;
-      }
-    }
-    /* Telegram СЂРµРєР»Р°РјРЅС‹Р№ Р±Р°РЅРЅРµСЂ */
-    .telegram-banner {
-      display: flex;
-      justify-content: center;
-      text-decoration: none;
-      color: inherit;
-      width: 100%;
-      margin: 40px 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    }
-
-    .telegram-banner-container {
-      width: 100%;
-      max-width: 500px;
-      min-height: 120px;
-      border-radius: 16px;
-      background: linear-gradient(135deg, #0088cc 0%, #005f8f 100%);
-      border: 1px solid #005f8f;
-      display: flex;
-      align-items: center;
-      padding: 20px;
-      box-shadow: 0 4px 16px rgba(0, 136, 204, 0.2);
-      overflow: hidden;
-      box-sizing: border-box;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-
-    .telegram-banner-container:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(0, 136, 204, 0.3);
-    }
-
-    .telegram-logo {
-      width: 60px;
-      height: 60px;
-      min-width: 60px;
-      background: #ffffff;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-right: 20px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    }
-
-    .telegram-logo svg {
-      width: 32px;
-      height: 32px;
-      fill: #0088cc;
-    }
-
-    .telegram-content {
-      flex: 1;
-      color: #ffffff;
-    }
-
-    .telegram-title {
-      font-size: 16px;
-      font-weight: 600;
-      margin: 0 0 8px 0;
-      line-height: 1.3;
-    }
-
-    .telegram-subtitle {
-      font-size: 14px;
-      opacity: 0.9;
-      margin: 0 0 12px 0;
-      line-height: 1.4;
-    }
-
-    .telegram-button {
-      display: inline-flex;
-      align-items: center;
-      padding: 8px 16px;
-      background: #ffffff;
-      color: #0088cc;
-      border-radius: 20px;
-      font-size: 14px;
-      font-weight: 600;
-      text-decoration: none;
-      transition: background 0.2s ease, transform 0.2s ease;
-    }
-
-    .telegram-button:hover {
-      background: #f0f8ff;
-      transform: scale(1.05);
-    }
-
-    .telegram-button svg {
-      width: 16px;
-      height: 16px;
-      margin-left: 6px;
-      fill: #0088cc;
-    }
-
-    /* РђРґР°РїС‚РёРІ РґР»СЏ РјРѕР±РёР»СЊРЅС‹С… */
-    @media (max-width: 480px) {
-      .telegram-banner-container {
-        max-width: 100%;
-        margin: 20px 0;
-        padding: 15px;
-        min-height: 100px;
-      }
-      .telegram-logo {
-        width: 50px;
-        height: 50px;
-        min-width: 50px;
-        margin-right: 15px;
-      }
-      .telegram-logo svg {
-        width: 26px;
-        height: 26px;
-      }
-      .telegram-title {
-        font-size: 14px;
-      }
-      .telegram-subtitle {
-        font-size: 12px;
-      }
-      .telegram-button {
-        font-size: 12px;
-        padding: 6px 12px;
-      }
-    }
-
-
-
   </style>
-  <script async src="https://timeweb.cloud/api/v1/cloud-ai/agents/3cc03620-d051-4d8d-b5af-f7b6cd083a35/embed.js?collapsed=true"></script>
+
 </head>
 <body>
-  <header class="header">
-    <div class="container">
-      <div class="header__inner">
-        <a href="../index.html" class="logo">
-          <span class="logo__icon"></span>
-          <span class="logo__text">GeoExpert</span>
-        </a>
-        <nav class="nav">
-          <ul class="nav__list">
-            <li><a href="../cameras.html" class="nav__link">РљР°РјРµСЂС‹</a></li>
-            <li><a href="../drones.html" class="nav__link">Р”СЂРѕРЅС‹</a></li>
-            <li><a href="../workflow.html" class="nav__link">Workflow</a></li>
-          </ul>
-        </nav>
-      </div>
-    </div>
-  </header>
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <a href="../index.html" class="logo">
+                    <span class="logo__icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 15L7 10H17L12 15Z" fill="currentColor"/>
+                            <path d="M12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3ZM12 19C8.13401 19 5 15.866 5 12C5 8.13401 8.13401 5 12 5C15.866 5 19 8.13401 19 12C19 15.866 15.866 19 12 19Z" fill="currentColor"/>
+                        </svg>
+                    </span>
+                    <span class="logo__text">Repairo</span>
+                </a>
+                <nav class="nav">
+                    <ul class="nav__list">
+                       <li><a href="../tv.html" class="nav__link">РўРµР»РµРІРёР·РѕСЂС‹</a></li>
+                        <li><a href="../auto-electronics.html" class="nav__link">РђРІС‚РѕСЌР»РµРєС‚СЂРѕРЅРёРєР°</a></li>
+                        <li><a href="../consoles.html" class="nav__link">РџСЂРёСЃС‚Р°РІРєРё</a></li>
+                        <li><a href="../laptops.html" class="nav__link">РќРѕСѓС‚Р±СѓРєРё</a></li>
+                        <li><a href="../smartphones.html" class="nav__link">РЎРјР°СЂС‚С„РѕРЅС‹</a></li>
+                        <li><a href="../index.html#categories" class="nav__link">Р’СЃРµ РєР°С‚РµРіРѕСЂРёРё</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
 
     <main class="container">
         <div class="guide-content">
-            <h1>Обнаружены проблемы с твердотельным накопителем Windows 11 ноутбук</h1>
-            <p>Сообщение "Обнаружены проблемы с твердотельным накопителем" в Windows 11 указывает на неисправности SSD. В этом подробном руководстве мы разберем причины этой проблемы и эффективные способы ее исправления для ноутбуков.</p>
+            <h1>РћР±РЅР°СЂСѓР¶РµРЅС‹ РїСЂРѕР±Р»РµРјС‹ СЃ С‚РІРµСЂРґРѕС‚РµР»СЊРЅС‹Рј РЅР°РєРѕРїРёС‚РµР»РµРј Windows 11 РЅРѕСѓС‚Р±СѓРє</h1>
+            <p>РЎРѕРѕР±С‰РµРЅРёРµ "РћР±РЅР°СЂСѓР¶РµРЅС‹ РїСЂРѕР±Р»РµРјС‹ СЃ С‚РІРµСЂРґРѕС‚РµР»СЊРЅС‹Рј РЅР°РєРѕРїРёС‚РµР»РµРј" РІ Windows 11 СѓРєР°Р·С‹РІР°РµС‚ РЅР° РЅРµРёСЃРїСЂР°РІРЅРѕСЃС‚Рё SSD. Р’ СЌС‚РѕРј РїРѕРґСЂРѕР±РЅРѕРј СЂСѓРєРѕРІРѕРґСЃС‚РІРµ РјС‹ СЂР°Р·Р±РµСЂРµРј РїСЂРёС‡РёРЅС‹ СЌС‚РѕР№ РїСЂРѕР±Р»РµРјС‹ Рё СЌС„С„РµРєС‚РёРІРЅС‹Рµ СЃРїРѕСЃРѕР±С‹ РµРµ РёСЃРїСЂР°РІР»РµРЅРёСЏ РґР»СЏ РЅРѕСѓС‚Р±СѓРєРѕРІ.</p>
 
-            <h2>Что означает проблемы с SSD</h2>
-            <p>Windows 11 обнаружила неисправности в работе твердотельного накопителя.</p>
-            <h3>Техническое объяснение</h3>
+            <h2>Р§С‚Рѕ РѕР·РЅР°С‡Р°РµС‚ РїСЂРѕР±Р»РµРјС‹ СЃ SSD</h2>
+            <p>Windows 11 РѕР±РЅР°СЂСѓР¶РёР»Р° РЅРµРёСЃРїСЂР°РІРЅРѕСЃС‚Рё РІ СЂР°Р±РѕС‚Рµ С‚РІРµСЂРґРѕС‚РµР»СЊРЅРѕРіРѕ РЅР°РєРѕРїРёС‚РµР»СЏ.</p>
+            <h3>РўРµС…РЅРёС‡РµСЃРєРѕРµ РѕР±СЉСЏСЃРЅРµРЅРёРµ</h3>
             <ul>
-                <li><strong>Причина:</strong> Аппаратные или программные проблемы с SSD</li>
-                <li><strong>Влияние:</strong> Риск потери данных и замедление работы</li>
-                <li><strong>Часто связано:</strong> С износом или повреждениями</li>
-                <li><strong>Результат:</strong> Необходимость диагностики и ремонта</li>
+                <li><strong>РџСЂРёС‡РёРЅР°:</strong> РђРїРїР°СЂР°С‚РЅС‹Рµ РёР»Рё РїСЂРѕРіСЂР°РјРјРЅС‹Рµ РїСЂРѕР±Р»РµРјС‹ СЃ SSD</li>
+                <li><strong>Р’Р»РёСЏРЅРёРµ:</strong> Р РёСЃРє РїРѕС‚РµСЂРё РґР°РЅРЅС‹С… Рё Р·Р°РјРµРґР»РµРЅРёРµ СЂР°Р±РѕС‚С‹</li>
+                <li><strong>Р§Р°СЃС‚Рѕ СЃРІСЏР·Р°РЅРѕ:</strong> РЎ РёР·РЅРѕСЃРѕРј РёР»Рё РїРѕРІСЂРµР¶РґРµРЅРёСЏРјРё</li>
+                <li><strong>Р РµР·СѓР»СЊС‚Р°С‚:</strong> РќРµРѕР±С…РѕРґРёРјРѕСЃС‚СЊ РґРёР°РіРЅРѕСЃС‚РёРєРё Рё СЂРµРјРѕРЅС‚Р°</li>
             </ul>
 
-            <h3>Влияние на систему</h3>
+            <h3>Р’Р»РёСЏРЅРёРµ РЅР° СЃРёСЃС‚РµРјСѓ</h3>
             <ul>
-                <li>Замедление загрузки</li>
-                <li>Ошибки приложений</li>
-                <li>Риск потери данных</li>
-                <li>Неустойчивая работа</li>
+                <li>Р—Р°РјРµРґР»РµРЅРёРµ Р·Р°РіСЂСѓР·РєРё</li>
+                <li>РћС€РёР±РєРё РїСЂРёР»РѕР¶РµРЅРёР№</li>
+                <li>Р РёСЃРє РїРѕС‚РµСЂРё РґР°РЅРЅС‹С…</li>
+                <li>РќРµСѓСЃС‚РѕР№С‡РёРІР°СЏ СЂР°Р±РѕС‚Р°</li>
             </ul>
 
-            <h2>Распространенные причины</h2>
-            <p>Почему обнаруживаются проблемы с SSD.</p>
-            <h3>Аппаратные проблемы</h3>
+            <h2>Р Р°СЃРїСЂРѕСЃС‚СЂР°РЅРµРЅРЅС‹Рµ РїСЂРёС‡РёРЅС‹</h2>
+            <p>РџРѕС‡РµРјСѓ РѕР±РЅР°СЂСѓР¶РёРІР°СЋС‚СЃСЏ РїСЂРѕР±Р»РµРјС‹ СЃ SSD.</p>
+            <h3>РђРїРїР°СЂР°С‚РЅС‹Рµ РїСЂРѕР±Р»РµРјС‹</h3>
             <ul>
-                <li><strong>Износ ячеек:</strong> Превышение лимита перезаписи</li>
-                <li><strong>Поврежденные чипы:</strong> Физические дефекты</li>
-                <li><strong>Перегрев:</strong> Высокая температура</li>
-                <li><strong>Контроллер:</strong> Неисправность контроллера</li>
+                <li><strong>РР·РЅРѕСЃ СЏС‡РµРµРє:</strong> РџСЂРµРІС‹С€РµРЅРёРµ Р»РёРјРёС‚Р° РїРµСЂРµР·Р°РїРёСЃРё</li>
+                <li><strong>РџРѕРІСЂРµР¶РґРµРЅРЅС‹Рµ С‡РёРїС‹:</strong> Р¤РёР·РёС‡РµСЃРєРёРµ РґРµС„РµРєС‚С‹</li>
+                <li><strong>РџРµСЂРµРіСЂРµРІ:</strong> Р’С‹СЃРѕРєР°СЏ С‚РµРјРїРµСЂР°С‚СѓСЂР°</li>
+                <li><strong>РљРѕРЅС‚СЂРѕР»Р»РµСЂ:</strong> РќРµРёСЃРїСЂР°РІРЅРѕСЃС‚СЊ РєРѕРЅС‚СЂРѕР»Р»РµСЂР°</li>
             </ul>
 
-            <h3>Программные проблемы</h3>
+            <h3>РџСЂРѕРіСЂР°РјРјРЅС‹Рµ РїСЂРѕР±Р»РµРјС‹</h3>
             <ul>
-                <li><strong>Драйверы:</strong> Устаревшие или поврежденные</li>
-                <li><strong>Фирмвар:</strong> Устаревший firmware</li>
-                <li><strong>TRIM:</strong> Отключена оптимизация</li>
-                <li><strong>Конфликты:</strong> Несовместимое ПО</li>
+                <li><strong>Р”СЂР°Р№РІРµСЂС‹:</strong> РЈСЃС‚Р°СЂРµРІС€РёРµ РёР»Рё РїРѕРІСЂРµР¶РґРµРЅРЅС‹Рµ</li>
+                <li><strong>Р¤РёСЂРјРІР°СЂ:</strong> РЈСЃС‚Р°СЂРµРІС€РёР№ firmware</li>
+                <li><strong>TRIM:</strong> РћС‚РєР»СЋС‡РµРЅР° РѕРїС‚РёРјРёР·Р°С†РёСЏ</li>
+                <li><strong>РљРѕРЅС„Р»РёРєС‚С‹:</strong> РќРµСЃРѕРІРјРµСЃС‚РёРјРѕРµ РџРћ</li>
             </ul>
 
-            <h3>Системные проблемы</h3>
+            <h3>РЎРёСЃС‚РµРјРЅС‹Рµ РїСЂРѕР±Р»РµРјС‹</h3>
             <ul>
-                <li><strong>Обновления:</strong> После установки обновлений</li>
-                <li><strong>Резкое выключение:</strong> Потеря данных</li>
-                <li><strong>Вирусы:</strong> Вредоносное ПО</li>
-                <li><strong>Конфигурация:</strong> Неправильные настройки</li>
+                <li><strong>РћР±РЅРѕРІР»РµРЅРёСЏ:</strong> РџРѕСЃР»Рµ СѓСЃС‚Р°РЅРѕРІРєРё РѕР±РЅРѕРІР»РµРЅРёР№</li>
+                <li><strong>Р РµР·РєРѕРµ РІС‹РєР»СЋС‡РµРЅРёРµ:</strong> РџРѕС‚РµСЂСЏ РґР°РЅРЅС‹С…</li>
+                <li><strong>Р’РёСЂСѓСЃС‹:</strong> Р’СЂРµРґРѕРЅРѕСЃРЅРѕРµ РџРћ</li>
+                <li><strong>РљРѕРЅС„РёРіСѓСЂР°С†РёСЏ:</strong> РќРµРїСЂР°РІРёР»СЊРЅС‹Рµ РЅР°СЃС‚СЂРѕР№РєРё</li>
             </ul>
 
-            <h2>Диагностика проблемы</h2>
-            <p>Как определить причину проблем с SSD.</p>
-            <h3>Проверка SMART</h3>
+            <h2>Р”РёР°РіРЅРѕСЃС‚РёРєР° РїСЂРѕР±Р»РµРјС‹</h2>
+            <p>РљР°Рє РѕРїСЂРµРґРµР»РёС‚СЊ РїСЂРёС‡РёРЅСѓ РїСЂРѕР±Р»РµРј СЃ SSD.</p>
+            <h3>РџСЂРѕРІРµСЂРєР° SMART</h3>
             <h4>CrystalDiskInfo</h4>
             <ol>
-                <li>Установите CrystalDiskInfo</li>
-                <li>Запустите программу</li>
-                <li>Посмотрите на статус диска</li>
-                <li>Проверьте значения: Reallocated Sector Count, Uncorrectable Sector Count</li>
-                <li>Если красный статус, серьезные проблемы</li>
+                <li>РЈСЃС‚Р°РЅРѕРІРёС‚Рµ CrystalDiskInfo</li>
+                <li>Р—Р°РїСѓСЃС‚РёС‚Рµ РїСЂРѕРіСЂР°РјРјСѓ</li>
+                <li>РџРѕСЃРјРѕС‚СЂРёС‚Рµ РЅР° СЃС‚Р°С‚СѓСЃ РґРёСЃРєР°</li>
+                <li>РџСЂРѕРІРµСЂСЊС‚Рµ Р·РЅР°С‡РµРЅРёСЏ: Reallocated Sector Count, Uncorrectable Sector Count</li>
+                <li>Р•СЃР»Рё РєСЂР°СЃРЅС‹Р№ СЃС‚Р°С‚СѓСЃ, СЃРµСЂСЊРµР·РЅС‹Рµ РїСЂРѕР±Р»РµРјС‹</li>
             </ol>
 
-            <h4>Встроенные инструменты</h4>
+            <h4>Р’СЃС‚СЂРѕРµРЅРЅС‹Рµ РёРЅСЃС‚СЂСѓРјРµРЅС‚С‹</h4>
             <ol>
-                <li>Откройте командную строку от имени администратора</li>
-                <li>Введите: wmic diskdrive get status</li>
-                <li>Посмотрите на статус диска</li>
-                <li>Если "Pred Fail", проблемы с диском</li>
+                <li>РћС‚РєСЂРѕР№С‚Рµ РєРѕРјР°РЅРґРЅСѓСЋ СЃС‚СЂРѕРєСѓ РѕС‚ РёРјРµРЅРё Р°РґРјРёРЅРёСЃС‚СЂР°С‚РѕСЂР°</li>
+                <li>Р’РІРµРґРёС‚Рµ: wmic diskdrive get status</li>
+                <li>РџРѕСЃРјРѕС‚СЂРёС‚Рµ РЅР° СЃС‚Р°С‚СѓСЃ РґРёСЃРєР°</li>
+                <li>Р•СЃР»Рё "Pred Fail", РїСЂРѕР±Р»РµРјС‹ СЃ РґРёСЃРєРѕРј</li>
             </ol>
 
-            <h3>Проверка производительности</h3>
+            <h3>РџСЂРѕРІРµСЂРєР° РїСЂРѕРёР·РІРѕРґРёС‚РµР»СЊРЅРѕСЃС‚Рё</h3>
             <ol>
-                <li>Откройте Диспетчер задач</li>
-                <li>Перейдите на вкладку "Диск"</li>
-                <li>Посмотрите на скорость чтения/записи</li>
-                <li>Если низкая скорость, проблемы с SSD</li>
+                <li>РћС‚РєСЂРѕР№С‚Рµ Р”РёСЃРїРµС‚С‡РµСЂ Р·Р°РґР°С‡</li>
+                <li>РџРµСЂРµР№РґРёС‚Рµ РЅР° РІРєР»Р°РґРєСѓ "Р”РёСЃРє"</li>
+                <li>РџРѕСЃРјРѕС‚СЂРёС‚Рµ РЅР° СЃРєРѕСЂРѕСЃС‚СЊ С‡С‚РµРЅРёСЏ/Р·Р°РїРёСЃРё</li>
+                <li>Р•СЃР»Рё РЅРёР·РєР°СЏ СЃРєРѕСЂРѕСЃС‚СЊ, РїСЂРѕР±Р»РµРјС‹ СЃ SSD</li>
             </ol>
 
-            <h2>Решение проблемы</h2>
-            <p>Методы исправления проблем с SSD.</p>
-            <h3>Метод 1: Обновление firmware</h3>
-            <h4>Прошивка SSD</h4>
+            <h2>Р РµС€РµРЅРёРµ РїСЂРѕР±Р»РµРјС‹</h2>
+            <p>РњРµС‚РѕРґС‹ РёСЃРїСЂР°РІР»РµРЅРёСЏ РїСЂРѕР±Р»РµРј СЃ SSD.</p>
+            <h3>РњРµС‚РѕРґ 1: РћР±РЅРѕРІР»РµРЅРёРµ firmware</h3>
+            <h4>РџСЂРѕС€РёРІРєР° SSD</h4>
             <ol>
-                <li>Посетите сайт производителя SSD</li>
-                <li>Найдите модель вашего диска</li>
-                <li>Скачайте последнюю версию firmware</li>
-                <li>Установите обновление</li>
-                <li>Перезагрузите систему</li>
+                <li>РџРѕСЃРµС‚РёС‚Рµ СЃР°Р№С‚ РїСЂРѕРёР·РІРѕРґРёС‚РµР»СЏ SSD</li>
+                <li>РќР°Р№РґРёС‚Рµ РјРѕРґРµР»СЊ РІР°С€РµРіРѕ РґРёСЃРєР°</li>
+                <li>РЎРєР°С‡Р°Р№С‚Рµ РїРѕСЃР»РµРґРЅСЋСЋ РІРµСЂСЃРёСЋ firmware</li>
+                <li>РЈСЃС‚Р°РЅРѕРІРёС‚Рµ РѕР±РЅРѕРІР»РµРЅРёРµ</li>
+                <li>РџРµСЂРµР·Р°РіСЂСѓР·РёС‚Рµ СЃРёСЃС‚РµРјСѓ</li>
             </ol>
 
-            <h3>Метод 2: Включение TRIM</h3>
-            <h4>Оптимизация SSD</h4>
+            <h3>РњРµС‚РѕРґ 2: Р’РєР»СЋС‡РµРЅРёРµ TRIM</h3>
+            <h4>РћРїС‚РёРјРёР·Р°С†РёСЏ SSD</h4>
             <ol>
-                <li>Откройте командную строку от имени администратора</li>
-                <li>Введите: fsutil behavior set disabledeletenotify 0</li>
-                <li>Проверьте: fsutil behavior query disabledeletenotify</li>
-                <li>Если 0, TRIM включен</li>
+                <li>РћС‚РєСЂРѕР№С‚Рµ РєРѕРјР°РЅРґРЅСѓСЋ СЃС‚СЂРѕРєСѓ РѕС‚ РёРјРµРЅРё Р°РґРјРёРЅРёСЃС‚СЂР°С‚РѕСЂР°</li>
+                <li>Р’РІРµРґРёС‚Рµ: fsutil behavior set disabledeletenotify 0</li>
+                <li>РџСЂРѕРІРµСЂСЊС‚Рµ: fsutil behavior query disabledeletenotify</li>
+                <li>Р•СЃР»Рё 0, TRIM РІРєР»СЋС‡РµРЅ</li>
             </ol>
 
-            <h3>Метод 3: Проверка на ошибки</h3>
-            <h4>CHKDSK для SSD</h4>
+            <h3>РњРµС‚РѕРґ 3: РџСЂРѕРІРµСЂРєР° РЅР° РѕС€РёР±РєРё</h3>
+            <h4>CHKDSK РґР»СЏ SSD</h4>
             <ol>
-                <li>Откройте командную строку от имени администратора</li>
-                <li>Введите: chkdsk C: /f</li>
-                <li>Не используйте /r для SSD</li>
-                <li>Дождитесь завершения</li>
+                <li>РћС‚РєСЂРѕР№С‚Рµ РєРѕРјР°РЅРґРЅСѓСЋ СЃС‚СЂРѕРєСѓ РѕС‚ РёРјРµРЅРё Р°РґРјРёРЅРёСЃС‚СЂР°С‚РѕСЂР°</li>
+                <li>Р’РІРµРґРёС‚Рµ: chkdsk C: /f</li>
+                <li>РќРµ РёСЃРїРѕР»СЊР·СѓР№С‚Рµ /r РґР»СЏ SSD</li>
+                <li>Р”РѕР¶РґРёС‚РµСЃСЊ Р·Р°РІРµСЂС€РµРЅРёСЏ</li>
             </ol>
 
-            <h3>Метод 4: Оптимизация SSD</h3>
-            <h4>Встроенные инструменты</h4>
+            <h3>РњРµС‚РѕРґ 4: РћРїС‚РёРјРёР·Р°С†РёСЏ SSD</h3>
+            <h4>Р’СЃС‚СЂРѕРµРЅРЅС‹Рµ РёРЅСЃС‚СЂСѓРјРµРЅС‚С‹</h4>
             <ol>
-                <li>Откройте "Параметры" > "Система" > "Хранение"</li>
-                <li>Найдите "Оптимизировать"</li>
-                <li>Выберите SSD и нажмите "Оптимизировать"</li>
-                <li>Это запустит TRIM</li>
+                <li>РћС‚РєСЂРѕР№С‚Рµ "РџР°СЂР°РјРµС‚СЂС‹" в†’ "РЎРёСЃС‚РµРјР°" в†’ "РҐСЂР°РЅРµРЅРёРµ"</li>
+                <li>РќР°Р№РґРёС‚Рµ "РћРїС‚РёРјРёР·РёСЂРѕРІР°С‚СЊ"</li>
+                <li>Р’С‹Р±РµСЂРёС‚Рµ SSD Рё РЅР°Р¶РјРёС‚Рµ "РћРїС‚РёРјРёР·РёСЂРѕРІР°С‚СЊ"</li>
+                <li>Р­С‚Рѕ Р·Р°РїСѓСЃС‚РёС‚ TRIM</li>
             </ol>
 
-            <h3>Метод 5: Восстановление системы</h3>
-            <h4>Если проблема программная</h4>
+            <h3>РњРµС‚РѕРґ 5: Р’РѕСЃСЃС‚Р°РЅРѕРІР»РµРЅРёРµ СЃРёСЃС‚РµРјС‹</h3>
+            <h4>Р•СЃР»Рё РїСЂРѕР±Р»РµРјР° РїСЂРѕРіСЂР°РјРјРЅР°СЏ</h4>
             <ol>
-                <li>Загрузитесь в безопасный режим</li>
-                <li>Откройте "Параметры" > "Обновление и безопасность"</li>
-                <li>Выберите "Восстановление"</li>
-                <li>Восстановите систему до даты без ошибок</li>
+                <li>Р—Р°РіСЂСѓР·РёС‚РµСЃСЊ РІ Р±РµР·РѕРїР°СЃРЅС‹Р№ СЂРµР¶РёРј</li>
+                <li>РћС‚РєСЂРѕР№С‚Рµ "РџР°СЂР°РјРµС‚СЂС‹" в†’ "РћР±РЅРѕРІР»РµРЅРёРµ Рё Р±РµР·РѕРїР°СЃРЅРѕСЃС‚СЊ"</li>
+                <li>Р’С‹Р±РµСЂРёС‚Рµ "Р’РѕСЃСЃС‚Р°РЅРѕРІР»РµРЅРёРµ"</li>
+                <li>Р’РѕСЃСЃС‚Р°РЅРѕРІРёС‚Рµ СЃРёСЃС‚РµРјСѓ РґРѕ РґР°С‚С‹ Р±РµР· РѕС€РёР±РѕРє</li>
             </ol>
 
-            <h2>Специфические случаи</h2>
-            <p>Решения для распространенных сценариев.</p>
-            <h3>Проблема после обновления</h3>
+            <h2>РЎРїРµС†РёС„РёС‡РµСЃРєРёРµ СЃР»СѓС‡Р°Рё</h2>
+            <p>Р РµС€РµРЅРёСЏ РґР»СЏ СЂР°СЃРїСЂРѕСЃС‚СЂР°РЅРµРЅРЅС‹С… СЃС†РµРЅР°СЂРёРµРІ.</p>
+            <h3>РџСЂРѕР±Р»РµРјР° РїРѕСЃР»Рµ РѕР±РЅРѕРІР»РµРЅРёСЏ</h3>
             <ul>
-                <li>Откатите обновление Windows</li>
-                <li>Обновите firmware SSD</li>
-                <li>Восстановите систему</li>
-                <li>Проверьте драйверы</li>
+                <li>РћС‚РєР°С‚РёС‚Рµ РѕР±РЅРѕРІР»РµРЅРёРµ Windows</li>
+                <li>РћР±РЅРѕРІРёС‚Рµ firmware SSD</li>
+                <li>Р’РѕСЃСЃС‚Р°РЅРѕРІРёС‚Рµ СЃРёСЃС‚РµРјСѓ</li>
+                <li>РџСЂРѕРІРµСЂСЊС‚Рµ РґСЂР°Р№РІРµСЂС‹</li>
             </ul>
 
-            <h3>Проблема с производительностью</h3>
+            <h3>РџСЂРѕР±Р»РµРјР° СЃ РїСЂРѕРёР·РІРѕРґРёС‚РµР»СЊРЅРѕСЃС‚СЊСЋ</h3>
             <ul>
-                <li>Включите TRIM</li>
-                <li>Оптимизируйте SSD</li>
-                <li>Отключите SysMain</li>
-                <li>Проверьте на вирусы</li>
+                <li>Р’РєР»СЋС‡РёС‚Рµ TRIM</li>
+                <li>РћРїС‚РёРјРёР·РёСЂСѓР№С‚Рµ SSD</li>
+                <li>РћС‚РєР»СЋС‡РёС‚Рµ SysMain</li>
+                <li>РџСЂРѕРІРµСЂСЊС‚Рµ РЅР° РІРёСЂСѓСЃС‹</li>
             </ul>
 
-            <h3>Проблема с надежностью</h3>
+            <h3>РџСЂРѕР±Р»РµРјР° СЃ РЅР°РґРµР¶РЅРѕСЃС‚СЊСЋ</h3>
             <ul>
-                <li>Проверьте SMART статус</li>
-                <li>Создайте резервную копию</li>
-                <li>Рассмотрите замену SSD</li>
-                <li>Обратитесь в сервис</li>
+                <li>РџСЂРѕРІРµСЂСЊС‚Рµ SMART СЃС‚Р°С‚СѓСЃ</li>
+                <li>РЎРѕР·РґР°Р№С‚Рµ СЂРµР·РµСЂРІРЅСѓСЋ РєРѕРїРёСЋ</li>
+                <li>Р Р°СЃСЃРјРѕС‚СЂРёС‚Рµ Р·Р°РјРµРЅСѓ SSD</li>
+                <li>РћР±СЂР°С‚РёС‚РµСЃСЊ РІ СЃРµСЂРІРёСЃ</li>
             </ul>
 
-            <h2>Профилактика</h2>
-            <p>Как избежать проблем с SSD.</p>
-            <h3>Регулярное обслуживание</h3>
+            <h2>РџСЂРѕС„РёР»Р°РєС‚РёРєР°</h2>
+            <p>РљР°Рє РёР·Р±РµР¶Р°С‚СЊ РїСЂРѕР±Р»РµРј СЃ SSD.</p>
+            <h3>Р РµРіСѓР»СЏСЂРЅРѕРµ РѕР±СЃР»СѓР¶РёРІР°РЅРёРµ</h3>
             <ul>
-                <li><strong>Обновления:</strong> Firmware и драйверы</li>
-                <li><strong>TRIM:</strong> Включена оптимизация</li>
-                <li><strong>Мониторинг:</strong> SMART статус</li>
-                <li><strong>Резервные копии:</strong> Важных данных</li>
+                <li><strong>РћР±РЅРѕРІР»РµРЅРёСЏ:</strong> Firmware Рё РґСЂР°Р№РІРµСЂС‹</li>
+                <li><strong>TRIM:</strong> Р’РєР»СЋС‡РµРЅР° РѕРїС‚РёРјРёР·Р°С†РёСЏ</li>
+                <li><strong>РњРѕРЅРёС‚РѕСЂРёРЅРі:</strong> SMART СЃС‚Р°С‚СѓСЃ</li>
+                <li><strong>Р РµР·РµСЂРІРЅС‹Рµ РєРѕРїРёРё:</strong> Р’Р°Р¶РЅС‹С… РґР°РЅРЅС‹С…</li>
             </ul>
 
-            <h3>Безопасность</h3>
+            <h3>Р‘РµР·РѕРїР°СЃРЅРѕСЃС‚СЊ</h3>
             <ul>
-                <li>Не перегревайте SSD</li>
-                <li>Используйте качественное питание</li>
-                <li>Избегайте резкого выключения</li>
-                <li>Регулярно проверяйте здоровье</li>
+                <li>РќРµ РїРµСЂРµРіСЂРµРІР°Р№С‚Рµ SSD</li>
+                <li>РСЃРїРѕР»СЊР·СѓР№С‚Рµ РєР°С‡РµСЃС‚РІРµРЅРЅРѕРµ РїРёС‚Р°РЅРёРµ</li>
+                <li>РР·Р±РµРіР°Р№С‚Рµ СЂРµР·РєРѕРіРѕ РІС‹РєР»СЋС‡РµРЅРёСЏ</li>
+                <li>Р РµРіСѓР»СЏСЂРЅРѕ РїСЂРѕРІРµСЂСЏР№С‚Рµ Р·РґРѕСЂРѕРІСЊРµ</li>
             </ul>
 
             <div class="pro-tips">
-                <h4>Полезные советы</h4>
+                <h4>РџРѕР»РµР·РЅС‹Рµ СЃРѕРІРµС‚С‹</h4>
                 <div class="tip-item">
                     <i class="fas fa-lightbulb"></i>
-                    <span>Регулярно обновляйте firmware SSD</span>
+                    <span>Р РµРіСѓР»СЏСЂРЅРѕ РѕР±РЅРѕРІР»СЏР№С‚Рµ firmware SSD</span>
                 </div>
                 <div class="tip-item">
                     <i class="fas fa-lightbulb"></i>
-                    <span>Включайте TRIM для оптимизации</span>
+                    <span>Р’РєР»СЋС‡Р°Р№С‚Рµ TRIM РґР»СЏ РѕРїС‚РёРјРёР·Р°С†РёРё</span>
                 </div>
                 <div class="tip-item">
                     <i class="fas fa-lightbulb"></i>
-                    <span>Мониторьте SMART статус</span>
+                    <span>РњРѕРЅРёС‚РѕСЂСЊС‚Рµ SMART СЃС‚Р°С‚СѓСЃ</span>
                 </div>
                 <div class="tip-item">
                     <i class="fas fa-lightbulb"></i>
-                    <span>Создавайте резервные копии данных</span>
+                    <span>РЎРѕР·РґР°РІР°Р№С‚Рµ СЂРµР·РµСЂРІРЅС‹Рµ РєРѕРїРёРё РґР°РЅРЅС‹С…</span>
                 </div>
             </div>
 
-            <h2>Когда нужна помощь специалиста</h2>
-            <p>Признаки серьезных проблем.</p>
-            <h3>Критические случаи</h3>
+            <h2>РљРѕРіРґР° РЅСѓР¶РЅР° РїРѕРјРѕС‰СЊ СЃРїРµС†РёР°Р»РёСЃС‚Р°</h2>
+            <p>РџСЂРёР·РЅР°РєРё СЃРµСЂСЊРµР·РЅС‹С… РїСЂРѕР±Р»РµРј.</p>
+            <h3>РљСЂРёС‚РёС‡РµСЃРєРёРµ СЃР»СѓС‡Р°Рё</h3>
             <ul>
-                <li>Красный статус в SMART</li>
-                <li>SSD не распознается</li>
-                <li>Потеря данных</li>
-                <li>Необходима замена SSD</li>
+                <li>РљСЂР°СЃРЅС‹Р№ СЃС‚Р°С‚СѓСЃ РІ SMART</li>
+                <li>SSD РЅРµ СЂР°СЃРїРѕР·РЅР°РµС‚СЃСЏ</li>
+                <li>РџРѕС‚РµСЂСЏ РґР°РЅРЅС‹С…</li>
+                <li>РќРµРѕР±С…РѕРґРёРјР° Р·Р°РјРµРЅР° SSD</li>
             </ul>
 
-            <h3>Что проверить в сервисе</h3>
+            <h3>Р§С‚Рѕ РїСЂРѕРІРµСЂРёС‚СЊ РІ СЃРµСЂРІРёСЃРµ</h3>
             <ul>
-                <li>Работоспособность SSD</li>
-                <li>Целостность чипов памяти</li>
-                <li>Совместимость контроллера</li>
-                <li>Возможность восстановления данных</li>
+                <li>Р Р°Р±РѕС‚РѕСЃРїРѕСЃРѕР±РЅРѕСЃС‚СЊ SSD</li>
+                <li>Р¦РµР»РѕСЃС‚РЅРѕСЃС‚СЊ С‡РёРїРѕРІ РїР°РјСЏС‚Рё</li>
+                <li>РЎРѕРІРјРµСЃС‚РёРјРѕСЃС‚СЊ РєРѕРЅС‚СЂРѕР»Р»РµСЂР°</li>
+                <li>Р’РѕР·РјРѕР¶РЅРѕСЃС‚СЊ РІРѕСЃСЃС‚Р°РЅРѕРІР»РµРЅРёСЏ РґР°РЅРЅС‹С…</li>
             </ul>
 
-            <h2>Заключение</h2>
-            <p>Сообщение "Обнаружены проблемы с твердотельным накопителем" в Windows 11 обычно связано с износом или повреждениями SSD. В большинстве случаев ее можно решить обновлением firmware или включением TRIM. Начните с проверки SMART статуса, затем обновите firmware. Если самостоятельные попытки не увенчались успехом, обратитесь к специалистам для проверки SSD.</p>
+            <h2>Р—Р°РєР»СЋС‡РµРЅРёРµ</h2>
+            <p>РЎРѕРѕР±С‰РµРЅРёРµ "РћР±РЅР°СЂСѓР¶РµРЅС‹ РїСЂРѕР±Р»РµРјС‹ СЃ С‚РІРµСЂРґРѕС‚РµР»СЊРЅС‹Рј РЅР°РєРѕРїРёС‚РµР»РµРј" РІ Windows 11 РѕР±С‹С‡РЅРѕ СЃРІСЏР·Р°РЅРѕ СЃ РёР·РЅРѕСЃРѕРј РёР»Рё РїРѕРІСЂРµР¶РґРµРЅРёСЏРјРё SSD. Р’ Р±РѕР»СЊС€РёРЅСЃС‚РІРµ СЃР»СѓС‡Р°РµРІ РµРµ РјРѕР¶РЅРѕ СЂРµС€РёС‚СЊ РѕР±РЅРѕРІР»РµРЅРёРµРј firmware РёР»Рё РІРєР»СЋС‡РµРЅРёРµРј TRIM. РќР°С‡РЅРёС‚Рµ СЃ РїСЂРѕРІРµСЂРєРё SMART СЃС‚Р°С‚СѓСЃР°, Р·Р°С‚РµРј РѕР±РЅРѕРІРёС‚Рµ firmware. Р•СЃР»Рё СЃР°РјРѕСЃС‚РѕСЏС‚РµР»СЊРЅС‹Рµ РїРѕРїС‹С‚РєРё РЅРµ СѓРІРµРЅС‡Р°Р»РёСЃСЊ СѓСЃРїРµС…РѕРј, РѕР±СЂР°С‚РёС‚РµСЃСЊ Рє СЃРїРµС†РёР°Р»РёСЃС‚Р°Рј РґР»СЏ РїСЂРѕРІРµСЂРєРё SSD.</p>
         </div>
     </main>
 
     <footer class="footer">
         <div class="container">
             <div class="footer__content">
-                <p>&copy; 2024 Repairo. Все права защищены.</p>
+                <p>&copy; 2024 Repairo. Р’СЃРµ РїСЂР°РІР° Р·Р°С‰РёС‰РµРЅС‹.</p>
             </div>
         </div>
     </footer>
@@ -562,9 +284,3 @@
     <script src="../cookie-consent.js"></script>
 </body>
 </html>
-
-
-
-
-
-

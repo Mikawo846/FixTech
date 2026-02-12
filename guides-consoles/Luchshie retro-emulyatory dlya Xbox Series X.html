@@ -4,8 +4,9 @@
 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Лучшие ретро-эмуляторы для Xbox Series X | Экспертный мегага</title>
-    <meta name="description" content="">
+  <title>Р›СѓС‡С€РёРµ СЂРµС‚СЂРѕ-СЌРјСѓР»СЏС‚РѕСЂС‹ РґР»СЏ Xbox Series X | Р­РєСЃРїРµСЂС‚РЅС‹Р№ РјРµРіР°РіР°Р№Рґ 2025</title>
+    <meta name="description" content="{{ description }}">
+    <meta name="description" content="РџРѕС€Р°РіРѕРІР°СЏ РёРЅСЃС‚СЂСѓРєС†РёСЏ: Р›СѓС‡С€РёРµ СЂРµС‚СЂРѕ-СЌРјСѓР»СЏС‚РѕСЂС‹ РґР»СЏ Xbox Series X. Р‘Р»Р°РіРѕРґР°СЂСЏ РјРѕС‰РЅРѕРјСѓ Р¶РµР»РµР·Сѓ, РїРѕРґРґРµСЂР¶РєРµ Dev Mode Рё РѕС‚РєСЂС‹С‚РѕСЃС‚Рё РїР»Р°С‚С„РѕСЂРјС‹, Xbox Series.... РЎРѕРІРµС‚С‹ СЌ...">
 
   <link rel="stylesheet" href="../styles.css" />
   <link rel="stylesheet" href="../styles-header.css" />
@@ -24,14 +25,20 @@
     table { width: 100%; border-collapse: collapse; margin: 20px 0; }
     th, td { border: 1px solid var(--border); padding: 8px; text-align: left; }
     th { background: var(--background-light); }
-    .highlight { background: #f5f7fa; border-left: 4px solid #2d9cdb; padding: 10px 15px; margin: 20px 0; }
-    .faq-section ul { margin-left: 1em; }
-    .block-section { margin-bottom: 2em; }
     @media (max-width: 768px) {
       .guide-content h2 { font-size: 1.4rem; margin-top: 25px; }
       .guide-image-block { padding: 12px; margin: 15px 0; }
       table, th, td { font-size: 0.95rem; }
     }
+    /* РЇРЅРґРµРєСЃ РњР°СЂРєРµС‚ СЂРµРєР»Р°РјРЅС‹Р№ Р±Р°РЅРЅРµСЂ */
+    .ym-hero-link {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+      max-width: 100%;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
     /* Р“РѕСЂРёР·РѕРЅС‚Р°Р»СЊРЅС‹Р№ Р±Р°РЅРЅРµСЂ-РєР°СЂС‚РѕС‡РєР° */
     .ym-hero-banner {
       width: 100%;
@@ -144,11 +151,13 @@
       transition: background 0.15s ease, transform 0.15s ease,
                   box-shadow 0.15s ease;
     }
+
     .ym-hero-button::after {
       content: "в†’";
       margin-left: 6px;
       font-size: 14px;
     }
+
     .ym-hero-button:hover {
       background: #7c3aed;
       transform: translateY(-1px);
@@ -172,19 +181,24 @@
         max-width: 100%;
         margin: 20px 0;
       }
+
       .ym-hero-images {
         height: 100px;
       }
+
       .ym-hero-content {
         padding: 12px 12px;
       }
+
       .ym-hero-title {
         font-size: 13px;
       }
+
       .ym-hero-button {
         font-size: 13px;
         padding: 8px 14px;
       }
+
       .ym-hero-legal {
         font-size: 10px;
       }
@@ -292,22 +306,27 @@
         padding: 15px;
         min-height: 100px;
       }
+
       .telegram-logo {
         width: 50px;
         height: 50px;
         min-width: 50px;
         margin-right: 15px;
       }
+
       .telegram-logo svg {
         width: 26px;
         height: 26px;
       }
+
       .telegram-title {
         font-size: 14px;
       }
+
       .telegram-subtitle {
         font-size: 12px;
       }
+
       .telegram-button {
         font-size: 12px;
         padding: 6px 12px;
@@ -325,13 +344,15 @@
       <div class="header__inner">
         <a href="../index.html" class="logo">
           <span class="logo__icon"></span>
-          <span class="logo__text">GeoExpert</span>
+          <span class="logo__text">Repairo</span>
         </a>
         <nav class="nav">
           <ul class="nav__list">
-            <li><a href="../cameras.html" class="nav__link">РљР°РјРµСЂС‹</a></li>
-            <li><a href="../drones.html" class="nav__link">Р”СЂРѕРЅС‹</a></li>
-            <li><a href="../workflow.html" class="nav__link">Workflow</a></li>
+            <li><a href="../tv.html" class="nav__link">РўРµР»РµРІРёР·РѕСЂС‹</a></li>
+            <li><a href="../cameras.html" class="nav__link">Р¤РѕС‚РѕР°РїРїР°СЂР°С‚С‹</a></li>
+            <li><a href="../consoles.html" class="nav__link">РџСЂРёСЃС‚Р°РІРєРё</a></li>
+            <li><a href="../laptops.html" class="nav__link">РќРѕСѓС‚Р±СѓРєРё</a></li>
+            <li><a href="../smartphones.html" class="nav__link">РЎРјР°СЂС‚С„РѕРЅС‹</a></li>
           </ul>
         </nav>
       </div>
@@ -341,364 +362,377 @@
   <section class="guide-page">
     <div class="container">
       <div class="breadcrumbs">
-        <a href="../index.html">Главная</a>
+        <a href="../index.html">Р“Р»Р°РІРЅР°СЏ</a>
         <i class="fas fa-chevron-right"></i>
-        <a href="../consoles.html">Приставки</a>
+        <a href="../consoles.html">РџСЂРёСЃС‚Р°РІРєРё</a>
         <i class="fas fa-chevron-right"></i>
-        <span>Лучшие ретро-эмуляторы для Xbox Series X</span>
+        <span>Р›СѓС‡С€РёРµ СЂРµС‚СЂРѕ-СЌРјСѓР»СЏС‚РѕСЂС‹ РґР»СЏ Xbox Series X</span>
       </div>
 
-      <h1 class="section__title">Лучшие ретро-эмуляторы для Xbox Series X</h1>
+      <h1 class="section__title">Р›СѓС‡С€РёРµ СЂРµС‚СЂРѕ-СЌРјСѓР»СЏС‚РѕСЂС‹ РґР»СЏ Xbox Series X</h1>
 
       <div class="guide-meta">
-        <span><i class="fas fa-hourglass-half"></i> Глобальный мегагайд: сравнение эмуляторов, установка, лайфхаки, FAQ, таблицы, иллюстрация.</span>
+        <span><i class="fas fa-hourglass-half"></i> Р“Р»РѕР±Р°Р»СЊРЅС‹Р№ РјРµРіР°РіР°Р№Рґ: СЃСЂР°РІРЅРµРЅРёРµ СЌРјСѓР»СЏС‚РѕСЂРѕРІ, СѓСЃС‚Р°РЅРѕРІРєР°, Р»Р°Р№С„С…Р°РєРё, FAQ, С‚Р°Р±Р»РёС†С‹, РёР»Р»СЋСЃС‚СЂР°С†РёСЏ.</span>
       </div>
 
       <div class="guide-image-block">
-        <img src="https://avatars.mds.yandex.net/get-shedevrum/15240847/img_399c3d97386711f08c82d27cdd667232/orig" alt="Ретро-эмуляторы Xbox Series X">
+        <img src="https://avatars.mds.yandex.net/get-shedevrum/15240847/img_399c3d97386711f08c82d27cdd667232/orig" alt="Р РµС‚СЂРѕ-СЌРјСѓР»СЏС‚РѕСЂС‹ Xbox Series X">
         <div class="image-caption">
-          Xbox Series X — настоящая ретро-машина: современные эмуляторы позволяют запускать десятки классических платформ, от NES и SNES до PlayStation 2 и GameCube. Какой выбрать, как настроить и что запускать в 2025 году? Подробно — ниже.
+          Xbox Series X вЂ” РЅР°СЃС‚РѕСЏС‰Р°СЏ СЂРµС‚СЂРѕ-РјР°С€РёРЅР°: СЃРѕРІСЂРµРјРµРЅРЅС‹Рµ СЌРјСѓР»СЏС‚РѕСЂС‹ РїРѕР·РІРѕР»СЏСЋС‚ Р·Р°РїСѓСЃРєР°С‚СЊ РґРµСЃСЏС‚РєРё РєР»Р°СЃСЃРёС‡РµСЃРєРёС… РїР»Р°С‚С„РѕСЂРј, РѕС‚ NES Рё SNES РґРѕ PlayStation 2 Рё GameCube. РљР°РєРѕР№ РІС‹Р±СЂР°С‚СЊ, РєР°Рє РЅР°СЃС‚СЂРѕРёС‚СЊ Рё С‡С‚Рѕ Р·Р°РїСѓСЃРєР°С‚СЊ РІ 2025 РіРѕРґСѓ? РџРѕРґСЂРѕР±РЅРѕ вЂ” РЅРёР¶Рµ.
         </div>
       </div>
 
       <div class="guide-content">
-        <!-- Яндекс Маркет рекламный блок -->
+        <!-- РЇРЅРґРµРєСЃ РњР°СЂРєРµС‚ СЂРµРєР»Р°РјРЅС‹Р№ Р±Р»РѕРє -->
         <a href="https://market.yandex.ru/catalog--bytovaia-tekhnika/54419/list?hid=198118&rs=eJwzUvjEKMvBILDwEKsEg8Kzbh6Nw4dZNS4D8c7lFhp9c1-wAQC3uAwP&clid=14635360&refid=rbck8fgamv681iu59go3iqxwddedl4x9&erid=5jtCeReNx12oajxS2bzShmZ&mclid=1003&distr_type=7&utm_source=partner_network&pp=900&utm_medium=link_list&utm_campaign=14635360"
            target="_blank"
            rel="noopener noreferrer sponsored"
+           class="ym-hero-link">
+          <div class="ym-hero-banner">
+            <div class="ym-hero-images">
+              <div class="ym-hero-image">
                 <img src="https://avatars.mds.yandex.net/get-mpic/14770882/2a00000197f4dbee777f8afddccaf44faa53/optimize"
-                     alt="Распродажа бытовой электроники 1">
+                     alt="Р Р°СЃРїСЂРѕРґР°Р¶Р° Р±С‹С‚РѕРІРѕР№ СЌР»РµРєС‚СЂРѕРЅРёРєРё 1">
               </div>
+              <div class="ym-hero-image">
                 <img src="https://avatars.mds.yandex.net/get-mpic/15580298/img_id8867318964670654684.jpeg/optimize"
-                     alt="Распродажа бытовой электроники 2">
+                     alt="Р Р°СЃРїСЂРѕРґР°Р¶Р° Р±С‹С‚РѕРІРѕР№ СЌР»РµРєС‚СЂРѕРЅРёРєРё 2">
               </div>
+              <div class="ym-hero-image">
                 <img src="https://avatars.mds.yandex.net/get-mpic/10096780/2a000001953b534fed2494e0b30fadd9b458/optimize"
-                     alt="Распродажа бытовой электроники 3">
+                     alt="Р Р°СЃРїСЂРѕРґР°Р¶Р° Р±С‹С‚РѕРІРѕР№ СЌР»РµРєС‚СЂРѕРЅРёРєРё 3">
               </div>
             </div>
-                  ? Выгодные предложения
+            <div class="ym-hero-content">
+              <h3 class="ym-hero-title">Р Р°СЃРїСЂРѕРґР°Р¶Р° Р±С‹С‚РѕРІРѕР№ СЌР»РµРєС‚СЂРѕРЅРёРєРё РЅР° РЇРЅРґРµРєСЃ РњР°СЂРєРµС‚Рµ</h3>
+              <div class="ym-hero-top">
+                <div class="ym-hero-rating">
+                  в­ђ Р’С‹РіРѕРґРЅС‹Рµ РїСЂРµРґР»РѕР¶РµРЅРёСЏ
+                  <span class="ym-hero-rating-count">РЎРєРёРґРєРё РґРѕ 50%</span>
                 </div>
               </div>
+              <button class="ym-hero-button">Р—Р° СЃРєРёРґРєР°РјРё</button>
             </div>
           </div>
-            Реклама. ООО "ЯНДЕКС", ИНН 7736207543. clid: 14635360, erid: 5jtCeReNx12oajxS2bzShmZ
+          <div class="ym-hero-legal">
+            Р РµРєР»Р°РјР°. РћРћРћ "РЇРќР”Р•РљРЎ", РРќРќ 7736207543. clid: 14635360, erid: 5jtCeReNx12oajxS2bzShmZ
           </div>
         </a>
 
-        <h2>Введение: почему Xbox Series X — идеальная консоль для эмуляции?</h2>
+        <h2>Р’РІРµРґРµРЅРёРµ: РїРѕС‡РµРјСѓ Xbox Series X вЂ” РёРґРµР°Р»СЊРЅР°СЏ РєРѕРЅСЃРѕР»СЊ РґР»СЏ СЌРјСѓР»СЏС†РёРё?</h2>
         <p>
-          Благодаря мощному железу, поддержке Dev Mode и открытости платформы, Xbox Series X (и S) в 2025 году стали одними из лучших устройств для ретро-эмуляции. На ней можно запускать практически любые консольные и аркадные игры прошлого — от 8-битных до 128-битных систем, включая PlayStation 2, GameCube, Dreamcast, PSP, Nintendo 64, Sega Saturn и даже оригинальный Xbox[10][11].
+          Р‘Р»Р°РіРѕРґР°СЂСЏ РјРѕС‰РЅРѕРјСѓ Р¶РµР»РµР·Сѓ, РїРѕРґРґРµСЂР¶РєРµ Dev Mode Рё РѕС‚РєСЂС‹С‚РѕСЃС‚Рё РїР»Р°С‚С„РѕСЂРјС‹, Xbox Series X (Рё S) РІ 2025 РіРѕРґСѓ СЃС‚Р°Р»Рё РѕРґРЅРёРјРё РёР· Р»СѓС‡С€РёС… СѓСЃС‚СЂРѕР№СЃС‚РІ РґР»СЏ СЂРµС‚СЂРѕ-СЌРјСѓР»СЏС†РёРё. РќР° РЅРµР№ РјРѕР¶РЅРѕ Р·Р°РїСѓСЃРєР°С‚СЊ РїСЂР°РєС‚РёС‡РµСЃРєРё Р»СЋР±С‹Рµ РєРѕРЅСЃРѕР»СЊРЅС‹Рµ Рё Р°СЂРєР°РґРЅС‹Рµ РёРіСЂС‹ РїСЂРѕС€Р»РѕРіРѕ вЂ” РѕС‚ 8-Р±РёС‚РЅС‹С… РґРѕ 128-Р±РёС‚РЅС‹С… СЃРёСЃС‚РµРј, РІРєР»СЋС‡Р°СЏ PlayStation 2, GameCube, Dreamcast, PSP, Nintendo 64, Sega Saturn Рё РґР°Р¶Рµ РѕСЂРёРіРёРЅР°Р»СЊРЅС‹Р№ Xbox[10][11].
         </p>
         <p>
-          В этом мегагайде — только лучшие эмуляторы, пошаговые инструкции, советы по настройке, ограничения и лайфхаки для максимального ретро-кайфа!
+          Р’ СЌС‚РѕРј РјРµРіР°РіР°Р№РґРµ вЂ” С‚РѕР»СЊРєРѕ Р»СѓС‡С€РёРµ СЌРјСѓР»СЏС‚РѕСЂС‹, РїРѕС€Р°РіРѕРІС‹Рµ РёРЅСЃС‚СЂСѓРєС†РёРё, СЃРѕРІРµС‚С‹ РїРѕ РЅР°СЃС‚СЂРѕР№РєРµ, РѕРіСЂР°РЅРёС‡РµРЅРёСЏ Рё Р»Р°Р№С„С…Р°РєРё РґР»СЏ РјР°РєСЃРёРјР°Р»СЊРЅРѕРіРѕ СЂРµС‚СЂРѕ-РєР°Р№С„Р°!
         </p>
 
-        <h2>Таблица: лучшие ретро-эмуляторы для Xbox Series X (2025)</h2>
+        <h2>РўР°Р±Р»РёС†Р°: Р»СѓС‡С€РёРµ СЂРµС‚СЂРѕ-СЌРјСѓР»СЏС‚РѕСЂС‹ РґР»СЏ Xbox Series X (2025)</h2>
 <table>
           <thead>
             <tr>
-              <th>Платформа</th>
-              <th>Эмулятор</th>
-              <th>Режим</th>
-              <th>Особенности</th>
+              <th>РџР»Р°С‚С„РѕСЂРјР°</th>
+              <th>Р­РјСѓР»СЏС‚РѕСЂ</th>
+              <th>Р РµР¶РёРј</th>
+              <th>РћСЃРѕР±РµРЅРЅРѕСЃС‚Рё</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td>Все классические (NES, SNES, Genesis, GB, GBA, PS1 и др.)</td>
+              <td>Р’СЃРµ РєР»Р°СЃСЃРёС‡РµСЃРєРёРµ (NES, SNES, Genesis, GB, GBA, PS1 Рё РґСЂ.)</td>
               <td>RetroArch</td>
               <td>Dev Mode / Retail</td>
-              <td>Мультисистема, простая установка, быстрые обновления</td>
+              <td>РњСѓР»СЊС‚РёСЃРёСЃС‚РµРјР°, РїСЂРѕСЃС‚Р°СЏ СѓСЃС‚Р°РЅРѕРІРєР°, Р±С‹СЃС‚СЂС‹Рµ РѕР±РЅРѕРІР»РµРЅРёСЏ</td>
             </tr>
             <tr>
               <td>PlayStation 1</td>
               <td>DuckStation</td>
               <td>Dev Mode</td>
-              <td>Лучшая совместимость, upscaling, быстрый рендеринг</td>
+              <td>Р›СѓС‡С€Р°СЏ СЃРѕРІРјРµСЃС‚РёРјРѕСЃС‚СЊ, upscaling, Р±С‹СЃС‚СЂС‹Р№ СЂРµРЅРґРµСЂРёРЅРі</td>
             </tr>
             <tr>
               <td>PlayStation 2</td>
               <td>XBSX2</td>
               <td>Dev Mode</td>
-              <td>До 4K, высокая совместимость, сейвы</td>
+              <td>Р”Рѕ 4K, РІС‹СЃРѕРєР°СЏ СЃРѕРІРјРµСЃС‚РёРјРѕСЃС‚СЊ, СЃРµР№РІС‹</td>
             </tr>
             <tr>
               <td>GameCube/Wii</td>
               <td>Dolphin UWP</td>
               <td>Dev Mode</td>
-              <td>Быстрый запуск, поддержка Wii Remote, ретроачивки[10]</td>
+              <td>Р‘С‹СЃС‚СЂС‹Р№ Р·Р°РїСѓСЃРє, РїРѕРґРґРµСЂР¶РєР° Wii Remote, СЂРµС‚СЂРѕР°С‡РёРІРєРё[10]</td>
             </tr>
             <tr>
               <td>Dreamcast</td>
               <td>Flycast</td>
               <td>Dev Mode</td>
-              <td>Стабильная эмуляция, поддержка VMU</td>
+              <td>РЎС‚Р°Р±РёР»СЊРЅР°СЏ СЌРјСѓР»СЏС†РёСЏ, РїРѕРґРґРµСЂР¶РєР° VMU</td>
             </tr>
             <tr>
               <td>PSP</td>
               <td>PPSSPP UWP</td>
               <td>Dev Mode</td>
-              <td>Максимальная производительность, upscaling</td>
+              <td>РњР°РєСЃРёРјР°Р»СЊРЅР°СЏ РїСЂРѕРёР·РІРѕРґРёС‚РµР»СЊРЅРѕСЃС‚СЊ, upscaling</td>
             </tr>
             <tr>
               <td>3DS</td>
               <td>Citra UWP</td>
               <td>Dev Mode</td>
-              <td>Поддержка большинства игр, быстрый рендеринг</td>
+              <td>РџРѕРґРґРµСЂР¶РєР° Р±РѕР»СЊС€РёРЅСЃС‚РІР° РёРіСЂ, Р±С‹СЃС‚СЂС‹Р№ СЂРµРЅРґРµСЂРёРЅРі</td>
             </tr>
             <tr>
-              <td>Оригинальный Xbox</td>
+              <td>РћСЂРёРіРёРЅР°Р»СЊРЅС‹Р№ Xbox</td>
               <td>XEMU</td>
-              <td>ПК / (Dev Mode в будущем)</td>
-              <td>Лучшая совместимость, upscaling, сеть</td>
+              <td>РџРљ / (Dev Mode РІ Р±СѓРґСѓС‰РµРј)</td>
+              <td>Р›СѓС‡С€Р°СЏ СЃРѕРІРјРµСЃС‚РёРјРѕСЃС‚СЊ, upscaling, СЃРµС‚СЊ</td>
             </tr>
             <tr>
               <td>Arcade (MAME, FBNeo)</td>
               <td>RetroArch (MAME, FBNeo cores)</td>
               <td>Dev Mode / Retail</td>
-              <td>Множество аркад, поддержка fightstick</td>
+              <td>РњРЅРѕР¶РµСЃС‚РІРѕ Р°СЂРєР°Рґ, РїРѕРґРґРµСЂР¶РєР° fightstick</td>
             </tr>
             <tr>
               <td>Sega Saturn</td>
               <td>RetroArch (Yabause, Kronos)</td>
               <td>Dev Mode</td>
-              <td>Сложная настройка, но работает[11]</td>
+              <td>РЎР»РѕР¶РЅР°СЏ РЅР°СЃС‚СЂРѕР№РєР°, РЅРѕ СЂР°Р±РѕС‚Р°РµС‚[11]</td>
             </tr>
           </tbody>
         </table>
 
-        <h2>Пошаговая инструкция: установка RetroArch на Xbox Series X</h2>
+        <h2>РџРѕС€Р°РіРѕРІР°СЏ РёРЅСЃС‚СЂСѓРєС†РёСЏ: СѓСЃС‚Р°РЅРѕРІРєР° RetroArch РЅР° Xbox Series X</h2>
         <ol>
           <li>
-            <b>Зарегистрируйте Dev Mode (разработчика) на Xbox (разовый платёж $20 через Microsoft).</b>
+            <b>Р—Р°СЂРµРіРёСЃС‚СЂРёСЂСѓР№С‚Рµ Dev Mode (СЂР°Р·СЂР°Р±РѕС‚С‡РёРєР°) РЅР° Xbox (СЂР°Р·РѕРІС‹Р№ РїР»Р°С‚С‘Р¶ $20 С‡РµСЂРµР· Microsoft).</b>
           </li>
           <li>
-            <b>Переведите Xbox в Dev Mode через приложение Dev Mode Activation.</b>
+            <b>РџРµСЂРµРІРµРґРёС‚Рµ Xbox РІ Dev Mode С‡РµСЂРµР· РїСЂРёР»РѕР¶РµРЅРёРµ Dev Mode Activation.</b>
           </li>
           <li>
-            <b>Скачайте RetroArch UWP с официального сайта или GitHub (ищите сборку для Xbox).</b>
+            <b>РЎРєР°С‡Р°Р№С‚Рµ RetroArch UWP СЃ РѕС„РёС†РёР°Р»СЊРЅРѕРіРѕ СЃР°Р№С‚Р° РёР»Рё GitHub (РёС‰РёС‚Рµ СЃР±РѕСЂРєСѓ РґР»СЏ Xbox).</b>
           </li>
           <li>
-            <b>Установите RetroArch через Dev Home (Add App > выберите .appx/.msixbundle).</b>
+            <b>РЈСЃС‚Р°РЅРѕРІРёС‚Рµ RetroArch С‡РµСЂРµР· Dev Home (Add App в†’ РІС‹Р±РµСЂРёС‚Рµ .appx/.msixbundle).</b>
           </li>
           <li>
-            <b>Подготовьте USB-накопитель (флешку или HDD) с ROM-ами и BIOS, отформатируйте через XboxMediaUSB Tool.</b>
+            <b>РџРѕРґРіРѕС‚РѕРІСЊС‚Рµ USB-РЅР°РєРѕРїРёС‚РµР»СЊ (С„Р»РµС€РєСѓ РёР»Рё HDD) СЃ ROM-Р°РјРё Рё BIOS, РѕС‚С„РѕСЂРјР°С‚РёСЂСѓР№С‚Рµ С‡РµСЂРµР· XboxMediaUSB Tool.</b>
           </li>
           <li>
-            <b>В настройках RetroArch включите доступ к внешнему накопителю (App > Game mode).</b>
+            <b>Р’ РЅР°СЃС‚СЂРѕР№РєР°С… RetroArch РІРєР»СЋС‡РёС‚Рµ РґРѕСЃС‚СѓРї Рє РІРЅРµС€РЅРµРјСѓ РЅР°РєРѕРїРёС‚РµР»СЋ (App в†’ Game mode).</b>
           </li>
           <li>
-            <b>Настройте контроллер, обновите ядра через Online Updater.</b>
+            <b>РќР°СЃС‚СЂРѕР№С‚Рµ РєРѕРЅС‚СЂРѕР»Р»РµСЂ, РѕР±РЅРѕРІРёС‚Рµ СЏРґСЂР° С‡РµСЂРµР· Online Updater.</b>
           </li>
           <li>
-            <b>Добавьте игры, создайте плейлисты, наслаждайтесь ретро!</b>
+            <b>Р”РѕР±Р°РІСЊС‚Рµ РёРіСЂС‹, СЃРѕР·РґР°Р№С‚Рµ РїР»РµР№Р»РёСЃС‚С‹, РЅР°СЃР»Р°Р¶РґР°Р№С‚РµСЃСЊ СЂРµС‚СЂРѕ!</b>
           </li>
         </ol>
         <p>
-          <b>Важно:</b> В Retail Mode (без Dev Mode) возможна установка RetroArch через альтернативные AppStore (GAMR13), но функционал и стабильность ниже.
+          <b>Р’Р°Р¶РЅРѕ:</b> Р’ Retail Mode (Р±РµР· Dev Mode) РІРѕР·РјРѕР¶РЅР° СѓСЃС‚Р°РЅРѕРІРєР° RetroArch С‡РµСЂРµР· Р°Р»СЊС‚РµСЂРЅР°С‚РёРІРЅС‹Рµ AppStore (GAMR13), РЅРѕ С„СѓРЅРєС†РёРѕРЅР°Р» Рё СЃС‚Р°Р±РёР»СЊРЅРѕСЃС‚СЊ РЅРёР¶Рµ.
         </p>
 
-        <h2>Пошаговая инструкция: установка Dolphin (GameCube/Wii) на Xbox Series X</h2>
+        <h2>РџРѕС€Р°РіРѕРІР°СЏ РёРЅСЃС‚СЂСѓРєС†РёСЏ: СѓСЃС‚Р°РЅРѕРІРєР° Dolphin (GameCube/Wii) РЅР° Xbox Series X</h2>
         <ol>
           <li>
-            <b>Переведите Xbox в Dev Mode.</b>
+            <b>РџРµСЂРµРІРµРґРёС‚Рµ Xbox РІ Dev Mode.</b>
           </li>
           <li>
-            <b>Скачайте Dolphin UWP для Xbox Series X|S (ищите актуальную сборку 2025 года).</b>
+            <b>РЎРєР°С‡Р°Р№С‚Рµ Dolphin UWP РґР»СЏ Xbox Series X|S (РёС‰РёС‚Рµ Р°РєС‚СѓР°Р»СЊРЅСѓСЋ СЃР±РѕСЂРєСѓ 2025 РіРѕРґР°).</b>
           </li>
           <li>
-            <b>Установите через Dev Home, добавьте ROM-ы и BIOS на USB.</b>
+            <b>РЈСЃС‚Р°РЅРѕРІРёС‚Рµ С‡РµСЂРµР· Dev Home, РґРѕР±Р°РІСЊС‚Рµ ROM-С‹ Рё BIOS РЅР° USB.</b>
           </li>
           <li>
-            <b>Настройте управление, графику, подключите Wii Remote (опционально).</b>
+            <b>РќР°СЃС‚СЂРѕР№С‚Рµ СѓРїСЂР°РІР»РµРЅРёРµ, РіСЂР°С„РёРєСѓ, РїРѕРґРєР»СЋС‡РёС‚Рµ Wii Remote (РѕРїС†РёРѕРЅР°Р»СЊРЅРѕ).</b>
           </li>
           <li>
-            <b>Включите Retro Achievements и System Menu для полного ретро-опыта.</b>
+            <b>Р’РєР»СЋС‡РёС‚Рµ Retro Achievements Рё System Menu РґР»СЏ РїРѕР»РЅРѕРіРѕ СЂРµС‚СЂРѕ-РѕРїС‹С‚Р°.</b>
           </li>
         </ol>
         <p>
-          <b>Поддержка GameCube и Wii на Xbox Series X — одна из лучших среди всех консолей, включая Steam Deck и мини-ПК[10].</b>
+          <b>РџРѕРґРґРµСЂР¶РєР° GameCube Рё Wii РЅР° Xbox Series X вЂ” РѕРґРЅР° РёР· Р»СѓС‡С€РёС… СЃСЂРµРґРё РІСЃРµС… РєРѕРЅСЃРѕР»РµР№, РІРєР»СЋС‡Р°СЏ Steam Deck Рё РјРёРЅРё-РџРљ[10].</b>
         </p>
 
-        <h2>Таблица: производительность эмуляторов на Xbox Series X (2025)</h2>
+        <h2>РўР°Р±Р»РёС†Р°: РїСЂРѕРёР·РІРѕРґРёС‚РµР»СЊРЅРѕСЃС‚СЊ СЌРјСѓР»СЏС‚РѕСЂРѕРІ РЅР° Xbox Series X (2025)</h2>
         <table>
           <thead>
             <tr>
-              <th>Эмулятор</th>
-              <th>Платформа</th>
-              <th>Скорость</th>
-              <th>Совместимость</th>
-              <th>Особенности</th>
+              <th>Р­РјСѓР»СЏС‚РѕСЂ</th>
+              <th>РџР»Р°С‚С„РѕСЂРјР°</th>
+              <th>РЎРєРѕСЂРѕСЃС‚СЊ</th>
+              <th>РЎРѕРІРјРµСЃС‚РёРјРѕСЃС‚СЊ</th>
+              <th>РћСЃРѕР±РµРЅРЅРѕСЃС‚Рё</th>
             </tr>
           </thead>
           <tbody>
             <tr>
               <td>RetroArch</td>
-              <td>8–32 бит</td>
+              <td>8вЂ“32 Р±РёС‚</td>
               <td>100%</td>
               <td>99%</td>
-              <td>Мультисистема, быстрые обновления</td>
+              <td>РњСѓР»СЊС‚РёСЃРёСЃС‚РµРјР°, Р±С‹СЃС‚СЂС‹Рµ РѕР±РЅРѕРІР»РµРЅРёСЏ</td>
             </tr>
             <tr>
               <td>DuckStation</td>
               <td>PS1</td>
               <td>100%</td>
               <td>99%</td>
-              <td>Upscaling, быстрый рендеринг</td>
+              <td>Upscaling, Р±С‹СЃС‚СЂС‹Р№ СЂРµРЅРґРµСЂРёРЅРі</td>
             </tr>
             <tr>
               <td>XBSX2</td>
               <td>PS2</td>
-              <td>95–100%</td>
+              <td>95вЂ“100%</td>
               <td>95%</td>
-              <td>4K, сейвы, ретроачивки</td>
+              <td>4K, СЃРµР№РІС‹, СЂРµС‚СЂРѕР°С‡РёРІРєРё</td>
             </tr>
             <tr>
               <td>Dolphin UWP</td>
               <td>GameCube/Wii</td>
-              <td>95–100%</td>
+              <td>95вЂ“100%</td>
               <td>95%</td>
-              <td>Поддержка Wii Remote, System Menu</td>
+              <td>РџРѕРґРґРµСЂР¶РєР° Wii Remote, System Menu</td>
             </tr>
             <tr>
               <td>Flycast</td>
               <td>Dreamcast</td>
               <td>100%</td>
               <td>98%</td>
-              <td>VMU, сеть</td>
+              <td>VMU, СЃРµС‚СЊ</td>
             </tr>
             <tr>
               <td>PPSSPP UWP</td>
               <td>PSP</td>
               <td>100%</td>
               <td>99%</td>
-              <td>Upscaling, сейвы</td>
+              <td>Upscaling, СЃРµР№РІС‹</td>
             </tr>
             <tr>
               <td>Citra UWP</td>
               <td>3DS</td>
-              <td>90–100%</td>
+              <td>90вЂ“100%</td>
               <td>90%</td>
-              <td>Многие игры идут на полной скорости</td>
+              <td>РњРЅРѕРіРёРµ РёРіСЂС‹ РёРґСѓС‚ РЅР° РїРѕР»РЅРѕР№ СЃРєРѕСЂРѕСЃС‚Рё</td>
             </tr>
             <tr>
               <td>XEMU</td>
               <td>Xbox OG</td>
-              <td>90–100% (на ПК)</td>
+              <td>90вЂ“100% (РЅР° РџРљ)</td>
               <td>85%</td>
-              <td>Upscaling, сеть, сейвы</td>
+              <td>Upscaling, СЃРµС‚СЊ, СЃРµР№РІС‹</td>
             </tr>
           </tbody>
         </table>
 
-        <h2>Лайфхаки и советы по ретро-эмуляции на Xbox Series X</h2>
+        <h2>Р›Р°Р№С„С…Р°РєРё Рё СЃРѕРІРµС‚С‹ РїРѕ СЂРµС‚СЂРѕ-СЌРјСѓР»СЏС†РёРё РЅР° Xbox Series X</h2>
         <div class="pro-tips">
-          <h4>?? Практические советы</h4>
+          <h4>рџ”№ РџСЂР°РєС‚РёС‡РµСЃРєРёРµ СЃРѕРІРµС‚С‹</h4>
           <div class="tip-item">
             <i class="fas fa-lightbulb"></i>
-            <p>Используйте Dev Mode для максимальной совместимости и обновляемости эмуляторов[10].</p>
+            <p>РСЃРїРѕР»СЊР·СѓР№С‚Рµ Dev Mode РґР»СЏ РјР°РєСЃРёРјР°Р»СЊРЅРѕР№ СЃРѕРІРјРµСЃС‚РёРјРѕСЃС‚Рё Рё РѕР±РЅРѕРІР»СЏРµРјРѕСЃС‚Рё СЌРјСѓР»СЏС‚РѕСЂРѕРІ[10].</p>
           </div>
           <div class="tip-item">
             <i class="fas fa-lightbulb"></i>
-            <p>Для хранения ROM-ов и BIOS используйте быстрый USB 3.0 SSD или HDD, отформатированный через XboxMediaUSB Tool[10].</p>
+            <p>Р”Р»СЏ С…СЂР°РЅРµРЅРёСЏ ROM-РѕРІ Рё BIOS РёСЃРїРѕР»СЊР·СѓР№С‚Рµ Р±С‹СЃС‚СЂС‹Р№ USB 3.0 SSD РёР»Рё HDD, РѕС‚С„РѕСЂРјР°С‚РёСЂРѕРІР°РЅРЅС‹Р№ С‡РµСЂРµР· XboxMediaUSB Tool[10].</p>
           </div>
           <div class="tip-item">
             <i class="fas fa-lightbulb"></i>
-            <p>Для PS2, GameCube, Wii и PSP лучше использовать отдельные UWP-эмуляторы, а не RetroArch — выше производительность и меньше багов[10].</p>
+            <p>Р”Р»СЏ PS2, GameCube, Wii Рё PSP Р»СѓС‡С€Рµ РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ РѕС‚РґРµР»СЊРЅС‹Рµ UWP-СЌРјСѓР»СЏС‚РѕСЂС‹, Р° РЅРµ RetroArch вЂ” РІС‹С€Рµ РїСЂРѕРёР·РІРѕРґРёС‚РµР»СЊРЅРѕСЃС‚СЊ Рё РјРµРЅСЊС€Рµ Р±Р°РіРѕРІ[10].</p>
           </div>
           <div class="tip-item">
             <i class="fas fa-lightbulb"></i>
-            <p>Регулярно обновляйте эмуляторы через официальные GitHub/Discord — новые версии выходят часто[10].</p>
+            <p>Р РµРіСѓР»СЏСЂРЅРѕ РѕР±РЅРѕРІР»СЏР№С‚Рµ СЌРјСѓР»СЏС‚РѕСЂС‹ С‡РµСЂРµР· РѕС„РёС†РёР°Р»СЊРЅС‹Рµ GitHub/Discord вЂ” РЅРѕРІС‹Рµ РІРµСЂСЃРёРё РІС‹С…РѕРґСЏС‚ С‡Р°СЃС‚Рѕ[10].</p>
           </div>
           <div class="tip-item">
             <i class="fas fa-lightbulb"></i>
-            <p>Для аркадных игр используйте MAME и FBNeo cores в RetroArch — поддержка fightstick и ретроачивок.</p>
+            <p>Р”Р»СЏ Р°СЂРєР°РґРЅС‹С… РёРіСЂ РёСЃРїРѕР»СЊР·СѓР№С‚Рµ MAME Рё FBNeo cores РІ RetroArch вЂ” РїРѕРґРґРµСЂР¶РєР° fightstick Рё СЂРµС‚СЂРѕР°С‡РёРІРѕРє.</p>
           </div>
         </div>
 
-        <h2>FAQ — часто задаваемые вопросы о ретро-эмуляторах на Xbox Series X</h2>
+        <h2>FAQ вЂ” С‡Р°СЃС‚Рѕ Р·Р°РґР°РІР°РµРјС‹Рµ РІРѕРїСЂРѕСЃС‹ Рѕ СЂРµС‚СЂРѕ-СЌРјСѓР»СЏС‚РѕСЂР°С… РЅР° Xbox Series X</h2>
         <ul>
           <li>
-            <strong>Можно ли запускать эмуляторы без Dev Mode?</strong><br>
-            Да, но функционал и стабильность ниже. Dev Mode — лучший выбор для энтузиастов.
+            <strong>РњРѕР¶РЅРѕ Р»Рё Р·Р°РїСѓСЃРєР°С‚СЊ СЌРјСѓР»СЏС‚РѕСЂС‹ Р±РµР· Dev Mode?</strong><br>
+            Р”Р°, РЅРѕ С„СѓРЅРєС†РёРѕРЅР°Р» Рё СЃС‚Р°Р±РёР»СЊРЅРѕСЃС‚СЊ РЅРёР¶Рµ. Dev Mode вЂ” Р»СѓС‡С€РёР№ РІС‹Р±РѕСЂ РґР»СЏ СЌРЅС‚СѓР·РёР°СЃС‚РѕРІ.
           </li>
           <li>
-            <strong>Какие платформы эмулируются лучше всего?</strong><br>
-            Все 8–32 битные консоли, PS1, PS2, GameCube, Wii, Dreamcast, PSP, 3DS, аркады — практически без лагов и багов[10][11].
+            <strong>РљР°РєРёРµ РїР»Р°С‚С„РѕСЂРјС‹ СЌРјСѓР»РёСЂСѓСЋС‚СЃСЏ Р»СѓС‡С€Рµ РІСЃРµРіРѕ?</strong><br>
+            Р’СЃРµ 8вЂ“32 Р±РёС‚РЅС‹Рµ РєРѕРЅСЃРѕР»Рё, PS1, PS2, GameCube, Wii, Dreamcast, PSP, 3DS, Р°СЂРєР°РґС‹ вЂ” РїСЂР°РєС‚РёС‡РµСЃРєРё Р±РµР· Р»Р°РіРѕРІ Рё Р±Р°РіРѕРІ[10][11].
           </li>
           <li>
-            <strong>Можно ли эмулировать оригинальный Xbox?</strong><br>
-            Да, через XEMU на ПК или экспериментальные сборки для Dev Mode. Совместимость постоянно растёт.
+            <strong>РњРѕР¶РЅРѕ Р»Рё СЌРјСѓР»РёСЂРѕРІР°С‚СЊ РѕСЂРёРіРёРЅР°Р»СЊРЅС‹Р№ Xbox?</strong><br>
+            Р”Р°, С‡РµСЂРµР· XEMU РЅР° РџРљ РёР»Рё СЌРєСЃРїРµСЂРёРјРµРЅС‚Р°Р»СЊРЅС‹Рµ СЃР±РѕСЂРєРё РґР»СЏ Dev Mode. РЎРѕРІРјРµСЃС‚РёРјРѕСЃС‚СЊ РїРѕСЃС‚РѕСЏРЅРЅРѕ СЂР°СЃС‚С‘С‚.
           </li>
           <li>
-            <strong>Где брать ROM-ы и BIOS?</strong><br>
-            Только из легальных источников, с ваших картриджей и дисков. Пиратство запрещено правилами Xbox и законами большинства стран.
+            <strong>Р“РґРµ Р±СЂР°С‚СЊ ROM-С‹ Рё BIOS?</strong><br>
+            РўРѕР»СЊРєРѕ РёР· Р»РµРіР°Р»СЊРЅС‹С… РёСЃС‚РѕС‡РЅРёРєРѕРІ, СЃ РІР°С€РёС… РєР°СЂС‚СЂРёРґР¶РµР№ Рё РґРёСЃРєРѕРІ. РџРёСЂР°С‚СЃС‚РІРѕ Р·Р°РїСЂРµС‰РµРЅРѕ РїСЂР°РІРёР»Р°РјРё Xbox Рё Р·Р°РєРѕРЅР°РјРё Р±РѕР»СЊС€РёРЅСЃС‚РІР° СЃС‚СЂР°РЅ.
           </li>
           <li>
-            <strong>Можно ли запускать эмуляторы на Xbox One?</strong><br>
-            Да, но производительность ниже, чем на Series X|S. Для PS2, GameCube, 3DS лучше Series X|S[11].
+            <strong>РњРѕР¶РЅРѕ Р»Рё Р·Р°РїСѓСЃРєР°С‚СЊ СЌРјСѓР»СЏС‚РѕСЂС‹ РЅР° Xbox One?</strong><br>
+            Р”Р°, РЅРѕ РїСЂРѕРёР·РІРѕРґРёС‚РµР»СЊРЅРѕСЃС‚СЊ РЅРёР¶Рµ, С‡РµРј РЅР° Series X|S. Р”Р»СЏ PS2, GameCube, 3DS Р»СѓС‡С€Рµ Series X|S[11].
           </li>
         </ul>
 
-        <h2>Пошаговая инструкция: подготовка USB для ROM-ов и BIOS</h2>
+        <h2>РџРѕС€Р°РіРѕРІР°СЏ РёРЅСЃС‚СЂСѓРєС†РёСЏ: РїРѕРґРіРѕС‚РѕРІРєР° USB РґР»СЏ ROM-РѕРІ Рё BIOS</h2>
         <ol>
-          <li>Скачайте XboxMediaUSB Tool (Windows-программа).</li>
-          <li>Подключите USB-флешку или диск к ПК, отформатируйте через программу.</li>
-          <li>Скопируйте ROM-ы, BIOS и сейвы в соответствующие папки.</li>
-          <li>Подключите к Xbox, выберите "Медиа" при первом подключении.</li>
-          <li>В эмуляторах укажите путь к USB-диску для поиска игр и BIOS.</li>
+          <li>РЎРєР°С‡Р°Р№С‚Рµ XboxMediaUSB Tool (Windows-РїСЂРѕРіСЂР°РјРјР°).</li>
+          <li>РџРѕРґРєР»СЋС‡РёС‚Рµ USB-С„Р»РµС€РєСѓ РёР»Рё РґРёСЃРє Рє РџРљ, РѕС‚С„РѕСЂРјР°С‚РёСЂСѓР№С‚Рµ С‡РµСЂРµР· РїСЂРѕРіСЂР°РјРјСѓ.</li>
+          <li>РЎРєРѕРїРёСЂСѓР№С‚Рµ ROM-С‹, BIOS Рё СЃРµР№РІС‹ РІ СЃРѕРѕС‚РІРµС‚СЃС‚РІСѓСЋС‰РёРµ РїР°РїРєРё.</li>
+          <li>РџРѕРґРєР»СЋС‡РёС‚Рµ Рє Xbox, РІС‹Р±РµСЂРёС‚Рµ "РњРµРґРёР°" РїСЂРё РїРµСЂРІРѕРј РїРѕРґРєР»СЋС‡РµРЅРёРё.</li>
+          <li>Р’ СЌРјСѓР»СЏС‚РѕСЂР°С… СѓРєР°Р¶РёС‚Рµ РїСѓС‚СЊ Рє USB-РґРёСЃРєСѓ РґР»СЏ РїРѕРёСЃРєР° РёРіСЂ Рё BIOS.</li>
         </ol>
 
-        <h2>Таблица: сравнение Xbox Series X и других платформ для ретро-эмуляции (2025)</h2>
+        <h2>РўР°Р±Р»РёС†Р°: СЃСЂР°РІРЅРµРЅРёРµ Xbox Series X Рё РґСЂСѓРіРёС… РїР»Р°С‚С„РѕСЂРј РґР»СЏ СЂРµС‚СЂРѕ-СЌРјСѓР»СЏС†РёРё (2025)</h2>
         <table>
           <thead>
             <tr>
-              <th>Платформа</th>
-              <th>Установка</th>
-              <th>Производительность</th>
-              <th>Совместимость</th>
-              <th>Обновляемость</th>
+              <th>РџР»Р°С‚С„РѕСЂРјР°</th>
+              <th>РЈСЃС‚Р°РЅРѕРІРєР°</th>
+              <th>РџСЂРѕРёР·РІРѕРґРёС‚РµР»СЊРЅРѕСЃС‚СЊ</th>
+              <th>РЎРѕРІРјРµСЃС‚РёРјРѕСЃС‚СЊ</th>
+              <th>РћР±РЅРѕРІР»СЏРµРјРѕСЃС‚СЊ</th>
             </tr>
           </thead>
           <tbody>
             <tr>
               <td>Xbox Series X</td>
               <td>Dev Mode, Retail</td>
-              <td>Максимум</td>
+              <td>РњР°РєСЃРёРјСѓРј</td>
               <td>99%</td>
-              <td>Высокая</td>
+              <td>Р’С‹СЃРѕРєР°СЏ</td>
             </tr>
             <tr>
               <td>Steam Deck</td>
               <td>EmuDeck, Batocera</td>
-              <td>Максимум</td>
+              <td>РњР°РєСЃРёРјСѓРј</td>
               <td>99%</td>
-              <td>Высокая</td>
+              <td>Р’С‹СЃРѕРєР°СЏ</td>
             </tr>
             <tr>
-              <td>Мини-ПК (Windows)</td>
+              <td>РњРёРЅРё-РџРљ (Windows)</td>
               <td>RetroArch, UWP, Standalone</td>
-              <td>Зависит от железа</td>
+              <td>Р—Р°РІРёСЃРёС‚ РѕС‚ Р¶РµР»РµР·Р°</td>
               <td>99%</td>
-              <td>Высокая</td>
+              <td>Р’С‹СЃРѕРєР°СЏ</td>
             </tr>
             <tr>
-              <td>Android приставки</td>
+              <td>Android РїСЂРёСЃС‚Р°РІРєРё</td>
               <td>RetroArch, Standalone</td>
-              <td>Средняя</td>
+              <td>РЎСЂРµРґРЅСЏСЏ</td>
               <td>90%</td>
-              <td>Средняя</td>
+              <td>РЎСЂРµРґРЅСЏСЏ</td>
             </tr>
           </tbody>
         </table>
 
-        <h2>Итог: как выбрать лучший ретро-эмулятор для Xbox Series X?</h2>
+        <h2>РС‚РѕРі: РєР°Рє РІС‹Р±СЂР°С‚СЊ Р»СѓС‡С€РёР№ СЂРµС‚СЂРѕ-СЌРјСѓР»СЏС‚РѕСЂ РґР»СЏ Xbox Series X?</h2>
         <p>
-          В 2025 году Xbox Series X — одна из лучших платформ для ретро-эмуляции: поддержка Dev Mode, мощное железо, простая установка эмуляторов и высочайшая совместимость. Для мультисистемы — RetroArch, для PS2 — XBSX2, для GameCube/Wii — Dolphin UWP, для PS1 — DuckStation, для оригинального Xbox — XEMU (на ПК). Используйте быстрые USB-накопители, регулярно обновляйте эмуляторы, храните ROM-ы из легальных источников — и наслаждайтесь ретро-играми в максимальном качестве!
+          Р’ 2025 РіРѕРґСѓ Xbox Series X вЂ” РѕРґРЅР° РёР· Р»СѓС‡С€РёС… РїР»Р°С‚С„РѕСЂРј РґР»СЏ СЂРµС‚СЂРѕ-СЌРјСѓР»СЏС†РёРё: РїРѕРґРґРµСЂР¶РєР° Dev Mode, РјРѕС‰РЅРѕРµ Р¶РµР»РµР·Рѕ, РїСЂРѕСЃС‚Р°СЏ СѓСЃС‚Р°РЅРѕРІРєР° СЌРјСѓР»СЏС‚РѕСЂРѕРІ Рё РІС‹СЃРѕС‡Р°Р№С€Р°СЏ СЃРѕРІРјРµСЃС‚РёРјРѕСЃС‚СЊ. Р”Р»СЏ РјСѓР»СЊС‚РёСЃРёСЃС‚РµРјС‹ вЂ” RetroArch, РґР»СЏ PS2 вЂ” XBSX2, РґР»СЏ GameCube/Wii вЂ” Dolphin UWP, РґР»СЏ PS1 вЂ” DuckStation, РґР»СЏ РѕСЂРёРіРёРЅР°Р»СЊРЅРѕРіРѕ Xbox вЂ” XEMU (РЅР° РџРљ). РСЃРїРѕР»СЊР·СѓР№С‚Рµ Р±С‹СЃС‚СЂС‹Рµ USB-РЅР°РєРѕРїРёС‚РµР»Рё, СЂРµРіСѓР»СЏСЂРЅРѕ РѕР±РЅРѕРІР»СЏР№С‚Рµ СЌРјСѓР»СЏС‚РѕСЂС‹, С…СЂР°РЅРёС‚Рµ ROM-С‹ РёР· Р»РµРіР°Р»СЊРЅС‹С… РёСЃС‚РѕС‡РЅРёРєРѕРІ вЂ” Рё РЅР°СЃР»Р°Р¶РґР°Р№С‚РµСЃСЊ СЂРµС‚СЂРѕ-РёРіСЂР°РјРё РІ РјР°РєСЃРёРјР°Р»СЊРЅРѕРј РєР°С‡РµСЃС‚РІРµ!
         </p>
 </div>
 
-        <!-- Telegram рекламный баннер -->
+        <!-- Telegram СЂРµРєР»Р°РјРЅС‹Р№ Р±Р°РЅРЅРµСЂ -->
         <a href="https://t.me/RepairoRU" target="_blank" rel="noopener noreferrer" class="telegram-banner">
           <div class="telegram-banner-container">
             <div class="telegram-logo">
@@ -707,10 +741,10 @@
               </svg>
             </div>
             <div class="telegram-content">
-              <div class="telegram-title">Новости из мира технологий</div>
-              <div class="telegram-subtitle">В нашем новом Telegram-канале. Подписывайтесь и будьте в числе первых!</div>
+              <div class="telegram-title">РќРѕРІРѕСЃС‚Рё РёР· РјРёСЂР° С‚РµС…РЅРѕР»РѕРіРёР№</div>
+              <div class="telegram-subtitle">Р’ РЅР°С€РµРј РЅРѕРІРѕРј Telegram-РєР°РЅР°Р»Рµ. РџРѕРґРїРёСЃС‹РІР°Р№С‚РµСЃСЊ Рё Р±СѓРґСЊС‚Рµ РІ С‡РёСЃР»Рµ РїРµСЂРІС‹С…!</div>
               <div class="telegram-button">
-                Подписаться
+                РџРѕРґРїРёСЃР°С‚СЊСЃСЏ
                 <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.56c-.21 2.22-1.12 7.58-1.58 10.06-.19 1.07-.57 1.43-.94 1.46-.8.07-1.4-.52-2.17-1.03-1.21-.79-1.89-1.28-3.06-2.05-1.35-.87-.47-1.35.3-2.13.2-.21 3.71-3.39 3.77-3.68.01-.04.01-.18-.07-.26s-.2-.05-.29-.03c-.12.03-2.11 1.34-5.95 3.93-.56.38-1.07.57-1.53.56-.5-.01-1.47-.28-2.19-.51-.88-.28-1.58-.43-1.52-.91.03-.25.38-.51 1.04-.78 4.07-1.77 6.78-2.94 8.13-3.51 3.88-1.62 4.68-1.9 5.19-1.91.12 0 .37.03.54.17.14.12.18.28.2.44-.01.06 0 .11-.01.17z"/>
                 </svg>
@@ -735,45 +769,45 @@
                         </span>
                         <span class="logo__text">Repairo</span>
                     </a>
-                    <p class="footer__text">Помогаем ремонтировать электронику с 2024 года</p>
+                    <p class="footer__text">РџРѕРјРѕРіР°РµРј СЂРµРјРѕРЅС‚РёСЂРѕРІР°С‚СЊ СЌР»РµРєС‚СЂРѕРЅРёРєСѓ СЃ 2024 РіРѕРґР°</p>
                 </div>
                 <div class="footer__col">
-                    <h3 class="footer__title">Разделы</h3>
+                    <h3 class="footer__title">Р Р°Р·РґРµР»С‹</h3>
                     <ul class="footer__links">
-                        <li><a href="../index.html" class="footer__link">Главная</a></li>
-                        <li><a href="../index.html#categories" class="footer__link">Все гайды</a></li>
-                        <li><a href="../contacts.html" class="footer__link">Контакты</a></li>
+                        <li><a href="../index.html" class="footer__link">Р“Р»Р°РІРЅР°СЏ</a></li>
+                        <li><a href="../index.html#categories" class="footer__link">Р’СЃРµ РіР°Р№РґС‹</a></li>
+                        <li><a href="../contacts.html" class="footer__link">РљРѕРЅС‚Р°РєС‚С‹</a></li>
                     </ul>
                 </div>
                 <div class="footer__col">
-                    <h3 class="footer__title">Категории</h3>
+                    <h3 class="footer__title">РљР°С‚РµРіРѕСЂРёРё</h3>
                     <ul class="footer__links">
-                        <li><a href="../tv.html" class="nav__link">Телевизоры</a></li>
-                        <li><a href="../cameras.html" class="nav__link">Фотоаппараты</a></li>
-                        <li><a href="../consoles.html" class="nav__link">Приставки</a></li>
-                        <li><a href="../laptops.html" class="nav__link">Ноутбуки</a></li>
-                        <li><a href="../smartphones.html" class="nav__link">Смартфоны</a></li>
-                        <li><a href="../small-appliances.html" class="nav__link">Мелкая техника</a></li>
-                        <li><a href="../large-appliances.html" class="nav__link">Бытовая техника</a></li>
-                        <li><a href="../auto-electronics.html" class="nav__link">Авто-Электроника</a></li>
+                        <li><a href="../tv.html" class="nav__link">РўРµР»РµРІРёР·РѕСЂС‹</a></li>
+                        <li><a href="../cameras.html" class="nav__link">Р¤РѕС‚РѕР°РїРїР°СЂР°С‚С‹</a></li>
+                        <li><a href="../consoles.html" class="nav__link">РџСЂРёСЃС‚Р°РІРєРё</a></li>
+                        <li><a href="../laptops.html" class="nav__link">РќРѕСѓС‚Р±СѓРєРё</a></li>
+                        <li><a href="../smartphones.html" class="nav__link">РЎРјР°СЂС‚С„РѕРЅС‹</a></li>
+                        <li><a href="../small-appliances.html" class="nav__link">РњРµР»РєР°СЏ С‚РµС…РЅРёРєР°</a></li>
+                        <li><a href="../large-appliances.html" class="nav__link">Р‘С‹С‚РѕРІР°СЏ С‚РµС…РЅРёРєР°</a></li>
+                        <li><a href="../auto-electronics.html" class="nav__link">РђРІС‚Рѕ-Р­Р»РµРєС‚СЂРѕРЅРёРєР°</a></li>
                     </ul>
                 </div>
                 <div class="footer__col">
-                    <h3 class="footer__title">Контакты</h3>
+                    <h3 class="footer__title">РљРѕРЅС‚Р°РєС‚С‹</h3>
                     <ul class="footer__links">
                         <li><a href="https://t.me/RepairoRU" class="footer__link"><i class="fab fa-telegram"></i> Telegram</a></li>
-                        <li><span class="footer__link">Наша почта: repairo.info@mail.ru</span></li>
+                        <li><span class="footer__link">РќР°С€Р° РїРѕС‡С‚Р°: repairo.info@mail.ru</span></li>
                     </ul>
                 </div>
             </div>
             <div class="footer__bottom">
                 <p class="disclaimer">
-    Администрация сайта не несёт ответственности за возможные повреждения техники
-    и иные последствия, возникшие в результате самостоятельного ремонта по
-    материалам и инструкциям, размещённым на сайте. Все работы вы выполняете
-    на свой страх и риск.
+    РђРґРјРёРЅРёСЃС‚СЂР°С†РёСЏ СЃР°Р№С‚Р° РЅРµ РЅРµСЃС‘С‚ РѕС‚РІРµС‚СЃС‚РІРµРЅРЅРѕСЃС‚Рё Р·Р° РІРѕР·РјРѕР¶РЅС‹Рµ РїРѕРІСЂРµР¶РґРµРЅРёСЏ С‚РµС…РЅРёРєРё
+    Рё РёРЅС‹Рµ РїРѕСЃР»РµРґСЃС‚РІРёСЏ, РІРѕР·РЅРёРєС€РёРµ РІ СЂРµР·СѓР»СЊС‚Р°С‚Рµ СЃР°РјРѕСЃС‚РѕСЏС‚РµР»СЊРЅРѕРіРѕ СЂРµРјРѕРЅС‚Р° РїРѕ
+    РјР°С‚РµСЂРёР°Р»Р°Рј Рё РёРЅСЃС‚СЂСѓРєС†РёСЏРј, СЂР°Р·РјРµС‰С‘РЅРЅС‹Рј РЅР° СЃР°Р№С‚Рµ. Р’СЃРµ СЂР°Р±РѕС‚С‹ РІС‹ РІС‹РїРѕР»РЅСЏРµС‚Рµ
+    РЅР° СЃРІРѕР№ СЃС‚СЂР°С… Рё СЂРёСЃРє.
     </p>
-                <p class="footer__copyright">© 2026 Repairo. Все права защищены.</p>
+                <p class="footer__copyright">В© 2026 Repairo. Р’СЃРµ РїСЂР°РІР° Р·Р°С‰РёС‰РµРЅС‹.</p>
             </div>
         </div>
     </footer>
@@ -784,56 +818,56 @@
 {
   "@context": "https://schema.org",
   "@type": "HowTo",
-  "name": "Лучшие ретро-эмуляторы для Xbox Series X",
-  "description": "Пошаговая инструкция: Лучшие ретро-эмуляторы для Xbox Series X. Благодаря мощному железу, поддержке Dev Mode и открытости платформы, Xbox Series.... Советы э...",
+  "name": "Р›СѓС‡С€РёРµ СЂРµС‚СЂРѕ-СЌРјСѓР»СЏС‚РѕСЂС‹ РґР»СЏ Xbox Series X",
+  "description": "РџРѕС€Р°РіРѕРІР°СЏ РёРЅСЃС‚СЂСѓРєС†РёСЏ: Р›СѓС‡С€РёРµ СЂРµС‚СЂРѕ-СЌРјСѓР»СЏС‚РѕСЂС‹ РґР»СЏ Xbox Series X. Р‘Р»Р°РіРѕРґР°СЂСЏ РјРѕС‰РЅРѕРјСѓ Р¶РµР»РµР·Сѓ, РїРѕРґРґРµСЂР¶РєРµ Dev Mode Рё РѕС‚РєСЂС‹С‚РѕСЃС‚Рё РїР»Р°С‚С„РѕСЂРјС‹, Xbox Series.... РЎРѕРІРµС‚С‹ СЌ...",
   "totalTime": "PT30M",
   "step": [
     {
       "@type": "HowToStep",
-      "name": "Введение: почему Xbox Series X — идеальная консоль для эмуляции?",
-      "text": "Введение: почему Xbox Series X — идеальная консоль для эмуляции?",
+      "name": "Р’РІРµРґРµРЅРёРµ: РїРѕС‡РµРјСѓ Xbox Series X вЂ” РёРґРµР°Р»СЊРЅР°СЏ РєРѕРЅСЃРѕР»СЊ РґР»СЏ СЌРјСѓР»СЏС†РёРё?",
+      "text": "Р’РІРµРґРµРЅРёРµ: РїРѕС‡РµРјСѓ Xbox Series X вЂ” РёРґРµР°Р»СЊРЅР°СЏ РєРѕРЅСЃРѕР»СЊ РґР»СЏ СЌРјСѓР»СЏС†РёРё?",
       "url": "#step-1"
     },
     {
       "@type": "HowToStep",
-      "name": "Таблица: лучшие ретро-эмуляторы для Xbox Series X (2025)",
-      "text": "Таблица: лучшие ретро-эмуляторы для Xbox Series X (2025)",
+      "name": "РўР°Р±Р»РёС†Р°: Р»СѓС‡С€РёРµ СЂРµС‚СЂРѕ-СЌРјСѓР»СЏС‚РѕСЂС‹ РґР»СЏ Xbox Series X (2025)",
+      "text": "РўР°Р±Р»РёС†Р°: Р»СѓС‡С€РёРµ СЂРµС‚СЂРѕ-СЌРјСѓР»СЏС‚РѕСЂС‹ РґР»СЏ Xbox Series X (2025)",
       "url": "#step-2"
     },
     {
       "@type": "HowToStep",
-      "name": "Пошаговая инструкция: установка RetroArch на Xbox Series X",
-      "text": "Пошаговая инструкция: установка RetroArch на Xbox Series X",
+      "name": "РџРѕС€Р°РіРѕРІР°СЏ РёРЅСЃС‚СЂСѓРєС†РёСЏ: СѓСЃС‚Р°РЅРѕРІРєР° RetroArch РЅР° Xbox Series X",
+      "text": "РџРѕС€Р°РіРѕРІР°СЏ РёРЅСЃС‚СЂСѓРєС†РёСЏ: СѓСЃС‚Р°РЅРѕРІРєР° RetroArch РЅР° Xbox Series X",
       "url": "#step-3"
     },
     {
       "@type": "HowToStep",
-      "name": "Пошаговая инструкция: установка Dolphin (GameCube/Wii) на Xbox Series X",
-      "text": "Пошаговая инструкция: установка Dolphin (GameCube/Wii) на Xbox Series X",
+      "name": "РџРѕС€Р°РіРѕРІР°СЏ РёРЅСЃС‚СЂСѓРєС†РёСЏ: СѓСЃС‚Р°РЅРѕРІРєР° Dolphin (GameCube/Wii) РЅР° Xbox Series X",
+      "text": "РџРѕС€Р°РіРѕРІР°СЏ РёРЅСЃС‚СЂСѓРєС†РёСЏ: СѓСЃС‚Р°РЅРѕРІРєР° Dolphin (GameCube/Wii) РЅР° Xbox Series X",
       "url": "#step-4"
     },
     {
       "@type": "HowToStep",
-      "name": "Таблица: производительность эмуляторов на Xbox Series X (2025)",
-      "text": "Таблица: производительность эмуляторов на Xbox Series X (2025)",
+      "name": "РўР°Р±Р»РёС†Р°: РїСЂРѕРёР·РІРѕРґРёС‚РµР»СЊРЅРѕСЃС‚СЊ СЌРјСѓР»СЏС‚РѕСЂРѕРІ РЅР° Xbox Series X (2025)",
+      "text": "РўР°Р±Р»РёС†Р°: РїСЂРѕРёР·РІРѕРґРёС‚РµР»СЊРЅРѕСЃС‚СЊ СЌРјСѓР»СЏС‚РѕСЂРѕРІ РЅР° Xbox Series X (2025)",
       "url": "#step-5"
     },
     {
       "@type": "HowToStep",
-      "name": "Лайфхаки и советы по ретро-эмуляции на Xbox Series X",
-      "text": "Лайфхаки и советы по ретро-эмуляции на Xbox Series X",
+      "name": "Р›Р°Р№С„С…Р°РєРё Рё СЃРѕРІРµС‚С‹ РїРѕ СЂРµС‚СЂРѕ-СЌРјСѓР»СЏС†РёРё РЅР° Xbox Series X",
+      "text": "Р›Р°Р№С„С…Р°РєРё Рё СЃРѕРІРµС‚С‹ РїРѕ СЂРµС‚СЂРѕ-СЌРјСѓР»СЏС†РёРё РЅР° Xbox Series X",
       "url": "#step-6"
     },
     {
       "@type": "HowToStep",
-      "name": "FAQ — часто задаваемые вопросы о ретро-эмуляторах на Xbox Series X",
-      "text": "FAQ — часто задаваемые вопросы о ретро-эмуляторах на Xbox Series X",
+      "name": "FAQ вЂ” С‡Р°СЃС‚Рѕ Р·Р°РґР°РІР°РµРјС‹Рµ РІРѕРїСЂРѕСЃС‹ Рѕ СЂРµС‚СЂРѕ-СЌРјСѓР»СЏС‚РѕСЂР°С… РЅР° Xbox Series X",
+      "text": "FAQ вЂ” С‡Р°СЃС‚Рѕ Р·Р°РґР°РІР°РµРјС‹Рµ РІРѕРїСЂРѕСЃС‹ Рѕ СЂРµС‚СЂРѕ-СЌРјСѓР»СЏС‚РѕСЂР°С… РЅР° Xbox Series X",
       "url": "#step-7"
     },
     {
       "@type": "HowToStep",
-      "name": "Пошаговая инструкция: подготовка USB для ROM-ов и BIOS",
-      "text": "Пошаговая инструкция: подготовка USB для ROM-ов и BIOS",
+      "name": "РџРѕС€Р°РіРѕРІР°СЏ РёРЅСЃС‚СЂСѓРєС†РёСЏ: РїРѕРґРіРѕС‚РѕРІРєР° USB РґР»СЏ ROM-РѕРІ Рё BIOS",
+      "text": "РџРѕС€Р°РіРѕРІР°СЏ РёРЅСЃС‚СЂСѓРєС†РёСЏ: РїРѕРґРіРѕС‚РѕРІРєР° USB РґР»СЏ ROM-РѕРІ Рё BIOS",
       "url": "#step-8"
     }
   ],
@@ -844,8 +878,4 @@
 <script src="../cookie-consent.js"></script>
 </body>
 </html>
-
-
-
-
 

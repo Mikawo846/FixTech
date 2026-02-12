@@ -4,8 +4,9 @@
 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Эмуляция Sega Dreamcast на Nintendo Switch | Экспертный мега</title>
-    <meta name="description" content="">
+  <title>Р­РјСѓР»СЏС†РёСЏ Sega Dreamcast РЅР° Nintendo Switch | Р­РєСЃРїРµСЂС‚РЅС‹Р№ РјРµРіР°РіР°Р№Рґ</title>
+    <meta name="description" content="{{ description }}">
+    <meta name="description" content="РџРѕС€Р°РіРѕРІР°СЏ РёРЅСЃС‚СЂСѓРєС†РёСЏ: Р­РјСѓР»СЏС†РёСЏ Sega Dreamcast РЅР° Nintendo Switch. Р’РєР»СЋС‡РёС‚Рµ "Threaded Rendering" РІ РіСЂР°С„РёС‡РµСЃРєРёС… РЅР°СЃС‚СЂРѕР№РєР°С… РґР»СЏ 15% РїСЂРёСЂРѕСЃС‚Р° FPS. РЎРѕРІРµС‚С‹ СЌРєСЃРїРµСЂС‚...">
 
   <link rel="stylesheet" href="../styles.css" />
   <link rel="stylesheet" href="../styles-header.css" />
@@ -21,17 +22,30 @@
     .pro-tips { background: rgba(3, 74, 79, 0.05); padding: 15px; border-radius: 6px; margin: 20px 0; }
     .pro-tips h4 { color: var(--primary); margin-top: 0; margin-bottom: 12px; font-size: 1.1rem; }
     .tip-item { display: flex; gap: 8px; margin-bottom: 8px; align-items: flex-start; }
+    .warning-block {
+      background: #fff3e0;
+      border-left: 5px solid #ff9100;
+      padding: 15px 18px;
+      margin: 22px 0;
+      border-radius: 7px;
+    }
     table { width: 100%; border-collapse: collapse; margin: 20px 0; }
     th, td { border: 1px solid var(--border); padding: 8px; text-align: left; }
     th { background: var(--background-light); }
-    .highlight { background: #f5f7fa; border-left: 4px solid #2d9cdb; padding: 10px 15px; margin: 20px 0; }
-    .faq-section ul { margin-left: 1em; }
-    .block-section { margin-bottom: 2em; }
     @media (max-width: 768px) {
       .guide-content h2 { font-size: 1.4rem; margin-top: 25px; }
       .guide-image-block { padding: 12px; margin: 15px 0; }
       table, th, td { font-size: 0.95rem; }
     }
+    /* РЇРЅРґРµРєСЃ РњР°СЂРєРµС‚ СЂРµРєР»Р°РјРЅС‹Р№ Р±Р°РЅРЅРµСЂ */
+    .ym-hero-link {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+      max-width: 100%;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
     /* Р“РѕСЂРёР·РѕРЅС‚Р°Р»СЊРЅС‹Р№ Р±Р°РЅРЅРµСЂ-РєР°СЂС‚РѕС‡РєР° */
     .ym-hero-banner {
       width: 100%;
@@ -144,11 +158,13 @@
       transition: background 0.15s ease, transform 0.15s ease,
                   box-shadow 0.15s ease;
     }
+
     .ym-hero-button::after {
       content: "в†’";
       margin-left: 6px;
       font-size: 14px;
     }
+
     .ym-hero-button:hover {
       background: #7c3aed;
       transform: translateY(-1px);
@@ -172,19 +188,24 @@
         max-width: 100%;
         margin: 20px 0;
       }
+
       .ym-hero-images {
         height: 100px;
       }
+
       .ym-hero-content {
         padding: 12px 12px;
       }
+
       .ym-hero-title {
         font-size: 13px;
       }
+
       .ym-hero-button {
         font-size: 13px;
         padding: 8px 14px;
       }
+
       .ym-hero-legal {
         font-size: 10px;
       }
@@ -292,22 +313,27 @@
         padding: 15px;
         min-height: 100px;
       }
+
       .telegram-logo {
         width: 50px;
         height: 50px;
         min-width: 50px;
         margin-right: 15px;
       }
+
       .telegram-logo svg {
         width: 26px;
         height: 26px;
       }
+
       .telegram-title {
         font-size: 14px;
       }
+
       .telegram-subtitle {
         font-size: 12px;
       }
+
       .telegram-button {
         font-size: 12px;
         padding: 6px 12px;
@@ -325,13 +351,15 @@
       <div class="header__inner">
         <a href="../index.html" class="logo">
           <span class="logo__icon"></span>
-          <span class="logo__text">GeoExpert</span>
+          <span class="logo__text">Repairo</span>
         </a>
         <nav class="nav">
           <ul class="nav__list">
-            <li><a href="../cameras.html" class="nav__link">РљР°РјРµСЂС‹</a></li>
-            <li><a href="../drones.html" class="nav__link">Р”СЂРѕРЅС‹</a></li>
-            <li><a href="../workflow.html" class="nav__link">Workflow</a></li>
+            <li><a href="../tv.html" class="nav__link">РўРµР»РµРІРёР·РѕСЂС‹</a></li>
+            <li><a href="../cameras.html" class="nav__link">Р¤РѕС‚РѕР°РїРїР°СЂР°С‚С‹</a></li>
+            <li><a href="../consoles.html" class="nav__link">РџСЂРёСЃС‚Р°РІРєРё</a></li>
+            <li><a href="../laptops.html" class="nav__link">РќРѕСѓС‚Р±СѓРєРё</a></li>
+            <li><a href="../smartphones.html" class="nav__link">РЎРјР°СЂС‚С„РѕРЅС‹</a></li>
           </ul>
         </nav>
       </div>
@@ -341,159 +369,172 @@
   <section class="guide-page">
     <div class="container">
       <div class="breadcrumbs">
-        <a href="../index.html">Главная</a>
+        <a href="../index.html">Р“Р»Р°РІРЅР°СЏ</a>
         <i class="fas fa-chevron-right"></i>
-        <a href="../consoles.html">Приставки</a>
+        <a href="../consoles.html">РџСЂРёСЃС‚Р°РІРєРё</a>
         <i class="fas fa-chevron-right"></i>
-        <span>Эмуляция Sega Dreamcast на Nintendo Switch</span>
+        <span>Р­РјСѓР»СЏС†РёСЏ Sega Dreamcast РЅР° Nintendo Switch</span>
       </div>
 
-      <h1 class="section__title">Эмуляция Sega Dreamcast на Nintendo Switch</h1>
+      <h1 class="section__title">Р­РјСѓР»СЏС†РёСЏ Sega Dreamcast РЅР° Nintendo Switch</h1>
 
       <div class="guide-meta">
-        <span><i class="fas fa-gamepad"></i> Экспертный гид: Flycast, RetroArch, настройка BIOS, разгон CPU, таблицы совместимости и лайфхаки для идеального ретро-опыта</span>
+        <span><i class="fas fa-gamepad"></i> Р­РєСЃРїРµСЂС‚РЅС‹Р№ РіРёРґ: Flycast, RetroArch, РЅР°СЃС‚СЂРѕР№РєР° BIOS, СЂР°Р·РіРѕРЅ CPU, С‚Р°Р±Р»РёС†С‹ СЃРѕРІРјРµСЃС‚РёРјРѕСЃС‚Рё Рё Р»Р°Р№С„С…Р°РєРё РґР»СЏ РёРґРµР°Р»СЊРЅРѕРіРѕ СЂРµС‚СЂРѕ-РѕРїС‹С‚Р°</span>
       </div>
 
       <div class="guide-image-block">
-        <img src="https://avatars.mds.yandex.net/get-shedevrum/15240802/img_b385274c3d5211f0b783b633c76826bc/orig" alt="Эмуляция Sega Dreamcast на Nintendo Switch">
+        <img src="https://avatars.mds.yandex.net/get-shedevrum/15240802/img_b385274c3d5211f0b783b633c76826bc/orig" alt="Р­РјСѓР»СЏС†РёСЏ Sega Dreamcast РЅР° Nintendo Switch">
         <div class="image-caption">
-          Shenmue, Sonic Adventure и Soulcalibur на Switch: полная настройка Flycast 2.5 с поддержкой 4K-рендеринга и кастомизацией управления.
+          Shenmue, Sonic Adventure Рё Soulcalibur РЅР° Switch: РїРѕР»РЅР°СЏ РЅР°СЃС‚СЂРѕР№РєР° Flycast 2.5 СЃ РїРѕРґРґРµСЂР¶РєРѕР№ 4K-СЂРµРЅРґРµСЂРёРЅРіР° Рё РєР°СЃС‚РѕРјРёР·Р°С†РёРµР№ СѓРїСЂР°РІР»РµРЅРёСЏ.
         </div>
       </div>
 
       <div class="guide-content">
-        <!-- Яндекс Маркет рекламный блок -->
+        <!-- РЇРЅРґРµРєСЃ РњР°СЂРєРµС‚ СЂРµРєР»Р°РјРЅС‹Р№ Р±Р»РѕРє -->
         <a href="https://market.yandex.ru/catalog--bytovaia-tekhnika/54419/list?hid=198118&rs=eJwzUvjEKMvBILDwEKsEg8Kzbh6Nw4dZNS4D8c7lFhp9c1-wAQC3uAwP&clid=14635360&refid=rbck8fgamv681iu59go3iqxwddedl4x9&erid=5jtCeReNx12oajxS2bzShmZ&mclid=1003&distr_type=7&utm_source=partner_network&pp=900&utm_medium=link_list&utm_campaign=14635360"
            target="_blank"
            rel="noopener noreferrer sponsored"
+           class="ym-hero-link">
+          <div class="ym-hero-banner">
+            <div class="ym-hero-images">
+              <div class="ym-hero-image">
                 <img src="https://avatars.mds.yandex.net/get-mpic/14770882/2a00000197f4dbee777f8afddccaf44faa53/optimize"
-                     alt="Распродажа бытовой электроники 1">
+                     alt="Р Р°СЃРїСЂРѕРґР°Р¶Р° Р±С‹С‚РѕРІРѕР№ СЌР»РµРєС‚СЂРѕРЅРёРєРё 1">
               </div>
+              <div class="ym-hero-image">
                 <img src="https://avatars.mds.yandex.net/get-mpic/15580298/img_id8867318964670654684.jpeg/optimize"
-                     alt="Распродажа бытовой электроники 2">
+                     alt="Р Р°СЃРїСЂРѕРґР°Р¶Р° Р±С‹С‚РѕРІРѕР№ СЌР»РµРєС‚СЂРѕРЅРёРєРё 2">
               </div>
+              <div class="ym-hero-image">
                 <img src="https://avatars.mds.yandex.net/get-mpic/10096780/2a000001953b534fed2494e0b30fadd9b458/optimize"
-                     alt="Распродажа бытовой электроники 3">
+                     alt="Р Р°СЃРїСЂРѕРґР°Р¶Р° Р±С‹С‚РѕРІРѕР№ СЌР»РµРєС‚СЂРѕРЅРёРєРё 3">
               </div>
             </div>
-                  ? Выгодные предложения
+            <div class="ym-hero-content">
+              <h3 class="ym-hero-title">Р Р°СЃРїСЂРѕРґР°Р¶Р° Р±С‹С‚РѕРІРѕР№ СЌР»РµРєС‚СЂРѕРЅРёРєРё РЅР° РЇРЅРґРµРєСЃ РњР°СЂРєРµС‚Рµ</h3>
+              <div class="ym-hero-top">
+                <div class="ym-hero-rating">
+                  в­ђ Р’С‹РіРѕРґРЅС‹Рµ РїСЂРµРґР»РѕР¶РµРЅРёСЏ
+                  <span class="ym-hero-rating-count">РЎРєРёРґРєРё РґРѕ 50%</span>
                 </div>
               </div>
+              <button class="ym-hero-button">Р—Р° СЃРєРёРґРєР°РјРё</button>
             </div>
           </div>
-            Реклама. ООО "ЯНДЕКС", ИНН 7736207543. clid: 14635360, erid: 5jtCeReNx12oajxS2bzShmZ
+          <div class="ym-hero-legal">
+            Р РµРєР»Р°РјР°. РћРћРћ "РЇРќР”Р•РљРЎ", РРќРќ 7736207543. clid: 14635360, erid: 5jtCeReNx12oajxS2bzShmZ
           </div>
         </a>
 
-        <h2>Почему Nintendo Switch подходит для эмуляции Dreamcast?</h2>
+        <h2>РџРѕС‡РµРјСѓ Nintendo Switch РїРѕРґС…РѕРґРёС‚ РґР»СЏ СЌРјСѓР»СЏС†РёРё Dreamcast?</h2>
         <ul>
-          <li>Процессор Nvidia Tegra X1 с ARM Cortex-A57 (1.9 ГГц) обеспечивает достаточную мощность для эмуляции</li>
-          <li>Поддержка Vulkan API через драйверы Mesa улучшает производительность</li>
-          <li>Портативный режим позволяет играть в классику где угодно</li>
+          <li>РџСЂРѕС†РµСЃСЃРѕСЂ Nvidia Tegra X1 СЃ ARM Cortex-A57 (1.9 Р“Р“С†) РѕР±РµСЃРїРµС‡РёРІР°РµС‚ РґРѕСЃС‚Р°С‚РѕС‡РЅСѓСЋ РјРѕС‰РЅРѕСЃС‚СЊ РґР»СЏ СЌРјСѓР»СЏС†РёРё</li>
+          <li>РџРѕРґРґРµСЂР¶РєР° Vulkan API С‡РµСЂРµР· РґСЂР°Р№РІРµСЂС‹ Mesa СѓР»СѓС‡С€Р°РµС‚ РїСЂРѕРёР·РІРѕРґРёС‚РµР»СЊРЅРѕСЃС‚СЊ</li>
+          <li>РџРѕСЂС‚Р°С‚РёРІРЅС‹Р№ СЂРµР¶РёРј РїРѕР·РІРѕР»СЏРµС‚ РёРіСЂР°С‚СЊ РІ РєР»Р°СЃСЃРёРєСѓ РіРґРµ СѓРіРѕРґРЅРѕ</li>
         </ul>
 
-        <h2>Таблица: сравнение эмуляторов Dreamcast для Switch</h2>
+        <h2>РўР°Р±Р»РёС†Р°: СЃСЂР°РІРЅРµРЅРёРµ СЌРјСѓР»СЏС‚РѕСЂРѕРІ Dreamcast РґР»СЏ Switch</h2>
 <table>
           <thead>
             <tr>
-              <th>Эмулятор</th>
-              <th>Тип</th>
-              <th>Разрешение</th>
+              <th>Р­РјСѓР»СЏС‚РѕСЂ</th>
+              <th>РўРёРї</th>
+              <th>Р Р°Р·СЂРµС€РµРЅРёРµ</th>
               <th>FPS</th>
-              <th>Особенности</th>
+              <th>РћСЃРѕР±РµРЅРЅРѕСЃС‚Рё</th>
             </tr>
           </thead>
           <tbody>
             <tr>
               <td>Flycast Standalone</td>
-              <td>Нативный порт</td>
-              <td>До 4K (док-режим)</td>
-              <td>60 для 90% игр</td>
-              <td>Поддержка HD-текстур, сетевой игры</td>
+              <td>РќР°С‚РёРІРЅС‹Р№ РїРѕСЂС‚</td>
+              <td>Р”Рѕ 4K (РґРѕРє-СЂРµР¶РёРј)</td>
+              <td>60 РґР»СЏ 90% РёРіСЂ</td>
+              <td>РџРѕРґРґРµСЂР¶РєР° HD-С‚РµРєСЃС‚СѓСЂ, СЃРµС‚РµРІРѕР№ РёРіСЂС‹</td>
             </tr>
             <tr>
               <td>RetroArch (Flycast core)</td>
-              <td>Мультисистемный</td>
+              <td>РњСѓР»СЊС‚РёСЃРёСЃС‚РµРјРЅС‹Р№</td>
               <td>720p</td>
               <td>30-60</td>
-              <td>Интеграция с RetroAchievements</td>
+              <td>РРЅС‚РµРіСЂР°С†РёСЏ СЃ RetroAchievements</td>
             </tr>
             <tr>
               <td>Reicast Alpha</td>
-              <td>Устаревшая версия</td>
+              <td>РЈСЃС‚Р°СЂРµРІС€Р°СЏ РІРµСЂСЃРёСЏ</td>
               <td>480p</td>
               <td>20-30</td>
-              <td>Только для тестирования</td>
+              <td>РўРѕР»СЊРєРѕ РґР»СЏ С‚РµСЃС‚РёСЂРѕРІР°РЅРёСЏ</td>
             </tr>
           </tbody>
         </table>
 
-        <h2>Пошаговая инструкция: установка Flycast 2.5</h2>
+        <h2>РџРѕС€Р°РіРѕРІР°СЏ РёРЅСЃС‚СЂСѓРєС†РёСЏ: СѓСЃС‚Р°РЅРѕРІРєР° Flycast 2.5</h2>
         <ol>
-          <li><b>Подготовка консоли:</b>
+          <li><b>РџРѕРґРіРѕС‚РѕРІРєР° РєРѕРЅСЃРѕР»Рё:</b>
             <ul>
-              <li>Установите кастомную прошивку Atmosphere 1.5.0+</li>
-              <li>Активируйте режим разработчика через Hekate</li>
+              <li>РЈСЃС‚Р°РЅРѕРІРёС‚Рµ РєР°СЃС‚РѕРјРЅСѓСЋ РїСЂРѕС€РёРІРєСѓ Atmosphere 1.5.0+</li>
+              <li>РђРєС‚РёРІРёСЂСѓР№С‚Рµ СЂРµР¶РёРј СЂР°Р·СЂР°Р±РѕС‚С‡РёРєР° С‡РµСЂРµР· Hekate</li>
             </ul>
           </li>
-          <li><b>Установка эмулятора:</b>
+          <li><b>РЈСЃС‚Р°РЅРѕРІРєР° СЌРјСѓР»СЏС‚РѕСЂР°:</b>
             <ul>
-              <li>Скачайте .nro-файл Flycast с GitHub</li>
-              <li>Скопируйте в папку /switch/flycast на SD-карте</li>
+              <li>РЎРєР°С‡Р°Р№С‚Рµ .nro-С„Р°Р№Р» Flycast СЃ GitHub</li>
+              <li>РЎРєРѕРїРёСЂСѓР№С‚Рµ РІ РїР°РїРєСѓ /switch/flycast РЅР° SD-РєР°СЂС‚Рµ</li>
             </ul>
           </li>
-          <li><b>Добавление BIOS:</b>
+          <li><b>Р”РѕР±Р°РІР»РµРЅРёРµ BIOS:</b>
             <ul>
-              <li>Поместите dc_boot.bin и dc_flash.bin в /switch/flycast/system</li>
-              <li>Для Naomi/Atomiswave добавьте naomi.zip и awbios.zip</li>
+              <li>РџРѕРјРµСЃС‚РёС‚Рµ dc_boot.bin Рё dc_flash.bin РІ /switch/flycast/system</li>
+              <li>Р”Р»СЏ Naomi/Atomiswave РґРѕР±Р°РІСЊС‚Рµ naomi.zip Рё awbios.zip</li>
             </ul>
           </li>
         </ol>
 
-        <h2>Оптимизация производительности</h2>
+        <h2>РћРїС‚РёРјРёР·Р°С†РёСЏ РїСЂРѕРёР·РІРѕРґРёС‚РµР»СЊРЅРѕСЃС‚Рё</h2>
         <div class="pro-tips">
-          <h4>?? Профессиональные настройки</h4>
+          <h4>рџ”№ РџСЂРѕС„РµСЃСЃРёРѕРЅР°Р»СЊРЅС‹Рµ РЅР°СЃС‚СЂРѕР№РєРё</h4>
           <div class="tip-item">
             <i class="fas fa-lightbulb"></i>
-            <p>Включите "Threaded Rendering" в графических настройках для 15% прироста FPS</p>
+            <p>Р’РєР»СЋС‡РёС‚Рµ "Threaded Rendering" РІ РіСЂР°С„РёС‡РµСЃРєРёС… РЅР°СЃС‚СЂРѕР№РєР°С… РґР»СЏ 15% РїСЂРёСЂРѕСЃС‚Р° FPS</p>
           </div>
           <div class="tip-item">
             <i class="fas fa-lightbulb"></i>
-            <p>Используйте разгон до 1.9 ГГц через sys-clk для стабильного 60 FPS</p>
+            <p>РСЃРїРѕР»СЊР·СѓР№С‚Рµ СЂР°Р·РіРѕРЅ РґРѕ 1.9 Р“Р“С† С‡РµСЂРµР· sys-clk РґР»СЏ СЃС‚Р°Р±РёР»СЊРЅРѕРіРѕ 60 FPS</p>
           </div>
         </div>
 
-        <h2>Совместимость игр: топ-10 хитов</h2>
+        <h2>РЎРѕРІРјРµСЃС‚РёРјРѕСЃС‚СЊ РёРіСЂ: С‚РѕРї-10 С…РёС‚РѕРІ</h2>
         <table>
           <thead>
             <tr>
-              <th>Игра</th>
+              <th>РРіСЂР°</th>
               <th>FPS</th>
-              <th>Особые настройки</th>
+              <th>РћСЃРѕР±С‹Рµ РЅР°СЃС‚СЂРѕР№РєРё</th>
             </tr>
           </thead>
           <tbody>
             <tr>
               <td>Shenmue I/II</td>
-              <td>30 (лимит оригинала)</td>
-              <td>Включить "Force Windows CE"</td>
+              <td>30 (Р»РёРјРёС‚ РѕСЂРёРіРёРЅР°Р»Р°)</td>
+              <td>Р’РєР»СЋС‡РёС‚СЊ "Force Windows CE"</td>
             </tr>
             <tr>
               <td>Soulcalibur</td>
               <td>60</td>
-              <td>Разрешение 2x, анизотропная фильтрация 4x</td>
+              <td>Р Р°Р·СЂРµС€РµРЅРёРµ 2x, Р°РЅРёР·РѕС‚СЂРѕРїРЅР°СЏ С„РёР»СЊС‚СЂР°С†РёСЏ 4x</td>
             </tr>
             <tr>
               <td>Crazy Taxi</td>
               <td>60</td>
-              <td>Отключить "Delay Frame Swapping"</td>
+              <td>РћС‚РєР»СЋС‡РёС‚СЊ "Delay Frame Swapping"</td>
             </tr>
           </tbody>
         </table>
 
-        <h2>Настройка управления</h2>
+        <h2>РќР°СЃС‚СЂРѕР№РєР° СѓРїСЂР°РІР»РµРЅРёСЏ</h2>
         <pre><code class="language-json">
-// Пример конфига controls.json
+// РџСЂРёРјРµСЂ РєРѕРЅС„РёРіР° controls.json
 {
   "mappings": {
     "dc_controller": {
@@ -508,30 +549,30 @@
         </code></pre>
 
         <div class="warning-block">
-          <strong>Внимание!</strong> Отключите Wi-Fi через Airplane Mode для предотвращения бана. Используйте Incognito для очистки уникальных идентификаторов.
+          <strong>Р’РЅРёРјР°РЅРёРµ!</strong> РћС‚РєР»СЋС‡РёС‚Рµ Wi-Fi С‡РµСЂРµР· Airplane Mode РґР»СЏ РїСЂРµРґРѕС‚РІСЂР°С‰РµРЅРёСЏ Р±Р°РЅР°. РСЃРїРѕР»СЊР·СѓР№С‚Рµ Incognito РґР»СЏ РѕС‡РёСЃС‚РєРё СѓРЅРёРєР°Р»СЊРЅС‹С… РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂРѕРІ.
         </div>
 
-        <h2>Частые проблемы и решения</h2>
+        <h2>Р§Р°СЃС‚С‹Рµ РїСЂРѕР±Р»РµРјС‹ Рё СЂРµС€РµРЅРёСЏ</h2>
         <ul>
-          <li><b>Чёрный экран при запуске:</b> Проверьте целостность BIOS-файлов</li>
-          <li><b>Дёрганая анимация:</b> Включите "Frame Skipping" в настройках</li>
-          <li><b>Отсутствие звука:</b> Смените аудиодрайвер на libretro_switch</li>
+          <li><b>Р§С‘СЂРЅС‹Р№ СЌРєСЂР°РЅ РїСЂРё Р·Р°РїСѓСЃРєРµ:</b> РџСЂРѕРІРµСЂСЊС‚Рµ С†РµР»РѕСЃС‚РЅРѕСЃС‚СЊ BIOS-С„Р°Р№Р»РѕРІ</li>
+          <li><b>Р”С‘СЂРіР°РЅР°СЏ Р°РЅРёРјР°С†РёСЏ:</b> Р’РєР»СЋС‡РёС‚Рµ "Frame Skipping" РІ РЅР°СЃС‚СЂРѕР№РєР°С…</li>
+          <li><b>РћС‚СЃСѓС‚СЃС‚РІРёРµ Р·РІСѓРєР°:</b> РЎРјРµРЅРёС‚Рµ Р°СѓРґРёРѕРґСЂР°Р№РІРµСЂ РЅР° libretro_switch</li>
         </ul>
 
-        <h2>Будущее эмуляции: тренды 2025-2026</h2>
+        <h2>Р‘СѓРґСѓС‰РµРµ СЌРјСѓР»СЏС†РёРё: С‚СЂРµРЅРґС‹ 2025-2026</h2>
         <ul>
-          <li>Поддержка Vulkan 1.3 для улучшения рендеринга</li>
-          <li>Интеграция с облачными сохранениями через RetroArch</li>
-          <li>Автоматическая загрузка текстур из Steam Workshop</li>
+          <li>РџРѕРґРґРµСЂР¶РєР° Vulkan 1.3 РґР»СЏ СѓР»СѓС‡С€РµРЅРёСЏ СЂРµРЅРґРµСЂРёРЅРіР°</li>
+          <li>РРЅС‚РµРіСЂР°С†РёСЏ СЃ РѕР±Р»Р°С‡РЅС‹РјРё СЃРѕС…СЂР°РЅРµРЅРёСЏРјРё С‡РµСЂРµР· RetroArch</li>
+          <li>РђРІС‚РѕРјР°С‚РёС‡РµСЃРєР°СЏ Р·Р°РіСЂСѓР·РєР° С‚РµРєСЃС‚СѓСЂ РёР· Steam Workshop</li>
         </ul>
 
-        <h2>?? Итог: Dreamcast живёт на Switch!</h2>
+        <h2>рџ“Њ РС‚РѕРі: Dreamcast Р¶РёРІС‘С‚ РЅР° Switch!</h2>
         <p>
-          С Flycast 2.5 и правильно настроенной кастомной прошивкой Nintendo Switch превращается в мощную ретро-платформу. 85% игр библиотеки Dreamcast работают идеально, остальные требуют индивидуальной настройки. Экспериментируйте с HD-паками и наслаждайтесь классикой!
+          РЎ Flycast 2.5 Рё РїСЂР°РІРёР»СЊРЅРѕ РЅР°СЃС‚СЂРѕРµРЅРЅРѕР№ РєР°СЃС‚РѕРјРЅРѕР№ РїСЂРѕС€РёРІРєРѕР№ Nintendo Switch РїСЂРµРІСЂР°С‰Р°РµС‚СЃСЏ РІ РјРѕС‰РЅСѓСЋ СЂРµС‚СЂРѕ-РїР»Р°С‚С„РѕСЂРјСѓ. 85% РёРіСЂ Р±РёР±Р»РёРѕС‚РµРєРё Dreamcast СЂР°Р±РѕС‚Р°СЋС‚ РёРґРµР°Р»СЊРЅРѕ, РѕСЃС‚Р°Р»СЊРЅС‹Рµ С‚СЂРµР±СѓСЋС‚ РёРЅРґРёРІРёРґСѓР°Р»СЊРЅРѕР№ РЅР°СЃС‚СЂРѕР№РєРё. Р­РєСЃРїРµСЂРёРјРµРЅС‚РёСЂСѓР№С‚Рµ СЃ HD-РїР°РєР°РјРё Рё РЅР°СЃР»Р°Р¶РґР°Р№С‚РµСЃСЊ РєР»Р°СЃСЃРёРєРѕР№!
         </p>
 </div>
 
-        <!-- Telegram рекламный баннер -->
+        <!-- Telegram СЂРµРєР»Р°РјРЅС‹Р№ Р±Р°РЅРЅРµСЂ -->
         <a href="https://t.me/RepairoRU" target="_blank" rel="noopener noreferrer" class="telegram-banner">
           <div class="telegram-banner-container">
             <div class="telegram-logo">
@@ -540,10 +581,10 @@
               </svg>
             </div>
             <div class="telegram-content">
-              <div class="telegram-title">Новости из мира технологий</div>
-              <div class="telegram-subtitle">В нашем новом Telegram-канале. Подписывайтесь и будьте в числе первых!</div>
+              <div class="telegram-title">РќРѕРІРѕСЃС‚Рё РёР· РјРёСЂР° С‚РµС…РЅРѕР»РѕРіРёР№</div>
+              <div class="telegram-subtitle">Р’ РЅР°С€РµРј РЅРѕРІРѕРј Telegram-РєР°РЅР°Р»Рµ. РџРѕРґРїРёСЃС‹РІР°Р№С‚РµСЃСЊ Рё Р±СѓРґСЊС‚Рµ РІ С‡РёСЃР»Рµ РїРµСЂРІС‹С…!</div>
               <div class="telegram-button">
-                Подписаться
+                РџРѕРґРїРёСЃР°С‚СЊСЃСЏ
                 <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.56c-.21 2.22-1.12 7.58-1.58 10.06-.19 1.07-.57 1.43-.94 1.46-.8.07-1.4-.52-2.17-1.03-1.21-.79-1.89-1.28-3.06-2.05-1.35-.87-.47-1.35.3-2.13.2-.21 3.71-3.39 3.77-3.68.01-.04.01-.18-.07-.26s-.2-.05-.29-.03c-.12.03-2.11 1.34-5.95 3.93-.56.38-1.07.57-1.53.56-.5-.01-1.47-.28-2.19-.51-.88-.28-1.58-.43-1.52-.91.03-.25.38-.51 1.04-.78 4.07-1.77 6.78-2.94 8.13-3.51 3.88-1.62 4.68-1.9 5.19-1.91.12 0 .37.03.54.17.14.12.18.28.2.44-.01.06 0 .11-.01.17z"/>
                 </svg>
@@ -568,45 +609,45 @@
                         </span>
                         <span class="logo__text">Repairo</span>
                     </a>
-                    <p class="footer__text">Помогаем ремонтировать электронику с 2024 года</p>
+                    <p class="footer__text">РџРѕРјРѕРіР°РµРј СЂРµРјРѕРЅС‚РёСЂРѕРІР°С‚СЊ СЌР»РµРєС‚СЂРѕРЅРёРєСѓ СЃ 2024 РіРѕРґР°</p>
                 </div>
                 <div class="footer__col">
-                    <h3 class="footer__title">Разделы</h3>
+                    <h3 class="footer__title">Р Р°Р·РґРµР»С‹</h3>
                     <ul class="footer__links">
-                        <li><a href="../index.html" class="footer__link">Главная</a></li>
-                        <li><a href="../index.html#categories" class="footer__link">Все гайды</a></li>
-                        <li><a href="../contacts.html" class="footer__link">Контакты</a></li>
+                        <li><a href="../index.html" class="footer__link">Р“Р»Р°РІРЅР°СЏ</a></li>
+                        <li><a href="../index.html#categories" class="footer__link">Р’СЃРµ РіР°Р№РґС‹</a></li>
+                        <li><a href="../contacts.html" class="footer__link">РљРѕРЅС‚Р°РєС‚С‹</a></li>
                     </ul>
                 </div>
                 <div class="footer__col">
-                    <h3 class="footer__title">Категории</h3>
+                    <h3 class="footer__title">РљР°С‚РµРіРѕСЂРёРё</h3>
                     <ul class="footer__links">
-                        <li><a href="../tv.html" class="nav__link">Телевизоры</a></li>
-                        <li><a href="../cameras.html" class="nav__link">Фотоаппараты</a></li>
-                        <li><a href="../consoles.html" class="nav__link">Приставки</a></li>
-                        <li><a href="../laptops.html" class="nav__link">Ноутбуки</a></li>
-                        <li><a href="../smartphones.html" class="nav__link">Смартфоны</a></li>
-                        <li><a href="../small-appliances.html" class="nav__link">Мелкая техника</a></li>
-                        <li><a href="../large-appliances.html" class="nav__link">Бытовая техника</a></li>
-                        <li><a href="../auto-electronics.html" class="nav__link">Авто-Электроника</a></li>
+                        <li><a href="../tv.html" class="nav__link">РўРµР»РµРІРёР·РѕСЂС‹</a></li>
+                        <li><a href="../cameras.html" class="nav__link">Р¤РѕС‚РѕР°РїРїР°СЂР°С‚С‹</a></li>
+                        <li><a href="../consoles.html" class="nav__link">РџСЂРёСЃС‚Р°РІРєРё</a></li>
+                        <li><a href="../laptops.html" class="nav__link">РќРѕСѓС‚Р±СѓРєРё</a></li>
+                        <li><a href="../smartphones.html" class="nav__link">РЎРјР°СЂС‚С„РѕРЅС‹</a></li>
+                        <li><a href="../small-appliances.html" class="nav__link">РњРµР»РєР°СЏ С‚РµС…РЅРёРєР°</a></li>
+                        <li><a href="../large-appliances.html" class="nav__link">Р‘С‹С‚РѕРІР°СЏ С‚РµС…РЅРёРєР°</a></li>
+                        <li><a href="../auto-electronics.html" class="nav__link">РђРІС‚Рѕ-Р­Р»РµРєС‚СЂРѕРЅРёРєР°</a></li>
                     </ul>
                 </div>
                 <div class="footer__col">
-                    <h3 class="footer__title">Контакты</h3>
+                    <h3 class="footer__title">РљРѕРЅС‚Р°РєС‚С‹</h3>
                     <ul class="footer__links">
                         <li><a href="https://t.me/RepairoRU" class="footer__link"><i class="fab fa-telegram"></i> Telegram</a></li>
-                        <li><span class="footer__link">Наша почта: repairo.info@mail.ru</span></li>
+                        <li><span class="footer__link">РќР°С€Р° РїРѕС‡С‚Р°: repairo.info@mail.ru</span></li>
                     </ul>
                 </div>
             </div>
             <div class="footer__bottom">
                 <p class="disclaimer">
-    Администрация сайта не несёт ответственности за возможные повреждения техники
-    и иные последствия, возникшие в результате самостоятельного ремонта по
-    материалам и инструкциям, размещённым на сайте. Все работы вы выполняете
-    на свой страх и риск.
+    РђРґРјРёРЅРёСЃС‚СЂР°С†РёСЏ СЃР°Р№С‚Р° РЅРµ РЅРµСЃС‘С‚ РѕС‚РІРµС‚СЃС‚РІРµРЅРЅРѕСЃС‚Рё Р·Р° РІРѕР·РјРѕР¶РЅС‹Рµ РїРѕРІСЂРµР¶РґРµРЅРёСЏ С‚РµС…РЅРёРєРё
+    Рё РёРЅС‹Рµ РїРѕСЃР»РµРґСЃС‚РІРёСЏ, РІРѕР·РЅРёРєС€РёРµ РІ СЂРµР·СѓР»СЊС‚Р°С‚Рµ СЃР°РјРѕСЃС‚РѕСЏС‚РµР»СЊРЅРѕРіРѕ СЂРµРјРѕРЅС‚Р° РїРѕ
+    РјР°С‚РµСЂРёР°Р»Р°Рј Рё РёРЅСЃС‚СЂСѓРєС†РёСЏРј, СЂР°Р·РјРµС‰С‘РЅРЅС‹Рј РЅР° СЃР°Р№С‚Рµ. Р’СЃРµ СЂР°Р±РѕС‚С‹ РІС‹ РІС‹РїРѕР»РЅСЏРµС‚Рµ
+    РЅР° СЃРІРѕР№ СЃС‚СЂР°С… Рё СЂРёСЃРє.
     </p>
-                <p class="footer__copyright">© 2026 Repairo. Все права защищены.</p>
+                <p class="footer__copyright">В© 2026 Repairo. Р’СЃРµ РїСЂР°РІР° Р·Р°С‰РёС‰РµРЅС‹.</p>
             </div>
         </div>
     </footer>
@@ -617,56 +658,56 @@
 {
   "@context": "https://schema.org",
   "@type": "HowTo",
-  "name": "Эмуляция Sega Dreamcast на Nintendo Switch",
-  "description": "Пошаговая инструкция: Эмуляция Sega Dreamcast на Nintendo Switch. Включите",
+  "name": "Р­РјСѓР»СЏС†РёСЏ Sega Dreamcast РЅР° Nintendo Switch",
+  "description": "РџРѕС€Р°РіРѕРІР°СЏ РёРЅСЃС‚СЂСѓРєС†РёСЏ: Р­РјСѓР»СЏС†РёСЏ Sega Dreamcast РЅР° Nintendo Switch. Р’РєР»СЋС‡РёС‚Рµ",
   "totalTime": "PT30M",
   "step": [
     {
       "@type": "HowToStep",
-      "name": "Почему Nintendo Switch подходит для эмуляции Dreamcast?",
-      "text": "Почему Nintendo Switch подходит для эмуляции Dreamcast?",
+      "name": "РџРѕС‡РµРјСѓ Nintendo Switch РїРѕРґС…РѕРґРёС‚ РґР»СЏ СЌРјСѓР»СЏС†РёРё Dreamcast?",
+      "text": "РџРѕС‡РµРјСѓ Nintendo Switch РїРѕРґС…РѕРґРёС‚ РґР»СЏ СЌРјСѓР»СЏС†РёРё Dreamcast?",
       "url": "#step-1"
     },
     {
       "@type": "HowToStep",
-      "name": "Таблица: сравнение эмуляторов Dreamcast для Switch",
-      "text": "Таблица: сравнение эмуляторов Dreamcast для Switch",
+      "name": "РўР°Р±Р»РёС†Р°: СЃСЂР°РІРЅРµРЅРёРµ СЌРјСѓР»СЏС‚РѕСЂРѕРІ Dreamcast РґР»СЏ Switch",
+      "text": "РўР°Р±Р»РёС†Р°: СЃСЂР°РІРЅРµРЅРёРµ СЌРјСѓР»СЏС‚РѕСЂРѕРІ Dreamcast РґР»СЏ Switch",
       "url": "#step-2"
     },
     {
       "@type": "HowToStep",
-      "name": "Пошаговая инструкция: установка Flycast 2.5",
-      "text": "Пошаговая инструкция: установка Flycast 2.5",
+      "name": "РџРѕС€Р°РіРѕРІР°СЏ РёРЅСЃС‚СЂСѓРєС†РёСЏ: СѓСЃС‚Р°РЅРѕРІРєР° Flycast 2.5",
+      "text": "РџРѕС€Р°РіРѕРІР°СЏ РёРЅСЃС‚СЂСѓРєС†РёСЏ: СѓСЃС‚Р°РЅРѕРІРєР° Flycast 2.5",
       "url": "#step-3"
     },
     {
       "@type": "HowToStep",
-      "name": "Оптимизация производительности",
-      "text": "Оптимизация производительности",
+      "name": "РћРїС‚РёРјРёР·Р°С†РёСЏ РїСЂРѕРёР·РІРѕРґРёС‚РµР»СЊРЅРѕСЃС‚Рё",
+      "text": "РћРїС‚РёРјРёР·Р°С†РёСЏ РїСЂРѕРёР·РІРѕРґРёС‚РµР»СЊРЅРѕСЃС‚Рё",
       "url": "#step-4"
     },
     {
       "@type": "HowToStep",
-      "name": "Совместимость игр: топ-10 хитов",
-      "text": "Совместимость игр: топ-10 хитов",
+      "name": "РЎРѕРІРјРµСЃС‚РёРјРѕСЃС‚СЊ РёРіСЂ: С‚РѕРї-10 С…РёС‚РѕРІ",
+      "text": "РЎРѕРІРјРµСЃС‚РёРјРѕСЃС‚СЊ РёРіСЂ: С‚РѕРї-10 С…РёС‚РѕРІ",
       "url": "#step-5"
     },
     {
       "@type": "HowToStep",
-      "name": "Настройка управления",
-      "text": "Настройка управления",
+      "name": "РќР°СЃС‚СЂРѕР№РєР° СѓРїСЂР°РІР»РµРЅРёСЏ",
+      "text": "РќР°СЃС‚СЂРѕР№РєР° СѓРїСЂР°РІР»РµРЅРёСЏ",
       "url": "#step-6"
     },
     {
       "@type": "HowToStep",
-      "name": "Частые проблемы и решения",
-      "text": "Частые проблемы и решения",
+      "name": "Р§Р°СЃС‚С‹Рµ РїСЂРѕР±Р»РµРјС‹ Рё СЂРµС€РµРЅРёСЏ",
+      "text": "Р§Р°СЃС‚С‹Рµ РїСЂРѕР±Р»РµРјС‹ Рё СЂРµС€РµРЅРёСЏ",
       "url": "#step-7"
     },
     {
       "@type": "HowToStep",
-      "name": "Будущее эмуляции: тренды 2025-2026",
-      "text": "Будущее эмуляции: тренды 2025-2026",
+      "name": "Р‘СѓРґСѓС‰РµРµ СЌРјСѓР»СЏС†РёРё: С‚СЂРµРЅРґС‹ 2025-2026",
+      "text": "Р‘СѓРґСѓС‰РµРµ СЌРјСѓР»СЏС†РёРё: С‚СЂРµРЅРґС‹ 2025-2026",
       "url": "#step-8"
     }
   ],
@@ -677,8 +718,4 @@
 <script src="../cookie-consent.js"></script>
 </body>
 </html>
-
-
-
-
 

@@ -4,8 +4,9 @@
 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>При включении Eevee Cycles ноутбук резко начинает троттлить </title>
-    <meta name="description" content="">
+  <title>РџСЂРё РІРєР»СЋС‡РµРЅРёРё Eevee Cycles РЅРѕСѓС‚Р±СѓРє СЂРµР·РєРѕ РЅР°С‡РёРЅР°РµС‚ С‚СЂРѕС‚С‚Р»РёС‚СЊ Рё РІРёСЃРЅСѓС‚СЊ | Р­РєСЃРїРµСЂС‚РЅС‹Р№ РјРµРіР°РіР°Р№Рґ</title>
+    <meta name="description" content="{{ description }}">
+    <meta name="description" content="РџРѕС€Р°РіРѕРІР°СЏ РёРЅСЃС‚СЂСѓРєС†РёСЏ: РџСЂРё РІРєР»СЋС‡РµРЅРёРё Eevee Cycles РЅРѕСѓС‚Р±СѓРє СЂРµР·РєРѕ РЅР°С‡РёРЅР°РµС‚ С‚СЂРѕС‚С‚Р»РёС‚СЊ Рё РІРёСЃРЅСѓС‚СЊ вЂ” Р­РєСЃРїРµСЂС‚РЅС‹Р№ РјРµРіР°РіР°Р№Рґ. РџСЂРёС‡РёРЅС‹: РЅР°РіСЂСѓР·РєР°, РЅР°СЃС‚СЂРѕР№РєРё, РѕР±РѕСЂСѓРґРѕРІР°РЅРёРµ. Р РµС€РµРЅРёСЏ: РѕРїС‚РёРјРёР·Р°С†РёСЏ, РѕР±РЅРѕРІР»РµРЅРёРµ, РѕС…Р»Р°Р¶РґРµРЅРёРµ.">
 
   <link rel="stylesheet" href="../styles.css" />
   <link rel="stylesheet" href="../styles-header.css" />
@@ -13,25 +14,36 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <style>
     .guide-content { line-height: 1.7; color: var(--text); }
-    .guide-content h2 { color: var(--primary); margin-top: 30px; margin-bottom: 15px; font-size: 1.5rem; }
-    .guide-content h3 { color: var(--primary-dark); margin-top: 25px; margin-bottom: 12px; font-size: 1.2rem; }
+    .guide-content h2 { color: var(--primary); margin-top: 30px; margin-bottom: 15px; font-size: 1.6rem; }
+    .guide-content h3 { color: var(--primary-dark); margin-top: 25px; margin-bottom: 12px; font-size: 1.25rem; }
     .guide-image-block { margin: 20px 0; padding: 15px; background: var(--background); border-radius: var(--border-radius); border: 1px solid var(--border); text-align: center; }
     .guide-image-block img { max-width: 100%; height: auto; border-radius: 6px; border: 1px solid var(--border); }
     .image-caption { margin-top: 10px; font-size: 0.85rem; color: var(--text-light); font-style: italic; }
-    .pro-tips { background: rgba(3, 74, 79, 0.05); padding: 15px; border-radius: 6px; margin: 20px 0; }
-    .pro-tips h4 { color: var(--primary); margin-top: 0; margin-bottom: 12px; font-size: 1.1rem; }
-    .tip-item { display: flex; gap: 8px; margin-bottom: 8px; align-items: flex-start; }
+    .pro-tips { background: rgba(3, 74, 79, 0.05); padding: 18px; border-radius: 8px; margin: 25px 0; }
+    .pro-tips h4 { color: var(--primary); margin-top: 0; margin-bottom: 12px; font-size: 1.15rem; }
+    .tip-item { display: flex; gap: 10px; margin-bottom: 10px; align-items: flex-start; }
+    .tip-item i { margin-top: 3px; }
     table { width: 100%; border-collapse: collapse; margin: 20px 0; }
-    th, td { border: 1px solid var(--border); padding: 8px; text-align: left; }
+    th, td { border: 1px solid var(--border); padding: 8px; text-align: left; vertical-align: top; }
     th { background: var(--background-light); }
-    .highlight { background: #f5f7fa; border-left: 4px solid #2d9cdb; padding: 10px 15px; margin: 20px 0; }
-    .faq-section ul { margin-left: 1em; }
-    .block-section { margin-bottom: 2em; }
+    code { background: var(--background-light); padding: 2px 4px; border-radius: 4px; font-size: 0.9em; }
+    ul, ol { margin-left: 18px; }
     @media (max-width: 768px) {
       .guide-content h2 { font-size: 1.4rem; margin-top: 25px; }
+      .guide-content h3 { font-size: 1.15rem; }
       .guide-image-block { padding: 12px; margin: 15px 0; }
       table, th, td { font-size: 0.95rem; }
     }
+
+    /* РЇРЅРґРµРєСЃ РњР°СЂРєРµС‚ СЂРµРєР»Р°РјРЅС‹Р№ Р±Р°РЅРЅРµСЂ */
+    .ym-hero-link {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+      max-width: 100%;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
     /* Р“РѕСЂРёР·РѕРЅС‚Р°Р»СЊРЅС‹Р№ Р±Р°РЅРЅРµСЂ-РєР°СЂС‚РѕС‡РєР° */
     .ym-hero-banner {
       width: 100%;
@@ -107,553 +119,328 @@
     }
 
     /* Р РµР№С‚РёРЅРі */
-    .ym-hero-top {
+    .ym-hero-rating {
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      gap: 8px;
-    }
-
-    .ym-hero-rating {
-      font-size: 13px;
-      font-weight: 500;
-      color: #111827;
-      background: #f9fafb;
-      border-radius: 999px;
-      padding: 4px 10px;
-    }
-
-    .ym-hero-rating-count {
+      gap: 4px;
+      font-size: 12px;
       color: #6b7280;
     }
 
-    /* Р¤РёРѕР»РµС‚РѕРІР°СЏ РєРЅРѕРїРєР° */
-    .ym-hero-button {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 9px 16px;
-      border-radius: 999px;
-      border: none;
-      background: #6a00ff;
-      color: #ffffff;
-      font-size: 14px;
-      font-weight: 600;
-      cursor: pointer;
-      box-shadow: 0 2px 6px rgba(88, 28, 135, 0.35);
-      transition: background 0.15s ease, transform 0.15s ease,
-                  box-shadow 0.15s ease;
-    }
-    .ym-hero-button::after {
-      content: "в†’";
-      margin-left: 6px;
-      font-size: 14px;
-    }
-    .ym-hero-button:hover {
-      background: #7c3aed;
-      transform: translateY(-1px);
-      box-shadow: 0 4px 10px rgba(88, 28, 135, 0.45);
+    .ym-hero-stars {
+      display: flex;
+      gap: 1px;
     }
 
-    /* Р®СЂРёРґРёС‡РµСЃРєРёР№ Р±Р»РѕРє */
-    .ym-hero-legal {
-      margin-top: 6px;
-      max-width: 600px;
+    .ym-hero-star {
+      width: 12px;
+      height: 12px;
+      fill: #fbbf24;
+    }
+
+    .ym-hero-reviews {
       font-size: 11px;
-      line-height: 1.3;
-      color: #6b7280;
-      margin-left: auto;
-      margin-right: auto;
+      color: #9ca3af;
     }
 
-    /* РђРґР°РїС‚РёРІ */
-    @media (max-width: 480px) {
+    /* Р¦РµРЅР° */
+    .ym-hero-price {
+      font-size: 16px;
+      font-weight: 700;
+      color: #111827;
+      margin: 0;
+    }
+
+    /* РљРЅРѕРїРєР° */
+    .ym-hero-button {
+      background: #007bff;
+      color: #ffffff;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background 0.2s ease;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .ym-hero-button:hover {
+      background: #0056b3;
+    }
+
+    /* РђРґР°РїС‚РёРІРЅРѕСЃС‚СЊ */
+    @media (max-width: 768px) {
       .ym-hero-banner {
-        max-width: 100%;
-        margin: 20px 0;
+        flex-direction: row;
+        min-height: auto;
       }
+
       .ym-hero-images {
-        height: 100px;
+        width: 120px;
+        height: auto;
+        flex-shrink: 0;
       }
+
       .ym-hero-content {
-        padding: 12px 12px;
+        flex: 1;
+        padding: 12px 16px;
       }
+
       .ym-hero-title {
         font-size: 13px;
       }
+
+      .ym-hero-price {
+        font-size: 15px;
+      }
+
       .ym-hero-button {
-        font-size: 13px;
-        padding: 8px 14px;
-      }
-      .ym-hero-legal {
-        font-size: 10px;
-      }
-    }
-    /* Telegram СЂРµРєР»Р°РјРЅС‹Р№ Р±Р°РЅРЅРµСЂ */
-    .telegram-banner {
-      display: flex;
-      justify-content: center;
-      text-decoration: none;
-      color: inherit;
-      width: 100%;
-      margin: 40px 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    }
-
-    .telegram-banner-container {
-      width: 100%;
-      max-width: 500px;
-      min-height: 120px;
-      border-radius: 16px;
-      background: linear-gradient(135deg, #0088cc 0%, #005f8f 100%);
-      border: 1px solid #005f8f;
-      display: flex;
-      align-items: center;
-      padding: 20px;
-      box-shadow: 0 4px 16px rgba(0, 136, 204, 0.2);
-      overflow: hidden;
-      box-sizing: border-box;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-
-    .telegram-banner-container:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(0, 136, 204, 0.3);
-    }
-
-    .telegram-logo {
-      width: 60px;
-      height: 60px;
-      min-width: 60px;
-      background: #ffffff;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-right: 20px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    }
-
-    .telegram-logo svg {
-      width: 32px;
-      height: 32px;
-      fill: #0088cc;
-    }
-
-    .telegram-content {
-      flex: 1;
-      color: #ffffff;
-    }
-
-    .telegram-title {
-      font-size: 16px;
-      font-weight: 600;
-      margin: 0 0 8px 0;
-      line-height: 1.3;
-    }
-
-    .telegram-subtitle {
-      font-size: 14px;
-      opacity: 0.9;
-      margin: 0 0 12px 0;
-      line-height: 1.4;
-    }
-
-    .telegram-button {
-      display: inline-flex;
-      align-items: center;
-      padding: 8px 16px;
-      background: #ffffff;
-      color: #0088cc;
-      border-radius: 20px;
-      font-size: 14px;
-      font-weight: 600;
-      text-decoration: none;
-      transition: background 0.2s ease, transform 0.2s ease;
-    }
-
-    .telegram-button:hover {
-      background: #f0f8ff;
-      transform: scale(1.05);
-    }
-
-    .telegram-button svg {
-      width: 16px;
-      height: 16px;
-      margin-left: 6px;
-      fill: #0088cc;
-    }
-
-    /* РђРґР°РїС‚РёРІ РґР»СЏ РјРѕР±РёР»СЊРЅС‹С… */
-    @media (max-width: 480px) {
-      .telegram-banner-container {
-        max-width: 100%;
-        margin: 20px 0;
-        padding: 15px;
-        min-height: 100px;
-      }
-      .telegram-logo {
-        width: 50px;
-        height: 50px;
-        min-width: 50px;
-        margin-right: 15px;
-      }
-      .telegram-logo svg {
-        width: 26px;
-        height: 26px;
-      }
-      .telegram-title {
-        font-size: 14px;
-      }
-      .telegram-subtitle {
-        font-size: 12px;
-      }
-      .telegram-button {
-        font-size: 12px;
-        padding: 6px 12px;
+        padding: 6px 10px;
+        font-size: 11px;
       }
     }
 
-
-
+    /* РЎРєСЂС‹С‚С‹Р№ Р±Р°РЅРЅРµСЂ РґР»СЏ РґРµСЃРєС‚РѕРїР° */
+    @media (min-width: 769px) {
+      .ym-hero-link {
+        display: none !important;
+      }
+    }
   </style>
   <script async src="https://timeweb.cloud/api/v1/cloud-ai/agents/3cc03620-d051-4d8d-b5af-f7b6cd083a35/embed.js?collapsed=true"></script>
 </head>
 <body>
-  <header class="header">
-    <div class="container">
-      <div class="header__inner">
-        <a href="../index.html" class="logo">
-          <span class="logo__icon"></span>
-          <span class="logo__text">GeoExpert</span>
-        </a>
-        <nav class="nav">
-          <ul class="nav__list">
-            <li><a href="../cameras.html" class="nav__link">РљР°РјРµСЂС‹</a></li>
-            <li><a href="../drones.html" class="nav__link">Р”СЂРѕРЅС‹</a></li>
-            <li><a href="../workflow.html" class="nav__link">Workflow</a></li>
-          </ul>
-        </nav>
+  <header>
+    <div class="header-content">
+      <a href="/" class="logo">
+        <i class="fas fa-tools"></i>
+        FixTech
+      </a>
+      <nav class="nav-links">
+        <a href="/">Р“Р»Р°РІРЅР°СЏ</a>
+        <a href="/articles">Р’СЃРµ СЃС‚Р°С‚СЊРё</a>
+        <a href="/smartphones">РЎРјР°СЂС‚С„РѕРЅС‹</a>
+        <a href="/laptops">РќРѕСѓС‚Р±СѓРєРё</a>
+        <a href="/tv">РўРµР»РµРІРёР·РѕСЂС‹</a>
+        <a href="/cameras">РљР°РјРµСЂС‹</a>
+        <a href="/consoles">РљРѕРЅСЃРѕР»Рё</a>
+        <a href="/auto-electronics">РђРІС‚РѕСЌР»РµРєС‚СЂРѕРЅРёРєР°</a>
+        <a href="/small-appliances">РњРµР»РєР°СЏ С‚РµС…РЅРёРєР°</a>
+        <a href="/large-appliances">РљСЂСѓРїРЅР°СЏ С‚РµС…РЅРёРєР°</a>
+      </nav>
+      <div class="search-container">
+        <input type="text" id="search-input" placeholder="РџРѕРёСЃРє РїРѕ СЃР°Р№С‚Сѓ..." />
+        <button id="search-button"><i class="fas fa-search"></i></button>
       </div>
     </div>
   </header>
 
   <main class="guide-container">
     <div class="guide-content">
-      <h1>При включении Eevee Cycles ноутбук резко начинает троттлить и виснуть</h1>
-      <p>Когда при включении движков рендеринга Eevee или Cycles в Blender ноутбук начинает троттлить и виснуть, проблема связана с высокой нагрузкой на GPU. В этом экспертном мегагайде мы разберем все причины нестабильной работы рендер-движков и предоставим решения для стабильного использования.</p>
+      <h1>РџСЂРё РІРєР»СЋС‡РµРЅРёРё Eevee Cycles РЅРѕСѓС‚Р±СѓРє СЂРµР·РєРѕ РЅР°С‡РёРЅР°РµС‚ С‚СЂРѕС‚С‚Р»РёС‚СЊ Рё РІРёСЃРЅСѓС‚СЊ</h1>
+      <p>РљРѕРіРґР° РїСЂРё РІРєР»СЋС‡РµРЅРёРё РґРІРёР¶РєРѕРІ СЂРµРЅРґРµСЂРёРЅРіР° Eevee РёР»Рё Cycles РІ Blender РЅРѕСѓС‚Р±СѓРє РЅР°С‡РёРЅР°РµС‚ С‚СЂРѕС‚С‚Р»РёС‚СЊ Рё РІРёСЃРЅСѓС‚СЊ, РїСЂРѕР±Р»РµРјР° СЃРІСЏР·Р°РЅР° СЃ РІС‹СЃРѕРєРѕР№ РЅР°РіСЂСѓР·РєРѕР№ РЅР° GPU. Р’ СЌС‚РѕРј СЌРєСЃРїРµСЂС‚РЅРѕРј РјРµРіР°РіР°Р№РґРµ РјС‹ СЂР°Р·Р±РµСЂРµРј РІСЃРµ РїСЂРёС‡РёРЅС‹ РЅРµСЃС‚Р°Р±РёР»СЊРЅРѕР№ СЂР°Р±РѕС‚С‹ СЂРµРЅРґРµСЂ-РґРІРёР¶РєРѕРІ Рё РїСЂРµРґРѕСЃС‚Р°РІРёРј СЂРµС€РµРЅРёСЏ РґР»СЏ СЃС‚Р°Р±РёР»СЊРЅРѕРіРѕ РёСЃРїРѕР»СЊР·РѕРІР°РЅРёСЏ.</p>
 
-      <h2>Признаки проблемы</h2>
+      <h2>РџСЂРёР·РЅР°РєРё РїСЂРѕР±Р»РµРјС‹</h2>
       <ul>
-        <li>Троттлинг при включении Eevee/Cycles</li>
-        <li>Ноутбук зависает</li>
-        <li>Частоты GPU падают</li>
-        <li>Работает на низких настройках</li>
-        <li>Перегрев компонентов</li>
+        <li>РўСЂРѕС‚С‚Р»РёРЅРі РїСЂРё РІРєР»СЋС‡РµРЅРёРё Eevee/Cycles</li>
+        <li>РќРѕСѓС‚Р±СѓРє Р·Р°РІРёСЃР°РµС‚</li>
+        <li>Р§Р°СЃС‚РѕС‚С‹ GPU РїР°РґР°СЋС‚</li>
+        <li>Р Р°Р±РѕС‚Р°РµС‚ РЅР° РЅРёР·РєРёС… РЅР°СЃС‚СЂРѕР№РєР°С…</li>
+        <li>РџРµСЂРµРіСЂРµРІ РєРѕРјРїРѕРЅРµРЅС‚РѕРІ</li>
       </ul>
 
-      <h2>Основные причины</h2>
+      <h2>РћСЃРЅРѕРІРЅС‹Рµ РїСЂРёС‡РёРЅС‹</h2>
       <table>
         <tr>
-          <th>Причина</th>
-          <th>Вероятность</th>
-          <th>Характерные признаки</th>
+          <th>РџСЂРёС‡РёРЅР°</th>
+          <th>Р’РµСЂРѕСЏС‚РЅРѕСЃС‚СЊ</th>
+          <th>РҐР°СЂР°РєС‚РµСЂРЅС‹Рµ РїСЂРёР·РЅР°РєРё</th>
         </tr>
         <tr>
-          <td>Перегрев GPU</td>
+          <td>РџРµСЂРµРіСЂРµРІ GPU</td>
           <td>35%</td>
-          <td>Работает после охлаждения</td>
+          <td>Р Р°Р±РѕС‚Р°РµС‚ РїРѕСЃР»Рµ РѕС…Р»Р°Р¶РґРµРЅРёСЏ</td>
         </tr>
         <tr>
-          <td>Настройки рендера</td>
+          <td>РќР°СЃС‚СЂРѕР№РєРё СЂРµРЅРґРµСЂР°</td>
           <td>25%</td>
-          <td>Работает после оптимизации</td>
+          <td>Р Р°Р±РѕС‚Р°РµС‚ РїРѕСЃР»Рµ РѕРїС‚РёРјРёР·Р°С†РёРё</td>
         </tr>
         <tr>
-          <td>Драйверы GPU</td>
+          <td>Р”СЂР°Р№РІРµСЂС‹ GPU</td>
           <td>20%</td>
-          <td>Работает после обновления</td>
+          <td>Р Р°Р±РѕС‚Р°РµС‚ РїРѕСЃР»Рµ РѕР±РЅРѕРІР»РµРЅРёСЏ</td>
         </tr>
         <tr>
-          <td>Энергосбережение</td>
+          <td>Р­РЅРµСЂРіРѕСЃР±РµСЂРµР¶РµРЅРёРµ</td>
           <td>15%</td>
-          <td>Работает на высокой производительности</td>
+          <td>Р Р°Р±РѕС‚Р°РµС‚ РЅР° РІС‹СЃРѕРєРѕР№ РїСЂРѕРёР·РІРѕРґРёС‚РµР»СЊРЅРѕСЃС‚Рё</td>
         </tr>
         <tr>
-          <td>Повреждение GPU</td>
+          <td>РџРѕРІСЂРµР¶РґРµРЅРёРµ GPU</td>
           <td>4%</td>
-          <td>Не работает после всех решений</td>
+          <td>РќРµ СЂР°Р±РѕС‚Р°РµС‚ РїРѕСЃР»Рµ РІСЃРµС… СЂРµС€РµРЅРёР№</td>
         </tr>
         <tr>
-          <td>Недостаток питания</td>
+          <td>РќРµРґРѕСЃС‚Р°С‚РѕРє РїРёС‚Р°РЅРёСЏ</td>
           <td>1%</td>
-          <td>Работает от сети</td>
+          <td>Р Р°Р±РѕС‚Р°РµС‚ РѕС‚ СЃРµС‚Рё</td>
         </tr>
       </table>
 
-      <h2>Диагностика проблемы</h2>
-      <h3>Мониторинг температуры</h3>
+      <h2>Р”РёР°РіРЅРѕСЃС‚РёРєР° РїСЂРѕР±Р»РµРјС‹</h2>
+      <h3>РњРѕРЅРёС‚РѕСЂРёРЅРі С‚РµРјРїРµСЂР°С‚СѓСЂС‹</h3>
       <ol>
-        <li>HWMonitor или MSI Afterburner</li>
-        <li>Измерьте температуру GPU при включении рендера</li>
-        <li>Если >90°C - перегрев</li>
+        <li>HWMonitor РёР»Рё MSI Afterburner</li>
+        <li>РР·РјРµСЂСЊС‚Рµ С‚РµРјРїРµСЂР°С‚СѓСЂСѓ GPU РїСЂРё РІРєР»СЋС‡РµРЅРёРё СЂРµРЅРґРµСЂР°</li>
+        <li>Р•СЃР»Рё >90В°C - РїРµСЂРµРіСЂРµРІ</li>
       </ol>
 
       <h3>ThrottleStop</h3>
       <ol>
-        <li>Запустите ThrottleStop</li>
-        <li>Посмотрите статус троттлинга</li>
-        <li>BD PROCHOT активен</li>
+        <li>Р—Р°РїСѓСЃС‚РёС‚Рµ ThrottleStop</li>
+        <li>РџРѕСЃРјРѕС‚СЂРёС‚Рµ СЃС‚Р°С‚СѓСЃ С‚СЂРѕС‚С‚Р»РёРЅРіР°</li>
+        <li>BD PROCHOT Р°РєС‚РёРІРµРЅ</li>
       </ol>
 
-      <h2>Решение 1: Охлаждение ноутбука</h2>
-      <h3>Чистка от пыли</h3>
+      <h2>Р РµС€РµРЅРёРµ 1: РћС…Р»Р°Р¶РґРµРЅРёРµ РЅРѕСѓС‚Р±СѓРєР°</h2>
+      <h3>Р§РёСЃС‚РєР° РѕС‚ РїС‹Р»Рё</h3>
       <ol>
-        <li>Разберите ноутбук</li>
-        <li>Очистите радиаторы и кулер</li>
-        <li>Замените термопасту</li>
+        <li>Р Р°Р·Р±РµСЂРёС‚Рµ РЅРѕСѓС‚Р±СѓРє</li>
+        <li>РћС‡РёСЃС‚РёС‚Рµ СЂР°РґРёР°С‚РѕСЂС‹ Рё РєСѓР»РµСЂ</li>
+        <li>Р—Р°РјРµРЅРёС‚Рµ С‚РµСЂРјРѕРїР°СЃС‚Сѓ</li>
       </ol>
 
-      <h3>Охлаждающая подставка</h3>
+      <h3>РћС…Р»Р°Р¶РґР°СЋС‰Р°СЏ РїРѕРґСЃС‚Р°РІРєР°</h3>
       <ol>
-        <li>Используйте активную подставку</li>
-        <li>Улучшите циркуляцию воздуха</li>
+        <li>РСЃРїРѕР»СЊР·СѓР№С‚Рµ Р°РєС‚РёРІРЅСѓСЋ РїРѕРґСЃС‚Р°РІРєСѓ</li>
+        <li>РЈР»СѓС‡С€РёС‚Рµ С†РёСЂРєСѓР»СЏС†РёСЋ РІРѕР·РґСѓС…Р°</li>
       </ol>
 
-      <h2>Решение 2: Настройки рендера</h2>
+      <h2>Р РµС€РµРЅРёРµ 2: РќР°СЃС‚СЂРѕР№РєРё СЂРµРЅРґРµСЂР°</h2>
       <h3>Eevee</h3>
       <ol>
-        <li>Properties > Render > Eevee</li>
-        <li>Sampling > Render > 64</li>
-        <li>Viewport > 16</li>
+        <li>Properties в†’ Render в†’ Eevee</li>
+        <li>Sampling в†’ Render в†’ 64</li>
+        <li>Viewport в†’ 16</li>
       </ol>
 
       <h3>Cycles</h3>
       <ol>
-        <li>Device > GPU Compute</li>
-        <li>Samples > 128</li>
-        <li>Tile Size > 128x128</li>
+        <li>Device в†’ GPU Compute</li>
+        <li>Samples в†’ 128</li>
+        <li>Tile Size в†’ 128x128</li>
       </ol>
 
-      <h2>Решение 3: Обновление драйверов</h2>
-      <h3>Драйверы NVIDIA</h3>
+      <h2>Р РµС€РµРЅРёРµ 3: РћР±РЅРѕРІР»РµРЅРёРµ РґСЂР°Р№РІРµСЂРѕРІ</h2>
+      <h3>Р”СЂР°Р№РІРµСЂС‹ NVIDIA</h3>
       <ol>
-        <li>GeForce Experience > Обновления</li>
-        <li>Установите Studio Driver</li>
-        <li>Включите экспериментальные функции</li>
+        <li>GeForce Experience в†’ РћР±РЅРѕРІР»РµРЅРёСЏ</li>
+        <li>РЈСЃС‚Р°РЅРѕРІРёС‚Рµ Studio Driver</li>
+        <li>Р’РєР»СЋС‡РёС‚Рµ СЌРєСЃРїРµСЂРёРјРµРЅС‚Р°Р»СЊРЅС‹Рµ С„СѓРЅРєС†РёРё</li>
       </ol>
 
-      <h3>Драйверы AMD</h3>
+      <h3>Р”СЂР°Р№РІРµСЂС‹ AMD</h3>
       <ol>
-        <li>AMD Radeon Software > Обновления</li>
-        <li>Установите последние версии</li>
+        <li>AMD Radeon Software в†’ РћР±РЅРѕРІР»РµРЅРёСЏ</li>
+        <li>РЈСЃС‚Р°РЅРѕРІРёС‚Рµ РїРѕСЃР»РµРґРЅРёРµ РІРµСЂСЃРёРё</li>
       </ol>
 
-      <h2>Решение 4: Настройки электропитания</h2>
-      <h3>Высокая производительность</h3>
+      <h2>Р РµС€РµРЅРёРµ 4: РќР°СЃС‚СЂРѕР№РєРё СЌР»РµРєС‚СЂРѕРїРёС‚Р°РЅРёСЏ</h2>
+      <h3>Р’С‹СЃРѕРєР°СЏ РїСЂРѕРёР·РІРѕРґРёС‚РµР»СЊРЅРѕСЃС‚СЊ</h3>
       <ol>
-        <li>Панель управления > Электропитание</li>
-        <li>Выбрать "Высокая производительность"</li>
-        <li>Отключить энергосбережение</li>
+        <li>РџР°РЅРµР»СЊ СѓРїСЂР°РІР»РµРЅРёСЏ в†’ Р­Р»РµРєС‚СЂРѕРїРёС‚Р°РЅРёРµ</li>
+        <li>Р’С‹Р±СЂР°С‚СЊ "Р’С‹СЃРѕРєР°СЏ РїСЂРѕРёР·РІРѕРґРёС‚РµР»СЊРЅРѕСЃС‚СЊ"</li>
+        <li>РћС‚РєР»СЋС‡РёС‚СЊ СЌРЅРµСЂРіРѕСЃР±РµСЂРµР¶РµРЅРёРµ</li>
       </ol>
 
-      <h2>Решение 5: Отключение троттлинга</h2>
+      <h2>Р РµС€РµРЅРёРµ 5: РћС‚РєР»СЋС‡РµРЅРёРµ С‚СЂРѕС‚С‚Р»РёРЅРіР°</h2>
       <h3>ThrottleStop</h3>
       <ol>
-        <li>Запустить ThrottleStop</li>
-        <li>Отключить BD PROCHOT</li>
-        <li>Установить множители на максимум</li>
+        <li>Р—Р°РїСѓСЃС‚РёС‚СЊ ThrottleStop</li>
+        <li>РћС‚РєР»СЋС‡РёС‚СЊ BD PROCHOT</li>
+        <li>РЈСЃС‚Р°РЅРѕРІРёС‚СЊ РјРЅРѕР¶РёС‚РµР»Рё РЅР° РјР°РєСЃРёРјСѓРј</li>
       </ol>
 
-      <h2>Решение 6: Оптимизация сцены</h2>
-      <h3>Упрощение</h3>
+      <h2>Р РµС€РµРЅРёРµ 6: РћРїС‚РёРјРёР·Р°С†РёСЏ СЃС†РµРЅС‹</h2>
+      <h3>РЈРїСЂРѕС‰РµРЅРёРµ</h3>
       <ol>
-        <li>Уменьшить количество объектов</li>
-        <li>Использовать низкополигональные модели</li>
-        <li>Отключить сложные материалы</li>
+        <li>РЈРјРµРЅСЊС€РёС‚СЊ РєРѕР»РёС‡РµСЃС‚РІРѕ РѕР±СЉРµРєС‚РѕРІ</li>
+        <li>РСЃРїРѕР»СЊР·РѕРІР°С‚СЊ РЅРёР·РєРѕРїРѕР»РёРіРѕРЅР°Р»СЊРЅС‹Рµ РјРѕРґРµР»Рё</li>
+        <li>РћС‚РєР»СЋС‡РёС‚СЊ СЃР»РѕР¶РЅС‹Рµ РјР°С‚РµСЂРёР°Р»С‹</li>
       </ol>
 
       <div class="pro-tips">
-        <h4><i class="fas fa-lightbulb"></i> Профессиональные советы</h4>
+        <h4><i class="fas fa-lightbulb"></i> РџСЂРѕС„РµСЃСЃРёРѕРЅР°Р»СЊРЅС‹Рµ СЃРѕРІРµС‚С‹</h4>
         <div class="tip-item">
           <i class="fas fa-fan"></i>
-          <span>Регулярно чистите ноутбук от пыли для предотвращения перегрева</span>
+          <span>Р РµРіСѓР»СЏСЂРЅРѕ С‡РёСЃС‚РёС‚Рµ РЅРѕСѓС‚Р±СѓРє РѕС‚ РїС‹Р»Рё РґР»СЏ РїСЂРµРґРѕС‚РІСЂР°С‰РµРЅРёСЏ РїРµСЂРµРіСЂРµРІР°</span>
         </div>
         <div class="tip-item">
           <i class="fas fa-tools"></i>
-          <span>Используйте ThrottleStop для отключения троттлинга</span>
+          <span>РСЃРїРѕР»СЊР·СѓР№С‚Рµ ThrottleStop РґР»СЏ РѕС‚РєР»СЋС‡РµРЅРёСЏ С‚СЂРѕС‚С‚Р»РёРЅРіР°</span>
         </div>
         <div class="tip-item">
           <i class="fas fa-bolt"></i>
-          <span>Всегда используйте план электропитания высокой производительности</span>
+          <span>Р’СЃРµРіРґР° РёСЃРїРѕР»СЊР·СѓР№С‚Рµ РїР»Р°РЅ СЌР»РµРєС‚СЂРѕРїРёС‚Р°РЅРёСЏ РІС‹СЃРѕРєРѕР№ РїСЂРѕРёР·РІРѕРґРёС‚РµР»СЊРЅРѕСЃС‚Рё</span>
         </div>
         <div class="tip-item">
           <i class="fas fa-cube"></i>
-          <span>Оптимизируйте сцены для снижения нагрузки на GPU</span>
+          <span>РћРїС‚РёРјРёР·РёСЂСѓР№С‚Рµ СЃС†РµРЅС‹ РґР»СЏ СЃРЅРёР¶РµРЅРёСЏ РЅР°РіСЂСѓР·РєРё РЅР° GPU</span>
         </div>
       </div>
 
-      <h2>Расширенные решения</h2>
-      <h3>Восстановление системы</h3>
+      <h2>Р Р°СЃС€РёСЂРµРЅРЅС‹Рµ СЂРµС€РµРЅРёСЏ</h2>
+      <h3>Р’РѕСЃСЃС‚Р°РЅРѕРІР»РµРЅРёРµ СЃРёСЃС‚РµРјС‹</h3>
       <ol>
-        <li>Win + R > rstrui</li>
-        <li>Выберите точку восстановления</li>
-        <li>Восстановите до появления проблемы</li>
+        <li>Win + R в†’ rstrui</li>
+        <li>Р’С‹Р±РµСЂРёС‚Рµ С‚РѕС‡РєСѓ РІРѕСЃСЃС‚Р°РЅРѕРІР»РµРЅРёСЏ</li>
+        <li>Р’РѕСЃСЃС‚Р°РЅРѕРІРёС‚Рµ РґРѕ РїРѕСЏРІР»РµРЅРёСЏ РїСЂРѕР±Р»РµРјС‹</li>
       </ol>
 
-      <h3>Замена охлаждения</h3>
+      <h3>Р—Р°РјРµРЅР° РѕС…Р»Р°Р¶РґРµРЅРёСЏ</h3>
       <ol>
-        <li>Если кулер неисправен</li>
-        <li>Замените на более эффективный</li>
-        <li>Обратитесь в сервис</li>
+        <li>Р•СЃР»Рё РєСѓР»РµСЂ РЅРµРёСЃРїСЂР°РІРµРЅ</li>
+        <li>Р—Р°РјРµРЅРёС‚Рµ РЅР° Р±РѕР»РµРµ СЌС„С„РµРєС‚РёРІРЅС‹Р№</li>
+        <li>РћР±СЂР°С‚РёС‚РµСЃСЊ РІ СЃРµСЂРІРёСЃ</li>
       </ol>
 
-      <h2>Частые вопросы</h2>
-      <h3>Почему ноутбук троттлит при рендере?</h3>
-      <p>Перегрев вызывает защитный механизм. Очистите от пыли и улучшите охлаждение.</p>
+      <h2>Р§Р°СЃС‚С‹Рµ РІРѕРїСЂРѕСЃС‹</h2>
+      <h3>РџРѕС‡РµРјСѓ РЅРѕСѓС‚Р±СѓРє С‚СЂРѕС‚С‚Р»РёС‚ РїСЂРё СЂРµРЅРґРµСЂРµ?</h3>
+      <p>РџРµСЂРµРіСЂРµРІ РІС‹Р·С‹РІР°РµС‚ Р·Р°С‰РёС‚РЅС‹Р№ РјРµС…Р°РЅРёР·Рј. РћС‡РёСЃС‚РёС‚Рµ РѕС‚ РїС‹Р»Рё Рё СѓР»СѓС‡С€РёС‚Рµ РѕС…Р»Р°Р¶РґРµРЅРёРµ.</p>
 
-      <h3>Можно ли использовать Cycles на ноутбуке?</h3>
-      <p>Да, но нужен мощный GPU и хорошее охлаждение. Eevee лучше для ноутбуков.</p>
+      <h3>РњРѕР¶РЅРѕ Р»Рё РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ Cycles РЅР° РЅРѕСѓС‚Р±СѓРєРµ?</h3>
+      <p>Р”Р°, РЅРѕ РЅСѓР¶РµРЅ РјРѕС‰РЅС‹Р№ GPU Рё С…РѕСЂРѕС€РµРµ РѕС…Р»Р°Р¶РґРµРЅРёРµ. Eevee Р»СѓС‡С€Рµ РґР»СЏ РЅРѕСѓС‚Р±СѓРєРѕРІ.</p>
 
-      <h3>Что делать при зависании?</h3>
-      <p>Оптимизируйте сцену и отключите троттлинг с помощью ThrottleStop.</p>
+      <h3>Р§С‚Рѕ РґРµР»Р°С‚СЊ РїСЂРё Р·Р°РІРёСЃР°РЅРёРё?</h3>
+      <p>РћРїС‚РёРјРёР·РёСЂСѓР№С‚Рµ СЃС†РµРЅСѓ Рё РѕС‚РєР»СЋС‡РёС‚Рµ С‚СЂРѕС‚С‚Р»РёРЅРі СЃ РїРѕРјРѕС‰СЊСЋ ThrottleStop.</p>
 
-      <h2>Когда нужна замена</h2>
+      <h2>РљРѕРіРґР° РЅСѓР¶РЅР° Р·Р°РјРµРЅР°</h2>
       <ul>
-        <li>GPU поврежден перегревом</li>
-        <li>Кулер неисправен</li>
-        <li>Все решения не помогли</li>
+        <li>GPU РїРѕРІСЂРµР¶РґРµРЅ РїРµСЂРµРіСЂРµРІРѕРј</li>
+        <li>РљСѓР»РµСЂ РЅРµРёСЃРїСЂР°РІРµРЅ</li>
+        <li>Р’СЃРµ СЂРµС€РµРЅРёСЏ РЅРµ РїРѕРјРѕРіР»Рё</li>
       </ul>
 
-      <p>В большинстве случаев проблема решается охлаждением и оптимизацией настроек рендера. Начните с чистки от пыли и использования охлаждающей подставки.</p>
+      <p>Р’ Р±РѕР»СЊС€РёРЅСЃС‚РІРµ СЃР»СѓС‡Р°РµРІ РїСЂРѕР±Р»РµРјР° СЂРµС€Р°РµС‚СЃСЏ РѕС…Р»Р°Р¶РґРµРЅРёРµРј Рё РѕРїС‚РёРјРёР·Р°С†РёРµР№ РЅР°СЃС‚СЂРѕРµРє СЂРµРЅРґРµСЂР°. РќР°С‡РЅРёС‚Рµ СЃ С‡РёСЃС‚РєРё РѕС‚ РїС‹Р»Рё Рё РёСЃРїРѕР»СЊР·РѕРІР°РЅРёСЏ РѕС…Р»Р°Р¶РґР°СЋС‰РµР№ РїРѕРґСЃС‚Р°РІРєРё.</p>
     </div>
   </main>
 
-      <footer class="footer">
-        <div class="container">
-            <div class="footer__grid">
-                <div class="footer__col footer__col--logo">
-                    <a href="../index.html" class="footer-logo">
-                        <span class="logo__icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M12 15L7 10H17L12 15Z" fill="currentColor"/>
-                                <path d="M12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3ZM12 19C8.13401 19 5 15.866 5 12C5 8.13401 8.13401 5 12 5C15.866 5 19 8.13401 19 12C19 15.866 15.866 19 12 19Z" fill="currentColor"/>
-                            </svg>
-                        </span>
-                        <span class="logo__text">Repairo</span>
-                    </a>
-                    <p class="footer__text">Помогаем ремонтировать электронику с 2024 года</p>
-                </div>
-                <div class="footer__col">
-                    <h3 class="footer__title">Разделы</h3>
-                    <ul class="footer__links">
-                        <li><a href="../index.html" class="footer__link">Главная</a></li>
-                        <li><a href="../index.html#categories" class="footer__link">Все гайды</a></li>
-                        <li><a href="../contacts.html" class="footer__link">Контакты</a></li>
-                    </ul>
-                </div>
-                <div class="footer__col">
-                    <h3 class="footer__title">Категории</h3>
-                    <ul class="footer__links">
-                        <li><a href="../tv.html" class="nav__link">Телевизоры</a></li>
-                        <li><a href="../cameras.html" class="nav__link">Фотоаппараты</a></li>
-                        <li><a href="../consoles.html" class="nav__link">Приставки</a></li>
-                        <li><a href="../laptops.html" class="nav__link">Ноутбуки</a></li>
-                        <li><a href="../smartphones.html" class="nav__link">Смартфоны</a></li>
-                        <li><a href="../small-appliances.html" class="nav__link">Мелкая техника</a></li>
-                        <li><a href="../large-appliances.html" class="nav__link">Бытовая техника</a></li>
-                        <li><a href="../auto-electronics.html" class="nav__link">Авто-Электроника</a></li>
-                    </ul>
-                </div>
-                <div class="footer__col">
-                    <h3 class="footer__title">Контакты</h3>
-                    <ul class="footer__links">
-                        <li><a href="https://t.me/RepairoRU" class="footer__link"><i class="fab fa-telegram"></i> Telegram</a></li>
-                        <li><span class="footer__link">Наша почта: repairo.info@mail.ru</span></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer__bottom">
-                <p class="disclaimer">
-    Администрация сайта не несёт ответственности за возможные повреждения техники
-    и иные последствия, возникшие в результате самостоятельного ремонта по
-    материалам и инструкциям, размещённым на сайте. Все работы вы выполняете
-    на свой страх и риск.
-    </p>
-                <p class="footer__copyright">© 2026 Repairo. Все права защищены.</p>
-            </div>
-        </div>
-    </footer>
-    <!-- Cookie Consent Banner -->
-    <script src="../script.js"></script>
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2024 FixTech. Р’СЃРµ РїСЂР°РІР° Р·Р°С‰РёС‰РµРЅС‹.</p>
+      <div class="footer-links">
+        <a href="/privacy">РљРѕРЅС„РёРґРµРЅС†РёР°Р»СЊРЅРѕСЃС‚СЊ</a>
+        <a href="/terms">РЈСЃР»РѕРІРёСЏ РёСЃРїРѕР»СЊР·РѕРІР°РЅРёСЏ</a>
+        <a href="/contact">РљРѕРЅС‚Р°РєС‚С‹</a>
+      </div>
+    </div>
+  </footer>
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "HowTo",
-  "name": "При включении Eevee Cycles ноутбук резко начинает троттлить и виснуть | Экспертный мегагайд",
-  "description": "",
-  "totalTime": "PT30M",
-  "step": [
-    {
-      "@type": "HowToStep",
-      "name": "Введение: почему Cyberpunk 2077 может тормозить на PS5 после патчей?",
-      "text": "Введение: почему Cyberpunk 2077 может тормозить на PS5 после патчей?",
-      "url": "#step-1"
-    },
-    {
-      "@type": "HowToStep",
-      "name": "Таблица: основные причины лагов и просадок FPS в Cyberpunk 2077 на PS5 после обновлений",
-      "text": "Таблица: основные причины лагов и просадок FPS в Cyberpunk 2077 на PS5 после обновлений",
-      "url": "#step-2"
-    },
-    {
-      "@type": "HowToStep",
-      "name": "Пошаговая инструкция: что делать, если Cyberpunk 2077 тормозит на PS5 после обновления",
-      "text": "Пошаговая инструкция: что делать, если Cyberpunk 2077 тормозит на PS5 после обновления",
-      "url": "#step-3"
-    },
-    {
-      "@type": "HowToStep",
-      "name": "Таблица: сравнение режимов графики и FPS в Cyberpunk 2077 на PS5",
-      "text": "Таблица: сравнение режимов графики и FPS в Cyberpunk 2077 на PS5",
-      "url": "#step-4"
-    },
-    {
-      "@type": "HowToStep",
-      "name": "Отзывы игроков и тесты Digital Foundry",
-      "text": "Отзывы игроков и тесты Digital Foundry",
-      "url": "#step-5"
-    },
-    {
-      "@type": "HowToStep",
-      "name": "Лайфхаки и советы по оптимизации Cyberpunk 2077 на PS5",
-      "text": "Лайфхаки и советы по оптимизации Cyberpunk 2077 на PS5",
-      "url": "#step-6"
-    },
-    {
-      "@type": "HowToStep",
-      "name": "FAQ – часто задаваемые вопросы о тормозах Cyberpunk 2077 на PS5",
-      "text": "FAQ – часто задаваемые вопросы о тормозах Cyberpunk 2077 на PS5",
-      "url": "#step-7"
-    },
-    {
-      "@type": "HowToStep",
-      "name": "Пошаговая инструкция: как восстановить базу данных PS5",
-      "text": "Пошаговая инструкция: как восстановить базу данных PS5",
-      "url": "#step-8"
-    }
-  ],
-  "image": "https://repairo.ru/https://mc.yandex.ru/watch/106225686"
-}
-</script>
-<!-- Cookie Consent Script -->
-<script src="../cookie-consent.js"></script>
+  <script src="../script.js"></script>
+  <script src="../search.js"></script>
 </body>
 </html>
-
-
-
-
-
-

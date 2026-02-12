@@ -4,8 +4,9 @@
 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Лучшие игры в PlayStation Plus Premium (2025) | Экспертный м</title>
-    <meta name="description" content="">
+  <title>Р›СѓС‡С€РёРµ РёРіСЂС‹ РІ PlayStation Plus Premium (2025) | Р­РєСЃРїРµСЂС‚РЅС‹Р№ РјРµРіР°РіР°Р№Рґ</title>
+    <meta name="description" content="{{ description }}">
+    <meta name="description" content="РџРѕС€Р°РіРѕРІР°СЏ РёРЅСЃС‚СЂСѓРєС†РёСЏ: Р›СѓС‡С€РёРµ РёРіСЂС‹ РІ PlayStation Plus Premium (2025). РџРѕРґРїРёСЃРєР° PlayStation Plus Premium РІ 2025 РіРѕРґСѓ вЂ” СЌС‚Рѕ Р±РѕР»РµРµ 800 РёРіСЂ РЅР° PS5 Рё PS4,.... РЎРѕРІРµ...">
 
   <link rel="stylesheet" href="../styles.css" />
   <link rel="stylesheet" href="../styles-header.css" />
@@ -21,17 +22,30 @@
     .pro-tips { background: rgba(3, 74, 79, 0.05); padding: 15px; border-radius: 6px; margin: 20px 0; }
     .pro-tips h4 { color: var(--primary); margin-top: 0; margin-bottom: 12px; font-size: 1.1rem; }
     .tip-item { display: flex; gap: 8px; margin-bottom: 8px; align-items: flex-start; }
+    .warning-block {
+      background: #fff3e0;
+      border-left: 5px solid #ff9100;
+      padding: 15px 18px;
+      margin: 22px 0;
+      border-radius: 7px;
+    }
     table { width: 100%; border-collapse: collapse; margin: 20px 0; }
     th, td { border: 1px solid var(--border); padding: 8px; text-align: left; }
     th { background: var(--background-light); }
-    .highlight { background: #f5f7fa; border-left: 4px solid #2d9cdb; padding: 10px 15px; margin: 20px 0; }
-    .faq-section ul { margin-left: 1em; }
-    .block-section { margin-bottom: 2em; }
     @media (max-width: 768px) {
       .guide-content h2 { font-size: 1.4rem; margin-top: 25px; }
       .guide-image-block { padding: 12px; margin: 15px 0; }
       table, th, td { font-size: 0.95rem; }
     }
+    /* РЇРЅРґРµРєСЃ РњР°СЂРєРµС‚ СЂРµРєР»Р°РјРЅС‹Р№ Р±Р°РЅРЅРµСЂ */
+    .ym-hero-link {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+      max-width: 100%;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
     /* Р“РѕСЂРёР·РѕРЅС‚Р°Р»СЊРЅС‹Р№ Р±Р°РЅРЅРµСЂ-РєР°СЂС‚РѕС‡РєР° */
     .ym-hero-banner {
       width: 100%;
@@ -144,11 +158,13 @@
       transition: background 0.15s ease, transform 0.15s ease,
                   box-shadow 0.15s ease;
     }
+
     .ym-hero-button::after {
       content: "в†’";
       margin-left: 6px;
       font-size: 14px;
     }
+
     .ym-hero-button:hover {
       background: #7c3aed;
       transform: translateY(-1px);
@@ -172,19 +188,24 @@
         max-width: 100%;
         margin: 20px 0;
       }
+
       .ym-hero-images {
         height: 100px;
       }
+
       .ym-hero-content {
         padding: 12px 12px;
       }
+
       .ym-hero-title {
         font-size: 13px;
       }
+
       .ym-hero-button {
         font-size: 13px;
         padding: 8px 14px;
       }
+
       .ym-hero-legal {
         font-size: 10px;
       }
@@ -292,22 +313,27 @@
         padding: 15px;
         min-height: 100px;
       }
+
       .telegram-logo {
         width: 50px;
         height: 50px;
         min-width: 50px;
         margin-right: 15px;
       }
+
       .telegram-logo svg {
         width: 26px;
         height: 26px;
       }
+
       .telegram-title {
         font-size: 14px;
       }
+
       .telegram-subtitle {
         font-size: 12px;
       }
+
       .telegram-button {
         font-size: 12px;
         padding: 6px 12px;
@@ -325,13 +351,15 @@
       <div class="header__inner">
         <a href="../index.html" class="logo">
           <span class="logo__icon"></span>
-          <span class="logo__text">GeoExpert</span>
+          <span class="logo__text">Repairo</span>
         </a>
         <nav class="nav">
           <ul class="nav__list">
-            <li><a href="../cameras.html" class="nav__link">РљР°РјРµСЂС‹</a></li>
-            <li><a href="../drones.html" class="nav__link">Р”СЂРѕРЅС‹</a></li>
-            <li><a href="../workflow.html" class="nav__link">Workflow</a></li>
+            <li><a href="../tv.html" class="nav__link">РўРµР»РµРІРёР·РѕСЂС‹</a></li>
+            <li><a href="../cameras.html" class="nav__link">Р¤РѕС‚РѕР°РїРїР°СЂР°С‚С‹</a></li>
+            <li><a href="../consoles.html" class="nav__link">РџСЂРёСЃС‚Р°РІРєРё</a></li>
+            <li><a href="../laptops.html" class="nav__link">РќРѕСѓС‚Р±СѓРєРё</a></li>
+            <li><a href="../smartphones.html" class="nav__link">РЎРјР°СЂС‚С„РѕРЅС‹</a></li>
           </ul>
         </nav>
       </div>
@@ -341,245 +369,258 @@
   <section class="guide-page">
     <div class="container">
       <div class="breadcrumbs">
-        <a href="../index.html">Главная</a>
+        <a href="../index.html">Р“Р»Р°РІРЅР°СЏ</a>
         <i class="fas fa-chevron-right"></i>
-        <a href="../consoles.html">Приставки</a>
+        <a href="../consoles.html">РџСЂРёСЃС‚Р°РІРєРё</a>
         <i class="fas fa-chevron-right"></i>
-        <span>Лучшие игры в PlayStation Plus Premium (2025)</span>
+        <span>Р›СѓС‡С€РёРµ РёРіСЂС‹ РІ PlayStation Plus Premium (2025)</span>
       </div>
 
-      <h1 class="section__title">Лучшие игры в PlayStation Plus Premium (2025)</h1>
+      <h1 class="section__title">Р›СѓС‡С€РёРµ РёРіСЂС‹ РІ PlayStation Plus Premium (2025)</h1>
 
       <div class="guide-meta">
-        <span><i class="fas fa-crown"></i> Экспертный гид: топ игр PS Plus Premium 2025, свежие релизы, классика, жанры, советы, лайфхаки, FAQ, таблицы, иллюстрация.</span>
+        <span><i class="fas fa-crown"></i> Р­РєСЃРїРµСЂС‚РЅС‹Р№ РіРёРґ: С‚РѕРї РёРіСЂ PS Plus Premium 2025, СЃРІРµР¶РёРµ СЂРµР»РёР·С‹, РєР»Р°СЃСЃРёРєР°, Р¶Р°РЅСЂС‹, СЃРѕРІРµС‚С‹, Р»Р°Р№С„С…Р°РєРё, FAQ, С‚Р°Р±Р»РёС†С‹, РёР»Р»СЋСЃС‚СЂР°С†РёСЏ.</span>
       </div>
 
       <div class="guide-image-block">
-        <img src="https://avatars.mds.yandex.net/get-shedevrum/15240802/img_eed5ec273c8511f0af1e827efa7d9939/orig" alt="Лучшие игры в PlayStation Plus Premium 2025">
+        <img src="https://avatars.mds.yandex.net/get-shedevrum/15240802/img_eed5ec273c8511f0af1e827efa7d9939/orig" alt="Р›СѓС‡С€РёРµ РёРіСЂС‹ РІ PlayStation Plus Premium 2025">
         <div class="image-caption">
-          Лучшие игры в PlayStation Plus Premium 2025: свежие релизы, культовая классика, эксклюзивы, пробные версии и хиты всех жанров.
+          Р›СѓС‡С€РёРµ РёРіСЂС‹ РІ PlayStation Plus Premium 2025: СЃРІРµР¶РёРµ СЂРµР»РёР·С‹, РєСѓР»СЊС‚РѕРІР°СЏ РєР»Р°СЃСЃРёРєР°, СЌРєСЃРєР»СЋР·РёРІС‹, РїСЂРѕР±РЅС‹Рµ РІРµСЂСЃРёРё Рё С…РёС‚С‹ РІСЃРµС… Р¶Р°РЅСЂРѕРІ.
         </div>
       </div>
 
       <div class="guide-content">
-        <!-- Яндекс Маркет рекламный блок -->
+        <!-- РЇРЅРґРµРєСЃ РњР°СЂРєРµС‚ СЂРµРєР»Р°РјРЅС‹Р№ Р±Р»РѕРє -->
         <a href="https://market.yandex.ru/catalog--bytovaia-tekhnika/54419/list?hid=198118&rs=eJwzUvjEKMvBILDwEKsEg8Kzbh6Nw4dZNS4D8c7lFhp9c1-wAQC3uAwP&clid=14635360&refid=rbck8fgamv681iu59go3iqxwddedl4x9&erid=5jtCeReNx12oajxS2bzShmZ&mclid=1003&distr_type=7&utm_source=partner_network&pp=900&utm_medium=link_list&utm_campaign=14635360"
            target="_blank"
            rel="noopener noreferrer sponsored"
+           class="ym-hero-link">
+          <div class="ym-hero-banner">
+            <div class="ym-hero-images">
+              <div class="ym-hero-image">
                 <img src="https://avatars.mds.yandex.net/get-mpic/14770882/2a00000197f4dbee777f8afddccaf44faa53/optimize"
-                     alt="Распродажа бытовой электроники 1">
+                     alt="Р Р°СЃРїСЂРѕРґР°Р¶Р° Р±С‹С‚РѕРІРѕР№ СЌР»РµРєС‚СЂРѕРЅРёРєРё 1">
               </div>
+              <div class="ym-hero-image">
                 <img src="https://avatars.mds.yandex.net/get-mpic/15580298/img_id8867318964670654684.jpeg/optimize"
-                     alt="Распродажа бытовой электроники 2">
+                     alt="Р Р°СЃРїСЂРѕРґР°Р¶Р° Р±С‹С‚РѕРІРѕР№ СЌР»РµРєС‚СЂРѕРЅРёРєРё 2">
               </div>
+              <div class="ym-hero-image">
                 <img src="https://avatars.mds.yandex.net/get-mpic/10096780/2a000001953b534fed2494e0b30fadd9b458/optimize"
-                     alt="Распродажа бытовой электроники 3">
+                     alt="Р Р°СЃРїСЂРѕРґР°Р¶Р° Р±С‹С‚РѕРІРѕР№ СЌР»РµРєС‚СЂРѕРЅРёРєРё 3">
               </div>
             </div>
-                  ? Выгодные предложения
+            <div class="ym-hero-content">
+              <h3 class="ym-hero-title">Р Р°СЃРїСЂРѕРґР°Р¶Р° Р±С‹С‚РѕРІРѕР№ СЌР»РµРєС‚СЂРѕРЅРёРєРё РЅР° РЇРЅРґРµРєСЃ РњР°СЂРєРµС‚Рµ</h3>
+              <div class="ym-hero-top">
+                <div class="ym-hero-rating">
+                  в­ђ Р’С‹РіРѕРґРЅС‹Рµ РїСЂРµРґР»РѕР¶РµРЅРёСЏ
+                  <span class="ym-hero-rating-count">РЎРєРёРґРєРё РґРѕ 50%</span>
                 </div>
               </div>
+              <button class="ym-hero-button">Р—Р° СЃРєРёРґРєР°РјРё</button>
             </div>
           </div>
-            Реклама. ООО "ЯНДЕКС", ИНН 7736207543. clid: 14635360, erid: 5jtCeReNx12oajxS2bzShmZ
+          <div class="ym-hero-legal">
+            Р РµРєР»Р°РјР°. РћРћРћ "РЇРќР”Р•РљРЎ", РРќРќ 7736207543. clid: 14635360, erid: 5jtCeReNx12oajxS2bzShmZ
           </div>
         </a>
 
-        <h2>Введение: почему PS Plus Premium — лучший выбор для геймера в 2025?</h2>
+        <h2>Р’РІРµРґРµРЅРёРµ: РїРѕС‡РµРјСѓ PS Plus Premium вЂ” Р»СѓС‡С€РёР№ РІС‹Р±РѕСЂ РґР»СЏ РіРµР№РјРµСЂР° РІ 2025?</h2>
         <p>
-          Подписка PlayStation Plus Premium в 2025 году — это более 800 игр на PS5 и PS4, включая новинки, классику, эксклюзивы, VR и пробные версии. Sony регулярно пополняет каталог свежими релизами, AAA-хитами, инди-открытиями и культовыми проектами прошлых лет. Premium — это максимальная свобода выбора и экономия: десятки тысяч рублей контента за одну подписку.
+          РџРѕРґРїРёСЃРєР° PlayStation Plus Premium РІ 2025 РіРѕРґСѓ вЂ” СЌС‚Рѕ Р±РѕР»РµРµ 800 РёРіСЂ РЅР° PS5 Рё PS4, РІРєР»СЋС‡Р°СЏ РЅРѕРІРёРЅРєРё, РєР»Р°СЃСЃРёРєСѓ, СЌРєСЃРєР»СЋР·РёРІС‹, VR Рё РїСЂРѕР±РЅС‹Рµ РІРµСЂСЃРёРё. Sony СЂРµРіСѓР»СЏСЂРЅРѕ РїРѕРїРѕР»РЅСЏРµС‚ РєР°С‚Р°Р»РѕРі СЃРІРµР¶РёРјРё СЂРµР»РёР·Р°РјРё, AAA-С…РёС‚Р°РјРё, РёРЅРґРё-РѕС‚РєСЂС‹С‚РёСЏРјРё Рё РєСѓР»СЊС‚РѕРІС‹РјРё РїСЂРѕРµРєС‚Р°РјРё РїСЂРѕС€Р»С‹С… Р»РµС‚. Premium вЂ” СЌС‚Рѕ РјР°РєСЃРёРјР°Р»СЊРЅР°СЏ СЃРІРѕР±РѕРґР° РІС‹Р±РѕСЂР° Рё СЌРєРѕРЅРѕРјРёСЏ: РґРµСЃСЏС‚РєРё С‚С‹СЃСЏС‡ СЂСѓР±Р»РµР№ РєРѕРЅС‚РµРЅС‚Р° Р·Р° РѕРґРЅСѓ РїРѕРґРїРёСЃРєСѓ.
         </p>
 
-        <h2>Таблица: самые свежие и громкие релизы PS Plus Premium (май–июнь 2025)</h2>
+        <h2>РўР°Р±Р»РёС†Р°: СЃР°РјС‹Рµ СЃРІРµР¶РёРµ Рё РіСЂРѕРјРєРёРµ СЂРµР»РёР·С‹ PS Plus Premium (РјР°Р№вЂ“РёСЋРЅСЊ 2025)</h2>
 <table>
           <thead>
             <tr>
-              <th>Игра</th>
-              <th>Жанр</th>
-              <th>Платформа</th>
-              <th>Дата добавления</th>
-              <th>Особенности</th>
+              <th>РРіСЂР°</th>
+              <th>Р–Р°РЅСЂ</th>
+              <th>РџР»Р°С‚С„РѕСЂРјР°</th>
+              <th>Р”Р°С‚Р° РґРѕР±Р°РІР»РµРЅРёСЏ</th>
+              <th>РћСЃРѕР±РµРЅРЅРѕСЃС‚Рё</th>
             </tr>
           </thead>
           <tbody>
             <tr>
               <td>Skull and Bones</td>
-              <td>Экшен, морские сражения</td>
+              <td>Р­РєС€РµРЅ, РјРѕСЂСЃРєРёРµ СЃСЂР°Р¶РµРЅРёСЏ</td>
               <td>PS5</td>
-              <td>2 июня 2025</td>
-              <td>ММО про пиратов, открытый мир, кооператив</td>
+              <td>2 РёСЋРЅСЏ 2025</td>
+              <td>РњРњРћ РїСЂРѕ РїРёСЂР°С‚РѕРІ, РѕС‚РєСЂС‹С‚С‹Р№ РјРёСЂ, РєРѕРѕРїРµСЂР°С‚РёРІ</td>
             </tr>
             <tr>
               <td>Alone in the Dark (2024)</td>
-              <td>Хоррор, приключение</td>
+              <td>РҐРѕСЂСЂРѕСЂ, РїСЂРёРєР»СЋС‡РµРЅРёРµ</td>
               <td>PS5</td>
-              <td>3 июня 2025</td>
-              <td>Ремейк классики, две кампании, атмосфера 1920-х</td>
+              <td>3 РёСЋРЅСЏ 2025</td>
+              <td>Р РµРјРµР№Рє РєР»Р°СЃСЃРёРєРё, РґРІРµ РєР°РјРїР°РЅРёРё, Р°С‚РјРѕСЃС„РµСЂР° 1920-С…</td>
             </tr>
             <tr>
               <td>NBA 2K25</td>
-              <td>Спорт, симулятор</td>
+              <td>РЎРїРѕСЂС‚, СЃРёРјСѓР»СЏС‚РѕСЂ</td>
               <td>PS5, PS4</td>
-              <td>3 июня 2025</td>
-              <td>Новая часть, улучшенная графика и ИИ, свежие ростеры</td>
+              <td>3 РёСЋРЅСЏ 2025</td>
+              <td>РќРѕРІР°СЏ С‡Р°СЃС‚СЊ, СѓР»СѓС‡С€РµРЅРЅР°СЏ РіСЂР°С„РёРєР° Рё РР, СЃРІРµР¶РёРµ СЂРѕСЃС‚РµСЂС‹</td>
             </tr>
             <tr>
               <td>Bomb Rush Cyberfunk</td>
-              <td>Аркада, паркур</td>
+              <td>РђСЂРєР°РґР°, РїР°СЂРєСѓСЂ</td>
               <td>PS5, PS4</td>
-              <td>3 июня 2025</td>
-              <td>Граффити, танцы, музыка, стиль</td>
+              <td>3 РёСЋРЅСЏ 2025</td>
+              <td>Р“СЂР°С„С„РёС‚Рё, С‚Р°РЅС†С‹, РјСѓР·С‹РєР°, СЃС‚РёР»СЊ</td>
             </tr>
             <tr>
               <td>Destiny 2: The Final Shape</td>
-              <td>Шутер, MMO</td>
+              <td>РЁСѓС‚РµСЂ, MMO</td>
               <td>PS5, PS4</td>
-              <td>28 мая 2025</td>
-              <td>Финал саги, новые рейды, сюжет</td>
+              <td>28 РјР°СЏ 2025</td>
+              <td>Р¤РёРЅР°Р» СЃР°РіРё, РЅРѕРІС‹Рµ СЂРµР№РґС‹, СЃСЋР¶РµС‚</td>
             </tr>
             <tr>
-              <td>Another Crab’s Treasure</td>
-              <td>Soulslike, приключение</td>
+              <td>Another CrabвЂ™s Treasure</td>
+              <td>Soulslike, РїСЂРёРєР»СЋС‡РµРЅРёРµ</td>
               <td>PS5</td>
-              <td>29 мая 2025</td>
-              <td>Юмор, необычный сеттинг, динамичный бой</td>
+              <td>29 РјР°СЏ 2025</td>
+              <td>Р®РјРѕСЂ, РЅРµРѕР±С‹С‡РЅС‹Р№ СЃРµС‚С‚РёРЅРі, РґРёРЅР°РјРёС‡РЅС‹Р№ Р±РѕР№</td>
             </tr>
             <tr>
               <td>Grand Theft Auto III</td>
-              <td>Экшен, открытый мир</td>
+              <td>Р­РєС€РµРЅ, РѕС‚РєСЂС‹С‚С‹Р№ РјРёСЂ</td>
               <td>PS4, PS5</td>
-              <td>10 июня 2025</td>
-              <td>Классика в обновлённой версии</td>
+              <td>10 РёСЋРЅСЏ 2025</td>
+              <td>РљР»Р°СЃСЃРёРєР° РІ РѕР±РЅРѕРІР»С‘РЅРЅРѕР№ РІРµСЂСЃРёРё</td>
             </tr>
             <tr>
               <td>Myst / Riven</td>
-              <td>Головоломка, приключение</td>
+              <td>Р“РѕР»РѕРІРѕР»РѕРјРєР°, РїСЂРёРєР»СЋС‡РµРЅРёРµ</td>
               <td>PS5, PS4</td>
-              <td>июнь 2025</td>
-              <td>Ремейки культовых квестов, поддержка VR</td>
+              <td>РёСЋРЅСЊ 2025</td>
+              <td>Р РµРјРµР№РєРё РєСѓР»СЊС‚РѕРІС‹С… РєРІРµСЃС‚РѕРІ, РїРѕРґРґРµСЂР¶РєР° VR</td>
             </tr>
             <tr>
               <td>Destiny 2: Legacy Collection</td>
-              <td>Шутер, MMO</td>
+              <td>РЁСѓС‚РµСЂ, MMO</td>
               <td>PS5, PS4</td>
-              <td>4 июня 2025</td>
-              <td>Сборник дополнений, сюжетные кампании</td>
+              <td>4 РёСЋРЅСЏ 2025</td>
+              <td>РЎР±РѕСЂРЅРёРє РґРѕРїРѕР»РЅРµРЅРёР№, СЃСЋР¶РµС‚РЅС‹Рµ РєР°РјРїР°РЅРёРё</td>
             </tr>
             <tr>
-              <td>Kingdom Come: Deliverance II (пробная версия)</td>
-              <td>RPG, средневековье</td>
+              <td>Kingdom Come: Deliverance II (РїСЂРѕР±РЅР°СЏ РІРµСЂСЃРёСЏ)</td>
+              <td>RPG, СЃСЂРµРґРЅРµРІРµРєРѕРІСЊРµ</td>
               <td>PS5</td>
-              <td>июнь 2025</td>
-              <td>Демо, уникальный геймплей, реализм</td>
+              <td>РёСЋРЅСЊ 2025</td>
+              <td>Р”РµРјРѕ, СѓРЅРёРєР°Р»СЊРЅС‹Р№ РіРµР№РјРїР»РµР№, СЂРµР°Р»РёР·Рј</td>
             </tr>
             <tr>
-              <td>Sid Meier’s Civilization VII (пробная версия)</td>
-              <td>Стратегия</td>
+              <td>Sid MeierвЂ™s Civilization VII (РїСЂРѕР±РЅР°СЏ РІРµСЂСЃРёСЏ)</td>
+              <td>РЎС‚СЂР°С‚РµРіРёСЏ</td>
               <td>PS5, PS4</td>
-              <td>июнь 2025</td>
-              <td>Демо, глобальная стратегия</td>
+              <td>РёСЋРЅСЊ 2025</td>
+              <td>Р”РµРјРѕ, РіР»РѕР±Р°Р»СЊРЅР°СЏ СЃС‚СЂР°С‚РµРіРёСЏ</td>
             </tr>
           </tbody>
         </table>
 
-        <h2>ТОП-20 лучших игр в каталоге PS Plus Premium (2025)</h2>
+        <h2>РўРћРџ-20 Р»СѓС‡С€РёС… РёРіСЂ РІ РєР°С‚Р°Р»РѕРіРµ PS Plus Premium (2025)</h2>
         <ol>
-          <li><b>The Last of Us Part II</b> — шедевр нарратива, эмоций и боевой системы, обязательный для всех поклонников PlayStation.</li>
-          <li><b>Bloodborne</b> — эталонный экшен от FromSoftware, готический хоррор и сложные боссы.</li>
-          <li><b>Marvel’s Spider-Man: Miles Morales</b> — динамичный супергеройский экшен с открытым Нью-Йорком и уникальными способностями.</li>
-          <li><b>Demon’s Souls</b> — ремейк классики, графика нового поколения и хардкорные битвы.</li>
-          <li><b>Death Stranding</b> — философский экшен от Хидео Кодзимы, необычный сеттинг и визуал.</li>
-          <li><b>Returnal</b> — рогалик с потрясающей атмосферой, динамикой и визуальными эффектами.</li>
-          <li><b>Uncharted: Legacy of Thieves Collection</b> — лучшие приключения Натана Дрейка в одном сборнике.</li>
-          <li><b>Ratchet & Clank: Rift Apart</b> — красочный платформер с инновационной механикой порталов.</li>
-          <li><b>Control: Ultimate Edition</b> — мистический экшен с разрушаемым окружением и уникальной атмосферой.</li>
-          <li><b>Ghost of Tsushima: Director’s Cut</b> — самурайская сага, открытый мир, кинематографичный стиль.</li>
-          <li><b>Persona 5 Royal</b> — одна из лучших JRPG всех времён, стиль, сюжет, музыка.</li>
-          <li><b>Dead Island 2</b> — зомби-экшен с кооперативом и чёрным юмором.</li>
-          <li><b>Gran Turismo 7</b> — топовый автосимулятор с сотнями машин и трасс.</li>
-          <li><b>Prince of Persia: The Lost Crown</b> — возвращение классики в современном стиле.</li>
-          <li><b>Remnant 2</b> — кооперативный шутер с процедурными мирами и боссами.</li>
-          <li><b>Syberia: The World Before</b> — квест с уникальной атмосферой и сюжетом.</li>
-          <li><b>S.T.A.L.K.E.R.: Legends of the Zone Trilogy</b> — культовая трилогия впервые на PlayStation.</li>
-          <li><b>Battlefield V</b> — динамичный мультиплеерный шутер Второй мировой.</li>
-          <li><b>Five Nights at Freddy’s: Help Wanted – Full Time Edition</b> — хоррор с мини-играми и VR-режимом.</li>
-          <li><b>Sand Land</b> — приключение по манге Акиры Ториямы, необычный мир и юмор.</li>
+          <li><b>The Last of Us Part II</b> вЂ” С€РµРґРµРІСЂ РЅР°СЂСЂР°С‚РёРІР°, СЌРјРѕС†РёР№ Рё Р±РѕРµРІРѕР№ СЃРёСЃС‚РµРјС‹, РѕР±СЏР·Р°С‚РµР»СЊРЅС‹Р№ РґР»СЏ РІСЃРµС… РїРѕРєР»РѕРЅРЅРёРєРѕРІ PlayStation.</li>
+          <li><b>Bloodborne</b> вЂ” СЌС‚Р°Р»РѕРЅРЅС‹Р№ СЌРєС€РµРЅ РѕС‚ FromSoftware, РіРѕС‚РёС‡РµСЃРєРёР№ С…РѕСЂСЂРѕСЂ Рё СЃР»РѕР¶РЅС‹Рµ Р±РѕСЃСЃС‹.</li>
+          <li><b>MarvelвЂ™s Spider-Man: Miles Morales</b> вЂ” РґРёРЅР°РјРёС‡РЅС‹Р№ СЃСѓРїРµСЂРіРµСЂРѕР№СЃРєРёР№ СЌРєС€РµРЅ СЃ РѕС‚РєСЂС‹С‚С‹Рј РќСЊСЋ-Р™РѕСЂРєРѕРј Рё СѓРЅРёРєР°Р»СЊРЅС‹РјРё СЃРїРѕСЃРѕР±РЅРѕСЃС‚СЏРјРё.</li>
+          <li><b>DemonвЂ™s Souls</b> вЂ” СЂРµРјРµР№Рє РєР»Р°СЃСЃРёРєРё, РіСЂР°С„РёРєР° РЅРѕРІРѕРіРѕ РїРѕРєРѕР»РµРЅРёСЏ Рё С…Р°СЂРґРєРѕСЂРЅС‹Рµ Р±РёС‚РІС‹.</li>
+          <li><b>Death Stranding</b> вЂ” С„РёР»РѕСЃРѕС„СЃРєРёР№ СЌРєС€РµРЅ РѕС‚ РҐРёРґРµРѕ РљРѕРґР·РёРјС‹, РЅРµРѕР±С‹С‡РЅС‹Р№ СЃРµС‚С‚РёРЅРі Рё РІРёР·СѓР°Р».</li>
+          <li><b>Returnal</b> вЂ” СЂРѕРіР°Р»РёРє СЃ РїРѕС‚СЂСЏСЃР°СЋС‰РµР№ Р°С‚РјРѕСЃС„РµСЂРѕР№, РґРёРЅР°РјРёРєРѕР№ Рё РІРёР·СѓР°Р»СЊРЅС‹РјРё СЌС„С„РµРєС‚Р°РјРё.</li>
+          <li><b>Uncharted: Legacy of Thieves Collection</b> вЂ” Р»СѓС‡С€РёРµ РїСЂРёРєР»СЋС‡РµРЅРёСЏ РќР°С‚Р°РЅР° Р”СЂРµР№РєР° РІ РѕРґРЅРѕРј СЃР±РѕСЂРЅРёРєРµ.</li>
+          <li><b>Ratchet & Clank: Rift Apart</b> вЂ” РєСЂР°СЃРѕС‡РЅС‹Р№ РїР»Р°С‚С„РѕСЂРјРµСЂ СЃ РёРЅРЅРѕРІР°С†РёРѕРЅРЅРѕР№ РјРµС…Р°РЅРёРєРѕР№ РїРѕСЂС‚Р°Р»РѕРІ.</li>
+          <li><b>Control: Ultimate Edition</b> вЂ” РјРёСЃС‚РёС‡РµСЃРєРёР№ СЌРєС€РµРЅ СЃ СЂР°Р·СЂСѓС€Р°РµРјС‹Рј РѕРєСЂСѓР¶РµРЅРёРµРј Рё СѓРЅРёРєР°Р»СЊРЅРѕР№ Р°С‚РјРѕСЃС„РµСЂРѕР№.</li>
+          <li><b>Ghost of Tsushima: DirectorвЂ™s Cut</b> вЂ” СЃР°РјСѓСЂР°Р№СЃРєР°СЏ СЃР°РіР°, РѕС‚РєСЂС‹С‚С‹Р№ РјРёСЂ, РєРёРЅРµРјР°С‚РѕРіСЂР°С„РёС‡РЅС‹Р№ СЃС‚РёР»СЊ.</li>
+          <li><b>Persona 5 Royal</b> вЂ” РѕРґРЅР° РёР· Р»СѓС‡С€РёС… JRPG РІСЃРµС… РІСЂРµРјС‘РЅ, СЃС‚РёР»СЊ, СЃСЋР¶РµС‚, РјСѓР·С‹РєР°.</li>
+          <li><b>Dead Island 2</b> вЂ” Р·РѕРјР±Рё-СЌРєС€РµРЅ СЃ РєРѕРѕРїРµСЂР°С‚РёРІРѕРј Рё С‡С‘СЂРЅС‹Рј СЋРјРѕСЂРѕРј.</li>
+          <li><b>Gran Turismo 7</b> вЂ” С‚РѕРїРѕРІС‹Р№ Р°РІС‚РѕСЃРёРјСѓР»СЏС‚РѕСЂ СЃ СЃРѕС‚РЅСЏРјРё РјР°С€РёРЅ Рё С‚СЂР°СЃСЃ.</li>
+          <li><b>Prince of Persia: The Lost Crown</b> вЂ” РІРѕР·РІСЂР°С‰РµРЅРёРµ РєР»Р°СЃСЃРёРєРё РІ СЃРѕРІСЂРµРјРµРЅРЅРѕРј СЃС‚РёР»Рµ.</li>
+          <li><b>Remnant 2</b> вЂ” РєРѕРѕРїРµСЂР°С‚РёРІРЅС‹Р№ С€СѓС‚РµСЂ СЃ РїСЂРѕС†РµРґСѓСЂРЅС‹РјРё РјРёСЂР°РјРё Рё Р±РѕСЃСЃР°РјРё.</li>
+          <li><b>Syberia: The World Before</b> вЂ” РєРІРµСЃС‚ СЃ СѓРЅРёРєР°Р»СЊРЅРѕР№ Р°С‚РјРѕСЃС„РµСЂРѕР№ Рё СЃСЋР¶РµС‚РѕРј.</li>
+          <li><b>S.T.A.L.K.E.R.: Legends of the Zone Trilogy</b> вЂ” РєСѓР»СЊС‚РѕРІР°СЏ С‚СЂРёР»РѕРіРёСЏ РІРїРµСЂРІС‹Рµ РЅР° PlayStation.</li>
+          <li><b>Battlefield V</b> вЂ” РґРёРЅР°РјРёС‡РЅС‹Р№ РјСѓР»СЊС‚РёРїР»РµРµСЂРЅС‹Р№ С€СѓС‚РµСЂ Р’С‚РѕСЂРѕР№ РјРёСЂРѕРІРѕР№.</li>
+          <li><b>Five Nights at FreddyвЂ™s: Help Wanted вЂ“ Full Time Edition</b> вЂ” С…РѕСЂСЂРѕСЂ СЃ РјРёРЅРё-РёРіСЂР°РјРё Рё VR-СЂРµР¶РёРјРѕРј.</li>
+          <li><b>Sand Land</b> вЂ” РїСЂРёРєР»СЋС‡РµРЅРёРµ РїРѕ РјР°РЅРіРµ РђРєРёСЂС‹ РўРѕСЂРёСЏРјС‹, РЅРµРѕР±С‹С‡РЅС‹Р№ РјРёСЂ Рё СЋРјРѕСЂ.</li>
         </ol>
 
-        <h2>Классика и эксклюзивы в PS Plus Premium</h2>
+        <h2>РљР»Р°СЃСЃРёРєР° Рё СЌРєСЃРєР»СЋР·РёРІС‹ РІ PS Plus Premium</h2>
         <ul>
-          <li><b>Myst / Riven</b> — ремейки культовых квестов, поддержка VR и обновлённая графика.</li>
-          <li><b>Grand Theft Auto III</b> — обновлённая классика, открытый мир, свобода действий.</li>
-          <li><b>Uncharted: Legacy of Thieves Collection</b> — приключения Натана Дрейка в лучшем качестве.</li>
-          <li><b>Persona 5 Royal</b> — эксклюзивная JRPG с глубоким сюжетом и стилем.</li>
-          <li><b>Kingdom Come: Deliverance II (пробная версия)</b> — уникальный реализм средневековья.</li>
+          <li><b>Myst / Riven</b> вЂ” СЂРµРјРµР№РєРё РєСѓР»СЊС‚РѕРІС‹С… РєРІРµСЃС‚РѕРІ, РїРѕРґРґРµСЂР¶РєР° VR Рё РѕР±РЅРѕРІР»С‘РЅРЅР°СЏ РіСЂР°С„РёРєР°.</li>
+          <li><b>Grand Theft Auto III</b> вЂ” РѕР±РЅРѕРІР»С‘РЅРЅР°СЏ РєР»Р°СЃСЃРёРєР°, РѕС‚РєСЂС‹С‚С‹Р№ РјРёСЂ, СЃРІРѕР±РѕРґР° РґРµР№СЃС‚РІРёР№.</li>
+          <li><b>Uncharted: Legacy of Thieves Collection</b> вЂ” РїСЂРёРєР»СЋС‡РµРЅРёСЏ РќР°С‚Р°РЅР° Р”СЂРµР№РєР° РІ Р»СѓС‡С€РµРј РєР°С‡РµСЃС‚РІРµ.</li>
+          <li><b>Persona 5 Royal</b> вЂ” СЌРєСЃРєР»СЋР·РёРІРЅР°СЏ JRPG СЃ РіР»СѓР±РѕРєРёРј СЃСЋР¶РµС‚РѕРј Рё СЃС‚РёР»РµРј.</li>
+          <li><b>Kingdom Come: Deliverance II (РїСЂРѕР±РЅР°СЏ РІРµСЂСЃРёСЏ)</b> вЂ” СѓРЅРёРєР°Р»СЊРЅС‹Р№ СЂРµР°Р»РёР·Рј СЃСЂРµРґРЅРµРІРµРєРѕРІСЊСЏ.</li>
         </ul>
 
-        <h2>Лайфхаки и советы для подписчиков PS Plus Premium</h2>
+        <h2>Р›Р°Р№С„С…Р°РєРё Рё СЃРѕРІРµС‚С‹ РґР»СЏ РїРѕРґРїРёСЃС‡РёРєРѕРІ PS Plus Premium</h2>
         <div class="pro-tips">
-          <h4>?? Практические советы</h4>
+          <h4>рџ”№ РџСЂР°РєС‚РёС‡РµСЃРєРёРµ СЃРѕРІРµС‚С‹</h4>
           <div class="tip-item">
             <i class="fas fa-lightbulb"></i>
-            <p>Следите за ежемесячными обновлениями каталога: новые хиты и классика появляются каждые 3–4 недели.</p>
+            <p>РЎР»РµРґРёС‚Рµ Р·Р° РµР¶РµРјРµСЃСЏС‡РЅС‹РјРё РѕР±РЅРѕРІР»РµРЅРёСЏРјРё РєР°С‚Р°Р»РѕРіР°: РЅРѕРІС‹Рµ С…РёС‚С‹ Рё РєР»Р°СЃСЃРёРєР° РїРѕСЏРІР»СЏСЋС‚СЃСЏ РєР°Р¶РґС‹Рµ 3вЂ“4 РЅРµРґРµР»Рё.</p>
           </div>
           <div class="tip-item">
             <i class="fas fa-lightbulb"></i>
-            <p>Пробуйте пробные версии (Trials): Kingdom Come: Deliverance II, Civilization VII и другие — отличный шанс оценить новинки до покупки.</p>
+            <p>РџСЂРѕР±СѓР№С‚Рµ РїСЂРѕР±РЅС‹Рµ РІРµСЂСЃРёРё (Trials): Kingdom Come: Deliverance II, Civilization VII Рё РґСЂСѓРіРёРµ вЂ” РѕС‚Р»РёС‡РЅС‹Р№ С€Р°РЅСЃ РѕС†РµРЅРёС‚СЊ РЅРѕРІРёРЅРєРё РґРѕ РїРѕРєСѓРїРєРё.</p>
           </div>
           <div class="tip-item">
             <i class="fas fa-lightbulb"></i>
-            <p>Не откладывайте интересные проекты: часть игр регулярно уходит из каталога, особенно в Premium.</p>
+            <p>РќРµ РѕС‚РєР»Р°РґС‹РІР°Р№С‚Рµ РёРЅС‚РµСЂРµСЃРЅС‹Рµ РїСЂРѕРµРєС‚С‹: С‡Р°СЃС‚СЊ РёРіСЂ СЂРµРіСѓР»СЏСЂРЅРѕ СѓС…РѕРґРёС‚ РёР· РєР°С‚Р°Р»РѕРіР°, РѕСЃРѕР±РµРЅРЅРѕ РІ Premium.</p>
           </div>
           <div class="tip-item">
             <i class="fas fa-lightbulb"></i>
-            <p>Пользуйтесь фильтрами в библиотеке PS Plus для поиска по жанру, платформе, дате добавления.</p>
+            <p>РџРѕР»СЊР·СѓР№С‚РµСЃСЊ С„РёР»СЊС‚СЂР°РјРё РІ Р±РёР±Р»РёРѕС‚РµРєРµ PS Plus РґР»СЏ РїРѕРёСЃРєР° РїРѕ Р¶Р°РЅСЂСѓ, РїР»Р°С‚С„РѕСЂРјРµ, РґР°С‚Рµ РґРѕР±Р°РІР»РµРЅРёСЏ.</p>
           </div>
         </div>
 
-        <h2>FAQ – часто задаваемые вопросы о лучших играх PS Plus Premium 2025</h2>
+        <h2>FAQ вЂ“ С‡Р°СЃС‚Рѕ Р·Р°РґР°РІР°РµРјС‹Рµ РІРѕРїСЂРѕСЃС‹ Рѕ Р»СѓС‡С€РёС… РёРіСЂР°С… PS Plus Premium 2025</h2>
         <ul>
           <li>
-            <strong>Какие новинки добавили в PS Plus Premium в мае–июне 2025?</strong><br>
-            Skull and Bones, Alone in the Dark (2024), NBA 2K25, Bomb Rush Cyberfunk, Another Crab’s Treasure, Grand Theft Auto III, Myst, Riven и другие.
+            <strong>РљР°РєРёРµ РЅРѕРІРёРЅРєРё РґРѕР±Р°РІРёР»Рё РІ PS Plus Premium РІ РјР°РµвЂ“РёСЋРЅРµ 2025?</strong><br>
+            Skull and Bones, Alone in the Dark (2024), NBA 2K25, Bomb Rush Cyberfunk, Another CrabвЂ™s Treasure, Grand Theft Auto III, Myst, Riven Рё РґСЂСѓРіРёРµ.
           </li>
           <li>
-            <strong>Какие эксклюзивы и классика доступны только в Premium?</strong><br>
-            Myst, Riven, пробные версии Kingdom Come: Deliverance II, Civilization VII, расширенный каталог классики и VR.
+            <strong>РљР°РєРёРµ СЌРєСЃРєР»СЋР·РёРІС‹ Рё РєР»Р°СЃСЃРёРєР° РґРѕСЃС‚СѓРїРЅС‹ С‚РѕР»СЊРєРѕ РІ Premium?</strong><br>
+            Myst, Riven, РїСЂРѕР±РЅС‹Рµ РІРµСЂСЃРёРё Kingdom Come: Deliverance II, Civilization VII, СЂР°СЃС€РёСЂРµРЅРЅС‹Р№ РєР°С‚Р°Р»РѕРі РєР»Р°СЃСЃРёРєРё Рё VR.
           </li>
           <li>
-            <strong>Какие лучшие игры для PS5 в подписке?</strong><br>
+            <strong>РљР°РєРёРµ Р»СѓС‡С€РёРµ РёРіСЂС‹ РґР»СЏ PS5 РІ РїРѕРґРїРёСЃРєРµ?</strong><br>
             The Last of Us Part II, Demon's Souls, Returnal, Ratchet & Clank: Rift Apart, Ghost of Tsushima, Gran Turismo 7, Spider-Man: Miles Morales.
           </li>
           <li>
-            <strong>Уходят ли игры из каталога Premium?</strong><br>
-            Да, часть проектов регулярно удаляется — следите за новостями и играйте в интересные тайтлы заранее.
+            <strong>РЈС…РѕРґСЏС‚ Р»Рё РёРіСЂС‹ РёР· РєР°С‚Р°Р»РѕРіР° Premium?</strong><br>
+            Р”Р°, С‡Р°СЃС‚СЊ РїСЂРѕРµРєС‚РѕРІ СЂРµРіСѓР»СЏСЂРЅРѕ СѓРґР°Р»СЏРµС‚СЃСЏ вЂ” СЃР»РµРґРёС‚Рµ Р·Р° РЅРѕРІРѕСЃС‚СЏРјРё Рё РёРіСЂР°Р№С‚Рµ РІ РёРЅС‚РµСЂРµСЃРЅС‹Рµ С‚Р°Р№С‚Р»С‹ Р·Р°СЂР°РЅРµРµ.
           </li>
           <li>
-            <strong>Можно ли играть в классику PS1/PS2/PSP?</strong><br>
-            Да, Premium включает расширенный каталог классики, ремастеры и обновлённые версии.
+            <strong>РњРѕР¶РЅРѕ Р»Рё РёРіСЂР°С‚СЊ РІ РєР»Р°СЃСЃРёРєСѓ PS1/PS2/PSP?</strong><br>
+            Р”Р°, Premium РІРєР»СЋС‡Р°РµС‚ СЂР°СЃС€РёСЂРµРЅРЅС‹Р№ РєР°С‚Р°Р»РѕРі РєР»Р°СЃСЃРёРєРё, СЂРµРјР°СЃС‚РµСЂС‹ Рё РѕР±РЅРѕРІР»С‘РЅРЅС‹Рµ РІРµСЂСЃРёРё.
           </li>
         </ul>
 
         <div class="warning-block">
-          <strong>Внимание!</strong> Список игр в PS Plus Premium меняется каждый месяц — не откладывайте интересные проекты и следите за новостями Sony!
+          <strong>Р’РЅРёРјР°РЅРёРµ!</strong> РЎРїРёСЃРѕРє РёРіСЂ РІ PS Plus Premium РјРµРЅСЏРµС‚СЃСЏ РєР°Р¶РґС‹Р№ РјРµСЃСЏС† вЂ” РЅРµ РѕС‚РєР»Р°РґС‹РІР°Р№С‚Рµ РёРЅС‚РµСЂРµСЃРЅС‹Рµ РїСЂРѕРµРєС‚С‹ Рё СЃР»РµРґРёС‚Рµ Р·Р° РЅРѕРІРѕСЃС‚СЏРјРё Sony!
         </div>
 
-        <h2>Пошаговая инструкция: как получить максимум от PS Plus Premium</h2>
+        <h2>РџРѕС€Р°РіРѕРІР°СЏ РёРЅСЃС‚СЂСѓРєС†РёСЏ: РєР°Рє РїРѕР»СѓС‡РёС‚СЊ РјР°РєСЃРёРјСѓРј РѕС‚ PS Plus Premium</h2>
         <ol>
-          <li>Регулярно проверяйте раздел "Новое в каталоге" — там появляются свежие релизы и уходящие игры.</li>
-          <li>Пробуйте пробные версии новинок: это бесплатно для подписчиков Premium.</li>
-          <li>Используйте фильтры по жанрам, платформам и дате добавления для поиска лучших игр.</li>
-          <li>Следите за новостями Sony и подборками в YouTube — там часто рассказывают о скрытых жемчужинах каталога.</li>
-          <li>Не забывайте про классику: многие хиты PS1/PS2/PSP доступны только в Premium.</li>
+          <li>Р РµРіСѓР»СЏСЂРЅРѕ РїСЂРѕРІРµСЂСЏР№С‚Рµ СЂР°Р·РґРµР» "РќРѕРІРѕРµ РІ РєР°С‚Р°Р»РѕРіРµ" вЂ” С‚Р°Рј РїРѕСЏРІР»СЏСЋС‚СЃСЏ СЃРІРµР¶РёРµ СЂРµР»РёР·С‹ Рё СѓС…РѕРґСЏС‰РёРµ РёРіСЂС‹.</li>
+          <li>РџСЂРѕР±СѓР№С‚Рµ РїСЂРѕР±РЅС‹Рµ РІРµСЂСЃРёРё РЅРѕРІРёРЅРѕРє: СЌС‚Рѕ Р±РµСЃРїР»Р°С‚РЅРѕ РґР»СЏ РїРѕРґРїРёСЃС‡РёРєРѕРІ Premium.</li>
+          <li>РСЃРїРѕР»СЊР·СѓР№С‚Рµ С„РёР»СЊС‚СЂС‹ РїРѕ Р¶Р°РЅСЂР°Рј, РїР»Р°С‚С„РѕСЂРјР°Рј Рё РґР°С‚Рµ РґРѕР±Р°РІР»РµРЅРёСЏ РґР»СЏ РїРѕРёСЃРєР° Р»СѓС‡С€РёС… РёРіСЂ.</li>
+          <li>РЎР»РµРґРёС‚Рµ Р·Р° РЅРѕРІРѕСЃС‚СЏРјРё Sony Рё РїРѕРґР±РѕСЂРєР°РјРё РІ YouTube вЂ” С‚Р°Рј С‡Р°СЃС‚Рѕ СЂР°СЃСЃРєР°Р·С‹РІР°СЋС‚ Рѕ СЃРєСЂС‹С‚С‹С… Р¶РµРјС‡СѓР¶РёРЅР°С… РєР°С‚Р°Р»РѕРіР°.</li>
+          <li>РќРµ Р·Р°Р±С‹РІР°Р№С‚Рµ РїСЂРѕ РєР»Р°СЃСЃРёРєСѓ: РјРЅРѕРіРёРµ С…РёС‚С‹ PS1/PS2/PSP РґРѕСЃС‚СѓРїРЅС‹ С‚РѕР»СЊРєРѕ РІ Premium.</li>
         </ol>
 
-        <h2>?? Итог: лучшие игры в PlayStation Plus Premium (2025)</h2>
+        <h2>рџ“Њ РС‚РѕРі: Р»СѓС‡С€РёРµ РёРіСЂС‹ РІ PlayStation Plus Premium (2025)</h2>
         <p>
-          В 2025 году подписка PS Plus Premium — это доступ к сотням хитов: Skull and Bones, Alone in the Dark, NBA 2K25, Bomb Rush Cyberfunk, Destiny 2: The Final Shape, Another Crab’s Treasure, Grand Theft Auto III, Myst, Riven, The Last of Us Part II, Bloodborne, Demon's Souls, Persona 5 Royal, S.T.A.L.K.E.R.: Legends of the Zone Trilogy, Battlefield V, Sand Land, Dead Island 2, Returnal, Ghost of Tsushima, Gran Turismo 7, Prince of Persia: The Lost Crown, Uncharted, Syberia и десяткам других. Каталог пополняется ежемесячно, а пробные версии и классика делают Premium лучшей подпиской для геймеров на PlayStation!
+          Р’ 2025 РіРѕРґСѓ РїРѕРґРїРёСЃРєР° PS Plus Premium вЂ” СЌС‚Рѕ РґРѕСЃС‚СѓРї Рє СЃРѕС‚РЅСЏРј С…РёС‚РѕРІ: Skull and Bones, Alone in the Dark, NBA 2K25, Bomb Rush Cyberfunk, Destiny 2: The Final Shape, Another CrabвЂ™s Treasure, Grand Theft Auto III, Myst, Riven, The Last of Us Part II, Bloodborne, Demon's Souls, Persona 5 Royal, S.T.A.L.K.E.R.: Legends of the Zone Trilogy, Battlefield V, Sand Land, Dead Island 2, Returnal, Ghost of Tsushima, Gran Turismo 7, Prince of Persia: The Lost Crown, Uncharted, Syberia Рё РґРµСЃСЏС‚РєР°Рј РґСЂСѓРіРёС…. РљР°С‚Р°Р»РѕРі РїРѕРїРѕР»РЅСЏРµС‚СЃСЏ РµР¶РµРјРµСЃСЏС‡РЅРѕ, Р° РїСЂРѕР±РЅС‹Рµ РІРµСЂСЃРёРё Рё РєР»Р°СЃСЃРёРєР° РґРµР»Р°СЋС‚ Premium Р»СѓС‡С€РµР№ РїРѕРґРїРёСЃРєРѕР№ РґР»СЏ РіРµР№РјРµСЂРѕРІ РЅР° PlayStation!
         </p>
 </div>
 
-        <!-- Telegram рекламный баннер -->
+        <!-- Telegram СЂРµРєР»Р°РјРЅС‹Р№ Р±Р°РЅРЅРµСЂ -->
         <a href="https://t.me/RepairoRU" target="_blank" rel="noopener noreferrer" class="telegram-banner">
           <div class="telegram-banner-container">
             <div class="telegram-logo">
@@ -588,10 +629,10 @@
               </svg>
             </div>
             <div class="telegram-content">
-              <div class="telegram-title">Новости из мира технологий</div>
-              <div class="telegram-subtitle">В нашем новом Telegram-канале. Подписывайтесь и будьте в числе первых!</div>
+              <div class="telegram-title">РќРѕРІРѕСЃС‚Рё РёР· РјРёСЂР° С‚РµС…РЅРѕР»РѕРіРёР№</div>
+              <div class="telegram-subtitle">Р’ РЅР°С€РµРј РЅРѕРІРѕРј Telegram-РєР°РЅР°Р»Рµ. РџРѕРґРїРёСЃС‹РІР°Р№С‚РµСЃСЊ Рё Р±СѓРґСЊС‚Рµ РІ С‡РёСЃР»Рµ РїРµСЂРІС‹С…!</div>
               <div class="telegram-button">
-                Подписаться
+                РџРѕРґРїРёСЃР°С‚СЊСЃСЏ
                 <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.56c-.21 2.22-1.12 7.58-1.58 10.06-.19 1.07-.57 1.43-.94 1.46-.8.07-1.4-.52-2.17-1.03-1.21-.79-1.89-1.28-3.06-2.05-1.35-.87-.47-1.35.3-2.13.2-.21 3.71-3.39 3.77-3.68.01-.04.01-.18-.07-.26s-.2-.05-.29-.03c-.12.03-2.11 1.34-5.95 3.93-.56.38-1.07.57-1.53.56-.5-.01-1.47-.28-2.19-.51-.88-.28-1.58-.43-1.52-.91.03-.25.38-.51 1.04-.78 4.07-1.77 6.78-2.94 8.13-3.51 3.88-1.62 4.68-1.9 5.19-1.91.12 0 .37.03.54.17.14.12.18.28.2.44-.01.06 0 .11-.01.17z"/>
                 </svg>
@@ -616,45 +657,45 @@
                         </span>
                         <span class="logo__text">Repairo</span>
                     </a>
-                    <p class="footer__text">Помогаем ремонтировать электронику с 2024 года</p>
+                    <p class="footer__text">РџРѕРјРѕРіР°РµРј СЂРµРјРѕРЅС‚РёСЂРѕРІР°С‚СЊ СЌР»РµРєС‚СЂРѕРЅРёРєСѓ СЃ 2024 РіРѕРґР°</p>
                 </div>
                 <div class="footer__col">
-                    <h3 class="footer__title">Разделы</h3>
+                    <h3 class="footer__title">Р Р°Р·РґРµР»С‹</h3>
                     <ul class="footer__links">
-                        <li><a href="../index.html" class="footer__link">Главная</a></li>
-                        <li><a href="../index.html#categories" class="footer__link">Все гайды</a></li>
-                        <li><a href="../contacts.html" class="footer__link">Контакты</a></li>
+                        <li><a href="../index.html" class="footer__link">Р“Р»Р°РІРЅР°СЏ</a></li>
+                        <li><a href="../index.html#categories" class="footer__link">Р’СЃРµ РіР°Р№РґС‹</a></li>
+                        <li><a href="../contacts.html" class="footer__link">РљРѕРЅС‚Р°РєС‚С‹</a></li>
                     </ul>
                 </div>
                 <div class="footer__col">
-                    <h3 class="footer__title">Категории</h3>
+                    <h3 class="footer__title">РљР°С‚РµРіРѕСЂРёРё</h3>
                     <ul class="footer__links">
-                        <li><a href="../tv.html" class="nav__link">Телевизоры</a></li>
-                        <li><a href="../cameras.html" class="nav__link">Фотоаппараты</a></li>
-                        <li><a href="../consoles.html" class="nav__link">Приставки</a></li>
-                        <li><a href="../laptops.html" class="nav__link">Ноутбуки</a></li>
-                        <li><a href="../smartphones.html" class="nav__link">Смартфоны</a></li>
-                        <li><a href="../small-appliances.html" class="nav__link">Мелкая техника</a></li>
-                        <li><a href="../large-appliances.html" class="nav__link">Бытовая техника</a></li>
-                        <li><a href="../auto-electronics.html" class="nav__link">Авто-Электроника</a></li>
+                        <li><a href="../tv.html" class="nav__link">РўРµР»РµРІРёР·РѕСЂС‹</a></li>
+                        <li><a href="../cameras.html" class="nav__link">Р¤РѕС‚РѕР°РїРїР°СЂР°С‚С‹</a></li>
+                        <li><a href="../consoles.html" class="nav__link">РџСЂРёСЃС‚Р°РІРєРё</a></li>
+                        <li><a href="../laptops.html" class="nav__link">РќРѕСѓС‚Р±СѓРєРё</a></li>
+                        <li><a href="../smartphones.html" class="nav__link">РЎРјР°СЂС‚С„РѕРЅС‹</a></li>
+                        <li><a href="../small-appliances.html" class="nav__link">РњРµР»РєР°СЏ С‚РµС…РЅРёРєР°</a></li>
+                        <li><a href="../large-appliances.html" class="nav__link">Р‘С‹С‚РѕРІР°СЏ С‚РµС…РЅРёРєР°</a></li>
+                        <li><a href="../auto-electronics.html" class="nav__link">РђРІС‚Рѕ-Р­Р»РµРєС‚СЂРѕРЅРёРєР°</a></li>
                     </ul>
                 </div>
                 <div class="footer__col">
-                    <h3 class="footer__title">Контакты</h3>
+                    <h3 class="footer__title">РљРѕРЅС‚Р°РєС‚С‹</h3>
                     <ul class="footer__links">
                         <li><a href="https://t.me/RepairoRU" class="footer__link"><i class="fab fa-telegram"></i> Telegram</a></li>
-                        <li><span class="footer__link">Наша почта: repairo.info@mail.ru</span></li>
+                        <li><span class="footer__link">РќР°С€Р° РїРѕС‡С‚Р°: repairo.info@mail.ru</span></li>
                     </ul>
                 </div>
             </div>
             <div class="footer__bottom">
                 <p class="disclaimer">
-    Администрация сайта не несёт ответственности за возможные повреждения техники
-    и иные последствия, возникшие в результате самостоятельного ремонта по
-    материалам и инструкциям, размещённым на сайте. Все работы вы выполняете
-    на свой страх и риск.
+    РђРґРјРёРЅРёСЃС‚СЂР°С†РёСЏ СЃР°Р№С‚Р° РЅРµ РЅРµСЃС‘С‚ РѕС‚РІРµС‚СЃС‚РІРµРЅРЅРѕСЃС‚Рё Р·Р° РІРѕР·РјРѕР¶РЅС‹Рµ РїРѕРІСЂРµР¶РґРµРЅРёСЏ С‚РµС…РЅРёРєРё
+    Рё РёРЅС‹Рµ РїРѕСЃР»РµРґСЃС‚РІРёСЏ, РІРѕР·РЅРёРєС€РёРµ РІ СЂРµР·СѓР»СЊС‚Р°С‚Рµ СЃР°РјРѕСЃС‚РѕСЏС‚РµР»СЊРЅРѕРіРѕ СЂРµРјРѕРЅС‚Р° РїРѕ
+    РјР°С‚РµСЂРёР°Р»Р°Рј Рё РёРЅСЃС‚СЂСѓРєС†РёСЏРј, СЂР°Р·РјРµС‰С‘РЅРЅС‹Рј РЅР° СЃР°Р№С‚Рµ. Р’СЃРµ СЂР°Р±РѕС‚С‹ РІС‹ РІС‹РїРѕР»РЅСЏРµС‚Рµ
+    РЅР° СЃРІРѕР№ СЃС‚СЂР°С… Рё СЂРёСЃРє.
     </p>
-                <p class="footer__copyright">© 2026 Repairo. Все права защищены.</p>
+                <p class="footer__copyright">В© 2026 Repairo. Р’СЃРµ РїСЂР°РІР° Р·Р°С‰РёС‰РµРЅС‹.</p>
             </div>
         </div>
     </footer>
@@ -665,56 +706,56 @@
 {
   "@context": "https://schema.org",
   "@type": "HowTo",
-  "name": "Лучшие игры в PlayStation Plus Premium (2025)",
-  "description": "Пошаговая инструкция: Лучшие игры в PlayStation Plus Premium (2025). Подписка PlayStation Plus Premium в 2025 году — это более 800 игр на PS5 и PS4,.... Сове...",
+  "name": "Р›СѓС‡С€РёРµ РёРіСЂС‹ РІ PlayStation Plus Premium (2025)",
+  "description": "РџРѕС€Р°РіРѕРІР°СЏ РёРЅСЃС‚СЂСѓРєС†РёСЏ: Р›СѓС‡С€РёРµ РёРіСЂС‹ РІ PlayStation Plus Premium (2025). РџРѕРґРїРёСЃРєР° PlayStation Plus Premium РІ 2025 РіРѕРґСѓ вЂ” СЌС‚Рѕ Р±РѕР»РµРµ 800 РёРіСЂ РЅР° PS5 Рё PS4,.... РЎРѕРІРµ...",
   "totalTime": "PT30M",
   "step": [
     {
       "@type": "HowToStep",
-      "name": "Введение: почему PS Plus Premium — лучший выбор для геймера в 2025?",
-      "text": "Введение: почему PS Plus Premium — лучший выбор для геймера в 2025?",
+      "name": "Р’РІРµРґРµРЅРёРµ: РїРѕС‡РµРјСѓ PS Plus Premium вЂ” Р»СѓС‡С€РёР№ РІС‹Р±РѕСЂ РґР»СЏ РіРµР№РјРµСЂР° РІ 2025?",
+      "text": "Р’РІРµРґРµРЅРёРµ: РїРѕС‡РµРјСѓ PS Plus Premium вЂ” Р»СѓС‡С€РёР№ РІС‹Р±РѕСЂ РґР»СЏ РіРµР№РјРµСЂР° РІ 2025?",
       "url": "#step-1"
     },
     {
       "@type": "HowToStep",
-      "name": "Таблица: самые свежие и громкие релизы PS Plus Premium (май–июнь 2025)",
-      "text": "Таблица: самые свежие и громкие релизы PS Plus Premium (май–июнь 2025)",
+      "name": "РўР°Р±Р»РёС†Р°: СЃР°РјС‹Рµ СЃРІРµР¶РёРµ Рё РіСЂРѕРјРєРёРµ СЂРµР»РёР·С‹ PS Plus Premium (РјР°Р№вЂ“РёСЋРЅСЊ 2025)",
+      "text": "РўР°Р±Р»РёС†Р°: СЃР°РјС‹Рµ СЃРІРµР¶РёРµ Рё РіСЂРѕРјРєРёРµ СЂРµР»РёР·С‹ PS Plus Premium (РјР°Р№вЂ“РёСЋРЅСЊ 2025)",
       "url": "#step-2"
     },
     {
       "@type": "HowToStep",
-      "name": "ТОП-20 лучших игр в каталоге PS Plus Premium (2025)",
-      "text": "ТОП-20 лучших игр в каталоге PS Plus Premium (2025)",
+      "name": "РўРћРџ-20 Р»СѓС‡С€РёС… РёРіСЂ РІ РєР°С‚Р°Р»РѕРіРµ PS Plus Premium (2025)",
+      "text": "РўРћРџ-20 Р»СѓС‡С€РёС… РёРіСЂ РІ РєР°С‚Р°Р»РѕРіРµ PS Plus Premium (2025)",
       "url": "#step-3"
     },
     {
       "@type": "HowToStep",
-      "name": "Классика и эксклюзивы в PS Plus Premium",
-      "text": "Классика и эксклюзивы в PS Plus Premium",
+      "name": "РљР»Р°СЃСЃРёРєР° Рё СЌРєСЃРєР»СЋР·РёРІС‹ РІ PS Plus Premium",
+      "text": "РљР»Р°СЃСЃРёРєР° Рё СЌРєСЃРєР»СЋР·РёРІС‹ РІ PS Plus Premium",
       "url": "#step-4"
     },
     {
       "@type": "HowToStep",
-      "name": "Лайфхаки и советы для подписчиков PS Plus Premium",
-      "text": "Лайфхаки и советы для подписчиков PS Plus Premium",
+      "name": "Р›Р°Р№С„С…Р°РєРё Рё СЃРѕРІРµС‚С‹ РґР»СЏ РїРѕРґРїРёСЃС‡РёРєРѕРІ PS Plus Premium",
+      "text": "Р›Р°Р№С„С…Р°РєРё Рё СЃРѕРІРµС‚С‹ РґР»СЏ РїРѕРґРїРёСЃС‡РёРєРѕРІ PS Plus Premium",
       "url": "#step-5"
     },
     {
       "@type": "HowToStep",
-      "name": "FAQ – часто задаваемые вопросы о лучших играх PS Plus Premium 2025",
-      "text": "FAQ – часто задаваемые вопросы о лучших играх PS Plus Premium 2025",
+      "name": "FAQ вЂ“ С‡Р°СЃС‚Рѕ Р·Р°РґР°РІР°РµРјС‹Рµ РІРѕРїСЂРѕСЃС‹ Рѕ Р»СѓС‡С€РёС… РёРіСЂР°С… PS Plus Premium 2025",
+      "text": "FAQ вЂ“ С‡Р°СЃС‚Рѕ Р·Р°РґР°РІР°РµРјС‹Рµ РІРѕРїСЂРѕСЃС‹ Рѕ Р»СѓС‡С€РёС… РёРіСЂР°С… PS Plus Premium 2025",
       "url": "#step-6"
     },
     {
       "@type": "HowToStep",
-      "name": "Пошаговая инструкция: как получить максимум от PS Plus Premium",
-      "text": "Пошаговая инструкция: как получить максимум от PS Plus Premium",
+      "name": "РџРѕС€Р°РіРѕРІР°СЏ РёРЅСЃС‚СЂСѓРєС†РёСЏ: РєР°Рє РїРѕР»СѓС‡РёС‚СЊ РјР°РєСЃРёРјСѓРј РѕС‚ PS Plus Premium",
+      "text": "РџРѕС€Р°РіРѕРІР°СЏ РёРЅСЃС‚СЂСѓРєС†РёСЏ: РєР°Рє РїРѕР»СѓС‡РёС‚СЊ РјР°РєСЃРёРјСѓРј РѕС‚ PS Plus Premium",
       "url": "#step-7"
     },
     {
       "@type": "HowToStep",
-      "name": "?? Итог: лучшие игры в PlayStation Plus Premium (2025)",
-      "text": "?? Итог: лучшие игры в PlayStation Plus Premium (2025)",
+      "name": "рџ“Њ РС‚РѕРі: Р»СѓС‡С€РёРµ РёРіСЂС‹ РІ PlayStation Plus Premium (2025)",
+      "text": "рџ“Њ РС‚РѕРі: Р»СѓС‡С€РёРµ РёРіСЂС‹ РІ PlayStation Plus Premium (2025)",
       "url": "#step-8"
     }
   ],
@@ -725,8 +766,4 @@
 <script src="../cookie-consent.js"></script>
 </body>
 </html>
-
-
-
-
 

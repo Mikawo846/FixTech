@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Тест Cookie Banner в режиме инкогнито</title>
+    <title>РўРµСЃС‚ Cookie Banner РІ СЂРµР¶РёРјРµ РёРЅРєРѕРіРЅРёС‚Рѕ</title>
     <link rel="stylesheet" href="./styles.css">
     <link rel="stylesheet" href="./cookie-override.css">
     <style>
@@ -50,33 +50,33 @@
 </head>
 <body>
     <div class="test-info">
-        <h2>?? Тест Cookie Banner в режиме инкогнито</h2>
-        <p>Эта страница предназначена для проверки работы cookie-баннера в режиме инкогнито/приватном режиме.</p>
-        <p><strong>Инструкции:</strong></p>
+        <h2>рџ§Є РўРµСЃС‚ Cookie Banner РІ СЂРµР¶РёРјРµ РёРЅРєРѕРіРЅРёС‚Рѕ</h2>
+        <p>Р­С‚Р° СЃС‚СЂР°РЅРёС†Р° РїСЂРµРґРЅР°Р·РЅР°С‡РµРЅР° РґР»СЏ РїСЂРѕРІРµСЂРєРё СЂР°Р±РѕС‚С‹ cookie-Р±Р°РЅРЅРµСЂР° РІ СЂРµР¶РёРјРµ РёРЅРєРѕРіРЅРёС‚Рѕ/РїСЂРёРІР°С‚РЅРѕРј СЂРµР¶РёРјРµ.</p>
+        <p><strong>РРЅСЃС‚СЂСѓРєС†РёРё:</strong></p>
         <ol>
-            <li>Откройте эту страницу в обычном режиме - баннер должен появиться</li>
-            <li>Примите cookie - баннер должен исчезнуть</li>
-            <li>Откройте эту же страницу в режиме инкогнито - баннер должен снова появиться</li>
-            <li>Проверьте консоль браузера для отладочной информации</li>
+            <li>РћС‚РєСЂРѕР№С‚Рµ СЌС‚Сѓ СЃС‚СЂР°РЅРёС†Сѓ РІ РѕР±С‹С‡РЅРѕРј СЂРµР¶РёРјРµ - Р±Р°РЅРЅРµСЂ РґРѕР»Р¶РµРЅ РїРѕСЏРІРёС‚СЊСЃСЏ</li>
+            <li>РџСЂРёРјРёС‚Рµ cookie - Р±Р°РЅРЅРµСЂ РґРѕР»Р¶РµРЅ РёСЃС‡РµР·РЅСѓС‚СЊ</li>
+            <li>РћС‚РєСЂРѕР№С‚Рµ СЌС‚Сѓ Р¶Рµ СЃС‚СЂР°РЅРёС†Сѓ РІ СЂРµР¶РёРјРµ РёРЅРєРѕРіРЅРёС‚Рѕ - Р±Р°РЅРЅРµСЂ РґРѕР»Р¶РµРЅ СЃРЅРѕРІР° РїРѕСЏРІРёС‚СЊСЃСЏ</li>
+            <li>РџСЂРѕРІРµСЂСЊС‚Рµ РєРѕРЅСЃРѕР»СЊ Р±СЂР°СѓР·РµСЂР° РґР»СЏ РѕС‚Р»Р°РґРѕС‡РЅРѕР№ РёРЅС„РѕСЂРјР°С†РёРё</li>
         </ol>
     </div>
 
     <div class="debug-info">
-        <h3>?? Отладочная информация</h3>
+        <h3>рџ”Ќ РћС‚Р»Р°РґРѕС‡РЅР°СЏ РёРЅС„РѕСЂРјР°С†РёСЏ</h3>
         <div id="debug-output"></div>
     </div>
 
     <div style="margin: 20px 0;">
-        <button onclick="checkCookieStatus()">Проверить статус cookie</button>
-        <button onclick="clearAllCookies()">Очистить все cookie</button>
-        <button onclick="forceShowBanner()">Принудительно показать баннер</button>
-        <button onclick="testIncognitoMode()">Тест режима инкогнито</button>
+        <button onclick="checkCookieStatus()">РџСЂРѕРІРµСЂРёС‚СЊ СЃС‚Р°С‚СѓСЃ cookie</button>
+        <button onclick="clearAllCookies()">РћС‡РёСЃС‚РёС‚СЊ РІСЃРµ cookie</button>
+        <button onclick="forceShowBanner()">РџСЂРёРЅСѓРґРёС‚РµР»СЊРЅРѕ РїРѕРєР°Р·Р°С‚СЊ Р±Р°РЅРЅРµСЂ</button>
+        <button onclick="testIncognitoMode()">РўРµСЃС‚ СЂРµР¶РёРјР° РёРЅРєРѕРіРЅРёС‚Рѕ</button>
     </div>
 
     <div id="status-output"></div>
 
     <script>
-        // Функции для тестирования
+        // Р¤СѓРЅРєС†РёРё РґР»СЏ С‚РµСЃС‚РёСЂРѕРІР°РЅРёСЏ
         function updateDebugInfo() {
             const debugOutput = document.getElementById('debug-output');
             const info = {
@@ -90,7 +90,7 @@
 
             let html = '<ul>';
             for (const [key, value] of Object.entries(info)) {
-                html += `<li><strong>${key}:</strong> ${value || '(пусто)'}</li>`;
+                html += `<li><strong>${key}:</strong> ${value || '(РїСѓСЃС‚Рѕ)'}</li>`;
             }
             html += '</ul>';
             debugOutput.innerHTML = html;
@@ -103,7 +103,7 @@
             statusDiv.textContent = `[${new Date().toLocaleTimeString()}] ${message}`;
             statusOutput.appendChild(statusDiv);
             
-            // Автоматически удалять старые сообщения
+            // РђРІС‚РѕРјР°С‚РёС‡РµСЃРєРё СѓРґР°Р»СЏС‚СЊ СЃС‚Р°СЂС‹Рµ СЃРѕРѕР±С‰РµРЅРёСЏ
             if (statusOutput.children.length > 5) {
                 statusOutput.removeChild(statusOutput.firstChild);
             }
@@ -112,9 +112,9 @@
         function checkCookieStatus() {
             const consentCookie = getCookie('cookie_consent');
             if (consentCookie) {
-                showStatus(`Найден cookie согласия: ${consentCookie}`, 'success');
+                showStatus(`РќР°Р№РґРµРЅ cookie СЃРѕРіР»Р°СЃРёСЏ: ${consentCookie}`, 'success');
             } else {
-                showStatus('Cookie согласия не найден', 'warning');
+                showStatus('Cookie СЃРѕРіР»Р°СЃРёСЏ РЅРµ РЅР°Р№РґРµРЅ', 'warning');
             }
             updateDebugInfo();
         }
@@ -124,63 +124,63 @@
                 document.cookie = c.replace(/^ +/, "").replace(/=.*/, "=;expires=" + new Date().toUTCString() + ";path=/"); 
             });
             
-            // Очистить sessionStorage
+            // РћС‡РёСЃС‚РёС‚СЊ sessionStorage
             try {
                 sessionStorage.clear();
-                showStatus('SessionStorage очищен', 'success');
+                showStatus('SessionStorage РѕС‡РёС‰РµРЅ', 'success');
             } catch (e) {
-                showStatus('Ошибка очистки sessionStorage: ' + e.message, 'error');
+                showStatus('РћС€РёР±РєР° РѕС‡РёСЃС‚РєРё sessionStorage: ' + e.message, 'error');
             }
             
-            showStatus('Все cookie очищены', 'success');
+            showStatus('Р’СЃРµ cookie РѕС‡РёС‰РµРЅС‹', 'success');
             updateDebugInfo();
         }
 
         function forceShowBanner() {
-            // Удаляем существующий баннер если есть
+            // РЈРґР°Р»СЏРµРј СЃСѓС‰РµСЃС‚РІСѓСЋС‰РёР№ Р±Р°РЅРЅРµСЂ РµСЃР»Рё РµСЃС‚СЊ
             const existingBanner = document.getElementById('cookie-banner');
             if (existingBanner) {
                 existingBanner.remove();
             }
             
-            // Показываем баннер
+            // РџРѕРєР°Р·С‹РІР°РµРј Р±Р°РЅРЅРµСЂ
             if (typeof showCookieBanner === 'function') {
                 showCookieBanner();
-                showStatus('Баннер принудительно показан', 'success');
+                showStatus('Р‘Р°РЅРЅРµСЂ РїСЂРёРЅСѓРґРёС‚РµР»СЊРЅРѕ РїРѕРєР°Р·Р°РЅ', 'success');
             } else {
-                showStatus('Функция showCookieBanner не найдена', 'error');
+                showStatus('Р¤СѓРЅРєС†РёСЏ showCookieBanner РЅРµ РЅР°Р№РґРµРЅР°', 'error');
             }
         }
 
         function testIncognitoMode() {
             try {
-                // Пробуем установить тестовый cookie
+                // РџСЂРѕР±СѓРµРј СѓСЃС‚Р°РЅРѕРІРёС‚СЊ С‚РµСЃС‚РѕРІС‹Р№ cookie
                 document.cookie = 'test_incognito=1; max-age=60';
                 const cookiesEnabled = document.cookie.indexOf('test_incognito=') !== -1;
                 
-                // Очищаем тестовый cookie
+                // РћС‡РёС‰Р°РµРј С‚РµСЃС‚РѕРІС‹Р№ cookie
                 document.cookie = 'test_incognito=1; max-age=-1';
                 
                 if (cookiesEnabled) {
-                    showStatus('Cookie работают - обычный режим', 'success');
+                    showStatus('Cookie СЂР°Р±РѕС‚Р°СЋС‚ - РѕР±С‹С‡РЅС‹Р№ СЂРµР¶РёРј', 'success');
                 } else {
-                    showStatus('Cookie не работают - режим инкогнито или блокировка', 'warning');
+                    showStatus('Cookie РЅРµ СЂР°Р±РѕС‚Р°СЋС‚ - СЂРµР¶РёРј РёРЅРєРѕРіРЅРёС‚Рѕ РёР»Рё Р±Р»РѕРєРёСЂРѕРІРєР°', 'warning');
                 }
             } catch (e) {
-                showStatus('Ошибка проверки cookie: ' + e.message, 'error');
+                showStatus('РћС€РёР±РєР° РїСЂРѕРІРµСЂРєРё cookie: ' + e.message, 'error');
             }
         }
 
-        // Инициализация при загрузке страницы
+        // РРЅРёС†РёР°Р»РёР·Р°С†РёСЏ РїСЂРё Р·Р°РіСЂСѓР·РєРµ СЃС‚СЂР°РЅРёС†С‹
         document.addEventListener('DOMContentLoaded', function() {
             updateDebugInfo();
-            showStatus('Страница загружена, проверьте cookie баннер', 'info');
+            showStatus('РЎС‚СЂР°РЅРёС†Р° Р·Р°РіСЂСѓР¶РµРЅР°, РїСЂРѕРІРµСЂСЊС‚Рµ cookie Р±Р°РЅРЅРµСЂ', 'info');
             
-            // Обновляем debug info каждые 5 секунд
+            // РћР±РЅРѕРІР»СЏРµРј debug info РєР°Р¶РґС‹Рµ 5 СЃРµРєСѓРЅРґ
             setInterval(updateDebugInfo, 5000);
         });
 
-        // Перехватываем console.log для отображения в интерфейсе
+        // РџРµСЂРµС…РІР°С‚С‹РІР°РµРј console.log РґР»СЏ РѕС‚РѕР±СЂР°Р¶РµРЅРёСЏ РІ РёРЅС‚РµСЂС„РµР№СЃРµ
         const originalLog = console.log;
         console.log = function(...args) {
             originalLog.apply(console, args);
@@ -194,5 +194,3 @@
     <script src="cookie-consent.js"></script>
 </body>
 </html>
-
-

@@ -4,8 +4,9 @@
 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Как стримить Xbox-игры на iPhone? | Экспертный мегагайд</title>
-    <meta name="description" content="">
+  <title>РљР°Рє СЃС‚СЂРёРјРёС‚СЊ Xbox-РёРіСЂС‹ РЅР° iPhone? | Р­РєСЃРїРµСЂС‚РЅС‹Р№ РјРµРіР°РіР°Р№Рґ</title>
+    <meta name="description" content="{{ description }}">
+    <meta name="description" content="РџРѕС€Р°РіРѕРІР°СЏ РёРЅСЃС‚СЂСѓРєС†РёСЏ: РљР°Рє СЃС‚СЂРёРјРёС‚СЊ Xbox-РёРіСЂС‹ РЅР° iPhone?. Р’ 2025 РіРѕРґСѓ СЃС‚СЂРёРјРёС‚СЊ Xbox-РёРіСЂС‹ РЅР° iPhone РјРѕР¶РЅРѕ РґРІСѓРјСЏ РѕСЃРЅРѕРІРЅС‹РјРё СЃРїРѕСЃРѕР±Р°РјРё: С‡РµСЂРµР·.... РЎРѕРІРµС‚С‹ СЌРєСЃРїРµСЂС‚РѕРІ...">
 
   <link rel="stylesheet" href="../styles.css" />
   <link rel="stylesheet" href="../styles-header.css" />
@@ -21,17 +22,30 @@
     .pro-tips { background: rgba(3, 74, 79, 0.05); padding: 15px; border-radius: 6px; margin: 20px 0; }
     .pro-tips h4 { color: var(--primary); margin-top: 0; margin-bottom: 12px; font-size: 1.1rem; }
     .tip-item { display: flex; gap: 8px; margin-bottom: 8px; align-items: flex-start; }
+    .warning-block {
+      background: #fff3e0;
+      border-left: 5px solid #ff9100;
+      padding: 15px 18px;
+      margin: 22px 0;
+      border-radius: 7px;
+    }
     table { width: 100%; border-collapse: collapse; margin: 20px 0; }
     th, td { border: 1px solid var(--border); padding: 8px; text-align: left; }
     th { background: var(--background-light); }
-    .highlight { background: #f5f7fa; border-left: 4px solid #2d9cdb; padding: 10px 15px; margin: 20px 0; }
-    .faq-section ul { margin-left: 1em; }
-    .block-section { margin-bottom: 2em; }
     @media (max-width: 768px) {
       .guide-content h2 { font-size: 1.4rem; margin-top: 25px; }
       .guide-image-block { padding: 12px; margin: 15px 0; }
       table, th, td { font-size: 0.95rem; }
     }
+    /* РЇРЅРґРµРєСЃ РњР°СЂРєРµС‚ СЂРµРєР»Р°РјРЅС‹Р№ Р±Р°РЅРЅРµСЂ */
+    .ym-hero-link {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+      max-width: 100%;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
     /* Р“РѕСЂРёР·РѕРЅС‚Р°Р»СЊРЅС‹Р№ Р±Р°РЅРЅРµСЂ-РєР°СЂС‚РѕС‡РєР° */
     .ym-hero-banner {
       width: 100%;
@@ -144,11 +158,13 @@
       transition: background 0.15s ease, transform 0.15s ease,
                   box-shadow 0.15s ease;
     }
+
     .ym-hero-button::after {
       content: "в†’";
       margin-left: 6px;
       font-size: 14px;
     }
+
     .ym-hero-button:hover {
       background: #7c3aed;
       transform: translateY(-1px);
@@ -172,19 +188,24 @@
         max-width: 100%;
         margin: 20px 0;
       }
+
       .ym-hero-images {
         height: 100px;
       }
+
       .ym-hero-content {
         padding: 12px 12px;
       }
+
       .ym-hero-title {
         font-size: 13px;
       }
+
       .ym-hero-button {
         font-size: 13px;
         padding: 8px 14px;
       }
+
       .ym-hero-legal {
         font-size: 10px;
       }
@@ -292,22 +313,27 @@
         padding: 15px;
         min-height: 100px;
       }
+
       .telegram-logo {
         width: 50px;
         height: 50px;
         min-width: 50px;
         margin-right: 15px;
       }
+
       .telegram-logo svg {
         width: 26px;
         height: 26px;
       }
+
       .telegram-title {
         font-size: 14px;
       }
+
       .telegram-subtitle {
         font-size: 12px;
       }
+
       .telegram-button {
         font-size: 12px;
         padding: 6px 12px;
@@ -325,13 +351,15 @@
       <div class="header__inner">
         <a href="../index.html" class="logo">
           <span class="logo__icon"></span>
-          <span class="logo__text">GeoExpert</span>
+          <span class="logo__text">Repairo</span>
         </a>
         <nav class="nav">
           <ul class="nav__list">
-            <li><a href="../cameras.html" class="nav__link">РљР°РјРµСЂС‹</a></li>
-            <li><a href="../drones.html" class="nav__link">Р”СЂРѕРЅС‹</a></li>
-            <li><a href="../workflow.html" class="nav__link">Workflow</a></li>
+            <li><a href="../tv.html" class="nav__link">РўРµР»РµРІРёР·РѕСЂС‹</a></li>
+            <li><a href="../cameras.html" class="nav__link">Р¤РѕС‚РѕР°РїРїР°СЂР°С‚С‹</a></li>
+            <li><a href="../consoles.html" class="nav__link">РџСЂРёСЃС‚Р°РІРєРё</a></li>
+            <li><a href="../laptops.html" class="nav__link">РќРѕСѓС‚Р±СѓРєРё</a></li>
+            <li><a href="../smartphones.html" class="nav__link">РЎРјР°СЂС‚С„РѕРЅС‹</a></li>
           </ul>
         </nav>
       </div>
@@ -341,165 +369,178 @@
   <section class="guide-page">
     <div class="container">
       <div class="breadcrumbs">
-        <a href="../index.html">Главная</a>
+        <a href="../index.html">Р“Р»Р°РІРЅР°СЏ</a>
         <i class="fas fa-chevron-right"></i>
-        <a href="../consoles.html">Приставки</a>
+        <a href="../consoles.html">РџСЂРёСЃС‚Р°РІРєРё</a>
         <i class="fas fa-chevron-right"></i>
-        <span>Как стримить Xbox-игры на iPhone?</span>
+        <span>РљР°Рє СЃС‚СЂРёРјРёС‚СЊ Xbox-РёРіСЂС‹ РЅР° iPhone?</span>
       </div>
 
-      <h1 class="section__title">Как стримить Xbox-игры на iPhone?</h1>
+      <h1 class="section__title">РљР°Рє СЃС‚СЂРёРјРёС‚СЊ Xbox-РёРіСЂС‹ РЅР° iPhone?</h1>
 
       <div class="guide-meta">
-        <span><i class="fas fa-mobile-alt"></i> Экспертный гид: все способы стримить Xbox-игры на iPhone — Cloud Gaming, Remote Play, настройка, советы, лайфхаки, FAQ, таблицы, иллюстрация.</span>
+        <span><i class="fas fa-mobile-alt"></i> Р­РєСЃРїРµСЂС‚РЅС‹Р№ РіРёРґ: РІСЃРµ СЃРїРѕСЃРѕР±С‹ СЃС‚СЂРёРјРёС‚СЊ Xbox-РёРіСЂС‹ РЅР° iPhone вЂ” Cloud Gaming, Remote Play, РЅР°СЃС‚СЂРѕР№РєР°, СЃРѕРІРµС‚С‹, Р»Р°Р№С„С…Р°РєРё, FAQ, С‚Р°Р±Р»РёС†С‹, РёР»Р»СЋСЃС‚СЂР°С†РёСЏ.</span>
       </div>
 
       <div class="guide-image-block">
-        <img src="https://avatars.mds.yandex.net/get-shedevrum/16419046/img_48b8ea473c8611f08cfeceaf04b5ef38/orig" alt="Как стримить Xbox-игры на iPhone">
+        <img src="https://avatars.mds.yandex.net/get-shedevrum/16419046/img_48b8ea473c8611f08cfeceaf04b5ef38/orig" alt="РљР°Рє СЃС‚СЂРёРјРёС‚СЊ Xbox-РёРіСЂС‹ РЅР° iPhone">
         <div class="image-caption">
-          Как стримить Xbox-игры на iPhone: Cloud Gaming через Safari, Remote Play с консоли, настройка контроллера, советы по минимизации задержки и лучшие лайфхаки.
+          РљР°Рє СЃС‚СЂРёРјРёС‚СЊ Xbox-РёРіСЂС‹ РЅР° iPhone: Cloud Gaming С‡РµСЂРµР· Safari, Remote Play СЃ РєРѕРЅСЃРѕР»Рё, РЅР°СЃС‚СЂРѕР№РєР° РєРѕРЅС‚СЂРѕР»Р»РµСЂР°, СЃРѕРІРµС‚С‹ РїРѕ РјРёРЅРёРјРёР·Р°С†РёРё Р·Р°РґРµСЂР¶РєРё Рё Р»СѓС‡С€РёРµ Р»Р°Р№С„С…Р°РєРё.
         </div>
       </div>
 
       <div class="guide-content">
-        <!-- Яндекс Маркет рекламный блок -->
+        <!-- РЇРЅРґРµРєСЃ РњР°СЂРєРµС‚ СЂРµРєР»Р°РјРЅС‹Р№ Р±Р»РѕРє -->
         <a href="https://market.yandex.ru/catalog--bytovaia-tekhnika/54419/list?hid=198118&rs=eJwzUvjEKMvBILDwEKsEg8Kzbh6Nw4dZNS4D8c7lFhp9c1-wAQC3uAwP&clid=14635360&refid=rbck8fgamv681iu59go3iqxwddedl4x9&erid=5jtCeReNx12oajxS2bzShmZ&mclid=1003&distr_type=7&utm_source=partner_network&pp=900&utm_medium=link_list&utm_campaign=14635360"
            target="_blank"
            rel="noopener noreferrer sponsored"
+           class="ym-hero-link">
+          <div class="ym-hero-banner">
+            <div class="ym-hero-images">
+              <div class="ym-hero-image">
                 <img src="https://avatars.mds.yandex.net/get-mpic/14770882/2a00000197f4dbee777f8afddccaf44faa53/optimize"
-                     alt="Распродажа бытовой электроники 1">
+                     alt="Р Р°СЃРїСЂРѕРґР°Р¶Р° Р±С‹С‚РѕРІРѕР№ СЌР»РµРєС‚СЂРѕРЅРёРєРё 1">
               </div>
+              <div class="ym-hero-image">
                 <img src="https://avatars.mds.yandex.net/get-mpic/15580298/img_id8867318964670654684.jpeg/optimize"
-                     alt="Распродажа бытовой электроники 2">
+                     alt="Р Р°СЃРїСЂРѕРґР°Р¶Р° Р±С‹С‚РѕРІРѕР№ СЌР»РµРєС‚СЂРѕРЅРёРєРё 2">
               </div>
+              <div class="ym-hero-image">
                 <img src="https://avatars.mds.yandex.net/get-mpic/10096780/2a000001953b534fed2494e0b30fadd9b458/optimize"
-                     alt="Распродажа бытовой электроники 3">
+                     alt="Р Р°СЃРїСЂРѕРґР°Р¶Р° Р±С‹С‚РѕРІРѕР№ СЌР»РµРєС‚СЂРѕРЅРёРєРё 3">
               </div>
             </div>
-                  ? Выгодные предложения
+            <div class="ym-hero-content">
+              <h3 class="ym-hero-title">Р Р°СЃРїСЂРѕРґР°Р¶Р° Р±С‹С‚РѕРІРѕР№ СЌР»РµРєС‚СЂРѕРЅРёРєРё РЅР° РЇРЅРґРµРєСЃ РњР°СЂРєРµС‚Рµ</h3>
+              <div class="ym-hero-top">
+                <div class="ym-hero-rating">
+                  в­ђ Р’С‹РіРѕРґРЅС‹Рµ РїСЂРµРґР»РѕР¶РµРЅРёСЏ
+                  <span class="ym-hero-rating-count">РЎРєРёРґРєРё РґРѕ 50%</span>
                 </div>
               </div>
+              <button class="ym-hero-button">Р—Р° СЃРєРёРґРєР°РјРё</button>
             </div>
           </div>
-            Реклама. ООО "ЯНДЕКС", ИНН 7736207543. clid: 14635360, erid: 5jtCeReNx12oajxS2bzShmZ
+          <div class="ym-hero-legal">
+            Р РµРєР»Р°РјР°. РћРћРћ "РЇРќР”Р•РљРЎ", РРќРќ 7736207543. clid: 14635360, erid: 5jtCeReNx12oajxS2bzShmZ
           </div>
         </a>
 
-        <h2>Введение: два способа играть в Xbox на iPhone</h2>
+        <h2>Р’РІРµРґРµРЅРёРµ: РґРІР° СЃРїРѕСЃРѕР±Р° РёРіСЂР°С‚СЊ РІ Xbox РЅР° iPhone</h2>
         <p>
-          В 2025 году стримить Xbox-игры на iPhone можно двумя основными способами: через облачный сервис Xbox Cloud Gaming (xCloud) — без консоли, и с помощью Xbox Remote Play — поток с вашей Xbox Series X|S или One. Оба метода поддерживают управление геймпадом, сенсорный ввод и требуют стабильного интернета.
+          Р’ 2025 РіРѕРґСѓ СЃС‚СЂРёРјРёС‚СЊ Xbox-РёРіСЂС‹ РЅР° iPhone РјРѕР¶РЅРѕ РґРІСѓРјСЏ РѕСЃРЅРѕРІРЅС‹РјРё СЃРїРѕСЃРѕР±Р°РјРё: С‡РµСЂРµР· РѕР±Р»Р°С‡РЅС‹Р№ СЃРµСЂРІРёСЃ Xbox Cloud Gaming (xCloud) вЂ” Р±РµР· РєРѕРЅСЃРѕР»Рё, Рё СЃ РїРѕРјРѕС‰СЊСЋ Xbox Remote Play вЂ” РїРѕС‚РѕРє СЃ РІР°С€РµР№ Xbox Series X|S РёР»Рё One. РћР±Р° РјРµС‚РѕРґР° РїРѕРґРґРµСЂР¶РёРІР°СЋС‚ СѓРїСЂР°РІР»РµРЅРёРµ РіРµР№РјРїР°РґРѕРј, СЃРµРЅСЃРѕСЂРЅС‹Р№ РІРІРѕРґ Рё С‚СЂРµР±СѓСЋС‚ СЃС‚Р°Р±РёР»СЊРЅРѕРіРѕ РёРЅС‚РµСЂРЅРµС‚Р°.
         </p>
 
-        <h2>Таблица: сравнение Cloud Gaming и Remote Play на iPhone</h2>
+        <h2>РўР°Р±Р»РёС†Р°: СЃСЂР°РІРЅРµРЅРёРµ Cloud Gaming Рё Remote Play РЅР° iPhone</h2>
 <table>
           <thead>
             <tr>
-              <th>Параметр</th>
+              <th>РџР°СЂР°РјРµС‚СЂ</th>
               <th>Cloud Gaming (xCloud)</th>
               <th>Remote Play</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td>Нужна ли консоль?</td>
-              <td>Нет</td>
-              <td>Да</td>
+              <td>РќСѓР¶РЅР° Р»Рё РєРѕРЅСЃРѕР»СЊ?</td>
+              <td>РќРµС‚</td>
+              <td>Р”Р°</td>
             </tr>
             <tr>
-              <td>Подписка</td>
+              <td>РџРѕРґРїРёСЃРєР°</td>
               <td>Game Pass Ultimate</td>
-              <td>Любая (бесплатно)</td>
+              <td>Р›СЋР±Р°СЏ (Р±РµСЃРїР»Р°С‚РЅРѕ)</td>
             </tr>
             <tr>
-              <td>Где работает</td>
-              <td>Везде (через интернет)</td>
-              <td>В локальной сети и вне дома</td>
+              <td>Р“РґРµ СЂР°Р±РѕС‚Р°РµС‚</td>
+              <td>Р’РµР·РґРµ (С‡РµСЂРµР· РёРЅС‚РµСЂРЅРµС‚)</td>
+              <td>Р’ Р»РѕРєР°Р»СЊРЅРѕР№ СЃРµС‚Рё Рё РІРЅРµ РґРѕРјР°</td>
             </tr>
             <tr>
-              <td>Библиотека игр</td>
-              <td>Только поддерживаемые Game Pass</td>
-              <td>Все установленные на вашей Xbox</td>
+              <td>Р‘РёР±Р»РёРѕС‚РµРєР° РёРіСЂ</td>
+              <td>РўРѕР»СЊРєРѕ РїРѕРґРґРµСЂР¶РёРІР°РµРјС‹Рµ Game Pass</td>
+              <td>Р’СЃРµ СѓСЃС‚Р°РЅРѕРІР»РµРЅРЅС‹Рµ РЅР° РІР°С€РµР№ Xbox</td>
             </tr>
             <tr>
-              <td>Качество</td>
-              <td>1080p/60fps (ограничено облаком)</td>
-              <td>До 1080p/60fps (зависит от сети)</td>
+              <td>РљР°С‡РµСЃС‚РІРѕ</td>
+              <td>1080p/60fps (РѕРіСЂР°РЅРёС‡РµРЅРѕ РѕР±Р»Р°РєРѕРј)</td>
+              <td>Р”Рѕ 1080p/60fps (Р·Р°РІРёСЃРёС‚ РѕС‚ СЃРµС‚Рё)</td>
             </tr>
             <tr>
-              <td>Контроллер</td>
-              <td>Bluetooth/USB, сенсорный ввод</td>
-              <td>Bluetooth/USB, сенсорный ввод</td>
+              <td>РљРѕРЅС‚СЂРѕР»Р»РµСЂ</td>
+              <td>Bluetooth/USB, СЃРµРЅСЃРѕСЂРЅС‹Р№ РІРІРѕРґ</td>
+              <td>Bluetooth/USB, СЃРµРЅСЃРѕСЂРЅС‹Р№ РІРІРѕРґ</td>
             </tr>
             <tr>
-              <td>Задержка</td>
-              <td>Средняя (серверы Microsoft)</td>
-              <td>Минимальная (особенно в локальной сети)</td>
+              <td>Р—Р°РґРµСЂР¶РєР°</td>
+              <td>РЎСЂРµРґРЅСЏСЏ (СЃРµСЂРІРµСЂС‹ Microsoft)</td>
+              <td>РњРёРЅРёРјР°Р»СЊРЅР°СЏ (РѕСЃРѕР±РµРЅРЅРѕ РІ Р»РѕРєР°Р»СЊРЅРѕР№ СЃРµС‚Рё)</td>
             </tr>
           </tbody>
         </table>
 
-        <h2>Пошаговая инструкция: как стримить Xbox-игры на iPhone через Cloud Gaming (xCloud)</h2>
+        <h2>РџРѕС€Р°РіРѕРІР°СЏ РёРЅСЃС‚СЂСѓРєС†РёСЏ: РєР°Рє СЃС‚СЂРёРјРёС‚СЊ Xbox-РёРіСЂС‹ РЅР° iPhone С‡РµСЂРµР· Cloud Gaming (xCloud)</h2>
         <ol>
           <li>
-            <b>Оформите подписку Xbox Game Pass Ultimate</b> — только она даёт доступ к облачному геймингу.
+            <b>РћС„РѕСЂРјРёС‚Рµ РїРѕРґРїРёСЃРєСѓ Xbox Game Pass Ultimate</b> вЂ” С‚РѕР»СЊРєРѕ РѕРЅР° РґР°С‘С‚ РґРѕСЃС‚СѓРї Рє РѕР±Р»Р°С‡РЅРѕРјСѓ РіРµР№РјРёРЅРіСѓ.
           </li>
           <li>
-            <b>Откройте Safari (или Chrome/Edge) на iPhone</b> и перейдите на <b>xbox.com/play</b>.
+            <b>РћС‚РєСЂРѕР№С‚Рµ Safari (РёР»Рё Chrome/Edge) РЅР° iPhone</b> Рё РїРµСЂРµР№РґРёС‚Рµ РЅР° <b>xbox.com/play</b>.
           </li>
           <li>
-            <b>Войдите в свой Microsoft-аккаунт</b>, связанный с подпиской Game Pass Ultimate.
+            <b>Р’РѕР№РґРёС‚Рµ РІ СЃРІРѕР№ Microsoft-Р°РєРєР°СѓРЅС‚</b>, СЃРІСЏР·Р°РЅРЅС‹Р№ СЃ РїРѕРґРїРёСЃРєРѕР№ Game Pass Ultimate.
           </li>
           <li>
-            <b>Добавьте Xbox Cloud Gaming на главный экран</b>:
+            <b>Р”РѕР±Р°РІСЊС‚Рµ Xbox Cloud Gaming РЅР° РіР»Р°РІРЅС‹Р№ СЌРєСЂР°РЅ</b>:
             <ul>
-              <li>В Safari нажмите <b>Поделиться</b> > <b>Добавить на экран "Домой"</b> > <b>Добавить</b>.</li>
+              <li>Р’ Safari РЅР°Р¶РјРёС‚Рµ <b>РџРѕРґРµР»РёС‚СЊСЃСЏ</b> в†’ <b>Р”РѕР±Р°РІРёС‚СЊ РЅР° СЌРєСЂР°РЅ "Р”РѕРјРѕР№"</b> в†’ <b>Р”РѕР±Р°РІРёС‚СЊ</b>.</li>
             </ul>
           </li>
           <li>
-            <b>Подключите геймпад</b>:
+            <b>РџРѕРґРєР»СЋС‡РёС‚Рµ РіРµР№РјРїР°Рґ</b>:
             <ul>
-              <li>Включите Bluetooth на iPhone.</li>
-              <li>Зажмите кнопку синхронизации на контроллере Xbox, найдите его в списке устройств и подключите.</li>
+              <li>Р’РєР»СЋС‡РёС‚Рµ Bluetooth РЅР° iPhone.</li>
+              <li>Р—Р°Р¶РјРёС‚Рµ РєРЅРѕРїРєСѓ СЃРёРЅС…СЂРѕРЅРёР·Р°С†РёРё РЅР° РєРѕРЅС‚СЂРѕР»Р»РµСЂРµ Xbox, РЅР°Р№РґРёС‚Рµ РµРіРѕ РІ СЃРїРёСЃРєРµ СѓСЃС‚СЂРѕР№СЃС‚РІ Рё РїРѕРґРєР»СЋС‡РёС‚Рµ.</li>
             </ul>
           </li>
           <li>
-            <b>Запустите веб-приложение Xbox Cloud Gaming</b> с домашнего экрана, выберите игру и нажмите <b>Играть</b>.
+            <b>Р—Р°РїСѓСЃС‚РёС‚Рµ РІРµР±-РїСЂРёР»РѕР¶РµРЅРёРµ Xbox Cloud Gaming</b> СЃ РґРѕРјР°С€РЅРµРіРѕ СЌРєСЂР°РЅР°, РІС‹Р±РµСЂРёС‚Рµ РёРіСЂСѓ Рё РЅР°Р¶РјРёС‚Рµ <b>РРіСЂР°С‚СЊ</b>.
           </li>
           <li>
-            <b>Для сенсорных игр</b> (например, Minecraft Dungeons, Hades) можно играть без геймпада — появится виртуальный контроллер.
+            <b>Р”Р»СЏ СЃРµРЅСЃРѕСЂРЅС‹С… РёРіСЂ</b> (РЅР°РїСЂРёРјРµСЂ, Minecraft Dungeons, Hades) РјРѕР¶РЅРѕ РёРіСЂР°С‚СЊ Р±РµР· РіРµР№РјРїР°РґР° вЂ” РїРѕСЏРІРёС‚СЃСЏ РІРёСЂС‚СѓР°Р»СЊРЅС‹Р№ РєРѕРЅС‚СЂРѕР»Р»РµСЂ.
           </li>
         </ol>
 
-        <h2>Пошаговая инструкция: как стримить Xbox-игры на iPhone через Remote Play</h2>
+        <h2>РџРѕС€Р°РіРѕРІР°СЏ РёРЅСЃС‚СЂСѓРєС†РёСЏ: РєР°Рє СЃС‚СЂРёРјРёС‚СЊ Xbox-РёРіСЂС‹ РЅР° iPhone С‡РµСЂРµР· Remote Play</h2>
         <ol>
           <li>
-            <b>Включите Xbox и обновите ПО до последней версии</b>.
+            <b>Р’РєР»СЋС‡РёС‚Рµ Xbox Рё РѕР±РЅРѕРІРёС‚Рµ РџРћ РґРѕ РїРѕСЃР»РµРґРЅРµР№ РІРµСЂСЃРёРё</b>.
           </li>
           <li>
-            <b>На Xbox перейдите в <b>Настройки > Устройства и подключения > Удалённые функции</b></b> и включите <b>Удалённые функции</b>, выберите режим питания <b>Мгновенный запуск (Instant-On)</b>.
+            <b>РќР° Xbox РїРµСЂРµР№РґРёС‚Рµ РІ <b>РќР°СЃС‚СЂРѕР№РєРё в†’ РЈСЃС‚СЂРѕР№СЃС‚РІР° Рё РїРѕРґРєР»СЋС‡РµРЅРёСЏ в†’ РЈРґР°Р»С‘РЅРЅС‹Рµ С„СѓРЅРєС†РёРё</b></b> Рё РІРєР»СЋС‡РёС‚Рµ <b>РЈРґР°Р»С‘РЅРЅС‹Рµ С„СѓРЅРєС†РёРё</b>, РІС‹Р±РµСЂРёС‚Рµ СЂРµР¶РёРј РїРёС‚Р°РЅРёСЏ <b>РњРіРЅРѕРІРµРЅРЅС‹Р№ Р·Р°РїСѓСЃРє (Instant-On)</b>.
           </li>
           <li>
-            <b>Скачайте приложение Xbox</b> из App Store на iPhone.
+            <b>РЎРєР°С‡Р°Р№С‚Рµ РїСЂРёР»РѕР¶РµРЅРёРµ Xbox</b> РёР· App Store РЅР° iPhone.
           </li>
           <li>
-            <b>Войдите в свой Microsoft-аккаунт</b> в приложении Xbox.
+            <b>Р’РѕР№РґРёС‚Рµ РІ СЃРІРѕР№ Microsoft-Р°РєРєР°СѓРЅС‚</b> РІ РїСЂРёР»РѕР¶РµРЅРёРё Xbox.
           </li>
           <li>
-            <b>В разделе <b>Моя библиотека > Консоли</b> выберите свою Xbox и нажмите <b>Удалённая игра на этом устройстве</b></b>.
+            <b>Р’ СЂР°Р·РґРµР»Рµ <b>РњРѕСЏ Р±РёР±Р»РёРѕС‚РµРєР° в†’ РљРѕРЅСЃРѕР»Рё</b> РІС‹Р±РµСЂРёС‚Рµ СЃРІРѕСЋ Xbox Рё РЅР°Р¶РјРёС‚Рµ <b>РЈРґР°Р»С‘РЅРЅР°СЏ РёРіСЂР° РЅР° СЌС‚РѕРј СѓСЃС‚СЂРѕР№СЃС‚РІРµ</b></b>.
           </li>
           <li>
-            <b>Подключите геймпад Xbox по Bluetooth</b> (или используйте сенсорное управление, если поддерживается).
+            <b>РџРѕРґРєР»СЋС‡РёС‚Рµ РіРµР№РјРїР°Рґ Xbox РїРѕ Bluetooth</b> (РёР»Рё РёСЃРїРѕР»СЊР·СѓР№С‚Рµ СЃРµРЅСЃРѕСЂРЅРѕРµ СѓРїСЂР°РІР»РµРЅРёРµ, РµСЃР»Рё РїРѕРґРґРµСЂР¶РёРІР°РµС‚СЃСЏ).
           </li>
           <li>
-            <b>Запустите любую установленную на консоли игру — изображение и звук появятся на iPhone</b>.
+            <b>Р—Р°РїСѓСЃС‚РёС‚Рµ Р»СЋР±СѓСЋ СѓСЃС‚Р°РЅРѕРІР»РµРЅРЅСѓСЋ РЅР° РєРѕРЅСЃРѕР»Рё РёРіСЂСѓ вЂ” РёР·РѕР±СЂР°Р¶РµРЅРёРµ Рё Р·РІСѓРє РїРѕСЏРІСЏС‚СЃСЏ РЅР° iPhone</b>.
           </li>
         </ol>
 
-        <h2>Таблица: минимальные требования для комфортного стриминга Xbox на iPhone</h2>
+        <h2>РўР°Р±Р»РёС†Р°: РјРёРЅРёРјР°Р»СЊРЅС‹Рµ С‚СЂРµР±РѕРІР°РЅРёСЏ РґР»СЏ РєРѕРјС„РѕСЂС‚РЅРѕРіРѕ СЃС‚СЂРёРјРёРЅРіР° Xbox РЅР° iPhone</h2>
         <table>
           <thead>
             <tr>
-              <th>Параметр</th>
+              <th>РџР°СЂР°РјРµС‚СЂ</th>
               <th>Cloud Gaming</th>
               <th>Remote Play</th>
             </tr>
@@ -507,104 +548,104 @@
           <tbody>
             <tr>
               <td>iPhone</td>
-              <td>XR или новее, iOS 14.4+</td>
-              <td>XR или новее, iOS 13+</td>
+              <td>XR РёР»Рё РЅРѕРІРµРµ, iOS 14.4+</td>
+              <td>XR РёР»Рё РЅРѕРІРµРµ, iOS 13+</td>
             </tr>
             <tr>
-              <td>Интернет</td>
-              <td>10 Мбит/с+ (20 Мбит/с для планшета)</td>
-              <td>10 Мбит/с+ (лучше 5 ГГц Wi-Fi)</td>
+              <td>РРЅС‚РµСЂРЅРµС‚</td>
+              <td>10 РњР±РёС‚/СЃ+ (20 РњР±РёС‚/СЃ РґР»СЏ РїР»Р°РЅС€РµС‚Р°)</td>
+              <td>10 РњР±РёС‚/СЃ+ (Р»СѓС‡С€Рµ 5 Р“Р“С† Wi-Fi)</td>
             </tr>
             <tr>
-              <td>Геймпад</td>
-              <td>Bluetooth Xbox/совместимый</td>
-              <td>Bluetooth Xbox/совместимый</td>
+              <td>Р“РµР№РјРїР°Рґ</td>
+              <td>Bluetooth Xbox/СЃРѕРІРјРµСЃС‚РёРјС‹Р№</td>
+              <td>Bluetooth Xbox/СЃРѕРІРјРµСЃС‚РёРјС‹Р№</td>
             </tr>
             <tr>
-              <td>Браузер/приложение</td>
-              <td>Safari (рекомендуется), Chrome, Edge</td>
+              <td>Р‘СЂР°СѓР·РµСЂ/РїСЂРёР»РѕР¶РµРЅРёРµ</td>
+              <td>Safari (СЂРµРєРѕРјРµРЅРґСѓРµС‚СЃСЏ), Chrome, Edge</td>
               <td>Xbox App (App Store)</td>
             </tr>
             <tr>
-              <td>Подписка</td>
+              <td>РџРѕРґРїРёСЃРєР°</td>
               <td>Game Pass Ultimate</td>
-              <td>Не требуется</td>
+              <td>РќРµ С‚СЂРµР±СѓРµС‚СЃСЏ</td>
             </tr>
           </tbody>
         </table>
 
-        <h2>Лайфхаки и советы для стриминга Xbox-игр на iPhone</h2>
+        <h2>Р›Р°Р№С„С…Р°РєРё Рё СЃРѕРІРµС‚С‹ РґР»СЏ СЃС‚СЂРёРјРёРЅРіР° Xbox-РёРіСЂ РЅР° iPhone</h2>
         <div class="pro-tips">
-          <h4>?? Практические советы</h4>
+          <h4>рџ”№ РџСЂР°РєС‚РёС‡РµСЃРєРёРµ СЃРѕРІРµС‚С‹</h4>
           <div class="tip-item">
             <i class="fas fa-lightbulb"></i>
-            <p>Используйте Wi-Fi 5 ГГц — это минимизирует лаги и потери пакетов, особенно для Remote Play.</p>
+            <p>РСЃРїРѕР»СЊР·СѓР№С‚Рµ Wi-Fi 5 Р“Р“С† вЂ” СЌС‚Рѕ РјРёРЅРёРјРёР·РёСЂСѓРµС‚ Р»Р°РіРё Рё РїРѕС‚РµСЂРё РїР°РєРµС‚РѕРІ, РѕСЃРѕР±РµРЅРЅРѕ РґР»СЏ Remote Play.</p>
           </div>
           <div class="tip-item">
             <i class="fas fa-lightbulb"></i>
-            <p>Для Cloud Gaming лучше Safari: меньше багов, стабильнее поток.</p>
+            <p>Р”Р»СЏ Cloud Gaming Р»СѓС‡С€Рµ Safari: РјРµРЅСЊС€Рµ Р±Р°РіРѕРІ, СЃС‚Р°Р±РёР»СЊРЅРµРµ РїРѕС‚РѕРє.</p>
           </div>
           <div class="tip-item">
             <i class="fas fa-lightbulb"></i>
-            <p>Добавьте иконку Xbox Cloud Gaming на главный экран — запускать игры так удобнее и быстрее.</p>
+            <p>Р”РѕР±Р°РІСЊС‚Рµ РёРєРѕРЅРєСѓ Xbox Cloud Gaming РЅР° РіР»Р°РІРЅС‹Р№ СЌРєСЂР°РЅ вЂ” Р·Р°РїСѓСЃРєР°С‚СЊ РёРіСЂС‹ С‚Р°Рє СѓРґРѕР±РЅРµРµ Рё Р±С‹СЃС‚СЂРµРµ.</p>
           </div>
           <div class="tip-item">
             <i class="fas fa-lightbulb"></i>
-            <p>Регулярно обновляйте приложение Xbox и iOS для лучшей совместимости и производительности.</p>
+            <p>Р РµРіСѓР»СЏСЂРЅРѕ РѕР±РЅРѕРІР»СЏР№С‚Рµ РїСЂРёР»РѕР¶РµРЅРёРµ Xbox Рё iOS РґР»СЏ Р»СѓС‡С€РµР№ СЃРѕРІРјРµСЃС‚РёРјРѕСЃС‚Рё Рё РїСЂРѕРёР·РІРѕРґРёС‚РµР»СЊРЅРѕСЃС‚Рё.</p>
           </div>
           <div class="tip-item">
             <i class="fas fa-lightbulb"></i>
-            <p>Для сенсорных игр (Minecraft Dungeons, Hades) не нужен геймпад — используйте экранный контроллер.</p>
+            <p>Р”Р»СЏ СЃРµРЅСЃРѕСЂРЅС‹С… РёРіСЂ (Minecraft Dungeons, Hades) РЅРµ РЅСѓР¶РµРЅ РіРµР№РјРїР°Рґ вЂ” РёСЃРїРѕР»СЊР·СѓР№С‚Рµ СЌРєСЂР°РЅРЅС‹Р№ РєРѕРЅС‚СЂРѕР»Р»РµСЂ.</p>
           </div>
         </div>
 
-        <h2>FAQ – часто задаваемые вопросы о стриминге Xbox-игр на iPhone</h2>
+        <h2>FAQ вЂ“ С‡Р°СЃС‚Рѕ Р·Р°РґР°РІР°РµРјС‹Рµ РІРѕРїСЂРѕСЃС‹ Рѕ СЃС‚СЂРёРјРёРЅРіРµ Xbox-РёРіСЂ РЅР° iPhone</h2>
         <ul>
           <li>
-            <strong>Можно ли стримить Xbox-игры на iPhone без консоли?</strong><br>
-            Да, через Xbox Cloud Gaming (xCloud) с подпиской Game Pass Ultimate.
+            <strong>РњРѕР¶РЅРѕ Р»Рё СЃС‚СЂРёРјРёС‚СЊ Xbox-РёРіСЂС‹ РЅР° iPhone Р±РµР· РєРѕРЅСЃРѕР»Рё?</strong><br>
+            Р”Р°, С‡РµСЂРµР· Xbox Cloud Gaming (xCloud) СЃ РїРѕРґРїРёСЃРєРѕР№ Game Pass Ultimate.
           </li>
           <li>
-            <strong>Какие игры доступны через Cloud Gaming?</strong><br>
-            Только поддерживаемые Game Pass Ultimate (см. xbox.com/play).
+            <strong>РљР°РєРёРµ РёРіСЂС‹ РґРѕСЃС‚СѓРїРЅС‹ С‡РµСЂРµР· Cloud Gaming?</strong><br>
+            РўРѕР»СЊРєРѕ РїРѕРґРґРµСЂР¶РёРІР°РµРјС‹Рµ Game Pass Ultimate (СЃРј. xbox.com/play).
           </li>
           <li>
-            <strong>Можно ли играть в свои установленные игры с Xbox на iPhone?</strong><br>
-            Да, через Remote Play — стрим с вашей консоли на iPhone.
+            <strong>РњРѕР¶РЅРѕ Р»Рё РёРіСЂР°С‚СЊ РІ СЃРІРѕРё СѓСЃС‚Р°РЅРѕРІР»РµРЅРЅС‹Рµ РёРіСЂС‹ СЃ Xbox РЅР° iPhone?</strong><br>
+            Р”Р°, С‡РµСЂРµР· Remote Play вЂ” СЃС‚СЂРёРј СЃ РІР°С€РµР№ РєРѕРЅСЃРѕР»Рё РЅР° iPhone.
           </li>
           <li>
-            <strong>Работает ли сенсорное управление?</strong><br>
-            Да, для ряда игр доступен виртуальный контроллер прямо на экране.
+            <strong>Р Р°Р±РѕС‚Р°РµС‚ Р»Рё СЃРµРЅСЃРѕСЂРЅРѕРµ СѓРїСЂР°РІР»РµРЅРёРµ?</strong><br>
+            Р”Р°, РґР»СЏ СЂСЏРґР° РёРіСЂ РґРѕСЃС‚СѓРїРµРЅ РІРёСЂС‚СѓР°Р»СЊРЅС‹Р№ РєРѕРЅС‚СЂРѕР»Р»РµСЂ РїСЂСЏРјРѕ РЅР° СЌРєСЂР°РЅРµ.
           </li>
           <li>
-            <strong>Поддерживается ли 4K-стриминг?</strong><br>
-            Пока только 1080p/60fps, но качество постоянно улучшается.
+            <strong>РџРѕРґРґРµСЂР¶РёРІР°РµС‚СЃСЏ Р»Рё 4K-СЃС‚СЂРёРјРёРЅРі?</strong><br>
+            РџРѕРєР° С‚РѕР»СЊРєРѕ 1080p/60fps, РЅРѕ РєР°С‡РµСЃС‚РІРѕ РїРѕСЃС‚РѕСЏРЅРЅРѕ СѓР»СѓС‡С€Р°РµС‚СЃСЏ.
           </li>
           <li>
-            <strong>Можно ли стримить Xbox Game Pass для ПК на iPhone?</strong><br>
-            Нет, только Xbox-версии игр через облако или Remote Play с консоли.
+            <strong>РњРѕР¶РЅРѕ Р»Рё СЃС‚СЂРёРјРёС‚СЊ Xbox Game Pass РґР»СЏ РџРљ РЅР° iPhone?</strong><br>
+            РќРµС‚, С‚РѕР»СЊРєРѕ Xbox-РІРµСЂСЃРёРё РёРіСЂ С‡РµСЂРµР· РѕР±Р»Р°РєРѕ РёР»Рё Remote Play СЃ РєРѕРЅСЃРѕР»Рё.
           </li>
         </ul>
 
         <div class="warning-block">
-          <strong>Внимание!</strong> Для облачного гейминга и Remote Play нужен стабильный быстрый интернет (лучше 5 ГГц Wi-Fi) и совместимый геймпад. В некоторых играх возможны ограничения по сенсорному управлению!
+          <strong>Р’РЅРёРјР°РЅРёРµ!</strong> Р”Р»СЏ РѕР±Р»Р°С‡РЅРѕРіРѕ РіРµР№РјРёРЅРіР° Рё Remote Play РЅСѓР¶РµРЅ СЃС‚Р°Р±РёР»СЊРЅС‹Р№ Р±С‹СЃС‚СЂС‹Р№ РёРЅС‚РµСЂРЅРµС‚ (Р»СѓС‡С€Рµ 5 Р“Р“С† Wi-Fi) Рё СЃРѕРІРјРµСЃС‚РёРјС‹Р№ РіРµР№РјРїР°Рґ. Р’ РЅРµРєРѕС‚РѕСЂС‹С… РёРіСЂР°С… РІРѕР·РјРѕР¶РЅС‹ РѕРіСЂР°РЅРёС‡РµРЅРёСЏ РїРѕ СЃРµРЅСЃРѕСЂРЅРѕРјСѓ СѓРїСЂР°РІР»РµРЅРёСЋ!
         </div>
 
-        <h2>Пошаговая инструкция: как подключить Xbox-контроллер к iPhone</h2>
+        <h2>РџРѕС€Р°РіРѕРІР°СЏ РёРЅСЃС‚СЂСѓРєС†РёСЏ: РєР°Рє РїРѕРґРєР»СЋС‡РёС‚СЊ Xbox-РєРѕРЅС‚СЂРѕР»Р»РµСЂ Рє iPhone</h2>
         <ol>
-          <li>Включите Bluetooth на iPhone (Настройки > Bluetooth > Вкл.).</li>
-          <li>На геймпаде Xbox зажмите кнопку синхронизации до мигания индикатора.</li>
-          <li>В списке устройств на iPhone выберите "Xbox Wireless Controller" и дождитесь подключения.</li>
-          <li>Откройте Xbox Cloud Gaming или Xbox App и начните игру.</li>
+          <li>Р’РєР»СЋС‡РёС‚Рµ Bluetooth РЅР° iPhone (РќР°СЃС‚СЂРѕР№РєРё в†’ Bluetooth в†’ Р’РєР».).</li>
+          <li>РќР° РіРµР№РјРїР°РґРµ Xbox Р·Р°Р¶РјРёС‚Рµ РєРЅРѕРїРєСѓ СЃРёРЅС…СЂРѕРЅРёР·Р°С†РёРё РґРѕ РјРёРіР°РЅРёСЏ РёРЅРґРёРєР°С‚РѕСЂР°.</li>
+          <li>Р’ СЃРїРёСЃРєРµ СѓСЃС‚СЂРѕР№СЃС‚РІ РЅР° iPhone РІС‹Р±РµСЂРёС‚Рµ "Xbox Wireless Controller" Рё РґРѕР¶РґРёС‚РµСЃСЊ РїРѕРґРєР»СЋС‡РµРЅРёСЏ.</li>
+          <li>РћС‚РєСЂРѕР№С‚Рµ Xbox Cloud Gaming РёР»Рё Xbox App Рё РЅР°С‡РЅРёС‚Рµ РёРіСЂСѓ.</li>
         </ol>
 
-        <h2>?? Итог: как стримить Xbox-игры на iPhone?</h2>
+        <h2>рџ“Њ РС‚РѕРі: РєР°Рє СЃС‚СЂРёРјРёС‚СЊ Xbox-РёРіСЂС‹ РЅР° iPhone?</h2>
         <p>
-          В 2025 году стримить Xbox-игры на iPhone можно двумя способами: через облачный сервис Xbox Cloud Gaming (xCloud) с подпиской Game Pass Ultimate или с помощью Remote Play с вашей консоли. Оба метода поддерживают геймпады, сенсорное управление и требуют стабильного интернета (лучше 5 ГГц Wi-Fi). Для Cloud Gaming используйте Safari и добавьте веб-приложение на главный экран. Для Remote Play скачайте Xbox App и включите удалённые функции на консоли. Следуйте инструкциям — и играйте в Xbox где угодно!
+          Р’ 2025 РіРѕРґСѓ СЃС‚СЂРёРјРёС‚СЊ Xbox-РёРіСЂС‹ РЅР° iPhone РјРѕР¶РЅРѕ РґРІСѓРјСЏ СЃРїРѕСЃРѕР±Р°РјРё: С‡РµСЂРµР· РѕР±Р»Р°С‡РЅС‹Р№ СЃРµСЂРІРёСЃ Xbox Cloud Gaming (xCloud) СЃ РїРѕРґРїРёСЃРєРѕР№ Game Pass Ultimate РёР»Рё СЃ РїРѕРјРѕС‰СЊСЋ Remote Play СЃ РІР°С€РµР№ РєРѕРЅСЃРѕР»Рё. РћР±Р° РјРµС‚РѕРґР° РїРѕРґРґРµСЂР¶РёРІР°СЋС‚ РіРµР№РјРїР°РґС‹, СЃРµРЅСЃРѕСЂРЅРѕРµ СѓРїСЂР°РІР»РµРЅРёРµ Рё С‚СЂРµР±СѓСЋС‚ СЃС‚Р°Р±РёР»СЊРЅРѕРіРѕ РёРЅС‚РµСЂРЅРµС‚Р° (Р»СѓС‡С€Рµ 5 Р“Р“С† Wi-Fi). Р”Р»СЏ Cloud Gaming РёСЃРїРѕР»СЊР·СѓР№С‚Рµ Safari Рё РґРѕР±Р°РІСЊС‚Рµ РІРµР±-РїСЂРёР»РѕР¶РµРЅРёРµ РЅР° РіР»Р°РІРЅС‹Р№ СЌРєСЂР°РЅ. Р”Р»СЏ Remote Play СЃРєР°С‡Р°Р№С‚Рµ Xbox App Рё РІРєР»СЋС‡РёС‚Рµ СѓРґР°Р»С‘РЅРЅС‹Рµ С„СѓРЅРєС†РёРё РЅР° РєРѕРЅСЃРѕР»Рё. РЎР»РµРґСѓР№С‚Рµ РёРЅСЃС‚СЂСѓРєС†РёСЏРј вЂ” Рё РёРіСЂР°Р№С‚Рµ РІ Xbox РіРґРµ СѓРіРѕРґРЅРѕ!
         </p>
 </div>
 
-        <!-- Telegram рекламный баннер -->
+        <!-- Telegram СЂРµРєР»Р°РјРЅС‹Р№ Р±Р°РЅРЅРµСЂ -->
         <a href="https://t.me/RepairoRU" target="_blank" rel="noopener noreferrer" class="telegram-banner">
           <div class="telegram-banner-container">
             <div class="telegram-logo">
@@ -613,10 +654,10 @@
               </svg>
             </div>
             <div class="telegram-content">
-              <div class="telegram-title">Новости из мира технологий</div>
-              <div class="telegram-subtitle">В нашем новом Telegram-канале. Подписывайтесь и будьте в числе первых!</div>
+              <div class="telegram-title">РќРѕРІРѕСЃС‚Рё РёР· РјРёСЂР° С‚РµС…РЅРѕР»РѕРіРёР№</div>
+              <div class="telegram-subtitle">Р’ РЅР°С€РµРј РЅРѕРІРѕРј Telegram-РєР°РЅР°Р»Рµ. РџРѕРґРїРёСЃС‹РІР°Р№С‚РµСЃСЊ Рё Р±СѓРґСЊС‚Рµ РІ С‡РёСЃР»Рµ РїРµСЂРІС‹С…!</div>
               <div class="telegram-button">
-                Подписаться
+                РџРѕРґРїРёСЃР°С‚СЊСЃСЏ
                 <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.56c-.21 2.22-1.12 7.58-1.58 10.06-.19 1.07-.57 1.43-.94 1.46-.8.07-1.4-.52-2.17-1.03-1.21-.79-1.89-1.28-3.06-2.05-1.35-.87-.47-1.35.3-2.13.2-.21 3.71-3.39 3.77-3.68.01-.04.01-.18-.07-.26s-.2-.05-.29-.03c-.12.03-2.11 1.34-5.95 3.93-.56.38-1.07.57-1.53.56-.5-.01-1.47-.28-2.19-.51-.88-.28-1.58-.43-1.52-.91.03-.25.38-.51 1.04-.78 4.07-1.77 6.78-2.94 8.13-3.51 3.88-1.62 4.68-1.9 5.19-1.91.12 0 .37.03.54.17.14.12.18.28.2.44-.01.06 0 .11-.01.17z"/>
                 </svg>
@@ -641,45 +682,45 @@
                         </span>
                         <span class="logo__text">Repairo</span>
                     </a>
-                    <p class="footer__text">Помогаем ремонтировать электронику с 2024 года</p>
+                    <p class="footer__text">РџРѕРјРѕРіР°РµРј СЂРµРјРѕРЅС‚РёСЂРѕРІР°С‚СЊ СЌР»РµРєС‚СЂРѕРЅРёРєСѓ СЃ 2024 РіРѕРґР°</p>
                 </div>
                 <div class="footer__col">
-                    <h3 class="footer__title">Разделы</h3>
+                    <h3 class="footer__title">Р Р°Р·РґРµР»С‹</h3>
                     <ul class="footer__links">
-                        <li><a href="../index.html" class="footer__link">Главная</a></li>
-                        <li><a href="../index.html#categories" class="footer__link">Все гайды</a></li>
-                        <li><a href="../contacts.html" class="footer__link">Контакты</a></li>
+                        <li><a href="../index.html" class="footer__link">Р“Р»Р°РІРЅР°СЏ</a></li>
+                        <li><a href="../index.html#categories" class="footer__link">Р’СЃРµ РіР°Р№РґС‹</a></li>
+                        <li><a href="../contacts.html" class="footer__link">РљРѕРЅС‚Р°РєС‚С‹</a></li>
                     </ul>
                 </div>
                 <div class="footer__col">
-                    <h3 class="footer__title">Категории</h3>
+                    <h3 class="footer__title">РљР°С‚РµРіРѕСЂРёРё</h3>
                     <ul class="footer__links">
-                        <li><a href="../tv.html" class="nav__link">Телевизоры</a></li>
-                        <li><a href="../cameras.html" class="nav__link">Фотоаппараты</a></li>
-                        <li><a href="../consoles.html" class="nav__link">Приставки</a></li>
-                        <li><a href="../laptops.html" class="nav__link">Ноутбуки</a></li>
-                        <li><a href="../smartphones.html" class="nav__link">Смартфоны</a></li>
-                        <li><a href="../small-appliances.html" class="nav__link">Мелкая техника</a></li>
-                        <li><a href="../large-appliances.html" class="nav__link">Бытовая техника</a></li>
-                        <li><a href="../auto-electronics.html" class="nav__link">Авто-Электроника</a></li>
+                        <li><a href="../tv.html" class="nav__link">РўРµР»РµРІРёР·РѕСЂС‹</a></li>
+                        <li><a href="../cameras.html" class="nav__link">Р¤РѕС‚РѕР°РїРїР°СЂР°С‚С‹</a></li>
+                        <li><a href="../consoles.html" class="nav__link">РџСЂРёСЃС‚Р°РІРєРё</a></li>
+                        <li><a href="../laptops.html" class="nav__link">РќРѕСѓС‚Р±СѓРєРё</a></li>
+                        <li><a href="../smartphones.html" class="nav__link">РЎРјР°СЂС‚С„РѕРЅС‹</a></li>
+                        <li><a href="../small-appliances.html" class="nav__link">РњРµР»РєР°СЏ С‚РµС…РЅРёРєР°</a></li>
+                        <li><a href="../large-appliances.html" class="nav__link">Р‘С‹С‚РѕРІР°СЏ С‚РµС…РЅРёРєР°</a></li>
+                        <li><a href="../auto-electronics.html" class="nav__link">РђРІС‚Рѕ-Р­Р»РµРєС‚СЂРѕРЅРёРєР°</a></li>
                     </ul>
                 </div>
                 <div class="footer__col">
-                    <h3 class="footer__title">Контакты</h3>
+                    <h3 class="footer__title">РљРѕРЅС‚Р°РєС‚С‹</h3>
                     <ul class="footer__links">
                         <li><a href="https://t.me/RepairoRU" class="footer__link"><i class="fab fa-telegram"></i> Telegram</a></li>
-                        <li><span class="footer__link">Наша почта: repairo.info@mail.ru</span></li>
+                        <li><span class="footer__link">РќР°С€Р° РїРѕС‡С‚Р°: repairo.info@mail.ru</span></li>
                     </ul>
                 </div>
             </div>
             <div class="footer__bottom">
                 <p class="disclaimer">
-    Администрация сайта не несёт ответственности за возможные повреждения техники
-    и иные последствия, возникшие в результате самостоятельного ремонта по
-    материалам и инструкциям, размещённым на сайте. Все работы вы выполняете
-    на свой страх и риск.
+    РђРґРјРёРЅРёСЃС‚СЂР°С†РёСЏ СЃР°Р№С‚Р° РЅРµ РЅРµСЃС‘С‚ РѕС‚РІРµС‚СЃС‚РІРµРЅРЅРѕСЃС‚Рё Р·Р° РІРѕР·РјРѕР¶РЅС‹Рµ РїРѕРІСЂРµР¶РґРµРЅРёСЏ С‚РµС…РЅРёРєРё
+    Рё РёРЅС‹Рµ РїРѕСЃР»РµРґСЃС‚РІРёСЏ, РІРѕР·РЅРёРєС€РёРµ РІ СЂРµР·СѓР»СЊС‚Р°С‚Рµ СЃР°РјРѕСЃС‚РѕСЏС‚РµР»СЊРЅРѕРіРѕ СЂРµРјРѕРЅС‚Р° РїРѕ
+    РјР°С‚РµСЂРёР°Р»Р°Рј Рё РёРЅСЃС‚СЂСѓРєС†РёСЏРј, СЂР°Р·РјРµС‰С‘РЅРЅС‹Рј РЅР° СЃР°Р№С‚Рµ. Р’СЃРµ СЂР°Р±РѕС‚С‹ РІС‹ РІС‹РїРѕР»РЅСЏРµС‚Рµ
+    РЅР° СЃРІРѕР№ СЃС‚СЂР°С… Рё СЂРёСЃРє.
     </p>
-                <p class="footer__copyright">© 2026 Repairo. Все права защищены.</p>
+                <p class="footer__copyright">В© 2026 Repairo. Р’СЃРµ РїСЂР°РІР° Р·Р°С‰РёС‰РµРЅС‹.</p>
             </div>
         </div>
     </footer>
@@ -690,56 +731,56 @@
 {
   "@context": "https://schema.org",
   "@type": "HowTo",
-  "name": "Как стримить Xbox-игры на iPhone?",
-  "description": "Пошаговая инструкция: Как стримить Xbox-игры на iPhone?. В 2025 году стримить Xbox-игры на iPhone можно двумя основными способами: через.... Советы экспертов...",
+  "name": "РљР°Рє СЃС‚СЂРёРјРёС‚СЊ Xbox-РёРіСЂС‹ РЅР° iPhone?",
+  "description": "РџРѕС€Р°РіРѕРІР°СЏ РёРЅСЃС‚СЂСѓРєС†РёСЏ: РљР°Рє СЃС‚СЂРёРјРёС‚СЊ Xbox-РёРіСЂС‹ РЅР° iPhone?. Р’ 2025 РіРѕРґСѓ СЃС‚СЂРёРјРёС‚СЊ Xbox-РёРіСЂС‹ РЅР° iPhone РјРѕР¶РЅРѕ РґРІСѓРјСЏ РѕСЃРЅРѕРІРЅС‹РјРё СЃРїРѕСЃРѕР±Р°РјРё: С‡РµСЂРµР·.... РЎРѕРІРµС‚С‹ СЌРєСЃРїРµСЂС‚РѕРІ...",
   "totalTime": "PT30M",
   "step": [
     {
       "@type": "HowToStep",
-      "name": "Введение: два способа играть в Xbox на iPhone",
-      "text": "Введение: два способа играть в Xbox на iPhone",
+      "name": "Р’РІРµРґРµРЅРёРµ: РґРІР° СЃРїРѕСЃРѕР±Р° РёРіСЂР°С‚СЊ РІ Xbox РЅР° iPhone",
+      "text": "Р’РІРµРґРµРЅРёРµ: РґРІР° СЃРїРѕСЃРѕР±Р° РёРіСЂР°С‚СЊ РІ Xbox РЅР° iPhone",
       "url": "#step-1"
     },
     {
       "@type": "HowToStep",
-      "name": "Таблица: сравнение Cloud Gaming и Remote Play на iPhone",
-      "text": "Таблица: сравнение Cloud Gaming и Remote Play на iPhone",
+      "name": "РўР°Р±Р»РёС†Р°: СЃСЂР°РІРЅРµРЅРёРµ Cloud Gaming Рё Remote Play РЅР° iPhone",
+      "text": "РўР°Р±Р»РёС†Р°: СЃСЂР°РІРЅРµРЅРёРµ Cloud Gaming Рё Remote Play РЅР° iPhone",
       "url": "#step-2"
     },
     {
       "@type": "HowToStep",
-      "name": "Пошаговая инструкция: как стримить Xbox-игры на iPhone через Cloud Gaming (xCloud)",
-      "text": "Пошаговая инструкция: как стримить Xbox-игры на iPhone через Cloud Gaming (xCloud)",
+      "name": "РџРѕС€Р°РіРѕРІР°СЏ РёРЅСЃС‚СЂСѓРєС†РёСЏ: РєР°Рє СЃС‚СЂРёРјРёС‚СЊ Xbox-РёРіСЂС‹ РЅР° iPhone С‡РµСЂРµР· Cloud Gaming (xCloud)",
+      "text": "РџРѕС€Р°РіРѕРІР°СЏ РёРЅСЃС‚СЂСѓРєС†РёСЏ: РєР°Рє СЃС‚СЂРёРјРёС‚СЊ Xbox-РёРіСЂС‹ РЅР° iPhone С‡РµСЂРµР· Cloud Gaming (xCloud)",
       "url": "#step-3"
     },
     {
       "@type": "HowToStep",
-      "name": "Пошаговая инструкция: как стримить Xbox-игры на iPhone через Remote Play",
-      "text": "Пошаговая инструкция: как стримить Xbox-игры на iPhone через Remote Play",
+      "name": "РџРѕС€Р°РіРѕРІР°СЏ РёРЅСЃС‚СЂСѓРєС†РёСЏ: РєР°Рє СЃС‚СЂРёРјРёС‚СЊ Xbox-РёРіСЂС‹ РЅР° iPhone С‡РµСЂРµР· Remote Play",
+      "text": "РџРѕС€Р°РіРѕРІР°СЏ РёРЅСЃС‚СЂСѓРєС†РёСЏ: РєР°Рє СЃС‚СЂРёРјРёС‚СЊ Xbox-РёРіСЂС‹ РЅР° iPhone С‡РµСЂРµР· Remote Play",
       "url": "#step-4"
     },
     {
       "@type": "HowToStep",
-      "name": "Таблица: минимальные требования для комфортного стриминга Xbox на iPhone",
-      "text": "Таблица: минимальные требования для комфортного стриминга Xbox на iPhone",
+      "name": "РўР°Р±Р»РёС†Р°: РјРёРЅРёРјР°Р»СЊРЅС‹Рµ С‚СЂРµР±РѕРІР°РЅРёСЏ РґР»СЏ РєРѕРјС„РѕСЂС‚РЅРѕРіРѕ СЃС‚СЂРёРјРёРЅРіР° Xbox РЅР° iPhone",
+      "text": "РўР°Р±Р»РёС†Р°: РјРёРЅРёРјР°Р»СЊРЅС‹Рµ С‚СЂРµР±РѕРІР°РЅРёСЏ РґР»СЏ РєРѕРјС„РѕСЂС‚РЅРѕРіРѕ СЃС‚СЂРёРјРёРЅРіР° Xbox РЅР° iPhone",
       "url": "#step-5"
     },
     {
       "@type": "HowToStep",
-      "name": "Лайфхаки и советы для стриминга Xbox-игр на iPhone",
-      "text": "Лайфхаки и советы для стриминга Xbox-игр на iPhone",
+      "name": "Р›Р°Р№С„С…Р°РєРё Рё СЃРѕРІРµС‚С‹ РґР»СЏ СЃС‚СЂРёРјРёРЅРіР° Xbox-РёРіСЂ РЅР° iPhone",
+      "text": "Р›Р°Р№С„С…Р°РєРё Рё СЃРѕРІРµС‚С‹ РґР»СЏ СЃС‚СЂРёРјРёРЅРіР° Xbox-РёРіСЂ РЅР° iPhone",
       "url": "#step-6"
     },
     {
       "@type": "HowToStep",
-      "name": "FAQ – часто задаваемые вопросы о стриминге Xbox-игр на iPhone",
-      "text": "FAQ – часто задаваемые вопросы о стриминге Xbox-игр на iPhone",
+      "name": "FAQ вЂ“ С‡Р°СЃС‚Рѕ Р·Р°РґР°РІР°РµРјС‹Рµ РІРѕРїСЂРѕСЃС‹ Рѕ СЃС‚СЂРёРјРёРЅРіРµ Xbox-РёРіСЂ РЅР° iPhone",
+      "text": "FAQ вЂ“ С‡Р°СЃС‚Рѕ Р·Р°РґР°РІР°РµРјС‹Рµ РІРѕРїСЂРѕСЃС‹ Рѕ СЃС‚СЂРёРјРёРЅРіРµ Xbox-РёРіСЂ РЅР° iPhone",
       "url": "#step-7"
     },
     {
       "@type": "HowToStep",
-      "name": "Пошаговая инструкция: как подключить Xbox-контроллер к iPhone",
-      "text": "Пошаговая инструкция: как подключить Xbox-контроллер к iPhone",
+      "name": "РџРѕС€Р°РіРѕРІР°СЏ РёРЅСЃС‚СЂСѓРєС†РёСЏ: РєР°Рє РїРѕРґРєР»СЋС‡РёС‚СЊ Xbox-РєРѕРЅС‚СЂРѕР»Р»РµСЂ Рє iPhone",
+      "text": "РџРѕС€Р°РіРѕРІР°СЏ РёРЅСЃС‚СЂСѓРєС†РёСЏ: РєР°Рє РїРѕРґРєР»СЋС‡РёС‚СЊ Xbox-РєРѕРЅС‚СЂРѕР»Р»РµСЂ Рє iPhone",
       "url": "#step-8"
     }
   ],
@@ -750,8 +791,4 @@
 <script src="../cookie-consent.js"></script>
 </body>
 </html>
-
-
-
-
 

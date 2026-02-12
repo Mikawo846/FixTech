@@ -2,36 +2,40 @@
 <html lang="ru" data-theme="light">
 <head>
 
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Полнокадровые vs кропнутые камеры – что лучше? | Repairo</title>
-    <meta name="description" content="">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>РџРѕР»РЅРѕРєР°РґСЂРѕРІС‹Рµ vs РєСЂРѕРїРЅСѓС‚С‹Рµ РєР°РјРµСЂС‹ вЂ“ С‡С‚Рѕ Р»СѓС‡С€Рµ? | Repairo</title>
+    <meta name="description" content="{{ description }}">
+    <meta name="description" content="РџРѕС€Р°РіРѕРІР°СЏ РёРЅСЃС‚СЂСѓРєС†РёСЏ: РџРѕР»РЅРѕРєР°РґСЂРѕРІС‹Рµ vs РєСЂРѕРїРЅСѓС‚С‹Рµ РєР°РјРµСЂС‹ вЂ“ С‡С‚Рѕ Р»СѓС‡С€Рµ?. Р”Р»СЏ РїРѕСЂС‚СЂРµС‚РѕРІ Рё С…СѓРґРѕР¶РµСЃС‚РІРµРЅРЅРѕР№ СЃСЉС‘РјРєРё Full Frame РґР°СЃС‚ Р±РѕР»РµРµ РєСЂР°СЃРёРІРѕРµ Р±РѕРєРµ Рё "РєРёРЅ.... РЎРѕ...">
 
-  <link rel="stylesheet" href="../styles.css" />
-  <link rel="stylesheet" href="../styles-header.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <style>
-    .guide-content { line-height: 1.7; color: var(--text); }
-    .guide-content h2 { color: var(--primary); margin-top: 30px; margin-bottom: 15px; font-size: 1.5rem; }
-    .guide-content h3 { color: var(--primary-dark); margin-top: 25px; margin-bottom: 12px; font-size: 1.2rem; }
-    .guide-image-block { margin: 20px 0; padding: 15px; background: var(--background); border-radius: var(--border-radius); border: 1px solid var(--border); text-align: center; }
-    .guide-image-block img { max-width: 100%; height: auto; border-radius: 6px; border: 1px solid var(--border); }
-    .image-caption { margin-top: 10px; font-size: 0.85rem; color: var(--text-light); font-style: italic; }
-    .pro-tips { background: rgba(3, 74, 79, 0.05); padding: 15px; border-radius: 6px; margin: 20px 0; }
-    .pro-tips h4 { color: var(--primary); margin-top: 0; margin-bottom: 12px; font-size: 1.1rem; }
-    .tip-item { display: flex; gap: 8px; margin-bottom: 8px; align-items: flex-start; }
-    table { width: 100%; border-collapse: collapse; margin: 20px 0; }
-    th, td { border: 1px solid var(--border); padding: 8px; text-align: left; }
-    th { background: var(--background-light); }
-    .highlight { background: #f5f7fa; border-left: 4px solid #2d9cdb; padding: 10px 15px; margin: 20px 0; }
-    .faq-section ul { margin-left: 1em; }
-    .block-section { margin-bottom: 2em; }
-    @media (max-width: 768px) {
-      .guide-content h2 { font-size: 1.4rem; margin-top: 25px; }
-      .guide-image-block { padding: 12px; margin: 15px 0; }
-      table, th, td { font-size: 0.95rem; }
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="../styles-header.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <style>
+        .guide-content { line-height: 1.7; color: var(--text);}
+        .guide-content h2 { color: var(--primary); margin-top: 30px; margin-bottom: 15px; font-size: 1.5rem;}
+        .compare-table { width: 100%; border-collapse: collapse; margin: 20px 0;}
+        .compare-table th, .compare-table td { border: 1px solid var(--border); padding: 10px 15px; text-align: left;}
+        .compare-table th { background: var(--background-alt);}
+        .recommend-box { background: rgba(3, 74, 79, 0.1); border-left: 4px solid var(--primary); padding: 12px; margin: 15px 0; display: flex; gap: 12px; align-items: flex-start; border-radius: 4px;}
+        .recommend-box i { font-size: 1.2rem; color: var(--primary); margin-top: 2px;}
+        .pro-tips { background: rgba(3, 74, 79, 0.05); padding: 15px; border-radius: 6px; margin: 20px 0;}
+        .pro-tips h4 { color: var(--primary); margin-top: 0; margin-bottom: 12px; font-size: 1.1rem;}
+        .tip-item { display: flex; gap: 8px; margin-bottom: 8px; align-items: flex-start;}
+        @media (max-width: 768px) {
+            .guide-content h2 { font-size: 1.4rem; margin-top: 25px;}
+            .compare-table th, .compare-table td { padding: 8px 10px;}
+        }
+    /* РЇРЅРґРµРєСЃ РњР°СЂРєРµС‚ СЂРµРєР»Р°РјРЅС‹Р№ Р±Р°РЅРЅРµСЂ */
+    .ym-hero-link {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+      max-width: 100%;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     }
+
     /* Р“РѕСЂРёР·РѕРЅС‚Р°Р»СЊРЅС‹Р№ Р±Р°РЅРЅРµСЂ-РєР°СЂС‚РѕС‡РєР° */
     .ym-hero-banner {
       width: 100%;
@@ -144,11 +148,13 @@
       transition: background 0.15s ease, transform 0.15s ease,
                   box-shadow 0.15s ease;
     }
+
     .ym-hero-button::after {
       content: "в†’";
       margin-left: 6px;
       font-size: 14px;
     }
+
     .ym-hero-button:hover {
       background: #7c3aed;
       transform: translateY(-1px);
@@ -172,19 +178,24 @@
         max-width: 100%;
         margin: 20px 0;
       }
+
       .ym-hero-images {
         height: 100px;
       }
+
       .ym-hero-content {
         padding: 12px 12px;
       }
+
       .ym-hero-title {
         font-size: 13px;
       }
+
       .ym-hero-button {
         font-size: 13px;
         padding: 8px 14px;
       }
+
       .ym-hero-legal {
         font-size: 10px;
       }
@@ -292,22 +303,27 @@
         padding: 15px;
         min-height: 100px;
       }
+
       .telegram-logo {
         width: 50px;
         height: 50px;
         min-width: 50px;
         margin-right: 15px;
       }
+
       .telegram-logo svg {
         width: 26px;
         height: 26px;
       }
+
       .telegram-title {
         font-size: 14px;
       }
+
       .telegram-subtitle {
         font-size: 12px;
       }
+
       .telegram-button {
         font-size: 12px;
         padding: 6px 12px;
@@ -316,163 +332,177 @@
 
 
 
-  </style>
+    </style>
   <script async src="https://timeweb.cloud/api/v1/cloud-ai/agents/3cc03620-d051-4d8d-b5af-f7b6cd083a35/embed.js?collapsed=true"></script>
 </head>
 <body>
-  <header class="header">
+<header class="header">
     <div class="container">
-      <div class="header__inner">
-        <a href="../index.html" class="logo">
-          <span class="logo__icon"></span>
-          <span class="logo__text">GeoExpert</span>
-        </a>
-        <nav class="nav">
-          <ul class="nav__list">
-            <li><a href="../cameras.html" class="nav__link">РљР°РјРµСЂС‹</a></li>
-            <li><a href="../drones.html" class="nav__link">Р”СЂРѕРЅС‹</a></li>
-            <li><a href="../workflow.html" class="nav__link">Workflow</a></li>
-          </ul>
-        </nav>
-      </div>
+        <div class="header__inner">
+            <a href="../index.html" class="logo">
+                <span class="logo__icon"></span>
+                <span class="logo__text">Repairo</span>
+            </a>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li><a href="../cameras.html" class="nav__link">Р¤РѕС‚РѕР°РїРїР°СЂР°С‚С‹</a></li>
+                    <li><a href="../tv.html" class="nav__link">РўРµР»РµРІРёР·РѕСЂС‹</a></li>
+                    <li><a href="../laptops.html" class="nav__link">РќРѕСѓС‚Р±СѓРєРё</a></li>
+                    <li><a href="../smartphones.html" class="nav__link">РЎРјР°СЂС‚С„РѕРЅС‹</a></li>
+                </ul>
+            </nav>
+        </div>
     </div>
-  </header>
+</header>
 <section class="guide-page">
     <div class="container">
         <div class="breadcrumbs">
-            <a href="../index.html">Главная</a>
+            <a href="../index.html">Р“Р»Р°РІРЅР°СЏ</a>
             <i class="fas fa-chevron-right"></i>
-            <a href="../cameras.html">Фотоаппараты</a>
+            <a href="../cameras.html">Р¤РѕС‚РѕР°РїРїР°СЂР°С‚С‹</a>
             <i class="fas fa-chevron-right"></i>
-            <span>Полнокадровые vs кропнутые камеры – что лучше?</span>
+            <span>РџРѕР»РЅРѕРєР°РґСЂРѕРІС‹Рµ vs РєСЂРѕРїРЅСѓС‚С‹Рµ РєР°РјРµСЂС‹ вЂ“ С‡С‚Рѕ Р»СѓС‡С€Рµ?</span>
         </div>
-        <h1 class="section__title">Полнокадровые vs кропнутые камеры – что лучше?</h1>
+        <h1 class="section__title">РџРѕР»РЅРѕРєР°РґСЂРѕРІС‹Рµ vs РєСЂРѕРїРЅСѓС‚С‹Рµ РєР°РјРµСЂС‹ вЂ“ С‡С‚Рѕ Р»СѓС‡С€Рµ?</h1>
         <div class="guide-meta">
-            <span><i class="fas fa-expand"></i> Сравнительный обзор</span>
+            <span><i class="fas fa-expand"></i> РЎСЂР°РІРЅРёС‚РµР»СЊРЅС‹Р№ РѕР±Р·РѕСЂ</span>
         </div>
         <div class="guide-image-block">
                 <img src="https://avatars.mds.yandex.net/get-shedevrum/16123700/img_d8a36f0a2cb111f08e20e680f4260773/orig">
             </div>
       <div class="guide-content">
-        <!-- Яндекс Маркет рекламный блок -->
+        <!-- РЇРЅРґРµРєСЃ РњР°СЂРєРµС‚ СЂРµРєР»Р°РјРЅС‹Р№ Р±Р»РѕРє -->
         <a href="https://market.yandex.ru/catalog--bytovaia-tekhnika/54419/list?hid=198118&rs=eJwzUvjEKMvBILDwEKsEg8Kzbh6Nw4dZNS4D8c7lFhp9c1-wAQC3uAwP&clid=14635360&refid=rbck8fgamv681iu59go3iqxwddedl4x9&erid=5jtCeReNx12oajxS2bzShmZ&mclid=1003&distr_type=7&utm_source=partner_network&pp=900&utm_medium=link_list&utm_campaign=14635360"
            target="_blank"
            rel="noopener noreferrer sponsored"
+           class="ym-hero-link">
+          <div class="ym-hero-banner">
+            <div class="ym-hero-images">
+              <div class="ym-hero-image">
                 <img src="https://avatars.mds.yandex.net/get-mpic/14770882/2a00000197f4dbee777f8afddccaf44faa53/optimize"
-                     alt="Распродажа бытовой электроники 1">
+                     alt="Р Р°СЃРїСЂРѕРґР°Р¶Р° Р±С‹С‚РѕРІРѕР№ СЌР»РµРєС‚СЂРѕРЅРёРєРё 1">
               </div>
+              <div class="ym-hero-image">
                 <img src="https://avatars.mds.yandex.net/get-mpic/15580298/img_id8867318964670654684.jpeg/optimize"
-                     alt="Распродажа бытовой электроники 2">
+                     alt="Р Р°СЃРїСЂРѕРґР°Р¶Р° Р±С‹С‚РѕРІРѕР№ СЌР»РµРєС‚СЂРѕРЅРёРєРё 2">
               </div>
+              <div class="ym-hero-image">
                 <img src="https://avatars.mds.yandex.net/get-mpic/10096780/2a000001953b534fed2494e0b30fadd9b458/optimize"
-                     alt="Распродажа бытовой электроники 3">
+                     alt="Р Р°СЃРїСЂРѕРґР°Р¶Р° Р±С‹С‚РѕРІРѕР№ СЌР»РµРєС‚СЂРѕРЅРёРєРё 3">
               </div>
             </div>
-                  ? Выгодные предложения
+            <div class="ym-hero-content">
+              <h3 class="ym-hero-title">Р Р°СЃРїСЂРѕРґР°Р¶Р° Р±С‹С‚РѕРІРѕР№ СЌР»РµРєС‚СЂРѕРЅРёРєРё РЅР° РЇРЅРґРµРєСЃ РњР°СЂРєРµС‚Рµ</h3>
+              <div class="ym-hero-top">
+                <div class="ym-hero-rating">
+                  в­ђ Р’С‹РіРѕРґРЅС‹Рµ РїСЂРµРґР»РѕР¶РµРЅРёСЏ
+                  <span class="ym-hero-rating-count">РЎРєРёРґРєРё РґРѕ 50%</span>
                 </div>
               </div>
+              <button class="ym-hero-button">Р—Р° СЃРєРёРґРєР°РјРё</button>
             </div>
           </div>
-            Реклама. ООО "ЯНДЕКС", ИНН 7736207543. clid: 14635360, erid: 5jtCeReNx12oajxS2bzShmZ
+          <div class="ym-hero-legal">
+            Р РµРєР»Р°РјР°. РћРћРћ "РЇРќР”Р•РљРЎ", РРќРќ 7736207543. clid: 14635360, erid: 5jtCeReNx12oajxS2bzShmZ
           </div>
         </a>
         <div class="guide-content">
-            <h2>Что такое полнокадровая и кропнутая камера?</h2>
+            <h2>Р§С‚Рѕ С‚Р°РєРѕРµ РїРѕР»РЅРѕРєР°РґСЂРѕРІР°СЏ Рё РєСЂРѕРїРЅСѓС‚Р°СЏ РєР°РјРµСЂР°?</h2>
             <ul>
-                <li><b>Полнокадровая камера (Full Frame)</b> - камера с матрицей размером 36?24 мм (аналог классического 35 мм фотоплёнки). Преимущественно используется в профессиональных и продвинутых любительских камерах.</li>
-                <li><b>Кропнутая камера (Crop, APS-C, Micro 4/3)</b> - камера с матрицей меньшего размера (например, APS-C: ~24?16 мм, Micro 4/3: 17?13 мм). Кроп-фактор - это коэффициент уменьшения по сравнению с полным кадром (обычно 1.5–2?).</li>
+                <li><b>РџРѕР»РЅРѕРєР°РґСЂРѕРІР°СЏ РєР°РјРµСЂР° (Full Frame)</b> - РєР°РјРµСЂР° СЃ РјР°С‚СЂРёС†РµР№ СЂР°Р·РјРµСЂРѕРј 36Г—24 РјРј (Р°РЅР°Р»РѕРі РєР»Р°СЃСЃРёС‡РµСЃРєРѕРіРѕ 35 РјРј С„РѕС‚РѕРїР»С‘РЅРєРё). РџСЂРµРёРјСѓС‰РµСЃС‚РІРµРЅРЅРѕ РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ РІ РїСЂРѕС„РµСЃСЃРёРѕРЅР°Р»СЊРЅС‹С… Рё РїСЂРѕРґРІРёРЅСѓС‚С‹С… Р»СЋР±РёС‚РµР»СЊСЃРєРёС… РєР°РјРµСЂР°С….</li>
+                <li><b>РљСЂРѕРїРЅСѓС‚Р°СЏ РєР°РјРµСЂР° (Crop, APS-C, Micro 4/3)</b> - РєР°РјРµСЂР° СЃ РјР°С‚СЂРёС†РµР№ РјРµРЅСЊС€РµРіРѕ СЂР°Р·РјРµСЂР° (РЅР°РїСЂРёРјРµСЂ, APS-C: ~24Г—16 РјРј, Micro 4/3: 17Г—13 РјРј). РљСЂРѕРї-С„Р°РєС‚РѕСЂ - СЌС‚Рѕ РєРѕСЌС„С„РёС†РёРµРЅС‚ СѓРјРµРЅСЊС€РµРЅРёСЏ РїРѕ СЃСЂР°РІРЅРµРЅРёСЋ СЃ РїРѕР»РЅС‹Рј РєР°РґСЂРѕРј (РѕР±С‹С‡РЅРѕ 1.5вЂ“2Г—).</li>
             </ul>
-            <h2>Сравнение: полнокадровая vs кропнутая</h2>
+            <h2>РЎСЂР°РІРЅРµРЅРёРµ: РїРѕР»РЅРѕРєР°РґСЂРѕРІР°СЏ vs РєСЂРѕРїРЅСѓС‚Р°СЏ</h2>
 <table class="compare-table">
                 <thead>
                     <tr>
-                        <th>Параметр</th>
-                        <th>Полнокадровая</th>
-                        <th>Кропнутая</th>
+                        <th>РџР°СЂР°РјРµС‚СЂ</th>
+                        <th>РџРѕР»РЅРѕРєР°РґСЂРѕРІР°СЏ</th>
+                        <th>РљСЂРѕРїРЅСѓС‚Р°СЏ</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Размер матрицы</td>
-                        <td>36?24 мм (Full Frame)</td>
-                        <td>APS-C (~24?16 мм), Micro 4/3 (17?13 мм)</td>
+                        <td>Р Р°Р·РјРµСЂ РјР°С‚СЂРёС†С‹</td>
+                        <td>36Г—24 РјРј (Full Frame)</td>
+                        <td>APS-C (~24Г—16 РјРј), Micro 4/3 (17Г—13 РјРј)</td>
                     </tr>
                     <tr>
-                        <td>Качество изображения</td>
-                        <td>Лучше детализация, выше динамический диапазон, меньше шумов при высоком ISO</td>
-                        <td>Хорошее, но уступает по детализации и шумам при слабом освещении</td>
+                        <td>РљР°С‡РµСЃС‚РІРѕ РёР·РѕР±СЂР°Р¶РµРЅРёСЏ</td>
+                        <td>Р›СѓС‡С€Рµ РґРµС‚Р°Р»РёР·Р°С†РёСЏ, РІС‹С€Рµ РґРёРЅР°РјРёС‡РµСЃРєРёР№ РґРёР°РїР°Р·РѕРЅ, РјРµРЅСЊС€Рµ С€СѓРјРѕРІ РїСЂРё РІС‹СЃРѕРєРѕРј ISO</td>
+                        <td>РҐРѕСЂРѕС€РµРµ, РЅРѕ СѓСЃС‚СѓРїР°РµС‚ РїРѕ РґРµС‚Р°Р»РёР·Р°С†РёРё Рё С€СѓРјР°Рј РїСЂРё СЃР»Р°Р±РѕРј РѕСЃРІРµС‰РµРЅРёРё</td>
                     </tr>
                     <tr>
-                        <td>Глубина резкости (боке)</td>
-                        <td>Более выраженное размытие фона при той же диафрагме</td>
-                        <td>Меньше боке, глубина резкости больше при тех же настройках</td>
+                        <td>Р“Р»СѓР±РёРЅР° СЂРµР·РєРѕСЃС‚Рё (Р±РѕРєРµ)</td>
+                        <td>Р‘РѕР»РµРµ РІС‹СЂР°Р¶РµРЅРЅРѕРµ СЂР°Р·РјС‹С‚РёРµ С„РѕРЅР° РїСЂРё С‚РѕР№ Р¶Рµ РґРёР°С„СЂР°РіРјРµ</td>
+                        <td>РњРµРЅСЊС€Рµ Р±РѕРєРµ, РіР»СѓР±РёРЅР° СЂРµР·РєРѕСЃС‚Рё Р±РѕР»СЊС€Рµ РїСЂРё С‚РµС… Р¶Рµ РЅР°СЃС‚СЂРѕР№РєР°С…</td>
                     </tr>
                     <tr>
-                        <td>Угол обзора</td>
-                        <td>Объектив работает "как есть"</td>
-                        <td>Из-за кроп-фактора угол обзора сужается (объектив 50 мм "превращается" в 75–80 мм)</td>
+                        <td>РЈРіРѕР» РѕР±Р·РѕСЂР°</td>
+                        <td>РћР±СЉРµРєС‚РёРІ СЂР°Р±РѕС‚Р°РµС‚ "РєР°Рє РµСЃС‚СЊ"</td>
+                        <td>РР·-Р·Р° РєСЂРѕРї-С„Р°РєС‚РѕСЂР° СѓРіРѕР» РѕР±Р·РѕСЂР° СЃСѓР¶Р°РµС‚СЃСЏ (РѕР±СЉРµРєС‚РёРІ 50 РјРј "РїСЂРµРІСЂР°С‰Р°РµС‚СЃСЏ" РІ 75вЂ“80 РјРј)</td>
                     </tr>
                     <tr>
-                        <td>Вес и габариты</td>
-                        <td>Больше и тяжелее (камера и объективы)</td>
-                        <td>Компактнее и легче</td>
+                        <td>Р’РµСЃ Рё РіР°Р±Р°СЂРёС‚С‹</td>
+                        <td>Р‘РѕР»СЊС€Рµ Рё С‚СЏР¶РµР»РµРµ (РєР°РјРµСЂР° Рё РѕР±СЉРµРєС‚РёРІС‹)</td>
+                        <td>РљРѕРјРїР°РєС‚РЅРµРµ Рё Р»РµРіС‡Рµ</td>
                     </tr>
                     <tr>
-                        <td>Цена</td>
-                        <td>Дороже (корпус и оптика)</td>
-                        <td>Доступнее, больше бюджетных решений</td>
+                        <td>Р¦РµРЅР°</td>
+                        <td>Р”РѕСЂРѕР¶Рµ (РєРѕСЂРїСѓСЃ Рё РѕРїС‚РёРєР°)</td>
+                        <td>Р”РѕСЃС‚СѓРїРЅРµРµ, Р±РѕР»СЊС€Рµ Р±СЋРґР¶РµС‚РЅС‹С… СЂРµС€РµРЅРёР№</td>
                     </tr>
                     <tr>
-                        <td>Выбор оптики</td>
-                        <td>Широкий, особенно у топовых брендов</td>
-                        <td>Много доступных объективов, но меньше профессиональных решений</td>
+                        <td>Р’С‹Р±РѕСЂ РѕРїС‚РёРєРё</td>
+                        <td>РЁРёСЂРѕРєРёР№, РѕСЃРѕР±РµРЅРЅРѕ Сѓ С‚РѕРїРѕРІС‹С… Р±СЂРµРЅРґРѕРІ</td>
+                        <td>РњРЅРѕРіРѕ РґРѕСЃС‚СѓРїРЅС‹С… РѕР±СЉРµРєС‚РёРІРѕРІ, РЅРѕ РјРµРЅСЊС€Рµ РїСЂРѕС„РµСЃСЃРёРѕРЅР°Р»СЊРЅС‹С… СЂРµС€РµРЅРёР№</td>
                     </tr>
                     <tr>
-                        <td>Кому подходит</td>
-                        <td>Профессионалам, энтузиастам, тем, кто снимает в сложных условиях и печатает крупно</td>
-                        <td>Новичкам, путешественникам, для повседневной и творческой съёмки</td>
+                        <td>РљРѕРјСѓ РїРѕРґС…РѕРґРёС‚</td>
+                        <td>РџСЂРѕС„РµСЃСЃРёРѕРЅР°Р»Р°Рј, СЌРЅС‚СѓР·РёР°СЃС‚Р°Рј, С‚РµРј, РєС‚Рѕ СЃРЅРёРјР°РµС‚ РІ СЃР»РѕР¶РЅС‹С… СѓСЃР»РѕРІРёСЏС… Рё РїРµС‡Р°С‚Р°РµС‚ РєСЂСѓРїРЅРѕ</td>
+                        <td>РќРѕРІРёС‡РєР°Рј, РїСѓС‚РµС€РµСЃС‚РІРµРЅРЅРёРєР°Рј, РґР»СЏ РїРѕРІСЃРµРґРЅРµРІРЅРѕР№ Рё С‚РІРѕСЂС‡РµСЃРєРѕР№ СЃСЉС‘РјРєРё</td>
                     </tr>
                 </tbody>
             </table>
-            <h2>Плюсы и минусы</h2>
+            <h2>РџР»СЋСЃС‹ Рё РјРёРЅСѓСЃС‹</h2>
             <ul>
-                <li><b>Полнокадровые:</b> максимум качества, лучшее боке, высокая светочувствительность, но крупные, тяжёлые и дорогие.</li>
-                <li><b>Кропнутые:</b> компактность, лёгкость, доступность, универсальность, но чуть меньше возможностей по качеству и художественному эффекту.</li>
+                <li><b>РџРѕР»РЅРѕРєР°РґСЂРѕРІС‹Рµ:</b> РјР°РєСЃРёРјСѓРј РєР°С‡РµСЃС‚РІР°, Р»СѓС‡С€РµРµ Р±РѕРєРµ, РІС‹СЃРѕРєР°СЏ СЃРІРµС‚РѕС‡СѓРІСЃС‚РІРёС‚РµР»СЊРЅРѕСЃС‚СЊ, РЅРѕ РєСЂСѓРїРЅС‹Рµ, С‚СЏР¶С‘Р»С‹Рµ Рё РґРѕСЂРѕРіРёРµ.</li>
+                <li><b>РљСЂРѕРїРЅСѓС‚С‹Рµ:</b> РєРѕРјРїР°РєС‚РЅРѕСЃС‚СЊ, Р»С‘РіРєРѕСЃС‚СЊ, РґРѕСЃС‚СѓРїРЅРѕСЃС‚СЊ, СѓРЅРёРІРµСЂСЃР°Р»СЊРЅРѕСЃС‚СЊ, РЅРѕ С‡СѓС‚СЊ РјРµРЅСЊС€Рµ РІРѕР·РјРѕР¶РЅРѕСЃС‚РµР№ РїРѕ РєР°С‡РµСЃС‚РІСѓ Рё С…СѓРґРѕР¶РµСЃС‚РІРµРЅРЅРѕРјСѓ СЌС„С„РµРєС‚Сѓ.</li>
             </ul>
             <div class="recommend-box">
                 <i class="fas fa-info-circle"></i>
                 <div>
-                    <strong>Совет:</strong> Новичкам и для путешествий чаще всего достаточно кроп-камеры. Полнокадровая оправдана для профессионалов, творческих задач, съёмки в сложном свете и крупной печати.
+                    <strong>РЎРѕРІРµС‚:</strong> РќРѕРІРёС‡РєР°Рј Рё РґР»СЏ РїСѓС‚РµС€РµСЃС‚РІРёР№ С‡Р°С‰Рµ РІСЃРµРіРѕ РґРѕСЃС‚Р°С‚РѕС‡РЅРѕ РєСЂРѕРї-РєР°РјРµСЂС‹. РџРѕР»РЅРѕРєР°РґСЂРѕРІР°СЏ РѕРїСЂР°РІРґР°РЅР° РґР»СЏ РїСЂРѕС„РµСЃСЃРёРѕРЅР°Р»РѕРІ, С‚РІРѕСЂС‡РµСЃРєРёС… Р·Р°РґР°С‡, СЃСЉС‘РјРєРё РІ СЃР»РѕР¶РЅРѕРј СЃРІРµС‚Рµ Рё РєСЂСѓРїРЅРѕР№ РїРµС‡Р°С‚Рё.
                 </div>
             </div>
             <div class="pro-tips">
-                <h4>?? Профессиональные советы</h4>
+                <h4>рџ”№ РџСЂРѕС„РµСЃСЃРёРѕРЅР°Р»СЊРЅС‹Рµ СЃРѕРІРµС‚С‹</h4>
                 <div class="tip-item">
                     <i class="fas fa-lightbulb"></i>
-                    <p>Для портретов и художественной съёмки Full Frame даст более красивое боке и "киношный" эффект.</p>
+                    <p>Р”Р»СЏ РїРѕСЂС‚СЂРµС‚РѕРІ Рё С…СѓРґРѕР¶РµСЃС‚РІРµРЅРЅРѕР№ СЃСЉС‘РјРєРё Full Frame РґР°СЃС‚ Р±РѕР»РµРµ РєСЂР°СЃРёРІРѕРµ Р±РѕРєРµ Рё "РєРёРЅРѕС€РЅС‹Р№" СЌС„С„РµРєС‚.</p>
                 </div>
                 <div class="tip-item">
                     <i class="fas fa-lightbulb"></i>
-                    <p>Для спорта, дикой природы и путешествий кроп-камера удобнее из-за компактности и "дальности" (эффекта увеличения фокусного расстояния).</p>
+                    <p>Р”Р»СЏ СЃРїРѕСЂС‚Р°, РґРёРєРѕР№ РїСЂРёСЂРѕРґС‹ Рё РїСѓС‚РµС€РµСЃС‚РІРёР№ РєСЂРѕРї-РєР°РјРµСЂР° СѓРґРѕР±РЅРµРµ РёР·-Р·Р° РєРѕРјРїР°РєС‚РЅРѕСЃС‚Рё Рё "РґР°Р»СЊРЅРѕСЃС‚Рё" (СЌС„С„РµРєС‚Р° СѓРІРµР»РёС‡РµРЅРёСЏ С„РѕРєСѓСЃРЅРѕРіРѕ СЂР°СЃСЃС‚РѕСЏРЅРёСЏ).</p>
                 </div>
                 <div class="tip-item">
                     <i class="fas fa-lightbulb"></i>
-                    <p>Если бюджет ограничен - лучше вложиться в хороший объектив для кроп-камеры, чем экономить на Full Frame с "китовой" оптикой.</p>
+                    <p>Р•СЃР»Рё Р±СЋРґР¶РµС‚ РѕРіСЂР°РЅРёС‡РµРЅ - Р»СѓС‡С€Рµ РІР»РѕР¶РёС‚СЊСЃСЏ РІ С…РѕСЂРѕС€РёР№ РѕР±СЉРµРєС‚РёРІ РґР»СЏ РєСЂРѕРї-РєР°РјРµСЂС‹, С‡РµРј СЌРєРѕРЅРѕРјРёС‚СЊ РЅР° Full Frame СЃ "РєРёС‚РѕРІРѕР№" РѕРїС‚РёРєРѕР№.</p>
                 </div>
             </div>
-            <h2>Часто задаваемые вопросы</h2>
+            <h2>Р§Р°СЃС‚Рѕ Р·Р°РґР°РІР°РµРјС‹Рµ РІРѕРїСЂРѕСЃС‹</h2>
             <ul>
-                <li><b>Будет ли разница заметна новичку?</b> - В большинстве бытовых и творческих задач - минимальна. Кроп-камера проще и дешевле для старта.</li>
-                <li><b>Можно ли снимать профессионально на кроп?</b> - Да, современные кроп-камеры дают отличное качество для интернета и печати до A3.</li>
-                <li><b>Что выбрать для видео?</b> - Оба типа хорошо справляются, но Full Frame даёт больше возможностей для художественного эффекта и работы в темноте.</li>
+                <li><b>Р‘СѓРґРµС‚ Р»Рё СЂР°Р·РЅРёС†Р° Р·Р°РјРµС‚РЅР° РЅРѕРІРёС‡РєСѓ?</b> - Р’ Р±РѕР»СЊС€РёРЅСЃС‚РІРµ Р±С‹С‚РѕРІС‹С… Рё С‚РІРѕСЂС‡РµСЃРєРёС… Р·Р°РґР°С‡ - РјРёРЅРёРјР°Р»СЊРЅР°. РљСЂРѕРї-РєР°РјРµСЂР° РїСЂРѕС‰Рµ Рё РґРµС€РµРІР»Рµ РґР»СЏ СЃС‚Р°СЂС‚Р°.</li>
+                <li><b>РњРѕР¶РЅРѕ Р»Рё СЃРЅРёРјР°С‚СЊ РїСЂРѕС„РµСЃСЃРёРѕРЅР°Р»СЊРЅРѕ РЅР° РєСЂРѕРї?</b> - Р”Р°, СЃРѕРІСЂРµРјРµРЅРЅС‹Рµ РєСЂРѕРї-РєР°РјРµСЂС‹ РґР°СЋС‚ РѕС‚Р»РёС‡РЅРѕРµ РєР°С‡РµСЃС‚РІРѕ РґР»СЏ РёРЅС‚РµСЂРЅРµС‚Р° Рё РїРµС‡Р°С‚Рё РґРѕ A3.</li>
+                <li><b>Р§С‚Рѕ РІС‹Р±СЂР°С‚СЊ РґР»СЏ РІРёРґРµРѕ?</b> - РћР±Р° С‚РёРїР° С…РѕСЂРѕС€Рѕ СЃРїСЂР°РІР»СЏСЋС‚СЃСЏ, РЅРѕ Full Frame РґР°С‘С‚ Р±РѕР»СЊС€Рµ РІРѕР·РјРѕР¶РЅРѕСЃС‚РµР№ РґР»СЏ С…СѓРґРѕР¶РµСЃС‚РІРµРЅРЅРѕРіРѕ СЌС„С„РµРєС‚Р° Рё СЂР°Р±РѕС‚С‹ РІ С‚РµРјРЅРѕС‚Рµ.</li>
             </ul>
-            <h2>?? Итог</h2>
+            <h2>рџ“Њ РС‚РѕРі</h2>
             <p>
-                Полнокадровые камеры - выбор для максимального качества, художественных задач и профессионалов. Кропнутые - оптимальны для новичков, путешественников и всех, кто ценит компактность и доступность. Главное - подобрать камеру под свои задачи и не гнаться за "старшими" моделями без необходимости.
+                РџРѕР»РЅРѕРєР°РґСЂРѕРІС‹Рµ РєР°РјРµСЂС‹ - РІС‹Р±РѕСЂ РґР»СЏ РјР°РєСЃРёРјР°Р»СЊРЅРѕРіРѕ РєР°С‡РµСЃС‚РІР°, С…СѓРґРѕР¶РµСЃС‚РІРµРЅРЅС‹С… Р·Р°РґР°С‡ Рё РїСЂРѕС„РµСЃСЃРёРѕРЅР°Р»РѕРІ. РљСЂРѕРїРЅСѓС‚С‹Рµ - РѕРїС‚РёРјР°Р»СЊРЅС‹ РґР»СЏ РЅРѕРІРёС‡РєРѕРІ, РїСѓС‚РµС€РµСЃС‚РІРµРЅРЅРёРєРѕРІ Рё РІСЃРµС…, РєС‚Рѕ С†РµРЅРёС‚ РєРѕРјРїР°РєС‚РЅРѕСЃС‚СЊ Рё РґРѕСЃС‚СѓРїРЅРѕСЃС‚СЊ. Р“Р»Р°РІРЅРѕРµ - РїРѕРґРѕР±СЂР°С‚СЊ РєР°РјРµСЂСѓ РїРѕРґ СЃРІРѕРё Р·Р°РґР°С‡Рё Рё РЅРµ РіРЅР°С‚СЊСЃСЏ Р·Р° "СЃС‚Р°СЂС€РёРјРё" РјРѕРґРµР»СЏРјРё Р±РµР· РЅРµРѕР±С…РѕРґРёРјРѕСЃС‚Рё.
             </p>
 </div>
 
-        <!-- Telegram рекламный баннер -->
+        <!-- Telegram СЂРµРєР»Р°РјРЅС‹Р№ Р±Р°РЅРЅРµСЂ -->
         <a href="https://t.me/RepairoRU" target="_blank" rel="noopener noreferrer" class="telegram-banner">
           <div class="telegram-banner-container">
             <div class="telegram-logo">
@@ -481,10 +511,10 @@
               </svg>
             </div>
             <div class="telegram-content">
-              <div class="telegram-title">Новости из мира технологий</div>
-              <div class="telegram-subtitle">В нашем новом Telegram-канале. Подписывайтесь и будьте в числе первых!</div>
+              <div class="telegram-title">РќРѕРІРѕСЃС‚Рё РёР· РјРёСЂР° С‚РµС…РЅРѕР»РѕРіРёР№</div>
+              <div class="telegram-subtitle">Р’ РЅР°С€РµРј РЅРѕРІРѕРј Telegram-РєР°РЅР°Р»Рµ. РџРѕРґРїРёСЃС‹РІР°Р№С‚РµСЃСЊ Рё Р±СѓРґСЊС‚Рµ РІ С‡РёСЃР»Рµ РїРµСЂРІС‹С…!</div>
               <div class="telegram-button">
-                Подписаться
+                РџРѕРґРїРёСЃР°С‚СЊСЃСЏ
                 <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.56c-.21 2.22-1.12 7.58-1.58 10.06-.19 1.07-.57 1.43-.94 1.46-.8.07-1.4-.52-2.17-1.03-1.21-.79-1.89-1.28-3.06-2.05-1.35-.87-.47-1.35.3-2.13.2-.21 3.71-3.39 3.77-3.68.01-.04.01-.18-.07-.26s-.2-.05-.29-.03c-.12.03-2.11 1.34-5.95 3.93-.56.38-1.07.57-1.53.56-.5-.01-1.47-.28-2.19-.51-.88-.28-1.58-.43-1.52-.91.03-.25.38-.51 1.04-.78 4.07-1.77 6.78-2.94 8.13-3.51 3.88-1.62 4.68-1.9 5.19-1.91.12 0 .37.03.54.17.14.12.18.28.2.44-.01.06 0 .11-.01.17z"/>
                 </svg>
@@ -509,45 +539,45 @@
                         </span>
                         <span class="logo__text">Repairo</span>
                     </a>
-                    <p class="footer__text">Помогаем ремонтировать электронику с 2024 года</p>
+                    <p class="footer__text">РџРѕРјРѕРіР°РµРј СЂРµРјРѕРЅС‚РёСЂРѕРІР°С‚СЊ СЌР»РµРєС‚СЂРѕРЅРёРєСѓ СЃ 2024 РіРѕРґР°</p>
                 </div>
                 <div class="footer__col">
-                    <h3 class="footer__title">Разделы</h3>
+                    <h3 class="footer__title">Р Р°Р·РґРµР»С‹</h3>
                     <ul class="footer__links">
-                        <li><a href="../index.html" class="footer__link">Главная</a></li>
-                        <li><a href="../index.html#categories" class="footer__link">Все гайды</a></li>
-                        <li><a href="../contacts.html" class="footer__link">Контакты</a></li>
+                        <li><a href="../index.html" class="footer__link">Р“Р»Р°РІРЅР°СЏ</a></li>
+                        <li><a href="../index.html#categories" class="footer__link">Р’СЃРµ РіР°Р№РґС‹</a></li>
+                        <li><a href="../contacts.html" class="footer__link">РљРѕРЅС‚Р°РєС‚С‹</a></li>
                     </ul>
                 </div>
                 <div class="footer__col">
-                    <h3 class="footer__title">Категории</h3>
+                    <h3 class="footer__title">РљР°С‚РµРіРѕСЂРёРё</h3>
                     <ul class="footer__links">
-                        <li><a href="../tv.html" class="nav__link">Телевизоры</a></li>
-                        <li><a href="../cameras.html" class="nav__link">Фотоаппараты</a></li>
-                        <li><a href="../consoles.html" class="nav__link">Приставки</a></li>
-                        <li><a href="../laptops.html" class="nav__link">Ноутбуки</a></li>
-                        <li><a href="../smartphones.html" class="nav__link">Смартфоны</a></li>
-                        <li><a href="../small-appliances.html" class="nav__link">Мелкая техника</a></li>
-                        <li><a href="../large-appliances.html" class="nav__link">Бытовая техника</a></li>
-                        <li><a href="../auto-electronics.html" class="nav__link">Авто-Электроника</a></li>
+                        <li><a href="../tv.html" class="nav__link">РўРµР»РµРІРёР·РѕСЂС‹</a></li>
+                        <li><a href="../cameras.html" class="nav__link">Р¤РѕС‚РѕР°РїРїР°СЂР°С‚С‹</a></li>
+                        <li><a href="../consoles.html" class="nav__link">РџСЂРёСЃС‚Р°РІРєРё</a></li>
+                        <li><a href="../laptops.html" class="nav__link">РќРѕСѓС‚Р±СѓРєРё</a></li>
+                        <li><a href="../smartphones.html" class="nav__link">РЎРјР°СЂС‚С„РѕРЅС‹</a></li>
+                        <li><a href="../small-appliances.html" class="nav__link">РњРµР»РєР°СЏ С‚РµС…РЅРёРєР°</a></li>
+                        <li><a href="../large-appliances.html" class="nav__link">Р‘С‹С‚РѕРІР°СЏ С‚РµС…РЅРёРєР°</a></li>
+                        <li><a href="../auto-electronics.html" class="nav__link">РђРІС‚Рѕ-Р­Р»РµРєС‚СЂРѕРЅРёРєР°</a></li>
                     </ul>
                 </div>
                 <div class="footer__col">
-                    <h3 class="footer__title">Контакты</h3>
+                    <h3 class="footer__title">РљРѕРЅС‚Р°РєС‚С‹</h3>
                     <ul class="footer__links">
                         <li><a href="https://t.me/RepairoRU" class="footer__link"><i class="fab fa-telegram"></i> Telegram</a></li>
-                        <li><span class="footer__link">Наша почта: repairo.info@mail.ru</span></li>
+                        <li><span class="footer__link">РќР°С€Р° РїРѕС‡С‚Р°: repairo.info@mail.ru</span></li>
                     </ul>
                 </div>
             </div>
             <div class="footer__bottom">
                 <p class="disclaimer">
-    Администрация сайта не несёт ответственности за возможные повреждения техники
-    и иные последствия, возникшие в результате самостоятельного ремонта по
-    материалам и инструкциям, размещённым на сайте. Все работы вы выполняете
-    на свой страх и риск.
+    РђРґРјРёРЅРёСЃС‚СЂР°С†РёСЏ СЃР°Р№С‚Р° РЅРµ РЅРµСЃС‘С‚ РѕС‚РІРµС‚СЃС‚РІРµРЅРЅРѕСЃС‚Рё Р·Р° РІРѕР·РјРѕР¶РЅС‹Рµ РїРѕРІСЂРµР¶РґРµРЅРёСЏ С‚РµС…РЅРёРєРё
+    Рё РёРЅС‹Рµ РїРѕСЃР»РµРґСЃС‚РІРёСЏ, РІРѕР·РЅРёРєС€РёРµ РІ СЂРµР·СѓР»СЊС‚Р°С‚Рµ СЃР°РјРѕСЃС‚РѕСЏС‚РµР»СЊРЅРѕРіРѕ СЂРµРјРѕРЅС‚Р° РїРѕ
+    РјР°С‚РµСЂРёР°Р»Р°Рј Рё РёРЅСЃС‚СЂСѓРєС†РёСЏРј, СЂР°Р·РјРµС‰С‘РЅРЅС‹Рј РЅР° СЃР°Р№С‚Рµ. Р’СЃРµ СЂР°Р±РѕС‚С‹ РІС‹ РІС‹РїРѕР»РЅСЏРµС‚Рµ
+    РЅР° СЃРІРѕР№ СЃС‚СЂР°С… Рё СЂРёСЃРє.
     </p>
-                <p class="footer__copyright">© 2026 Repairo. Все права защищены.</p>
+                <p class="footer__copyright">В© 2026 Repairo. Р’СЃРµ РїСЂР°РІР° Р·Р°С‰РёС‰РµРЅС‹.</p>
             </div>
         </div>
     </footer>
@@ -558,38 +588,38 @@
 {
   "@context": "https://schema.org",
   "@type": "HowTo",
-  "name": "Полнокадровые vs кропнутые камеры – что лучше?",
-  "description": "Пошаговая инструкция: Полнокадровые vs кропнутые камеры – что лучше?. Для портретов и художественной съёмки Full Frame даст более красивое боке и",
+  "name": "РџРѕР»РЅРѕРєР°РґСЂРѕРІС‹Рµ vs РєСЂРѕРїРЅСѓС‚С‹Рµ РєР°РјРµСЂС‹ вЂ“ С‡С‚Рѕ Р»СѓС‡С€Рµ?",
+  "description": "РџРѕС€Р°РіРѕРІР°СЏ РёРЅСЃС‚СЂСѓРєС†РёСЏ: РџРѕР»РЅРѕРєР°РґСЂРѕРІС‹Рµ vs РєСЂРѕРїРЅСѓС‚С‹Рµ РєР°РјРµСЂС‹ вЂ“ С‡С‚Рѕ Р»СѓС‡С€Рµ?. Р”Р»СЏ РїРѕСЂС‚СЂРµС‚РѕРІ Рё С…СѓРґРѕР¶РµСЃС‚РІРµРЅРЅРѕР№ СЃСЉС‘РјРєРё Full Frame РґР°СЃС‚ Р±РѕР»РµРµ РєСЂР°СЃРёРІРѕРµ Р±РѕРєРµ Рё",
   "totalTime": "PT30M",
   "step": [
     {
       "@type": "HowToStep",
-      "name": "Что такое полнокадровая и кропнутая камера?",
-      "text": "Что такое полнокадровая и кропнутая камера?",
+      "name": "Р§С‚Рѕ С‚Р°РєРѕРµ РїРѕР»РЅРѕРєР°РґСЂРѕРІР°СЏ Рё РєСЂРѕРїРЅСѓС‚Р°СЏ РєР°РјРµСЂР°?",
+      "text": "Р§С‚Рѕ С‚Р°РєРѕРµ РїРѕР»РЅРѕРєР°РґСЂРѕРІР°СЏ Рё РєСЂРѕРїРЅСѓС‚Р°СЏ РєР°РјРµСЂР°?",
       "url": "#step-1"
     },
     {
       "@type": "HowToStep",
-      "name": "Сравнение: полнокадровая vs кропнутая",
-      "text": "Сравнение: полнокадровая vs кропнутая",
+      "name": "РЎСЂР°РІРЅРµРЅРёРµ: РїРѕР»РЅРѕРєР°РґСЂРѕРІР°СЏ vs РєСЂРѕРїРЅСѓС‚Р°СЏ",
+      "text": "РЎСЂР°РІРЅРµРЅРёРµ: РїРѕР»РЅРѕРєР°РґСЂРѕРІР°СЏ vs РєСЂРѕРїРЅСѓС‚Р°СЏ",
       "url": "#step-2"
     },
     {
       "@type": "HowToStep",
-      "name": "Плюсы и минусы",
-      "text": "Плюсы и минусы",
+      "name": "РџР»СЋСЃС‹ Рё РјРёРЅСѓСЃС‹",
+      "text": "РџР»СЋСЃС‹ Рё РјРёРЅСѓСЃС‹",
       "url": "#step-3"
     },
     {
       "@type": "HowToStep",
-      "name": "Часто задаваемые вопросы",
-      "text": "Часто задаваемые вопросы",
+      "name": "Р§Р°СЃС‚Рѕ Р·Р°РґР°РІР°РµРјС‹Рµ РІРѕРїСЂРѕСЃС‹",
+      "text": "Р§Р°СЃС‚Рѕ Р·Р°РґР°РІР°РµРјС‹Рµ РІРѕРїСЂРѕСЃС‹",
       "url": "#step-4"
     },
     {
       "@type": "HowToStep",
-      "name": "?? Итог",
-      "text": "?? Итог",
+      "name": "рџ“Њ РС‚РѕРі",
+      "text": "рџ“Њ РС‚РѕРі",
       "url": "#step-5"
     }
   ],
@@ -600,8 +630,4 @@
 <script src="../cookie-consent.js"></script>
 </body>
 </html>
-
-
-
-
 

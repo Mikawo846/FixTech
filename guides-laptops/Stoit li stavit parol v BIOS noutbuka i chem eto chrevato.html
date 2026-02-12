@@ -4,34 +4,70 @@
 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Пароль в BIOS ноутбука: стоит ли ставить и чем это чревато |</title>
-    <meta name="description" content="">
+  <title>РџР°СЂРѕР»СЊ РІ BIOS РЅРѕСѓС‚Р±СѓРєР°: СЃС‚РѕРёС‚ Р»Рё СЃС‚Р°РІРёС‚СЊ Рё С‡РµРј СЌС‚Рѕ С‡СЂРµРІР°С‚Рѕ | РђРЅР°Р»РёР· СЂРёСЃРєРѕРІ</title>
+    <meta name="description" content="{{ description }}">
+    <meta name="description" content="РџРѕС€Р°РіРѕРІР°СЏ РёРЅСЃС‚СЂСѓРєС†РёСЏ: РЎС‚РѕРёС‚ Р»Рё СЃС‚Р°РІРёС‚СЊ РїР°СЂРѕР»СЊ РІ BIOS РЅРѕСѓС‚Р±СѓРєР° Рё РєР°РєРёРµ РµСЃС‚СЊ СЂРёСЃРєРё. РџРѕР»РЅС‹Р№ Р°РЅР°Р»РёР· РїСЂРµРёРјСѓС‰РµСЃС‚РІ Рё РЅРµРґРѕСЃС‚Р°С‚РєРѕРІ РїР°СЂРѕР»СЊРЅРѕР№ Р·Р°С‰РёС‚С‹ BIOS/UEFI РЅР° РЅРѕСѓС‚Р±СѓРєР°С….">
 
   <link rel="stylesheet" href="../styles.css" />
   <link rel="stylesheet" href="../styles-header.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
   <style>
     .guide-content { line-height: 1.7; color: var(--text); }
-    .guide-content h2 { color: var(--primary); margin-top: 30px; margin-bottom: 15px; font-size: 1.5rem; }
-    .guide-content h3 { color: var(--primary-dark); margin-top: 25px; margin-bottom: 12px; font-size: 1.2rem; }
+    .guide-content h2 { color: var(--primary); margin-top: 30px; margin-bottom: 15px; font-size: 1.6rem; }
+    .guide-content h3 { color: var(--primary-dark); margin-top: 25px; margin-bottom: 12px; font-size: 1.25rem; }
     .guide-image-block { margin: 20px 0; padding: 15px; background: var(--background); border-radius: var(--border-radius); border: 1px solid var(--border); text-align: center; }
     .guide-image-block img { max-width: 100%; height: auto; border-radius: 6px; border: 1px solid var(--border); }
     .image-caption { margin-top: 10px; font-size: 0.85rem; color: var(--text-light); font-style: italic; }
+    table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+    th, td { border: 1px solid var(--border); padding: 8px; text-align: left; vertical-align: top; }
+    th { background: var(--background-light); }
+    code { background: rgba(0,0,0,0.04); padding: 1px 4px; border-radius: 3px; }
+    ul, ol { padding-left: 18px; }
+    .check-section { padding: 15px; border-radius: 6px; border: 1px dashed var(--border); margin: 18px 0; background: rgba(0,0,0,0.01); }
+    .check-title { font-weight: 600; margin-bottom: 8px; }
     .pro-tips { background: rgba(3, 74, 79, 0.05); padding: 15px; border-radius: 6px; margin: 20px 0; }
     .pro-tips h4 { color: var(--primary); margin-top: 0; margin-bottom: 12px; font-size: 1.1rem; }
     .tip-item { display: flex; gap: 8px; margin-bottom: 8px; align-items: flex-start; }
-    table { width: 100%; border-collapse: collapse; margin: 20px 0; }
-    th, td { border: 1px solid var(--border); padding: 8px; text-align: left; }
-    th { background: var(--background-light); }
-    .highlight { background: #f5f7fa; border-left: 4px solid #2d9cdb; padding: 10px 15px; margin: 20px 0; }
-    .faq-section ul { margin-left: 1em; }
-    .block-section { margin-bottom: 2em; }
+    .ok { color: #0a8f3c; font-weight: 600; }
+    .warn { color: #c97a00; font-weight: 600; }
+    .bad { color: #c62828; font-weight: 600; }
+    .alert-box { padding: 20px; border-radius: 8px; margin: 25px 0; }
+    .alert-danger { background: rgba(198, 40, 40, 0.1); border-left: 4px solid #c62828; }
+    .alert-warning { background: rgba(201, 122, 0, 0.1); border-left: 4px solid #c97a00; }
+    .alert-success { background: rgba(10, 143, 60, 0.1); border-left: 4px solid #0a8f3c; }
+    .alert-info { background: rgba(3, 74, 79, 0.1); border-left: 4px solid var(--primary); }
+    .pros-cons { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 20px 0; }
+    .pros, .cons { padding: 15px; border-radius: 6px; }
+    .pros { background: rgba(10, 143, 60, 0.1); border-left: 4px solid #0a8f3c; }
+    .cons { background: rgba(198, 40, 40, 0.1); border-left: 4px solid #c62828; }
+    .pros h4, .cons h4 { margin-top: 0; margin-bottom: 10px; }
+    .risk-levels { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; margin: 20px 0; }
+    .risk-card { padding: 15px; border-radius: 6px; background: var(--background); border: 1px solid var(--border); text-align: center; }
+    .risk-card h4 { color: var(--primary-dark); margin-top: 0; margin-bottom: 8px; }
+    .risk-low { border-left: 4px solid #0a8f3c; }
+    .risk-medium { border-left: 4px solid #c97a00; }
+    .risk-high { border-left: 4px solid #c62828; }
+    .comparison-table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+    .comparison-table th { background: var(--primary); color: white; padding: 12px; text-align: center; }
+    .comparison-table td { padding: 10px; text-align: center; }
+    .comparison-table .feature-col { text-align: left; font-weight: 600; }
     @media (max-width: 768px) {
       .guide-content h2 { font-size: 1.4rem; margin-top: 25px; }
       .guide-image-block { padding: 12px; margin: 15px 0; }
       table, th, td { font-size: 0.95rem; }
+      .pros-cons { grid-template-columns: 1fr; }
     }
+    /* РЇРЅРґРµРєСЃ РњР°СЂРєРµС‚ СЂРµРєР»Р°РјРЅС‹Р№ Р±Р°РЅРЅРµСЂ */
+    .ym-hero-link {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+      max-width: 100%;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
     /* Р“РѕСЂРёР·РѕРЅС‚Р°Р»СЊРЅС‹Р№ Р±Р°РЅРЅРµСЂ-РєР°СЂС‚РѕС‡РєР° */
     .ym-hero-banner {
       width: 100%;
@@ -83,257 +119,63 @@
       transform: scale(1.02);
     }
 
-    /* РџСЂР°РІР°СЏ С‡Р°СЃС‚СЊ: РєРѕРЅС‚РµРЅС‚ */
+    /* РўРµРєСЃС‚РѕРІР°СЏ С‡Р°СЃС‚СЊ Р±Р°РЅРЅРµСЂР° */
     .ym-hero-content {
-      padding: 16px 18px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      gap: 8px;
+      padding: 12px 16px;
+      text-align: center;
     }
 
-    /* РќР°Р·РІР°РЅРёРµ С‚РѕРІР°СЂР° */
     .ym-hero-title {
-      font-size: 14px;
-      font-weight: 600;
-      color: #111827;
-      line-height: 1.3;
-      margin: 0 0 4px 0;
-      display: -webkit-box;
-      -webkit-line-clamp: 2;
-      line-clamp: 2;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
-    }
-
-    /* Р РµР№С‚РёРЅРі */
-    .ym-hero-top {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 8px;
-    }
-
-    .ym-hero-rating {
       font-size: 13px;
-      font-weight: 500;
-      color: #111827;
-      background: #f9fafb;
-      border-radius: 999px;
-      padding: 4px 10px;
-    }
-
-    .ym-hero-rating-count {
-      color: #6b7280;
-    }
-
-    /* Р¤РёРѕР»РµС‚РѕРІР°СЏ РєРЅРѕРїРєР° */
-    .ym-hero-button {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 9px 16px;
-      border-radius: 999px;
-      border: none;
-      background: #6a00ff;
-      color: #ffffff;
-      font-size: 14px;
       font-weight: 600;
-      cursor: pointer;
-      box-shadow: 0 2px 6px rgba(88, 28, 135, 0.35);
-      transition: background 0.15s ease, transform 0.15s ease,
-                  box-shadow 0.15s ease;
-    }
-    .ym-hero-button::after {
-      content: "в†’";
-      margin-left: 6px;
-      font-size: 14px;
-    }
-    .ym-hero-button:hover {
-      background: #7c3aed;
-      transform: translateY(-1px);
-      box-shadow: 0 4px 10px rgba(88, 28, 135, 0.45);
-    }
-
-    /* Р®СЂРёРґРёС‡РµСЃРєРёР№ Р±Р»РѕРє */
-    .ym-hero-legal {
-      margin-top: 6px;
-      max-width: 600px;
-      font-size: 11px;
+      color: #1f2937;
+      margin: 0 0 4px 0;
       line-height: 1.3;
-      color: #6b7280;
-      margin-left: auto;
-      margin-right: auto;
     }
 
-    /* РђРґР°РїС‚РёРІ */
+    .ym-hero-desc {
+      font-size: 11px;
+      color: #6b7280;
+      margin: 0;
+      line-height: 1.3;
+    }
+
     @media (max-width: 480px) {
       .ym-hero-banner {
-        max-width: 100%;
-        margin: 20px 0;
+        min-height: 120px;
       }
       .ym-hero-images {
         height: 100px;
       }
-      .ym-hero-content {
-        padding: 12px 12px;
-      }
       .ym-hero-title {
-        font-size: 13px;
+        font-size: 12px;
       }
-      .ym-hero-button {
-        font-size: 13px;
-        padding: 8px 14px;
-      }
-      .ym-hero-legal {
+      .ym-hero-desc {
         font-size: 10px;
       }
     }
-    /* Telegram СЂРµРєР»Р°РјРЅС‹Р№ Р±Р°РЅРЅРµСЂ */
-    .telegram-banner {
-      display: flex;
-      justify-content: center;
-      text-decoration: none;
-      color: inherit;
-      width: 100%;
-      margin: 40px 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    }
-
-    .telegram-banner-container {
-      width: 100%;
-      max-width: 500px;
-      min-height: 120px;
-      border-radius: 16px;
-      background: linear-gradient(135deg, #0088cc 0%, #005f8f 100%);
-      border: 1px solid #005f8f;
-      display: flex;
-      align-items: center;
-      padding: 20px;
-      box-shadow: 0 4px 16px rgba(0, 136, 204, 0.2);
-      overflow: hidden;
-      box-sizing: border-box;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-
-    .telegram-banner-container:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(0, 136, 204, 0.3);
-    }
-
-    .telegram-logo {
-      width: 60px;
-      height: 60px;
-      min-width: 60px;
-      background: #ffffff;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-right: 20px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    }
-
-    .telegram-logo svg {
-      width: 32px;
-      height: 32px;
-      fill: #0088cc;
-    }
-
-    .telegram-content {
-      flex: 1;
-      color: #ffffff;
-    }
-
-    .telegram-title {
-      font-size: 16px;
-      font-weight: 600;
-      margin: 0 0 8px 0;
-      line-height: 1.3;
-    }
-
-    .telegram-subtitle {
-      font-size: 14px;
-      opacity: 0.9;
-      margin: 0 0 12px 0;
-      line-height: 1.4;
-    }
-
-    .telegram-button {
-      display: inline-flex;
-      align-items: center;
-      padding: 8px 16px;
-      background: #ffffff;
-      color: #0088cc;
-      border-radius: 20px;
-      font-size: 14px;
-      font-weight: 600;
-      text-decoration: none;
-      transition: background 0.2s ease, transform 0.2s ease;
-    }
-
-    .telegram-button:hover {
-      background: #f0f8ff;
-      transform: scale(1.05);
-    }
-
-    .telegram-button svg {
-      width: 16px;
-      height: 16px;
-      margin-left: 6px;
-      fill: #0088cc;
-    }
-
-    /* РђРґР°РїС‚РёРІ РґР»СЏ РјРѕР±РёР»СЊРЅС‹С… */
-    @media (max-width: 480px) {
-      .telegram-banner-container {
-        max-width: 100%;
-        margin: 20px 0;
-        padding: 15px;
-        min-height: 100px;
-      }
-      .telegram-logo {
-        width: 50px;
-        height: 50px;
-        min-width: 50px;
-        margin-right: 15px;
-      }
-      .telegram-logo svg {
-        width: 26px;
-        height: 26px;
-      }
-      .telegram-title {
-        font-size: 14px;
-      }
-      .telegram-subtitle {
-        font-size: 12px;
-      }
-      .telegram-button {
-        font-size: 12px;
-        padding: 6px 12px;
-      }
-    }
-
-
-
   </style>
-  <script async src="https://timeweb.cloud/api/v1/cloud-ai/agents/3cc03620-d051-4d8d-b5af-f7b6cd083a35/embed.js?collapsed=true"></script>
 </head>
 <body>
+
   <header class="header">
     <div class="container">
       <div class="header__inner">
         <a href="../index.html" class="logo">
-          <span class="logo__icon"></span>
-          <span class="logo__text">GeoExpert</span>
+          <img src="../logo.svg" alt="Repairo" width="40" height="40">
+          <span>Repairo</span>
         </a>
         <nav class="nav">
-          <ul class="nav__list">
-            <li><a href="../cameras.html" class="nav__link">РљР°РјРµСЂС‹</a></li>
-            <li><a href="../drones.html" class="nav__link">Р”СЂРѕРЅС‹</a></li>
-            <li><a href="../workflow.html" class="nav__link">Workflow</a></li>
-          </ul>
+          <a href="../index.html">Р“Р»Р°РІРЅР°СЏ</a>
+          <a href="../laptops.html">РќРѕСѓС‚Р±СѓРєРё</a>
+          <a href="../smartphones.html">РЎРјР°СЂС‚С„РѕРЅС‹</a>
+          <a href="../consoles.html">РљРѕРЅСЃРѕР»Рё</a>
+          <a href="../cameras.html">Р¤РѕС‚РѕР°РїРїР°СЂР°С‚С‹</a>
+          <a href="../tv.html">РўРµР»РµРІРёР·РѕСЂС‹</a>
         </nav>
+        <button class="theme-toggle" aria-label="РџРµСЂРµРєР»СЋС‡РёС‚СЊ С‚РµРјСѓ">
+          <i class="fas fa-moon"></i>
+        </button>
       </div>
     </div>
   </header>
@@ -341,289 +183,297 @@
   <main class="main">
     <div class="container">
       <div class="guide-content">
-        <h1>Пароль в BIOS ноутбука: стоит ли ставить и чем это чревато</h1>
+        <h1>РџР°СЂРѕР»СЊ РІ BIOS РЅРѕСѓС‚Р±СѓРєР°: СЃС‚РѕРёС‚ Р»Рё СЃС‚Р°РІРёС‚СЊ Рё С‡РµРј СЌС‚Рѕ С‡СЂРµРІР°С‚Рѕ</h1>
         
-        <p>Установка пароля в BIOS (или UEFI на современных ноутбуках) кажется хорошей идеей для защиты устройства, но это решение имеет серьезные риски. В этой статье мы подробно разберем все преимущества и недостатки парольной защиты BIOS, чтобы вы могли принять взвешенное решение.</p>
+        <p>РЈСЃС‚Р°РЅРѕРІРєР° РїР°СЂРѕР»СЏ РІ BIOS (РёР»Рё UEFI РЅР° СЃРѕРІСЂРµРјРµРЅРЅС‹С… РЅРѕСѓС‚Р±СѓРєР°С…) РєР°Р¶РµС‚СЃСЏ С…РѕСЂРѕС€РµР№ РёРґРµРµР№ РґР»СЏ Р·Р°С‰РёС‚С‹ СѓСЃС‚СЂРѕР№СЃС‚РІР°, РЅРѕ СЌС‚Рѕ СЂРµС€РµРЅРёРµ РёРјРµРµС‚ СЃРµСЂСЊРµР·РЅС‹Рµ СЂРёСЃРєРё. Р’ СЌС‚РѕР№ СЃС‚Р°С‚СЊРµ РјС‹ РїРѕРґСЂРѕР±РЅРѕ СЂР°Р·Р±РµСЂРµРј РІСЃРµ РїСЂРµРёРјСѓС‰РµСЃС‚РІР° Рё РЅРµРґРѕСЃС‚Р°С‚РєРё РїР°СЂРѕР»СЊРЅРѕР№ Р·Р°С‰РёС‚С‹ BIOS, С‡С‚РѕР±С‹ РІС‹ РјРѕРіР»Рё РїСЂРёРЅСЏС‚СЊ РІР·РІРµС€РµРЅРЅРѕРµ СЂРµС€РµРЅРёРµ.</p>
 
         <div class="guide-image-block">
-          <img src="https://avatars.mds.yandex.net/get-shedevrum/16500899/img_f3c2c3e937b611f08c82d27cdd667232/orig" alt="Пароль в BIOS ноутбука">
-          <div class="image-caption">Интерфейс установки пароля в BIOS/UEFI</div>
+          <img src="https://avatars.mds.yandex.net/get-shedevrum/16500899/img_f3c2c3e937b611f08c82d27cdd667232/orig" alt="РџР°СЂРѕР»СЊ РІ BIOS РЅРѕСѓС‚Р±СѓРєР°">
+          <div class="image-caption">РРЅС‚РµСЂС„РµР№СЃ СѓСЃС‚Р°РЅРѕРІРєРё РїР°СЂРѕР»СЏ РІ BIOS/UEFI</div>
         </div>
 
         <div class="alert-info">
-          <h4><i class="fas fa-info-circle"></i> Что такое пароль BIOS</h4>
-          <p>Пароль BIOS — это защита на уровне аппаратного обеспечения, которая блокирует доступ к настройкам системы или даже prevents загрузку операционной системы без правильного пароля.</p>
+          <h4><i class="fas fa-info-circle"></i> Р§С‚Рѕ С‚Р°РєРѕРµ РїР°СЂРѕР»СЊ BIOS</h4>
+          <p>РџР°СЂРѕР»СЊ BIOS вЂ” СЌС‚Рѕ Р·Р°С‰РёС‚Р° РЅР° СѓСЂРѕРІРЅРµ Р°РїРїР°СЂР°С‚РЅРѕРіРѕ РѕР±РµСЃРїРµС‡РµРЅРёСЏ, РєРѕС‚РѕСЂР°СЏ Р±Р»РѕРєРёСЂСѓРµС‚ РґРѕСЃС‚СѓРї Рє РЅР°СЃС‚СЂРѕР№РєР°Рј СЃРёСЃС‚РµРјС‹ РёР»Рё РґР°Р¶Рµ prevents Р·Р°РіСЂСѓР·РєСѓ РѕРїРµСЂР°С†РёРѕРЅРЅРѕР№ СЃРёСЃС‚РµРјС‹ Р±РµР· РїСЂР°РІРёР»СЊРЅРѕРіРѕ РїР°СЂРѕР»СЏ.</p>
         </div>
 
-        <h2>Типы паролей в BIOS/UEFI</h2>
+        <h2>РўРёРїС‹ РїР°СЂРѕР»РµР№ РІ BIOS/UEFI</h2>
 
-        <h3>Основные виды парольной защиты</h3>
+        <h3>РћСЃРЅРѕРІРЅС‹Рµ РІРёРґС‹ РїР°СЂРѕР»СЊРЅРѕР№ Р·Р°С‰РёС‚С‹</h3>
 
         <div class="check-section">
-          <div class="check-title">Типы паролей:</div>
+          <div class="check-title">РўРёРїС‹ РїР°СЂРѕР»РµР№:</div>
           <ul>
-            <li><strong>Supervisor Password (пароль администратора)</strong> — полный доступ ко всем настройкам BIOS</li>
-            <li><strong>User Password (пароль пользователя)</strong> — ограниченный доступ к настройкам</li>
-            <li><strong>Hard Disk Password (пароль жесткого диска)</strong> — блокирует доступ к данным на диске</li>
-            <li><strong>Boot Password (пароль загрузки)</strong> — требуется при каждой загрузке системы</li>
+            <li><strong>Supervisor Password (РїР°СЂРѕР»СЊ Р°РґРјРёРЅРёСЃС‚СЂР°С‚РѕСЂР°)</strong> вЂ” РїРѕР»РЅС‹Р№ РґРѕСЃС‚СѓРї РєРѕ РІСЃРµРј РЅР°СЃС‚СЂРѕР№РєР°Рј BIOS</li>
+            <li><strong>User Password (РїР°СЂРѕР»СЊ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ)</strong> вЂ” РѕРіСЂР°РЅРёС‡РµРЅРЅС‹Р№ РґРѕСЃС‚СѓРї Рє РЅР°СЃС‚СЂРѕР№РєР°Рј</li>
+            <li><strong>Hard Disk Password (РїР°СЂРѕР»СЊ Р¶РµСЃС‚РєРѕРіРѕ РґРёСЃРєР°)</strong> вЂ” Р±Р»РѕРєРёСЂСѓРµС‚ РґРѕСЃС‚СѓРї Рє РґР°РЅРЅС‹Рј РЅР° РґРёСЃРєРµ</li>
+            <li><strong>Boot Password (РїР°СЂРѕР»СЊ Р·Р°РіСЂСѓР·РєРё)</strong> вЂ” С‚СЂРµР±СѓРµС‚СЃСЏ РїСЂРё РєР°Р¶РґРѕР№ Р·Р°РіСЂСѓР·РєРµ СЃРёСЃС‚РµРјС‹</li>
           </ul>
         </div>
 
-        <h3>Различия между BIOS и UEFI</h3>
+        <h3>Р Р°Р·Р»РёС‡РёСЏ РјРµР¶РґСѓ BIOS Рё UEFI</h3>
 
         <div class="pro-tips">
-          <h4>Современные особенности:</h4>
+          <h4>РЎРѕРІСЂРµРјРµРЅРЅС‹Рµ РѕСЃРѕР±РµРЅРЅРѕСЃС‚Рё:</h4>
           <ul>
-            <li><strong>UEFI</strong> — более современная замена BIOS с улучшенной безопасностью</li>
-            <li><strong>Secure Boot</strong> — дополнительная защита UEFI от вредоносного ПО</li>
-            <li><strong>Графический интерфейс</strong> — удобнее настраивать пароли</li>
-            <li><strong>Поддержка мыши</strong> — упрощает навигацию по настройкам</li>
+            <li><strong>UEFI</strong> вЂ” Р±РѕР»РµРµ СЃРѕРІСЂРµРјРµРЅРЅР°СЏ Р·Р°РјРµРЅР° BIOS СЃ СѓР»СѓС‡С€РµРЅРЅРѕР№ Р±РµР·РѕРїР°СЃРЅРѕСЃС‚СЊСЋ</li>
+            <li><strong>Secure Boot</strong> вЂ” РґРѕРїРѕР»РЅРёС‚РµР»СЊРЅР°СЏ Р·Р°С‰РёС‚Р° UEFI РѕС‚ РІСЂРµРґРѕРЅРѕСЃРЅРѕРіРѕ РџРћ</li>
+            <li><strong>Р“СЂР°С„РёС‡РµСЃРєРёР№ РёРЅС‚РµСЂС„РµР№СЃ</strong> вЂ” СѓРґРѕР±РЅРµРµ РЅР°СЃС‚СЂР°РёРІР°С‚СЊ РїР°СЂРѕР»Рё</li>
+            <li><strong>РџРѕРґРґРµСЂР¶РєР° РјС‹С€Рё</strong> вЂ” СѓРїСЂРѕС‰Р°РµС‚ РЅР°РІРёРіР°С†РёСЋ РїРѕ РЅР°СЃС‚СЂРѕР№РєР°Рј</li>
           </ul>
         </div>
 
-        <h2>Преимущества установки пароля BIOS</h2>
+        <h2>РџСЂРµРёРјСѓС‰РµСЃС‚РІР° СѓСЃС‚Р°РЅРѕРІРєРё РїР°СЂРѕР»СЏ BIOS</h2>
 
         <div class="pros-cons">
           <div class="pros">
-            <h4><i class="fas fa-shield-alt"></i> Плюсы парольной защиты</h4>
+            <h4><i class="fas fa-shield-alt"></i> РџР»СЋСЃС‹ РїР°СЂРѕР»СЊРЅРѕР№ Р·Р°С‰РёС‚С‹</h4>
             <ul>
-              <li><strong>Защита от кражи</strong> — ноутбук бесполезен без пароля</li>
-              <li><strong>Предотвращение несанкционированного доступа</strong> к настройкам</li>
-              <li><strong>Блокировка загрузки с внешних носителей</strong> — защита от вредоносных программ</li>
-              <li><strong>Защита от изменения настроек</strong> — никто не сможет сбросить конфигурацию</li>
-              <li><strong>Дополнительный уровень безопасности</strong> — вместе с паролем Windows</li>
-              <li><strong>Защита данных на уровне железа</strong> — пароль диска шифрует данные</li>
+              <li><strong>Р—Р°С‰РёС‚Р° РѕС‚ РєСЂР°Р¶Рё</strong> вЂ” РЅРѕСѓС‚Р±СѓРє Р±РµСЃРїРѕР»РµР·РµРЅ Р±РµР· РїР°СЂРѕР»СЏ</li>
+              <li><strong>РџСЂРµРґРѕС‚РІСЂР°С‰РµРЅРёРµ РЅРµСЃР°РЅРєС†РёРѕРЅРёСЂРѕРІР°РЅРЅРѕРіРѕ РґРѕСЃС‚СѓРїР°</strong> Рє РЅР°СЃС‚СЂРѕР№РєР°Рј</li>
+              <li><strong>Р‘Р»РѕРєРёСЂРѕРІРєР° Р·Р°РіСЂСѓР·РєРё СЃ РІРЅРµС€РЅРёС… РЅРѕСЃРёС‚РµР»РµР№</strong> вЂ” Р·Р°С‰РёС‚Р° РѕС‚ РІСЂРµРґРѕРЅРѕСЃРЅС‹С… РїСЂРѕРіСЂР°РјРј</li>
+              <li><strong>Р—Р°С‰РёС‚Р° РѕС‚ РёР·РјРµРЅРµРЅРёСЏ РЅР°СЃС‚СЂРѕРµРє</strong> вЂ” РЅРёРєС‚Рѕ РЅРµ СЃРјРѕР¶РµС‚ СЃР±СЂРѕСЃРёС‚СЊ РєРѕРЅС„РёРіСѓСЂР°С†РёСЋ</li>
+              <li><strong>Р”РѕРїРѕР»РЅРёС‚РµР»СЊРЅС‹Р№ СѓСЂРѕРІРµРЅСЊ Р±РµР·РѕРїР°СЃРЅРѕСЃС‚Рё</strong> вЂ” РІРјРµСЃС‚Рµ СЃ РїР°СЂРѕР»РµРј Windows</li>
+              <li><strong>Р—Р°С‰РёС‚Р° РґР°РЅРЅС‹С… РЅР° СѓСЂРѕРІРЅРµ Р¶РµР»РµР·Р°</strong> вЂ” РїР°СЂРѕР»СЊ РґРёСЃРєР° С€РёС„СЂСѓРµС‚ РґР°РЅРЅС‹Рµ</li>
             </ul>
           </div>
           <div class="cons">
-            <h4><i class="fas fa-exclamation-triangle"></i> Минусы и риски</h4>
+            <h4><i class="fas fa-exclamation-triangle"></i> РњРёРЅСѓСЃС‹ Рё СЂРёСЃРєРё</h4>
             <ul>
-              <li><strong>Риск блокировки</strong> — забытый пароль может сделать ноутбук бесполезным</li>
-              <li><strong>Сложность сброса</strong> — требуется обращение в сервисный центр</li>
-              <li><strong>Проблемы с ремонтом</strong> — мастера не смогут провести диагностику</li>
-              <li><strong>Ограничение функциональности</strong> — нельзя будет менять настройки</li>
-              <li><strong>Проблемы с обновлениями</strong> — некоторые обновления требуют сброса BIOS</li>
-              <li><strong>Сложность для наследников</strong> — после смерти владельца доступ невозможен</li>
+              <li><strong>Р РёСЃРє Р±Р»РѕРєРёСЂРѕРІРєРё</strong> вЂ” Р·Р°Р±С‹С‚С‹Р№ РїР°СЂРѕР»СЊ РјРѕР¶РµС‚ СЃРґРµР»Р°С‚СЊ РЅРѕСѓС‚Р±СѓРє Р±РµСЃРїРѕР»РµР·РЅС‹Рј</li>
+              <li><strong>РЎР»РѕР¶РЅРѕСЃС‚СЊ СЃР±СЂРѕСЃР°</strong> вЂ” С‚СЂРµР±СѓРµС‚СЃСЏ РѕР±СЂР°С‰РµРЅРёРµ РІ СЃРµСЂРІРёСЃРЅС‹Р№ С†РµРЅС‚СЂ</li>
+              <li><strong>РџСЂРѕР±Р»РµРјС‹ СЃ СЂРµРјРѕРЅС‚РѕРј</strong> вЂ” РјР°СЃС‚РµСЂР° РЅРµ СЃРјРѕРіСѓС‚ РїСЂРѕРІРµСЃС‚Рё РґРёР°РіРЅРѕСЃС‚РёРєСѓ</li>
+              <li><strong>РћРіСЂР°РЅРёС‡РµРЅРёРµ С„СѓРЅРєС†РёРѕРЅР°Р»СЊРЅРѕСЃС‚Рё</strong> вЂ” РЅРµР»СЊР·СЏ Р±СѓРґРµС‚ РјРµРЅСЏС‚СЊ РЅР°СЃС‚СЂРѕР№РєРё</li>
+              <li><strong>РџСЂРѕР±Р»РµРјС‹ СЃ РѕР±РЅРѕРІР»РµРЅРёСЏРјРё</strong> вЂ” РЅРµРєРѕС‚РѕСЂС‹Рµ РѕР±РЅРѕРІР»РµРЅРёСЏ С‚СЂРµР±СѓСЋС‚ СЃР±СЂРѕСЃР° BIOS</li>
+              <li><strong>РЎР»РѕР¶РЅРѕСЃС‚СЊ РґР»СЏ РЅР°СЃР»РµРґРЅРёРєРѕРІ</strong> вЂ” РїРѕСЃР»Рµ СЃРјРµСЂС‚Рё РІР»Р°РґРµР»СЊС†Р° РґРѕСЃС‚СѓРї РЅРµРІРѕР·РјРѕР¶РµРЅ</li>
             </ul>
           </div>
         </div>
 
-        <h2>Риски и опасности парольной защиты</h2>
+        <h2>Р РёСЃРєРё Рё РѕРїР°СЃРЅРѕСЃС‚Рё РїР°СЂРѕР»СЊРЅРѕР№ Р·Р°С‰РёС‚С‹</h2>
 
-        <h3>Критические риски</h3>
+        <h3>РљСЂРёС‚РёС‡РµСЃРєРёРµ СЂРёСЃРєРё</h3>
 
         <div class="alert-danger">
-          <h4><i class="fas fa-ban"></i> Самые опасные последствия:</h4>
+          <h4><i class="fas fa-ban"></i> РЎР°РјС‹Рµ РѕРїР°СЃРЅС‹Рµ РїРѕСЃР»РµРґСЃС‚РІРёСЏ:</h4>
           <ul>
-            <li><strong>Полная блокировка устройства</strong> при утере пароля</li>
-            <li><strong>Отсутствие универсального способа сброса</strong> — каждый производитель уникален</li>
-            <li><strong>Риск потери данных</strong> — при пароле жесткого диска</li>
-            <li><strong>Высокая стоимость восстановления</strong> — в сервисных центрах</li>
-            <li><strong>Невозможность быстрой помощи</strong> — даже специалистам сложно помочь</li>
+            <li><strong>РџРѕР»РЅР°СЏ Р±Р»РѕРєРёСЂРѕРІРєР° СѓСЃС‚СЂРѕР№СЃС‚РІР°</strong> РїСЂРё СѓС‚РµСЂРµ РїР°СЂРѕР»СЏ</li>
+            <li><strong>РћС‚СЃСѓС‚СЃС‚РІРёРµ СѓРЅРёРІРµСЂСЃР°Р»СЊРЅРѕРіРѕ СЃРїРѕСЃРѕР±Р° СЃР±СЂРѕСЃР°</strong> вЂ” РєР°Р¶РґС‹Р№ РїСЂРѕРёР·РІРѕРґРёС‚РµР»СЊ СѓРЅРёРєР°Р»РµРЅ</li>
+            <li><strong>Р РёСЃРє РїРѕС‚РµСЂРё РґР°РЅРЅС‹С…</strong> вЂ” РїСЂРё РїР°СЂРѕР»Рµ Р¶РµСЃС‚РєРѕРіРѕ РґРёСЃРєР°</li>
+            <li><strong>Р’С‹СЃРѕРєР°СЏ СЃС‚РѕРёРјРѕСЃС‚СЊ РІРѕСЃСЃС‚Р°РЅРѕРІР»РµРЅРёСЏ</strong> вЂ” РІ СЃРµСЂРІРёСЃРЅС‹С… С†РµРЅС‚СЂР°С…</li>
+            <li><strong>РќРµРІРѕР·РјРѕР¶РЅРѕСЃС‚СЊ Р±С‹СЃС‚СЂРѕР№ РїРѕРјРѕС‰Рё</strong> вЂ” РґР°Р¶Рµ СЃРїРµС†РёР°Р»РёСЃС‚Р°Рј СЃР»РѕР¶РЅРѕ РїРѕРјРѕС‡СЊ</li>
           </ul>
         </div>
 
-        <h3>Уровни риска для разных пользователей</h3>
+        <h3>РЈСЂРѕРІРЅРё СЂРёСЃРєР° РґР»СЏ СЂР°Р·РЅС‹С… РїРѕР»СЊР·РѕРІР°С‚РµР»РµР№</h3>
 
         <div class="risk-levels">
           <div class="risk-card risk-low">
-            <h4><i class="fas fa-user"></i> Домашний пользователь</h4>
-            <p><strong>Низкий риск</strong></p>
-            <p>Пароль может создать больше проблем, чем пользы. Рекомендуется использовать другие методы защиты.</p>
+            <h4><i class="fas fa-user"></i> Р”РѕРјР°С€РЅРёР№ РїРѕР»СЊР·РѕРІР°С‚РµР»СЊ</h4>
+            <p><strong>РќРёР·РєРёР№ СЂРёСЃРє</strong></p>
+            <p>РџР°СЂРѕР»СЊ РјРѕР¶РµС‚ СЃРѕР·РґР°С‚СЊ Р±РѕР»СЊС€Рµ РїСЂРѕР±Р»РµРј, С‡РµРј РїРѕР»СЊР·С‹. Р РµРєРѕРјРµРЅРґСѓРµС‚СЃСЏ РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ РґСЂСѓРіРёРµ РјРµС‚РѕРґС‹ Р·Р°С‰РёС‚С‹.</p>
           </div>
           <div class="risk-card risk-medium">
-            <h4><i class="fas fa-briefcase"></i> Бизнес-пользователь</h4>
-            <p><strong>Средний риск</strong></p>
-            <p>Полезно для защиты корпоративных данных, но требует централизованного управления паролями.</p>
+            <h4><i class="fas fa-briefcase"></i> Р‘РёР·РЅРµСЃ-РїРѕР»СЊР·РѕРІР°С‚РµР»СЊ</h4>
+            <p><strong>РЎСЂРµРґРЅРёР№ СЂРёСЃРє</strong></p>
+            <p>РџРѕР»РµР·РЅРѕ РґР»СЏ Р·Р°С‰РёС‚С‹ РєРѕСЂРїРѕСЂР°С‚РёРІРЅС‹С… РґР°РЅРЅС‹С…, РЅРѕ С‚СЂРµР±СѓРµС‚ С†РµРЅС‚СЂР°Р»РёР·РѕРІР°РЅРЅРѕРіРѕ СѓРїСЂР°РІР»РµРЅРёСЏ РїР°СЂРѕР»СЏРјРё.</p>
           </div>
           <div class="risk-card risk-high">
-            <h4><i class="fas fa-user-secret"></i> IT-специалист</h4>
-            <p><strong>Высокий риск</strong></p>
-            <p>Понимает риски, но может столкнуться с проблемами при передаче устройства другим.</p>
+            <h4><i class="fas fa-user-secret"></i> IT-СЃРїРµС†РёР°Р»РёСЃС‚</h4>
+            <p><strong>Р’С‹СЃРѕРєРёР№ СЂРёСЃРє</strong></p>
+            <p>РџРѕРЅРёРјР°РµС‚ СЂРёСЃРєРё, РЅРѕ РјРѕР¶РµС‚ СЃС‚РѕР»РєРЅСѓС‚СЊСЃСЏ СЃ РїСЂРѕР±Р»РµРјР°РјРё РїСЂРё РїРµСЂРµРґР°С‡Рµ СѓСЃС‚СЂРѕР№СЃС‚РІР° РґСЂСѓРіРёРј.</p>
           </div>
         </div>
 
-        <h2>Когда пароль BIOS действительно полезен</h2>
+        <h2>РљРѕРіРґР° РїР°СЂРѕР»СЊ BIOS РґРµР№СЃС‚РІРёС‚РµР»СЊРЅРѕ РїРѕР»РµР·РµРЅ</h2>
 
-        <h3>Рекомендуемые сценарии использования</h3>
+        <h3>Р РµРєРѕРјРµРЅРґСѓРµРјС‹Рµ СЃС†РµРЅР°СЂРёРё РёСЃРїРѕР»СЊР·РѕРІР°РЅРёСЏ</h3>
 
         <div class="alert-success">
-          <h4><i class="fas fa-check-circle"></i> В этих случаях пароль оправдан:</h4>
+          <h4><i class="fas fa-check-circle"></i> Р’ СЌС‚РёС… СЃР»СѓС‡Р°СЏС… РїР°СЂРѕР»СЊ РѕРїСЂР°РІРґР°РЅ:</h4>
           <ul>
-            <li><strong>Корпоративные ноутбуки</strong> с конфиденциальными данными</li>
-            <li><strong>Устройства в общественных местах</strong> — школы, библиотеки</li>
-            <li><strong>Ноутбуки с чувствительной информацией</strong> — медицинские, финансовые данные</li>
-            <li><strong>Защита от детей</strong> — ограничение доступа к настройкам</li>
-            <li><strong>Временная защита</strong> — при поездках или командировках</li>
+            <li><strong>РљРѕСЂРїРѕСЂР°С‚РёРІРЅС‹Рµ РЅРѕСѓС‚Р±СѓРєРё</strong> СЃ РєРѕРЅС„РёРґРµРЅС†РёР°Р»СЊРЅС‹РјРё РґР°РЅРЅС‹РјРё</li>
+            <li><strong>РЈСЃС‚СЂРѕР№СЃС‚РІР° РІ РѕР±С‰РµСЃС‚РІРµРЅРЅС‹С… РјРµСЃС‚Р°С…</strong> вЂ” С€РєРѕР»С‹, Р±РёР±Р»РёРѕС‚РµРєРё</li>
+            <li><strong>РќРѕСѓС‚Р±СѓРєРё СЃ С‡СѓРІСЃС‚РІРёС‚РµР»СЊРЅРѕР№ РёРЅС„РѕСЂРјР°С†РёРµР№</strong> вЂ” РјРµРґРёС†РёРЅСЃРєРёРµ, С„РёРЅР°РЅСЃРѕРІС‹Рµ РґР°РЅРЅС‹Рµ</li>
+            <li><strong>Р—Р°С‰РёС‚Р° РѕС‚ РґРµС‚РµР№</strong> вЂ” РѕРіСЂР°РЅРёС‡РµРЅРёРµ РґРѕСЃС‚СѓРїР° Рє РЅР°СЃС‚СЂРѕР№РєР°Рј</li>
+            <li><strong>Р’СЂРµРјРµРЅРЅР°СЏ Р·Р°С‰РёС‚Р°</strong> вЂ” РїСЂРё РїРѕРµР·РґРєР°С… РёР»Рё РєРѕРјР°РЅРґРёСЂРѕРІРєР°С…</li>
           </ul>
         </div>
 
-        <h3>Альтернативные методы защиты</h3>
+        <h3>РђР»СЊС‚РµСЂРЅР°С‚РёРІРЅС‹Рµ РјРµС‚РѕРґС‹ Р·Р°С‰РёС‚С‹</h3>
 
         <div class="pro-tips">
-          <h4>Более безопасные альтернативы:</h4>
+          <h4>Р‘РѕР»РµРµ Р±РµР·РѕРїР°СЃРЅС‹Рµ Р°Р»СЊС‚РµСЂРЅР°С‚РёРІС‹:</h4>
           <ul>
-            <li><strong>Шифрование диска BitLocker</strong> — защита данных без риска блокировки</li>
-            <li><strong>Пароль Windows</strong> — достаточная защита для большинства пользователей</li>
-            <li><strong>Двухфакторная аутентификация</strong> — Windows Hello,????</li>
-            <li><strong>Физические замки</strong> — Kensington Lock для защиты от кражи</li>
-            <li><strong>Отслеживание устройств</strong> — Find My Device, Prey</li>
+            <li><strong>РЁРёС„СЂРѕРІР°РЅРёРµ РґРёСЃРєР° BitLocker</strong> вЂ” Р·Р°С‰РёС‚Р° РґР°РЅРЅС‹С… Р±РµР· СЂРёСЃРєР° Р±Р»РѕРєРёСЂРѕРІРєРё</li>
+            <li><strong>РџР°СЂРѕР»СЊ Windows</strong> вЂ” РґРѕСЃС‚Р°С‚РѕС‡РЅР°СЏ Р·Р°С‰РёС‚Р° РґР»СЏ Р±РѕР»СЊС€РёРЅСЃС‚РІР° РїРѕР»СЊР·РѕРІР°С‚РµР»РµР№</li>
+            <li><strong>Р”РІСѓС…С„Р°РєС‚РѕСЂРЅР°СЏ Р°СѓС‚РµРЅС‚РёС„РёРєР°С†РёСЏ</strong> вЂ” Windows Hello,жЊ‡зє№иЇ†е€«</li>
+            <li><strong>Р¤РёР·РёС‡РµСЃРєРёРµ Р·Р°РјРєРё</strong> вЂ” Kensington Lock РґР»СЏ Р·Р°С‰РёС‚С‹ РѕС‚ РєСЂР°Р¶Рё</li>
+            <li><strong>РћС‚СЃР»РµР¶РёРІР°РЅРёРµ СѓСЃС‚СЂРѕР№СЃС‚РІ</strong> вЂ” Find My Device, Prey</li>
           </ul>
         </div>
 
-        <h2>Процесс установки пароля BIOS</h2>
+        <h2>РџСЂРѕС†РµСЃСЃ СѓСЃС‚Р°РЅРѕРІРєРё РїР°СЂРѕР»СЏ BIOS</h2>
 
-        <h3>Пошаговая инструкция</h3>
+        <h3>РџРѕС€Р°РіРѕРІР°СЏ РёРЅСЃС‚СЂСѓРєС†РёСЏ</h3>
 
         <div class="check-section">
-          <div class="check-title">Как установить пароль:</div>
+          <div class="check-title">РљР°Рє СѓСЃС‚Р°РЅРѕРІРёС‚СЊ РїР°СЂРѕР»СЊ:</div>
           <ol>
-            <li><strong>Перезагрузите ноутбук</strong> и войдите в BIOS (обычно F2, F10, Del)</li>
-            <li><strong>Найдите раздел Security</strong> или Password</li>
-            <li><strong>Выберите тип пароля</strong> — Supervisor или User</li>
-            <li><strong>Введите и подтвердите пароль</strong> — используйте сложную комбинацию</li>
-            <li><strong>Сохраните изменения</strong> и выйдите из BIOS</li>
-            <li><strong>Протестируйте работу</strong> — перезагрузите систему</li>
+            <li><strong>РџРµСЂРµР·Р°РіСЂСѓР·РёС‚Рµ РЅРѕСѓС‚Р±СѓРє</strong> Рё РІРѕР№РґРёС‚Рµ РІ BIOS (РѕР±С‹С‡РЅРѕ F2, F10, Del)</li>
+            <li><strong>РќР°Р№РґРёС‚Рµ СЂР°Р·РґРµР» Security</strong> РёР»Рё Password</li>
+            <li><strong>Р’С‹Р±РµСЂРёС‚Рµ С‚РёРї РїР°СЂРѕР»СЏ</strong> вЂ” Supervisor РёР»Рё User</li>
+            <li><strong>Р’РІРµРґРёС‚Рµ Рё РїРѕРґС‚РІРµСЂРґРёС‚Рµ РїР°СЂРѕР»СЊ</strong> вЂ” РёСЃРїРѕР»СЊР·СѓР№С‚Рµ СЃР»РѕР¶РЅСѓСЋ РєРѕРјР±РёРЅР°С†РёСЋ</li>
+            <li><strong>РЎРѕС…СЂР°РЅРёС‚Рµ РёР·РјРµРЅРµРЅРёСЏ</strong> Рё РІС‹Р№РґРёС‚Рµ РёР· BIOS</li>
+            <li><strong>РџСЂРѕС‚РµСЃС‚РёСЂСѓР№С‚Рµ СЂР°Р±РѕС‚Сѓ</strong> вЂ” РїРµСЂРµР·Р°РіСЂСѓР·РёС‚Рµ СЃРёСЃС‚РµРјСѓ</li>
           </ol>
         </div>
 
-        <h3>Рекомендации по созданию пароля</h3>
+        <h3>Р РµРєРѕРјРµРЅРґР°С†РёРё РїРѕ СЃРѕР·РґР°РЅРёСЋ РїР°СЂРѕР»СЏ</h3>
 
         <div class="alert-warning">
-          <h4><i class="fas fa-key"></i> Правила создания надежного пароля:</h4>
+          <h4><i class="fas fa-key"></i> РџСЂР°РІРёР»Р° СЃРѕР·РґР°РЅРёСЏ РЅР°РґРµР¶РЅРѕРіРѕ РїР°СЂРѕР»СЏ:</h4>
           <ul>
-            <li><strong>Запишите пароль</strong> в нескольких надежных местах</li>
-            <li><strong>Используйте мнемоническую фразу</strong> для запоминания</li>
-            <li><strong>Избегайте очевидных комбинаций</strong> — даты рождения, простые слова</li>
-            <li><strong>Создайте резервную копию</strong> пароля в менеджере паролей</li>
-            <li><strong>Сообщите пароль доверенному лицу</strong> на случай экстренной ситуации</li>
+            <li><strong>Р—Р°РїРёС€РёС‚Рµ РїР°СЂРѕР»СЊ</strong> РІ РЅРµСЃРєРѕР»СЊРєРёС… РЅР°РґРµР¶РЅС‹С… РјРµСЃС‚Р°С…</li>
+            <li><strong>РСЃРїРѕР»СЊР·СѓР№С‚Рµ РјРЅРµРјРѕРЅРёС‡РµСЃРєСѓСЋ С„СЂР°Р·Сѓ</strong> РґР»СЏ Р·Р°РїРѕРјРёРЅР°РЅРёСЏ</li>
+            <li><strong>РР·Р±РµРіР°Р№С‚Рµ РѕС‡РµРІРёРґРЅС‹С… РєРѕРјР±РёРЅР°С†РёР№</strong> вЂ” РґР°С‚С‹ СЂРѕР¶РґРµРЅРёСЏ, РїСЂРѕСЃС‚С‹Рµ СЃР»РѕРІР°</li>
+            <li><strong>РЎРѕР·РґР°Р№С‚Рµ СЂРµР·РµСЂРІРЅСѓСЋ РєРѕРїРёСЋ</strong> РїР°СЂРѕР»СЏ РІ РјРµРЅРµРґР¶РµСЂРµ РїР°СЂРѕР»РµР№</li>
+            <li><strong>РЎРѕРѕР±С‰РёС‚Рµ РїР°СЂРѕР»СЊ РґРѕРІРµСЂРµРЅРЅРѕРјСѓ Р»РёС†Сѓ</strong> РЅР° СЃР»СѓС‡Р°Р№ СЌРєСЃС‚СЂРµРЅРЅРѕР№ СЃРёС‚СѓР°С†РёРё</li>
           </ul>
         </div>
 
-        <h2>Сброс пароля BIOS</h2>
+        <h2>РЎР±СЂРѕСЃ РїР°СЂРѕР»СЏ BIOS</h2>
 
-        <h3>Методы восстановления доступа</h3>
+        <h3>РњРµС‚РѕРґС‹ РІРѕСЃСЃС‚Р°РЅРѕРІР»РµРЅРёСЏ РґРѕСЃС‚СѓРїР°</h3>
 
         <div class="alert-danger">
-          <h4><i class="fas fa-exclamation-triangle"></i> ВНИМАНИЕ: Сброс пароля сложен!</h4>
-          <p>В отличие от пароля Windows, пароль BIOS невозможно сбросить простыми способами. Каждый производитель использует уникальные методы защиты.</p>
+          <h4><i class="fas fa-exclamation-triangle"></i> Р’РќРРњРђРќРР•: РЎР±СЂРѕСЃ РїР°СЂРѕР»СЏ СЃР»РѕР¶РµРЅ!</h4>
+          <p>Р’ РѕС‚Р»РёС‡РёРµ РѕС‚ РїР°СЂРѕР»СЏ Windows, РїР°СЂРѕР»СЊ BIOS РЅРµРІРѕР·РјРѕР¶РЅРѕ СЃР±СЂРѕСЃРёС‚СЊ РїСЂРѕСЃС‚С‹РјРё СЃРїРѕСЃРѕР±Р°РјРё. РљР°Р¶РґС‹Р№ РїСЂРѕРёР·РІРѕРґРёС‚РµР»СЊ РёСЃРїРѕР»СЊР·СѓРµС‚ СѓРЅРёРєР°Р»СЊРЅС‹Рµ РјРµС‚РѕРґС‹ Р·Р°С‰РёС‚С‹.</p>
         </div>
 
-        <h3>Возможные способы сброса</h3>
+        <h3>Р’РѕР·РјРѕР¶РЅС‹Рµ СЃРїРѕСЃРѕР±С‹ СЃР±СЂРѕСЃР°</h3>
 
         <div class="check-section">
-          <div class="check-title">Что можно попробовать:</div>
+          <div class="check-title">Р§С‚Рѕ РјРѕР¶РЅРѕ РїРѕРїСЂРѕР±РѕРІР°С‚СЊ:</div>
           <ul>
-            <li><strong>Общий пароль по умолчанию</strong> — некоторые производители используют стандартные пароли</li>
-            <li><strong>Сброс настроек BIOS</strong> — через джампер на материнской плате</li>
-            <li><strong>Извлечение батареи CMOS</strong> — может сбросить пароль (не всегда)</li>
-            <li><strong>Обращение в сервисный центр</strong> — самый надежный способ</li>
-            <li><strong>Связь с производителем</strong> — предоставление доказательства владения</li>
+            <li><strong>РћР±С‰РёР№ РїР°СЂРѕР»СЊ РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ</strong> вЂ” РЅРµРєРѕС‚РѕСЂС‹Рµ РїСЂРѕРёР·РІРѕРґРёС‚РµР»Рё РёСЃРїРѕР»СЊР·СѓСЋС‚ СЃС‚Р°РЅРґР°СЂС‚РЅС‹Рµ РїР°СЂРѕР»Рё</li>
+            <li><strong>РЎР±СЂРѕСЃ РЅР°СЃС‚СЂРѕРµРє BIOS</strong> вЂ” С‡РµСЂРµР· РґР¶Р°РјРїРµСЂ РЅР° РјР°С‚РµСЂРёРЅСЃРєРѕР№ РїР»Р°С‚Рµ</li>
+            <li><strong>РР·РІР»РµС‡РµРЅРёРµ Р±Р°С‚Р°СЂРµРё CMOS</strong> вЂ” РјРѕР¶РµС‚ СЃР±СЂРѕСЃРёС‚СЊ РїР°СЂРѕР»СЊ (РЅРµ РІСЃРµРіРґР°)</li>
+            <li><strong>РћР±СЂР°С‰РµРЅРёРµ РІ СЃРµСЂРІРёСЃРЅС‹Р№ С†РµРЅС‚СЂ</strong> вЂ” СЃР°РјС‹Р№ РЅР°РґРµР¶РЅС‹Р№ СЃРїРѕСЃРѕР±</li>
+            <li><strong>РЎРІСЏР·СЊ СЃ РїСЂРѕРёР·РІРѕРґРёС‚РµР»РµРј</strong> вЂ” РїСЂРµРґРѕСЃС‚Р°РІР»РµРЅРёРµ РґРѕРєР°Р·Р°С‚РµР»СЊСЃС‚РІР° РІР»Р°РґРµРЅРёСЏ</li>
           </ul>
         </div>
 
-        <h3>Стоимость восстановления</h3>
+        <h3>РЎС‚РѕРёРјРѕСЃС‚СЊ РІРѕСЃСЃС‚Р°РЅРѕРІР»РµРЅРёСЏ</h3>
 
         <table class="comparison-table">
           <tr>
-            <th class="feature-col">Метод восстановления</th>
-            <th>Стоимость</th>
-            <th>Вероятность успеха</th>
-            <th>Время</th>
+            <th class="feature-col">РњРµС‚РѕРґ РІРѕСЃСЃС‚Р°РЅРѕРІР»РµРЅРёСЏ</th>
+            <th>РЎС‚РѕРёРјРѕСЃС‚СЊ</th>
+            <th>Р’РµСЂРѕСЏС‚РЅРѕСЃС‚СЊ СѓСЃРїРµС…Р°</th>
+            <th>Р’СЂРµРјСЏ</th>
           </tr>
           <tr>
-            <td class="feature-col">Самостоятельный сброс</td>
-            <td>Бесплатно</td>
+            <td class="feature-col">РЎР°РјРѕСЃС‚РѕСЏС‚РµР»СЊРЅС‹Р№ СЃР±СЂРѕСЃ</td>
+            <td>Р‘РµСЃРїР»Р°С‚РЅРѕ</td>
             <td class="warn">20-30%</td>
-            <td>1-3 часа</td>
+            <td>1-3 С‡Р°СЃР°</td>
           </tr>
           <tr>
-            <td class="feature-col">Сервисный центр</td>
-            <td>2000-5000?</td>
+            <td class="feature-col">РЎРµСЂРІРёСЃРЅС‹Р№ С†РµРЅС‚СЂ</td>
+            <td>2000-5000в‚Ѕ</td>
             <td class="ok">80-90%</td>
-            <td>1-3 дня</td>
+            <td>1-3 РґРЅСЏ</td>
           </tr>
           <tr>
-            <td class="feature-col">Производитель</td>
-            <td>3000-8000?</td>
+            <td class="feature-col">РџСЂРѕРёР·РІРѕРґРёС‚РµР»СЊ</td>
+            <td>3000-8000в‚Ѕ</td>
             <td class="ok">95%</td>
-            <td>1-2 недели</td>
+            <td>1-2 РЅРµРґРµР»Рё</td>
           </tr>
         </table>
 
-        <h2>Пароль жесткого диска vs пароль BIOS</h2>
+        <h2>РџР°СЂРѕР»СЊ Р¶РµСЃС‚РєРѕРіРѕ РґРёСЃРєР° vs РїР°СЂРѕР»СЊ BIOS</h2>
 
-        <h3>Сравнение методов защиты</h3>
+        <h3>РЎСЂР°РІРЅРµРЅРёРµ РјРµС‚РѕРґРѕРІ Р·Р°С‰РёС‚С‹</h3>
 
         <div class="pros-cons">
           <div class="pros">
-            <h4><i class="fas fa-hdd"></i> Пароль жесткого диска</h4>
+            <h4><i class="fas fa-hdd"></i> РџР°СЂРѕР»СЊ Р¶РµСЃС‚РєРѕРіРѕ РґРёСЃРєР°</h4>
             <ul>
-              <li><strong>Шифрует данные</strong> на физическом уровне</li>
-              <li><strong>Защищает данные</strong> даже при извлечении диска</li>
-              <li><strong>Поддерживается большинством</strong> современных ноутбуков</li>
-              <li><strong>Независим от BIOS</strong> — работает на любом компьютере</li>
+              <li><strong>РЁРёС„СЂСѓРµС‚ РґР°РЅРЅС‹Рµ</strong> РЅР° С„РёР·РёС‡РµСЃРєРѕРј СѓСЂРѕРІРЅРµ</li>
+              <li><strong>Р—Р°С‰РёС‰Р°РµС‚ РґР°РЅРЅС‹Рµ</strong> РґР°Р¶Рµ РїСЂРё РёР·РІР»РµС‡РµРЅРёРё РґРёСЃРєР°</li>
+              <li><strong>РџРѕРґРґРµСЂР¶РёРІР°РµС‚СЃСЏ Р±РѕР»СЊС€РёРЅСЃС‚РІРѕРј</strong> СЃРѕРІСЂРµРјРµРЅРЅС‹С… РЅРѕСѓС‚Р±СѓРєРѕРІ</li>
+              <li><strong>РќРµР·Р°РІРёСЃРёРј РѕС‚ BIOS</strong> вЂ” СЂР°Р±РѕС‚Р°РµС‚ РЅР° Р»СЋР±РѕРј РєРѕРјРїСЊСЋС‚РµСЂРµ</li>
             </ul>
           </div>
           <div class="cons">
-            <h4><i class="fas fa-microchip"></i> Пароль BIOS</h4>
+            <h4><i class="fas fa-microchip"></i> РџР°СЂРѕР»СЊ BIOS</h4>
             <ul>
-              <li><strong>Блокирует загрузку</strong> всей системы</li>
-              <li><strong>Защищает настройки</strong> от изменений</li>
-              <li><strong>Работает на уровне железа</strong> — сложно обойти</li>
-              <li><strong>Предотвращает загрузку</strong> с внешних носителей</li>
+              <li><strong>Р‘Р»РѕРєРёСЂСѓРµС‚ Р·Р°РіСЂСѓР·РєСѓ</strong> РІСЃРµР№ СЃРёСЃС‚РµРјС‹</li>
+              <li><strong>Р—Р°С‰РёС‰Р°РµС‚ РЅР°СЃС‚СЂРѕР№РєРё</strong> РѕС‚ РёР·РјРµРЅРµРЅРёР№</li>
+              <li><strong>Р Р°Р±РѕС‚Р°РµС‚ РЅР° СѓСЂРѕРІРЅРµ Р¶РµР»РµР·Р°</strong> вЂ” СЃР»РѕР¶РЅРѕ РѕР±РѕР№С‚Рё</li>
+              <li><strong>РџСЂРµРґРѕС‚РІСЂР°С‰Р°РµС‚ Р·Р°РіСЂСѓР·РєСѓ</strong> СЃ РІРЅРµС€РЅРёС… РЅРѕСЃРёС‚РµР»РµР№</li>
             </ul>
           </div>
         </div>
 
-        <h2>Рекомендации по использованию</h2>
+        <h2>Р РµРєРѕРјРµРЅРґР°С†РёРё РїРѕ РёСЃРїРѕР»СЊР·РѕРІР°РЅРёСЋ</h2>
 
-        <h3>Кому стоит устанавливать пароль BIOS</h3>
+        <h3>РљРѕРјСѓ СЃС‚РѕРёС‚ СѓСЃС‚Р°РЅР°РІР»РёРІР°С‚СЊ РїР°СЂРѕР»СЊ BIOS</h3>
 
         <div class="alert-success">
-          <h4><i class="fas fa-thumbs-up"></i> Рекомендуется для:</h4>
+          <h4><i class="fas fa-thumbs-up"></i> Р РµРєРѕРјРµРЅРґСѓРµС‚СЃСЏ РґР»СЏ:</h4>
           <ul>
-            <li><strong>Корпоративных пользователей</strong> с важными данными</li>
-            <li><strong>Журналистов и активистов</strong> с риском конфискации</li>
-            <li><strong>Исследователей</strong> с ценной интеллектуальной собственностью</li>
-            <li><strong>Родителей</strong> для ограничения доступа детей</li>
+            <li><strong>РљРѕСЂРїРѕСЂР°С‚РёРІРЅС‹С… РїРѕР»СЊР·РѕРІР°С‚РµР»РµР№</strong> СЃ РІР°Р¶РЅС‹РјРё РґР°РЅРЅС‹РјРё</li>
+            <li><strong>Р–СѓСЂРЅР°Р»РёСЃС‚РѕРІ Рё Р°РєС‚РёРІРёСЃС‚РѕРІ</strong> СЃ СЂРёСЃРєРѕРј РєРѕРЅС„РёСЃРєР°С†РёРё</li>
+            <li><strong>РСЃСЃР»РµРґРѕРІР°С‚РµР»РµР№</strong> СЃ С†РµРЅРЅРѕР№ РёРЅС‚РµР»Р»РµРєС‚СѓР°Р»СЊРЅРѕР№ СЃРѕР±СЃС‚РІРµРЅРЅРѕСЃС‚СЊСЋ</li>
+            <li><strong>Р РѕРґРёС‚РµР»РµР№</strong> РґР»СЏ РѕРіСЂР°РЅРёС‡РµРЅРёСЏ РґРѕСЃС‚СѓРїР° РґРµС‚РµР№</li>
           </ul>
         </div>
 
-        <h3>Кому лучше избегать пароля BIOS</h3>
+        <h3>РљРѕРјСѓ Р»СѓС‡С€Рµ РёР·Р±РµРіР°С‚СЊ РїР°СЂРѕР»СЏ BIOS</h3>
 
         <div class="alert-warning">
-          <h4><i class="fas fa-thumbs-down"></i> Не рекомендуется для:</h4>
+          <h4><i class="fas fa-thumbs-down"></i> РќРµ СЂРµРєРѕРјРµРЅРґСѓРµС‚СЃСЏ РґР»СЏ:</h4>
           <ul>
-            <li><strong>Домашних пользователей</strong> — риски превышают пользу</li>
-            <li><strong>Пожилых людей</strong> — риск забыть пароль выше</li>
-            <li><strong>Студентов</strong> — частая необходимость в настройках</li>
-            <li><strong>Пользователей с плохой памятью</strong> — высокий риск блокировки</li>
+            <li><strong>Р”РѕРјР°С€РЅРёС… РїРѕР»СЊР·РѕРІР°С‚РµР»РµР№</strong> вЂ” СЂРёСЃРєРё РїСЂРµРІС‹С€Р°СЋС‚ РїРѕР»СЊР·Сѓ</li>
+            <li><strong>РџРѕР¶РёР»С‹С… Р»СЋРґРµР№</strong> вЂ” СЂРёСЃРє Р·Р°Р±С‹С‚СЊ РїР°СЂРѕР»СЊ РІС‹С€Рµ</li>
+            <li><strong>РЎС‚СѓРґРµРЅС‚РѕРІ</strong> вЂ” С‡Р°СЃС‚Р°СЏ РЅРµРѕР±С…РѕРґРёРјРѕСЃС‚СЊ РІ РЅР°СЃС‚СЂРѕР№РєР°С…</li>
+            <li><strong>РџРѕР»СЊР·РѕРІР°С‚РµР»РµР№ СЃ РїР»РѕС…РѕР№ РїР°РјСЏС‚СЊСЋ</strong> вЂ” РІС‹СЃРѕРєРёР№ СЂРёСЃРє Р±Р»РѕРєРёСЂРѕРІРєРё</li>
           </ul>
         </div>
 
-        <h2>Заключение</h2>
+        <h2>Р—Р°РєР»СЋС‡РµРЅРёРµ</h2>
 
-        <p>Пароль в BIOS ноутбука — это мощный, но рискованный инструмент защиты. Для большинства обычных пользователей риски блокировки устройства превышают потенциальную пользу от дополнительной защиты.</p>
+        <p>РџР°СЂРѕР»СЊ РІ BIOS РЅРѕСѓС‚Р±СѓРєР° вЂ” СЌС‚Рѕ РјРѕС‰РЅС‹Р№, РЅРѕ СЂРёСЃРєРѕРІР°РЅРЅС‹Р№ РёРЅСЃС‚СЂСѓРјРµРЅС‚ Р·Р°С‰РёС‚С‹. Р”Р»СЏ Р±РѕР»СЊС€РёРЅСЃС‚РІР° РѕР±С‹С‡РЅС‹С… РїРѕР»СЊР·РѕРІР°С‚РµР»РµР№ СЂРёСЃРєРё Р±Р»РѕРєРёСЂРѕРІРєРё СѓСЃС‚СЂРѕР№СЃС‚РІР° РїСЂРµРІС‹С€Р°СЋС‚ РїРѕС‚РµРЅС†РёР°Р»СЊРЅСѓСЋ РїРѕР»СЊР·Сѓ РѕС‚ РґРѕРїРѕР»РЅРёС‚РµР»СЊРЅРѕР№ Р·Р°С‰РёС‚С‹.</p>
 
-        <p>Если вы все же решили установить пароль BIOS, обязательно:</p>
+        <p>Р•СЃР»Рё РІС‹ РІСЃРµ Р¶Рµ СЂРµС€РёР»Рё СѓСЃС‚Р°РЅРѕРІРёС‚СЊ РїР°СЂРѕР»СЊ BIOS, РѕР±СЏР·Р°С‚РµР»СЊРЅРѕ:</p>
         <ul>
-          <li><strong>Запишите пароль</strong> в нескольких надежных местах</li>
-          <li><strong>Создайте резервную копию</strong> в цифровом виде</li>
-          <li><strong>Сообщите пароль</strong> доверенному лицу</li>
-          <li><strong>Регулярно проверяйте</strong> возможность доступа</li>
+          <li><strong>Р—Р°РїРёС€РёС‚Рµ РїР°СЂРѕР»СЊ</strong> РІ РЅРµСЃРєРѕР»СЊРєРёС… РЅР°РґРµР¶РЅС‹С… РјРµСЃС‚Р°С…</li>
+          <li><strong>РЎРѕР·РґР°Р№С‚Рµ СЂРµР·РµСЂРІРЅСѓСЋ РєРѕРїРёСЋ</strong> РІ С†РёС„СЂРѕРІРѕРј РІРёРґРµ</li>
+          <li><strong>РЎРѕРѕР±С‰РёС‚Рµ РїР°СЂРѕР»СЊ</strong> РґРѕРІРµСЂРµРЅРЅРѕРјСѓ Р»РёС†Сѓ</li>
+          <li><strong>Р РµРіСѓР»СЏСЂРЅРѕ РїСЂРѕРІРµСЂСЏР№С‚Рµ</strong> РІРѕР·РјРѕР¶РЅРѕСЃС‚СЊ РґРѕСЃС‚СѓРїР°</li>
         </ul>
 
-        <p>Для большинства пользователей лучше использовать альтернативные методы защиты — шифрование диска BitLocker, сложный пароль Windows и двухфакторную аутентификацию. Эти методы обеспечивают надежную защиту без риска полной блокировки устройства.</p>
+        <p>Р”Р»СЏ Р±РѕР»СЊС€РёРЅСЃС‚РІР° РїРѕР»СЊР·РѕРІР°С‚РµР»РµР№ Р»СѓС‡С€Рµ РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ Р°Р»СЊС‚РµСЂРЅР°С‚РёРІРЅС‹Рµ РјРµС‚РѕРґС‹ Р·Р°С‰РёС‚С‹ вЂ” С€РёС„СЂРѕРІР°РЅРёРµ РґРёСЃРєР° BitLocker, СЃР»РѕР¶РЅС‹Р№ РїР°СЂРѕР»СЊ Windows Рё РґРІСѓС…С„Р°РєС‚РѕСЂРЅСѓСЋ Р°СѓС‚РµРЅС‚РёС„РёРєР°С†РёСЋ. Р­С‚Рё РјРµС‚РѕРґС‹ РѕР±РµСЃРїРµС‡РёРІР°СЋС‚ РЅР°РґРµР¶РЅСѓСЋ Р·Р°С‰РёС‚Сѓ Р±РµР· СЂРёСЃРєР° РїРѕР»РЅРѕР№ Р±Р»РѕРєРёСЂРѕРІРєРё СѓСЃС‚СЂРѕР№СЃС‚РІР°.</p>
 
-        <p>Помните: лучшая защита — это та, которая не создает больше проблем, чем решает.</p>
+        <p>РџРѕРјРЅРёС‚Рµ: Р»СѓС‡С€Р°СЏ Р·Р°С‰РёС‚Р° вЂ” СЌС‚Рѕ С‚Р°, РєРѕС‚РѕСЂР°СЏ РЅРµ СЃРѕР·РґР°РµС‚ Р±РѕР»СЊС€Рµ РїСЂРѕР±Р»РµРј, С‡РµРј СЂРµС€Р°РµС‚.</p>
 
-        <!-- Яндекс Маркет рекламный баннер -->
-                <img src="https://avatars.mds.yandex.net/get-market-ugc/12573871/2a0000018f2a5a8b8c0b7d9d9c4b6c5c/orig" alt="Замок Kensington для ноутбука">
+        <!-- РЇРЅРґРµРєСЃ РњР°СЂРєРµС‚ СЂРµРєР»Р°РјРЅС‹Р№ Р±Р°РЅРЅРµСЂ -->
+        <a href="https://market.yandex.ru/search?text=Р·Р°РјРѕРє%20Kensington%20РґР»СЏ%20РЅРѕСѓС‚Р±СѓРєР°&local-offers-first=0" class="ym-hero-link" target="_blank" rel="noopener noreferrer">
+          <div class="ym-hero-banner">
+            <div class="ym-hero-images">
+              <div class="ym-hero-image">
+                <img src="https://avatars.mds.yandex.net/get-market-ugc/12573871/2a0000018f2a5a8b8c0b7d9d9c4b6c5c/orig" alt="Р—Р°РјРѕРє Kensington РґР»СЏ РЅРѕСѓС‚Р±СѓРєР°">
               </div>
-                <img src="https://avatars.mds.yandex.net/get-market-ugc/15377961/2a0000018f2a5a8b8c0b7d9d9c4b6c5d/orig" alt="Менеджер паролей">
+              <div class="ym-hero-image">
+                <img src="https://avatars.mds.yandex.net/get-market-ugc/15377961/2a0000018f2a5a8b8c0b7d9d9c4b6c5d/orig" alt="РњРµРЅРµРґР¶РµСЂ РїР°СЂРѕР»РµР№">
               </div>
             </div>
+            <div class="ym-hero-content">
+              <div class="ym-hero-title">РђР»СЊС‚РµСЂРЅР°С‚РёРІРЅС‹Рµ РјРµС‚РѕРґС‹ Р·Р°С‰РёС‚С‹</div>
+              <div class="ym-hero-desc">Р¤РёР·РёС‡РµСЃРєРёРµ Р·Р°РјРєРё Рё РїСЂРѕРіСЂР°РјРјС‹ РґР»СЏ СѓРїСЂР°РІР»РµРЅРёСЏ РїР°СЂРѕР»СЏРјРё</div>
             </div>
           </div>
         </a>
@@ -637,24 +487,24 @@
       <div class="footer__content">
         <div class="footer__section">
           <h4>Repairo</h4>
-          <p>Экспертные руководства по ремонту и обслуживанию техники</p>
+          <p>Р­РєСЃРїРµСЂС‚РЅС‹Рµ СЂСѓРєРѕРІРѕРґСЃС‚РІР° РїРѕ СЂРµРјРѕРЅС‚Сѓ Рё РѕР±СЃР»СѓР¶РёРІР°РЅРёСЋ С‚РµС…РЅРёРєРё</p>
         </div>
         <div class="footer__section">
-          <h4>Разделы</h4>
+          <h4>Р Р°Р·РґРµР»С‹</h4>
           <ul>
-            <li><a href="../laptops.html">Ноутбуки</a></li>
-            <li><a href="../smartphones.html">Смартфоны</a></li>
-            <li><a href="../consoles.html">Консоли</a></li>
-            <li><a href="../cameras.html">Фотоаппараты</a></li>
+            <li><a href="../laptops.html">РќРѕСѓС‚Р±СѓРєРё</a></li>
+            <li><a href="../smartphones.html">РЎРјР°СЂС‚С„РѕРЅС‹</a></li>
+            <li><a href="../consoles.html">РљРѕРЅСЃРѕР»Рё</a></li>
+            <li><a href="../cameras.html">Р¤РѕС‚РѕР°РїРїР°СЂР°С‚С‹</a></li>
           </ul>
         </div>
         <div class="footer__section">
-          <h4>Контакты</h4>
+          <h4>РљРѕРЅС‚Р°РєС‚С‹</h4>
           <p>support@repairo.ru</p>
         </div>
       </div>
       <div class="footer__bottom">
-        <p>&copy; 2024 Repairo. Все права защищены.</p>
+        <p>&copy; 2024 Repairo. Р’СЃРµ РїСЂР°РІР° Р·Р°С‰РёС‰РµРЅС‹.</p>
       </div>
     </div>
   </footer>
@@ -664,9 +514,3 @@
 
 </body>
 </html>
-
-
-
-
-
-

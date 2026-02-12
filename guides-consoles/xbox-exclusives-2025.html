@@ -4,8 +4,9 @@
 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Лучшие эксклюзивы Xbox в 2025: что ждать? | Экспертный мегаг</title>
-    <meta name="description" content="">
+  <title>Р›СѓС‡С€РёРµ СЌРєСЃРєР»СЋР·РёРІС‹ Xbox РІ 2025: С‡С‚Рѕ Р¶РґР°С‚СЊ? | Р­РєСЃРїРµСЂС‚РЅС‹Р№ РјРµРіР°РіР°Р№Рґ</title>
+    <meta name="description" content="{{ description }}">
+    <meta name="description" content="РџРѕС€Р°РіРѕРІР°СЏ РёРЅСЃС‚СЂСѓРєС†РёСЏ: Р›СѓС‡С€РёРµ СЌРєСЃРєР»СЋР·РёРІС‹ Xbox РІ 2025: С‡С‚Рѕ Р¶РґР°С‚СЊ?. 2025 РіРѕРґ РѕР±РµС‰Р°РµС‚ СЃС‚Р°С‚СЊ РѕРґРЅРёРј РёР· СЃР°РјС‹С… РЅР°СЃС‹С‰РµРЅРЅС‹С… РґР»СЏ РІР»Р°РґРµР»СЊС†РµРІ Xbox Series X|S:.... РЎРѕРІРµС‚С‹...">
 
   <link rel="stylesheet" href="../styles.css" />
   <link rel="stylesheet" href="../styles-header.css" />
@@ -21,17 +22,30 @@
     .pro-tips { background: rgba(3, 74, 79, 0.05); padding: 15px; border-radius: 6px; margin: 20px 0; }
     .pro-tips h4 { color: var(--primary); margin-top: 0; margin-bottom: 12px; font-size: 1.1rem; }
     .tip-item { display: flex; gap: 8px; margin-bottom: 8px; align-items: flex-start; }
+    .warning-block {
+      background: #fff3e0;
+      border-left: 5px solid #ff9100;
+      padding: 15px 18px;
+      margin: 22px 0;
+      border-radius: 7px;
+    }
     table { width: 100%; border-collapse: collapse; margin: 20px 0; }
     th, td { border: 1px solid var(--border); padding: 8px; text-align: left; }
     th { background: var(--background-light); }
-    .highlight { background: #f5f7fa; border-left: 4px solid #2d9cdb; padding: 10px 15px; margin: 20px 0; }
-    .faq-section ul { margin-left: 1em; }
-    .block-section { margin-bottom: 2em; }
     @media (max-width: 768px) {
       .guide-content h2 { font-size: 1.4rem; margin-top: 25px; }
       .guide-image-block { padding: 12px; margin: 15px 0; }
       table, th, td { font-size: 0.95rem; }
     }
+    /* РЇРЅРґРµРєСЃ РњР°СЂРєРµС‚ СЂРµРєР»Р°РјРЅС‹Р№ Р±Р°РЅРЅРµСЂ */
+    .ym-hero-link {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+      max-width: 100%;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
     /* Р“РѕСЂРёР·РѕРЅС‚Р°Р»СЊРЅС‹Р№ Р±Р°РЅРЅРµСЂ-РєР°СЂС‚РѕС‡РєР° */
     .ym-hero-banner {
       width: 100%;
@@ -144,11 +158,13 @@
       transition: background 0.15s ease, transform 0.15s ease,
                   box-shadow 0.15s ease;
     }
+
     .ym-hero-button::after {
       content: "в†’";
       margin-left: 6px;
       font-size: 14px;
     }
+
     .ym-hero-button:hover {
       background: #7c3aed;
       transform: translateY(-1px);
@@ -172,19 +188,24 @@
         max-width: 100%;
         margin: 20px 0;
       }
+
       .ym-hero-images {
         height: 100px;
       }
+
       .ym-hero-content {
         padding: 12px 12px;
       }
+
       .ym-hero-title {
         font-size: 13px;
       }
+
       .ym-hero-button {
         font-size: 13px;
         padding: 8px 14px;
       }
+
       .ym-hero-legal {
         font-size: 10px;
       }
@@ -292,22 +313,27 @@
         padding: 15px;
         min-height: 100px;
       }
+
       .telegram-logo {
         width: 50px;
         height: 50px;
         min-width: 50px;
         margin-right: 15px;
       }
+
       .telegram-logo svg {
         width: 26px;
         height: 26px;
       }
+
       .telegram-title {
         font-size: 14px;
       }
+
       .telegram-subtitle {
         font-size: 12px;
       }
+
       .telegram-button {
         font-size: 12px;
         padding: 6px 12px;
@@ -325,13 +351,15 @@
       <div class="header__inner">
         <a href="../index.html" class="logo">
           <span class="logo__icon"></span>
-          <span class="logo__text">GeoExpert</span>
+          <span class="logo__text">Repairo</span>
         </a>
         <nav class="nav">
           <ul class="nav__list">
-            <li><a href="../cameras.html" class="nav__link">РљР°РјРµСЂС‹</a></li>
-            <li><a href="../drones.html" class="nav__link">Р”СЂРѕРЅС‹</a></li>
-            <li><a href="../workflow.html" class="nav__link">Workflow</a></li>
+            <li><a href="../tv.html" class="nav__link">РўРµР»РµРІРёР·РѕСЂС‹</a></li>
+            <li><a href="../cameras.html" class="nav__link">Р¤РѕС‚РѕР°РїРїР°СЂР°С‚С‹</a></li>
+            <li><a href="../consoles.html" class="nav__link">РџСЂРёСЃС‚Р°РІРєРё</a></li>
+            <li><a href="../laptops.html" class="nav__link">РќРѕСѓС‚Р±СѓРєРё</a></li>
+            <li><a href="../smartphones.html" class="nav__link">РЎРјР°СЂС‚С„РѕРЅС‹</a></li>
           </ul>
         </nav>
       </div>
@@ -341,250 +369,263 @@
   <section class="guide-page">
     <div class="container">
       <div class="breadcrumbs">
-        <a href="../index.html">Главная</a>
+        <a href="../index.html">Р“Р»Р°РІРЅР°СЏ</a>
         <i class="fas fa-chevron-right"></i>
-        <a href="../consoles.html">Приставки</a>
+        <a href="../consoles.html">РџСЂРёСЃС‚Р°РІРєРё</a>
         <i class="fas fa-chevron-right"></i>
-        <span>Лучшие эксклюзивы Xbox в 2025: что ждать?</span>
+        <span>Р›СѓС‡С€РёРµ СЌРєСЃРєР»СЋР·РёРІС‹ Xbox РІ 2025: С‡С‚Рѕ Р¶РґР°С‚СЊ?</span>
       </div>
 
-      <h1 class="section__title">Лучшие эксклюзивы Xbox в 2025: что ждать?</h1>
+      <h1 class="section__title">Р›СѓС‡С€РёРµ СЌРєСЃРєР»СЋР·РёРІС‹ Xbox РІ 2025: С‡С‚Рѕ Р¶РґР°С‚СЊ?</h1>
 
       <div class="guide-meta">
-        <span><i class="fas fa-star"></i> Экспертный гид: самые ожидаемые эксклюзивы Xbox, релизы Game Pass, жанры, советы, лайфхаки, FAQ, таблицы, иллюстрация.</span>
+        <span><i class="fas fa-star"></i> Р­РєСЃРїРµСЂС‚РЅС‹Р№ РіРёРґ: СЃР°РјС‹Рµ РѕР¶РёРґР°РµРјС‹Рµ СЌРєСЃРєР»СЋР·РёРІС‹ Xbox, СЂРµР»РёР·С‹ Game Pass, Р¶Р°РЅСЂС‹, СЃРѕРІРµС‚С‹, Р»Р°Р№С„С…Р°РєРё, FAQ, С‚Р°Р±Р»РёС†С‹, РёР»Р»СЋСЃС‚СЂР°С†РёСЏ.</span>
       </div>
 
       <div class="guide-image-block">
-        <img src="https://avatars.mds.yandex.net/get-shedevrum/16500899/img_47df7c3b3c8111f08e4c8a1f92f7a718/orig" alt="Эксклюзивы Xbox 2025">
+        <img src="https://avatars.mds.yandex.net/get-shedevrum/16500899/img_47df7c3b3c8111f08e4c8a1f92f7a718/orig" alt="Р­РєСЃРєР»СЋР·РёРІС‹ Xbox 2025">
         <div class="image-caption">
-          Лучшие эксклюзивы Xbox в 2025: новые IP, возвращение культовых серий, инди-открытия и все хиты Game Pass первого дня.
+          Р›СѓС‡С€РёРµ СЌРєСЃРєР»СЋР·РёРІС‹ Xbox РІ 2025: РЅРѕРІС‹Рµ IP, РІРѕР·РІСЂР°С‰РµРЅРёРµ РєСѓР»СЊС‚РѕРІС‹С… СЃРµСЂРёР№, РёРЅРґРё-РѕС‚РєСЂС‹С‚РёСЏ Рё РІСЃРµ С…РёС‚С‹ Game Pass РїРµСЂРІРѕРіРѕ РґРЅСЏ.
         </div>
       </div>
 
       <div class="guide-content">
-        <!-- Яндекс Маркет рекламный блок -->
+        <!-- РЇРЅРґРµРєСЃ РњР°СЂРєРµС‚ СЂРµРєР»Р°РјРЅС‹Р№ Р±Р»РѕРє -->
         <a href="https://market.yandex.ru/catalog--bytovaia-tekhnika/54419/list?hid=198118&rs=eJwzUvjEKMvBILDwEKsEg8Kzbh6Nw4dZNS4D8c7lFhp9c1-wAQC3uAwP&clid=14635360&refid=rbck8fgamv681iu59go3iqxwddedl4x9&erid=5jtCeReNx12oajxS2bzShmZ&mclid=1003&distr_type=7&utm_source=partner_network&pp=900&utm_medium=link_list&utm_campaign=14635360"
            target="_blank"
            rel="noopener noreferrer sponsored"
+           class="ym-hero-link">
+          <div class="ym-hero-banner">
+            <div class="ym-hero-images">
+              <div class="ym-hero-image">
                 <img src="https://avatars.mds.yandex.net/get-mpic/14770882/2a00000197f4dbee777f8afddccaf44faa53/optimize"
-                     alt="Распродажа бытовой электроники 1">
+                     alt="Р Р°СЃРїСЂРѕРґР°Р¶Р° Р±С‹С‚РѕРІРѕР№ СЌР»РµРєС‚СЂРѕРЅРёРєРё 1">
               </div>
+              <div class="ym-hero-image">
                 <img src="https://avatars.mds.yandex.net/get-mpic/15580298/img_id8867318964670654684.jpeg/optimize"
-                     alt="Распродажа бытовой электроники 2">
+                     alt="Р Р°СЃРїСЂРѕРґР°Р¶Р° Р±С‹С‚РѕРІРѕР№ СЌР»РµРєС‚СЂРѕРЅРёРєРё 2">
               </div>
+              <div class="ym-hero-image">
                 <img src="https://avatars.mds.yandex.net/get-mpic/10096780/2a000001953b534fed2494e0b30fadd9b458/optimize"
-                     alt="Распродажа бытовой электроники 3">
+                     alt="Р Р°СЃРїСЂРѕРґР°Р¶Р° Р±С‹С‚РѕРІРѕР№ СЌР»РµРєС‚СЂРѕРЅРёРєРё 3">
               </div>
             </div>
-                  ? Выгодные предложения
+            <div class="ym-hero-content">
+              <h3 class="ym-hero-title">Р Р°СЃРїСЂРѕРґР°Р¶Р° Р±С‹С‚РѕРІРѕР№ СЌР»РµРєС‚СЂРѕРЅРёРєРё РЅР° РЇРЅРґРµРєСЃ РњР°СЂРєРµС‚Рµ</h3>
+              <div class="ym-hero-top">
+                <div class="ym-hero-rating">
+                  в­ђ Р’С‹РіРѕРґРЅС‹Рµ РїСЂРµРґР»РѕР¶РµРЅРёСЏ
+                  <span class="ym-hero-rating-count">РЎРєРёРґРєРё РґРѕ 50%</span>
                 </div>
               </div>
+              <button class="ym-hero-button">Р—Р° СЃРєРёРґРєР°РјРё</button>
             </div>
           </div>
-            Реклама. ООО "ЯНДЕКС", ИНН 7736207543. clid: 14635360, erid: 5jtCeReNx12oajxS2bzShmZ
+          <div class="ym-hero-legal">
+            Р РµРєР»Р°РјР°. РћРћРћ "РЇРќР”Р•РљРЎ", РРќРќ 7736207543. clid: 14635360, erid: 5jtCeReNx12oajxS2bzShmZ
           </div>
         </a>
 
-        <h2>Введение: почему 2025 год важен для Xbox?</h2>
+        <h2>Р’РІРµРґРµРЅРёРµ: РїРѕС‡РµРјСѓ 2025 РіРѕРґ РІР°Р¶РµРЅ РґР»СЏ Xbox?</h2>
         <p>
-          2025 год обещает стать одним из самых насыщенных для владельцев Xbox Series X|S: десятки новых релизов, крупные эксклюзивы, возвращение легендарных франшиз и сразу множество хитов в Game Pass в день выхода. Microsoft делает ставку на разнообразие жанров и максимальную доступность — и это видно по списку главных анонсов года.
+          2025 РіРѕРґ РѕР±РµС‰Р°РµС‚ СЃС‚Р°С‚СЊ РѕРґРЅРёРј РёР· СЃР°РјС‹С… РЅР°СЃС‹С‰РµРЅРЅС‹С… РґР»СЏ РІР»Р°РґРµР»СЊС†РµРІ Xbox Series X|S: РґРµСЃСЏС‚РєРё РЅРѕРІС‹С… СЂРµР»РёР·РѕРІ, РєСЂСѓРїРЅС‹Рµ СЌРєСЃРєР»СЋР·РёРІС‹, РІРѕР·РІСЂР°С‰РµРЅРёРµ Р»РµРіРµРЅРґР°СЂРЅС‹С… С„СЂР°РЅС€РёР· Рё СЃСЂР°Р·Сѓ РјРЅРѕР¶РµСЃС‚РІРѕ С…РёС‚РѕРІ РІ Game Pass РІ РґРµРЅСЊ РІС‹С…РѕРґР°. Microsoft РґРµР»Р°РµС‚ СЃС‚Р°РІРєСѓ РЅР° СЂР°Р·РЅРѕРѕР±СЂР°Р·РёРµ Р¶Р°РЅСЂРѕРІ Рё РјР°РєСЃРёРјР°Р»СЊРЅСѓСЋ РґРѕСЃС‚СѓРїРЅРѕСЃС‚СЊ вЂ” Рё СЌС‚Рѕ РІРёРґРЅРѕ РїРѕ СЃРїРёСЃРєСѓ РіР»Р°РІРЅС‹С… Р°РЅРѕРЅСЃРѕРІ РіРѕРґР°.
         </p>
 
-        <h2>Таблица: самые ожидаемые эксклюзивы и релизы Xbox в 2025 году</h2>
+        <h2>РўР°Р±Р»РёС†Р°: СЃР°РјС‹Рµ РѕР¶РёРґР°РµРјС‹Рµ СЌРєСЃРєР»СЋР·РёРІС‹ Рё СЂРµР»РёР·С‹ Xbox РІ 2025 РіРѕРґСѓ</h2>
 <table>
           <thead>
             <tr>
-              <th>Игра</th>
-              <th>Жанр</th>
-              <th>Дата выхода</th>
+              <th>РРіСЂР°</th>
+              <th>Р–Р°РЅСЂ</th>
+              <th>Р”Р°С‚Р° РІС‹С…РѕРґР°</th>
               <th>Game Pass</th>
-              <th>Описание</th>
+              <th>РћРїРёСЃР°РЅРёРµ</th>
             </tr>
           </thead>
           <tbody>
             <tr>
               <td>South of Midnight</td>
-              <td>Экшен-приключение</td>
-              <td>8 апреля</td>
-              <td>Да</td>
-              <td>Мифология Юга США, уникальный арт, глубокий сюжет</td>
+              <td>Р­РєС€РµРЅ-РїСЂРёРєР»СЋС‡РµРЅРёРµ</td>
+              <td>8 Р°РїСЂРµР»СЏ</td>
+              <td>Р”Р°</td>
+              <td>РњРёС„РѕР»РѕРіРёСЏ Р®РіР° РЎРЁРђ, СѓРЅРёРєР°Р»СЊРЅС‹Р№ Р°СЂС‚, РіР»СѓР±РѕРєРёР№ СЃСЋР¶РµС‚</td>
             </tr>
             <tr>
               <td>Avowed</td>
               <td>RPG</td>
               <td>2025</td>
-              <td>Да</td>
-              <td>Новая RPG от Obsidian, магия, открытый мир</td>
+              <td>Р”Р°</td>
+              <td>РќРѕРІР°СЏ RPG РѕС‚ Obsidian, РјР°РіРёСЏ, РѕС‚РєСЂС‹С‚С‹Р№ РјРёСЂ</td>
             </tr>
             <tr>
               <td>DOOM: The Dark Ages</td>
-              <td>Шутер</td>
-              <td>Май</td>
-              <td>Да</td>
-              <td>Средневековый DOOM, монстры, мясо, адреналин</td>
+              <td>РЁСѓС‚РµСЂ</td>
+              <td>РњР°Р№</td>
+              <td>Р”Р°</td>
+              <td>РЎСЂРµРґРЅРµРІРµРєРѕРІС‹Р№ DOOM, РјРѕРЅСЃС‚СЂС‹, РјСЏСЃРѕ, Р°РґСЂРµРЅР°Р»РёРЅ</td>
             </tr>
             <tr>
               <td>Commandos: Origins</td>
-              <td>Тактика</td>
-              <td>9 апреля</td>
-              <td>Да</td>
-              <td>Возвращение культовой серии, кооператив</td>
+              <td>РўР°РєС‚РёРєР°</td>
+              <td>9 Р°РїСЂРµР»СЏ</td>
+              <td>Р”Р°</td>
+              <td>Р’РѕР·РІСЂР°С‰РµРЅРёРµ РєСѓР»СЊС‚РѕРІРѕР№ СЃРµСЂРёРё, РєРѕРѕРїРµСЂР°С‚РёРІ</td>
             </tr>
             <tr>
               <td>Clair Obscur: Expedition 33</td>
               <td>JRPG</td>
-              <td>24 апреля</td>
-              <td>Да</td>
-              <td>Франция "Прекрасной эпохи", стиль, сюжет</td>
+              <td>24 Р°РїСЂРµР»СЏ</td>
+              <td>Р”Р°</td>
+              <td>Р¤СЂР°РЅС†РёСЏ "РџСЂРµРєСЂР°СЃРЅРѕР№ СЌРїРѕС…Рё", СЃС‚РёР»СЊ, СЃСЋР¶РµС‚</td>
             </tr>
             <tr>
               <td>Indiana Jones and the Great Circle</td>
-              <td>Экшен-приключение</td>
+              <td>Р­РєС€РµРЅ-РїСЂРёРєР»СЋС‡РµРЅРёРµ</td>
               <td>2025</td>
-              <td>Да</td>
-              <td>Новая история Индианы Джонса, загадки, экшен</td>
+              <td>Р”Р°</td>
+              <td>РќРѕРІР°СЏ РёСЃС‚РѕСЂРёСЏ РРЅРґРёР°РЅС‹ Р”Р¶РѕРЅСЃР°, Р·Р°РіР°РґРєРё, СЌРєС€РµРЅ</td>
             </tr>
             <tr>
               <td>Ninja Gaiden: Ragebound</td>
-              <td>Платформер/Экшен</td>
+              <td>РџР»Р°С‚С„РѕСЂРјРµСЂ/Р­РєС€РµРЅ</td>
               <td>2025</td>
-              <td>Да</td>
-              <td>Возвращение легенды, динамика, сложность</td>
+              <td>Р”Р°</td>
+              <td>Р’РѕР·РІСЂР°С‰РµРЅРёРµ Р»РµРіРµРЅРґС‹, РґРёРЅР°РјРёРєР°, СЃР»РѕР¶РЅРѕСЃС‚СЊ</td>
             </tr>
             <tr>
               <td>Persona 4 Remake</td>
               <td>JRPG</td>
               <td>2025</td>
-              <td>Да</td>
-              <td>Ремейк культовой JRPG, впервые на Xbox</td>
+              <td>Р”Р°</td>
+              <td>Р РµРјРµР№Рє РєСѓР»СЊС‚РѕРІРѕР№ JRPG, РІРїРµСЂРІС‹Рµ РЅР° Xbox</td>
             </tr>
             <tr>
               <td>Star Wars: Zero Company</td>
-              <td>Стратегия</td>
+              <td>РЎС‚СЂР°С‚РµРіРёСЏ</td>
               <td>2025</td>
-              <td>Да</td>
-              <td>Тактическая стратегия во вселенной Звёздных войн</td>
+              <td>Р”Р°</td>
+              <td>РўР°РєС‚РёС‡РµСЃРєР°СЏ СЃС‚СЂР°С‚РµРіРёСЏ РІРѕ РІСЃРµР»РµРЅРЅРѕР№ Р—РІС‘Р·РґРЅС‹С… РІРѕР№РЅ</td>
             </tr>
             <tr>
               <td>Withering Realms</td>
-              <td>Экшен/RPG</td>
+              <td>Р­РєС€РµРЅ/RPG</td>
               <td>2025</td>
-              <td>Да</td>
-              <td>Новый фэнтези-мир, исследования, битвы</td>
+              <td>Р”Р°</td>
+              <td>РќРѕРІС‹Р№ С„СЌРЅС‚РµР·Рё-РјРёСЂ, РёСЃСЃР»РµРґРѕРІР°РЅРёСЏ, Р±РёС‚РІС‹</td>
             </tr>
             <tr>
               <td>Steel Hunters</td>
-              <td>Экшен</td>
+              <td>Р­РєС€РµРЅ</td>
               <td>2025</td>
-              <td>Да</td>
-              <td>Бои на мехах, командные сражения</td>
+              <td>Р”Р°</td>
+              <td>Р‘РѕРё РЅР° РјРµС…Р°С…, РєРѕРјР°РЅРґРЅС‹Рµ СЃСЂР°Р¶РµРЅРёСЏ</td>
             </tr>
             <tr>
               <td>Den of Wolves</td>
-              <td>Экшен</td>
+              <td>Р­РєС€РµРЅ</td>
               <td>2025</td>
-              <td>Да</td>
-              <td>Кооперативные ограбления, киберпанк</td>
+              <td>Р”Р°</td>
+              <td>РљРѕРѕРїРµСЂР°С‚РёРІРЅС‹Рµ РѕРіСЂР°Р±Р»РµРЅРёСЏ, РєРёР±РµСЂРїР°РЅРє</td>
             </tr>
             <tr>
               <td>Replaced</td>
-              <td>2D-экшен</td>
+              <td>2D-СЌРєС€РµРЅ</td>
               <td>2025</td>
-              <td>Да</td>
-              <td>Киберпанк, пиксель-арт, атмосфера</td>
+              <td>Р”Р°</td>
+              <td>РљРёР±РµСЂРїР°РЅРє, РїРёРєСЃРµР»СЊ-Р°СЂС‚, Р°С‚РјРѕСЃС„РµСЂР°</td>
             </tr>
           </tbody>
         </table>
 
-        <h2>Крупнейшие мультиплатформенные хиты, которые выйдут на Xbox в 2025 году</h2>
+        <h2>РљСЂСѓРїРЅРµР№С€РёРµ РјСѓР»СЊС‚РёРїР»Р°С‚С„РѕСЂРјРµРЅРЅС‹Рµ С…РёС‚С‹, РєРѕС‚РѕСЂС‹Рµ РІС‹Р№РґСѓС‚ РЅР° Xbox РІ 2025 РіРѕРґСѓ</h2>
         <ul>
-          <li><b>Grand Theft Auto VI</b> — главный релиз года, впервые с женщиной-протагонистом и возвращением в Вайс-Сити. На Xbox Series X/S проект выйдет одновременно с PS5.</li>
-          <li><b>Metal Gear Solid ?: Snake Eater</b> — ремейк культовой части, обновлённая графика и механики.</li>
-          <li><b>Kingdom Come: Deliverance II</b> — продолжение реалистичной RPG о средневековой Европе.</li>
-          <li><b>Borderlands 4</b> — новая часть безумного шутера с кооперативом.</li>
-          <li><b>Little Nightmares III</b> — продолжение атмосферного хоррора.</li>
+          <li><b>Grand Theft Auto VI</b> вЂ” РіР»Р°РІРЅС‹Р№ СЂРµР»РёР· РіРѕРґР°, РІРїРµСЂРІС‹Рµ СЃ Р¶РµРЅС‰РёРЅРѕР№-РїСЂРѕС‚Р°РіРѕРЅРёСЃС‚РѕРј Рё РІРѕР·РІСЂР°С‰РµРЅРёРµРј РІ Р’Р°Р№СЃ-РЎРёС‚Рё. РќР° Xbox Series X/S РїСЂРѕРµРєС‚ РІС‹Р№РґРµС‚ РѕРґРЅРѕРІСЂРµРјРµРЅРЅРѕ СЃ PS5.</li>
+          <li><b>Metal Gear Solid в€†: Snake Eater</b> вЂ” СЂРµРјРµР№Рє РєСѓР»СЊС‚РѕРІРѕР№ С‡Р°СЃС‚Рё, РѕР±РЅРѕРІР»С‘РЅРЅР°СЏ РіСЂР°С„РёРєР° Рё РјРµС…Р°РЅРёРєРё.</li>
+          <li><b>Kingdom Come: Deliverance II</b> вЂ” РїСЂРѕРґРѕР»Р¶РµРЅРёРµ СЂРµР°Р»РёСЃС‚РёС‡РЅРѕР№ RPG Рѕ СЃСЂРµРґРЅРµРІРµРєРѕРІРѕР№ Р•РІСЂРѕРїРµ.</li>
+          <li><b>Borderlands 4</b> вЂ” РЅРѕРІР°СЏ С‡Р°СЃС‚СЊ Р±РµР·СѓРјРЅРѕРіРѕ С€СѓС‚РµСЂР° СЃ РєРѕРѕРїРµСЂР°С‚РёРІРѕРј.</li>
+          <li><b>Little Nightmares III</b> вЂ” РїСЂРѕРґРѕР»Р¶РµРЅРёРµ Р°С‚РјРѕСЃС„РµСЂРЅРѕРіРѕ С…РѕСЂСЂРѕСЂР°.</li>
         </ul>
 
-        <h2>Топ-5 эксклюзивов Xbox первой половины 2025 года</h2>
+        <h2>РўРѕРї-5 СЌРєСЃРєР»СЋР·РёРІРѕРІ Xbox РїРµСЂРІРѕР№ РїРѕР»РѕРІРёРЅС‹ 2025 РіРѕРґР°</h2>
         <ol>
-          <li><b>South of Midnight</b> — уникальный арт и мифология Юга США, атмосферное приключение с необычным геймплеем.</li>
-          <li><b>DOOM: The Dark Ages</b> — средневековый DOOM с новым оружием и монстрами, адреналиновый экшен.</li>
-          <li><b>Clair Obscur: Expedition 33</b> — стильная JRPG с пошаговыми боями и французским колоритом.</li>
-          <li><b>Commandos: Origins</b> — возвращение культовой тактики с кооперативом и новыми героями.</li>
-          <li><b>Avowed</b> — масштабная RPG от Obsidian, магия, открытый мир, глубокий сюжет.</li>
+          <li><b>South of Midnight</b> вЂ” СѓРЅРёРєР°Р»СЊРЅС‹Р№ Р°СЂС‚ Рё РјРёС„РѕР»РѕРіРёСЏ Р®РіР° РЎРЁРђ, Р°С‚РјРѕСЃС„РµСЂРЅРѕРµ РїСЂРёРєР»СЋС‡РµРЅРёРµ СЃ РЅРµРѕР±С‹С‡РЅС‹Рј РіРµР№РјРїР»РµРµРј.</li>
+          <li><b>DOOM: The Dark Ages</b> вЂ” СЃСЂРµРґРЅРµРІРµРєРѕРІС‹Р№ DOOM СЃ РЅРѕРІС‹Рј РѕСЂСѓР¶РёРµРј Рё РјРѕРЅСЃС‚СЂР°РјРё, Р°РґСЂРµРЅР°Р»РёРЅРѕРІС‹Р№ СЌРєС€РµРЅ.</li>
+          <li><b>Clair Obscur: Expedition 33</b> вЂ” СЃС‚РёР»СЊРЅР°СЏ JRPG СЃ РїРѕС€Р°РіРѕРІС‹РјРё Р±РѕСЏРјРё Рё С„СЂР°РЅС†СѓР·СЃРєРёРј РєРѕР»РѕСЂРёС‚РѕРј.</li>
+          <li><b>Commandos: Origins</b> вЂ” РІРѕР·РІСЂР°С‰РµРЅРёРµ РєСѓР»СЊС‚РѕРІРѕР№ С‚Р°РєС‚РёРєРё СЃ РєРѕРѕРїРµСЂР°С‚РёРІРѕРј Рё РЅРѕРІС‹РјРё РіРµСЂРѕСЏРјРё.</li>
+          <li><b>Avowed</b> вЂ” РјР°СЃС€С‚Р°Р±РЅР°СЏ RPG РѕС‚ Obsidian, РјР°РіРёСЏ, РѕС‚РєСЂС‹С‚С‹Р№ РјРёСЂ, РіР»СѓР±РѕРєРёР№ СЃСЋР¶РµС‚.</li>
         </ol>
 
-        <h2>Что нового в Xbox Game Pass в 2025 году?</h2>
+        <h2>Р§С‚Рѕ РЅРѕРІРѕРіРѕ РІ Xbox Game Pass РІ 2025 РіРѕРґСѓ?</h2>
         <ul>
-          <li>Все крупные релизы Microsoft и партнёров — <b>в день выхода</b> в Game Pass: South of Midnight, Avowed, DOOM: The Dark Ages, Commandos: Origins, Indiana Jones and the Great Circle, Ninja Gaiden: Ragebound, Persona 4 Remake и др..</li>
-          <li>Добавлены новые инди-хиты и ремейки: Replaced, Little Nightmares III, Steel Hunters, Den of Wolves и др..</li>
-          <li>Поддержка облачного гейминга, кроссплатформенные сохранения и стриминг на ПК/мобильных устройствах.</li>
+          <li>Р’СЃРµ РєСЂСѓРїРЅС‹Рµ СЂРµР»РёР·С‹ Microsoft Рё РїР°СЂС‚РЅС‘СЂРѕРІ вЂ” <b>РІ РґРµРЅСЊ РІС‹С…РѕРґР°</b> РІ Game Pass: South of Midnight, Avowed, DOOM: The Dark Ages, Commandos: Origins, Indiana Jones and the Great Circle, Ninja Gaiden: Ragebound, Persona 4 Remake Рё РґСЂ..</li>
+          <li>Р”РѕР±Р°РІР»РµРЅС‹ РЅРѕРІС‹Рµ РёРЅРґРё-С…РёС‚С‹ Рё СЂРµРјРµР№РєРё: Replaced, Little Nightmares III, Steel Hunters, Den of Wolves Рё РґСЂ..</li>
+          <li>РџРѕРґРґРµСЂР¶РєР° РѕР±Р»Р°С‡РЅРѕРіРѕ РіРµР№РјРёРЅРіР°, РєСЂРѕСЃСЃРїР»Р°С‚С„РѕСЂРјРµРЅРЅС‹Рµ СЃРѕС…СЂР°РЅРµРЅРёСЏ Рё СЃС‚СЂРёРјРёРЅРі РЅР° РџРљ/РјРѕР±РёР»СЊРЅС‹С… СѓСЃС‚СЂРѕР№СЃС‚РІР°С….</li>
         </ul>
 
-        <h2>Лайфхаки и советы для фанатов Xbox в 2025 году</h2>
+        <h2>Р›Р°Р№С„С…Р°РєРё Рё СЃРѕРІРµС‚С‹ РґР»СЏ С„Р°РЅР°С‚РѕРІ Xbox РІ 2025 РіРѕРґСѓ</h2>
         <div class="pro-tips">
-          <h4>?? Практические советы</h4>
+          <h4>рџ”№ РџСЂР°РєС‚РёС‡РµСЃРєРёРµ СЃРѕРІРµС‚С‹</h4>
           <div class="tip-item">
             <i class="fas fa-lightbulb"></i>
-            <p>Подписка <b>Game Pass Ultimate</b> — лучший способ играть во все новинки без переплат: все эксклюзивы доступны в день релиза.</p>
+            <p>РџРѕРґРїРёСЃРєР° <b>Game Pass Ultimate</b> вЂ” Р»СѓС‡С€РёР№ СЃРїРѕСЃРѕР± РёРіСЂР°С‚СЊ РІРѕ РІСЃРµ РЅРѕРІРёРЅРєРё Р±РµР· РїРµСЂРµРїР»Р°С‚: РІСЃРµ СЌРєСЃРєР»СЋР·РёРІС‹ РґРѕСЃС‚СѓРїРЅС‹ РІ РґРµРЅСЊ СЂРµР»РёР·Р°.</p>
           </div>
           <div class="tip-item">
             <i class="fas fa-lightbulb"></i>
-            <p>Следите за <b>Xbox Showcase летом</b> — там анонсируют новые эксклюзивы и неожиданные коллаборации.</p>
+            <p>РЎР»РµРґРёС‚Рµ Р·Р° <b>Xbox Showcase Р»РµС‚РѕРј</b> вЂ” С‚Р°Рј Р°РЅРѕРЅСЃРёСЂСѓСЋС‚ РЅРѕРІС‹Рµ СЌРєСЃРєР»СЋР·РёРІС‹ Рё РЅРµРѕР¶РёРґР°РЅРЅС‹Рµ РєРѕР»Р»Р°Р±РѕСЂР°С†РёРё.</p>
           </div>
           <div class="tip-item">
             <i class="fas fa-lightbulb"></i>
-            <p>Пробуйте инди-игры из Game Pass — часто среди них настоящие жемчужины, как Replaced или Wanderstop.</p>
+            <p>РџСЂРѕР±СѓР№С‚Рµ РёРЅРґРё-РёРіСЂС‹ РёР· Game Pass вЂ” С‡Р°СЃС‚Рѕ СЃСЂРµРґРё РЅРёС… РЅР°СЃС‚РѕСЏС‰РёРµ Р¶РµРјС‡СѓР¶РёРЅС‹, РєР°Рє Replaced РёР»Рё Wanderstop.</p>
           </div>
           <div class="tip-item">
             <i class="fas fa-lightbulb"></i>
-            <p>Не забывайте про обратную совместимость: на Xbox Series X/S доступны все хиты прошлых поколений.</p>
+            <p>РќРµ Р·Р°Р±С‹РІР°Р№С‚Рµ РїСЂРѕ РѕР±СЂР°С‚РЅСѓСЋ СЃРѕРІРјРµСЃС‚РёРјРѕСЃС‚СЊ: РЅР° Xbox Series X/S РґРѕСЃС‚СѓРїРЅС‹ РІСЃРµ С…РёС‚С‹ РїСЂРѕС€Р»С‹С… РїРѕРєРѕР»РµРЅРёР№.</p>
           </div>
         </div>
 
-        <h2>FAQ – часто задаваемые вопросы о эксклюзивах Xbox в 2025 году</h2>
+        <h2>FAQ вЂ“ С‡Р°СЃС‚Рѕ Р·Р°РґР°РІР°РµРјС‹Рµ РІРѕРїСЂРѕСЃС‹ Рѕ СЌРєСЃРєР»СЋР·РёРІР°С… Xbox РІ 2025 РіРѕРґСѓ</h2>
         <ul>
           <li>
-            <strong>Какие главные эксклюзивы Xbox выйдут в 2025 году?</strong><br>
-            South of Midnight, Avowed, DOOM: The Dark Ages, Commandos: Origins, Indiana Jones and the Great Circle, Ninja Gaiden: Ragebound, Persona 4 Remake и др..
+            <strong>РљР°РєРёРµ РіР»Р°РІРЅС‹Рµ СЌРєСЃРєР»СЋР·РёРІС‹ Xbox РІС‹Р№РґСѓС‚ РІ 2025 РіРѕРґСѓ?</strong><br>
+            South of Midnight, Avowed, DOOM: The Dark Ages, Commandos: Origins, Indiana Jones and the Great Circle, Ninja Gaiden: Ragebound, Persona 4 Remake Рё РґСЂ..
           </li>
           <li>
-            <strong>Все ли эксклюзивы будут в Game Pass?</strong><br>
-            Да, все крупные релизы Microsoft и партнёров доступны в Game Pass в день выхода.
+            <strong>Р’СЃРµ Р»Рё СЌРєСЃРєР»СЋР·РёРІС‹ Р±СѓРґСѓС‚ РІ Game Pass?</strong><br>
+            Р”Р°, РІСЃРµ РєСЂСѓРїРЅС‹Рµ СЂРµР»РёР·С‹ Microsoft Рё РїР°СЂС‚РЅС‘СЂРѕРІ РґРѕСЃС‚СѓРїРЅС‹ РІ Game Pass РІ РґРµРЅСЊ РІС‹С…РѕРґР°.
           </li>
           <li>
-            <strong>Будут ли мультиплатформенные хиты на Xbox?</strong><br>
-            Да, GTA VI, Metal Gear Solid ?, Borderlands 4, Kingdom Come: Deliverance II, Little Nightmares III и др. выйдут на Xbox одновременно с другими платформами.
+            <strong>Р‘СѓРґСѓС‚ Р»Рё РјСѓР»СЊС‚РёРїР»Р°С‚С„РѕСЂРјРµРЅРЅС‹Рµ С…РёС‚С‹ РЅР° Xbox?</strong><br>
+            Р”Р°, GTA VI, Metal Gear Solid в€†, Borderlands 4, Kingdom Come: Deliverance II, Little Nightmares III Рё РґСЂ. РІС‹Р№РґСѓС‚ РЅР° Xbox РѕРґРЅРѕРІСЂРµРјРµРЅРЅРѕ СЃ РґСЂСѓРіРёРјРё РїР»Р°С‚С„РѕСЂРјР°РјРё.
           </li>
           <li>
-            <strong>Есть ли смысл покупать Xbox Series X/S в 2025 году?</strong><br>
-            Да, это самая выгодная консоль для новых релизов и Game Pass.
+            <strong>Р•СЃС‚СЊ Р»Рё СЃРјС‹СЃР» РїРѕРєСѓРїР°С‚СЊ Xbox Series X/S РІ 2025 РіРѕРґСѓ?</strong><br>
+            Р”Р°, СЌС‚Рѕ СЃР°РјР°СЏ РІС‹РіРѕРґРЅР°СЏ РєРѕРЅСЃРѕР»СЊ РґР»СЏ РЅРѕРІС‹С… СЂРµР»РёР·РѕРІ Рё Game Pass.
           </li>
           <li>
-            <strong>Какие жанры будут доминировать среди эксклюзивов?</strong><br>
-            Экшен, RPG, JRPG, платформеры, тактика, приключения и инди-проекты.
+            <strong>РљР°РєРёРµ Р¶Р°РЅСЂС‹ Р±СѓРґСѓС‚ РґРѕРјРёРЅРёСЂРѕРІР°С‚СЊ СЃСЂРµРґРё СЌРєСЃРєР»СЋР·РёРІРѕРІ?</strong><br>
+            Р­РєС€РµРЅ, RPG, JRPG, РїР»Р°С‚С„РѕСЂРјРµСЂС‹, С‚Р°РєС‚РёРєР°, РїСЂРёРєР»СЋС‡РµРЅРёСЏ Рё РёРЅРґРё-РїСЂРѕРµРєС‚С‹.
           </li>
         </ul>
 
         <div class="warning-block">
-          <strong>Внимание!</strong> Даты релизов могут меняться — следите за новостями Xbox и обновлениями Game Pass, чтобы не пропустить важные анонсы!
+          <strong>Р’РЅРёРјР°РЅРёРµ!</strong> Р”Р°С‚С‹ СЂРµР»РёР·РѕРІ РјРѕРіСѓС‚ РјРµРЅСЏС‚СЊСЃСЏ вЂ” СЃР»РµРґРёС‚Рµ Р·Р° РЅРѕРІРѕСЃС‚СЏРјРё Xbox Рё РѕР±РЅРѕРІР»РµРЅРёСЏРјРё Game Pass, С‡С‚РѕР±С‹ РЅРµ РїСЂРѕРїСѓСЃС‚РёС‚СЊ РІР°Р¶РЅС‹Рµ Р°РЅРѕРЅСЃС‹!
         </div>
 
-        <h2>Пошаговая инструкция: как не пропустить эксклюзивы Xbox в 2025 году</h2>
+        <h2>РџРѕС€Р°РіРѕРІР°СЏ РёРЅСЃС‚СЂСѓРєС†РёСЏ: РєР°Рє РЅРµ РїСЂРѕРїСѓСЃС‚РёС‚СЊ СЌРєСЃРєР»СЋР·РёРІС‹ Xbox РІ 2025 РіРѕРґСѓ</h2>
         <ol>
-          <li>Оформите подписку Game Pass Ultimate — все новинки будут доступны в день релиза.</li>
-          <li>Установите приложение Xbox на смартфон — получайте уведомления о новых релизах и скидках.</li>
-          <li>Следите за новостями на официальном сайте Xbox и в соцсетях.</li>
-          <li>Планируйте время для прохождения: в 2025 году поток хитов будет максимальным!</li>
+          <li>РћС„РѕСЂРјРёС‚Рµ РїРѕРґРїРёСЃРєСѓ Game Pass Ultimate вЂ” РІСЃРµ РЅРѕРІРёРЅРєРё Р±СѓРґСѓС‚ РґРѕСЃС‚СѓРїРЅС‹ РІ РґРµРЅСЊ СЂРµР»РёР·Р°.</li>
+          <li>РЈСЃС‚Р°РЅРѕРІРёС‚Рµ РїСЂРёР»РѕР¶РµРЅРёРµ Xbox РЅР° СЃРјР°СЂС‚С„РѕРЅ вЂ” РїРѕР»СѓС‡Р°Р№С‚Рµ СѓРІРµРґРѕРјР»РµРЅРёСЏ Рѕ РЅРѕРІС‹С… СЂРµР»РёР·Р°С… Рё СЃРєРёРґРєР°С….</li>
+          <li>РЎР»РµРґРёС‚Рµ Р·Р° РЅРѕРІРѕСЃС‚СЏРјРё РЅР° РѕС„РёС†РёР°Р»СЊРЅРѕРј СЃР°Р№С‚Рµ Xbox Рё РІ СЃРѕС†СЃРµС‚СЏС….</li>
+          <li>РџР»Р°РЅРёСЂСѓР№С‚Рµ РІСЂРµРјСЏ РґР»СЏ РїСЂРѕС…РѕР¶РґРµРЅРёСЏ: РІ 2025 РіРѕРґСѓ РїРѕС‚РѕРє С…РёС‚РѕРІ Р±СѓРґРµС‚ РјР°РєСЃРёРјР°Р»СЊРЅС‹Рј!</li>
         </ol>
 
-        <h2>?? Итог: лучшие эксклюзивы Xbox в 2025 году — что ждать?</h2>
+        <h2>рџ“Њ РС‚РѕРі: Р»СѓС‡С€РёРµ СЌРєСЃРєР»СЋР·РёРІС‹ Xbox РІ 2025 РіРѕРґСѓ вЂ” С‡С‚Рѕ Р¶РґР°С‚СЊ?</h2>
         <p>
-          2025 год — золотое время для владельцев Xbox Series X|S: десятки эксклюзивов, новые франшизы, возвращение легенд и все хиты в Game Pass с первого дня. Главные релизы — South of Midnight, Avowed, DOOM: The Dark Ages, Commandos: Origins, Indiana Jones and the Great Circle, Ninja Gaiden: Ragebound, Persona 4 Remake, а также GTA VI, Metal Gear Solid ?, Borderlands 4 и другие мультиплатформенные блокбастеры. Подписка Game Pass и обратная совместимость делают Xbox лучшей платформой для геймеров в 2025 году!
+          2025 РіРѕРґ вЂ” Р·РѕР»РѕС‚РѕРµ РІСЂРµРјСЏ РґР»СЏ РІР»Р°РґРµР»СЊС†РµРІ Xbox Series X|S: РґРµСЃСЏС‚РєРё СЌРєСЃРєР»СЋР·РёРІРѕРІ, РЅРѕРІС‹Рµ С„СЂР°РЅС€РёР·С‹, РІРѕР·РІСЂР°С‰РµРЅРёРµ Р»РµРіРµРЅРґ Рё РІСЃРµ С…РёС‚С‹ РІ Game Pass СЃ РїРµСЂРІРѕРіРѕ РґРЅСЏ. Р“Р»Р°РІРЅС‹Рµ СЂРµР»РёР·С‹ вЂ” South of Midnight, Avowed, DOOM: The Dark Ages, Commandos: Origins, Indiana Jones and the Great Circle, Ninja Gaiden: Ragebound, Persona 4 Remake, Р° С‚Р°РєР¶Рµ GTA VI, Metal Gear Solid в€†, Borderlands 4 Рё РґСЂСѓРіРёРµ РјСѓР»СЊС‚РёРїР»Р°С‚С„РѕСЂРјРµРЅРЅС‹Рµ Р±Р»РѕРєР±Р°СЃС‚РµСЂС‹. РџРѕРґРїРёСЃРєР° Game Pass Рё РѕР±СЂР°С‚РЅР°СЏ СЃРѕРІРјРµСЃС‚РёРјРѕСЃС‚СЊ РґРµР»Р°СЋС‚ Xbox Р»СѓС‡С€РµР№ РїР»Р°С‚С„РѕСЂРјРѕР№ РґР»СЏ РіРµР№РјРµСЂРѕРІ РІ 2025 РіРѕРґСѓ!
         </p>
 </div>
 
-        <!-- Telegram рекламный баннер -->
+        <!-- Telegram СЂРµРєР»Р°РјРЅС‹Р№ Р±Р°РЅРЅРµСЂ -->
         <a href="https://t.me/RepairoRU" target="_blank" rel="noopener noreferrer" class="telegram-banner">
           <div class="telegram-banner-container">
             <div class="telegram-logo">
@@ -593,10 +634,10 @@
               </svg>
             </div>
             <div class="telegram-content">
-              <div class="telegram-title">Новости из мира технологий</div>
-              <div class="telegram-subtitle">В нашем новом Telegram-канале. Подписывайтесь и будьте в числе первых!</div>
+              <div class="telegram-title">РќРѕРІРѕСЃС‚Рё РёР· РјРёСЂР° С‚РµС…РЅРѕР»РѕРіРёР№</div>
+              <div class="telegram-subtitle">Р’ РЅР°С€РµРј РЅРѕРІРѕРј Telegram-РєР°РЅР°Р»Рµ. РџРѕРґРїРёСЃС‹РІР°Р№С‚РµСЃСЊ Рё Р±СѓРґСЊС‚Рµ РІ С‡РёСЃР»Рµ РїРµСЂРІС‹С…!</div>
               <div class="telegram-button">
-                Подписаться
+                РџРѕРґРїРёСЃР°С‚СЊСЃСЏ
                 <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.56c-.21 2.22-1.12 7.58-1.58 10.06-.19 1.07-.57 1.43-.94 1.46-.8.07-1.4-.52-2.17-1.03-1.21-.79-1.89-1.28-3.06-2.05-1.35-.87-.47-1.35.3-2.13.2-.21 3.71-3.39 3.77-3.68.01-.04.01-.18-.07-.26s-.2-.05-.29-.03c-.12.03-2.11 1.34-5.95 3.93-.56.38-1.07.57-1.53.56-.5-.01-1.47-.28-2.19-.51-.88-.28-1.58-.43-1.52-.91.03-.25.38-.51 1.04-.78 4.07-1.77 6.78-2.94 8.13-3.51 3.88-1.62 4.68-1.9 5.19-1.91.12 0 .37.03.54.17.14.12.18.28.2.44-.01.06 0 .11-.01.17z"/>
                 </svg>
@@ -621,45 +662,45 @@
                         </span>
                         <span class="logo__text">Repairo</span>
                     </a>
-                    <p class="footer__text">Помогаем ремонтировать электронику с 2024 года</p>
+                    <p class="footer__text">РџРѕРјРѕРіР°РµРј СЂРµРјРѕРЅС‚РёСЂРѕРІР°С‚СЊ СЌР»РµРєС‚СЂРѕРЅРёРєСѓ СЃ 2024 РіРѕРґР°</p>
                 </div>
                 <div class="footer__col">
-                    <h3 class="footer__title">Разделы</h3>
+                    <h3 class="footer__title">Р Р°Р·РґРµР»С‹</h3>
                     <ul class="footer__links">
-                        <li><a href="../index.html" class="footer__link">Главная</a></li>
-                        <li><a href="../index.html#categories" class="footer__link">Все гайды</a></li>
-                        <li><a href="../contacts.html" class="footer__link">Контакты</a></li>
+                        <li><a href="../index.html" class="footer__link">Р“Р»Р°РІРЅР°СЏ</a></li>
+                        <li><a href="../index.html#categories" class="footer__link">Р’СЃРµ РіР°Р№РґС‹</a></li>
+                        <li><a href="../contacts.html" class="footer__link">РљРѕРЅС‚Р°РєС‚С‹</a></li>
                     </ul>
                 </div>
                 <div class="footer__col">
-                    <h3 class="footer__title">Категории</h3>
+                    <h3 class="footer__title">РљР°С‚РµРіРѕСЂРёРё</h3>
                     <ul class="footer__links">
-                        <li><a href="../tv.html" class="nav__link">Телевизоры</a></li>
-                        <li><a href="../cameras.html" class="nav__link">Фотоаппараты</a></li>
-                        <li><a href="../consoles.html" class="nav__link">Приставки</a></li>
-                        <li><a href="../laptops.html" class="nav__link">Ноутбуки</a></li>
-                        <li><a href="../smartphones.html" class="nav__link">Смартфоны</a></li>
-                        <li><a href="../small-appliances.html" class="nav__link">Мелкая техника</a></li>
-                        <li><a href="../large-appliances.html" class="nav__link">Бытовая техника</a></li>
-                        <li><a href="../auto-electronics.html" class="nav__link">Авто-Электроника</a></li>
+                        <li><a href="../tv.html" class="nav__link">РўРµР»РµРІРёР·РѕСЂС‹</a></li>
+                        <li><a href="../cameras.html" class="nav__link">Р¤РѕС‚РѕР°РїРїР°СЂР°С‚С‹</a></li>
+                        <li><a href="../consoles.html" class="nav__link">РџСЂРёСЃС‚Р°РІРєРё</a></li>
+                        <li><a href="../laptops.html" class="nav__link">РќРѕСѓС‚Р±СѓРєРё</a></li>
+                        <li><a href="../smartphones.html" class="nav__link">РЎРјР°СЂС‚С„РѕРЅС‹</a></li>
+                        <li><a href="../small-appliances.html" class="nav__link">РњРµР»РєР°СЏ С‚РµС…РЅРёРєР°</a></li>
+                        <li><a href="../large-appliances.html" class="nav__link">Р‘С‹С‚РѕРІР°СЏ С‚РµС…РЅРёРєР°</a></li>
+                        <li><a href="../auto-electronics.html" class="nav__link">РђРІС‚Рѕ-Р­Р»РµРєС‚СЂРѕРЅРёРєР°</a></li>
                     </ul>
                 </div>
                 <div class="footer__col">
-                    <h3 class="footer__title">Контакты</h3>
+                    <h3 class="footer__title">РљРѕРЅС‚Р°РєС‚С‹</h3>
                     <ul class="footer__links">
                         <li><a href="https://t.me/RepairoRU" class="footer__link"><i class="fab fa-telegram"></i> Telegram</a></li>
-                        <li><span class="footer__link">Наша почта: repairo.info@mail.ru</span></li>
+                        <li><span class="footer__link">РќР°С€Р° РїРѕС‡С‚Р°: repairo.info@mail.ru</span></li>
                     </ul>
                 </div>
             </div>
             <div class="footer__bottom">
                 <p class="disclaimer">
-    Администрация сайта не несёт ответственности за возможные повреждения техники
-    и иные последствия, возникшие в результате самостоятельного ремонта по
-    материалам и инструкциям, размещённым на сайте. Все работы вы выполняете
-    на свой страх и риск.
+    РђРґРјРёРЅРёСЃС‚СЂР°С†РёСЏ СЃР°Р№С‚Р° РЅРµ РЅРµСЃС‘С‚ РѕС‚РІРµС‚СЃС‚РІРµРЅРЅРѕСЃС‚Рё Р·Р° РІРѕР·РјРѕР¶РЅС‹Рµ РїРѕРІСЂРµР¶РґРµРЅРёСЏ С‚РµС…РЅРёРєРё
+    Рё РёРЅС‹Рµ РїРѕСЃР»РµРґСЃС‚РІРёСЏ, РІРѕР·РЅРёРєС€РёРµ РІ СЂРµР·СѓР»СЊС‚Р°С‚Рµ СЃР°РјРѕСЃС‚РѕСЏС‚РµР»СЊРЅРѕРіРѕ СЂРµРјРѕРЅС‚Р° РїРѕ
+    РјР°С‚РµСЂРёР°Р»Р°Рј Рё РёРЅСЃС‚СЂСѓРєС†РёСЏРј, СЂР°Р·РјРµС‰С‘РЅРЅС‹Рј РЅР° СЃР°Р№С‚Рµ. Р’СЃРµ СЂР°Р±РѕС‚С‹ РІС‹ РІС‹РїРѕР»РЅСЏРµС‚Рµ
+    РЅР° СЃРІРѕР№ СЃС‚СЂР°С… Рё СЂРёСЃРє.
     </p>
-                <p class="footer__copyright">© 2026 Repairo. Все права защищены.</p>
+                <p class="footer__copyright">В© 2026 Repairo. Р’СЃРµ РїСЂР°РІР° Р·Р°С‰РёС‰РµРЅС‹.</p>
             </div>
         </div>
     </footer>
@@ -670,56 +711,56 @@
 {
   "@context": "https://schema.org",
   "@type": "HowTo",
-  "name": "Лучшие эксклюзивы Xbox в 2025: что ждать?",
-  "description": "Пошаговая инструкция: Лучшие эксклюзивы Xbox в 2025: что ждать?. 2025 год обещает стать одним из самых насыщенных для владельцев Xbox Series X|S:.... Советы...",
+  "name": "Р›СѓС‡С€РёРµ СЌРєСЃРєР»СЋР·РёРІС‹ Xbox РІ 2025: С‡С‚Рѕ Р¶РґР°С‚СЊ?",
+  "description": "РџРѕС€Р°РіРѕРІР°СЏ РёРЅСЃС‚СЂСѓРєС†РёСЏ: Р›СѓС‡С€РёРµ СЌРєСЃРєР»СЋР·РёРІС‹ Xbox РІ 2025: С‡С‚Рѕ Р¶РґР°С‚СЊ?. 2025 РіРѕРґ РѕР±РµС‰Р°РµС‚ СЃС‚Р°С‚СЊ РѕРґРЅРёРј РёР· СЃР°РјС‹С… РЅР°СЃС‹С‰РµРЅРЅС‹С… РґР»СЏ РІР»Р°РґРµР»СЊС†РµРІ Xbox Series X|S:.... РЎРѕРІРµС‚С‹...",
   "totalTime": "PT30M",
   "step": [
     {
       "@type": "HowToStep",
-      "name": "Введение: почему 2025 год важен для Xbox?",
-      "text": "Введение: почему 2025 год важен для Xbox?",
+      "name": "Р’РІРµРґРµРЅРёРµ: РїРѕС‡РµРјСѓ 2025 РіРѕРґ РІР°Р¶РµРЅ РґР»СЏ Xbox?",
+      "text": "Р’РІРµРґРµРЅРёРµ: РїРѕС‡РµРјСѓ 2025 РіРѕРґ РІР°Р¶РµРЅ РґР»СЏ Xbox?",
       "url": "#step-1"
     },
     {
       "@type": "HowToStep",
-      "name": "Таблица: самые ожидаемые эксклюзивы и релизы Xbox в 2025 году",
-      "text": "Таблица: самые ожидаемые эксклюзивы и релизы Xbox в 2025 году",
+      "name": "РўР°Р±Р»РёС†Р°: СЃР°РјС‹Рµ РѕР¶РёРґР°РµРјС‹Рµ СЌРєСЃРєР»СЋР·РёРІС‹ Рё СЂРµР»РёР·С‹ Xbox РІ 2025 РіРѕРґСѓ",
+      "text": "РўР°Р±Р»РёС†Р°: СЃР°РјС‹Рµ РѕР¶РёРґР°РµРјС‹Рµ СЌРєСЃРєР»СЋР·РёРІС‹ Рё СЂРµР»РёР·С‹ Xbox РІ 2025 РіРѕРґСѓ",
       "url": "#step-2"
     },
     {
       "@type": "HowToStep",
-      "name": "Крупнейшие мультиплатформенные хиты, которые выйдут на Xbox в 2025 году",
-      "text": "Крупнейшие мультиплатформенные хиты, которые выйдут на Xbox в 2025 году",
+      "name": "РљСЂСѓРїРЅРµР№С€РёРµ РјСѓР»СЊС‚РёРїР»Р°С‚С„РѕСЂРјРµРЅРЅС‹Рµ С…РёС‚С‹, РєРѕС‚РѕСЂС‹Рµ РІС‹Р№РґСѓС‚ РЅР° Xbox РІ 2025 РіРѕРґСѓ",
+      "text": "РљСЂСѓРїРЅРµР№С€РёРµ РјСѓР»СЊС‚РёРїР»Р°С‚С„РѕСЂРјРµРЅРЅС‹Рµ С…РёС‚С‹, РєРѕС‚РѕСЂС‹Рµ РІС‹Р№РґСѓС‚ РЅР° Xbox РІ 2025 РіРѕРґСѓ",
       "url": "#step-3"
     },
     {
       "@type": "HowToStep",
-      "name": "Топ-5 эксклюзивов Xbox первой половины 2025 года",
-      "text": "Топ-5 эксклюзивов Xbox первой половины 2025 года",
+      "name": "РўРѕРї-5 СЌРєСЃРєР»СЋР·РёРІРѕРІ Xbox РїРµСЂРІРѕР№ РїРѕР»РѕРІРёРЅС‹ 2025 РіРѕРґР°",
+      "text": "РўРѕРї-5 СЌРєСЃРєР»СЋР·РёРІРѕРІ Xbox РїРµСЂРІРѕР№ РїРѕР»РѕРІРёРЅС‹ 2025 РіРѕРґР°",
       "url": "#step-4"
     },
     {
       "@type": "HowToStep",
-      "name": "Что нового в Xbox Game Pass в 2025 году?",
-      "text": "Что нового в Xbox Game Pass в 2025 году?",
+      "name": "Р§С‚Рѕ РЅРѕРІРѕРіРѕ РІ Xbox Game Pass РІ 2025 РіРѕРґСѓ?",
+      "text": "Р§С‚Рѕ РЅРѕРІРѕРіРѕ РІ Xbox Game Pass РІ 2025 РіРѕРґСѓ?",
       "url": "#step-5"
     },
     {
       "@type": "HowToStep",
-      "name": "Лайфхаки и советы для фанатов Xbox в 2025 году",
-      "text": "Лайфхаки и советы для фанатов Xbox в 2025 году",
+      "name": "Р›Р°Р№С„С…Р°РєРё Рё СЃРѕРІРµС‚С‹ РґР»СЏ С„Р°РЅР°С‚РѕРІ Xbox РІ 2025 РіРѕРґСѓ",
+      "text": "Р›Р°Р№С„С…Р°РєРё Рё СЃРѕРІРµС‚С‹ РґР»СЏ С„Р°РЅР°С‚РѕРІ Xbox РІ 2025 РіРѕРґСѓ",
       "url": "#step-6"
     },
     {
       "@type": "HowToStep",
-      "name": "FAQ – часто задаваемые вопросы о эксклюзивах Xbox в 2025 году",
-      "text": "FAQ – часто задаваемые вопросы о эксклюзивах Xbox в 2025 году",
+      "name": "FAQ вЂ“ С‡Р°СЃС‚Рѕ Р·Р°РґР°РІР°РµРјС‹Рµ РІРѕРїСЂРѕСЃС‹ Рѕ СЌРєСЃРєР»СЋР·РёРІР°С… Xbox РІ 2025 РіРѕРґСѓ",
+      "text": "FAQ вЂ“ С‡Р°СЃС‚Рѕ Р·Р°РґР°РІР°РµРјС‹Рµ РІРѕРїСЂРѕСЃС‹ Рѕ СЌРєСЃРєР»СЋР·РёРІР°С… Xbox РІ 2025 РіРѕРґСѓ",
       "url": "#step-7"
     },
     {
       "@type": "HowToStep",
-      "name": "Пошаговая инструкция: как не пропустить эксклюзивы Xbox в 2025 году",
-      "text": "Пошаговая инструкция: как не пропустить эксклюзивы Xbox в 2025 году",
+      "name": "РџРѕС€Р°РіРѕРІР°СЏ РёРЅСЃС‚СЂСѓРєС†РёСЏ: РєР°Рє РЅРµ РїСЂРѕРїСѓСЃС‚РёС‚СЊ СЌРєСЃРєР»СЋР·РёРІС‹ Xbox РІ 2025 РіРѕРґСѓ",
+      "text": "РџРѕС€Р°РіРѕРІР°СЏ РёРЅСЃС‚СЂСѓРєС†РёСЏ: РєР°Рє РЅРµ РїСЂРѕРїСѓСЃС‚РёС‚СЊ СЌРєСЃРєР»СЋР·РёРІС‹ Xbox РІ 2025 РіРѕРґСѓ",
       "url": "#step-8"
     }
   ],
@@ -730,8 +771,4 @@
 <script src="../cookie-consent.js"></script>
 </body>
 </html>
-
-
-
-
 

@@ -4,8 +4,9 @@
 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Программирование Arduino через смартфон | Полное руководство</title>
+  <title>РџСЂРѕРіСЂР°РјРјРёСЂРѕРІР°РЅРёРµ Arduino С‡РµСЂРµР· СЃРјР°СЂС‚С„РѕРЅ | РџРѕР»РЅРѕРµ СЂСѓРєРѕРІРѕРґСЃС‚РІРѕ</title>
     <meta name="description" content="{{ description }}">
+    <meta name="description" content="РџРѕС€Р°РіРѕРІР°СЏ РёРЅСЃС‚СЂСѓРєС†РёСЏ: РџСЂРѕРіСЂР°РјРјРёСЂРѕРІР°РЅРёРµ Arduino С‡РµСЂРµР· СЃРјР°СЂС‚С„РѕРЅ: РїРѕР»РЅРѕРµ СЂСѓРєРѕРІРѕРґСЃС‚РІРѕ. РџСЂРѕРіСЂР°РјРјРёСЂРѕРІР°РЅРёРµ РјРёРєСЂРѕРєРѕРЅС‚СЂРѕР»Р»РµСЂРѕРІ С‡РµСЂРµР· СЃРјР°СЂС‚С„РѕРЅ РѕС‚РєСЂС‹РІР°РµС‚ РЅРѕРІС‹Рµ РІРѕР·РјРѕР¶РЅРѕ...">
 
   <link rel="stylesheet" href="../styles.css" />
   <link rel="stylesheet" href="../styles-header.css" />
@@ -24,14 +25,20 @@
     table { width: 100%; border-collapse: collapse; margin: 20px 0; }
     th, td { border: 1px solid var(--border); padding: 8px; text-align: left; }
     th { background: var(--background-light); }
-    .highlight { background: #f5f7fa; border-left: 4px solid #2d9cdb; padding: 10px 15px; margin: 20px 0; }
-    .faq-section ul { margin-left: 1em; }
-    .block-section { margin-bottom: 2em; }
     @media (max-width: 768px) {
       .guide-content h2 { font-size: 1.4rem; margin-top: 25px; }
       .guide-image-block { padding: 12px; margin: 15px 0; }
       table, th, td { font-size: 0.95rem; }
     }
+    /* РЇРЅРґРµРєСЃ РњР°СЂРєРµС‚ СЂРµРєР»Р°РјРЅС‹Р№ Р±Р°РЅРЅРµСЂ */
+    .ym-hero-link {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+      max-width: 100%;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
     /* Р“РѕСЂРёР·РѕРЅС‚Р°Р»СЊРЅС‹Р№ Р±Р°РЅРЅРµСЂ-РєР°СЂС‚РѕС‡РєР° */
     .ym-hero-banner {
       width: 100%;
@@ -144,11 +151,13 @@
       transition: background 0.15s ease, transform 0.15s ease,
                   box-shadow 0.15s ease;
     }
+
     .ym-hero-button::after {
       content: "в†’";
       margin-left: 6px;
       font-size: 14px;
     }
+
     .ym-hero-button:hover {
       background: #7c3aed;
       transform: translateY(-1px);
@@ -172,19 +181,24 @@
         max-width: 100%;
         margin: 20px 0;
       }
+
       .ym-hero-images {
         height: 100px;
       }
+
       .ym-hero-content {
         padding: 12px 12px;
       }
+
       .ym-hero-title {
         font-size: 13px;
       }
+
       .ym-hero-button {
         font-size: 13px;
         padding: 8px 14px;
       }
+
       .ym-hero-legal {
         font-size: 10px;
       }
@@ -292,22 +306,27 @@
         padding: 15px;
         min-height: 100px;
       }
+
       .telegram-logo {
         width: 50px;
         height: 50px;
         min-width: 50px;
         margin-right: 15px;
       }
+
       .telegram-logo svg {
         width: 26px;
         height: 26px;
       }
+
       .telegram-title {
         font-size: 14px;
       }
+
       .telegram-subtitle {
         font-size: 12px;
       }
+
       .telegram-button {
         font-size: 12px;
         padding: 6px 12px;
@@ -325,13 +344,14 @@
       <div class="header__inner">
         <a href="../index.html" class="logo">
           <span class="logo__icon"></span>
-          <span class="logo__text">GeoExpert</span>
+          <span class="logo__text">IoT Guide</span>
         </a>
         <nav class="nav">
           <ul class="nav__list">
-            <li><a href="../cameras.html" class="nav__link">РљР°РјРµСЂС‹</a></li>
-            <li><a href="../drones.html" class="nav__link">Р”СЂРѕРЅС‹</a></li>
-            <li><a href="../workflow.html" class="nav__link">Workflow</a></li>
+            <li><a href="../arduino.html" class="nav__link">Arduino</a></li>
+            <li><a href="../android.html" class="nav__link">Android</a></li>
+            <li><a href="../tools.html" class="nav__link">РРЅСЃС‚СЂСѓРјРµРЅС‚С‹</a></li>
+            <li><a href="../faq.html" class="nav__link">FAQ</a></li>
           </ul>
         </nav>
       </div>
@@ -341,117 +361,130 @@
   <section class="guide-page">
     <div class="container">
       <div class="breadcrumbs">
-        <a href="../index.html">Главная</a>
+        <a href="../index.html">Р“Р»Р°РІРЅР°СЏ</a>
         <i class="fas fa-chevron-right"></i>
         <a href="../arduino.html">Arduino</a>
         <i class="fas fa-chevron-right"></i>
-        <span>Программирование через смартфон</span>
+        <span>РџСЂРѕРіСЂР°РјРјРёСЂРѕРІР°РЅРёРµ С‡РµСЂРµР· СЃРјР°СЂС‚С„РѕРЅ</span>
       </div>
 
-      <h1 class="section__title">Программирование Arduino через смартфон: полное руководство</h1>
+      <h1 class="section__title">РџСЂРѕРіСЂР°РјРјРёСЂРѕРІР°РЅРёРµ Arduino С‡РµСЂРµР· СЃРјР°СЂС‚С„РѕРЅ: РїРѕР»РЅРѕРµ СЂСѓРєРѕРІРѕРґСЃС‚РІРѕ</h1>
 
       <div class="guide-meta">
-        <span><i class="fas fa-mobile-alt"></i> Экспертный гайд: приложения, настройки, лайфхаки, таблицы, FAQ, иллюстрация.</span>
+        <span><i class="fas fa-mobile-alt"></i> Р­РєСЃРїРµСЂС‚РЅС‹Р№ РіР°Р№Рґ: РїСЂРёР»РѕР¶РµРЅРёСЏ, РЅР°СЃС‚СЂРѕР№РєРё, Р»Р°Р№С„С…Р°РєРё, С‚Р°Р±Р»РёС†С‹, FAQ, РёР»Р»СЋСЃС‚СЂР°С†РёСЏ.</span>
       </div>
 
       <div class="guide-image-block">
-        <img src="https://avatars.mds.yandex.net/get-shedevrum/16913138/img_caf6f8d3451311f092d752d8e6a785d9/orig" alt="Программирование Arduino со смартфона">
+        <img src="https://avatars.mds.yandex.net/get-shedevrum/16913138/img_caf6f8d3451311f092d752d8e6a785d9/orig" alt="РџСЂРѕРіСЂР°РјРјРёСЂРѕРІР°РЅРёРµ Arduino СЃРѕ СЃРјР°СЂС‚С„РѕРЅР°">
         <div class="image-caption">
-          Современные смартфоны позволяют полноценно программировать Arduino благодаря OTG и специализированным приложениям.
+          РЎРѕРІСЂРµРјРµРЅРЅС‹Рµ СЃРјР°СЂС‚С„РѕРЅС‹ РїРѕР·РІРѕР»СЏСЋС‚ РїРѕР»РЅРѕС†РµРЅРЅРѕ РїСЂРѕРіСЂР°РјРјРёСЂРѕРІР°С‚СЊ Arduino Р±Р»Р°РіРѕРґР°СЂСЏ OTG Рё СЃРїРµС†РёР°Р»РёР·РёСЂРѕРІР°РЅРЅС‹Рј РїСЂРёР»РѕР¶РµРЅРёСЏРј.
         </div>
       </div>
 
       <div class="guide-content">
-        <!-- Яндекс Маркет рекламный блок -->
+        <!-- РЇРЅРґРµРєСЃ РњР°СЂРєРµС‚ СЂРµРєР»Р°РјРЅС‹Р№ Р±Р»РѕРє -->
         <a href="https://market.yandex.ru/catalog--bytovaia-tekhnika/54419/list?hid=198118&rs=eJwzUvjEKMvBILDwEKsEg8Kzbh6Nw4dZNS4D8c7lFhp9c1-wAQC3uAwP&clid=14635360&refid=rbck8fgamv681iu59go3iqxwddedl4x9&erid=5jtCeReNx12oajxS2bzShmZ&mclid=1003&distr_type=7&utm_source=partner_network&pp=900&utm_medium=link_list&utm_campaign=14635360"
            target="_blank"
            rel="noopener noreferrer sponsored"
+           class="ym-hero-link">
+          <div class="ym-hero-banner">
+            <div class="ym-hero-images">
+              <div class="ym-hero-image">
                 <img src="https://avatars.mds.yandex.net/get-mpic/14770882/2a00000197f4dbee777f8afddccaf44faa53/optimize"
-                     alt="Распродажа бытовой электроники 1">
+                     alt="Р Р°СЃРїСЂРѕРґР°Р¶Р° Р±С‹С‚РѕРІРѕР№ СЌР»РµРєС‚СЂРѕРЅРёРєРё 1">
               </div>
+              <div class="ym-hero-image">
                 <img src="https://avatars.mds.yandex.net/get-mpic/15580298/img_id8867318964670654684.jpeg/optimize"
-                     alt="Распродажа бытовой электроники 2">
+                     alt="Р Р°СЃРїСЂРѕРґР°Р¶Р° Р±С‹С‚РѕРІРѕР№ СЌР»РµРєС‚СЂРѕРЅРёРєРё 2">
               </div>
+              <div class="ym-hero-image">
                 <img src="https://avatars.mds.yandex.net/get-mpic/10096780/2a000001953b534fed2494e0b30fadd9b458/optimize"
-                     alt="Распродажа бытовой электроники 3">
+                     alt="Р Р°СЃРїСЂРѕРґР°Р¶Р° Р±С‹С‚РѕРІРѕР№ СЌР»РµРєС‚СЂРѕРЅРёРєРё 3">
               </div>
             </div>
-                  ? Выгодные предложения
+            <div class="ym-hero-content">
+              <h3 class="ym-hero-title">Р Р°СЃРїСЂРѕРґР°Р¶Р° Р±С‹С‚РѕРІРѕР№ СЌР»РµРєС‚СЂРѕРЅРёРєРё РЅР° РЇРЅРґРµРєСЃ РњР°СЂРєРµС‚Рµ</h3>
+              <div class="ym-hero-top">
+                <div class="ym-hero-rating">
+                  в­ђ Р’С‹РіРѕРґРЅС‹Рµ РїСЂРµРґР»РѕР¶РµРЅРёСЏ
+                  <span class="ym-hero-rating-count">РЎРєРёРґРєРё РґРѕ 50%</span>
                 </div>
               </div>
+              <button class="ym-hero-button">Р—Р° СЃРєРёРґРєР°РјРё</button>
             </div>
           </div>
-            Реклама. ООО "ЯНДЕКС", ИНН 7736207543. clid: 14635360, erid: 5jtCeReNx12oajxS2bzShmZ
+          <div class="ym-hero-legal">
+            Р РµРєР»Р°РјР°. РћРћРћ "РЇРќР”Р•РљРЎ", РРќРќ 7736207543. clid: 14635360, erid: 5jtCeReNx12oajxS2bzShmZ
           </div>
         </a>
 
-        <h2>Введение: зачем программировать Arduino через смартфон?</h2>
+        <h2>Р’РІРµРґРµРЅРёРµ: Р·Р°С‡РµРј РїСЂРѕРіСЂР°РјРјРёСЂРѕРІР°С‚СЊ Arduino С‡РµСЂРµР· СЃРјР°СЂС‚С„РѕРЅ?</h2>
         <p>
-          Программирование микроконтроллеров через смартфон открывает новые возможности для мобильной разработки, полевых испытаний и быстрого прототипирования. С помощью Android-устройства вы можете:
+          РџСЂРѕРіСЂР°РјРјРёСЂРѕРІР°РЅРёРµ РјРёРєСЂРѕРєРѕРЅС‚СЂРѕР»Р»РµСЂРѕРІ С‡РµСЂРµР· СЃРјР°СЂС‚С„РѕРЅ РѕС‚РєСЂС‹РІР°РµС‚ РЅРѕРІС‹Рµ РІРѕР·РјРѕР¶РЅРѕСЃС‚Рё РґР»СЏ РјРѕР±РёР»СЊРЅРѕР№ СЂР°Р·СЂР°Р±РѕС‚РєРё, РїРѕР»РµРІС‹С… РёСЃРїС‹С‚Р°РЅРёР№ Рё Р±С‹СЃС‚СЂРѕРіРѕ РїСЂРѕС‚РѕС‚РёРїРёСЂРѕРІР°РЅРёСЏ. РЎ РїРѕРјРѕС‰СЊСЋ Android-СѓСЃС‚СЂРѕР№СЃС‚РІР° РІС‹ РјРѕР¶РµС‚Рµ:
           <ul>
-            <li>Загружать скетчи в Arduino без ПК</li>
-            <li>Отлаживать код через последовательный монитор</li>
-            <li>Управлять проектами через Bluetooth/Wi-Fi</li>
-            <li>Создавать мобильные интерфейсы для IoT-устройств</li>
+            <li>Р—Р°РіСЂСѓР¶Р°С‚СЊ СЃРєРµС‚С‡Рё РІ Arduino Р±РµР· РџРљ</li>
+            <li>РћС‚Р»Р°Р¶РёРІР°С‚СЊ РєРѕРґ С‡РµСЂРµР· РїРѕСЃР»РµРґРѕРІР°С‚РµР»СЊРЅС‹Р№ РјРѕРЅРёС‚РѕСЂ</li>
+            <li>РЈРїСЂР°РІР»СЏС‚СЊ РїСЂРѕРµРєС‚Р°РјРё С‡РµСЂРµР· Bluetooth/Wi-Fi</li>
+            <li>РЎРѕР·РґР°РІР°С‚СЊ РјРѕР±РёР»СЊРЅС‹Рµ РёРЅС‚РµСЂС„РµР№СЃС‹ РґР»СЏ IoT-СѓСЃС‚СЂРѕР№СЃС‚РІ</li>
           </ul>
         </p>
 
-        <h2>Таблица: сравнение методов программирования</h2>
+        <h2>РўР°Р±Р»РёС†Р°: СЃСЂР°РІРЅРµРЅРёРµ РјРµС‚РѕРґРѕРІ РїСЂРѕРіСЂР°РјРјРёСЂРѕРІР°РЅРёСЏ</h2>
 <table>
           <thead>
             <tr>
-              <th>Метод</th>
-              <th>Инструменты</th>
-              <th>Скорость</th>
-              <th>Совместимость</th>
+              <th>РњРµС‚РѕРґ</th>
+              <th>РРЅСЃС‚СЂСѓРјРµРЅС‚С‹</th>
+              <th>РЎРєРѕСЂРѕСЃС‚СЊ</th>
+              <th>РЎРѕРІРјРµСЃС‚РёРјРѕСЃС‚СЊ</th>
             </tr>
           </thead>
           <tbody>
             <tr>
               <td>USB + OTG</td>
               <td>ArduinoDroid, USB Host Controller</td>
-              <td>Высокая</td>
+              <td>Р’С‹СЃРѕРєР°СЏ</td>
               <td>Uno, Nano, Mega (CH340/FTDI)</td>
             </tr>
             <tr>
               <td>Bluetooth</td>
               <td>MIT App Inventor, HC-05/06</td>
-              <td>Средняя</td>
-              <td>Любые платы с Serial</td>
+              <td>РЎСЂРµРґРЅСЏСЏ</td>
+              <td>Р›СЋР±С‹Рµ РїР»Р°С‚С‹ СЃ Serial</td>
             </tr>
             <tr>
               <td>Wi-Fi</td>
               <td>ESP8266/ESP32, Blynk</td>
-              <td>Низкая</td>
-              <td>ESP-серии</td>
+              <td>РќРёР·РєР°СЏ</td>
+              <td>ESP-СЃРµСЂРёРё</td>
             </tr>
           </tbody>
         </table>
 
-        <h2>Пошаговая инструкция: программирование через USB</h2>
+        <h2>РџРѕС€Р°РіРѕРІР°СЏ РёРЅСЃС‚СЂСѓРєС†РёСЏ: РїСЂРѕРіСЂР°РјРјРёСЂРѕРІР°РЅРёРµ С‡РµСЂРµР· USB</h2>
         <ol>
           <li>
-            <b>Подготовьте оборудование:</b>
+            <b>РџРѕРґРіРѕС‚РѕРІСЊС‚Рµ РѕР±РѕСЂСѓРґРѕРІР°РЅРёРµ:</b>
             <ul>
               <li>Arduino Uno/Nano</li>
-              <li>OTG-кабель</li>
-              <li>USB-кабель (Type-A или Micro-USB)</li>
+              <li>OTG-РєР°Р±РµР»СЊ</li>
+              <li>USB-РєР°Р±РµР»СЊ (Type-A РёР»Рё Micro-USB)</li>
             </ul>
           </li>
           <li>
-            <b>Установите ArduinoDroid:</b>
-            Скачайте приложение из <a href="https://play.google.com/store/apps/details?id=name.antonsmirnov.android.arduinodroid2" target="_blank">Google Play</a>.
+            <b>РЈСЃС‚Р°РЅРѕРІРёС‚Рµ ArduinoDroid:</b>
+            РЎРєР°С‡Р°Р№С‚Рµ РїСЂРёР»РѕР¶РµРЅРёРµ РёР· <a href="https://play.google.com/store/apps/details?id=name.antonsmirnov.android.arduinodroid2" target="_blank">Google Play</a>.
           </li>
           <li>
-            <b>Настройте среду:</b>
+            <b>РќР°СЃС‚СЂРѕР№С‚Рµ СЃСЂРµРґСѓ:</b>
             <ul>
-              <li>Откройте приложение и дождитесь загрузки SDK</li>
-              <li>Выберите плату: Settings > Board Type > Arduino Uno</li>
-              <li>Укажите порт: Settings > Serial Port > /dev/bus/usb/...</li>
+              <li>РћС‚РєСЂРѕР№С‚Рµ РїСЂРёР»РѕР¶РµРЅРёРµ Рё РґРѕР¶РґРёС‚РµСЃСЊ Р·Р°РіСЂСѓР·РєРё SDK</li>
+              <li>Р’С‹Р±РµСЂРёС‚Рµ РїР»Р°С‚Сѓ: Settings в†’ Board Type в†’ Arduino Uno</li>
+              <li>РЈРєР°Р¶РёС‚Рµ РїРѕСЂС‚: Settings в†’ Serial Port в†’ /dev/bus/usb/...</li>
             </ul>
           </li>
           <li>
-            <b>Напишите и загрузите скетч:</b>
+            <b>РќР°РїРёС€РёС‚Рµ Рё Р·Р°РіСЂСѓР·РёС‚Рµ СЃРєРµС‚С‡:</b>
             <pre>
 void setup() {
   pinMode(LED_BUILTIN, OUTPUT);
@@ -465,104 +498,104 @@ void loop() {
 }</pre>
           </li>
           <li>
-            <b>Подключите Arduino:</b>
-            Используйте OTG-кабель для соединения смартфона и платы.
+            <b>РџРѕРґРєР»СЋС‡РёС‚Рµ Arduino:</b>
+            РСЃРїРѕР»СЊР·СѓР№С‚Рµ OTG-РєР°Р±РµР»СЊ РґР»СЏ СЃРѕРµРґРёРЅРµРЅРёСЏ СЃРјР°СЂС‚С„РѕРЅР° Рё РїР»Р°С‚С‹.
           </li>
           <li>
-            <b>Загрузите код:</b>
-            Нажмите кнопку Upload (стрелка вправо) в приложении.
+            <b>Р—Р°РіСЂСѓР·РёС‚Рµ РєРѕРґ:</b>
+            РќР°Р¶РјРёС‚Рµ РєРЅРѕРїРєСѓ Upload (СЃС‚СЂРµР»РєР° РІРїСЂР°РІРѕ) РІ РїСЂРёР»РѕР¶РµРЅРёРё.
           </li>
         </ol>
 
         <div class="pro-tips">
-          <h4>?? Важно!</h4>
-          <p>Для Nano с CH340 драйвер активируется автоматически. Для старых моделей может потребоваться ручная настройка.</p>
+          <h4>рџ’Ў Р’Р°Р¶РЅРѕ!</h4>
+          <p>Р”Р»СЏ Nano СЃ CH340 РґСЂР°Р№РІРµСЂ Р°РєС‚РёРІРёСЂСѓРµС‚СЃСЏ Р°РІС‚РѕРјР°С‚РёС‡РµСЃРєРё. Р”Р»СЏ СЃС‚Р°СЂС‹С… РјРѕРґРµР»РµР№ РјРѕР¶РµС‚ РїРѕС‚СЂРµР±РѕРІР°С‚СЊСЃСЏ СЂСѓС‡РЅР°СЏ РЅР°СЃС‚СЂРѕР№РєР°.</p>
         </div>
 
-        <h2>Таблица: совместимость смартфонов и Arduino</h2>
+        <h2>РўР°Р±Р»РёС†Р°: СЃРѕРІРјРµСЃС‚РёРјРѕСЃС‚СЊ СЃРјР°СЂС‚С„РѕРЅРѕРІ Рё Arduino</h2>
         <table>
           <thead>
             <tr>
-              <th>Смартфон</th>
-              <th>Архитектура</th>
-              <th>Поддержка OTG</th>
-              <th>Рекомендуемые модели Arduino</th>
+              <th>РЎРјР°СЂС‚С„РѕРЅ</th>
+              <th>РђСЂС…РёС‚РµРєС‚СѓСЂР°</th>
+              <th>РџРѕРґРґРµСЂР¶РєР° OTG</th>
+              <th>Р РµРєРѕРјРµРЅРґСѓРµРјС‹Рµ РјРѕРґРµР»Рё Arduino</th>
             </tr>
           </thead>
           <tbody>
             <tr>
               <td>Samsung Galaxy S23</td>
               <td>ARM64</td>
-              <td>Полная</td>
+              <td>РџРѕР»РЅР°СЏ</td>
               <td>Uno R3, Nano CH340</td>
             </tr>
             <tr>
               <td>Xiaomi Redmi Note 12</td>
               <td>ARMv8</td>
-              <td>Требуется переходник</td>
+              <td>РўСЂРµР±СѓРµС‚СЃСЏ РїРµСЂРµС…РѕРґРЅРёРє</td>
               <td>Mega 2560</td>
             </tr>
             <tr>
               <td>Google Pixel 7</td>
               <td>ARM64</td>
-              <td>Нативная</td>
+              <td>РќР°С‚РёРІРЅР°СЏ</td>
               <td>Leonardo, Micro</td>
             </tr>
           </tbody>
         </table>
 
-        <h2>Лайфхаки для эффективной работы</h2>
+        <h2>Р›Р°Р№С„С…Р°РєРё РґР»СЏ СЌС„С„РµРєС‚РёРІРЅРѕР№ СЂР°Р±РѕС‚С‹</h2>
         <div class="pro-tips">
-          <h4>?? Экспертные советы</h4>
+          <h4>рџ”§ Р­РєСЃРїРµСЂС‚РЅС‹Рµ СЃРѕРІРµС‚С‹</h4>
           <div class="tip-item">
             <i class="fas fa-lightbulb"></i>
-            <p>Используйте Y-кабель с внешним питанием для стабильной работы с энергоёмкими платами.</p>
+            <p>РСЃРїРѕР»СЊР·СѓР№С‚Рµ Y-РєР°Р±РµР»СЊ СЃ РІРЅРµС€РЅРёРј РїРёС‚Р°РЅРёРµРј РґР»СЏ СЃС‚Р°Р±РёР»СЊРЅРѕР№ СЂР°Р±РѕС‚С‹ СЃ СЌРЅРµСЂРіРѕС‘РјРєРёРјРё РїР»Р°С‚Р°РјРё.</p>
           </div>
           <div class="tip-item">
             <i class="fas fa-lightbulb"></i>
-            <p>Активируйте режим разработчика на Android для доступа к скрытым USB-настройкам.</p>
+            <p>РђРєС‚РёРІРёСЂСѓР№С‚Рµ СЂРµР¶РёРј СЂР°Р·СЂР°Р±РѕС‚С‡РёРєР° РЅР° Android РґР»СЏ РґРѕСЃС‚СѓРїР° Рє СЃРєСЂС‹С‚С‹Рј USB-РЅР°СЃС‚СЂРѕР№РєР°Рј.</p>
           </div>
           <div class="tip-item">
             <i class="fas fa-lightbulb"></i>
-            <p>Храните скетчи в облаке (GitHub, Google Drive) для синхронизации между устройствами.</p>
+            <p>РҐСЂР°РЅРёС‚Рµ СЃРєРµС‚С‡Рё РІ РѕР±Р»Р°РєРµ (GitHub, Google Drive) РґР»СЏ СЃРёРЅС…СЂРѕРЅРёР·Р°С†РёРё РјРµР¶РґСѓ СѓСЃС‚СЂРѕР№СЃС‚РІР°РјРё.</p>
           </div>
         </div>
 
-        <h2>Программирование через Bluetooth</h2>
+        <h2>РџСЂРѕРіСЂР°РјРјРёСЂРѕРІР°РЅРёРµ С‡РµСЂРµР· Bluetooth</h2>
         <ol>
-          <li>Подключите HC-05 к Arduino через UART (RX/TX)</li>
-          <li>Установите приложение Bluetooth Terminal HC-05</li>
-          <li>Напишите скетч с обработкой Serial-команд</li>
-          <li>Отправляйте код через мобильное приложение</li>
+          <li>РџРѕРґРєР»СЋС‡РёС‚Рµ HC-05 Рє Arduino С‡РµСЂРµР· UART (RX/TX)</li>
+          <li>РЈСЃС‚Р°РЅРѕРІРёС‚Рµ РїСЂРёР»РѕР¶РµРЅРёРµ Bluetooth Terminal HC-05</li>
+          <li>РќР°РїРёС€РёС‚Рµ СЃРєРµС‚С‡ СЃ РѕР±СЂР°Р±РѕС‚РєРѕР№ Serial-РєРѕРјР°РЅРґ</li>
+          <li>РћС‚РїСЂР°РІР»СЏР№С‚Рµ РєРѕРґ С‡РµСЂРµР· РјРѕР±РёР»СЊРЅРѕРµ РїСЂРёР»РѕР¶РµРЅРёРµ</li>
         </ol>
 
-        <h2>FAQ – часто задаваемые вопросы</h2>
+        <h2>FAQ вЂ“ С‡Р°СЃС‚Рѕ Р·Р°РґР°РІР°РµРјС‹Рµ РІРѕРїСЂРѕСЃС‹</h2>
         <ul>
           <li>
-            <strong>Почему приложение не видит Arduino?</strong><br>
-            Проверьте OTG-совместимость, попробуйте другой кабель, перезагрузите смартфон.
+            <strong>РџРѕС‡РµРјСѓ РїСЂРёР»РѕР¶РµРЅРёРµ РЅРµ РІРёРґРёС‚ Arduino?</strong><br>
+            РџСЂРѕРІРµСЂСЊС‚Рµ OTG-СЃРѕРІРјРµСЃС‚РёРјРѕСЃС‚СЊ, РїРѕРїСЂРѕР±СѓР№С‚Рµ РґСЂСѓРіРѕР№ РєР°Р±РµР»СЊ, РїРµСЂРµР·Р°РіСЂСѓР·РёС‚Рµ СЃРјР°СЂС‚С„РѕРЅ.
           </li>
           <li>
-            <strong>Можно ли использовать ESP32?</strong><br>
-            Да, через PlatformIO в Termux или веб-IDE Espruino.
+            <strong>РњРѕР¶РЅРѕ Р»Рё РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ ESP32?</strong><br>
+            Р”Р°, С‡РµСЂРµР· PlatformIO РІ Termux РёР»Рё РІРµР±-IDE Espruino.
           </li>
           <li>
-            <strong>Как debug-ить код на смартфоне?</strong><br>
-            Используйте встроенный Serial Monitor в ArduinoDroid.
+            <strong>РљР°Рє debug-РёС‚СЊ РєРѕРґ РЅР° СЃРјР°СЂС‚С„РѕРЅРµ?</strong><br>
+            РСЃРїРѕР»СЊР·СѓР№С‚Рµ РІСЃС‚СЂРѕРµРЅРЅС‹Р№ Serial Monitor РІ ArduinoDroid.
           </li>
           <li>
-            <strong>Требуется ли root-доступ?</strong><br>
-            Нет, но для некоторых функций нужны права разработчика.
+            <strong>РўСЂРµР±СѓРµС‚СЃСЏ Р»Рё root-РґРѕСЃС‚СѓРї?</strong><br>
+            РќРµС‚, РЅРѕ РґР»СЏ РЅРµРєРѕС‚РѕСЂС‹С… С„СѓРЅРєС†РёР№ РЅСѓР¶РЅС‹ РїСЂР°РІР° СЂР°Р·СЂР°Р±РѕС‚С‡РёРєР°.
           </li>
         </ul>
 
-        <h2>?? Итог: мобильная станция для Arduino</h2>
+        <h2>рџ“Њ РС‚РѕРі: РјРѕР±РёР»СЊРЅР°СЏ СЃС‚Р°РЅС†РёСЏ РґР»СЏ Arduino</h2>
         <p>
-          Современные смартфоны с приложениями типа ArduinoDroid превращаются в полноценные рабочие станции для программирования микроконтроллеров. Комбинируйте USB-подключение для быстрой загрузки кода, Bluetooth для беспроводного управления и облачные сервисы для хранения проектов. Следуя этому руководству, вы сможете разрабатывать IoT-устройства прямо в полевых условиях без ноутбука.
+          РЎРѕРІСЂРµРјРµРЅРЅС‹Рµ СЃРјР°СЂС‚С„РѕРЅС‹ СЃ РїСЂРёР»РѕР¶РµРЅРёСЏРјРё С‚РёРїР° ArduinoDroid РїСЂРµРІСЂР°С‰Р°СЋС‚СЃСЏ РІ РїРѕР»РЅРѕС†РµРЅРЅС‹Рµ СЂР°Р±РѕС‡РёРµ СЃС‚Р°РЅС†РёРё РґР»СЏ РїСЂРѕРіСЂР°РјРјРёСЂРѕРІР°РЅРёСЏ РјРёРєСЂРѕРєРѕРЅС‚СЂРѕР»Р»РµСЂРѕРІ. РљРѕРјР±РёРЅРёСЂСѓР№С‚Рµ USB-РїРѕРґРєР»СЋС‡РµРЅРёРµ РґР»СЏ Р±С‹СЃС‚СЂРѕР№ Р·Р°РіСЂСѓР·РєРё РєРѕРґР°, Bluetooth РґР»СЏ Р±РµСЃРїСЂРѕРІРѕРґРЅРѕРіРѕ СѓРїСЂР°РІР»РµРЅРёСЏ Рё РѕР±Р»Р°С‡РЅС‹Рµ СЃРµСЂРІРёСЃС‹ РґР»СЏ С…СЂР°РЅРµРЅРёСЏ РїСЂРѕРµРєС‚РѕРІ. РЎР»РµРґСѓСЏ СЌС‚РѕРјСѓ СЂСѓРєРѕРІРѕРґСЃС‚РІСѓ, РІС‹ СЃРјРѕР¶РµС‚Рµ СЂР°Р·СЂР°Р±Р°С‚С‹РІР°С‚СЊ IoT-СѓСЃС‚СЂРѕР№СЃС‚РІР° РїСЂСЏРјРѕ РІ РїРѕР»РµРІС‹С… СѓСЃР»РѕРІРёСЏС… Р±РµР· РЅРѕСѓС‚Р±СѓРєР°.
         </p>
 </div>
 
-        <!-- Telegram рекламный баннер -->
+        <!-- Telegram СЂРµРєР»Р°РјРЅС‹Р№ Р±Р°РЅРЅРµСЂ -->
         <a href="https://t.me/RepairoRU" target="_blank" rel="noopener noreferrer" class="telegram-banner">
           <div class="telegram-banner-container">
             <div class="telegram-logo">
@@ -571,10 +604,10 @@ void loop() {
               </svg>
             </div>
             <div class="telegram-content">
-              <div class="telegram-title">Новости из мира технологий</div>
-              <div class="telegram-subtitle">В нашем новом Telegram-канале. Подписывайтесь и будьте в числе первых!</div>
+              <div class="telegram-title">РќРѕРІРѕСЃС‚Рё РёР· РјРёСЂР° С‚РµС…РЅРѕР»РѕРіРёР№</div>
+              <div class="telegram-subtitle">Р’ РЅР°С€РµРј РЅРѕРІРѕРј Telegram-РєР°РЅР°Р»Рµ. РџРѕРґРїРёСЃС‹РІР°Р№С‚РµСЃСЊ Рё Р±СѓРґСЊС‚Рµ РІ С‡РёСЃР»Рµ РїРµСЂРІС‹С…!</div>
               <div class="telegram-button">
-                Подписаться
+                РџРѕРґРїРёСЃР°С‚СЊСЃСЏ
                 <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.56c-.21 2.22-1.12 7.58-1.58 10.06-.19 1.07-.57 1.43-.94 1.46-.8.07-1.4-.52-2.17-1.03-1.21-.79-1.89-1.28-3.06-2.05-1.35-.87-.47-1.35.3-2.13.2-.21 3.71-3.39 3.77-3.68.01-.04.01-.18-.07-.26s-.2-.05-.29-.03c-.12.03-2.11 1.34-5.95 3.93-.56.38-1.07.57-1.53.56-.5-.01-1.47-.28-2.19-.51-.88-.28-1.58-.43-1.52-.91.03-.25.38-.51 1.04-.78 4.07-1.77 6.78-2.94 8.13-3.51 3.88-1.62 4.68-1.9 5.19-1.91.12 0 .37.03.54.17.14.12.18.28.2.44-.01.06 0 .11-.01.17z"/>
                 </svg>
@@ -599,45 +632,45 @@ void loop() {
                         </span>
                         <span class="logo__text">Repairo</span>
                     </a>
-                    <p class="footer__text">Помогаем ремонтировать электронику с 2024 года</p>
+                    <p class="footer__text">РџРѕРјРѕРіР°РµРј СЂРµРјРѕРЅС‚РёСЂРѕРІР°С‚СЊ СЌР»РµРєС‚СЂРѕРЅРёРєСѓ СЃ 2024 РіРѕРґР°</p>
                 </div>
                 <div class="footer__col">
-                    <h3 class="footer__title">Разделы</h3>
+                    <h3 class="footer__title">Р Р°Р·РґРµР»С‹</h3>
                     <ul class="footer__links">
-                        <li><a href="../index.html" class="footer__link">Главная</a></li>
-                        <li><a href="../index.html#categories" class="footer__link">Все гайды</a></li>
-                        <li><a href="../contacts.html" class="footer__link">Контакты</a></li>
+                        <li><a href="../index.html" class="footer__link">Р“Р»Р°РІРЅР°СЏ</a></li>
+                        <li><a href="../index.html#categories" class="footer__link">Р’СЃРµ РіР°Р№РґС‹</a></li>
+                        <li><a href="../contacts.html" class="footer__link">РљРѕРЅС‚Р°РєС‚С‹</a></li>
                     </ul>
                 </div>
                 <div class="footer__col">
-                    <h3 class="footer__title">Категории</h3>
+                    <h3 class="footer__title">РљР°С‚РµРіРѕСЂРёРё</h3>
                     <ul class="footer__links">
-                        <li><a href="../tv.html" class="nav__link">Телевизоры</a></li>
-                        <li><a href="../cameras.html" class="nav__link">Фотоаппараты</a></li>
-                        <li><a href="../consoles.html" class="nav__link">Приставки</a></li>
-                        <li><a href="../laptops.html" class="nav__link">Ноутбуки</a></li>
-                        <li><a href="../smartphones.html" class="nav__link">Смартфоны</a></li>
-                        <li><a href="../small-appliances.html" class="nav__link">Мелкая техника</a></li>
-                        <li><a href="../large-appliances.html" class="nav__link">Бытовая техника</a></li>
-                        <li><a href="../auto-electronics.html" class="nav__link">Авто-Электроника</a></li>
+                        <li><a href="../tv.html" class="nav__link">РўРµР»РµРІРёР·РѕСЂС‹</a></li>
+                        <li><a href="../cameras.html" class="nav__link">Р¤РѕС‚РѕР°РїРїР°СЂР°С‚С‹</a></li>
+                        <li><a href="../consoles.html" class="nav__link">РџСЂРёСЃС‚Р°РІРєРё</a></li>
+                        <li><a href="../laptops.html" class="nav__link">РќРѕСѓС‚Р±СѓРєРё</a></li>
+                        <li><a href="../smartphones.html" class="nav__link">РЎРјР°СЂС‚С„РѕРЅС‹</a></li>
+                        <li><a href="../small-appliances.html" class="nav__link">РњРµР»РєР°СЏ С‚РµС…РЅРёРєР°</a></li>
+                        <li><a href="../large-appliances.html" class="nav__link">Р‘С‹С‚РѕРІР°СЏ С‚РµС…РЅРёРєР°</a></li>
+                        <li><a href="../auto-electronics.html" class="nav__link">РђРІС‚Рѕ-Р­Р»РµРєС‚СЂРѕРЅРёРєР°</a></li>
                     </ul>
                 </div>
                 <div class="footer__col">
-                    <h3 class="footer__title">Контакты</h3>
+                    <h3 class="footer__title">РљРѕРЅС‚Р°РєС‚С‹</h3>
                     <ul class="footer__links">
                         <li><a href="https://t.me/RepairoRU" class="footer__link"><i class="fab fa-telegram"></i> Telegram</a></li>
-                        <li><span class="footer__link">Наша почта: repairo.info@mail.ru</span></li>
+                        <li><span class="footer__link">РќР°С€Р° РїРѕС‡С‚Р°: repairo.info@mail.ru</span></li>
                     </ul>
                 </div>
             </div>
             <div class="footer__bottom">
                 <p class="disclaimer">
-    Администрация сайта не несёт ответственности за возможные повреждения техники
-    и иные последствия, возникшие в результате самостоятельного ремонта по
-    материалам и инструкциям, размещённым на сайте. Все работы вы выполняете
-    на свой страх и риск.
+    РђРґРјРёРЅРёСЃС‚СЂР°С†РёСЏ СЃР°Р№С‚Р° РЅРµ РЅРµСЃС‘С‚ РѕС‚РІРµС‚СЃС‚РІРµРЅРЅРѕСЃС‚Рё Р·Р° РІРѕР·РјРѕР¶РЅС‹Рµ РїРѕРІСЂРµР¶РґРµРЅРёСЏ С‚РµС…РЅРёРєРё
+    Рё РёРЅС‹Рµ РїРѕСЃР»РµРґСЃС‚РІРёСЏ, РІРѕР·РЅРёРєС€РёРµ РІ СЂРµР·СѓР»СЊС‚Р°С‚Рµ СЃР°РјРѕСЃС‚РѕСЏС‚РµР»СЊРЅРѕРіРѕ СЂРµРјРѕРЅС‚Р° РїРѕ
+    РјР°С‚РµСЂРёР°Р»Р°Рј Рё РёРЅСЃС‚СЂСѓРєС†РёСЏРј, СЂР°Р·РјРµС‰С‘РЅРЅС‹Рј РЅР° СЃР°Р№С‚Рµ. Р’СЃРµ СЂР°Р±РѕС‚С‹ РІС‹ РІС‹РїРѕР»РЅСЏРµС‚Рµ
+    РЅР° СЃРІРѕР№ СЃС‚СЂР°С… Рё СЂРёСЃРє.
     </p>
-                <p class="footer__copyright">© 2026 Repairo. Все права защищены.</p>
+                <p class="footer__copyright">В© 2026 Repairo. Р’СЃРµ РїСЂР°РІР° Р·Р°С‰РёС‰РµРЅС‹.</p>
             </div>
         </div>
     </footer>
@@ -648,56 +681,56 @@ void loop() {
 {
   "@context": "https://schema.org",
   "@type": "HowTo",
-  "name": "Программирование Arduino через смартфон: полное руководство",
-  "description": "Пошаговая инструкция: Программирование Arduino через смартфон: полное руководство. Программирование микроконтроллеров через смартфон открывает новые возможно...",
+  "name": "РџСЂРѕРіСЂР°РјРјРёСЂРѕРІР°РЅРёРµ Arduino С‡РµСЂРµР· СЃРјР°СЂС‚С„РѕРЅ: РїРѕР»РЅРѕРµ СЂСѓРєРѕРІРѕРґСЃС‚РІРѕ",
+  "description": "РџРѕС€Р°РіРѕРІР°СЏ РёРЅСЃС‚СЂСѓРєС†РёСЏ: РџСЂРѕРіСЂР°РјРјРёСЂРѕРІР°РЅРёРµ Arduino С‡РµСЂРµР· СЃРјР°СЂС‚С„РѕРЅ: РїРѕР»РЅРѕРµ СЂСѓРєРѕРІРѕРґСЃС‚РІРѕ. РџСЂРѕРіСЂР°РјРјРёСЂРѕРІР°РЅРёРµ РјРёРєСЂРѕРєРѕРЅС‚СЂРѕР»Р»РµСЂРѕРІ С‡РµСЂРµР· СЃРјР°СЂС‚С„РѕРЅ РѕС‚РєСЂС‹РІР°РµС‚ РЅРѕРІС‹Рµ РІРѕР·РјРѕР¶РЅРѕ...",
   "totalTime": "PT30M",
   "step": [
     {
       "@type": "HowToStep",
-      "name": "Введение: зачем программировать Arduino через смартфон?",
-      "text": "Введение: зачем программировать Arduino через смартфон?",
+      "name": "Р’РІРµРґРµРЅРёРµ: Р·Р°С‡РµРј РїСЂРѕРіСЂР°РјРјРёСЂРѕРІР°С‚СЊ Arduino С‡РµСЂРµР· СЃРјР°СЂС‚С„РѕРЅ?",
+      "text": "Р’РІРµРґРµРЅРёРµ: Р·Р°С‡РµРј РїСЂРѕРіСЂР°РјРјРёСЂРѕРІР°С‚СЊ Arduino С‡РµСЂРµР· СЃРјР°СЂС‚С„РѕРЅ?",
       "url": "#step-1"
     },
     {
       "@type": "HowToStep",
-      "name": "Таблица: сравнение методов программирования",
-      "text": "Таблица: сравнение методов программирования",
+      "name": "РўР°Р±Р»РёС†Р°: СЃСЂР°РІРЅРµРЅРёРµ РјРµС‚РѕРґРѕРІ РїСЂРѕРіСЂР°РјРјРёСЂРѕРІР°РЅРёСЏ",
+      "text": "РўР°Р±Р»РёС†Р°: СЃСЂР°РІРЅРµРЅРёРµ РјРµС‚РѕРґРѕРІ РїСЂРѕРіСЂР°РјРјРёСЂРѕРІР°РЅРёСЏ",
       "url": "#step-2"
     },
     {
       "@type": "HowToStep",
-      "name": "Пошаговая инструкция: программирование через USB",
-      "text": "Пошаговая инструкция: программирование через USB",
+      "name": "РџРѕС€Р°РіРѕРІР°СЏ РёРЅСЃС‚СЂСѓРєС†РёСЏ: РїСЂРѕРіСЂР°РјРјРёСЂРѕРІР°РЅРёРµ С‡РµСЂРµР· USB",
+      "text": "РџРѕС€Р°РіРѕРІР°СЏ РёРЅСЃС‚СЂСѓРєС†РёСЏ: РїСЂРѕРіСЂР°РјРјРёСЂРѕРІР°РЅРёРµ С‡РµСЂРµР· USB",
       "url": "#step-3"
     },
     {
       "@type": "HowToStep",
-      "name": "Таблица: совместимость смартфонов и Arduino",
-      "text": "Таблица: совместимость смартфонов и Arduino",
+      "name": "РўР°Р±Р»РёС†Р°: СЃРѕРІРјРµСЃС‚РёРјРѕСЃС‚СЊ СЃРјР°СЂС‚С„РѕРЅРѕРІ Рё Arduino",
+      "text": "РўР°Р±Р»РёС†Р°: СЃРѕРІРјРµСЃС‚РёРјРѕСЃС‚СЊ СЃРјР°СЂС‚С„РѕРЅРѕРІ Рё Arduino",
       "url": "#step-4"
     },
     {
       "@type": "HowToStep",
-      "name": "Лайфхаки для эффективной работы",
-      "text": "Лайфхаки для эффективной работы",
+      "name": "Р›Р°Р№С„С…Р°РєРё РґР»СЏ СЌС„С„РµРєС‚РёРІРЅРѕР№ СЂР°Р±РѕС‚С‹",
+      "text": "Р›Р°Р№С„С…Р°РєРё РґР»СЏ СЌС„С„РµРєС‚РёРІРЅРѕР№ СЂР°Р±РѕС‚С‹",
       "url": "#step-5"
     },
     {
       "@type": "HowToStep",
-      "name": "Программирование через Bluetooth",
-      "text": "Программирование через Bluetooth",
+      "name": "РџСЂРѕРіСЂР°РјРјРёСЂРѕРІР°РЅРёРµ С‡РµСЂРµР· Bluetooth",
+      "text": "РџСЂРѕРіСЂР°РјРјРёСЂРѕРІР°РЅРёРµ С‡РµСЂРµР· Bluetooth",
       "url": "#step-6"
     },
     {
       "@type": "HowToStep",
-      "name": "FAQ – часто задаваемые вопросы",
-      "text": "FAQ – часто задаваемые вопросы",
+      "name": "FAQ вЂ“ С‡Р°СЃС‚Рѕ Р·Р°РґР°РІР°РµРјС‹Рµ РІРѕРїСЂРѕСЃС‹",
+      "text": "FAQ вЂ“ С‡Р°СЃС‚Рѕ Р·Р°РґР°РІР°РµРјС‹Рµ РІРѕРїСЂРѕСЃС‹",
       "url": "#step-7"
     },
     {
       "@type": "HowToStep",
-      "name": "?? Итог: мобильная станция для Arduino",
-      "text": "?? Итог: мобильная станция для Arduino",
+      "name": "рџ“Њ РС‚РѕРі: РјРѕР±РёР»СЊРЅР°СЏ СЃС‚Р°РЅС†РёСЏ РґР»СЏ Arduino",
+      "text": "рџ“Њ РС‚РѕРі: РјРѕР±РёР»СЊРЅР°СЏ СЃС‚Р°РЅС†РёСЏ РґР»СЏ Arduino",
       "url": "#step-8"
     }
   ],
@@ -708,6 +741,4 @@ void loop() {
 <script src="../cookie-consent.js"></script>
 </body>
 </html>
-
-
 

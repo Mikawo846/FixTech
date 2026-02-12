@@ -2,36 +2,47 @@
 <html lang="ru" data-theme="light">
 <head>
 
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Как изменить язык меню в фотоаппарате? | Repairo</title>
-    <meta name="description" content="">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>РљР°Рє РёР·РјРµРЅРёС‚СЊ СЏР·С‹Рє РјРµРЅСЋ РІ С„РѕС‚РѕР°РїРїР°СЂР°С‚Рµ? | Repairo</title>
+    <meta name="description" content="{{ description }}">
+    <meta name="description" content="РџРѕС€Р°РіРѕРІР°СЏ РёРЅСЃС‚СЂСѓРєС†РёСЏ: РљР°Рє РёР·РјРµРЅРёС‚СЊ СЏР·С‹Рє РјРµРЅСЋ РІ С„РѕС‚РѕР°РїРїР°СЂР°С‚Рµ?. Р•СЃР»Рё РєР°РјРµСЂР° РЅРµ СЂРµР°РіРёСЂСѓРµС‚ РЅР° СЃРјРµРЅСѓ СЏР·С‹РєР° РёР»Рё РїСѓРЅРєС‚ РЅРµРґРѕСЃС‚СѓРїРµРЅ - РѕР±РЅРѕРІРёС‚Рµ РїСЂРѕС€РёРІРєСѓ.... РЎРѕРІРµС‚С‹ СЌРєСЃ...">
 
-  <link rel="stylesheet" href="../styles.css" />
-  <link rel="stylesheet" href="../styles-header.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <style>
-    .guide-content { line-height: 1.7; color: var(--text); }
-    .guide-content h2 { color: var(--primary); margin-top: 30px; margin-bottom: 15px; font-size: 1.5rem; }
-    .guide-content h3 { color: var(--primary-dark); margin-top: 25px; margin-bottom: 12px; font-size: 1.2rem; }
-    .guide-image-block { margin: 20px 0; padding: 15px; background: var(--background); border-radius: var(--border-radius); border: 1px solid var(--border); text-align: center; }
-    .guide-image-block img { max-width: 100%; height: auto; border-radius: 6px; border: 1px solid var(--border); }
-    .image-caption { margin-top: 10px; font-size: 0.85rem; color: var(--text-light); font-style: italic; }
-    .pro-tips { background: rgba(3, 74, 79, 0.05); padding: 15px; border-radius: 6px; margin: 20px 0; }
-    .pro-tips h4 { color: var(--primary); margin-top: 0; margin-bottom: 12px; font-size: 1.1rem; }
-    .tip-item { display: flex; gap: 8px; margin-bottom: 8px; align-items: flex-start; }
-    table { width: 100%; border-collapse: collapse; margin: 20px 0; }
-    th, td { border: 1px solid var(--border); padding: 8px; text-align: left; }
-    th { background: var(--background-light); }
-    .highlight { background: #f5f7fa; border-left: 4px solid #2d9cdb; padding: 10px 15px; margin: 20px 0; }
-    .faq-section ul { margin-left: 1em; }
-    .block-section { margin-bottom: 2em; }
-    @media (max-width: 768px) {
-      .guide-content h2 { font-size: 1.4rem; margin-top: 25px; }
-      .guide-image-block { padding: 12px; margin: 15px 0; }
-      table, th, td { font-size: 0.95rem; }
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../styles-header.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .guide-content { line-height: 1.7; color: var(--text);}
+        .guide-content h2 { color: var(--primary); margin-top: 30px; margin-bottom: 15px; font-size: 1.5rem;}
+        .step-group { margin: 20px 0; padding: 15px; background: var(--background); border-radius: var(--border-radius); border: 1px solid var(--border);}
+        .step { display: flex; gap: 15px; margin: 12px 0; padding: 12px; background: var(--background-alt); border-radius: 6px; align-items: flex-start;}
+        .step-number { background: var(--primary); color: white; width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-weight: bold; font-size: 0.8rem;}
+        .guide-image-block { margin: 20px 0; padding: 15px; background: var(--background); border-radius: var(--border-radius); border: 1px solid var(--border); text-align: center;}
+        .guide-image-block img { max-width: 100%; height: auto; border-radius: 6px; border: 1px solid var(--border);}
+        .recommend-box { background: rgba(3, 74, 79, 0.1); border-left: 4px solid var(--primary); padding: 12px; margin: 15px 0; display: flex; gap: 12px; align-items: flex-start; border-radius: 4px;}
+        .recommend-box i { font-size: 1.2rem; color: var(--primary); margin-top: 2px;}
+        .pro-tips { background: rgba(3, 74, 79, 0.05); padding: 15px; border-radius: 6px; margin: 20px 0;}
+        .pro-tips h4 { color: var(--primary); margin-top: 0; margin-bottom: 12px; font-size: 1.1rem;}
+        .tip-item { display: flex; gap: 8px; margin-bottom: 8px; align-items: flex-start;}
+        table {width: 100%; border-collapse: collapse; margin: 20px 0;}
+        th, td {border: 1px solid var(--border); padding: 8px 12px; text-align: left;}
+        th {background: var(--background-alt);}
+        @media (max-width: 768px) {
+            .guide-content h2 { font-size: 1.4rem; margin-top: 25px;}
+            .guide-image-block, .step-group { padding: 12px; margin: 15px 0;}
+            .step { padding: 10px;}
+            table, th, td {font-size: 0.9em;}
+        }
+    /* РЇРЅРґРµРєСЃ РњР°СЂРєРµС‚ СЂРµРєР»Р°РјРЅС‹Р№ Р±Р°РЅРЅРµСЂ */
+    .ym-hero-link {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+      max-width: 100%;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     }
+
     /* Р“РѕСЂРёР·РѕРЅС‚Р°Р»СЊРЅС‹Р№ Р±Р°РЅРЅРµСЂ-РєР°СЂС‚РѕС‡РєР° */
     .ym-hero-banner {
       width: 100%;
@@ -144,11 +155,13 @@
       transition: background 0.15s ease, transform 0.15s ease,
                   box-shadow 0.15s ease;
     }
+
     .ym-hero-button::after {
       content: "в†’";
       margin-left: 6px;
       font-size: 14px;
     }
+
     .ym-hero-button:hover {
       background: #7c3aed;
       transform: translateY(-1px);
@@ -172,19 +185,24 @@
         max-width: 100%;
         margin: 20px 0;
       }
+
       .ym-hero-images {
         height: 100px;
       }
+
       .ym-hero-content {
         padding: 12px 12px;
       }
+
       .ym-hero-title {
         font-size: 13px;
       }
+
       .ym-hero-button {
         font-size: 13px;
         padding: 8px 14px;
       }
+
       .ym-hero-legal {
         font-size: 10px;
       }
@@ -292,22 +310,27 @@
         padding: 15px;
         min-height: 100px;
       }
+
       .telegram-logo {
         width: 50px;
         height: 50px;
         min-width: 50px;
         margin-right: 15px;
       }
+
       .telegram-logo svg {
         width: 26px;
         height: 26px;
       }
+
       .telegram-title {
         font-size: 14px;
       }
+
       .telegram-subtitle {
         font-size: 12px;
       }
+
       .telegram-button {
         font-size: 12px;
         padding: 6px 12px;
@@ -316,199 +339,213 @@
 
 
 
-  </style>
+    </style>
   <script async src="https://timeweb.cloud/api/v1/cloud-ai/agents/3cc03620-d051-4d8d-b5af-f7b6cd083a35/embed.js?collapsed=true"></script>
 </head>
 <body>
-  <header class="header">
+<header class="header">
     <div class="container">
-      <div class="header__inner">
-        <a href="../index.html" class="logo">
-          <span class="logo__icon"></span>
-          <span class="logo__text">GeoExpert</span>
-        </a>
-        <nav class="nav">
-          <ul class="nav__list">
-            <li><a href="../cameras.html" class="nav__link">РљР°РјРµСЂС‹</a></li>
-            <li><a href="../drones.html" class="nav__link">Р”СЂРѕРЅС‹</a></li>
-            <li><a href="../workflow.html" class="nav__link">Workflow</a></li>
-          </ul>
-        </nav>
-      </div>
+        <div class="header__inner">
+            <a href="../index.html" class="logo">
+                <span class="logo__icon"></span>
+                <span class="logo__text">Repairo</span>
+            </a>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li><a href="../cameras.html" class="nav__link">Р¤РѕС‚РѕР°РїРїР°СЂР°С‚С‹</a></li>
+                    <li><a href="../tv.html" class="nav__link">РўРµР»РµРІРёР·РѕСЂС‹</a></li>
+                    <li><a href="../laptops.html" class="nav__link">РќРѕСѓС‚Р±СѓРєРё</a></li>
+                    <li><a href="../smartphones.html" class="nav__link">РЎРјР°СЂС‚С„РѕРЅС‹</a></li>
+                </ul>
+            </nav>
+        </div>
     </div>
-  </header>
+</header>
 <section class="guide-page">
     <div class="container">
         <div class="breadcrumbs">
-            <a href="../index.html">Главная</a>
+            <a href="../index.html">Р“Р»Р°РІРЅР°СЏ</a>
             <i class="fas fa-chevron-right"></i>
-            <a href="../cameras.html">Фотоаппараты</a>
+            <a href="../cameras.html">Р¤РѕС‚РѕР°РїРїР°СЂР°С‚С‹</a>
             <i class="fas fa-chevron-right"></i>
-            <span>Как изменить язык меню в фотоаппарате?</span>
+            <span>РљР°Рє РёР·РјРµРЅРёС‚СЊ СЏР·С‹Рє РјРµРЅСЋ РІ С„РѕС‚РѕР°РїРїР°СЂР°С‚Рµ?</span>
         </div>
-        <h1 class="section__title">Как изменить язык меню в фотоаппарате?</h1>
+        <h1 class="section__title">РљР°Рє РёР·РјРµРЅРёС‚СЊ СЏР·С‹Рє РјРµРЅСЋ РІ С„РѕС‚РѕР°РїРїР°СЂР°С‚Рµ?</h1>
         <div class="guide-meta">
-            <span><i class="fas fa-adjust"></i> Практический гайд</span>
+            <span><i class="fas fa-adjust"></i> РџСЂР°РєС‚РёС‡РµСЃРєРёР№ РіР°Р№Рґ</span>
         </div>
         <div class="guide-image-block">
-            <img src="https://avatars.mds.yandex.net/get-shedevrum/15236108/img_bf3853702dc311f09ae30699c18b75b2/orig" alt="Как изменить язык меню в фотоаппарате?">
+            <img src="https://avatars.mds.yandex.net/get-shedevrum/15236108/img_bf3853702dc311f09ae30699c18b75b2/orig" alt="РљР°Рє РёР·РјРµРЅРёС‚СЊ СЏР·С‹Рє РјРµРЅСЋ РІ С„РѕС‚РѕР°РїРїР°СЂР°С‚Рµ?">
         </div>
         <div class="guide-content">
-        <!-- Яндекс Маркет рекламный блок -->
+        <!-- РЇРЅРґРµРєСЃ РњР°СЂРєРµС‚ СЂРµРєР»Р°РјРЅС‹Р№ Р±Р»РѕРє -->
         <a href="https://market.yandex.ru/catalog--bytovaia-tekhnika/54419/list?hid=198118&rs=eJwzUvjEKMvBILDwEKsEg8Kzbh6Nw4dZNS4D8c7lFhp9c1-wAQC3uAwP&clid=14635360&refid=rbck8fgamv681iu59go3iqxwddedl4x9&erid=5jtCeReNx12oajxS2bzShmZ&mclid=1003&distr_type=7&utm_source=partner_network&pp=900&utm_medium=link_list&utm_campaign=14635360"
            target="_blank"
            rel="noopener noreferrer sponsored"
+           class="ym-hero-link">
+          <div class="ym-hero-banner">
+            <div class="ym-hero-images">
+              <div class="ym-hero-image">
                 <img src="https://avatars.mds.yandex.net/get-mpic/14770882/2a00000197f4dbee777f8afddccaf44faa53/optimize"
-                     alt="Распродажа бытовой электроники 1">
+                     alt="Р Р°СЃРїСЂРѕРґР°Р¶Р° Р±С‹С‚РѕРІРѕР№ СЌР»РµРєС‚СЂРѕРЅРёРєРё 1">
               </div>
+              <div class="ym-hero-image">
                 <img src="https://avatars.mds.yandex.net/get-mpic/15580298/img_id8867318964670654684.jpeg/optimize"
-                     alt="Распродажа бытовой электроники 2">
+                     alt="Р Р°СЃРїСЂРѕРґР°Р¶Р° Р±С‹С‚РѕРІРѕР№ СЌР»РµРєС‚СЂРѕРЅРёРєРё 2">
               </div>
+              <div class="ym-hero-image">
                 <img src="https://avatars.mds.yandex.net/get-mpic/10096780/2a000001953b534fed2494e0b30fadd9b458/optimize"
-                     alt="Распродажа бытовой электроники 3">
+                     alt="Р Р°СЃРїСЂРѕРґР°Р¶Р° Р±С‹С‚РѕРІРѕР№ СЌР»РµРєС‚СЂРѕРЅРёРєРё 3">
               </div>
             </div>
-                  ? Выгодные предложения
+            <div class="ym-hero-content">
+              <h3 class="ym-hero-title">Р Р°СЃРїСЂРѕРґР°Р¶Р° Р±С‹С‚РѕРІРѕР№ СЌР»РµРєС‚СЂРѕРЅРёРєРё РЅР° РЇРЅРґРµРєСЃ РњР°СЂРєРµС‚Рµ</h3>
+              <div class="ym-hero-top">
+                <div class="ym-hero-rating">
+                  в­ђ Р’С‹РіРѕРґРЅС‹Рµ РїСЂРµРґР»РѕР¶РµРЅРёСЏ
+                  <span class="ym-hero-rating-count">РЎРєРёРґРєРё РґРѕ 50%</span>
                 </div>
               </div>
+              <button class="ym-hero-button">Р—Р° СЃРєРёРґРєР°РјРё</button>
             </div>
           </div>
-            Реклама. ООО "ЯНДЕКС", ИНН 7736207543. clid: 14635360, erid: 5jtCeReNx12oajxS2bzShmZ
+          <div class="ym-hero-legal">
+            Р РµРєР»Р°РјР°. РћРћРћ "РЇРќР”Р•РљРЎ", РРќРќ 7736207543. clid: 14635360, erid: 5jtCeReNx12oajxS2bzShmZ
           </div>
         </a>
-            <h2>Зачем менять язык меню?</h2>
+            <h2>Р—Р°С‡РµРј РјРµРЅСЏС‚СЊ СЏР·С‹Рє РјРµРЅСЋ?</h2>
             <ul>
-                <li>Удобство использования: родной язык меню облегчает работу с камерой, настройку параметров и поиск нужных функций.</li>
-                <li>Актуально при покупке камеры за рубежом или при передаче другому пользователю.</li>
-                <li>Помогает быстрее освоить новые функции и избежать ошибок при настройке.</li>
+                <li>РЈРґРѕР±СЃС‚РІРѕ РёСЃРїРѕР»СЊР·РѕРІР°РЅРёСЏ: СЂРѕРґРЅРѕР№ СЏР·С‹Рє РјРµРЅСЋ РѕР±Р»РµРіС‡Р°РµС‚ СЂР°Р±РѕС‚Сѓ СЃ РєР°РјРµСЂРѕР№, РЅР°СЃС‚СЂРѕР№РєСѓ РїР°СЂР°РјРµС‚СЂРѕРІ Рё РїРѕРёСЃРє РЅСѓР¶РЅС‹С… С„СѓРЅРєС†РёР№.</li>
+                <li>РђРєС‚СѓР°Р»СЊРЅРѕ РїСЂРё РїРѕРєСѓРїРєРµ РєР°РјРµСЂС‹ Р·Р° СЂСѓР±РµР¶РѕРј РёР»Рё РїСЂРё РїРµСЂРµРґР°С‡Рµ РґСЂСѓРіРѕРјСѓ РїРѕР»СЊР·РѕРІР°С‚РµР»СЋ.</li>
+                <li>РџРѕРјРѕРіР°РµС‚ Р±С‹СЃС‚СЂРµРµ РѕСЃРІРѕРёС‚СЊ РЅРѕРІС‹Рµ С„СѓРЅРєС†РёРё Рё РёР·Р±РµР¶Р°С‚СЊ РѕС€РёР±РѕРє РїСЂРё РЅР°СЃС‚СЂРѕР№РєРµ.</li>
             </ul>
-            <h2>Общие шаги для смены языка меню</h2>
+            <h2>РћР±С‰РёРµ С€Р°РіРё РґР»СЏ СЃРјРµРЅС‹ СЏР·С‹РєР° РјРµРЅСЋ</h2>
 <div class="step-group">
                 <div class="step">
                     <div class="step-number">1</div>
                     <div>
-                        <strong>Включите фотоаппарат и войдите в главное меню</strong>
+                        <strong>Р’РєР»СЋС‡РёС‚Рµ С„РѕС‚РѕР°РїРїР°СЂР°С‚ Рё РІРѕР№РґРёС‚Рµ РІ РіР»Р°РІРЅРѕРµ РјРµРЅСЋ</strong>
                         <ul>
-                            <li>Нажмите кнопку MENU или HOME (в зависимости от модели).</li>
+                            <li>РќР°Р¶РјРёС‚Рµ РєРЅРѕРїРєСѓ MENU РёР»Рё HOME (РІ Р·Р°РІРёСЃРёРјРѕСЃС‚Рё РѕС‚ РјРѕРґРµР»Рё).</li>
                         </ul>
                     </div>
                 </div>
                 <div class="step">
                     <div class="step-number">2</div>
                     <div>
-                        <strong>Перейдите в раздел настроек (Setup/Settings)</strong>
+                        <strong>РџРµСЂРµР№РґРёС‚Рµ РІ СЂР°Р·РґРµР» РЅР°СЃС‚СЂРѕРµРє (Setup/Settings)</strong>
                         <ul>
-                            <li>Ищите иконку шестерёнки, гаечного ключа, или пункт «Настройки», «Система», «Setup».</li>
+                            <li>РС‰РёС‚Рµ РёРєРѕРЅРєСѓ С€РµСЃС‚РµСЂС‘РЅРєРё, РіР°РµС‡РЅРѕРіРѕ РєР»СЋС‡Р°, РёР»Рё РїСѓРЅРєС‚ В«РќР°СЃС‚СЂРѕР№РєРёВ», В«РЎРёСЃС‚РµРјР°В», В«SetupВ».</li>
                         </ul>
                     </div>
                 </div>
                 <div class="step">
                     <div class="step-number">3</div>
                     <div>
-                        <strong>Найдите пункт «Язык» / «Language»</strong>
+                        <strong>РќР°Р№РґРёС‚Рµ РїСѓРЅРєС‚ В«РЇР·С‹РєВ» / В«LanguageВ»</strong>
                         <ul>
-                            <li>В меню ищите «Язык», «Language», «Language Setting», «Language/??».</li>
-                            <li>На некоторых моделях - «Системные настройки» > «Язык/Language».</li>
+                            <li>Р’ РјРµРЅСЋ РёС‰РёС‚Рµ В«РЇР·С‹РєВ», В«LanguageВ», В«Language SettingВ», В«Language/иЁЂиЄћВ».</li>
+                            <li>РќР° РЅРµРєРѕС‚РѕСЂС‹С… РјРѕРґРµР»СЏС… - В«РЎРёСЃС‚РµРјРЅС‹Рµ РЅР°СЃС‚СЂРѕР№РєРёВ» в†’ В«РЇР·С‹Рє/LanguageВ».</li>
                         </ul>
                     </div>
                 </div>
                 <div class="step">
                     <div class="step-number">4</div>
                     <div>
-                        <strong>Выберите нужный язык из списка</strong>
+                        <strong>Р’С‹Р±РµСЂРёС‚Рµ РЅСѓР¶РЅС‹Р№ СЏР·С‹Рє РёР· СЃРїРёСЃРєР°</strong>
                         <ul>
-                            <li>Используйте навигационные кнопки или сенсорный экран для выбора.</li>
-                            <li>Подтвердите выбор кнопкой OK, MENU/OK или аналогичной.</li>
+                            <li>РСЃРїРѕР»СЊР·СѓР№С‚Рµ РЅР°РІРёРіР°С†РёРѕРЅРЅС‹Рµ РєРЅРѕРїРєРё РёР»Рё СЃРµРЅСЃРѕСЂРЅС‹Р№ СЌРєСЂР°РЅ РґР»СЏ РІС‹Р±РѕСЂР°.</li>
+                            <li>РџРѕРґС‚РІРµСЂРґРёС‚Рµ РІС‹Р±РѕСЂ РєРЅРѕРїРєРѕР№ OK, MENU/OK РёР»Рё Р°РЅР°Р»РѕРіРёС‡РЅРѕР№.</li>
                         </ul>
                     </div>
                 </div>
             </div>
-            <h2>Особенности и нюансы для разных марок</h2>
+            <h2>РћСЃРѕР±РµРЅРЅРѕСЃС‚Рё Рё РЅСЋР°РЅСЃС‹ РґР»СЏ СЂР°Р·РЅС‹С… РјР°СЂРѕРє</h2>
             <table>
                 <tr>
-                    <th>Бренд</th>
-                    <th>Путь в меню</th>
-                    <th>Примечания</th>
+                    <th>Р‘СЂРµРЅРґ</th>
+                    <th>РџСѓС‚СЊ РІ РјРµРЅСЋ</th>
+                    <th>РџСЂРёРјРµС‡Р°РЅРёСЏ</th>
                 </tr>
                 <tr>
                     <td>Sony</td>
-                    <td>MENU > (Настройки/Setup) > [Язык/Language] > выбрать язык</td>
-                    <td>На некоторых моделях из Японии нельзя выбрать английский/русский язык</td>
+                    <td>MENU в†’ (РќР°СЃС‚СЂРѕР№РєРё/Setup) в†’ [РЇР·С‹Рє/Language] в†’ РІС‹Р±СЂР°С‚СЊ СЏР·С‹Рє</td>
+                    <td>РќР° РЅРµРєРѕС‚РѕСЂС‹С… РјРѕРґРµР»СЏС… РёР· РЇРїРѕРЅРёРё РЅРµР»СЊР·СЏ РІС‹Р±СЂР°С‚СЊ Р°РЅРіР»РёР№СЃРєРёР№/СЂСѓСЃСЃРєРёР№ СЏР·С‹Рє</td>
                 </tr>
                 <tr>
                     <td>Canon</td>
-                    <td>MENU > <Предпочтения> > <Параметры отображения> > <Перекл. языка/клавиатуры></td>
-                    <td>Можно менять язык и раскладку клавиатуры, для сенсорных моделей - отдельная кнопка переключения</td>
+                    <td>MENU в†’ <РџСЂРµРґРїРѕС‡С‚РµРЅРёСЏ> в†’ <РџР°СЂР°РјРµС‚СЂС‹ РѕС‚РѕР±СЂР°Р¶РµРЅРёСЏ> в†’ <РџРµСЂРµРєР». СЏР·С‹РєР°/РєР»Р°РІРёР°С‚СѓСЂС‹></td>
+                    <td>РњРѕР¶РЅРѕ РјРµРЅСЏС‚СЊ СЏР·С‹Рє Рё СЂР°СЃРєР»Р°РґРєСѓ РєР»Р°РІРёР°С‚СѓСЂС‹, РґР»СЏ СЃРµРЅСЃРѕСЂРЅС‹С… РјРѕРґРµР»РµР№ - РѕС‚РґРµР»СЊРЅР°СЏ РєРЅРѕРїРєР° РїРµСЂРµРєР»СЋС‡РµРЅРёСЏ</td>
                 </tr>
                 <tr>
                     <td>Nikon</td>
-                    <td>MENU > Меню настройки (иконка гаечного ключа) > Язык (Language)</td>
-                    <td>Список языков зависит от региона продажи камеры</td>
+                    <td>MENU в†’ РњРµРЅСЋ РЅР°СЃС‚СЂРѕР№РєРё (РёРєРѕРЅРєР° РіР°РµС‡РЅРѕРіРѕ РєР»СЋС‡Р°) в†’ РЇР·С‹Рє (Language)</td>
+                    <td>РЎРїРёСЃРѕРє СЏР·С‹РєРѕРІ Р·Р°РІРёСЃРёС‚ РѕС‚ СЂРµРіРёРѕРЅР° РїСЂРѕРґР°Р¶Рё РєР°РјРµСЂС‹</td>
                 </tr>
                 <tr>
                     <td>Fujifilm</td>
-                    <td>MENU > Настройки > Язык (Language) или при первом включении</td>
-                    <td>После долгого извлечения батареи появится окно выбора языка</td>
+                    <td>MENU в†’ РќР°СЃС‚СЂРѕР№РєРё в†’ РЇР·С‹Рє (Language) РёР»Рё РїСЂРё РїРµСЂРІРѕРј РІРєР»СЋС‡РµРЅРёРё</td>
+                    <td>РџРѕСЃР»Рµ РґРѕР»РіРѕРіРѕ РёР·РІР»РµС‡РµРЅРёСЏ Р±Р°С‚Р°СЂРµРё РїРѕСЏРІРёС‚СЃСЏ РѕРєРЅРѕ РІС‹Р±РѕСЂР° СЏР·С‹РєР°</td>
                 </tr>
                 <tr>
                     <td>Panasonic/Olympus</td>
-                    <td>MENU > Настройки > Язык/Language</td>
-                    <td>Путь аналогичен Sony</td>
+                    <td>MENU в†’ РќР°СЃС‚СЂРѕР№РєРё в†’ РЇР·С‹Рє/Language</td>
+                    <td>РџСѓС‚СЊ Р°РЅР°Р»РѕРіРёС‡РµРЅ Sony</td>
                 </tr>
                 <tr>
-                    <td>Смартфоны, компакты</td>
-                    <td>Настройки камеры > Язык/Language</td>
-                    <td>Меняется через системные настройки устройства</td>
+                    <td>РЎРјР°СЂС‚С„РѕРЅС‹, РєРѕРјРїР°РєС‚С‹</td>
+                    <td>РќР°СЃС‚СЂРѕР№РєРё РєР°РјРµСЂС‹ в†’ РЇР·С‹Рє/Language</td>
+                    <td>РњРµРЅСЏРµС‚СЃСЏ С‡РµСЂРµР· СЃРёСЃС‚РµРјРЅС‹Рµ РЅР°СЃС‚СЂРѕР№РєРё СѓСЃС‚СЂРѕР№СЃС‚РІР°</td>
                 </tr>
             </table>
-            <h2>Что делать, если нужного языка нет?</h2>
+            <h2>Р§С‚Рѕ РґРµР»Р°С‚СЊ, РµСЃР»Рё РЅСѓР¶РЅРѕРіРѕ СЏР·С‹РєР° РЅРµС‚?</h2>
             <ul>
-                <li>Список языков зависит от страны покупки и прошивки камеры. Например, японские версии часто не поддерживают английский или русский язык.</li>
-                <li>В некоторых случаях можно обновить прошивку или обратиться в сервис для установки нужного языка (официально не всегда поддерживается).</li>
-                <li>Для камер Sony, купленных в Китае, может отсутствовать английский язык; для японских - только японский и английский.</li>
+                <li>РЎРїРёСЃРѕРє СЏР·С‹РєРѕРІ Р·Р°РІРёСЃРёС‚ РѕС‚ СЃС‚СЂР°РЅС‹ РїРѕРєСѓРїРєРё Рё РїСЂРѕС€РёРІРєРё РєР°РјРµСЂС‹. РќР°РїСЂРёРјРµСЂ, СЏРїРѕРЅСЃРєРёРµ РІРµСЂСЃРёРё С‡Р°СЃС‚Рѕ РЅРµ РїРѕРґРґРµСЂР¶РёРІР°СЋС‚ Р°РЅРіР»РёР№СЃРєРёР№ РёР»Рё СЂСѓСЃСЃРєРёР№ СЏР·С‹Рє.</li>
+                <li>Р’ РЅРµРєРѕС‚РѕСЂС‹С… СЃР»СѓС‡Р°СЏС… РјРѕР¶РЅРѕ РѕР±РЅРѕРІРёС‚СЊ РїСЂРѕС€РёРІРєСѓ РёР»Рё РѕР±СЂР°С‚РёС‚СЊСЃСЏ РІ СЃРµСЂРІРёСЃ РґР»СЏ СѓСЃС‚Р°РЅРѕРІРєРё РЅСѓР¶РЅРѕРіРѕ СЏР·С‹РєР° (РѕС„РёС†РёР°Р»СЊРЅРѕ РЅРµ РІСЃРµРіРґР° РїРѕРґРґРµСЂР¶РёРІР°РµС‚СЃСЏ).</li>
+                <li>Р”Р»СЏ РєР°РјРµСЂ Sony, РєСѓРїР»РµРЅРЅС‹С… РІ РљРёС‚Р°Рµ, РјРѕР¶РµС‚ РѕС‚СЃСѓС‚СЃС‚РІРѕРІР°С‚СЊ Р°РЅРіР»РёР№СЃРєРёР№ СЏР·С‹Рє; РґР»СЏ СЏРїРѕРЅСЃРєРёС… - С‚РѕР»СЊРєРѕ СЏРїРѕРЅСЃРєРёР№ Рё Р°РЅРіР»РёР№СЃРєРёР№.</li>
             </ul>
-            <h2>Дополнительные советы и лайфхаки</h2>
+            <h2>Р”РѕРїРѕР»РЅРёС‚РµР»СЊРЅС‹Рµ СЃРѕРІРµС‚С‹ Рё Р»Р°Р№С„С…Р°РєРё</h2>
             <ul>
-                <li>Если меню на незнакомом языке, ориентируйтесь по иконкам, расположению пунктов и числу шагов в инструкции.</li>
-                <li>Используйте онлайн-руководство или инструкцию на сайте производителя - там всегда есть пошаговые скриншоты.</li>
-                <li>При первом включении камеры всегда появляется окно выбора языка - если его пропустили, сбросьте настройки к заводским и повторите настройку.</li>
-                <li>На некоторых моделях можно назначить быструю смену языка на отдельную кнопку или вынести в меню быстрого доступа.</li>
+                <li>Р•СЃР»Рё РјРµРЅСЋ РЅР° РЅРµР·РЅР°РєРѕРјРѕРј СЏР·С‹РєРµ, РѕСЂРёРµРЅС‚РёСЂСѓР№С‚РµСЃСЊ РїРѕ РёРєРѕРЅРєР°Рј, СЂР°СЃРїРѕР»РѕР¶РµРЅРёСЋ РїСѓРЅРєС‚РѕРІ Рё С‡РёСЃР»Сѓ С€Р°РіРѕРІ РІ РёРЅСЃС‚СЂСѓРєС†РёРё.</li>
+                <li>РСЃРїРѕР»СЊР·СѓР№С‚Рµ РѕРЅР»Р°Р№РЅ-СЂСѓРєРѕРІРѕРґСЃС‚РІРѕ РёР»Рё РёРЅСЃС‚СЂСѓРєС†РёСЋ РЅР° СЃР°Р№С‚Рµ РїСЂРѕРёР·РІРѕРґРёС‚РµР»СЏ - С‚Р°Рј РІСЃРµРіРґР° РµСЃС‚СЊ РїРѕС€Р°РіРѕРІС‹Рµ СЃРєСЂРёРЅС€РѕС‚С‹.</li>
+                <li>РџСЂРё РїРµСЂРІРѕРј РІРєР»СЋС‡РµРЅРёРё РєР°РјРµСЂС‹ РІСЃРµРіРґР° РїРѕСЏРІР»СЏРµС‚СЃСЏ РѕРєРЅРѕ РІС‹Р±РѕСЂР° СЏР·С‹РєР° - РµСЃР»Рё РµРіРѕ РїСЂРѕРїСѓСЃС‚РёР»Рё, СЃР±СЂРѕСЃСЊС‚Рµ РЅР°СЃС‚СЂРѕР№РєРё Рє Р·Р°РІРѕРґСЃРєРёРј Рё РїРѕРІС‚РѕСЂРёС‚Рµ РЅР°СЃС‚СЂРѕР№РєСѓ.</li>
+                <li>РќР° РЅРµРєРѕС‚РѕСЂС‹С… РјРѕРґРµР»СЏС… РјРѕР¶РЅРѕ РЅР°Р·РЅР°С‡РёС‚СЊ Р±С‹СЃС‚СЂСѓСЋ СЃРјРµРЅСѓ СЏР·С‹РєР° РЅР° РѕС‚РґРµР»СЊРЅСѓСЋ РєРЅРѕРїРєСѓ РёР»Рё РІС‹РЅРµСЃС‚Рё РІ РјРµРЅСЋ Р±С‹СЃС‚СЂРѕРіРѕ РґРѕСЃС‚СѓРїР°.</li>
             </ul>
             <div class="recommend-box">
                 <i class="fas fa-info-circle"></i>
                 <div>
-                    <strong>Совет:</strong> Перед покупкой камеры за рубежом уточняйте список поддерживаемых языков в спецификации или инструкции. Не все модели поддерживают русский или английский язык меню.
+                    <strong>РЎРѕРІРµС‚:</strong> РџРµСЂРµРґ РїРѕРєСѓРїРєРѕР№ РєР°РјРµСЂС‹ Р·Р° СЂСѓР±РµР¶РѕРј СѓС‚РѕС‡РЅСЏР№С‚Рµ СЃРїРёСЃРѕРє РїРѕРґРґРµСЂР¶РёРІР°РµРјС‹С… СЏР·С‹РєРѕРІ РІ СЃРїРµС†РёС„РёРєР°С†РёРё РёР»Рё РёРЅСЃС‚СЂСѓРєС†РёРё. РќРµ РІСЃРµ РјРѕРґРµР»Рё РїРѕРґРґРµСЂР¶РёРІР°СЋС‚ СЂСѓСЃСЃРєРёР№ РёР»Рё Р°РЅРіР»РёР№СЃРєРёР№ СЏР·С‹Рє РјРµРЅСЋ.
                 </div>
             </div>
             <div class="pro-tips">
-                <h4>?? Профессиональные советы</h4>
+                <h4>рџ”№ РџСЂРѕС„РµСЃСЃРёРѕРЅР°Р»СЊРЅС‹Рµ СЃРѕРІРµС‚С‹</h4>
                 <div class="tip-item">
                     <i class="fas fa-lightbulb"></i>
-                    <p>Если камера не реагирует на смену языка или пункт недоступен - обновите прошивку или выполните сброс настроек до заводских.</p>
+                    <p>Р•СЃР»Рё РєР°РјРµСЂР° РЅРµ СЂРµР°РіРёСЂСѓРµС‚ РЅР° СЃРјРµРЅСѓ СЏР·С‹РєР° РёР»Рё РїСѓРЅРєС‚ РЅРµРґРѕСЃС‚СѓРїРµРЅ - РѕР±РЅРѕРІРёС‚Рµ РїСЂРѕС€РёРІРєСѓ РёР»Рё РІС‹РїРѕР»РЅРёС‚Рµ СЃР±СЂРѕСЃ РЅР°СЃС‚СЂРѕРµРє РґРѕ Р·Р°РІРѕРґСЃРєРёС….</p>
                 </div>
                 <div class="tip-item">
                     <i class="fas fa-lightbulb"></i>
-                    <p>Для быстрой смены языка на сенсорных Canon используйте кнопку <Перекл. языка/клавиатуры> на экране.</p>
+                    <p>Р”Р»СЏ Р±С‹СЃС‚СЂРѕР№ СЃРјРµРЅС‹ СЏР·С‹РєР° РЅР° СЃРµРЅСЃРѕСЂРЅС‹С… Canon РёСЃРїРѕР»СЊР·СѓР№С‚Рµ РєРЅРѕРїРєСѓ <РџРµСЂРµРєР». СЏР·С‹РєР°/РєР»Р°РІРёР°С‚СѓСЂС‹> РЅР° СЌРєСЂР°РЅРµ.</p>
                 </div>
                 <div class="tip-item">
                     <i class="fas fa-lightbulb"></i>
-                    <p>Если меню совсем непонятно - найдите видеоинструкцию для вашей модели на YouTube, где показан путь по пунктам на нужном языке.</p>
+                    <p>Р•СЃР»Рё РјРµРЅСЋ СЃРѕРІСЃРµРј РЅРµРїРѕРЅСЏС‚РЅРѕ - РЅР°Р№РґРёС‚Рµ РІРёРґРµРѕРёРЅСЃС‚СЂСѓРєС†РёСЋ РґР»СЏ РІР°С€РµР№ РјРѕРґРµР»Рё РЅР° YouTube, РіРґРµ РїРѕРєР°Р·Р°РЅ РїСѓС‚СЊ РїРѕ РїСѓРЅРєС‚Р°Рј РЅР° РЅСѓР¶РЅРѕРј СЏР·С‹РєРµ.</p>
                 </div>
             </div>
-            <h2>Часто задаваемые вопросы</h2>
+            <h2>Р§Р°СЃС‚Рѕ Р·Р°РґР°РІР°РµРјС‹Рµ РІРѕРїСЂРѕСЃС‹</h2>
             <ul>
-                <li><strong>Можно ли добавить язык самостоятельно?</strong> - Только с помощью официальной прошивки или в сервисе. Неофициальные методы могут привести к сбоям.</li>
-                <li><strong>Меняется ли язык только для меню?</strong> - Да, язык влияет на меню, сообщения, подсказки, но не на язык файлов или фото.</li>
-                <li><strong>Изменится ли язык после сброса настроек?</strong> - После сброса появится окно выбора языка (актуально для Fujifilm, Panasonic, некоторых Canon и Nikon).</li>
-                <li><strong>Что делать, если нужного языка нет?</strong> - Использовать доступные языки или обратиться в сервис/производителю.</li>
+                <li><strong>РњРѕР¶РЅРѕ Р»Рё РґРѕР±Р°РІРёС‚СЊ СЏР·С‹Рє СЃР°РјРѕСЃС‚РѕСЏС‚РµР»СЊРЅРѕ?</strong> - РўРѕР»СЊРєРѕ СЃ РїРѕРјРѕС‰СЊСЋ РѕС„РёС†РёР°Р»СЊРЅРѕР№ РїСЂРѕС€РёРІРєРё РёР»Рё РІ СЃРµСЂРІРёСЃРµ. РќРµРѕС„РёС†РёР°Р»СЊРЅС‹Рµ РјРµС‚РѕРґС‹ РјРѕРіСѓС‚ РїСЂРёРІРµСЃС‚Рё Рє СЃР±РѕСЏРј.</li>
+                <li><strong>РњРµРЅСЏРµС‚СЃСЏ Р»Рё СЏР·С‹Рє С‚РѕР»СЊРєРѕ РґР»СЏ РјРµРЅСЋ?</strong> - Р”Р°, СЏР·С‹Рє РІР»РёСЏРµС‚ РЅР° РјРµРЅСЋ, СЃРѕРѕР±С‰РµРЅРёСЏ, РїРѕРґСЃРєР°Р·РєРё, РЅРѕ РЅРµ РЅР° СЏР·С‹Рє С„Р°Р№Р»РѕРІ РёР»Рё С„РѕС‚Рѕ.</li>
+                <li><strong>РР·РјРµРЅРёС‚СЃСЏ Р»Рё СЏР·С‹Рє РїРѕСЃР»Рµ СЃР±СЂРѕСЃР° РЅР°СЃС‚СЂРѕРµРє?</strong> - РџРѕСЃР»Рµ СЃР±СЂРѕСЃР° РїРѕСЏРІРёС‚СЃСЏ РѕРєРЅРѕ РІС‹Р±РѕСЂР° СЏР·С‹РєР° (Р°РєС‚СѓР°Р»СЊРЅРѕ РґР»СЏ Fujifilm, Panasonic, РЅРµРєРѕС‚РѕСЂС‹С… Canon Рё Nikon).</li>
+                <li><strong>Р§С‚Рѕ РґРµР»Р°С‚СЊ, РµСЃР»Рё РЅСѓР¶РЅРѕРіРѕ СЏР·С‹РєР° РЅРµС‚?</strong> - РСЃРїРѕР»СЊР·РѕРІР°С‚СЊ РґРѕСЃС‚СѓРїРЅС‹Рµ СЏР·С‹РєРё РёР»Рё РѕР±СЂР°С‚РёС‚СЊСЃСЏ РІ СЃРµСЂРІРёСЃ/РїСЂРѕРёР·РІРѕРґРёС‚РµР»СЋ.</li>
             </ul>
-            <h2>?? Итог</h2>
+            <h2>рџ“Њ РС‚РѕРі</h2>
             <p>
-                Изменить язык меню фотоаппарата просто: войдите в меню настроек, найдите пункт «Язык/Language», выберите нужный язык и подтвердите выбор. Учитывайте региональные ограничения и всегда проверяйте список языков перед покупкой камеры за рубежом!
+                РР·РјРµРЅРёС‚СЊ СЏР·С‹Рє РјРµРЅСЋ С„РѕС‚РѕР°РїРїР°СЂР°С‚Р° РїСЂРѕСЃС‚Рѕ: РІРѕР№РґРёС‚Рµ РІ РјРµРЅСЋ РЅР°СЃС‚СЂРѕРµРє, РЅР°Р№РґРёС‚Рµ РїСѓРЅРєС‚ В«РЇР·С‹Рє/LanguageВ», РІС‹Р±РµСЂРёС‚Рµ РЅСѓР¶РЅС‹Р№ СЏР·С‹Рє Рё РїРѕРґС‚РІРµСЂРґРёС‚Рµ РІС‹Р±РѕСЂ. РЈС‡РёС‚С‹РІР°Р№С‚Рµ СЂРµРіРёРѕРЅР°Р»СЊРЅС‹Рµ РѕРіСЂР°РЅРёС‡РµРЅРёСЏ Рё РІСЃРµРіРґР° РїСЂРѕРІРµСЂСЏР№С‚Рµ СЃРїРёСЃРѕРє СЏР·С‹РєРѕРІ РїРµСЂРµРґ РїРѕРєСѓРїРєРѕР№ РєР°РјРµСЂС‹ Р·Р° СЂСѓР±РµР¶РѕРј!
             </p>
 </div>
 
-        <!-- Telegram рекламный баннер -->
+        <!-- Telegram СЂРµРєР»Р°РјРЅС‹Р№ Р±Р°РЅРЅРµСЂ -->
         <a href="https://t.me/RepairoRU" target="_blank" rel="noopener noreferrer" class="telegram-banner">
           <div class="telegram-banner-container">
             <div class="telegram-logo">
@@ -517,10 +554,10 @@
               </svg>
             </div>
             <div class="telegram-content">
-              <div class="telegram-title">Новости из мира технологий</div>
-              <div class="telegram-subtitle">В нашем новом Telegram-канале. Подписывайтесь и будьте в числе первых!</div>
+              <div class="telegram-title">РќРѕРІРѕСЃС‚Рё РёР· РјРёСЂР° С‚РµС…РЅРѕР»РѕРіРёР№</div>
+              <div class="telegram-subtitle">Р’ РЅР°С€РµРј РЅРѕРІРѕРј Telegram-РєР°РЅР°Р»Рµ. РџРѕРґРїРёСЃС‹РІР°Р№С‚РµСЃСЊ Рё Р±СѓРґСЊС‚Рµ РІ С‡РёСЃР»Рµ РїРµСЂРІС‹С…!</div>
               <div class="telegram-button">
-                Подписаться
+                РџРѕРґРїРёСЃР°С‚СЊСЃСЏ
                 <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.56c-.21 2.22-1.12 7.58-1.58 10.06-.19 1.07-.57 1.43-.94 1.46-.8.07-1.4-.52-2.17-1.03-1.21-.79-1.89-1.28-3.06-2.05-1.35-.87-.47-1.35.3-2.13.2-.21 3.71-3.39 3.77-3.68.01-.04.01-.18-.07-.26s-.2-.05-.29-.03c-.12.03-2.11 1.34-5.95 3.93-.56.38-1.07.57-1.53.56-.5-.01-1.47-.28-2.19-.51-.88-.28-1.58-.43-1.52-.91.03-.25.38-.51 1.04-.78 4.07-1.77 6.78-2.94 8.13-3.51 3.88-1.62 4.68-1.9 5.19-1.91.12 0 .37.03.54.17.14.12.18.28.2.44-.01.06 0 .11-.01.17z"/>
                 </svg>
@@ -545,45 +582,45 @@
                         </span>
                         <span class="logo__text">Repairo</span>
                     </a>
-                    <p class="footer__text">Помогаем ремонтировать электронику с 2024 года</p>
+                    <p class="footer__text">РџРѕРјРѕРіР°РµРј СЂРµРјРѕРЅС‚РёСЂРѕРІР°С‚СЊ СЌР»РµРєС‚СЂРѕРЅРёРєСѓ СЃ 2024 РіРѕРґР°</p>
                 </div>
                 <div class="footer__col">
-                    <h3 class="footer__title">Разделы</h3>
+                    <h3 class="footer__title">Р Р°Р·РґРµР»С‹</h3>
                     <ul class="footer__links">
-                        <li><a href="../index.html" class="footer__link">Главная</a></li>
-                        <li><a href="../index.html#categories" class="footer__link">Все гайды</a></li>
-                        <li><a href="../contacts.html" class="footer__link">Контакты</a></li>
+                        <li><a href="../index.html" class="footer__link">Р“Р»Р°РІРЅР°СЏ</a></li>
+                        <li><a href="../index.html#categories" class="footer__link">Р’СЃРµ РіР°Р№РґС‹</a></li>
+                        <li><a href="../contacts.html" class="footer__link">РљРѕРЅС‚Р°РєС‚С‹</a></li>
                     </ul>
                 </div>
                 <div class="footer__col">
-                    <h3 class="footer__title">Категории</h3>
+                    <h3 class="footer__title">РљР°С‚РµРіРѕСЂРёРё</h3>
                     <ul class="footer__links">
-                        <li><a href="../tv.html" class="nav__link">Телевизоры</a></li>
-                        <li><a href="../cameras.html" class="nav__link">Фотоаппараты</a></li>
-                        <li><a href="../consoles.html" class="nav__link">Приставки</a></li>
-                        <li><a href="../laptops.html" class="nav__link">Ноутбуки</a></li>
-                        <li><a href="../smartphones.html" class="nav__link">Смартфоны</a></li>
-                        <li><a href="../small-appliances.html" class="nav__link">Мелкая техника</a></li>
-                        <li><a href="../large-appliances.html" class="nav__link">Бытовая техника</a></li>
-                        <li><a href="../auto-electronics.html" class="nav__link">Авто-Электроника</a></li>
+                        <li><a href="../tv.html" class="nav__link">РўРµР»РµРІРёР·РѕСЂС‹</a></li>
+                        <li><a href="../cameras.html" class="nav__link">Р¤РѕС‚РѕР°РїРїР°СЂР°С‚С‹</a></li>
+                        <li><a href="../consoles.html" class="nav__link">РџСЂРёСЃС‚Р°РІРєРё</a></li>
+                        <li><a href="../laptops.html" class="nav__link">РќРѕСѓС‚Р±СѓРєРё</a></li>
+                        <li><a href="../smartphones.html" class="nav__link">РЎРјР°СЂС‚С„РѕРЅС‹</a></li>
+                        <li><a href="../small-appliances.html" class="nav__link">РњРµР»РєР°СЏ С‚РµС…РЅРёРєР°</a></li>
+                        <li><a href="../large-appliances.html" class="nav__link">Р‘С‹С‚РѕРІР°СЏ С‚РµС…РЅРёРєР°</a></li>
+                        <li><a href="../auto-electronics.html" class="nav__link">РђРІС‚Рѕ-Р­Р»РµРєС‚СЂРѕРЅРёРєР°</a></li>
                     </ul>
                 </div>
                 <div class="footer__col">
-                    <h3 class="footer__title">Контакты</h3>
+                    <h3 class="footer__title">РљРѕРЅС‚Р°РєС‚С‹</h3>
                     <ul class="footer__links">
                         <li><a href="https://t.me/RepairoRU" class="footer__link"><i class="fab fa-telegram"></i> Telegram</a></li>
-                        <li><span class="footer__link">Наша почта: repairo.info@mail.ru</span></li>
+                        <li><span class="footer__link">РќР°С€Р° РїРѕС‡С‚Р°: repairo.info@mail.ru</span></li>
                     </ul>
                 </div>
             </div>
             <div class="footer__bottom">
                 <p class="disclaimer">
-    Администрация сайта не несёт ответственности за возможные повреждения техники
-    и иные последствия, возникшие в результате самостоятельного ремонта по
-    материалам и инструкциям, размещённым на сайте. Все работы вы выполняете
-    на свой страх и риск.
+    РђРґРјРёРЅРёСЃС‚СЂР°С†РёСЏ СЃР°Р№С‚Р° РЅРµ РЅРµСЃС‘С‚ РѕС‚РІРµС‚СЃС‚РІРµРЅРЅРѕСЃС‚Рё Р·Р° РІРѕР·РјРѕР¶РЅС‹Рµ РїРѕРІСЂРµР¶РґРµРЅРёСЏ С‚РµС…РЅРёРєРё
+    Рё РёРЅС‹Рµ РїРѕСЃР»РµРґСЃС‚РІРёСЏ, РІРѕР·РЅРёРєС€РёРµ РІ СЂРµР·СѓР»СЊС‚Р°С‚Рµ СЃР°РјРѕСЃС‚РѕСЏС‚РµР»СЊРЅРѕРіРѕ СЂРµРјРѕРЅС‚Р° РїРѕ
+    РјР°С‚РµСЂРёР°Р»Р°Рј Рё РёРЅСЃС‚СЂСѓРєС†РёСЏРј, СЂР°Р·РјРµС‰С‘РЅРЅС‹Рј РЅР° СЃР°Р№С‚Рµ. Р’СЃРµ СЂР°Р±РѕС‚С‹ РІС‹ РІС‹РїРѕР»РЅСЏРµС‚Рµ
+    РЅР° СЃРІРѕР№ СЃС‚СЂР°С… Рё СЂРёСЃРє.
     </p>
-                <p class="footer__copyright">© 2026 Repairo. Все права защищены.</p>
+                <p class="footer__copyright">В© 2026 Repairo. Р’СЃРµ РїСЂР°РІР° Р·Р°С‰РёС‰РµРЅС‹.</p>
             </div>
         </div>
     </footer>
@@ -594,50 +631,50 @@
 {
   "@context": "https://schema.org",
   "@type": "HowTo",
-  "name": "Как изменить язык меню в фотоаппарате?",
-  "description": "Пошаговая инструкция: Как изменить язык меню в фотоаппарате?. Если камера не реагирует на смену языка или пункт недоступен - обновите прошивку.... Советы экс...",
+  "name": "РљР°Рє РёР·РјРµРЅРёС‚СЊ СЏР·С‹Рє РјРµРЅСЋ РІ С„РѕС‚РѕР°РїРїР°СЂР°С‚Рµ?",
+  "description": "РџРѕС€Р°РіРѕРІР°СЏ РёРЅСЃС‚СЂСѓРєС†РёСЏ: РљР°Рє РёР·РјРµРЅРёС‚СЊ СЏР·С‹Рє РјРµРЅСЋ РІ С„РѕС‚РѕР°РїРїР°СЂР°С‚Рµ?. Р•СЃР»Рё РєР°РјРµСЂР° РЅРµ СЂРµР°РіРёСЂСѓРµС‚ РЅР° СЃРјРµРЅСѓ СЏР·С‹РєР° РёР»Рё РїСѓРЅРєС‚ РЅРµРґРѕСЃС‚СѓРїРµРЅ - РѕР±РЅРѕРІРёС‚Рµ РїСЂРѕС€РёРІРєСѓ.... РЎРѕРІРµС‚С‹ СЌРєСЃ...",
   "totalTime": "PT30M",
   "step": [
     {
       "@type": "HowToStep",
-      "name": "Зачем менять язык меню?",
-      "text": "Зачем менять язык меню?",
+      "name": "Р—Р°С‡РµРј РјРµРЅСЏС‚СЊ СЏР·С‹Рє РјРµРЅСЋ?",
+      "text": "Р—Р°С‡РµРј РјРµРЅСЏС‚СЊ СЏР·С‹Рє РјРµРЅСЋ?",
       "url": "#step-1"
     },
     {
       "@type": "HowToStep",
-      "name": "Общие шаги для смены языка меню",
-      "text": "Общие шаги для смены языка меню",
+      "name": "РћР±С‰РёРµ С€Р°РіРё РґР»СЏ СЃРјРµРЅС‹ СЏР·С‹РєР° РјРµРЅСЋ",
+      "text": "РћР±С‰РёРµ С€Р°РіРё РґР»СЏ СЃРјРµРЅС‹ СЏР·С‹РєР° РјРµРЅСЋ",
       "url": "#step-2"
     },
     {
       "@type": "HowToStep",
-      "name": "Особенности и нюансы для разных марок",
-      "text": "Особенности и нюансы для разных марок",
+      "name": "РћСЃРѕР±РµРЅРЅРѕСЃС‚Рё Рё РЅСЋР°РЅСЃС‹ РґР»СЏ СЂР°Р·РЅС‹С… РјР°СЂРѕРє",
+      "text": "РћСЃРѕР±РµРЅРЅРѕСЃС‚Рё Рё РЅСЋР°РЅСЃС‹ РґР»СЏ СЂР°Р·РЅС‹С… РјР°СЂРѕРє",
       "url": "#step-3"
     },
     {
       "@type": "HowToStep",
-      "name": "Что делать, если нужного языка нет?",
-      "text": "Что делать, если нужного языка нет?",
+      "name": "Р§С‚Рѕ РґРµР»Р°С‚СЊ, РµСЃР»Рё РЅСѓР¶РЅРѕРіРѕ СЏР·С‹РєР° РЅРµС‚?",
+      "text": "Р§С‚Рѕ РґРµР»Р°С‚СЊ, РµСЃР»Рё РЅСѓР¶РЅРѕРіРѕ СЏР·С‹РєР° РЅРµС‚?",
       "url": "#step-4"
     },
     {
       "@type": "HowToStep",
-      "name": "Дополнительные советы и лайфхаки",
-      "text": "Дополнительные советы и лайфхаки",
+      "name": "Р”РѕРїРѕР»РЅРёС‚РµР»СЊРЅС‹Рµ СЃРѕРІРµС‚С‹ Рё Р»Р°Р№С„С…Р°РєРё",
+      "text": "Р”РѕРїРѕР»РЅРёС‚РµР»СЊРЅС‹Рµ СЃРѕРІРµС‚С‹ Рё Р»Р°Р№С„С…Р°РєРё",
       "url": "#step-5"
     },
     {
       "@type": "HowToStep",
-      "name": "Часто задаваемые вопросы",
-      "text": "Часто задаваемые вопросы",
+      "name": "Р§Р°СЃС‚Рѕ Р·Р°РґР°РІР°РµРјС‹Рµ РІРѕРїСЂРѕСЃС‹",
+      "text": "Р§Р°СЃС‚Рѕ Р·Р°РґР°РІР°РµРјС‹Рµ РІРѕРїСЂРѕСЃС‹",
       "url": "#step-6"
     },
     {
       "@type": "HowToStep",
-      "name": "?? Итог",
-      "text": "?? Итог",
+      "name": "рџ“Њ РС‚РѕРі",
+      "text": "рџ“Њ РС‚РѕРі",
       "url": "#step-7"
     }
   ],
@@ -648,8 +685,4 @@
 <script src="../cookie-consent.js"></script>
 </body>
 </html>
-
-
-
-
 

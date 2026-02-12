@@ -4,7 +4,7 @@
 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Почему посудомоечная машина не удаляет жир с посуды? | Экспе</title>
+  <title>РџРѕС‡РµРјСѓ РїРѕСЃСѓРґРѕРјРѕРµС‡РЅР°СЏ РјР°С€РёРЅР° РЅРµ СѓРґР°Р»СЏРµС‚ Р¶РёСЂ СЃ РїРѕСЃСѓРґС‹? | Р­РєСЃРїРµСЂС‚РЅС‹Р№ РјРµРіР°РіР°Р№Рґ</title>
 
   <link rel="stylesheet" href="../styles.css" />
   <link rel="stylesheet" href="../styles-header.css" />
@@ -29,7 +29,8 @@
       .guide-image-block { padding: 12px; margin: 15px 0; }
       table, th, td { font-size: 0.95rem; }
     }
-    /* Яндекс Маркет рекламный баннер */
+    /* РЇРЅРґРµРєСЃ РњР°СЂРєРµС‚ СЂРµРєР»Р°РјРЅС‹Р№ Р±Р°РЅРЅРµСЂ */
+    .ym-hero-link {
       display: block;
       text-decoration: none;
       color: inherit;
@@ -37,7 +38,8 @@
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     }
 
-    /* Горизонтальный баннер-карточка */
+    /* Р“РѕСЂРёР·РѕРЅС‚Р°Р»СЊРЅС‹Р№ Р±Р°РЅРЅРµСЂ-РєР°СЂС‚РѕС‡РєР° */
+    .ym-hero-banner {
       width: 100%;
       max-width: 600px;
       min-height: 140px;
@@ -52,12 +54,14 @@
       margin: 40px auto;
     }
 
-    /* Контейнер для изображений */
+    /* РљРѕРЅС‚РµР№РЅРµСЂ РґР»СЏ РёР·РѕР±СЂР°Р¶РµРЅРёР№ */
+    .ym-hero-images {
       display: flex;
       height: 120px;
       overflow: hidden;
     }
 
+    .ym-hero-image {
       flex: 1;
       min-width: 0;
       height: 100%;
@@ -69,9 +73,11 @@
       background: #f8f9fa;
     }
 
+    .ym-hero-image:last-child {
       border-right: none;
     }
 
+    .ym-hero-image img {
       width: 100%;
       height: 100%;
       object-fit: contain;
@@ -79,40 +85,56 @@
       background: #f8f9fa;
     }
 
+    .ym-hero-image:hover img {
       transform: scale(1.02);
     }
 
-    /* Правая часть: контент */
+    /* РџСЂР°РІР°СЏ С‡Р°СЃС‚СЊ: РєРѕРЅС‚РµРЅС‚ */
+    .ym-hero-content {
       padding: 16px 18px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-        <!-- Яндекс Маркет рекламный блок -->
+        <!-- РЇРЅРґРµРєСЃ РњР°СЂРєРµС‚ СЂРµРєР»Р°РјРЅС‹Р№ Р±Р»РѕРє -->
         <a href="https://market.yandex.ru/catalog--bytovaia-tekhnika/54419/list?hid=198118&rs=eJwzUvjEKMvBILDwEKsEg8Kzbh6Nw4dZNS4D8c7lFhp9c1-wAQC3uAwP&clid=14635360&refid=rbck8fgamv681iu59go3iqxwddedl4x9&erid=5jtCeReNx12oajxS2bzShmZ&mclid=1003&distr_type=7&utm_source=partner_network&pp=900&utm_medium=link_list&utm_campaign=14635360"
            target="_blank"
            rel="noopener noreferrer sponsored"
+           class="ym-hero-link">
+          <div class="ym-hero-banner">
+            <div class="ym-hero-images">
+              <div class="ym-hero-image">
                 <img src="https://avatars.mds.yandex.net/get-mpic/14770882/2a00000197f4dbee777f8afddccaf44faa53/optimize"
-                     alt="Распродажа бытовой электроники 1">
+                     alt="Р Р°СЃРїСЂРѕРґР°Р¶Р° Р±С‹С‚РѕРІРѕР№ СЌР»РµРєС‚СЂРѕРЅРёРєРё 1">
               </div>
+              <div class="ym-hero-image">
                 <img src="https://avatars.mds.yandex.net/get-mpic/15580298/img_id8867318964670654684.jpeg/optimize"
-                     alt="Распродажа бытовой электроники 2">
+                     alt="Р Р°СЃРїСЂРѕРґР°Р¶Р° Р±С‹С‚РѕРІРѕР№ СЌР»РµРєС‚СЂРѕРЅРёРєРё 2">
               </div>
+              <div class="ym-hero-image">
                 <img src="https://avatars.mds.yandex.net/get-mpic/10096780/2a000001953b534fed2494e0b30fadd9b458/optimize"
-                     alt="Распродажа бытовой электроники 3">
+                     alt="Р Р°СЃРїСЂРѕРґР°Р¶Р° Р±С‹С‚РѕРІРѕР№ СЌР»РµРєС‚СЂРѕРЅРёРєРё 3">
               </div>
             </div>
-                  ? Выгодные предложения
+            <div class="ym-hero-content">
+              <h3 class="ym-hero-title">Р Р°СЃРїСЂРѕРґР°Р¶Р° Р±С‹С‚РѕРІРѕР№ СЌР»РµРєС‚СЂРѕРЅРёРєРё РЅР° РЇРЅРґРµРєСЃ РњР°СЂРєРµС‚Рµ</h3>
+              <div class="ym-hero-top">
+                <div class="ym-hero-rating">
+                  в­ђ Р’С‹РіРѕРґРЅС‹Рµ РїСЂРµРґР»РѕР¶РµРЅРёСЏ
+                  <span class="ym-hero-rating-count">РЎРєРёРґРєРё РґРѕ 50%</span>
                 </div>
               </div>
+              <button class="ym-hero-button">Р—Р° СЃРєРёРґРєР°РјРё</button>
             </div>
           </div>
-            Реклама. ООО "ЯНДЕКС", ИНН 7736207543. clid: 14635360, erid: 5jtCeReNx12oajxS2bzShmZ
+          <div class="ym-hero-legal">
+            Р РµРєР»Р°РјР°. РћРћРћ "РЇРќР”Р•РљРЎ", РРќРќ 7736207543. clid: 14635360, erid: 5jtCeReNx12oajxS2bzShmZ
           </div>
         </a>
       gap: 8px;
     }
 
-    /* Название товара */
+    /* РќР°Р·РІР°РЅРёРµ С‚РѕРІР°СЂР° */
+    .ym-hero-title {
       font-size: 14px;
       font-weight: 600;
       color: #111827;
@@ -125,13 +147,15 @@
       overflow: hidden;
     }
 
-    /* Рейтинг */
+    /* Р РµР№С‚РёРЅРі */
+    .ym-hero-top {
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 8px;
     }
 
+    .ym-hero-rating {
       font-size: 13px;
       font-weight: 500;
       color: #111827;
@@ -140,10 +164,12 @@
       padding: 4px 10px;
     }
 
+    .ym-hero-rating-count {
       color: #6b7280;
     }
 
-    /* Фиолетовая кнопка */
+    /* Р¤РёРѕР»РµС‚РѕРІР°СЏ РєРЅРѕРїРєР° */
+    .ym-hero-button {
       display: inline-flex;
       align-items: center;
       justify-content: center;
@@ -160,17 +186,20 @@
                   box-shadow 0.15s ease;
     }
 
-      content: ">";
+    .ym-hero-button::after {
+      content: "в†’";
       margin-left: 6px;
       font-size: 14px;
     }
 
+    .ym-hero-button:hover {
       background: #7c3aed;
       transform: translateY(-1px);
       box-shadow: 0 4px 10px rgba(88, 28, 135, 0.45);
     }
 
-    /* Юридический блок */
+    /* Р®СЂРёРґРёС‡РµСЃРєРёР№ Р±Р»РѕРє */
+    .ym-hero-legal {
       margin-top: 6px;
       max-width: 600px;
       font-size: 11px;
@@ -180,25 +209,31 @@
       margin-right: auto;
     }
 
-    /* Адаптив */
+    /* РђРґР°РїС‚РёРІ */
     @media (max-width: 480px) {
+      .ym-hero-banner {
         max-width: 100%;
         margin: 20px 0;
       }
 
+      .ym-hero-images {
         height: 100px;
       }
 
+      .ym-hero-content {
         padding: 12px 12px;
       }
 
+      .ym-hero-title {
         font-size: 13px;
       }
 
+      .ym-hero-button {
         font-size: 13px;
         padding: 8px 14px;
       }
 
+      .ym-hero-legal {
         font-size: 10px;
       }
     }
@@ -215,7 +250,3 @@
           <span class="logo__text">
 <!-- Cookie Consent Script -->
 <script src="../cookie-consent.js"></script>
-
-
-
-

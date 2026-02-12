@@ -2,36 +2,40 @@
 <html lang="ru" data-theme="light">
 <head>
 
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Как устроен цифровой фотоаппарат? Основные компоненты | Repa</title>
-    <meta name="description" content="">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>РљР°Рє СѓСЃС‚СЂРѕРµРЅ С†РёС„СЂРѕРІРѕР№ С„РѕС‚РѕР°РїРїР°СЂР°С‚? РћСЃРЅРѕРІРЅС‹Рµ РєРѕРјРїРѕРЅРµРЅС‚С‹ | Repairo</title>
+    <meta name="description" content="{{ description }}">
+    <meta name="description" content="РџРѕС€Р°РіРѕРІР°СЏ РёРЅСЃС‚СЂСѓРєС†РёСЏ: РљР°Рє СѓСЃС‚СЂРѕРµРЅ С†РёС„СЂРѕРІРѕР№ С„РѕС‚РѕР°РїРїР°СЂР°С‚? РћСЃРЅРѕРІРЅС‹Рµ РєРѕРјРїРѕРЅРµРЅС‚С‹. РЎРёСЃС‚РµРјР° Р°РІС‚РѕС„РѕРєСѓСЃР° Рё СЃРєРѕСЂРѕСЃС‚СЊ РїСЂРѕС†РµСЃСЃРѕСЂР° РІР°Р¶РЅС‹ РґР»СЏ СЃСЉС‘РјРєРё РґРёРЅР°РјРёРєРё Рё СЃРїРѕСЂС‚Р°.. РЎРѕ...">
 
-  <link rel="stylesheet" href="../styles.css" />
-  <link rel="stylesheet" href="../styles-header.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <style>
-    .guide-content { line-height: 1.7; color: var(--text); }
-    .guide-content h2 { color: var(--primary); margin-top: 30px; margin-bottom: 15px; font-size: 1.5rem; }
-    .guide-content h3 { color: var(--primary-dark); margin-top: 25px; margin-bottom: 12px; font-size: 1.2rem; }
-    .guide-image-block { margin: 20px 0; padding: 15px; background: var(--background); border-radius: var(--border-radius); border: 1px solid var(--border); text-align: center; }
-    .guide-image-block img { max-width: 100%; height: auto; border-radius: 6px; border: 1px solid var(--border); }
-    .image-caption { margin-top: 10px; font-size: 0.85rem; color: var(--text-light); font-style: italic; }
-    .pro-tips { background: rgba(3, 74, 79, 0.05); padding: 15px; border-radius: 6px; margin: 20px 0; }
-    .pro-tips h4 { color: var(--primary); margin-top: 0; margin-bottom: 12px; font-size: 1.1rem; }
-    .tip-item { display: flex; gap: 8px; margin-bottom: 8px; align-items: flex-start; }
-    table { width: 100%; border-collapse: collapse; margin: 20px 0; }
-    th, td { border: 1px solid var(--border); padding: 8px; text-align: left; }
-    th { background: var(--background-light); }
-    .highlight { background: #f5f7fa; border-left: 4px solid #2d9cdb; padding: 10px 15px; margin: 20px 0; }
-    .faq-section ul { margin-left: 1em; }
-    .block-section { margin-bottom: 2em; }
-    @media (max-width: 768px) {
-      .guide-content h2 { font-size: 1.4rem; margin-top: 25px; }
-      .guide-image-block { padding: 12px; margin: 15px 0; }
-      table, th, td { font-size: 0.95rem; }
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="../styles-header.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <style>
+        .guide-content { line-height: 1.7; color: var(--text);}
+        .guide-content h2 { color: var(--primary); margin-top: 30px; margin-bottom: 15px; font-size: 1.5rem;}
+        .parts-table { width: 100%; border-collapse: collapse; margin: 20px 0;}
+        .parts-table th, .parts-table td { border: 1px solid var(--border); padding: 10px 15px; text-align: left;}
+        .parts-table th { background: var(--background-alt);}
+        .recommend-box { background: rgba(3, 74, 79, 0.1); border-left: 4px solid var(--primary); padding: 12px; margin: 15px 0; display: flex; gap: 12px; align-items: flex-start; border-radius: 4px;}
+        .recommend-box i { font-size: 1.2rem; color: var(--primary); margin-top: 2px;}
+        .pro-tips { background: rgba(3, 74, 79, 0.05); padding: 15px; border-radius: 6px; margin: 20px 0;}
+        .pro-tips h4 { color: var(--primary); margin-top: 0; margin-bottom: 12px; font-size: 1.1rem;}
+        .tip-item { display: flex; gap: 8px; margin-bottom: 8px; align-items: flex-start;}
+        @media (max-width: 768px) {
+            .guide-content h2 { font-size: 1.4rem; margin-top: 25px;}
+            .parts-table th, .parts-table td { padding: 8px 10px;}
+        }
+    /* РЇРЅРґРµРєСЃ РњР°СЂРєРµС‚ СЂРµРєР»Р°РјРЅС‹Р№ Р±Р°РЅРЅРµСЂ */
+    .ym-hero-link {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+      max-width: 100%;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     }
+
     /* Р“РѕСЂРёР·РѕРЅС‚Р°Р»СЊРЅС‹Р№ Р±Р°РЅРЅРµСЂ-РєР°СЂС‚РѕС‡РєР° */
     .ym-hero-banner {
       width: 100%;
@@ -144,11 +148,13 @@
       transition: background 0.15s ease, transform 0.15s ease,
                   box-shadow 0.15s ease;
     }
+
     .ym-hero-button::after {
       content: "в†’";
       margin-left: 6px;
       font-size: 14px;
     }
+
     .ym-hero-button:hover {
       background: #7c3aed;
       transform: translateY(-1px);
@@ -172,19 +178,24 @@
         max-width: 100%;
         margin: 20px 0;
       }
+
       .ym-hero-images {
         height: 100px;
       }
+
       .ym-hero-content {
         padding: 12px 12px;
       }
+
       .ym-hero-title {
         font-size: 13px;
       }
+
       .ym-hero-button {
         font-size: 13px;
         padding: 8px 14px;
       }
+
       .ym-hero-legal {
         font-size: 10px;
       }
@@ -292,22 +303,27 @@
         padding: 15px;
         min-height: 100px;
       }
+
       .telegram-logo {
         width: 50px;
         height: 50px;
         min-width: 50px;
         margin-right: 15px;
       }
+
       .telegram-logo svg {
         width: 26px;
         height: 26px;
       }
+
       .telegram-title {
         font-size: 14px;
       }
+
       .telegram-subtitle {
         font-size: 12px;
       }
+
       .telegram-button {
         font-size: 12px;
         padding: 6px 12px;
@@ -316,165 +332,179 @@
 
 
 
-  </style>
+    </style>
   <script async src="https://timeweb.cloud/api/v1/cloud-ai/agents/3cc03620-d051-4d8d-b5af-f7b6cd083a35/embed.js?collapsed=true"></script>
 </head>
 <body>
-  <header class="header">
+<header class="header">
     <div class="container">
-      <div class="header__inner">
-        <a href="../index.html" class="logo">
-          <span class="logo__icon"></span>
-          <span class="logo__text">GeoExpert</span>
-        </a>
-        <nav class="nav">
-          <ul class="nav__list">
-            <li><a href="../cameras.html" class="nav__link">РљР°РјРµСЂС‹</a></li>
-            <li><a href="../drones.html" class="nav__link">Р”СЂРѕРЅС‹</a></li>
-            <li><a href="../workflow.html" class="nav__link">Workflow</a></li>
-          </ul>
-        </nav>
-      </div>
+        <div class="header__inner">
+            <a href="../index.html" class="logo">
+                <span class="logo__icon"></span>
+                <span class="logo__text">Repairo</span>
+            </a>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li><a href="../cameras.html" class="nav__link">Р¤РѕС‚РѕР°РїРїР°СЂР°С‚С‹</a></li>
+                    <li><a href="../tv.html" class="nav__link">РўРµР»РµРІРёР·РѕСЂС‹</a></li>
+                    <li><a href="../laptops.html" class="nav__link">РќРѕСѓС‚Р±СѓРєРё</a></li>
+                    <li><a href="../smartphones.html" class="nav__link">РЎРјР°СЂС‚С„РѕРЅС‹</a></li>
+                </ul>
+            </nav>
+        </div>
     </div>
-  </header>
+</header>
 <section class="guide-page">
     <div class="container">
         <div class="breadcrumbs">
-            <a href="../index.html">Главная</a>
+            <a href="../index.html">Р“Р»Р°РІРЅР°СЏ</a>
             <i class="fas fa-chevron-right"></i>
-            <a href="../cameras.html">Фотоаппараты</a>
+            <a href="../cameras.html">Р¤РѕС‚РѕР°РїРїР°СЂР°С‚С‹</a>
             <i class="fas fa-chevron-right"></i>
-            <span>Как устроен цифровой фотоаппарат? Основные компоненты</span>
+            <span>РљР°Рє СѓСЃС‚СЂРѕРµРЅ С†РёС„СЂРѕРІРѕР№ С„РѕС‚РѕР°РїРїР°СЂР°С‚? РћСЃРЅРѕРІРЅС‹Рµ РєРѕРјРїРѕРЅРµРЅС‚С‹</span>
         </div>
-        <h1 class="section__title">Как устроен цифровой фотоаппарат? Основные компоненты</h1>
+        <h1 class="section__title">РљР°Рє СѓСЃС‚СЂРѕРµРЅ С†РёС„СЂРѕРІРѕР№ С„РѕС‚РѕР°РїРїР°СЂР°С‚? РћСЃРЅРѕРІРЅС‹Рµ РєРѕРјРїРѕРЅРµРЅС‚С‹</h1>
         <div class="guide-meta">
-            <span><i class="fas fa-cogs"></i> Строение цифровой камеры</span>
+            <span><i class="fas fa-cogs"></i> РЎС‚СЂРѕРµРЅРёРµ С†РёС„СЂРѕРІРѕР№ РєР°РјРµСЂС‹</span>
         </div>
         <div class="guide-image-block">
                 <img src="https://avatars.mds.yandex.net/get-shedevrum/16295926/img_7cadd4a52cb111f0a8fec2e84929c63d/orig">
             </div>
         <div class="guide-content">
-        <!-- Яндекс Маркет рекламный блок -->
+        <!-- РЇРЅРґРµРєСЃ РњР°СЂРєРµС‚ СЂРµРєР»Р°РјРЅС‹Р№ Р±Р»РѕРє -->
         <a href="https://market.yandex.ru/catalog--bytovaia-tekhnika/54419/list?hid=198118&rs=eJwzUvjEKMvBILDwEKsEg8Kzbh6Nw4dZNS4D8c7lFhp9c1-wAQC3uAwP&clid=14635360&refid=rbck8fgamv681iu59go3iqxwddedl4x9&erid=5jtCeReNx12oajxS2bzShmZ&mclid=1003&distr_type=7&utm_source=partner_network&pp=900&utm_medium=link_list&utm_campaign=14635360"
            target="_blank"
            rel="noopener noreferrer sponsored"
+           class="ym-hero-link">
+          <div class="ym-hero-banner">
+            <div class="ym-hero-images">
+              <div class="ym-hero-image">
                 <img src="https://avatars.mds.yandex.net/get-mpic/14770882/2a00000197f4dbee777f8afddccaf44faa53/optimize"
-                     alt="Распродажа бытовой электроники 1">
+                     alt="Р Р°СЃРїСЂРѕРґР°Р¶Р° Р±С‹С‚РѕРІРѕР№ СЌР»РµРєС‚СЂРѕРЅРёРєРё 1">
               </div>
+              <div class="ym-hero-image">
                 <img src="https://avatars.mds.yandex.net/get-mpic/15580298/img_id8867318964670654684.jpeg/optimize"
-                     alt="Распродажа бытовой электроники 2">
+                     alt="Р Р°СЃРїСЂРѕРґР°Р¶Р° Р±С‹С‚РѕРІРѕР№ СЌР»РµРєС‚СЂРѕРЅРёРєРё 2">
               </div>
+              <div class="ym-hero-image">
                 <img src="https://avatars.mds.yandex.net/get-mpic/10096780/2a000001953b534fed2494e0b30fadd9b458/optimize"
-                     alt="Распродажа бытовой электроники 3">
+                     alt="Р Р°СЃРїСЂРѕРґР°Р¶Р° Р±С‹С‚РѕРІРѕР№ СЌР»РµРєС‚СЂРѕРЅРёРєРё 3">
               </div>
             </div>
-                  ? Выгодные предложения
+            <div class="ym-hero-content">
+              <h3 class="ym-hero-title">Р Р°СЃРїСЂРѕРґР°Р¶Р° Р±С‹С‚РѕРІРѕР№ СЌР»РµРєС‚СЂРѕРЅРёРєРё РЅР° РЇРЅРґРµРєСЃ РњР°СЂРєРµС‚Рµ</h3>
+              <div class="ym-hero-top">
+                <div class="ym-hero-rating">
+                  в­ђ Р’С‹РіРѕРґРЅС‹Рµ РїСЂРµРґР»РѕР¶РµРЅРёСЏ
+                  <span class="ym-hero-rating-count">РЎРєРёРґРєРё РґРѕ 50%</span>
                 </div>
               </div>
+              <button class="ym-hero-button">Р—Р° СЃРєРёРґРєР°РјРё</button>
             </div>
           </div>
-            Реклама. ООО "ЯНДЕКС", ИНН 7736207543. clid: 14635360, erid: 5jtCeReNx12oajxS2bzShmZ
+          <div class="ym-hero-legal">
+            Р РµРєР»Р°РјР°. РћРћРћ "РЇРќР”Р•РљРЎ", РРќРќ 7736207543. clid: 14635360, erid: 5jtCeReNx12oajxS2bzShmZ
           </div>
         </a>
-            <h2>Главные компоненты цифрового фотоаппарата</h2>
+            <h2>Р“Р»Р°РІРЅС‹Рµ РєРѕРјРїРѕРЅРµРЅС‚С‹ С†РёС„СЂРѕРІРѕРіРѕ С„РѕС‚РѕР°РїРїР°СЂР°С‚Р°</h2>
             <table class="parts-table">
                 <thead>
                     <tr>
-                        <th>Компонент</th>
-                        <th>Назначение</th>
-                        <th>Особенности</th>
+                        <th>РљРѕРјРїРѕРЅРµРЅС‚</th>
+                        <th>РќР°Р·РЅР°С‡РµРЅРёРµ</th>
+                        <th>РћСЃРѕР±РµРЅРЅРѕСЃС‚Рё</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td><b>Объектив</b></td>
-                        <td>Фокусирует свет на матрице, определяет угол обзора, светосилу и качество изображения</td>
-                        <td>Может быть сменным или встроенным, содержит линзы, диафрагму и иногда стабилизатор</td>
+                        <td><b>РћР±СЉРµРєС‚РёРІ</b></td>
+                        <td>Р¤РѕРєСѓСЃРёСЂСѓРµС‚ СЃРІРµС‚ РЅР° РјР°С‚СЂРёС†Рµ, РѕРїСЂРµРґРµР»СЏРµС‚ СѓРіРѕР» РѕР±Р·РѕСЂР°, СЃРІРµС‚РѕСЃРёР»Сѓ Рё РєР°С‡РµСЃС‚РІРѕ РёР·РѕР±СЂР°Р¶РµРЅРёСЏ</td>
+                        <td>РњРѕР¶РµС‚ Р±С‹С‚СЊ СЃРјРµРЅРЅС‹Рј РёР»Рё РІСЃС‚СЂРѕРµРЅРЅС‹Рј, СЃРѕРґРµСЂР¶РёС‚ Р»РёРЅР·С‹, РґРёР°С„СЂР°РіРјСѓ Рё РёРЅРѕРіРґР° СЃС‚Р°Р±РёР»РёР·Р°С‚РѕСЂ</td>
                     </tr>
                     <tr>
-                        <td><b>Матрица (сенсор)</b></td>
-                        <td>Преобразует свет в электрический сигнал, формирует цифровое изображение</td>
-                        <td>Основные типы: CMOS, CCD; размер и технология влияют на качество, шумы и динамический диапазон</td>
+                        <td><b>РњР°С‚СЂРёС†Р° (СЃРµРЅСЃРѕСЂ)</b></td>
+                        <td>РџСЂРµРѕР±СЂР°Р·СѓРµС‚ СЃРІРµС‚ РІ СЌР»РµРєС‚СЂРёС‡РµСЃРєРёР№ СЃРёРіРЅР°Р», С„РѕСЂРјРёСЂСѓРµС‚ С†РёС„СЂРѕРІРѕРµ РёР·РѕР±СЂР°Р¶РµРЅРёРµ</td>
+                        <td>РћСЃРЅРѕРІРЅС‹Рµ С‚РёРїС‹: CMOS, CCD; СЂР°Р·РјРµСЂ Рё С‚РµС…РЅРѕР»РѕРіРёСЏ РІР»РёСЏСЋС‚ РЅР° РєР°С‡РµСЃС‚РІРѕ, С€СѓРјС‹ Рё РґРёРЅР°РјРёС‡РµСЃРєРёР№ РґРёР°РїР°Р·РѕРЅ</td>
                     </tr>
                     <tr>
-                        <td><b>Затвор</b></td>
-                        <td>Определяет время экспозиции (выдержку), контролирует попадание света на матрицу</td>
-                        <td>Бывает механическим, электронным или гибридным</td>
+                        <td><b>Р—Р°С‚РІРѕСЂ</b></td>
+                        <td>РћРїСЂРµРґРµР»СЏРµС‚ РІСЂРµРјСЏ СЌРєСЃРїРѕР·РёС†РёРё (РІС‹РґРµСЂР¶РєСѓ), РєРѕРЅС‚СЂРѕР»РёСЂСѓРµС‚ РїРѕРїР°РґР°РЅРёРµ СЃРІРµС‚Р° РЅР° РјР°С‚СЂРёС†Сѓ</td>
+                        <td>Р‘С‹РІР°РµС‚ РјРµС…Р°РЅРёС‡РµСЃРєРёРј, СЌР»РµРєС‚СЂРѕРЅРЅС‹Рј РёР»Рё РіРёР±СЂРёРґРЅС‹Рј</td>
                     </tr>
                     <tr>
-                        <td><b>Процессор (процессор обработки изображения)</b></td>
-                        <td>Обрабатывает сигнал с матрицы, формирует файл изображения, отвечает за скорость работы, шумоподавление, цвет</td>
-                        <td>Влияет на скорость серийной съёмки, качество JPEG, работу автофокуса и видео</td>
+                        <td><b>РџСЂРѕС†РµСЃСЃРѕСЂ (РїСЂРѕС†РµСЃСЃРѕСЂ РѕР±СЂР°Р±РѕС‚РєРё РёР·РѕР±СЂР°Р¶РµРЅРёСЏ)</b></td>
+                        <td>РћР±СЂР°Р±Р°С‚С‹РІР°РµС‚ СЃРёРіРЅР°Р» СЃ РјР°С‚СЂРёС†С‹, С„РѕСЂРјРёСЂСѓРµС‚ С„Р°Р№Р» РёР·РѕР±СЂР°Р¶РµРЅРёСЏ, РѕС‚РІРµС‡Р°РµС‚ Р·Р° СЃРєРѕСЂРѕСЃС‚СЊ СЂР°Р±РѕС‚С‹, С€СѓРјРѕРїРѕРґР°РІР»РµРЅРёРµ, С†РІРµС‚</td>
+                        <td>Р’Р»РёСЏРµС‚ РЅР° СЃРєРѕСЂРѕСЃС‚СЊ СЃРµСЂРёР№РЅРѕР№ СЃСЉС‘РјРєРё, РєР°С‡РµСЃС‚РІРѕ JPEG, СЂР°Р±РѕС‚Сѓ Р°РІС‚РѕС„РѕРєСѓСЃР° Рё РІРёРґРµРѕ</td>
                     </tr>
                     <tr>
-                        <td><b>Видоискатель и/или экран</b></td>
-                        <td>Позволяет кадрировать и просматривать снимки</td>
-                        <td>Бывает оптическим (DSLR), электронным (беззеркалки) или только ЖК-экраном (компакты)</td>
+                        <td><b>Р’РёРґРѕРёСЃРєР°С‚РµР»СЊ Рё/РёР»Рё СЌРєСЂР°РЅ</b></td>
+                        <td>РџРѕР·РІРѕР»СЏРµС‚ РєР°РґСЂРёСЂРѕРІР°С‚СЊ Рё РїСЂРѕСЃРјР°С‚СЂРёРІР°С‚СЊ СЃРЅРёРјРєРё</td>
+                        <td>Р‘С‹РІР°РµС‚ РѕРїС‚РёС‡РµСЃРєРёРј (DSLR), СЌР»РµРєС‚СЂРѕРЅРЅС‹Рј (Р±РµР·Р·РµСЂРєР°Р»РєРё) РёР»Рё С‚РѕР»СЊРєРѕ Р–Рљ-СЌРєСЂР°РЅРѕРј (РєРѕРјРїР°РєС‚С‹)</td>
                     </tr>
                     <tr>
-                        <td><b>Система автофокуса</b></td>
-                        <td>Наводит резкость на объект съёмки</td>
-                        <td>Фазовый, контрастный или гибридный автофокус, количество точек и скорость зависят от модели</td>
+                        <td><b>РЎРёСЃС‚РµРјР° Р°РІС‚РѕС„РѕРєСѓСЃР°</b></td>
+                        <td>РќР°РІРѕРґРёС‚ СЂРµР·РєРѕСЃС‚СЊ РЅР° РѕР±СЉРµРєС‚ СЃСЉС‘РјРєРё</td>
+                        <td>Р¤Р°Р·РѕРІС‹Р№, РєРѕРЅС‚СЂР°СЃС‚РЅС‹Р№ РёР»Рё РіРёР±СЂРёРґРЅС‹Р№ Р°РІС‚РѕС„РѕРєСѓСЃ, РєРѕР»РёС‡РµСЃС‚РІРѕ С‚РѕС‡РµРє Рё СЃРєРѕСЂРѕСЃС‚СЊ Р·Р°РІРёСЃСЏС‚ РѕС‚ РјРѕРґРµР»Рё</td>
                     </tr>
                     <tr>
-                        <td><b>Слот для карты памяти</b></td>
-                        <td>Хранит отснятые фотографии и видео</td>
-                        <td>SD, CFexpress, XQD и другие форматы карт памяти</td>
+                        <td><b>РЎР»РѕС‚ РґР»СЏ РєР°СЂС‚С‹ РїР°РјСЏС‚Рё</b></td>
+                        <td>РҐСЂР°РЅРёС‚ РѕС‚СЃРЅСЏС‚С‹Рµ С„РѕС‚РѕРіСЂР°С„РёРё Рё РІРёРґРµРѕ</td>
+                        <td>SD, CFexpress, XQD Рё РґСЂСѓРіРёРµ С„РѕСЂРјР°С‚С‹ РєР°СЂС‚ РїР°РјСЏС‚Рё</td>
                     </tr>
                     <tr>
-                        <td><b>Аккумулятор</b></td>
-                        <td>Питает все электронные компоненты камеры</td>
-                        <td>Ёмкость влияет на время автономной работы</td>
+                        <td><b>РђРєРєСѓРјСѓР»СЏС‚РѕСЂ</b></td>
+                        <td>РџРёС‚Р°РµС‚ РІСЃРµ СЌР»РµРєС‚СЂРѕРЅРЅС‹Рµ РєРѕРјРїРѕРЅРµРЅС‚С‹ РєР°РјРµСЂС‹</td>
+                        <td>РЃРјРєРѕСЃС‚СЊ РІР»РёСЏРµС‚ РЅР° РІСЂРµРјСЏ Р°РІС‚РѕРЅРѕРјРЅРѕР№ СЂР°Р±РѕС‚С‹</td>
                     </tr>
                     <tr>
-                        <td><b>Корпус и органы управления</b></td>
-                        <td>Обеспечивает защиту, эргономику, доступ к настройкам</td>
-                        <td>Материал корпуса (пластик, металл, магний), кнопки, колёса, сенсорный экран</td>
+                        <td><b>РљРѕСЂРїСѓСЃ Рё РѕСЂРіР°РЅС‹ СѓРїСЂР°РІР»РµРЅРёСЏ</b></td>
+                        <td>РћР±РµСЃРїРµС‡РёРІР°РµС‚ Р·Р°С‰РёС‚Сѓ, СЌСЂРіРѕРЅРѕРјРёРєСѓ, РґРѕСЃС‚СѓРї Рє РЅР°СЃС‚СЂРѕР№РєР°Рј</td>
+                        <td>РњР°С‚РµСЂРёР°Р» РєРѕСЂРїСѓСЃР° (РїР»Р°СЃС‚РёРє, РјРµС‚Р°Р»Р», РјР°РіРЅРёР№), РєРЅРѕРїРєРё, РєРѕР»С‘СЃР°, СЃРµРЅСЃРѕСЂРЅС‹Р№ СЌРєСЂР°РЅ</td>
                     </tr>
                 </tbody>
             </table>
-            <h2>Как работает цифровой фотоаппарат?</h2>
+            <h2>РљР°Рє СЂР°Р±РѕС‚Р°РµС‚ С†РёС„СЂРѕРІРѕР№ С„РѕС‚РѕР°РїРїР°СЂР°С‚?</h2>
 <ul>
-                <li>Свет проходит через объектив, фокусируется на матрице.</li>
-                <li>Затвор открывается на заданное время (выдержка), свет попадает на сенсор.</li>
-                <li>Матрица преобразует свет в электрические сигналы, которые обрабатываются процессором.</li>
-                <li>Процессор формирует файл (JPEG, RAW), сохраняет его на карту памяти.</li>
-                <li>Результат можно просмотреть на экране или через видоискатель, а также передать на компьютер или смартфон.</li>
+                <li>РЎРІРµС‚ РїСЂРѕС…РѕРґРёС‚ С‡РµСЂРµР· РѕР±СЉРµРєС‚РёРІ, С„РѕРєСѓСЃРёСЂСѓРµС‚СЃСЏ РЅР° РјР°С‚СЂРёС†Рµ.</li>
+                <li>Р—Р°С‚РІРѕСЂ РѕС‚РєСЂС‹РІР°РµС‚СЃСЏ РЅР° Р·Р°РґР°РЅРЅРѕРµ РІСЂРµРјСЏ (РІС‹РґРµСЂР¶РєР°), СЃРІРµС‚ РїРѕРїР°РґР°РµС‚ РЅР° СЃРµРЅСЃРѕСЂ.</li>
+                <li>РњР°С‚СЂРёС†Р° РїСЂРµРѕР±СЂР°Р·СѓРµС‚ СЃРІРµС‚ РІ СЌР»РµРєС‚СЂРёС‡РµСЃРєРёРµ СЃРёРіРЅР°Р»С‹, РєРѕС‚РѕСЂС‹Рµ РѕР±СЂР°Р±Р°С‚С‹РІР°СЋС‚СЃСЏ РїСЂРѕС†РµСЃСЃРѕСЂРѕРј.</li>
+                <li>РџСЂРѕС†РµСЃСЃРѕСЂ С„РѕСЂРјРёСЂСѓРµС‚ С„Р°Р№Р» (JPEG, RAW), СЃРѕС…СЂР°РЅСЏРµС‚ РµРіРѕ РЅР° РєР°СЂС‚Сѓ РїР°РјСЏС‚Рё.</li>
+                <li>Р РµР·СѓР»СЊС‚Р°С‚ РјРѕР¶РЅРѕ РїСЂРѕСЃРјРѕС‚СЂРµС‚СЊ РЅР° СЌРєСЂР°РЅРµ РёР»Рё С‡РµСЂРµР· РІРёРґРѕРёСЃРєР°С‚РµР»СЊ, Р° С‚Р°РєР¶Рµ РїРµСЂРµРґР°С‚СЊ РЅР° РєРѕРјРїСЊСЋС‚РµСЂ РёР»Рё СЃРјР°СЂС‚С„РѕРЅ.</li>
             </ul>
             <div class="recommend-box">
                 <i class="fas fa-info-circle"></i>
                 <div>
-                    <strong>Совет:</strong> При выборе камеры обращайте внимание не только на мегапиксели, но и на тип и размер матрицы, качество объектива, скорость процессора и удобство управления.
+                    <strong>РЎРѕРІРµС‚:</strong> РџСЂРё РІС‹Р±РѕСЂРµ РєР°РјРµСЂС‹ РѕР±СЂР°С‰Р°Р№С‚Рµ РІРЅРёРјР°РЅРёРµ РЅРµ С‚РѕР»СЊРєРѕ РЅР° РјРµРіР°РїРёРєСЃРµР»Рё, РЅРѕ Рё РЅР° С‚РёРї Рё СЂР°Р·РјРµСЂ РјР°С‚СЂРёС†С‹, РєР°С‡РµСЃС‚РІРѕ РѕР±СЉРµРєС‚РёРІР°, СЃРєРѕСЂРѕСЃС‚СЊ РїСЂРѕС†РµСЃСЃРѕСЂР° Рё СѓРґРѕР±СЃС‚РІРѕ СѓРїСЂР°РІР»РµРЅРёСЏ.
                 </div>
             </div>
             <div class="pro-tips">
-                <h4>?? Профессиональные советы</h4>
+                <h4>рџ”№ РџСЂРѕС„РµСЃСЃРёРѕРЅР°Р»СЊРЅС‹Рµ СЃРѕРІРµС‚С‹</h4>
                 <div class="tip-item">
                     <i class="fas fa-lightbulb"></i>
-                    <p>Система автофокуса и скорость процессора важны для съёмки динамики и спорта.</p>
+                    <p>РЎРёСЃС‚РµРјР° Р°РІС‚РѕС„РѕРєСѓСЃР° Рё СЃРєРѕСЂРѕСЃС‚СЊ РїСЂРѕС†РµСЃСЃРѕСЂР° РІР°Р¶РЅС‹ РґР»СЏ СЃСЉС‘РјРєРё РґРёРЅР°РјРёРєРё Рё СЃРїРѕСЂС‚Р°.</p>
                 </div>
                 <div class="tip-item">
                     <i class="fas fa-lightbulb"></i>
-                    <p>Матрица большего размера (APS-C, Full Frame) даёт меньше шумов и больше возможностей для творчества.</p>
+                    <p>РњР°С‚СЂРёС†Р° Р±РѕР»СЊС€РµРіРѕ СЂР°Р·РјРµСЂР° (APS-C, Full Frame) РґР°С‘С‚ РјРµРЅСЊС€Рµ С€СѓРјРѕРІ Рё Р±РѕР»СЊС€Рµ РІРѕР·РјРѕР¶РЅРѕСЃС‚РµР№ РґР»СЏ С‚РІРѕСЂС‡РµСЃС‚РІР°.</p>
                 </div>
                 <div class="tip-item">
                     <i class="fas fa-lightbulb"></i>
-                    <p>Выбирайте камеру с удобным хватом, ярким экраном и понятным меню - это ускорит обучение и повысит удовольствие от съёмки.</p>
+                    <p>Р’С‹Р±РёСЂР°Р№С‚Рµ РєР°РјРµСЂСѓ СЃ СѓРґРѕР±РЅС‹Рј С…РІР°С‚РѕРј, СЏСЂРєРёРј СЌРєСЂР°РЅРѕРј Рё РїРѕРЅСЏС‚РЅС‹Рј РјРµРЅСЋ - СЌС‚Рѕ СѓСЃРєРѕСЂРёС‚ РѕР±СѓС‡РµРЅРёРµ Рё РїРѕРІС‹СЃРёС‚ СѓРґРѕРІРѕР»СЊСЃС‚РІРёРµ РѕС‚ СЃСЉС‘РјРєРё.</p>
                 </div>
             </div>
-            <h2>Часто задаваемые вопросы</h2>
+            <h2>Р§Р°СЃС‚Рѕ Р·Р°РґР°РІР°РµРјС‹Рµ РІРѕРїСЂРѕСЃС‹</h2>
             <ul>
-                <li><b>Что важнее: матрица или объектив?</b> - Оба компонента одинаково важны: матрица отвечает за качество сигнала, объектив - за резкость и характер изображения.</li>
-                <li><b>Можно ли менять объективы?</b> - Да, на зеркальных и беззеркальных камерах с байонетом, на компактных - нет.</li>
-                <li><b>Зачем нужен процессор?</b> - Он отвечает за обработку изображения, скорость работы камеры, шумоподавление и цветопередачу.</li>
+                <li><b>Р§С‚Рѕ РІР°Р¶РЅРµРµ: РјР°С‚СЂРёС†Р° РёР»Рё РѕР±СЉРµРєС‚РёРІ?</b> - РћР±Р° РєРѕРјРїРѕРЅРµРЅС‚Р° РѕРґРёРЅР°РєРѕРІРѕ РІР°Р¶РЅС‹: РјР°С‚СЂРёС†Р° РѕС‚РІРµС‡Р°РµС‚ Р·Р° РєР°С‡РµСЃС‚РІРѕ СЃРёРіРЅР°Р»Р°, РѕР±СЉРµРєС‚РёРІ - Р·Р° СЂРµР·РєРѕСЃС‚СЊ Рё С…Р°СЂР°РєС‚РµСЂ РёР·РѕР±СЂР°Р¶РµРЅРёСЏ.</li>
+                <li><b>РњРѕР¶РЅРѕ Р»Рё РјРµРЅСЏС‚СЊ РѕР±СЉРµРєС‚РёРІС‹?</b> - Р”Р°, РЅР° Р·РµСЂРєР°Р»СЊРЅС‹С… Рё Р±РµР·Р·РµСЂРєР°Р»СЊРЅС‹С… РєР°РјРµСЂР°С… СЃ Р±Р°Р№РѕРЅРµС‚РѕРј, РЅР° РєРѕРјРїР°РєС‚РЅС‹С… - РЅРµС‚.</li>
+                <li><b>Р—Р°С‡РµРј РЅСѓР¶РµРЅ РїСЂРѕС†РµСЃСЃРѕСЂ?</b> - РћРЅ РѕС‚РІРµС‡Р°РµС‚ Р·Р° РѕР±СЂР°Р±РѕС‚РєСѓ РёР·РѕР±СЂР°Р¶РµРЅРёСЏ, СЃРєРѕСЂРѕСЃС‚СЊ СЂР°Р±РѕС‚С‹ РєР°РјРµСЂС‹, С€СѓРјРѕРїРѕРґР°РІР»РµРЅРёРµ Рё С†РІРµС‚РѕРїРµСЂРµРґР°С‡Сѓ.</li>
             </ul>
-            <h2>?? Итог</h2>
+            <h2>рџ“Њ РС‚РѕРі</h2>
             <p>
-                Современный цифровой фотоаппарат - это сложная система из объектива, матрицы, затвора, процессора, автофокуса, экрана, аккумулятора и корпуса. Каждый компонент влияет на итоговое качество снимка, удобство и возможности камеры. Понимание устройства поможет сделать правильный выбор и использовать камеру максимально эффективно.
+                РЎРѕРІСЂРµРјРµРЅРЅС‹Р№ С†РёС„СЂРѕРІРѕР№ С„РѕС‚РѕР°РїРїР°СЂР°С‚ - СЌС‚Рѕ СЃР»РѕР¶РЅР°СЏ СЃРёСЃС‚РµРјР° РёР· РѕР±СЉРµРєС‚РёРІР°, РјР°С‚СЂРёС†С‹, Р·Р°С‚РІРѕСЂР°, РїСЂРѕС†РµСЃСЃРѕСЂР°, Р°РІС‚РѕС„РѕРєСѓСЃР°, СЌРєСЂР°РЅР°, Р°РєРєСѓРјСѓР»СЏС‚РѕСЂР° Рё РєРѕСЂРїСѓСЃР°. РљР°Р¶РґС‹Р№ РєРѕРјРїРѕРЅРµРЅС‚ РІР»РёСЏРµС‚ РЅР° РёС‚РѕРіРѕРІРѕРµ РєР°С‡РµСЃС‚РІРѕ СЃРЅРёРјРєР°, СѓРґРѕР±СЃС‚РІРѕ Рё РІРѕР·РјРѕР¶РЅРѕСЃС‚Рё РєР°РјРµСЂС‹. РџРѕРЅРёРјР°РЅРёРµ СѓСЃС‚СЂРѕР№СЃС‚РІР° РїРѕРјРѕР¶РµС‚ СЃРґРµР»Р°С‚СЊ РїСЂР°РІРёР»СЊРЅС‹Р№ РІС‹Р±РѕСЂ Рё РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ РєР°РјРµСЂСѓ РјР°РєСЃРёРјР°Р»СЊРЅРѕ СЌС„С„РµРєС‚РёРІРЅРѕ.
             </p>
 </div>
 
-        <!-- Telegram рекламный баннер -->
+        <!-- Telegram СЂРµРєР»Р°РјРЅС‹Р№ Р±Р°РЅРЅРµСЂ -->
         <a href="https://t.me/RepairoRU" target="_blank" rel="noopener noreferrer" class="telegram-banner">
           <div class="telegram-banner-container">
             <div class="telegram-logo">
@@ -483,10 +513,10 @@
               </svg>
             </div>
             <div class="telegram-content">
-              <div class="telegram-title">Новости из мира технологий</div>
-              <div class="telegram-subtitle">В нашем новом Telegram-канале. Подписывайтесь и будьте в числе первых!</div>
+              <div class="telegram-title">РќРѕРІРѕСЃС‚Рё РёР· РјРёСЂР° С‚РµС…РЅРѕР»РѕРіРёР№</div>
+              <div class="telegram-subtitle">Р’ РЅР°С€РµРј РЅРѕРІРѕРј Telegram-РєР°РЅР°Р»Рµ. РџРѕРґРїРёСЃС‹РІР°Р№С‚РµСЃСЊ Рё Р±СѓРґСЊС‚Рµ РІ С‡РёСЃР»Рµ РїРµСЂРІС‹С…!</div>
               <div class="telegram-button">
-                Подписаться
+                РџРѕРґРїРёСЃР°С‚СЊСЃСЏ
                 <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.56c-.21 2.22-1.12 7.58-1.58 10.06-.19 1.07-.57 1.43-.94 1.46-.8.07-1.4-.52-2.17-1.03-1.21-.79-1.89-1.28-3.06-2.05-1.35-.87-.47-1.35.3-2.13.2-.21 3.71-3.39 3.77-3.68.01-.04.01-.18-.07-.26s-.2-.05-.29-.03c-.12.03-2.11 1.34-5.95 3.93-.56.38-1.07.57-1.53.56-.5-.01-1.47-.28-2.19-.51-.88-.28-1.58-.43-1.52-.91.03-.25.38-.51 1.04-.78 4.07-1.77 6.78-2.94 8.13-3.51 3.88-1.62 4.68-1.9 5.19-1.91.12 0 .37.03.54.17.14.12.18.28.2.44-.01.06 0 .11-.01.17z"/>
                 </svg>
@@ -511,45 +541,45 @@
                         </span>
                         <span class="logo__text">Repairo</span>
                     </a>
-                    <p class="footer__text">Помогаем ремонтировать электронику с 2024 года</p>
+                    <p class="footer__text">РџРѕРјРѕРіР°РµРј СЂРµРјРѕРЅС‚РёСЂРѕРІР°С‚СЊ СЌР»РµРєС‚СЂРѕРЅРёРєСѓ СЃ 2024 РіРѕРґР°</p>
                 </div>
                 <div class="footer__col">
-                    <h3 class="footer__title">Разделы</h3>
+                    <h3 class="footer__title">Р Р°Р·РґРµР»С‹</h3>
                     <ul class="footer__links">
-                        <li><a href="../index.html" class="footer__link">Главная</a></li>
-                        <li><a href="../index.html#categories" class="footer__link">Все гайды</a></li>
-                        <li><a href="../contacts.html" class="footer__link">Контакты</a></li>
+                        <li><a href="../index.html" class="footer__link">Р“Р»Р°РІРЅР°СЏ</a></li>
+                        <li><a href="../index.html#categories" class="footer__link">Р’СЃРµ РіР°Р№РґС‹</a></li>
+                        <li><a href="../contacts.html" class="footer__link">РљРѕРЅС‚Р°РєС‚С‹</a></li>
                     </ul>
                 </div>
                 <div class="footer__col">
-                    <h3 class="footer__title">Категории</h3>
+                    <h3 class="footer__title">РљР°С‚РµРіРѕСЂРёРё</h3>
                     <ul class="footer__links">
-                        <li><a href="../tv.html" class="nav__link">Телевизоры</a></li>
-                        <li><a href="../cameras.html" class="nav__link">Фотоаппараты</a></li>
-                        <li><a href="../consoles.html" class="nav__link">Приставки</a></li>
-                        <li><a href="../laptops.html" class="nav__link">Ноутбуки</a></li>
-                        <li><a href="../smartphones.html" class="nav__link">Смартфоны</a></li>
-                        <li><a href="../small-appliances.html" class="nav__link">Мелкая техника</a></li>
-                        <li><a href="../large-appliances.html" class="nav__link">Бытовая техника</a></li>
-                        <li><a href="../auto-electronics.html" class="nav__link">Авто-Электроника</a></li>
+                        <li><a href="../tv.html" class="nav__link">РўРµР»РµРІРёР·РѕСЂС‹</a></li>
+                        <li><a href="../cameras.html" class="nav__link">Р¤РѕС‚РѕР°РїРїР°СЂР°С‚С‹</a></li>
+                        <li><a href="../consoles.html" class="nav__link">РџСЂРёСЃС‚Р°РІРєРё</a></li>
+                        <li><a href="../laptops.html" class="nav__link">РќРѕСѓС‚Р±СѓРєРё</a></li>
+                        <li><a href="../smartphones.html" class="nav__link">РЎРјР°СЂС‚С„РѕРЅС‹</a></li>
+                        <li><a href="../small-appliances.html" class="nav__link">РњРµР»РєР°СЏ С‚РµС…РЅРёРєР°</a></li>
+                        <li><a href="../large-appliances.html" class="nav__link">Р‘С‹С‚РѕРІР°СЏ С‚РµС…РЅРёРєР°</a></li>
+                        <li><a href="../auto-electronics.html" class="nav__link">РђРІС‚Рѕ-Р­Р»РµРєС‚СЂРѕРЅРёРєР°</a></li>
                     </ul>
                 </div>
                 <div class="footer__col">
-                    <h3 class="footer__title">Контакты</h3>
+                    <h3 class="footer__title">РљРѕРЅС‚Р°РєС‚С‹</h3>
                     <ul class="footer__links">
                         <li><a href="https://t.me/RepairoRU" class="footer__link"><i class="fab fa-telegram"></i> Telegram</a></li>
-                        <li><span class="footer__link">Наша почта: repairo.info@mail.ru</span></li>
+                        <li><span class="footer__link">РќР°С€Р° РїРѕС‡С‚Р°: repairo.info@mail.ru</span></li>
                     </ul>
                 </div>
             </div>
             <div class="footer__bottom">
                 <p class="disclaimer">
-    Администрация сайта не несёт ответственности за возможные повреждения техники
-    и иные последствия, возникшие в результате самостоятельного ремонта по
-    материалам и инструкциям, размещённым на сайте. Все работы вы выполняете
-    на свой страх и риск.
+    РђРґРјРёРЅРёСЃС‚СЂР°С†РёСЏ СЃР°Р№С‚Р° РЅРµ РЅРµСЃС‘С‚ РѕС‚РІРµС‚СЃС‚РІРµРЅРЅРѕСЃС‚Рё Р·Р° РІРѕР·РјРѕР¶РЅС‹Рµ РїРѕРІСЂРµР¶РґРµРЅРёСЏ С‚РµС…РЅРёРєРё
+    Рё РёРЅС‹Рµ РїРѕСЃР»РµРґСЃС‚РІРёСЏ, РІРѕР·РЅРёРєС€РёРµ РІ СЂРµР·СѓР»СЊС‚Р°С‚Рµ СЃР°РјРѕСЃС‚РѕСЏС‚РµР»СЊРЅРѕРіРѕ СЂРµРјРѕРЅС‚Р° РїРѕ
+    РјР°С‚РµСЂРёР°Р»Р°Рј Рё РёРЅСЃС‚СЂСѓРєС†РёСЏРј, СЂР°Р·РјРµС‰С‘РЅРЅС‹Рј РЅР° СЃР°Р№С‚Рµ. Р’СЃРµ СЂР°Р±РѕС‚С‹ РІС‹ РІС‹РїРѕР»РЅСЏРµС‚Рµ
+    РЅР° СЃРІРѕР№ СЃС‚СЂР°С… Рё СЂРёСЃРє.
     </p>
-                <p class="footer__copyright">© 2026 Repairo. Все права защищены.</p>
+                <p class="footer__copyright">В© 2026 Repairo. Р’СЃРµ РїСЂР°РІР° Р·Р°С‰РёС‰РµРЅС‹.</p>
             </div>
         </div>
     </footer>
@@ -560,32 +590,32 @@
 {
   "@context": "https://schema.org",
   "@type": "HowTo",
-  "name": "Как устроен цифровой фотоаппарат? Основные компоненты",
-  "description": "Пошаговая инструкция: Как устроен цифровой фотоаппарат? Основные компоненты. Система автофокуса и скорость процессора важны для съёмки динамики и спорта.. Со...",
+  "name": "РљР°Рє СѓСЃС‚СЂРѕРµРЅ С†РёС„СЂРѕРІРѕР№ С„РѕС‚РѕР°РїРїР°СЂР°С‚? РћСЃРЅРѕРІРЅС‹Рµ РєРѕРјРїРѕРЅРµРЅС‚С‹",
+  "description": "РџРѕС€Р°РіРѕРІР°СЏ РёРЅСЃС‚СЂСѓРєС†РёСЏ: РљР°Рє СѓСЃС‚СЂРѕРµРЅ С†РёС„СЂРѕРІРѕР№ С„РѕС‚РѕР°РїРїР°СЂР°С‚? РћСЃРЅРѕРІРЅС‹Рµ РєРѕРјРїРѕРЅРµРЅС‚С‹. РЎРёСЃС‚РµРјР° Р°РІС‚РѕС„РѕРєСѓСЃР° Рё СЃРєРѕСЂРѕСЃС‚СЊ РїСЂРѕС†РµСЃСЃРѕСЂР° РІР°Р¶РЅС‹ РґР»СЏ СЃСЉС‘РјРєРё РґРёРЅР°РјРёРєРё Рё СЃРїРѕСЂС‚Р°.. РЎРѕ...",
   "totalTime": "PT30M",
   "step": [
     {
       "@type": "HowToStep",
-      "name": "Главные компоненты цифрового фотоаппарата",
-      "text": "Главные компоненты цифрового фотоаппарата",
+      "name": "Р“Р»Р°РІРЅС‹Рµ РєРѕРјРїРѕРЅРµРЅС‚С‹ С†РёС„СЂРѕРІРѕРіРѕ С„РѕС‚РѕР°РїРїР°СЂР°С‚Р°",
+      "text": "Р“Р»Р°РІРЅС‹Рµ РєРѕРјРїРѕРЅРµРЅС‚С‹ С†РёС„СЂРѕРІРѕРіРѕ С„РѕС‚РѕР°РїРїР°СЂР°С‚Р°",
       "url": "#step-1"
     },
     {
       "@type": "HowToStep",
-      "name": "Как работает цифровой фотоаппарат?",
-      "text": "Как работает цифровой фотоаппарат?",
+      "name": "РљР°Рє СЂР°Р±РѕС‚Р°РµС‚ С†РёС„СЂРѕРІРѕР№ С„РѕС‚РѕР°РїРїР°СЂР°С‚?",
+      "text": "РљР°Рє СЂР°Р±РѕС‚Р°РµС‚ С†РёС„СЂРѕРІРѕР№ С„РѕС‚РѕР°РїРїР°СЂР°С‚?",
       "url": "#step-2"
     },
     {
       "@type": "HowToStep",
-      "name": "Часто задаваемые вопросы",
-      "text": "Часто задаваемые вопросы",
+      "name": "Р§Р°СЃС‚Рѕ Р·Р°РґР°РІР°РµРјС‹Рµ РІРѕРїСЂРѕСЃС‹",
+      "text": "Р§Р°СЃС‚Рѕ Р·Р°РґР°РІР°РµРјС‹Рµ РІРѕРїСЂРѕСЃС‹",
       "url": "#step-3"
     },
     {
       "@type": "HowToStep",
-      "name": "?? Итог",
-      "text": "?? Итог",
+      "name": "рџ“Њ РС‚РѕРі",
+      "text": "рџ“Њ РС‚РѕРі",
       "url": "#step-4"
     }
   ],
@@ -596,8 +626,4 @@
 <script src="../cookie-consent.js"></script>
 </body>
 </html>
-
-
-
-
 

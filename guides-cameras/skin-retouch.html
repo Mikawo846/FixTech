@@ -2,36 +2,43 @@
 <html lang="ru" data-theme="light">
 <head>
 
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Ретушь кожи: естественные методы | Repairo</title>
-    <meta name="description" content="">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Р РµС‚СѓС€СЊ РєРѕР¶Рё: РµСЃС‚РµСЃС‚РІРµРЅРЅС‹Рµ РјРµС‚РѕРґС‹ | Repairo</title>
+    <meta name="description" content="{{ description }}">
+    <meta name="description" content="РџРѕС€Р°РіРѕРІР°СЏ РёРЅСЃС‚СЂСѓРєС†РёСЏ: Р РµС‚СѓС€СЊ РєРѕР¶Рё: РµСЃС‚РµСЃС‚РІРµРЅРЅС‹Рµ РјРµС‚РѕРґС‹. РСЃРїРѕР»СЊР·СѓР№С‚Рµ РЅРёР·РєСѓСЋ РЅРµРїСЂРѕР·СЂР°С‡РЅРѕСЃС‚СЊ РєРёСЃС‚Рё РґР»СЏ РїР»Р°РІРЅС‹С… РїРµСЂРµС…РѕРґРѕРІ.. РЎРѕРІРµС‚С‹ СЌРєСЃРїРµСЂС‚РѕРІ, С‚Р°Р±Р»РёС†С‹, FAQ.">
 
-  <link rel="stylesheet" href="../styles.css" />
-  <link rel="stylesheet" href="../styles-header.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <style>
-    .guide-content { line-height: 1.7; color: var(--text); }
-    .guide-content h2 { color: var(--primary); margin-top: 30px; margin-bottom: 15px; font-size: 1.5rem; }
-    .guide-content h3 { color: var(--primary-dark); margin-top: 25px; margin-bottom: 12px; font-size: 1.2rem; }
-    .guide-image-block { margin: 20px 0; padding: 15px; background: var(--background); border-radius: var(--border-radius); border: 1px solid var(--border); text-align: center; }
-    .guide-image-block img { max-width: 100%; height: auto; border-radius: 6px; border: 1px solid var(--border); }
-    .image-caption { margin-top: 10px; font-size: 0.85rem; color: var(--text-light); font-style: italic; }
-    .pro-tips { background: rgba(3, 74, 79, 0.05); padding: 15px; border-radius: 6px; margin: 20px 0; }
-    .pro-tips h4 { color: var(--primary); margin-top: 0; margin-bottom: 12px; font-size: 1.1rem; }
-    .tip-item { display: flex; gap: 8px; margin-bottom: 8px; align-items: flex-start; }
-    table { width: 100%; border-collapse: collapse; margin: 20px 0; }
-    th, td { border: 1px solid var(--border); padding: 8px; text-align: left; }
-    th { background: var(--background-light); }
-    .highlight { background: #f5f7fa; border-left: 4px solid #2d9cdb; padding: 10px 15px; margin: 20px 0; }
-    .faq-section ul { margin-left: 1em; }
-    .block-section { margin-bottom: 2em; }
-    @media (max-width: 768px) {
-      .guide-content h2 { font-size: 1.4rem; margin-top: 25px; }
-      .guide-image-block { padding: 12px; margin: 15px 0; }
-      table, th, td { font-size: 0.95rem; }
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../styles-header.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .guide-content { line-height: 1.7; color: var(--text);}
+        .guide-content h2 { color: var(--primary); margin-top: 30px; margin-bottom: 15px; font-size: 1.5rem;}
+        .step-group { margin: 20px 0; padding: 15px; background: var(--background); border-radius: var(--border-radius); border: 1px solid var(--border);}
+        .step { display: flex; gap: 15px; margin: 12px 0; padding: 12px; background: var(--background-alt); border-radius: 6px; align-items: flex-start;}
+        .step-number { background: var(--primary); color: white; width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-weight: bold; font-size: 0.8rem;}
+        .guide-image-block { margin: 20px 0; padding: 15px; background: var(--background); border-radius: var(--border-radius); border: 1px solid var(--border); text-align: center;}
+        .guide-image-block img { max-width: 100%; height: auto; border-radius: 6px; border: 1px solid var(--border);}
+        .recommend-box { background: rgba(3, 74, 79, 0.1); border-left: 4px solid var(--primary); padding: 12px; margin: 15px 0; display: flex; gap: 12px; align-items: flex-start; border-radius: 4px;}
+        .recommend-box i { font-size: 1.2rem; color: var(--primary); margin-top: 2px;}
+        .pro-tips { background: rgba(3, 74, 79, 0.05); padding: 15px; border-radius: 6px; margin: 20px 0;}
+        .pro-tips h4 { color: var(--primary); margin-top: 0; margin-bottom: 12px; font-size: 1.1rem;}
+        .tip-item { display: flex; gap: 8px; margin-bottom: 8px; align-items: flex-start;}
+        @media (max-width: 768px) {
+            .guide-content h2 { font-size: 1.4rem; margin-top: 25px;}
+            .guide-image-block, .step-group { padding: 12px; margin: 15px 0;}
+            .step { padding: 10px;}
+        }
+    /* РЇРЅРґРµРєСЃ РњР°СЂРєРµС‚ СЂРµРєР»Р°РјРЅС‹Р№ Р±Р°РЅРЅРµСЂ */
+    .ym-hero-link {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+      max-width: 100%;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     }
+
     /* Р“РѕСЂРёР·РѕРЅС‚Р°Р»СЊРЅС‹Р№ Р±Р°РЅРЅРµСЂ-РєР°СЂС‚РѕС‡РєР° */
     .ym-hero-banner {
       width: 100%;
@@ -144,11 +151,13 @@
       transition: background 0.15s ease, transform 0.15s ease,
                   box-shadow 0.15s ease;
     }
+
     .ym-hero-button::after {
       content: "в†’";
       margin-left: 6px;
       font-size: 14px;
     }
+
     .ym-hero-button:hover {
       background: #7c3aed;
       transform: translateY(-1px);
@@ -172,19 +181,24 @@
         max-width: 100%;
         margin: 20px 0;
       }
+
       .ym-hero-images {
         height: 100px;
       }
+
       .ym-hero-content {
         padding: 12px 12px;
       }
+
       .ym-hero-title {
         font-size: 13px;
       }
+
       .ym-hero-button {
         font-size: 13px;
         padding: 8px 14px;
       }
+
       .ym-hero-legal {
         font-size: 10px;
       }
@@ -292,22 +306,27 @@
         padding: 15px;
         min-height: 100px;
       }
+
       .telegram-logo {
         width: 50px;
         height: 50px;
         min-width: 50px;
         margin-right: 15px;
       }
+
       .telegram-logo svg {
         width: 26px;
         height: 26px;
       }
+
       .telegram-title {
         font-size: 14px;
       }
+
       .telegram-subtitle {
         font-size: 12px;
       }
+
       .telegram-button {
         font-size: 12px;
         padding: 6px 12px;
@@ -316,122 +335,136 @@
 
 
 
-  </style>
+    </style>
   <script async src="https://timeweb.cloud/api/v1/cloud-ai/agents/3cc03620-d051-4d8d-b5af-f7b6cd083a35/embed.js?collapsed=true"></script>
 </head>
 <body>
-  <header class="header">
-    <div class="container">
-      <div class="header__inner">
-        <a href="../index.html" class="logo">
-          <span class="logo__icon"></span>
-          <span class="logo__text">GeoExpert</span>
-        </a>
-        <nav class="nav">
-          <ul class="nav__list">
-            <li><a href="../cameras.html" class="nav__link">РљР°РјРµСЂС‹</a></li>
-            <li><a href="../drones.html" class="nav__link">Р”СЂРѕРЅС‹</a></li>
-            <li><a href="../workflow.html" class="nav__link">Workflow</a></li>
-          </ul>
-        </nav>
-      </div>
-    </div>
-  </header>
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <a href="../index.html" class="logo">
+                    <span class="logo__icon"></span>
+                    <span class="logo__text">Repairo</span>
+                </a>
+                <nav class="nav">
+                    <ul class="nav__list">
+                        <li><a href="../cameras.html" class="nav__link">Р¤РѕС‚РѕР°РїРїР°СЂР°С‚С‹</a></li>
+                        <li><a href="../tv.html" class="nav__link">РўРµР»РµРІРёР·РѕСЂС‹</a></li>
+                        <li><a href="../laptops.html" class="nav__link">РќРѕСѓС‚Р±СѓРєРё</a></li>
+                        <li><a href="../smartphones.html" class="nav__link">РЎРјР°СЂС‚С„РѕРЅС‹</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
     <section class="guide-page">
         <div class="container">
             <div class="breadcrumbs">
-                <a href="../index.html">Главная</a>
+                <a href="../index.html">Р“Р»Р°РІРЅР°СЏ</a>
                 <i class="fas fa-chevron-right"></i>
-                <a href="../cameras.html">Фотоаппараты</a>
+                <a href="../cameras.html">Р¤РѕС‚РѕР°РїРїР°СЂР°С‚С‹</a>
                 <i class="fas fa-chevron-right"></i>
-                <span>Ретушь кожи: естественные методы</span>
+                <span>Р РµС‚СѓС€СЊ РєРѕР¶Рё: РµСЃС‚РµСЃС‚РІРµРЅРЅС‹Рµ РјРµС‚РѕРґС‹</span>
             </div>
-            <h1 class="section__title">Ретушь кожи: естественные методы</h1>
+            <h1 class="section__title">Р РµС‚СѓС€СЊ РєРѕР¶Рё: РµСЃС‚РµСЃС‚РІРµРЅРЅС‹Рµ РјРµС‚РѕРґС‹</h1>
             <div class="guide-meta">
-                <span><i class="fas fa-adjust"></i> Практический гайд</span>
+                <span><i class="fas fa-adjust"></i> РџСЂР°РєС‚РёС‡РµСЃРєРёР№ РіР°Р№Рґ</span>
             </div>
             <div class="guide-image-block">
-                <img src="https://avatars.mds.yandex.net/get-shedevrum/13110292/img_951e0efb2d7b11f0a3737acc1207f44c/orig" alt="Естественная ретушь кожи">
+                <img src="https://avatars.mds.yandex.net/get-shedevrum/13110292/img_951e0efb2d7b11f0a3737acc1207f44c/orig" alt="Р•СЃС‚РµСЃС‚РІРµРЅРЅР°СЏ СЂРµС‚СѓС€СЊ РєРѕР¶Рё">
             </div>
             <div class="guide-content">
-        <!-- Яндекс Маркет рекламный блок -->
+        <!-- РЇРЅРґРµРєСЃ РњР°СЂРєРµС‚ СЂРµРєР»Р°РјРЅС‹Р№ Р±Р»РѕРє -->
         <a href="https://market.yandex.ru/catalog--bytovaia-tekhnika/54419/list?hid=198118&rs=eJwzUvjEKMvBILDwEKsEg8Kzbh6Nw4dZNS4D8c7lFhp9c1-wAQC3uAwP&clid=14635360&refid=rbck8fgamv681iu59go3iqxwddedl4x9&erid=5jtCeReNx12oajxS2bzShmZ&mclid=1003&distr_type=7&utm_source=partner_network&pp=900&utm_medium=link_list&utm_campaign=14635360"
            target="_blank"
            rel="noopener noreferrer sponsored"
+           class="ym-hero-link">
+          <div class="ym-hero-banner">
+            <div class="ym-hero-images">
+              <div class="ym-hero-image">
                 <img src="https://avatars.mds.yandex.net/get-mpic/14770882/2a00000197f4dbee777f8afddccaf44faa53/optimize"
-                     alt="Распродажа бытовой электроники 1">
+                     alt="Р Р°СЃРїСЂРѕРґР°Р¶Р° Р±С‹С‚РѕРІРѕР№ СЌР»РµРєС‚СЂРѕРЅРёРєРё 1">
               </div>
+              <div class="ym-hero-image">
                 <img src="https://avatars.mds.yandex.net/get-mpic/15580298/img_id8867318964670654684.jpeg/optimize"
-                     alt="Распродажа бытовой электроники 2">
+                     alt="Р Р°СЃРїСЂРѕРґР°Р¶Р° Р±С‹С‚РѕРІРѕР№ СЌР»РµРєС‚СЂРѕРЅРёРєРё 2">
               </div>
+              <div class="ym-hero-image">
                 <img src="https://avatars.mds.yandex.net/get-mpic/10096780/2a000001953b534fed2494e0b30fadd9b458/optimize"
-                     alt="Распродажа бытовой электроники 3">
+                     alt="Р Р°СЃРїСЂРѕРґР°Р¶Р° Р±С‹С‚РѕРІРѕР№ СЌР»РµРєС‚СЂРѕРЅРёРєРё 3">
               </div>
             </div>
-                  ? Выгодные предложения
+            <div class="ym-hero-content">
+              <h3 class="ym-hero-title">Р Р°СЃРїСЂРѕРґР°Р¶Р° Р±С‹С‚РѕРІРѕР№ СЌР»РµРєС‚СЂРѕРЅРёРєРё РЅР° РЇРЅРґРµРєСЃ РњР°СЂРєРµС‚Рµ</h3>
+              <div class="ym-hero-top">
+                <div class="ym-hero-rating">
+                  в­ђ Р’С‹РіРѕРґРЅС‹Рµ РїСЂРµРґР»РѕР¶РµРЅРёСЏ
+                  <span class="ym-hero-rating-count">РЎРєРёРґРєРё РґРѕ 50%</span>
                 </div>
               </div>
+              <button class="ym-hero-button">Р—Р° СЃРєРёРґРєР°РјРё</button>
             </div>
           </div>
-            Реклама. ООО "ЯНДЕКС", ИНН 7736207543. clid: 14635360, erid: 5jtCeReNx12oajxS2bzShmZ
+          <div class="ym-hero-legal">
+            Р РµРєР»Р°РјР°. РћРћРћ "РЇРќР”Р•РљРЎ", РРќРќ 7736207543. clid: 14635360, erid: 5jtCeReNx12oajxS2bzShmZ
           </div>
         </a>
-                <h2>Принципы естественной ретуши</h2>
+                <h2>РџСЂРёРЅС†РёРїС‹ РµСЃС‚РµСЃС‚РІРµРЅРЅРѕР№ СЂРµС‚СѓС€Рё</h2>
                 <ul>
-                    <li>Сохраняйте текстуру кожи - лицо должно выглядеть живым, а не «пластиковым».</li>
-                    <li>Удаляйте только временные недостатки: прыщи, покраснения, мелкие дефекты.</li>
-                    <li>Не стирайте родинки, шрамы и индивидуальные черты без согласия модели.</li>
+                    <li>РЎРѕС…СЂР°РЅСЏР№С‚Рµ С‚РµРєСЃС‚СѓСЂСѓ РєРѕР¶Рё - Р»РёС†Рѕ РґРѕР»Р¶РЅРѕ РІС‹РіР»СЏРґРµС‚СЊ Р¶РёРІС‹Рј, Р° РЅРµ В«РїР»Р°СЃС‚РёРєРѕРІС‹РјВ».</li>
+                    <li>РЈРґР°Р»СЏР№С‚Рµ С‚РѕР»СЊРєРѕ РІСЂРµРјРµРЅРЅС‹Рµ РЅРµРґРѕСЃС‚Р°С‚РєРё: РїСЂС‹С‰Рё, РїРѕРєСЂР°СЃРЅРµРЅРёСЏ, РјРµР»РєРёРµ РґРµС„РµРєС‚С‹.</li>
+                    <li>РќРµ СЃС‚РёСЂР°Р№С‚Рµ СЂРѕРґРёРЅРєРё, С€СЂР°РјС‹ Рё РёРЅРґРёРІРёРґСѓР°Р»СЊРЅС‹Рµ С‡РµСЂС‚С‹ Р±РµР· СЃРѕРіР»Р°СЃРёСЏ РјРѕРґРµР»Рё.</li>
                 </ul>
-                <h2>Пошаговая инструкция по естественной ретуши кожи</h2>
+                <h2>РџРѕС€Р°РіРѕРІР°СЏ РёРЅСЃС‚СЂСѓРєС†РёСЏ РїРѕ РµСЃС‚РµСЃС‚РІРµРЅРЅРѕР№ СЂРµС‚СѓС€Рё РєРѕР¶Рё</h2>
 <div class="step-group">
                     <div class="step">
                         <div class="step-number">1</div>
                         <div>
-                            <strong>Удалите явные дефекты</strong>
+                            <strong>РЈРґР°Р»РёС‚Рµ СЏРІРЅС‹Рµ РґРµС„РµРєС‚С‹</strong>
                             <ul>
-                                <li>Используйте инструмент «Точечная восстанавливающая кисть» (Spot Healing Brush) или «Заплатка» (Patch Tool) в Photoshop.</li>
-                                <li>Аккуратно обработайте прыщи, царапины, отдельные покраснения.</li>
+                                <li>РСЃРїРѕР»СЊР·СѓР№С‚Рµ РёРЅСЃС‚СЂСѓРјРµРЅС‚ В«РўРѕС‡РµС‡РЅР°СЏ РІРѕСЃСЃС‚Р°РЅР°РІР»РёРІР°СЋС‰Р°СЏ РєРёСЃС‚СЊВ» (Spot Healing Brush) РёР»Рё В«Р—Р°РїР»Р°С‚РєР°В» (Patch Tool) РІ Photoshop.</li>
+                                <li>РђРєРєСѓСЂР°С‚РЅРѕ РѕР±СЂР°Р±РѕС‚Р°Р№С‚Рµ РїСЂС‹С‰Рё, С†Р°СЂР°РїРёРЅС‹, РѕС‚РґРµР»СЊРЅС‹Рµ РїРѕРєСЂР°СЃРЅРµРЅРёСЏ.</li>
                             </ul>
                         </div>
                     </div>
                     <div class="step">
                         <div class="step-number">2</div>
                         <div>
-                            <strong>Сгладьте тон кожи</strong>
+                            <strong>РЎРіР»Р°РґСЊС‚Рµ С‚РѕРЅ РєРѕР¶Рё</strong>
                             <ul>
-                                <li>Создайте копию слоя и примените к ней фильтр «Поверхностное размытие» (Surface Blur) или используйте «Частотное разложение» (Frequency Separation).</li>
-                                <li>Работайте на низкой частоте для выравнивания цвета, не трогайте текстуру.</li>
-                                <li>Снизьте непрозрачность слоя, чтобы эффект был мягким и естественным.</li>
+                                <li>РЎРѕР·РґР°Р№С‚Рµ РєРѕРїРёСЋ СЃР»РѕСЏ Рё РїСЂРёРјРµРЅРёС‚Рµ Рє РЅРµР№ С„РёР»СЊС‚СЂ В«РџРѕРІРµСЂС…РЅРѕСЃС‚РЅРѕРµ СЂР°Р·РјС‹С‚РёРµВ» (Surface Blur) РёР»Рё РёСЃРїРѕР»СЊР·СѓР№С‚Рµ В«Р§Р°СЃС‚РѕС‚РЅРѕРµ СЂР°Р·Р»РѕР¶РµРЅРёРµВ» (Frequency Separation).</li>
+                                <li>Р Р°Р±РѕС‚Р°Р№С‚Рµ РЅР° РЅРёР·РєРѕР№ С‡Р°СЃС‚РѕС‚Рµ РґР»СЏ РІС‹СЂР°РІРЅРёРІР°РЅРёСЏ С†РІРµС‚Р°, РЅРµ С‚СЂРѕРіР°Р№С‚Рµ С‚РµРєСЃС‚СѓСЂСѓ.</li>
+                                <li>РЎРЅРёР·СЊС‚Рµ РЅРµРїСЂРѕР·СЂР°С‡РЅРѕСЃС‚СЊ СЃР»РѕСЏ, С‡С‚РѕР±С‹ СЌС„С„РµРєС‚ Р±С‹Р» РјСЏРіРєРёРј Рё РµСЃС‚РµСЃС‚РІРµРЅРЅС‹Рј.</li>
                             </ul>
                         </div>
                     </div>
                     <div class="step">
                         <div class="step-number">3</div>
                         <div>
-                            <strong>Сохраните текстуру кожи</strong>
+                            <strong>РЎРѕС…СЂР°РЅРёС‚Рµ С‚РµРєСЃС‚СѓСЂСѓ РєРѕР¶Рё</strong>
                             <ul>
-                                <li>Используйте высокочастотный слой (при частотном разложении) для восстановления пор и мелких деталей.</li>
-                                <li>Не переусердствуйте с размытием - кожа должна оставаться фактурной.</li>
+                                <li>РСЃРїРѕР»СЊР·СѓР№С‚Рµ РІС‹СЃРѕРєРѕС‡Р°СЃС‚РѕС‚РЅС‹Р№ СЃР»РѕР№ (РїСЂРё С‡Р°СЃС‚РѕС‚РЅРѕРј СЂР°Р·Р»РѕР¶РµРЅРёРё) РґР»СЏ РІРѕСЃСЃС‚Р°РЅРѕРІР»РµРЅРёСЏ РїРѕСЂ Рё РјРµР»РєРёС… РґРµС‚Р°Р»РµР№.</li>
+                                <li>РќРµ РїРµСЂРµСѓСЃРµСЂРґСЃС‚РІСѓР№С‚Рµ СЃ СЂР°Р·РјС‹С‚РёРµРј - РєРѕР¶Р° РґРѕР»Р¶РЅР° РѕСЃС‚Р°РІР°С‚СЊСЃСЏ С„Р°РєС‚СѓСЂРЅРѕР№.</li>
                             </ul>
                         </div>
                     </div>
                     <div class="step">
                         <div class="step-number">4</div>
                         <div>
-                            <strong>Корректируйте цвет и контраст</strong>
+                            <strong>РљРѕСЂСЂРµРєС‚РёСЂСѓР№С‚Рµ С†РІРµС‚ Рё РєРѕРЅС‚СЂР°СЃС‚</strong>
                             <ul>
-                                <li>Используйте корректирующие слои «Кривые» или «Цветовой баланс», чтобы убрать излишнюю красноту или желтизну.</li>
-                                <li>Добавьте немного контраста для объёма, но избегайте пересветов.</li>
+                                <li>РСЃРїРѕР»СЊР·СѓР№С‚Рµ РєРѕСЂСЂРµРєС‚РёСЂСѓСЋС‰РёРµ СЃР»РѕРё В«РљСЂРёРІС‹РµВ» РёР»Рё В«Р¦РІРµС‚РѕРІРѕР№ Р±Р°Р»Р°РЅСЃВ», С‡С‚РѕР±С‹ СѓР±СЂР°С‚СЊ РёР·Р»РёС€РЅСЋСЋ РєСЂР°СЃРЅРѕС‚Сѓ РёР»Рё Р¶РµР»С‚РёР·РЅСѓ.</li>
+                                <li>Р”РѕР±Р°РІСЊС‚Рµ РЅРµРјРЅРѕРіРѕ РєРѕРЅС‚СЂР°СЃС‚Р° РґР»СЏ РѕР±СЉС‘РјР°, РЅРѕ РёР·Р±РµРіР°Р№С‚Рµ РїРµСЂРµСЃРІРµС‚РѕРІ.</li>
                             </ul>
                         </div>
                     </div>
                     <div class="step">
                         <div class="step-number">5</div>
                         <div>
-                            <strong>Проверьте результат на 100% увеличении</strong>
+                            <strong>РџСЂРѕРІРµСЂСЊС‚Рµ СЂРµР·СѓР»СЊС‚Р°С‚ РЅР° 100% СѓРІРµР»РёС‡РµРЅРёРё</strong>
                             <ul>
-                                <li>Сравните с исходником, чтобы убедиться, что лицо выглядит натурально.</li>
-                                <li>При необходимости уменьшите силу эффекта с помощью непрозрачности слоя.</li>
+                                <li>РЎСЂР°РІРЅРёС‚Рµ СЃ РёСЃС…РѕРґРЅРёРєРѕРј, С‡С‚РѕР±С‹ СѓР±РµРґРёС‚СЊСЃСЏ, С‡С‚Рѕ Р»РёС†Рѕ РІС‹РіР»СЏРґРёС‚ РЅР°С‚СѓСЂР°Р»СЊРЅРѕ.</li>
+                                <li>РџСЂРё РЅРµРѕР±С…РѕРґРёРјРѕСЃС‚Рё СѓРјРµРЅСЊС€РёС‚Рµ СЃРёР»Сѓ СЌС„С„РµРєС‚Р° СЃ РїРѕРјРѕС‰СЊСЋ РЅРµРїСЂРѕР·СЂР°С‡РЅРѕСЃС‚Рё СЃР»РѕСЏ.</li>
                             </ul>
                         </div>
                     </div>
@@ -439,37 +472,37 @@
                 <div class="recommend-box">
                     <i class="fas fa-info-circle"></i>
                     <div>
-                        <strong>Совет:</strong> Работайте с масками слоёв - это позволит ретушировать только нужные участки, не затрагивая фон и волосы.
+                        <strong>РЎРѕРІРµС‚:</strong> Р Р°Р±РѕС‚Р°Р№С‚Рµ СЃ РјР°СЃРєР°РјРё СЃР»РѕС‘РІ - СЌС‚Рѕ РїРѕР·РІРѕР»РёС‚ СЂРµС‚СѓС€РёСЂРѕРІР°С‚СЊ С‚РѕР»СЊРєРѕ РЅСѓР¶РЅС‹Рµ СѓС‡Р°СЃС‚РєРё, РЅРµ Р·Р°С‚СЂР°РіРёРІР°СЏ С„РѕРЅ Рё РІРѕР»РѕСЃС‹.
                     </div>
                 </div>
                 <div class="pro-tips">
-                    <h4>?? Профессиональные советы</h4>
+                    <h4>рџ”№ РџСЂРѕС„РµСЃСЃРёРѕРЅР°Р»СЊРЅС‹Рµ СЃРѕРІРµС‚С‹</h4>
                     <div class="tip-item">
                         <i class="fas fa-lightbulb"></i>
-                        <p>Используйте низкую непрозрачность кисти для плавных переходов.</p>
+                        <p>РСЃРїРѕР»СЊР·СѓР№С‚Рµ РЅРёР·РєСѓСЋ РЅРµРїСЂРѕР·СЂР°С‡РЅРѕСЃС‚СЊ РєРёСЃС‚Рё РґР»СЏ РїР»Р°РІРЅС‹С… РїРµСЂРµС…РѕРґРѕРІ.</p>
                     </div>
                     <div class="tip-item">
                         <i class="fas fa-lightbulb"></i>
-                        <p>Регулярно включайте и выключайте слой ретуши - это поможет не «перетянуть» обработку.</p>
+                        <p>Р РµРіСѓР»СЏСЂРЅРѕ РІРєР»СЋС‡Р°Р№С‚Рµ Рё РІС‹РєР»СЋС‡Р°Р№С‚Рµ СЃР»РѕР№ СЂРµС‚СѓС€Рё - СЌС‚Рѕ РїРѕРјРѕР¶РµС‚ РЅРµ В«РїРµСЂРµС‚СЏРЅСѓС‚СЊВ» РѕР±СЂР°Р±РѕС‚РєСѓ.</p>
                     </div>
                     <div class="tip-item">
                         <i class="fas fa-lightbulb"></i>
-                        <p>Для быстрой ретуши в Lightroom используйте инструмент «Устранение дефектов» и локальные корректировки экспозиции и текстуры.</p>
+                        <p>Р”Р»СЏ Р±С‹СЃС‚СЂРѕР№ СЂРµС‚СѓС€Рё РІ Lightroom РёСЃРїРѕР»СЊР·СѓР№С‚Рµ РёРЅСЃС‚СЂСѓРјРµРЅС‚ В«РЈСЃС‚СЂР°РЅРµРЅРёРµ РґРµС„РµРєС‚РѕРІВ» Рё Р»РѕРєР°Р»СЊРЅС‹Рµ РєРѕСЂСЂРµРєС‚РёСЂРѕРІРєРё СЌРєСЃРїРѕР·РёС†РёРё Рё С‚РµРєСЃС‚СѓСЂС‹.</p>
                     </div>
                 </div>
-                <h2>Часто задаваемые вопросы</h2>
+                <h2>Р§Р°СЃС‚Рѕ Р·Р°РґР°РІР°РµРјС‹Рµ РІРѕРїСЂРѕСЃС‹</h2>
                 <ul>
-                    <li><strong>Можно ли сделать естественную ретушь на смартфоне?</strong> - Да, используйте приложения с функцией «точечной коррекции» и избегайте сильных фильтров размытия.</li>
-                    <li><strong>Как не «переборщить» с ретушью?</strong> - Работайте с минимальными изменениями, делайте паузы и сравнивайте с оригиналом.</li>
-                    <li><strong>Нужно ли ретушировать все портреты?</strong> - Нет, иногда естественные несовершенства делают снимок живым и индивидуальным.</li>
+                    <li><strong>РњРѕР¶РЅРѕ Р»Рё СЃРґРµР»Р°С‚СЊ РµСЃС‚РµСЃС‚РІРµРЅРЅСѓСЋ СЂРµС‚СѓС€СЊ РЅР° СЃРјР°СЂС‚С„РѕРЅРµ?</strong> - Р”Р°, РёСЃРїРѕР»СЊР·СѓР№С‚Рµ РїСЂРёР»РѕР¶РµРЅРёСЏ СЃ С„СѓРЅРєС†РёРµР№ В«С‚РѕС‡РµС‡РЅРѕР№ РєРѕСЂСЂРµРєС†РёРёВ» Рё РёР·Р±РµРіР°Р№С‚Рµ СЃРёР»СЊРЅС‹С… С„РёР»СЊС‚СЂРѕРІ СЂР°Р·РјС‹С‚РёСЏ.</li>
+                    <li><strong>РљР°Рє РЅРµ В«РїРµСЂРµР±РѕСЂС‰РёС‚СЊВ» СЃ СЂРµС‚СѓС€СЊСЋ?</strong> - Р Р°Р±РѕС‚Р°Р№С‚Рµ СЃ РјРёРЅРёРјР°Р»СЊРЅС‹РјРё РёР·РјРµРЅРµРЅРёСЏРјРё, РґРµР»Р°Р№С‚Рµ РїР°СѓР·С‹ Рё СЃСЂР°РІРЅРёРІР°Р№С‚Рµ СЃ РѕСЂРёРіРёРЅР°Р»РѕРј.</li>
+                    <li><strong>РќСѓР¶РЅРѕ Р»Рё СЂРµС‚СѓС€РёСЂРѕРІР°С‚СЊ РІСЃРµ РїРѕСЂС‚СЂРµС‚С‹?</strong> - РќРµС‚, РёРЅРѕРіРґР° РµСЃС‚РµСЃС‚РІРµРЅРЅС‹Рµ РЅРµСЃРѕРІРµСЂС€РµРЅСЃС‚РІР° РґРµР»Р°СЋС‚ СЃРЅРёРјРѕРє Р¶РёРІС‹Рј Рё РёРЅРґРёРІРёРґСѓР°Р»СЊРЅС‹Рј.</li>
                 </ul>
-                <h2>?? Итог</h2>
+                <h2>рџ“Њ РС‚РѕРі</h2>
                 <p>
-                    Естественная ретушь кожи - это аккуратное удаление временных недостатков, выравнивание тона и сохранение текстуры. Главное - умеренность: пусть лицо выглядит живым, а не «отфотошопленным». Практикуйтесь, и ваши портреты будут радовать своей натуральностью!
+                    Р•СЃС‚РµСЃС‚РІРµРЅРЅР°СЏ СЂРµС‚СѓС€СЊ РєРѕР¶Рё - СЌС‚Рѕ Р°РєРєСѓСЂР°С‚РЅРѕРµ СѓРґР°Р»РµРЅРёРµ РІСЂРµРјРµРЅРЅС‹С… РЅРµРґРѕСЃС‚Р°С‚РєРѕРІ, РІС‹СЂР°РІРЅРёРІР°РЅРёРµ С‚РѕРЅР° Рё СЃРѕС…СЂР°РЅРµРЅРёРµ С‚РµРєСЃС‚СѓСЂС‹. Р“Р»Р°РІРЅРѕРµ - СѓРјРµСЂРµРЅРЅРѕСЃС‚СЊ: РїСѓСЃС‚СЊ Р»РёС†Рѕ РІС‹РіР»СЏРґРёС‚ Р¶РёРІС‹Рј, Р° РЅРµ В«РѕС‚С„РѕС‚РѕС€РѕРїР»РµРЅРЅС‹РјВ». РџСЂР°РєС‚РёРєСѓР№С‚РµСЃСЊ, Рё РІР°С€Рё РїРѕСЂС‚СЂРµС‚С‹ Р±СѓРґСѓС‚ СЂР°РґРѕРІР°С‚СЊ СЃРІРѕРµР№ РЅР°С‚СѓСЂР°Р»СЊРЅРѕСЃС‚СЊСЋ!
                 </p>
 </div>
 
-        <!-- Telegram рекламный баннер -->
+        <!-- Telegram СЂРµРєР»Р°РјРЅС‹Р№ Р±Р°РЅРЅРµСЂ -->
         <a href="https://t.me/RepairoRU" target="_blank" rel="noopener noreferrer" class="telegram-banner">
           <div class="telegram-banner-container">
             <div class="telegram-logo">
@@ -478,10 +511,10 @@
               </svg>
             </div>
             <div class="telegram-content">
-              <div class="telegram-title">Новости из мира технологий</div>
-              <div class="telegram-subtitle">В нашем новом Telegram-канале. Подписывайтесь и будьте в числе первых!</div>
+              <div class="telegram-title">РќРѕРІРѕСЃС‚Рё РёР· РјРёСЂР° С‚РµС…РЅРѕР»РѕРіРёР№</div>
+              <div class="telegram-subtitle">Р’ РЅР°С€РµРј РЅРѕРІРѕРј Telegram-РєР°РЅР°Р»Рµ. РџРѕРґРїРёСЃС‹РІР°Р№С‚РµСЃСЊ Рё Р±СѓРґСЊС‚Рµ РІ С‡РёСЃР»Рµ РїРµСЂРІС‹С…!</div>
               <div class="telegram-button">
-                Подписаться
+                РџРѕРґРїРёСЃР°С‚СЊСЃСЏ
                 <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.56c-.21 2.22-1.12 7.58-1.58 10.06-.19 1.07-.57 1.43-.94 1.46-.8.07-1.4-.52-2.17-1.03-1.21-.79-1.89-1.28-3.06-2.05-1.35-.87-.47-1.35.3-2.13.2-.21 3.71-3.39 3.77-3.68.01-.04.01-.18-.07-.26s-.2-.05-.29-.03c-.12.03-2.11 1.34-5.95 3.93-.56.38-1.07.57-1.53.56-.5-.01-1.47-.28-2.19-.51-.88-.28-1.58-.43-1.52-.91.03-.25.38-.51 1.04-.78 4.07-1.77 6.78-2.94 8.13-3.51 3.88-1.62 4.68-1.9 5.19-1.91.12 0 .37.03.54.17.14.12.18.28.2.44-.01.06 0 .11-.01.17z"/>
                 </svg>
@@ -506,45 +539,45 @@
                         </span>
                         <span class="logo__text">Repairo</span>
                     </a>
-                    <p class="footer__text">Помогаем ремонтировать электронику с 2024 года</p>
+                    <p class="footer__text">РџРѕРјРѕРіР°РµРј СЂРµРјРѕРЅС‚РёСЂРѕРІР°С‚СЊ СЌР»РµРєС‚СЂРѕРЅРёРєСѓ СЃ 2024 РіРѕРґР°</p>
                 </div>
                 <div class="footer__col">
-                    <h3 class="footer__title">Разделы</h3>
+                    <h3 class="footer__title">Р Р°Р·РґРµР»С‹</h3>
                     <ul class="footer__links">
-                        <li><a href="../index.html" class="footer__link">Главная</a></li>
-                        <li><a href="../index.html#categories" class="footer__link">Все гайды</a></li>
-                        <li><a href="../contacts.html" class="footer__link">Контакты</a></li>
+                        <li><a href="../index.html" class="footer__link">Р“Р»Р°РІРЅР°СЏ</a></li>
+                        <li><a href="../index.html#categories" class="footer__link">Р’СЃРµ РіР°Р№РґС‹</a></li>
+                        <li><a href="../contacts.html" class="footer__link">РљРѕРЅС‚Р°РєС‚С‹</a></li>
                     </ul>
                 </div>
                 <div class="footer__col">
-                    <h3 class="footer__title">Категории</h3>
+                    <h3 class="footer__title">РљР°С‚РµРіРѕСЂРёРё</h3>
                     <ul class="footer__links">
-                        <li><a href="../tv.html" class="nav__link">Телевизоры</a></li>
-                        <li><a href="../cameras.html" class="nav__link">Фотоаппараты</a></li>
-                        <li><a href="../consoles.html" class="nav__link">Приставки</a></li>
-                        <li><a href="../laptops.html" class="nav__link">Ноутбуки</a></li>
-                        <li><a href="../smartphones.html" class="nav__link">Смартфоны</a></li>
-                        <li><a href="../small-appliances.html" class="nav__link">Мелкая техника</a></li>
-                        <li><a href="../large-appliances.html" class="nav__link">Бытовая техника</a></li>
-                        <li><a href="../auto-electronics.html" class="nav__link">Авто-Электроника</a></li>
+                        <li><a href="../tv.html" class="nav__link">РўРµР»РµРІРёР·РѕСЂС‹</a></li>
+                        <li><a href="../cameras.html" class="nav__link">Р¤РѕС‚РѕР°РїРїР°СЂР°С‚С‹</a></li>
+                        <li><a href="../consoles.html" class="nav__link">РџСЂРёСЃС‚Р°РІРєРё</a></li>
+                        <li><a href="../laptops.html" class="nav__link">РќРѕСѓС‚Р±СѓРєРё</a></li>
+                        <li><a href="../smartphones.html" class="nav__link">РЎРјР°СЂС‚С„РѕРЅС‹</a></li>
+                        <li><a href="../small-appliances.html" class="nav__link">РњРµР»РєР°СЏ С‚РµС…РЅРёРєР°</a></li>
+                        <li><a href="../large-appliances.html" class="nav__link">Р‘С‹С‚РѕРІР°СЏ С‚РµС…РЅРёРєР°</a></li>
+                        <li><a href="../auto-electronics.html" class="nav__link">РђРІС‚Рѕ-Р­Р»РµРєС‚СЂРѕРЅРёРєР°</a></li>
                     </ul>
                 </div>
                 <div class="footer__col">
-                    <h3 class="footer__title">Контакты</h3>
+                    <h3 class="footer__title">РљРѕРЅС‚Р°РєС‚С‹</h3>
                     <ul class="footer__links">
                         <li><a href="https://t.me/RepairoRU" class="footer__link"><i class="fab fa-telegram"></i> Telegram</a></li>
-                        <li><span class="footer__link">Наша почта: repairo.info@mail.ru</span></li>
+                        <li><span class="footer__link">РќР°С€Р° РїРѕС‡С‚Р°: repairo.info@mail.ru</span></li>
                     </ul>
                 </div>
             </div>
             <div class="footer__bottom">
                 <p class="disclaimer">
-    Администрация сайта не несёт ответственности за возможные повреждения техники
-    и иные последствия, возникшие в результате самостоятельного ремонта по
-    материалам и инструкциям, размещённым на сайте. Все работы вы выполняете
-    на свой страх и риск.
+    РђРґРјРёРЅРёСЃС‚СЂР°С†РёСЏ СЃР°Р№С‚Р° РЅРµ РЅРµСЃС‘С‚ РѕС‚РІРµС‚СЃС‚РІРµРЅРЅРѕСЃС‚Рё Р·Р° РІРѕР·РјРѕР¶РЅС‹Рµ РїРѕРІСЂРµР¶РґРµРЅРёСЏ С‚РµС…РЅРёРєРё
+    Рё РёРЅС‹Рµ РїРѕСЃР»РµРґСЃС‚РІРёСЏ, РІРѕР·РЅРёРєС€РёРµ РІ СЂРµР·СѓР»СЊС‚Р°С‚Рµ СЃР°РјРѕСЃС‚РѕСЏС‚РµР»СЊРЅРѕРіРѕ СЂРµРјРѕРЅС‚Р° РїРѕ
+    РјР°С‚РµСЂРёР°Р»Р°Рј Рё РёРЅСЃС‚СЂСѓРєС†РёСЏРј, СЂР°Р·РјРµС‰С‘РЅРЅС‹Рј РЅР° СЃР°Р№С‚Рµ. Р’СЃРµ СЂР°Р±РѕС‚С‹ РІС‹ РІС‹РїРѕР»РЅСЏРµС‚Рµ
+    РЅР° СЃРІРѕР№ СЃС‚СЂР°С… Рё СЂРёСЃРє.
     </p>
-                <p class="footer__copyright">© 2026 Repairo. Все права защищены.</p>
+                <p class="footer__copyright">В© 2026 Repairo. Р’СЃРµ РїСЂР°РІР° Р·Р°С‰РёС‰РµРЅС‹.</p>
             </div>
         </div>
     </footer>
@@ -555,32 +588,32 @@
 {
   "@context": "https://schema.org",
   "@type": "HowTo",
-  "name": "Ретушь кожи: естественные методы",
-  "description": "Пошаговая инструкция: Ретушь кожи: естественные методы. Используйте низкую непрозрачность кисти для плавных переходов.. Советы экспертов, таблицы, FAQ.",
+  "name": "Р РµС‚СѓС€СЊ РєРѕР¶Рё: РµСЃС‚РµСЃС‚РІРµРЅРЅС‹Рµ РјРµС‚РѕРґС‹",
+  "description": "РџРѕС€Р°РіРѕРІР°СЏ РёРЅСЃС‚СЂСѓРєС†РёСЏ: Р РµС‚СѓС€СЊ РєРѕР¶Рё: РµСЃС‚РµСЃС‚РІРµРЅРЅС‹Рµ РјРµС‚РѕРґС‹. РСЃРїРѕР»СЊР·СѓР№С‚Рµ РЅРёР·РєСѓСЋ РЅРµРїСЂРѕР·СЂР°С‡РЅРѕСЃС‚СЊ РєРёСЃС‚Рё РґР»СЏ РїР»Р°РІРЅС‹С… РїРµСЂРµС…РѕРґРѕРІ.. РЎРѕРІРµС‚С‹ СЌРєСЃРїРµСЂС‚РѕРІ, С‚Р°Р±Р»РёС†С‹, FAQ.",
   "totalTime": "PT30M",
   "step": [
     {
       "@type": "HowToStep",
-      "name": "Принципы естественной ретуши",
-      "text": "Принципы естественной ретуши",
+      "name": "РџСЂРёРЅС†РёРїС‹ РµСЃС‚РµСЃС‚РІРµРЅРЅРѕР№ СЂРµС‚СѓС€Рё",
+      "text": "РџСЂРёРЅС†РёРїС‹ РµСЃС‚РµСЃС‚РІРµРЅРЅРѕР№ СЂРµС‚СѓС€Рё",
       "url": "#step-1"
     },
     {
       "@type": "HowToStep",
-      "name": "Пошаговая инструкция по естественной ретуши кожи",
-      "text": "Пошаговая инструкция по естественной ретуши кожи",
+      "name": "РџРѕС€Р°РіРѕРІР°СЏ РёРЅСЃС‚СЂСѓРєС†РёСЏ РїРѕ РµСЃС‚РµСЃС‚РІРµРЅРЅРѕР№ СЂРµС‚СѓС€Рё РєРѕР¶Рё",
+      "text": "РџРѕС€Р°РіРѕРІР°СЏ РёРЅСЃС‚СЂСѓРєС†РёСЏ РїРѕ РµСЃС‚РµСЃС‚РІРµРЅРЅРѕР№ СЂРµС‚СѓС€Рё РєРѕР¶Рё",
       "url": "#step-2"
     },
     {
       "@type": "HowToStep",
-      "name": "Часто задаваемые вопросы",
-      "text": "Часто задаваемые вопросы",
+      "name": "Р§Р°СЃС‚Рѕ Р·Р°РґР°РІР°РµРјС‹Рµ РІРѕРїСЂРѕСЃС‹",
+      "text": "Р§Р°СЃС‚Рѕ Р·Р°РґР°РІР°РµРјС‹Рµ РІРѕРїСЂРѕСЃС‹",
       "url": "#step-3"
     },
     {
       "@type": "HowToStep",
-      "name": "?? Итог",
-      "text": "?? Итог",
+      "name": "рџ“Њ РС‚РѕРі",
+      "text": "рџ“Њ РС‚РѕРі",
       "url": "#step-4"
     }
   ],
@@ -591,8 +624,4 @@
 <script src="../cookie-consent.js"></script>
 </body>
 </html>
-
-
-
-
 

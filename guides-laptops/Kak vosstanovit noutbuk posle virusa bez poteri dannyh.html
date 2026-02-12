@@ -4,34 +4,69 @@
 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Восстановление ноутбука после вируса без потери данных | Пош</title>
-    <meta name="description" content="">
+  <title>Р’РѕСЃСЃС‚Р°РЅРѕРІР»РµРЅРёРµ РЅРѕСѓС‚Р±СѓРєР° РїРѕСЃР»Рµ РІРёСЂСѓСЃР° Р±РµР· РїРѕС‚РµСЂРё РґР°РЅРЅС‹С… | РџРѕС€Р°РіРѕРІР°СЏ РёРЅСЃС‚СЂСѓРєС†РёСЏ</title>
+    <meta name="description" content="{{ description }}">
+    <meta name="description" content="РџРѕС€Р°РіРѕРІР°СЏ РёРЅСЃС‚СЂСѓРєС†РёСЏ: РљР°Рє РІРѕСЃСЃС‚Р°РЅРѕРІРёС‚СЊ РЅРѕСѓС‚Р±СѓРє РїРѕСЃР»Рµ РІРёСЂСѓСЃР° Рё РЅРµ РїРѕС‚РµСЂСЏС‚СЊ РІР°Р¶РЅС‹Рµ РґР°РЅРЅС‹Рµ. РџРѕР»РЅРѕРµ СЂСѓРєРѕРІРѕРґСЃС‚РІРѕ РїРѕ РѕС‡РёСЃС‚РєРµ СЃРёСЃС‚РµРјС‹ РѕС‚ РІСЂРµРґРѕРЅРѕСЃРЅРѕРіРѕ РџРћ Рё СЃРѕС…СЂР°РЅРµРЅРёСЋ С„Р°Р№Р»РѕРІ.">
 
   <link rel="stylesheet" href="../styles.css" />
   <link rel="stylesheet" href="../styles-header.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
   <style>
     .guide-content { line-height: 1.7; color: var(--text); }
-    .guide-content h2 { color: var(--primary); margin-top: 30px; margin-bottom: 15px; font-size: 1.5rem; }
-    .guide-content h3 { color: var(--primary-dark); margin-top: 25px; margin-bottom: 12px; font-size: 1.2rem; }
+    .guide-content h2 { color: var(--primary); margin-top: 30px; margin-bottom: 15px; font-size: 1.6rem; }
+    .guide-content h3 { color: var(--primary-dark); margin-top: 25px; margin-bottom: 12px; font-size: 1.25rem; }
     .guide-image-block { margin: 20px 0; padding: 15px; background: var(--background); border-radius: var(--border-radius); border: 1px solid var(--border); text-align: center; }
     .guide-image-block img { max-width: 100%; height: auto; border-radius: 6px; border: 1px solid var(--border); }
     .image-caption { margin-top: 10px; font-size: 0.85rem; color: var(--text-light); font-style: italic; }
+    table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+    th, td { border: 1px solid var(--border); padding: 8px; text-align: left; vertical-align: top; }
+    th { background: var(--background-light); }
+    code { background: rgba(0,0,0,0.04); padding: 1px 4px; border-radius: 3px; }
+    ul, ol { padding-left: 18px; }
+    .check-section { padding: 15px; border-radius: 6px; border: 1px dashed var(--border); margin: 18px 0; background: rgba(0,0,0,0.01); }
+    .check-title { font-weight: 600; margin-bottom: 8px; }
     .pro-tips { background: rgba(3, 74, 79, 0.05); padding: 15px; border-radius: 6px; margin: 20px 0; }
     .pro-tips h4 { color: var(--primary); margin-top: 0; margin-bottom: 12px; font-size: 1.1rem; }
     .tip-item { display: flex; gap: 8px; margin-bottom: 8px; align-items: flex-start; }
-    table { width: 100%; border-collapse: collapse; margin: 20px 0; }
-    th, td { border: 1px solid var(--border); padding: 8px; text-align: left; }
-    th { background: var(--background-light); }
-    .highlight { background: #f5f7fa; border-left: 4px solid #2d9cdb; padding: 10px 15px; margin: 20px 0; }
-    .faq-section ul { margin-left: 1em; }
-    .block-section { margin-bottom: 2em; }
+    .ok { color: #0a8f3c; font-weight: 600; }
+    .warn { color: #c97a00; font-weight: 600; }
+    .bad { color: #c62828; font-weight: 600; }
+    .alert-box { padding: 20px; border-radius: 8px; margin: 25px 0; }
+    .alert-danger { background: rgba(198, 40, 40, 0.1); border-left: 4px solid #c62828; }
+    .alert-warning { background: rgba(201, 122, 0, 0.1); border-left: 4px solid #c97a00; }
+    .alert-success { background: rgba(10, 143, 60, 0.1); border-left: 4px solid #0a8f3c; }
+    .alert-info { background: rgba(3, 74, 79, 0.1); border-left: 4px solid var(--primary); }
+    .recovery-steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin: 20px 0; }
+    .recovery-step { padding: 20px; border-radius: 8px; background: var(--background); border: 1px solid var(--border); }
+    .recovery-step h4 { color: var(--primary-dark); margin-top: 0; margin-bottom: 10px; }
+    .step-number { display: inline-block; width: 35px; height: 35px; background: var(--primary); color: white; text-align: center; line-height: 35px; border-radius: 50%; margin-right: 10px; font-weight: bold; font-size: 1.1rem; }
+    .tool-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; margin: 20px 0; }
+    .tool-card { padding: 15px; border-radius: 6px; background: var(--background); border: 1px solid var(--border); text-align: center; }
+    .tool-card h4 { color: var(--primary-dark); margin-top: 0; margin-bottom: 8px; }
+    .tool-card .price { color: var(--primary); font-weight: 600; margin-bottom: 8px; }
+    .backup-methods { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 20px 0; }
+    .backup-method { padding: 15px; border-radius: 6px; }
+    .backup-method.local { background: rgba(10, 143, 60, 0.1); border-left: 4px solid #0a8f3c; }
+    .backup-method.cloud { background: rgba(3, 74, 79, 0.1); border-left: 4px solid var(--primary); }
+    .backup-method h4 { margin-top: 0; margin-bottom: 10px; }
     @media (max-width: 768px) {
       .guide-content h2 { font-size: 1.4rem; margin-top: 25px; }
       .guide-image-block { padding: 12px; margin: 15px 0; }
       table, th, td { font-size: 0.95rem; }
+      .recovery-steps { grid-template-columns: 1fr; }
+      .backup-methods { grid-template-columns: 1fr; }
     }
+    /* РЇРЅРґРµРєСЃ РњР°СЂРєРµС‚ СЂРµРєР»Р°РјРЅС‹Р№ Р±Р°РЅРЅРµСЂ */
+    .ym-hero-link {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+      max-width: 100%;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
     /* Р“РѕСЂРёР·РѕРЅС‚Р°Р»СЊРЅС‹Р№ Р±Р°РЅРЅРµСЂ-РєР°СЂС‚РѕС‡РєР° */
     .ym-hero-banner {
       width: 100%;
@@ -83,257 +118,63 @@
       transform: scale(1.02);
     }
 
-    /* РџСЂР°РІР°СЏ С‡Р°СЃС‚СЊ: РєРѕРЅС‚РµРЅС‚ */
+    /* РўРµРєСЃС‚РѕРІР°СЏ С‡Р°СЃС‚СЊ Р±Р°РЅРЅРµСЂР° */
     .ym-hero-content {
-      padding: 16px 18px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      gap: 8px;
+      padding: 12px 16px;
+      text-align: center;
     }
 
-    /* РќР°Р·РІР°РЅРёРµ С‚РѕРІР°СЂР° */
     .ym-hero-title {
-      font-size: 14px;
-      font-weight: 600;
-      color: #111827;
-      line-height: 1.3;
-      margin: 0 0 4px 0;
-      display: -webkit-box;
-      -webkit-line-clamp: 2;
-      line-clamp: 2;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
-    }
-
-    /* Р РµР№С‚РёРЅРі */
-    .ym-hero-top {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 8px;
-    }
-
-    .ym-hero-rating {
       font-size: 13px;
-      font-weight: 500;
-      color: #111827;
-      background: #f9fafb;
-      border-radius: 999px;
-      padding: 4px 10px;
-    }
-
-    .ym-hero-rating-count {
-      color: #6b7280;
-    }
-
-    /* Р¤РёРѕР»РµС‚РѕРІР°СЏ РєРЅРѕРїРєР° */
-    .ym-hero-button {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 9px 16px;
-      border-radius: 999px;
-      border: none;
-      background: #6a00ff;
-      color: #ffffff;
-      font-size: 14px;
       font-weight: 600;
-      cursor: pointer;
-      box-shadow: 0 2px 6px rgba(88, 28, 135, 0.35);
-      transition: background 0.15s ease, transform 0.15s ease,
-                  box-shadow 0.15s ease;
-    }
-    .ym-hero-button::after {
-      content: "в†’";
-      margin-left: 6px;
-      font-size: 14px;
-    }
-    .ym-hero-button:hover {
-      background: #7c3aed;
-      transform: translateY(-1px);
-      box-shadow: 0 4px 10px rgba(88, 28, 135, 0.45);
-    }
-
-    /* Р®СЂРёРґРёС‡РµСЃРєРёР№ Р±Р»РѕРє */
-    .ym-hero-legal {
-      margin-top: 6px;
-      max-width: 600px;
-      font-size: 11px;
+      color: #1f2937;
+      margin: 0 0 4px 0;
       line-height: 1.3;
-      color: #6b7280;
-      margin-left: auto;
-      margin-right: auto;
     }
 
-    /* РђРґР°РїС‚РёРІ */
+    .ym-hero-desc {
+      font-size: 11px;
+      color: #6b7280;
+      margin: 0;
+      line-height: 1.3;
+    }
+
     @media (max-width: 480px) {
       .ym-hero-banner {
-        max-width: 100%;
-        margin: 20px 0;
+        min-height: 120px;
       }
       .ym-hero-images {
         height: 100px;
       }
-      .ym-hero-content {
-        padding: 12px 12px;
-      }
       .ym-hero-title {
-        font-size: 13px;
+        font-size: 12px;
       }
-      .ym-hero-button {
-        font-size: 13px;
-        padding: 8px 14px;
-      }
-      .ym-hero-legal {
+      .ym-hero-desc {
         font-size: 10px;
       }
     }
-    /* Telegram СЂРµРєР»Р°РјРЅС‹Р№ Р±Р°РЅРЅРµСЂ */
-    .telegram-banner {
-      display: flex;
-      justify-content: center;
-      text-decoration: none;
-      color: inherit;
-      width: 100%;
-      margin: 40px 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    }
-
-    .telegram-banner-container {
-      width: 100%;
-      max-width: 500px;
-      min-height: 120px;
-      border-radius: 16px;
-      background: linear-gradient(135deg, #0088cc 0%, #005f8f 100%);
-      border: 1px solid #005f8f;
-      display: flex;
-      align-items: center;
-      padding: 20px;
-      box-shadow: 0 4px 16px rgba(0, 136, 204, 0.2);
-      overflow: hidden;
-      box-sizing: border-box;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-
-    .telegram-banner-container:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(0, 136, 204, 0.3);
-    }
-
-    .telegram-logo {
-      width: 60px;
-      height: 60px;
-      min-width: 60px;
-      background: #ffffff;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-right: 20px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    }
-
-    .telegram-logo svg {
-      width: 32px;
-      height: 32px;
-      fill: #0088cc;
-    }
-
-    .telegram-content {
-      flex: 1;
-      color: #ffffff;
-    }
-
-    .telegram-title {
-      font-size: 16px;
-      font-weight: 600;
-      margin: 0 0 8px 0;
-      line-height: 1.3;
-    }
-
-    .telegram-subtitle {
-      font-size: 14px;
-      opacity: 0.9;
-      margin: 0 0 12px 0;
-      line-height: 1.4;
-    }
-
-    .telegram-button {
-      display: inline-flex;
-      align-items: center;
-      padding: 8px 16px;
-      background: #ffffff;
-      color: #0088cc;
-      border-radius: 20px;
-      font-size: 14px;
-      font-weight: 600;
-      text-decoration: none;
-      transition: background 0.2s ease, transform 0.2s ease;
-    }
-
-    .telegram-button:hover {
-      background: #f0f8ff;
-      transform: scale(1.05);
-    }
-
-    .telegram-button svg {
-      width: 16px;
-      height: 16px;
-      margin-left: 6px;
-      fill: #0088cc;
-    }
-
-    /* РђРґР°РїС‚РёРІ РґР»СЏ РјРѕР±РёР»СЊРЅС‹С… */
-    @media (max-width: 480px) {
-      .telegram-banner-container {
-        max-width: 100%;
-        margin: 20px 0;
-        padding: 15px;
-        min-height: 100px;
-      }
-      .telegram-logo {
-        width: 50px;
-        height: 50px;
-        min-width: 50px;
-        margin-right: 15px;
-      }
-      .telegram-logo svg {
-        width: 26px;
-        height: 26px;
-      }
-      .telegram-title {
-        font-size: 14px;
-      }
-      .telegram-subtitle {
-        font-size: 12px;
-      }
-      .telegram-button {
-        font-size: 12px;
-        padding: 6px 12px;
-      }
-    }
-
-
-
   </style>
-  <script async src="https://timeweb.cloud/api/v1/cloud-ai/agents/3cc03620-d051-4d8d-b5af-f7b6cd083a35/embed.js?collapsed=true"></script>
 </head>
 <body>
+
   <header class="header">
     <div class="container">
       <div class="header__inner">
         <a href="../index.html" class="logo">
-          <span class="logo__icon"></span>
-          <span class="logo__text">GeoExpert</span>
+          <img src="../logo.svg" alt="Repairo" width="40" height="40">
+          <span>Repairo</span>
         </a>
         <nav class="nav">
-          <ul class="nav__list">
-            <li><a href="../cameras.html" class="nav__link">РљР°РјРµСЂС‹</a></li>
-            <li><a href="../drones.html" class="nav__link">Р”СЂРѕРЅС‹</a></li>
-            <li><a href="../workflow.html" class="nav__link">Workflow</a></li>
-          </ul>
+          <a href="../index.html">Р“Р»Р°РІРЅР°СЏ</a>
+          <a href="../laptops.html">РќРѕСѓС‚Р±СѓРєРё</a>
+          <a href="../smartphones.html">РЎРјР°СЂС‚С„РѕРЅС‹</a>
+          <a href="../consoles.html">РљРѕРЅСЃРѕР»Рё</a>
+          <a href="../cameras.html">Р¤РѕС‚РѕР°РїРїР°СЂР°С‚С‹</a>
+          <a href="../tv.html">РўРµР»РµРІРёР·РѕСЂС‹</a>
         </nav>
+        <button class="theme-toggle" aria-label="РџРµСЂРµРєР»СЋС‡РёС‚СЊ С‚РµРјСѓ">
+          <i class="fas fa-moon"></i>
+        </button>
       </div>
     </div>
   </header>
@@ -341,114 +182,114 @@
   <main class="main">
     <div class="container">
       <div class="guide-content">
-        <h1>Восстановление ноутбука после вируса без потери данных</h1>
+        <h1>Р’РѕСЃСЃС‚Р°РЅРѕРІР»РµРЅРёРµ РЅРѕСѓС‚Р±СѓРєР° РїРѕСЃР»Рµ РІРёСЂСѓСЃР° Р±РµР· РїРѕС‚РµСЂРё РґР°РЅРЅС‹С…</h1>
         
-        <p>Обнаружение вируса на ноутбуке не означает потерю всех данных. При правильном подходе можно полностью очистить систему от вредоносного ПО и сохранить важные файлы. В этой инструкции мы рассмотрим пошаговый процесс безопасного восстановления ноутбука после вирусной атаки.</p>
+        <p>РћР±РЅР°СЂСѓР¶РµРЅРёРµ РІРёСЂСѓСЃР° РЅР° РЅРѕСѓС‚Р±СѓРєРµ РЅРµ РѕР·РЅР°С‡Р°РµС‚ РїРѕС‚РµСЂСЋ РІСЃРµС… РґР°РЅРЅС‹С…. РџСЂРё РїСЂР°РІРёР»СЊРЅРѕРј РїРѕРґС…РѕРґРµ РјРѕР¶РЅРѕ РїРѕР»РЅРѕСЃС‚СЊСЋ РѕС‡РёСЃС‚РёС‚СЊ СЃРёСЃС‚РµРјСѓ РѕС‚ РІСЂРµРґРѕРЅРѕСЃРЅРѕРіРѕ РџРћ Рё СЃРѕС…СЂР°РЅРёС‚СЊ РІР°Р¶РЅС‹Рµ С„Р°Р№Р»С‹. Р’ СЌС‚РѕР№ РёРЅСЃС‚СЂСѓРєС†РёРё РјС‹ СЂР°СЃСЃРјРѕС‚СЂРёРј РїРѕС€Р°РіРѕРІС‹Р№ РїСЂРѕС†РµСЃСЃ Р±РµР·РѕРїР°СЃРЅРѕРіРѕ РІРѕСЃСЃС‚Р°РЅРѕРІР»РµРЅРёСЏ РЅРѕСѓС‚Р±СѓРєР° РїРѕСЃР»Рµ РІРёСЂСѓСЃРЅРѕР№ Р°С‚Р°РєРё.</p>
 
         <div class="guide-image-block">
-          <img src="https://avatars.mds.yandex.net/get-shedevrum/16419046/img_44137e6537b611f097f70ecdb250e1a9/orig" alt="Восстановление ноутбука после вируса без потери данных">
-          <div class="image-caption">Процесс восстановления системы после вирусной атаки</div>
+          <img src="https://avatars.mds.yandex.net/get-shedevrum/16419046/img_44137e6537b611f097f70ecdb250e1a9/orig" alt="Р’РѕСЃСЃС‚Р°РЅРѕРІР»РµРЅРёРµ РЅРѕСѓС‚Р±СѓРєР° РїРѕСЃР»Рµ РІРёСЂСѓСЃР° Р±РµР· РїРѕС‚РµСЂРё РґР°РЅРЅС‹С…">
+          <div class="image-caption">РџСЂРѕС†РµСЃСЃ РІРѕСЃСЃС‚Р°РЅРѕРІР»РµРЅРёСЏ СЃРёСЃС‚РµРјС‹ РїРѕСЃР»Рµ РІРёСЂСѓСЃРЅРѕР№ Р°С‚Р°РєРё</div>
         </div>
 
         <div class="alert-warning">
-          <h4><i class="fas fa-exclamation-triangle"></i> ВАЖНО: Первые действия</h4>
-          <p>Прежде чем начать восстановление, немедленно отключите ноутбук от интернета и локальной сети, чтобы предотвратить дальнейшее распространение вируса и утечку данных.</p>
+          <h4><i class="fas fa-exclamation-triangle"></i> Р’РђР–РќРћ: РџРµСЂРІС‹Рµ РґРµР№СЃС‚РІРёСЏ</h4>
+          <p>РџСЂРµР¶РґРµ С‡РµРј РЅР°С‡Р°С‚СЊ РІРѕСЃСЃС‚Р°РЅРѕРІР»РµРЅРёРµ, РЅРµРјРµРґР»РµРЅРЅРѕ РѕС‚РєР»СЋС‡РёС‚Рµ РЅРѕСѓС‚Р±СѓРє РѕС‚ РёРЅС‚РµСЂРЅРµС‚Р° Рё Р»РѕРєР°Р»СЊРЅРѕР№ СЃРµС‚Рё, С‡С‚РѕР±С‹ РїСЂРµРґРѕС‚РІСЂР°С‚РёС‚СЊ РґР°Р»СЊРЅРµР№С€РµРµ СЂР°СЃРїСЂРѕСЃС‚СЂР°РЅРµРЅРёРµ РІРёСЂСѓСЃР° Рё СѓС‚РµС‡РєСѓ РґР°РЅРЅС‹С….</p>
         </div>
 
-        <h2>Оценка ситуации и подготовка к восстановлению</h2>
+        <h2>РћС†РµРЅРєР° СЃРёС‚СѓР°С†РёРё Рё РїРѕРґРіРѕС‚РѕРІРєР° Рє РІРѕСЃСЃС‚Р°РЅРѕРІР»РµРЅРёСЋ</h2>
 
-        <h3>Шаг 1: Диагностика заражения</h3>
+        <h3>РЁР°Рі 1: Р”РёР°РіРЅРѕСЃС‚РёРєР° Р·Р°СЂР°Р¶РµРЅРёСЏ</h3>
 
         <div class="check-section">
-          <div class="check-title">Что нужно определить перед восстановлением:</div>
+          <div class="check-title">Р§С‚Рѕ РЅСѓР¶РЅРѕ РѕРїСЂРµРґРµР»РёС‚СЊ РїРµСЂРµРґ РІРѕСЃСЃС‚Р°РЅРѕРІР»РµРЅРёРµРј:</div>
           <ul>
-            <li><strong>Тип вируса</strong> — троян, шифровальщик, рекламное ПО, черви</li>
-            <li><strong>Степень заражения</strong> — отдельные файлы или вся система</li>
-            <li><strong>Важные данные</strong> — какие файлы нужно сохранить в первую очередь</li>
-            <li><strong>Наличие бэкапов</strong> — проверьте внешние диски и облако</li>
-            <li><strong>Работоспособность системы</strong> — загружается ли Windows</li>
+            <li><strong>РўРёРї РІРёСЂСѓСЃР°</strong> вЂ” С‚СЂРѕСЏРЅ, С€РёС„СЂРѕРІР°Р»СЊС‰РёРє, СЂРµРєР»Р°РјРЅРѕРµ РџРћ, С‡РµСЂРІРё</li>
+            <li><strong>РЎС‚РµРїРµРЅСЊ Р·Р°СЂР°Р¶РµРЅРёСЏ</strong> вЂ” РѕС‚РґРµР»СЊРЅС‹Рµ С„Р°Р№Р»С‹ РёР»Рё РІСЃСЏ СЃРёСЃС‚РµРјР°</li>
+            <li><strong>Р’Р°Р¶РЅС‹Рµ РґР°РЅРЅС‹Рµ</strong> вЂ” РєР°РєРёРµ С„Р°Р№Р»С‹ РЅСѓР¶РЅРѕ СЃРѕС…СЂР°РЅРёС‚СЊ РІ РїРµСЂРІСѓСЋ РѕС‡РµСЂРµРґСЊ</li>
+            <li><strong>РќР°Р»РёС‡РёРµ Р±СЌРєР°РїРѕРІ</strong> вЂ” РїСЂРѕРІРµСЂСЊС‚Рµ РІРЅРµС€РЅРёРµ РґРёСЃРєРё Рё РѕР±Р»Р°РєРѕ</li>
+            <li><strong>Р Р°Р±РѕС‚РѕСЃРїРѕСЃРѕР±РЅРѕСЃС‚СЊ СЃРёСЃС‚РµРјС‹</strong> вЂ” Р·Р°РіСЂСѓР¶Р°РµС‚СЃСЏ Р»Рё Windows</li>
           </ul>
         </div>
 
-        <h3>Шаг 2: Подготовка к сохранению данных</h3>
+        <h3>РЁР°Рі 2: РџРѕРґРіРѕС‚РѕРІРєР° Рє СЃРѕС…СЂР°РЅРµРЅРёСЋ РґР°РЅРЅС‹С…</h3>
 
         <div class="pro-tips">
-          <h4>Необходимые инструменты и носители:</h4>
+          <h4>РќРµРѕР±С…РѕРґРёРјС‹Рµ РёРЅСЃС‚СЂСѓРјРµРЅС‚С‹ Рё РЅРѕСЃРёС‚РµР»Рё:</h4>
           <ul>
-            <li><strong>Внешний жесткий диск или SSD</strong> — для сохранения файлов</li>
-            <li><strong>Загрузочная флешка с антивирусом</strong> — Kaspersky Rescue Disk</li>
-            <li><strong>Чистая флешка</strong> — для переноса данных</li>
-            <li><strong>Загрузочный диск Windows</strong> — для переустановки системы</li>
+            <li><strong>Р’РЅРµС€РЅРёР№ Р¶РµСЃС‚РєРёР№ РґРёСЃРє РёР»Рё SSD</strong> вЂ” РґР»СЏ СЃРѕС…СЂР°РЅРµРЅРёСЏ С„Р°Р№Р»РѕРІ</li>
+            <li><strong>Р—Р°РіСЂСѓР·РѕС‡РЅР°СЏ С„Р»РµС€РєР° СЃ Р°РЅС‚РёРІРёСЂСѓСЃРѕРј</strong> вЂ” Kaspersky Rescue Disk</li>
+            <li><strong>Р§РёСЃС‚Р°СЏ С„Р»РµС€РєР°</strong> вЂ” РґР»СЏ РїРµСЂРµРЅРѕСЃР° РґР°РЅРЅС‹С…</li>
+            <li><strong>Р—Р°РіСЂСѓР·РѕС‡РЅС‹Р№ РґРёСЃРє Windows</strong> вЂ” РґР»СЏ РїРµСЂРµСѓСЃС‚Р°РЅРѕРІРєРё СЃРёСЃС‚РµРјС‹</li>
           </ul>
         </div>
 
-        <h2>Сохранение важных данных</h2>
+        <h2>РЎРѕС…СЂР°РЅРµРЅРёРµ РІР°Р¶РЅС‹С… РґР°РЅРЅС‹С…</h2>
 
-        <h3>Метод 1: Сохранение через загрузочную флешку</h3>
+        <h3>РњРµС‚РѕРґ 1: РЎРѕС…СЂР°РЅРµРЅРёРµ С‡РµСЂРµР· Р·Р°РіСЂСѓР·РѕС‡РЅСѓСЋ С„Р»РµС€РєСѓ</h3>
 
         <div class="alert-success">
-          <h4><i class="fas fa-check-circle"></i> Рекомендуемый метод</h4>
-          <p>Использование загрузочной среды с антивирусом — самый безопасный способ сохранения данных.</p>
+          <h4><i class="fas fa-check-circle"></i> Р РµРєРѕРјРµРЅРґСѓРµРјС‹Р№ РјРµС‚РѕРґ</h4>
+          <p>РСЃРїРѕР»СЊР·РѕРІР°РЅРёРµ Р·Р°РіСЂСѓР·РѕС‡РЅРѕР№ СЃСЂРµРґС‹ СЃ Р°РЅС‚РёРІРёСЂСѓСЃРѕРј вЂ” СЃР°РјС‹Р№ Р±РµР·РѕРїР°СЃРЅС‹Р№ СЃРїРѕСЃРѕР± СЃРѕС…СЂР°РЅРµРЅРёСЏ РґР°РЅРЅС‹С….</p>
         </div>
 
         <div class="check-section">
-          <div class="check-title">Порядок действий:</div>
+          <div class="check-title">РџРѕСЂСЏРґРѕРє РґРµР№СЃС‚РІРёР№:</div>
           <ol>
-            <li><strong>Создайте загрузочную флешку</strong> с Kaspersky Rescue Disk или Dr.Web LiveDisk</li>
-            <li><strong>Загрузитесь с флешки</strong> (в BIOS выберите Boot from USB)</li>
-            <li><strong>Запустите антивирусное сканирование</strong> для очистки системы</li>
-            <li><strong>Подключите чистый внешний диск</strong> для сохранения файлов</li>
-            <li><strong>Скопируйте важные данные</strong> (документы, фото, проекты)</li>
-            <li><strong>Проверьте скопированные файлы</strong> на наличие вирусов</li>
+            <li><strong>РЎРѕР·РґР°Р№С‚Рµ Р·Р°РіСЂСѓР·РѕС‡РЅСѓСЋ С„Р»РµС€РєСѓ</strong> СЃ Kaspersky Rescue Disk РёР»Рё Dr.Web LiveDisk</li>
+            <li><strong>Р—Р°РіСЂСѓР·РёС‚РµСЃСЊ СЃ С„Р»РµС€РєРё</strong> (РІ BIOS РІС‹Р±РµСЂРёС‚Рµ Boot from USB)</li>
+            <li><strong>Р—Р°РїСѓСЃС‚РёС‚Рµ Р°РЅС‚РёРІРёСЂСѓСЃРЅРѕРµ СЃРєР°РЅРёСЂРѕРІР°РЅРёРµ</strong> РґР»СЏ РѕС‡РёСЃС‚РєРё СЃРёСЃС‚РµРјС‹</li>
+            <li><strong>РџРѕРґРєР»СЋС‡РёС‚Рµ С‡РёСЃС‚С‹Р№ РІРЅРµС€РЅРёР№ РґРёСЃРє</strong> РґР»СЏ СЃРѕС…СЂР°РЅРµРЅРёСЏ С„Р°Р№Р»РѕРІ</li>
+            <li><strong>РЎРєРѕРїРёСЂСѓР№С‚Рµ РІР°Р¶РЅС‹Рµ РґР°РЅРЅС‹Рµ</strong> (РґРѕРєСѓРјРµРЅС‚С‹, С„РѕС‚Рѕ, РїСЂРѕРµРєС‚С‹)</li>
+            <li><strong>РџСЂРѕРІРµСЂСЊС‚Рµ СЃРєРѕРїРёСЂРѕРІР°РЅРЅС‹Рµ С„Р°Р№Р»С‹</strong> РЅР° РЅР°Р»РёС‡РёРµ РІРёСЂСѓСЃРѕРІ</li>
           </ol>
         </div>
 
-        <h3>Метод 2: Использование Live CD Linux</h3>
+        <h3>РњРµС‚РѕРґ 2: РСЃРїРѕР»СЊР·РѕРІР°РЅРёРµ Live CD Linux</h3>
 
         <div class="pro-tips">
-          <h4>Преимущества Linux Live CD:</h4>
+          <h4>РџСЂРµРёРјСѓС‰РµСЃС‚РІР° Linux Live CD:</h4>
           <ul>
-            <li>Полная изоляция от зараженной Windows</li>
-            <li>Доступ к файловой системе NTFS</li>
-            <li>Встроенные инструменты для работы с файлами</li>
-            <li>Возможность проверки файлов антивирусом</li>
+            <li>РџРѕР»РЅР°СЏ РёР·РѕР»СЏС†РёСЏ РѕС‚ Р·Р°СЂР°Р¶РµРЅРЅРѕР№ Windows</li>
+            <li>Р”РѕСЃС‚СѓРї Рє С„Р°Р№Р»РѕРІРѕР№ СЃРёСЃС‚РµРјРµ NTFS</li>
+            <li>Р’СЃС‚СЂРѕРµРЅРЅС‹Рµ РёРЅСЃС‚СЂСѓРјРµРЅС‚С‹ РґР»СЏ СЂР°Р±РѕС‚С‹ СЃ С„Р°Р№Р»Р°РјРё</li>
+            <li>Р’РѕР·РјРѕР¶РЅРѕСЃС‚СЊ РїСЂРѕРІРµСЂРєРё С„Р°Р№Р»РѕРІ Р°РЅС‚РёРІРёСЂСѓСЃРѕРј</li>
           </ul>
         </div>
 
         <div class="backup-methods">
           <div class="backup-method local">
-            <h4><i class="fas fa-hdd"></i> Локальное сохранение</h4>
+            <h4><i class="fas fa-hdd"></i> Р›РѕРєР°Р»СЊРЅРѕРµ СЃРѕС…СЂР°РЅРµРЅРёРµ</h4>
             <ul>
-              <li>Внешний HDD/SSD накопитель</li>
-              <li>Большой объем хранения</li>
-              <li>Быстрая скорость передачи</li>
-              <li>Полный контроль над данными</li>
+              <li>Р’РЅРµС€РЅРёР№ HDD/SSD РЅР°РєРѕРїРёС‚РµР»СЊ</li>
+              <li>Р‘РѕР»СЊС€РѕР№ РѕР±СЉРµРј С…СЂР°РЅРµРЅРёСЏ</li>
+              <li>Р‘С‹СЃС‚СЂР°СЏ СЃРєРѕСЂРѕСЃС‚СЊ РїРµСЂРµРґР°С‡Рё</li>
+              <li>РџРѕР»РЅС‹Р№ РєРѕРЅС‚СЂРѕР»СЊ РЅР°Рґ РґР°РЅРЅС‹РјРё</li>
             </ul>
           </div>
           <div class="backup-method cloud">
-            <h4><i class="fas fa-cloud"></i> Облачное сохранение</h4>
+            <h4><i class="fas fa-cloud"></i> РћР±Р»Р°С‡РЅРѕРµ СЃРѕС…СЂР°РЅРµРЅРёРµ</h4>
             <ul>
-              <li>Google Drive, OneDrive, Яндекс.Диск</li>
-              <li>Доступ из любой точки мира</li>
-              <li>Автоматическая синхронизация</li>
-              <li>Защита от физических повреждений</li>
+              <li>Google Drive, OneDrive, РЇРЅРґРµРєСЃ.Р”РёСЃРє</li>
+              <li>Р”РѕСЃС‚СѓРї РёР· Р»СЋР±РѕР№ С‚РѕС‡РєРё РјРёСЂР°</li>
+              <li>РђРІС‚РѕРјР°С‚РёС‡РµСЃРєР°СЏ СЃРёРЅС…СЂРѕРЅРёР·Р°С†РёСЏ</li>
+              <li>Р—Р°С‰РёС‚Р° РѕС‚ С„РёР·РёС‡РµСЃРєРёС… РїРѕРІСЂРµР¶РґРµРЅРёР№</li>
             </ul>
           </div>
         </div>
 
-        <h2>Полная очистка системы от вирусов</h2>
+        <h2>РџРѕР»РЅР°СЏ РѕС‡РёСЃС‚РєР° СЃРёСЃС‚РµРјС‹ РѕС‚ РІРёСЂСѓСЃРѕРІ</h2>
 
-        <h3>Вариант 1: Глубокая очистка без переустановки</h3>
+        <h3>Р’Р°СЂРёР°РЅС‚ 1: Р“Р»СѓР±РѕРєР°СЏ РѕС‡РёСЃС‚РєР° Р±РµР· РїРµСЂРµСѓСЃС‚Р°РЅРѕРІРєРё</h3>
 
         <div class="alert-warning">
-          <h4><i class="fas fa-info-circle"></i> Когда подходит этот метод:</h4>
-          <p>Если система работает стабильно и вы уверены, что вирус не проник глубоко в системные файлы.</p>
+          <h4><i class="fas fa-info-circle"></i> РљРѕРіРґР° РїРѕРґС…РѕРґРёС‚ СЌС‚РѕС‚ РјРµС‚РѕРґ:</h4>
+          <p>Р•СЃР»Рё СЃРёСЃС‚РµРјР° СЂР°Р±РѕС‚Р°РµС‚ СЃС‚Р°Р±РёР»СЊРЅРѕ Рё РІС‹ СѓРІРµСЂРµРЅС‹, С‡С‚Рѕ РІРёСЂСѓСЃ РЅРµ РїСЂРѕРЅРёРє РіР»СѓР±РѕРєРѕ РІ СЃРёСЃС‚РµРјРЅС‹Рµ С„Р°Р№Р»С‹.</p>
         </div>
 
         <div class="recovery-steps">
           <div class="recovery-step">
-            <h4><span class="step-number">1</span> Специализированные утилиты</h4>
-            <p>Используйте несколько антивирусных утилит для комплексной очистки:</p>
+            <h4><span class="step-number">1</span> РЎРїРµС†РёР°Р»РёР·РёСЂРѕРІР°РЅРЅС‹Рµ СѓС‚РёР»РёС‚С‹</h4>
+            <p>РСЃРїРѕР»СЊР·СѓР№С‚Рµ РЅРµСЃРєРѕР»СЊРєРѕ Р°РЅС‚РёРІРёСЂСѓСЃРЅС‹С… СѓС‚РёР»РёС‚ РґР»СЏ РєРѕРјРїР»РµРєСЃРЅРѕР№ РѕС‡РёСЃС‚РєРё:</p>
             <ul>
               <li>Kaspersky Virus Removal Tool</li>
               <li>Malwarebytes Anti-Malware</li>
@@ -457,155 +298,163 @@
             </ul>
           </div>
           <div class="recovery-step">
-            <h4><span class="step-number">2</span> Очистка системы</h4>
-            <p>Удалите временные файлы и кэш:</p>
+            <h4><span class="step-number">2</span> РћС‡РёСЃС‚РєР° СЃРёСЃС‚РµРјС‹</h4>
+            <p>РЈРґР°Р»РёС‚Рµ РІСЂРµРјРµРЅРЅС‹Рµ С„Р°Р№Р»С‹ Рё РєСЌС€:</p>
             <ul>
-              <li>Очистка диска (Cleanmgr.exe)</li>
-              <li>CCleaner для очистки реестра</li>
-              <li>Удаление неизвестных программ</li>
-              <li>Проверка автозагрузки</li>
+              <li>РћС‡РёСЃС‚РєР° РґРёСЃРєР° (Cleanmgr.exe)</li>
+              <li>CCleaner РґР»СЏ РѕС‡РёСЃС‚РєРё СЂРµРµСЃС‚СЂР°</li>
+              <li>РЈРґР°Р»РµРЅРёРµ РЅРµРёР·РІРµСЃС‚РЅС‹С… РїСЂРѕРіСЂР°РјРј</li>
+              <li>РџСЂРѕРІРµСЂРєР° Р°РІС‚РѕР·Р°РіСЂСѓР·РєРё</li>
             </ul>
           </div>
           <div class="recovery-step">
-            <h4><span class="step-number">3</span> Проверка браузеров</h4>
-            <p>Очистите веб-браузеры от вредоносных расширений:</p>
+            <h4><span class="step-number">3</span> РџСЂРѕРІРµСЂРєР° Р±СЂР°СѓР·РµСЂРѕРІ</h4>
+            <p>РћС‡РёСЃС‚РёС‚Рµ РІРµР±-Р±СЂР°СѓР·РµСЂС‹ РѕС‚ РІСЂРµРґРѕРЅРѕСЃРЅС‹С… СЂР°СЃС€РёСЂРµРЅРёР№:</p>
             <ul>
-              <li>Сброс настроек браузеров</li>
-              <li>Удаление подозрительных расширений</li>
-              <li>Очистка кэша и cookies</li>
-              <li>Проверка поисковых систем</li>
+              <li>РЎР±СЂРѕСЃ РЅР°СЃС‚СЂРѕРµРє Р±СЂР°СѓР·РµСЂРѕРІ</li>
+              <li>РЈРґР°Р»РµРЅРёРµ РїРѕРґРѕР·СЂРёС‚РµР»СЊРЅС‹С… СЂР°СЃС€РёСЂРµРЅРёР№</li>
+              <li>РћС‡РёСЃС‚РєР° РєСЌС€Р° Рё cookies</li>
+              <li>РџСЂРѕРІРµСЂРєР° РїРѕРёСЃРєРѕРІС‹С… СЃРёСЃС‚РµРј</li>
             </ul>
           </div>
         </div>
 
-        <h3>Вариант 2: Переустановка Windows (рекомендуется)</h3>
+        <h3>Р’Р°СЂРёР°РЅС‚ 2: РџРµСЂРµСѓСЃС‚Р°РЅРѕРІРєР° Windows (СЂРµРєРѕРјРµРЅРґСѓРµС‚СЃСЏ)</h3>
 
         <div class="alert-success">
-          <h4><i class="fas fa-thumbs-up"></i> Самый надежный метод</h4>
-          <p>Полная переустановка системы гарантирует 100% удаление всех вирусов.</p>
+          <h4><i class="fas fa-thumbs-up"></i> РЎР°РјС‹Р№ РЅР°РґРµР¶РЅС‹Р№ РјРµС‚РѕРґ</h4>
+          <p>РџРѕР»РЅР°СЏ РїРµСЂРµСѓСЃС‚Р°РЅРѕРІРєР° СЃРёСЃС‚РµРјС‹ РіР°СЂР°РЅС‚РёСЂСѓРµС‚ 100% СѓРґР°Р»РµРЅРёРµ РІСЃРµС… РІРёСЂСѓСЃРѕРІ.</p>
         </div>
 
         <div class="check-section">
-          <div class="check-title">Процесс переустановки:</div>
+          <div class="check-title">РџСЂРѕС†РµСЃСЃ РїРµСЂРµСѓСЃС‚Р°РЅРѕРІРєРё:</div>
           <ol>
-            <li><strong>Создайте загрузочную флешку</strong> с Windows 10/11</li>
-            <li><strong>Сохраните все данные</strong> на внешний носитель</li>
-            <li><strong>Запустите установку Windows</strong> с флешки</li>
-            <li><strong>Выберите "Пользовательская установка"</strong></li>
-            <li><strong>Отформатируйте системный диск</strong> (полная очистка)</li>
-            <li><strong>Установите Windows</strong> на чистый диск</li>
-            <li><strong>Установите драйверы</strong> и необходимое ПО</li>
-            <li><strong>Восстановите данные</strong> из резервной копии</li>
+            <li><strong>РЎРѕР·РґР°Р№С‚Рµ Р·Р°РіСЂСѓР·РѕС‡РЅСѓСЋ С„Р»РµС€РєСѓ</strong> СЃ Windows 10/11</li>
+            <li><strong>РЎРѕС…СЂР°РЅРёС‚Рµ РІСЃРµ РґР°РЅРЅС‹Рµ</strong> РЅР° РІРЅРµС€РЅРёР№ РЅРѕСЃРёС‚РµР»СЊ</li>
+            <li><strong>Р—Р°РїСѓСЃС‚РёС‚Рµ СѓСЃС‚Р°РЅРѕРІРєСѓ Windows</strong> СЃ С„Р»РµС€РєРё</li>
+            <li><strong>Р’С‹Р±РµСЂРёС‚Рµ "РџРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєР°СЏ СѓСЃС‚Р°РЅРѕРІРєР°"</strong></li>
+            <li><strong>РћС‚С„РѕСЂРјР°С‚РёСЂСѓР№С‚Рµ СЃРёСЃС‚РµРјРЅС‹Р№ РґРёСЃРє</strong> (РїРѕР»РЅР°СЏ РѕС‡РёСЃС‚РєР°)</li>
+            <li><strong>РЈСЃС‚Р°РЅРѕРІРёС‚Рµ Windows</strong> РЅР° С‡РёСЃС‚С‹Р№ РґРёСЃРє</li>
+            <li><strong>РЈСЃС‚Р°РЅРѕРІРёС‚Рµ РґСЂР°Р№РІРµСЂС‹</strong> Рё РЅРµРѕР±С…РѕРґРёРјРѕРµ РџРћ</li>
+            <li><strong>Р’РѕСЃСЃС‚Р°РЅРѕРІРёС‚Рµ РґР°РЅРЅС‹Рµ</strong> РёР· СЂРµР·РµСЂРІРЅРѕР№ РєРѕРїРёРё</li>
           </ol>
         </div>
 
-        <h2>Проверка и восстановление данных</h2>
+        <h2>РџСЂРѕРІРµСЂРєР° Рё РІРѕСЃСЃС‚Р°РЅРѕРІР»РµРЅРёРµ РґР°РЅРЅС‹С…</h2>
 
-        <h3>Проверка сохраненных файлов</h3>
+        <h3>РџСЂРѕРІРµСЂРєР° СЃРѕС…СЂР°РЅРµРЅРЅС‹С… С„Р°Р№Р»РѕРІ</h3>
 
         <div class="pro-tips">
-          <h4>Комплексная проверка файлов:</h4>
+          <h4>РљРѕРјРїР»РµРєСЃРЅР°СЏ РїСЂРѕРІРµСЂРєР° С„Р°Р№Р»РѕРІ:</h4>
           <ul>
-            <li><strong>Сканирование антивирусом</strong> — проверьте все файлы на внешнем диске</li>
-            <li><strong>Проверка целостности</strong> — откройте важные документы и файлы</li>
-            <li><strong>Поиск скрытых файлов</strong> — включите показ скрытых файлов и папок</li>
-            <li><strong>Проверка расширений</strong> — убедитесь, что файлы не изменили тип</li>
+            <li><strong>РЎРєР°РЅРёСЂРѕРІР°РЅРёРµ Р°РЅС‚РёРІРёСЂСѓСЃРѕРј</strong> вЂ” РїСЂРѕРІРµСЂСЊС‚Рµ РІСЃРµ С„Р°Р№Р»С‹ РЅР° РІРЅРµС€РЅРµРј РґРёСЃРєРµ</li>
+            <li><strong>РџСЂРѕРІРµСЂРєР° С†РµР»РѕСЃС‚РЅРѕСЃС‚Рё</strong> вЂ” РѕС‚РєСЂРѕР№С‚Рµ РІР°Р¶РЅС‹Рµ РґРѕРєСѓРјРµРЅС‚С‹ Рё С„Р°Р№Р»С‹</li>
+            <li><strong>РџРѕРёСЃРє СЃРєСЂС‹С‚С‹С… С„Р°Р№Р»РѕРІ</strong> вЂ” РІРєР»СЋС‡РёС‚Рµ РїРѕРєР°Р· СЃРєСЂС‹С‚С‹С… С„Р°Р№Р»РѕРІ Рё РїР°РїРѕРє</li>
+            <li><strong>РџСЂРѕРІРµСЂРєР° СЂР°СЃС€РёСЂРµРЅРёР№</strong> вЂ” СѓР±РµРґРёС‚РµСЃСЊ, С‡С‚Рѕ С„Р°Р№Р»С‹ РЅРµ РёР·РјРµРЅРёР»Рё С‚РёРї</li>
           </ul>
         </div>
 
-        <h3>Восстановление системных настроек</h3>
+        <h3>Р’РѕСЃСЃС‚Р°РЅРѕРІР»РµРЅРёРµ СЃРёСЃС‚РµРјРЅС‹С… РЅР°СЃС‚СЂРѕРµРє</h3>
 
         <div class="check-section">
-          <div class="check-title">После переустановки Windows:</div>
+          <div class="check-title">РџРѕСЃР»Рµ РїРµСЂРµСѓСЃС‚Р°РЅРѕРІРєРё Windows:</div>
           <ol>
-            <li><strong>Установите качественный антивирус</strong> с обновленными базами</li>
-            <li><strong>Обновите Windows</strong> до последней версии</li>
-            <li><strong>Настройте брандмауэр</strong> и параметры безопасности</li>
-            <li><strong>Установите необходимые программы</strong> с официальных сайтов</li>
-            <li><strong>Настройте резервное копирование</strong> для предотвращения будущих проблем</li>
+            <li><strong>РЈСЃС‚Р°РЅРѕРІРёС‚Рµ РєР°С‡РµСЃС‚РІРµРЅРЅС‹Р№ Р°РЅС‚РёРІРёСЂСѓСЃ</strong> СЃ РѕР±РЅРѕРІР»РµРЅРЅС‹РјРё Р±Р°Р·Р°РјРё</li>
+            <li><strong>РћР±РЅРѕРІРёС‚Рµ Windows</strong> РґРѕ РїРѕСЃР»РµРґРЅРµР№ РІРµСЂСЃРёРё</li>
+            <li><strong>РќР°СЃС‚СЂРѕР№С‚Рµ Р±СЂР°РЅРґРјР°СѓСЌСЂ</strong> Рё РїР°СЂР°РјРµС‚СЂС‹ Р±РµР·РѕРїР°СЃРЅРѕСЃС‚Рё</li>
+            <li><strong>РЈСЃС‚Р°РЅРѕРІРёС‚Рµ РЅРµРѕР±С…РѕРґРёРјС‹Рµ РїСЂРѕРіСЂР°РјРјС‹</strong> СЃ РѕС„РёС†РёР°Р»СЊРЅС‹С… СЃР°Р№С‚РѕРІ</li>
+            <li><strong>РќР°СЃС‚СЂРѕР№С‚Рµ СЂРµР·РµСЂРІРЅРѕРµ РєРѕРїРёСЂРѕРІР°РЅРёРµ</strong> РґР»СЏ РїСЂРµРґРѕС‚РІСЂР°С‰РµРЅРёСЏ Р±СѓРґСѓС‰РёС… РїСЂРѕР±Р»РµРј</li>
           </ol>
         </div>
 
-        <h2>Профилактика повторного заражения</h2>
+        <h2>РџСЂРѕС„РёР»Р°РєС‚РёРєР° РїРѕРІС‚РѕСЂРЅРѕРіРѕ Р·Р°СЂР°Р¶РµРЅРёСЏ</h2>
 
-        <h3>Обязательные меры защиты:</h3>
+        <h3>РћР±СЏР·Р°С‚РµР»СЊРЅС‹Рµ РјРµСЂС‹ Р·Р°С‰РёС‚С‹:</h3>
 
         <div class="alert-info">
-          <h4><i class="fas fa-shield-alt"></i> Комплексная защита системы:</h4>
+          <h4><i class="fas fa-shield-alt"></i> РљРѕРјРїР»РµРєСЃРЅР°СЏ Р·Р°С‰РёС‚Р° СЃРёСЃС‚РµРјС‹:</h4>
           <ul>
-            <li><strong>Качественный антивирус</strong> — Kaspersky, ESET, Dr.Web</li>
-            <li><strong>Регулярные обновления</strong> — Windows и всех программ</li>
-            <li><strong>Контролируемый доступ к папкам</strong> — защита от вымогателей</li>
-            <li><strong>Резервное копирование</strong> — по правилу 3-2-1</li>
-            <li><strong>Ограничение прав</strong> — работа под стандартной учетной записью</li>
+            <li><strong>РљР°С‡РµСЃС‚РІРµРЅРЅС‹Р№ Р°РЅС‚РёРІРёСЂСѓСЃ</strong> вЂ” Kaspersky, ESET, Dr.Web</li>
+            <li><strong>Р РµРіСѓР»СЏСЂРЅС‹Рµ РѕР±РЅРѕРІР»РµРЅРёСЏ</strong> вЂ” Windows Рё РІСЃРµС… РїСЂРѕРіСЂР°РјРј</li>
+            <li><strong>РљРѕРЅС‚СЂРѕР»РёСЂСѓРµРјС‹Р№ РґРѕСЃС‚СѓРї Рє РїР°РїРєР°Рј</strong> вЂ” Р·Р°С‰РёС‚Р° РѕС‚ РІС‹РјРѕРіР°С‚РµР»РµР№</li>
+            <li><strong>Р РµР·РµСЂРІРЅРѕРµ РєРѕРїРёСЂРѕРІР°РЅРёРµ</strong> вЂ” РїРѕ РїСЂР°РІРёР»Сѓ 3-2-1</li>
+            <li><strong>РћРіСЂР°РЅРёС‡РµРЅРёРµ РїСЂР°РІ</strong> вЂ” СЂР°Р±РѕС‚Р° РїРѕРґ СЃС‚Р°РЅРґР°СЂС‚РЅРѕР№ СѓС‡РµС‚РЅРѕР№ Р·Р°РїРёСЃСЊСЋ</li>
           </ul>
         </div>
 
-        <h3>Безопасное поведение в интернете:</h3>
+        <h3>Р‘РµР·РѕРїР°СЃРЅРѕРµ РїРѕРІРµРґРµРЅРёРµ РІ РёРЅС‚РµСЂРЅРµС‚Рµ:</h3>
 
         <div class="pro-tips">
-          <h4>Правила безопасности:</h4>
+          <h4>РџСЂР°РІРёР»Р° Р±РµР·РѕРїР°СЃРЅРѕСЃС‚Рё:</h4>
           <ul>
-            <li><strong>Не открывайте подозрительные вложения</strong> в email</li>
-            <li><strong>Скачивайте программы</strong> только с официальных сайтов</li>
-            <li><strong>Используйте сложные пароли</strong> и двухфакторную аутентификацию</li>
-            <li><strong>Избегайте пиратского ПО</strong> и кряков</li>
-            <li><strong>Регулярно проверяйте систему</strong> на наличие вредоносного ПО</li>
+            <li><strong>РќРµ РѕС‚РєСЂС‹РІР°Р№С‚Рµ РїРѕРґРѕР·СЂРёС‚РµР»СЊРЅС‹Рµ РІР»РѕР¶РµРЅРёСЏ</strong> РІ email</li>
+            <li><strong>РЎРєР°С‡РёРІР°Р№С‚Рµ РїСЂРѕРіСЂР°РјРјС‹</strong> С‚РѕР»СЊРєРѕ СЃ РѕС„РёС†РёР°Р»СЊРЅС‹С… СЃР°Р№С‚РѕРІ</li>
+            <li><strong>РСЃРїРѕР»СЊР·СѓР№С‚Рµ СЃР»РѕР¶РЅС‹Рµ РїР°СЂРѕР»Рё</strong> Рё РґРІСѓС…С„Р°РєС‚РѕСЂРЅСѓСЋ Р°СѓС‚РµРЅС‚РёС„РёРєР°С†РёСЋ</li>
+            <li><strong>РР·Р±РµРіР°Р№С‚Рµ РїРёСЂР°С‚СЃРєРѕРіРѕ РџРћ</strong> Рё РєСЂСЏРєРѕРІ</li>
+            <li><strong>Р РµРіСѓР»СЏСЂРЅРѕ РїСЂРѕРІРµСЂСЏР№С‚Рµ СЃРёСЃС‚РµРјСѓ</strong> РЅР° РЅР°Р»РёС‡РёРµ РІСЂРµРґРѕРЅРѕСЃРЅРѕРіРѕ РџРћ</li>
           </ul>
         </div>
 
-        <h2>Специализированные инструменты для восстановления</h2>
+        <h2>РЎРїРµС†РёР°Р»РёР·РёСЂРѕРІР°РЅРЅС‹Рµ РёРЅСЃС‚СЂСѓРјРµРЅС‚С‹ РґР»СЏ РІРѕСЃСЃС‚Р°РЅРѕРІР»РµРЅРёСЏ</h2>
 
         <div class="tool-grid">
           <div class="tool-card">
             <h4>Kaspersky Rescue Disk</h4>
-            <p class="price">Бесплатно</p>
-            <p>Загрузочный диск с мощным антивирусом для очистки системы</p>
+            <p class="price">Р‘РµСЃРїР»Р°С‚РЅРѕ</p>
+            <p>Р—Р°РіСЂСѓР·РѕС‡РЅС‹Р№ РґРёСЃРє СЃ РјРѕС‰РЅС‹Рј Р°РЅС‚РёРІРёСЂСѓСЃРѕРј РґР»СЏ РѕС‡РёСЃС‚РєРё СЃРёСЃС‚РµРјС‹</p>
           </div>
           <div class="tool-card">
             <h4>Dr.Web LiveDisk</h4>
-            <p class="price">Бесплатно</p>
-            <p>Полноценная операционная система с антивирусом</p>
+            <p class="price">Р‘РµСЃРїР»Р°С‚РЅРѕ</p>
+            <p>РџРѕР»РЅРѕС†РµРЅРЅР°СЏ РѕРїРµСЂР°С†РёРѕРЅРЅР°СЏ СЃРёСЃС‚РµРјР° СЃ Р°РЅС‚РёРІРёСЂСѓСЃРѕРј</p>
           </div>
           <div class="tool-card">
             <h4>Malwarebytes</h4>
-            <p class="price">От 2000?/год</p>
-            <p>Эффективное средство от вредоносного ПО и шпионских программ</p>
+            <p class="price">РћС‚ 2000в‚Ѕ/РіРѕРґ</p>
+            <p>Р­С„С„РµРєС‚РёРІРЅРѕРµ СЃСЂРµРґСЃС‚РІРѕ РѕС‚ РІСЂРµРґРѕРЅРѕСЃРЅРѕРіРѕ РџРћ Рё С€РїРёРѕРЅСЃРєРёС… РїСЂРѕРіСЂР°РјРј</p>
           </div>
           <div class="tool-card">
             <h4>HitmanPro</h4>
-            <p class="price">От 2500?/год</p>
-            <p>Сканер второго мнения для обнаружения сложных угроз</p>
+            <p class="price">РћС‚ 2500в‚Ѕ/РіРѕРґ</p>
+            <p>РЎРєР°РЅРµСЂ РІС‚РѕСЂРѕРіРѕ РјРЅРµРЅРёСЏ РґР»СЏ РѕР±РЅР°СЂСѓР¶РµРЅРёСЏ СЃР»РѕР¶РЅС‹С… СѓРіСЂРѕР·</p>
           </div>
         </div>
 
-        <h2>Когда обращаться к специалистам</h2>
+        <h2>РљРѕРіРґР° РѕР±СЂР°С‰Р°С‚СЊСЃСЏ Рє СЃРїРµС†РёР°Р»РёСЃС‚Р°Рј</h2>
 
         <div class="alert-warning">
-          <h4><i class="fas fa-user-md"></i> Признаки необходимости профессиональной помощи:</h4>
+          <h4><i class="fas fa-user-md"></i> РџСЂРёР·РЅР°РєРё РЅРµРѕР±С…РѕРґРёРјРѕСЃС‚Рё РїСЂРѕС„РµСЃСЃРёРѕРЅР°Р»СЊРЅРѕР№ РїРѕРјРѕС‰Рё:</h4>
           <ul>
-            <li><strong>Системные файлы повреждены</strong> — Windows не загружается</li>
-            <li><strong>Вирус зашифровал данные</strong> — требуется помощь в расшифровке</li>
-            <li><strong>Повторное заражение</strong> — после очистки вирус возвращается</li>
-            <li><strong>Корпоративные данные</strong> — риск утечки важной информации</li>
-            <li><strong>Сложный полиморфный вирус</strong> — стандартные средства не помогают</li>
+            <li><strong>РЎРёСЃС‚РµРјРЅС‹Рµ С„Р°Р№Р»С‹ РїРѕРІСЂРµР¶РґРµРЅС‹</strong> вЂ” Windows РЅРµ Р·Р°РіСЂСѓР¶Р°РµС‚СЃСЏ</li>
+            <li><strong>Р’РёСЂСѓСЃ Р·Р°С€РёС„СЂРѕРІР°Р» РґР°РЅРЅС‹Рµ</strong> вЂ” С‚СЂРµР±СѓРµС‚СЃСЏ РїРѕРјРѕС‰СЊ РІ СЂР°СЃС€РёС„СЂРѕРІРєРµ</li>
+            <li><strong>РџРѕРІС‚РѕСЂРЅРѕРµ Р·Р°СЂР°Р¶РµРЅРёРµ</strong> вЂ” РїРѕСЃР»Рµ РѕС‡РёСЃС‚РєРё РІРёСЂСѓСЃ РІРѕР·РІСЂР°С‰Р°РµС‚СЃСЏ</li>
+            <li><strong>РљРѕСЂРїРѕСЂР°С‚РёРІРЅС‹Рµ РґР°РЅРЅС‹Рµ</strong> вЂ” СЂРёСЃРє СѓС‚РµС‡РєРё РІР°Р¶РЅРѕР№ РёРЅС„РѕСЂРјР°С†РёРё</li>
+            <li><strong>РЎР»РѕР¶РЅС‹Р№ РїРѕР»РёРјРѕСЂС„РЅС‹Р№ РІРёСЂСѓСЃ</strong> вЂ” СЃС‚Р°РЅРґР°СЂС‚РЅС‹Рµ СЃСЂРµРґСЃС‚РІР° РЅРµ РїРѕРјРѕРіР°СЋС‚</li>
           </ul>
         </div>
 
-        <h2>Заключение</h2>
+        <h2>Р—Р°РєР»СЋС‡РµРЅРёРµ</h2>
 
-        <p>Восстановление ноутбука после вируса без потери данных — это выполнимая задача при правильном подходе. Главное — действовать последовательно: сначала сохранить важные файлы в безопасном месте, затем полностью очистить систему и только после этого восстанавливать данные.</p>
+        <p>Р’РѕСЃСЃС‚Р°РЅРѕРІР»РµРЅРёРµ РЅРѕСѓС‚Р±СѓРєР° РїРѕСЃР»Рµ РІРёСЂСѓСЃР° Р±РµР· РїРѕС‚РµСЂРё РґР°РЅРЅС‹С… вЂ” СЌС‚Рѕ РІС‹РїРѕР»РЅРёРјР°СЏ Р·Р°РґР°С‡Р° РїСЂРё РїСЂР°РІРёР»СЊРЅРѕРј РїРѕРґС…РѕРґРµ. Р“Р»Р°РІРЅРѕРµ вЂ” РґРµР№СЃС‚РІРѕРІР°С‚СЊ РїРѕСЃР»РµРґРѕРІР°С‚РµР»СЊРЅРѕ: СЃРЅР°С‡Р°Р»Р° СЃРѕС…СЂР°РЅРёС‚СЊ РІР°Р¶РЅС‹Рµ С„Р°Р№Р»С‹ РІ Р±РµР·РѕРїР°СЃРЅРѕРј РјРµСЃС‚Рµ, Р·Р°С‚РµРј РїРѕР»РЅРѕСЃС‚СЊСЋ РѕС‡РёСЃС‚РёС‚СЊ СЃРёСЃС‚РµРјСѓ Рё С‚РѕР»СЊРєРѕ РїРѕСЃР»Рµ СЌС‚РѕРіРѕ РІРѕСЃСЃС‚Р°РЅР°РІР»РёРІР°С‚СЊ РґР°РЅРЅС‹Рµ.</p>
 
-        <p>Помните, что лучшая защита от вирусов — это профилактика. Регулярные резервные копии, качественный антивирус и осторожное поведение в интернете помогут избежать подобных проблем в будущем.</p>
+        <p>РџРѕРјРЅРёС‚Рµ, С‡С‚Рѕ Р»СѓС‡С€Р°СЏ Р·Р°С‰РёС‚Р° РѕС‚ РІРёСЂСѓСЃРѕРІ вЂ” СЌС‚Рѕ РїСЂРѕС„РёР»Р°РєС‚РёРєР°. Р РµРіСѓР»СЏСЂРЅС‹Рµ СЂРµР·РµСЂРІРЅС‹Рµ РєРѕРїРёРё, РєР°С‡РµСЃС‚РІРµРЅРЅС‹Р№ Р°РЅС‚РёРІРёСЂСѓСЃ Рё РѕСЃС‚РѕСЂРѕР¶РЅРѕРµ РїРѕРІРµРґРµРЅРёРµ РІ РёРЅС‚РµСЂРЅРµС‚Рµ РїРѕРјРѕРіСѓС‚ РёР·Р±РµР¶Р°С‚СЊ РїРѕРґРѕР±РЅС‹С… РїСЂРѕР±Р»РµРј РІ Р±СѓРґСѓС‰РµРј.</p>
 
-        <p>Не экономьте на безопасности — стоимость восстановления данных и системы всегда выше стоимости качественной защиты.</p>
+        <p>РќРµ СЌРєРѕРЅРѕРјСЊС‚Рµ РЅР° Р±РµР·РѕРїР°СЃРЅРѕСЃС‚Рё вЂ” СЃС‚РѕРёРјРѕСЃС‚СЊ РІРѕСЃСЃС‚Р°РЅРѕРІР»РµРЅРёСЏ РґР°РЅРЅС‹С… Рё СЃРёСЃС‚РµРјС‹ РІСЃРµРіРґР° РІС‹С€Рµ СЃС‚РѕРёРјРѕСЃС‚Рё РєР°С‡РµСЃС‚РІРµРЅРЅРѕР№ Р·Р°С‰РёС‚С‹.</p>
 
-        <!-- Яндекс Маркет рекламный баннер -->
-                <img src="https://avatars.mds.yandex.net/get-market-ugc/12573871/2a0000018f2a5a8b8c0b7d9d9c4b6c5c/orig" alt="Антивирус Kaspersky">
+        <!-- РЇРЅРґРµРєСЃ РњР°СЂРєРµС‚ СЂРµРєР»Р°РјРЅС‹Р№ Р±Р°РЅРЅРµСЂ -->
+        <a href="https://market.yandex.ru/search?text=Р°РЅС‚РёРІРёСЂСѓСЃ%20Kaspersky%20ESET&local-offers-first=0" class="ym-hero-link" target="_blank" rel="noopener noreferrer">
+          <div class="ym-hero-banner">
+            <div class="ym-hero-images">
+              <div class="ym-hero-image">
+                <img src="https://avatars.mds.yandex.net/get-market-ugc/12573871/2a0000018f2a5a8b8c0b7d9d9c4b6c5c/orig" alt="РђРЅС‚РёРІРёСЂСѓСЃ Kaspersky">
               </div>
-                <img src="https://avatars.mds.yandex.net/get-market-ugc/15377961/2a0000018f2a5a8b8c0b7d9d9c4b6c5d/orig" alt="Внешний диск для бэкапа">
+              <div class="ym-hero-image">
+                <img src="https://avatars.mds.yandex.net/get-market-ugc/15377961/2a0000018f2a5a8b8c0b7d9d9c4b6c5d/orig" alt="Р’РЅРµС€РЅРёР№ РґРёСЃРє РґР»СЏ Р±СЌРєР°РїР°">
               </div>
             </div>
+            <div class="ym-hero-content">
+              <div class="ym-hero-title">РђРЅС‚РёРІРёСЂСѓСЃС‹ Рё РґРёСЃРєРё РґР»СЏ Р·Р°С‰РёС‚С‹ РґР°РЅРЅС‹С…</div>
+              <div class="ym-hero-desc">РќР°РґРµР¶РЅР°СЏ Р·Р°С‰РёС‚Р° РѕС‚ РІРёСЂСѓСЃРѕРІ Рё Р±РµР·РѕРїР°СЃРЅРѕРµ С…СЂР°РЅРµРЅРёРµ РёРЅС„РѕСЂРјР°С†РёРё</div>
             </div>
           </div>
         </a>
@@ -619,24 +468,24 @@
       <div class="footer__content">
         <div class="footer__section">
           <h4>Repairo</h4>
-          <p>Экспертные руководства по ремонту и обслуживанию техники</p>
+          <p>Р­РєСЃРїРµСЂС‚РЅС‹Рµ СЂСѓРєРѕРІРѕРґСЃС‚РІР° РїРѕ СЂРµРјРѕРЅС‚Сѓ Рё РѕР±СЃР»СѓР¶РёРІР°РЅРёСЋ С‚РµС…РЅРёРєРё</p>
         </div>
         <div class="footer__section">
-          <h4>Разделы</h4>
+          <h4>Р Р°Р·РґРµР»С‹</h4>
           <ul>
-            <li><a href="../laptops.html">Ноутбуки</a></li>
-            <li><a href="../smartphones.html">Смартфоны</a></li>
-            <li><a href="../consoles.html">Консоли</a></li>
-            <li><a href="../cameras.html">Фотоаппараты</a></li>
+            <li><a href="../laptops.html">РќРѕСѓС‚Р±СѓРєРё</a></li>
+            <li><a href="../smartphones.html">РЎРјР°СЂС‚С„РѕРЅС‹</a></li>
+            <li><a href="../consoles.html">РљРѕРЅСЃРѕР»Рё</a></li>
+            <li><a href="../cameras.html">Р¤РѕС‚РѕР°РїРїР°СЂР°С‚С‹</a></li>
           </ul>
         </div>
         <div class="footer__section">
-          <h4>Контакты</h4>
+          <h4>РљРѕРЅС‚Р°РєС‚С‹</h4>
           <p>support@repairo.ru</p>
         </div>
       </div>
       <div class="footer__bottom">
-        <p>&copy; 2024 Repairo. Все права защищены.</p>
+        <p>&copy; 2024 Repairo. Р’СЃРµ РїСЂР°РІР° Р·Р°С‰РёС‰РµРЅС‹.</p>
       </div>
     </div>
   </footer>
@@ -646,9 +495,3 @@
 
 </body>
 </html>
-
-
-
-
-
-

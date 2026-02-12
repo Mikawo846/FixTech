@@ -4,8 +4,9 @@
 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Интернет только в браузере а в приложениях нет ноутбук | Экс</title>
-    <meta name="description" content="">
+  <title>РРЅС‚РµСЂРЅРµС‚ С‚РѕР»СЊРєРѕ РІ Р±СЂР°СѓР·РµСЂРµ Р° РІ РїСЂРёР»РѕР¶РµРЅРёСЏС… РЅРµС‚ РЅРѕСѓС‚Р±СѓРє | Р­РєСЃРїРµСЂС‚РЅС‹Р№ РјРµРіР°РіР°Р№Рґ</title>
+    <meta name="description" content="{{ description }}">
+    <meta name="description" content="РџРѕС€Р°РіРѕРІР°СЏ РёРЅСЃС‚СЂСѓРєС†РёСЏ: РРЅС‚РµСЂРЅРµС‚ С‚РѕР»СЊРєРѕ РІ Р±СЂР°СѓР·РµСЂРµ Р° РІ РїСЂРёР»РѕР¶РµРЅРёСЏС… РЅРµС‚ РЅРѕСѓС‚Р±СѓРє вЂ” Р­РєСЃРїРµСЂС‚РЅС‹Р№ РјРµРіР°РіР°Р№Рґ. РџСЂРёС‡РёРЅС‹ РѕРіСЂР°РЅРёС‡РµРЅРЅРѕРіРѕ РґРѕСЃС‚СѓРїР° Рє РёРЅС‚РµСЂРЅРµС‚Сѓ: РїСЂРѕРєСЃРё РЅР°СЃС‚СЂРѕР№РєРё, Р°РЅС‚РёРІРёСЂСѓСЃ, С„Р°РµСЂРІРѕР», DNS РїСЂРѕР±Р»РµРјС‹, VPN РєРѕРЅС„Р»РёРєС‚С‹. Р РµС€РµРЅРёСЏ: СЃР±СЂРѕСЃ РЅР°СЃС‚СЂРѕРµРє, РѕС‚РєР»СЋС‡РµРЅРёРµ РїСЂРѕРєСЃРё, РЅР°СЃС‚СЂРѕР№РєР° РёСЃРєР»СЋС‡РµРЅРёР№.">
 
   <link rel="stylesheet" href="../styles.css" />
   <link rel="stylesheet" href="../styles-header.css" />
@@ -13,25 +14,36 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <style>
     .guide-content { line-height: 1.7; color: var(--text); }
-    .guide-content h2 { color: var(--primary); margin-top: 30px; margin-bottom: 15px; font-size: 1.5rem; }
-    .guide-content h3 { color: var(--primary-dark); margin-top: 25px; margin-bottom: 12px; font-size: 1.2rem; }
+    .guide-content h2 { color: var(--primary); margin-top: 30px; margin-bottom: 15px; font-size: 1.6rem; }
+    .guide-content h3 { color: var(--primary-dark); margin-top: 25px; margin-bottom: 12px; font-size: 1.25rem; }
     .guide-image-block { margin: 20px 0; padding: 15px; background: var(--background); border-radius: var(--border-radius); border: 1px solid var(--border); text-align: center; }
     .guide-image-block img { max-width: 100%; height: auto; border-radius: 6px; border: 1px solid var(--border); }
     .image-caption { margin-top: 10px; font-size: 0.85rem; color: var(--text-light); font-style: italic; }
-    .pro-tips { background: rgba(3, 74, 79, 0.05); padding: 15px; border-radius: 6px; margin: 20px 0; }
-    .pro-tips h4 { color: var(--primary); margin-top: 0; margin-bottom: 12px; font-size: 1.1rem; }
-    .tip-item { display: flex; gap: 8px; margin-bottom: 8px; align-items: flex-start; }
+    .pro-tips { background: rgba(3, 74, 79, 0.05); padding: 18px; border-radius: 8px; margin: 25px 0; }
+    .pro-tips h4 { color: var(--primary); margin-top: 0; margin-bottom: 12px; font-size: 1.15rem; }
+    .tip-item { display: flex; gap: 10px; margin-bottom: 10px; align-items: flex-start; }
+    .tip-item i { margin-top: 3px; }
     table { width: 100%; border-collapse: collapse; margin: 20px 0; }
-    th, td { border: 1px solid var(--border); padding: 8px; text-align: left; }
+    th, td { border: 1px solid var(--border); padding: 8px; text-align: left; vertical-align: top; }
     th { background: var(--background-light); }
-    .highlight { background: #f5f7fa; border-left: 4px solid #2d9cdb; padding: 10px 15px; margin: 20px 0; }
-    .faq-section ul { margin-left: 1em; }
-    .block-section { margin-bottom: 2em; }
+    code { background: var(--background-light); padding: 2px 4px; border-radius: 4px; font-size: 0.9em; }
+    ul, ol { margin-left: 18px; }
     @media (max-width: 768px) {
       .guide-content h2 { font-size: 1.4rem; margin-top: 25px; }
+      .guide-content h3 { font-size: 1.15rem; }
       .guide-image-block { padding: 12px; margin: 15px 0; }
       table, th, td { font-size: 0.95rem; }
     }
+
+    /* РЇРЅРґРµРєСЃ РњР°СЂРєРµС‚ СЂРµРєР»Р°РјРЅС‹Р№ Р±Р°РЅРЅРµСЂ */
+    .ym-hero-link {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+      max-width: 100%;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
     /* Р“РѕСЂРёР·РѕРЅС‚Р°Р»СЊРЅС‹Р№ Р±Р°РЅРЅРµСЂ-РєР°СЂС‚РѕС‡РєР° */
     .ym-hero-banner {
       width: 100%;
@@ -107,606 +119,381 @@
     }
 
     /* Р РµР№С‚РёРЅРі */
-    .ym-hero-top {
+    .ym-hero-rating {
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      gap: 8px;
-    }
-
-    .ym-hero-rating {
-      font-size: 13px;
-      font-weight: 500;
-      color: #111827;
-      background: #f9fafb;
-      border-radius: 999px;
-      padding: 4px 10px;
-    }
-
-    .ym-hero-rating-count {
+      gap: 4px;
+      font-size: 12px;
       color: #6b7280;
     }
 
-    /* Р¤РёРѕР»РµС‚РѕРІР°СЏ РєРЅРѕРїРєР° */
-    .ym-hero-button {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 9px 16px;
-      border-radius: 999px;
-      border: none;
-      background: #6a00ff;
-      color: #ffffff;
-      font-size: 14px;
-      font-weight: 600;
-      cursor: pointer;
-      box-shadow: 0 2px 6px rgba(88, 28, 135, 0.35);
-      transition: background 0.15s ease, transform 0.15s ease,
-                  box-shadow 0.15s ease;
-    }
-    .ym-hero-button::after {
-      content: "в†’";
-      margin-left: 6px;
-      font-size: 14px;
-    }
-    .ym-hero-button:hover {
-      background: #7c3aed;
-      transform: translateY(-1px);
-      box-shadow: 0 4px 10px rgba(88, 28, 135, 0.45);
+    .ym-hero-stars {
+      display: flex;
+      gap: 1px;
     }
 
-    /* Р®СЂРёРґРёС‡РµСЃРєРёР№ Р±Р»РѕРє */
-    .ym-hero-legal {
-      margin-top: 6px;
-      max-width: 600px;
+    .ym-hero-star {
+      width: 12px;
+      height: 12px;
+      fill: #fbbf24;
+    }
+
+    .ym-hero-reviews {
       font-size: 11px;
-      line-height: 1.3;
-      color: #6b7280;
-      margin-left: auto;
-      margin-right: auto;
+      color: #9ca3af;
     }
 
-    /* РђРґР°РїС‚РёРІ */
-    @media (max-width: 480px) {
+    /* Р¦РµРЅР° */
+    .ym-hero-price {
+      font-size: 16px;
+      font-weight: 700;
+      color: #111827;
+      margin: 0;
+    }
+
+    /* РљРЅРѕРїРєР° */
+    .ym-hero-button {
+      background: #007bff;
+      color: #ffffff;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background 0.2s ease;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .ym-hero-button:hover {
+      background: #0056b3;
+    }
+
+    /* РђРґР°РїС‚РёРІРЅРѕСЃС‚СЊ */
+    @media (max-width: 768px) {
       .ym-hero-banner {
-        max-width: 100%;
-        margin: 20px 0;
+        flex-direction: row;
+        min-height: auto;
       }
+
       .ym-hero-images {
-        height: 100px;
+        width: 120px;
+        height: auto;
+        flex-shrink: 0;
       }
+
       .ym-hero-content {
-        padding: 12px 12px;
+        flex: 1;
+        padding: 12px 16px;
       }
+
       .ym-hero-title {
         font-size: 13px;
       }
+
+      .ym-hero-price {
+        font-size: 15px;
+      }
+
       .ym-hero-button {
-        font-size: 13px;
-        padding: 8px 14px;
-      }
-      .ym-hero-legal {
-        font-size: 10px;
-      }
-    }
-    /* Telegram СЂРµРєР»Р°РјРЅС‹Р№ Р±Р°РЅРЅРµСЂ */
-    .telegram-banner {
-      display: flex;
-      justify-content: center;
-      text-decoration: none;
-      color: inherit;
-      width: 100%;
-      margin: 40px 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    }
-
-    .telegram-banner-container {
-      width: 100%;
-      max-width: 500px;
-      min-height: 120px;
-      border-radius: 16px;
-      background: linear-gradient(135deg, #0088cc 0%, #005f8f 100%);
-      border: 1px solid #005f8f;
-      display: flex;
-      align-items: center;
-      padding: 20px;
-      box-shadow: 0 4px 16px rgba(0, 136, 204, 0.2);
-      overflow: hidden;
-      box-sizing: border-box;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-
-    .telegram-banner-container:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(0, 136, 204, 0.3);
-    }
-
-    .telegram-logo {
-      width: 60px;
-      height: 60px;
-      min-width: 60px;
-      background: #ffffff;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-right: 20px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    }
-
-    .telegram-logo svg {
-      width: 32px;
-      height: 32px;
-      fill: #0088cc;
-    }
-
-    .telegram-content {
-      flex: 1;
-      color: #ffffff;
-    }
-
-    .telegram-title {
-      font-size: 16px;
-      font-weight: 600;
-      margin: 0 0 8px 0;
-      line-height: 1.3;
-    }
-
-    .telegram-subtitle {
-      font-size: 14px;
-      opacity: 0.9;
-      margin: 0 0 12px 0;
-      line-height: 1.4;
-    }
-
-    .telegram-button {
-      display: inline-flex;
-      align-items: center;
-      padding: 8px 16px;
-      background: #ffffff;
-      color: #0088cc;
-      border-radius: 20px;
-      font-size: 14px;
-      font-weight: 600;
-      text-decoration: none;
-      transition: background 0.2s ease, transform 0.2s ease;
-    }
-
-    .telegram-button:hover {
-      background: #f0f8ff;
-      transform: scale(1.05);
-    }
-
-    .telegram-button svg {
-      width: 16px;
-      height: 16px;
-      margin-left: 6px;
-      fill: #0088cc;
-    }
-
-    /* РђРґР°РїС‚РёРІ РґР»СЏ РјРѕР±РёР»СЊРЅС‹С… */
-    @media (max-width: 480px) {
-      .telegram-banner-container {
-        max-width: 100%;
-        margin: 20px 0;
-        padding: 15px;
-        min-height: 100px;
-      }
-      .telegram-logo {
-        width: 50px;
-        height: 50px;
-        min-width: 50px;
-        margin-right: 15px;
-      }
-      .telegram-logo svg {
-        width: 26px;
-        height: 26px;
-      }
-      .telegram-title {
-        font-size: 14px;
-      }
-      .telegram-subtitle {
-        font-size: 12px;
-      }
-      .telegram-button {
-        font-size: 12px;
-        padding: 6px 12px;
+        padding: 6px 10px;
+        font-size: 11px;
       }
     }
 
-
-
+    /* РЎРєСЂС‹С‚С‹Р№ Р±Р°РЅРЅРµСЂ РґР»СЏ РґРµСЃРєС‚РѕРїР° */
+    @media (min-width: 769px) {
+      .ym-hero-link {
+        display: none !important;
+      }
+    }
   </style>
   <script async src="https://timeweb.cloud/api/v1/cloud-ai/agents/3cc03620-d051-4d8d-b5af-f7b6cd083a35/embed.js?collapsed=true"></script>
 </head>
 <body>
-  <header class="header">
-    <div class="container">
-      <div class="header__inner">
-        <a href="../index.html" class="logo">
-          <span class="logo__icon"></span>
-          <span class="logo__text">GeoExpert</span>
-        </a>
-        <nav class="nav">
-          <ul class="nav__list">
-            <li><a href="../cameras.html" class="nav__link">РљР°РјРµСЂС‹</a></li>
-            <li><a href="../drones.html" class="nav__link">Р”СЂРѕРЅС‹</a></li>
-            <li><a href="../workflow.html" class="nav__link">Workflow</a></li>
-          </ul>
-        </nav>
+  <header>
+    <div class="header-content">
+      <a href="/" class="logo">
+        <i class="fas fa-tools"></i>
+        FixTech
+      </a>
+      <nav class="nav-links">
+        <a href="/">Р“Р»Р°РІРЅР°СЏ</a>
+        <a href="/articles">Р’СЃРµ СЃС‚Р°С‚СЊРё</a>
+        <a href="/smartphones">РЎРјР°СЂС‚С„РѕРЅС‹</a>
+        <a href="/laptops">РќРѕСѓС‚Р±СѓРєРё</a>
+        <a href="/tv">РўРµР»РµРІРёР·РѕСЂС‹</a>
+        <a href="/cameras">РљР°РјРµСЂС‹</a>
+        <a href="/consoles">РљРѕРЅСЃРѕР»Рё</a>
+        <a href="/auto-electronics">РђРІС‚РѕСЌР»РµРєС‚СЂРѕРЅРёРєР°</a>
+        <a href="/small-appliances">РњРµР»РєР°СЏ С‚РµС…РЅРёРєР°</a>
+        <a href="/large-appliances">РљСЂСѓРїРЅР°СЏ С‚РµС…РЅРёРєР°</a>
+      </nav>
+      <div class="search-container">
+        <input type="text" id="search-input" placeholder="РџРѕРёСЃРє РїРѕ СЃР°Р№С‚Сѓ..." />
+        <button id="search-button"><i class="fas fa-search"></i></button>
       </div>
     </div>
   </header>
 
   <main class="guide-container">
     <div class="guide-content">
-      <h1>Интернет только в браузере а в приложениях нет на ноутбуке</h1>
-      <p>Проблема, когда интернет работает только в браузере, а приложения не могут подключиться к сети, является распространенной. В этом мегагайде мы рассмотрим все возможные причины ограниченного доступа к интернету и предоставим пошаговые решения для восстановления нормальной работы всех программ.</p>
+      <h1>РРЅС‚РµСЂРЅРµС‚ С‚РѕР»СЊРєРѕ РІ Р±СЂР°СѓР·РµСЂРµ Р° РІ РїСЂРёР»РѕР¶РµРЅРёСЏС… РЅРµС‚ РЅР° РЅРѕСѓС‚Р±СѓРєРµ</h1>
+      <p>РџСЂРѕР±Р»РµРјР°, РєРѕРіРґР° РёРЅС‚РµСЂРЅРµС‚ СЂР°Р±РѕС‚Р°РµС‚ С‚РѕР»СЊРєРѕ РІ Р±СЂР°СѓР·РµСЂРµ, Р° РїСЂРёР»РѕР¶РµРЅРёСЏ РЅРµ РјРѕРіСѓС‚ РїРѕРґРєР»СЋС‡РёС‚СЊСЃСЏ Рє СЃРµС‚Рё, СЏРІР»СЏРµС‚СЃСЏ СЂР°СЃРїСЂРѕСЃС‚СЂР°РЅРµРЅРЅРѕР№. Р’ СЌС‚РѕРј РјРµРіР°РіР°Р№РґРµ РјС‹ СЂР°СЃСЃРјРѕС‚СЂРёРј РІСЃРµ РІРѕР·РјРѕР¶РЅС‹Рµ РїСЂРёС‡РёРЅС‹ РѕРіСЂР°РЅРёС‡РµРЅРЅРѕРіРѕ РґРѕСЃС‚СѓРїР° Рє РёРЅС‚РµСЂРЅРµС‚Сѓ Рё РїСЂРµРґРѕСЃС‚Р°РІРёРј РїРѕС€Р°РіРѕРІС‹Рµ СЂРµС€РµРЅРёСЏ РґР»СЏ РІРѕСЃСЃС‚Р°РЅРѕРІР»РµРЅРёСЏ РЅРѕСЂРјР°Р»СЊРЅРѕР№ СЂР°Р±РѕС‚С‹ РІСЃРµС… РїСЂРѕРіСЂР°РјРј.</p>
 
-      <h2>Симптомы проблемы</h2>
+      <h2>РЎРёРјРїС‚РѕРјС‹ РїСЂРѕР±Р»РµРјС‹</h2>
       <ul>
-        <li>Браузер открывает сайты нормально</li>
-        <li>Приложения выдают ошибки подключения</li>
-        <li>Не работают обновления программ</li>
-        <li>Не загружаются email клиенты</li>
-        <li>Антивирус не может обновить базы</li>
-        <li>Мессенджеры не подключаются</li>
+        <li>Р‘СЂР°СѓР·РµСЂ РѕС‚РєСЂС‹РІР°РµС‚ СЃР°Р№С‚С‹ РЅРѕСЂРјР°Р»СЊРЅРѕ</li>
+        <li>РџСЂРёР»РѕР¶РµРЅРёСЏ РІС‹РґР°СЋС‚ РѕС€РёР±РєРё РїРѕРґРєР»СЋС‡РµРЅРёСЏ</li>
+        <li>РќРµ СЂР°Р±РѕС‚Р°СЋС‚ РѕР±РЅРѕРІР»РµРЅРёСЏ РїСЂРѕРіСЂР°РјРј</li>
+        <li>РќРµ Р·Р°РіСЂСѓР¶Р°СЋС‚СЃСЏ email РєР»РёРµРЅС‚С‹</li>
+        <li>РђРЅС‚РёРІРёСЂСѓСЃ РЅРµ РјРѕР¶РµС‚ РѕР±РЅРѕРІРёС‚СЊ Р±Р°Р·С‹</li>
+        <li>РњРµСЃСЃРµРЅРґР¶РµСЂС‹ РЅРµ РїРѕРґРєР»СЋС‡Р°СЋС‚СЃСЏ</li>
       </ul>
 
-      <h2>Возможные причины</h2>
+      <h2>Р’РѕР·РјРѕР¶РЅС‹Рµ РїСЂРёС‡РёРЅС‹</h2>
       <table>
         <tr>
-          <th>Причина</th>
-          <th>Вероятность</th>
-          <th>Типичные симптомы</th>
+          <th>РџСЂРёС‡РёРЅР°</th>
+          <th>Р’РµСЂРѕСЏС‚РЅРѕСЃС‚СЊ</th>
+          <th>РўРёРїРёС‡РЅС‹Рµ СЃРёРјРїС‚РѕРјС‹</th>
         </tr>
         <tr>
-          <td>Настройки прокси-сервера</td>
+          <td>РќР°СЃС‚СЂРѕР№РєРё РїСЂРѕРєСЃРё-СЃРµСЂРІРµСЂР°</td>
           <td>45%</td>
-          <td>Работает только через системный прокси</td>
+          <td>Р Р°Р±РѕС‚Р°РµС‚ С‚РѕР»СЊРєРѕ С‡РµСЂРµР· СЃРёСЃС‚РµРјРЅС‹Р№ РїСЂРѕРєСЃРё</td>
         </tr>
         <tr>
-          <td>Блокировка антивирусом/фаерволом</td>
+          <td>Р‘Р»РѕРєРёСЂРѕРІРєР° Р°РЅС‚РёРІРёСЂСѓСЃРѕРј/С„Р°РµСЂРІРѕР»РѕРј</td>
           <td>25%</td>
-          <td>Приложения не в списке исключений</td>
+          <td>РџСЂРёР»РѕР¶РµРЅРёСЏ РЅРµ РІ СЃРїРёСЃРєРµ РёСЃРєР»СЋС‡РµРЅРёР№</td>
         </tr>
         <tr>
-          <td>Проблемы с DNS</td>
+          <td>РџСЂРѕР±Р»РµРјС‹ СЃ DNS</td>
           <td>15%</td>
-          <td>Не резолвятся доменные имена</td>
+          <td>РќРµ СЂРµР·РѕР»РІСЏС‚СЃСЏ РґРѕРјРµРЅРЅС‹Рµ РёРјРµРЅР°</td>
         </tr>
         <tr>
-          <td>Конфликт с VPN</td>
+          <td>РљРѕРЅС„Р»РёРєС‚ СЃ VPN</td>
           <td>10%</td>
-          <td>Работает при отключении VPN</td>
+          <td>Р Р°Р±РѕС‚Р°РµС‚ РїСЂРё РѕС‚РєР»СЋС‡РµРЅРёРё VPN</td>
         </tr>
         <tr>
-          <td>Поврежденные сетевые настройки</td>
+          <td>РџРѕРІСЂРµР¶РґРµРЅРЅС‹Рµ СЃРµС‚РµРІС‹Рµ РЅР°СЃС‚СЂРѕР№РєРё</td>
           <td>3%</td>
-          <td>Требуется сброс TCP/IP</td>
+          <td>РўСЂРµР±СѓРµС‚СЃСЏ СЃР±СЂРѕСЃ TCP/IP</td>
         </tr>
         <tr>
-          <td>Проблемы с hosts файлом</td>
+          <td>РџСЂРѕР±Р»РµРјС‹ СЃ hosts С„Р°Р№Р»РѕРј</td>
           <td>2%</td>
-          <td>Заблокированные домены</td>
+          <td>Р—Р°Р±Р»РѕРєРёСЂРѕРІР°РЅРЅС‹Рµ РґРѕРјРµРЅС‹</td>
         </tr>
       </table>
 
-      <h2>Диагностика проблемы</h2>
-      <h3>Проверка подключения</h3>
+      <h2>Р”РёР°РіРЅРѕСЃС‚РёРєР° РїСЂРѕР±Р»РµРјС‹</h2>
+      <h3>РџСЂРѕРІРµСЂРєР° РїРѕРґРєР»СЋС‡РµРЅРёСЏ</h3>
       <ol>
-        <li>Откройте командную строку (Win + R > cmd)</li>
-        <li>Выполните ping google.com</li>
-        <li>Если ping работает, проблема в DNS или приложениях</li>
-        <li>Если ping не работает, проблема в сетевых настройках</li>
+        <li>РћС‚РєСЂРѕР№С‚Рµ РєРѕРјР°РЅРґРЅСѓСЋ СЃС‚СЂРѕРєСѓ (Win + R в†’ cmd)</li>
+        <li>Р’С‹РїРѕР»РЅРёС‚Рµ ping google.com</li>
+        <li>Р•СЃР»Рё ping СЂР°Р±РѕС‚Р°РµС‚, РїСЂРѕР±Р»РµРјР° РІ DNS РёР»Рё РїСЂРёР»РѕР¶РµРЅРёСЏС…</li>
+        <li>Р•СЃР»Рё ping РЅРµ СЂР°Р±РѕС‚Р°РµС‚, РїСЂРѕР±Р»РµРјР° РІ СЃРµС‚РµРІС‹С… РЅР°СЃС‚СЂРѕР№РєР°С…</li>
       </ol>
 
-      <h3>Тест через telnet</h3>
+      <h3>РўРµСЃС‚ С‡РµСЂРµР· telnet</h3>
       <code>telnet google.com 80</code>
-      <p>Если подключается, сеть работает. Если нет, проблема в настройках.</p>
+      <p>Р•СЃР»Рё РїРѕРґРєР»СЋС‡Р°РµС‚СЃСЏ, СЃРµС‚СЊ СЂР°Р±РѕС‚Р°РµС‚. Р•СЃР»Рё РЅРµС‚, РїСЂРѕР±Р»РµРјР° РІ РЅР°СЃС‚СЂРѕР№РєР°С….</p>
 
-      <h2>Решение 1: Проверка и отключение прокси</h2>
-      <h3>Настройки прокси в Windows</h3>
+      <h2>Р РµС€РµРЅРёРµ 1: РџСЂРѕРІРµСЂРєР° Рё РѕС‚РєР»СЋС‡РµРЅРёРµ РїСЂРѕРєСЃРё</h2>
+      <h3>РќР°СЃС‚СЂРѕР№РєРё РїСЂРѕРєСЃРё РІ Windows</h3>
       <ol>
-        <li>Откройте "Параметры" > "Сеть и Интернет"</li>
-        <li>Выберите текущую сеть</li>
-        <li>Прокрутите вниз и нажмите "Параметры прокси"</li>
-        <li>Отключите все параметры прокси</li>
-        <li>Убедитесь, что "Автоматическое определение параметров" отключено</li>
+        <li>РћС‚РєСЂРѕР№С‚Рµ "РџР°СЂР°РјРµС‚СЂС‹" в†’ "РЎРµС‚СЊ Рё РРЅС‚РµСЂРЅРµС‚"</li>
+        <li>Р’С‹Р±РµСЂРёС‚Рµ С‚РµРєСѓС‰СѓСЋ СЃРµС‚СЊ</li>
+        <li>РџСЂРѕРєСЂСѓС‚РёС‚Рµ РІРЅРёР· Рё РЅР°Р¶РјРёС‚Рµ "РџР°СЂР°РјРµС‚СЂС‹ РїСЂРѕРєСЃРё"</li>
+        <li>РћС‚РєР»СЋС‡РёС‚Рµ РІСЃРµ РїР°СЂР°РјРµС‚СЂС‹ РїСЂРѕРєСЃРё</li>
+        <li>РЈР±РµРґРёС‚РµСЃСЊ, С‡С‚Рѕ "РђРІС‚РѕРјР°С‚РёС‡РµСЃРєРѕРµ РѕРїСЂРµРґРµР»РµРЅРёРµ РїР°СЂР°РјРµС‚СЂРѕРІ" РѕС‚РєР»СЋС‡РµРЅРѕ</li>
       </ol>
 
-      <h3>Проверка в Internet Explorer</h3>
+      <h3>РџСЂРѕРІРµСЂРєР° РІ Internet Explorer</h3>
       <ol>
-        <li>Откройте Internet Explorer</li>
-        <li>Перейдите в "Сервис" > "Свойства браузера"</li>
-        <li>Вкладка "Подключения" > "Настройка сети"</li>
-        <li>Снимите все галочки с прокси</li>
+        <li>РћС‚РєСЂРѕР№С‚Рµ Internet Explorer</li>
+        <li>РџРµСЂРµР№РґРёС‚Рµ РІ "РЎРµСЂРІРёСЃ" в†’ "РЎРІРѕР№СЃС‚РІР° Р±СЂР°СѓР·РµСЂР°"</li>
+        <li>Р’РєР»Р°РґРєР° "РџРѕРґРєР»СЋС‡РµРЅРёСЏ" в†’ "РќР°СЃС‚СЂРѕР№РєР° СЃРµС‚Рё"</li>
+        <li>РЎРЅРёРјРёС‚Рµ РІСЃРµ РіР°Р»РѕС‡РєРё СЃ РїСЂРѕРєСЃРё</li>
       </ol>
 
-      <h3>Проверка переменных среды</h3>
+      <h3>РџСЂРѕРІРµСЂРєР° РїРµСЂРµРјРµРЅРЅС‹С… СЃСЂРµРґС‹</h3>
       <code>set</code>
-      <p>Посмотрите переменные http_proxy и https_proxy. Если они установлены, очистите их:</p>
+      <p>РџРѕСЃРјРѕС‚СЂРёС‚Рµ РїРµСЂРµРјРµРЅРЅС‹Рµ http_proxy Рё https_proxy. Р•СЃР»Рё РѕРЅРё СѓСЃС‚Р°РЅРѕРІР»РµРЅС‹, РѕС‡РёСЃС‚РёС‚Рµ РёС…:</p>
       <code>
 set http_proxy=
 set https_proxy=
       </code>
 
-      <h2>Решение 2: Настройка антивируса и фаервола</h2>
-      <h3>Добавление исключений в антивирус</h3>
+      <h2>Р РµС€РµРЅРёРµ 2: РќР°СЃС‚СЂРѕР№РєР° Р°РЅС‚РёРІРёСЂСѓСЃР° Рё С„Р°РµСЂРІРѕР»Р°</h2>
+      <h3>Р”РѕР±Р°РІР»РµРЅРёРµ РёСЃРєР»СЋС‡РµРЅРёР№ РІ Р°РЅС‚РёРІРёСЂСѓСЃ</h3>
       <ol>
-        <li>Откройте настройки антивируса</li>
-        <li>Найдите раздел исключений или доверенных приложений</li>
-        <li>Добавьте проблемные приложения в исключения</li>
-        <li>Отключите веб-защиту временно для теста</li>
+        <li>РћС‚РєСЂРѕР№С‚Рµ РЅР°СЃС‚СЂРѕР№РєРё Р°РЅС‚РёРІРёСЂСѓСЃР°</li>
+        <li>РќР°Р№РґРёС‚Рµ СЂР°Р·РґРµР» РёСЃРєР»СЋС‡РµРЅРёР№ РёР»Рё РґРѕРІРµСЂРµРЅРЅС‹С… РїСЂРёР»РѕР¶РµРЅРёР№</li>
+        <li>Р”РѕР±Р°РІСЊС‚Рµ РїСЂРѕР±Р»РµРјРЅС‹Рµ РїСЂРёР»РѕР¶РµРЅРёСЏ РІ РёСЃРєР»СЋС‡РµРЅРёСЏ</li>
+        <li>РћС‚РєР»СЋС‡РёС‚Рµ РІРµР±-Р·Р°С‰РёС‚Сѓ РІСЂРµРјРµРЅРЅРѕ РґР»СЏ С‚РµСЃС‚Р°</li>
       </ol>
 
-      <h3>Настройка Windows Defender</h3>
+      <h3>РќР°СЃС‚СЂРѕР№РєР° Windows Defender</h3>
       <ol>
-        <li>Откройте "Параметры" > "Обновление и безопасность" > "Защита от вирусов и угроз"</li>
-        <li>Нажмите "Управление параметрами"</li>
-        <li>Отключите "Защита в реальном времени" временно</li>
-        <li>Проверьте работу приложений</li>
+        <li>РћС‚РєСЂРѕР№С‚Рµ "РџР°СЂР°РјРµС‚СЂС‹" в†’ "РћР±РЅРѕРІР»РµРЅРёРµ Рё Р±РµР·РѕРїР°СЃРЅРѕСЃС‚СЊ" в†’ "Р—Р°С‰РёС‚Р° РѕС‚ РІРёСЂСѓСЃРѕРІ Рё СѓРіСЂРѕР·"</li>
+        <li>РќР°Р¶РјРёС‚Рµ "РЈРїСЂР°РІР»РµРЅРёРµ РїР°СЂР°РјРµС‚СЂР°РјРё"</li>
+        <li>РћС‚РєР»СЋС‡РёС‚Рµ "Р—Р°С‰РёС‚Р° РІ СЂРµР°Р»СЊРЅРѕРј РІСЂРµРјРµРЅРё" РІСЂРµРјРµРЅРЅРѕ</li>
+        <li>РџСЂРѕРІРµСЂСЊС‚Рµ СЂР°Р±РѕС‚Сѓ РїСЂРёР»РѕР¶РµРЅРёР№</li>
       </ol>
 
-      <h3>Проверка фаервола</h3>
+      <h3>РџСЂРѕРІРµСЂРєР° С„Р°РµСЂРІРѕР»Р°</h3>
       <ol>
-        <li>Win + R > wf.msc</li>
-        <li>Проверьте правила для исходящих подключений</li>
-        <li>Создайте правило разрешения для проблемного приложения</li>
+        <li>Win + R в†’ wf.msc</li>
+        <li>РџСЂРѕРІРµСЂСЊС‚Рµ РїСЂР°РІРёР»Р° РґР»СЏ РёСЃС…РѕРґСЏС‰РёС… РїРѕРґРєР»СЋС‡РµРЅРёР№</li>
+        <li>РЎРѕР·РґР°Р№С‚Рµ РїСЂР°РІРёР»Рѕ СЂР°Р·СЂРµС€РµРЅРёСЏ РґР»СЏ РїСЂРѕР±Р»РµРјРЅРѕРіРѕ РїСЂРёР»РѕР¶РµРЅРёСЏ</li>
       </ol>
 
-      <h2>Решение 3: Исправление DNS проблем</h2>
-      <h3>Сброс DNS кэша</h3>
+      <h2>Р РµС€РµРЅРёРµ 3: РСЃРїСЂР°РІР»РµРЅРёРµ DNS РїСЂРѕР±Р»РµРј</h2>
+      <h3>РЎР±СЂРѕСЃ DNS РєСЌС€Р°</h3>
       <code>ipconfig /flushdns</code>
 
-      <h3>Изменение DNS серверов</h3>
+      <h3>РР·РјРµРЅРµРЅРёРµ DNS СЃРµСЂРІРµСЂРѕРІ</h3>
       <ol>
-        <li>Откройте "Параметры" > "Сеть и Интернет" > "Ethernet" или "Wi-Fi"</li>
-        <li>Выберите подключение > "Изменить параметры адаптера"</li>
-        <li>Щелкните правой кнопкой на подключении > "Свойства"</li>
-        <li>Выберите "IP версии 4 (TCP/IPv4)" > "Свойства"</li>
-        <li>Выберите "Использовать следующие адреса DNS-серверов"</li>
-        <li>Укажите 8.8.8.8 и 8.8.4.4 (Google DNS)</li>
+        <li>РћС‚РєСЂРѕР№С‚Рµ "РџР°СЂР°РјРµС‚СЂС‹" в†’ "РЎРµС‚СЊ Рё РРЅС‚РµСЂРЅРµС‚" в†’ "Ethernet" РёР»Рё "Wi-Fi"</li>
+        <li>Р’С‹Р±РµСЂРёС‚Рµ РїРѕРґРєР»СЋС‡РµРЅРёРµ в†’ "РР·РјРµРЅРёС‚СЊ РїР°СЂР°РјРµС‚СЂС‹ Р°РґР°РїС‚РµСЂР°"</li>
+        <li>Р©РµР»РєРЅРёС‚Рµ РїСЂР°РІРѕР№ РєРЅРѕРїРєРѕР№ РЅР° РїРѕРґРєР»СЋС‡РµРЅРёРё в†’ "РЎРІРѕР№СЃС‚РІР°"</li>
+        <li>Р’С‹Р±РµСЂРёС‚Рµ "IP РІРµСЂСЃРёРё 4 (TCP/IPv4)" в†’ "РЎРІРѕР№СЃС‚РІР°"</li>
+        <li>Р’С‹Р±РµСЂРёС‚Рµ "РСЃРїРѕР»СЊР·РѕРІР°С‚СЊ СЃР»РµРґСѓСЋС‰РёРµ Р°РґСЂРµСЃР° DNS-СЃРµСЂРІРµСЂРѕРІ"</li>
+        <li>РЈРєР°Р¶РёС‚Рµ 8.8.8.8 Рё 8.8.4.4 (Google DNS)</li>
       </ol>
 
-      <h3>Проверка DNS</h3>
+      <h3>РџСЂРѕРІРµСЂРєР° DNS</h3>
       <code>nslookup google.com</code>
-      <p>Если не резолвится, проблема в DNS.</p>
+      <p>Р•СЃР»Рё РЅРµ СЂРµР·РѕР»РІРёС‚СЃСЏ, РїСЂРѕР±Р»РµРјР° РІ DNS.</p>
 
-      <h2>Решение 4: Отключение VPN и прокси</h2>
-      <h3>Проверка VPN подключений</h3>
+      <h2>Р РµС€РµРЅРёРµ 4: РћС‚РєР»СЋС‡РµРЅРёРµ VPN Рё РїСЂРѕРєСЃРё</h2>
+      <h3>РџСЂРѕРІРµСЂРєР° VPN РїРѕРґРєР»СЋС‡РµРЅРёР№</h3>
       <ol>
-        <li>Откройте "Параметры" > "Сеть и Интернет" > "VPN"</li>
-        <li>Отключите все активные VPN подключения</li>
-        <li>Проверьте работу приложений</li>
+        <li>РћС‚РєСЂРѕР№С‚Рµ "РџР°СЂР°РјРµС‚СЂС‹" в†’ "РЎРµС‚СЊ Рё РРЅС‚РµСЂРЅРµС‚" в†’ "VPN"</li>
+        <li>РћС‚РєР»СЋС‡РёС‚Рµ РІСЃРµ Р°РєС‚РёРІРЅС‹Рµ VPN РїРѕРґРєР»СЋС‡РµРЅРёСЏ</li>
+        <li>РџСЂРѕРІРµСЂСЊС‚Рµ СЂР°Р±РѕС‚Сѓ РїСЂРёР»РѕР¶РµРЅРёР№</li>
       </ol>
 
-      <h3>Удаление VPN профиля</h3>
+      <h3>РЈРґР°Р»РµРЅРёРµ VPN РїСЂРѕС„РёР»СЏ</h3>
       <ol>
-        <li>В списке VPN нажмите на подключение</li>
-        <li>Выберите "Удалить"</li>
-        <li>Перезагрузите компьютер</li>
+        <li>Р’ СЃРїРёСЃРєРµ VPN РЅР°Р¶РјРёС‚Рµ РЅР° РїРѕРґРєР»СЋС‡РµРЅРёРµ</li>
+        <li>Р’С‹Р±РµСЂРёС‚Рµ "РЈРґР°Р»РёС‚СЊ"</li>
+        <li>РџРµСЂРµР·Р°РіСЂСѓР·РёС‚Рµ РєРѕРјРїСЊСЋС‚РµСЂ</li>
       </ol>
 
-      <h2>Решение 5: Сброс сетевых настроек</h2>
-      <h3>Сброс TCP/IP стека</h3>
+      <h2>Р РµС€РµРЅРёРµ 5: РЎР±СЂРѕСЃ СЃРµС‚РµРІС‹С… РЅР°СЃС‚СЂРѕРµРє</h2>
+      <h3>РЎР±СЂРѕСЃ TCP/IP СЃС‚РµРєР°</h3>
       <code>
 netsh winsock reset
 netsh int ip reset
       </code>
 
-      <h3>Сброс сетевых настроек Windows</h3>
+      <h3>РЎР±СЂРѕСЃ СЃРµС‚РµРІС‹С… РЅР°СЃС‚СЂРѕРµРє Windows</h3>
       <ol>
-        <li>Параметры > Сеть и Интернет > Дополнительные параметры сети</li>
-        <li>Сброс сети</li>
+        <li>РџР°СЂР°РјРµС‚СЂС‹ в†’ РЎРµС‚СЊ Рё РРЅС‚РµСЂРЅРµС‚ в†’ Р”РѕРїРѕР»РЅРёС‚РµР»СЊРЅС‹Рµ РїР°СЂР°РјРµС‚СЂС‹ СЃРµС‚Рё</li>
+        <li>РЎР±СЂРѕСЃ СЃРµС‚Рё</li>
       </ol>
 
-      <h3>Восстановление hosts файла</h3>
+      <h3>Р’РѕСЃСЃС‚Р°РЅРѕРІР»РµРЅРёРµ hosts С„Р°Р№Р»Р°</h3>
       <ol>
-        <li>Откройте C:\Windows\System32\drivers\etc\hosts</li>
-        <li>Удалите все строки кроме "127.0.0.1 localhost"</li>
-        <li>Сохраните файл</li>
+        <li>РћС‚РєСЂРѕР№С‚Рµ C:\Windows\System32\drivers\etc\hosts</li>
+        <li>РЈРґР°Р»РёС‚Рµ РІСЃРµ СЃС‚СЂРѕРєРё РєСЂРѕРјРµ "127.0.0.1 localhost"</li>
+        <li>РЎРѕС…СЂР°РЅРёС‚Рµ С„Р°Р№Р»</li>
       </ol>
 
       <div class="pro-tips">
-        <h4><i class="fas fa-lightbulb"></i> Профессиональные советы</h4>
+        <h4><i class="fas fa-lightbulb"></i> РџСЂРѕС„РµСЃСЃРёРѕРЅР°Р»СЊРЅС‹Рµ СЃРѕРІРµС‚С‹</h4>
         <div class="tip-item">
           <i class="fas fa-shield-alt"></i>
-          <span>Всегда добавляйте доверенные приложения в исключения антивируса</span>
+          <span>Р’СЃРµРіРґР° РґРѕР±Р°РІР»СЏР№С‚Рµ РґРѕРІРµСЂРµРЅРЅС‹Рµ РїСЂРёР»РѕР¶РµРЅРёСЏ РІ РёСЃРєР»СЋС‡РµРЅРёСЏ Р°РЅС‚РёРІРёСЂСѓСЃР°</span>
         </div>
         <div class="tip-item">
           <i class="fas fa-network-wired"></i>
-          <span>Используйте Google DNS (8.8.8.8) для стабильного разрешения имен</span>
+          <span>РСЃРїРѕР»СЊР·СѓР№С‚Рµ Google DNS (8.8.8.8) РґР»СЏ СЃС‚Р°Р±РёР»СЊРЅРѕРіРѕ СЂР°Р·СЂРµС€РµРЅРёСЏ РёРјРµРЅ</span>
         </div>
         <div class="tip-item">
           <i class="fas fa-tools"></i>
-          <span>Создайте точку восстановления перед внесением изменений в сеть</span>
+          <span>РЎРѕР·РґР°Р№С‚Рµ С‚РѕС‡РєСѓ РІРѕСЃСЃС‚Р°РЅРѕРІР»РµРЅРёСЏ РїРµСЂРµРґ РІРЅРµСЃРµРЅРёРµРј РёР·РјРµРЅРµРЅРёР№ РІ СЃРµС‚СЊ</span>
         </div>
         <div class="tip-item">
           <i class="fas fa-vpn"></i>
-          <span>Проверяйте VPN настройки, если проблема появилась после установки</span>
+          <span>РџСЂРѕРІРµСЂСЏР№С‚Рµ VPN РЅР°СЃС‚СЂРѕР№РєРё, РµСЃР»Рё РїСЂРѕР±Р»РµРјР° РїРѕСЏРІРёР»Р°СЃСЊ РїРѕСЃР»Рµ СѓСЃС‚Р°РЅРѕРІРєРё</span>
         </div>
       </div>
 
-      <h2>Расширенная диагностика</h2>
-      <h3>Проверка маршрутизации</h3>
+      <h2>Р Р°СЃС€РёСЂРµРЅРЅР°СЏ РґРёР°РіРЅРѕСЃС‚РёРєР°</h2>
+      <h3>РџСЂРѕРІРµСЂРєР° РјР°СЂС€СЂСѓС‚РёР·Р°С†РёРё</h3>
       <code>route print</code>
-      <p>Проверьте таблицу маршрутизации на наличие проблемных записей.</p>
+      <p>РџСЂРѕРІРµСЂСЊС‚Рµ С‚Р°Р±Р»РёС†Сѓ РјР°СЂС€СЂСѓС‚РёР·Р°С†РёРё РЅР° РЅР°Р»РёС‡РёРµ РїСЂРѕР±Р»РµРјРЅС‹С… Р·Р°РїРёСЃРµР№.</p>
 
-      <h3>Анализ сетевых подключений</h3>
+      <h3>РђРЅР°Р»РёР· СЃРµС‚РµРІС‹С… РїРѕРґРєР»СЋС‡РµРЅРёР№</h3>
       <code>netstat -ano</code>
-      <p>Посмотрите активные подключения и PID процессов.</p>
+      <p>РџРѕСЃРјРѕС‚СЂРёС‚Рµ Р°РєС‚РёРІРЅС‹Рµ РїРѕРґРєР»СЋС‡РµРЅРёСЏ Рё PID РїСЂРѕС†РµСЃСЃРѕРІ.</p>
 
-      <h3>Журнал событий</h3>
+      <h3>Р–СѓСЂРЅР°Р» СЃРѕР±С‹С‚РёР№</h3>
       <ol>
-        <li>Win + R > eventvwr</li>
-        <li>Журналы Windows > Система</li>
-        <li>Ищите ошибки с кодом 0x000001F4 или сетевыми событиями</li>
+        <li>Win + R в†’ eventvwr</li>
+        <li>Р–СѓСЂРЅР°Р»С‹ Windows в†’ РЎРёСЃС‚РµРјР°</li>
+        <li>РС‰РёС‚Рµ РѕС€РёР±РєРё СЃ РєРѕРґРѕРј 0x000001F4 РёР»Рё СЃРµС‚РµРІС‹РјРё СЃРѕР±С‹С‚РёСЏРјРё</li>
       </ol>
 
-      <h2>Альтернативные решения</h2>
-      <h3>Чистый запуск Windows</h3>
+      <h2>РђР»СЊС‚РµСЂРЅР°С‚РёРІРЅС‹Рµ СЂРµС€РµРЅРёСЏ</h2>
+      <h3>Р§РёСЃС‚С‹Р№ Р·Р°РїСѓСЃРє Windows</h3>
       <ol>
-        <li>Нажмите Win + R > msconfig</li>
-        <li>Вкладка "Службы" > "Не загружать службы Майкрософт"</li>
-        <li>Вкладка "Автозагрузка" > "Отключить все"</li>
-        <li>Перезагрузите и проверьте</li>
+        <li>РќР°Р¶РјРёС‚Рµ Win + R в†’ msconfig</li>
+        <li>Р’РєР»Р°РґРєР° "РЎР»СѓР¶Р±С‹" в†’ "РќРµ Р·Р°РіСЂСѓР¶Р°С‚СЊ СЃР»СѓР¶Р±С‹ РњР°Р№РєСЂРѕСЃРѕС„С‚"</li>
+        <li>Р’РєР»Р°РґРєР° "РђРІС‚РѕР·Р°РіСЂСѓР·РєР°" в†’ "РћС‚РєР»СЋС‡РёС‚СЊ РІСЃРµ"</li>
+        <li>РџРµСЂРµР·Р°РіСЂСѓР·РёС‚Рµ Рё РїСЂРѕРІРµСЂСЊС‚Рµ</li>
       </ol>
 
-      <h3>Создание нового профиля пользователя</h3>
+      <h3>РЎРѕР·РґР°РЅРёРµ РЅРѕРІРѕРіРѕ РїСЂРѕС„РёР»СЏ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ</h3>
       <ol>
-        <li>Параметры > Учетные записи > Семья и другие пользователи</li>
-        <li>Добавьте нового пользователя</li>
-        <li>Войдите под новой учетной записью и проверьте</li>
+        <li>РџР°СЂР°РјРµС‚СЂС‹ в†’ РЈС‡РµС‚РЅС‹Рµ Р·Р°РїРёСЃРё в†’ РЎРµРјСЊСЏ Рё РґСЂСѓРіРёРµ РїРѕР»СЊР·РѕРІР°С‚РµР»Рё</li>
+        <li>Р”РѕР±Р°РІСЊС‚Рµ РЅРѕРІРѕРіРѕ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ</li>
+        <li>Р’РѕР№РґРёС‚Рµ РїРѕРґ РЅРѕРІРѕР№ СѓС‡РµС‚РЅРѕР№ Р·Р°РїРёСЃСЊСЋ Рё РїСЂРѕРІРµСЂСЊС‚Рµ</li>
       </ol>
 
-      <h2>Частые вопросы</h2>
-      <h3>Почему браузер работает, а приложения нет?</h3>
-      <p>Браузеры часто используют системные настройки прокси, а приложения могут игнорировать их или быть заблокированными фаерволом.</p>
+      <h2>Р§Р°СЃС‚С‹Рµ РІРѕРїСЂРѕСЃС‹</h2>
+      <h3>РџРѕС‡РµРјСѓ Р±СЂР°СѓР·РµСЂ СЂР°Р±РѕС‚Р°РµС‚, Р° РїСЂРёР»РѕР¶РµРЅРёСЏ РЅРµС‚?</h3>
+      <p>Р‘СЂР°СѓР·РµСЂС‹ С‡Р°СЃС‚Рѕ РёСЃРїРѕР»СЊР·СѓСЋС‚ СЃРёСЃС‚РµРјРЅС‹Рµ РЅР°СЃС‚СЂРѕР№РєРё РїСЂРѕРєСЃРё, Р° РїСЂРёР»РѕР¶РµРЅРёСЏ РјРѕРіСѓС‚ РёРіРЅРѕСЂРёСЂРѕРІР°С‚СЊ РёС… РёР»Рё Р±С‹С‚СЊ Р·Р°Р±Р»РѕРєРёСЂРѕРІР°РЅРЅС‹РјРё С„Р°РµСЂРІРѕР»РѕРј.</p>
 
-      <h3>Можно ли обойти проблему без отключения антивируса?</h3>
-      <p>Да, добавьте приложения в исключения антивируса и настройте правила фаервола.</p>
+      <h3>РњРѕР¶РЅРѕ Р»Рё РѕР±РѕР№С‚Рё РїСЂРѕР±Р»РµРјСѓ Р±РµР· РѕС‚РєР»СЋС‡РµРЅРёСЏ Р°РЅС‚РёРІРёСЂСѓСЃР°?</h3>
+      <p>Р”Р°, РґРѕР±Р°РІСЊС‚Рµ РїСЂРёР»РѕР¶РµРЅРёСЏ РІ РёСЃРєР»СЋС‡РµРЅРёСЏ Р°РЅС‚РёРІРёСЂСѓСЃР° Рё РЅР°СЃС‚СЂРѕР№С‚Рµ РїСЂР°РІРёР»Р° С„Р°РµСЂРІРѕР»Р°.</p>
 
-      <h3>Что делать, если проблема только с определенными приложениями?</h3>
-      <p>Проверьте настройки конкретного приложения, часто есть опции прокси или сетевых настроек.</p>
+      <h3>Р§С‚Рѕ РґРµР»Р°С‚СЊ, РµСЃР»Рё РїСЂРѕР±Р»РµРјР° С‚РѕР»СЊРєРѕ СЃ РѕРїСЂРµРґРµР»РµРЅРЅС‹РјРё РїСЂРёР»РѕР¶РµРЅРёСЏРјРё?</h3>
+      <p>РџСЂРѕРІРµСЂСЊС‚Рµ РЅР°СЃС‚СЂРѕР№РєРё РєРѕРЅРєСЂРµС‚РЅРѕРіРѕ РїСЂРёР»РѕР¶РµРЅРёСЏ, С‡Р°СЃС‚Рѕ РµСЃС‚СЊ РѕРїС†РёРё РїСЂРѕРєСЃРё РёР»Рё СЃРµС‚РµРІС‹С… РЅР°СЃС‚СЂРѕРµРє.</p>
 
-      <h2>Если ничего не помогает</h2>
+      <h2>Р•СЃР»Рё РЅРёС‡РµРіРѕ РЅРµ РїРѕРјРѕРіР°РµС‚</h2>
       <ul>
-        <li>Выполните полное сканирование на вирусы</li>
-        <li>Восстановите систему из точки восстановления</li>
-        <li>Переустановите Windows в режиме обновления</li>
-        <li>Обратитесь к специалисту по компьютерной помощи</li>
+        <li>Р’С‹РїРѕР»РЅРёС‚Рµ РїРѕР»РЅРѕРµ СЃРєР°РЅРёСЂРѕРІР°РЅРёРµ РЅР° РІРёСЂСѓСЃС‹</li>
+        <li>Р’РѕСЃСЃС‚Р°РЅРѕРІРёС‚Рµ СЃРёСЃС‚РµРјСѓ РёР· С‚РѕС‡РєРё РІРѕСЃСЃС‚Р°РЅРѕРІР»РµРЅРёСЏ</li>
+        <li>РџРµСЂРµСѓСЃС‚Р°РЅРѕРІРёС‚Рµ Windows РІ СЂРµР¶РёРјРµ РѕР±РЅРѕРІР»РµРЅРёСЏ</li>
+        <li>РћР±СЂР°С‚РёС‚РµСЃСЊ Рє СЃРїРµС†РёР°Р»РёСЃС‚Сѓ РїРѕ РєРѕРјРїСЊСЋС‚РµСЂРЅРѕР№ РїРѕРјРѕС‰Рё</li>
       </ul>
 
-      <p>Эта проблема обычно решается отключением прокси или настройкой исключений в антивирусе. Начните с проверки сетевых настроек, затем переходите к диагностике приложений.</p>
+      <p>Р­С‚Р° РїСЂРѕР±Р»РµРјР° РѕР±С‹С‡РЅРѕ СЂРµС€Р°РµС‚СЃСЏ РѕС‚РєР»СЋС‡РµРЅРёРµРј РїСЂРѕРєСЃРё РёР»Рё РЅР°СЃС‚СЂРѕР№РєРѕР№ РёСЃРєР»СЋС‡РµРЅРёР№ РІ Р°РЅС‚РёРІРёСЂСѓСЃРµ. РќР°С‡РЅРёС‚Рµ СЃ РїСЂРѕРІРµСЂРєРё СЃРµС‚РµРІС‹С… РЅР°СЃС‚СЂРѕРµРє, Р·Р°С‚РµРј РїРµСЂРµС…РѕРґРёС‚Рµ Рє РґРёР°РіРЅРѕСЃС‚РёРєРµ РїСЂРёР»РѕР¶РµРЅРёР№.</p>
     </div>
   </main>
 
-      <footer class="footer">
-        <div class="container">
-            <div class="footer__grid">
-                <div class="footer__col footer__col--logo">
-                    <a href="../index.html" class="footer-logo">
-                        <span class="logo__icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M12 15L7 10H17L12 15Z" fill="currentColor"/>
-                                <path d="M12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3ZM12 19C8.13401 19 5 15.866 5 12C5 8.13401 8.13401 5 12 5C15.866 5 19 8.13401 19 12C19 15.866 15.866 19 12 19Z" fill="currentColor"/>
-                            </svg>
-                        </span>
-                        <span class="logo__text">Repairo</span>
-                    </a>
-                    <p class="footer__text">Помогаем ремонтировать электронику с 2024 года</p>
-                </div>
-                <div class="footer__col">
-                    <h3 class="footer__title">Разделы</h3>
-                    <ul class="footer__links">
-                        <li><a href="../index.html" class="footer__link">Главная</a></li>
-                        <li><a href="../index.html#categories" class="footer__link">Все гайды</a></li>
-                        <li><a href="../contacts.html" class="footer__link">Контакты</a></li>
-                    </ul>
-                </div>
-                <div class="footer__col">
-                    <h3 class="footer__title">Категории</h3>
-                    <ul class="footer__links">
-                        <li><a href="../tv.html" class="nav__link">Телевизоры</a></li>
-                        <li><a href="../cameras.html" class="nav__link">Фотоаппараты</a></li>
-                        <li><a href="../consoles.html" class="nav__link">Приставки</a></li>
-                        <li><a href="../laptops.html" class="nav__link">Ноутбуки</a></li>
-                        <li><a href="../smartphones.html" class="nav__link">Смартфоны</a></li>
-                        <li><a href="../small-appliances.html" class="nav__link">Мелкая техника</a></li>
-                        <li><a href="../large-appliances.html" class="nav__link">Бытовая техника</a></li>
-                        <li><a href="../auto-electronics.html" class="nav__link">Авто-Электроника</a></li>
-                    </ul>
-                </div>
-                <div class="footer__col">
-                    <h3 class="footer__title">Контакты</h3>
-                    <ul class="footer__links">
-                        <li><a href="https://t.me/RepairoRU" class="footer__link"><i class="fab fa-telegram"></i> Telegram</a></li>
-                        <li><span class="footer__link">Наша почта: repairo.info@mail.ru</span></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer__bottom">
-                <p class="disclaimer">
-    Администрация сайта не несёт ответственности за возможные повреждения техники
-    и иные последствия, возникшие в результате самостоятельного ремонта по
-    материалам и инструкциям, размещённым на сайте. Все работы вы выполняете
-    на свой страх и риск.
-    </p>
-                <p class="footer__copyright">© 2026 Repairo. Все права защищены.</p>
-            </div>
-        </div>
-    </footer>
-    <!-- Cookie Consent Banner -->
-    <script src="../script.js"></script>
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2024 FixTech. Р’СЃРµ РїСЂР°РІР° Р·Р°С‰РёС‰РµРЅС‹.</p>
+      <div class="footer-links">
+        <a href="/privacy">РљРѕРЅС„РёРґРµРЅС†РёР°Р»СЊРЅРѕСЃС‚СЊ</a>
+        <a href="/terms">РЈСЃР»РѕРІРёСЏ РёСЃРїРѕР»СЊР·РѕРІР°РЅРёСЏ</a>
+        <a href="/contact">РљРѕРЅС‚Р°РєС‚С‹</a>
+      </div>
+    </div>
+  </footer>
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "HowTo",
-  "name": "Интернет только в браузере а в приложениях нет ноутбук | Экспертный мегагайд",
-  "description": "",
-  "totalTime": "PT30M",
-  "step": [
-    {
-      "@type": "HowToStep",
-      "name": "Введение: почему Cyberpunk 2077 может тормозить на PS5 после патчей?",
-      "text": "Введение: почему Cyberpunk 2077 может тормозить на PS5 после патчей?",
-      "url": "#step-1"
-    },
-    {
-      "@type": "HowToStep",
-      "name": "Таблица: основные причины лагов и просадок FPS в Cyberpunk 2077 на PS5 после обновлений",
-      "text": "Таблица: основные причины лагов и просадок FPS в Cyberpunk 2077 на PS5 после обновлений",
-      "url": "#step-2"
-    },
-    {
-      "@type": "HowToStep",
-      "name": "Пошаговая инструкция: что делать, если Cyberpunk 2077 тормозит на PS5 после обновления",
-      "text": "Пошаговая инструкция: что делать, если Cyberpunk 2077 тормозит на PS5 после обновления",
-      "url": "#step-3"
-    },
-    {
-      "@type": "HowToStep",
-      "name": "Таблица: сравнение режимов графики и FPS в Cyberpunk 2077 на PS5",
-      "text": "Таблица: сравнение режимов графики и FPS в Cyberpunk 2077 на PS5",
-      "url": "#step-4"
-    },
-    {
-      "@type": "HowToStep",
-      "name": "Отзывы игроков и тесты Digital Foundry",
-      "text": "Отзывы игроков и тесты Digital Foundry",
-      "url": "#step-5"
-    },
-    {
-      "@type": "HowToStep",
-      "name": "Лайфхаки и советы по оптимизации Cyberpunk 2077 на PS5",
-      "text": "Лайфхаки и советы по оптимизации Cyberpunk 2077 на PS5",
-      "url": "#step-6"
-    },
-    {
-      "@type": "HowToStep",
-      "name": "FAQ – часто задаваемые вопросы о тормозах Cyberpunk 2077 на PS5",
-      "text": "FAQ – часто задаваемые вопросы о тормозах Cyberpunk 2077 на PS5",
-      "url": "#step-7"
-    },
-    {
-      "@type": "HowToStep",
-      "name": "Пошаговая инструкция: как восстановить базу данных PS5",
-      "text": "Пошаговая инструкция: как восстановить базу данных PS5",
-      "url": "#step-8"
-    }
-  ],
-  "image": "https://repairo.ru/https://mc.yandex.ru/watch/106225686"
-}
-</script>
-<!-- Cookie Consent Script -->
-<script src="../cookie-consent.js"></script>
+  <script src="../script.js"></script>
+  <script src="../search.js"></script>
 </body>
 </html>
-
-
-
-
-
-

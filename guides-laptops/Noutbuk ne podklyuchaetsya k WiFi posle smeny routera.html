@@ -4,8 +4,9 @@
 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Ноутбук не подключается к WiFi после смены роутера | Эксперт</title>
-    <meta name="description" content="">
+  <title>РќРѕСѓС‚Р±СѓРє РЅРµ РїРѕРґРєР»СЋС‡Р°РµС‚СЃСЏ Рє WiFi РїРѕСЃР»Рµ СЃРјРµРЅС‹ СЂРѕСѓС‚РµСЂР° | Р­РєСЃРїРµСЂС‚РЅС‹Р№ РјРµРіР°РіР°Р№Рґ</title>
+    <meta name="description" content="{{ description }}">
+    <meta name="description" content="РџРѕС€Р°РіРѕРІР°СЏ РёРЅСЃС‚СЂСѓРєС†РёСЏ: РќРѕСѓС‚Р±СѓРє РЅРµ РїРѕРґРєР»СЋС‡Р°РµС‚СЃСЏ Рє WiFi РїРѕСЃР»Рµ СЃРјРµРЅС‹ СЂРѕСѓС‚РµСЂР° вЂ” Р­РєСЃРїРµСЂС‚РЅС‹Р№ РјРµРіР°РіР°Р№Рґ. РџСЂРёС‡РёРЅС‹: РЅР°СЃС‚СЂРѕР№РєРё СЃРµС‚Рё, РґСЂР°Р№РІРµСЂС‹, РєСЌС€, СЃРѕРІРјРµСЃС‚РёРјРѕСЃС‚СЊ. Р РµС€РµРЅРёСЏ: Р·Р°Р±С‹РІР°РЅРёРµ СЃРµС‚Рё, СЃР±СЂРѕСЃ РЅР°СЃС‚СЂРѕРµРє, РѕР±РЅРѕРІР»РµРЅРёРµ РґСЂР°Р№РІРµСЂРѕРІ, РїРµСЂРµР·Р°РіСЂСѓР·РєР° СѓСЃС‚СЂРѕР№СЃС‚РІ.">
 
   <link rel="stylesheet" href="../styles.css" />
   <link rel="stylesheet" href="../styles-header.css" />
@@ -13,25 +14,36 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <style>
     .guide-content { line-height: 1.7; color: var(--text); }
-    .guide-content h2 { color: var(--primary); margin-top: 30px; margin-bottom: 15px; font-size: 1.5rem; }
-    .guide-content h3 { color: var(--primary-dark); margin-top: 25px; margin-bottom: 12px; font-size: 1.2rem; }
+    .guide-content h2 { color: var(--primary); margin-top: 30px; margin-bottom: 15px; font-size: 1.6rem; }
+    .guide-content h3 { color: var(--primary-dark); margin-top: 25px; margin-bottom: 12px; font-size: 1.25rem; }
     .guide-image-block { margin: 20px 0; padding: 15px; background: var(--background); border-radius: var(--border-radius); border: 1px solid var(--border); text-align: center; }
     .guide-image-block img { max-width: 100%; height: auto; border-radius: 6px; border: 1px solid var(--border); }
     .image-caption { margin-top: 10px; font-size: 0.85rem; color: var(--text-light); font-style: italic; }
-    .pro-tips { background: rgba(3, 74, 79, 0.05); padding: 15px; border-radius: 6px; margin: 20px 0; }
-    .pro-tips h4 { color: var(--primary); margin-top: 0; margin-bottom: 12px; font-size: 1.1rem; }
-    .tip-item { display: flex; gap: 8px; margin-bottom: 8px; align-items: flex-start; }
+    .pro-tips { background: rgba(3, 74, 79, 0.05); padding: 18px; border-radius: 8px; margin: 25px 0; }
+    .pro-tips h4 { color: var(--primary); margin-top: 0; margin-bottom: 12px; font-size: 1.15rem; }
+    .tip-item { display: flex; gap: 10px; margin-bottom: 10px; align-items: flex-start; }
+    .tip-item i { margin-top: 3px; }
     table { width: 100%; border-collapse: collapse; margin: 20px 0; }
-    th, td { border: 1px solid var(--border); padding: 8px; text-align: left; }
+    th, td { border: 1px solid var(--border); padding: 8px; text-align: left; vertical-align: top; }
     th { background: var(--background-light); }
-    .highlight { background: #f5f7fa; border-left: 4px solid #2d9cdb; padding: 10px 15px; margin: 20px 0; }
-    .faq-section ul { margin-left: 1em; }
-    .block-section { margin-bottom: 2em; }
+    code { background: var(--background-light); padding: 2px 4px; border-radius: 4px; font-size: 0.9em; }
+    ul, ol { margin-left: 18px; }
     @media (max-width: 768px) {
       .guide-content h2 { font-size: 1.4rem; margin-top: 25px; }
+      .guide-content h3 { font-size: 1.15rem; }
       .guide-image-block { padding: 12px; margin: 15px 0; }
       table, th, td { font-size: 0.95rem; }
     }
+
+    /* РЇРЅРґРµРєСЃ РњР°СЂРєРµС‚ СЂРµРєР»Р°РјРЅС‹Р№ Р±Р°РЅРЅРµСЂ */
+    .ym-hero-link {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+      max-width: 100%;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
     /* Р“РѕСЂРёР·РѕРЅС‚Р°Р»СЊРЅС‹Р№ Р±Р°РЅРЅРµСЂ-РєР°СЂС‚РѕС‡РєР° */
     .ym-hero-banner {
       width: 100%;
@@ -107,324 +119,212 @@
     }
 
     /* Р РµР№С‚РёРЅРі */
-    .ym-hero-top {
+    .ym-hero-rating {
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      gap: 8px;
-    }
-
-    .ym-hero-rating {
-      font-size: 13px;
-      font-weight: 500;
-      color: #111827;
-      background: #f9fafb;
-      border-radius: 999px;
-      padding: 4px 10px;
-    }
-
-    .ym-hero-rating-count {
+      gap: 4px;
+      font-size: 12px;
       color: #6b7280;
     }
 
-    /* Р¤РёРѕР»РµС‚РѕРІР°СЏ РєРЅРѕРїРєР° */
-    .ym-hero-button {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 9px 16px;
-      border-radius: 999px;
-      border: none;
-      background: #6a00ff;
-      color: #ffffff;
-      font-size: 14px;
-      font-weight: 600;
-      cursor: pointer;
-      box-shadow: 0 2px 6px rgba(88, 28, 135, 0.35);
-      transition: background 0.15s ease, transform 0.15s ease,
-                  box-shadow 0.15s ease;
-    }
-    .ym-hero-button::after {
-      content: "в†’";
-      margin-left: 6px;
-      font-size: 14px;
-    }
-    .ym-hero-button:hover {
-      background: #7c3aed;
-      transform: translateY(-1px);
-      box-shadow: 0 4px 10px rgba(88, 28, 135, 0.45);
+    .ym-hero-stars {
+      display: flex;
+      gap: 1px;
     }
 
-    /* Р®СЂРёРґРёС‡РµСЃРєРёР№ Р±Р»РѕРє */
-    .ym-hero-legal {
-      margin-top: 6px;
-      max-width: 600px;
+    .ym-hero-star {
+      width: 12px;
+      height: 12px;
+      fill: #fbbf24;
+    }
+
+    .ym-hero-reviews {
       font-size: 11px;
-      line-height: 1.3;
-      color: #6b7280;
-      margin-left: auto;
-      margin-right: auto;
+      color: #9ca3af;
     }
 
-    /* РђРґР°РїС‚РёРІ */
-    @media (max-width: 480px) {
+    /* Р¦РµРЅР° */
+    .ym-hero-price {
+      font-size: 16px;
+      font-weight: 700;
+      color: #111827;
+      margin: 0;
+    }
+
+    /* РљРЅРѕРїРєР° */
+    .ym-hero-button {
+      background: #007bff;
+      color: #ffffff;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background 0.2s ease;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .ym-hero-button:hover {
+      background: #0056b3;
+    }
+
+    /* РђРґР°РїС‚РёРІРЅРѕСЃС‚СЊ */
+    @media (max-width: 768px) {
       .ym-hero-banner {
-        max-width: 100%;
-        margin: 20px 0;
+        flex-direction: row;
+        min-height: auto;
       }
+
       .ym-hero-images {
-        height: 100px;
+        width: 120px;
+        height: auto;
+        flex-shrink: 0;
       }
+
       .ym-hero-content {
-        padding: 12px 12px;
+        flex: 1;
+        padding: 12px 16px;
       }
+
       .ym-hero-title {
         font-size: 13px;
       }
+
+      .ym-hero-price {
+        font-size: 15px;
+      }
+
       .ym-hero-button {
-        font-size: 13px;
-        padding: 8px 14px;
-      }
-      .ym-hero-legal {
-        font-size: 10px;
-      }
-    }
-    /* Telegram СЂРµРєР»Р°РјРЅС‹Р№ Р±Р°РЅРЅРµСЂ */
-    .telegram-banner {
-      display: flex;
-      justify-content: center;
-      text-decoration: none;
-      color: inherit;
-      width: 100%;
-      margin: 40px 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    }
-
-    .telegram-banner-container {
-      width: 100%;
-      max-width: 500px;
-      min-height: 120px;
-      border-radius: 16px;
-      background: linear-gradient(135deg, #0088cc 0%, #005f8f 100%);
-      border: 1px solid #005f8f;
-      display: flex;
-      align-items: center;
-      padding: 20px;
-      box-shadow: 0 4px 16px rgba(0, 136, 204, 0.2);
-      overflow: hidden;
-      box-sizing: border-box;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-
-    .telegram-banner-container:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(0, 136, 204, 0.3);
-    }
-
-    .telegram-logo {
-      width: 60px;
-      height: 60px;
-      min-width: 60px;
-      background: #ffffff;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-right: 20px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    }
-
-    .telegram-logo svg {
-      width: 32px;
-      height: 32px;
-      fill: #0088cc;
-    }
-
-    .telegram-content {
-      flex: 1;
-      color: #ffffff;
-    }
-
-    .telegram-title {
-      font-size: 16px;
-      font-weight: 600;
-      margin: 0 0 8px 0;
-      line-height: 1.3;
-    }
-
-    .telegram-subtitle {
-      font-size: 14px;
-      opacity: 0.9;
-      margin: 0 0 12px 0;
-      line-height: 1.4;
-    }
-
-    .telegram-button {
-      display: inline-flex;
-      align-items: center;
-      padding: 8px 16px;
-      background: #ffffff;
-      color: #0088cc;
-      border-radius: 20px;
-      font-size: 14px;
-      font-weight: 600;
-      text-decoration: none;
-      transition: background 0.2s ease, transform 0.2s ease;
-    }
-
-    .telegram-button:hover {
-      background: #f0f8ff;
-      transform: scale(1.05);
-    }
-
-    .telegram-button svg {
-      width: 16px;
-      height: 16px;
-      margin-left: 6px;
-      fill: #0088cc;
-    }
-
-    /* РђРґР°РїС‚РёРІ РґР»СЏ РјРѕР±РёР»СЊРЅС‹С… */
-    @media (max-width: 480px) {
-      .telegram-banner-container {
-        max-width: 100%;
-        margin: 20px 0;
-        padding: 15px;
-        min-height: 100px;
-      }
-      .telegram-logo {
-        width: 50px;
-        height: 50px;
-        min-width: 50px;
-        margin-right: 15px;
-      }
-      .telegram-logo svg {
-        width: 26px;
-        height: 26px;
-      }
-      .telegram-title {
-        font-size: 14px;
-      }
-      .telegram-subtitle {
-        font-size: 12px;
-      }
-      .telegram-button {
-        font-size: 12px;
-        padding: 6px 12px;
+        padding: 6px 10px;
+        font-size: 11px;
       }
     }
 
-
-
+    /* РЎРєСЂС‹С‚С‹Р№ Р±Р°РЅРЅРµСЂ РґР»СЏ РґРµСЃРєС‚РѕРїР° */
+    @media (min-width: 769px) {
+      .ym-hero-link {
+        display: none !important;
+      }
+    }
   </style>
   <script async src="https://timeweb.cloud/api/v1/cloud-ai/agents/3cc03620-d051-4d8d-b5af-f7b6cd083a35/embed.js?collapsed=true"></script>
 </head>
 <body>
-  <header class="header">
-    <div class="container">
-      <div class="header__inner">
-        <a href="../index.html" class="logo">
-          <span class="logo__icon"></span>
-          <span class="logo__text">GeoExpert</span>
-        </a>
-        <nav class="nav">
-          <ul class="nav__list">
-            <li><a href="../cameras.html" class="nav__link">РљР°РјРµСЂС‹</a></li>
-            <li><a href="../drones.html" class="nav__link">Р”СЂРѕРЅС‹</a></li>
-            <li><a href="../workflow.html" class="nav__link">Workflow</a></li>
-          </ul>
-        </nav>
+  <header>
+    <div class="header-content">
+      <a href="/" class="logo">
+        <i class="fas fa-tools"></i>
+        FixTech
+      </a>
+      <nav class="nav-links">
+        <a href="/">Р“Р»Р°РІРЅР°СЏ</a>
+        <a href="/articles">Р’СЃРµ СЃС‚Р°С‚СЊРё</a>
+        <a href="/smartphones">РЎРјР°СЂС‚С„РѕРЅС‹</a>
+        <a href="/laptops">РќРѕСѓС‚Р±СѓРєРё</a>
+        <a href="/tv">РўРµР»РµРІРёР·РѕСЂС‹</a>
+        <a href="/cameras">РљР°РјРµСЂС‹</a>
+        <a href="/consoles">РљРѕРЅСЃРѕР»Рё</a>
+        <a href="/auto-electronics">РђРІС‚РѕСЌР»РµРєС‚СЂРѕРЅРёРєР°</a>
+        <a href="/small-appliances">РњРµР»РєР°СЏ С‚РµС…РЅРёРєР°</a>
+        <a href="/large-appliances">РљСЂСѓРїРЅР°СЏ С‚РµС…РЅРёРєР°</a>
+      </nav>
+      <div class="search-container">
+        <input type="text" id="search-input" placeholder="РџРѕРёСЃРє РїРѕ СЃР°Р№С‚Сѓ..." />
+        <button id="search-button"><i class="fas fa-search"></i></button>
       </div>
     </div>
   </header>
 
   <main class="guide-container">
     <div class="guide-content">
-      <h1>Ноутбук не подключается к WiFi после смены роутера</h1>
-      <p>Когда ноутбук не может подключиться к WiFi после замены роутера, это обычно связано с сохраненными настройками старой сети или несовместимостью параметров. В этом экспертном мегагайде мы разберем все причины отсутствия подключения и предоставим пошаговые решения для восстановления доступа к интернету.</p>
+      <h1>РќРѕСѓС‚Р±СѓРє РЅРµ РїРѕРґРєР»СЋС‡Р°РµС‚СЃСЏ Рє WiFi РїРѕСЃР»Рµ СЃРјРµРЅС‹ СЂРѕСѓС‚РµСЂР°</h1>
+      <p>РљРѕРіРґР° РЅРѕСѓС‚Р±СѓРє РЅРµ РјРѕР¶РµС‚ РїРѕРґРєР»СЋС‡РёС‚СЊСЃСЏ Рє WiFi РїРѕСЃР»Рµ Р·Р°РјРµРЅС‹ СЂРѕСѓС‚РµСЂР°, СЌС‚Рѕ РѕР±С‹С‡РЅРѕ СЃРІСЏР·Р°РЅРѕ СЃ СЃРѕС…СЂР°РЅРµРЅРЅС‹РјРё РЅР°СЃС‚СЂРѕР№РєР°РјРё СЃС‚Р°СЂРѕР№ СЃРµС‚Рё РёР»Рё РЅРµСЃРѕРІРјРµСЃС‚РёРјРѕСЃС‚СЊСЋ РїР°СЂР°РјРµС‚СЂРѕРІ. Р’ СЌС‚РѕРј СЌРєСЃРїРµСЂС‚РЅРѕРј РјРµРіР°РіР°Р№РґРµ РјС‹ СЂР°Р·Р±РµСЂРµРј РІСЃРµ РїСЂРёС‡РёРЅС‹ РѕС‚СЃСѓС‚СЃС‚РІРёСЏ РїРѕРґРєР»СЋС‡РµРЅРёСЏ Рё РїСЂРµРґРѕСЃС‚Р°РІРёРј РїРѕС€Р°РіРѕРІС‹Рµ СЂРµС€РµРЅРёСЏ РґР»СЏ РІРѕСЃСЃС‚Р°РЅРѕРІР»РµРЅРёСЏ РґРѕСЃС‚СѓРїР° Рє РёРЅС‚РµСЂРЅРµС‚Сѓ.</p>
 
-      <h2>Признаки проблемы</h2>
+      <h2>РџСЂРёР·РЅР°РєРё РїСЂРѕР±Р»РµРјС‹</h2>
       <ul>
-        <li>Ноутбук не видит новую сеть роутера</li>
-        <li>Не удается подключиться к известной сети</li>
-        <li>Ошибка "Не удается подключиться к этой сети"</li>
-        <li>Другие устройства подключаются нормально</li>
-        <li>WiFi адаптер работает на других сетях</li>
+        <li>РќРѕСѓС‚Р±СѓРє РЅРµ РІРёРґРёС‚ РЅРѕРІСѓСЋ СЃРµС‚СЊ СЂРѕСѓС‚РµСЂР°</li>
+        <li>РќРµ СѓРґР°РµС‚СЃСЏ РїРѕРґРєР»СЋС‡РёС‚СЊСЃСЏ Рє РёР·РІРµСЃС‚РЅРѕР№ СЃРµС‚Рё</li>
+        <li>РћС€РёР±РєР° "РќРµ СѓРґР°РµС‚СЃСЏ РїРѕРґРєР»СЋС‡РёС‚СЊСЃСЏ Рє СЌС‚РѕР№ СЃРµС‚Рё"</li>
+        <li>Р”СЂСѓРіРёРµ СѓСЃС‚СЂРѕР№СЃС‚РІР° РїРѕРґРєР»СЋС‡Р°СЋС‚СЃСЏ РЅРѕСЂРјР°Р»СЊРЅРѕ</li>
+        <li>WiFi Р°РґР°РїС‚РµСЂ СЂР°Р±РѕС‚Р°РµС‚ РЅР° РґСЂСѓРіРёС… СЃРµС‚СЏС…</li>
       </ul>
 
-      <h2>Основные причины</h2>
+      <h2>РћСЃРЅРѕРІРЅС‹Рµ РїСЂРёС‡РёРЅС‹</h2>
       <table>
         <tr>
-          <th>Причина</th>
-          <th>Вероятность</th>
-          <th>Характерные признаки</th>
+          <th>РџСЂРёС‡РёРЅР°</th>
+          <th>Р’РµСЂРѕСЏС‚РЅРѕСЃС‚СЊ</th>
+          <th>РҐР°СЂР°РєС‚РµСЂРЅС‹Рµ РїСЂРёР·РЅР°РєРё</th>
         </tr>
         <tr>
-          <td>Кэш старой сети</td>
+          <td>РљСЌС€ СЃС‚Р°СЂРѕР№ СЃРµС‚Рё</td>
           <td>45%</td>
-          <td>Работает после забывания сети</td>
+          <td>Р Р°Р±РѕС‚Р°РµС‚ РїРѕСЃР»Рµ Р·Р°Р±С‹РІР°РЅРёСЏ СЃРµС‚Рё</td>
         </tr>
         <tr>
-          <td>Несовместимые настройки</td>
+          <td>РќРµСЃРѕРІРјРµСЃС‚РёРјС‹Рµ РЅР°СЃС‚СЂРѕР№РєРё</td>
           <td>25%</td>
-          <td>Работает после изменения настроек роутера</td>
+          <td>Р Р°Р±РѕС‚Р°РµС‚ РїРѕСЃР»Рµ РёР·РјРµРЅРµРЅРёСЏ РЅР°СЃС‚СЂРѕРµРє СЂРѕСѓС‚РµСЂР°</td>
         </tr>
         <tr>
-          <td>Драйверы WiFi адаптера</td>
+          <td>Р”СЂР°Р№РІРµСЂС‹ WiFi Р°РґР°РїС‚РµСЂР°</td>
           <td>15%</td>
-          <td>Работает после обновления драйверов</td>
+          <td>Р Р°Р±РѕС‚Р°РµС‚ РїРѕСЃР»Рµ РѕР±РЅРѕРІР»РµРЅРёСЏ РґСЂР°Р№РІРµСЂРѕРІ</td>
         </tr>
         <tr>
-          <td>IP конфликт</td>
+          <td>IP РєРѕРЅС„Р»РёРєС‚</td>
           <td>10%</td>
-          <td>Работает после сброса TCP/IP</td>
+          <td>Р Р°Р±РѕС‚Р°РµС‚ РїРѕСЃР»Рµ СЃР±СЂРѕСЃР° TCP/IP</td>
         </tr>
         <tr>
-          <td>MAC фильтр</td>
+          <td>MAC С„РёР»СЊС‚СЂ</td>
           <td>3%</td>
-          <td>Работает после добавления в белый список</td>
+          <td>Р Р°Р±РѕС‚Р°РµС‚ РїРѕСЃР»Рµ РґРѕР±Р°РІР»РµРЅРёСЏ РІ Р±РµР»С‹Р№ СЃРїРёСЃРѕРє</td>
         </tr>
         <tr>
-          <td>Аппаратная неисправность</td>
+          <td>РђРїРїР°СЂР°С‚РЅР°СЏ РЅРµРёСЃРїСЂР°РІРЅРѕСЃС‚СЊ</td>
           <td>2%</td>
-          <td>Не работает ни с одним роутером</td>
+          <td>РќРµ СЂР°Р±РѕС‚Р°РµС‚ РЅРё СЃ РѕРґРЅРёРј СЂРѕСѓС‚РµСЂРѕРј</td>
         </tr>
       </table>
 
-      <h2>Диагностика проблемы</h2>
-      <h3>Проверка подключения других устройств</h3>
+      <h2>Р”РёР°РіРЅРѕСЃС‚РёРєР° РїСЂРѕР±Р»РµРјС‹</h2>
+      <h3>РџСЂРѕРІРµСЂРєР° РїРѕРґРєР»СЋС‡РµРЅРёСЏ РґСЂСѓРіРёС… СѓСЃС‚СЂРѕР№СЃС‚РІ</h3>
       <ol>
-        <li>Подключите смартфон или другой ноутбук к новому роутеру</li>
-        <li>Если подключаются, проблема в ноутбуке</li>
-        <li>Если не подключаются, проблема в роутере</li>
+        <li>РџРѕРґРєР»СЋС‡РёС‚Рµ СЃРјР°СЂС‚С„РѕРЅ РёР»Рё РґСЂСѓРіРѕР№ РЅРѕСѓС‚Р±СѓРє Рє РЅРѕРІРѕРјСѓ СЂРѕСѓС‚РµСЂСѓ</li>
+        <li>Р•СЃР»Рё РїРѕРґРєР»СЋС‡Р°СЋС‚СЃСЏ, РїСЂРѕР±Р»РµРјР° РІ РЅРѕСѓС‚Р±СѓРєРµ</li>
+        <li>Р•СЃР»Рё РЅРµ РїРѕРґРєР»СЋС‡Р°СЋС‚СЃСЏ, РїСЂРѕР±Р»РµРјР° РІ СЂРѕСѓС‚РµСЂРµ</li>
       </ol>
 
-      <h3>Проверка настроек роутера</h3>
+      <h3>РџСЂРѕРІРµСЂРєР° РЅР°СЃС‚СЂРѕРµРє СЂРѕСѓС‚РµСЂР°</h3>
       <ol>
-        <li>Войдите в веб-интерфейс роутера</li>
-        <li>Проверьте имя сети (SSID) и пароль</li>
-        <li>Убедитесь, что сеть включена</li>
-        <li>Проверьте частоту (2.4 или 5 ГГц)</li>
+        <li>Р’РѕР№РґРёС‚Рµ РІ РІРµР±-РёРЅС‚РµСЂС„РµР№СЃ СЂРѕСѓС‚РµСЂР°</li>
+        <li>РџСЂРѕРІРµСЂСЊС‚Рµ РёРјСЏ СЃРµС‚Рё (SSID) Рё РїР°СЂРѕР»СЊ</li>
+        <li>РЈР±РµРґРёС‚РµСЃСЊ, С‡С‚Рѕ СЃРµС‚СЊ РІРєР»СЋС‡РµРЅР°</li>
+        <li>РџСЂРѕРІРµСЂСЊС‚Рµ С‡Р°СЃС‚РѕС‚Сѓ (2.4 РёР»Рё 5 Р“Р“С†)</li>
       </ol>
 
-      <h2>Решение 1: Забывание старых сетей</h2>
-      <h3>Удаление сохраненных сетей</h3>
+      <h2>Р РµС€РµРЅРёРµ 1: Р—Р°Р±С‹РІР°РЅРёРµ СЃС‚Р°СЂС‹С… СЃРµС‚РµР№</h2>
+      <h3>РЈРґР°Р»РµРЅРёРµ СЃРѕС…СЂР°РЅРµРЅРЅС‹С… СЃРµС‚РµР№</h3>
       <ol>
-        <li>Параметры > Сеть и Интернет > WiFi</li>
-        <li>Управление известными сетями</li>
-        <li>Найдите старые сети и забудьте их</li>
-        <li>Особенно те, что от старого роутера</li>
+        <li>РџР°СЂР°РјРµС‚СЂС‹ в†’ РЎРµС‚СЊ Рё РРЅС‚РµСЂРЅРµС‚ в†’ WiFi</li>
+        <li>РЈРїСЂР°РІР»РµРЅРёРµ РёР·РІРµСЃС‚РЅС‹РјРё СЃРµС‚СЏРјРё</li>
+        <li>РќР°Р№РґРёС‚Рµ СЃС‚Р°СЂС‹Рµ СЃРµС‚Рё Рё Р·Р°Р±СѓРґСЊС‚Рµ РёС…</li>
+        <li>РћСЃРѕР±РµРЅРЅРѕ С‚Рµ, С‡С‚Рѕ РѕС‚ СЃС‚Р°СЂРѕРіРѕ СЂРѕСѓС‚РµСЂР°</li>
       </ol>
 
-      <h3>Очистка всех сетей</h3>
+      <h3>РћС‡РёСЃС‚РєР° РІСЃРµС… СЃРµС‚РµР№</h3>
       <ol>
-        <li>Забудьте все известные сети</li>
-        <li>Перезагрузите ноутбук</li>
-        <li>Найдите новую сеть и подключитесь</li>
+        <li>Р—Р°Р±СѓРґСЊС‚Рµ РІСЃРµ РёР·РІРµСЃС‚РЅС‹Рµ СЃРµС‚Рё</li>
+        <li>РџРµСЂРµР·Р°РіСЂСѓР·РёС‚Рµ РЅРѕСѓС‚Р±СѓРє</li>
+        <li>РќР°Р№РґРёС‚Рµ РЅРѕРІСѓСЋ СЃРµС‚СЊ Рё РїРѕРґРєР»СЋС‡РёС‚РµСЃСЊ</li>
       </ol>
 
-      <h2>Решение 2: Сброс сетевых настроек</h2>
-      <h3>Сброс TCP/IP</h3>
+      <h2>Р РµС€РµРЅРёРµ 2: РЎР±СЂРѕСЃ СЃРµС‚РµРІС‹С… РЅР°СЃС‚СЂРѕРµРє</h2>
+      <h3>РЎР±СЂРѕСЃ TCP/IP</h3>
       <code>
 netsh int ip reset
 netsh winsock reset
@@ -432,262 +332,149 @@ ipconfig /release
 ipconfig /renew
       </code>
 
-      <h3>Сброс настроек сети</h3>
+      <h3>РЎР±СЂРѕСЃ РЅР°СЃС‚СЂРѕРµРє СЃРµС‚Рё</h3>
       <ol>
-        <li>Параметры > Сеть и Интернет > Состояние</li>
-        <li>Сброс сети</li>
-        <li>Это удалит все сетевые настройки</li>
+        <li>РџР°СЂР°РјРµС‚СЂС‹ в†’ РЎРµС‚СЊ Рё РРЅС‚РµСЂРЅРµС‚ в†’ РЎРѕСЃС‚РѕСЏРЅРёРµ</li>
+        <li>РЎР±СЂРѕСЃ СЃРµС‚Рё</li>
+        <li>Р­С‚Рѕ СѓРґР°Р»РёС‚ РІСЃРµ СЃРµС‚РµРІС‹Рµ РЅР°СЃС‚СЂРѕР№РєРё</li>
       </ol>
 
-      <h2>Решение 3: Настройка роутера</h2>
-      <h3>Проверка совместимости</h3>
+      <h2>Р РµС€РµРЅРёРµ 3: РќР°СЃС‚СЂРѕР№РєР° СЂРѕСѓС‚РµСЂР°</h2>
+      <h3>РџСЂРѕРІРµСЂРєР° СЃРѕРІРјРµСЃС‚РёРјРѕСЃС‚Рё</h3>
       <ol>
-        <li>Убедитесь, что роутер работает на поддерживаемой частоте</li>
-        <li>Для старых ноутбуков используйте 2.4 ГГц</li>
-        <li>Отключите 802.11n only, если ноутбук старый</li>
+        <li>РЈР±РµРґРёС‚РµСЃСЊ, С‡С‚Рѕ СЂРѕСѓС‚РµСЂ СЂР°Р±РѕС‚Р°РµС‚ РЅР° РїРѕРґРґРµСЂР¶РёРІР°РµРјРѕР№ С‡Р°СЃС‚РѕС‚Рµ</li>
+        <li>Р”Р»СЏ СЃС‚Р°СЂС‹С… РЅРѕСѓС‚Р±СѓРєРѕРІ РёСЃРїРѕР»СЊР·СѓР№С‚Рµ 2.4 Р“Р“С†</li>
+        <li>РћС‚РєР»СЋС‡РёС‚Рµ 802.11n only, РµСЃР»Рё РЅРѕСѓС‚Р±СѓРє СЃС‚Р°СЂС‹Р№</li>
       </ol>
 
-      <h3>Изменение настроек безопасности</h3>
+      <h3>РР·РјРµРЅРµРЅРёРµ РЅР°СЃС‚СЂРѕРµРє Р±РµР·РѕРїР°СЃРЅРѕСЃС‚Рё</h3>
       <ol>
-        <li>В настройках роутера найдите Wireless Security</li>
-        <li>Попробуйте изменить тип шифрования (WPA2, WPA3)</li>
-        <li>Если ноутбук старый, используйте WPA2</li>
+        <li>Р’ РЅР°СЃС‚СЂРѕР№РєР°С… СЂРѕСѓС‚РµСЂР° РЅР°Р№РґРёС‚Рµ Wireless Security</li>
+        <li>РџРѕРїСЂРѕР±СѓР№С‚Рµ РёР·РјРµРЅРёС‚СЊ С‚РёРї С€РёС„СЂРѕРІР°РЅРёСЏ (WPA2, WPA3)</li>
+        <li>Р•СЃР»Рё РЅРѕСѓС‚Р±СѓРє СЃС‚Р°СЂС‹Р№, РёСЃРїРѕР»СЊР·СѓР№С‚Рµ WPA2</li>
       </ol>
 
-      <h2>Решение 4: Обновление драйверов</h2>
-      <h3>Обновление WiFi драйверов</h3>
+      <h2>Р РµС€РµРЅРёРµ 4: РћР±РЅРѕРІР»РµРЅРёРµ РґСЂР°Р№РІРµСЂРѕРІ</h2>
+      <h3>РћР±РЅРѕРІР»РµРЅРёРµ WiFi РґСЂР°Р№РІРµСЂРѕРІ</h3>
       <ol>
-        <li>Диспетчер устройств > Сетевые адаптеры</li>
-        <li>Найдите WiFi адаптер > Обновить драйвер</li>
-        <li>Автоматический поиск</li>
+        <li>Р”РёСЃРїРµС‚С‡РµСЂ СѓСЃС‚СЂРѕР№СЃС‚РІ в†’ РЎРµС‚РµРІС‹Рµ Р°РґР°РїС‚РµСЂС‹</li>
+        <li>РќР°Р№РґРёС‚Рµ WiFi Р°РґР°РїС‚РµСЂ в†’ РћР±РЅРѕРІРёС‚СЊ РґСЂР°Р№РІРµСЂ</li>
+        <li>РђРІС‚РѕРјР°С‚РёС‡РµСЃРєРёР№ РїРѕРёСЃРє</li>
       </ol>
 
-      <h3>Ручная установка</h3>
+      <h3>Р СѓС‡РЅР°СЏ СѓСЃС‚Р°РЅРѕРІРєР°</h3>
       <ol>
-        <li>Скачайте драйверы с сайта производителя ноутбука</li>
-        <li>Установите последние версии</li>
-        <li>Перезагрузите компьютер</li>
+        <li>РЎРєР°С‡Р°Р№С‚Рµ РґСЂР°Р№РІРµСЂС‹ СЃ СЃР°Р№С‚Р° РїСЂРѕРёР·РІРѕРґРёС‚РµР»СЏ РЅРѕСѓС‚Р±СѓРєР°</li>
+        <li>РЈСЃС‚Р°РЅРѕРІРёС‚Рµ РїРѕСЃР»РµРґРЅРёРµ РІРµСЂСЃРёРё</li>
+        <li>РџРµСЂРµР·Р°РіСЂСѓР·РёС‚Рµ РєРѕРјРїСЊСЋС‚РµСЂ</li>
       </ol>
 
-      <h2>Решение 5: Проверка на конфликты</h2>
-      <h3>MAC фильтр</h3>
+      <h2>Р РµС€РµРЅРёРµ 5: РџСЂРѕРІРµСЂРєР° РЅР° РєРѕРЅС„Р»РёРєС‚С‹</h2>
+      <h3>MAC С„РёР»СЊС‚СЂ</h3>
       <ol>
-        <li>В настройках роутера найдите MAC фильтр</li>
-        <li>Отключите фильтр или добавьте MAC ноутбука</li>
-        <li>Найти MAC: ipconfig /all в командной строке</li>
+        <li>Р’ РЅР°СЃС‚СЂРѕР№РєР°С… СЂРѕСѓС‚РµСЂР° РЅР°Р№РґРёС‚Рµ MAC С„РёР»СЊС‚СЂ</li>
+        <li>РћС‚РєР»СЋС‡РёС‚Рµ С„РёР»СЊС‚СЂ РёР»Рё РґРѕР±Р°РІСЊС‚Рµ MAC РЅРѕСѓС‚Р±СѓРєР°</li>
+        <li>РќР°Р№С‚Рё MAC: ipconfig /all РІ РєРѕРјР°РЅРґРЅРѕР№ СЃС‚СЂРѕРєРµ</li>
       </ol>
 
-      <h3>Проверка канала</h3>
+      <h3>РџСЂРѕРІРµСЂРєР° РєР°РЅР°Р»Р°</h3>
       <ol>
-        <li>В настройках роутера измените канал WiFi</li>
-        <li>Попробуйте каналы 1, 6, 11 для 2.4 ГГц</li>
-        <li>Или каналы с меньшим количеством помех</li>
+        <li>Р’ РЅР°СЃС‚СЂРѕР№РєР°С… СЂРѕСѓС‚РµСЂР° РёР·РјРµРЅРёС‚Рµ РєР°РЅР°Р» WiFi</li>
+        <li>РџРѕРїСЂРѕР±СѓР№С‚Рµ РєР°РЅР°Р»С‹ 1, 6, 11 РґР»СЏ 2.4 Р“Р“С†</li>
+        <li>РР»Рё РєР°РЅР°Р»С‹ СЃ РјРµРЅСЊС€РёРј РєРѕР»РёС‡РµСЃС‚РІРѕРј РїРѕРјРµС…</li>
       </ol>
 
-      <h2>Решение 6: Перезагрузка устройств</h2>
-      <h3>Полная перезагрузка</h3>
+      <h2>Р РµС€РµРЅРёРµ 6: РџРµСЂРµР·Р°РіСЂСѓР·РєР° СѓСЃС‚СЂРѕР№СЃС‚РІ</h2>
+      <h3>РџРѕР»РЅР°СЏ РїРµСЂРµР·Р°РіСЂСѓР·РєР°</h3>
       <ol>
-        <li>Выключите роутер и ноутбук</li>
-        <li>Отключите роутер от питания на 30 секунд</li>
-        <li>Включите роутер, подождите полной загрузки</li>
-        <li>Включите ноутбук и попробуйте подключиться</li>
+        <li>Р’С‹РєР»СЋС‡РёС‚Рµ СЂРѕСѓС‚РµСЂ Рё РЅРѕСѓС‚Р±СѓРє</li>
+        <li>РћС‚РєР»СЋС‡РёС‚Рµ СЂРѕСѓС‚РµСЂ РѕС‚ РїРёС‚Р°РЅРёСЏ РЅР° 30 СЃРµРєСѓРЅРґ</li>
+        <li>Р’РєР»СЋС‡РёС‚Рµ СЂРѕСѓС‚РµСЂ, РїРѕРґРѕР¶РґРёС‚Рµ РїРѕР»РЅРѕР№ Р·Р°РіСЂСѓР·РєРё</li>
+        <li>Р’РєР»СЋС‡РёС‚Рµ РЅРѕСѓС‚Р±СѓРє Рё РїРѕРїСЂРѕР±СѓР№С‚Рµ РїРѕРґРєР»СЋС‡РёС‚СЊСЃСЏ</li>
       </ol>
 
-      <h3>Сброс роутера</h3>
+      <h3>РЎР±СЂРѕСЃ СЂРѕСѓС‚РµСЂР°</h3>
       <ol>
-        <li>Найдите кнопку Reset на роутере</li>
-        <li>Зажмите на 10-15 секунд</li>
-        <li>Роутер вернется к заводским настройкам</li>
-        <li>Настройте роутер заново</li>
+        <li>РќР°Р№РґРёС‚Рµ РєРЅРѕРїРєСѓ Reset РЅР° СЂРѕСѓС‚РµСЂРµ</li>
+        <li>Р—Р°Р¶РјРёС‚Рµ РЅР° 10-15 СЃРµРєСѓРЅРґ</li>
+        <li>Р РѕСѓС‚РµСЂ РІРµСЂРЅРµС‚СЃСЏ Рє Р·Р°РІРѕРґСЃРєРёРј РЅР°СЃС‚СЂРѕР№РєР°Рј</li>
+        <li>РќР°СЃС‚СЂРѕР№С‚Рµ СЂРѕСѓС‚РµСЂ Р·Р°РЅРѕРІРѕ</li>
       </ol>
 
       <div class="pro-tips">
-        <h4><i class="fas fa-lightbulb"></i> Профессиональные советы</h4>
+        <h4><i class="fas fa-lightbulb"></i> РџСЂРѕС„РµСЃСЃРёРѕРЅР°Р»СЊРЅС‹Рµ СЃРѕРІРµС‚С‹</h4>
         <div class="tip-item">
           <i class="fas fa-router"></i>
-          <span>При замене роутера используйте одинаковые настройки SSID и пароль для бесшовного перехода</span>
+          <span>РџСЂРё Р·Р°РјРµРЅРµ СЂРѕСѓС‚РµСЂР° РёСЃРїРѕР»СЊР·СѓР№С‚Рµ РѕРґРёРЅР°РєРѕРІС‹Рµ РЅР°СЃС‚СЂРѕР№РєРё SSID Рё РїР°СЂРѕР»СЊ РґР»СЏ Р±РµСЃС€РѕРІРЅРѕРіРѕ РїРµСЂРµС…РѕРґР°</span>
         </div>
         <div class="tip-item">
           <i class="fas fa-wifi"></i>
-          <span>Регулярно обновляйте прошивку роутера для исправления багов совместимости</span>
+          <span>Р РµРіСѓР»СЏСЂРЅРѕ РѕР±РЅРѕРІР»СЏР№С‚Рµ РїСЂРѕС€РёРІРєСѓ СЂРѕСѓС‚РµСЂР° РґР»СЏ РёСЃРїСЂР°РІР»РµРЅРёСЏ Р±Р°РіРѕРІ СЃРѕРІРјРµСЃС‚РёРјРѕСЃС‚Рё</span>
         </div>
         <div class="tip-item">
           <i class="fas fa-tools"></i>
-          <span>Используйте приложение для анализа WiFi сетей для выбора оптимального канала</li>
-        <li>Создайте резервную копию настроек роутера перед изменениями</li>
+          <span>РСЃРїРѕР»СЊР·СѓР№С‚Рµ РїСЂРёР»РѕР¶РµРЅРёРµ РґР»СЏ Р°РЅР°Р»РёР·Р° WiFi СЃРµС‚РµР№ РґР»СЏ РІС‹Р±РѕСЂР° РѕРїС‚РёРјР°Р»СЊРЅРѕРіРѕ РєР°РЅР°Р»Р°</li>
+        <li>РЎРѕР·РґР°Р№С‚Рµ СЂРµР·РµСЂРІРЅСѓСЋ РєРѕРїРёСЋ РЅР°СЃС‚СЂРѕРµРє СЂРѕСѓС‚РµСЂР° РїРµСЂРµРґ РёР·РјРµРЅРµРЅРёСЏРјРё</li>
       </ol>
 
-      <h2>Расширенные решения</h2>
-      <h3>Восстановление системы</h3>
+      <h2>Р Р°СЃС€РёСЂРµРЅРЅС‹Рµ СЂРµС€РµРЅРёСЏ</h2>
+      <h3>Р’РѕСЃСЃС‚Р°РЅРѕРІР»РµРЅРёРµ СЃРёСЃС‚РµРјС‹</h3>
       <ol>
-        <li>Win + R > rstrui</li>
-        <li>Выберите точку восстановления до смены роутера</li>
-        <li>Восстановите систему</li>
+        <li>Win + R в†’ rstrui</li>
+        <li>Р’С‹Р±РµСЂРёС‚Рµ С‚РѕС‡РєСѓ РІРѕСЃСЃС‚Р°РЅРѕРІР»РµРЅРёСЏ РґРѕ СЃРјРµРЅС‹ СЂРѕСѓС‚РµСЂР°</li>
+        <li>Р’РѕСЃСЃС‚Р°РЅРѕРІРёС‚Рµ СЃРёСЃС‚РµРјСѓ</li>
       </ol>
 
-      <h3>Чистая загрузка Windows</h3>
+      <h3>Р§РёСЃС‚Р°СЏ Р·Р°РіСЂСѓР·РєР° Windows</h3>
       <ol>
-        <li>msconfig > вкладка "Службы"</li>
-        <li>"Не загружать службы Майкрософт"</li>
-        <li>Вкладка "Автозагрузка" > "Отключить все"</li>
-        <li>Перезагрузите и проверьте подключение</li>
+        <li>msconfig в†’ РІРєР»Р°РґРєР° "РЎР»СѓР¶Р±С‹"</li>
+        <li>"РќРµ Р·Р°РіСЂСѓР¶Р°С‚СЊ СЃР»СѓР¶Р±С‹ РњР°Р№РєСЂРѕСЃРѕС„С‚"</li>
+        <li>Р’РєР»Р°РґРєР° "РђРІС‚РѕР·Р°РіСЂСѓР·РєР°" в†’ "РћС‚РєР»СЋС‡РёС‚СЊ РІСЃРµ"</li>
+        <li>РџРµСЂРµР·Р°РіСЂСѓР·РёС‚Рµ Рё РїСЂРѕРІРµСЂСЊС‚Рµ РїРѕРґРєР»СЋС‡РµРЅРёРµ</li>
       </ol>
 
-      <h3>Использование USB WiFi адаптера</h3>
-      <p>Если встроенный адаптер несовместим:</p>
+      <h3>РСЃРїРѕР»СЊР·РѕРІР°РЅРёРµ USB WiFi Р°РґР°РїС‚РµСЂР°</h3>
+      <p>Р•СЃР»Рё РІСЃС‚СЂРѕРµРЅРЅС‹Р№ Р°РґР°РїС‚РµСЂ РЅРµСЃРѕРІРјРµСЃС‚РёРј:</p>
       <ul>
-        <li>Купите USB WiFi адаптер с поддержкой новых стандартов</li>
-        <li>Установите драйверы</li>
-        <li>Отключите встроенный адаптер</li>
+        <li>РљСѓРїРёС‚Рµ USB WiFi Р°РґР°РїС‚РµСЂ СЃ РїРѕРґРґРµСЂР¶РєРѕР№ РЅРѕРІС‹С… СЃС‚Р°РЅРґР°СЂС‚РѕРІ</li>
+        <li>РЈСЃС‚Р°РЅРѕРІРёС‚Рµ РґСЂР°Р№РІРµСЂС‹</li>
+        <li>РћС‚РєР»СЋС‡РёС‚Рµ РІСЃС‚СЂРѕРµРЅРЅС‹Р№ Р°РґР°РїС‚РµСЂ</li>
       </ul>
 
-      <h2>Частые вопросы</h2>
-      <h3>Почему ноутбук не подключается к новому роутеру?</h3>
-      <p>Кэш настроек старой сети конфликтует с новой. Или настройки роутера несовместимы с WiFi адаптером ноутбука.</p>
+      <h2>Р§Р°СЃС‚С‹Рµ РІРѕРїСЂРѕСЃС‹</h2>
+      <h3>РџРѕС‡РµРјСѓ РЅРѕСѓС‚Р±СѓРє РЅРµ РїРѕРґРєР»СЋС‡Р°РµС‚СЃСЏ Рє РЅРѕРІРѕРјСѓ СЂРѕСѓС‚РµСЂСѓ?</h3>
+      <p>РљСЌС€ РЅР°СЃС‚СЂРѕРµРє СЃС‚Р°СЂРѕР№ СЃРµС‚Рё РєРѕРЅС„Р»РёРєС‚СѓРµС‚ СЃ РЅРѕРІРѕР№. РР»Рё РЅР°СЃС‚СЂРѕР№РєРё СЂРѕСѓС‚РµСЂР° РЅРµСЃРѕРІРјРµСЃС‚РёРјС‹ СЃ WiFi Р°РґР°РїС‚РµСЂРѕРј РЅРѕСѓС‚Р±СѓРєР°.</p>
 
-      <h3>Можно ли перенести настройки с старого роутера?</h3>
-      <p>Да, если роутеры одной модели. Сделайте бэкап настроек и восстановите на новом роутере.</p>
+      <h3>РњРѕР¶РЅРѕ Р»Рё РїРµСЂРµРЅРµСЃС‚Рё РЅР°СЃС‚СЂРѕР№РєРё СЃ СЃС‚Р°СЂРѕРіРѕ СЂРѕСѓС‚РµСЂР°?</h3>
+      <p>Р”Р°, РµСЃР»Рё СЂРѕСѓС‚РµСЂС‹ РѕРґРЅРѕР№ РјРѕРґРµР»Рё. РЎРґРµР»Р°Р№С‚Рµ Р±СЌРєР°Рї РЅР°СЃС‚СЂРѕРµРє Рё РІРѕСЃСЃС‚Р°РЅРѕРІРёС‚Рµ РЅР° РЅРѕРІРѕРј СЂРѕСѓС‚РµСЂРµ.</p>
 
-      <h3>Что делать, если роутер работает только на 5 ГГц?</h3>
-      <p>Проверьте, поддерживает ли ноутбук 5 ГГц. Если нет, настройте роутер на работу в смешанном режиме.</p>
+      <h3>Р§С‚Рѕ РґРµР»Р°С‚СЊ, РµСЃР»Рё СЂРѕСѓС‚РµСЂ СЂР°Р±РѕС‚Р°РµС‚ С‚РѕР»СЊРєРѕ РЅР° 5 Р“Р“С†?</h3>
+      <p>РџСЂРѕРІРµСЂСЊС‚Рµ, РїРѕРґРґРµСЂР¶РёРІР°РµС‚ Р»Рё РЅРѕСѓС‚Р±СѓРє 5 Р“Р“С†. Р•СЃР»Рё РЅРµС‚, РЅР°СЃС‚СЂРѕР№С‚Рµ СЂРѕСѓС‚РµСЂ РЅР° СЂР°Р±РѕС‚Сѓ РІ СЃРјРµС€Р°РЅРЅРѕРј СЂРµР¶РёРјРµ.</p>
 
-      <h2>Когда нужна замена оборудования</h2>
+      <h2>РљРѕРіРґР° РЅСѓР¶РЅР° Р·Р°РјРµРЅР° РѕР±РѕСЂСѓРґРѕРІР°РЅРёСЏ</h2>
       <ul>
-        <li>WiFi адаптер не работает ни с одним роутером</li>
-        <li>Роутер неисправен</li>
-        <li>Несовместимость оборудования</li>
-        <li>Все решения не помогли</li>
+        <li>WiFi Р°РґР°РїС‚РµСЂ РЅРµ СЂР°Р±РѕС‚Р°РµС‚ РЅРё СЃ РѕРґРЅРёРј СЂРѕСѓС‚РµСЂРѕРј</li>
+        <li>Р РѕСѓС‚РµСЂ РЅРµРёСЃРїСЂР°РІРµРЅ</li>
+        <li>РќРµСЃРѕРІРјРµСЃС‚РёРјРѕСЃС‚СЊ РѕР±РѕСЂСѓРґРѕРІР°РЅРёСЏ</li>
+        <li>Р’СЃРµ СЂРµС€РµРЅРёСЏ РЅРµ РїРѕРјРѕРіР»Рё</li>
       </ul>
 
-      <p>В большинстве случаев проблема решается забыванием старых сетей и сбросом настроек. Начните с проверки совместимости роутера и ноутбука.</p>
+      <p>Р’ Р±РѕР»СЊС€РёРЅСЃС‚РІРµ СЃР»СѓС‡Р°РµРІ РїСЂРѕР±Р»РµРјР° СЂРµС€Р°РµС‚СЃСЏ Р·Р°Р±С‹РІР°РЅРёРµРј СЃС‚Р°СЂС‹С… СЃРµС‚РµР№ Рё СЃР±СЂРѕСЃРѕРј РЅР°СЃС‚СЂРѕРµРє. РќР°С‡РЅРёС‚Рµ СЃ РїСЂРѕРІРµСЂРєРё СЃРѕРІРјРµСЃС‚РёРјРѕСЃС‚Рё СЂРѕСѓС‚РµСЂР° Рё РЅРѕСѓС‚Р±СѓРєР°.</p>
     </div>
   </main>
 
-      <footer class="footer">
-        <div class="container">
-            <div class="footer__grid">
-                <div class="footer__col footer__col--logo">
-                    <a href="../index.html" class="footer-logo">
-                        <span class="logo__icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M12 15L7 10H17L12 15Z" fill="currentColor"/>
-                                <path d="M12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3ZM12 19C8.13401 19 5 15.866 5 12C5 8.13401 8.13401 5 12 5C15.866 5 19 8.13401 19 12C19 15.866 15.866 19 12 19Z" fill="currentColor"/>
-                            </svg>
-                        </span>
-                        <span class="logo__text">Repairo</span>
-                    </a>
-                    <p class="footer__text">Помогаем ремонтировать электронику с 2024 года</p>
-                </div>
-                <div class="footer__col">
-                    <h3 class="footer__title">Разделы</h3>
-                    <ul class="footer__links">
-                        <li><a href="../index.html" class="footer__link">Главная</a></li>
-                        <li><a href="../index.html#categories" class="footer__link">Все гайды</a></li>
-                        <li><a href="../contacts.html" class="footer__link">Контакты</a></li>
-                    </ul>
-                </div>
-                <div class="footer__col">
-                    <h3 class="footer__title">Категории</h3>
-                    <ul class="footer__links">
-                        <li><a href="../tv.html" class="nav__link">Телевизоры</a></li>
-                        <li><a href="../cameras.html" class="nav__link">Фотоаппараты</a></li>
-                        <li><a href="../consoles.html" class="nav__link">Приставки</a></li>
-                        <li><a href="../laptops.html" class="nav__link">Ноутбуки</a></li>
-                        <li><a href="../smartphones.html" class="nav__link">Смартфоны</a></li>
-                        <li><a href="../small-appliances.html" class="nav__link">Мелкая техника</a></li>
-                        <li><a href="../large-appliances.html" class="nav__link">Бытовая техника</a></li>
-                        <li><a href="../auto-electronics.html" class="nav__link">Авто-Электроника</a></li>
-                    </ul>
-                </div>
-                <div class="footer__col">
-                    <h3 class="footer__title">Контакты</h3>
-                    <ul class="footer__links">
-                        <li><a href="https://t.me/RepairoRU" class="footer__link"><i class="fab fa-telegram"></i> Telegram</a></li>
-                        <li><span class="footer__link">Наша почта: repairo.info@mail.ru</span></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer__bottom">
-                <p class="disclaimer">
-    Администрация сайта не несёт ответственности за возможные повреждения техники
-    и иные последствия, возникшие в результате самостоятельного ремонта по
-    материалам и инструкциям, размещённым на сайте. Все работы вы выполняете
-    на свой страх и риск.
-    </p>
-                <p class="footer__copyright">© 2026 Repairo. Все права защищены.</p>
-            </div>
-        </div>
-    </footer>
-    <!-- Cookie Consent Banner -->
-    <script src="../script.js"></script>
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2024 FixTech. Р’СЃРµ РїСЂР°РІР° Р·Р°С‰РёС‰РµРЅС‹.</p>
+      <div class="footer-links">
+        <a href="/privacy">РљРѕРЅС„РёРґРµРЅС†РёР°Р»СЊРЅРѕСЃС‚СЊ</a>
+        <a href="/terms">РЈСЃР»РѕРІРёСЏ РёСЃРїРѕР»СЊР·РѕРІР°РЅРёСЏ</a>
+        <a href="/contact">РљРѕРЅС‚Р°РєС‚С‹</a>
+      </div>
+    </div>
+  </footer>
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "HowTo",
-  "name": "Ноутбук не подключается к WiFi после смены роутера | Экспертный мегагайд",
-  "description": "",
-  "totalTime": "PT30M",
-  "step": [
-    {
-      "@type": "HowToStep",
-      "name": "Введение: почему Cyberpunk 2077 может тормозить на PS5 после патчей?",
-      "text": "Введение: почему Cyberpunk 2077 может тормозить на PS5 после патчей?",
-      "url": "#step-1"
-    },
-    {
-      "@type": "HowToStep",
-      "name": "Таблица: основные причины лагов и просадок FPS в Cyberpunk 2077 на PS5 после обновлений",
-      "text": "Таблица: основные причины лагов и просадок FPS в Cyberpunk 2077 на PS5 после обновлений",
-      "url": "#step-2"
-    },
-    {
-      "@type": "HowToStep",
-      "name": "Пошаговая инструкция: что делать, если Cyberpunk 2077 тормозит на PS5 после обновления",
-      "text": "Пошаговая инструкция: что делать, если Cyberpunk 2077 тормозит на PS5 после обновления",
-      "url": "#step-3"
-    },
-    {
-      "@type": "HowToStep",
-      "name": "Таблица: сравнение режимов графики и FPS в Cyberpunk 2077 на PS5",
-      "text": "Таблица: сравнение режимов графики и FPS в Cyberpunk 2077 на PS5",
-      "url": "#step-4"
-    },
-    {
-      "@type": "HowToStep",
-      "name": "Отзывы игроков и тесты Digital Foundry",
-      "text": "Отзывы игроков и тесты Digital Foundry",
-      "url": "#step-5"
-    },
-    {
-      "@type": "HowToStep",
-      "name": "Лайфхаки и советы по оптимизации Cyberpunk 2077 на PS5",
-      "text": "Лайфхаки и советы по оптимизации Cyberpunk 2077 на PS5",
-      "url": "#step-6"
-    },
-    {
-      "@type": "HowToStep",
-      "name": "FAQ – часто задаваемые вопросы о тормозах Cyberpunk 2077 на PS5",
-      "text": "FAQ – часто задаваемые вопросы о тормозах Cyberpunk 2077 на PS5",
-      "url": "#step-7"
-    },
-    {
-      "@type": "HowToStep",
-      "name": "Пошаговая инструкция: как восстановить базу данных PS5",
-      "text": "Пошаговая инструкция: как восстановить базу данных PS5",
-      "url": "#step-8"
-    }
-  ],
-  "image": "https://repairo.ru/https://mc.yandex.ru/watch/106225686"
-}
-</script>
-<!-- Cookie Consent Script -->
-<script src="../cookie-consent.js"></script>
+  <script src="../script.js"></script>
+  <script src="../search.js"></script>
 </body>
 </html>
-
-
-
-
-
-
