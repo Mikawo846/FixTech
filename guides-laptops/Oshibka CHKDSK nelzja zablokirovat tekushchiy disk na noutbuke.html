@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ошибка CHKDSK нельзя заблокировать текущий диск на ноутбуке | Решение проблемы</title>
+    <meta name="description" content="{{ description }}">
+    <meta name="description" content="Ошибка CHKDSK нельзя заблокировать текущий диск на ноутбуке. Причины ошибки блокировки диска CHKDSK и способы исправления проблемы с проверкой диска на ноутбуке.">
+
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="../styles-header.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    .guide-content { line-height: 1.7; color: var(--text); }
+    .guide-content h2 { color: var(--primary); margin-top: 30px; margin-bottom: 15px; font-size: 1.5rem; }
+    .guide-content h3 { color: var(--primary-dark); margin-top: 25px; margin-bottom: 12px; font-size: 1.2rem; }
+    .guide-image-block { margin: 20px 0; padding: 15px; background: var(--background); border-radius: var(--border-radius); border: 1px solid var(--border); text-align: center; }
+    .guide-image-block img { max-width: 100%; height: auto; border-radius: 6px; border: 1px solid var(--border); }
+    .image-caption { margin-top: 10px; font-size: 0.85rem; color: var(--text-light); font-style: italic; }
+    .pro-tips { background: rgba(3, 74, 79, 0.05); padding: 15px; border-radius: 6px; margin: 20px 0; }
+    .pro-tips h4 { color: var(--primary); margin-top: 0; margin-bottom: 12px; font-size: 1.1rem; }
+    .tip-item { display: flex; gap: 8px; margin-bottom: 8px; align-items: flex-start; }
+    table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+    th, td { border: 1px solid var(--border); padding: 8px; text-align: left; }
+    th { background: var(--background-light); }
+    @media (max-width: 768px) {
+      .guide-content h2 { font-size: 1.4rem; margin-top: 25px; }
+      .guide-image-block { padding: 12px; margin: 15px 0; }
+      table, th, td { font-size: 0.95rem; }
+    }
+  </style>
+
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <a href="../index.html" class="logo">
+                    <span class="logo__icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 15L7 10H17L12 15Z" fill="currentColor"/>
+                            <path d="M12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3ZM12 19C8.13401 19 5 15.866 5 12C5 8.13401 8.13401 5 12 5C15.866 5 19 8.13401 19 12C19 15.866 15.866 19 12 19Z" fill="currentColor"/>
+                        </svg>
+                    </span>
+                    <span class="logo__text">Repairo</span>
+                </a>
+                <nav class="nav">
+                    <ul class="nav__list">
+                       <li><a href="../tv.html" class="nav__link">Телевизоры</a></li>
+                        <li><a href="../auto-electronics.html" class="nav__link">Автоэлектроника</a></li>
+                        <li><a href="../consoles.html" class="nav__link">Приставки</a></li>
+                        <li><a href="../laptops.html" class="nav__link">Ноутбуки</a></li>
+                        <li><a href="../smartphones.html" class="nav__link">Смартфоны</a></li>
+                        <li><a href="../index.html#categories" class="nav__link">Все категории</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="guide-content">
+            <h1>Ошибка CHKDSK нельзя заблокировать текущий диск на ноутбуке</h1>
+            <p>Ошибка "CHKDSK нельзя заблокировать текущий диск" на ноутбуке указывает на невозможность запуска проверки диска. В этом подробном руководстве мы разберем причины этой ошибки и эффективные способы ее исправления.</p>
+
+            <h2>Что означает ошибка блокировки CHKDSK</h2>
+            <p>Ошибка блокировки указывает на невозможность монопольного доступа к диску.</p>
+            <h3>Техническое объяснение</h3>
+            <ul>
+                <li><strong>Причина:</strong> Диск используется другими процессами</li>
+                <li><strong>Влияние:</strong> Невозможно запустить проверку</li>
+                <li><strong>Часто связано:</strong> С открытыми файлами или службами</li>
+                <li><strong>Результат:</strong> Отмена проверки диска</li>
+            </ul>
+
+            <h3>Влияние на систему</h3>
+            <ul>
+                <li>Невозможно проверить диск</li>
+                <li>Не исправлены ошибки</li>
+                <li>Продолжение повреждений</li>
+                <li>Нестабильная работа</li>
+            </ul>
+
+            <h2>Распространенные причины</h2>
+            <p>Почему возникает ошибка блокировки CHKDSK.</p>
+            <h3>Открытые файлы</h3>
+            <ul>
+                <li><strong>Запущенные программы:</strong> Приложения используют диск</li>
+                <li><strong>Открытые файлы:</strong> Файлы заблокированы</li>
+                <li><strong>Службы:</strong> Системные службы работают</li>
+                <li><strong>Фоновые процессы:</strong> Процессы блокируют доступ</li>
+            </ul>
+
+            <h3>Системные проблемы</h3>
+            <ul>
+                <li><strong>Антивирус:</strong> Сканирование блокирует CHKDSK</li>
+                <li><strong>Виртуализация:</strong> Гипервизор блокирует диск</li>
+                <li><strong>Сетевые диски:</strong> Удаленные диски нельзя проверить</li>
+                <li><strong>Поврежденный диск:</strong> Диск не отвечает</li>
+            </ul>
+
+            <h3>Другие причины</h3>
+            <ul>
+                <li><strong>Недостаточно прав:</strong> Нет прав администратора</li>
+                <li><strong>Текущий диск:</strong> Попытка проверить системный диск</li>
+                <li><strong>USB устройства:</strong> Флешки подключены</li>
+                <li><strong>Съемные диски:</strong> Карты памяти</li>
+            </ul>
+
+            <h2>Диагностика ошибки</h2>
+            <p>Как определить причину ошибки блокировки CHKDSK.</p>
+            <h3>Проверка открытых процессов</h3>
+            <h4>Диспетчер задач</h4>
+            <ol>
+                <li>Откройте Диспетчер задач (Ctrl + Shift + Esc)</li>
+                <li>Перейдите на вкладку "Процессы"</li>
+                <li>Посмотрите, какие программы используют диск</li>
+                <li>Закройте ненужные приложения</li>
+            </ol>
+
+            <h4>Resource Monitor</h4>
+            <ol>
+                <li>Откройте Resource Monitor</li>
+                <li>Перейдите на вкладку "Диск"</li>
+                <li>Посмотрите активные процессы</li>
+                <li>Завершите подозрительные</li>
+            </ol>
+
+            <h3>Проверка системных служб</h3>
+            <ol>
+                <li>Откройте services.msc</li>
+                <li>Проверьте статус важных служб</li>
+                <li>Остановите ненужные</li>
+                <li>Попробуйте запустить CHKDSK</li>
+            </ol>
+
+            <h2>Решение проблемы</h2>
+            <p>Методы исправления ошибки блокировки CHKDSK.</p>
+            <h3>Метод 1: Проверка при загрузке</h3>
+            <h4>Отложенная проверка</h4>
+            <ol>
+                <li>Откройте командную строку от имени администратора</li>
+                <li>Введите: chkdsk C: /f (замените C: на букву диска)</li>
+                <li>Подтвердите планирование проверки</li>
+                <li>Перезагрузите систему</li>
+                <li>CHKDSK запустится автоматически</li>
+            </ol>
+
+            <h3>Метод 2: Безопасный режим</h3>
+            <h4>Запуск в безопасном режиме</h4>
+            <ol>
+                <li>Перезагрузите ноутбук</li>
+                <li>Во время загрузки нажмите Shift + Перезагрузка</li>
+                <li>Выберите "Поиск и устранение неисправностей"</li>
+                <li>Выберите "Дополнительные параметры"</li>
+                <li>Выберите "Параметры загрузки" → "Безопасный режим"</li>
+                <li>Запустите CHKDSK</li>
+            </ol>
+
+            <h3>Метод 3: Остановка служб</h3>
+            <h4>Отключение мешающих служб</h4>
+            <ol>
+                <li>Откройте services.msc</li>
+                <li>Найдите "Windows Search"</li>
+                <li>Остановите службу</li>
+                <li>Попробуйте запустить CHKDSK</li>
+                <li>Включите службу обратно</li>
+            </ol>
+
+            <h3>Метод 4: Отключение антивируса</h3>
+            <h4>Временное отключение</h4>
+            <ol>
+                <li>Откройте настройки антивируса</li>
+                <li>Отключите защиту в реальном времени</li>
+                <li>Попробуйте запустить CHKDSK</li>
+                <li>Включите защиту обратно</li>
+            </ol>
+
+            <h3>Метод 5: Использование сторонних инструментов</h3>
+            <h4>HDDScan или HD Tune</h4>
+            <ol>
+                <li>Скачайте HDDScan</li>
+                <li>Запустите программу</li>
+                <li>Выберите диск для проверки</li>
+                <li>Запустите сканирование</li>
+            </ol>
+
+            <h2>Специфические случаи</h2>
+            <p>Решения для распространенных сценариев.</p>
+            <h3>Ошибка с системным диском</h3>
+            <ul>
+                <li>Всегда планируйте проверку при загрузке</li>
+                <li>Используйте безопасный режим</li>
+                <li>Остановите службы перед проверкой</li>
+                <li>Не проверяйте системный диск в рабочее время</li>
+            </ul>
+
+            <h3>Ошибка с внешними дисками</h3>
+            <ul>
+                <li>Подключите диск к другому компьютеру</li>
+                <li>Используйте сторонние инструменты</li>
+                <li>Проверьте файловую систему</li>
+                <li>Рассмотрите форматирование</li>
+            </ul>
+
+            <h3>Ошибка с SSD</h3>
+            <ul>
+                <li>SSD не требуют CHKDSK</li>
+                <li>Используйте встроенные инструменты производителя</li>
+                <li>Проверьте SMART статус</li>
+                <li>Обновите firmware</li>
+            </ul>
+
+            <h2>Профилактика</h2>
+            <p>Как избежать ошибок блокировки CHKDSK.</p>
+            <h3>Регулярное обслуживание</h3>
+            <ul>
+                <li><strong>Проверка дисков:</strong> Регулярно проверяйте диски</li>
+                <li><strong>Чистка:</strong> Очищайте систему от мусора</li>
+                <li><strong>Антивирус:</strong> Защита от вредоносного ПО</li>
+                <li><strong>Обновления:</strong> Обновляйте драйверы</li>
+            </ul>
+
+            <h3>Безопасность использования</h3>
+            <ul>
+                <li>Правильно завершайте работу</li>
+                <li>Избегайте резких отключений</li>
+                <li>Регулярно проверяйте здоровье диска</li>
+                <li>Следите за свободным местом</li>
+            </ul>
+
+            <div class="pro-tips">
+                <h4>Полезные советы</h4>
+                <div class="tip-item">
+                    <i class="fas fa-lightbulb"></i>
+                    <span>Планируйте проверку CHKDSK при следующей загрузке</span>
+                </div>
+                <div class="tip-item">
+                    <i class="fas fa-lightbulb"></i>
+                    <span>Используйте безопасный режим для проверки системного диска</span>
+                </div>
+                <div class="tip-item">
+                    <i class="fas fa-lightbulb"></i>
+                    <span>Останавливайте службы перед запуском CHKDSK</span>
+                </div>
+                <div class="tip-item">
+                    <i class="fas fa-lightbulb"></i>
+                    <span>Если CHKDSK не помогает, проверьте здоровье диска</span>
+                </div>
+            </div>
+
+            <h2>Когда нужна помощь специалиста</h2>
+            <p>Признаки серьезных проблем.</p>
+            <h3>Критические случаи</h3>
+            <ul>
+                <li>Диск не определяется системой</li>
+                <li>Постоянные ошибки чтения</li>
+                <li>Потеря данных</li>
+                <li>Неисправность оборудования</li>
+            </ul>
+
+            <h3>Что проверить в сервисе</h3>
+            <ul>
+                <li>Работоспособность жесткого диска</li>
+                <li>Целостность данных</li>
+                <li>Совместимость оборудования</li>
+                <li>Возможность восстановления</li>
+            </ul>
+
+            <h2>Заключение</h2>
+            <p>Ошибка "CHKDSK нельзя заблокировать текущий диск" обычно связана с использованием диска другими процессами. В большинстве случаев ее можно решить планированием проверки при загрузке или запуском в безопасном режиме. Начните с планирования проверки, затем попробуйте безопасный режим. Если самостоятельные попытки не увенчались успехом, обратитесь к специалистам для профессиональной помощи.</p>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <p>&copy; 2024 Repairo. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+    <script src="../cookie-consent.js"></script>
+</body>
+</html>

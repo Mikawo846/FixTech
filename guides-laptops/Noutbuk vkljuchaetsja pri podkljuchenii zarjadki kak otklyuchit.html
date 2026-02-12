@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ноутбук включается при подключении зарядки как отключить | Решение проблемы</title>
+    <meta name="description" content="{{ description }}">
+    <meta name="description" content="Ноутбук включается при подключении зарядки как отключить. Причины автоматического включения и способы настройки поведения при подключении питания.">
+
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="../styles-header.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    .guide-content { line-height: 1.7; color: var(--text); }
+    .guide-content h2 { color: var(--primary); margin-top: 30px; margin-bottom: 15px; font-size: 1.5rem; }
+    .guide-content h3 { color: var(--primary-dark); margin-top: 25px; margin-bottom: 12px; font-size: 1.2rem; }
+    .guide-image-block { margin: 20px 0; padding: 15px; background: var(--background); border-radius: var(--border-radius); border: 1px solid var(--border); text-align: center; }
+    .guide-image-block img { max-width: 100%; height: auto; border-radius: 6px; border: 1px solid var(--border); }
+    .image-caption { margin-top: 10px; font-size: 0.85rem; color: var(--text-light); font-style: italic; }
+    .pro-tips { background: rgba(3, 74, 79, 0.05); padding: 15px; border-radius: 6px; margin: 20px 0; }
+    .pro-tips h4 { color: var(--primary); margin-top: 0; margin-bottom: 12px; font-size: 1.1rem; }
+    .tip-item { display: flex; gap: 8px; margin-bottom: 8px; align-items: flex-start; }
+    table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+    th, td { border: 1px solid var(--border); padding: 8px; text-align: left; }
+    th { background: var(--background-light); }
+    @media (max-width: 768px) {
+      .guide-content h2 { font-size: 1.4rem; margin-top: 25px; }
+      .guide-image-block { padding: 12px; margin: 15px 0; }
+      table, th, td { font-size: 0.95rem; }
+    }
+  </style>
+
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <a href="../index.html" class="logo">
+                    <span class="logo__icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 15L7 10H17L12 15Z" fill="currentColor"/>
+                            <path d="M12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3ZM12 19C8.13401 19 5 15.866 5 12C5 8.13401 8.13401 5 12 5C15.866 5 19 8.13401 19 12C19 15.866 15.866 19 12 19Z" fill="currentColor"/>
+                        </svg>
+                    </span>
+                    <span class="logo__text">Repairo</span>
+                </a>
+                <nav class="nav">
+                    <ul class="nav__list">
+                       <li><a href="../tv.html" class="nav__link">Телевизоры</a></li>
+                        <li><a href="../auto-electronics.html" class="nav__link">Автоэлектроника</a></li>
+                        <li><a href="../consoles.html" class="nav__link">Приставки</a></li>
+                        <li><a href="../laptops.html" class="nav__link">Ноутбуки</a></li>
+                        <li><a href="../smartphones.html" class="nav__link">Смартфоны</a></li>
+                        <li><a href="../index.html#categories" class="nav__link">Все категории</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="guide-content">
+            <h1>Ноутбук включается при подключении зарядки: как отключить</h1>
+            <p>Многие пользователи сталкиваются с проблемой, когда ноутбук автоматически включается при подключении зарядного устройства. В этом руководстве мы разберем причины этой проблемы и способы ее решения для разных моделей ноутбуков.</p>
+
+            <h2>Почему ноутбук включается при подключении зарядки</h2>
+            <p>Автоматическое включение при подключении питания - это встроенная функция безопасности и удобства.</p>
+            <h3>Причины включения</h3>
+            <ul>
+                <li><strong>Защита от глубокого разряда:</strong> Ноутбук включается для зарядки, если батарея сильно разряжена</li>
+                <li><strong>Настройки BIOS:</strong> В некоторых моделях это поведение включено по умолчанию</li>
+                <li><strong>ACPI настройки:</strong> Система управления питанием автоматически реагирует на подключение</li>
+                <li><strong>Аварийное восстановление:</strong> После внезапного отключения питания</li>
+            </ul>
+
+            <h3>Когда это нормально</h3>
+            <ul>
+                <li>Батарея полностью разряжена (менее 5%)</li>
+                <li>Ноутбук был выключен из-за низкого заряда</li>
+                <li>Включена функция "Включение при подключении зарядки"</li>
+            </ul>
+
+            <h2>Как отключить автоматическое включение</h2>
+            <p>Способы решения проблемы в зависимости от ситуации.</p>
+            <h3>Метод 1: Настройки Windows</h3>
+            <h4>План электропитания</h4>
+            <ol>
+                <li>Откройте "Панель управления" → "Электропитание"</li>
+                <li>Выберите активный план питания</li>
+                <li>Нажмите "Изменить параметры плана"</li>
+                <li>Выберите "Изменить дополнительные параметры питания"</li>
+                <li>Разверните "Питание кнопок и крышки"</li>
+                <li>Установите "При нажатии кнопки питания" → "Ничего не делать"</li>
+                <li>Для "При закрытии крышки" → "Ничего не делать"</li>
+            </ol>
+
+            <h4>Настройки в Параметры</h4>
+            <ol>
+                <li>Откройте "Параметры" → "Система" → "Питание и спящий режим"</li>
+                <li>В разделе "Связанные параметры" нажмите "Дополнительные параметры питания"</li>
+                <li>Следуйте шагам выше</li>
+            </ol>
+
+            <h3>Метод 2: Настройки BIOS/UEFI</h3>
+            <h4>Вход в BIOS</h4>
+            <p>Перезагрузите ноутбук и войдите в BIOS (обычно Del, F2, F10 или Esc)</p>
+
+            <h4>Настройки питания</h4>
+            <ul>
+                <li>Найдите раздел Power Management или Advanced</li>
+                <li>Отключите опцию "Power on when AC attached" или аналогичную</li>
+                <li>Установите "AC Power Loss" в "Power Off" или "Last State"</li>
+                <li>Сохраните изменения и выйдите</li>
+            </ul>
+
+            <h3>Метод 3: Реестр Windows</h3>
+            <p>Для опытных пользователей:</p>
+            <ol>
+                <li>Нажмите Win + R, введите "regedit"</li>
+                <li>Перейдите к HKEY_CURRENT_USER\Control Panel\PowerCfg</li>
+                <li>Найдите или создайте DWORD значение "ACSettingIndex"</li>
+                <li>Установите значение 0</li>
+                <li>Перезагрузите систему</li>
+            </ol>
+
+            <h2>Особенности разных моделей</h2>
+            <p>Настройки могут отличаться в зависимости от производителя.</p>
+            <h3>Lenovo ThinkPad</h3>
+            <ul>
+                <li>В BIOS: Config → Power → "Power On with AC Attach" → Disabled</li>
+                <li>В Windows: Используйте стандартные настройки питания</li>
+            </ul>
+
+            <h3>Dell Inspiron/Latitude</h3>
+            <ul>
+                <li>В BIOS: Power Management → "AC Recovery" → "Power Off"</li>
+                <li>Проверьте настройки в Dell Power Manager</li>
+            </ul>
+
+            <h3>HP Pavilion/EliteBook</h3>
+            <ul>
+                <li>В BIOS: Advanced → "Power-On Options" → "Allow power on" → Disabled</li>
+                <li>Используйте HP Power Assistant</li>
+            </ul>
+
+            <h3>ASUS</h3>
+            <ul>
+                <li>В BIOS: Advanced → APM → "Power on by PCI-E" → Disabled</li>
+                <li>В ASUS Power4Gear проверьте настройки</li>
+            </ul>
+
+            <h2>Когда не стоит отключать</h2>
+            <p>В некоторых случаях автоматическое включение полезно.</p>
+            <h3>Рекомендуется оставить</h3>
+            <ul>
+                <li>Ноутбук используется как домашний ПК</li>
+                <li>Частые перебои с питанием</li>
+                <li>Необходимость удаленного доступа</li>
+                <li>Слабая батарея (нуждается в постоянной зарядке)</li>
+            </ul>
+
+            <h3>Риски отключения</h3>
+            <ul>
+                <li>Ноутбук может не включиться при необходимости</li>
+                <li>Потеря данных при внезапном отключении</li>
+                <li>Проблемы с восстановлением после сбоя питания</li>
+            </ul>
+
+            <h2>Дополнительные решения</h2>
+            <p>Альтернативные способы решения проблемы.</p>
+            <h3>Использование UPS</h3>
+            <p>Источник бесперебойного питания предотвратит внезапные отключения.</p>
+
+            <h3>Программное управление</h3>
+            <ul>
+                <li><strong>Auto Power-on & Shut-down:</strong> Программа для управления питанием</li>
+                <li><strong>PowerToys:</strong> Для Windows 10/11</li>
+                <li><strong>Сторонние утилиты:</strong> От производителя ноутбука</li>
+            </ul>
+
+            <h3>Аппаратные решения</h3>
+            <ul>
+                <li>Умная розетка с таймером</li>
+                <li>Внешний контроллер питания</li>
+                <li>Модификация зарядки (не рекомендуется)</li>
+            </ul>
+
+            <div class="pro-tips">
+                <h4>Полезные советы</h4>
+                <div class="tip-item">
+                    <i class="fas fa-lightbulb"></i>
+                    <span>Проверьте настройки в BIOS в первую очередь</span>
+                </div>
+                <div class="tip-item">
+                    <i class="fas fa-lightbulb"></i>
+                    <span>Создайте резервную копию настроек BIOS перед изменениями</span>
+                </div>
+                <div class="tip-item">
+                    <i class="fas fa-lightbulb"></i>
+                    <span>Если проблема появилась недавно, проверьте обновления Windows</span>
+                </div>
+                <div class="tip-item">
+                    <i class="fas fa-lightbulb"></i>
+                    <span>Тестируйте изменения после каждого шага</span>
+                </div>
+            </div>
+
+            <h2>Диагностика проблемы</h2>
+            <p>Если настройки не помогают, проверьте оборудование.</p>
+            <h3>Проверка зарядки</h3>
+            <ul>
+                <li>Используйте мультиметр для проверки напряжения</li>
+                <li>Попробуйте другую зарядку</li>
+                <li>Проверьте разъем на ноутбуке</li>
+            </ul>
+
+            <h3>Проверка батареи</h3>
+            <ul>
+                <li>Извлеките батарею (если съемная)</li>
+                <li>Протестируйте без батареи</li>
+                <li>Проверьте индикатор заряда</li>
+            </ul>
+
+            <h3>Когда обращаться в сервис</h3>
+            <ul>
+                <li>Проблема не решается настройками</li>
+                <li>Поврежден разъем питания</li>
+                <li>Подозрение на неисправность платы</li>
+                <li>Ноутбук включается самопроизвольно</li>
+            </ul>
+
+            <h2>Заключение</h2>
+            <p>Автоматическое включение ноутбука при подключении зарядки обычно легко отключается через настройки BIOS или Windows. Если проблема persists после всех настроек, возможно, есть аппаратная неисправность, требующая обращения в сервис. Помните, что в некоторых случаях эта функция полезна для защиты от глубокого разряда батареи.</p>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <p>&copy; 2024 Repairo. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+    <script src="../cookie-consent.js"></script>
+</body>
+</html>

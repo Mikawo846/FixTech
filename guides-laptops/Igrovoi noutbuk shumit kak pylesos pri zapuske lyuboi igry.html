@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Игровой ноутбук шумит как пылесос при запуске любой игры | Экспертный мегагайд</title>
+    <meta name="description" content="{{ description }}">
+    <meta name="description" content="Пошаговая инструкция: Игровой ноутбук шумит как пылесос при запуске любой игры — Экспертный мегагайд. Причины: перегрев, пыль, настройки. Решения: чистка, охлаждение, ПО производителя.">
+
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="../styles-header.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    .guide-content { line-height: 1.7; color: var(--text); }
+    .guide-content h2 { color: var(--primary); margin-top: 30px; margin-bottom: 15px; font-size: 1.6rem; }
+    .guide-content h3 { color: var(--primary-dark); margin-top: 25px; margin-bottom: 12px; font-size: 1.25rem; }
+    .guide-image-block { margin: 20px 0; padding: 15px; background: var(--background); border-radius: var(--border-radius); border: 1px solid var(--border); text-align: center; }
+    .guide-image-block img { max-width: 100%; height: auto; border-radius: 6px; border: 1px solid var(--border); }
+    .image-caption { margin-top: 10px; font-size: 0.85rem; color: var(--text-light); font-style: italic; }
+    .pro-tips { background: rgba(3, 74, 79, 0.05); padding: 18px; border-radius: 8px; margin: 25px 0; }
+    .pro-tips h4 { color: var(--primary); margin-top: 0; margin-bottom: 12px; font-size: 1.15rem; }
+    .tip-item { display: flex; gap: 10px; margin-bottom: 10px; align-items: flex-start; }
+    .tip-item i { margin-top: 3px; }
+    table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+    th, td { border: 1px solid var(--border); padding: 8px; text-align: left; vertical-align: top; }
+    th { background: var(--background-light); }
+    code { background: var(--background-light); padding: 2px 4px; border-radius: 4px; font-size: 0.9em; }
+    ul, ol { margin-left: 18px; }
+    @media (max-width: 768px) {
+      .guide-content h2 { font-size: 1.4rem; margin-top: 25px; }
+      .guide-content h3 { font-size: 1.15rem; }
+      .guide-image-block { padding: 12px; margin: 15px 0; }
+      table, th, td { font-size: 0.95rem; }
+    }
+
+    /* Яндекс Маркет рекламный баннер */
+    .ym-hero-link {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+      max-width: 100%;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    /* Горизонтальный баннер-карточка */
+    .ym-hero-banner {
+      width: 100%;
+      max-width: 600px;
+      min-height: 140px;
+      border-radius: 16px;
+      background: #ffffff;
+      border: 1px solid #e5e7eb;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 4px 16px rgba(15, 23, 42, 0.08);
+      overflow: hidden;
+      box-sizing: border-box;
+      margin: 40px auto;
+    }
+
+    /* Контейнер для изображений */
+    .ym-hero-images {
+      display: flex;
+      height: 120px;
+      overflow: hidden;
+    }
+
+    .ym-hero-image {
+      flex: 1;
+      min-width: 0;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      border-right: 1px solid #e5e7eb;
+      background: #f8f9fa;
+    }
+
+    .ym-hero-image:last-child {
+      border-right: none;
+    }
+
+    .ym-hero-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      transition: transform 0.3s ease;
+      background: #f8f9fa;
+    }
+
+    .ym-hero-image:hover img {
+      transform: scale(1.02);
+    }
+
+    /* Правая часть: контент */
+    .ym-hero-content {
+      padding: 16px 18px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 8px;
+    }
+
+    /* Название товара */
+    .ym-hero-title {
+      font-size: 14px;
+      font-weight: 600;
+      color: #111827;
+      line-height: 1.3;
+      margin: 0 0 4px 0;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    /* Рейтинг */
+    .ym-hero-rating {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 12px;
+      color: #6b7280;
+    }
+
+    .ym-hero-stars {
+      display: flex;
+      gap: 1px;
+    }
+
+    .ym-hero-star {
+      width: 12px;
+      height: 12px;
+      fill: #fbbf24;
+    }
+
+    .ym-hero-reviews {
+      font-size: 11px;
+      color: #9ca3af;
+    }
+
+    /* Цена */
+    .ym-hero-price {
+      font-size: 16px;
+      font-weight: 700;
+      color: #111827;
+      margin: 0;
+    }
+
+    /* Кнопка */
+    .ym-hero-button {
+      background: #007bff;
+      color: #ffffff;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background 0.2s ease;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .ym-hero-button:hover {
+      background: #0056b3;
+    }
+
+    /* Адаптивность */
+    @media (max-width: 768px) {
+      .ym-hero-banner {
+        flex-direction: row;
+        min-height: auto;
+      }
+
+      .ym-hero-images {
+        width: 120px;
+        height: auto;
+        flex-shrink: 0;
+      }
+
+      .ym-hero-content {
+        flex: 1;
+        padding: 12px 16px;
+      }
+
+      .ym-hero-title {
+        font-size: 13px;
+      }
+
+      .ym-hero-price {
+        font-size: 15px;
+      }
+
+      .ym-hero-button {
+        padding: 6px 10px;
+        font-size: 11px;
+      }
+    }
+
+    /* Скрытый баннер для десктопа */
+    @media (min-width: 769px) {
+      .ym-hero-link {
+        display: none !important;
+      }
+    }
+  </style>
+  <script async src="https://timeweb.cloud/api/v1/cloud-ai/agents/3cc03620-d051-4d8d-b5af-f7b6cd083a35/embed.js?collapsed=true"></script>
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <a href="/" class="logo">
+        <i class="fas fa-tools"></i>
+        FixTech
+      </a>
+      <nav class="nav-links">
+        <a href="/">Главная</a>
+        <a href="/articles">Все статьи</a>
+        <a href="/smartphones">Смартфоны</a>
+        <a href="/laptops">Ноутбуки</a>
+        <a href="/tv">Телевизоры</a>
+        <a href="/cameras">Камеры</a>
+        <a href="/consoles">Консоли</a>
+        <a href="/auto-electronics">Автоэлектроника</a>
+        <a href="/small-appliances">Мелкая техника</a>
+        <a href="/large-appliances">Крупная техника</a>
+      </nav>
+      <div class="search-container">
+        <input type="text" id="search-input" placeholder="Поиск по сайту..." />
+        <button id="search-button"><i class="fas fa-search"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <main class="guide-container">
+    <div class="guide-content">
+      <h1>Игровой ноутбук шумит как пылесос при запуске любой игры</h1>
+      <p>Когда игровой ноутбук начинает шуметь как пылесос при запуске даже простых игр, проблема связана с системой охлаждения или настройками. В этом экспертном мегагайде мы разберем все причины чрезмерного шума и предоставим решения для тихой работы игрового ноутбука.</p>
+
+      <h2>Признаки проблемы</h2>
+      <ul>
+        <li>Очень громкий шум при запуске игр</li>
+        <li>Вентиляторы работают на максимум</li>
+        <li>Ноутбук горячий</li>
+        <li>Работает тихо в простое</li>
+        <li>Проблема с любой игрой</li>
+      </ul>
+
+      <h2>Основные причины</h2>
+      <table>
+        <tr>
+          <th>Причина</th>
+          <th>Вероятность</th>
+          <th>Характерные признаки</th>
+        </tr>
+        <tr>
+          <td>Засорение пылью</td>
+          <td>35%</td>
+          <td>Работает после чистки</td>
+        </tr>
+        <tr>
+          <td>ПО производителя</td>
+          <td>25%</td>
+          <td>Работает после отключения</td>
+        </tr>
+        <tr>
+          <td>Высокие настройки графики</td>
+          <td>20%</td>
+          <td>Работает на низких настройках</td>
+        </tr>
+        <tr>
+          <td>Термопаста</td>
+          <td>15%</td>
+          <td>Работает после замены</td>
+        </tr>
+        <tr>
+          <td>Поврежденный кулер</td>
+          <td>4%</td>
+          <td>Вентилятор не крутится</td>
+        </tr>
+        <tr>
+          <td>Аппаратная неисправность</td>
+          <td>1%</td>
+          <td>Не работает после всех решений</td>
+        </tr>
+      </table>
+
+      <h2>Диагностика проблемы</h2>
+      <h3>Мониторинг температуры</h3>
+      <ol>
+        <li>HWMonitor или MSI Afterburner</li>
+        <li>Измерьте температуру в игре</li>
+        <li>Если нормальная - проблема в ПО</li>
+      </ol>
+
+      <h3>Тест в разных режимах</h3>
+      <ol>
+        <li>Запустите игру на низких настройках</li>
+        <li>Если тихо - проблема в графике</li>
+        <li>Если шумно - проблема в охлаждении</li>
+      </ol>
+
+      <h2>Решение 1: Чистка системы охлаждения</h2>
+      <h3>Внешняя чистка</h3>
+      <ol>
+        <li>Выключите ноутбук</li>
+        <li>Очистите решетки сжатым воздухом</li>
+        <li>Будьте осторожны с вентиляторами</li>
+      </ol>
+
+      <h3>Полная разборка</h3>
+      <ol>
+        <li>Снимите нижнюю крышку</li>
+        <li>Очистите радиаторы и кулер</li>
+        <li>Замените термопасту</li>
+      </ol>
+
+      <h2>Решение 2: Настройки ПО производителя</h2>
+      <h3>Переключение режимов</h3>
+      <ol>
+        <li>ASUS Armory Crate → Режимы</li>
+        <li>Выберите "Тихий" или "Баланс"</li>
+        <li>Отключите "Игровой" режим</li>
+      </ol>
+
+      <h3>Настройки вентиляторов</h3>
+      <ol>
+        <li>В ПО установите минимальные обороты</li>
+        <li>Отключите автоматическое ускорение</li>
+      </ol>
+
+      <h2>Решение 3: Настройки графики в играх</h2>
+      <h3>Снижение нагрузки</h3>
+      <ol>
+        <li>В игре уменьшите разрешение</li>
+        <li>Отключите V-sync и антиалиасинг</li>
+        <li>Установите низкие настройки теней</li>
+      </ol>
+
+      <h3>NVIDIA/AMD настройки</h3>
+      <ol>
+        <li>GeForce Experience → Оптимизировать</li>
+        <li>Выберите "Предпочитать максимальную производительность"</li>
+      </ol>
+
+      <h2>Решение 4: Обновление драйверов</h2>
+      <h3>Драйверы видеокарты</h3>
+      <ol>
+        <li>Обновите до последних версий</li>
+        <li>Включите оптимизации</li>
+      </ol>
+
+      <h2>Решение 5: Настройки электропитания</h2>
+      <h3>Сбалансированный режим</h3>
+      <ol>
+        <li>Панель управления → Электропитание</li>
+        <li>Выберите "Сбалансированный"</li>
+        <li>Не используйте "Высокую производительность"</li>
+      </ol>
+
+      <h2>Решение 6: Охлаждающая подставка</h2>
+      <h3>Выбор подставки</h3>
+      <ol>
+        <li>Активная с вентиляторами</li>
+        <li>Улучшает циркуляцию воздуха</li>
+        <li>Снижает температуру</li>
+      </ol>
+
+      <div class="pro-tips">
+        <h4><i class="fas fa-lightbulb"></i> Профессиональные советы</h4>
+        <div class="tip-item">
+          <i class="fas fa-broom"></i>
+          <span>Чистите игровой ноутбук от пыли каждые 3-6 месяцев</span>
+        </div>
+        <div class="tip-item">
+          <i class="fas fa-tools"></i>
+          <span>Используйте ПО производителя для настройки режимов охлаждения</span>
+        </div>
+        <div class="tip-item">
+          <i class="fas fa-gamepad"></i>
+          <span>Не играйте постоянно на максимальных настройках</span>
+        </div>
+        <div class="tip-item">
+          <i class="fas fa-fan"></i>
+          <span>Используйте охлаждающую подставку для снижения шума</span>
+        </div>
+      </div>
+
+      <h2>Расширенные решения</h2>
+      <h3>Восстановление системы</h3>
+      <ol>
+        <li>Win + R → rstrui</li>
+        <li>Выберите точку восстановления</li>
+        <li>Восстановите до появления проблемы</li>
+      </ol>
+
+      <h3>Замена кулера</h3>
+      <ol>
+        <li>Если кулер неисправен</li>
+        <li>Замените на более тихий</li>
+        <li>Обратитесь в сервис</li>
+      </ol>
+
+      <h2>Частые вопросы</h2>
+      <h3>Почему игровой ноутбук шумит как пылесос?</h3>
+      <p>Перегрев или неправильные настройки. Очистите от пыли и настройте режим охлаждения.</p>
+
+      <h3>Можно ли сделать игровой ноутбук тише?</h3>
+      <p>Да, чисткой и правильными настройками. Но производительность может снизиться.</p>
+
+      <h3>Опасен ли сильный шум?</h3>
+      <p>Нет, если температура нормальная. Но постоянный шум указывает на проблему.</p>
+
+      <h2>Когда нужна замена</h2>
+      <ul>
+        <li>Поврежден кулер</li>
+        <li>Материнская плата повреждена</li>
+        <li>Все решения не помогли</li>
+      </ul>
+
+      <p>В большинстве случаев проблема решается чисткой и настройками ПО. Начните с очистки от пыли и переключения на тихий режим.</p>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2024 FixTech. Все права защищены.</p>
+      <div class="footer-links">
+        <a href="/privacy">Конфиденциальность</a>
+        <a href="/terms">Условия использования</a>
+        <a href="/contact">Контакты</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+  <script src="../search.js"></script>
+</body>
+</html>

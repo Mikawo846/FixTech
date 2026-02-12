@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ошибка очередь печати заблокирована на ноутбуке Windows 11 | Экспертный мегагайд</title>
+    <meta name="description" content="{{ description }}">
+    <meta name="description" content="Пошаговая инструкция: Ошибка очередь печати заблокирована на ноутбуке Windows 11 — Экспертный мегагайд. Причины блокировки очереди: спулер, разрешения, политика, вирусы. Решения: перезапуск спулера, проверка разрешений, отключение политики, сканирование на вирусы.">
+
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="../styles-header.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    .guide-content { line-height: 1.7; color: var(--text); }
+    .guide-content h2 { color: var(--primary); margin-top: 30px; margin-bottom: 15px; font-size: 1.6rem; }
+    .guide-content h3 { color: var(--primary-dark); margin-top: 25px; margin-bottom: 12px; font-size: 1.25rem; }
+    .guide-image-block { margin: 20px 0; padding: 15px; background: var(--background); border-radius: var(--border-radius); border: 1px solid var(--border); text-align: center; }
+    .guide-image-block img { max-width: 100%; height: auto; border-radius: 6px; border: 1px solid var(--border); }
+    .image-caption { margin-top: 10px; font-size: 0.85rem; color: var(--text-light); font-style: italic; }
+    .pro-tips { background: rgba(3, 74, 79, 0.05); padding: 18px; border-radius: 8px; margin: 25px 0; }
+    .pro-tips h4 { color: var(--primary); margin-top: 0; margin-bottom: 12px; font-size: 1.15rem; }
+    .tip-item { display: flex; gap: 10px; margin-bottom: 10px; align-items: flex-start; }
+    .tip-item i { margin-top: 3px; }
+    table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+    th, td { border: 1px solid var(--border); padding: 8px; text-align: left; vertical-align: top; }
+    th { background: var(--background-light); }
+    code { background: var(--background-light); padding: 2px 4px; border-radius: 4px; font-size: 0.9em; }
+    ul, ol { margin-left: 18px; }
+    @media (max-width: 768px) {
+      .guide-content h2 { font-size: 1.4rem; margin-top: 25px; }
+      .guide-content h3 { font-size: 1.15rem; }
+      .guide-image-block { padding: 12px; margin: 15px 0; }
+      table, th, td { font-size: 0.95rem; }
+    }
+
+    /* Яндекс Маркет рекламный баннер */
+    .ym-hero-link {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+      max-width: 100%;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    /* Горизонтальный баннер-карточка */
+    .ym-hero-banner {
+      width: 100%;
+      max-width: 600px;
+      min-height: 140px;
+      border-radius: 16px;
+      background: #ffffff;
+      border: 1px solid #e5e7eb;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 4px 16px rgba(15, 23, 42, 0.08);
+      overflow: hidden;
+      box-sizing: border-box;
+      margin: 40px auto;
+    }
+
+    /* Контейнер для изображений */
+    .ym-hero-images {
+      display: flex;
+      height: 120px;
+      overflow: hidden;
+    }
+
+    .ym-hero-image {
+      flex: 1;
+      min-width: 0;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      border-right: 1px solid #e5e7eb;
+      background: #f8f9fa;
+    }
+
+    .ym-hero-image:last-child {
+      border-right: none;
+    }
+
+    .ym-hero-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      transition: transform 0.3s ease;
+      background: #f8f9fa;
+    }
+
+    .ym-hero-image:hover img {
+      transform: scale(1.02);
+    }
+
+    /* Правая часть: контент */
+    .ym-hero-content {
+      padding: 16px 18px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 8px;
+    }
+
+    /* Название товара */
+    .ym-hero-title {
+      font-size: 14px;
+      font-weight: 600;
+      color: #111827;
+      line-height: 1.3;
+      margin: 0 0 4px 0;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    /* Рейтинг */
+    .ym-hero-rating {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 12px;
+      color: #6b7280;
+    }
+
+    .ym-hero-stars {
+      display: flex;
+      gap: 1px;
+    }
+
+    .ym-hero-star {
+      width: 12px;
+      height: 12px;
+      fill: #fbbf24;
+    }
+
+    .ym-hero-reviews {
+      font-size: 11px;
+      color: #9ca3af;
+    }
+
+    /* Цена */
+    .ym-hero-price {
+      font-size: 16px;
+      font-weight: 700;
+      color: #111827;
+      margin: 0;
+    }
+
+    /* Кнопка */
+    .ym-hero-button {
+      background: #007bff;
+      color: #ffffff;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background 0.2s ease;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .ym-hero-button:hover {
+      background: #0056b3;
+    }
+
+    /* Адаптивность */
+    @media (max-width: 768px) {
+      .ym-hero-banner {
+        flex-direction: row;
+        min-height: auto;
+      }
+
+      .ym-hero-images {
+        width: 120px;
+        height: auto;
+        flex-shrink: 0;
+      }
+
+      .ym-hero-content {
+        flex: 1;
+        padding: 12px 16px;
+      }
+
+      .ym-hero-title {
+        font-size: 13px;
+      }
+
+      .ym-hero-price {
+        font-size: 15px;
+      }
+
+      .ym-hero-button {
+        padding: 6px 10px;
+        font-size: 11px;
+      }
+    }
+
+    /* Скрытый баннер для десктопа */
+    @media (min-width: 769px) {
+      .ym-hero-link {
+        display: none !important;
+      }
+    }
+  </style>
+  <script async src="https://timeweb.cloud/api/v1/cloud-ai/agents/3cc03620-d051-4d8d-b5af-f7b6cd083a35/embed.js?collapsed=true"></script>
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <a href="/" class="logo">
+        <i class="fas fa-tools"></i>
+        FixTech
+      </a>
+      <nav class="nav-links">
+        <a href="/">Главная</a>
+        <a href="/articles">Все статьи</a>
+        <a href="/smartphones">Смартфоны</a>
+        <a href="/laptops">Ноутбуки</a>
+        <a href="/tv">Телевизоры</a>
+        <a href="/cameras">Камеры</a>
+        <a href="/consoles">Консоли</a>
+        <a href="/auto-electronics">Автоэлектроника</a>
+        <a href="/small-appliances">Мелкая техника</a>
+        <a href="/large-appliances">Крупная техника</a>
+      </nav>
+      <div class="search-container">
+        <input type="text" id="search-input" placeholder="Поиск по сайту..." />
+        <button id="search-button"><i class="fas fa-search"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <main class="guide-container">
+    <div class="guide-content">
+      <h1>Ошибка "очередь печати заблокирована" на ноутбуке Windows 11</h1>
+      <p>Когда на ноутбуке Windows 11 появляется ошибка "очередь печати заблокирована", это препятствует печати документов. В этом экспертном мегагайде мы разберем все причины блокировки очереди печати и предоставим пошаговые решения для восстановления нормальной работы принтера.</p>
+
+      <h2>Что означает ошибка</h2>
+      <ul>
+        <li>Очередь печати заблокирована из-за системных политик</li>
+        <li>Принтер недоступен для текущего пользователя</li>
+        <li>Проблемы с разрешениями или настройками безопасности</li>
+        <li>Конфликт с антивирусом или фаерволом</li>
+      </ul>
+
+      <h2>Признаки проблемы</h2>
+      <ul>
+        <li>Документы не печатаются</li>
+        <li>Сообщение "Очередь печати заблокирована"</li>
+        <li>Принтер отображается как доступный</li>
+        <li>Работает на других учетных записях</li>
+        <li>Тестовая страница не печатается</li>
+      </ul>
+
+      <h2>Основные причины</h2>
+      <table>
+        <tr>
+          <th>Причина</th>
+          <th>Вероятность</th>
+          <th>Характерные признаки</th>
+        </tr>
+        <tr>
+          <td>Политика безопасности Windows</td>
+          <td>35%</td>
+          <td>Работает в режиме администратора</td>
+        </tr>
+        <tr>
+          <td>Антивирус блокирует печать</td>
+          <td>25%</td>
+          <td>Работает при отключении антивируса</td>
+        </tr>
+        <tr>
+          <td>Поврежденная служба спулера</td>
+          <td>20%</td>
+          <td>Работает после перезапуска</td>
+        </tr>
+        <tr>
+          <td>Проблемы с разрешениями</td>
+          <td>10%</td>
+          <td>Работает под другой учетной записью</td>
+        </tr>
+        <tr>
+          <td>Поврежденные системные файлы</td>
+          <td>5%</td>
+          <td>Требуется восстановление системы</td>
+        </tr>
+        <tr>
+          <td>Конфликт приложений</td>
+          <td>5%</td>
+          <td>Работает при чистой загрузке</td>
+        </tr>
+      </table>
+
+      <h2>Диагностика проблемы</h2>
+      <h3>Проверка очереди печати</h3>
+      <ol>
+        <li>Параметры → Устройства → Принтеры и сканеры</li>
+        <li>Выберите принтер → Открыть очередь</li>
+        <li>Посмотрите на статус: "Заблокировано" или "Пауза"</li>
+        <li>Попробуйте снять паузу</li>
+      </ol>
+
+      <h3>Проверка разрешений</h3>
+      <ol>
+        <li>Свойства принтера → вкладка "Безопасность"</li>
+        <li>Убедитесь, что текущий пользователь имеет разрешения</li>
+        <li>Добавьте разрешения "Печать" для пользователя</li>
+      </ol>
+
+      <h2>Решение 1: Проверка политик безопасности</h2>
+      <h3>Отключение политики блокировки</h3>
+      <ol>
+        <li>Win + R → gpedit.msc</li>
+        <li>Конфигурация компьютера → Административные шаблоны</li>
+        <li>Принтеры → "Разрешить печать только для администраторов"</li>
+        <li>Установите "Отключено"</li>
+      </ol>
+
+      <h3>Проверка локальных политик</h3>
+      <ol>
+        <li>В том же разделе найдите "Запретить установку принтеров"</li>
+        <li>Убедитесь, что политика отключена</li>
+        <li>Примените изменения</li>
+      </ol>
+
+      <h2>Решение 2: Отключение антивируса</h2>
+      <h3>Временное отключение</h3>
+      <ol>
+        <li>Откройте настройки антивируса</li>
+        <li>Найдите опцию отключения защиты</li>
+        <li>Выберите временное отключение</li>
+        <li>Попробуйте напечатать документ</li>
+      </ol>
+
+      <h3>Добавление исключений</h3>
+      <ol>
+        <li>Добавьте процесс spoolsv.exe в исключения</li>
+        <li>Исключите папку C:\Windows\System32\spool</li>
+        <li>Отключите веб-защиту антивируса</li>
+      </ol>
+
+      <h2>Решение 3: Перезапуск спулера печати</h2>
+      <h3>Через службы</h3>
+      <ol>
+        <li>Win + R → services.msc</li>
+        <li>Найдите "Диспетчер очереди печати"</li>
+        <li>Остановите службу</li>
+        <li>Подождите 30 секунд</li>
+        <li>Запустите службу</li>
+      </ol>
+
+      <h3>Очистка очереди</h3>
+      <ol>
+        <li>Остановите службу спулера</li>
+        <li>Удалите файлы из C:\Windows\System32\spool\PRINTERS</li>
+        <li>Запустите службу</li>
+      </ol>
+
+      <h2>Решение 4: Проверка разрешений</h2>
+      <h3>Настройка разрешений принтера</h3>
+      <ol>
+        <li>Свойства принтера → вкладка "Безопасность"</li>
+        <li>Выберите группу "Пользователи"</li>
+        <li>Установите разрешения "Печать" и "Управление документами"</li>
+        <li>Примените изменения</li>
+      </ol>
+
+      <h3>Запуск от имени администратора</h3>
+      <ol>
+        <li>Закройте все приложения печати</li>
+        <li>Запустите приложение от имени администратора</li>
+        <li>Попробуйте напечатать</li>
+      </ol>
+
+      <h2>Решение 5: Восстановление системы</h2>
+      <h3>Точка восстановления</h3>
+      <ol>
+        <li>Параметры → Система → Восстановление</li>
+        <li>Вернуть компьютер в исходное состояние</li>
+        <li>Выберите точку до появления проблемы</li>
+      </ol>
+
+      <h3>Восстановление системных файлов</h3>
+      <code>sfc /scannow</code>
+
+      <h2>Решение 6: Создание нового профиля</h2>
+      <h3>Новый пользователь</h3>
+      <ol>
+        <li>Параметры → Учетные записи → Семья и другие пользователи</li>
+        <li>Добавьте нового пользователя</li>
+        <li>Войдите под новой учетной записью</li>
+        <li>Протестируйте печать</li>
+      </ol>
+
+      <div class="pro-tips">
+        <h4><i class="fas fa-lightbulb"></i> Профессиональные советы</h4>
+        <div class="tip-item">
+          <i class="fas fa-shield-alt"></i>
+          <span>После решения проблемы настройте исключения в антивирусе</span>
+        </div>
+        <div class="tip-item">
+          <i class="fas fa-user-shield"></i>
+          <span>Используйте отдельную учетную запись администратора для печати</span>
+        </div>
+        <div class="tip-item">
+          <i class="fas fa-tools"></i>
+          <span>Регулярно очищайте очередь печати для предотвращения зависаний</span>
+        </div>
+        <div class="tip-item">
+          <i class="fas fa-network-wired"></i>
+          <span>Для сетевых принтеров проверьте разрешения на сервере печати</span>
+        </div>
+      </div>
+
+      <h2>Расширенные решения</h2>
+      <h3>Чистая загрузка Windows</h3>
+      <ol>
+        <li>msconfig → вкладка "Службы"</li>
+        <li>"Не загружать службы Майкрософт"</li>
+        <li>Вкладка "Автозагрузка" → "Отключить все"</li>
+        <li>Перезагрузите и протестируйте</li>
+      </ol>
+
+      <h3>Переустановка Windows</h3>
+      <ol>
+        <li>Создайте установочную флешку</li>
+        <li>Загрузитесь с нее</li>
+        <li>Выберите "Установка" → "Сохранить мои файлы"</li>
+        <li>Переустановите Windows</li>
+      </ol>
+
+      <h3>Проверка на вирусы</h3>
+      <ol>
+        <li>Запустите полное сканирование</li>
+        <li>Проверьте на rootkit и malware</li>
+        <li>Удалите найденные угрозы</li>
+      </ol>
+
+      <h2>Частые вопросы</h2>
+      <h3>Почему очередь заблокирована только для одного пользователя?</h3>
+      <p>Проблема в разрешениях для конкретной учетной записи. Проверьте настройки безопасности принтера.</p>
+
+      <h3>Можно ли обойти блокировку без отключения антивируса?</h3>
+      <p>Да, добавьте исключения для процессов печати и папки спулера.</p>
+
+      <h3>Что делать, если проблема появилась после обновления Windows?</h3>
+      <p>Проверьте политики безопасности и переустановите драйверы принтера.</p>
+
+      <h2>Когда нужна помощь специалиста</h2>
+      <ul>
+        <li>Проблема на всех учетных записях</li>
+        <li>Не помогает переустановка Windows</li>
+        <li>Корпоративная политика блокирует изменения</li>
+        <li>Все решения исчерпаны</li>
+      </ul>
+
+      <p>Ошибка блокировки очереди обычно связана с политиками безопасности или антивирусом. Начните с проверки разрешений и отключения антивируса.</p>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2024 FixTech. Все права защищены.</p>
+      <div class="footer-links">
+        <a href="/privacy">Конфиденциальность</a>
+        <a href="/terms">Условия использования</a>
+        <a href="/contact">Контакты</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+  <script src="../search.js"></script>
+</body>
+</html>

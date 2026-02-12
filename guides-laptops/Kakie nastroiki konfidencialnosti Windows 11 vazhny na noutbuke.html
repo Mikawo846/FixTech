@@ -4,44 +4,61 @@
 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Какие настройки конфиденциальности Windows 11 важны на ноутбуке | Экспертный мегагайд</title>
+  <title>Настройки конфиденциальности Windows 11 на ноутбуке | Важные параметры безопасности</title>
     <meta name="description" content="{{ description }}">
+    <meta name="description" content="Пошаговая инструкция: Какие настройки конфиденциальности Windows 11 важно включить на ноутбуке. Полное руководство по защите личных данных и приватности в Windows 11.">
 
   <link rel="stylesheet" href="../styles.css" />
   <link rel="stylesheet" href="../styles-header.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
   <style>
     .guide-content { line-height: 1.7; color: var(--text); }
-    .guide-content h2 { color: var(--primary); margin-top: 30px; margin-bottom: 15px; font-size: 1.5rem; }
-    .guide-content h3 { color: var(--primary-dark); margin-top: 25px; margin-bottom: 12px; font-size: 1.2rem; }
+    .guide-content h2 { color: var(--primary); margin-top: 30px; margin-bottom: 15px; font-size: 1.6rem; }
+    .guide-content h3 { color: var(--primary-dark); margin-top: 25px; margin-bottom: 12px; font-size: 1.25rem; }
     .guide-image-block { margin: 20px 0; padding: 15px; background: var(--background); border-radius: var(--border-radius); border: 1px solid var(--border); text-align: center; }
     .guide-image-block img { max-width: 100%; height: auto; border-radius: 6px; border: 1px solid var(--border); }
     .image-caption { margin-top: 10px; font-size: 0.85rem; color: var(--text-light); font-style: italic; }
+    table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+    th, td { border: 1px solid var(--border); padding: 8px; text-align: left; vertical-align: top; }
+    th { background: var(--background-light); }
+    code { background: rgba(0,0,0,0.04); padding: 1px 4px; border-radius: 3px; }
+    ul, ol { padding-left: 18px; }
+    .check-section { padding: 15px; border-radius: 6px; border: 1px dashed var(--border); margin: 18px 0; background: rgba(0,0,0,0.01); }
+    .check-title { font-weight: 600; margin-bottom: 8px; }
     .pro-tips { background: rgba(3, 74, 79, 0.05); padding: 15px; border-radius: 6px; margin: 20px 0; }
     .pro-tips h4 { color: var(--primary); margin-top: 0; margin-bottom: 12px; font-size: 1.1rem; }
     .tip-item { display: flex; gap: 8px; margin-bottom: 8px; align-items: flex-start; }
-    .warning-block {
-      background: #fff3e0;
-      border-left: 5px solid #ff9100;
-      padding: 15px 18px;
-      margin: 22px 0;
-      border-radius: 7px;
-    }
-    .critical-block {
-      background: #ffebee;
-      border-left: 5px solid #f44336;
-      padding: 15px 18px;
-      margin: 22px 0;
-      border-radius: 7px;
-    }
-    table { width: 100%; border-collapse: collapse; margin: 20px 0; }
-    th, td { border: 1px solid var(--border); padding: 8px; text-align: left; }
-    th { background: var(--background-light); }
+    .ok { color: #0a8f3c; font-weight: 600; }
+    .warn { color: #c97a00; font-weight: 600; }
+    .bad { color: #c62828; font-weight: 600; }
+    .alert-box { padding: 20px; border-radius: 8px; margin: 25px 0; }
+    .alert-danger { background: rgba(198, 40, 40, 0.1); border-left: 4px solid #c62828; }
+    .alert-warning { background: rgba(201, 122, 0, 0.1); border-left: 4px solid #c97a00; }
+    .alert-success { background: rgba(10, 143, 60, 0.1); border-left: 4px solid #0a8f3c; }
+    .alert-info { background: rgba(3, 74, 79, 0.1); border-left: 4px solid var(--primary); }
+    .settings-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin: 20px 0; }
+    .setting-card { padding: 20px; border-radius: 8px; background: var(--background); border: 1px solid var(--border); }
+    .setting-card h4 { color: var(--primary-dark); margin-top: 0; margin-bottom: 15px; }
+    .setting-card .priority { display: inline-block; padding: 4px 8px; border-radius: 4px; font-size: 0.85rem; font-weight: 600; margin-bottom: 10px; }
+    .priority-critical { background: rgba(198, 40, 40, 0.2); color: #c62828; }
+    .priority-high { background: rgba(201, 122, 0, 0.2); color: #c97a00; }
+    .priority-medium { background: rgba(3, 74, 79, 0.2); color: var(--primary); }
+    .priority-low { background: rgba(10, 143, 60, 0.2); color: #0a8f3c; }
+    .step-by-step { counter-reset: step-counter; }
+    .step-by-step .step-item { position: relative; padding-left: 50px; margin-bottom: 20px; }
+    .step-by-step .step-item::before { counter-increment: step-counter; content: counter(step-counter); position: absolute; left: 0; top: 0; width: 35px; height: 35px; background: var(--primary); color: white; text-align: center; line-height: 35px; border-radius: 50%; font-weight: bold; }
+    .privacy-checklist { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin: 20px 0; }
+    .checklist-item { padding: 12px; border-radius: 6px; background: var(--background); border: 1px solid var(--border); }
+    .checklist-item input { margin-right: 8px; }
+    .checklist-item label { font-weight: 500; }
     @media (max-width: 768px) {
       .guide-content h2 { font-size: 1.4rem; margin-top: 25px; }
       .guide-image-block { padding: 12px; margin: 15px 0; }
       table, th, td { font-size: 0.95rem; }
+      .settings-grid { grid-template-columns: 1fr; }
+      .privacy-checklist { grid-template-columns: 1fr; }
     }
     /* Яндекс Маркет рекламный баннер */
     .ym-hero-link {
@@ -103,1606 +120,470 @@
       transform: scale(1.02);
     }
 
-    /* Правая часть: контент */
+    /* Текстовая часть баннера */
     .ym-hero-content {
-      padding: 16px 18px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      gap: 8px;
+      padding: 12px 16px;
+      text-align: center;
     }
 
-    /* Название товара */
     .ym-hero-title {
-      font-size: 14px;
-      font-weight: 600;
-      color: #111827;
-      line-height: 1.3;
-      margin: 0 0 4px 0;
-      display: -webkit-box;
-      -webkit-line-clamp: 2;
-      line-clamp: 2;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
-    }
-
-    /* Рейтинг */
-    .ym-hero-top {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 8px;
-    }
-
-    .ym-hero-rating {
       font-size: 13px;
-      font-weight: 500;
-      color: #111827;
-      background: #f9fafb;
-      border-radius: 999px;
-      padding: 4px 10px;
-    }
-
-    .ym-hero-rating-count {
-      color: #6b7280;
-    }
-
-    /* Фиолетовая кнопка */
-    .ym-hero-button {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 9px 16px;
-      border-radius: 999px;
-      border: none;
-      background: #6a00ff;
-      color: #ffffff;
-      font-size: 14px;
       font-weight: 600;
-      cursor: pointer;
-      box-shadow: 0 2px 6px rgba(88, 28, 135, 0.35);
-      transition: background 0.15s ease, transform 0.15s ease,
-                  box-shadow 0.15s ease;
-    }
-
-    .ym-hero-button::after {
-      content: "→";
-      margin-left: 6px;
-      font-size: 14px;
-    }
-
-    .ym-hero-button:hover {
-      background: #7c3aed;
-      transform: translateY(-1px);
-      box-shadow: 0 4px 10px rgba(88, 28, 135, 0.45);
-    }
-
-    /* Юридический блок */
-    .ym-hero-legal {
-      margin-top: 6px;
-      max-width: 600px;
-      font-size: 11px;
+      color: #1f2937;
+      margin: 0 0 4px 0;
       line-height: 1.3;
-      color: #6b7280;
-      margin-left: auto;
-      margin-right: auto;
     }
 
-    /* Адаптив */
+    .ym-hero-desc {
+      font-size: 11px;
+      color: #6b7280;
+      margin: 0;
+      line-height: 1.3;
+    }
+
     @media (max-width: 480px) {
       .ym-hero-banner {
-        max-width: 100%;
-        margin: 20px 0;
+        min-height: 120px;
       }
-
       .ym-hero-images {
         height: 100px;
       }
-
-      .ym-hero-content {
-        padding: 12px 12px;
-      }
-
       .ym-hero-title {
-        font-size: 13px;
+        font-size: 12px;
       }
-
-      .ym-hero-button {
-        font-size: 13px;
-        padding: 8px 14px;
-      }
-
-      .ym-hero-legal {
+      .ym-hero-desc {
         font-size: 10px;
       }
     }
-    /* Telegram рекламный баннер */
-    .telegram-banner {
-      display: flex;
-      justify-content: center;
-      text-decoration: none;
-      color: inherit;
-      width: 100%;
-      margin: 40px 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    }
-
-    .telegram-banner-container {
-      width: 100%;
-      max-width: 500px;
-      min-height: 120px;
-      border-radius: 16px;
-      background: linear-gradient(135deg, #0088cc 0%, #005f8f 100%);
-      border: 1px solid #005f8f;
-      display: flex;
-      align-items: center;
-      padding: 20px;
-      box-shadow: 0 4px 16px rgba(0, 136, 204, 0.2);
-      overflow: hidden;
-      box-sizing: border-box;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-
-    .telegram-banner-container:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(0, 136, 204, 0.3);
-    }
-
-    .telegram-logo {
-      width: 60px;
-      height: 60px;
-      min-width: 60px;
-      background: #ffffff;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-right: 20px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    }
-
-    .telegram-logo svg {
-      width: 32px;
-      height: 32px;
-      fill: #0088cc;
-    }
-
-    .telegram-content {
-      flex: 1;
-      color: #ffffff;
-    }
-
-    .telegram-title {
-      font-size: 16px;
-      font-weight: 600;
-      margin: 0 0 8px 0;
-      line-height: 1.3;
-    }
-
-    .telegram-subtitle {
-      font-size: 14px;
-      opacity: 0.9;
-      margin: 0 0 12px 0;
-      line-height: 1.4;
-    }
-
-    .telegram-button {
-      display: inline-flex;
-      align-items: center;
-      padding: 8px 16px;
-      background: #ffffff;
-      color: #0088cc;
-      border-radius: 20px;
-      font-size: 14px;
-      font-weight: 600;
-      text-decoration: none;
-      transition: background 0.2s ease, transform 0.2s ease;
-    }
-
-    .telegram-button:hover {
-      background: #f0f8ff;
-      transform: scale(1.05);
-    }
-
-    .telegram-button svg {
-      width: 16px;
-      height: 16px;
-      margin-left: 6px;
-      fill: #0088cc;
-    }
-
-    /* Адаптив для мобильных */
-    @media (max-width: 480px) {
-      .telegram-banner-container {
-        max-width: 100%;
-        margin: 20px 0;
-        padding: 15px;
-        min-height: 100px;
-      }
-
-      .telegram-logo {
-        width: 50px;
-        height: 50px;
-        min-width: 50px;
-        margin-right: 15px;
-      }
-
-      .telegram-logo svg {
-        width: 26px;
-        height: 26px;
-      }
-
-      .telegram-title {
-        font-size: 14px;
-      }
-
-      .telegram-subtitle {
-        font-size: 12px;
-      }
-
-      .telegram-button {
-        font-size: 12px;
-        padding: 6px 12px;
-      }
-    }
-
-
-
   </style>
-  <script async src="https://timeweb.cloud/api/v1/cloud-ai/agents/3cc03620-d051-4d8d-b5af-f7b6cd083a35/embed.js?collapsed=true"></script>
 </head>
 <body>
+
   <header class="header">
     <div class="container">
       <div class="header__inner">
         <a href="../index.html" class="logo">
-          <span class="logo__icon"></span>
-          <span class="logo__text">Repairo</span>
+          <img src="../logo.svg" alt="Repairo" width="40" height="40">
+          <span>Repairo</span>
         </a>
         <nav class="nav">
-          <ul class="nav__list">
-            <li><a href="../tv.html" class="nav__link">Телевизоры</a></li>
-            <li><a href="../cameras.html" class="nav__link">Фотоаппараты</a></li>
-            <li><a href="../consoles.html" class="nav__link">Приставки</a></li>
-            <li><a href="../laptops.html" class="nav__link">Ноутбуки</a></li>
-            <li><a href="../smartphones.html" class="nav__link">Смартфоны</a></li>
-          </ul>
+          <a href="../index.html">Главная</a>
+          <a href="../laptops.html">Ноутбуки</a>
+          <a href="../smartphones.html">Смартфоны</a>
+          <a href="../consoles.html">Консоли</a>
+          <a href="../cameras.html">Фотоаппараты</a>
+          <a href="../tv.html">Телевизоры</a>
         </nav>
+        <button class="theme-toggle" aria-label="Переключить тему">
+          <i class="fas fa-moon"></i>
+        </button>
       </div>
     </div>
   </header>
 
-  <section class="guide-page">
+  <main class="main">
     <div class="container">
-      <div class="breadcrumbs">
-        <a href="../index.html">Главная</a>
-        <i class="fas fa-chevron-right"></i>
-        <a href="../laptops.html">Ноутбуки</a>
-        <i class="fas fa-chevron-right"></i>
-        <span>Какие настройки конфиденциальности Windows 11 важны на ноутбуке</span>
-      </div>
-
-      <h1 class="section__title">Какие настройки конфиденциальности Windows 11 важны на ноутбуке</h1>
-
-      <div class="guide-meta">
-        <span><i class="fas fa-laptop"></i> Экспертный гид: полная настройка конфиденциальности Windows 11 на ноутбуке. Отключение телеметрии, защита персональных данных, контроль доступа приложений, настройка приватности. Максимальная безопасность.</span>
-      </div>
-
-      <div class="guide-image-block">
-        <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Настройки конфиденциальности Windows 11">
-        <div class="image-caption">
-          Настройки конфиденциальности Windows 11 на ноутбуке: защита персональных данных, отключение телеметрии, контроль приложений, приватность, безопасность. Полный гид по настройке.
-        </div>
-      </div>
-
       <div class="guide-content">
-        <!-- Яндекс Маркет рекламный блок -->
-        <a href="https://market.yandex.ru/catalog--bytovaia-tekhnika/54419/list?hid=198118&rs=eJwzUvjEKMvBILDwEKsEg8Kzbh6Nw4dZNS4D8c7lFhp9c1-wAQC3uAwP&clid=14635360&refid=rbck8fgamv681iu59go3iqxwddedl4x9&erid=5jtCeReNx12oajxS2bzShmZ&mclid=1003&distr_type=7&utm_source=partner_network&pp=900&utm_medium=link_list&utm_campaign=14635360"
-           target="_blank"
-           rel="noopener noreferrer sponsored"
-           class="ym-hero-link">
+        <h1>Настройки конфиденциальности Windows 11 на ноутбуке</h1>
+        
+        <p>Windows 11 собирает множество данных о пользователях, но позволяет контролировать эту сборку через настройки конфиденциальности. Правильная конфигурация этих параметров особенно важна для ноутбуков, которые часто используются в разных местах и содержат личную информацию. В этом руководстве мы разберем ключевые настройки конфиденциальности, которые необходимо включить.</p>
+
+        <div class="guide-image-block">
+          <img src="https://avatars.mds.yandex.net/get-shedevrum/16419046/img_44137e6537b611f097f70ecdb250e1a9/orig" alt="Настройки конфиденциальности Windows 11 на ноутбуке">
+          <div class="image-caption">Панель настроек конфиденциальности Windows 11</div>
+        </div>
+
+        <div class="alert-info">
+          <h4><i class="fas fa-info-circle"></i> Почему важны настройки конфиденциальности</h4>
+          <p>Windows 11 по умолчанию собирает данные о использовании системы, местоположении, приложениях и другую личную информацию. Правильная настройка защитит вашу приватность и предотвратит нежелательную передачу данных Microsoft и третьим лицам.</p>
+        </div>
+
+        <h2>Критически важные настройки конфиденциальности</h2>
+
+        <h3>1. Общие параметры конфиденциальности</h3>
+
+        <div class="settings-grid">
+          <div class="setting-card">
+            <h4><i class="fas fa-shield-alt"></i> Диагностические данные</h4>
+            <span class="priority priority-critical">Критически важно</span>
+            <p>Windows отправляет отчеты об использовании системы и ошибках в Microsoft.</p>
+            <div class="check-section">
+              <div class="check-title">Рекомендуемые настройки:</div>
+              <ul>
+                <li><strong>Отправка диагностических данных</strong> → "Требуемые"</li>
+                <li><strong>Отключите отправку дополнительных данных</strong></li>
+                <li><strong>Отключите отзывы</strong> и предложения</li>
+              </ul>
+            </div>
+          </div>
+          <div class="setting-card">
+            <h4><i class="fas fa-history"></i> Журнал активности</h4>
+            <span class="priority priority-high">Высокий приоритет</span>
+            <p>Windows отслеживает все ваши действия на компьютере для создания временной шкалы.</p>
+            <div class="check-section">
+              <div class="check-title">Настройки журнала:</div>
+              <ul>
+                <li><strong>Хранение журнала активности</strong> → "Отключено"</li>
+                <li><strong>Синхронизация между устройствами</strong> → "Отключено"</li>
+                <li><strong>Очистка существующего журнала</strong></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <h3>2. Разрешения для приложений</h3>
+
+        <div class="alert-warning">
+          <h4><i class="fas fa-exclamation-triangle"></i> Внимание на разрешения!</h4>
+          <p>Приложения могут запрашивать доступ к камере, микрофону, местоположению и другим чувствительным данным. Контролируйте эти разрешения тщательно.</p>
+        </div>
+
+        <div class="settings-grid">
+          <div class="setting-card">
+            <h4><i class="fas fa-camera"></i> Доступ к камере</h4>
+            <span class="priority priority-critical">Критически важно</span>
+            <p>Контролируйте, какие приложения могут использовать веб-камеру.</p>
+            <div class="check-section">
+              <div class="check-title">Рекомендации:</div>
+              <ul>
+                <li><strong>Доступ к камере</strong> → "Отключено" по умолчанию</li>
+                <li><strong>Разрешайте только доверенным приложениям</strong> (Skype, Zoom)</li>
+                <li><strong>Отключите "Разрешить приложениям доступ к камере"</strong></li>
+                <li><strong>Используйте физическую крышку</strong> для веб-камеры</li>
+              </ul>
+            </div>
+          </div>
+          <div class="setting-card">
+            <h4><i class="fas fa-microphone"></i> Доступ к микрофону</h4>
+            <span class="priority priority-critical">Критически важно</span>
+            <p>Защитите себя от прослушивания через микрофон.</p>
+            <div class="check-section">
+              <div class="check-title">Настройки микрофона:</div>
+              <ul>
+                <li><strong>Доступ к микрофону</strong> → "Отключено" по умолчанию</li>
+                <li><strong>Разрешайте только необходимым приложениям</strong></li>
+                <li><strong>Отключите голосовую активацию</strong> Cortana</li>
+                <li><strong>Проверяйте индикатор</strong> использования микрофона</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <h3>3. Местоположение и отслеживание</h3>
+
+        <div class="settings-grid">
+          <div class="setting-card">
+            <h4><i class="fas fa-map-marker-alt"></i> Службы определения местоположения</h4>
+            <span class="priority priority-high">Высокий приоритет</span>
+            <p>Windows может отслеживать ваше географическое положение.</p>
+            <div class="check-section">
+              <div class="check-title">Настройки местоположения:</div>
+              <ul>
+                <li><strong>Доступ к местоположению</strong> → "Отключено"</li>
+                <li><strong>Разрешите только картам</strong> и навигационным приложениям</li>
+                <li><strong>Отключите историю местоположений</strong></li>
+                <li><strong>Очистите сохраненную историю</strong></li>
+              </ul>
+            </div>
+          </div>
+          <div class="setting-card">
+            <h4><i class="fas fa-search"></i> Поиск на устройстве</h4>
+            <span class="priority priority-medium">Средний приоритет</span>
+            <p>Позволяет находить ноутбук при потере, но передает данные о местоположении.</p>
+            <div class="check-section">
+              <div class="check-title">Решение:</div>
+              <ul>
+                <li><strong>Включите только для ноутбуков</strong> с высоким риском утери</li>
+                <li><strong>Используйте альтернативы</strong> — Prey, Find My Device</li>
+                <li><strong>Оцените риски</strong> — приватность vs безопасность</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <h2>Настройки сбора данных и телеметрии</h2>
+
+        <h3>Управление диагностикой и отзывами</h3>
+
+        <div class="step-by-step">
+          <div class="step-item">
+            <h4>Откройте настройки диагностики</h4>
+            <p>Параметры → Конфиденциальность и безопасность → Диагностика и отзывы</p>
+          </div>
+          <div class="step-item">
+            <h4>Выберите минимальный уровень</h4>
+            <p>Установите "Требуемые диагностические данные" вместо "Полные" или "Дополнительные"</p>
+          </div>
+          <div class="step-item">
+            <h4>Отключите отправку отзывов</h4>
+            <p>Снимите галочки с "Отправка отзывов о Windows" и "Предложения и предложения"</p>
+          </div>
+          <div class="step-item">
+            <h4>Настройте настраиваемую диагностику</h4>
+            <p>Отключите сбор данных о просмотре веб-страниц, приложениях и устройствах</p>
+          </div>
+        </div>
+
+        <h3>Управление рекламой и отслеживанием</h3>
+
+        <div class="pro-tips">
+          <h4>Настройки рекламы:</h4>
+          <ul>
+            <li><strong>Идентификатор рекламы</strong> → "Отключить"</li>
+            <li><strong>Отслеживание рекламодателями</strong> → "Отключить"</li>
+            <li><strong>Персонализированная реклама</strong> → "Отключить"</li>
+            <li><strong>Управление приложениями</strong> → отключите доступ к рекламному ID</li>
+          </ul>
+        </div>
+
+        <h2>Конфиденциальность браузера Microsoft Edge</h2>
+
+        <h3>Настройки отслеживания в Edge</h3>
+
+        <div class="check-section">
+          <div class="check-title">Параметры конфиденциальности Edge:</div>
+          <ul>
+            <li><strong>Предотвращение отслеживания</strong> → "Строгий"</li>
+            <li><strong>Отправка данных "Do Not Track"</strong> → включить</li>
+            <li><strong>Блокировка трекеров</strong> → "Строгий"</li>
+            <li><strong>Сервисы Microsoft</strong> → отключить сбор данных</li>
+          </ul>
+        </div>
+
+        <h3>Настройки синхронизации</h3>
+
+        <div class="alert-warning">
+          <h4><i class="fas fa-sync"></i> Внимание на синхронизацию!</h4>
+          <p>Edge синхронизирует закладки, историю и пароли с облаком Microsoft. Настройте только необходимые элементы.</p>
+        </div>
+
+        <div class="pro-tips">
+          <h4>Рекомендации по синхронизации:</h4>
+          <ul>
+            <li><strong>Синхронизируйте только закладки</strong> и настройки</li>
+            <li><strong>Отключите синхронизацию истории</strong> и открытых вкладок</li>
+            <li><strong>Используйте пароль</strong> для синхронизации</li>
+            <li><strong>Регулярно проверяйте</strong> синхронизированные данные</li>
+          </ul>
+        </div>
+
+        <h2>Защита от вредоносных программ и фишинга</h2>
+
+        <h3>Настройки безопасности Windows Defender</h3>
+
+        <div class="settings-grid">
+          <div class="setting-card">
+            <h4><i class="fas fa-shield-virus"></i> Защита в реальном времени</h4>
+            <span class="priority priority-critical">Критически важно</span>
+            <p>Обеспечивает постоянную защиту от вредоносных программ.</p>
+            <div class="check-section">
+              <div class="check-title">Обязательные настройки:</div>
+              <ul>
+                <li><strong>Защита в реальном времени</strong> → включена</li>
+                <li><strong>Облачная защита</strong> → включена</li>
+                <li><strong>Контролируемый доступ к папкам</strong> → включен</li>
+                <li><strong>Поведенческая блокировка</strong> → включена</li>
+              </ul>
+            </div>
+          </div>
+          <div class="setting-card">
+            <h4><i class="fas fa-filter"></i> Фильтрация SmartScreen</h4>
+            <span class="priority priority-high">Высокий приоритет</span>
+            <p>Защищает от фишинговых сайтов и вредоносных загрузок.</p>
+            <div class="check-section">
+              <div class="check-title">Настройки SmartScreen:</div>
+              <ul>
+                <li><strong>Проверка приложений и файлов</strong> → включена</li>
+                <li><strong>SmartScreen в Microsoft Edge</strong> → включен</li>
+                <li><strong>Проверка URL-адресов</strong> → включена</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <h2>Управление обновлениями и доставкой ПО</h2>
+
+        <h3>Настройки обновления Windows</h3>
+
+        <div class="pro-tips">
+          <h4>Оптимизация обновлений:</h4>
+          <ul>
+            <li><strong>Автоматические обновления</strong> → включить для безопасности</li>
+            <li><strong>Параметры доставки</strong> → отключить "Загрузка из других ПК"</li>
+            <li><strong>Планирование перезагрузок</strong> → настроить удобное время</li>
+            <li><strong>Отложенные обновления качества</strong> → до 7 дней</li>
+          </ul>
+        </div>
+
+        <h3>Управление предустановленными приложениями</h3>
+
+        <div class="alert-info">
+          <h4><i class="fas fa-th"></i> Удаление ненужных приложений</h4>
+          <p>Windows 11 предустанавливает множество приложений, которые собирают данные. Удалите ненужные.</p>
+        </div>
+
+        <div class="check-section">
+          <div class="check-title">Приложения для удаления или отключения:</div>
+          <ul>
+            <li><strong>Xbox Game Bar</strong> — если не играете</li>
+            <li><strong>Cortana</strong> — голосовой помощник Microsoft</li>
+            <li><strong>News и Interest</strong> — новостная лента</li>
+            <li><strong>Tips</strong> — советы по использованию Windows</li>
+            <li><strong>Microsoft Solitaire Collection</strong> — игры Xbox</li>
+          </ul>
+        </div>
+
+        <h2>Проверка конфиденциальности: чек-лист</h2>
+
+        <h3>Обязательные настройки для максимальной приватности</h3>
+
+        <div class="privacy-checklist">
+          <div class="checklist-item">
+            <input type="checkbox" id="diag1" checked>
+            <label for="diag1">Диагностические данные → "Требуемые"</label>
+          </div>
+          <div class="checklist-item">
+            <input type="checkbox" id="activity1" checked>
+            <label for="activity1">Журнал активности → "Отключено"</label>
+          </div>
+          <div class="checklist-item">
+            <input type="checkbox" id="camera1" checked>
+            <label for="camera1">Доступ к камере → "Отключено"</label>
+          </div>
+          <div class="checklist-item">
+            <input type="checkbox" id="mic1" checked>
+            <label for="mic1">Доступ к микрофону → "Отключено"</label>
+          </div>
+          <div class="checklist-item">
+            <input type="checkbox" id="location1" checked>
+            <label for="location1">Местоположение → "Отключено"</label>
+          </div>
+          <div class="checklist-item">
+            <input type="checkbox" id="ad1" checked>
+            <label for="ad1">Идентификатор рекламы → "Отключен"</label>
+          </div>
+          <div class="checklist-item">
+            <input type="checkbox" id="feedback1" checked>
+            <label for="feedback1">Отправка отзывов → "Отключена"</label>
+          </div>
+          <div class="checklist-item">
+            <input type="checkbox" id="delivery1" checked>
+            <label for="delivery1">Доставка обновлений → "Только из Интернета"</label>
+          </div>
+        </div>
+
+        <h2>Дополнительные инструменты для приватности</h2>
+
+        <h3>Сторонние программы для усиления защиты</h3>
+
+        <div class="pro-tips">
+          <h4>Рекомендуемые инструменты:</h4>
+          <ul>
+            <li><strong>O&O ShutUp10</strong> — бесплатная настройка приватности Windows</li>
+            <li><strong>W10Privacy</strong> — мощный инструмент конфиденциальности</li>
+            <li><strong>Privacy.sexy</strong> — открытый инструмент для настройки приватности</li>
+            <li><strong>Blackbird</strong> — комплексная защита и оптимизация</li>
+          </ul>
+        </div>
+
+        <h3>Альтернативные браузеры</h3>
+
+        <div class="alert-success">
+          <h4><i class="fas fa-globe"></i> Более приватные браузеры:</h4>
+          <ul>
+            <li><strong>Mozilla Firefox</strong> — усиленная защита от отслеживания</li>
+            <li><strong>Brave</strong> — встроенная блокировка рекламы и трекеров</li>
+            <li><strong>Tor Browser</strong> — максимальная анонимность</li>
+            <li><strong>Vivaldi</strong> — настраиваемая приватность</li>
+          </ul>
+        </div>
+
+        <h2>Регулярное обслуживание настроек</h2>
+
+        <h3>Периодическая проверка конфиденциальности</h3>
+
+        <div class="check-section">
+          <div class="check-title">Ежемесячные проверки:</div>
+          <ul>
+            <li><strong>Просмотрите разрешения приложений</strong> — удалите ненужные</li>
+            <li><strong>Проверьте историю местоположений</strong> — очистите при необходимости</li>
+            <li><strong>Обновите настройки диагностики</strong> — после обновлений Windows</li>
+            <li><strong>Проверьте синхронизацию</strong> — аккаунтов и браузеров</li>
+            <li><strong>Очистите телеметрию</strong> — с помощью специализированных утилит</li>
+          </ul>
+        </div>
+
+        <h3>Мониторинг активности системы</h3>
+
+        <div class="pro-tips">
+          <h4>Инструменты мониторинга:</h4>
+          <ul>
+            <li><strong>Диспетчер задач</strong> — проверка сетевой активности</li>
+            <li><strong>Ресурсный монитор</strong> — анализ подключений</li>
+            <li><strong>Wireshark</strong> — детальный анализ сетевого трафика</li>
+            <li><strong>Process Explorer</strong> — мониторинг процессов</li>
+          </ul>
+        </div>
+
+        <h2>Заключение</h2>
+
+        <p>Правильная настройка конфиденциальности Windows 11 критически важна для защиты личных данных на ноутбуке. Следуя рекомендациям из этого руководства, вы сможете значительно уменьшить сбор данных и повысить уровень приватности.</p>
+
+        <p>Помните, что конфиденциальность — это не разовая настройка, а постоянный процесс. Регулярно проверяйте разрешения приложений, обновляйте настройки после обновлений системы и используйте дополнительные инструменты для усиления защиты.</p>
+
+        <p>Баланс между удобством и приватностью индивидуален, но базовые настройки безопасности должны быть включены у каждого пользователя. Ваша личная информация стоит того, чтобы уделить время ее защите.</p>
+
+        <!-- Яндекс Маркет рекламный баннер -->
+        <a href="https://market.yandex.ru/search?text=веб-камера%20с%20крышкой%20для%20ноутбука&local-offers-first=0" class="ym-hero-link" target="_blank" rel="noopener noreferrer">
           <div class="ym-hero-banner">
             <div class="ym-hero-images">
               <div class="ym-hero-image">
-                <img src="https://avatars.mds.yandex.net/get-mpic/14770882/2a00000197f4dbee777f8afddccaf44faa53/optimize"
-                     alt="Распродажа бытовой электроники 1">
+                <img src="https://avatars.mds.yandex.net/get-market-ugc/12573871/2a0000018f2a5a8b8c0b7d9d9c4b6c5c/orig" alt="Веб-камера с крышкой">
               </div>
               <div class="ym-hero-image">
-                <img src="https://avatars.mds.yandex.net/get-mpic/15580298/img_id8867318964670654684.jpeg/optimize"
-                     alt="Распродажа бытовой электроники 2">
-              </div>
-              <div class="ym-hero-image">
-                <img src="https://avatars.mds.yandex.net/get-mpic/10096780/2a000001953b534fed2494e0b30fadd9b458/optimize"
-                     alt="Распродажа бытовой электроники 3">
+                <img src="https://avatars.mds.yandex.net/get-market-ugc/15377961/2a0000018f2a5a8b8c0b7d9d9c4b6c5d/orig" alt="Защитный экран для ноутбука">
               </div>
             </div>
             <div class="ym-hero-content">
-              <h3 class="ym-hero-title">Распродажа бытовой электроники на Яндекс Маркете</h3>
-              <div class="ym-hero-top">
-                <div class="ym-hero-rating">
-                  ⭐ Выгодные предложения
-                  <span class="ym-hero-rating-count">Скидки до 50%</span>
-                </div>
-              </div>
-              <button class="ym-hero-button">За скидками</button>
-            </div>
-          </div>
-          <div class="ym-hero-legal">
-            Реклама. ООО "ЯНДЕКС", ИНН 7736207543. clid: 14635360, erid: 5jtCeReNx12oajxS2bzShmZ
-          </div>
-        </a>
-
-        <h2>Введение: почему конфиденциальность в Windows 11 критически важна</h2>
-        <p>
-          Windows 11 по умолчанию собирает огромное количество данных: от истории использования приложений до геолокации и биометрии. Для ноутбука, который часто используется в разных местах и содержит чувствительную информацию, правильная настройка конфиденциальности — не опция, а необходимость. Microsoft предоставляет инструменты контроля, но они скрыты в десятках меню и включены по умолчанию. Этот гид поможет вам настроить максимальную приватность без потери функциональности.
-        </p>
-
-        <div class="critical-block">
-          <strong>⚠️ КРИТИЧЕСКИ ВАЖНО!</strong><br>
-          Некоторые настройки конфиденциальности могут влиять на работу системы и приложений. Изменяйте параметры постепенно и проверяйте работоспособность важных программ после каждого изменения.
-        </div>
-
-        <h2>Таблица: критически важные настройки конфиденциальности</h2>
-<table>
-          <thead>
-            <tr>
-              <th>Категория</th>
-              <th>Настройка по умолчанию</th>
-              <th>Рекомендуемая</th>
-              <th>Риск при отключении</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Телеметрия</td>
-              <td>Полная</td>
-              <td>Минимальная</td>
-              <td>Низкий</td>
-            </tr>
-            <tr>
-              <td>Геолокация</td>
-              <td>Включена</td>
-              <td>Отключена</td>
-              <td>Средний</td>
-            </tr>
-            <tr>
-              <td>Камера/Микрофон</td>
-              <td>Разрешены</td>
-              <td>Запрещены</td>
-              <td>Низкий</td>
-            </tr>
-            <tr>
-              <td>Рекламный ID</td>
-              <td>Включен</td>
-              <td>Отключен</td>
-              <td>Низкий</td>
-            </tr>
-            <tr>
-              <td>Диагностика</td>
-              <td>Полная</td>
-              <td>Базовая</td>
-              <td>Низкий</td>
-            </tr>
-          </tbody>
-        </table>
-
-        <h2>Часть 1: Отключение телеметрии и сбора данных</h2>
-        <h3>Настройка телеметрии</h3>
-        <ol>
-          <li><b>Параметры</b> → Конфиденциальность и безопасность → Диагностика и отзывы</li>
-          <li><b>Отправка необязательных данных диагностики</b> → Отключено</li>
-          <li><b>Обратная связь</b> → Никогда</li>
-          <li><b>Настройка телеметрии</b> через реестр:
-            <ul>
-              <li>Win + R → regedit</li>
-              <li>HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\DataCollection</li>
-              <li>Создайте DWORD AllowTelemetry = 0</li>
-            </ul>
-          </li>
-        </ol>
-
-        <h3>Отключение сбора данных о приложениях</h3>
-        <ul>
-          <li><b>Журнал активности</b> → Очистить историю</li>
-          <li><b>Доступ приложений к активности</b> → Отключено</li>
-          <li><b>Показывать недавние приложения</b> → Отключено</li>
-          <li><b>Показывать недавно использованные элементы</b> → Отключено</li>
-        </ul>
-
-        <h2>Часть 2: Контроль доступа к устройствам</h2>
-        <h3>Настройка камеры и микрофона</h3>
-        <ol>
-          <li><b>Параметры</b> → Конфиденциальность и безопасность → Камера</li>
-          <li><b>Доступ приложений к камере</b> → Отключено</li>
-          <li><b>Разрешить приложениям доступ к камере</b> → Отключено</li>
-          <li><b>Аппаратный переключатель камеры</b> — если доступен</li>
-          <li><b>Микрофон</b> — аналогичные настройки</li>
-        </ol>
-
-        <h3>Контроль других устройств</h3>
-        <ul>
-          <li><b>Доступ к файлам</b> — настройте по приложениям</li>
-          <li><b>Доступ к картинкам</b> — отключите для ненужных приложений</li>
-          <li><b>Доступ к документам</b> — только для необходимых программ</li>
-          <li><b>Доступ к съемным устройствам</b> — ограничьте</li>
-        </ul>
-
-        <h2>Часть 3: Защита геолокации и движения</h2>
-        <h3>Отключение геолокации</h3>
-        <ol>
-          <li><b>Параметры</b> → Конфиденциальность и безопасность → Местоположение</li>
-          <li><b>Доступ к местоположению</b> → Отключено</li>
-          <li><b>Разрешить приложениям доступ к местоположению</b> → Отключено</li>
-          <li><b>История местоположения</b> → Очистить</li>
-          <li><b>Гео-метки</b> для фото — отключите в приложении "Фотографии"</li>
-        </ol>
-
-        <h3>Контроль датчиков движения</h3>
-        <ul>
-          <li><b>Датчик движения</b> — отключите если не используете</li>
-          <li><b>Автоматическая яркость</b> — настройте вручную</li>
-          <li><b>Адаптивная яркость</b> — отключите для контроля</li>
-        </ul>
-
-        <h2>Часть 4: Защита аккаунта и персонализации</h2>
-        <h3>Настройки учетной записи Microsoft</h3>
-        <ol>
-          <li><b>Панель управления аккаунтом</b> Microsoft</li>
-          <li><b>Конфиденциальность</b> → Отключите ненужное</li>
-          <li><b>Рекламные настройки</b> → Отключите персонализацию рекламы</li>
-          <li><b>Поиск по Bing</b> → Отключите историю поиска</li>
-          <li><b>Местоположение</b> → Очистите историю</li>
-        </ol>
-
-        <h3>Персонализация и реклама</h3>
-        <ul>
-          <li><b>Параметры</b> → Персонализация</li>
-          <li><b>Использовать ID рекламы</b> → Отключено</li>
-          <li><b>Позволить приложениям использовать ID рекламы</b> → Отключено</li>
-          <li><b>Управлять интересами</b> → Очистите все</li>
-        </ul>
-
-        <h2>Часть 5: Защита сети и соединений</h2>
-        <h3>Настройки сетевой конфиденциальности</h3>
-        <ol>
-          <li><b>Параметры</b> → Сеть и Интернет → Wi-Fi</li>
-          <li><b>Случайные аппаратные MAC-адреса</b> → Включено</li>
-          <li><b>Использовать случайные адреса</b> для всех сетей</li>
-          <li><b>Автоматическое подключение</b> → Отключите для открытых сетей</li>
-        </ol>
-
-        <h3>Защита от отслеживания</h3>
-        <ul>
-          <li><b>Отслеживание активности</b> → Отключено</li>
-          <li><b>Общий доступ к ближайшим устройствам</b> → Отключено</li>
-          <li><b>Общий доступ к файлам</b> — настройте только для доверенных сетей</li>
-        </ul>
-
-        <h2>Часть 6: Контроль приложений и программ</h2>
-        <h3>Разрешения приложений</h3>
-        <table>
-          <thead>
-            <tr>
-              <th>Тип разрешения</th>
-              <th>Рекомендация</th>
-              <th>Исключения</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Доступ к файлам</td>
-              <td>Только по необходимости</td>
-              <td>Офисные программы</td>
-            </tr>
-            <tr>
-              <td>Доступ к камере</td>
-              <td>Отключено</td>
-              <td>Zoom, Skype</td>
-            </tr>
-            <tr>
-              <td>Доступ к микрофону</td>
-              <td>Отключено</td>
-              <td>Диктофон, мессенджеры</td>
-            </tr>
-            <tr>
-              <td>Доступ к уведомлениям</td>
-              <td>Только важные</td>
-              <td>Системные приложения</td>
-            </tr>
-          </tbody>
-        </table>
-
-        <h3>Фоновая активность</h3>
-        <ol>
-          <li><b>Параметры</b> → Приложения → Установленные приложения</li>
-          <li><b>Фоновые приложения</b> → Отключите ненужные</li>
-            <ul>
-              <li>Оставьте: антивирус, мессенджеры, почта</li>
-              <li>Отключите: игры, магазины, рекламные приложения</li>
-            </ul>
-          </li>
-          <li><b>Экономия батареи</b> → Ограничьте фоновую активность</li>
-        </ol>
-
-        <h2>Часть 7: Продвинутые настройки через реестр</h2>
-        <h3>Отключение через Group Policy</h3>
-        <ul>
-          <li><b>gpedit.msc</b> — редактор групповых политик</li>
-          <li><b>Конфигурация компьютера</b> → Административные шаблоны</li>
-          <li><b>Система</b> → Сбор данных телеметрии</li>
-          <li><b>Разрешить телеметрию</b> → Отключено</li>
-        </ul>
-
-        <h3>Критические реестровые настройки</h3>
-        <ol>
-          <li><b>Отключение Cortana</b>:
-            <ul>
-              <li>HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Windows Search</li>
-              <li>AllowCortana = 0</li>
-            </ul>
-          </li>
-          <li><b>Отключение поиска в Bing</b>:
-            <ul>
-              <li>HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Search</li>
-              <li>BingSearchEnabled = 0</li>
-            </ul>
-          </li>
-          <li><b>Отключение рекламы</b>:
-            <ul>
-              <li>HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced</li>
-              <li>Start_ShowRecommendations = 0</li>
-            </ul>
-          </li>
-        </ol>
-
-        <h2>Часть 8: Мониторинг и проверка конфиденциальности</h2>
-        <h3>Инструменты для проверки</h3>
-        <ul>
-          <li><b>O&O ShutUp10</b> — автоматическая настройка приватности</li>
-          <li><b>W10Privacy</b> — детальный контроль настроек</li>
-          <li><b>Privacy.sexy</b> — скрипты для настройки приватности</li>
-          <li><b>Windows Privacy Dashboard</b> — мониторинг настроек</li>
-        </ul>
-
-        <h3>Регулярная проверка</h3>
-        <div class="pro-tips">
-          <h4>🔹 Ежемесячная проверка конфиденциальности</h4>
-          <div class="tip-item">
-            <i class="fas fa-lightbulb"></i>
-            <p>Проверьте активные приложения и их разрешения.</p>
-          </div>
-          <div class="tip-item">
-            <i class="fas fa-lightbulb"></i>
-            <p>Очистите историю активности и местоположений.</p>
-          </div>
-          <div class="tip-item">
-            <i class="fas fa-lightbulb"></i>
-            <p>Проверьте настройки телеметрии после обновлений.</p>
-          </div>
-          <div class="tip-item">
-            <i class="fas fa-lightbulb"></i>
-            <p>Обновите blacklist нежелательных приложений.</p>
-          </div>
-        </div>
-
-        <h2>Часть 9: Баланс между безопасностью и функциональностью</h2>
-        <h3>Что можно безопасно отключить</h3>
-        <ul>
-          <li><b>Телеметрия</b> — не влияет на работу системы</li>
-          <li><b>Рекламный ID</b> — только уменьшает таргетированную рекламу</li>
-          <li><b>Кортана</b> — не используется в большинстве регионов</li>
-          <li><b>Поиск Bing</b> — можно заменить на Google</li>
-        </ul>
-
-        <h3>Что стоит оставить включенным</h3>
-        <ol>
-          <li><b>Базовая телеметрия</b> — для критических обновлений безопасности</li>
-          <li><b>Защитник Windows</b> — антивирусная защита</li>
-          <li><b>Обновления системы</b> — безопасность важнее приватности</li>
-          <li><b>Некоторые разрешения</b> для необходимых приложений</li>
-        </ol>
-
-        <h2>FAQ — часто задаваемые вопросы</h2>
-        <ul>
-          <li>
-            <strong>Повлияет ли отключение телеметрии на обновления?</strong><br>
-            Нет, критические обновления безопасности будут устанавливаться.
-          </li>
-          <li>
-            <strong>Можно ли вернуть настройки по умолчанию?</strong><br>
-            Да, через тот же интерфейс или кнопкой "Сбросить" в настройках.
-          </li>
-          <li>
-            <strong>Нужны ли права администратора для изменений?</strong><br>
-            Для большинства настроек да, для некоторых — нет.
-          </li>
-          <li>
-            <strong>Сработают ли эти настройки в Windows 10?</strong><br>
-            Большинство настроек аналогичны, но расположение может отличаться.
-          </li>
-          <li>
-            <strong>Что делать если приложение перестало работать?</strong><br>
-            Включите необходимые разрешения для конкретного приложения.
-          </li>
-        </ul>
-
-        <div class="warning-block">
-          <strong>Внимание!</strong> После крупных обновлений Windows некоторые настройки конфиденциальности могут сброситься на значения по умолчанию. Регулярно проверяйте настройки после установки обновлений системы.
-        </div>
-
-        <h2>Пошаговая инструкция: максимальная приватность</h2>
-        <ol>
-          <li>Отключите телеметрию и сбор диагностических данных</li>
-          <li>Настройте доступ к камере и микрофону</li>
-          <li>Отключите геолокацию и датчики движения</li>
-          <li>Очистите настройки рекламного ID</li>
-          <li>Настройте случайные MAC-адреса для Wi-Fi</li>
-          <li>Ограничьте фоновую активность приложений</li>
-          <li>Используйте O&O ShutUp10 для автоматической настройки</li>
-          <li>Создайте точку восстановления системы</li>
-          <li>Протестируйте работу важных приложений</li>
-          <li>Настройте ежемесячную проверку конфиденциальности</li>
-        </ol>
-
-        <h2>📌 Итог: контроль над вашими данными</h2>
-        <p>
-          Windows 11 предоставляет мощные инструменты для контроля конфиденциальности, но они требуют внимания и регулярного обслуживания. Правильная настройка приватности превращает ноутбук из устройства для сбора данных в защищенный рабочий инструмент. Главное — найти баланс между безопасностью и функциональностью, регулярно проверять настройки после обновлений и использовать специализированные утилиты для автоматизации процесса. Помните, что ваши данные принадлежат только вам, и Microsoft не имеет права собирать их без вашего явного согласия.
-        </p>
-      </div>
-
-        <!-- Telegram рекламный баннер -->
-        <a href="https://t.me/RepairoRU" target="_blank" rel="noopener noreferrer" class="telegram-banner">
-          <div class="telegram-banner-container">
-            <div class="telegram-logo">
-              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.56c-.21 2.22-1.12 7.58-1.58 10.06-.19 1.07-.57 1.43-.94 1.46-.8.07-1.4-.52-2.17-1.03-1.21-.79-1.89-1.28-3.06-2.05-1.35-.87-.47-1.35.3-2.13.2-.21 3.71-3.39 3.77-3.68.01-.04.01-.18-.07-.26s-.2-.05-.29-.03c-.12.03-2.11 1.34-5.95 3.93-.56.38-1.07.57-1.53.56-.5-.01-1.47-.28-2.19-.51-.88-.28-1.58-.43-1.52-.91.03-.25.38-.51 1.04-.78 4.07-1.77 6.78-2.94 8.13-3.51 3.88-1.62 4.68-1.9 5.19-1.91.12 0 .37.03.54.17.14.12.18.28.2.44-.01.06 0 .11-.01.17z"/>
-              </svg>
-            </div>
-            <div class="telegram-content">
-              <div class="telegram-title">Новости из мира технологий</div>
-              <div class="telegram-subtitle">В нашем новом Telegram-канале. Подписывайтесь и будьте в числе первых!</div>
-              <div class="telegram-button">
-                Подписаться
-                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.56c-.21 2.22-1.12 7.58-1.58 10.06-.19 1.07-.57 1.43-.94 1.46-.8.07-1.4-.52-2.17-1.03-1.21-.79-1.89-1.28-3.06-2.05-1.35-.87-.47-1.35.3-2.13.2-.21 3.71-3.39 3.77-3.68.01-.04.01-.18-.07-.26s-.2-.05-.29-.03c-.12.03-2.11 1.34-5.95 3.93-.56.38-1.07.57-1.53.56-.5-.01-1.47-.28-2.19-.51-.88-.28-1.58-.43-1.52-.91.03-.25.38-.51 1.04-.78 4.07-1.77 6.78-2.94 8.13-3.51 3.88-1.62 4.68-1.9 5.19-1.91.12 0 .37.03.54.17.14.12.18.28.2.44-.01.06 0 .11-.01.17z"/>
-                </svg>
-              </div>
+              <div class="ym-hero-title">Аксессуары для приватности</div>
+              <div class="ym-hero-desc">Веб-камеры с крышками и защитные экраны для ноутбуков</div>
             </div>
           </div>
         </a>
 
-</div>
-  </section>
-
-    <footer class="footer">
-        <div class="container">
-            <div class="footer__grid">
-                <div class="footer__col footer__col--logo">
-                    <a href="../index.html" class="footer-logo">
-                        <span class="logo__icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M12 15L7 10H17L12 15Z" fill="currentColor"/>
-                                <path d="M12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3ZM12 19C8.13401 19 5 15.866 5 12C5 8.13401 8.13401 5 12 5C15.866 5 19 8.13401 19 12C19 15.866 15.866 19 12 19Z" fill="currentColor"/>
-                            </svg>
-                        </span>
-                        <span class="logo__text">Repairo</span>
-                    </a>
-                    <p class="footer__text">Помогаем ремонтировать электронику с 2024 года</p>
-                </div>
-                <div class="footer__col">
-                    <h3 class="footer__title">Разделы</h3>
-                    <ul class="footer__links">
-                        <li><a href="../index.html" class="footer__link">Главная</a></li>
-                        <li><a href="../index.html#categories" class="footer__link">Все гайды</a></li>
-                        <li><a href="../contacts.html" class="footer__link">Контакты</a></li>
-                    </ul>
-                </div>
-                <div class="footer__col">
-                    <h3 class="footer__title">Категории</h3>
-                    <ul class="footer__links">
-                        <li><a href="../tv.html" class="nav__link">Телевизоры</a></li>
-                        <li><a href="../cameras.html" class="nav__link">Фотоаппараты</a></li>
-                        <li><a href="../consoles.html" class="nav__link">Приставки</a></li>
-                        <li><a href="../laptops.html" class="nav__link">Ноутбуки</a></li>
-                        <li><a href="../smartphones.html" class="nav__link">Смартфоны</a></li>
-                        <li><a href="../small-appliances.html" class="nav__link">Мелкая техника</a></li>
-                        <li><a href="../large-appliances.html" class="nav__link">Бытовая техника</a></li>
-                        <li><a href="../auto-electronics.html" class="nav__link">Авто-Электроника</a></li>
-                    </ul>
-                </div>
-                <div class="footer__col">
-                    <h3 class="footer__title">Контакты</h3>
-                    <ul class="footer__links">
-                        <li><a href="https://t.me/RepairoRU" class="footer__link"><i class="fab fa-telegram"></i> Telegram</a></li>
-                        <li><span class="footer__link">Наша почта: repairo.info@mail.ru</span></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer__bottom">
-                <p class="disclaimer">
-    Администрация сайта не несёт ответственности за возможные повреждения техники
-    и иные последствия, возникшие в результате самостоятельного ремонта по
-    материалам и инструкциям, размещённым на сайте. Все работы вы выполняете
-    на свой страх и риск.
-    </p>
-                <p class="footer__copyright">© 2026 Repairo. Все права защищены.</p>
-            </div>
-        </div>
-    </footer>
-    <!-- Cookie Consent Banner -->
-    <script src="../script.js"></script>
-  <script src="../guides-images.js"></script>
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "HowTo",
-  "name": "Какие настройки конфиденциальности Windows 11 важны на ноутбуке",
-  "description": "Пошаговая инструкция: Какие настройки конфиденциальности Windows 11 важно включить на ноутбуке. Полный гид по защите персональных данных, отключению телеметрии, настройке приватности. Безопасность и контроль.",
-  "totalTime": "PT75M",
-  "step": [
-    {
-      "@type": "HowToStep",
-      "name": "Часть 1: Отключение телеметрии и сбора данных",
-      "text": "Часть 1: Отключение телеметрии и сбора данных",
-      "url": "#step-1"
-    },
-    {
-      "@type": "HowToStep",
-      "name": "Часть 2: Контроль доступа к устройствам",
-      "text": "Часть 2: Контроль доступа к устройствам",
-      "url": "#step-2"
-    },
-    {
-      "@type": "HowToStep",
-      "name": "Часть 3: Защита геолокации и движения",
-      "text": "Часть 3: Защита геолокации и движения",
-      "url": "#step-3"
-    },
-    {
-      "@type": "HowToStep",
-      "name": "Часть 4: Защита аккаунта и персонализации",
-      "text": "Часть 4: Защита аккаунта и персонализации",
-      "url": "#step-4"
-    },
-    {
-      "@type": "HowToStep",
-      "name": "Часть 5: Защита сети и соединений",
-      "text": "Часть 5: Защита сети и соединений",
-      "url": "#step-5"
-    }
-  ],
-  "image": "https://images.unsplash.com/photo-1550745165-9bc0b252726a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
-}
-</script>
-<!-- Cookie Consent Script -->
-<script src="../cookie-consent.js"></script>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="ru" data-theme="light">
-<head>
-
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Какие настройки конфиденциальности Windows 11 важны на ноутбуке | Экспертный мегагайд</title>
-    <meta name="description" content="Пошаговая инструкция: Какие настройки конфиденциальности Windows 11 важно включить на ноутбуке. Полный гид по защите персональных данных, отключению телеметрии, настройке приватности. Безопасность и контроль.">
-
-  <link rel="stylesheet" href="../styles.css" />
-  <link rel="stylesheet" href="../styles-header.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <style>
-    .guide-content { line-height: 1.7; color: var(--text); }
-    .guide-content h2 { color: var(--primary); margin-top: 30px; margin-bottom: 15px; font-size: 1.5rem; }
-    .guide-content h3 { color: var(--primary-dark); margin-top: 25px; margin-bottom: 12px; font-size: 1.2rem; }
-    .guide-image-block { margin: 20px 0; padding: 15px; background: var(--background); border-radius: var(--border-radius); border: 1px solid var(--border); text-align: center; }
-    .guide-image-block img { max-width: 100%; height: auto; border-radius: 6px; border: 1px solid var(--border); }
-    .image-caption { margin-top: 10px; font-size: 0.85rem; color: var(--text-light); font-style: italic; }
-    .pro-tips { background: rgba(3, 74, 79, 0.05); padding: 15px; border-radius: 6px; margin: 20px 0; }
-    .pro-tips h4 { color: var(--primary); margin-top: 0; margin-bottom: 12px; font-size: 1.1rem; }
-    .tip-item { display: flex; gap: 8px; margin-bottom: 8px; align-items: flex-start; }
-    .warning-block {
-      background: #fff3e0;
-      border-left: 5px solid #ff9100;
-      padding: 15px 18px;
-      margin: 22px 0;
-      border-radius: 7px;
-    }
-    .critical-block {
-      background: #ffebee;
-      border-left: 5px solid #f44336;
-      padding: 15px 18px;
-      margin: 22px 0;
-      border-radius: 7px;
-    }
-    table { width: 100%; border-collapse: collapse; margin: 20px 0; }
-    th, td { border: 1px solid var(--border); padding: 8px; text-align: left; }
-    th { background: var(--background-light); }
-    @media (max-width: 768px) {
-      .guide-content h2 { font-size: 1.4rem; margin-top: 25px; }
-      .guide-image-block { padding: 12px; margin: 15px 0; }
-      table, th, td { font-size: 0.95rem; }
-    }
-    /* Яндекс Маркет рекламный баннер */
-    .ym-hero-link {
-      display: block;
-      text-decoration: none;
-      color: inherit;
-      max-width: 100%;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    }
-
-    /* Горизонтальный баннер-карточка */
-    .ym-hero-banner {
-      width: 100%;
-      max-width: 600px;
-      min-height: 140px;
-      border-radius: 16px;
-      background: #ffffff;
-      border: 1px solid #e5e7eb;
-      display: flex;
-      flex-direction: column;
-      box-shadow: 0 4px 16px rgba(15, 23, 42, 0.08);
-      overflow: hidden;
-      box-sizing: border-box;
-      margin: 40px auto;
-    }
-
-    /* Контейнер для изображений */
-    .ym-hero-images {
-      display: flex;
-      height: 120px;
-      overflow: hidden;
-    }
-
-    .ym-hero-image {
-      flex: 1;
-      min-width: 0;
-      height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-      border-right: 1px solid #e5e7eb;
-      background: #f8f9fa;
-    }
-
-    .ym-hero-image:last-child {
-      border-right: none;
-    }
-
-    .ym-hero-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-      transition: transform 0.3s ease;
-      background: #f8f9fa;
-    }
-
-    .ym-hero-image:hover img {
-      transform: scale(1.02);
-    }
-
-    /* Правая часть: контент */
-    .ym-hero-content {
-      padding: 16px 18px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      gap: 8px;
-    }
-
-    /* Название товара */
-    .ym-hero-title {
-      font-size: 14px;
-      font-weight: 600;
-      color: #111827;
-      line-height: 1.3;
-      margin: 0 0 4px 0;
-      display: -webkit-box;
-      -webkit-line-clamp: 2;
-      line-clamp: 2;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
-    }
-
-    /* Рейтинг */
-    .ym-hero-top {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 8px;
-    }
-
-    .ym-hero-rating {
-      font-size: 13px;
-      font-weight: 500;
-      color: #111827;
-      background: #f9fafb;
-      border-radius: 999px;
-      padding: 4px 10px;
-    }
-
-    .ym-hero-rating-count {
-      color: #6b7280;
-    }
-
-    /* Фиолетовая кнопка */
-    .ym-hero-button {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 9px 16px;
-      border-radius: 999px;
-      border: none;
-      background: #6a00ff;
-      color: #ffffff;
-      font-size: 14px;
-      font-weight: 600;
-      cursor: pointer;
-      box-shadow: 0 2px 6px rgba(88, 28, 135, 0.35);
-      transition: background 0.15s ease, transform 0.15s ease,
-                  box-shadow 0.15s ease;
-    }
-
-    .ym-hero-button::after {
-      content: "→";
-      margin-left: 6px;
-      font-size: 14px;
-    }
-
-    .ym-hero-button:hover {
-      background: #7c3aed;
-      transform: translateY(-1px);
-      box-shadow: 0 4px 10px rgba(88, 28, 135, 0.45);
-    }
-
-    /* Юридический блок */
-    .ym-hero-legal {
-      margin-top: 6px;
-      max-width: 600px;
-      font-size: 11px;
-      line-height: 1.3;
-      color: #6b7280;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    /* Адаптив */
-    @media (max-width: 480px) {
-      .ym-hero-banner {
-        max-width: 100%;
-        margin: 20px 0;
-      }
-
-      .ym-hero-images {
-        height: 100px;
-      }
-
-      .ym-hero-content {
-        padding: 12px 12px;
-      }
-
-      .ym-hero-title {
-        font-size: 13px;
-      }
-
-      .ym-hero-button {
-        font-size: 13px;
-        padding: 8px 14px;
-      }
-
-      .ym-hero-legal {
-        font-size: 10px;
-      }
-    }
-    /* Telegram рекламный баннер */
-    .telegram-banner {
-      display: flex;
-      justify-content: center;
-      text-decoration: none;
-      color: inherit;
-      width: 100%;
-      margin: 40px 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    }
-
-    .telegram-banner-container {
-      width: 100%;
-      max-width: 500px;
-      min-height: 120px;
-      border-radius: 16px;
-      background: linear-gradient(135deg, #0088cc 0%, #005f8f 100%);
-      border: 1px solid #005f8f;
-      display: flex;
-      align-items: center;
-      padding: 20px;
-      box-shadow: 0 4px 16px rgba(0, 136, 204, 0.2);
-      overflow: hidden;
-      box-sizing: border-box;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-
-    .telegram-banner-container:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(0, 136, 204, 0.3);
-    }
-
-    .telegram-logo {
-      width: 60px;
-      height: 60px;
-      min-width: 60px;
-      background: #ffffff;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-right: 20px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    }
-
-    .telegram-logo svg {
-      width: 32px;
-      height: 32px;
-      fill: #0088cc;
-    }
-
-    .telegram-content {
-      flex: 1;
-      color: #ffffff;
-    }
-
-    .telegram-title {
-      font-size: 16px;
-      font-weight: 600;
-      margin: 0 0 8px 0;
-      line-height: 1.3;
-    }
-
-    .telegram-subtitle {
-      font-size: 14px;
-      opacity: 0.9;
-      margin: 0 0 12px 0;
-      line-height: 1.4;
-    }
-
-    .telegram-button {
-      display: inline-flex;
-      align-items: center;
-      padding: 8px 16px;
-      background: #ffffff;
-      color: #0088cc;
-      border-radius: 20px;
-      font-size: 14px;
-      font-weight: 600;
-      text-decoration: none;
-      transition: background 0.2s ease, transform 0.2s ease;
-    }
-
-    .telegram-button:hover {
-      background: #f0f8ff;
-      transform: scale(1.05);
-    }
-
-    .telegram-button svg {
-      width: 16px;
-      height: 16px;
-      margin-left: 6px;
-      fill: #0088cc;
-    }
-
-    /* Адаптив для мобильных */
-    @media (max-width: 480px) {
-      .telegram-banner-container {
-        max-width: 100%;
-        margin: 20px 0;
-        padding: 15px;
-        min-height: 100px;
-      }
-
-      .telegram-logo {
-        width: 50px;
-        height: 50px;
-        min-width: 50px;
-        margin-right: 15px;
-      }
-
-      .telegram-logo svg {
-        width: 26px;
-        height: 26px;
-      }
-
-      .telegram-title {
-        font-size: 14px;
-      }
-
-      .telegram-subtitle {
-        font-size: 12px;
-      }
-
-      .telegram-button {
-        font-size: 12px;
-        padding: 6px 12px;
-      }
-    }
-
-
-
-  </style>
-  <script async src="https://timeweb.cloud/api/v1/cloud-ai/agents/3cc03620-d051-4d8d-b5af-f7b6cd083a35/embed.js?collapsed=true"></script>
-</head>
-<body>
-  <header class="header">
-    <div class="container">
-      <div class="header__inner">
-        <a href="../index.html" class="logo">
-          <span class="logo__icon"></span>
-          <span class="logo__text">Repairo</span>
-        </a>
-        <nav class="nav">
-          <ul class="nav__list">
-            <li><a href="../tv.html" class="nav__link">Телевизоры</a></li>
-            <li><a href="../cameras.html" class="nav__link">Фотоаппараты</a></li>
-            <li><a href="../consoles.html" class="nav__link">Приставки</a></li>
-            <li><a href="../laptops.html" class="nav__link">Ноутбуки</a></li>
-            <li><a href="../smartphones.html" class="nav__link">Смартфоны</a></li>
-          </ul>
-        </nav>
       </div>
     </div>
-  </header>
-
-  <section class="guide-page">
-    <div class="container">
-      <div class="breadcrumbs">
-        <a href="../index.html">Главная</a>
-        <i class="fas fa-chevron-right"></i>
-        <a href="../laptops.html">Ноутбуки</a>
-        <i class="fas fa-chevron-right"></i>
-        <span>Какие настройки конфиденциальности Windows 11 важны на ноутбуке</span>
-      </div>
-
-      <h1 class="section__title">Какие настройки конфиденциальности Windows 11 важны на ноутбуке</h1>
-
-      <div class="guide-meta">
-        <span><i class="fas fa-laptop"></i> Экспертный гид: полная настройка конфиденциальности Windows 11 на ноутбуке. Отключение телеметрии, защита персональных данных, контроль доступа приложений, настройка приватности. Максимальная безопасность.</span>
-      </div>
-
-      <div class="guide-image-block">
-        <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Настройки конфиденциальности Windows 11">
-        <div class="image-caption">
-          Настройки конфиденциальности Windows 11 на ноутбуке: защита персональных данных, отключение телеметрии, контроль приложений, приватность, безопасность. Полный гид по настройке.
-        </div>
-      </div>
-
-      <div class="guide-content">
-
-        <h2>Введение: почему конфиденциальность в Windows 11 критически важна</h2>
-        <p>
-          Windows 11 по умолчанию собирает огромное количество данных: от истории использования приложений до геолокации и биометрии. Для ноутбука, который часто используется в разных местах и содержит чувствительную информацию, правильная настройка конфиденциальности — не опция, а необходимость. Microsoft предоставляет инструменты контроля, но они скрыты в десятках меню и включены по умолчанию. Этот гид поможет вам настроить максимальную приватность без потери функциональности.
-        </p>
-
-        <div class="critical-block">
-          <strong>⚠️ КРИТИЧЕСКИ ВАЖНО!</strong><br>
-          Некоторые настройки конфиденциальности могут влиять на работу системы и приложений. Изменяйте параметры постепенно и проверяйте работоспособность важных программ после каждого изменения.
-        </div>
-
-        <h2>Таблица: критически важные настройки конфиденциальности</h2>
-        <table>
-          <thead>
-            <tr>
-              <th>Категория</th>
-              <th>Настройка по умолчанию</th>
-              <th>Рекомендуемая</th>
-              <th>Риск при отключении</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Телеметрия</td>
-              <td>Полная</td>
-              <td>Минимальная</td>
-              <td>Низкий</td>
-            </tr>
-            <tr>
-              <td>Геолокация</td>
-              <td>Включена</td>
-              <td>Отключена</td>
-              <td>Средний</td>
-            </tr>
-            <tr>
-              <td>Камера/Микрофон</td>
-              <td>Разрешены</td>
-              <td>Запрещены</td>
-              <td>Низкий</td>
-            </tr>
-            <tr>
-              <td>Рекламный ID</td>
-              <td>Включен</td>
-              <td>Отключен</td>
-              <td>Низкий</td>
-            </tr>
-            <tr>
-              <td>Диагностика</td>
-              <td>Полная</td>
-              <td>Базовая</td>
-              <td>Низкий</td>
-            </tr>
-          </tbody>
-        </table>
-
-        <h2>Часть 1: Отключение телеметрии и сбора данных</h2>
-        <h3>Настройка телеметрии</h3>
-        <ol>
-          <li><b>Параметры</b> → Конфиденциальность и безопасность → Диагностика и отзывы</li>
-          <li><b>Отправка необязательных данных диагностики</b> → Отключено</li>
-          <li><b>Обратная связь</b> → Никогда</li>
-          <li><b>Настройка телеметрии</b> через реестр:
-            <ul>
-              <li>Win + R → regedit</li>
-              <li>HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\DataCollection</li>
-              <li>Создайте DWORD AllowTelemetry = 0</li>
-            </ul>
-          </li>
-        </ol>
-
-        <h3>Отключение сбора данных о приложениях</h3>
-        <ul>
-          <li><b>Журнал активности</b> → Очистить историю</li>
-          <li><b>Доступ приложений к активности</b> → Отключено</li>
-          <li><b>Показывать недавние приложения</b> → Отключено</li>
-          <li><b>Показывать недавно использованные элементы</b> → Отключено</li>
-        </ul>
-
-        <h2>Часть 2: Контроль доступа к устройствам</h2>
-        <h3>Настройка камеры и микрофона</h3>
-        <ol>
-          <li><b>Параметры</b> → Конфиденциальность и безопасность → Камера</li>
-          <li><b>Доступ приложений к камере</b> → Отключено</li>
-          <li><b>Разрешить приложениям доступ к камере</b> → Отключено</li>
-          <li><b>Аппаратный переключатель камеры</b> — если доступен</li>
-          <li><b>Микрофон</b> — аналогичные настройки</li>
-        </ol>
-
-        <h3>Контроль других устройств</h3>
-        <ul>
-          <li><b>Доступ к файлам</b> — настройте по приложениям</li>
-          <li><b>Доступ к картинкам</b> — отключите для ненужных приложений</li>
-          <li><b>Доступ к документам</b> — только для необходимых программ</li>
-          <li><b>Доступ к съемным устройствам</b> — ограничьте</li>
-        </ul>
-
-        <h2>Часть 3: Защита геолокации и движения</h2>
-        <h3>Отключение геолокации</h3>
-        <ol>
-          <li><b>Параметры</b> → Конфиденциальность и безопасность → Местоположение</li>
-          <li><b>Доступ к местоположению</b> → Отключено</li>
-          <li><b>Разрешить приложениям доступ к местоположению</b> → Отключено</li>
-          <li><b>История местоположения</b> → Очистить</li>
-          <li><b>Гео-метки</b> для фото — отключите в приложении "Фотографии"</li>
-        </ol>
-
-        <h3>Контроль датчиков движения</h3>
-        <ul>
-          <li><b>Датчик движения</b> — отключите если не используете</li>
-          <li><b>Автоматическая яркость</b> — настройте вручную</li>
-          <li><b>Адаптивная яркость</b> — отключите для контроля</li>
-        </ul>
-
-        <h2>Часть 4: Защита аккаунта и персонализации</h2>
-        <h3>Настройки учетной записи Microsoft</h3>
-        <ol>
-          <li><b>Панель управления аккаунтом</b> Microsoft</li>
-          <li><b>Конфиденциальность</b> → Отключите ненужное</li>
-          <li><b>Рекламные настройки</b> → Отключите персонализацию рекламы</li>
-          <li><b>Поиск по Bing</b> → Отключите историю поиска</li>
-          <li><b>Местоположение</b> → Очистите историю</li>
-        </ol>
-
-        <h3>Персонализация и реклама</h3>
-        <ul>
-          <li><b>Параметры</b> → Персонализация</li>
-          <li><b>Использовать ID рекламы</b> → Отключено</li>
-          <li><b>Позволить приложениям использовать ID рекламы</b> → Отключено</li>
-          <li><b>Управлять интересами</b> → Очистите все</li>
-        </ul>
-
-        <h2>Часть 5: Защита сети и соединений</h2>
-        <h3>Настройки сетевой конфиденциальности</h3>
-        <ol>
-          <li><b>Параметры</b> → Сеть и Интернет → Wi-Fi</li>
-          <li><b>Случайные аппаратные MAC-адреса</b> → Включено</li>
-          <li><b>Использовать случайные адреса</b> для всех сетей</li>
-          <li><b>Автоматическое подключение</b> → Отключите для открытых сетей</li>
-        </ol>
-
-        <h3>Защита от отслеживания</h3>
-        <ul>
-          <li><b>Отслеживание активности</b> → Отключено</li>
-          <li><b>Общий доступ к ближайшим устройствам</b> → Отключено</li>
-          <li><b>Общий доступ к файлам</b> — настройте только для доверенных сетей</li>
-        </ul>
-
-        <h2>Часть 6: Контроль приложений и программ</h2>
-        <h3>Разрешения приложений</h3>
-        <table>
-          <thead>
-            <tr>
-              <th>Тип разрешения</th>
-              <th>Рекомендация</th>
-              <th>Исключения</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Доступ к файлам</td>
-              <td>Только по необходимости</td>
-              <td>Офисные программы</td>
-            </tr>
-            <tr>
-              <td>Доступ к камере</td>
-              <td>Отключено</td>
-              <td>Zoom, Skype</td>
-            </tr>
-            <tr>
-              <td>Доступ к микрофону</td>
-              <td>Отключено</td>
-              <td>Диктофон, мессенджеры</td>
-            </tr>
-            <tr>
-              <td>Доступ к уведомлениям</td>
-              <td>Только важные</td>
-              <td>Системные приложения</td>
-            </tr>
-          </tbody>
-        </table>
-
-        <h3>Фоновая активность</h3>
-        <ol>
-          <li><b>Параметры</b> → Приложения → Установленные приложения</li>
-          <li><b>Фоновые приложения</b> → Отключите ненужные</li>
-            <ul>
-              <li>Оставьте: антивирус, мессенджеры, почта</li>
-              <li>Отключите: игры, магазины, рекламные приложения</li>
-            </ul>
-          </li>
-          <li><b>Экономия батареи</b> → Ограничьте фоновую активность</li>
-        </ol>
-
-        <h2>Часть 7: Продвинутые настройки через реестр</h2>
-        <h3>Отключение через Group Policy</h3>
-        <ul>
-          <li><b>gpedit.msc</b> — редактор групповых политик</li>
-          <li><b>Конфигурация компьютера</b> → Административные шаблоны</li>
-          <li><b>Система</b> → Сбор данных телеметрии</li>
-          <li><b>Разрешить телеметрию</b> → Отключено</li>
-        </ul>
-
-        <h3>Критические реестровые настройки</h3>
-        <ol>
-          <li><b>Отключение Cortana</b>:
-            <ul>
-              <li>HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Windows Search</li>
-              <li>AllowCortana = 0</li>
-            </ul>
-          </li>
-          <li><b>Отключение поиска в Bing</b>:
-            <ul>
-              <li>HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Search</li>
-              <li>BingSearchEnabled = 0</li>
-            </ul>
-          </li>
-          <li><b>Отключение рекламы</b>:
-            <ul>
-              <li>HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced</li>
-              <li>Start_ShowRecommendations = 0</li>
-            </ul>
-          </li>
-        </ol>
-
-        <h2>Часть 8: Мониторинг и проверка конфиденциальности</h2>
-        <h3>Инструменты для проверки</h3>
-        <ul>
-          <li><b>O&O ShutUp10</b> — автоматическая настройка приватности</li>
-          <li><b>W10Privacy</b> — детальный контроль настроек</li>
-          <li><b>Privacy.sexy</b> — скрипты для настройки приватности</li>
-          <li><b>Windows Privacy Dashboard</b> — мониторинг настроек</li>
-        </ul>
-
-        <h3>Регулярная проверка</h3>
-        <div class="pro-tips">
-          <h4>🔹 Ежемесячная проверка конфиденциальности</h4>
-          <div class="tip-item">
-            <i class="fas fa-lightbulb"></i>
-            <p>Проверьте активные приложения и их разрешения.</p>
-          </div>
-          <div class="tip-item">
-            <i class="fas fa-lightbulb"></i>
-            <p>Очистите историю активности и местоположений.</p>
-          </div>
-          <div class="tip-item">
-            <i class="fas fa-lightbulb"></i>
-            <p>Проверьте настройки телеметрии после обновлений.</p>
-          </div>
-          <div class="tip-item">
-            <i class="fas fa-lightbulb"></i>
-            <p>Обновите blacklist нежелательных приложений.</p>
-          </div>
-        </div>
-
-        <h2>Часть 9: Баланс между безопасностью и функциональностью</h2>
-        <h3>Что можно безопасно отключить</h3>
-        <ul>
-          <li><b>Телеметрия</b> — не влияет на работу системы</li>
-          <li><b>Рекламный ID</b> — только уменьшает таргетированную рекламу</li>
-          <li><b>Кортана</b> — не используется в большинстве регионов</li>
-          <li><b>Поиск Bing</b> — можно заменить на Google</li>
-        </ul>
-
-        <h3>Что стоит оставить включенным</h3>
-        <ol>
-          <li><b>Базовая телеметрия</b> — для критических обновлений безопасности</li>
-          <li><b>Защитник Windows</b> — антивирусная защита</li>
-          <li><b>Обновления системы</b> — безопасность важнее приватности</li>
-          <li><b>Некоторые разрешения</b> для необходимых приложений</li>
-        </ol>
-
-        <h2>FAQ — часто задаваемые вопросы</h2>
-        <ul>
-          <li>
-            <strong>Повлияет ли отключение телеметрии на обновления?</strong><br>
-            Нет, критические обновления безопасности будут устанавливаться.
-          </li>
-          <li>
-            <strong>Можно ли вернуть настройки по умолчанию?</strong><br>
-            Да, через тот же интерфейс или кнопкой "Сбросить" в настройках.
-          </li>
-          <li>
-            <strong>Нужны ли права администратора для изменений?</strong><br>
-            Для большинства настроек да, для некоторых — нет.
-          </li>
-          <li>
-            <strong>Сработают ли эти настройки в Windows 10?</strong><br>
-            Большинство настроек аналогичны, но расположение может отличаться.
-          </li>
-          <li>
-            <strong>Что делать если приложение перестало работать?</strong><br>
-            Включите необходимые разрешения для конкретного приложения.
-          </li>
-        </ul>
-
-        <div class="warning-block">
-          <strong>Внимание!</strong> После крупных обновлений Windows некоторые настройки конфиденциальности могут сброситься на значения по умолчанию. Регулярно проверяйте настройки после установки обновлений системы.
-        </div>
-
-        <h2>Пошаговая инструкция: максимальная приватность</h2>
-        <ol>
-          <li>Отключите телеметрию и сбор диагностических данных</li>
-          <li>Настройте доступ к камере и микрофону</li>
-          <li>Отключите геолокацию и датчики движения</li>
-          <li>Очистите настройки рекламного ID</li>
-          <li>Настройте случайные MAC-адреса для Wi-Fi</li>
-          <li>Ограничьте фоновую активность приложений</li>
-          <li>Используйте O&O ShutUp10 для автоматической настройки</li>
-          <li>Создайте точку восстановления системы</li>
-          <li>Протестируйте работу важных приложений</li>
-          <li>Настройте ежемесячную проверку конфиденциальности</li>
-        </ol>
-
-        <h2>📌 Итог: контроль над вашими данными</h2>
-        <p>
-          Windows 11 предоставляет мощные инструменты для контроля конфиденциальности, но они требуют внимания и регулярного обслуживания. Правильная настройка приватности превращает ноутбук из устройства для сбора данных в защищенный рабочий инструмент. Главное — найти баланс между безопасностью и функциональностью, регулярно проверять настройки после обновлений и использовать специализированные утилиты для автоматизации процесса. Помните, что ваши данные принадлежат только вам, и Microsoft не имеет права собирать их без вашего явного согласия.
-        </p>
-</div>
-    </div>
-  </section>
+  </main>
 
   <footer class="footer">
     <div class="container">
-      <div class="footer__grid">
-        <div class="footer__col footer__col--logo">
-          <a href="index.html" class="footer-logo">
-            <span class="logo__icon"></span>
-            <span class="logo__text">Repairo</span>
-          </a>
-          <p class="footer__text">Экспертные инструкции по технике с 2024 года</p>
+      <div class="footer__content">
+        <div class="footer__section">
+          <h4>Repairo</h4>
+          <p>Экспертные руководства по ремонту и обслуживанию техники</p>
         </div>
-        <div class="footer__col">
-          <h3 class="footer__title">Разделы</h3>
-          <ul class="footer__links">
-            <li><a href="index.html" class="footer__link">Главная</a></li>
-            <li><a href="all-guides.html" class="footer__link">Все гайды</a></li>
-            <li><a href="contacts.html" class="footer__link">Контакты</a></li>
+        <div class="footer__section">
+          <h4>Разделы</h4>
+          <ul>
+            <li><a href="../laptops.html">Ноутбуки</a></li>
+            <li><a href="../smartphones.html">Смартфоны</a></li>
+            <li><a href="../consoles.html">Консоли</a></li>
+            <li><a href="../cameras.html">Фотоаппараты</a></li>
           </ul>
         </div>
-        <div class="footer__col">
-          <h3 class="footer__title">Категории</h3>
-          <ul class="footer__links">
-            <li><a href="../tv.html" class="nav__link">Телевизоры</a></li>
-            <li><a href="../cameras.html" class="nav__link">Фотоаппараты</a></li>
-            <li><a href="../consoles.html" class="nav__link">Приставки</a></li>
-            <li><a href="../laptops.html" class="nav__link">Ноутбуки</a></li>
-            <li><a href="../smartphones.html" class="nav__link">Смартфоны</a></li>
-            <li><a href="../small-appliances.html" class="nav__link">Мелкая техника</a></li>
-            <li><a href="../large-appliances.html" class="nav__link">Бытовая техника</a></li>
-            <li><a href="../auto-electronics.html" class="nav__link">Авто-Электроника</a></li>
-          </ul>
-        </div>
-        <div class="footer__col">
-          <h3 class="footer__title">Контакты</h3>
-          <ul class="footer__links">
-            <li>
-              <a href="https://t.me/repairo_kz" class="footer__link"><i class="fab fa-telegram"></i> Telegram</a>
-            </li>
-            <li>
-              <a href="https://instagram.com/repairo_kz" class="footer__link"><i class="fab fa-instagram"></i> Instagram</a>
-            </li>
-            <li>
-              <a href="mailto:support@repairo.kz" class="footer__link"><i class="fas fa-envelope"></i> Email</a>
-            </li>
-          </ul>
+        <div class="footer__section">
+          <h4>Контакты</h4>
+          <p>support@repairo.ru</p>
         </div>
       </div>
       <div class="footer__bottom">
-            <p class="disclaimer">
-        Администрация сайта не несёт ответственности за возможные повреждения техники
-        и иные последствия, возникшие в результате самостоятельного ремонта по
-        материалам и инструкциям, размещённым на сайте. Все работы вы выполняете
-        на свой страх и риск.
-    </p>
-                <p class="footer__copyright">© 2025 Repairo. Все права защищены.</p>
+        <p>&copy; 2024 Repairo. Все права защищены.</p>
       </div>
     </div>
   </footer>
-    <!-- Cookie Consent Banner -->
-    <script src="../script.js"></script>
-  <script src="../guides-images.js"></script>
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "HowTo",
-  "name": "Какие настройки конфиденциальности Windows 11 важны на ноутбуке",
-  "description": "Пошаговая инструкция: Какие настройки конфиденциальности Windows 11 важно включить на ноутбуке. Полный гид по защите персональных данных, отключению телеметрии, настройке приватности. Безопасность и контроль.",
-  "totalTime": "PT75M",
-  "step": [
-    {
-      "@type": "HowToStep",
-      "name": "Часть 1: Отключение телеметрии и сбора данных",
-      "text": "Часть 1: Отключение телеметрии и сбора данных",
-      "url": "#step-1"
-    },
-    {
-      "@type": "HowToStep",
-      "name": "Часть 2: Контроль доступа к устройствам",
-      "text": "Часть 2: Контроль доступа к устройствам",
-      "url": "#step-2"
-    },
-    {
-      "@type": "HowToStep",
-      "name": "Часть 3: Защита геолокации и движения",
-      "text": "Часть 3: Защита геолокации и движения",
-      "url": "#step-3"
-    },
-    {
-      "@type": "HowToStep",
-      "name": "Часть 4: Защита аккаунта и персонализации",
-      "text": "Часть 4: Защита аккаунта и персонализации",
-      "url": "#step-4"
-    },
-    {
-      "@type": "HowToStep",
-      "name": "Часть 5: Защита сети и соединений",
-      "text": "Часть 5: Защита сети и соединений",
-      "url": "#step-5"
-    }
-  ],
-  "image": "https://images.unsplash.com/photo-1550745165-9bc0b252726a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
-}
-</script>
-<!-- Cookie Consent Script -->
-<script src="../cookie-consent.js"></script>
+  <script src="../script.js"></script>
+  <script src="../search.js"></script>
+
 </body>
 </html>
-

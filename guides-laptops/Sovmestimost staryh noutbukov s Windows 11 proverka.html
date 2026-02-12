@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Совместимость старых ноутбуков с Windows 11 | Проверка и обновление</title>
+    <meta name="description" content="{{ description }}">
+    <meta name="description" content="Как проверить совместимость старого ноутбука с Windows 11. Пошаговое руководство по проверке требований, обновлению BIOS и решению проблем совместимости.">
+
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="../styles-header.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    .guide-content { line-height: 1.7; color: var(--text); }
+    .guide-content h2 { color: var(--primary); margin-top: 30px; margin-bottom: 15px; font-size: 1.5rem; }
+    .guide-content h3 { color: var(--primary-dark); margin-top: 25px; margin-bottom: 12px; font-size: 1.2rem; }
+    .guide-image-block { margin: 20px 0; padding: 15px; background: var(--background); border-radius: var(--border-radius); border: 1px solid var(--border); text-align: center; }
+    .guide-image-block img { max-width: 100%; height: auto; border-radius: 6px; border: 1px solid var(--border); }
+    .image-caption { margin-top: 10px; font-size: 0.85rem; color: var(--text-light); font-style: italic; }
+    .pro-tips { background: rgba(3, 74, 79, 0.05); padding: 15px; border-radius: 6px; margin: 20px 0; }
+    .pro-tips h4 { color: var(--primary); margin-top: 0; margin-bottom: 12px; font-size: 1.1rem; }
+    .tip-item { display: flex; gap: 8px; margin-bottom: 8px; align-items: flex-start; }
+    table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+    th, td { border: 1px solid var(--border); padding: 8px; text-align: left; }
+    th { background: var(--background-light); }
+    @media (max-width: 768px) {
+      .guide-content h2 { font-size: 1.4rem; margin-top: 25px; }
+      .guide-image-block { padding: 12px; margin: 15px 0; }
+      table, th, td { font-size: 0.95rem; }
+    }
+  </style>
+
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <a href="../index.html" class="logo">
+                    <span class="logo__icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 15L7 10H17L12 15Z" fill="currentColor"/>
+                            <path d="M12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3ZM12 19C8.13401 19 5 15.866 5 12C5 8.13401 8.13401 5 12 5C15.866 5 19 8.13401 19 12C19 15.866 15.866 19 12 19Z" fill="currentColor"/>
+                        </svg>
+                    </span>
+                    <span class="logo__text">Repairo</span>
+                </a>
+                <nav class="nav">
+                    <ul class="nav__list">
+                       <li><a href="../tv.html" class="nav__link">Телевизоры</a></li>
+                        <li><a href="../auto-electronics.html" class="nav__link">Автоэлектроника</a></li>
+                        <li><a href="../consoles.html" class="nav__link">Приставки</a></li>
+                        <li><a href="../laptops.html" class="nav__link">Ноутбуки</a></li>
+                        <li><a href="../smartphones.html" class="nav__link">Смартфоны</a></li>
+                        <li><a href="../index.html#categories" class="nav__link">Все категории</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="guide-content">
+            <h1>Совместимость старых ноутбуков с Windows 11</h1>
+            <p>Windows 11 предлагает современный интерфейс и улучшенную безопасность, но многие старые ноутбуки могут не соответствовать системным требованиям. В этом руководстве мы подробно рассмотрим, как проверить совместимость вашего устройства с Windows 11, какие проблемы могут возникнуть и как их решить.</p>
+
+            <h2>Минимальные требования Windows 11</h2>
+            <p>Для установки Windows 11 ваш ноутбук должен соответствовать следующим требованиям:</p>
+            <table>
+                <tr>
+                    <th>Компонент</th>
+                    <th>Минимальные требования</th>
+                    <th>Рекомендуемые</th>
+                </tr>
+                <tr>
+                    <td>Процессор</td>
+                    <td>1 ГГц, 2 ядра (64-bit)</td>
+                    <td>Intel Core i5 8-го поколения или аналог</td>
+                </tr>
+                <tr>
+                    <td>Оперативная память</td>
+                    <td>4 ГБ</td>
+                    <td>8 ГБ или больше</td>
+                </tr>
+                <tr>
+                    <td>Хранение</td>
+                    <td>64 ГБ</td>
+                    <td>SSD 128 ГБ или больше</td>
+                </tr>
+                <tr>
+                    <td>Графика</td>
+                    <td>DirectX 12 с WDDM 2.0</td>
+                    <td>Современная дискретная или интегрированная</td>
+                </tr>
+                <tr>
+                    <td>Экран</td>
+                    <td>720p, 9" диагональ</td>
+                    <td>1080p, 13" или больше</td>
+                </tr>
+                <tr>
+                    <td>Безопасность</td>
+                    <td>TPM 2.0</td>
+                    <td>TPM 2.0 или firmware TPM</td>
+                </tr>
+            </table>
+
+            <h2>Как проверить совместимость ноутбука</h2>
+            <h3>Использование приложения PC Health Check</h3>
+            <p>Microsoft предоставляет официальное приложение для проверки совместимости:</p>
+            <ol>
+                <li>Скачайте PC Health Check с официального сайта Microsoft</li>
+                <li>Запустите приложение</li>
+                <li>Выберите "Check now for Windows 11"</li>
+                <li>Просмотрите результаты проверки</li>
+            </ol>
+
+            <h3>Проверка характеристик системы</h3>
+            <ol>
+                <li>Нажмите Win + R, введите "msinfo32"</li>
+                <li>В разделе "Система" проверьте версию BIOS и TPM</li>
+                <li>В разделе "Процессор" посмотрите модель и частоту</li>
+                <li>Проверьте объем оперативной памяти</li>
+            </ol>
+
+            <h3>Проверка TPM</h3>
+            <p>TPM (Trusted Platform Module) обязателен для Windows 11:</p>
+            <ol>
+                <li>Откройте "Параметры" → "Обновление и безопасность" → "Безопасность устройства"</li>
+                <li>Найдите раздел "Безопасность процессора"</li>
+                <li>Если TPM не найден, проверьте в BIOS</li>
+            </ol>
+
+            <h2>Что делать, если ноутбук несовместим</h2>
+            <h3>Обновление BIOS</h3>
+            <p>Многие проблемы совместимости решаются обновлением BIOS:</p>
+            <ol>
+                <li>Определите модель ноутбука (на наклейке или в документации)</li>
+                <li>Посетите сайт производителя (Dell, HP, Lenovo и т.д.)</li>
+                <li>Найдите раздел поддержки и драйверы</li>
+                <li>Скачайте и установите последнюю версию BIOS</li>
+                <li>Перезагрузите и проверьте совместимость</li>
+            </ol>
+
+            <div class="pro-tips">
+                <h4>Важно при обновлении BIOS</h4>
+                <div class="tip-item">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <span>Подключите ноутбук к сети, чтобы избежать потери питания</span>
+                </div>
+                <div class="tip-item">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <span>Не прерывайте процесс обновления</span>
+                </div>
+                <div class="tip-item">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <span>Создайте резервную копию важных данных</span>
+                </div>
+            </div>
+
+            <h3>Включение TPM в BIOS</h3>
+            <p>Если TPM присутствует, но отключен:</p>
+            <ol>
+                <li>Перезагрузите ноутбук и войдите в BIOS (обычно Del, F2 или F10)</li>
+                <li>Найдите раздел Security или Advanced</li>
+                <li>Включите TPM или PTT (Intel) / fTPM (AMD)</li>
+                <li>Сохраните изменения и выйдите</li>
+            </ol>
+
+            <h3>Обход требований для тестирования</h3>
+            <p>Для тестирования Windows 11 на несовместимом устройстве:</p>
+            <ol>
+                <li>Создайте загрузочную флешку с Windows 11</li>
+                <li>Во время установки нажмите Shift + F10</li>
+                <li>Введите команду: regedit</li>
+                <li>Перейдите к HKEY_LOCAL_MACHINE\SYSTEM\Setup\LabConfig</li>
+                <li>Создайте DWORD значения: BypassTPMCheck=1, BypassSecureBootCheck=1, BypassRAMCheck=1</li>
+                <li>Продолжите установку</li>
+            </ol>
+
+            <h2>Альтернативные решения</h2>
+            <h3>Установка Windows 10 LTSC</h3>
+            <p>Если Windows 11 не подходит, рассмотрите Windows 10 Long Term Servicing Channel:</p>
+            <ul>
+                <li>Долгосрочная поддержка (10 лет)</li>
+                <li>Отсутствие встроенных приложений Microsoft</li>
+                <li>Регулярные обновления безопасности</li>
+            </ul>
+
+            <h3>Обновление компонентов</h3>
+            <p>Если возможно, апгрейдите:</p>
+            <ul>
+                <li>Установите дополнительную оперативную память</li>
+                <li>Замените HDD на SSD</li>
+                <li>Обновите процессор (если слот позволяет)</li>
+            </ul>
+
+            <h2>Распространенные проблемы и решения</h2>
+            <h3>Ошибка "Этот компьютер не может запустить Windows 11"</h3>
+            <p>Причины:</p>
+            <ul>
+                <li>Несоответствие требованиям процессора</li>
+                <li>Отсутствие или отключенный TPM</li>
+                <li>Недостаточно оперативной памяти</li>
+            </ul>
+            <p>Решения: Обновите BIOS, включите TPM, проверьте память.</p>
+
+            <h3>Проблемы с драйверами</h3>
+            <p>После обновления могут отсутствовать драйверы:</p>
+            <ol>
+                <li>Посетите сайт производителя ноутбука</li>
+                <li>Скачайте драйверы для Windows 11</li>
+                <li>Установите в порядке: чипсет, видео, аудио, сеть</li>
+            </ol>
+
+            <h3>Падение производительности</h3>
+            <p>Если после обновления ноутбук тормозит:</p>
+            <ul>
+                <li>Отключите визуальные эффекты</li>
+                <li>Оптимизируйте автозагрузку</li>
+                <li>Обновите все драйверы</li>
+            </ul>
+
+            <h2>Проверка совместимости перед покупкой</h2>
+            <h3>Для нового ноутбука</h3>
+            <ul>
+                <li>Проверьте список совместимых моделей на сайте Microsoft</li>
+                <li>Убедитесь в наличии TPM 2.0</li>
+                <li>Проверьте версию BIOS</li>
+            </ul>
+
+            <h3>Для подержанного ноутбука</h3>
+            <ul>
+                <li>Запустите PC Health Check</li>
+                <li>Проверьте характеристики в системной информации</li>
+                <li>Протестируйте производительность</li>
+            </ul>
+
+            <div class="pro-tips">
+                <h4>Советы по выбору ноутбука под Windows 11</h4>
+                <div class="tip-item">
+                    <i class="fas fa-lightbulb"></i>
+                    <span>Выбирайте модели 2018 года выпуска и новее</span>
+                </div>
+                <div class="tip-item">
+                    <i class="fas fa-lightbulb"></i>
+                    <span>Предпочтение SSD и минимум 8 ГБ RAM</span>
+                </div>
+                <div class="tip-item">
+                    <i class="fas fa-lightbulb"></i>
+                    <span>Проверяйте наличие TPM в характеристиках</span>
+                </div>
+                <div class="tip-item">
+                    <i class="fas fa-lightbulb"></i>
+                    <span>Тестируйте ноутбук перед покупкой</span>
+                </div>
+            </div>
+
+            <h2>Заключение</h2>
+            <p>Проверка совместимости старого ноутбука с Windows 11 - важный шаг перед обновлением. Следуя этому руководству, вы сможете определить, готов ли ваш компьютер к новой ОС, и решить возможные проблемы. Если обновление невозможно, рассмотрите альтернативы или апгрейд компонентов. Помните, что принудительная установка Windows 11 на несовместимом устройстве может привести к нестабильной работе и потере гарантии.</p>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <p>&copy; 2024 Repairo. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+    <script src="../cookie-consent.js"></script>
+</body>
+</html>

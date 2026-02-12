@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Оптимизация Windows 11 на слабом ноутбуке | Полное руководство</title>
+    <meta name="description" content="{{ description }}">
+    <meta name="description" content="Как ускорить Windows 11 на слабом ноутбуке с малым объемом RAM и процессором. Пошаговое руководство по оптимизации для комфортной работы на бюджетных устройствах.">
+
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="../styles-header.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    .guide-content { line-height: 1.7; color: var(--text); }
+    .guide-content h2 { color: var(--primary); margin-top: 30px; margin-bottom: 15px; font-size: 1.5rem; }
+    .guide-content h3 { color: var(--primary-dark); margin-top: 25px; margin-bottom: 12px; font-size: 1.2rem; }
+    .guide-image-block { margin: 20px 0; padding: 15px; background: var(--background); border-radius: var(--border-radius); border: 1px solid var(--border); text-align: center; }
+    .guide-image-block img { max-width: 100%; height: auto; border-radius: 6px; border: 1px solid var(--border); }
+    .image-caption { margin-top: 10px; font-size: 0.85rem; color: var(--text-light); font-style: italic; }
+    .pro-tips { background: rgba(3, 74, 79, 0.05); padding: 15px; border-radius: 6px; margin: 20px 0; }
+    .pro-tips h4 { color: var(--primary); margin-top: 0; margin-bottom: 12px; font-size: 1.1rem; }
+    .tip-item { display: flex; gap: 8px; margin-bottom: 8px; align-items: flex-start; }
+    table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+    th, td { border: 1px solid var(--border); padding: 8px; text-align: left; }
+    th { background: var(--background-light); }
+    @media (max-width: 768px) {
+      .guide-content h2 { font-size: 1.4rem; margin-top: 25px; }
+      .guide-image-block { padding: 12px; margin: 15px 0; }
+      table, th, td { font-size: 0.95rem; }
+    }
+  </style>
+
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <a href="../index.html" class="logo">
+                    <span class="logo__icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 15L7 10H17L12 15Z" fill="currentColor"/>
+                            <path d="M12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3ZM12 19C8.13401 19 5 15.866 5 12C5 8.13401 8.13401 5 12 5C15.866 5 19 8.13401 19 12C19 15.866 15.866 19 12 19Z" fill="currentColor"/>
+                        </svg>
+                    </span>
+                    <span class="logo__text">Repairo</span>
+                </a>
+                <nav class="nav">
+                    <ul class="nav__list">
+                       <li><a href="../tv.html" class="nav__link">Телевизоры</a></li>
+                        <li><a href="../auto-electronics.html" class="nav__link">Автоэлектроника</a></li>
+                        <li><a href="../consoles.html" class="nav__link">Приставки</a></li>
+                        <li><a href="../laptops.html" class="nav__link">Ноутбуки</a></li>
+                        <li><a href="../smartphones.html" class="nav__link">Смартфоны</a></li>
+                        <li><a href="../index.html#categories" class="nav__link">Все категории</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="guide-content">
+            <h1>Оптимизация Windows 11 на слабом ноутбуке</h1>
+            <p>Windows 11 предлагает современный интерфейс и новые функции, но на слабых ноутбуках с ограниченными ресурсами она может работать медленно. В этом руководстве мы рассмотрим эффективные способы оптимизации Windows 11 для комфортной работы на устройствах с малым объемом оперативной памяти, слабым процессором или встроенной графикой.</p>
+
+            <h2>Почему Windows 11 тормозит на слабом ноутбуке?</h2>
+            <p>Windows 11 имеет минимальные системные требования, но для комфортной работы нужны более мощные компоненты. Основные проблемы на слабых устройствах:</p>
+            <ul>
+                <li>Высокие требования к оперативной памяти (минимум 4 ГБ, рекомендуется 8+ ГБ)</li>
+                <li>Нагрузка на процессор от фоновых служб</li>
+                <li>Визуальные эффекты и анимации</li>
+                <li>Автоматические обновления и индексация</li>
+                <li>Современные приложения с высокими требованиями</li>
+            </ul>
+
+            <h2>Шаг 1: Проверка совместимости и обновлений</h2>
+            <p>Убедитесь, что ваш ноутбук соответствует минимальным требованиям Windows 11.</p>
+            <h3>Минимальные требования</h3>
+            <table>
+                <tr>
+                    <th>Компонент</th>
+                    <th>Минимальные требования</th>
+                    <th>Рекомендуемые для слабых устройств</th>
+                </tr>
+                <tr>
+                    <td>Процессор</td>
+                    <td>1 ГГц, 2 ядра</td>
+                    <td>Intel Core i3 или аналог</td>
+                </tr>
+                <tr>
+                    <td>Оперативная память</td>
+                    <td>4 ГБ</td>
+                    <td>8 ГБ минимум</td>
+                </tr>
+                <tr>
+                    <td>Хранение</td>
+                    <td>64 ГБ</td>
+                    <td>SSD 128 ГБ+</td>
+                </tr>
+            </table>
+
+            <h3>Проверка обновлений</h3>
+            <ol>
+                <li>Откройте "Параметры" → "Windows Update"</li>
+                <li>Установите все доступные обновления</li>
+                <li>Перезагрузите систему</li>
+            </ol>
+
+            <h2>Шаг 2: Отключение визуальных эффектов</h2>
+            <p>Визуальные эффекты Windows 11 сильно нагружают слабые видеокарты и процессоры.</p>
+            <h3>Быстрая настройка</h3>
+            <ol>
+                <li>Нажмите Win + R, введите "sysdm.cpl"</li>
+                <li>Перейдите на вкладку "Дополнительно" → "Быстродействие"</li>
+                <li>Выберите "Обеспечить наилучшее быстродействие"</li>
+                <li>Примените изменения и перезагрузите</li>
+            </ol>
+
+            <h3>Дополнительные настройки в Параметры</h3>
+            <ol>
+                <li>Откройте "Параметры" → "Система" → "О программе"</li>
+                <li>Выберите "Дополнительные параметры системы"</li>
+                <li>В разделе "Быстродействие" настройте эффекты индивидуально</li>
+            </ol>
+
+            <div class="pro-tips">
+                <h4>Рекомендуемые отключения</h4>
+                <div class="tip-item">
+                    <i class="fas fa-lightbulb"></i>
+                    <span>Отключите анимации окон и затухание меню</span>
+                </div>
+                <div class="tip-item">
+                    <i class="fas fa-lightbulb"></i>
+                    <span>Уберите прозрачность и размытие</span>
+                </div>
+                <div class="tip-item">
+                    <i class="fas fa-lightbulb"></i>
+                    <span>Отключите тени от окон</span>
+                </div>
+            </div>
+
+            <h2>Шаг 3: Оптимизация автозагрузки</h2>
+            <p>Многие программы запускаются при старте, замедляя загрузку и работу.</p>
+            <h3>Использование Диспетчера задач</h3>
+            <ol>
+                <li>Нажмите Ctrl + Shift + Esc</li>
+                <li>Перейдите на вкладку "Автозагрузка"</li>
+                <li>Отключите все ненужные программы</li>
+                <li>Оставьте только антивирус и системные службы</li>
+            </ol>
+
+            <h3>Очистка автозагрузки реестра</h3>
+            <p>Запустите командную строку от имени администратора:</p>
+            <pre><code>msconfig</code></pre>
+            <p>Перейдите на вкладку "Службы" и "Автозагрузка" для дополнительной настройки.</p>
+
+            <h2>Шаг 4: Управление памятью и виртуализацией</h2>
+            <h3>Отключение ненужных служб</h3>
+            <p>Откройте "Службы" (services.msc) и отключите:</p>
+            <ul>
+                <li>Служба маршрутизации push-сообщений (если не используете)</li>
+                <li>Факс</li>
+                <li>Служба геолокации</li>
+                <li>Служба маршрутизации push-сообщений</li>
+            </ul>
+
+            <h3>Оптимизация виртуальной памяти</h3>
+            <ol>
+                <li>Откройте "Свойства системы" → "Дополнительные параметры"</li>
+                <li>В разделе "Быстродействие" → "Дополнительно" → "Параметры"</li>
+                <li>Перейдите на вкладку "Дополнительно" → "Быстродействие"</li>
+                <li>Нажмите "Параметры" в разделе "Виртуальная память"</li>
+                <li>Снимите галочку "Автоматически" и установите размер файла подкачки</li>
+            </ol>
+
+            <h2>Шаг 5: Настройки энергосбережения</h2>
+            <p>Правильные настройки питания важны для автономной работы.</p>
+            <ol>
+                <li>Откройте "Панель управления" → "Электропитание"</li>
+                <li>Выберите план "Высокая производительность" или создайте собственный</li>
+                <li>Настройте параметры для максимальной производительности</li>
+            </ol>
+
+            <h3>Отключение гибернации</h3>
+            <p>Если не используете гибернацию, отключите ее:</p>
+            <pre><code>powercfg /h off</code></pre>
+
+            <h2>Шаг 6: Оптимизация хранилища</h2>
+            <h3>Очистка диска</h3>
+            <ol>
+                <li>Откройте "Этот компьютер", щелкните правой кнопкой на диске C:</li>
+                <li>Выберите "Свойства" → "Очистка диска"</li>
+                <li>Удалите временные файлы и кэш</li>
+            </ol>
+
+            <h3>Использование Storage Sense</h3>
+            <ol>
+                <li>Откройте "Параметры" → "Система" → "Хранение"</li>
+                <li>Включите "Storage Sense"</li>
+                <li>Настройте автоматическую очистку</li>
+            </ol>
+
+            <h2>Шаг 7: Оптимизация приложений</h2>
+            <h3>Переход на легкие альтернативы</h3>
+            <p>Замените тяжелые приложения на легкие аналоги:</p>
+            <ul>
+                <li>Браузер: Chrome → Firefox или Edge</li>
+                <li>Офис: Microsoft Office → LibreOffice</li>
+                <li>Медиаплеер: VLC вместо встроенного</li>
+            </ul>
+
+            <h3>Отключение фоновых приложений</h3>
+            <ol>
+                <li>Откройте "Параметры" → "Конфиденциальность и безопасность"</li>
+                <li>В разделе "Фоновые приложения" отключите ненужные</li>
+            </ol>
+
+            <h2>Шаг 8: Настройки для игр и мультимедиа</h2>
+            <h3>Оптимизация для игр</h3>
+            <p>Если ноутбук используется для игр:</p>
+            <ol>
+                <li>Откройте "Параметры графики" в Панели управления NVIDIA/AMD</li>
+                <li>Установите режим максимальной производительности</li>
+                <li>Отключите вертикальную синхронизацию</li>
+            </ol>
+
+            <h3>Настройки звука</h3>
+            <ol>
+                <li>Откройте "Параметры" → "Система" → "Звук"</li>
+                <li>Выберите устройство вывода с низкой задержкой</li>
+            </ol>
+
+            <div class="pro-tips">
+                <h4>Полезные советы для слабых ноутбуков</h4>
+                <div class="tip-item">
+                    <i class="fas fa-lightbulb"></i>
+                    <span>Используйте SSD вместо HDD для значительного ускорения</span>
+                </div>
+                <div class="tip-item">
+                    <i class="fas fa-lightbulb"></i>
+                    <span>Добавьте оперативную память, если возможно</span>
+                </div>
+                <div class="tip-item">
+                    <i class="fas fa-lightbulb"></i>
+                    <span>Регулярно обновляйте драйверы</span>
+                </div>
+                <div class="tip-item">
+                    <i class="fas fa-lightbulb"></i>
+                    <span>Избегайте многозадачности с тяжелыми приложениями</span>
+                </div>
+            </div>
+
+            <h2>Мониторинг производительности</h2>
+            <h3>Использование встроенных инструментов</h3>
+            <ol>
+                <li>Откройте Диспетчер задач (Ctrl + Shift + Esc)</li>
+                <li>Перейдите на вкладку "Производительность"</li>
+                <li>Мониторьте загрузку CPU, памяти и диска</li>
+            </ol>
+
+            <h3>Сторонние программы</h3>
+            <p>Для детального анализа используйте:</p>
+            <ul>
+                <li>HWMonitor для температуры</li>
+                <li>Process Explorer для процессов</li>
+                <li>CrystalDiskInfo для состояния диска</li>
+            </ul>
+
+            <h2>Заключение</h2>
+            <p>Оптимизация Windows 11 на слабом ноутбуке требует системного подхода и регулярного обслуживания. Следуя этому руководству, вы сможете значительно улучшить производительность и комфорт работы. Помните, что каждая система индивидуальна, поэтому тестируйте изменения и корректируйте настройки под свои нужды. Если проблемы persist, рассмотрите возможность апгрейда компонентов или перехода на более легкую ОС.</p>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <p>&copy; 2024 Repairo. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+    <script src="../cookie-consent.js"></script>
+</body>
+</html>

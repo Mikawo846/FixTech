@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ноутбук печатает только тестовую страницу но не печатает из Word | Экспертный мегагайд</title>
+    <meta name="description" content="{{ description }}">
+    <meta name="description" content="Пошаговая инструкция: Ноутбук печатает только тестовую страницу но не печатает из Word — Экспертный мегагайд. Причины проблем с печатью из приложений: настройки принтера, драйверы, конфликты ПО, спулер печати. Решения: перезапуск спулера, переустановка драйверов, проверка подключения.">
+
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="../styles-header.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    .guide-content { line-height: 1.7; color: var(--text); }
+    .guide-content h2 { color: var(--primary); margin-top: 30px; margin-bottom: 15px; font-size: 1.6rem; }
+    .guide-content h3 { color: var(--primary-dark); margin-top: 25px; margin-bottom: 12px; font-size: 1.25rem; }
+    .guide-image-block { margin: 20px 0; padding: 15px; background: var(--background); border-radius: var(--border-radius); border: 1px solid var(--border); text-align: center; }
+    .guide-image-block img { max-width: 100%; height: auto; border-radius: 6px; border: 1px solid var(--border); }
+    .image-caption { margin-top: 10px; font-size: 0.85rem; color: var(--text-light); font-style: italic; }
+    .pro-tips { background: rgba(3, 74, 79, 0.05); padding: 18px; border-radius: 8px; margin: 25px 0; }
+    .pro-tips h4 { color: var(--primary); margin-top: 0; margin-bottom: 12px; font-size: 1.15rem; }
+    .tip-item { display: flex; gap: 10px; margin-bottom: 10px; align-items: flex-start; }
+    .tip-item i { margin-top: 3px; }
+    table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+    th, td { border: 1px solid var(--border); padding: 8px; text-align: left; vertical-align: top; }
+    th { background: var(--background-light); }
+    code { background: var(--background-light); padding: 2px 4px; border-radius: 4px; font-size: 0.9em; }
+    ul, ol { margin-left: 18px; }
+    @media (max-width: 768px) {
+      .guide-content h2 { font-size: 1.4rem; margin-top: 25px; }
+      .guide-content h3 { font-size: 1.15rem; }
+      .guide-image-block { padding: 12px; margin: 15px 0; }
+      table, th, td { font-size: 0.95rem; }
+    }
+
+    /* Яндекс Маркет рекламный баннер */
+    .ym-hero-link {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+      max-width: 100%;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    /* Горизонтальный баннер-карточка */
+    .ym-hero-banner {
+      width: 100%;
+      max-width: 600px;
+      min-height: 140px;
+      border-radius: 16px;
+      background: #ffffff;
+      border: 1px solid #e5e7eb;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 4px 16px rgba(15, 23, 42, 0.08);
+      overflow: hidden;
+      box-sizing: border-box;
+      margin: 40px auto;
+    }
+
+    /* Контейнер для изображений */
+    .ym-hero-images {
+      display: flex;
+      height: 120px;
+      overflow: hidden;
+    }
+
+    .ym-hero-image {
+      flex: 1;
+      min-width: 0;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      border-right: 1px solid #e5e7eb;
+      background: #f8f9fa;
+    }
+
+    .ym-hero-image:last-child {
+      border-right: none;
+    }
+
+    .ym-hero-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      transition: transform 0.3s ease;
+      background: #f8f9fa;
+    }
+
+    .ym-hero-image:hover img {
+      transform: scale(1.02);
+    }
+
+    /* Правая часть: контент */
+    .ym-hero-content {
+      padding: 16px 18px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 8px;
+    }
+
+    /* Название товара */
+    .ym-hero-title {
+      font-size: 14px;
+      font-weight: 600;
+      color: #111827;
+      line-height: 1.3;
+      margin: 0 0 4px 0;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    /* Рейтинг */
+    .ym-hero-rating {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 12px;
+      color: #6b7280;
+    }
+
+    .ym-hero-stars {
+      display: flex;
+      gap: 1px;
+    }
+
+    .ym-hero-star {
+      width: 12px;
+      height: 12px;
+      fill: #fbbf24;
+    }
+
+    .ym-hero-reviews {
+      font-size: 11px;
+      color: #9ca3af;
+    }
+
+    /* Цена */
+    .ym-hero-price {
+      font-size: 16px;
+      font-weight: 700;
+      color: #111827;
+      margin: 0;
+    }
+
+    /* Кнопка */
+    .ym-hero-button {
+      background: #007bff;
+      color: #ffffff;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background 0.2s ease;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .ym-hero-button:hover {
+      background: #0056b3;
+    }
+
+    /* Адаптивность */
+    @media (max-width: 768px) {
+      .ym-hero-banner {
+        flex-direction: row;
+        min-height: auto;
+      }
+
+      .ym-hero-images {
+        width: 120px;
+        height: auto;
+        flex-shrink: 0;
+      }
+
+      .ym-hero-content {
+        flex: 1;
+        padding: 12px 16px;
+      }
+
+      .ym-hero-title {
+        font-size: 13px;
+      }
+
+      .ym-hero-price {
+        font-size: 15px;
+      }
+
+      .ym-hero-button {
+        padding: 6px 10px;
+        font-size: 11px;
+      }
+    }
+
+    /* Скрытый баннер для десктопа */
+    @media (min-width: 769px) {
+      .ym-hero-link {
+        display: none !important;
+      }
+    }
+  </style>
+  <script async src="https://timeweb.cloud/api/v1/cloud-ai/agents/3cc03620-d051-4d8d-b5af-f7b6cd083a35/embed.js?collapsed=true"></script>
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <a href="/" class="logo">
+        <i class="fas fa-tools"></i>
+        FixTech
+      </a>
+      <nav class="nav-links">
+        <a href="/">Главная</a>
+        <a href="/articles">Все статьи</a>
+        <a href="/smartphones">Смартфоны</a>
+        <a href="/laptops">Ноутбуки</a>
+        <a href="/tv">Телевизоры</a>
+        <a href="/cameras">Камеры</a>
+        <a href="/consoles">Консоли</a>
+        <a href="/auto-electronics">Автоэлектроника</a>
+        <a href="/small-appliances">Мелкая техника</a>
+        <a href="/large-appliances">Крупная техника</a>
+      </nav>
+      <div class="search-container">
+        <input type="text" id="search-input" placeholder="Поиск по сайту..." />
+        <button id="search-button"><i class="fas fa-search"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <main class="guide-container">
+    <div class="guide-content">
+      <h1>Ноутбук печатает только тестовую страницу но не печатает из Word</h1>
+      <p>Проблема, когда принтер на ноутбуке печатает тестовую страницу, но отказывается печатать документы из Microsoft Word и других приложений, является распространенной. В этом подробном руководстве мы рассмотрим все возможные причины и предоставим эффективные решения для восстановления нормальной печати.</p>
+
+      <h2>Симптомы проблемы</h2>
+      <ul>
+        <li>Тестовая страница печатается успешно</li>
+        <li>Документы из Word не печатаются</li>
+        <li>Задания печати зависают в очереди</li>
+        <li>Ошибка "Принтер не отвечает" в приложениях</li>
+        <li>Другие программы печатают нормально</li>
+      </ul>
+
+      <h2>Возможные причины</h2>
+      <table>
+        <tr>
+          <th>Причина</th>
+          <th>Вероятность</th>
+          <th>Характерные признаки</th>
+        </tr>
+        <tr>
+          <td>Проблемы со спулером печати</td>
+          <td>40%</td>
+          <td>Задания зависают в очереди</td>
+        </tr>
+        <tr>
+          <td>Несовместимость драйверов</td>
+          <td>25%</td>
+          <td>Работает тест, не работают приложения</td>
+        </tr>
+        <tr>
+          <td>Настройки принтера в Word</td>
+          <td>15%</td>
+          <td>Только Word не печатает</td>
+        </tr>
+        <tr>
+          <td>Поврежденные временные файлы</td>
+          <td>10%</td>
+          <td>Периодические сбои</td>
+        </tr>
+        <tr>
+          <td>Конфликт приложений</td>
+          <td>5%</td>
+          <td>Работает после перезагрузки</td>
+        </tr>
+        <tr>
+          <td>Проблемы с подключением</td>
+          <td>5%</td>
+          <td>Не печатает по сети</td>
+        </tr>
+      </table>
+
+      <h2>Диагностика проблемы</h2>
+      <h3>Проверка очереди печати</h3>
+      <ol>
+        <li>Откройте "Параметры" → "Устройства" → "Принтеры и сканеры"</li>
+        <li>Выберите ваш принтер</li>
+        <li>Нажмите "Открыть очередь"</li>
+        <li>Посмотрите на статус заданий</li>
+      </ol>
+
+      <h3>Тест печати из разных приложений</h3>
+      <ul>
+        <li>Блокнот - обычно работает</li>
+        <li>Word - может не работать</li>
+        <li>Браузер - может работать</li>
+        <li>Paint - обычно работает</li>
+      </ul>
+
+      <h2>Решение 1: Перезапуск спулера печати</h2>
+      <h3>Через службы</h3>
+      <ol>
+        <li>Нажмите Win + R, введите services.msc</li>
+        <li>Найдите "Диспетчер очереди печати"</li>
+        <li>Щелкните правой кнопкой → "Остановить"</li>
+        <li>Подождите 10 секунд</li>
+        <li>Щелкните правой кнопкой → "Запустить"</li>
+      </ol>
+
+      <h3>Через командную строку</h3>
+      <code>
+net stop spooler
+net start spooler
+      </code>
+
+      <h3>Очистка очереди печати</h3>
+      <ol>
+        <li>Остановите службу спулера</li>
+        <li>Откройте папку C:\Windows\System32\spool\PRINTERS</li>
+        <li>Удалите все файлы в папке</li>
+        <li>Запустите службу спулера</li>
+      </ol>
+
+      <h2>Решение 2: Переустановка драйверов принтера</h2>
+      <h3>Удаление и переустановка</h3>
+      <ol>
+        <li>Откройте "Параметры" → "Устройства" → "Принтеры и сканеры"</li>
+        <li>Выберите принтер → "Удалить устройство"</li>
+        <li>Нажмите "Добавить принтер или сканер"</li>
+        <li>Выберите ваш принтер из списка</li>
+      </ol>
+
+      <h3>Обновление драйверов</h3>
+      <ol>
+        <li>В диспетчере устройств найдите ваш принтер</li>
+        <li>Щелкните правой кнопкой → "Обновить драйвер"</li>
+        <li>Выберите автоматический поиск</li>
+        <li>Или скачайте драйверы с сайта производителя</li>
+      </ol>
+
+      <h2>Решение 3: Настройки Microsoft Word</h2>
+      <h3>Сброс настроек печати</h3>
+      <ol>
+        <li>Откройте Word</li>
+        <li>Файл → Параметры → Дополнительно</li>
+        <li>Прокрутите к разделу "Печать"</li>
+        <li>Снимите галочку "Разрешить поля ссылок"</li>
+        <li>Установите "Использовать черновую качество"</li>
+      </ol>
+
+      <h3>Изменение принтера по умолчанию</h3>
+      <ol>
+        <li>В Word: Файл → Печать</li>
+        <li>Выберите другой принтер</li>
+        <li>Печать тестовой страницы</li>
+        <li>Затем вернитесь к основному принтеру</li>
+      </ol>
+
+      <h2>Решение 4: Проверка подключения принтера</h2>
+      <h3>Для USB принтеров</h3>
+      <ol>
+        <li>Отключите USB кабель</li>
+        <li>Подождите 30 секунд</li>
+        <li>Подключите к другому USB порту</li>
+        <li>Протестируйте печать</li>
+      </ol>
+
+      <h3>Для сетевых принтеров</h3>
+      <ol>
+        <li>Проверьте подключение к сети</li>
+        <li>Выполните ping IP-адреса принтера</li>
+        <li>Проверьте настройки порта в свойствах принтера</li>
+      </ol>
+
+      <h2>Решение 5: Очистка временных файлов</h2>
+      <h3>Очистка папки Temp</h3>
+      <code>%temp%</code>
+      <p>Удалите все файлы в папке временных файлов.</p>
+
+      <h3>Очистка кэша Office</h3>
+      <ol>
+        <li>Закройте все приложения Office</li>
+        <li>Откройте Проводник</li>
+        <li>В адресной строке введите:</li>
+      </ol>
+      <code>%LOCALAPPDATA%\Microsoft\Office\16.0\OfficeFileCache</code>
+      <ol start="4">
+        <li>Удалите содержимое папки</li>
+      </ol>
+
+      <h2>Решение 6: Восстановление Office</h2>
+      <h3>Быстрое восстановление</h3>
+      <ol>
+        <li>Откройте "Параметры" → "Приложения"</li>
+        <li>Найдите Microsoft Office</li>
+        <li>Выберите "Изменить" → "Быстрое восстановление"</li>
+      </ol>
+
+      <h3>Переустановка Office</h3>
+      <ol>
+        <li>Удалите Office через "Параметры" → "Приложения"</li>
+        <li>Скачайте и установите Office заново</li>
+        <li>Используйте оффлайн установщик</li>
+      </ol>
+
+      <div class="pro-tips">
+        <h4><i class="fas fa-lightbulb"></i> Профессиональные советы</h4>
+        <div class="tip-item">
+          <i class="fas fa-print"></i>
+          <span>Всегда проверяйте очередь печати перед повторной отправкой документа</span>
+        </div>
+        <div class="tip-item">
+          <i class="fas fa-tools"></i>
+          <span>Создайте ярлык для быстрого перезапуска спулера печати</span>
+        </div>
+        <div class="tip-item">
+          <i class="fas fa-network-wired"></i>
+          <span>Для сетевых принтеров используйте статический IP-адрес</span>
+        </div>
+        <div class="tip-item">
+          <i class="fas fa-file-alt"></i>
+          <span>Сохраняйте документы в PDF перед печатью для тестирования</span>
+        </div>
+      </div>
+
+      <h2>Расширенная диагностика</h2>
+      <h3>Мониторинг событий</h3>
+      <ol>
+        <li>Win + R → eventvwr</li>
+        <li>Журналы приложений и служб → Microsoft → Windows → PrintService</li>
+        <li>Ищите ошибки с Event ID 372, 6161, 808</li>
+      </ol>
+
+      <h3>Тест в безопасном режиме</h3>
+      <ol>
+        <li>Перезагрузите в безопасном режиме</li>
+        <li>Попробуйте напечатать из Word</li>
+        <li>Если работает, проблема в стороннем ПО</li>
+      </ol>
+
+      <h2>Альтернативные решения</h2>
+      <h3>Использование виртуального принтера</h3>
+      <p>Установите PDF принтер (например, Microsoft Print to PDF) и протестируйте:</p>
+      <ul>
+        <li>Если печатает в PDF, проблема в физическом принтере</li>
+        <li>Если не печатает, проблема в приложении</li>
+      </ul>
+
+      <h3>Создание нового профиля пользователя</h3>
+      <ol>
+        <li>Создайте нового пользователя</li>
+        <li>Войдите под новой учетной записью</li>
+        <li>Протестируйте печать из Word</li>
+      </ol>
+
+      <h2>Частые вопросы</h2>
+      <h3>Почему тестовая страница печатается, а документы из Word нет?</h3>
+      <p>Тестовая страница использует прямой доступ к принтеру, минуя спулер и приложения. Если она печатается, принтер исправен, проблема в программном обеспечении.</p>
+
+      <h3>Можно ли печатать без перезагрузки спулера каждый раз?</h3>
+      <p>Да, если проблема решена одним из способов выше. Если проблема повторяется, нужно найти основную причину.</p>
+
+      <h3>Что делать, если проблема только с Word?</h3>
+      <p>Сбросьте настройки Office или переустановите программу. Проверьте наличие обновлений для Office.</p>
+
+      <h2>Если ничего не помогает</h2>
+      <ul>
+        <li>Выполните чистую загрузку Windows</li>
+        <li>Восстановите систему из точки восстановления</li>
+        <li>Обратитесь в сервисный центр</li>
+        <li>Замените принтер или картриджи</li>
+      </ul>
+
+      <p>В большинстве случаев проблема решается перезапуском спулера печати или переустановкой драйверов. Начните с простых решений и постепенно переходите к более сложным.</p>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2024 FixTech. Все права защищены.</p>
+      <div class="footer-links">
+        <a href="/privacy">Конфиденциальность</a>
+        <a href="/terms">Условия использования</a>
+        <a href="/contact">Контакты</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+  <script src="../search.js"></script>
+</body>
+</html>

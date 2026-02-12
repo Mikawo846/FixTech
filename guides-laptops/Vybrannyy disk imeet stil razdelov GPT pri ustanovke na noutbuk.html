@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Выбранный диск имеет стиль разделов GPT при установке на ноутбуке | Решение проблемы</title>
+    <meta name="description" content="{{ description }}">
+    <meta name="description" content="Выбранный диск имеет стиль разделов GPT при установке на ноутбуке. Причины GPT стиля разделов и способы исправления проблем с установкой Windows на ноутбуке.">
+
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="../styles-header.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    .guide-content { line-height: 1.7; color: var(--text); }
+    .guide-content h2 { color: var(--primary); margin-top: 30px; margin-bottom: 15px; font-size: 1.5rem; }
+    .guide-content h3 { color: var(--primary-dark); margin-top: 25px; margin-bottom: 12px; font-size: 1.2rem; }
+    .guide-image-block { margin: 20px 0; padding: 15px; background: var(--background); border-radius: var(--border-radius); border: 1px solid var(--border); text-align: center; }
+    .guide-image-block img { max-width: 100%; height: auto; border-radius: 6px; border: 1px solid var(--border); }
+    .image-caption { margin-top: 10px; font-size: 0.85rem; color: var(--text-light); font-style: italic; }
+    .pro-tips { background: rgba(3, 74, 79, 0.05); padding: 15px; border-radius: 6px; margin: 20px 0; }
+    .pro-tips h4 { color: var(--primary); margin-top: 0; margin-bottom: 12px; font-size: 1.1rem; }
+    .tip-item { display: flex; gap: 8px; margin-bottom: 8px; align-items: flex-start; }
+    table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+    th, td { border: 1px solid var(--border); padding: 8px; text-align: left; }
+    th { background: var(--background-light); }
+    @media (max-width: 768px) {
+      .guide-content h2 { font-size: 1.4rem; margin-top: 25px; }
+      .guide-image-block { padding: 12px; margin: 15px 0; }
+      table, th, td { font-size: 0.95rem; }
+    }
+  </style>
+
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <a href="../index.html" class="logo">
+                    <span class="logo__icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 15L7 10H17L12 15Z" fill="currentColor"/>
+                            <path d="M12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3ZM12 19C8.13401 19 5 15.866 5 12C5 8.13401 8.13401 5 12 5C15.866 5 19 8.13401 19 12C19 15.866 15.866 19 12 19Z" fill="currentColor"/>
+                        </svg>
+                    </span>
+                    <span class="logo__text">Repairo</span>
+                </a>
+                <nav class="nav">
+                    <ul class="nav__list">
+                       <li><a href="../tv.html" class="nav__link">Телевизоры</a></li>
+                        <li><a href="../auto-electronics.html" class="nav__link">Автоэлектроника</a></li>
+                        <li><a href="../consoles.html" class="nav__link">Приставки</a></li>
+                        <li><a href="../laptops.html" class="nav__link">Ноутбуки</a></li>
+                        <li><a href="../smartphones.html" class="nav__link">Смартфоны</a></li>
+                        <li><a href="../index.html#categories" class="nav__link">Все категории</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="guide-content">
+            <h1>Выбранный диск имеет стиль разделов GPT при установке на ноутбуке</h1>
+            <p>Сообщение "Выбранный диск имеет стиль разделов GPT" при установке Windows указывает на использование GPT таблицы разделов. В этом подробном руководстве мы разберем причины этого сообщения и эффективные способы его исправления для ноутбуков.</p>
+
+            <h2>Что означает GPT стиль разделов</h2>
+            <p>GPT (GUID Partition Table) - современный стандарт разметки дисков, заменяющий MBR.</p>
+            <h3>Техническое объяснение</h3>
+            <ul>
+                <li><strong>GPT:</strong> GUID Partition Table - таблица разделов GUID</li>
+                <li><strong>MBR:</strong> Master Boot Record - устаревший стандарт</li>
+                <li><strong>Преимущества GPT:</strong> Поддержка больших дисков, больше разделов</li>
+                <li><strong>Совместимость:</strong> Требует UEFI режима загрузки</li>
+            </ul>
+
+            <h3>Влияние на установку</h3>
+            <ul>
+                <li>Windows 11 требует GPT для установки</li>
+                <li>MBR диски могут вызвать проблемы</li>
+                <li>Необходим UEFI режим</li>
+                <li>Совместимость с Legacy BIOS</li>
+            </ul>
+
+            <h2>Распространенные причины</h2>
+            <p>Почему появляется сообщение о GPT стиле разделов.</p>
+            <h3>Диск уже разбит на GPT</h3>
+            <ul>
+                <li><strong>Современные диски:</strong> Новые диски часто поставляются с GPT</li>
+                <li><strong>Предыдущая установка:</strong> Windows 11 уже установлена с GPT</li>
+                <li><strong>Другие ОС:</strong> Linux или macOS используют GPT</li>
+                <li><strong>Внешние диски:</strong> USB диски часто имеют GPT</li>
+            </ul>
+
+            <h3>Проблемы с установкой</h3>
+            <ul>
+                <li><strong>Legacy режим:</strong> Загрузка в BIOS режиме</li>
+                <li><strong>CSM включен:</strong> Compatibility Support Module</li>
+                <li><strong>Старый установщик:</strong> Использование старой версии Windows</li>
+                <li><strong>Поврежденная таблица:</strong> Ошибки в таблице разделов</li>
+            </ul>
+
+            <h3>Аппаратные проблемы</h3>
+            <ul>
+                <li><strong>BIOS настройки:</strong> Неправильные параметры</li>
+                <li><strong>Диск поврежден:</strong> Физические дефекты</li>
+                <li><strong>Несовместимость:</strong> Диск не поддерживает GPT</li>
+                <li><strong>Контроллер:</strong> Проблемы с SATA контроллером</li>
+            </ul>
+
+            <h2>Диагностика проблемы</h2>
+            <p>Как определить стиль разделов диска.</p>
+            <h3>Проверка в установщике Windows</h3>
+            <h4>Во время установки</h4>
+            <ol>
+                <li>Загрузитесь с установочной флешки</li>
+                <li>Выберите язык и нажмите "Далее"</li>
+                <li>Выберите "Установка" → "Пользовательская"</li>
+                <li>Посмотрите на разделы диска</li>
+                <li>GPT диски показывают EFI раздел</li>
+            </ol>
+
+            <h4>Проверка в командной строке</h4>
+            <ol>
+                <li>В установщике нажмите Shift + F10</li>
+                <li>Введите: diskpart</li>
+                <li>list disk</li>
+                <li>Посмотрите столбец "Gpt" - * означает GPT</li>
+            </ol>
+
+            <h3>Проверка BIOS</h3>
+            <ol>
+                <li>Перезагрузите ноутбук</li>
+                <li>Войдите в BIOS (Del, F2 или F10)</li>
+                <li>Проверьте режим загрузки: UEFI или Legacy</li>
+                <li>Проверьте статус Secure Boot</li>
+                <li>Проверьте порядок загрузки</li>
+            </ol>
+
+            <h2>Решение проблемы</h2>
+            <p>Методы исправления проблемы с GPT стилем разделов.</p>
+            <h3>Метод 1: Включение UEFI режима</h3>
+            <h4>Настройки BIOS</h4>
+            <ol>
+                <li>Войдите в BIOS</li>
+                <li>Найдите раздел Boot</li>
+                <li>Включите UEFI режим (отключите Legacy/CSM)</li>
+                <li>Включите Secure Boot</li>
+                <li>Сохраните изменения</li>
+            </ol>
+
+            <h3>Метод 2: Конвертация диска</h3>
+            <h4>Из MBR в GPT</h4>
+            <ol>
+                <li>Создайте резервную копию данных</li>
+                <li>Загрузитесь с установочной флешки</li>
+                <li>Нажмите Shift + F10 для командной строки</li>
+                <li>Введите: diskpart</li>
+                <li>list disk</li>
+                <li>select disk X (номер диска)</li>
+                <li>clean</li>
+                <li>convert gpt</li>
+                <li>create partition efi size=100</li>
+                <li>format quick fs=fat32 label="EFI"</li>
+                <li>create partition primary</li>
+                <li>format quick fs=ntfs label="Windows"</li>
+                <li>exit</li>
+            </ol>
+
+            <h3>Метод 3: Чистая установка</h3>
+            <h4>Удаление всех разделов</h4>
+            <ol>
+                <li>Загрузитесь с установочной флешки</li>
+                <li>Выберите "Установка" → "Пользовательская"</li>
+                <li>Удалите все разделы на системном диске</li>
+                <li>Windows автоматически создаст GPT разделы</li>
+                <li>Установите Windows</li>
+            </ol>
+
+            <h3>Метод 4: Использование MBR2GPT</h3>
+            <h4>Инструмент Microsoft</h4>
+            <ol>
+                <li>Загрузитесь в существующую Windows</li>
+                <li>Откройте командную строку от имени администратора</li>
+                <li>Введите: mbr2gpt /validate /disk:X</li>
+                <li>Если валидация прошла: mbr2gpt /convert /disk:X</li>
+                <li>Перезагрузите систему</li>
+            </ol>
+
+            <h3>Метод 5: Проверка диска</h3>
+            <h4>CHKDSK</h4>
+            <ol>
+                <li>Загрузитесь с флешки</li>
+                <li>Нажмите Shift + F10</li>
+                <li>Введите: chkdsk C: /f /r</li>
+                <li>Дождитесь завершения</li>
+                <li>Попробуйте установить Windows</li>
+            </ol>
+
+            <h2>Специфические случаи</h2>
+            <p>Решения для распространенных сценариев.</p>
+            <h3>Ошибка на старом ноутбуке</h3>
+            <ul>
+                <li>Проверьте поддержку UEFI в BIOS</li>
+                <li>Обновите BIOS до последней версии</li>
+                <li>Рассмотрите замену диска</li>
+                <li>Установите Windows 10 вместо 11</li>
+            </ul>
+
+            <h3>Ошибка с внешним диском</h3>
+            <ul>
+                <li>Внешние диски часто имеют GPT</li>
+                <li>Попробуйте другой USB порт</li>
+                <li>Протестируйте на другом компьютере</li>
+                <li>Форматируйте диск при необходимости</li>
+            </ul>
+
+            <h3>Ошибка после конвертации</h3>
+            <ul>
+                <li>Проверьте правильность конвертации</li>
+                <li>Удалите все разделы и создайте заново</li>
+                <li>Используйте diskpart для создания разделов</li>
+                <li>Попробуйте чистую установку</li>
+            </ul>
+
+            <h2>Профилактика</h2>
+            <p>Как избежать проблем с GPT стилем разделов.</p>
+            <h3>Подготовка диска</h3>
+            <ul>
+                <li><strong>Резервные копии:</strong> Сохраните важные данные</li>
+                <li><strong>Проверка BIOS:</strong> Убедитесь в UEFI режиме</li>
+                <li><strong>Чистая установка:</strong> Удалите все разделы перед установкой</li>
+                <li><strong>Современные диски:</strong> Используйте диски с GPT</li>
+            </ul>
+
+            <h3>Безопасность установки</h3>
+            <ul>
+                <li>Загружайте Windows только с официального сайта</li>
+                <li>Проверяйте совместимость оборудования</li>
+                <li>Обновляйте BIOS перед установкой</li>
+                <li>Следите за настройками загрузки</li>
+            </ul>
+
+            <div class="pro-tips">
+                <h4>Полезные советы</h4>
+                <div class="tip-item">
+                    <i class="fas fa-lightbulb"></i>
+                    <span>GPT - современный стандарт для новых дисков</span>
+                </div>
+                <div class="tip-item">
+                    <i class="fas fa-lightbulb"></i>
+                    <span>Windows 11 требует UEFI и GPT для установки</span>
+                </div>
+                <div class="tip-item">
+                    <i class="fas fa-lightbulb"></i>
+                    <span>Всегда делайте резервные копии перед изменением разделов</span>
+                </div>
+                <div class="tip-item">
+                    <i class="fas fa-lightbulb"></i>
+                    <span>Если диск старый, рассмотрите его замену</span>
+                </div>
+            </div>
+
+            <h2>Когда нужна помощь специалиста</h2>
+            <p>Признаки серьезных проблем.</p>
+            <h3>Критические случаи</h3>
+            <ul>
+                <li>BIOS не поддерживает UEFI</li>
+                <li>Диск физически поврежден</li>
+                <li>Потеря данных после конвертации</li>
+                <li>Необходима замена оборудования</li>
+            </ul>
+
+            <h3>Что проверить в сервисе</h3>
+            <ul>
+                <li>Совместимость оборудования</li>
+                <li>Настройки BIOS</li>
+                <li>Целостность диска</li>
+                <li>Возможность восстановления данных</li>
+            </ul>
+
+            <h2>Заключение</h2>
+            <p>Сообщение "Выбранный диск имеет стиль разделов GPT" обычно указывает на то, что диск правильно подготовлен для Windows 11. Если установка не проходит, проверьте настройки BIOS и режим загрузки. В большинстве случаев проблема решается включением UEFI режима. Начните с проверки BIOS, затем переходите к чистой установке. Если самостоятельные попытки не увенчались успехом, обратитесь к специалистам для профессиональной помощи.</p>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <p>&copy; 2024 Repairo. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+    <script src="../cookie-consent.js"></script>
+</body>
+</html>

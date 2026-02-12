@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>WiFi на ноутбуке работает только при подключенной зарядке | Экспертный мегагайд</title>
+    <meta name="description" content="{{ description }}">
+    <meta name="description" content="Пошаговая инструкция: WiFi на ноутбуке работает только при подключенной зарядке — Экспертный мегагайд. Причины: энергосбережение, настройки питания, драйверы. Решения: отключение экономии, обновление драйверов, сброс настроек, замена адаптера.">
+
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="../styles-header.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    .guide-content { line-height: 1.7; color: var(--text); }
+    .guide-content h2 { color: var(--primary); margin-top: 30px; margin-bottom: 15px; font-size: 1.6rem; }
+    .guide-content h3 { color: var(--primary-dark); margin-top: 25px; margin-bottom: 12px; font-size: 1.25rem; }
+    .guide-image-block { margin: 20px 0; padding: 15px; background: var(--background); border-radius: var(--border-radius); border: 1px solid var(--border); text-align: center; }
+    .guide-image-block img { max-width: 100%; height: auto; border-radius: 6px; border: 1px solid var(--border); }
+    .image-caption { margin-top: 10px; font-size: 0.85rem; color: var(--text-light); font-style: italic; }
+    .pro-tips { background: rgba(3, 74, 79, 0.05); padding: 18px; border-radius: 8px; margin: 25px 0; }
+    .pro-tips h4 { color: var(--primary); margin-top: 0; margin-bottom: 12px; font-size: 1.15rem; }
+    .tip-item { display: flex; gap: 10px; margin-bottom: 10px; align-items: flex-start; }
+    .tip-item i { margin-top: 3px; }
+    table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+    th, td { border: 1px solid var(--border); padding: 8px; text-align: left; vertical-align: top; }
+    th { background: var(--background-light); }
+    code { background: var(--background-light); padding: 2px 4px; border-radius: 4px; font-size: 0.9em; }
+    ul, ol { margin-left: 18px; }
+    @media (max-width: 768px) {
+      .guide-content h2 { font-size: 1.4rem; margin-top: 25px; }
+      .guide-content h3 { font-size: 1.15rem; }
+      .guide-image-block { padding: 12px; margin: 15px 0; }
+      table, th, td { font-size: 0.95rem; }
+    }
+
+    /* Яндекс Маркет рекламный баннер */
+    .ym-hero-link {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+      max-width: 100%;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    /* Горизонтальный баннер-карточка */
+    .ym-hero-banner {
+      width: 100%;
+      max-width: 600px;
+      min-height: 140px;
+      border-radius: 16px;
+      background: #ffffff;
+      border: 1px solid #e5e7eb;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 4px 16px rgba(15, 23, 42, 0.08);
+      overflow: hidden;
+      box-sizing: border-box;
+      margin: 40px auto;
+    }
+
+    /* Контейнер для изображений */
+    .ym-hero-images {
+      display: flex;
+      height: 120px;
+      overflow: hidden;
+    }
+
+    .ym-hero-image {
+      flex: 1;
+      min-width: 0;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      border-right: 1px solid #e5e7eb;
+      background: #f8f9fa;
+    }
+
+    .ym-hero-image:last-child {
+      border-right: none;
+    }
+
+    .ym-hero-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      transition: transform 0.3s ease;
+      background: #f8f9fa;
+    }
+
+    .ym-hero-image:hover img {
+      transform: scale(1.02);
+    }
+
+    /* Правая часть: контент */
+    .ym-hero-content {
+      padding: 16px 18px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 8px;
+    }
+
+    /* Название товара */
+    .ym-hero-title {
+      font-size: 14px;
+      font-weight: 600;
+      color: #111827;
+      line-height: 1.3;
+      margin: 0 0 4px 0;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    /* Рейтинг */
+    .ym-hero-rating {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 12px;
+      color: #6b7280;
+    }
+
+    .ym-hero-stars {
+      display: flex;
+      gap: 1px;
+    }
+
+    .ym-hero-star {
+      width: 12px;
+      height: 12px;
+      fill: #fbbf24;
+    }
+
+    .ym-hero-reviews {
+      font-size: 11px;
+      color: #9ca3af;
+    }
+
+    /* Цена */
+    .ym-hero-price {
+      font-size: 16px;
+      font-weight: 700;
+      color: #111827;
+      margin: 0;
+    }
+
+    /* Кнопка */
+    .ym-hero-button {
+      background: #007bff;
+      color: #ffffff;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background 0.2s ease;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .ym-hero-button:hover {
+      background: #0056b3;
+    }
+
+    /* Адаптивность */
+    @media (max-width: 768px) {
+      .ym-hero-banner {
+        flex-direction: row;
+        min-height: auto;
+      }
+
+      .ym-hero-images {
+        width: 120px;
+        height: auto;
+        flex-shrink: 0;
+      }
+
+      .ym-hero-content {
+        flex: 1;
+        padding: 12px 16px;
+      }
+
+      .ym-hero-title {
+        font-size: 13px;
+      }
+
+      .ym-hero-price {
+        font-size: 15px;
+      }
+
+      .ym-hero-button {
+        padding: 6px 10px;
+        font-size: 11px;
+      }
+    }
+
+    /* Скрытый баннер для десктопа */
+    @media (min-width: 769px) {
+      .ym-hero-link {
+        display: none !important;
+      }
+    }
+  </style>
+  <script async src="https://timeweb.cloud/api/v1/cloud-ai/agents/3cc03620-d051-4d8d-b5af-f7b6cd083a35/embed.js?collapsed=true"></script>
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <a href="/" class="logo">
+        <i class="fas fa-tools"></i>
+        FixTech
+      </a>
+      <nav class="nav-links">
+        <a href="/">Главная</a>
+        <a href="/articles">Все статьи</a>
+        <a href="/smartphones">Смартфоны</a>
+        <a href="/laptops">Ноутбуки</a>
+        <a href="/tv">Телевизоры</a>
+        <a href="/cameras">Камеры</a>
+        <a href="/consoles">Консоли</a>
+        <a href="/auto-electronics">Автоэлектроника</a>
+        <a href="/small-appliances">Мелкая техника</a>
+        <a href="/large-appliances">Крупная техника</a>
+      </nav>
+      <div class="search-container">
+        <input type="text" id="search-input" placeholder="Поиск по сайту..." />
+        <button id="search-button"><i class="fas fa-search"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <main class="guide-container">
+    <div class="guide-content">
+      <h1>WiFi на ноутбуке работает только при подключенной зарядке</h1>
+      <p>Когда WiFi на ноутбуке функционирует только при подключенном зарядном устройстве, это указывает на проблему с энергосбережением или питанием адаптера. В этом экспертном мегагайде мы рассмотрим все причины такой зависимости и предоставим эффективные решения для восстановления нормальной работы WiFi.</p>
+
+      <h2>Признаки проблемы</h2>
+      <ul>
+        <li>WiFi работает только от сети</li>
+        <li>На батарее WiFi отключается</li>
+        <li>Интернет работает, но скорость низкая на батарее</li>
+        <li>Адаптер WiFi потребляет много энергии</li>
+        <li>Проблема появилась после обновления</li>
+      </ul>
+
+      <h2>Основные причины</h2>
+      <table>
+        <tr>
+          <th>Причина</th>
+          <th>Вероятность</th>
+          <th>Характерные признаки</th>
+        </tr>
+        <tr>
+          <td>Энергосбережение WiFi</td>
+          <td>50%</td>
+          <td>Работает после отключения экономии</td>
+        </tr>
+        <tr>
+          <td>Драйверы WiFi адаптера</td>
+          <td>25%</td>
+          <td>Работает после обновления драйверов</td>
+        </tr>
+        <tr>
+          <td>Настройки плана питания</td>
+          <td>15%</td>
+          <td>Работает при изменении плана</td>
+        </tr>
+        <tr>
+          <td>Поврежденная батарея</td>
+          <td>5%</td>
+          <td>Батарея быстро разряжается</td>
+        </tr>
+        <tr>
+          <td>BIOS настройки</td>
+          <td>3%</td>
+          <td>Не работает после сброса BIOS</td>
+        </tr>
+        <tr>
+          <td>Аппаратная неисправность</td>
+          <td>2%</td>
+          <td>Не решается программно</td>
+        </tr>
+      </table>
+
+      <h2>Диагностика проблемы</h2>
+      <h3>Проверка состояния батареи</h3>
+      <ol>
+        <li>Посмотрите индикатор батареи на панели задач</li>
+        <li>Проверьте статус зарядки</li>
+        <li>Если батарея повреждена, замените ее</li>
+      </ol>
+
+      <h3>Тестирование в разных режимах</h3>
+      <ol>
+        <li>Отключите зарядку - проверьте WiFi</li>
+        <li>Подключите зарядку - проверьте WiFi</li>
+        <li>Если работает только от сети, проблема в энергосбережении</li>
+      </ol>
+
+      <h2>Решение 1: Отключение энергосбережения WiFi</h2>
+      <h3>В диспетчере устройств</h3>
+      <ol>
+        <li>Диспетчер устройств → Сетевые адаптеры</li>
+        <li>Найдите WiFi адаптер → Свойства</li>
+        <li>Вкладка "Управление электропитанием"</li>
+        <li>Снимите галочку "Разрешить отключение для экономии энергии"</li>
+      </ol>
+
+      <h3>В настройках адаптера</h3>
+      <ol>
+        <li>Вкладка "Дополнительно" в свойствах адаптера</li>
+        <li>Найдите "Power Save Mode" или "Энергосбережение"</li>
+        <li>Установите "Максимальная производительность" или "Отключено"</li>
+      </ol>
+
+      <h2>Решение 2: Изменение плана питания</h2>
+      <h3>Создание пользовательского плана</h3>
+      <ol>
+        <li>Панель управления → Электропитание</li>
+        <li>Создать план питания</li>
+        <li>Выберите "Высокая производительность"</li>
+        <li>Измените дополнительные параметры</li>
+      </ol>
+
+      <h3>Настройки для беспроводного адаптера</h3>
+      <ol>
+        <li>В плане питания → Изменить дополнительные параметры</li>
+        <li>Беспроводной адаптер → Режим энергосбережения</li>
+        <li>Установите "Максимальная производительность"</li>
+      </ol>
+
+      <h2>Решение 3: Обновление драйверов</h2>
+      <h3>Обновление через диспетчер устройств</h3>
+      <ol>
+        <li>Диспетчер устройств → Сетевые адаптеры</li>
+        <li>WiFi адаптер → Обновить драйвер</li>
+        <li>Автоматический поиск обновленных драйверов</li>
+      </ol>
+
+      <h3>Ручная установка драйверов</h3>
+      <ol>
+        <li>Определите модель WiFi адаптера</li>
+        <li>Скачайте драйверы с сайта производителя ноутбука</li>
+        <li>Установите драйверы с опцией "Максимальная производительность"</li>
+      </ol>
+
+      <h2>Решение 4: Настройки в BIOS</h2>
+      <h3>Включение WiFi в BIOS</h3>
+      <ol>
+        <li>Перезагрузите ноутбук и войдите в BIOS</li>
+        <li>Найдите раздел Wireless или Network</li>
+        <li>Убедитесь, что WiFi включен</li>
+        <li>Отключите любые энергосберегающие опции для WiFi</li>
+        <li>Сохраните изменения</li>
+      </ol>
+
+      <h3>Сброс BIOS</h3>
+      <ol>
+        <li>В BIOS найдите опцию сброса</li>
+        <li>Восстановите заводские настройки</li>
+        <li>Сохраните и выйдите</li>
+      </ol>
+
+      <h2>Решение 5: Сброс сетевых настроек</h2>
+      <h3>Сброс TCP/IP</h3>
+      <code>
+netsh int ip reset
+netsh winsock reset
+      </code>
+
+      <h3>Восстановление сетевых настроек</h3>
+      <code>ipconfig /release && ipconfig /renew</code>
+
+      <h2>Решение 6: Проверка батареи</h2>
+      <h3>Калибровка батареи</h3>
+      <ol>
+        <li>Полностью зарядите батарею</li>
+        <li>Отключите зарядку и работайте до выключения</li>
+        <li>Зарядите батарею без использования</li>
+        <li>Повторите 2-3 раза</li>
+      </ol>
+
+      <h3>Тестирование батареи</h3>
+      <ol>
+        <li>Используйте программу BatteryInfoView</li>
+        <li>Проверьте состояние батареи</li>
+        <li>Если батарея повреждена, замените</li>
+      </ol>
+
+      <div class="pro-tips">
+        <h4><i class="fas fa-lightbulb"></i> Профессиональные советы</h4>
+        <div class="tip-item">
+          <i class="fas fa-battery-half"></i>
+          <span>Регулярно калибруйте батарею для поддержания ее работоспособности</span>
+        </div>
+        <div class="tip-item">
+          <i class="fas fa-plug"></i>
+          <span>Используйте оригинальное зарядное устройство для стабильного питания</span>
+        </div>
+        <div class="tip-item">
+          <i class="fas fa-wifi"></i>
+          <span>Отключайте энергосбережение WiFi для постоянной максимальной производительности</span>
+        </div>
+        <div class="tip-item">
+          <i class="fas fa-tools"></i>
+          <span>Мониторьте температуру ноутбука - перегрев может вызывать отключения</span>
+        </div>
+      </div>
+
+      <h2>Расширенные решения</h2>
+      <h3>Восстановление системы</h3>
+      <ol>
+        <li>Win + R → rstrui</li>
+        <li>Выберите точку восстановления</li>
+        <li>Восстановите систему</li>
+      </ol>
+
+      <h3>Чистая загрузка Windows</h3>
+      <ol>
+        <li>msconfig → вкладка "Службы"</li>
+        <li>"Не загружать службы Майкрософт"</li>
+        <li>Вкладка "Автозагрузка" → "Отключить все"</li>
+        <li>Перезагрузите и протестируйте</li>
+      </ol>
+
+      <h3>Использование внешнего WiFi адаптера</h3>
+      <p>Если встроенный адаптер неисправен:</p>
+      <ul>
+        <li>Купите USB WiFi адаптер</li>
+        <li>Установите драйверы</li>
+        <li>Отключите встроенный адаптер</li>
+      </ul>
+
+      <h2>Частые вопросы</h2>
+      <h3>Почему WiFi работает только от сети?</h3>
+      <p>Ноутбук ограничивает энергопотребление на батарее для экономии заряда. WiFi адаптер может отключаться для сохранения энергии.</p>
+
+      <h3>Можно ли отключить энергосбережение WiFi навсегда?</h3>
+      <p>Да, изменив настройки плана питания и адаптера. Но это сократит время работы от батареи.</p>
+
+      <h3>Что делать, если батарея быстро разряжается?</h3>
+      <p>Проверьте состояние батареи и замените ее, если необходимо. Также отключите неиспользуемые устройства.</p>
+
+      <h2>Когда нужна замена оборудования</h2>
+      <ul>
+        <li>Батарея полностью разряжена и не заряжается</li>
+        <li>WiFi адаптер не работает даже от сети</li>
+        <li>Ноутбук перегревается при работе</li>
+        <li>Все решения не помогли</li>
+      </ul>
+
+      <p>В большинстве случаев проблема решается отключением энергосбережения WiFi. Начните с проверки настроек плана питания и драйверов адаптера.</p>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2024 FixTech. Все права защищены.</p>
+      <div class="footer-links">
+        <a href="/privacy">Конфиденциальность</a>
+        <a href="/terms">Условия использования</a>
+        <a href="/contact">Контакты</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+  <script src="../search.js"></script>
+</body>
+</html>

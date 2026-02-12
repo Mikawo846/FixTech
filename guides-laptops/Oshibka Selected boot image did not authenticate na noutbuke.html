@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ошибка Selected boot image did not authenticate на ноутбуке | Решение проблемы</title>
+    <meta name="description" content="{{ description }}">
+    <meta name="description" content="Ошибка Selected boot image did not authenticate на ноутбуке. Причины ошибки аутентификации загрузочного образа и способы исправления проблем с загрузкой на ноутбуке.">
+
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="../styles-header.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    .guide-content { line-height: 1.7; color: var(--text); }
+    .guide-content h2 { color: var(--primary); margin-top: 30px; margin-bottom: 15px; font-size: 1.5rem; }
+    .guide-content h3 { color: var(--primary-dark); margin-top: 25px; margin-bottom: 12px; font-size: 1.2rem; }
+    .guide-image-block { margin: 20px 0; padding: 15px; background: var(--background); border-radius: var(--border-radius); border: 1px solid var(--border); text-align: center; }
+    .guide-image-block img { max-width: 100%; height: auto; border-radius: 6px; border: 1px solid var(--border); }
+    .image-caption { margin-top: 10px; font-size: 0.85rem; color: var(--text-light); font-style: italic; }
+    .pro-tips { background: rgba(3, 74, 79, 0.05); padding: 15px; border-radius: 6px; margin: 20px 0; }
+    .pro-tips h4 { color: var(--primary); margin-top: 0; margin-bottom: 12px; font-size: 1.1rem; }
+    .tip-item { display: flex; gap: 8px; margin-bottom: 8px; align-items: flex-start; }
+    table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+    th, td { border: 1px solid var(--border); padding: 8px; text-align: left; }
+    th { background: var(--background-light); }
+    @media (max-width: 768px) {
+      .guide-content h2 { font-size: 1.4rem; margin-top: 25px; }
+      .guide-image-block { padding: 12px; margin: 15px 0; }
+      table, th, td { font-size: 0.95rem; }
+    }
+  </style>
+
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <a href="../index.html" class="logo">
+                    <span class="logo__icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 15L7 10H17L12 15Z" fill="currentColor"/>
+                            <path d="M12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3ZM12 19C8.13401 19 5 15.866 5 12C5 8.13401 8.13401 5 12 5C15.866 5 19 8.13401 19 12C19 15.866 15.866 19 12 19Z" fill="currentColor"/>
+                        </svg>
+                    </span>
+                    <span class="logo__text">Repairo</span>
+                </a>
+                <nav class="nav">
+                    <ul class="nav__list">
+                       <li><a href="../tv.html" class="nav__link">Телевизоры</a></li>
+                        <li><a href="../auto-electronics.html" class="nav__link">Автоэлектроника</a></li>
+                        <li><a href="../consoles.html" class="nav__link">Приставки</a></li>
+                        <li><a href="../laptops.html" class="nav__link">Ноутбуки</a></li>
+                        <li><a href="../smartphones.html" class="nav__link">Смартфоны</a></li>
+                        <li><a href="../index.html#categories" class="nav__link">Все категории</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="guide-content">
+            <h1>Ошибка Selected boot image did not authenticate на ноутбуке</h1>
+            <p>Ошибка "Selected boot image did not authenticate" при загрузке ноутбука указывает на проблемы с аутентификацией загрузочного образа. В этом подробном руководстве мы разберем причины этой ошибки и эффективные способы ее исправления.</p>
+
+            <h2>Что означает ошибка аутентификации</h2>
+            <p>Windows не может проверить подлинность загрузочного образа.</p>
+            <h3>Техническое объяснение</h3>
+            <ul>
+                <li><strong>Причина:</strong> Проблемы с цифровой подписью или Secure Boot</li>
+                <li><strong>Влияние:</strong> Блокировка загрузки</li>
+                <li><strong>Часто связано:</strong> С UEFI и Secure Boot</li>
+                <li><strong>Результат:</strong> Система не загружается</li>
+            </ul>
+
+            <h3>Влияние на систему</h3>
+            <ul>
+                <li>Не удается загрузить Windows</li>
+                <li>Застревание на экране с ошибкой</li>
+                <li>Необходимость изменения настроек BIOS</li>
+                <li>Потеря доступа к системе</li>
+            </ul>
+
+            <h2>Распространенные причины</h2>
+            <p>Почему возникает ошибка аутентификации загрузочного образа.</p>
+            <h3>Настройки Secure Boot</h3>
+            <ul>
+                <li><strong>Отключен Secure Boot:</strong> Для не подписанных загрузчиков</li>
+                <li><strong>Поврежденная подпись:</strong> Файлы загрузчика повреждены</li>
+                <li><strong>UEFI настройки:</strong> Неправильный режим загрузки</li>
+                <li><strong>Обновления BIOS:</strong> После обновления прошивки</li>
+            </ul>
+
+            <h3>Повреждение файлов</h3>
+            <ul>
+                <li><strong>Загрузчик:</strong> Поврежден winload.efi</li>
+                <li><strong>BCD:</strong> Ошибки в конфигурации загрузки</li>
+                <li><strong>EFI раздел:</strong> Поврежденный раздел</li>
+                <li><strong>Вирусы:</strong> Вредоносное ПО повредило файлы</li>
+            </ul>
+
+            <h3>Аппаратные проблемы</h3>
+            <ul>
+                <li><strong>Поврежденный диск:</strong> Физические дефекты</li>
+                <li><strong>BIOS сброс:</strong> Настройки сброшены</li>
+                <li><strong>Перегрев:</strong> Повреждение от температуры</li>
+                <li><strong>Замена оборудования:</strong> После замены компонентов</li>
+            </ul>
+
+            <h2>Диагностика ошибки</h2>
+            <p>Как определить причину ошибки аутентификации.</p>
+            <h3>Проверка Secure Boot</h3>
+            <h4>BIOS настройки</h4>
+            <ol>
+                <li>Войдите в BIOS</li>
+                <li>Найдите раздел Security или Boot</li>
+                <li>Проверьте статус Secure Boot</li>
+                <li>Если включен, попробуйте отключить</li>
+            </ol>
+
+            <h4>Режим загрузки</h4>
+            <ol>
+                <li>В BIOS посмотрите на режим загрузки</li>
+                <li>Должен быть UEFI</li>
+                <li>Если Legacy, измените на UEFI</li>
+                <li>Сохраните изменения</li>
+            </ol>
+
+            <h3>Проверка файлов</h3>
+            <ol>
+                <li>Загрузитесь с установочной флешки</li>
+                <li>Выберите "Восстановление системы" → "Командная строка"</li>
+                <li>Введите: bootrec /fixmbr</li>
+                <li>bootrec /fixboot</li>
+                <li>bootrec /rebuildbcd</li>
+            </ol>
+
+            <h2>Решение проблемы</h2>
+            <p>Методы исправления ошибки аутентификации.</p>
+            <h3>Метод 1: Отключение Secure Boot</h3>
+            <h4>BIOS настройки</h4>
+            <ol>
+                <li>Перезагрузите ноутбук</li>
+                <li>Войдите в BIOS (Del, F2 или F10)</li>
+                <li>Найдите раздел Security</li>
+                <li>Отключите Secure Boot</li>
+                <li>Сохраните и выйдите</li>
+            </ol>
+
+            <h3>Метод 2: Восстановление BCD</h3>
+            <h4>Перестроение конфигурации</h4>
+            <ol>
+                <li>Загрузитесь с установочной флешки</li>
+                <li>Выберите "Восстановление" → "Командная строка"</li>
+                <li>Введите: bootrec /fixmbr</li>
+                <li>bootrec /fixboot</li>
+                <li>bootrec /rebuildbcd</li>
+                <li>exit</li>
+            </ol>
+
+            <h3>Метод 3: Перестроение EFI</h3>
+            <h4>Для UEFI систем</h4>
+            <ol>
+                <li>В командной строке введите: diskpart</li>
+                <li>list disk</li>
+                <li>select disk X</li>
+                <li>list partition</li>
+                <li>select partition Y (EFI)</li>
+                <li>assign letter=Z</li>
+                <li>bcdboot C:\Windows /s Z: /f UEFI</li>
+            </ol>
+
+            <h3>Метод 4: Сброс настроек BIOS</h3>
+            <h4>Восстановление заводских настроек</h4>
+            <ol>
+                <li>В BIOS найдите опцию сброса</li>
+                <li>Подтвердите сброс настроек</li>
+                <li>Сохраните и выйдите</li>
+                <li>Настройте порядок загрузки заново</li>
+            </ol>
+
+            <h3>Метод 5: Исправление системных файлов</h3>
+            <h4>SFC и DISM</h4>
+            <ol>
+                <li>В командной строке введите: sfc /scannow /offbootdir=C:\ /offwindir=C:\Windows</li>
+                <li>Дождитесь завершения</li>
+                <li>DISM /Image:C:\ /Cleanup-Image /RestoreHealth</li>
+            </ol>
+
+            <h2>Специфические случаи</h2>
+            <p>Решения для распространенных сценариев.</p>
+            <h3>Ошибка после обновления BIOS</h3>
+            <ul>
+                <li>Сбросьте настройки BIOS</li>
+                <li>Восстановите BCD</li>
+                <li>Отключите Secure Boot</li>
+                <li>Переустановите обновление BIOS</li>
+            </ul>
+
+            <h3>Ошибка с двойной загрузкой</h3>
+            <ul>
+                <li>Восстановите BCD</li>
+                <li>Проверьте порядок загрузки</li>
+                <li>Удалите лишние записи</li>
+                <li>Переустановите загрузчик</li>
+            </ul>
+
+            <h3>Ошибка после замены диска</h3>
+            <ul>
+                <li>Настройте порядок загрузки</li>
+                <li>Восстановите EFI</li>
+                <li>Отключите Secure Boot</li>
+                <li>Установите Windows заново</li>
+            </ul>
+
+            <h2>Профилактика</h2>
+            <p>Как избежать ошибки аутентификации.</p>
+            <h3>Регулярное обслуживание</h3>
+            <ul>
+                <li><strong>Обновления:</strong> Устанавливайте обновления BIOS осторожно</li>
+                <li><strong>Антивирус:</strong> Защита от вредоносного ПО</li>
+                <li><strong>Резервные копии:</strong> Создавайте образы системы</li>
+                <li><strong>Чистка:</strong> Очищайте от пыли</li>
+            </ul>
+
+            <h3>Безопасность загрузки</h3>
+            <ul>
+                <li>Не изменяйте настройки BIOS без необходимости</li>
+                <li>Используйте надежные источники обновлений</li>
+                <li>Регулярно проверяйте диск</li>
+                <li>Создавайте резервные копии BCD</li>
+            </ul>
+
+            <div class="pro-tips">
+                <h4>Полезные советы</h4>
+                <div class="tip-item">
+                    <i class="fas fa-lightbulb"></i>
+                    <span>Отключайте Secure Boot при проблемах с загрузкой</span>
+                </div>
+                <div class="tip-item">
+                    <i class="fas fa-lightbulb"></i>
+                    <span>Создавайте резервные копии BCD перед изменениями</span>
+                </div>
+                <div class="tip-item">
+                    <i class="fas fa-lightbulb"></i>
+                    <span>Проверяйте режим загрузки в BIOS</span>
+                </div>
+                <div class="tip-item">
+                    <i class="fas fa-lightbulb"></i>
+                    <span>Если проблема повторяется, обратитесь в поддержку Microsoft</span>
+                </div>
+            </div>
+
+            <h2>Когда нужна помощь специалиста</h2>
+            <p>Признаки серьезных проблем.</p>
+            <h3>Критические случаи</h3>
+            <ul>
+                <li>Поврежден EFI раздел</li>
+                <li>Неисправность материнской платы</li>
+                <li>Потеря всех данных</li>
+                <li>Необходима замена оборудования</li>
+            </ul>
+
+            <h3>Что проверить в сервисе</h3>
+            <ul>
+                <li>Работоспособность диска</li>
+                <li>Целостность EFI раздела</li>
+                <li>Совместимость оборудования</li>
+                <li>Возможность восстановления</li>
+            </ul>
+
+            <h2>Заключение</h2>
+            <p>Ошибка "Selected boot image did not authenticate" обычно связана с Secure Boot или поврежденными загрузочными файлами. В большинстве случаев ее можно решить отключением Secure Boot или восстановлением BCD. Начните с проверки настроек BIOS, затем восстановите загрузчик. Если самостоятельные попытки не увенчались успехом, обратитесь к специалистам или поддержке Microsoft.</p>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <p>&copy; 2024 Repairo. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+    <script src="../cookie-consent.js"></script>
+</body>
+</html>

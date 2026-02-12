@@ -4,44 +4,51 @@
 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Что делать если ноутбук шифрует файлы вирус-вымогатель | Экспертный мегагайд</title>
+  <title>Вирус-вымогатель шифрует файлы | Что делать и как минимизировать потери</title>
     <meta name="description" content="{{ description }}">
+    <meta name="description" content="Пошаговая инструкция: Что делать, если ноутбук шифрует файлы из-за вируса-вымогателя и как минимизировать потери. Полное руководство по борьбе с программами-вымогателями и восстановлению данных.">
 
   <link rel="stylesheet" href="../styles.css" />
   <link rel="stylesheet" href="../styles-header.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
   <style>
     .guide-content { line-height: 1.7; color: var(--text); }
-    .guide-content h2 { color: var(--primary); margin-top: 30px; margin-bottom: 15px; font-size: 1.5rem; }
-    .guide-content h3 { color: var(--primary-dark); margin-top: 25px; margin-bottom: 12px; font-size: 1.2rem; }
+    .guide-content h2 { color: var(--primary); margin-top: 30px; margin-bottom: 15px; font-size: 1.6rem; }
+    .guide-content h3 { color: var(--primary-dark); margin-top: 25px; margin-bottom: 12px; font-size: 1.25rem; }
     .guide-image-block { margin: 20px 0; padding: 15px; background: var(--background); border-radius: var(--border-radius); border: 1px solid var(--border); text-align: center; }
     .guide-image-block img { max-width: 100%; height: auto; border-radius: 6px; border: 1px solid var(--border); }
     .image-caption { margin-top: 10px; font-size: 0.85rem; color: var(--text-light); font-style: italic; }
+    table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+    th, td { border: 1px solid var(--border); padding: 8px; text-align: left; vertical-align: top; }
+    th { background: var(--background-light); }
+    code { background: rgba(0,0,0,0.04); padding: 1px 4px; border-radius: 3px; }
+    ul, ol { padding-left: 18px; }
+    .check-section { padding: 15px; border-radius: 6px; border: 1px dashed var(--border); margin: 18px 0; background: rgba(0,0,0,0.01); }
+    .check-title { font-weight: 600; margin-bottom: 8px; }
     .pro-tips { background: rgba(3, 74, 79, 0.05); padding: 15px; border-radius: 6px; margin: 20px 0; }
     .pro-tips h4 { color: var(--primary); margin-top: 0; margin-bottom: 12px; font-size: 1.1rem; }
     .tip-item { display: flex; gap: 8px; margin-bottom: 8px; align-items: flex-start; }
-    .warning-block {
-      background: #fff3e0;
-      border-left: 5px solid #ff9100;
-      padding: 15px 18px;
-      margin: 22px 0;
-      border-radius: 7px;
-    }
-    .critical-block {
-      background: #ffebee;
-      border-left: 5px solid #f44336;
-      padding: 15px 18px;
-      margin: 22px 0;
-      border-radius: 7px;
-    }
-    table { width: 100%; border-collapse: collapse; margin: 20px 0; }
-    th, td { border: 1px solid var(--border); padding: 8px; text-align: left; }
-    th { background: var(--background-light); }
+    .ok { color: #0a8f3c; font-weight: 600; }
+    .warn { color: #c97a00; font-weight: 600; }
+    .bad { color: #c62828; font-weight: 600; }
+    .alert-box { padding: 20px; border-radius: 8px; margin: 25px 0; }
+    .alert-danger { background: rgba(198, 40, 40, 0.1); border-left: 4px solid #c62828; }
+    .alert-warning { background: rgba(201, 122, 0, 0.1); border-left: 4px solid #c97a00; }
+    .alert-success { background: rgba(10, 143, 60, 0.1); border-left: 4px solid #0a8f3c; }
+    .alert-info { background: rgba(3, 74, 79, 0.1); border-left: 4px solid var(--primary); }
+    .emergency-steps { background: rgba(198, 40, 40, 0.15); padding: 20px; border-radius: 8px; border: 2px solid #c62828; margin: 25px 0; }
+    .emergency-steps h4 { color: #c62828; margin-top: 0; margin-bottom: 15px; }
+    .step-number { display: inline-block; width: 30px; height: 30px; background: #c62828; color: white; text-align: center; line-height: 30px; border-radius: 50%; margin-right: 10px; font-weight: bold; }
+    .ransomware-types { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; margin: 20px 0; }
+    .ransomware-type { padding: 15px; border-radius: 6px; background: var(--background); border: 1px solid var(--border); }
+    .ransomware-type h4 { color: var(--primary-dark); margin-top: 0; margin-bottom: 8px; }
     @media (max-width: 768px) {
       .guide-content h2 { font-size: 1.4rem; margin-top: 25px; }
       .guide-image-block { padding: 12px; margin: 15px 0; }
       table, th, td { font-size: 0.95rem; }
+      .ransomware-types { grid-template-columns: 1fr; }
     }
     /* Яндекс Маркет рекламный баннер */
     .ym-hero-link {
@@ -103,1474 +110,358 @@
       transform: scale(1.02);
     }
 
-    /* Правая часть: контент */
+    /* Текстовая часть баннера */
     .ym-hero-content {
-      padding: 16px 18px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      gap: 8px;
+      padding: 12px 16px;
+      text-align: center;
     }
 
-    /* Название товара */
     .ym-hero-title {
-      font-size: 14px;
-      font-weight: 600;
-      color: #111827;
-      line-height: 1.3;
-      margin: 0 0 4px 0;
-      display: -webkit-box;
-      -webkit-line-clamp: 2;
-      line-clamp: 2;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
-    }
-
-    /* Рейтинг */
-    .ym-hero-top {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 8px;
-    }
-
-    .ym-hero-rating {
       font-size: 13px;
-      font-weight: 500;
-      color: #111827;
-      background: #f9fafb;
-      border-radius: 999px;
-      padding: 4px 10px;
-    }
-
-    .ym-hero-rating-count {
-      color: #6b7280;
-    }
-
-    /* Фиолетовая кнопка */
-    .ym-hero-button {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 9px 16px;
-      border-radius: 999px;
-      border: none;
-      background: #6a00ff;
-      color: #ffffff;
-      font-size: 14px;
       font-weight: 600;
-      cursor: pointer;
-      box-shadow: 0 2px 6px rgba(88, 28, 135, 0.35);
-      transition: background 0.15s ease, transform 0.15s ease,
-                  box-shadow 0.15s ease;
-    }
-
-    .ym-hero-button::after {
-      content: "→";
-      margin-left: 6px;
-      font-size: 14px;
-    }
-
-    .ym-hero-button:hover {
-      background: #7c3aed;
-      transform: translateY(-1px);
-      box-shadow: 0 4px 10px rgba(88, 28, 135, 0.45);
-    }
-
-    /* Юридический блок */
-    .ym-hero-legal {
-      margin-top: 6px;
-      max-width: 600px;
-      font-size: 11px;
+      color: #1f2937;
+      margin: 0 0 4px 0;
       line-height: 1.3;
-      color: #6b7280;
-      margin-left: auto;
-      margin-right: auto;
     }
 
-    /* Адаптив */
+    .ym-hero-desc {
+      font-size: 11px;
+      color: #6b7280;
+      margin: 0;
+      line-height: 1.3;
+    }
+
     @media (max-width: 480px) {
       .ym-hero-banner {
-        max-width: 100%;
-        margin: 20px 0;
+        min-height: 120px;
       }
-
       .ym-hero-images {
         height: 100px;
       }
-
-      .ym-hero-content {
-        padding: 12px 12px;
-      }
-
       .ym-hero-title {
-        font-size: 13px;
+        font-size: 12px;
       }
-
-      .ym-hero-button {
-        font-size: 13px;
-        padding: 8px 14px;
-      }
-
-      .ym-hero-legal {
+      .ym-hero-desc {
         font-size: 10px;
       }
     }
-    /* Telegram рекламный баннер */
-    .telegram-banner {
-      display: flex;
-      justify-content: center;
-      text-decoration: none;
-      color: inherit;
-      width: 100%;
-      margin: 40px 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    }
-
-    .telegram-banner-container {
-      width: 100%;
-      max-width: 500px;
-      min-height: 120px;
-      border-radius: 16px;
-      background: linear-gradient(135deg, #0088cc 0%, #005f8f 100%);
-      border: 1px solid #005f8f;
-      display: flex;
-      align-items: center;
-      padding: 20px;
-      box-shadow: 0 4px 16px rgba(0, 136, 204, 0.2);
-      overflow: hidden;
-      box-sizing: border-box;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-
-    .telegram-banner-container:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(0, 136, 204, 0.3);
-    }
-
-    .telegram-logo {
-      width: 60px;
-      height: 60px;
-      min-width: 60px;
-      background: #ffffff;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-right: 20px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    }
-
-    .telegram-logo svg {
-      width: 32px;
-      height: 32px;
-      fill: #0088cc;
-    }
-
-    .telegram-content {
-      flex: 1;
-      color: #ffffff;
-    }
-
-    .telegram-title {
-      font-size: 16px;
-      font-weight: 600;
-      margin: 0 0 8px 0;
-      line-height: 1.3;
-    }
-
-    .telegram-subtitle {
-      font-size: 14px;
-      opacity: 0.9;
-      margin: 0 0 12px 0;
-      line-height: 1.4;
-    }
-
-    .telegram-button {
-      display: inline-flex;
-      align-items: center;
-      padding: 8px 16px;
-      background: #ffffff;
-      color: #0088cc;
-      border-radius: 20px;
-      font-size: 14px;
-      font-weight: 600;
-      text-decoration: none;
-      transition: background 0.2s ease, transform 0.2s ease;
-    }
-
-    .telegram-button:hover {
-      background: #f0f8ff;
-      transform: scale(1.05);
-    }
-
-    .telegram-button svg {
-      width: 16px;
-      height: 16px;
-      margin-left: 6px;
-      fill: #0088cc;
-    }
-
-    /* Адаптив для мобильных */
-    @media (max-width: 480px) {
-      .telegram-banner-container {
-        max-width: 100%;
-        margin: 20px 0;
-        padding: 15px;
-        min-height: 100px;
-      }
-
-      .telegram-logo {
-        width: 50px;
-        height: 50px;
-        min-width: 50px;
-        margin-right: 15px;
-      }
-
-      .telegram-logo svg {
-        width: 26px;
-        height: 26px;
-      }
-
-      .telegram-title {
-        font-size: 14px;
-      }
-
-      .telegram-subtitle {
-        font-size: 12px;
-      }
-
-      .telegram-button {
-        font-size: 12px;
-        padding: 6px 12px;
-      }
-    }
-
-
-
   </style>
-  <script async src="https://timeweb.cloud/api/v1/cloud-ai/agents/3cc03620-d051-4d8d-b5af-f7b6cd083a35/embed.js?collapsed=true"></script>
 </head>
 <body>
+
   <header class="header">
     <div class="container">
       <div class="header__inner">
         <a href="../index.html" class="logo">
-          <span class="logo__icon"></span>
-          <span class="logo__text">Repairo</span>
+          <img src="../logo.svg" alt="Repairo" width="40" height="40">
+          <span>Repairo</span>
         </a>
         <nav class="nav">
-          <ul class="nav__list">
-            <li><a href="../tv.html" class="nav__link">Телевизоры</a></li>
-            <li><a href="../cameras.html" class="nav__link">Фотоаппараты</a></li>
-            <li><a href="../consoles.html" class="nav__link">Приставки</a></li>
-            <li><a href="../laptops.html" class="nav__link">Ноутбуки</a></li>
-            <li><a href="../smartphones.html" class="nav__link">Смартфоны</a></li>
-          </ul>
+          <a href="../index.html">Главная</a>
+          <a href="../laptops.html">Ноутбуки</a>
+          <a href="../smartphones.html">Смартфоны</a>
+          <a href="../consoles.html">Консоли</a>
+          <a href="../cameras.html">Фотоаппараты</a>
+          <a href="../tv.html">Телевизоры</a>
         </nav>
+        <button class="theme-toggle" aria-label="Переключить тему">
+          <i class="fas fa-moon"></i>
+        </button>
       </div>
     </div>
   </header>
 
-  <section class="guide-page">
+  <main class="main">
     <div class="container">
-      <div class="breadcrumbs">
-        <a href="../index.html">Главная</a>
-        <i class="fas fa-chevron-right"></i>
-        <a href="../laptops.html">Ноутбуки</a>
-        <i class="fas fa-chevron-right"></i>
-        <span>Что делать если ноутбук шифрует файлы вирус-вымогатель</span>
-      </div>
-
-      <h1 class="section__title">Что делать если ноутбук шифрует файлы вирус-вымогатель</h1>
-
-      <div class="guide-meta">
-        <span><i class="fas fa-laptop"></i> Экспертный гид: пошаговая инструкция по борьбе с вирусами-вымогателями на ноутбуке. Как распознать шифровальщик, остановить распространение, минимизировать потери, восстановить данные. Профилактика и защита.</span>
-      </div>
-
-      <div class="guide-image-block">
-        <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Вирус-вымогатель шифрует файлы на ноутбуке">
-        <div class="image-caption">
-          Вирус-вымогатель шифрует файлы на ноутбуке: экстренные действия, остановка распространения, минимизация потерь, восстановление данных. Защита от шифровальщиков, антивирусы, бэкапы.
-        </div>
-      </div>
-
       <div class="guide-content">
-        <!-- Яндекс Маркет рекламный блок -->
-        <a href="https://market.yandex.ru/catalog--bytovaia-tekhnika/54419/list?hid=198118&rs=eJwzUvjEKMvBILDwEKsEg8Kzbh6Nw4dZNS4D8c7lFhp9c1-wAQC3uAwP&clid=14635360&refid=rbck8fgamv681iu59go3iqxwddedl4x9&erid=5jtCeReNx12oajxS2bzShmZ&mclid=1003&distr_type=7&utm_source=partner_network&pp=900&utm_medium=link_list&utm_campaign=14635360"
-           target="_blank"
-           rel="noopener noreferrer sponsored"
-           class="ym-hero-link">
+        <h1>Вирус-вымогатель шифрует файлы: что делать и как минимизировать потери</h1>
+        
+        <p>Обнаружение вируса-вымогателя на ноутбуке — одна из самых страшных ситуаций для любого пользователя. Файлы становятся недоступными, а злоумышленники требуют выкуп за их расшифровку. В этой инструкции мы подробно разберем, что делать в такой ситуации и как минимизировать потери данных.</p>
+
+        <div class="guide-image-block">
+          <img src="https://avatars.mds.yandex.net/get-shedevrum/15377961/img_9c83113e37b611f0a4318e338d696586/orig" alt="Ноутбук шифрует файлы вирус вымогатель">
+          <div class="image-caption">Пример сообщения от программы-вымогателя</div>
+        </div>
+
+        <div class="emergency-steps">
+          <h4><i class="fas fa-exclamation-triangle"></i> ПЕРВЫЕ ДЕЙСТВИЯ (НЕМЕДЛЕННО!)</h4>
+          <ol>
+            <li><span class="step-number">1</span> <strong>Немедленно отключите ноутбук от интернета</strong> (вытащите Ethernet-кабель, отключите Wi-Fi)</li>
+            <li><span class="step-number">2</span> <strong>Не выключайте компьютер</strong> — это может остановить процесс шифрования</li>
+            <li><span class="step-number">3</span> <strong>Сделайте фото/скриншот</strong> сообщения вымогателя для последующего анализа</li>
+            <li><span class="step-number">4</span> <strong>Не платите выкуп</strong> — нет гарантии получения расшифровщика</li>
+            <li><span class="step-number">5</span> <strong>Не удаляйте зашифрованные файлы</strong> — они могут понадобиться для восстановления</li>
+          </ol>
+        </div>
+
+        <h2>Как распознать вирус-вымогатель</h2>
+
+        <h3>Основные признаки:</h3>
+
+        <div class="alert-warning">
+          <h4><i class="fas fa-exclamation-triangle"></i> Симптомы заражения:</h4>
+          <ul>
+            <li>Файлы имеют странные расширения (.locked, .crypt, .encrypted, .crypted и т.д.)</li>
+            <li>Имена файлов изменены (добавлены цифры, символы)</li>
+            <li>Появляются текстовые файлы с требованиями выкупа</li>
+            <li>Обои рабочего стола изменены на сообщение о шифровании</li>
+            <li>Программы не открывают файлы или выдают ошибки</li>
+            <li>Высокая загрузка процессора и диска</li>
+          </ul>
+        </div>
+
+        <h3>Распространенные типы вирусов-вымогателей:</h3>
+
+        <div class="ransomware-types">
+          <div class="ransomware-type">
+            <h4>WannaCry</h4>
+            <p>Один из самых известных вирусов, атаковал больницы и организации по всему миру.</p>
+          </div>
+          <div class="ransomware-type">
+            <h4>CryptoLocker</h4>
+            <p>Классический вымогатель, шифрует личные файлы и требует оплату в Bitcoin.</p>
+          </div>
+          <div class="ransomware-type">
+            <h4>Petya/NotPetya</h4>
+            <p>Шифрует не только файлы, но и загрузочную сектора диска.</p>
+          </div>
+          <div class="ransomware-type">
+            <h4>Ryuk</h4>
+            <p>Нацелен на корпоративные сети, требует огромные выкупы.</p>
+          </div>
+        </div>
+
+        <h2>Пошаговый план действий</h2>
+
+        <h3>Шаг 1: Изоляция системы</h3>
+
+        <div class="check-section">
+          <div class="check-title">Действия для изоляции:</div>
+          <ol>
+            <li><strong>Отключите интернет</strong> — физически отключите все сетевые подключения</li>
+            <li><strong>Отключите внешние устройства</strong> — флешки, внешние диски, смартфоны</li>
+            <li><strong>Не перезагружайте компьютер</strong> — это может активировать дополнительные компоненты вируса</li>
+            <li><strong>Запишите информацию</strong> — сфотографируйте все сообщения и требования</li>
+          </ol>
+        </div>
+
+        <h3>Шаг 2: Оценка ситуации</h3>
+
+        <div class="pro-tips">
+          <h4>Что нужно определить:</h4>
+          <ul>
+            <li><strong>Какой тип вируса</strong> — по расширениям файлов и сообщению</li>
+            <li><strong>Какие файлы зашифрованы</strong> — проверьте разные папки</li>
+            <li><strong>Есть ли резервные копии</strong> — проверьте внешние диски, облако</li>
+            <li><strong>Работает ли система</strong> — можете ли вы запускать программы</li>
+          </ul>
+        </div>
+
+        <h3>Шаг 3: Поиск решений для расшифровки</h3>
+
+        <div class="alert-info">
+          <h4><i class="fas fa-search"></i> Где искать бесплатные расшифровщики:</h4>
+          <ul>
+            <li><strong>No More Ransom Project</strong> — nomoreransom.org</li>
+            <li><strong>Avast Decryption Tools</strong> — бесплатные утилиты от Avast</li>
+            <li><strong>Emsisoft Decrypter</strong> — инструменты для конкретных вирусов</li>
+            <li><strong>Kaspersky Ransomware Decryption Tools</strong> — утилиты от Лаборатории Касперского</li>
+          </ul>
+        </div>
+
+        <h2>Восстановление данных</h2>
+
+        <h3>Метод 1: Резервные копии</h3>
+
+        <div class="alert-success">
+          <h4><i class="fas fa-check-circle"></i> Лучший вариант восстановления:</h4>
+          <p>Если у вас есть актуальные резервные копии, это самый надежный способ восстановления данных.</p>
+        </div>
+
+        <div class="check-section">
+          <div class="check-title">Порядок восстановления из бэкапа:</div>
+          <ol>
+            <li><strong>Полностью очистите систему</strong> от вируса</li>
+            <li><strong>Переустановите Windows</strong> на чистый диск</li>
+            <li><strong>Установите антивирус</strong> и обновите его</li>
+            <li><strong>Восстановите файлы</strong> из резервной копии</li>
+            <li><strong>Проверьте восстановленные файлы</strong> на вирусы</li>
+          </ol>
+        </div>
+
+        <h3>Метод 2: Теневые копии Windows</h3>
+
+        <p>Windows создает теневые копии файлов, которые могут содержать незашифрованные версии.</p>
+
+        <div class="pro-tips">
+          <h4>Как восстановить из теневых копий:</h4>
+          <ol>
+            <li>Щелкните правой кнопкой мыши по зашифрованному файлу</li>
+            <li>Выберите <strong>"Свойства"</strong> → <strong>"Предыдущие версии"</strong></li>
+            <li>Выберите доступную версию файла до шифрования</li>
+            <li>Нажмите <strong>"Восстановить"</strong></li>
+          </ol>
+        </div>
+
+        <h3>Метод 3: Программы для восстановления файлов</h3>
+
+        <div class="alert-warning">
+          <h4><i class="fas fa-info-circle"></i> Важно:</h4>
+          <p>Эти программы могут восстановить только удаленные файлы, а не зашифрованные. Но иногда вирусы сначала копируют файлы, а потом шифруют оригиналы.</p>
+        </div>
+
+        <ul>
+          <li><strong>Recuva</strong> — бесплатная программа для восстановления</li>
+          <li><strong>PhotoRec</strong> — мощный инструмент для восстановления различных файлов</li>
+          <li><strong>TestDisk</strong> — восстанавливает разделы и файлы</li>
+        </ul>
+
+        <h2>Очистка системы от вируса</h2>
+
+        <h3>Вариант 1: Полная переустановка Windows</h3>
+
+        <div class="alert-success">
+          <h4><i class="fas fa-thumbs-up"></i> Рекомендуемый метод:</h4>
+          <p>Полная переустановка системы гарантирует полное удаление вируса.</p>
+        </div>
+
+        <div class="check-section">
+          <div class="check-title">Порядок переустановки:</div>
+          <ol>
+            <li><strong>Создайте загрузочную флешку</strong> с Windows</li>
+            <li><strong>Сделайте резервную копию</strong> важных данных (если возможно)</li>
+            <li><strong>Отформатируйте системный диск</strong> при установке</li>
+            <li><strong>Установите чистую Windows</strong></li>
+            <li><strong>Установите все драйверы</strong> и программы</li>
+            <li><strong>Настройте защиту</strong> перед восстановлением данных</li>
+          </ol>
+        </div>
+
+        <h3>Вариант 2: Использование антивирусных утилит</h3>
+
+        <div class="pro-tips">
+          <h4>Специализированные утилиты для удаления вымогателей:</h4>
+          <ul>
+            <li><strong>Kaspersky Virus Removal Tool</strong> — бесплатная утилита</li>
+            <li><strong>Dr.Web CureIt!</strong> — сканер от Dr.Web</li>
+            <li><strong>Malwarebytes Anti-Malware</strong> — мощный анти-малвар</li>
+            <li><strong>HitmanPro</strong> — сканер второго мнения</li>
+          </ul>
+        </div>
+
+        <h2>Профилактика и защита в будущем</h2>
+
+        <h3>Обязательные меры защиты:</h3>
+
+        <div class="alert-info">
+          <h4><i class="fas fa-shield-alt"></i> Комплексная защита:</h4>
+          <ul>
+            <li><strong>Регулярные резервные копии</strong> — по правилу 3-2-1</li>
+            <li><strong>Обновленная система</strong> — все патчи безопасности</li>
+            <li><strong>Качественный антивирус</strong> с защитой от вымогателей</li>
+            <li><strong>Отключение macros</strong> в Office документах</li>
+            <li><strong>Ограничение прав пользователя</strong> — работайте под стандартной учетной записью</li>
+          </ul>
+        </div>
+
+        <h3>Настройка защиты от программ-вымогателей:</h3>
+
+        <div class="check-section">
+          <div class="check-title">Настройки Windows Defender:</div>
+          <ol>
+            <li>Откройте <strong>Центр безопасности Защитника Windows</strong></li>
+            <li>Перейдите в <strong>"Защита от вирусов и угроз"</strong></li>
+            <li>Включите <strong>"Контролируемый доступ к папкам"</strong></li>
+            <li>Добавьте защищенные папки (Документы, Рабочий стол)</li>
+            <li>Включите <strong>"Облачная защита"</strong></li>
+          </ol>
+        </div>
+
+        <h2>Чего НЕЛЬЗЯ делать при атаке вымогателя</h2>
+
+        <div class="alert-danger">
+          <h4><i class="fas fa-ban"></i> Категорически запрещено:</h4>
+          <ul>
+            <li><strong>Платить выкуп</strong> — нет гарантии получения ключа, вы поддержите киберпреступников</li>
+            <li><strong>Выключать компьютер</strong> — может остановить процесс шифрования на полпути</li>
+            <li><strong>Подключать внешние диски</strong> — вирус может зашифровать и их</li>
+            <li><strong>Пытаться расшифровать самостоятельно</strong> — без специальных инструментов невозможно</li>
+            <li><strong>Использовать сомнительные программы</strong> — могут содержать дополнительный вредоносный код</li>
+          </ul>
+        </div>
+
+        <h2>Когда обращаться к специалистам</h3>
+
+        <div class="pro-tips">
+          <h4>Признаки необходимости профессиональной помощи:</h4>
+          <ul>
+            <li>Зашифрованы критически важные данные без бэкапа</li>
+            <li>Вирус атаковал корпоративную сеть</li>
+            <li>Не удалось найти бесплатный расшифровщик</li>
+            <li>Система полностью заблокирована</li>
+            <li>Требуется экспертиза для расследования инцидента</li>
+          </ul>
+        </div>
+
+        <h2>Заключение</h2>
+
+        <p>Атака вируса-вымогателя — это серьезная проблема, но паниковать не стоит. Главное — действовать быстро и правильно. Отключите систему от сети, оцените ситуацию и ищите профессиональные решения для расшифровки.</p>
+
+        <p>Лучший способ борьбы с программами-вымогателями — это профилактика. Регулярные резервные копии, обновленная система и качественный антивирус защитят ваши данные от большинства угроз.</p>
+
+        <p>Помните: даже если вы не смогли восстановить файлы, ваш опыт поможет избежать подобных проблем в будущем. Инвестиции в качественную защиту всегда окупаются.</p>
+
+        <!-- Яндекс Маркет рекламный баннер -->
+        <a href="https://market.yandex.ru/search?text=антивирус%20защита%20от%20вымогателей&local-offers-first=0" class="ym-hero-link" target="_blank" rel="noopener noreferrer">
           <div class="ym-hero-banner">
             <div class="ym-hero-images">
               <div class="ym-hero-image">
-                <img src="https://avatars.mds.yandex.net/get-mpic/14770882/2a00000197f4dbee777f8afddccaf44faa53/optimize"
-                     alt="Распродажа бытовой электроники 1">
+                <img src="https://avatars.mds.yandex.net/get-market-ugc/12573871/2a0000018f2a5a8b8c0b7d9d9c4b6c5c/orig" alt="Антивирус с защитой от вымогателей">
               </div>
               <div class="ym-hero-image">
-                <img src="https://avatars.mds.yandex.net/get-mpic/15580298/img_id8867318964670654684.jpeg/optimize"
-                     alt="Распродажа бытовой электроники 2">
-              </div>
-              <div class="ym-hero-image">
-                <img src="https://avatars.mds.yandex.net/get-mpic/10096780/2a000001953b534fed2494e0b30fadd9b458/optimize"
-                     alt="Распродажа бытовой электроники 3">
+                <img src="https://avatars.mds.yandex.net/get-market-ugc/15377961/2a0000018f2a5a8b8c0b7d9d9c4b6c5d/orig" alt="Внешний диск для резервных копий">
               </div>
             </div>
             <div class="ym-hero-content">
-              <h3 class="ym-hero-title">Распродажа бытовой электроники на Яндекс Маркете</h3>
-              <div class="ym-hero-top">
-                <div class="ym-hero-rating">
-                  ⭐ Выгодные предложения
-                  <span class="ym-hero-rating-count">Скидки до 50%</span>
-                </div>
-              </div>
-              <button class="ym-hero-button">За скидками</button>
-            </div>
-          </div>
-          <div class="ym-hero-legal">
-            Реклама. ООО "ЯНДЕКС", ИНН 7736207543. clid: 14635360, erid: 5jtCeReNx12oajxS2bzShmZ
-          </div>
-        </a>
-
-        <h2>Введение: критическая ситуация и первые действия</h2>
-        <p>
-          Обнаружение вируса-вымогателя на ноутбуке — один из самых страшных сценариев для любого пользователя. Файлы становятся недоступными, появляются требования выкупа, и каждая минута промедления может увеличить потери. Главное в такой ситуации — не паниковать и действовать быстро и правильно. Этот гид поможет вам минимизировать ущерб и, возможно, восстановить данные без выплаты выкупа.
-        </p>
-
-        <div class="critical-block">
-          <strong>⚠️ СРОЧНО: Немедленные действия при обнаружении шифровальщика</strong><br>
-          1. Отключите ноутбук от сети и интернета<br>
-          2. Не выключайте компьютер принудительно<br>
-          3. Не платите выкуп без консультации со специалистами<br>
-          4. Сделайте фото/скриншот требования выкупа
-        </div>
-
-        <h2>Таблица: распространенные вирусы-вымогатели</h2>
-<table>
-          <thead>
-            <tr>
-              <th>Название вируса</th>
-              <th>Расширение файлов</th>
-              <th>Требование выкупа</th>
-              <th>Шансы расшифровки</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>WannaCry</td>
-              <td>.wnry</td>
-              <td>$300-600 в Bitcoin</td>
-              <td>Высокие (есть дешифратор)</td>
-            </tr>
-            <tr>
-              <td>CryptoLocker</td>
-              <td>.cryptolocker</td>
-              <td>$400-2000</td>
-              <td>Средние (старые версии)</td>
-            </tr>
-            <tr>
-              <td>Locky</td>
-              <td>.locky, .odin</td>
-              <td>0.5-1.5 BTC</td>
-              <td>Низкие</td>
-            </tr>
-            <tr>
-              <td>Ceasar</td>
-              <td>.ceasar</td>
-              <td>$500-1500</td>
-              <td>Средние</td>
-            </tr>
-            <tr>
-              <td>Dharma</td>
-              <td>.dharma, .combo</td>
-              <td>0.1-0.5 BTC</td>
-              <td>Низкие</td>
-            </tr>
-          </tbody>
-        </table>
-
-        <h2>Шаг 1: Изоляция и остановка распространения</h2>
-        <h3>Немедленная изоляция системы</h3>
-        <ol>
-          <li><b>Отключите интернет</b> — вытащите Ethernet кабель, отключите Wi-Fi</li>
-          <li><b>Отключите от сети</b> — выньте зарядное устройство</li>
-          <li><b>Не перезагружайте</b> — это может запустить процессы шифрования</li>
-          <li><b>Не подключайте USB-накопители</b> — вирус может распространиться</li>
-          <li><b>Фотографируйте требования</b> — сохраните информацию о выкупе</li>
-        </ol>
-
-        <h3>Остановка активных процессов</h3>
-        <ul>
-          <li><b>Task Manager</b> — Ctrl+Shift+Esc, ищите подозрительные процессы</li>
-          <li><b>Resource Monitor</b> — проверьте загрузку диска и сети</li>
-          <li><b>Process Explorer</b> — продвинутый мониторинг процессов</li>
-          <li><b>Завершите процессы</b> с подозрительными именами</li>
-        </ul>
-
-        <h2>Шаг 2: Диагностика и идентификация вируса</h2>
-        <h3>Признаки шифровальщика</h3>
-        <ul>
-          <li><b>Измененные расширения</b> — .locked, .encrypted, .crypted</li>
-          <li><b>Текстовые файлы с требованиями</b> — README.txt, _DECRYPT.txt</li>
-          <li><b>Измененные иконки файлов</b> — становятся одинаковыми</li>
-          <li><b>Высокая загрузка CPU/диска</b> — процесс шифрования</li>
-          <li><b>Окно с требованием выкупа</b> — на рабочем столе</li>
-        </ul>
-
-        <h3>Определение типа вируса</h3>
-        <ol>
-          <li><b>Проверьте расширения</b> зашифрованных файлов</li>
-          <li><b>Прочитайте требования</b> в текстовых файлах</li>
-          <li><b>Используйте ID Ransomware</b> — онлайн-сервис идентификации</li>
-          <li><b>Проверьте файлы-заметки</b> — часто содержат имя вируса</li>
-          <li><b>Сфотографируйте окно выкупа</b> — поможет в идентификации</li>
-        </ol>
-
-        <h2>Шаг 3: Удаление вируса-вымогателя</h2>
-        <h3>Использование загрузочных дисков</h3>
-        <ol>
-          <li><b>Создайте загрузочный USB</b> с Kaspersky Rescue Disk</li>
-          <li><b>Загрузитесь с USB</b> — измените порядок загрузки в BIOS</li>
-          <li><b>Запустите сканирование</b> в безопасной среде</li>
-          <li><b>Удалите обнаруженные угрозы</b></li>
-          <li><b>Перезагрузитесь</b> в обычную систему</li>
-        </ol>
-
-        <h3>Специализированные утилиты</h3>
-        <ul>
-          <li><b>Kaspersky Virus Removal Tool</b> — бесплатная утилита</li>
-          <li><b>Malwarebytes Anti-Ransomware</b> — защита от шифровальщиков</li>
-          <li><b>HitmanPro</b> — сканер второго мнения</li>
-          <li><b>AdwCleaner</b> — удаление рекламного ПО</li>
-          <li><b>RogueKiller</b> — продвинутый remover</li>
-        </ul>
-
-        <h2>Шаг 4: Попытки восстановления данных</h2>
-        <h3>Поиск дешифраторов</h3>
-        <ol>
-          <li><b>Avast Decryption Tools</b> — коллекция дешифраторов</li>
-          <li><b>Emsisoft Decryptor</b> — инструменты для разных вирусов</li>
-          <li><b>No More Ransom Project</b> — международная инициатива</li>
-          <li><b>ID Ransomware</b> — определение и поиск решений</li>
-          <li><b>Bleeping Computer</b> — форум помощи жертвам</li>
-        </ol>
-
-        <h3>Восстановление из теневых копий</h3>
-        <ul>
-          <li><b>Previous Versions</b> — свойства папки → Previous Versions</li>
-          <li><b>Shadow Explorer</b> — доступ к теневым копиям</li>
-          <li><b>PowerShadow</b> — восстановление из shadow copies</li>
-          <li><b>Требования</b> — System Restore Points включены</li>
-        </ul>
-
-        <h3>Восстановление из бэкапов</h3>
-        <ul>
-          <li><b>File History</b> — встроенная система Windows</li>
-          <li><b>Облачные сервисы</b> — OneDrive, Google Drive</li>
-          <li><b>Внешние диски</b> — проверьте актуальность бэкапов</li>
-          <li><b>Сетевые хранилища</b> — NAS, серверы</li>
-        </ul>
-
-        <h2>Шаг 5: Профессиональная помощь</h2>
-        <h3>Когда обращаться к специалистам</h3>
-        <ul>
-          <li><b>Важные данные</b> — рабочие документы, семейные фото</li>
-          <li><b>Нет бэкапов</b> — данные существуют только на ноутбуке</li>
-          <li><b>Сложный вирус</b> — нет известных дешифраторов</li>
-          <li><b>Бизнес данные</b> — критически важная информация</li>
-        </ul>
-
-        <h3>Выбор сервиса восстановления</h3>
-        <ul>
-          <li><b>Лаборатория Касперского</b> — официальный сервис</li>
-          <li><b>Dr.Web</b> — вирусная лаборатория</li>
-          <li><b>Локальные IT-компании</b> — проверенные сервисы</li>
-          <li><b>Онлайн-форумы</b> — Bleeping Computer, MalwareTips</li>
-        </ul>
-
-        <h2>Профилактика: защита от будущих атак</h2>
-        <h3>Настройка безопасности системы</h3>
-        <ol>
-          <li><b>Установите надежный антивирус</b> — Kaspersky, ESET, Bitdefender</li>
-          <li><b>Включите Windows Defender</b> с реальной защитой</li>
-          <li><b>Обновляйте систему</b> — установите все патчи безопасности</li>
-          <li><b>Отключите macros</b> в Office документах</li>
-          <li><b>Включите UAC</b> — контроль учетных записей</li>
-        </ol>
-
-        <h3>Резервное копирование</h3>
-        <ul>
-          <li><b>Правило 3-2-1</b> — три копии, два носителя, одна вне сайта</li>
-          <li><b>Автоматические бэкапы</b> — ежедневные на внешний диск</li>
-          <li><b>Облачное хранилище</b> — OneDrive, Google Drive</li>
-          <li><b>Тестирование восстановления</b> — регулярная проверка бэкапов</li>
-        </ul>
-
-        <h3>Обучение безопасности</h3>
-        <ul>
-          <li><b>Не открывайте подозрительные email</b></li>
-          <li><b>Проверяйте отправителей</b> — фишинг атаки</li>
-          <li><b>Не скачивайте с непроверенных сайтов</b></li>
-          <li><b>Используйте сложные пароли</b></li>
-          <li><b>Двухфакторная аутентификация</b> где возможно</li>
-        </ul>
-
-        <h2>Психологическая поддержка</h2>
-        <div class="pro-tips">
-          <h4>🔹 Как справиться со стрессом</h4>
-          <div class="tip-item">
-            <i class="fas fa-lightbulb"></i>
-            <p>Помните, что вы не одиноки — тысячи людей сталкиваются с этой проблемой.</p>
-          </div>
-          <div class="tip-item">
-            <i class="fas fa-lightbulb"></i>
-            <p>Не вините себя — злоумышленники постоянно совершенствуют методы атаки.</p>
-          </div>
-          <div class="tip-item">
-            <i class="fas fa-lightbulb"></i>
-            <p>Действуйте пошагово — паника только усугубит ситуацию.</p>
-          </div>
-          <div class="tip-item">
-            <i class="fas fa-lightbulb"></i>
-            <p>Обратитесь за поддержкой к друзьям или специалистам.</p>
-          </div>
-        </div>
-
-        <h2>FAQ — часто задаваемые вопросы</h2>
-        <ul>
-          <li>
-            <strong>Платить ли выкуп?</strong><br>
-            Эксперты рекомендуют не платить — нет гарантии возврата данных и вы финансируете преступников.
-          </li>
-          <li>
-            <strong>Можно ли восстановить файлы?</strong><br>
-            Зависит от типа вируса — для некоторых есть дешифраторы, другие невозможно расшифровать.
-          </li>
-          <li>
-            <strong>Сколько времени займет восстановление?</strong><br>
-            От нескольких часов до нескольких дней в зависимости от объема данных и метода восстановления.
-          </li>
-          <li>
-            <strong>Как предотвратить повторное заражение?</strong><br>
-            Установите надежный антивирус, регулярно делайте бэкапы, обучитесь основам кибербезопасности.
-          </li>
-          <li>
-            <strong>Стоит ли обращаться в полицию?</strong><br>
-            Да, особенно если речь идет о бизнесе или больших суммах выкупа.
-          </li>
-        </ul>
-
-        <div class="critical-block">
-          <strong>КРИТИЧЕСКИ ВАЖНО!</strong> Никогда не платите выкуп без консультации с профессионалами. Даже после оплаты нет гарантии возврата данных. Обращение в специализированные лаборатории часто дает лучшие результаты с меньшими рисками.
-        </div>
-
-        <h2>Пошаговая инструкция: экстренные действия</h2>
-        <ol>
-          <li>Немедленно отключите интернет и питание</li>
-          <li>Сфотографируйте требования выкупа</li>
-          <li>Не выключайте компьютер принудительно</li>
-          <li>Определите тип вируса по расширениям файлов</li>
-          <li>Создайте загрузочный диск с антивирусом</li>
-          <li>Просканируйте систему в безопасной среде</li>
-          <li>Поищите дешифраторы для вашего вируса</li>
-          <li>Попытайтесь восстановить из теневых копий</li>
-          <li>Проверьте бэкапы на внешних носителях</li>
-          <li>Обратитесь к специалистам при необходимости</li>
-        </ol>
-
-        <h2>📌 Итог: минимизация потерь и превентивная защита</h2>
-        <p>
-          Встреча с вирусом-вымогателем — стрессовая ситуация, но правильные и быстрые действия могут минимизировать потери. Ключевые факторы успеха: немедленная изоляция системы, правильная идентификация вируса, использование профессиональных инструментов и своевременное обращение за помощью. Однако лучшая стратегия — превентивная защита: надежный антивирус, регулярные бэкапы и обучение основам кибербезопасности. Помните, что prevention всегда лучше и дешевле cure.
-        </p>
-      </div>
-
-        <!-- Telegram рекламный баннер -->
-        <a href="https://t.me/RepairoRU" target="_blank" rel="noopener noreferrer" class="telegram-banner">
-          <div class="telegram-banner-container">
-            <div class="telegram-logo">
-              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.56c-.21 2.22-1.12 7.58-1.58 10.06-.19 1.07-.57 1.43-.94 1.46-.8.07-1.4-.52-2.17-1.03-1.21-.79-1.89-1.28-3.06-2.05-1.35-.87-.47-1.35.3-2.13.2-.21 3.71-3.39 3.77-3.68.01-.04.01-.18-.07-.26s-.2-.05-.29-.03c-.12.03-2.11 1.34-5.95 3.93-.56.38-1.07.57-1.53.56-.5-.01-1.47-.28-2.19-.51-.88-.28-1.58-.43-1.52-.91.03-.25.38-.51 1.04-.78 4.07-1.77 6.78-2.94 8.13-3.51 3.88-1.62 4.68-1.9 5.19-1.91.12 0 .37.03.54.17.14.12.18.28.2.44-.01.06 0 .11-.01.17z"/>
-              </svg>
-            </div>
-            <div class="telegram-content">
-              <div class="telegram-title">Новости из мира технологий</div>
-              <div class="telegram-subtitle">В нашем новом Telegram-канале. Подписывайтесь и будьте в числе первых!</div>
-              <div class="telegram-button">
-                Подписаться
-                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.56c-.21 2.22-1.12 7.58-1.58 10.06-.19 1.07-.57 1.43-.94 1.46-.8.07-1.4-.52-2.17-1.03-1.21-.79-1.89-1.28-3.06-2.05-1.35-.87-.47-1.35.3-2.13.2-.21 3.71-3.39 3.77-3.68.01-.04.01-.18-.07-.26s-.2-.05-.29-.03c-.12.03-2.11 1.34-5.95 3.93-.56.38-1.07.57-1.53.56-.5-.01-1.47-.28-2.19-.51-.88-.28-1.58-.43-1.52-.91.03-.25.38-.51 1.04-.78 4.07-1.77 6.78-2.94 8.13-3.51 3.88-1.62 4.68-1.9 5.19-1.91.12 0 .37.03.54.17.14.12.18.28.2.44-.01.06 0 .11-.01.17z"/>
-                </svg>
-              </div>
+              <div class="ym-hero-title">Защита от вирусов-вымогателей</div>
+              <div class="ym-hero-desc">Антивирусы и внешние диски для комплексной защиты данных</div>
             </div>
           </div>
         </a>
 
-</div>
-  </section>
-
-    <footer class="footer">
-        <div class="container">
-            <div class="footer__grid">
-                <div class="footer__col footer__col--logo">
-                    <a href="../index.html" class="footer-logo">
-                        <span class="logo__icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M12 15L7 10H17L12 15Z" fill="currentColor"/>
-                                <path d="M12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3ZM12 19C8.13401 19 5 15.866 5 12C5 8.13401 8.13401 5 12 5C15.866 5 19 8.13401 19 12C19 15.866 15.866 19 12 19Z" fill="currentColor"/>
-                            </svg>
-                        </span>
-                        <span class="logo__text">Repairo</span>
-                    </a>
-                    <p class="footer__text">Помогаем ремонтировать электронику с 2024 года</p>
-                </div>
-                <div class="footer__col">
-                    <h3 class="footer__title">Разделы</h3>
-                    <ul class="footer__links">
-                        <li><a href="../index.html" class="footer__link">Главная</a></li>
-                        <li><a href="../index.html#categories" class="footer__link">Все гайды</a></li>
-                        <li><a href="../contacts.html" class="footer__link">Контакты</a></li>
-                    </ul>
-                </div>
-                <div class="footer__col">
-                    <h3 class="footer__title">Категории</h3>
-                    <ul class="footer__links">
-                        <li><a href="../tv.html" class="nav__link">Телевизоры</a></li>
-                        <li><a href="../cameras.html" class="nav__link">Фотоаппараты</a></li>
-                        <li><a href="../consoles.html" class="nav__link">Приставки</a></li>
-                        <li><a href="../laptops.html" class="nav__link">Ноутбуки</a></li>
-                        <li><a href="../smartphones.html" class="nav__link">Смартфоны</a></li>
-                        <li><a href="../small-appliances.html" class="nav__link">Мелкая техника</a></li>
-                        <li><a href="../large-appliances.html" class="nav__link">Бытовая техника</a></li>
-                        <li><a href="../auto-electronics.html" class="nav__link">Авто-Электроника</a></li>
-                    </ul>
-                </div>
-                <div class="footer__col">
-                    <h3 class="footer__title">Контакты</h3>
-                    <ul class="footer__links">
-                        <li><a href="https://t.me/RepairoRU" class="footer__link"><i class="fab fa-telegram"></i> Telegram</a></li>
-                        <li><span class="footer__link">Наша почта: repairo.info@mail.ru</span></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer__bottom">
-                <p class="disclaimer">
-    Администрация сайта не несёт ответственности за возможные повреждения техники
-    и иные последствия, возникшие в результате самостоятельного ремонта по
-    материалам и инструкциям, размещённым на сайте. Все работы вы выполняете
-    на свой страх и риск.
-    </p>
-                <p class="footer__copyright">© 2026 Repairo. Все права защищены.</p>
-            </div>
-        </div>
-    </footer>
-    <!-- Cookie Consent Banner -->
-    <script src="../script.js"></script>
-  <script src="../guides-images.js"></script>
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "HowTo",
-  "name": "Что делать если ноутбук шифрует файлы вирус-вымогатель",
-  "description": "Пошаговая инструкция: Что делать если ноутбук шифрует файлы из-за вируса-вымогателя. Полный гид по борьбе с шифровальщиками, предотвращению потерь, восстановлению данных. Антивирусы, бэкапы, безопасность.",
-  "totalTime": "PT60M",
-  "step": [
-    {
-      "@type": "HowToStep",
-      "name": "Шаг 1: Изоляция и остановка распространения",
-      "text": "Шаг 1: Изоляция и остановка распространения",
-      "url": "#step-1"
-    },
-    {
-      "@type": "HowToStep",
-      "name": "Шаг 2: Диагностика и идентификация вируса",
-      "text": "Шаг 2: Диагностика и идентификация вируса",
-      "url": "#step-2"
-    },
-    {
-      "@type": "HowToStep",
-      "name": "Шаг 3: Удаление вируса-вымогателя",
-      "text": "Шаг 3: Удаление вируса-вымогателя",
-      "url": "#step-3"
-    },
-    {
-      "@type": "HowToStep",
-      "name": "Шаг 4: Попытки восстановления данных",
-      "text": "Шаг 4: Попытки восстановления данных",
-      "url": "#step-4"
-    },
-    {
-      "@type": "HowToStep",
-      "name": "Шаг 5: Профессиональная помощь",
-      "text": "Шаг 5: Профессиональная помощь",
-      "url": "#step-5"
-    }
-  ],
-  "image": "https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
-}
-</script>
-<!-- Cookie Consent Script -->
-<script src="../cookie-consent.js"></script>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="ru" data-theme="light">
-<head>
-
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Что делать если ноутбук шифрует файлы вирус-вымогатель | Экспертный мегагайд</title>
-    <meta name="description" content="Пошаговая инструкция: Что делать если ноутбук шифрует файлы из-за вируса-вымогателя. Полный гид по борьбе с шифровальщиками, предотвращению потерь, восстановлению данных. Антивирусы, бэкапы, безопасность.">
-
-  <link rel="stylesheet" href="../styles.css" />
-  <link rel="stylesheet" href="../styles-header.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <style>
-    .guide-content { line-height: 1.7; color: var(--text); }
-    .guide-content h2 { color: var(--primary); margin-top: 30px; margin-bottom: 15px; font-size: 1.5rem; }
-    .guide-content h3 { color: var(--primary-dark); margin-top: 25px; margin-bottom: 12px; font-size: 1.2rem; }
-    .guide-image-block { margin: 20px 0; padding: 15px; background: var(--background); border-radius: var(--border-radius); border: 1px solid var(--border); text-align: center; }
-    .guide-image-block img { max-width: 100%; height: auto; border-radius: 6px; border: 1px solid var(--border); }
-    .image-caption { margin-top: 10px; font-size: 0.85rem; color: var(--text-light); font-style: italic; }
-    .pro-tips { background: rgba(3, 74, 79, 0.05); padding: 15px; border-radius: 6px; margin: 20px 0; }
-    .pro-tips h4 { color: var(--primary); margin-top: 0; margin-bottom: 12px; font-size: 1.1rem; }
-    .tip-item { display: flex; gap: 8px; margin-bottom: 8px; align-items: flex-start; }
-    .warning-block {
-      background: #fff3e0;
-      border-left: 5px solid #ff9100;
-      padding: 15px 18px;
-      margin: 22px 0;
-      border-radius: 7px;
-    }
-    .critical-block {
-      background: #ffebee;
-      border-left: 5px solid #f44336;
-      padding: 15px 18px;
-      margin: 22px 0;
-      border-radius: 7px;
-    }
-    table { width: 100%; border-collapse: collapse; margin: 20px 0; }
-    th, td { border: 1px solid var(--border); padding: 8px; text-align: left; }
-    th { background: var(--background-light); }
-    @media (max-width: 768px) {
-      .guide-content h2 { font-size: 1.4rem; margin-top: 25px; }
-      .guide-image-block { padding: 12px; margin: 15px 0; }
-      table, th, td { font-size: 0.95rem; }
-    }
-    /* Яндекс Маркет рекламный баннер */
-    .ym-hero-link {
-      display: block;
-      text-decoration: none;
-      color: inherit;
-      max-width: 100%;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    }
-
-    /* Горизонтальный баннер-карточка */
-    .ym-hero-banner {
-      width: 100%;
-      max-width: 600px;
-      min-height: 140px;
-      border-radius: 16px;
-      background: #ffffff;
-      border: 1px solid #e5e7eb;
-      display: flex;
-      flex-direction: column;
-      box-shadow: 0 4px 16px rgba(15, 23, 42, 0.08);
-      overflow: hidden;
-      box-sizing: border-box;
-      margin: 40px auto;
-    }
-
-    /* Контейнер для изображений */
-    .ym-hero-images {
-      display: flex;
-      height: 120px;
-      overflow: hidden;
-    }
-
-    .ym-hero-image {
-      flex: 1;
-      min-width: 0;
-      height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-      border-right: 1px solid #e5e7eb;
-      background: #f8f9fa;
-    }
-
-    .ym-hero-image:last-child {
-      border-right: none;
-    }
-
-    .ym-hero-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-      transition: transform 0.3s ease;
-      background: #f8f9fa;
-    }
-
-    .ym-hero-image:hover img {
-      transform: scale(1.02);
-    }
-
-    /* Правая часть: контент */
-    .ym-hero-content {
-      padding: 16px 18px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      gap: 8px;
-    }
-
-    /* Название товара */
-    .ym-hero-title {
-      font-size: 14px;
-      font-weight: 600;
-      color: #111827;
-      line-height: 1.3;
-      margin: 0 0 4px 0;
-      display: -webkit-box;
-      -webkit-line-clamp: 2;
-      line-clamp: 2;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
-    }
-
-    /* Рейтинг */
-    .ym-hero-top {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 8px;
-    }
-
-    .ym-hero-rating {
-      font-size: 13px;
-      font-weight: 500;
-      color: #111827;
-      background: #f9fafb;
-      border-radius: 999px;
-      padding: 4px 10px;
-    }
-
-    .ym-hero-rating-count {
-      color: #6b7280;
-    }
-
-    /* Фиолетовая кнопка */
-    .ym-hero-button {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 9px 16px;
-      border-radius: 999px;
-      border: none;
-      background: #6a00ff;
-      color: #ffffff;
-      font-size: 14px;
-      font-weight: 600;
-      cursor: pointer;
-      box-shadow: 0 2px 6px rgba(88, 28, 135, 0.35);
-      transition: background 0.15s ease, transform 0.15s ease,
-                  box-shadow 0.15s ease;
-    }
-
-    .ym-hero-button::after {
-      content: "→";
-      margin-left: 6px;
-      font-size: 14px;
-    }
-
-    .ym-hero-button:hover {
-      background: #7c3aed;
-      transform: translateY(-1px);
-      box-shadow: 0 4px 10px rgba(88, 28, 135, 0.45);
-    }
-
-    /* Юридический блок */
-    .ym-hero-legal {
-      margin-top: 6px;
-      max-width: 600px;
-      font-size: 11px;
-      line-height: 1.3;
-      color: #6b7280;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    /* Адаптив */
-    @media (max-width: 480px) {
-      .ym-hero-banner {
-        max-width: 100%;
-        margin: 20px 0;
-      }
-
-      .ym-hero-images {
-        height: 100px;
-      }
-
-      .ym-hero-content {
-        padding: 12px 12px;
-      }
-
-      .ym-hero-title {
-        font-size: 13px;
-      }
-
-      .ym-hero-button {
-        font-size: 13px;
-        padding: 8px 14px;
-      }
-
-      .ym-hero-legal {
-        font-size: 10px;
-      }
-    }
-    /* Telegram рекламный баннер */
-    .telegram-banner {
-      display: flex;
-      justify-content: center;
-      text-decoration: none;
-      color: inherit;
-      width: 100%;
-      margin: 40px 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    }
-
-    .telegram-banner-container {
-      width: 100%;
-      max-width: 500px;
-      min-height: 120px;
-      border-radius: 16px;
-      background: linear-gradient(135deg, #0088cc 0%, #005f8f 100%);
-      border: 1px solid #005f8f;
-      display: flex;
-      align-items: center;
-      padding: 20px;
-      box-shadow: 0 4px 16px rgba(0, 136, 204, 0.2);
-      overflow: hidden;
-      box-sizing: border-box;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-
-    .telegram-banner-container:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(0, 136, 204, 0.3);
-    }
-
-    .telegram-logo {
-      width: 60px;
-      height: 60px;
-      min-width: 60px;
-      background: #ffffff;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-right: 20px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    }
-
-    .telegram-logo svg {
-      width: 32px;
-      height: 32px;
-      fill: #0088cc;
-    }
-
-    .telegram-content {
-      flex: 1;
-      color: #ffffff;
-    }
-
-    .telegram-title {
-      font-size: 16px;
-      font-weight: 600;
-      margin: 0 0 8px 0;
-      line-height: 1.3;
-    }
-
-    .telegram-subtitle {
-      font-size: 14px;
-      opacity: 0.9;
-      margin: 0 0 12px 0;
-      line-height: 1.4;
-    }
-
-    .telegram-button {
-      display: inline-flex;
-      align-items: center;
-      padding: 8px 16px;
-      background: #ffffff;
-      color: #0088cc;
-      border-radius: 20px;
-      font-size: 14px;
-      font-weight: 600;
-      text-decoration: none;
-      transition: background 0.2s ease, transform 0.2s ease;
-    }
-
-    .telegram-button:hover {
-      background: #f0f8ff;
-      transform: scale(1.05);
-    }
-
-    .telegram-button svg {
-      width: 16px;
-      height: 16px;
-      margin-left: 6px;
-      fill: #0088cc;
-    }
-
-    /* Адаптив для мобильных */
-    @media (max-width: 480px) {
-      .telegram-banner-container {
-        max-width: 100%;
-        margin: 20px 0;
-        padding: 15px;
-        min-height: 100px;
-      }
-
-      .telegram-logo {
-        width: 50px;
-        height: 50px;
-        min-width: 50px;
-        margin-right: 15px;
-      }
-
-      .telegram-logo svg {
-        width: 26px;
-        height: 26px;
-      }
-
-      .telegram-title {
-        font-size: 14px;
-      }
-
-      .telegram-subtitle {
-        font-size: 12px;
-      }
-
-      .telegram-button {
-        font-size: 12px;
-        padding: 6px 12px;
-      }
-    }
-
-
-
-  </style>
-  <script async src="https://timeweb.cloud/api/v1/cloud-ai/agents/3cc03620-d051-4d8d-b5af-f7b6cd083a35/embed.js?collapsed=true"></script>
-</head>
-<body>
-  <header class="header">
-    <div class="container">
-      <div class="header__inner">
-        <a href="../index.html" class="logo">
-          <span class="logo__icon"></span>
-          <span class="logo__text">Repairo</span>
-        </a>
-        <nav class="nav">
-          <ul class="nav__list">
-            <li><a href="../tv.html" class="nav__link">Телевизоры</a></li>
-            <li><a href="../cameras.html" class="nav__link">Фотоаппараты</a></li>
-            <li><a href="../consoles.html" class="nav__link">Приставки</a></li>
-            <li><a href="../laptops.html" class="nav__link">Ноутбуки</a></li>
-            <li><a href="../smartphones.html" class="nav__link">Смартфоны</a></li>
-          </ul>
-        </nav>
       </div>
     </div>
-  </header>
-
-  <section class="guide-page">
-    <div class="container">
-      <div class="breadcrumbs">
-        <a href="../index.html">Главная</a>
-        <i class="fas fa-chevron-right"></i>
-        <a href="../laptops.html">Ноутбуки</a>
-        <i class="fas fa-chevron-right"></i>
-        <span>Что делать если ноутбук шифрует файлы вирус-вымогатель</span>
-      </div>
-
-      <h1 class="section__title">Что делать если ноутбук шифрует файлы вирус-вымогатель</h1>
-
-      <div class="guide-meta">
-        <span><i class="fas fa-laptop"></i> Экспертный гид: пошаговая инструкция по борьбе с вирусами-вымогателями на ноутбуке. Как распознать шифровальщик, остановить распространение, минимизировать потери, восстановить данные. Профилактика и защита.</span>
-      </div>
-
-      <div class="guide-image-block">
-        <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Вирус-вымогатель шифрует файлы на ноутбуке">
-        <div class="image-caption">
-          Вирус-вымогатель шифрует файлы на ноутбуке: экстренные действия, остановка распространения, минимизация потерь, восстановление данных. Защита от шифровальщиков, антивирусы, бэкапы.
-        </div>
-      </div>
-
-      <div class="guide-content">
-
-        <h2>Введение: критическая ситуация и первые действия</h2>
-        <p>
-          Обнаружение вируса-вымогателя на ноутбуке — один из самых страшных сценариев для любого пользователя. Файлы становятся недоступными, появляются требования выкупа, и каждая минута промедления может увеличить потери. Главное в такой ситуации — не паниковать и действовать быстро и правильно. Этот гид поможет вам минимизировать ущерб и, возможно, восстановить данные без выплаты выкупа.
-        </p>
-
-        <div class="critical-block">
-          <strong>⚠️ СРОЧНО: Немедленные действия при обнаружении шифровальщика</strong><br>
-          1. Отключите ноутбук от сети и интернета<br>
-          2. Не выключайте компьютер принудительно<br>
-          3. Не платите выкуп без консультации со специалистами<br>
-          4. Сделайте фото/скриншот требования выкупа
-        </div>
-
-        <h2>Таблица: распространенные вирусы-вымогатели</h2>
-        <table>
-          <thead>
-            <tr>
-              <th>Название вируса</th>
-              <th>Расширение файлов</th>
-              <th>Требование выкупа</th>
-              <th>Шансы расшифровки</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>WannaCry</td>
-              <td>.wnry</td>
-              <td>$300-600 в Bitcoin</td>
-              <td>Высокие (есть дешифратор)</td>
-            </tr>
-            <tr>
-              <td>CryptoLocker</td>
-              <td>.cryptolocker</td>
-              <td>$400-2000</td>
-              <td>Средние (старые версии)</td>
-            </tr>
-            <tr>
-              <td>Locky</td>
-              <td>.locky, .odin</td>
-              <td>0.5-1.5 BTC</td>
-              <td>Низкие</td>
-            </tr>
-            <tr>
-              <td>Ceasar</td>
-              <td>.ceasar</td>
-              <td>$500-1500</td>
-              <td>Средние</td>
-            </tr>
-            <tr>
-              <td>Dharma</td>
-              <td>.dharma, .combo</td>
-              <td>0.1-0.5 BTC</td>
-              <td>Низкие</td>
-            </tr>
-          </tbody>
-        </table>
-
-        <h2>Шаг 1: Изоляция и остановка распространения</h2>
-        <h3>Немедленная изоляция системы</h3>
-        <ol>
-          <li><b>Отключите интернет</b> — вытащите Ethernet кабель, отключите Wi-Fi</li>
-          <li><b>Отключите от сети</b> — выньте зарядное устройство</li>
-          <li><b>Не перезагружайте</b> — это может запустить процессы шифрования</li>
-          <li><b>Не подключайте USB-накопители</b> — вирус может распространиться</li>
-          <li><b>Фотографируйте требования</b> — сохраните информацию о выкупе</li>
-        </ol>
-
-        <h3>Остановка активных процессов</h3>
-        <ul>
-          <li><b>Task Manager</b> — Ctrl+Shift+Esc, ищите подозрительные процессы</li>
-          <li><b>Resource Monitor</b> — проверьте загрузку диска и сети</li>
-          <li><b>Process Explorer</b> — продвинутый мониторинг процессов</li>
-          <li><b>Завершите процессы</b> с подозрительными именами</li>
-        </ul>
-
-        <h2>Шаг 2: Диагностика и идентификация вируса</h2>
-        <h3>Признаки шифровальщика</h3>
-        <ul>
-          <li><b>Измененные расширения</b> — .locked, .encrypted, .crypted</li>
-          <li><b>Текстовые файлы с требованиями</b> — README.txt, _DECRYPT.txt</li>
-          <li><b>Измененные иконки файлов</b> — становятся одинаковыми</li>
-          <li><b>Высокая загрузка CPU/диска</b> — процесс шифрования</li>
-          <li><b>Окно с требованием выкупа</b> — на рабочем столе</li>
-        </ul>
-
-        <h3>Определение типа вируса</h3>
-        <ol>
-          <li><b>Проверьте расширения</b> зашифрованных файлов</li>
-          <li><b>Прочитайте требования</b> в текстовых файлах</li>
-          <li><b>Используйте ID Ransomware</b> — онлайн-сервис идентификации</li>
-          <li><b>Проверьте файлы-заметки</b> — часто содержат имя вируса</li>
-          <li><b>Сфотографируйте окно выкупа</b> — поможет в идентификации</li>
-        </ol>
-
-        <h2>Шаг 3: Удаление вируса-вымогателя</h2>
-        <h3>Использование загрузочных дисков</h3>
-        <ol>
-          <li><b>Создайте загрузочный USB</b> с Kaspersky Rescue Disk</li>
-          <li><b>Загрузитесь с USB</b> — измените порядок загрузки в BIOS</li>
-          <li><b>Запустите сканирование</b> в безопасной среде</li>
-          <li><b>Удалите обнаруженные угрозы</b></li>
-          <li><b>Перезагрузитесь</b> в обычную систему</li>
-        </ol>
-
-        <h3>Специализированные утилиты</h3>
-        <ul>
-          <li><b>Kaspersky Virus Removal Tool</b> — бесплатная утилита</li>
-          <li><b>Malwarebytes Anti-Ransomware</b> — защита от шифровальщиков</li>
-          <li><b>HitmanPro</b> — сканер второго мнения</li>
-          <li><b>AdwCleaner</b> — удаление рекламного ПО</li>
-          <li><b>RogueKiller</b> — продвинутый remover</li>
-        </ul>
-
-        <h2>Шаг 4: Попытки восстановления данных</h2>
-        <h3>Поиск дешифраторов</h3>
-        <ol>
-          <li><b>Avast Decryption Tools</b> — коллекция дешифраторов</li>
-          <li><b>Emsisoft Decryptor</b> — инструменты для разных вирусов</li>
-          <li><b>No More Ransom Project</b> — международная инициатива</li>
-          <li><b>ID Ransomware</b> — определение и поиск решений</li>
-          <li><b>Bleeping Computer</b> — форум помощи жертвам</li>
-        </ol>
-
-        <h3>Восстановление из теневых копий</h3>
-        <ul>
-          <li><b>Previous Versions</b> — свойства папки → Previous Versions</li>
-          <li><b>Shadow Explorer</b> — доступ к теневым копиям</li>
-          <li><b>PowerShadow</b> — восстановление из shadow copies</li>
-          <li><b>Требования</b> — System Restore Points включены</li>
-        </ul>
-
-        <h3>Восстановление из бэкапов</h3>
-        <ul>
-          <li><b>File History</b> — встроенная система Windows</li>
-          <li><b>Облачные сервисы</b> — OneDrive, Google Drive</li>
-          <li><b>Внешние диски</b> — проверьте актуальность бэкапов</li>
-          <li><b>Сетевые хранилища</b> — NAS, серверы</li>
-        </ul>
-
-        <h2>Шаг 5: Профессиональная помощь</h2>
-        <h3>Когда обращаться к специалистам</h3>
-        <ul>
-          <li><b>Важные данные</b> — рабочие документы, семейные фото</li>
-          <li><b>Нет бэкапов</b> — данные существуют только на ноутбуке</li>
-          <li><b>Сложный вирус</b> — нет известных дешифраторов</li>
-          <li><b>Бизнес данные</b> — критически важная информация</li>
-        </ul>
-
-        <h3>Выбор сервиса восстановления</h3>
-        <ul>
-          <li><b>Лаборатория Касперского</b> — официальный сервис</li>
-          <li><b>Dr.Web</b> — вирусная лаборатория</li>
-          <li><b>Локальные IT-компании</b> — проверенные сервисы</li>
-          <li><b>Онлайн-форумы</b> — Bleeping Computer, MalwareTips</li>
-        </ul>
-
-        <h2>Профилактика: защита от будущих атак</h2>
-        <h3>Настройка безопасности системы</h3>
-        <ol>
-          <li><b>Установите надежный антивирус</b> — Kaspersky, ESET, Bitdefender</li>
-          <li><b>Включите Windows Defender</b> с реальной защитой</li>
-          <li><b>Обновляйте систему</b> — установите все патчи безопасности</li>
-          <li><b>Отключите macros</b> в Office документах</li>
-          <li><b>Включите UAC</b> — контроль учетных записей</li>
-        </ol>
-
-        <h3>Резервное копирование</h3>
-        <ul>
-          <li><b>Правило 3-2-1</b> — три копии, два носителя, одна вне сайта</li>
-          <li><b>Автоматические бэкапы</b> — ежедневные на внешний диск</li>
-          <li><b>Облачное хранилище</b> — OneDrive, Google Drive</li>
-          <li><b>Тестирование восстановления</b> — регулярная проверка бэкапов</li>
-        </ul>
-
-        <h3>Обучение безопасности</h3>
-        <ul>
-          <li><b>Не открывайте подозрительные email</b></li>
-          <li><b>Проверяйте отправителей</b> — фишинг атаки</li>
-          <li><b>Не скачивайте с непроверенных сайтов</b></li>
-          <li><b>Используйте сложные пароли</b></li>
-          <li><b>Двухфакторная аутентификация</b> где возможно</li>
-        </ul>
-
-        <h2>Психологическая поддержка</h2>
-        <div class="pro-tips">
-          <h4>🔹 Как справиться со стрессом</h4>
-          <div class="tip-item">
-            <i class="fas fa-lightbulb"></i>
-            <p>Помните, что вы не одиноки — тысячи людей сталкиваются с этой проблемой.</p>
-          </div>
-          <div class="tip-item">
-            <i class="fas fa-lightbulb"></i>
-            <p>Не вините себя — злоумышленники постоянно совершенствуют методы атаки.</p>
-          </div>
-          <div class="tip-item">
-            <i class="fas fa-lightbulb"></i>
-            <p>Действуйте пошагово — паника только усугубит ситуацию.</p>
-          </div>
-          <div class="tip-item">
-            <i class="fas fa-lightbulb"></i>
-            <p>Обратитесь за поддержкой к друзьям или специалистам.</p>
-          </div>
-        </div>
-
-        <h2>FAQ — часто задаваемые вопросы</h2>
-        <ul>
-          <li>
-            <strong>Платить ли выкуп?</strong><br>
-            Эксперты рекомендуют не платить — нет гарантии возврата данных и вы финансируете преступников.
-          </li>
-          <li>
-            <strong>Можно ли восстановить файлы?</strong><br>
-            Зависит от типа вируса — для некоторых есть дешифраторы, другие невозможно расшифровать.
-          </li>
-          <li>
-            <strong>Сколько времени займет восстановление?</strong><br>
-            От нескольких часов до нескольких дней в зависимости от объема данных и метода восстановления.
-          </li>
-          <li>
-            <strong>Как предотвратить повторное заражение?</strong><br>
-            Установите надежный антивирус, регулярно делайте бэкапы, обучитесь основам кибербезопасности.
-          </li>
-          <li>
-            <strong>Стоит ли обращаться в полицию?</strong><br>
-            Да, особенно если речь идет о бизнесе или больших суммах выкупа.
-          </li>
-        </ul>
-
-        <div class="critical-block">
-          <strong>КРИТИЧЕСКИ ВАЖНО!</strong> Никогда не платите выкуп без консультации с профессионалами. Даже после оплаты нет гарантии возврата данных. Обращение в специализированные лаборатории часто дает лучшие результаты с меньшими рисками.
-        </div>
-
-        <h2>Пошаговая инструкция: экстренные действия</h2>
-        <ol>
-          <li>Немедленно отключите интернет и питание</li>
-          <li>Сфотографируйте требования выкупа</li>
-          <li>Не выключайте компьютер принудительно</li>
-          <li>Определите тип вируса по расширениям файлов</li>
-          <li>Создайте загрузочный диск с антивирусом</li>
-          <li>Просканируйте систему в безопасной среде</li>
-          <li>Поищите дешифраторы для вашего вируса</li>
-          <li>Попытайтесь восстановить из теневых копий</li>
-          <li>Проверьте бэкапы на внешних носителях</li>
-          <li>Обратитесь к специалистам при необходимости</li>
-        </ol>
-
-        <h2>📌 Итог: минимизация потерь и превентивная защита</h2>
-        <p>
-          Встреча с вирусом-вымогателем — стрессовая ситуация, но правильные и быстрые действия могут минимизировать потери. Ключевые факторы успеха: немедленная изоляция системы, правильная идентификация вируса, использование профессиональных инструментов и своевременное обращение за помощью. Однако лучшая стратегия — превентивная защита: надежный антивирус, регулярные бэкапы и обучение основам кибербезопасности. Помните, что prevention всегда лучше и дешевле cure.
-        </p>
-</div>
-    </div>
-  </section>
+  </main>
 
   <footer class="footer">
     <div class="container">
-      <div class="footer__grid">
-        <div class="footer__col footer__col--logo">
-          <a href="index.html" class="footer-logo">
-            <span class="logo__icon"></span>
-            <span class="logo__text">Repairo</span>
-          </a>
-          <p class="footer__text">Экспертные инструкции по технике с 2024 года</p>
+      <div class="footer__content">
+        <div class="footer__section">
+          <h4>Repairo</h4>
+          <p>Экспертные руководства по ремонту и обслуживанию техники</p>
         </div>
-        <div class="footer__col">
-          <h3 class="footer__title">Разделы</h3>
-          <ul class="footer__links">
-            <li><a href="index.html" class="footer__link">Главная</a></li>
-            <li><a href="all-guides.html" class="footer__link">Все гайды</a></li>
-            <li><a href="contacts.html" class="footer__link">Контакты</a></li>
+        <div class="footer__section">
+          <h4>Разделы</h4>
+          <ul>
+            <li><a href="../laptops.html">Ноутбуки</a></li>
+            <li><a href="../smartphones.html">Смартфоны</a></li>
+            <li><a href="../consoles.html">Консоли</a></li>
+            <li><a href="../cameras.html">Фотоаппараты</a></li>
           </ul>
         </div>
-        <div class="footer__col">
-          <h3 class="footer__title">Категории</h3>
-          <ul class="footer__links">
-            <li><a href="../tv.html" class="nav__link">Телевизоры</a></li>
-            <li><a href="../cameras.html" class="nav__link">Фотоаппараты</a></li>
-            <li><a href="../consoles.html" class="nav__link">Приставки</a></li>
-            <li><a href="../laptops.html" class="nav__link">Ноутбуки</a></li>
-            <li><a href="../smartphones.html" class="nav__link">Смартфоны</a></li>
-            <li><a href="../small-appliances.html" class="nav__link">Мелкая техника</a></li>
-            <li><a href="../large-appliances.html" class="nav__link">Бытовая техника</a></li>
-            <li><a href="../auto-electronics.html" class="nav__link">Авто-Электроника</a></li>
-          </ul>
-        </div>
-        <div class="footer__col">
-          <h3 class="footer__title">Контакты</h3>
-          <ul class="footer__links">
-            <li>
-              <a href="https://t.me/repairo_kz" class="footer__link"><i class="fab fa-telegram"></i> Telegram</a>
-            </li>
-            <li>
-              <a href="https://instagram.com/repairo_kz" class="footer__link"><i class="fab fa-instagram"></i> Instagram</a>
-            </li>
-            <li>
-              <a href="mailto:support@repairo.kz" class="footer__link"><i class="fas fa-envelope"></i> Email</a>
-            </li>
-          </ul>
+        <div class="footer__section">
+          <h4>Контакты</h4>
+          <p>support@repairo.ru</p>
         </div>
       </div>
       <div class="footer__bottom">
-            <p class="disclaimer">
-        Администрация сайта не несёт ответственности за возможные повреждения техники
-        и иные последствия, возникшие в результате самостоятельного ремонта по
-        материалам и инструкциям, размещённым на сайте. Все работы вы выполняете
-        на свой страх и риск.
-    </p>
-                <p class="footer__copyright">© 2025 Repairo. Все права защищены.</p>
+        <p>&copy; 2024 Repairo. Все права защищены.</p>
       </div>
     </div>
   </footer>
-    <!-- Cookie Consent Banner -->
-    <script src="../script.js"></script>
-  <script src="../guides-images.js"></script>
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "HowTo",
-  "name": "Что делать если ноутбук шифрует файлы вирус-вымогатель",
-  "description": "Пошаговая инструкция: Что делать если ноутбук шифрует файлы из-за вируса-вымогателя. Полный гид по борьбе с шифровальщиками, предотвращению потерь, восстановлению данных. Антивирусы, бэкапы, безопасность.",
-  "totalTime": "PT60M",
-  "step": [
-    {
-      "@type": "HowToStep",
-      "name": "Шаг 1: Изоляция и остановка распространения",
-      "text": "Шаг 1: Изоляция и остановка распространения",
-      "url": "#step-1"
-    },
-    {
-      "@type": "HowToStep",
-      "name": "Шаг 2: Диагностика и идентификация вируса",
-      "text": "Шаг 2: Диагностика и идентификация вируса",
-      "url": "#step-2"
-    },
-    {
-      "@type": "HowToStep",
-      "name": "Шаг 3: Удаление вируса-вымогателя",
-      "text": "Шаг 3: Удаление вируса-вымогателя",
-      "url": "#step-3"
-    },
-    {
-      "@type": "HowToStep",
-      "name": "Шаг 4: Попытки восстановления данных",
-      "text": "Шаг 4: Попытки восстановления данных",
-      "url": "#step-4"
-    },
-    {
-      "@type": "HowToStep",
-      "name": "Шаг 5: Профессиональная помощь",
-      "text": "Шаг 5: Профессиональная помощь",
-      "url": "#step-5"
-    }
-  ],
-  "image": "https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
-}
-</script>
-<!-- Cookie Consent Script -->
-<script src="../cookie-consent.js"></script>
+  <script src="../script.js"></script>
+  <script src="../search.js"></script>
+
 </body>
 </html>
-

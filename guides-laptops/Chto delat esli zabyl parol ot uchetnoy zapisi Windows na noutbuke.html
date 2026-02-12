@@ -4,44 +4,63 @@
 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Что делать если забыл пароль от учетной записи Windows на ноутбуке | Экспертный мегагайд</title>
+  <title>Забыл пароль от Windows на ноутбуке: что делать | Пошаговая инструкция по восстановлению</title>
     <meta name="description" content="{{ description }}">
+    <meta name="description" content="Пошаговая инструкция: Что делать, если забыл пароль от учетной записи Windows на ноутбуке. Полное руководство по восстановлению доступа к системе без потери данных.">
 
   <link rel="stylesheet" href="../styles.css" />
   <link rel="stylesheet" href="../styles-header.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
   <style>
     .guide-content { line-height: 1.7; color: var(--text); }
-    .guide-content h2 { color: var(--primary); margin-top: 30px; margin-bottom: 15px; font-size: 1.5rem; }
-    .guide-content h3 { color: var(--primary-dark); margin-top: 25px; margin-bottom: 12px; font-size: 1.2rem; }
+    .guide-content h2 { color: var(--primary); margin-top: 30px; margin-bottom: 15px; font-size: 1.6rem; }
+    .guide-content h3 { color: var(--primary-dark); margin-top: 25px; margin-bottom: 12px; font-size: 1.25rem; }
     .guide-image-block { margin: 20px 0; padding: 15px; background: var(--background); border-radius: var(--border-radius); border: 1px solid var(--border); text-align: center; }
     .guide-image-block img { max-width: 100%; height: auto; border-radius: 6px; border: 1px solid var(--border); }
     .image-caption { margin-top: 10px; font-size: 0.85rem; color: var(--text-light); font-style: italic; }
+    table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+    th, td { border: 1px solid var(--border); padding: 8px; text-align: left; vertical-align: top; }
+    th { background: var(--background-light); }
+    code { background: rgba(0,0,0,0.04); padding: 1px 4px; border-radius: 3px; }
+    ul, ol { padding-left: 18px; }
+    .check-section { padding: 15px; border-radius: 6px; border: 1px dashed var(--border); margin: 18px 0; background: rgba(0,0,0,0.01); }
+    .check-title { font-weight: 600; margin-bottom: 8px; }
     .pro-tips { background: rgba(3, 74, 79, 0.05); padding: 15px; border-radius: 6px; margin: 20px 0; }
     .pro-tips h4 { color: var(--primary); margin-top: 0; margin-bottom: 12px; font-size: 1.1rem; }
     .tip-item { display: flex; gap: 8px; margin-bottom: 8px; align-items: flex-start; }
-    .warning-block {
-      background: #fff3e0;
-      border-left: 5px solid #ff9100;
-      padding: 15px 18px;
-      margin: 22px 0;
-      border-radius: 7px;
-    }
-    .critical-block {
-      background: #ffebee;
-      border-left: 5px solid #f44336;
-      padding: 15px 18px;
-      margin: 22px 0;
-      border-radius: 7px;
-    }
-    table { width: 100%; border-collapse: collapse; margin: 20px 0; }
-    th, td { border: 1px solid var(--border); padding: 8px; text-align: left; }
-    th { background: var(--background-light); }
+    .ok { color: #0a8f3c; font-weight: 600; }
+    .warn { color: #c97a00; font-weight: 600; }
+    .bad { color: #c62828; font-weight: 600; }
+    .alert-box { padding: 20px; border-radius: 8px; margin: 25px 0; }
+    .alert-danger { background: rgba(198, 40, 40, 0.1); border-left: 4px solid #c62828; }
+    .alert-warning { background: rgba(201, 122, 0, 0.1); border-left: 4px solid #c97a00; }
+    .alert-success { background: rgba(10, 143, 60, 0.1); border-left: 4px solid #0a8f3c; }
+    .alert-info { background: rgba(3, 74, 79, 0.1); border-left: 4px solid var(--primary); }
+    .method-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin: 20px 0; }
+    .method-card { padding: 20px; border-radius: 8px; background: var(--background); border: 1px solid var(--border); }
+    .method-card h4 { color: var(--primary-dark); margin-top: 0; margin-bottom: 15px; }
+    .method-card .difficulty { display: inline-block; padding: 4px 8px; border-radius: 4px; font-size: 0.85rem; font-weight: 600; margin-bottom: 10px; }
+    .difficulty-easy { background: rgba(10, 143, 60, 0.2); color: #0a8f3c; }
+    .difficulty-medium { background: rgba(201, 122, 0, 0.2); color: #c97a00; }
+    .difficulty-hard { background: rgba(198, 40, 40, 0.2); color: #c62828; }
+    .step-by-step { counter-reset: step-counter; }
+    .step-by-step .step-item { position: relative; padding-left: 50px; margin-bottom: 20px; }
+    .step-by-step .step-item::before { counter-increment: step-counter; content: counter(step-counter); position: absolute; left: 0; top: 0; width: 35px; height: 35px; background: var(--primary); color: white; text-align: center; line-height: 35px; border-radius: 50%; font-weight: bold; }
+    .tools-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; margin: 20px 0; }
+    .tool-card { padding: 15px; border-radius: 6px; background: var(--background); border: 1px solid var(--border); text-align: center; }
+    .tool-card h4 { color: var(--primary-dark); margin-top: 0; margin-bottom: 8px; }
+    .tool-card .price { color: var(--primary); font-weight: 600; margin-bottom: 8px; }
+    .comparison-table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+    .comparison-table th { background: var(--primary); color: white; padding: 12px; text-align: center; }
+    .comparison-table td { padding: 10px; text-align: center; }
+    .comparison-table .feature-col { text-align: left; font-weight: 600; }
     @media (max-width: 768px) {
       .guide-content h2 { font-size: 1.4rem; margin-top: 25px; }
       .guide-image-block { padding: 12px; margin: 15px 0; }
       table, th, td { font-size: 0.95rem; }
+      .method-grid { grid-template-columns: 1fr; }
     }
     /* Яндекс Маркет рекламный баннер */
     .ym-hero-link {
@@ -103,1556 +122,427 @@
       transform: scale(1.02);
     }
 
-    /* Правая часть: контент */
+    /* Текстовая часть баннера */
     .ym-hero-content {
-      padding: 16px 18px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      gap: 8px;
+      padding: 12px 16px;
+      text-align: center;
     }
 
-    /* Название товара */
     .ym-hero-title {
-      font-size: 14px;
-      font-weight: 600;
-      color: #111827;
-      line-height: 1.3;
-      margin: 0 0 4px 0;
-      display: -webkit-box;
-      -webkit-line-clamp: 2;
-      line-clamp: 2;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
-    }
-
-    /* Рейтинг */
-    .ym-hero-top {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 8px;
-    }
-
-    .ym-hero-rating {
       font-size: 13px;
-      font-weight: 500;
-      color: #111827;
-      background: #f9fafb;
-      border-radius: 999px;
-      padding: 4px 10px;
-    }
-
-    .ym-hero-rating-count {
-      color: #6b7280;
-    }
-
-    /* Фиолетовая кнопка */
-    .ym-hero-button {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 9px 16px;
-      border-radius: 999px;
-      border: none;
-      background: #6a00ff;
-      color: #ffffff;
-      font-size: 14px;
       font-weight: 600;
-      cursor: pointer;
-      box-shadow: 0 2px 6px rgba(88, 28, 135, 0.35);
-      transition: background 0.15s ease, transform 0.15s ease,
-                  box-shadow 0.15s ease;
-    }
-
-    .ym-hero-button::after {
-      content: "→";
-      margin-left: 6px;
-      font-size: 14px;
-    }
-
-    .ym-hero-button:hover {
-      background: #7c3aed;
-      transform: translateY(-1px);
-      box-shadow: 0 4px 10px rgba(88, 28, 135, 0.45);
-    }
-
-    /* Юридический блок */
-    .ym-hero-legal {
-      margin-top: 6px;
-      max-width: 600px;
-      font-size: 11px;
+      color: #1f2937;
+      margin: 0 0 4px 0;
       line-height: 1.3;
-      color: #6b7280;
-      margin-left: auto;
-      margin-right: auto;
     }
 
-    /* Адаптив */
+    .ym-hero-desc {
+      font-size: 11px;
+      color: #6b7280;
+      margin: 0;
+      line-height: 1.3;
+    }
+
     @media (max-width: 480px) {
       .ym-hero-banner {
-        max-width: 100%;
-        margin: 20px 0;
+        min-height: 120px;
       }
-
       .ym-hero-images {
         height: 100px;
       }
-
-      .ym-hero-content {
-        padding: 12px 12px;
-      }
-
       .ym-hero-title {
-        font-size: 13px;
+        font-size: 12px;
       }
-
-      .ym-hero-button {
-        font-size: 13px;
-        padding: 8px 14px;
-      }
-
-      .ym-hero-legal {
+      .ym-hero-desc {
         font-size: 10px;
       }
     }
-    /* Telegram рекламный баннер */
-    .telegram-banner {
-      display: flex;
-      justify-content: center;
-      text-decoration: none;
-      color: inherit;
-      width: 100%;
-      margin: 40px 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    }
-
-    .telegram-banner-container {
-      width: 100%;
-      max-width: 500px;
-      min-height: 120px;
-      border-radius: 16px;
-      background: linear-gradient(135deg, #0088cc 0%, #005f8f 100%);
-      border: 1px solid #005f8f;
-      display: flex;
-      align-items: center;
-      padding: 20px;
-      box-shadow: 0 4px 16px rgba(0, 136, 204, 0.2);
-      overflow: hidden;
-      box-sizing: border-box;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-
-    .telegram-banner-container:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(0, 136, 204, 0.3);
-    }
-
-    .telegram-logo {
-      width: 60px;
-      height: 60px;
-      min-width: 60px;
-      background: #ffffff;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-right: 20px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    }
-
-    .telegram-logo svg {
-      width: 32px;
-      height: 32px;
-      fill: #0088cc;
-    }
-
-    .telegram-content {
-      flex: 1;
-      color: #ffffff;
-    }
-
-    .telegram-title {
-      font-size: 16px;
-      font-weight: 600;
-      margin: 0 0 8px 0;
-      line-height: 1.3;
-    }
-
-    .telegram-subtitle {
-      font-size: 14px;
-      opacity: 0.9;
-      margin: 0 0 12px 0;
-      line-height: 1.4;
-    }
-
-    .telegram-button {
-      display: inline-flex;
-      align-items: center;
-      padding: 8px 16px;
-      background: #ffffff;
-      color: #0088cc;
-      border-radius: 20px;
-      font-size: 14px;
-      font-weight: 600;
-      text-decoration: none;
-      transition: background 0.2s ease, transform 0.2s ease;
-    }
-
-    .telegram-button:hover {
-      background: #f0f8ff;
-      transform: scale(1.05);
-    }
-
-    .telegram-button svg {
-      width: 16px;
-      height: 16px;
-      margin-left: 6px;
-      fill: #0088cc;
-    }
-
-    /* Адаптив для мобильных */
-    @media (max-width: 480px) {
-      .telegram-banner-container {
-        max-width: 100%;
-        margin: 20px 0;
-        padding: 15px;
-        min-height: 100px;
-      }
-
-      .telegram-logo {
-        width: 50px;
-        height: 50px;
-        min-width: 50px;
-        margin-right: 15px;
-      }
-
-      .telegram-logo svg {
-        width: 26px;
-        height: 26px;
-      }
-
-      .telegram-title {
-        font-size: 14px;
-      }
-
-      .telegram-subtitle {
-        font-size: 12px;
-      }
-
-      .telegram-button {
-        font-size: 12px;
-        padding: 6px 12px;
-      }
-    }
-
-
-
   </style>
-  <script async src="https://timeweb.cloud/api/v1/cloud-ai/agents/3cc03620-d051-4d8d-b5af-f7b6cd083a35/embed.js?collapsed=true"></script>
 </head>
 <body>
+
   <header class="header">
     <div class="container">
       <div class="header__inner">
         <a href="../index.html" class="logo">
-          <span class="logo__icon"></span>
-          <span class="logo__text">Repairo</span>
+          <img src="../logo.svg" alt="Repairo" width="40" height="40">
+          <span>Repairo</span>
         </a>
         <nav class="nav">
-          <ul class="nav__list">
-            <li><a href="../tv.html" class="nav__link">Телевизоры</a></li>
-            <li><a href="../cameras.html" class="nav__link">Фотоаппараты</a></li>
-            <li><a href="../consoles.html" class="nav__link">Приставки</a></li>
-            <li><a href="../laptops.html" class="nav__link">Ноутбуки</a></li>
-            <li><a href="../smartphones.html" class="nav__link">Смартфоны</a></li>
-          </ul>
+          <a href="../index.html">Главная</a>
+          <a href="../laptops.html">Ноутбуки</a>
+          <a href="../smartphones.html">Смартфоны</a>
+          <a href="../consoles.html">Консоли</a>
+          <a href="../cameras.html">Фотоаппараты</a>
+          <a href="../tv.html">Телевизоры</a>
         </nav>
+        <button class="theme-toggle" aria-label="Переключить тему">
+          <i class="fas fa-moon"></i>
+        </button>
       </div>
     </div>
   </header>
 
-  <section class="guide-page">
+  <main class="main">
     <div class="container">
-      <div class="breadcrumbs">
-        <a href="../index.html">Главная</a>
-        <i class="fas fa-chevron-right"></i>
-        <a href="../laptops.html">Ноутбуки</a>
-        <i class="fas fa-chevron-right"></i>
-        <span>Что делать если забыл пароль от учетной записи Windows на ноутбуке</span>
-      </div>
-
-      <h1 class="section__title">Что делать если забыл пароль от учетной записи Windows на ноутбуке</h1>
-
-      <div class="guide-meta">
-        <span><i class="fas fa-laptop"></i> Экспертный гид: пошаговая инструкция по восстановлению доступа к Windows при забытом пароле. Все методы сброса пароля, от официальных до утилитарных. Сохранение данных и безопасность.</span>
-      </div>
-
-      <div class="guide-image-block">
-        <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Забыл пароль от Windows на ноутбуке">
-        <div class="image-caption">
-          Восстановление доступа к Windows при забытом пароле: официальные методы, загрузочные диски, командная строка, утилиты. Сброс пароля без потери данных на ноутбуке.
-        </div>
-      </div>
-
       <div class="guide-content">
-        <!-- Яндекс Маркет рекламный блок -->
-        <a href="https://market.yandex.ru/catalog--bytovaia-tekhnika/54419/list?hid=198118&rs=eJwzUvjEKMvBILDwEKsEg8Kzbh6Nw4dZNS4D8c7lFhp9c1-wAQC3uAwP&clid=14635360&refid=rbck8fgamv681iu59go3iqxwddedl4x9&erid=5jtCeReNx12oajxS2bzShmZ&mclid=1003&distr_type=7&utm_source=partner_network&pp=900&utm_medium=link_list&utm_campaign=14635360"
-           target="_blank"
-           rel="noopener noreferrer sponsored"
-           class="ym-hero-link">
+        <h1>Забыл пароль от Windows на ноутбуке: что делать</h1>
+        
+        <p>Потеря пароля от учетной записи Windows — стрессовая ситуация, но не безнадежная. Существует несколько способов восстановить доступ к ноутбуку без потери данных. В этой инструкции мы рассмотрим все доступные методы, от самых простых до более сложных.</p>
+
+        <div class="guide-image-block">
+          <img src="https://avatars.mds.yandex.net/get-shedevrum/15247318/img_bb8da9b637b611f0a65652d8e6a785d9/orig" alt="Забыл пароль от учетной записи Windows на ноутбуке">
+          <div class="image-caption">Экран входа в Windows с забытым паролем</div>
+        </div>
+
+        <div class="alert-warning">
+          <h4><i class="fas fa-exclamation-triangle"></i> ВАЖНО: Первые действия</h4>
+          <p>Не паникуйте и не пытайтесь вводить пароль многократно — это может заблокировать учетную запись. Начните с самых простых и безопасных методов восстановления.</p>
+        </div>
+
+        <h2>Простые и безопасные методы восстановления</h2>
+
+        <h3>Метод 1: Использование вопросов безопасности</h3>
+
+        <div class="method-grid">
+          <div class="method-card">
+            <h4><i class="fas fa-question-circle"></i> Вопросы безопасности</h4>
+            <span class="difficulty difficulty-easy">Легко</span>
+            <p>Если вы настраивали вопросы безопасности при создании учетной записи, это самый простой способ восстановления.</p>
+            <div class="step-by-step">
+              <div class="step-item">
+                <h4>На экране входа</h4>
+                <p>Нажмите "Сброс пароля" или ссылка "Я забыл пароль"</p>
+              </div>
+              <div class="step-item">
+                <h4>Ответьте на вопросы</h4>
+                <p>Введите правильные ответы на контрольные вопросы</p>
+              </div>
+              <div class="step-item">
+                <h4>Создайте новый пароль</h4>
+                <p>Установите новый надежный пароль для входа</p>
+              </div>
+            </div>
+          </div>
+          <div class="method-card">
+            <h4><i class="fas fa-envelope"></i> Восстановление по email</h4>
+            <span class="difficulty difficulty-easy">Легко</span>
+            <p>Если учетная запись привязана к email, можно восстановить доступ через почту.</p>
+            <div class="step-by-step">
+              <div class="step-item">
+                <h4>Используйте другой компьютер</h4>
+                <p>Зайдите на сайт Microsoft для восстановления аккаунта</p>
+              </div>
+              <div class="step-item">
+                <h4>Введите email</h4>
+                <p>Укажите адрес электронной почты, привязанный к учетной записи</p>
+              </div>
+              <div class="step-item">
+                <h4>Подтвердите личность</h4>
+                <p>Следуйте инструкциям для подтверждения личности</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <h3>Метод 2: Использование Microsoft Account</h3>
+
+        <div class="alert-success">
+          <h4><i class="fas fa-check-circle"></i> Если вы используете Microsoft Account</h4>
+          <p>Для учетных записей Microsoft восстановление намного проще, чем для локальных.</p>
+        </div>
+
+        <div class="check-section">
+          <div class="check-title">Порядок восстановления Microsoft Account:</div>
+          <ol>
+            <li><strong>На экране входа</strong> нажмите "Сброс пароля"</li>
+            <li><strong>Введите email</strong> вашей учетной записи Microsoft</li>
+            <li><strong>Выберите способ подтверждения</strong> — email, SMS или звонок</li>
+            <li><strong>Введите код подтверждения</strong> полученный на выбранный способ</li>
+            <li><strong>Создайте новый пароль</strong> для вашей учетной записи</li>
+            <li><strong>Войдите в систему</strong> с новым паролем</li>
+          </ol>
+        </div>
+
+        <h2>Восстановление локальной учетной записи</h2>
+
+        <h3>Метод 3: Использование загрузочной флешки</h3>
+
+        <div class="method-card">
+          <h4><i class="fas fa-usb"></i> Загрузочная флешка с утилитами</h4>
+          <span class="difficulty difficulty-medium">Средне</span>
+          <p>Специализированные программы на загрузочной флешке могут сбросить пароль Windows.</p>
+        </div>
+
+        <div class="pro-tips">
+          <h4>Популярные утилиты для сброса пароля:</h4>
+          <ul>
+            <li><strong>Hiren's BootCD</strong> — комплексный набор утилит</li>
+            <li><strong>Ultimate Boot CD</strong> — содержит программы для сброса паролей</li>
+            <li><strong>LPassword</strong> — специализированная утилита для сброса паролей</li>
+            <li><strong>Offline NT Password & Registry Editor</strong> — бесплатная утилита</li>
+          </ul>
+        </div>
+
+        <h3>Метод 4: Командная строка в режиме восстановления</h3>
+
+        <div class="alert-warning">
+          <h4><i class="fas fa-terminal"></i> Технический метод</h4>
+          <p>Этот метод требует некоторых технических знаний, но очень эффективен.</p>
+        </div>
+
+        <div class="step-by-step">
+          <div class="step-item">
+            <h4>Запустите режим восстановления</h4>
+            <p>Загрузитесь с установочной флешки Windows и выберите "Восстановление системы"</p>
+          </div>
+          <div class="step-item">
+            <h4>Откройте командную строку</h4>
+            <p>Выберите "Диагностика" → "Дополнительные параметры" → "Командная строка"</p>
+          </div>
+          <div class="step-item">
+            <h4>Замените утилиту экрана входа</h4>
+            <p>Выполните команды для замены sethc.exe на cmd.exe</p>
+          </div>
+          <div class="step-item">
+            <h4>Перезагрузите систему</h4>
+            <p>На экране входа нажмите Shift 5 раз для запуска командной строки</p>
+          </div>
+          <div class="step-item">
+            <h4>Создайте нового пользователя</h4>
+            <p>Используйте команду net user для создания новой учетной записи</p>
+          </div>
+        </div>
+
+        <h2>Продвинутые методы восстановления</h2>
+
+        <h3>Метод 5: Программы для сброса пароля</h3>
+
+        <div class="tools-grid">
+          <div class="tool-card">
+            <h4>Windows Password Recovery</h4>
+            <p class="price">От 3000₽</p>
+            <p>Профессиональная программа для восстановления паролей Windows</p>
+          </div>
+          <div class="tool-card">
+            <h4>Passcape Password Recovery</h4>
+            <p class="price">От 2500₽</p>
+            <p>Мощный инструмент с поддержкой всех версий Windows</p>
+          </div>
+          <div class="tool-card">
+            <h4>Lazesoft Recovery Suite</h4>
+            <p class="price">От 2000₽</p>
+            <p>Комплексное решение для восстановления системы и паролей</p>
+          </div>
+          <div class="tool-card">
+            <h4>Ophcrack</h4>
+            <p class="price">Бесплатно</p>
+            <p>Бесплатная утилита для взлома паролей методом rainbow tables</p>
+          </div>
+        </div>
+
+        <h3>Метод 6: Переустановка Windows (сохранение данных)</h3>
+
+        <div class="alert-info">
+          <h4><i class="fas fa-info-circle"></i> Радикальный метод</h4>
+          <p>Если другие методы не работают, можно переустановить Windows с сохранением личных файлов.</p>
+        </div>
+
+        <div class="check-section">
+          <div class="check-title">Переустановка с сохранением данных:</div>
+          <ol>
+            <li><strong>Создайте загрузочную флешку</strong> с Windows</li>
+            <li><strong>Запустите установку</strong> с флешки</li>
+            <li><strong>Выберите "Восстановление"</strong> вместо установки</li>
+            <li><strong>Выберите "Удалить все"</strong> и "Только файлы"</li>
+            <li><strong>Сохраните личные файлы</strong> в папку Windows.old</li>
+            <li><strong>Установите чистую систему</strong></li>
+            <li><strong>Перенесите данные</strong> из Windows.old</li>
+          </ol>
+        </div>
+
+        <h2>Сравнение методов восстановления</h2>
+
+        <table class="comparison-table">
+          <tr>
+            <th class="feature-col">Метод</th>
+            <th>Сложность</th>
+            <th>Вероятность успеха</th>
+            <th>Риск потери данных</th>
+            <th>Время</th>
+          </tr>
+          <tr>
+            <td class="feature-col">Вопросы безопасности</td>
+            <td class="ok">Низкая</td>
+            <td class="ok">90%</td>
+            <td class="ok">Нет</td>
+            <td>5-15 мин</td>
+          </tr>
+          <tr>
+            <td class="feature-col">Microsoft Account</td>
+            <td class="ok">Низкая</td>
+            <td class="ok">95%</td>
+            <td class="ok">Нет</td>
+            <td>10-20 мин</td>
+          </tr>
+          <tr>
+            <td class="feature-col">Загрузочная флешка</td>
+            <td class="warn">Средняя</td>
+            <td class="warn">70%</td>
+            <td class="warn">Низкий</td>
+            <td>30-60 мин</td>
+          </tr>
+          <tr>
+            <td class="feature-col">Командная строка</td>
+            <td class="bad">Высокая</td>
+            <td class="ok">85%</td>
+            <td class="warn">Низкий</td>
+            <td>45-90 мин</td>
+          </tr>
+          <tr>
+            <td class="feature-col">Профессиональные программы</td>
+            <td class="warn">Средняя</td>
+            <td class="ok">90%</td>
+            <td class="ok">Нет</td>
+            <td>20-40 мин</td>
+          </tr>
+          <tr>
+            <td class="feature-col">Переустановка Windows</td>
+            <td class="warn">Средняя</td>
+            <td class="ok">100%</td>
+            <td class="bad">Средний</td>
+            <td>2-4 часа</td>
+          </tr>
+        </table>
+
+        <h2>Профилактика проблем с паролями</h2>
+
+        <h3>Как избежать подобных ситуаций</h3>
+
+        <div class="pro-tips">
+          <h4>Рекомендации по управлению паролями:</h4>
+          <ul>
+            <li><strong>Используйте менеджер паролей</strong> — Bitwarden, 1Password, LastPass</li>
+            <li><strong>Создайте диск восстановления</strong> для сброса пароля</li>
+            <li><strong>Настройте вопросы безопасности</strong> при создании учетной записи</li>
+            <li><strong>Используйте Microsoft Account</strong> вместо локальной учетной записи</li>
+            <li><strong>Запишите пароль</strong> в надежном месте</li>
+            <li><strong>Настройте PIN-код</strong> или биометрическую аутентификацию</li>
+          </ul>
+        </div>
+
+        <h3>Создание диска восстановления пароля</h3>
+
+        <div class="check-section">
+          <div class="check-title">Как создать диск восстановления:</div>
+          <ol>
+            <li><strong>Откройте Панель управления</strong> → "Учетные записи пользователей"</li>
+            <li><strong>Выберите "Создание диска"</strong> для сброса пароля</li>
+            <li><strong>Вставьте USB-флешку</strong> (минимум 1 ГБ)</li>
+            <li><strong>Следуйте инструкциям</strong> мастера создания диска</li>
+            <li><strong>Храните флешку</strong> в надежном месте</li>
+          </ol>
+        </div>
+
+        <h2>Когда обращаться к специалистам</h2>
+
+        <h3>Признаки необходимости профессиональной помощи</h3>
+
+        <div class="alert-warning">
+          <h4><i class="fas fa-user-md"></i> Обратитесь в сервис, если:</h4>
+          <ul>
+            <li><strong>Важные данные</strong> на ноутбуке и нет резервных копий</li>
+            <li><strong>Зашифрованные диски</strong> BitLocker или другие системы шифрования</li>
+            <li><strong>Корпоративный ноутбук</strong> с политиками безопасности</li>
+            <li><strong>Не уверены в своих действиях</strong> и боитесь повредить систему</li>
+            <li><strong>Пробовали все методы</strong> и ничего не помогло</li>
+          </ul>
+        </div>
+
+        <h3>Стоимость профессионального восстановления</h3>
+
+        <div class="pro-tips">
+          <h4>Ориентировочные цены:</h4>
+          <ul>
+            <li><strong>Программный сброс пароля</strong> — 1500-3000₽</li>
+            <li><strong>Сложное восстановление</strong> — 3000-5000₽</li>
+            <li><strong>Сохранение данных</strong> + переустановка — 2000-4000₽</li>
+            <li><strong>Выезд на дом</strong> — +1000-2000₽ к стоимости</li>
+          </ul>
+        </div>
+
+        <h2>Распространенные ошибки при восстановлении</h2>
+
+        <div class="alert-danger">
+          <h4><i class="fas fa-ban"></i> Чего НЕЛЬЗЯ делать:</h4>
+          <ul>
+            <li><strong>Многократно вводить неправильный пароль</strong> — может заблокировать учетную запись</li>
+            <li><strong>Использовать сомнительные программы</strong> — могут содержать вирусы</li>
+            <li><strong>Форматировать диск</strong> без сохранения данных</li>
+            <li><strong>Пытаться взломать пароль</strong> онлайн-сервисами</li>
+            <li><strong>Игнорировать резервные копии</strong> — всегда создавайте их заранее</li>
+          </ul>
+        </div>
+
+        <h2>Заключение</h2>
+
+        <p>Забытый пароль от Windows — это решаемая проблема. Начните с самых простых и безопасных методов: вопросы безопасности, восстановление через Microsoft Account. Если они не помогли, переходите к более техническим решениям.</p>
+
+        <p>Лучший способ избежать подобных ситуаций — это профилактика. Используйте менеджеры паролей, создавайте диски восстановления, настройте альтернативные методы входа (PIN-код, биометрия).</p>
+
+        <p>Помните: в большинстве случаев можно восстановить доступ к ноутбуку без потери данных. Главное — действовать последовательно и не паниковать. Если вы не уверены в своих действиях, лучше обратиться к профессионалам, чем рисковать важными данными.</p>
+
+        <!-- Яндекс Маркет рекламный баннер -->
+        <a href="https://market.yandex.ru/search?text=менеджер%20паролей%20USB%20флешка&local-offers-first=0" class="ym-hero-link" target="_blank" rel="noopener noreferrer">
           <div class="ym-hero-banner">
             <div class="ym-hero-images">
               <div class="ym-hero-image">
-                <img src="https://avatars.mds.yandex.net/get-mpic/14770882/2a00000197f4dbee777f8afddccaf44faa53/optimize"
-                     alt="Распродажа бытовой электроники 1">
+                <img src="https://avatars.mds.yandex.net/get-market-ugc/12573871/2a0000018f2a5a8b8c0b7d9d9c4b6c5c/orig" alt="Менеджер паролей на USB">
               </div>
               <div class="ym-hero-image">
-                <img src="https://avatars.mds.yandex.net/get-mpic/15580298/img_id8867318964670654684.jpeg/optimize"
-                     alt="Распродажа бытовой электроники 2">
-              </div>
-              <div class="ym-hero-image">
-                <img src="https://avatars.mds.yandex.net/get-mpic/10096780/2a000001953b534fed2494e0b30fadd9b458/optimize"
-                     alt="Распродажа бытовой электроники 3">
+                <img src="https://avatars.mds.yandex.net/get-market-ugc/15377961/2a0000018f2a5a8b8c0b7d9d9c4b6c5d/orig" alt="USB флешка для восстановления">
               </div>
             </div>
             <div class="ym-hero-content">
-              <h3 class="ym-hero-title">Распродажа бытовой электроники на Яндекс Маркете</h3>
-              <div class="ym-hero-top">
-                <div class="ym-hero-rating">
-                  ⭐ Выгодные предложения
-                  <span class="ym-hero-rating-count">Скидки до 50%</span>
-                </div>
-              </div>
-              <button class="ym-hero-button">За скидками</button>
-            </div>
-          </div>
-          <div class="ym-hero-legal">
-            Реклама. ООО "ЯНДЕКС", ИНН 7736207543. clid: 14635360, erid: 5jtCeReNx12oajxS2bzShmZ
-          </div>
-        </a>
-
-        <h2>Введение: стрессовая ситуация, но решаемая</h2>
-        <p>
-          Забытый пароль от Windows — одна из самых неприятных ситуаций с ноутбуком. Паника в этот момент может привести к неправильным действиям и потере данных. Хорошая новость — существует несколько легальных методов восстановления доступа, от официальных до утилитарных. Главное — действовать последовательно и не пытаться взломать систему сомнительными программами. Этот гид поможет вам вернуть доступ к ноутбуку без потери данных.
-        </p>
-
-        <div class="critical-block">
-          <strong>⚠️ СРОЧНО: Первые действия при забытом пароле</strong><br>
-          1. Не выключайте ноутбук принудительно<br>
-          2. Попробуйте вспомнить пароль — проверьте раскладку, Caps Lock<br>
-          3. Если есть другие учетные записи — попробуйте войти через них<br>
-          4. Подготовьте загрузочный USB с Windows или утилитами
-        </div>
-
-        <h2>Таблица: методы восстановления доступа к Windows</h2>
-        <table>
-          <thead>
-            <tr>
-              <th>Метод</th>
-              <th>Сложность</th>
-              <th>Риск потери данных</th>
-              <th>Требования</th>
-              <th>Надежность</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Microsoft Account</td>
-              <td>Низкая</td>
-              <td>Нет</td>
-              <td>Интернет</td>
-              <td>Высокая</td>
-            </tr>
-            <tr>
-              <td>Загрузочный диск Windows</td>
-              <td>Средняя</td>
-              <td>Нет</td>
-              <td>USB/DVD</td>
-              <td>Высокая</td>
-            </tr>
-            <tr>
-              <td>Командная строка</td>
-              <td>Средняя</td>
-              <td>Нет</td>
-              <td>Загрузочный диск</td>
-              <td>Высокая</td>
-            </tr>
-            <tr>
-              <td>Hiren's BootCD</td>
-              <td>Средняя</td>
-              <td>Нет</td>
-              <td>USB</td>
-              <td>Средняя</td>
-            </tr>
-            <tr>
-              <td>Переустановка Windows</td>
-              <td>Высокая</td>
-              <td>Высокий</td>
-              <td>USB/DVD</td>
-              <td>100% доступ</td>
-            </tr>
-          </tbody>
-        </table>
-
-        <h2>Часть 1: Официальные методы восстановления</h2>
-        <h3>Метод 1: Восстановление через Microsoft Account</h3>
-        <p><b>Работает для:</b> Windows 10/11 с учетной записью Microsoft</p>
-<ol>
-          <li><b>На экране входа</b> нажмите "Я забыл пароль"</li>
-          <li><b>Выберите "Сброс пароля"</b></li>
-          <li><b>Введите email</b> вашей учетной записи Microsoft</li>
-          <li><b>Пройдите проверку</b> — email, телефон или альтернативный email</li>
-          <li><b>Создайте новый пароль</b></li>
-          <li><b>Используйте новый пароль</b> для входа в систему</li>
-        </ol>
-
-        <h3>Метод 2: Использование вопросов безопасности</h3>
-        <ul>
-          <li><b>Локальные аккаунты</b> Windows 10/11 могут иметь вопросы безопасности</li>
-          <li><b>Ответьте на вопросы</b> которые вы установили ранее</li>
-          <li><b>Создайте новый пароль</b> после успешной проверки</li>
-        </ul>
-
-        <h3>Метод 3: Парольная дискета (Windows 7)</h3>
-        <ul>
-          <li><b>Используйте созданную ранее</b> парольную дискету или USB</li>
-          <li><b>Вставьте носитель</b> и следуйте инструкциям</li>
-          <li><b>Сбросьте пароль</b> с помощью мастера</li>
-        </ul>
-
-        <h2>Часть 2: Методы с загрузочным диском</h2>
-        <h3>Создание загрузочного диска Windows</h3>
-        <ol>
-          <li><b>На другом компьютере</b> скачайте Media Creation Tool</li>
-          <li><b>Запустите инструмент</b> и выберите "Создать установочный носитель"</li>
-          <li><b>Выберите язык</b> и версию Windows</li>
-          <li><b>Выберите USB-флешку</b> (минимум 8GB)</li>
-          <li><b>Дождитесь завершения</b> создания загрузочного диска</li>
-        </ol>
-
-        <h3>Метод 4: Сброс через командную строку</h3>
-        <ol>
-          <li><b>Загрузитесь с USB</b> — измените порядок загрузки в BIOS</li>
-          <li><b>Выберите "Восстановление системы"</b></li>
-          <li><b>Дополнительные параметры</b> → Командная строка</li>
-          <li><b>Определите букву диска</b> с Windows:
-            <ul>
-              <li><code>diskpart</code></li>
-              <li><code>list volume</code></li>
-              <li><code>exit</code></li>
-            </ul>
-          </li>
-          <li><b>Скопируйте utilman.exe</b>:
-            <ul>
-              <li><code>copy c:\windows\system32\utilman.exe c:\windows\system32\utilman.exe.bak</code></li>
-              <li><code>copy c:\windows\system32\cmd.exe c:\windows\system32\utilman.exe</code></li>
-            </ul>
-          </li>
-          <li><b>Перезагрузитесь</b> и на экране входа нажмите кнопку "Специальные возможности"</li>
-          <li><b>Откроется командная строка</b> — создайте нового пользователя:
-            <ul>
-              <li><code>net user NewAdmin Password123 /add</code></li>
-              <li><code>net localgroup administrators NewAdmin /add</code></li>
-            </ul>
-          </li>
-          <li><b>Войдите в систему</b> под новой учетной записью</li>
-        </ol>
-
-        <h2>Часть 3: Специализированные утилиты</h2>
-        <h3>Hiren's BootCD</h3>
-        <ul>
-          <li><b>Скачайте образ</b> Hiren's BootCD PE</li>
-          <li><b>Создайте загрузочный USB</b> с помощью Rufus</li>
-          <li><b>Загрузитесь с USB</b></li>
-          <li><b>Запустите Password Tools</b></li>
-          <li><b>Выберите "Windows Password Reset"</b></li>
-          <li><b>Выберите пользователя</b> и сбросьте пароль</li>
-        </ul>
-
-        <h3>Offline NT Password & Registry Editor</h3>
-        <ol>
-          <li><b>Скачайте утилиту</b> с официального сайта</li>
-          <li><b>Создайте загрузочный диск</b></li>
-          <li><b>Загрузитесь и выберите</b> путь к Windows</li>
-          <li><b>Выберите пользователя</b> для сброса пароля</li>
-          <li><b>Подтвердите сброс</b> и перезагрузитесь</li>
-        </ol>
-
-        <h3>Lazesoft Recovery Suite</h3>
-        <ul>
-          <li><b>Бесплатная версия</b> для домашнего использования</li>
-          <li><b>Простой интерфейс</b> для начинающих</li>
-          <li><b>Поддержка Windows</b> XP/7/8/10/11</li>
-          <li><b>Сброс пароля</b> без потери данных</li>
-        </ul>
-
-        <h2>Часть 4: Продвинутые методы</h2>
-        <h3>Метод 5: Замена sethc.exe (кнопка Shift)</h3>
-        <ol>
-          <li><b>Загрузитесь с установочного диска</b> Windows</li>
-          <li><b>Откройте командную строку</b> в режиме восстановления</li>
-          <li><b>Замените файл</b> экрана ввода пароля:
-            <ul>
-              <li><code>move c:\windows\system32\sethc.exe c:\windows\system32\sethc.exe.bak</code></li>
-              <li><code>copy c:\windows\system32\cmd.exe c:\windows\system32\sethc.exe</code></li>
-            </ul>
-          </li>
-          <li><b>Перезагрузитесь</b> и на экране входа нажмите Shift 5 раз</li>
-          <li><b>В открывшейся командной строке</b> создайте пользователя или смените пароль</li>
-        </ol>
-
-        <h3>Метод 6: Работа с реестром</h3>
-        <ul>
-          <li><b>Загрузочный редактор реестра</b> — RegEdit PE</li>
-          <li><b>Откройте реестр</b> с другого компьютера</li>
-          <li><b>Найдите ветку</b> SAM пользователя</li>
-          <li><b>Сбросьте хеш пароля</b> или удалите его</li>
-          <li><b>Сохраните изменения</b> и перезагрузитесь</li>
-        </ul>
-
-        <h2>Часть 5: Крайние меры</h2>
-        <h3>Переустановка Windows с сохранением данных</h3>
-        <ol>
-          <li><b>Сделайте резервную копию</b> важных данных (если возможно)</li>
-          <li><b>Загрузитесь с установочного диска</b></li>
-          <li><b>Выберите "Установить Windows"</b></li>
-          <li><b>Выберите "Обновить"</b> (не "Настоящая установка")</li>
-          <li><b>Следуйте инструкциям</b> — данные сохранятся в Windows.old</li>
-        </ol>
-
-        <h3>Полная переустановка Windows</h3>
-        <div class="warning-block">
-          <strong>Внимание!</strong> Этот метод приведет к полной потере данных на системном диске. Используйте только если другие методы не сработали и у вас есть резервные копии.
-        </div>
-
-        <ul>
-          <li><b>Форматирование диска</b> и чистая установка</li>
-          <li><b>100% решение</b> проблемы доступа</li>
-          <li><b>Требует переустановки</b> всех программ</li>
-        </ul>
-
-        <h2>Часть 6: Профилактика и подготовка</h2>
-        <h3>Создание резервных методов доступа</h3>
-        <ol>
-          <li><b>Создайте парольную дискету</b> или USB-ключ</li>
-          <li><b>Настройте вопросы безопасности</b></li>
-          <li><b>Добавьте PIN-код</b> или графический пароль</li>
-          <li><b>Создайте локального администратора</b> с известным паролем</li>
-          <li><b>Настройте отпечаток пальца</b> или Windows Hello</li>
-        </ol>
-
-        <h3>Регулярное резервное копирование</h3>
-        <ul>
-          <li><b>Системные точки восстановления</b></li>
-          <li><b>Резервные копии профиля</b></li>
-          <li><b>Облачное хранилище</b> для важных файлов</li>
-          <li><b>Запись паролей</b> в надежном месте</li>
-        </ul>
-
-        <h2>Часть 7: Безопасность и лучшие практики</h2>
-        <h3>Защита от забытых паролей</h3>
-        <div class="pro-tips">
-          <h4>🔹 Как избежать проблемы в будущем</h4>
-          <div class="tip-item">
-            <i class="fas fa-lightbulb"></i>
-            <p>Используйте менеджер паролей для хранения всех паролей.</p>
-          </div>
-          <div class="tip-item">
-            <i class="fas fa-lightbulb"></i>
-            <p>Создайте несколько методов входа — пароль, PIN, отпечаток.</p>
-          </div>
-          <div class="tip-item">
-            <i class="fas fa-lightbulb"></i>
-            <p>Регулярно создавайте точки восстановления системы.</p>
-          </div>
-          <div class="tip-item">
-            <i class="fas fa-lightbulb"></i>
-            <p>Запишите главный пароль на бумаге и храните в безопасном месте.</p>
-          </div>
-        </div>
-
-        <h3>Создание надежных паролей</h3>
-        <ul>
-          <li><b>Длина</b> — минимум 12-16 символов</li>
-          <li><b>Сложность</b> — буквы, цифры, символы</li>
-          <li><b>Уникальность</b> — не используйте один пароль везде</li>
-          <li><b>Запоминаемость</b> — используйте мнемонические фразы</li>
-        </ul>
-
-        <h2>FAQ — часто задаваемые вопросы</h2>
-        <ul>
-          <li>
-            <strong>Сработает ли сброс пароля если шифрование BitLocker включено?</strong><br>
-            Да, но может потребоваться ключ восстановления BitLocker после сброса пароля.
-          </li>
-          <li>
-            <strong>Можно ли сбросить пароль без потери данных?</strong><br>
-            Да, большинство методов сохраняют все данные и программы intact.
-          </li>
-          <li>
-            <strong>Что делать если нет другого компьютера для создания загрузочного диска?</strong><br>
-            Обратитесь в сервисный центр или попросите помощи у друзей.
-          </li>
-          <li>
-            <strong>Сработают ли эти методы для Windows 11?</strong><br>
-            Да, все методы работают для Windows 10 и 11.
-          </li>
-          <li>
-            <strong>Можно ли сбросить пароль для доменной учетной записи?</strong><br>
-            Только через системного администратора домена.
-          </li>
-        </ul>
-
-        <div class="warning-block">
-          <strong>Внимание!</strong> Используйте только легальные методы восстановления доступа. Программы для "взлома" паролей могут содержать вирусы или повредить систему. Всегда создавайте резервные копии данных перед выполнением операций.
-        </div>
-
-        <h2>Пошаговая инструкция: оптимальный план действий</h2>
-        <ol>
-          <li>Проверьте возможность входа через Microsoft Account</li>
-          <li>Создайте загрузочный USB с Windows на другом компьютере</li>
-          <li>Попробуйте сброс через командную строку (самый надежный метод)</li>
-          <li>Если не получилось — используйте Hiren's BootCD</li>
-          <li>После восстановления доступа создайте резервные методы входа</li>
-          <li>Настройте менеджер паролей для предотвращения проблем</li>
-          <li>Создайте регулярные резервные копии системы</li>
-        </ol>
-
-        <h2>📌 Итог: доступ восстановлен, урок усвоен</h2>
-        <p>
-          Забытый пароль Windows — неприятная, но решаемая проблема. Современные методы позволяют восстановить доступ без потери данных, если действовать последовательно и использовать правильные инструменты. Главный урок этой ситуации — необходимость подготовки: создайте резервные методы входа, используйте менеджер паролей и регулярно делайте резервные копии. Помните, что лучшее решение проблемы — ее предотвращение через правильную подготовку и использование современных методов аутентификации.
-        </p>
-      </div>
-
-        <!-- Telegram рекламный баннер -->
-        <a href="https://t.me/RepairoRU" target="_blank" rel="noopener noreferrer" class="telegram-banner">
-          <div class="telegram-banner-container">
-            <div class="telegram-logo">
-              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.56c-.21 2.22-1.12 7.58-1.58 10.06-.19 1.07-.57 1.43-.94 1.46-.8.07-1.4-.52-2.17-1.03-1.21-.79-1.89-1.28-3.06-2.05-1.35-.87-.47-1.35.3-2.13.2-.21 3.71-3.39 3.77-3.68.01-.04.01-.18-.07-.26s-.2-.05-.29-.03c-.12.03-2.11 1.34-5.95 3.93-.56.38-1.07.57-1.53.56-.5-.01-1.47-.28-2.19-.51-.88-.28-1.58-.43-1.52-.91.03-.25.38-.51 1.04-.78 4.07-1.77 6.78-2.94 8.13-3.51 3.88-1.62 4.68-1.9 5.19-1.91.12 0 .37.03.54.17.14.12.18.28.2.44-.01.06 0 .11-.01.17z"/>
-              </svg>
-            </div>
-            <div class="telegram-content">
-              <div class="telegram-title">Новости из мира технологий</div>
-              <div class="telegram-subtitle">В нашем новом Telegram-канале. Подписывайтесь и будьте в числе первых!</div>
-              <div class="telegram-button">
-                Подписаться
-                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.56c-.21 2.22-1.12 7.58-1.58 10.06-.19 1.07-.57 1.43-.94 1.46-.8.07-1.4-.52-2.17-1.03-1.21-.79-1.89-1.28-3.06-2.05-1.35-.87-.47-1.35.3-2.13.2-.21 3.71-3.39 3.77-3.68.01-.04.01-.18-.07-.26s-.2-.05-.29-.03c-.12.03-2.11 1.34-5.95 3.93-.56.38-1.07.57-1.53.56-.5-.01-1.47-.28-2.19-.51-.88-.28-1.58-.43-1.52-.91.03-.25.38-.51 1.04-.78 4.07-1.77 6.78-2.94 8.13-3.51 3.88-1.62 4.68-1.9 5.19-1.91.12 0 .37.03.54.17.14.12.18.28.2.44-.01.06 0 .11-.01.17z"/>
-                </svg>
-              </div>
+              <div class="ym-hero-title">Инструменты для управления паролями</div>
+              <div class="ym-hero-desc">Менеджеры паролей и флешки для восстановления доступа</div>
             </div>
           </div>
         </a>
 
-</div>
-  </section>
-
-    <footer class="footer">
-        <div class="container">
-            <div class="footer__grid">
-                <div class="footer__col footer__col--logo">
-                    <a href="../index.html" class="footer-logo">
-                        <span class="logo__icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M12 15L7 10H17L12 15Z" fill="currentColor"/>
-                                <path d="M12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3ZM12 19C8.13401 19 5 15.866 5 12C5 8.13401 8.13401 5 12 5C15.866 5 19 8.13401 19 12C19 15.866 15.866 19 12 19Z" fill="currentColor"/>
-                            </svg>
-                        </span>
-                        <span class="logo__text">Repairo</span>
-                    </a>
-                    <p class="footer__text">Помогаем ремонтировать электронику с 2024 года</p>
-                </div>
-                <div class="footer__col">
-                    <h3 class="footer__title">Разделы</h3>
-                    <ul class="footer__links">
-                        <li><a href="../index.html" class="footer__link">Главная</a></li>
-                        <li><a href="../index.html#categories" class="footer__link">Все гайды</a></li>
-                        <li><a href="../contacts.html" class="footer__link">Контакты</a></li>
-                    </ul>
-                </div>
-                <div class="footer__col">
-                    <h3 class="footer__title">Категории</h3>
-                    <ul class="footer__links">
-                        <li><a href="../tv.html" class="nav__link">Телевизоры</a></li>
-                        <li><a href="../cameras.html" class="nav__link">Фотоаппараты</a></li>
-                        <li><a href="../consoles.html" class="nav__link">Приставки</a></li>
-                        <li><a href="../laptops.html" class="nav__link">Ноутбуки</a></li>
-                        <li><a href="../smartphones.html" class="nav__link">Смартфоны</a></li>
-                        <li><a href="../small-appliances.html" class="nav__link">Мелкая техника</a></li>
-                        <li><a href="../large-appliances.html" class="nav__link">Бытовая техника</a></li>
-                        <li><a href="../auto-electronics.html" class="nav__link">Авто-Электроника</a></li>
-                    </ul>
-                </div>
-                <div class="footer__col">
-                    <h3 class="footer__title">Контакты</h3>
-                    <ul class="footer__links">
-                        <li><a href="https://t.me/RepairoRU" class="footer__link"><i class="fab fa-telegram"></i> Telegram</a></li>
-                        <li><span class="footer__link">Наша почта: repairo.info@mail.ru</span></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer__bottom">
-                <p class="disclaimer">
-    Администрация сайта не несёт ответственности за возможные повреждения техники
-    и иные последствия, возникшие в результате самостоятельного ремонта по
-    материалам и инструкциям, размещённым на сайте. Все работы вы выполняете
-    на свой страх и риск.
-    </p>
-                <p class="footer__copyright">© 2026 Repairo. Все права защищены.</p>
-            </div>
-        </div>
-    </footer>
-    <!-- Cookie Consent Banner -->
-    <script src="../script.js"></script>
-  <script src="../guides-images.js"></script>
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "HowTo",
-  "name": "Что делать если забыл пароль от учетной записи Windows на ноутбуке",
-  "description": "Пошаговая инструкция: Что делать, если забыл пароль от учетной записи Windows на ноутбуке. Полный гид по восстановлению доступа, сбросу пароля, использованию загрузочных дисков. Безопасность и сохранение данных.",
-  "totalTime": "PT90M",
-  "step": [
-    {
-      "@type": "HowToStep",
-      "name": "Часть 1: Официальные методы восстановления",
-      "text": "Часть 1: Официальные методы восстановления",
-      "url": "#step-1"
-    },
-    {
-      "@type": "HowToStep",
-      "name": "Часть 2: Методы с загрузочным диском",
-      "text": "Часть 2: Методы с загрузочным диском",
-      "url": "#step-2"
-    },
-    {
-      "@type": "HowToStep",
-      "name": "Часть 3: Специализированные утилиты",
-      "text": "Часть 3: Специализированные утилиты",
-      "url": "#step-3"
-    },
-    {
-      "@type": "HowToStep",
-      "name": "Часть 4: Продвинутые методы",
-      "text": "Часть 4: Продвинутые методы",
-      "url": "#step-4"
-    },
-    {
-      "@type": "HowToStep",
-      "name": "Часть 5: Крайние меры",
-      "text": "Часть 5: Крайние меры",
-      "url": "#step-5"
-    }
-  ],
-  "image": "https://images.unsplash.com/photo-1550745165-9bc0b252726a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
-}
-</script>
-<!-- Cookie Consent Script -->
-<script src="../cookie-consent.js"></script>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="ru" data-theme="light">
-<head>
-
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Что делать если забыл пароль от учетной записи Windows на ноутбуке | Экспертный мегагайд</title>
-    <meta name="description" content="Пошаговая инструкция: Что делать, если забыл пароль от учетной записи Windows на ноутбуке. Полный гид по восстановлению доступа, сбросу пароля, использованию загрузочных дисков. Безопасность и сохранение данных.">
-
-  <link rel="stylesheet" href="../styles.css" />
-  <link rel="stylesheet" href="../styles-header.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <style>
-    .guide-content { line-height: 1.7; color: var(--text); }
-    .guide-content h2 { color: var(--primary); margin-top: 30px; margin-bottom: 15px; font-size: 1.5rem; }
-    .guide-content h3 { color: var(--primary-dark); margin-top: 25px; margin-bottom: 12px; font-size: 1.2rem; }
-    .guide-image-block { margin: 20px 0; padding: 15px; background: var(--background); border-radius: var(--border-radius); border: 1px solid var(--border); text-align: center; }
-    .guide-image-block img { max-width: 100%; height: auto; border-radius: 6px; border: 1px solid var(--border); }
-    .image-caption { margin-top: 10px; font-size: 0.85rem; color: var(--text-light); font-style: italic; }
-    .pro-tips { background: rgba(3, 74, 79, 0.05); padding: 15px; border-radius: 6px; margin: 20px 0; }
-    .pro-tips h4 { color: var(--primary); margin-top: 0; margin-bottom: 12px; font-size: 1.1rem; }
-    .tip-item { display: flex; gap: 8px; margin-bottom: 8px; align-items: flex-start; }
-    .warning-block {
-      background: #fff3e0;
-      border-left: 5px solid #ff9100;
-      padding: 15px 18px;
-      margin: 22px 0;
-      border-radius: 7px;
-    }
-    .critical-block {
-      background: #ffebee;
-      border-left: 5px solid #f44336;
-      padding: 15px 18px;
-      margin: 22px 0;
-      border-radius: 7px;
-    }
-    table { width: 100%; border-collapse: collapse; margin: 20px 0; }
-    th, td { border: 1px solid var(--border); padding: 8px; text-align: left; }
-    th { background: var(--background-light); }
-    @media (max-width: 768px) {
-      .guide-content h2 { font-size: 1.4rem; margin-top: 25px; }
-      .guide-image-block { padding: 12px; margin: 15px 0; }
-      table, th, td { font-size: 0.95rem; }
-    }
-    /* Яндекс Маркет рекламный баннер */
-    .ym-hero-link {
-      display: block;
-      text-decoration: none;
-      color: inherit;
-      max-width: 100%;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    }
-
-    /* Горизонтальный баннер-карточка */
-    .ym-hero-banner {
-      width: 100%;
-      max-width: 600px;
-      min-height: 140px;
-      border-radius: 16px;
-      background: #ffffff;
-      border: 1px solid #e5e7eb;
-      display: flex;
-      flex-direction: column;
-      box-shadow: 0 4px 16px rgba(15, 23, 42, 0.08);
-      overflow: hidden;
-      box-sizing: border-box;
-      margin: 40px auto;
-    }
-
-    /* Контейнер для изображений */
-    .ym-hero-images {
-      display: flex;
-      height: 120px;
-      overflow: hidden;
-    }
-
-    .ym-hero-image {
-      flex: 1;
-      min-width: 0;
-      height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-      border-right: 1px solid #e5e7eb;
-      background: #f8f9fa;
-    }
-
-    .ym-hero-image:last-child {
-      border-right: none;
-    }
-
-    .ym-hero-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-      transition: transform 0.3s ease;
-      background: #f8f9fa;
-    }
-
-    .ym-hero-image:hover img {
-      transform: scale(1.02);
-    }
-
-    /* Правая часть: контент */
-    .ym-hero-content {
-      padding: 16px 18px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      gap: 8px;
-    }
-
-    /* Название товара */
-    .ym-hero-title {
-      font-size: 14px;
-      font-weight: 600;
-      color: #111827;
-      line-height: 1.3;
-      margin: 0 0 4px 0;
-      display: -webkit-box;
-      -webkit-line-clamp: 2;
-      line-clamp: 2;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
-    }
-
-    /* Рейтинг */
-    .ym-hero-top {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 8px;
-    }
-
-    .ym-hero-rating {
-      font-size: 13px;
-      font-weight: 500;
-      color: #111827;
-      background: #f9fafb;
-      border-radius: 999px;
-      padding: 4px 10px;
-    }
-
-    .ym-hero-rating-count {
-      color: #6b7280;
-    }
-
-    /* Фиолетовая кнопка */
-    .ym-hero-button {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 9px 16px;
-      border-radius: 999px;
-      border: none;
-      background: #6a00ff;
-      color: #ffffff;
-      font-size: 14px;
-      font-weight: 600;
-      cursor: pointer;
-      box-shadow: 0 2px 6px rgba(88, 28, 135, 0.35);
-      transition: background 0.15s ease, transform 0.15s ease,
-                  box-shadow 0.15s ease;
-    }
-
-    .ym-hero-button::after {
-      content: "→";
-      margin-left: 6px;
-      font-size: 14px;
-    }
-
-    .ym-hero-button:hover {
-      background: #7c3aed;
-      transform: translateY(-1px);
-      box-shadow: 0 4px 10px rgba(88, 28, 135, 0.45);
-    }
-
-    /* Юридический блок */
-    .ym-hero-legal {
-      margin-top: 6px;
-      max-width: 600px;
-      font-size: 11px;
-      line-height: 1.3;
-      color: #6b7280;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    /* Адаптив */
-    @media (max-width: 480px) {
-      .ym-hero-banner {
-        max-width: 100%;
-        margin: 20px 0;
-      }
-
-      .ym-hero-images {
-        height: 100px;
-      }
-
-      .ym-hero-content {
-        padding: 12px 12px;
-      }
-
-      .ym-hero-title {
-        font-size: 13px;
-      }
-
-      .ym-hero-button {
-        font-size: 13px;
-        padding: 8px 14px;
-      }
-
-      .ym-hero-legal {
-        font-size: 10px;
-      }
-    }
-    /* Telegram рекламный баннер */
-    .telegram-banner {
-      display: flex;
-      justify-content: center;
-      text-decoration: none;
-      color: inherit;
-      width: 100%;
-      margin: 40px 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    }
-
-    .telegram-banner-container {
-      width: 100%;
-      max-width: 500px;
-      min-height: 120px;
-      border-radius: 16px;
-      background: linear-gradient(135deg, #0088cc 0%, #005f8f 100%);
-      border: 1px solid #005f8f;
-      display: flex;
-      align-items: center;
-      padding: 20px;
-      box-shadow: 0 4px 16px rgba(0, 136, 204, 0.2);
-      overflow: hidden;
-      box-sizing: border-box;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-
-    .telegram-banner-container:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(0, 136, 204, 0.3);
-    }
-
-    .telegram-logo {
-      width: 60px;
-      height: 60px;
-      min-width: 60px;
-      background: #ffffff;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-right: 20px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    }
-
-    .telegram-logo svg {
-      width: 32px;
-      height: 32px;
-      fill: #0088cc;
-    }
-
-    .telegram-content {
-      flex: 1;
-      color: #ffffff;
-    }
-
-    .telegram-title {
-      font-size: 16px;
-      font-weight: 600;
-      margin: 0 0 8px 0;
-      line-height: 1.3;
-    }
-
-    .telegram-subtitle {
-      font-size: 14px;
-      opacity: 0.9;
-      margin: 0 0 12px 0;
-      line-height: 1.4;
-    }
-
-    .telegram-button {
-      display: inline-flex;
-      align-items: center;
-      padding: 8px 16px;
-      background: #ffffff;
-      color: #0088cc;
-      border-radius: 20px;
-      font-size: 14px;
-      font-weight: 600;
-      text-decoration: none;
-      transition: background 0.2s ease, transform 0.2s ease;
-    }
-
-    .telegram-button:hover {
-      background: #f0f8ff;
-      transform: scale(1.05);
-    }
-
-    .telegram-button svg {
-      width: 16px;
-      height: 16px;
-      margin-left: 6px;
-      fill: #0088cc;
-    }
-
-    /* Адаптив для мобильных */
-    @media (max-width: 480px) {
-      .telegram-banner-container {
-        max-width: 100%;
-        margin: 20px 0;
-        padding: 15px;
-        min-height: 100px;
-      }
-
-      .telegram-logo {
-        width: 50px;
-        height: 50px;
-        min-width: 50px;
-        margin-right: 15px;
-      }
-
-      .telegram-logo svg {
-        width: 26px;
-        height: 26px;
-      }
-
-      .telegram-title {
-        font-size: 14px;
-      }
-
-      .telegram-subtitle {
-        font-size: 12px;
-      }
-
-      .telegram-button {
-        font-size: 12px;
-        padding: 6px 12px;
-      }
-    }
-
-
-
-  </style>
-  <script async src="https://timeweb.cloud/api/v1/cloud-ai/agents/3cc03620-d051-4d8d-b5af-f7b6cd083a35/embed.js?collapsed=true"></script>
-</head>
-<body>
-  <header class="header">
-    <div class="container">
-      <div class="header__inner">
-        <a href="../index.html" class="logo">
-          <span class="logo__icon"></span>
-          <span class="logo__text">Repairo</span>
-        </a>
-        <nav class="nav">
-          <ul class="nav__list">
-            <li><a href="../tv.html" class="nav__link">Телевизоры</a></li>
-            <li><a href="../cameras.html" class="nav__link">Фотоаппараты</a></li>
-            <li><a href="../consoles.html" class="nav__link">Приставки</a></li>
-            <li><a href="../laptops.html" class="nav__link">Ноутбуки</a></li>
-            <li><a href="../smartphones.html" class="nav__link">Смартфоны</a></li>
-          </ul>
-        </nav>
       </div>
     </div>
-  </header>
-
-  <section class="guide-page">
-    <div class="container">
-      <div class="breadcrumbs">
-        <a href="../index.html">Главная</a>
-        <i class="fas fa-chevron-right"></i>
-        <a href="../laptops.html">Ноутбуки</a>
-        <i class="fas fa-chevron-right"></i>
-        <span>Что делать если забыл пароль от учетной записи Windows на ноутбуке</span>
-      </div>
-
-      <h1 class="section__title">Что делать если забыл пароль от учетной записи Windows на ноутбуке</h1>
-
-      <div class="guide-meta">
-        <span><i class="fas fa-laptop"></i> Экспертный гид: пошаговая инструкция по восстановлению доступа к Windows при забытом пароле. Все методы сброса пароля, от официальных до утилитарных. Сохранение данных и безопасность.</span>
-      </div>
-
-      <div class="guide-image-block">
-        <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Забыл пароль от Windows на ноутбуке">
-        <div class="image-caption">
-          Восстановление доступа к Windows при забытом пароле: официальные методы, загрузочные диски, командная строка, утилиты. Сброс пароля без потери данных на ноутбуке.
-        </div>
-      </div>
-
-      <div class="guide-content">
-
-        <h2>Введение: стрессовая ситуация, но решаемая</h2>
-        <p>
-          Забытый пароль от Windows — одна из самых неприятных ситуаций с ноутбуком. Паника в этот момент может привести к неправильным действиям и потере данных. Хорошая новость — существует несколько легальных методов восстановления доступа, от официальных до утилитарных. Главное — действовать последовательно и не пытаться взломать систему сомнительными программами. Этот гид поможет вам вернуть доступ к ноутбуку без потери данных.
-        </p>
-
-        <div class="critical-block">
-          <strong>⚠️ СРОЧНО: Первые действия при забытом пароле</strong><br>
-          1. Не выключайте ноутбук принудительно<br>
-          2. Попробуйте вспомнить пароль — проверьте раскладку, Caps Lock<br>
-          3. Если есть другие учетные записи — попробуйте войти через них<br>
-          4. Подготовьте загрузочный USB с Windows или утилитами
-        </div>
-
-        <h2>Таблица: методы восстановления доступа к Windows</h2>
-        <table>
-          <thead>
-            <tr>
-              <th>Метод</th>
-              <th>Сложность</th>
-              <th>Риск потери данных</th>
-              <th>Требования</th>
-              <th>Надежность</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Microsoft Account</td>
-              <td>Низкая</td>
-              <td>Нет</td>
-              <td>Интернет</td>
-              <td>Высокая</td>
-            </tr>
-            <tr>
-              <td>Загрузочный диск Windows</td>
-              <td>Средняя</td>
-              <td>Нет</td>
-              <td>USB/DVD</td>
-              <td>Высокая</td>
-            </tr>
-            <tr>
-              <td>Командная строка</td>
-              <td>Средняя</td>
-              <td>Нет</td>
-              <td>Загрузочный диск</td>
-              <td>Высокая</td>
-            </tr>
-            <tr>
-              <td>Hiren's BootCD</td>
-              <td>Средняя</td>
-              <td>Нет</td>
-              <td>USB</td>
-              <td>Средняя</td>
-            </tr>
-            <tr>
-              <td>Переустановка Windows</td>
-              <td>Высокая</td>
-              <td>Высокий</td>
-              <td>USB/DVD</td>
-              <td>100% доступ</td>
-            </tr>
-          </tbody>
-        </table>
-
-        <h2>Часть 1: Официальные методы восстановления</h2>
-        <h3>Метод 1: Восстановление через Microsoft Account</h3>
-        <p><b>Работает для:</b> Windows 10/11 с учетной записью Microsoft</p>
-        <ol>
-          <li><b>На экране входа</b> нажмите "Я забыл пароль"</li>
-          <li><b>Выберите "Сброс пароля"</b></li>
-          <li><b>Введите email</b> вашей учетной записи Microsoft</li>
-          <li><b>Пройдите проверку</b> — email, телефон или альтернативный email</li>
-          <li><b>Создайте новый пароль</b></li>
-          <li><b>Используйте новый пароль</b> для входа в систему</li>
-        </ol>
-
-        <h3>Метод 2: Использование вопросов безопасности</h3>
-        <ul>
-          <li><b>Локальные аккаунты</b> Windows 10/11 могут иметь вопросы безопасности</li>
-          <li><b>Ответьте на вопросы</b> которые вы установили ранее</li>
-          <li><b>Создайте новый пароль</b> после успешной проверки</li>
-        </ul>
-
-        <h3>Метод 3: Парольная дискета (Windows 7)</h3>
-        <ul>
-          <li><b>Используйте созданную ранее</b> парольную дискету или USB</li>
-          <li><b>Вставьте носитель</b> и следуйте инструкциям</li>
-          <li><b>Сбросьте пароль</b> с помощью мастера</li>
-        </ul>
-
-        <h2>Часть 2: Методы с загрузочным диском</h2>
-        <h3>Создание загрузочного диска Windows</h3>
-        <ol>
-          <li><b>На другом компьютере</b> скачайте Media Creation Tool</li>
-          <li><b>Запустите инструмент</b> и выберите "Создать установочный носитель"</li>
-          <li><b>Выберите язык</b> и версию Windows</li>
-          <li><b>Выберите USB-флешку</b> (минимум 8GB)</li>
-          <li><b>Дождитесь завершения</b> создания загрузочного диска</li>
-        </ol>
-
-        <h3>Метод 4: Сброс через командную строку</h3>
-        <ol>
-          <li><b>Загрузитесь с USB</b> — измените порядок загрузки в BIOS</li>
-          <li><b>Выберите "Восстановление системы"</b></li>
-          <li><b>Дополнительные параметры</b> → Командная строка</li>
-          <li><b>Определите букву диска</b> с Windows:
-            <ul>
-              <li><code>diskpart</code></li>
-              <li><code>list volume</code></li>
-              <li><code>exit</code></li>
-            </ul>
-          </li>
-          <li><b>Скопируйте utilman.exe</b>:
-            <ul>
-              <li><code>copy c:\windows\system32\utilman.exe c:\windows\system32\utilman.exe.bak</code></li>
-              <li><code>copy c:\windows\system32\cmd.exe c:\windows\system32\utilman.exe</code></li>
-            </ul>
-          </li>
-          <li><b>Перезагрузитесь</b> и на экране входа нажмите кнопку "Специальные возможности"</li>
-          <li><b>Откроется командная строка</b> — создайте нового пользователя:
-            <ul>
-              <li><code>net user NewAdmin Password123 /add</code></li>
-              <li><code>net localgroup administrators NewAdmin /add</code></li>
-            </ul>
-          </li>
-          <li><b>Войдите в систему</b> под новой учетной записью</li>
-        </ol>
-
-        <h2>Часть 3: Специализированные утилиты</h2>
-        <h3>Hiren's BootCD</h3>
-        <ul>
-          <li><b>Скачайте образ</b> Hiren's BootCD PE</li>
-          <li><b>Создайте загрузочный USB</b> с помощью Rufus</li>
-          <li><b>Загрузитесь с USB</b></li>
-          <li><b>Запустите Password Tools</b></li>
-          <li><b>Выберите "Windows Password Reset"</b></li>
-          <li><b>Выберите пользователя</b> и сбросьте пароль</li>
-        </ul>
-
-        <h3>Offline NT Password & Registry Editor</h3>
-        <ol>
-          <li><b>Скачайте утилиту</b> с официального сайта</li>
-          <li><b>Создайте загрузочный диск</b></li>
-          <li><b>Загрузитесь и выберите</b> путь к Windows</li>
-          <li><b>Выберите пользователя</b> для сброса пароля</li>
-          <li><b>Подтвердите сброс</b> и перезагрузитесь</li>
-        </ol>
-
-        <h3>Lazesoft Recovery Suite</h3>
-        <ul>
-          <li><b>Бесплатная версия</b> для домашнего использования</li>
-          <li><b>Простой интерфейс</b> для начинающих</li>
-          <li><b>Поддержка Windows</b> XP/7/8/10/11</li>
-          <li><b>Сброс пароля</b> без потери данных</li>
-        </ul>
-
-        <h2>Часть 4: Продвинутые методы</h2>
-        <h3>Метод 5: Замена sethc.exe (кнопка Shift)</h3>
-        <ol>
-          <li><b>Загрузитесь с установочного диска</b> Windows</li>
-          <li><b>Откройте командную строку</b> в режиме восстановления</li>
-          <li><b>Замените файл</b> экрана ввода пароля:
-            <ul>
-              <li><code>move c:\windows\system32\sethc.exe c:\windows\system32\sethc.exe.bak</code></li>
-              <li><code>copy c:\windows\system32\cmd.exe c:\windows\system32\sethc.exe</code></li>
-            </ul>
-          </li>
-          <li><b>Перезагрузитесь</b> и на экране входа нажмите Shift 5 раз</li>
-          <li><b>В открывшейся командной строке</b> создайте пользователя или смените пароль</li>
-        </ol>
-
-        <h3>Метод 6: Работа с реестром</h3>
-        <ul>
-          <li><b>Загрузочный редактор реестра</b> — RegEdit PE</li>
-          <li><b>Откройте реестр</b> с другого компьютера</li>
-          <li><b>Найдите ветку</b> SAM пользователя</li>
-          <li><b>Сбросьте хеш пароля</b> или удалите его</li>
-          <li><b>Сохраните изменения</b> и перезагрузитесь</li>
-        </ul>
-
-        <h2>Часть 5: Крайние меры</h2>
-        <h3>Переустановка Windows с сохранением данных</h3>
-        <ol>
-          <li><b>Сделайте резервную копию</b> важных данных (если возможно)</li>
-          <li><b>Загрузитесь с установочного диска</b></li>
-          <li><b>Выберите "Установить Windows"</b></li>
-          <li><b>Выберите "Обновить"</b> (не "Настоящая установка")</li>
-          <li><b>Следуйте инструкциям</b> — данные сохранятся в Windows.old</li>
-        </ol>
-
-        <h3>Полная переустановка Windows</h3>
-        <div class="warning-block">
-          <strong>Внимание!</strong> Этот метод приведет к полной потере данных на системном диске. Используйте только если другие методы не сработали и у вас есть резервные копии.
-        </div>
-
-        <ul>
-          <li><b>Форматирование диска</b> и чистая установка</li>
-          <li><b>100% решение</b> проблемы доступа</li>
-          <li><b>Требует переустановки</b> всех программ</li>
-        </ul>
-
-        <h2>Часть 6: Профилактика и подготовка</h2>
-        <h3>Создание резервных методов доступа</h3>
-        <ol>
-          <li><b>Создайте парольную дискету</b> или USB-ключ</li>
-          <li><b>Настройте вопросы безопасности</b></li>
-          <li><b>Добавьте PIN-код</b> или графический пароль</li>
-          <li><b>Создайте локального администратора</b> с известным паролем</li>
-          <li><b>Настройте отпечаток пальца</b> или Windows Hello</li>
-        </ol>
-
-        <h3>Регулярное резервное копирование</h3>
-        <ul>
-          <li><b>Системные точки восстановления</b></li>
-          <li><b>Резервные копии профиля</b></li>
-          <li><b>Облачное хранилище</b> для важных файлов</li>
-          <li><b>Запись паролей</b> в надежном месте</li>
-        </ul>
-
-        <h2>Часть 7: Безопасность и лучшие практики</h2>
-        <h3>Защита от забытых паролей</h3>
-        <div class="pro-tips">
-          <h4>🔹 Как избежать проблемы в будущем</h4>
-          <div class="tip-item">
-            <i class="fas fa-lightbulb"></i>
-            <p>Используйте менеджер паролей для хранения всех паролей.</p>
-          </div>
-          <div class="tip-item">
-            <i class="fas fa-lightbulb"></i>
-            <p>Создайте несколько методов входа — пароль, PIN, отпечаток.</p>
-          </div>
-          <div class="tip-item">
-            <i class="fas fa-lightbulb"></i>
-            <p>Регулярно создавайте точки восстановления системы.</p>
-          </div>
-          <div class="tip-item">
-            <i class="fas fa-lightbulb"></i>
-            <p>Запишите главный пароль на бумаге и храните в безопасном месте.</p>
-          </div>
-        </div>
-
-        <h3>Создание надежных паролей</h3>
-        <ul>
-          <li><b>Длина</b> — минимум 12-16 символов</li>
-          <li><b>Сложность</b> — буквы, цифры, символы</li>
-          <li><b>Уникальность</b> — не используйте один пароль везде</li>
-          <li><b>Запоминаемость</b> — используйте мнемонические фразы</li>
-        </ul>
-
-        <h2>FAQ — часто задаваемые вопросы</h2>
-        <ul>
-          <li>
-            <strong>Сработает ли сброс пароля если шифрование BitLocker включено?</strong><br>
-            Да, но может потребоваться ключ восстановления BitLocker после сброса пароля.
-          </li>
-          <li>
-            <strong>Можно ли сбросить пароль без потери данных?</strong><br>
-            Да, большинство методов сохраняют все данные и программы intact.
-          </li>
-          <li>
-            <strong>Что делать если нет другого компьютера для создания загрузочного диска?</strong><br>
-            Обратитесь в сервисный центр или попросите помощи у друзей.
-          </li>
-          <li>
-            <strong>Сработают ли эти методы для Windows 11?</strong><br>
-            Да, все методы работают для Windows 10 и 11.
-          </li>
-          <li>
-            <strong>Можно ли сбросить пароль для доменной учетной записи?</strong><br>
-            Только через системного администратора домена.
-          </li>
-        </ul>
-
-        <div class="warning-block">
-          <strong>Внимание!</strong> Используйте только легальные методы восстановления доступа. Программы для "взлома" паролей могут содержать вирусы или повредить систему. Всегда создавайте резервные копии данных перед выполнением операций.
-        </div>
-
-        <h2>Пошаговая инструкция: оптимальный план действий</h2>
-        <ol>
-          <li>Проверьте возможность входа через Microsoft Account</li>
-          <li>Создайте загрузочный USB с Windows на другом компьютере</li>
-          <li>Попробуйте сброс через командную строку (самый надежный метод)</li>
-          <li>Если не получилось — используйте Hiren's BootCD</li>
-          <li>После восстановления доступа создайте резервные методы входа</li>
-          <li>Настройте менеджер паролей для предотвращения проблем</li>
-          <li>Создайте регулярные резервные копии системы</li>
-        </ol>
-
-        <h2>📌 Итог: доступ восстановлен, урок усвоен</h2>
-        <p>
-          Забытый пароль Windows — неприятная, но решаемая проблема. Современные методы позволяют восстановить доступ без потери данных, если действовать последовательно и использовать правильные инструменты. Главный урок этой ситуации — необходимость подготовки: создайте резервные методы входа, используйте менеджер паролей и регулярно делайте резервные копии. Помните, что лучшее решение проблемы — ее предотвращение через правильную подготовку и использование современных методов аутентификации.
-        </p>
-</div>
-    </div>
-  </section>
+  </main>
 
   <footer class="footer">
     <div class="container">
-      <div class="footer__grid">
-        <div class="footer__col footer__col--logo">
-          <a href="index.html" class="footer-logo">
-            <span class="logo__icon"></span>
-            <span class="logo__text">Repairo</span>
-          </a>
-          <p class="footer__text">Экспертные инструкции по технике с 2024 года</p>
+      <div class="footer__content">
+        <div class="footer__section">
+          <h4>Repairo</h4>
+          <p>Экспертные руководства по ремонту и обслуживанию техники</p>
         </div>
-        <div class="footer__col">
-          <h3 class="footer__title">Разделы</h3>
-          <ul class="footer__links">
-            <li><a href="index.html" class="footer__link">Главная</a></li>
-            <li><a href="all-guides.html" class="footer__link">Все гайды</a></li>
-            <li><a href="contacts.html" class="footer__link">Контакты</a></li>
+        <div class="footer__section">
+          <h4>Разделы</h4>
+          <ul>
+            <li><a href="../laptops.html">Ноутбуки</a></li>
+            <li><a href="../smartphones.html">Смартфоны</a></li>
+            <li><a href="../consoles.html">Консоли</a></li>
+            <li><a href="../cameras.html">Фотоаппараты</a></li>
           </ul>
         </div>
-        <div class="footer__col">
-          <h3 class="footer__title">Категории</h3>
-          <ul class="footer__links">
-            <li><a href="../tv.html" class="nav__link">Телевизоры</a></li>
-            <li><a href="../cameras.html" class="nav__link">Фотоаппараты</a></li>
-            <li><a href="../consoles.html" class="nav__link">Приставки</a></li>
-            <li><a href="../laptops.html" class="nav__link">Ноутбуки</a></li>
-            <li><a href="../smartphones.html" class="nav__link">Смартфоны</a></li>
-            <li><a href="../small-appliances.html" class="nav__link">Мелкая техника</a></li>
-            <li><a href="../large-appliances.html" class="nav__link">Бытовая техника</a></li>
-            <li><a href="../auto-electronics.html" class="nav__link">Авто-Электроника</a></li>
-          </ul>
-        </div>
-        <div class="footer__col">
-          <h3 class="footer__title">Контакты</h3>
-          <ul class="footer__links">
-            <li>
-              <a href="https://t.me/repairo_kz" class="footer__link"><i class="fab fa-telegram"></i> Telegram</a>
-            </li>
-            <li>
-              <a href="https://instagram.com/repairo_kz" class="footer__link"><i class="fab fa-instagram"></i> Instagram</a>
-            </li>
-            <li>
-              <a href="mailto:support@repairo.kz" class="footer__link"><i class="fas fa-envelope"></i> Email</a>
-            </li>
-          </ul>
+        <div class="footer__section">
+          <h4>Контакты</h4>
+          <p>support@repairo.ru</p>
         </div>
       </div>
       <div class="footer__bottom">
-            <p class="disclaimer">
-        Администрация сайта не несёт ответственности за возможные повреждения техники
-        и иные последствия, возникшие в результате самостоятельного ремонта по
-        материалам и инструкциям, размещённым на сайте. Все работы вы выполняете
-        на свой страх и риск.
-    </p>
-                <p class="footer__copyright">© 2025 Repairo. Все права защищены.</p>
+        <p>&copy; 2024 Repairo. Все права защищены.</p>
       </div>
     </div>
   </footer>
-    <!-- Cookie Consent Banner -->
-    <script src="../script.js"></script>
-  <script src="../guides-images.js"></script>
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "HowTo",
-  "name": "Что делать если забыл пароль от учетной записи Windows на ноутбуке",
-  "description": "Пошаговая инструкция: Что делать, если забыл пароль от учетной записи Windows на ноутбуке. Полный гид по восстановлению доступа, сбросу пароля, использованию загрузочных дисков. Безопасность и сохранение данных.",
-  "totalTime": "PT90M",
-  "step": [
-    {
-      "@type": "HowToStep",
-      "name": "Часть 1: Официальные методы восстановления",
-      "text": "Часть 1: Официальные методы восстановления",
-      "url": "#step-1"
-    },
-    {
-      "@type": "HowToStep",
-      "name": "Часть 2: Методы с загрузочным диском",
-      "text": "Часть 2: Методы с загрузочным диском",
-      "url": "#step-2"
-    },
-    {
-      "@type": "HowToStep",
-      "name": "Часть 3: Специализированные утилиты",
-      "text": "Часть 3: Специализированные утилиты",
-      "url": "#step-3"
-    },
-    {
-      "@type": "HowToStep",
-      "name": "Часть 4: Продвинутые методы",
-      "text": "Часть 4: Продвинутые методы",
-      "url": "#step-4"
-    },
-    {
-      "@type": "HowToStep",
-      "name": "Часть 5: Крайние меры",
-      "text": "Часть 5: Крайние меры",
-      "url": "#step-5"
-    }
-  ],
-  "image": "https://images.unsplash.com/photo-1550745165-9bc0b252726a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
-}
-</script>
-<!-- Cookie Consent Script -->
-<script src="../cookie-consent.js"></script>
+  <script src="../script.js"></script>
+  <script src="../search.js"></script>
+
 </body>
 </html>
-

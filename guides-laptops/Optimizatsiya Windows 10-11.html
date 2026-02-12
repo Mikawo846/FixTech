@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Оптимизация Windows 10/11 | Полное руководство</title>
+    <meta name="description" content="{{ description }}">
+    <meta name="description" content="Пошаговое руководство по оптимизации Windows 10 и 11. Увеличьте производительность, скорость загрузки и стабильность системы с помощью проверенных методов.">
+
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="../styles-header.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    .guide-content { line-height: 1.7; color: var(--text); }
+    .guide-content h2 { color: var(--primary); margin-top: 30px; margin-bottom: 15px; font-size: 1.5rem; }
+    .guide-content h3 { color: var(--primary-dark); margin-top: 25px; margin-bottom: 12px; font-size: 1.2rem; }
+    .guide-image-block { margin: 20px 0; padding: 15px; background: var(--background); border-radius: var(--border-radius); border: 1px solid var(--border); text-align: center; }
+    .guide-image-block img { max-width: 100%; height: auto; border-radius: 6px; border: 1px solid var(--border); }
+    .image-caption { margin-top: 10px; font-size: 0.85rem; color: var(--text-light); font-style: italic; }
+    .pro-tips { background: rgba(3, 74, 79, 0.05); padding: 15px; border-radius: 6px; margin: 20px 0; }
+    .pro-tips h4 { color: var(--primary); margin-top: 0; margin-bottom: 12px; font-size: 1.1rem; }
+    .tip-item { display: flex; gap: 8px; margin-bottom: 8px; align-items: flex-start; }
+    table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+    th, td { border: 1px solid var(--border); padding: 8px; text-align: left; }
+    th { background: var(--background-light); }
+    @media (max-width: 768px) {
+      .guide-content h2 { font-size: 1.4rem; margin-top: 25px; }
+      .guide-image-block { padding: 12px; margin: 15px 0; }
+      table, th, td { font-size: 0.95rem; }
+    }
+  </style>
+
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <a href="../index.html" class="logo">
+                    <span class="logo__icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 15L7 10H17L12 15Z" fill="currentColor"/>
+                            <path d="M12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3ZM12 19C8.13401 19 5 15.866 5 12C5 8.13401 8.13401 5 12 5C15.866 5 19 8.13401 19 12C19 15.866 15.866 19 12 19Z" fill="currentColor"/>
+                        </svg>
+                    </span>
+                    <span class="logo__text">Repairo</span>
+                </a>
+                <nav class="nav">
+                    <ul class="nav__list">
+                       <li><a href="../tv.html" class="nav__link">Телевизоры</a></li>
+                        <li><a href="../auto-electronics.html" class="nav__link">Автоэлектроника</a></li>
+                        <li><a href="../consoles.html" class="nav__link">Приставки</a></li>
+                        <li><a href="../laptops.html" class="nav__link">Ноутбуки</a></li>
+                        <li><a href="../smartphones.html" class="nav__link">Смартфоны</a></li>
+                        <li><a href="../index.html#categories" class="nav__link">Все категории</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="guide-content">
+            <h1>Оптимизация Windows 10/11: Полное руководство</h1>
+            <p>В этом подробном руководстве мы рассмотрим все аспекты оптимизации Windows 10 и 11 для достижения максимальной производительности, скорости работы и стабильности системы. Независимо от того, используете ли вы стационарный компьютер или ноутбук, эти методы помогут вам значительно улучшить работу операционной системы.</p>
+
+            <h2>Зачем нужна оптимизация Windows?</h2>
+            <p>Со временем Windows накапливает временные файлы, ненужные программы и службы, которые замедляют работу системы. Оптимизация помогает:</p>
+            <ul>
+                <li>Ускорить загрузку операционной системы</li>
+                <li>Повысить производительность приложений</li>
+                <li>Снизить нагрузку на процессор и оперативную память</li>
+                <li>Увеличить время автономной работы ноутбука</li>
+                <li>Улучшить стабильность системы</li>
+            </ul>
+
+            <h2>Шаг 1: Очистка диска и удаление ненужных файлов</h2>
+            <p>Первый шаг оптимизации - очистка системы от мусора.</p>
+            <h3>Встроенные средства Windows</h3>
+            <ol>
+                <li>Откройте "Этот компьютер" и щелкните правой кнопкой мыши на системном диске (обычно C:)</li>
+                <li>Выберите "Свойства" → "Общие" → "Очистка диска"</li>
+                <li>Отметьте все ненужные файлы и нажмите "ОК"</li>
+            </ol>
+            <p>Для более глубокой очистки используйте "Очистка диска" в расширенном режиме.</p>
+
+            <h3>Удаление временных файлов</h3>
+            <p>Выполните команду в PowerShell (от имени администратора):</p>
+            <pre><code>cleanmgr /sagerun:1</code></pre>
+            <p>Это запустит автоматическую очистку с предварительно выбранными параметрами.</p>
+
+            <h2>Шаг 2: Оптимизация автозагрузки</h2>
+            <p>Многие программы запускаются автоматически при старте Windows, замедляя загрузку.</p>
+            <h3>Использование Диспетчера задач</h3>
+            <ol>
+                <li>Нажмите Ctrl + Shift + Esc для открытия Диспетчера задач</li>
+                <li>Перейдите на вкладку "Автозагрузка"</li>
+                <li>Отключите ненужные программы, щелкнув правой кнопкой и выбрав "Отключить"</li>
+            </ol>
+
+            <div class="pro-tips">
+                <h4>Полезные советы</h4>
+                <div class="tip-item">
+                    <i class="fas fa-lightbulb"></i>
+                    <span>Оставьте включенными только антивирус, драйверы устройств и критически важные системные службы</span>
+                </div>
+                <div class="tip-item">
+                    <i class="fas fa-lightbulb"></i>
+                    <span>Проверьте влияние программ на загрузку в столбце "Влияние на запуск"</span>
+                </div>
+            </div>
+
+            <h2>Шаг 3: Отключение ненужных служб и эффектов</h2>
+            <h3>Отключение визуальных эффектов</h3>
+            <ol>
+                <li>Откройте "Параметры" → "Система" → "О программе"</li>
+                <li>Выберите "Дополнительные параметры системы"</li>
+                <li>В разделе "Быстродействие" нажмите "Параметры"</li>
+                <li>Выберите "Обеспечить наилучшее быстродействие" или настройте эффекты вручную</li>
+            </ol>
+
+            <h3>Отключение ненужных служб</h3>
+            <p>В Windows 10/11 многие службы можно безопасно отключить:</p>
+            <table>
+                <tr>
+                    <th>Служба</th>
+                    <th>Рекомендация</th>
+                </tr>
+                <tr>
+                    <td>Факс</td>
+                    <td>Отключить</td>
+                </tr>
+                <tr>
+                    <td>Служба маршрутизации push-сообщений</td>
+                    <td>Отключить</td>
+                </tr>
+                <tr>
+                    <td>Служба геолокации</td>
+                    <td>Отключить, если не используете</td>
+                </tr>
+            </table>
+
+            <h2>Шаг 4: Оптимизация энергопотребления</h2>
+            <p>Для ноутбуков особенно важно настроить режимы питания.</p>
+            <ol>
+                <li>Откройте "Панель управления" → "Система и безопасность" → "Электропитание"</li>
+                <li>Выберите план питания или создайте собственный</li>
+                <li>Настройте параметры для максимальной производительности</li>
+            </ol>
+
+            <h2>Шаг 5: Обновление драйверов и системы</h2>
+            <p>Обновленные драйверы улучшают производительность и стабильность.</p>
+            <h3>Автоматическое обновление</h3>
+            <ol>
+                <li>Откройте "Параметры" → "Обновление и безопасность" → "Центр обновления Windows"</li>
+                <li>Установите все доступные обновления</li>
+            </ol>
+
+            <h3>Обновление драйверов</h3>
+            <p>Используйте Диспетчер устройств для обновления драйверов или специальные утилиты от производителей.</p>
+
+            <h2>Шаг 6: Оптимизация реестра и системных файлов</h2>
+            <h3>Проверка системных файлов</h3>
+            <p>Запустите командную строку от имени администратора и выполните:</p>
+            <pre><code>sfc /scannow</code></pre>
+            <p>Это проверит и восстановит поврежденные системные файлы.</p>
+
+            <h3>Очистка реестра</h3>
+            <p>Будьте осторожны с редактированием реестра. Используйте надежные программы для очистки.</p>
+
+            <h2>Дополнительные рекомендации</h2>
+            <h3>Использование SSD</h3>
+            <p>Если у вас SSD-накопитель, отключите дефрагментацию и включите TRIM.</p>
+
+            <h3>Мониторинг производительности</h3>
+            <p>Используйте встроенный Монитор производительности для отслеживания загрузки системы.</p>
+
+            <h3>Регулярное обслуживание</h3>
+            <p>Повторяйте оптимизацию каждые 3-6 месяцев для поддержания производительности.</p>
+
+            <div class="pro-tips">
+                <h4>Важные предупреждения</h4>
+                <div class="tip-item">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <span>Создавайте резервные копии перед внесением изменений</span>
+                </div>
+                <div class="tip-item">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <span>Не отключайте системные службы без понимания их функций</span>
+                </div>
+                <div class="tip-item">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <span>Тестируйте систему после каждого изменения</span>
+                </div>
+            </div>
+
+            <h2>Заключение</h2>
+            <p>Правильная оптимизация Windows 10/11 может значительно улучшить работу вашего компьютера. Следуйте этому руководству пошагово, и вы заметите улучшения в скорости загрузки, производительности приложений и общей стабильности системы. Помните, что каждая система уникальна, поэтому экспериментируйте с настройками и находите оптимальный баланс между производительностью и функциональностью.</p>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <p>&copy; 2024 Repairo. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+    <script src="../cookie-consent.js"></script>
+</body>
+</html>

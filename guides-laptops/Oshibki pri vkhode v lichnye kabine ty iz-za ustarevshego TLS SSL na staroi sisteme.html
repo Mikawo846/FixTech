@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ошибки при входе в личные кабинеты из-за устаревшего TLS SSL на старой системе | Экспертный мегагайд</title>
+    <meta name="description" content="{{ description }}">
+    <meta name="description" content="Пошаговая инструкция: Ошибки при входе в личные кабинеты из-за устаревшего TLS SSL на старой системе — Экспертный мегагайд. Причины: версия, настройки. Решения: обновление, обход, замена.">
+
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="../styles-header.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    .guide-content { line-height: 1.7; color: var(--text); }
+    .guide-content h2 { color: var(--primary); margin-top: 30px; margin-bottom: 15px; font-size: 1.6rem; }
+    .guide-content h3 { color: var(--primary-dark); margin-top: 25px; margin-bottom: 12px; font-size: 1.25rem; }
+    .guide-image-block { margin: 20px 0; padding: 15px; background: var(--background); border-radius: var(--border-radius); border: 1px solid var(--border); text-align: center; }
+    .guide-image-block img { max-width: 100%; height: auto; border-radius: 6px; border: 1px solid var(--border); }
+    .image-caption { margin-top: 10px; font-size: 0.85rem; color: var(--text-light); font-style: italic; }
+    .pro-tips { background: rgba(3, 74, 79, 0.05); padding: 18px; border-radius: 8px; margin: 25px 0; }
+    .pro-tips h4 { color: var(--primary); margin-top: 0; margin-bottom: 12px; font-size: 1.15rem; }
+    .tip-item { display: flex; gap: 10px; margin-bottom: 10px; align-items: flex-start; }
+    .tip-item i { margin-top: 3px; }
+    table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+    th, td { border: 1px solid var(--border); padding: 8px; text-align: left; vertical-align: top; }
+    th { background: var(--background-light); }
+    code { background: var(--background-light); padding: 2px 4px; border-radius: 4px; font-size: 0.9em; }
+    ul, ol { margin-left: 18px; }
+    @media (max-width: 768px) {
+      .guide-content h2 { font-size: 1.4rem; margin-top: 25px; }
+      .guide-content h3 { font-size: 1.15rem; }
+      .guide-image-block { padding: 12px; margin: 15px 0; }
+      table, th, td { font-size: 0.95rem; }
+    }
+
+    /* Яндекс Маркет рекламный баннер */
+    .ym-hero-link {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+      max-width: 100%;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    /* Горизонтальный баннер-карточка */
+    .ym-hero-banner {
+      width: 100%;
+      max-width: 600px;
+      min-height: 140px;
+      border-radius: 16px;
+      background: #ffffff;
+      border: 1px solid #e5e7eb;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 4px 16px rgba(15, 23, 42, 0.08);
+      overflow: hidden;
+      box-sizing: border-box;
+      margin: 40px auto;
+    }
+
+    /* Контейнер для изображений */
+    .ym-hero-images {
+      display: flex;
+      height: 120px;
+      overflow: hidden;
+    }
+
+    .ym-hero-image {
+      flex: 1;
+      min-width: 0;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      border-right: 1px solid #e5e7eb;
+      background: #f8f9fa;
+    }
+
+    .ym-hero-image:last-child {
+      border-right: none;
+    }
+
+    .ym-hero-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      transition: transform 0.3s ease;
+      background: #f8f9fa;
+    }
+
+    .ym-hero-image:hover img {
+      transform: scale(1.02);
+    }
+
+    /* Правая часть: контент */
+    .ym-hero-content {
+      padding: 16px 18px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 8px;
+    }
+
+    /* Название товара */
+    .ym-hero-title {
+      font-size: 14px;
+      font-weight: 600;
+      color: #111827;
+      line-height: 1.3;
+      margin: 0 0 4px 0;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    /* Рейтинг */
+    .ym-hero-rating {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 12px;
+      color: #6b7280;
+    }
+
+    .ym-hero-stars {
+      display: flex;
+      gap: 1px;
+    }
+
+    .ym-hero-star {
+      width: 12px;
+      height: 12px;
+      fill: #fbbf24;
+    }
+
+    .ym-hero-reviews {
+      font-size: 11px;
+      color: #9ca3af;
+    }
+
+    /* Цена */
+    .ym-hero-price {
+      font-size: 16px;
+      font-weight: 700;
+      color: #111827;
+      margin: 0;
+    }
+
+    /* Кнопка */
+    .ym-hero-button {
+      background: #007bff;
+      color: #ffffff;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background 0.2s ease;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .ym-hero-button:hover {
+      background: #0056b3;
+    }
+
+    /* Адаптивность */
+    @media (max-width: 768px) {
+      .ym-hero-banner {
+        flex-direction: row;
+        min-height: auto;
+      }
+
+      .ym-hero-images {
+        width: 120px;
+        height: auto;
+        flex-shrink: 0;
+      }
+
+      .ym-hero-content {
+        flex: 1;
+        padding: 12px 16px;
+      }
+
+      .ym-hero-title {
+        font-size: 13px;
+      }
+
+      .ym-hero-price {
+        font-size: 15px;
+      }
+
+      .ym-hero-button {
+        padding: 6px 10px;
+        font-size: 11px;
+      }
+    }
+
+    /* Скрытый баннер для десктопа */
+    @media (min-width: 769px) {
+      .ym-hero-link {
+        display: none !important;
+      }
+    }
+  </style>
+  <script async src="https://timeweb.cloud/api/v1/cloud-ai/agents/3cc03620-d051-4d8d-b5af-f7b6cd083a35/embed.js?collapsed=true"></script>
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <a href="/" class="logo">
+        <i class="fas fa-tools"></i>
+        FixTech
+      </a>
+      <nav class="nav-links">
+        <a href="/">Главная</a>
+        <a href="/articles">Все статьи</a>
+        <a href="/smartphones">Смартфоны</a>
+        <a href="/laptops">Ноутбуки</a>
+        <a href="/tv">Телевизоры</a>
+        <a href="/cameras">Камеры</a>
+        <a href="/consoles">Консоли</a>
+        <a href="/auto-electronics">Автоэлектроника</a>
+        <a href="/small-appliances">Мелкая техника</a>
+        <a href="/large-appliances">Крупная техника</a>
+      </nav>
+      <div class="search-container">
+        <input type="text" id="search-input" placeholder="Поиск по сайту..." />
+        <button id="search-button"><i class="fas fa-search"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <main class="guide-container">
+    <div class="guide-content">
+      <h1>Ошибки при входе в личные кабинеты из-за устаревшего TLS SSL на старой системе</h1>
+      <p>Когда возникают ошибки при входе в личные кабинеты из-за устаревшего TLS SSL на старой системе, проблема связана с протоколами безопасности. В этом экспертном мегагайде мы разберем все причины ошибок и предоставим решения для успешного входа.</p>
+
+      <h2>Признаки проблемы</h2>
+      <ul>
+        <li>Ошибка TLS/SSL</li>
+        <li>Не удается подключиться</li>
+        <li>Работает на новом устройстве</li>
+        <li>Старая ОС</li>
+        <li>Банки и сайты недоступны</li>
+      </ul>
+
+      <h2>Основные причины</h2>
+      <table>
+        <tr>
+          <th>Причина</th>
+          <th>Вероятность</th>
+          <th>Характерные признаки</th>
+        </tr>
+        <tr>
+          <td>Устаревший TLS</td>
+          <td>60%</td>
+          <td>Работает после обновления</td>
+        </tr>
+        <tr>
+          <td>Старая ОС</td>
+          <td>30%</td>
+          <td>Работает на Windows 11</td>
+        </tr>
+        <tr>
+          <td>Отключенный TLS 1.2</td>
+          <td>5%</td>
+          <td>Работает после включения</td>
+        </tr>
+        <tr>
+          <td>Поврежденные сертификаты</td>
+          <td>3%</td>
+          <td>Работает после обновления</td>
+        </tr>
+        <tr>
+          <td>Антивирус блокирует</td>
+          <td>2%</td>
+          <td>Работает после исключения</td>
+        </tr>
+      </table>
+
+      <h2>Диагностика проблемы</h2>
+      <h3>Проверка протоколов</h3>
+      <ol>
+        <li>Win + R → inetcpl.cpl</li>
+        <li>Дополнительно → Безопасность</li>
+        <li>Проверить TLS 1.2</li>
+      </ol>
+
+      <h2>Решение 1: Обновление Windows</h2>
+      <h3>Последние обновления</h3>
+      <ol>
+        <li>Параметры → Обновление и безопасность</li>
+        <li>Проверить обновления</li>
+        <li>Установить все</li>
+      </ol>
+
+      <h2>Решение 2: Включение TLS 1.2</h2>
+      <h3>Настройки протоколов</h3>
+      <ol>
+        <li>inetcpl.cpl → Дополнительно</li>
+        <li>Безопасность → TLS 1.2</li>
+        <li>Применить → OK</li>
+      </ol>
+
+      <h2>Решение 3: Обновление браузера</h2>
+      <h3>Последняя версия</h3>
+      <ol>
+        <li>Настройки браузера</li>
+        <li>О браузере → Обновить</li>
+        <li>Перезапустить</li>
+      </ol>
+
+      <h2>Решение 4: Очистка сертификатов</h2>
+      <h3>Удаление старых</h3>
+      <ol>
+        <li>certlm.msc</li>
+        <li>Доверенные корневые ЦС</li>
+        <li>Удалить подозрительные</li>
+      </ol>
+
+      <div class="pro-tips">
+        <h4><i class="fas fa-lightbulb"></i> Профессиональные советы</h4>
+        <div class="tip-item">
+          <i class="fas fa-shield-alt"></i>
+          <span>Обновляйте Windows для поддержки TLS</span>
+        </div>
+        <div class="tip-item">
+          <i class="fas fa-globe"></i>
+          <span>Используйте современные браузеры</span>
+        </div>
+        <div class="tip-item">
+          <i class="fas fa-tools"></i>
+          <span>Включайте TLS 1.2 и выше</span>
+        </div>
+        <div class="tip-item">
+          <i class="fas fa-certificate"></i>
+          <span>Регулярно обновляйте сертификаты</span>
+        </div>
+      </div>
+
+      <h2>Расширенные решения</h2>
+      <h3>Регистр для протоколов</h3>
+      <ol>
+        <li>regedit</li>
+        <li>HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols</li>
+        <li>Включить TLS 1.2</li>
+      </ol>
+
+      <h2>Частые вопросы</h2>
+      <h3>Почему ошибки при входе в личные кабинеты из-за устаревшего TLS SSL на старой системе?</h3>
+      <p>Старая ОС не поддерживает современные протоколы. Обновите Windows и включите TLS 1.2.</p>
+
+      <h3>Как включить TLS 1.2?</h3>
+      <p>inetcpl.cpl → Дополнительно → Безопасность → TLS 1.2.</p>
+
+      <h3>Что делать, если ОС старая?</h3>
+      <p>Обновите до Windows 10 или выше.</p>
+
+      <h2>Когда нужна замена</h2>
+      <ul>
+        <li>ОС не поддерживает обновления</li>
+        <li>Не работает после всех решений</li>
+        <li>Требуется современная система</li>
+      </ul>
+
+      <p>В большинстве случаев проблема решается обновлением Windows. Начните с включения TLS 1.2.</p>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2024 FixTech. Все права защищены.</p>
+      <div class="footer-links">
+        <a href="/privacy">Конфиденциальность</a>
+        <a href="/terms">Условия использования</a>
+        <a href="/contact">Контакты</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+  <script src="../search.js"></script>
+</body>
+</html>

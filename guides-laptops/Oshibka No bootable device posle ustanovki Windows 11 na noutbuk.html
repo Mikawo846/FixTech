@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ошибка No bootable device после установки Windows 11 на ноутбук | Решение проблемы</title>
+    <meta name="description" content="{{ description }}">
+    <meta name="description" content="Ошибка No bootable device после установки Windows 11 на ноутбук. Причины отсутствия загрузочного устройства после установки и способы исправления проблем с загрузкой на ноутбуке.">
+
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="../styles-header.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    .guide-content { line-height: 1.7; color: var(--text); }
+    .guide-content h2 { color: var(--primary); margin-top: 30px; margin-bottom: 15px; font-size: 1.5rem; }
+    .guide-content h3 { color: var(--primary-dark); margin-top: 25px; margin-bottom: 12px; font-size: 1.2rem; }
+    .guide-image-block { margin: 20px 0; padding: 15px; background: var(--background); border-radius: var(--border-radius); border: 1px solid var(--border); text-align: center; }
+    .guide-image-block img { max-width: 100%; height: auto; border-radius: 6px; border: 1px solid var(--border); }
+    .image-caption { margin-top: 10px; font-size: 0.85rem; color: var(--text-light); font-style: italic; }
+    .pro-tips { background: rgba(3, 74, 79, 0.05); padding: 15px; border-radius: 6px; margin: 20px 0; }
+    .pro-tips h4 { color: var(--primary); margin-top: 0; margin-bottom: 12px; font-size: 1.1rem; }
+    .tip-item { display: flex; gap: 8px; margin-bottom: 8px; align-items: flex-start; }
+    table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+    th, td { border: 1px solid var(--border); padding: 8px; text-align: left; }
+    th { background: var(--background-light); }
+    @media (max-width: 768px) {
+      .guide-content h2 { font-size: 1.4rem; margin-top: 25px; }
+      .guide-image-block { padding: 12px; margin: 15px 0; }
+      table, th, td { font-size: 0.95rem; }
+    }
+  </style>
+
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <a href="../index.html" class="logo">
+                    <span class="logo__icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 15L7 10H17L12 15Z" fill="currentColor"/>
+                            <path d="M12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3ZM12 19C8.13401 19 5 15.866 5 12C5 8.13401 8.13401 5 12 5C15.866 5 19 8.13401 19 12C19 15.866 15.866 19 12 19Z" fill="currentColor"/>
+                        </svg>
+                    </span>
+                    <span class="logo__text">Repairo</span>
+                </a>
+                <nav class="nav">
+                    <ul class="nav__list">
+                       <li><a href="../tv.html" class="nav__link">Телевизоры</a></li>
+                        <li><a href="../auto-electronics.html" class="nav__link">Автоэлектроника</a></li>
+                        <li><a href="../consoles.html" class="nav__link">Приставки</a></li>
+                        <li><a href="../laptops.html" class="nav__link">Ноутбуки</a></li>
+                        <li><a href="../smartphones.html" class="nav__link">Смартфоны</a></li>
+                        <li><a href="../index.html#categories" class="nav__link">Все категории</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="guide-content">
+            <h1>Ошибка No bootable device после установки Windows 11 на ноутбук</h1>
+            <p>Ошибка "No bootable device" после установки Windows 11 на ноутбук указывает на отсутствие загрузочного устройства. В этом подробном руководстве мы разберем причины этой ошибки и эффективные способы ее исправления.</p>
+
+            <h2>Что означает No bootable device</h2>
+            <p>BIOS не находит устройство, с которого можно загрузить операционную систему.</p>
+            <h3>Техническое объяснение</h3>
+            <ul>
+                <li><strong>Причина:</strong> Отсутствие загрузочного диска или повреждение загрузчика</li>
+                <li><strong>Влияние:</strong> Система не загружается после установки</li>
+                <li><strong>Часто связано:</strong> С установкой или настройками</li>
+                <li><strong>Результат:</strong> Черный экран с ошибкой</li>
+            </ul>
+
+            <h3>Влияние на систему</h3>
+            <ul>
+                <li>Не удается загрузить Windows</li>
+                <li>Установка прошла успешно, но загрузка невозможна</li>
+                <li>Необходимость восстановления</li>
+                <li>Потеря доступа к установленной системе</li>
+            </ul>
+
+            <h2>Распространенные причины</h2>
+            <p>Почему возникает ошибка No bootable device после установки Windows 11.</p>
+            <h3>Проблемы с установкой</h3>
+            <ul>
+                <li><strong>Неправильная установка:</strong> Загрузчик не создан</li>
+                <li><strong>Отключение флешки:</strong> Рано извлекли установочный носитель</li>
+                <li><strong>Поврежденная установка:</strong> Файлы повреждены</li>
+                <li><strong>Несовместимый диск:</strong> Диск не поддерживает загрузку</li>
+            </ul>
+
+            <h3>Настройки BIOS</h3>
+            <ul>
+                <li><strong>Порядок загрузки:</strong> Диск не в списке</li>
+                <li><strong>UEFI/Legacy:</strong> Неправильный режим</li>
+                <li><strong>Secure Boot:</strong> Конфликт с загрузчиком</li>
+                <li><strong>Сброс настроек:</strong> BIOS сброшен после установки</li>
+            </ul>
+
+            <h3>Повреждение данных</h3>
+            <ul>
+                <li><strong>BCD поврежден:</strong> Магазин конфигурации загрузки</li>
+                <li><strong>MBR/EFI:</strong> Загрузочные сектора повреждены</li>
+                <li><strong>Файлы Windows:</strong> Системные файлы повреждены</li>
+                <li><strong>Перегрев:</strong> Повреждение от температуры</li>
+            </ul>
+
+            <h2>Диагностика ошибки</h2>
+            <p>Как определить причину ошибки No bootable device.</p>
+            <h3>Проверка в BIOS</h3>
+            <h4>Обнаружение диска</h4>
+            <ol>
+                <li>Перезагрузите ноутбук</li>
+                <li>Войдите в BIOS (Del, F2 или F10)</li>
+                <li>Проверьте список дисков</li>
+                <li>Если диск есть, проверьте порядок загрузки</li>
+            </ol>
+
+            <h4>Порядок загрузки</h4>
+            <ol>
+                <li>В разделе Boot посмотрите порядок</li>
+                <li>Убедитесь, что системный диск первый</li>
+                <li>Проверьте настройки UEFI/Legacy</li>
+                <li>Сохраните изменения</li>
+            </ol>
+
+            <h3>Проверка установки</h3>
+            <ol>
+                <li>Загрузитесь с установочной флешки</li>
+                <li>Выберите "Восстановление системы"</li>
+                <li>Попробуйте автоматическое восстановление</li>
+                <li>Проверьте, загружается ли система</li>
+            </ol>
+
+            <h2>Решение проблемы</h2>
+            <p>Методы исправления ошибки No bootable device.</p>
+            <h3>Метод 1: Настройки BIOS</h3>
+            <h4>Порядок загрузки</h4>
+            <ol>
+                <li>Войдите в BIOS</li>
+                <li>Перейдите к настройкам загрузки</li>
+                <li>Установите системный диск первым</li>
+                <li>Отключите Secure Boot (если нужно)</li>
+                <li>Сохраните и выйдите</li>
+            </ol>
+
+            <h3>Метод 2: Восстановление загрузчика</h3>
+            <h4>Автоматическое восстановление</h4>
+            <ol>
+                <li>Загрузитесь с установочной флешки</li>
+                <li>Выберите "Восстановление системы"</li>
+                <li>Нажмите "Поиск и устранение неисправностей"</li>
+                <li>Выберите "Восстановление при загрузке"</li>
+                <li>Дождитесь завершения</li>
+            </ol>
+
+            <h3>Метод 3: Перестроение BCD</h3>
+            <h4>Командная строка</h4>
+            <ol>
+                <li>В меню восстановления выберите "Командная строка"</li>
+                <li>Введите: bootrec /fixmbr</li>
+                <li>bootrec /fixboot</li>
+                <li>bootrec /rebuildbcd</li>
+                <li>exit</li>
+                <li>Перезагрузите систему</li>
+            </ol>
+
+            <h3>Метод 4: Восстановление EFI</h3>
+            <h4>Для UEFI систем</h4>
+            <ol>
+                <li>В командной строке введите: diskpart</li>
+                <li>list disk</li>
+                <li>select disk X</li>
+                <li>list partition</li>
+                <li>select partition Y (EFI)</li>
+                <li>assign letter=Z</li>
+                <li>bcdboot C:\Windows /s Z: /f UEFI</li>
+            </ol>
+
+            <h3>Метод 5: Проверка диска</h3>
+            <h4>Исправление ошибок</h4>
+            <ol>
+                <li>В командной строке введите: chkdsk C: /f /r</li>
+                <li>Дождитесь завершения проверки</li>
+                <li>Если ошибки найдены, диск поврежден</li>
+                <li>Попробуйте восстановить загрузчик</li>
+            </ol>
+
+            <h2>Специфические случаи</h2>
+            <p>Решения для распространенных сценариев.</p>
+            <h3>Ошибка после чистой установки</h3>
+            <ul>
+                <li>Проверьте порядок загрузки в BIOS</li>
+                <li>Восстановите BCD</li>
+                <li>Убедитесь в UEFI режиме</li>
+                <li>Переустановите Windows</li>
+            </ul>
+
+            <h3>Ошибка с SSD</h3>
+            <ul>
+                <li>Включите AHCI в BIOS</li>
+                <li>Обновите firmware SSD</li>
+                <li>Перестроите BCD</li>
+                <li>Проверьте SATA режим</li>
+            </ul>
+
+            <h3>Ошибка после обновления</h3>
+            <ul>
+                <li>Откатите обновление</li>
+                <li>Восстановите загрузчик</li>
+                <li>Сбросьте настройки BIOS</li>
+                <li>Запустите восстановление</li>
+            </ul>
+
+            <h2>Профилактика</h2>
+            <p>Как избежать ошибки No bootable device.</p>
+            <h3>Регулярное обслуживание</h3>
+            <ul>
+                <li><strong>Обновления:</strong> Устанавливайте обновления BIOS</li>
+                <li><strong>Антивирус:</strong> Защита от вредоносного ПО</li>
+                <li><strong>Резервные копии:</strong> Создавайте образы системы</li>
+                <li><strong>Чистка:</strong> Очищайте от пыли</li>
+            </ul>
+
+            <h3>Безопасность установки</h3>
+            <ul>
+                <li>Не извлекайте флешку до завершения установки</li>
+                <li>Проверяйте настройки BIOS перед установкой</li>
+                <li>Используйте надежные источники Windows</li>
+                <li>Создавайте точки восстановления</li>
+            </ul>
+
+            <div class="pro-tips">
+                <h4>Полезные советы</h4>
+                <div class="tip-item">
+                    <i class="fas fa-lightbulb"></i>
+                    <span>Проверяйте порядок загрузки в BIOS</span>
+                </div>
+                <div class="tip-item">
+                    <i class="fas fa-lightbulb"></i>
+                    <span>Используйте автоматическое восстановление Windows</span>
+                </div>
+                <div class="tip-item">
+                    <i class="fas fa-lightbulb"></i>
+                    <span>Создавайте резервные копии перед установкой</span>
+                </div>
+                <div class="tip-item">
+                    <i class="fas fa-lightbulb"></i>
+                    <span>Если проблема повторяется, обратитесь в поддержку Microsoft</span>
+                </div>
+            </div>
+
+            <h2>Когда нужна помощь специалиста</h2>
+            <p>Признаки серьезных проблем.</p>
+            <h3>Критические случаи</h3>
+            <ul>
+                <li>Диск не обнаруживается в BIOS</li>
+                <li>Повреждение материнской платы</li>
+                <li>Потеря всех данных</li>
+                <li>Необходима замена оборудования</li>
+            </ul>
+
+            <h3>Что проверить в сервисе</h3>
+            <ul>
+                <li>Работоспособность жесткого диска</li>
+                <li>Целостность подключений</li>
+                <li>Совместимость оборудования</li>
+                <li>Возможность восстановления</li>
+            </ul>
+
+            <h2>Заключение</h2>
+            <p>Ошибка "No bootable device" после установки Windows 11 обычно связана с неправильными настройками BIOS или повреждением загрузчика. В большинстве случаев ее можно решить настройкой порядка загрузки или восстановлением BCD. Начните с BIOS, затем используйте восстановление при загрузке. Если самостоятельные попытки не увенчались успехом, обратитесь к специалистам или поддержке Microsoft.</p>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <p>&copy; 2024 Repairo. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+    <script src="../cookie-consent.js"></script>
+</body>
+</html>

@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ошибка служба входа в систему не отвечает Windows 11 на ноутбуке | Решение проблемы</title>
+    <meta name="description" content="{{ description }}">
+    <meta name="description" content="Ошибка служба входа в систему не отвечает Windows 11 на ноутбуке. Причины неответа службы входа и способы исправления проблемы с входом в Windows 11 на ноутбуке.">
+
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="../styles-header.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    .guide-content { line-height: 1.7; color: var(--text); }
+    .guide-content h2 { color: var(--primary); margin-top: 30px; margin-bottom: 15px; font-size: 1.5rem; }
+    .guide-content h3 { color: var(--primary-dark); margin-top: 25px; margin-bottom: 12px; font-size: 1.2rem; }
+    .guide-image-block { margin: 20px 0; padding: 15px; background: var(--background); border-radius: var(--border-radius); border: 1px solid var(--border); text-align: center; }
+    .guide-image-block img { max-width: 100%; height: auto; border-radius: 6px; border: 1px solid var(--border); }
+    .image-caption { margin-top: 10px; font-size: 0.85rem; color: var(--text-light); font-style: italic; }
+    .pro-tips { background: rgba(3, 74, 79, 0.05); padding: 15px; border-radius: 6px; margin: 20px 0; }
+    .pro-tips h4 { color: var(--primary); margin-top: 0; margin-bottom: 12px; font-size: 1.1rem; }
+    .tip-item { display: flex; gap: 8px; margin-bottom: 8px; align-items: flex-start; }
+    table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+    th, td { border: 1px solid var(--border); padding: 8px; text-align: left; }
+    th { background: var(--background-light); }
+    @media (max-width: 768px) {
+      .guide-content h2 { font-size: 1.4rem; margin-top: 25px; }
+      .guide-image-block { padding: 12px; margin: 15px 0; }
+      table, th, td { font-size: 0.95rem; }
+    }
+  </style>
+
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <a href="../index.html" class="logo">
+                    <span class="logo__icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 15L7 10H17L12 15Z" fill="currentColor"/>
+                            <path d="M12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3ZM12 19C8.13401 19 5 15.866 5 12C5 8.13401 8.13401 5 12 5C15.866 5 19 8.13401 19 12C19 15.866 15.866 19 12 19Z" fill="currentColor"/>
+                        </svg>
+                    </span>
+                    <span class="logo__text">Repairo</span>
+                </a>
+                <nav class="nav">
+                    <ul class="nav__list">
+                       <li><a href="../tv.html" class="nav__link">Телевизоры</a></li>
+                        <li><a href="../auto-electronics.html" class="nav__link">Автоэлектроника</a></li>
+                        <li><a href="../consoles.html" class="nav__link">Приставки</a></li>
+                        <li><a href="../laptops.html" class="nav__link">Ноутбуки</a></li>
+                        <li><a href="../smartphones.html" class="nav__link">Смартфоны</a></li>
+                        <li><a href="../index.html#categories" class="nav__link">Все категории</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="guide-content">
+            <h1>Ошибка служба входа в систему не отвечает Windows 11 на ноутбуке</h1>
+            <p>Ошибка "Служба входа в систему не отвечает" на Windows 11 указывает на проблемы со службами аутентификации. В этом подробном руководстве мы разберем причины этой ошибки и эффективные способы ее исправления для ноутбуков.</p>
+
+            <h2>Что означает ошибка службы входа</h2>
+            <p>Ошибка службы входа указывает на проблемы с Winlogon или LSASS.</p>
+            <h3>Техническое объяснение</h3>
+            <ul>
+                <li><strong>Причина:</strong> Служба Winlogon или LSASS не отвечает</li>
+                <li><strong>Влияние:</strong> Невозможно войти в систему</li>
+                <li><strong>Часто связано:</strong> С поврежденными службами или реестром</li>
+                <li><strong>Результат:</strong> Бесконечная загрузка или отказ в доступе</li>
+            </ul>
+
+            <h3>Влияние на систему</h3>
+            <ul>
+                <li>Невозможно войти в учетную запись</li>
+                <li>Бесконечная загрузка экрана входа</li>
+                <li>Нестабильная работа</li>
+                <li>Проблемы с приложениями</li>
+            </ul>
+
+            <h2>Распространенные причины</h2>
+            <p>Почему возникает ошибка службы входа в систему.</p>
+            <h3>Поврежденные службы</h3>
+            <ul>
+                <li><strong>Winlogon:</strong> Служба входа повреждена</li>
+                <li><strong>LSASS:</strong> Локальная служба безопасности не работает</li>
+                <li><strong>Зависимости:</strong> Не работают зависимые службы</li>
+                <li><strong>Конфликты:</strong> Конфликты с антивирусом</li>
+            </ul>
+
+            <h3>Системные проблемы</h3>
+            <ul>
+                <li><strong>Поврежденный реестр:</strong> Ошибки в реестре</li>
+                <li><strong>Вредоносное ПО:</strong> Вирусы блокируют службы</li>
+                <li><strong>Обновления Windows:</strong> После установки обновлений</li>
+                <li><strong>Драйверы:</strong> Конфликты с драйверами</li>
+            </ul>
+
+            <h3>Аппаратные причины</h3>
+            <ul>
+                <li><strong>Поврежденный диск:</strong> Ошибки жесткого диска</li>
+                <li><strong>Недостаточно памяти:</strong> RAM повреждена</li>
+                <li><strong>Перегрев:</strong> Система охлаждения не справляется</li>
+                <li><strong>BIOS:</strong> Неправильные настройки</li>
+            </ul>
+
+            <h2>Диагностика ошибки</h2>
+            <p>Как определить причину ошибки службы входа.</p>
+            <h3>Проверка в безопасном режиме</h3>
+            <h4>Загрузка в безопасном режиме</h4>
+            <ol>
+                <li>Перезагрузите ноутбук</li>
+                <li>Во время загрузки нажмите Shift + Перезагрузка</li>
+                <li>Выберите "Поиск и устранение неисправностей"</li>
+                <li>Выберите "Дополнительные параметры"</li>
+                <li>Выберите "Параметры загрузки" → "Безопасный режим"</li>
+            </ol>
+
+            <h4>Тестирование входа</h4>
+            <ol>
+                <li>Попробуйте войти в безопасном режиме</li>
+                <li>Если вход удается, проблема в стороннем ПО</li>
+                <li>Если нет, проблема в системных файлах</li>
+            </ol>
+
+            <h3>Проверка служб</h3>
+            <ol>
+                <li>Откройте services.msc</li>
+                <li>Найдите "Windows Logon Application"</li>
+                <li>Проверьте статус и тип запуска</li>
+                <li>Аналогично проверьте "Local Security Authority Process"</li>
+            </ol>
+
+            <h2>Решение проблемы</h2>
+            <p>Методы исправления ошибки службы входа.</p>
+            <h3>Метод 1: Перезапуск служб</h3>
+            <h4>В безопасном режиме</h4>
+            <ol>
+                <li>Загрузитесь в безопасный режим</li>
+                <li>Откройте services.msc</li>
+                <li>Найдите "Windows Logon Application"</li>
+                <li>Щелкните правой кнопкой → "Перезапустить"</li>
+                <li>Аналогично перезапустите LSASS</li>
+                <li>Перезагрузите в нормальном режиме</li>
+            </ol>
+
+            <h3>Метод 2: Исправление системных файлов</h3>
+            <h4>SFC и DISM</h4>
+            <ol>
+                <li>Откройте командную строку от имени администратора</li>
+                <li>Введите: sfc /scannow</li>
+                <li>Дождитесь завершения</li>
+                <li>Затем: DISM /Online /Cleanup-Image /RestoreHealth</li>
+                <li>Перезагрузите систему</li>
+            </ol>
+
+            <h3>Метод 3: Очистка реестра</h3>
+            <h4>Исправление поврежденных записей</h4>
+            <ol>
+                <li>Создайте точку восстановления</li>
+                <li>Откройте редактор реестра (regedit)</li>
+                <li>Перейдите к HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services</li>
+                <li>Найдите Winlogon и LSASS</li>
+                <li>Проверьте и исправьте значения</li>
+            </ol>
+
+            <h3>Метод 4: Отключение антивируса</h3>
+            <h4>Временное отключение</h4>
+            <ol>
+                <li>Загрузитесь в безопасный режим</li>
+                <li>Отключите антивирус</li>
+                <li>Попробуйте войти в систему</li>
+                <li>Если помогает, настройте исключения</li>
+                <li>Включите антивирус обратно</li>
+            </ol>
+
+            <h3>Метод 5: Восстановление системы</h3>
+            <h4>Точка восстановления</h4>
+            <ol>
+                <li>Загрузитесь в безопасный режим</li>
+                <li>Откройте "Параметры" → "Обновление и безопасность"</li>
+                <li>Выберите "Восстановление"</li>
+                <li>Восстановите систему до даты без ошибок</li>
+            </ol>
+
+            <h2>Специфические случаи</h2>
+            <p>Решения для распространенных сценариев.</p>
+            <h3>Ошибка после обновления Windows</h3>
+            <ul>
+                <li>Откатите обновление</li>
+                <li>Проверьте совместимость</li>
+                <li>Запустите устранение неисправностей</li>
+                <li>Восстановите систему</li>
+            </ul>
+
+            <h3>Ошибка с Microsoft аккаунтом</h3>
+            <ul>
+                <li>Проверьте подключение к интернету</li>
+                <li>Войдите в локальную учетную запись</li>
+                <li>Сбросьте пароль Microsoft</li>
+                <li>Свяжитесь с поддержкой</li>
+            </ul>
+
+            <h3>Ошибка на корпоративных системах</h3>
+            <ul>
+                <li>Свяжитесь с администратором</li>
+                <li>Проверьте настройки домена</li>
+                <li>Обновите групповые политики</li>
+                <li>Проверьте сертификаты</li>
+            </ul>
+
+            <h2>Профилактика</h2>
+            <p>Как избежать ошибки службы входа.</p>
+            <h3>Регулярное обслуживание</h3>
+            <ul>
+                <li><strong>Обновления:</strong> Устанавливайте обновления своевременно</li>
+                <li><strong>Чистка:</strong> Регулярно очищайте временные файлы</li>
+                <li><strong>Антивирус:</strong> Защита от вредоносного ПО</li>
+                <li><strong>Резервные копии:</strong> Важных данных</li>
+            </ul>
+
+            <h3>Безопасность системы</h3>
+            <ul>
+                <li>Создавайте точки восстановления</li>
+                <li>Регулярно проверяйте службы</li>
+                <li>Избегайте подозрительного ПО</li>
+                <li>Следите за дисковым пространством</li>
+            </ul>
+
+            <div class="pro-tips">
+                <h4>Полезные советы</h4>
+                <div class="tip-item">
+                    <i class="fas fa-lightbulb"></i>
+                    <span>Создавайте резервную учетную запись</span>
+                </div>
+                <div class="tip-item">
+                    <i class="fas fa-lightbulb"></i>
+                    <span>Регулярно проверяйте системные файлы</span>
+                </div>
+                <div class="tip-item">
+                    <i class="fas fa-lightbulb"></i>
+                    <span>Используйте безопасный режим для диагностики</span>
+                </div>
+                <div class="tip-item">
+                    <i class="fas fa-lightbulb"></i>
+                    <span>Если проблема повторяется, обратитесь в поддержку Microsoft</span>
+                </div>
+            </div>
+
+            <h2>Когда нужна помощь специалиста</h2>
+            <p>Признаки серьезных проблем.</p>
+            <h3>Критические случаи</h3>
+            <ul>
+                <li>Ошибка на всех учетных записях</li>
+                <li>Система не загружается</li>
+                <li>Повреждены системные файлы</li>
+                <li>Необходима переустановка Windows</li>
+            </ul>
+
+            <h3>Что проверить в сервисе</h3>
+            <ul>
+                <li>Целостность системных файлов</li>
+                <li>Работоспособность жесткого диска</li>
+                <li>Совместимость оборудования</li>
+                <li>Возможность восстановления</li>
+            </ul>
+
+            <h2>Заключение</h2>
+            <p>Ошибка "Служба входа в систему не отвечает" на Windows 11 обычно связана с поврежденными службами или системными файлами. В большинстве случаев ее можно решить перезапуском служб или исправлением системных файлов. Начните с загрузки в безопасном режиме, затем исправьте службы. Если самостоятельные попытки не увенчались успехом, обратитесь к специалистам или поддержке Microsoft.</p>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <p>&copy; 2024 Repairo. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+    <script src="../cookie-consent.js"></script>
+</body>
+</html>
