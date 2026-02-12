@@ -2,40 +2,36 @@
 <html lang="ru" data-theme="light">
 <head>
 
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Р§С‚Рѕ С‚Р°РєРѕРµ РєСЂРѕРї-С„Р°РєС‚РѕСЂ Рё РєР°Рє РѕРЅ РІР»РёСЏРµС‚ РЅР° СЃСЉРµРјРєСѓ? | Repairo</title>
-    <meta name="description" content="{{ description }}">
-    <meta name="description" content="РџРѕС€Р°РіРѕРІР°СЏ РёРЅСЃС‚СЂСѓРєС†РёСЏ: Р§С‚Рѕ С‚Р°РєРѕРµ РєСЂРѕРї-С„Р°РєС‚РѕСЂ Рё РєР°Рє РѕРЅ РІР»РёСЏРµС‚ РЅР° СЃСЉРµРјРєСѓ?. Р”Р»СЏ РїРѕСЂС‚СЂРµС‚РѕРІ РЅР° APS-C РѕС‚Р»РёС‡РЅРѕ РїРѕРґС…РѕРґСЏС‚ РѕР±СЉРµРєС‚РёРІС‹ 50вЂ“85 РјРј (СЌРєРІ. 75вЂ“130 РјРј).. РЎРѕРІРµС‚С‹...">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Что такое кроп-фактор и как он влияет на съемку? | Repairo</title>
+    <meta name="description" content="">
 
-    <link rel="stylesheet" href="../styles.css" />
-    <link rel="stylesheet" href="../styles-header.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-    <style>
-        .guide-content { line-height: 1.7; color: var(--text);}
-        .guide-content h2 { color: var(--primary); margin-top: 30px; margin-bottom: 15px; font-size: 1.5rem;}
-        .crop-table { width: 100%; border-collapse: collapse; margin: 20px 0;}
-        .crop-table th, .crop-table td { border: 1px solid var(--border); padding: 10px 15px; text-align: left;}
-        .crop-table th { background: var(--background-alt);}
-        .recommend-box { background: rgba(3, 74, 79, 0.1); border-left: 4px solid var(--primary); padding: 12px; margin: 15px 0; display: flex; gap: 12px; align-items: flex-start; border-radius: 4px;}
-        .recommend-box i { font-size: 1.2rem; color: var(--primary); margin-top: 2px;}
-        .pro-tips { background: rgba(3, 74, 79, 0.05); padding: 15px; border-radius: 6px; margin: 20px 0;}
-        .pro-tips h4 { color: var(--primary); margin-top: 0; margin-bottom: 12px; font-size: 1.1rem;}
-        .tip-item { display: flex; gap: 8px; margin-bottom: 8px; align-items: flex-start;}
-        @media (max-width: 768px) {
-            .guide-content h2 { font-size: 1.4rem; margin-top: 25px;}
-            .crop-table th, .crop-table td { padding: 8px 10px;}
-        }
-    /* РЇРЅРґРµРєСЃ РњР°СЂРєРµС‚ СЂРµРєР»Р°РјРЅС‹Р№ Р±Р°РЅРЅРµСЂ */
-    .ym-hero-link {
-      display: block;
-      text-decoration: none;
-      color: inherit;
-      max-width: 100%;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="../styles-header.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    .guide-content { line-height: 1.7; color: var(--text); }
+    .guide-content h2 { color: var(--primary); margin-top: 30px; margin-bottom: 15px; font-size: 1.5rem; }
+    .guide-content h3 { color: var(--primary-dark); margin-top: 25px; margin-bottom: 12px; font-size: 1.2rem; }
+    .guide-image-block { margin: 20px 0; padding: 15px; background: var(--background); border-radius: var(--border-radius); border: 1px solid var(--border); text-align: center; }
+    .guide-image-block img { max-width: 100%; height: auto; border-radius: 6px; border: 1px solid var(--border); }
+    .image-caption { margin-top: 10px; font-size: 0.85rem; color: var(--text-light); font-style: italic; }
+    .pro-tips { background: rgba(3, 74, 79, 0.05); padding: 15px; border-radius: 6px; margin: 20px 0; }
+    .pro-tips h4 { color: var(--primary); margin-top: 0; margin-bottom: 12px; font-size: 1.1rem; }
+    .tip-item { display: flex; gap: 8px; margin-bottom: 8px; align-items: flex-start; }
+    table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+    th, td { border: 1px solid var(--border); padding: 8px; text-align: left; }
+    th { background: var(--background-light); }
+    .highlight { background: #f5f7fa; border-left: 4px solid #2d9cdb; padding: 10px 15px; margin: 20px 0; }
+    .faq-section ul { margin-left: 1em; }
+    .block-section { margin-bottom: 2em; }
+    @media (max-width: 768px) {
+      .guide-content h2 { font-size: 1.4rem; margin-top: 25px; }
+      .guide-image-block { padding: 12px; margin: 15px 0; }
+      table, th, td { font-size: 0.95rem; }
     }
-
     /* Р“РѕСЂРёР·РѕРЅС‚Р°Р»СЊРЅС‹Р№ Р±Р°РЅРЅРµСЂ-РєР°СЂС‚РѕС‡РєР° */
     .ym-hero-banner {
       width: 100%;
@@ -148,13 +144,11 @@
       transition: background 0.15s ease, transform 0.15s ease,
                   box-shadow 0.15s ease;
     }
-
     .ym-hero-button::after {
       content: "в†’";
       margin-left: 6px;
       font-size: 14px;
     }
-
     .ym-hero-button:hover {
       background: #7c3aed;
       transform: translateY(-1px);
@@ -178,24 +172,19 @@
         max-width: 100%;
         margin: 20px 0;
       }
-
       .ym-hero-images {
         height: 100px;
       }
-
       .ym-hero-content {
         padding: 12px 12px;
       }
-
       .ym-hero-title {
         font-size: 13px;
       }
-
       .ym-hero-button {
         font-size: 13px;
         padding: 8px 14px;
       }
-
       .ym-hero-legal {
         font-size: 10px;
       }
@@ -303,27 +292,22 @@
         padding: 15px;
         min-height: 100px;
       }
-
       .telegram-logo {
         width: 50px;
         height: 50px;
         min-width: 50px;
         margin-right: 15px;
       }
-
       .telegram-logo svg {
         width: 26px;
         height: 26px;
       }
-
       .telegram-title {
         font-size: 14px;
       }
-
       .telegram-subtitle {
         font-size: 12px;
       }
-
       .telegram-button {
         font-size: 12px;
         padding: 6px 12px;
@@ -332,170 +316,156 @@
 
 
 
-    </style>
+  </style>
   <script async src="https://timeweb.cloud/api/v1/cloud-ai/agents/3cc03620-d051-4d8d-b5af-f7b6cd083a35/embed.js?collapsed=true"></script>
 </head>
 <body>
-<header class="header">
+  <header class="header">
     <div class="container">
-        <div class="header__inner">
-            <a href="../index.html" class="logo">
-                <span class="logo__icon"></span>
-                <span class="logo__text">Repairo</span>
-            </a>
-            <nav class="nav">
-                <ul class="nav__list">
-                    <li><a href="../cameras.html" class="nav__link">Р¤РѕС‚РѕР°РїРїР°СЂР°С‚С‹</a></li>
-                    <li><a href="../tv.html" class="nav__link">РўРµР»РµРІРёР·РѕСЂС‹</a></li>
-                    <li><a href="../laptops.html" class="nav__link">РќРѕСѓС‚Р±СѓРєРё</a></li>
-                    <li><a href="../smartphones.html" class="nav__link">РЎРјР°СЂС‚С„РѕРЅС‹</a></li>
-                </ul>
-            </nav>
-        </div>
+      <div class="header__inner">
+        <a href="../index.html" class="logo">
+          <span class="logo__icon"></span>
+          <span class="logo__text">GeoExpert</span>
+        </a>
+        <nav class="nav">
+          <ul class="nav__list">
+            <li><a href="../cameras.html" class="nav__link">РљР°РјРµСЂС‹</a></li>
+            <li><a href="../drones.html" class="nav__link">Р”СЂРѕРЅС‹</a></li>
+            <li><a href="../workflow.html" class="nav__link">Workflow</a></li>
+          </ul>
+        </nav>
+      </div>
     </div>
-</header>
+  </header>
 <section class="guide-page">
     <div class="container">
         <div class="breadcrumbs">
-            <a href="../index.html">Р“Р»Р°РІРЅР°СЏ</a>
+            <a href="../index.html">Главная</a>
             <i class="fas fa-chevron-right"></i>
-            <a href="../cameras.html">Р¤РѕС‚РѕР°РїРїР°СЂР°С‚С‹</a>
+            <a href="../cameras.html">Фотоаппараты</a>
             <i class="fas fa-chevron-right"></i>
-            <span>Р§С‚Рѕ С‚Р°РєРѕРµ РєСЂРѕРї-С„Р°РєС‚РѕСЂ Рё РєР°Рє РѕРЅ РІР»РёСЏРµС‚ РЅР° СЃСЉРµРјРєСѓ?</span>
+            <span>Что такое кроп-фактор и как он влияет на съемку?</span>
         </div>
-        <h1 class="section__title">Р§С‚Рѕ С‚Р°РєРѕРµ РєСЂРѕРї-С„Р°РєС‚РѕСЂ Рё РєР°Рє РѕРЅ РІР»РёСЏРµС‚ РЅР° СЃСЉРµРјРєСѓ?</h1>
+        <h1 class="section__title">Что такое кроп-фактор и как он влияет на съемку?</h1>
         <div class="guide-meta">
-            <span><i class="fas fa-expand"></i> РџСЂР°РєС‚РёС‡РµСЃРєРёР№ РіР°Р№Рґ</span>
+            <span><i class="fas fa-expand"></i> Практический гайд</span>
         </div>
         <div class="guide-image-block">
                 <img src="https://avatars.mds.yandex.net/get-shedevrum/15236108/img_d3bbc09f2cb311f0b9ba1ac0b0889e80/orig">
             </div>
       <div class="guide-content">
-        <!-- РЇРЅРґРµРєСЃ РњР°СЂРєРµС‚ СЂРµРєР»Р°РјРЅС‹Р№ Р±Р»РѕРє -->
+        <!-- Яндекс Маркет рекламный блок -->
         <a href="https://market.yandex.ru/catalog--bytovaia-tekhnika/54419/list?hid=198118&rs=eJwzUvjEKMvBILDwEKsEg8Kzbh6Nw4dZNS4D8c7lFhp9c1-wAQC3uAwP&clid=14635360&refid=rbck8fgamv681iu59go3iqxwddedl4x9&erid=5jtCeReNx12oajxS2bzShmZ&mclid=1003&distr_type=7&utm_source=partner_network&pp=900&utm_medium=link_list&utm_campaign=14635360"
            target="_blank"
            rel="noopener noreferrer sponsored"
-           class="ym-hero-link">
-          <div class="ym-hero-banner">
-            <div class="ym-hero-images">
-              <div class="ym-hero-image">
                 <img src="https://avatars.mds.yandex.net/get-mpic/14770882/2a00000197f4dbee777f8afddccaf44faa53/optimize"
-                     alt="Р Р°СЃРїСЂРѕРґР°Р¶Р° Р±С‹С‚РѕРІРѕР№ СЌР»РµРєС‚СЂРѕРЅРёРєРё 1">
+                     alt="Распродажа бытовой электроники 1">
               </div>
-              <div class="ym-hero-image">
                 <img src="https://avatars.mds.yandex.net/get-mpic/15580298/img_id8867318964670654684.jpeg/optimize"
-                     alt="Р Р°СЃРїСЂРѕРґР°Р¶Р° Р±С‹С‚РѕРІРѕР№ СЌР»РµРєС‚СЂРѕРЅРёРєРё 2">
+                     alt="Распродажа бытовой электроники 2">
               </div>
-              <div class="ym-hero-image">
                 <img src="https://avatars.mds.yandex.net/get-mpic/10096780/2a000001953b534fed2494e0b30fadd9b458/optimize"
-                     alt="Р Р°СЃРїСЂРѕРґР°Р¶Р° Р±С‹С‚РѕРІРѕР№ СЌР»РµРєС‚СЂРѕРЅРёРєРё 3">
+                     alt="Распродажа бытовой электроники 3">
               </div>
             </div>
-            <div class="ym-hero-content">
-              <h3 class="ym-hero-title">Р Р°СЃРїСЂРѕРґР°Р¶Р° Р±С‹С‚РѕРІРѕР№ СЌР»РµРєС‚СЂРѕРЅРёРєРё РЅР° РЇРЅРґРµРєСЃ РњР°СЂРєРµС‚Рµ</h3>
-              <div class="ym-hero-top">
-                <div class="ym-hero-rating">
-                  в­ђ Р’С‹РіРѕРґРЅС‹Рµ РїСЂРµРґР»РѕР¶РµРЅРёСЏ
-                  <span class="ym-hero-rating-count">РЎРєРёРґРєРё РґРѕ 50%</span>
+                  ? Выгодные предложения
                 </div>
               </div>
-              <button class="ym-hero-button">Р—Р° СЃРєРёРґРєР°РјРё</button>
             </div>
           </div>
-          <div class="ym-hero-legal">
-            Р РµРєР»Р°РјР°. РћРћРћ "РЇРќР”Р•РљРЎ", РРќРќ 7736207543. clid: 14635360, erid: 5jtCeReNx12oajxS2bzShmZ
+            Реклама. ООО "ЯНДЕКС", ИНН 7736207543. clid: 14635360, erid: 5jtCeReNx12oajxS2bzShmZ
           </div>
         </a>
         <div class="guide-content">
-            <h2>РћРїСЂРµРґРµР»РµРЅРёРµ РєСЂРѕРї-С„Р°РєС‚РѕСЂР°</h2>
+            <h2>Определение кроп-фактора</h2>
             <ul>
-                <li><b>РљСЂРѕРї-С„Р°РєС‚РѕСЂ</b> - СЌС‚Рѕ РєРѕСЌС„С„РёС†РёРµРЅС‚, РїРѕРєР°Р·С‹РІР°СЋС‰РёР№, РІРѕ СЃРєРѕР»СЊРєРѕ СЂР°Р· РјР°С‚СЂРёС†Р° РІР°С€РµР№ РєР°РјРµСЂС‹ РјРµРЅСЊС€Рµ РєР»Р°СЃСЃРёС‡РµСЃРєРѕРіРѕ РїРѕР»РЅРѕРєР°РґСЂРѕРІРѕРіРѕ С„РѕСЂРјР°С‚Р° (Full Frame, 36Г—24 РјРј).</li>
-                <li>РќР°РїСЂРёРјРµСЂ, Сѓ APS-C РєР°РјРµСЂ РєСЂРѕРї-С„Р°РєС‚РѕСЂ РѕР±С‹С‡РЅРѕ 1.5вЂ“1.6, Сѓ Micro 4/3 - 2.0.</li>
-                <li>РљСЂРѕРї-С„Р°РєС‚РѕСЂ РїРѕР·РІРѕР»СЏРµС‚ РїРµСЂРµСЃС‡РёС‚Р°С‚СЊ СЌРєРІРёРІР°Р»РµРЅС‚РЅРѕРµ С„РѕРєСѓСЃРЅРѕРµ СЂР°СЃСЃС‚РѕСЏРЅРёРµ РѕР±СЉРµРєС‚РёРІР° РѕС‚РЅРѕСЃРёС‚РµР»СЊРЅРѕ РїРѕР»РЅРѕРіРѕ РєР°РґСЂР°.</li>
+                <li><b>Кроп-фактор</b> - это коэффициент, показывающий, во сколько раз матрица вашей камеры меньше классического полнокадрового формата (Full Frame, 36?24 мм).</li>
+                <li>Например, у APS-C камер кроп-фактор обычно 1.5–1.6, у Micro 4/3 - 2.0.</li>
+                <li>Кроп-фактор позволяет пересчитать эквивалентное фокусное расстояние объектива относительно полного кадра.</li>
             </ul>
-            <h2>РљР°Рє СЂР°СЃСЃС‡РёС‚Р°С‚СЊ СЌРєРІРёРІР°Р»РµРЅС‚РЅРѕРµ С„РѕРєСѓСЃРЅРѕРµ СЂР°СЃСЃС‚РѕСЏРЅРёРµ?</h2>
+            <h2>Как рассчитать эквивалентное фокусное расстояние?</h2>
 <ul>
-                <li>Р¤РѕСЂРјСѓР»Р°: <b>Р­РєРІРёРІР°Р»РµРЅС‚РЅРѕРµ С„РѕРєСѓСЃРЅРѕРµ = Р¤РѕРєСѓСЃРЅРѕРµ РѕР±СЉРµРєС‚РёРІР° Г— РљСЂРѕРї-С„Р°РєС‚РѕСЂ</b></li>
-                <li>РќР°РїСЂРёРјРµСЂ, РѕР±СЉРµРєС‚РёРІ 50 РјРј РЅР° APS-C (РєСЂРѕРї 1.5) РґР°СЃС‚ СѓРіРѕР» РѕР±Р·РѕСЂР° РєР°Рє 75 РјРј РЅР° РїРѕР»РЅРѕРј РєР°РґСЂРµ.</li>
+                <li>Формула: <b>Эквивалентное фокусное = Фокусное объектива ? Кроп-фактор</b></li>
+                <li>Например, объектив 50 мм на APS-C (кроп 1.5) даст угол обзора как 75 мм на полном кадре.</li>
             </ul>
             <table class="crop-table">
                 <thead>
                     <tr>
-                        <th>РўРёРї РјР°С‚СЂРёС†С‹</th>
-                        <th>Р Р°Р·РјРµСЂ</th>
-                        <th>РљСЂРѕРї-С„Р°РєС‚РѕСЂ</th>
-                        <th>РџСЂРёРјРµСЂ СЌРєРІРёРІР°Р»РµРЅС‚Р° (РѕР±СЉРµРєС‚РёРІ 35 РјРј)</th>
+                        <th>Тип матрицы</th>
+                        <th>Размер</th>
+                        <th>Кроп-фактор</th>
+                        <th>Пример эквивалента (объектив 35 мм)</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td>Full Frame</td>
-                        <td>36Г—24 РјРј</td>
+                        <td>36?24 мм</td>
                         <td>1.0</td>
-                        <td>35 РјРј</td>
+                        <td>35 мм</td>
                     </tr>
                     <tr>
                         <td>APS-C (Canon)</td>
-                        <td>22.2Г—14.8 РјРј</td>
+                        <td>22.2?14.8 мм</td>
                         <td>1.6</td>
-                        <td>56 РјРј</td>
+                        <td>56 мм</td>
                     </tr>
                     <tr>
                         <td>APS-C (Nikon/Sony/Fuji)</td>
-                        <td>23.6Г—15.6 РјРј</td>
+                        <td>23.6?15.6 мм</td>
                         <td>1.5</td>
-                        <td>52.5 РјРј</td>
+                        <td>52.5 мм</td>
                     </tr>
                     <tr>
                         <td>Micro 4/3</td>
-                        <td>17.3Г—13 РјРј</td>
+                        <td>17.3?13 мм</td>
                         <td>2.0</td>
-                        <td>70 РјРј</td>
+                        <td>70 мм</td>
                     </tr>
                 </tbody>
             </table>
-            <h2>РљР°Рє РєСЂРѕРї-С„Р°РєС‚РѕСЂ РІР»РёСЏРµС‚ РЅР° СЃСЉРµРјРєСѓ?</h2>
+            <h2>Как кроп-фактор влияет на съемку?</h2>
             <ul>
-                <li><b>РЈРіРѕР» РѕР±Р·РѕСЂР°:</b> РќР° РєСЂРѕРї-РєР°РјРµСЂРµ РѕР±СЉРµРєС‚РёРІ "СЃСѓР¶Р°РµС‚" СѓРіРѕР» РѕР±Р·РѕСЂР° - С‚Рѕ РµСЃС‚СЊ РІС‹ РІРёРґРёС‚Рµ РјРµРЅСЊС€СѓСЋ С‡Р°СЃС‚СЊ СЃС†РµРЅС‹ РїРѕ СЃСЂР°РІРЅРµРЅРёСЋ СЃ РїРѕР»РЅС‹Рј РєР°РґСЂРѕРј.</li>
-                <li><b>Р¤РѕРєСѓСЃРЅРѕРµ СЂР°СЃСЃС‚РѕСЏРЅРёРµ:</b> Р”Р»СЏ РїРѕР»СѓС‡РµРЅРёСЏ С‚Р°РєРѕРіРѕ Р¶Рµ СѓРіР»Р° РѕР±Р·РѕСЂР°, РєР°Рє РЅР° РїРѕР»РЅРѕРј РєР°РґСЂРµ, РЅСѓР¶РµРЅ РѕР±СЉРµРєС‚РёРІ СЃ РјРµРЅСЊС€РёРј С„РѕРєСѓСЃРЅС‹Рј СЂР°СЃСЃС‚РѕСЏРЅРёРµРј.</li>
-                <li><b>Р“Р»СѓР±РёРЅР° СЂРµР·РєРѕСЃС‚Рё:</b> РќР° РєСЂРѕРї-РєР°РјРµСЂРµ РїСЂРё РѕРґРёРЅР°РєРѕРІС‹С… РЅР°СЃС‚СЂРѕР№РєР°С… РіР»СѓР±РёРЅР° СЂРµР·РєРѕСЃС‚Рё Р±РѕР»СЊС€Рµ, С‡РµРј РЅР° РїРѕР»РЅРѕРј РєР°РґСЂРµ (С‚.Рµ. С„РѕРЅ РјРµРЅРµРµ СЂР°Р·РјС‹С‚С‹Р№).</li>
-                <li><b>РџРѕСЂС‚СЂРµС‚С‹ Рё С‚РµР»РµРѕР±СЉРµРєС‚РёРІС‹:</b> РљСЂРѕРї-РєР°РјРµСЂР° "СѓРІРµР»РёС‡РёРІР°РµС‚" С„РѕРєСѓСЃРЅРѕРµ СЂР°СЃСЃС‚РѕСЏРЅРёРµ, С‡С‚Рѕ СѓРґРѕР±РЅРѕ РґР»СЏ СЃСЉС‘РјРєРё РґРёРєРѕР№ РїСЂРёСЂРѕРґС‹, СЃРїРѕСЂС‚Р°, РїРѕСЂС‚СЂРµС‚РѕРІ.</li>
-                <li><b>РЁРёСЂРѕРєРѕСѓРіРѕР»СЊРЅР°СЏ СЃСЉРµРјРєР°:</b> Р”Р»СЏ РїРµР№Р·Р°Р¶РµР№ Рё Р°СЂС…РёС‚РµРєС‚СѓСЂС‹ РЅР° РєСЂРѕРї-РєР°РјРµСЂРµ СЃР»РѕР¶РЅРµРµ РїРѕР»СѓС‡РёС‚СЊ РѕС‡РµРЅСЊ С€РёСЂРѕРєРёР№ СѓРіРѕР» РѕР±Р·РѕСЂР° - РЅСѓР¶РЅС‹ СЃРїРµС†РёР°Р»СЊРЅС‹Рµ С€РёСЂРѕРєРѕСѓРіРѕР»СЊРЅС‹Рµ РѕР±СЉРµРєС‚РёРІС‹.</li>
+                <li><b>Угол обзора:</b> На кроп-камере объектив "сужает" угол обзора - то есть вы видите меньшую часть сцены по сравнению с полным кадром.</li>
+                <li><b>Фокусное расстояние:</b> Для получения такого же угла обзора, как на полном кадре, нужен объектив с меньшим фокусным расстоянием.</li>
+                <li><b>Глубина резкости:</b> На кроп-камере при одинаковых настройках глубина резкости больше, чем на полном кадре (т.е. фон менее размытый).</li>
+                <li><b>Портреты и телеобъективы:</b> Кроп-камера "увеличивает" фокусное расстояние, что удобно для съёмки дикой природы, спорта, портретов.</li>
+                <li><b>Широкоугольная съемка:</b> Для пейзажей и архитектуры на кроп-камере сложнее получить очень широкий угол обзора - нужны специальные широкоугольные объективы.</li>
             </ul>
             <div class="recommend-box">
                 <i class="fas fa-info-circle"></i>
                 <div>
-                    <strong>РЎРѕРІРµС‚:</strong> РџСЂРё РІС‹Р±РѕСЂРµ РѕР±СЉРµРєС‚РёРІР° РґР»СЏ РєСЂРѕРї-РєР°РјРµСЂС‹ РІСЃРµРіРґР° СѓРјРЅРѕР¶Р°Р№С‚Рµ С„РѕРєСѓСЃРЅРѕРµ РЅР° РєСЂРѕРї-С„Р°РєС‚РѕСЂ, С‡С‚РѕР±С‹ РїРѕРЅСЏС‚СЊ, РєР°РєРёРј Р±СѓРґРµС‚ СѓРіРѕР» РѕР±Р·РѕСЂР° РѕС‚РЅРѕСЃРёС‚РµР»СЊРЅРѕ РїРѕР»РЅРѕРіРѕ РєР°РґСЂР°.
+                    <strong>Совет:</strong> При выборе объектива для кроп-камеры всегда умножайте фокусное на кроп-фактор, чтобы понять, каким будет угол обзора относительно полного кадра.
                 </div>
             </div>
             <div class="pro-tips">
-                <h4>рџ”№ РџСЂРѕС„РµСЃСЃРёРѕРЅР°Р»СЊРЅС‹Рµ СЃРѕРІРµС‚С‹</h4>
+                <h4>?? Профессиональные советы</h4>
                 <div class="tip-item">
                     <i class="fas fa-lightbulb"></i>
-                    <p>Р”Р»СЏ РїРѕСЂС‚СЂРµС‚РѕРІ РЅР° APS-C РѕС‚Р»РёС‡РЅРѕ РїРѕРґС…РѕРґСЏС‚ РѕР±СЉРµРєС‚РёРІС‹ 50вЂ“85 РјРј (СЌРєРІ. 75вЂ“130 РјРј).</p>
+                    <p>Для портретов на APS-C отлично подходят объективы 50–85 мм (экв. 75–130 мм).</p>
                 </div>
                 <div class="tip-item">
                     <i class="fas fa-lightbulb"></i>
-                    <p>Р”Р»СЏ РїРµР№Р·Р°Р¶РµР№ РёС‰РёС‚Рµ РѕР±СЉРµРєС‚РёРІС‹ СЃ С„РѕРєСѓСЃРЅС‹Рј 10вЂ“18 РјРј (СЌРєРІ. 15вЂ“28 РјРј РґР»СЏ APS-C).</p>
+                    <p>Для пейзажей ищите объективы с фокусным 10–18 мм (экв. 15–28 мм для APS-C).</p>
                 </div>
                 <div class="tip-item">
                     <i class="fas fa-lightbulb"></i>
-                    <p>РќР° РєСЂРѕРї-РєР°РјРµСЂРµ РїСЂРѕС‰Рµ РїРѕР»СѓС‡РёС‚СЊ "РґР°Р»СЊРЅРѕСЃС‚СЊ" РґР»СЏ СЃСЉС‘РјРєРё СЃРїРѕСЂС‚Р° Рё Р¶РёРІРѕС‚РЅС‹С…, РЅРѕ СЃР»РѕР¶РЅРµРµ - РєСЂР°СЃРёРІРѕРµ Р±РѕРєРµ Рё С€РёСЂРѕРєРёР№ СѓРіРѕР».</p>
+                    <p>На кроп-камере проще получить "дальность" для съёмки спорта и животных, но сложнее - красивое боке и широкий угол.</p>
                 </div>
             </div>
-            <h2>Р§Р°СЃС‚Рѕ Р·Р°РґР°РІР°РµРјС‹Рµ РІРѕРїСЂРѕСЃС‹</h2>
+            <h2>Часто задаваемые вопросы</h2>
             <ul>
-                <li><b>Р’Р»РёСЏРµС‚ Р»Рё РєСЂРѕРї-С„Р°РєС‚РѕСЂ РЅР° СЃРІРµС‚РѕСЃРёР»Сѓ РѕР±СЉРµРєС‚РёРІР°?</b> вЂ“ РќРµС‚, СЃРІРµС‚РѕСЃРёР»Р° (f/С‡РёСЃР»Рѕ) РЅРµ РјРµРЅСЏРµС‚СЃСЏ, РЅРѕ РіР»СѓР±РёРЅР° СЂРµР·РєРѕСЃС‚Рё РїСЂРё С‚РѕРј Р¶Рµ РєР°РґСЂРµ Р±СѓРґРµС‚ Р±РѕР»СЊС€Рµ.</li>
-                <li><b>РњРѕР¶РЅРѕ Р»Рё РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ РїРѕР»РЅРѕРєР°РґСЂРѕРІС‹Рµ РѕР±СЉРµРєС‚РёРІС‹ РЅР° РєСЂРѕРї-РєР°РјРµСЂРµ?</b> вЂ“ Р”Р°, РЅРѕ СѓРіРѕР» РѕР±Р·РѕСЂР° Р±СѓРґРµС‚ СѓР¶Рµ, С‡РµРј РЅР° РїРѕР»РЅРѕРј РєР°РґСЂРµ.</li>
-                <li><b>Р§С‚Рѕ РІС‹Р±СЂР°С‚СЊ РґР»СЏ РЅРѕРІРёС‡РєР°: РєСЂРѕРї РёР»Рё РїРѕР»РЅС‹Р№ РєР°РґСЂ?</b> вЂ“ Р”Р»СЏ СЃС‚Р°СЂС‚Р° С‡Р°С‰Рµ РІСЃРµРіРѕ РґРѕСЃС‚Р°С‚РѕС‡РЅРѕ РєСЂРѕРї-РєР°РјРµСЂС‹ - РѕРЅРё РєРѕРјРїР°РєС‚РЅРµРµ Рё РґРѕСЃС‚СѓРїРЅРµРµ.</li>
+                <li><b>Влияет ли кроп-фактор на светосилу объектива?</b> – Нет, светосила (f/число) не меняется, но глубина резкости при том же кадре будет больше.</li>
+                <li><b>Можно ли использовать полнокадровые объективы на кроп-камере?</b> – Да, но угол обзора будет уже, чем на полном кадре.</li>
+                <li><b>Что выбрать для новичка: кроп или полный кадр?</b> – Для старта чаще всего достаточно кроп-камеры - они компактнее и доступнее.</li>
             </ul>
-            <h2>рџ“Њ РС‚РѕРі</h2>
+            <h2>?? Итог</h2>
             <p>
-                РљСЂРѕРї-С„Р°РєС‚РѕСЂ - СЌС‚Рѕ РєРѕСЌС„С„РёС†РёРµРЅС‚ СѓРјРµРЅСЊС€РµРЅРёСЏ СЂР°Р·РјРµСЂР° РјР°С‚СЂРёС†С‹ РїРѕ СЃСЂР°РІРЅРµРЅРёСЋ СЃ РїРѕР»РЅС‹Рј РєР°РґСЂРѕРј. РћРЅ РІР»РёСЏРµС‚ РЅР° СѓРіРѕР» РѕР±Р·РѕСЂР°, СЌРєРІРёРІР°Р»РµРЅС‚РЅРѕРµ С„РѕРєСѓСЃРЅРѕРµ СЂР°СЃСЃС‚РѕСЏРЅРёРµ Рё РіР»СѓР±РёРЅСѓ СЂРµР·РєРѕСЃС‚Рё. РџСЂРё РІС‹Р±РѕСЂРµ РѕР±СЉРµРєС‚РёРІР° Рё РїР»Р°РЅРёСЂРѕРІР°РЅРёРё СЃСЉС‘РјРєРё РІСЃРµРіРґР° СѓС‡РёС‚С‹РІР°Р№С‚Рµ РєСЂРѕРї-С„Р°РєС‚РѕСЂ РІР°С€РµР№ РєР°РјРµСЂС‹!
+                Кроп-фактор - это коэффициент уменьшения размера матрицы по сравнению с полным кадром. Он влияет на угол обзора, эквивалентное фокусное расстояние и глубину резкости. При выборе объектива и планировании съёмки всегда учитывайте кроп-фактор вашей камеры!
             </p>
 </div>
 
-        <!-- Telegram СЂРµРєР»Р°РјРЅС‹Р№ Р±Р°РЅРЅРµСЂ -->
+        <!-- Telegram рекламный баннер -->
         <a href="https://t.me/RepairoRU" target="_blank" rel="noopener noreferrer" class="telegram-banner">
           <div class="telegram-banner-container">
             <div class="telegram-logo">
@@ -504,10 +474,10 @@
               </svg>
             </div>
             <div class="telegram-content">
-              <div class="telegram-title">РќРѕРІРѕСЃС‚Рё РёР· РјРёСЂР° С‚РµС…РЅРѕР»РѕРіРёР№</div>
-              <div class="telegram-subtitle">Р’ РЅР°С€РµРј РЅРѕРІРѕРј Telegram-РєР°РЅР°Р»Рµ. РџРѕРґРїРёСЃС‹РІР°Р№С‚РµСЃСЊ Рё Р±СѓРґСЊС‚Рµ РІ С‡РёСЃР»Рµ РїРµСЂРІС‹С…!</div>
+              <div class="telegram-title">Новости из мира технологий</div>
+              <div class="telegram-subtitle">В нашем новом Telegram-канале. Подписывайтесь и будьте в числе первых!</div>
               <div class="telegram-button">
-                РџРѕРґРїРёСЃР°С‚СЊСЃСЏ
+                Подписаться
                 <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.56c-.21 2.22-1.12 7.58-1.58 10.06-.19 1.07-.57 1.43-.94 1.46-.8.07-1.4-.52-2.17-1.03-1.21-.79-1.89-1.28-3.06-2.05-1.35-.87-.47-1.35.3-2.13.2-.21 3.71-3.39 3.77-3.68.01-.04.01-.18-.07-.26s-.2-.05-.29-.03c-.12.03-2.11 1.34-5.95 3.93-.56.38-1.07.57-1.53.56-.5-.01-1.47-.28-2.19-.51-.88-.28-1.58-.43-1.52-.91.03-.25.38-.51 1.04-.78 4.07-1.77 6.78-2.94 8.13-3.51 3.88-1.62 4.68-1.9 5.19-1.91.12 0 .37.03.54.17.14.12.18.28.2.44-.01.06 0 .11-.01.17z"/>
                 </svg>
@@ -532,45 +502,45 @@
                         </span>
                         <span class="logo__text">Repairo</span>
                     </a>
-                    <p class="footer__text">РџРѕРјРѕРіР°РµРј СЂРµРјРѕРЅС‚РёСЂРѕРІР°С‚СЊ СЌР»РµРєС‚СЂРѕРЅРёРєСѓ СЃ 2024 РіРѕРґР°</p>
+                    <p class="footer__text">Помогаем ремонтировать электронику с 2024 года</p>
                 </div>
                 <div class="footer__col">
-                    <h3 class="footer__title">Р Р°Р·РґРµР»С‹</h3>
+                    <h3 class="footer__title">Разделы</h3>
                     <ul class="footer__links">
-                        <li><a href="../index.html" class="footer__link">Р“Р»Р°РІРЅР°СЏ</a></li>
-                        <li><a href="../index.html#categories" class="footer__link">Р’СЃРµ РіР°Р№РґС‹</a></li>
-                        <li><a href="../contacts.html" class="footer__link">РљРѕРЅС‚Р°РєС‚С‹</a></li>
+                        <li><a href="../index.html" class="footer__link">Главная</a></li>
+                        <li><a href="../index.html#categories" class="footer__link">Все гайды</a></li>
+                        <li><a href="../contacts.html" class="footer__link">Контакты</a></li>
                     </ul>
                 </div>
                 <div class="footer__col">
-                    <h3 class="footer__title">РљР°С‚РµРіРѕСЂРёРё</h3>
+                    <h3 class="footer__title">Категории</h3>
                     <ul class="footer__links">
-                        <li><a href="../tv.html" class="nav__link">РўРµР»РµРІРёР·РѕСЂС‹</a></li>
-                        <li><a href="../cameras.html" class="nav__link">Р¤РѕС‚РѕР°РїРїР°СЂР°С‚С‹</a></li>
-                        <li><a href="../consoles.html" class="nav__link">РџСЂРёСЃС‚Р°РІРєРё</a></li>
-                        <li><a href="../laptops.html" class="nav__link">РќРѕСѓС‚Р±СѓРєРё</a></li>
-                        <li><a href="../smartphones.html" class="nav__link">РЎРјР°СЂС‚С„РѕРЅС‹</a></li>
-                        <li><a href="../small-appliances.html" class="nav__link">РњРµР»РєР°СЏ С‚РµС…РЅРёРєР°</a></li>
-                        <li><a href="../large-appliances.html" class="nav__link">Р‘С‹С‚РѕРІР°СЏ С‚РµС…РЅРёРєР°</a></li>
-                        <li><a href="../auto-electronics.html" class="nav__link">РђРІС‚Рѕ-Р­Р»РµРєС‚СЂРѕРЅРёРєР°</a></li>
+                        <li><a href="../tv.html" class="nav__link">Телевизоры</a></li>
+                        <li><a href="../cameras.html" class="nav__link">Фотоаппараты</a></li>
+                        <li><a href="../consoles.html" class="nav__link">Приставки</a></li>
+                        <li><a href="../laptops.html" class="nav__link">Ноутбуки</a></li>
+                        <li><a href="../smartphones.html" class="nav__link">Смартфоны</a></li>
+                        <li><a href="../small-appliances.html" class="nav__link">Мелкая техника</a></li>
+                        <li><a href="../large-appliances.html" class="nav__link">Бытовая техника</a></li>
+                        <li><a href="../auto-electronics.html" class="nav__link">Авто-Электроника</a></li>
                     </ul>
                 </div>
                 <div class="footer__col">
-                    <h3 class="footer__title">РљРѕРЅС‚Р°РєС‚С‹</h3>
+                    <h3 class="footer__title">Контакты</h3>
                     <ul class="footer__links">
                         <li><a href="https://t.me/RepairoRU" class="footer__link"><i class="fab fa-telegram"></i> Telegram</a></li>
-                        <li><span class="footer__link">РќР°С€Р° РїРѕС‡С‚Р°: repairo.info@mail.ru</span></li>
+                        <li><span class="footer__link">Наша почта: repairo.info@mail.ru</span></li>
                     </ul>
                 </div>
             </div>
             <div class="footer__bottom">
                 <p class="disclaimer">
-    РђРґРјРёРЅРёСЃС‚СЂР°С†РёСЏ СЃР°Р№С‚Р° РЅРµ РЅРµСЃС‘С‚ РѕС‚РІРµС‚СЃС‚РІРµРЅРЅРѕСЃС‚Рё Р·Р° РІРѕР·РјРѕР¶РЅС‹Рµ РїРѕРІСЂРµР¶РґРµРЅРёСЏ С‚РµС…РЅРёРєРё
-    Рё РёРЅС‹Рµ РїРѕСЃР»РµРґСЃС‚РІРёСЏ, РІРѕР·РЅРёРєС€РёРµ РІ СЂРµР·СѓР»СЊС‚Р°С‚Рµ СЃР°РјРѕСЃС‚РѕСЏС‚РµР»СЊРЅРѕРіРѕ СЂРµРјРѕРЅС‚Р° РїРѕ
-    РјР°С‚РµСЂРёР°Р»Р°Рј Рё РёРЅСЃС‚СЂСѓРєС†РёСЏРј, СЂР°Р·РјРµС‰С‘РЅРЅС‹Рј РЅР° СЃР°Р№С‚Рµ. Р’СЃРµ СЂР°Р±РѕС‚С‹ РІС‹ РІС‹РїРѕР»РЅСЏРµС‚Рµ
-    РЅР° СЃРІРѕР№ СЃС‚СЂР°С… Рё СЂРёСЃРє.
+    Администрация сайта не несёт ответственности за возможные повреждения техники
+    и иные последствия, возникшие в результате самостоятельного ремонта по
+    материалам и инструкциям, размещённым на сайте. Все работы вы выполняете
+    на свой страх и риск.
     </p>
-                <p class="footer__copyright">В© 2026 Repairo. Р’СЃРµ РїСЂР°РІР° Р·Р°С‰РёС‰РµРЅС‹.</p>
+                <p class="footer__copyright">© 2026 Repairo. Все права защищены.</p>
             </div>
         </div>
     </footer>
@@ -581,38 +551,38 @@
 {
   "@context": "https://schema.org",
   "@type": "HowTo",
-  "name": "Р§С‚Рѕ С‚Р°РєРѕРµ РєСЂРѕРї-С„Р°РєС‚РѕСЂ Рё РєР°Рє РѕРЅ РІР»РёСЏРµС‚ РЅР° СЃСЉРµРјРєСѓ?",
-  "description": "РџРѕС€Р°РіРѕРІР°СЏ РёРЅСЃС‚СЂСѓРєС†РёСЏ: Р§С‚Рѕ С‚Р°РєРѕРµ РєСЂРѕРї-С„Р°РєС‚РѕСЂ Рё РєР°Рє РѕРЅ РІР»РёСЏРµС‚ РЅР° СЃСЉРµРјРєСѓ?. Р”Р»СЏ РїРѕСЂС‚СЂРµС‚РѕРІ РЅР° APS-C РѕС‚Р»РёС‡РЅРѕ РїРѕРґС…РѕРґСЏС‚ РѕР±СЉРµРєС‚РёРІС‹ 50вЂ“85 РјРј (СЌРєРІ. 75вЂ“130 РјРј).. РЎРѕРІРµС‚С‹...",
+  "name": "Что такое кроп-фактор и как он влияет на съемку?",
+  "description": "Пошаговая инструкция: Что такое кроп-фактор и как он влияет на съемку?. Для портретов на APS-C отлично подходят объективы 50–85 мм (экв. 75–130 мм).. Советы...",
   "totalTime": "PT30M",
   "step": [
     {
       "@type": "HowToStep",
-      "name": "РћРїСЂРµРґРµР»РµРЅРёРµ РєСЂРѕРї-С„Р°РєС‚РѕСЂР°",
-      "text": "РћРїСЂРµРґРµР»РµРЅРёРµ РєСЂРѕРї-С„Р°РєС‚РѕСЂР°",
+      "name": "Определение кроп-фактора",
+      "text": "Определение кроп-фактора",
       "url": "#step-1"
     },
     {
       "@type": "HowToStep",
-      "name": "РљР°Рє СЂР°СЃСЃС‡РёС‚Р°С‚СЊ СЌРєРІРёРІР°Р»РµРЅС‚РЅРѕРµ С„РѕРєСѓСЃРЅРѕРµ СЂР°СЃСЃС‚РѕСЏРЅРёРµ?",
-      "text": "РљР°Рє СЂР°СЃСЃС‡РёС‚Р°С‚СЊ СЌРєРІРёРІР°Р»РµРЅС‚РЅРѕРµ С„РѕРєСѓСЃРЅРѕРµ СЂР°СЃСЃС‚РѕСЏРЅРёРµ?",
+      "name": "Как рассчитать эквивалентное фокусное расстояние?",
+      "text": "Как рассчитать эквивалентное фокусное расстояние?",
       "url": "#step-2"
     },
     {
       "@type": "HowToStep",
-      "name": "РљР°Рє РєСЂРѕРї-С„Р°РєС‚РѕСЂ РІР»РёСЏРµС‚ РЅР° СЃСЉРµРјРєСѓ?",
-      "text": "РљР°Рє РєСЂРѕРї-С„Р°РєС‚РѕСЂ РІР»РёСЏРµС‚ РЅР° СЃСЉРµРјРєСѓ?",
+      "name": "Как кроп-фактор влияет на съемку?",
+      "text": "Как кроп-фактор влияет на съемку?",
       "url": "#step-3"
     },
     {
       "@type": "HowToStep",
-      "name": "Р§Р°СЃС‚Рѕ Р·Р°РґР°РІР°РµРјС‹Рµ РІРѕРїСЂРѕСЃС‹",
-      "text": "Р§Р°СЃС‚Рѕ Р·Р°РґР°РІР°РµРјС‹Рµ РІРѕРїСЂРѕСЃС‹",
+      "name": "Часто задаваемые вопросы",
+      "text": "Часто задаваемые вопросы",
       "url": "#step-4"
     },
     {
       "@type": "HowToStep",
-      "name": "рџ“Њ РС‚РѕРі",
-      "text": "рџ“Њ РС‚РѕРі",
+      "name": "?? Итог",
+      "text": "?? Итог",
       "url": "#step-5"
     }
   ],
@@ -623,4 +593,8 @@
 <script src="../cookie-consent.js"></script>
 </body>
 </html>
+
+
+
+
 

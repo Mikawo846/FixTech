@@ -1,10 +1,9 @@
 <!doctype html><meta charset="utf-8"><title>Extended Compare</title>
     <meta name="description" content="{{ description }}">
-    <meta name="description" content="РџРѕС€Р°РіРѕРІР°СЏ РёРЅСЃС‚СЂСѓРєС†РёСЏ: Extended compare (50 queries) вЂ” avg overlap: 0.90. РЎРѕРІРµС‚С‹ СЌРєСЃРїРµСЂС‚РѕРІ, С‚Р°Р±Р»РёС†С‹, FAQ.">
+    <meta name="description" content="Пошаговая инструкция: Extended compare (50 queries) — avg overlap: 0.90. Советы экспертов, таблицы, FAQ.">
 
 <style>body{font-family:Arial;padding:16px}table{border-collapse:collapse;width:100%}th,td{border:1px solid #ddd;padding:6px;text-align:left}th{background:#f4f4f4}
-    /* РЇРЅРґРµРєСЃ РњР°СЂРєРµС‚ СЂРµРєР»Р°РјРЅС‹Р№ Р±Р°РЅРЅРµСЂ */
-    .ym-hero-link {
+    /* Яндекс Маркет рекламный баннер */
       display: block;
       text-decoration: none;
       color: inherit;
@@ -12,8 +11,7 @@
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     }
 
-    /* Р“РѕСЂРёР·РѕРЅС‚Р°Р»СЊРЅС‹Р№ Р±Р°РЅРЅРµСЂ-РєР°СЂС‚РѕС‡РєР° */
-    .ym-hero-banner {
+    /* Горизонтальный баннер-карточка */
       width: 100%;
       max-width: 600px;
       min-height: 140px;
@@ -28,14 +26,12 @@
       margin: 40px auto;
     }
 
-    /* РљРѕРЅС‚РµР№РЅРµСЂ РґР»СЏ РёР·РѕР±СЂР°Р¶РµРЅРёР№ */
-    .ym-hero-images {
+    /* Контейнер для изображений */
       display: flex;
       height: 120px;
       overflow: hidden;
     }
 
-    .ym-hero-image {
       flex: 1;
       min-width: 0;
       height: 100%;
@@ -47,11 +43,9 @@
       background: #f8f9fa;
     }
 
-    .ym-hero-image:last-child {
       border-right: none;
     }
 
-    .ym-hero-image img {
       width: 100%;
       height: 100%;
       object-fit: contain;
@@ -59,12 +53,10 @@
       background: #f8f9fa;
     }
 
-    .ym-hero-image:hover img {
       transform: scale(1.02);
     }
 
-    /* РџСЂР°РІР°СЏ С‡Р°СЃС‚СЊ: РєРѕРЅС‚РµРЅС‚ */
-    .ym-hero-content {
+    /* Правая часть: контент */
       padding: 16px 18px;
       display: flex;
       flex-direction: column;
@@ -72,8 +64,7 @@
       gap: 8px;
     }
 
-    /* РќР°Р·РІР°РЅРёРµ С‚РѕРІР°СЂР° */
-    .ym-hero-title {
+    /* Название товара */
       font-size: 14px;
       font-weight: 600;
       color: #111827;
@@ -86,15 +77,13 @@
       overflow: hidden;
     }
 
-    /* Р РµР№С‚РёРЅРі */
-    .ym-hero-top {
+    /* Рейтинг */
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 8px;
     }
 
-    .ym-hero-rating {
       font-size: 13px;
       font-weight: 500;
       color: #111827;
@@ -103,12 +92,10 @@
       padding: 4px 10px;
     }
 
-    .ym-hero-rating-count {
       color: #6b7280;
     }
 
-    /* Р¤РёРѕР»РµС‚РѕРІР°СЏ РєРЅРѕРїРєР° */
-    .ym-hero-button {
+    /* Фиолетовая кнопка */
       display: inline-flex;
       align-items: center;
       justify-content: center;
@@ -125,20 +112,17 @@
                   box-shadow 0.15s ease;
     }
 
-    .ym-hero-button::after {
-      content: "в†’";
+      content: ">";
       margin-left: 6px;
       font-size: 14px;
     }
 
-    .ym-hero-button:hover {
       background: #7c3aed;
       transform: translateY(-1px);
       box-shadow: 0 4px 10px rgba(88, 28, 135, 0.45);
     }
 
-    /* Р®СЂРёРґРёС‡РµСЃРєРёР№ Р±Р»РѕРє */
-    .ym-hero-legal {
+    /* Юридический блок */
       margin-top: 6px;
       max-width: 600px;
       font-size: 11px;
@@ -148,35 +132,29 @@
       margin-right: auto;
     }
 
-    /* РђРґР°РїС‚РёРІ */
+    /* Адаптив */
     @media (max-width: 480px) {
-      .ym-hero-banner {
         max-width: 100%;
         margin: 20px 0;
       }
 
-      .ym-hero-images {
         height: 100px;
       }
 
-      .ym-hero-content {
         padding: 12px 12px;
       }
 
-      .ym-hero-title {
         font-size: 13px;
       }
 
-      .ym-hero-button {
         font-size: 13px;
         padding: 8px 14px;
       }
 
-      .ym-hero-legal {
         font-size: 10px;
       }
     }
-</style><h1>Extended compare (50 queries) вЂ” avg overlap: 0.90</h1><table><tr><th>#</th><th>Query</th><th>Overlap</th><th>TF-IDF top</th><th>Fuzzy top</th></tr><tr><td>1</td><td>repairo</td><td>1</td><td><small>guides-cameras/С€Р°Р±Р»РѕРѕРѕРѕРЅ.html
+</style><h1>Extended compare (50 queries) — avg overlap: 0.90</h1><table><tr><th>#</th><th>Query</th><th>Overlap</th><th>TF-IDF top</th><th>Fuzzy top</th></tr><tr><td>1</td><td>repairo</td><td>1</td><td><small>guides-cameras/шаблоооон.html
 index.html
 gaids/Podklyucheniye LED paneli k elektroseti skhema i bezopasnost.html
 gaids/Ustanovka LED-paneli s pomoshch&#x27;yu trosov (podvesnoy variant).html
@@ -194,7 +172,7 @@ gaids/Uronili televizor pri perenoske ili ustanovke.html
 gaids/Zavisaniye sistem (Android TV, Tizen, WebOS i dr.).html
 tv.html
 gaids/Remont T-Con platy.html
-cameras.html</small></td></tr><tr><td>2</td><td>СЃРѕРІРµС‚С‹</td><td>0</td><td><small>guides-cameras/street-photo.html
+cameras.html</small></td></tr><tr><td>2</td><td>советы</td><td>0</td><td><small>guides-cameras/street-photo.html
 gaids/Vliyanie-LED-paneley-na-interer-sovety-dizaynerov.html
 guides-cameras/hdr.html
 guides-smartphones/best-health-monitoring-apps.html
@@ -212,7 +190,7 @@ guides-auto-electronics/auto-brake-settings.html
 guides-auto-electronics/smart-home-car-scenarios.html
 guides-large-appliances/appliance-sensor-compatibility-check-methods.html
 guides-auto-electronics/ota-update-setup.html
-guides-auto-electronics/parking-sensor-error-reset.html</small></td></tr><tr><td>3</td><td>СЃРјР°СЂС‚С„РѕРЅС‹</td><td>3</td><td><small>guides-cameras/С€Р°Р±Р»РѕРѕРѕРѕРЅ.html
+guides-auto-electronics/parking-sensor-error-reset.html</small></td></tr><tr><td>3</td><td>смартфоны</td><td>3</td><td><small>guides-cameras/шаблоооон.html
 guides-smartphones/transparent-display-phones.html
 guides-smartphones/5g-phones-2025.html
 guides-smartphones/holographic-display-phones.html
@@ -230,8 +208,8 @@ guides-smartphones/phone-gps-tracker.html
 guides-smartphones/modular-camera-phones.html
 guides-smartphones/eco-phones-2025.html
 guides-smartphones/phone-microscope.html
-guides-smartphones/rare-smartphones-world.html</small></td></tr><tr><td>4</td><td>РєРѕРЅС‚Р°РєС‚С‹</td><td>1</td><td><small>guides-smartphones/restore-deleted-contacts.html
-guides-cameras/С€Р°Р±Р»РѕРѕРѕРѕРЅ.html
+guides-smartphones/rare-smartphones-world.html</small></td></tr><tr><td>4</td><td>контакты</td><td>1</td><td><small>guides-smartphones/restore-deleted-contacts.html
+guides-cameras/шаблоооон.html
 guides-smartphones/charging-port-contacts-repair.html
 guides-auto-electronics/sensor-contacts-cleaning.html
 guides-auto-electronics/roof-sensor-error-fix.html
@@ -248,7 +226,7 @@ guides-auto-electronics/trunk-monitoring-modes.html
 smartphones.html
 guides-auto-electronics/audio-monitoring-modes.html
 guides-large-appliances/ac-noisy-operation.html
-guides-large-appliances/salt-container-leak-issue.html</small></td></tr><tr><td>5</td><td>С„РѕС‚РѕР°РїРїР°СЂР°С‚С‹</td><td>0</td><td><small>guides-cameras/С€Р°Р±Р»РѕРѕРѕРѕРЅ.html
+guides-large-appliances/salt-container-leak-issue.html</small></td></tr><tr><td>5</td><td>фотоаппараты</td><td>0</td><td><small>guides-cameras/шаблоооон.html
 index.html
 gaids/Podklyucheniye LED paneli k elektroseti skhema i bezopasnost.html
 gaids/Ustanovka LED-paneli s pomoshch&#x27;yu trosov (podvesnoy variant).html
@@ -266,7 +244,7 @@ guides-cameras/Kak snimat&#x27; sport na fotoapparat.html
 guides-cameras/Kak pravilno khranit fotoapparat.html
 guides-cameras/Kak snimat&#x27; zvezdy na fotoapparat.html
 guides-cameras/Kak snimat timelaps na fotoapparat.html
-guides-cameras/Kak nastroit&#x27; fotoapparat dlya.html</small></td></tr><tr><td>6</td><td>С‚РµС…РЅРёРєР°</td><td>0</td><td><small>guides-cameras/С€Р°Р±Р»РѕРѕРѕРѕРЅ.html
+guides-cameras/Kak nastroit&#x27; fotoapparat dlya.html</small></td></tr><tr><td>6</td><td>техника</td><td>0</td><td><small>guides-cameras/шаблоооон.html
 index.html
 gaids/Podklyucheniye LED paneli k elektroseti skhema i bezopasnost.html
 gaids/Ustanovka LED-paneli s pomoshch&#x27;yu trosov (podvesnoy variant).html
@@ -284,7 +262,7 @@ guides-large-appliances/coffee-machine-filter-replacement.html
 gaids/Remont IK-priyemnika (ne reagiruyet na pul&#x27;t).html
 guides-large-appliances/water-heater-leaking-from-bottom.html
 auto-electronics.html
-gaids/Remont razyema pitaniya (payka).html</small></td></tr><tr><td>7</td><td>РіР»Р°РІРЅР°СЏ</td><td>0</td><td><small>guides-cameras/С€Р°Р±Р»РѕРѕРѕРѕРЅ.html
+gaids/Remont razyema pitaniya (payka).html</small></td></tr><tr><td>7</td><td>главная</td><td>0</td><td><small>guides-cameras/шаблоооон.html
 gaids/Podklyucheniye LED paneli k elektroseti skhema i bezopasnost.html
 gaids/Ustanovka LED-paneli s pomoshch&#x27;yu trosov (podvesnoy variant).html
 gaids/Kak zakrepit&#x27; LED-panel&#x27; na stene.html
@@ -300,9 +278,9 @@ gaids/Ne rabotayet golosovoye upravleniye.html
 gaids/LED-panel-v-kachestve-ekrana-dlya-proektora.html
 gaids/Problemy s golosovym upravleniyem (Google Assistant, Alexa).html
 gaids/Problemy s avtomaticheskoy nastroykoy yarkosti.html
-guides-cameras/Pochemu blendР° dlya ob&#x27;ektiva vazhna.html
+guides-cameras/Pochemu blendа dlya ob&#x27;ektiva vazhna.html
 guides-large-appliances/washing-machine-frost-protection-tips.html
-gaids/Otkaz vstroyennogo kulera (yesli yest&#x27; aktivnoye okhlazhdeniye).html</small></td></tr><tr><td>8</td><td>РЅРѕСѓС‚Р±СѓРєРё</td><td>1</td><td><small>guides-cameras/С€Р°Р±Р»РѕРѕРѕРѕРЅ.html
+gaids/Otkaz vstroyennogo kulera (yesli yest&#x27; aktivnoye okhlazhdeniye).html</small></td></tr><tr><td>8</td><td>ноутбуки</td><td>1</td><td><small>guides-cameras/шаблоооон.html
 index.html
 laptops.html
 gaids/Podklyucheniye LED paneli k elektroseti skhema i bezopasnost.html
@@ -320,7 +298,7 @@ gaids/Zamena lampy proyektora svoimi rukami.html
 gaids/Zamena podsvetki (LED ili Edge-lit).html
 articles.html
 guides-large-appliances/no-frost-defrost-sensor-replacement.html
-guides-large-appliances/air-conditioner-power-consumption-check-methods.html</small></td></tr><tr><td>9</td><td>РёСЃРїРѕР»СЊР·СѓР№С‚Рµ</td><td>1</td><td><small>gaids/Dym ot sigarety ili kukhni osedayet na ekrane i vnutri televizora.html
+guides-large-appliances/air-conditioner-power-consumption-check-methods.html</small></td></tr><tr><td>9</td><td>используйте</td><td>1</td><td><small>gaids/Dym ot sigarety ili kukhni osedayet na ekrane i vnutri televizora.html
 gaids/Osedaniye bol&#x27;shogo kolichestva pyli na platakh.html
 gaids/Na ekrane popali bryzgi ot napitkov (chay, kofe, gazirovka).html
 gaids/Nastroyka proyektora dlya domashnego kinoteatra.html
@@ -338,7 +316,7 @@ guides-cameras/Ispolzovanie muzyki v slayd-shou.html
 gaids/Kak khranit&#x27; proyektor, yesli ne ispol&#x27;zuyetsya.html
 gaids/Optimal&#x27;nyye usloviya ekspluatatsii proyektora.html
 gaids/Kak-ispolzovat-LED-panel-dlya-fotosemki.html
-gaids/Ispol&#x27;zovaniye proyektora s saundbarom.html</small></td></tr><tr><td>10</td><td>С‚РµР»РµРІРёР·РѕСЂС‹</td><td>0</td><td><small>guides-cameras/С€Р°Р±Р»РѕРѕРѕРѕРЅ.html
+gaids/Ispol&#x27;zovaniye proyektora s saundbarom.html</small></td></tr><tr><td>10</td><td>телевизоры</td><td>0</td><td><small>guides-cameras/шаблоооон.html
 index.html
 gaids/Kak-utilizirovat-staryj-televizor.html
 gaids/Podklyucheniye LED paneli k elektroseti skhema i bezopasnost.html
@@ -356,7 +334,7 @@ gaids/Televizor izdayet strannyye zvuki (zhuzhzheniye, uchenyye) Hayer S8000.htm
 gaids/Greyetsya televizor Xiaomi Q2.html
 gaids/Televizor ne vidit Wi-Fi set&#x27; Haier S8000.html
 gaids/teper&#x27; na temu Televizor vyklyuchayetsya pri peregreve.html
-gaids/Televizor ne vklyuchayetsya posle grozy.html</small></td></tr><tr><td>11</td><td>РїСЂРёСЃС‚Р°РІРєРё</td><td>3</td><td><small>gaids/Nesovmestimost&#x27; razresheniya TV pristavki kak vystavit&#x27; 720p 1080p.html
+gaids/Televizor ne vklyuchayetsya posle grozy.html</small></td></tr><tr><td>11</td><td>приставки</td><td>3</td><td><small>gaids/Nesovmestimost&#x27; razresheniya TV pristavki kak vystavit&#x27; 720p 1080p.html
 gaids/Nesovmestimost&#x27; pristavki s chastotoy 5 GGts.html
 gaids/Net signala na televizore ot TV-pristavki Android TV Box.html
 gaids/Sleteli nastroyki kanalov TV-pristavki.html
@@ -374,7 +352,7 @@ gaids/Sleteli nastroyki kanalov TV-pristavki.html
 gaids/Nesovmestimost&#x27; razresheniya TV pristavki kak vystavit&#x27; 720p 1080p.html
 guides-large-appliances/appliance-sensor-compatibility-check-methods.html
 gaids/Pristavka DVB-T2 ne podklyuchayetsya k Wi-Fi.html
-gaids/Nesovmestimost&#x27; pristavki s chastotoy 5 GGts.html</small></td></tr><tr><td>12</td><td>Р°РІС‚Рѕ</td><td>0</td><td><small>guides-auto-electronics/smart-home-car-scenarios.html
+gaids/Nesovmestimost&#x27; pristavki s chastotoy 5 GGts.html</small></td></tr><tr><td>12</td><td>авто</td><td>0</td><td><small>guides-auto-electronics/smart-home-car-scenarios.html
 guides-smartphones/phone-gps-tracker.html
 guides-auto-electronics/video-surveillance-settings.html
 guides-auto-electronics/comfort-profiles.html
@@ -392,7 +370,7 @@ gaids/Problemy s avtootklyucheniyem (taymer sna).html
 guides-large-appliances/appliance-sensor-compatibility-check-methods.html
 guides-large-appliances/water-heater-trips-rccb-issue.html
 gaids/Zamena podsvetki (LED ili Edge-lit).html
-gaids/Kalibrovka tsvetov proyektora.html</small></td></tr><tr><td>13</td><td>СЌР»РµРєС‚СЂРѕРЅРёРєР°</td><td>2</td><td><small>guides-cameras/С€Р°Р±Р»РѕРѕРѕРѕРЅ.html
+gaids/Kalibrovka tsvetov proyektora.html</small></td></tr><tr><td>13</td><td>электроника</td><td>2</td><td><small>guides-cameras/шаблоооон.html
 guides-auto-electronics/starter-electronics.html
 gaids/Gde-kupit-zapchasti-dlya-remonta-LED-paneley.html
 index.html
@@ -410,7 +388,7 @@ gaids/Potreblenie-elektroenergii-LED-panelyami.html
 guides-auto-electronics/starter-electronics.html
 gaids/Kak podklyuchit&#x27; proyektor k kolonkam.html
 guides-auto-electronics/heating-systems.html
-guides-auto-electronics/brake-control-systems.html</small></td></tr><tr><td>14</td><td>Р±С‹С‚РѕРІР°СЏ</td><td>0</td><td><small>guides-cameras/С€Р°Р±Р»РѕРѕРѕРѕРЅ.html
+guides-auto-electronics/brake-control-systems.html</small></td></tr><tr><td>14</td><td>бытовая</td><td>0</td><td><small>guides-cameras/шаблоооон.html
 guides-large-appliances/remove-plastic-object-from-dishwasher-drum.html
 index.html
 gaids/Podklyucheniye LED paneli k elektroseti skhema i bezopasnost.html
@@ -428,7 +406,7 @@ gaids/Ne rabotayet podsvetka (QLED).html
 gaids/Ne rabotayet knopka vklyucheniya na televizore.html
 guides-auto-electronics/engine-sensor-scenarios.html
 gaids/Problemy s avtopovorotom izobrazheniya.html
-guides-auto-electronics/pressure-sensor-settings.html</small></td></tr><tr><td>15</td><td>РїСЂРѕРІРµСЂСЊС‚Рµ</td><td>0</td><td><small>gaids/Net zvuka v televizoreQN90C.html
+guides-auto-electronics/pressure-sensor-settings.html</small></td></tr><tr><td>15</td><td>проверьте</td><td>0</td><td><small>gaids/Net zvuka v televizoreQN90C.html
 gaids/Net zvuka Haier S8000.html
 gaids/Net zvuka cherez opticheskiy vykhod.html
 gaids/Zvuk propadayet i poyavlyayetsya Haier S8000.html
@@ -446,7 +424,7 @@ gaids/Proverka drayvera LED-paneli mul&#x27;timetrom.html
 gaids/Problemy s HDR na proyektore.html
 guides-auto-electronics/steering-heating-check.html
 guides-large-appliances/air-conditioner-power-consumption-check-methods.html
-gaids/Kak proverit&#x27; kondensatory v LED-paneli.html</small></td></tr><tr><td>16</td><td>РіРѕРґР°</td><td>0</td><td><small>guides-cameras/С€Р°Р±Р»РѕРѕРѕРѕРЅ.html
+gaids/Kak proverit&#x27; kondensatory v LED-paneli.html</small></td></tr><tr><td>16</td><td>года</td><td>0</td><td><small>guides-cameras/шаблоооон.html
 gaids/Reyting luchshikh proizvoditeley LED-paneley.html
 guides-cameras/Razvitie fotograficheskogo zreniya.html
 guides-smartphones/sue-manufacturer.html
@@ -464,7 +442,7 @@ gaids/Kondensat v televizore iz-za rezkogo perepada temperatury.html
 gaids/Kondensat v televizore iz-za povyshennoy vlazhnosti v pomeshchenii.html
 gaids/Explanations/capacitors.html
 guides-auto-electronics/smart-home-car-scenarios.html
-guides-large-appliances/kitchen-hood-airduct-vibration-issue.html</small></td></tr><tr><td>17</td><td>instagram</td><td>0</td><td><small>guides-cameras/С€Р°Р±Р»РѕРѕРѕРѕРЅ.html
+guides-large-appliances/kitchen-hood-airduct-vibration-issue.html</small></td></tr><tr><td>17</td><td>instagram</td><td>0</td><td><small>guides-cameras/шаблоооон.html
 guides-cameras/Vliyanie sotssetey na stil syemki.html
 guides-cameras/Pryamye prodazhi cherez sotsialnye seti.html
 guides-cameras/Kak zarabatyvat na fotografii.html
@@ -482,7 +460,7 @@ gaids/Kak nastroit&#x27; Perfect Natural Motion.html
 guides-consoles/Emulyatsiya Nintendo DS na Steam Deck.html
 guides-smartphones/xbox-elite2-mobile-setup.html
 guides-cameras/Fujifilm Instax Mini Evo hybrid-tekhnologii v 2025.html
-guides-smartphones/telegram-bot-android.html</small></td></tr><tr><td>18</td><td>РјРµР»РєР°СЏ</td><td>0</td><td><small>guides-cameras/С€Р°Р±Р»РѕРѕРѕРѕРЅ.html
+guides-smartphones/telegram-bot-android.html</small></td></tr><tr><td>18</td><td>мелкая</td><td>0</td><td><small>guides-cameras/шаблоооон.html
 index.html
 gaids/Svetodiodnaya-panel-dlya-podsvetki-zerkala.html
 gaids/Podklyucheniye LED paneli k elektroseti skhema i bezopasnost.html
@@ -500,10 +478,10 @@ guides-large-appliances/stove-top-shutdown-issue.html
 gaids/Pochemu-LED-panel-vklyuchaetsya-ne-srazu.html
 guides-large-appliances/kitchen-hood-filter-replacement.html
 guides-large-appliances/refrigerator-bubbling-noise.html
-gaids/Remont bloka pitaniya.html</small></td></tr><tr><td>19</td><td>РїСЂР°РІР°</td><td>0</td><td><small>guides-smartphones/photo-copyright.html
+gaids/Remont bloka pitaniya.html</small></td></tr><tr><td>19</td><td>права</td><td>0</td><td><small>guides-smartphones/photo-copyright.html
 guides-cameras/Avtorskie prava na foto v epokhu AI.html
 guides-smartphones/consumer-rights-repair.html
-guides-cameras/С€Р°Р±Р»РѕРѕРѕРѕРЅ.html
+guides-cameras/шаблоооон.html
 guides-auto-electronics/remote-control-error-fix.html
 gaids/Kanaly ne zagruzhayutsya Oshibka 403 Net pleylista.html
 guides-smartphones/remove-viruses-android.html
@@ -518,7 +496,7 @@ guides-large-appliances/water-heater-leak-fix.html
 guides-large-appliances/r32-split-system-refill-instruction.html
 guides-large-appliances/ac-poor-cooling-in-heat.html
 gaids/Tiho igraet TV.html
-guides-cameras/Pochemu fotoapparat peregrevayetsya.html</small></td></tr><tr><td>20</td><td>РіР°Р№РґС‹</td><td>0</td><td><small>guides-cameras/С€Р°Р±Р»РѕРѕРѕРѕРЅ.html
+guides-cameras/Pochemu fotoapparat peregrevayetsya.html</small></td></tr><tr><td>20</td><td>гайды</td><td>0</td><td><small>guides-cameras/шаблоооон.html
 index.html
 guides-smartphones/sue-manufacturer.html
 guides-smartphones/used-phone-sale.html
@@ -536,7 +514,7 @@ guides-auto-electronics/spark-plug-replacement.html
 guides-large-appliances/non-original-heater-element-fast-failure-issue.html
 guides-large-appliances/dishwasher-not-removing-oil.html
 guides-auto-electronics/humidity-control-errors.html
-guides-large-appliances/dishwasher-drying-element-replacement.html</small></td></tr><tr><td>21</td><td>repairo СЃРѕРІРµС‚С‹</td><td>2</td><td><small>guides-cameras/С€Р°Р±Р»РѕРѕРѕРѕРЅ.html
+guides-large-appliances/dishwasher-drying-element-replacement.html</small></td></tr><tr><td>21</td><td>repairo советы</td><td>2</td><td><small>guides-cameras/шаблоооон.html
 index.html
 gaids/Podklyucheniye LED paneli k elektroseti skhema i bezopasnost.html
 gaids/Ustanovka LED-paneli s pomoshch&#x27;yu trosov (podvesnoy variant).html
@@ -554,7 +532,7 @@ smartphones.html
 consoles.html
 gaids/Virusy v Smart TV (naprimer, iz-za komponentov prilozheniy).html
 gaids/Zavisaniye sistem (Android TV, Tizen, WebOS i dr.).html
-tv.html</small></td></tr><tr><td>22</td><td>repairo СЃРјР°СЂС‚С„РѕРЅС‹</td><td>2</td><td><small>guides-cameras/С€Р°Р±Р»РѕРѕРѕРѕРЅ.html
+tv.html</small></td></tr><tr><td>22</td><td>repairo смартфоны</td><td>2</td><td><small>guides-cameras/шаблоооон.html
 index.html
 gaids/Podklyucheniye LED paneli k elektroseti skhema i bezopasnost.html
 gaids/Ustanovka LED-paneli s pomoshch&#x27;yu trosov (podvesnoy variant).html
@@ -572,7 +550,7 @@ gaids/Potsarapali ekran pri neakkuratnoy ochistke (zhostkoy tkan&#x27;yu ili khi
 guides-smartphones/tails-os-smartphone.html
 gaids/Uronili televizor pri perenoske ili ustanovke.html
 consoles.html
-guides-smartphones/eco-phones-2025.html</small></td></tr><tr><td>23</td><td>repairo РєРѕРЅС‚Р°РєС‚С‹</td><td>2</td><td><small>guides-cameras/С€Р°Р±Р»РѕРѕРѕРѕРЅ.html
+guides-smartphones/eco-phones-2025.html</small></td></tr><tr><td>23</td><td>repairo контакты</td><td>2</td><td><small>guides-cameras/шаблоооон.html
 index.html
 gaids/Podklyucheniye LED paneli k elektroseti skhema i bezopasnost.html
 gaids/Ustanovka LED-paneli s pomoshch&#x27;yu trosov (podvesnoy variant).html
@@ -590,7 +568,7 @@ smartphones.html
 consoles.html
 gaids/Zavisaniye sistem (Android TV, Tizen, WebOS i dr.).html
 gaids/Remont T-Con platy.html
-tv.html</small></td></tr><tr><td>24</td><td>repairo С„РѕС‚РѕР°РїРїР°СЂР°С‚С‹</td><td>1</td><td><small>guides-cameras/С€Р°Р±Р»РѕРѕРѕРѕРЅ.html
+tv.html</small></td></tr><tr><td>24</td><td>repairo фотоаппараты</td><td>1</td><td><small>guides-cameras/шаблоооон.html
 index.html
 gaids/Podklyucheniye LED paneli k elektroseti skhema i bezopasnost.html
 gaids/Ustanovka LED-paneli s pomoshch&#x27;yu trosov (podvesnoy variant).html
@@ -608,7 +586,7 @@ guides-cameras/Kak zamenit&#x27; displey fotoapparata.html
 guides-cameras/Kak snimat&#x27; sport na fotoapparat.html
 guides-cameras/Kak pravilno khranit fotoapparat.html
 guides-cameras/Kak snimat&#x27; zvezdy na fotoapparat.html
-guides-cameras/Kak snimat timelaps na fotoapparat.html</small></td></tr><tr><td>25</td><td>repairo С‚РµС…РЅРёРєР°</td><td>2</td><td><small>guides-cameras/С€Р°Р±Р»РѕРѕРѕРѕРЅ.html
+guides-cameras/Kak snimat timelaps na fotoapparat.html</small></td></tr><tr><td>25</td><td>repairo техника</td><td>2</td><td><small>guides-cameras/шаблоооон.html
 index.html
 gaids/Podklyucheniye LED paneli k elektroseti skhema i bezopasnost.html
 gaids/Ustanovka LED-paneli s pomoshch&#x27;yu trosov (podvesnoy variant).html
@@ -626,7 +604,7 @@ gaids/Zavisaniye sistem (Android TV, Tizen, WebOS i dr.).html
 gaids/Virusy v Smart TV (naprimer, iz-za komponentov prilozheniy).html
 consoles.html
 gaids/Uronili televizor pri perenoske ili ustanovke.html
-gaids/Remont T-Con platy.html</small></td></tr><tr><td>26</td><td>СЃРѕРІРµС‚С‹ СЃРјР°СЂС‚С„РѕРЅС‹</td><td>1</td><td><small>guides-cameras/С€Р°Р±Р»РѕРѕРѕРѕРЅ.html
+gaids/Remont T-Con platy.html</small></td></tr><tr><td>26</td><td>советы смартфоны</td><td>1</td><td><small>guides-cameras/шаблоооон.html
 guides-smartphones/transparent-display-phones.html
 guides-cameras/street-photo.html
 guides-smartphones/5g-phones-2025.html
@@ -644,8 +622,8 @@ guides-auto-electronics/start-stop-check.html
 guides-smartphones/data-recovery-dead-phone.html
 guides-smartphones/encrypt-files-on-smartphone.html
 guides-smartphones/restore-deleted-contacts.html
-guides-smartphones/check-phone-authenticity.html</small></td></tr><tr><td>27</td><td>СЃРѕРІРµС‚С‹ РєРѕРЅС‚Р°РєС‚С‹</td><td>2</td><td><small>guides-smartphones/restore-deleted-contacts.html
-guides-cameras/С€Р°Р±Р»РѕРѕРѕРѕРЅ.html
+guides-smartphones/check-phone-authenticity.html</small></td></tr><tr><td>27</td><td>советы контакты</td><td>2</td><td><small>guides-smartphones/restore-deleted-contacts.html
+guides-cameras/шаблоооон.html
 guides-smartphones/charging-port-contacts-repair.html
 guides-cameras/street-photo.html
 guides-auto-electronics/sensor-contacts-cleaning.html
@@ -662,7 +640,7 @@ guides-large-appliances/convection-fan-cleaning-instruction.html
 guides-auto-electronics/sensor-contacts-cleaning.html
 guides-auto-electronics/trunk-monitoring-modes.html
 guides-large-appliances/salt-container-leak-issue.html
-guides-cameras/Kak proverit&#x27; rezkost&#x27; ob&#x27;ektiva.html</small></td></tr><tr><td>28</td><td>СЃРѕРІРµС‚С‹ С„РѕС‚РѕР°РїРїР°СЂР°С‚С‹</td><td>0</td><td><small>guides-cameras/С€Р°Р±Р»РѕРѕРѕРѕРЅ.html
+guides-cameras/Kak proverit&#x27; rezkost&#x27; ob&#x27;ektiva.html</small></td></tr><tr><td>28</td><td>советы фотоаппараты</td><td>0</td><td><small>guides-cameras/шаблоооон.html
 guides-cameras/street-photo.html
 guides-cameras/hdr.html
 gaids/Vliyanie-LED-paneley-na-interer-sovety-dizaynerov.html
@@ -680,7 +658,7 @@ guides-cameras/Kak snimat&#x27; portrety s boke na fotoapparat.html
 guides-cameras/Pochemu fotoapparat ne snimaet v RAW.html
 guides-cameras/brands.html
 guides-cameras/Kak zamenit displey fotoapparata.html
-guides-cameras/Pochemu fotoapparat peregrevayetsya.html</small></td></tr><tr><td>29</td><td>СЃРѕРІРµС‚С‹ С‚РµС…РЅРёРєР°</td><td>1</td><td><small>guides-cameras/С€Р°Р±Р»РѕРѕРѕРѕРЅ.html
+guides-cameras/Pochemu fotoapparat peregrevayetsya.html</small></td></tr><tr><td>29</td><td>советы техника</td><td>1</td><td><small>guides-cameras/шаблоооон.html
 guides-cameras/street-photo.html
 guides-cameras/hdr.html
 gaids/Vliyanie-LED-paneley-na-interer-sovety-dizaynerov.html
@@ -698,10 +676,10 @@ guides-cameras/hdr-processing.html
 guides-large-appliances/range-hood-light-flicker-issue.html
 small-appliances.html
 gaids/Zamena podsvetki (LED ili Edge-lit).html
-large-appliances.html</small></td></tr><tr><td>30</td><td>СЃРѕРІРµС‚С‹ РіР»Р°РІРЅР°СЏ</td><td>0</td><td><small>guides-cameras/street-photo.html
+large-appliances.html</small></td></tr><tr><td>30</td><td>советы главная</td><td>0</td><td><small>guides-cameras/street-photo.html
 guides-cameras/hdr.html
 gaids/Vliyanie-LED-paneley-na-interer-sovety-dizaynerov.html
-guides-cameras/С€Р°Р±Р»РѕРѕРѕРѕРЅ.html
+guides-cameras/шаблоооон.html
 guides-smartphones/best-health-monitoring-apps.html
 guides-large-appliances/remove-plastic-object-from-dishwasher-drum.html
 gaids/Mozhno li podklyuchat&#x27; LED-panel&#x27; cherez dimmer.html
@@ -716,7 +694,7 @@ guides-auto-electronics/pedal-lighting-settings.html
 guides-auto-electronics/door-sill-lighting-settings.html
 gaids/Proyektory dlya biznesa (konferents-zaly, vystavki).html
 guides-large-appliances/refrigerant-pressure-check-without-manometer.html
-guides-auto-electronics/auto-door-closer-issues.html</small></td></tr><tr><td>31</td><td>СЃРјР°СЂС‚С„РѕРЅС‹ РєРѕРЅС‚Р°РєС‚С‹</td><td>2</td><td><small>guides-cameras/С€Р°Р±Р»РѕРѕРѕРѕРЅ.html
+guides-auto-electronics/auto-door-closer-issues.html</small></td></tr><tr><td>31</td><td>смартфоны контакты</td><td>2</td><td><small>guides-cameras/шаблоооон.html
 guides-smartphones/restore-deleted-contacts.html
 guides-smartphones/charging-port-contacts-repair.html
 index.html
@@ -734,7 +712,7 @@ guides-smartphones/5g-phones-2025.html
 guides-smartphones/phone-as-server.html
 guides-smartphones/modular-camera-phones.html
 guides-smartphones/eco-phones-2025.html
-guides-smartphones/phone-as-monitor.html</small></td></tr><tr><td>32</td><td>СЃРјР°СЂС‚С„РѕРЅС‹ С„РѕС‚РѕР°РїРїР°СЂР°С‚С‹</td><td>0</td><td><small>guides-cameras/С€Р°Р±Р»РѕРѕРѕРѕРЅ.html
+guides-smartphones/phone-as-monitor.html</small></td></tr><tr><td>32</td><td>смартфоны фотоаппараты</td><td>0</td><td><small>guides-cameras/шаблоооон.html
 index.html
 guides-smartphones/transparent-display-phones.html
 guides-smartphones/5g-phones-2025.html
@@ -752,7 +730,7 @@ guides-cameras/Kak snimat&#x27; portrety s boke na fotoapparat.html
 guides-smartphones/phone-metal-detector.html
 guides-cameras/Kak pravilno khranit fotoapparat.html
 guides-cameras/Kak vybrat&#x27; shtativ pod fotoapparat.html
-guides-cameras/Kak snimat 360 panoramy na fotoapparat.html</small></td></tr><tr><td>33</td><td>СЃРјР°СЂС‚С„РѕРЅС‹ С‚РµС…РЅРёРєР°</td><td>2</td><td><small>guides-cameras/С€Р°Р±Р»РѕРѕРѕРѕРЅ.html
+guides-cameras/Kak snimat 360 panoramy na fotoapparat.html</small></td></tr><tr><td>33</td><td>смартфоны техника</td><td>2</td><td><small>guides-cameras/шаблоооон.html
 index.html
 guides-smartphones/transparent-display-phones.html
 guides-smartphones/5g-phones-2025.html
@@ -770,7 +748,7 @@ guides-smartphones/eco-phones-2025.html
 guides-cameras/macro-guide.html
 auto-electronics.html
 guides-large-appliances/refrigerator-door-seal-alternative-options.html
-guides-smartphones/5g-phones-2025.html</small></td></tr><tr><td>34</td><td>СЃРјР°СЂС‚С„РѕРЅС‹ РіР»Р°РІРЅР°СЏ</td><td>4</td><td><small>guides-cameras/С€Р°Р±Р»РѕРѕРѕРѕРЅ.html
+guides-smartphones/5g-phones-2025.html</small></td></tr><tr><td>34</td><td>смартфоны главная</td><td>4</td><td><small>guides-cameras/шаблоооон.html
 guides-smartphones/transparent-display-phones.html
 guides-smartphones/5g-phones-2025.html
 index.html
@@ -788,7 +766,7 @@ guides-smartphones/holographic-display-phones.html
 guides-smartphones/eco-phones-2025.html
 guides-auto-electronics/start-stop-check.html
 guides-smartphones/ai-chips-future.html
-guides-smartphones/phone-drone-remote.html</small></td></tr><tr><td>35</td><td>СЃРјР°СЂС‚С„РѕРЅС‹ РЅРѕСѓС‚Р±СѓРєРё</td><td>3</td><td><small>guides-cameras/С€Р°Р±Р»РѕРѕРѕРѕРЅ.html
+guides-smartphones/phone-drone-remote.html</small></td></tr><tr><td>35</td><td>смартфоны ноутбуки</td><td>3</td><td><small>guides-cameras/шаблоооон.html
 index.html
 guides-smartphones/transparent-display-phones.html
 guides-smartphones/5g-phones-2025.html
@@ -806,7 +784,7 @@ guides-smartphones/flexible-phones-2025.html
 guides-smartphones/holographic-display-phones.html
 guides-smartphones/mobile-game-development.html
 guides-smartphones/sim-card-not-detected.html
-guides-smartphones/phone-drone-remote.html</small></td></tr><tr><td>36</td><td>РєРѕРЅС‚Р°РєС‚С‹ С„РѕС‚РѕР°РїРїР°СЂР°С‚С‹</td><td>0</td><td><small>guides-cameras/С€Р°Р±Р»РѕРѕРѕРѕРЅ.html
+guides-smartphones/phone-drone-remote.html</small></td></tr><tr><td>36</td><td>контакты фотоаппараты</td><td>0</td><td><small>guides-cameras/шаблоооон.html
 guides-smartphones/restore-deleted-contacts.html
 guides-smartphones/charging-port-contacts-repair.html
 guides-auto-electronics/sensor-contacts-cleaning.html
@@ -824,7 +802,7 @@ guides-cameras/Kak zamenit displey fotoapparata.html
 guides-cameras/Kak snimat&#x27; sport na fotoapparat.html
 guides-cameras/Kak izmenit yazyk menyu v fotoapparate.html
 guides-cameras/Kak pravilno khranit fotoapparat.html
-guides-cameras/Kak podklyuchit fotoapparat k teleskopu.html</small></td></tr><tr><td>37</td><td>РєРѕРЅС‚Р°РєС‚С‹ С‚РµС…РЅРёРєР°</td><td>1</td><td><small>guides-cameras/С€Р°Р±Р»РѕРѕРѕРѕРЅ.html
+guides-cameras/Kak podklyuchit fotoapparat k teleskopu.html</small></td></tr><tr><td>37</td><td>контакты техника</td><td>1</td><td><small>guides-cameras/шаблоооон.html
 guides-smartphones/restore-deleted-contacts.html
 index.html
 guides-smartphones/charging-port-contacts-repair.html
@@ -842,7 +820,7 @@ guides-auto-electronics/sensor-contacts-cleaning.html
 guides-large-appliances/oven-thermal-fuse-replacement.html
 guides-large-appliances/fridge-evaporator-flush-without-disassembly.html
 guides-large-appliances/induction-stove-sparks-at-turn-on.html
-guides-large-appliances/refrigerator-door-seal-alternative-options.html</small></td></tr><tr><td>38</td><td>РєРѕРЅС‚Р°РєС‚С‹ РіР»Р°РІРЅР°СЏ</td><td>1</td><td><small>guides-cameras/С€Р°Р±Р»РѕРѕРѕРѕРЅ.html
+guides-large-appliances/refrigerator-door-seal-alternative-options.html</small></td></tr><tr><td>38</td><td>контакты главная</td><td>1</td><td><small>guides-cameras/шаблоооон.html
 guides-smartphones/restore-deleted-contacts.html
 guides-smartphones/charging-port-contacts-repair.html
 guides-auto-electronics/sensor-contacts-cleaning.html
@@ -860,7 +838,7 @@ gaids/Ne rabotayet golosovoye upravleniye.html
 gaids/Zvuk ostalsya ot izobrazheniya Syaomi Q2.html
 guides-smartphones/faceid-not-working.html
 guides-large-appliances/washing-machine-frost-protection-tips.html
-guides-auto-electronics/headlight-monitoring-modes.html</small></td></tr><tr><td>39</td><td>РєРѕРЅС‚Р°РєС‚С‹ РЅРѕСѓС‚Р±СѓРєРё</td><td>1</td><td><small>guides-cameras/С€Р°Р±Р»РѕРѕРѕРѕРЅ.html
+guides-auto-electronics/headlight-monitoring-modes.html</small></td></tr><tr><td>39</td><td>контакты ноутбуки</td><td>1</td><td><small>guides-cameras/шаблоооон.html
 guides-smartphones/restore-deleted-contacts.html
 index.html
 guides-smartphones/charging-port-contacts-repair.html
@@ -878,14 +856,14 @@ guides-large-appliances/bosch-dryer-humidity-sensor-cleaning.html
 guides-large-appliances/ceiling-range-hood-motor-replacement.html
 guides-large-appliances/dishwasher-water-consumption-reduction-tips.html
 guides-large-appliances/microwave-burnt-smell-removal.html
-smartphones.html</small></td></tr><tr><td>40</td><td>РєРѕРЅС‚Р°РєС‚С‹ РёСЃРїРѕР»СЊР·СѓР№С‚Рµ</td><td>1</td><td><small>guides-smartphones/restore-deleted-contacts.html
+smartphones.html</small></td></tr><tr><td>40</td><td>контакты используйте</td><td>1</td><td><small>guides-smartphones/restore-deleted-contacts.html
 guides-auto-electronics/sensor-contacts-cleaning.html
 gaids/Dym ot sigarety ili kukhni osedayet na ekrane i vnutri televizora.html
 gaids/Osedaniye bol&#x27;shogo kolichestva pyli na platakh.html
 guides-smartphones/charging-port-contacts-repair.html
 gaids/Na ekrane popali bryzgi ot napitkov (chay, kofe, gazirovka).html
 gaids/Nastroyka proyektora dlya domashnego kinoteatra.html
-guides-cameras/С€Р°Р±Р»РѕРѕРѕРѕРЅ.html
+guides-cameras/шаблоооон.html
 gaids/Ne rabotayet AirPlay ili Miracast.html
 gaids/Povredili nozhku ili krepleniye na stene.html</small></td><td><small>gaids/Kak khranit&#x27; proyektor, yesli ne ispol&#x27;zuyetsya.html
 gaids/Optimal&#x27;nyye usloviya ekspluatatsii proyektora.html
@@ -896,7 +874,7 @@ guides-large-appliances/fridge-repair-after-flood.html
 guides-auto-electronics/sensor-contacts-cleaning.html
 gaids/Kak-ispolzovat-LED-panel-dlya-fotosemki.html
 guides-large-appliances/dishwasher-water-consumption-reduction-tips.html
-guides-cameras/histogram.html</small></td></tr><tr><td>41</td><td>С„РѕС‚РѕР°РїРїР°СЂР°С‚С‹ С‚РµС…РЅРёРєР°</td><td>1</td><td><small>guides-cameras/С€Р°Р±Р»РѕРѕРѕРѕРЅ.html
+guides-cameras/histogram.html</small></td></tr><tr><td>41</td><td>фотоаппараты техника</td><td>1</td><td><small>guides-cameras/шаблоооон.html
 index.html
 gaids/Podklyucheniye LED paneli k elektroseti skhema i bezopasnost.html
 gaids/Ustanovka LED-paneli s pomoshch&#x27;yu trosov (podvesnoy variant).html
@@ -914,7 +892,7 @@ guides-cameras/Pochemu fotoapparat pishet Oshibka ob&#x27;ektiva.html
 guides-cameras/Kak podklyuchit fotoapparat k teleskopu.html
 guides-cameras/hdr-processing.html
 guides-cameras/Kak vybrat fotoapparat dlya videobloginga.html
-guides-cameras/Pochemu fotoapparat ne vklyuchaetsya posle padeniya.html</small></td></tr><tr><td>42</td><td>С„РѕС‚РѕР°РїРїР°СЂР°С‚С‹ РіР»Р°РІРЅР°СЏ</td><td>0</td><td><small>guides-cameras/С€Р°Р±Р»РѕРѕРѕРѕРЅ.html
+guides-cameras/Pochemu fotoapparat ne vklyuchaetsya posle padeniya.html</small></td></tr><tr><td>42</td><td>фотоаппараты главная</td><td>0</td><td><small>guides-cameras/шаблоооон.html
 gaids/Podklyucheniye LED paneli k elektroseti skhema i bezopasnost.html
 gaids/Ustanovka LED-paneli s pomoshch&#x27;yu trosov (podvesnoy variant).html
 gaids/Kak zakrepit&#x27; LED-panel&#x27; na stene.html
@@ -932,7 +910,7 @@ guides-cameras/Pochemu fotoapparat ne fokusiruyetsya.html
 guides-cameras/Kak nastroit&#x27; fotoapparat dlya.html
 guides-cameras/Pochemu fotoapparat delayet razmytye foto.html
 guides-large-appliances/electronic-board-alternative-compatibility-guide.html
-guides-cameras/Kakoy fotoapparat luchshe dlya novichka.html</small></td></tr><tr><td>43</td><td>С„РѕС‚РѕР°РїРїР°СЂР°С‚С‹ РЅРѕСѓС‚Р±СѓРєРё</td><td>0</td><td><small>guides-cameras/С€Р°Р±Р»РѕРѕРѕРѕРЅ.html
+guides-cameras/Kakoy fotoapparat luchshe dlya novichka.html</small></td></tr><tr><td>43</td><td>фотоаппараты ноутбуки</td><td>0</td><td><small>guides-cameras/шаблоооон.html
 index.html
 gaids/Podklyucheniye LED paneli k elektroseti skhema i bezopasnost.html
 gaids/Ustanovka LED-paneli s pomoshch&#x27;yu trosov (podvesnoy variant).html
@@ -950,10 +928,10 @@ guides-cameras/Chto delat esli fotoapparat ne raspoznaet obektiv.html
 guides-cameras/Pochemu fotoapparat ne fokusiruetsya cherez steklo.html
 guides-cameras/Chto delat esli fotoapparat ne vidit kartu pamyati.html
 guides-cameras/Kakoy fotoapparat luchshe dlya novichka.html
-guides-smartphones/hardware-security-keys.html</small></td></tr><tr><td>44</td><td>С„РѕС‚РѕР°РїРїР°СЂР°С‚С‹ РёСЃРїРѕР»СЊР·СѓР№С‚Рµ</td><td>0</td><td><small>gaids/Dym ot sigarety ili kukhni osedayet na ekrane i vnutri televizora.html
+guides-smartphones/hardware-security-keys.html</small></td></tr><tr><td>44</td><td>фотоаппараты используйте</td><td>0</td><td><small>gaids/Dym ot sigarety ili kukhni osedayet na ekrane i vnutri televizora.html
 gaids/Osedaniye bol&#x27;shogo kolichestva pyli na platakh.html
 gaids/Na ekrane popali bryzgi ot napitkov (chay, kofe, gazirovka).html
-guides-cameras/С€Р°Р±Р»РѕРѕРѕРѕРЅ.html
+guides-cameras/шаблоооон.html
 gaids/Nastroyka proyektora dlya domashnego kinoteatra.html
 guides-cameras/macro-lenses.html
 gaids/Povredili nozhku ili krepleniye na stene.html
@@ -968,7 +946,7 @@ gaids/Optimal&#x27;nyye usloviya ekspluatatsii proyektora.html
 guides-cameras/Chto delat esli fotoapparat zavisayet.html
 guides-cameras/Pochemu fotoapparat ne vklyuchaetsya posle padeniya.html
 guides-large-appliances/ceiling-range-hood-motor-replacement.html
-guides-cameras/Kak nastroit fotoapparat dlya semki v IR-spektre.html</small></td></tr><tr><td>45</td><td>С„РѕС‚РѕР°РїРїР°СЂР°С‚С‹ С‚РµР»РµРІРёР·РѕСЂС‹</td><td>0</td><td><small>guides-cameras/С€Р°Р±Р»РѕРѕРѕРѕРЅ.html
+guides-cameras/Kak nastroit fotoapparat dlya semki v IR-spektre.html</small></td></tr><tr><td>45</td><td>фотоаппараты телевизоры</td><td>0</td><td><small>guides-cameras/шаблоооон.html
 index.html
 gaids/Podklyucheniye LED paneli k elektroseti skhema i bezopasnost.html
 gaids/Ustanovka LED-paneli s pomoshch&#x27;yu trosov (podvesnoy variant).html
@@ -986,7 +964,7 @@ tv.html
 guides-cameras/Kakoy fotoapparat luchshe dlya novichka.html
 gaids/Popali myachom, igrushkoy ili drugim predmetom.html
 guides-cameras/Pochemu fotoapparat peregrevayetsya pri zapisi video.html
-guides-cameras/Pochemu fotoapparat ne vidit ob&#x27;ektiv.html</small></td></tr><tr><td>46</td><td>С‚РµС…РЅРёРєР° РіР»Р°РІРЅР°СЏ</td><td>0</td><td><small>guides-cameras/С€Р°Р±Р»РѕРѕРѕРѕРЅ.html
+guides-cameras/Pochemu fotoapparat ne vidit ob&#x27;ektiv.html</small></td></tr><tr><td>46</td><td>техника главная</td><td>0</td><td><small>guides-cameras/шаблоооон.html
 index.html
 gaids/Podklyucheniye LED paneli k elektroseti skhema i bezopasnost.html
 gaids/Ustanovka LED-paneli s pomoshch&#x27;yu trosov (podvesnoy variant).html
@@ -1004,7 +982,7 @@ guides-auto-electronics/tracker-features.html
 guides-large-appliances/refrigerant-pressure-check-without-manometer.html
 gaids/Zamena i kalibrovka linz.html
 guides-large-appliances/washing-machine-pressure-sensor-replacement.html
-guides-large-appliances/temporary-dishwasher-drain-setup.html</small></td></tr><tr><td>47</td><td>С‚РµС…РЅРёРєР° РЅРѕСѓС‚Р±СѓРєРё</td><td>1</td><td><small>guides-cameras/С€Р°Р±Р»РѕРѕРѕРѕРЅ.html
+guides-large-appliances/temporary-dishwasher-drain-setup.html</small></td></tr><tr><td>47</td><td>техника ноутбуки</td><td>1</td><td><small>guides-cameras/шаблоооон.html
 index.html
 laptops.html
 gaids/Podklyucheniye LED paneli k elektroseti skhema i bezopasnost.html
@@ -1022,10 +1000,10 @@ guides-large-appliances/refrigerator-bubbling-noise.html
 gaids/Haier Smart TV S8000Net izobrazheniya, no yest&#x27; zvuk.html
 gaids/Mertsaniye ekrana pri nizkoy yarkosti.html
 guides-cameras/Fototekhnika dlya vulkanologov.html
-guides-large-appliances/refrigerator-lights-but-not-cooling.html</small></td></tr><tr><td>48</td><td>С‚РµС…РЅРёРєР° РёСЃРїРѕР»СЊР·СѓР№С‚Рµ</td><td>0</td><td><small>gaids/Dym ot sigarety ili kukhni osedayet na ekrane i vnutri televizora.html
+guides-large-appliances/refrigerator-lights-but-not-cooling.html</small></td></tr><tr><td>48</td><td>техника используйте</td><td>0</td><td><small>gaids/Dym ot sigarety ili kukhni osedayet na ekrane i vnutri televizora.html
 gaids/Osedaniye bol&#x27;shogo kolichestva pyli na platakh.html
 gaids/Na ekrane popali bryzgi ot napitkov (chay, kofe, gazirovka).html
-guides-cameras/С€Р°Р±Р»РѕРѕРѕРѕРЅ.html
+guides-cameras/шаблоооон.html
 gaids/Nastroyka proyektora dlya domashnego kinoteatra.html
 gaids/Povredili nozhku ili krepleniye na stene.html
 gaids/Ne rabotayet AirPlay ili Miracast.html
@@ -1040,7 +1018,7 @@ guides-large-appliances/kitchen-hood-filter-replacement.html
 guides-cameras/live-view.html
 guides-large-appliances/coffee-machine-filter-replacement.html
 guides-consoles/kakie-monitory-ispolzuyut-kibersportsmeny.html
-gaids/Ustanovka LED-paneli s pul&#x27;tom DU.html</small></td></tr><tr><td>49</td><td>С‚РµС…РЅРёРєР° С‚РµР»РµРІРёР·РѕСЂС‹</td><td>0</td><td><small>guides-cameras/С€Р°Р±Р»РѕРѕРѕРѕРЅ.html
+gaids/Ustanovka LED-paneli s pul&#x27;tom DU.html</small></td></tr><tr><td>49</td><td>техника телевизоры</td><td>0</td><td><small>guides-cameras/шаблоооон.html
 index.html
 gaids/Podklyucheniye LED paneli k elektroseti skhema i bezopasnost.html
 gaids/Ustanovka LED-paneli s pomoshch&#x27;yu trosov (podvesnoy variant).html
@@ -1058,11 +1036,11 @@ gaids/Kondensat v televizore iz-za rezkogo perepada temperatury.html
 gaids/Osedaniye bol&#x27;shogo kolichestva pyli na platakh.html
 gaids/Popali myachom, igrushkoy ili drugim predmetom.html
 gaids/Razbili matritsu udarom.html
-gaids/Ekran televizora migayet.html</small></td></tr><tr><td>50</td><td>С‚РµС…РЅРёРєР° РїСЂРёСЃС‚Р°РІРєРё</td><td>3</td><td><small>gaids/Nesovmestimost&#x27; razresheniya TV pristavki kak vystavit&#x27; 720p 1080p.html
+gaids/Ekran televizora migayet.html</small></td></tr><tr><td>50</td><td>техника приставки</td><td>3</td><td><small>gaids/Nesovmestimost&#x27; razresheniya TV pristavki kak vystavit&#x27; 720p 1080p.html
 gaids/Nesovmestimost&#x27; pristavki s chastotoy 5 GGts.html
 gaids/Net signala na televizore ot TV-pristavki Android TV Box.html
 gaids/Sleteli nastroyki kanalov TV-pristavki.html
-guides-cameras/С€Р°Р±Р»РѕРѕРѕРѕРЅ.html
+guides-cameras/шаблоооон.html
 index.html
 gaids/Neispravnost&#x27; HDMI-kabelya TV-pristavki MAG.html
 gaids/Plokhoy kontaktnyy kabel&#x27; TV-pristavki Android TV Box.html
@@ -1077,43 +1055,32 @@ gaids/Mertsaniye ekrana pri nizkoy yarkosti.html
 guides-large-appliances/range-hood-light-flicker-issue.html
 gaids/Televizor izdayet strannyye zvuki (zhuzhzheniye, uchenyye) Hayer S8000.html
 gaids/Net signala na televizore ot TV-pristavki Android TV Box.html</small></td></tr></table>
-        <!-- РЇРЅРґРµРєСЃ РњР°СЂРєРµС‚ СЂРµРєР»Р°РјРЅС‹Р№ Р±Р»РѕРє -->
+        <!-- Яндекс Маркет рекламный блок -->
         <a href="https://market.yandex.ru/catalog--bytovaia-tekhnika/54419/list?hid=198118&rs=eJwzUvjEKMvBILDwEKsEg8Kzbh6Nw4dZNS4D8c7lFhp9c1-wAQC3uAwP&clid=14635360&refid=rbck8fgamv681iu59go3iqxwddedl4x9&erid=5jtCeReNx12oajxS2bzShmZ&mclid=1003&distr_type=7&utm_source=partner_network&pp=900&utm_medium=link_list&utm_campaign=14635360"
            target="_blank"
            rel="noopener noreferrer sponsored"
-           class="ym-hero-link">
-          <div class="ym-hero-banner">
-            <div class="ym-hero-images">
-              <div class="ym-hero-image">
                 <img src="https://avatars.mds.yandex.net/get-mpic/14770882/2a00000197f4dbee777f8afddccaf44faa53/optimize"
-                     alt="Р Р°СЃРїСЂРѕРґР°Р¶Р° Р±С‹С‚РѕРІРѕР№ СЌР»РµРєС‚СЂРѕРЅРёРєРё 1">
+                     alt="Распродажа бытовой электроники 1">
               </div>
-              <div class="ym-hero-image">
                 <img src="https://avatars.mds.yandex.net/get-mpic/15580298/img_id8867318964670654684.jpeg/optimize"
-                     alt="Р Р°СЃРїСЂРѕРґР°Р¶Р° Р±С‹С‚РѕРІРѕР№ СЌР»РµРєС‚СЂРѕРЅРёРєРё 2">
+                     alt="Распродажа бытовой электроники 2">
               </div>
-              <div class="ym-hero-image">
                 <img src="https://avatars.mds.yandex.net/get-mpic/10096780/2a000001953b534fed2494e0b30fadd9b458/optimize"
-                     alt="Р Р°СЃРїСЂРѕРґР°Р¶Р° Р±С‹С‚РѕРІРѕР№ СЌР»РµРєС‚СЂРѕРЅРёРєРё 3">
+                     alt="Распродажа бытовой электроники 3">
               </div>
             </div>
-            <div class="ym-hero-content">
-              <h3 class="ym-hero-title">Р Р°СЃРїСЂРѕРґР°Р¶Р° Р±С‹С‚РѕРІРѕР№ СЌР»РµРєС‚СЂРѕРЅРёРєРё РЅР° РЇРЅРґРµРєСЃ РњР°СЂРєРµС‚Рµ</h3>
-              <div class="ym-hero-top">
-                <div class="ym-hero-rating">
-                  в­ђ Р’С‹РіРѕРґРЅС‹Рµ РїСЂРµРґР»РѕР¶РµРЅРёСЏ
-                  <span class="ym-hero-rating-count">РЎРєРёРґРєРё РґРѕ 50%</span>
+                  ? Выгодные предложения
                 </div>
               </div>
-              <button class="ym-hero-button">Р—Р° СЃРєРёРґРєР°РјРё</button>
             </div>
           </div>
-          <div class="ym-hero-legal">
-            Р РµРєР»Р°РјР°. РћРћРћ "РЇРќР”Р•РљРЎ", РРќРќ 7736207543. clid: 14635360, erid: 5jtCeReNx12oajxS2bzShmZ
+            Реклама. ООО "ЯНДЕКС", ИНН 7736207543. clid: 14635360, erid: 5jtCeReNx12oajxS2bzShmZ
           </div>
         </a>
 
     <link rel="stylesheet" href="./styles.css">
     <!-- Cookie Consent Script -->
     <script src="cookie-consent.js"></script>
+
+
 

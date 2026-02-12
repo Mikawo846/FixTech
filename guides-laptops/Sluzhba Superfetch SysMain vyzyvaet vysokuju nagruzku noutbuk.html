@@ -4,9 +4,8 @@
 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>РЎР»СѓР¶Р±Р° Superfetch SysMain РІС‹Р·С‹РІР°РµС‚ РІС‹СЃРѕРєСѓСЋ РЅР°РіСЂСѓР·РєСѓ РЅР° РЅРѕСѓС‚Р±СѓРєРµ | Р РµС€РµРЅРёРµ РїСЂРѕР±Р»РµРјС‹</title>
-    <meta name="description" content="{{ description }}">
-    <meta name="description" content="РЎР»СѓР¶Р±Р° Superfetch SysMain РІС‹Р·С‹РІР°РµС‚ РІС‹СЃРѕРєСѓСЋ РЅР°РіСЂСѓР·РєСѓ РЅР° РЅРѕСѓС‚Р±СѓРєРµ. РџСЂРёС‡РёРЅС‹ РІС‹СЃРѕРєРѕР№ РЅР°РіСЂСѓР·РєРё РѕС‚ SysMain Рё СЃРїРѕСЃРѕР±С‹ РёСЃРїСЂР°РІР»РµРЅРёСЏ РїСЂРѕР±Р»РµРј СЃ РїСЂРѕРёР·РІРѕРґРёС‚РµР»СЊРЅРѕСЃС‚СЊСЋ РЅР° РЅРѕСѓС‚Р±СѓРєРµ.">
+  <title>Служба Superfetch SysMain вызывает высокую нагрузку на ноутб</title>
+    <meta name="description" content="">
 
   <link rel="stylesheet" href="../styles.css" />
   <link rel="stylesheet" href="../styles-header.css" />
@@ -25,262 +24,541 @@
     table { width: 100%; border-collapse: collapse; margin: 20px 0; }
     th, td { border: 1px solid var(--border); padding: 8px; text-align: left; }
     th { background: var(--background-light); }
+    .highlight { background: #f5f7fa; border-left: 4px solid #2d9cdb; padding: 10px 15px; margin: 20px 0; }
+    .faq-section ul { margin-left: 1em; }
+    .block-section { margin-bottom: 2em; }
     @media (max-width: 768px) {
       .guide-content h2 { font-size: 1.4rem; margin-top: 25px; }
       .guide-image-block { padding: 12px; margin: 15px 0; }
       table, th, td { font-size: 0.95rem; }
     }
-  </style>
+    /* Р“РѕСЂРёР·РѕРЅС‚Р°Р»СЊРЅС‹Р№ Р±Р°РЅРЅРµСЂ-РєР°СЂС‚РѕС‡РєР° */
+    .ym-hero-banner {
+      width: 100%;
+      max-width: 600px;
+      min-height: 140px;
+      border-radius: 16px;
+      background: #ffffff;
+      border: 1px solid #e5e7eb;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 4px 16px rgba(15, 23, 42, 0.08);
+      overflow: hidden;
+      box-sizing: border-box;
+      margin: 40px auto;
+    }
 
+    /* РљРѕРЅС‚РµР№РЅРµСЂ РґР»СЏ РёР·РѕР±СЂР°Р¶РµРЅРёР№ */
+    .ym-hero-images {
+      display: flex;
+      height: 120px;
+      overflow: hidden;
+    }
+
+    .ym-hero-image {
+      flex: 1;
+      min-width: 0;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      border-right: 1px solid #e5e7eb;
+      background: #f8f9fa;
+    }
+
+    .ym-hero-image:last-child {
+      border-right: none;
+    }
+
+    .ym-hero-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      transition: transform 0.3s ease;
+      background: #f8f9fa;
+    }
+
+    .ym-hero-image:hover img {
+      transform: scale(1.02);
+    }
+
+    /* РџСЂР°РІР°СЏ С‡Р°СЃС‚СЊ: РєРѕРЅС‚РµРЅС‚ */
+    .ym-hero-content {
+      padding: 16px 18px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 8px;
+    }
+
+    /* РќР°Р·РІР°РЅРёРµ С‚РѕРІР°СЂР° */
+    .ym-hero-title {
+      font-size: 14px;
+      font-weight: 600;
+      color: #111827;
+      line-height: 1.3;
+      margin: 0 0 4px 0;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    /* Р РµР№С‚РёРЅРі */
+    .ym-hero-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+    }
+
+    .ym-hero-rating {
+      font-size: 13px;
+      font-weight: 500;
+      color: #111827;
+      background: #f9fafb;
+      border-radius: 999px;
+      padding: 4px 10px;
+    }
+
+    .ym-hero-rating-count {
+      color: #6b7280;
+    }
+
+    /* Р¤РёРѕР»РµС‚РѕРІР°СЏ РєРЅРѕРїРєР° */
+    .ym-hero-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 9px 16px;
+      border-radius: 999px;
+      border: none;
+      background: #6a00ff;
+      color: #ffffff;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 2px 6px rgba(88, 28, 135, 0.35);
+      transition: background 0.15s ease, transform 0.15s ease,
+                  box-shadow 0.15s ease;
+    }
+    .ym-hero-button::after {
+      content: "в†’";
+      margin-left: 6px;
+      font-size: 14px;
+    }
+    .ym-hero-button:hover {
+      background: #7c3aed;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 10px rgba(88, 28, 135, 0.45);
+    }
+
+    /* Р®СЂРёРґРёС‡РµСЃРєРёР№ Р±Р»РѕРє */
+    .ym-hero-legal {
+      margin-top: 6px;
+      max-width: 600px;
+      font-size: 11px;
+      line-height: 1.3;
+      color: #6b7280;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* РђРґР°РїС‚РёРІ */
+    @media (max-width: 480px) {
+      .ym-hero-banner {
+        max-width: 100%;
+        margin: 20px 0;
+      }
+      .ym-hero-images {
+        height: 100px;
+      }
+      .ym-hero-content {
+        padding: 12px 12px;
+      }
+      .ym-hero-title {
+        font-size: 13px;
+      }
+      .ym-hero-button {
+        font-size: 13px;
+        padding: 8px 14px;
+      }
+      .ym-hero-legal {
+        font-size: 10px;
+      }
+    }
+    /* Telegram СЂРµРєР»Р°РјРЅС‹Р№ Р±Р°РЅРЅРµСЂ */
+    .telegram-banner {
+      display: flex;
+      justify-content: center;
+      text-decoration: none;
+      color: inherit;
+      width: 100%;
+      margin: 40px 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    .telegram-banner-container {
+      width: 100%;
+      max-width: 500px;
+      min-height: 120px;
+      border-radius: 16px;
+      background: linear-gradient(135deg, #0088cc 0%, #005f8f 100%);
+      border: 1px solid #005f8f;
+      display: flex;
+      align-items: center;
+      padding: 20px;
+      box-shadow: 0 4px 16px rgba(0, 136, 204, 0.2);
+      overflow: hidden;
+      box-sizing: border-box;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .telegram-banner-container:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0, 136, 204, 0.3);
+    }
+
+    .telegram-logo {
+      width: 60px;
+      height: 60px;
+      min-width: 60px;
+      background: #ffffff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 20px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .telegram-logo svg {
+      width: 32px;
+      height: 32px;
+      fill: #0088cc;
+    }
+
+    .telegram-content {
+      flex: 1;
+      color: #ffffff;
+    }
+
+    .telegram-title {
+      font-size: 16px;
+      font-weight: 600;
+      margin: 0 0 8px 0;
+      line-height: 1.3;
+    }
+
+    .telegram-subtitle {
+      font-size: 14px;
+      opacity: 0.9;
+      margin: 0 0 12px 0;
+      line-height: 1.4;
+    }
+
+    .telegram-button {
+      display: inline-flex;
+      align-items: center;
+      padding: 8px 16px;
+      background: #ffffff;
+      color: #0088cc;
+      border-radius: 20px;
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background 0.2s ease, transform 0.2s ease;
+    }
+
+    .telegram-button:hover {
+      background: #f0f8ff;
+      transform: scale(1.05);
+    }
+
+    .telegram-button svg {
+      width: 16px;
+      height: 16px;
+      margin-left: 6px;
+      fill: #0088cc;
+    }
+
+    /* РђРґР°РїС‚РёРІ РґР»СЏ РјРѕР±РёР»СЊРЅС‹С… */
+    @media (max-width: 480px) {
+      .telegram-banner-container {
+        max-width: 100%;
+        margin: 20px 0;
+        padding: 15px;
+        min-height: 100px;
+      }
+      .telegram-logo {
+        width: 50px;
+        height: 50px;
+        min-width: 50px;
+        margin-right: 15px;
+      }
+      .telegram-logo svg {
+        width: 26px;
+        height: 26px;
+      }
+      .telegram-title {
+        font-size: 14px;
+      }
+      .telegram-subtitle {
+        font-size: 12px;
+      }
+      .telegram-button {
+        font-size: 12px;
+        padding: 6px 12px;
+      }
+    }
+
+
+
+  </style>
+  <script async src="https://timeweb.cloud/api/v1/cloud-ai/agents/3cc03620-d051-4d8d-b5af-f7b6cd083a35/embed.js?collapsed=true"></script>
 </head>
 <body>
-    <header class="header">
-        <div class="container">
-            <div class="header__inner">
-                <a href="../index.html" class="logo">
-                    <span class="logo__icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12 15L7 10H17L12 15Z" fill="currentColor"/>
-                            <path d="M12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3ZM12 19C8.13401 19 5 15.866 5 12C5 8.13401 8.13401 5 12 5C15.866 5 19 8.13401 19 12C19 15.866 15.866 19 12 19Z" fill="currentColor"/>
-                        </svg>
-                    </span>
-                    <span class="logo__text">Repairo</span>
-                </a>
-                <nav class="nav">
-                    <ul class="nav__list">
-                       <li><a href="../tv.html" class="nav__link">РўРµР»РµРІРёР·РѕСЂС‹</a></li>
-                        <li><a href="../auto-electronics.html" class="nav__link">РђРІС‚РѕСЌР»РµРєС‚СЂРѕРЅРёРєР°</a></li>
-                        <li><a href="../consoles.html" class="nav__link">РџСЂРёСЃС‚Р°РІРєРё</a></li>
-                        <li><a href="../laptops.html" class="nav__link">РќРѕСѓС‚Р±СѓРєРё</a></li>
-                        <li><a href="../smartphones.html" class="nav__link">РЎРјР°СЂС‚С„РѕРЅС‹</a></li>
-                        <li><a href="../index.html#categories" class="nav__link">Р’СЃРµ РєР°С‚РµРіРѕСЂРёРё</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
-    </header>
+  <header class="header">
+    <div class="container">
+      <div class="header__inner">
+        <a href="../index.html" class="logo">
+          <span class="logo__icon"></span>
+          <span class="logo__text">GeoExpert</span>
+        </a>
+        <nav class="nav">
+          <ul class="nav__list">
+            <li><a href="../cameras.html" class="nav__link">РљР°РјРµСЂС‹</a></li>
+            <li><a href="../drones.html" class="nav__link">Р”СЂРѕРЅС‹</a></li>
+            <li><a href="../workflow.html" class="nav__link">Workflow</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
 
     <main class="container">
         <div class="guide-content">
-            <h1>РЎР»СѓР¶Р±Р° Superfetch SysMain РІС‹Р·С‹РІР°РµС‚ РІС‹СЃРѕРєСѓСЋ РЅР°РіСЂСѓР·РєСѓ РЅР° РЅРѕСѓС‚Р±СѓРєРµ</h1>
-            <p>РџСЂРѕР±Р»РµРјР° "РЎР»СѓР¶Р±Р° Superfetch SysMain РІС‹Р·С‹РІР°РµС‚ РІС‹СЃРѕРєСѓСЋ РЅР°РіСЂСѓР·РєСѓ" СѓРєР°Р·С‹РІР°РµС‚ РЅР° С‡СЂРµР·РјРµСЂРЅРѕРµ РёСЃРїРѕР»СЊР·РѕРІР°РЅРёРµ СЂРµСЃСѓСЂСЃРѕРІ СЃРёСЃС‚РµРјРѕР№ РѕРїС‚РёРјРёР·Р°С†РёРё. Р’ СЌС‚РѕРј РїРѕРґСЂРѕР±РЅРѕРј СЂСѓРєРѕРІРѕРґСЃС‚РІРµ РјС‹ СЂР°Р·Р±РµСЂРµРј РїСЂРёС‡РёРЅС‹ СЌС‚РѕР№ РїСЂРѕР±Р»РµРјС‹ Рё СЌС„С„РµРєС‚РёРІРЅС‹Рµ СЃРїРѕСЃРѕР±С‹ РµРµ РёСЃРїСЂР°РІР»РµРЅРёСЏ РґР»СЏ РЅРѕСѓС‚Р±СѓРєРѕРІ.</p>
+            <h1>Служба Superfetch SysMain вызывает высокую нагрузку на ноутбуке</h1>
+            <p>Проблема "Служба Superfetch SysMain вызывает высокую нагрузку" указывает на чрезмерное использование ресурсов системой оптимизации. В этом подробном руководстве мы разберем причины этой проблемы и эффективные способы ее исправления для ноутбуков.</p>
 
-            <h2>Р§С‚Рѕ РѕР·РЅР°С‡Р°РµС‚ РІС‹СЃРѕРєР°СЏ РЅР°РіСЂСѓР·РєР° РѕС‚ SysMain</h2>
-            <p>SysMain (СЂР°РЅРµРµ Superfetch) - СЃР»СѓР¶Р±Р°, РѕРїС‚РёРјРёР·РёСЂСѓСЋС‰Р°СЏ РїСЂРѕРёР·РІРѕРґРёС‚РµР»СЊРЅРѕСЃС‚СЊ СЃРёСЃС‚РµРјС‹.</p>
-            <h3>РўРµС…РЅРёС‡РµСЃРєРѕРµ РѕР±СЉСЏСЃРЅРµРЅРёРµ</h3>
+            <h2>Что означает высокая нагрузка от SysMain</h2>
+            <p>SysMain (ранее Superfetch) - служба, оптимизирующая производительность системы.</p>
+            <h3>Техническое объяснение</h3>
             <ul>
-                <li><strong>РџСЂРёС‡РёРЅР°:</strong> Р§СЂРµР·РјРµСЂРЅР°СЏ Р°РєС‚РёРІРЅРѕСЃС‚СЊ СЃР»СѓР¶Р±С‹ РѕРїС‚РёРјРёР·Р°С†РёРё</li>
-                <li><strong>Р’Р»РёСЏРЅРёРµ:</strong> Р’С‹СЃРѕРєР°СЏ РЅР°РіСЂСѓР·РєР° РЅР° CPU Рё РґРёСЃРє</li>
-                <li><strong>Р§Р°СЃС‚Рѕ СЃРІСЏР·Р°РЅРѕ:</strong> РЎ SSD РґРёСЃРєР°РјРё РёР»Рё РїРѕРІСЂРµР¶РґРµРЅРЅС‹РјРё С„Р°Р№Р»Р°РјРё</li>
-                <li><strong>Р РµР·СѓР»СЊС‚Р°С‚:</strong> Р—Р°РјРµРґР»РµРЅРёРµ СЂР°Р±РѕС‚С‹ СЃРёСЃС‚РµРјС‹</li>
+                <li><strong>Причина:</strong> Чрезмерная активность службы оптимизации</li>
+                <li><strong>Влияние:</strong> Высокая нагрузка на CPU и диск</li>
+                <li><strong>Часто связано:</strong> С SSD дисками или поврежденными файлами</li>
+                <li><strong>Результат:</strong> Замедление работы системы</li>
             </ul>
 
-            <h3>Р’Р»РёСЏРЅРёРµ РЅР° СЃРёСЃС‚РµРјСѓ</h3>
+            <h3>Влияние на систему</h3>
             <ul>
-                <li>Р’С‹СЃРѕРєР°СЏ РЅР°РіСЂСѓР·РєР° РЅР° РїСЂРѕС†РµСЃСЃРѕСЂ</li>
-                <li>Р—Р°РјРµРґР»РµРЅРёРµ СЂР°Р±РѕС‚С‹ РїСЂРёР»РѕР¶РµРЅРёР№</li>
-                <li>РџРѕРІС‹С€РµРЅРЅРѕРµ РїРѕС‚СЂРµР±Р»РµРЅРёРµ СЌРЅРµСЂРіРёРё</li>
-                <li>РЁСѓРј РѕС‚ РІРµРЅС‚РёР»СЏС‚РѕСЂРѕРІ</li>
+                <li>Высокая нагрузка на процессор</li>
+                <li>Замедление работы приложений</li>
+                <li>Повышенное потребление энергии</li>
+                <li>Шум от вентиляторов</li>
             </ul>
 
-            <h2>Р Р°СЃРїСЂРѕСЃС‚СЂР°РЅРµРЅРЅС‹Рµ РїСЂРёС‡РёРЅС‹</h2>
-            <p>РџРѕС‡РµРјСѓ SysMain РІС‹Р·С‹РІР°РµС‚ РІС‹СЃРѕРєСѓСЋ РЅР°РіСЂСѓР·РєСѓ.</p>
-            <h3>РћСЃРѕР±РµРЅРЅРѕСЃС‚Рё SSD РґРёСЃРєРѕРІ</h3>
+            <h2>Распространенные причины</h2>
+            <p>Почему SysMain вызывает высокую нагрузку.</p>
+            <h3>Особенности SSD дисков</h3>
             <ul>
-                <li><strong>TRIM РѕС‚РєР»СЋС‡РµРЅ:</strong> РЎР»СѓР¶Р±Р° РЅРµ РЅСѓР¶РЅР° РґР»СЏ SSD</li>
-                <li><strong>Р¤СЂР°РіРјРµРЅС‚Р°С†РёСЏ:</strong> РџРѕРїС‹С‚РєРё РѕРїС‚РёРјРёР·Р°С†РёРё SSD</li>
-                <li><strong>Р‘С‹СЃС‚СЂР°СЏ Р·Р°РіСЂСѓР·РєР°:</strong> РљРѕРЅС„Р»РёРєС‚ СЃ РіРёР±РµСЂРЅР°С†РёРµР№</li>
-                <li><strong>РћР±РЅРѕРІР»РµРЅРёСЏ:</strong> РџРѕСЃР»Рµ СѓСЃС‚Р°РЅРѕРІРєРё РѕР±РЅРѕРІР»РµРЅРёР№ Windows</li>
+                <li><strong>TRIM отключен:</strong> Служба не нужна для SSD</li>
+                <li><strong>Фрагментация:</strong> Попытки оптимизации SSD</li>
+                <li><strong>Быстрая загрузка:</strong> Конфликт с гибернацией</li>
+                <li><strong>Обновления:</strong> После установки обновлений Windows</li>
             </ul>
 
-            <h3>РџРѕРІСЂРµР¶РґРµРЅРЅС‹Рµ С„Р°Р№Р»С‹</h3>
+            <h3>Поврежденные файлы</h3>
             <ul>
-                <li><strong>РџРѕРІСЂРµР¶РґРµРЅРЅС‹Р№ РєСЌС€:</strong> РћС€РёР±РєРё РІ С„Р°Р№Р»Р°С… РѕРїС‚РёРјРёР·Р°С†РёРё</li>
-                <li><strong>Р’РёСЂСѓСЃС‹:</strong> Р’СЂРµРґРѕРЅРѕСЃРЅРѕРµ РџРћ РїРѕРІСЂРµР¶РґР°РµС‚ СЃР»СѓР¶Р±Сѓ</li>
-                <li><strong>РљРѕРЅС„Р»РёРєС‚С‹:</strong> РќРµСЃРѕРІРјРµСЃС‚РёРјРѕРµ РџРћ</li>
-                <li><strong>РћР±РЅРѕРІР»РµРЅРёСЏ:</strong> РџСЂРѕР±Р»РµРјС‹ РїРѕСЃР»Рµ РѕР±РЅРѕРІР»РµРЅРёР№</li>
+                <li><strong>Поврежденный кэш:</strong> Ошибки в файлах оптимизации</li>
+                <li><strong>Вирусы:</strong> Вредоносное ПО повреждает службу</li>
+                <li><strong>Конфликты:</strong> Несовместимое ПО</li>
+                <li><strong>Обновления:</strong> Проблемы после обновлений</li>
             </ul>
 
-            <h3>РќР°СЃС‚СЂРѕР№РєРё СЃРёСЃС‚РµРјС‹</h3>
+            <h3>Настройки системы</h3>
             <ul>
-                <li><strong>РђРІС‚РѕР·Р°РіСЂСѓР·РєР°:</strong> РЎР»РёС€РєРѕРј РјРЅРѕРіРѕ РїСЂРѕРіСЂР°РјРј</li>
-                <li><strong>РќРµРґРѕСЃС‚Р°С‚РѕРє РїР°РјСЏС‚Рё:</strong> РџРµСЂРµРїРѕР»РЅРµРЅРЅР°СЏ RAM</li>
-                <li><strong>Р¤РѕРЅРѕРІС‹Рµ РїСЂРѕС†РµСЃСЃС‹:</strong> РњРЅРѕРіРѕ СЃР»СѓР¶Р± СЂР°Р±РѕС‚Р°РµС‚</li>
-                <li><strong>Р”СЂР°Р№РІРµСЂС‹:</strong> РЈСЃС‚Р°СЂРµРІС€РёРµ РґСЂР°Р№РІРµСЂС‹</li>
+                <li><strong>Автозагрузка:</strong> Слишком много программ</li>
+                <li><strong>Недостаток памяти:</strong> Переполненная RAM</li>
+                <li><strong>Фоновые процессы:</strong> Много служб работает</li>
+                <li><strong>Драйверы:</strong> Устаревшие драйверы</li>
             </ul>
 
-            <h2>Р”РёР°РіРЅРѕСЃС‚РёРєР° РїСЂРѕР±Р»РµРјС‹</h2>
-            <p>РљР°Рє РѕРїСЂРµРґРµР»РёС‚СЊ РїСЂРёС‡РёРЅСѓ РІС‹СЃРѕРєРѕР№ РЅР°РіСЂСѓР·РєРё РѕС‚ SysMain.</p>
-            <h3>РџСЂРѕРІРµСЂРєР° РЅР°РіСЂСѓР·РєРё</h3>
-            <h4>Р”РёСЃРїРµС‚С‡РµСЂ Р·Р°РґР°С‡</h4>
+            <h2>Диагностика проблемы</h2>
+            <p>Как определить причину высокой нагрузки от SysMain.</p>
+            <h3>Проверка нагрузки</h3>
+            <h4>Диспетчер задач</h4>
             <ol>
-                <li>РќР°Р¶РјРёС‚Рµ Ctrl + Shift + Esc</li>
-                <li>РџРµСЂРµР№РґРёС‚Рµ РЅР° РІРєР»Р°РґРєСѓ "РџСЂРѕС†РµСЃСЃС‹"</li>
-                <li>РќР°Р№РґРёС‚Рµ "Service Host: SysMain"</li>
-                <li>РџРѕСЃРјРѕС‚СЂРёС‚Рµ РЅР° РёСЃРїРѕР»СЊР·РѕРІР°РЅРёРµ CPU Рё РґРёСЃРєР°</li>
-                <li>Р•СЃР»Рё РІС‹СЃРѕРєР°СЏ РЅР°РіСЂСѓР·РєР°, РїСЂРѕР±Р»РµРјР° СЃ СЃР»СѓР¶Р±РѕР№</li>
+                <li>Нажмите Ctrl + Shift + Esc</li>
+                <li>Перейдите на вкладку "Процессы"</li>
+                <li>Найдите "Service Host: SysMain"</li>
+                <li>Посмотрите на использование CPU и диска</li>
+                <li>Если высокая нагрузка, проблема с службой</li>
             </ol>
 
             <h4>Resource Monitor</h4>
             <ol>
-                <li>РћС‚РєСЂРѕР№С‚Рµ "Resource Monitor"</li>
-                <li>РџРѕСЃРјРѕС‚СЂРёС‚Рµ РЅР° РІРєР»Р°РґРєСѓ "Р”РёСЃРє"</li>
-                <li>РќР°Р№РґРёС‚Рµ РїСЂРѕС†РµСЃСЃС‹ СЃ РІС‹СЃРѕРєРѕР№ Р°РєС‚РёРІРЅРѕСЃС‚СЊСЋ</li>
-                <li>РџСЂРѕРІРµСЂСЊС‚Рµ, СЃРІСЏР·Р°РЅС‹ Р»Рё РѕРЅРё СЃ SysMain</li>
+                <li>Откройте "Resource Monitor"</li>
+                <li>Посмотрите на вкладку "Диск"</li>
+                <li>Найдите процессы с высокой активностью</li>
+                <li>Проверьте, связаны ли они с SysMain</li>
             </ol>
 
-            <h3>РџСЂРѕРІРµСЂРєР° РЅР°СЃС‚СЂРѕРµРє</h3>
+            <h3>Проверка настроек</h3>
             <ol>
-                <li>РћС‚РєСЂРѕР№С‚Рµ services.msc</li>
-                <li>РќР°Р№РґРёС‚Рµ "SysMain"</li>
-                <li>РџСЂРѕРІРµСЂСЊС‚Рµ С‚РёРї Р·Р°РїСѓСЃРєР°</li>
-                <li>Р•СЃР»Рё "РђРІС‚РѕРјР°С‚РёС‡РµСЃРєРёР№", СЃР»СѓР¶Р±Р° Р°РєС‚РёРІРЅР°</li>
+                <li>Откройте services.msc</li>
+                <li>Найдите "SysMain"</li>
+                <li>Проверьте тип запуска</li>
+                <li>Если "Автоматический", служба активна</li>
             </ol>
 
-            <h2>Р РµС€РµРЅРёРµ РїСЂРѕР±Р»РµРјС‹</h2>
-            <p>РњРµС‚РѕРґС‹ РёСЃРїСЂР°РІР»РµРЅРёСЏ РІС‹СЃРѕРєРѕР№ РЅР°РіСЂСѓР·РєРё РѕС‚ SysMain.</p>
-            <h3>РњРµС‚РѕРґ 1: РћС‚РєР»СЋС‡РµРЅРёРµ СЃР»СѓР¶Р±С‹</h3>
-            <h4>Р”Р»СЏ SSD РґРёСЃРєРѕРІ</h4>
+            <h2>Решение проблемы</h2>
+            <p>Методы исправления высокой нагрузки от SysMain.</p>
+            <h3>Метод 1: Отключение службы</h3>
+            <h4>Для SSD дисков</h4>
             <ol>
-                <li>РћС‚РєСЂРѕР№С‚Рµ services.msc</li>
-                <li>РќР°Р№РґРёС‚Рµ "SysMain"</li>
-                <li>Р©РµР»РєРЅРёС‚Рµ РїСЂР°РІРѕР№ РєРЅРѕРїРєРѕР№ в†’ "РЎРІРѕР№СЃС‚РІР°"</li>
-                <li>РР·РјРµРЅРёС‚Рµ С‚РёРї Р·Р°РїСѓСЃРєР° РЅР° "РћС‚РєР»СЋС‡РµРЅРѕ"</li>
-                <li>РћСЃС‚Р°РЅРѕРІРёС‚Рµ СЃР»СѓР¶Р±Сѓ</li>
-                <li>РџРµСЂРµР·Р°РіСЂСѓР·РёС‚Рµ СЃРёСЃС‚РµРјСѓ</li>
+                <li>Откройте services.msc</li>
+                <li>Найдите "SysMain"</li>
+                <li>Щелкните правой кнопкой > "Свойства"</li>
+                <li>Измените тип запуска на "Отключено"</li>
+                <li>Остановите службу</li>
+                <li>Перезагрузите систему</li>
             </ol>
 
-            <h3>РњРµС‚РѕРґ 2: РћС‡РёСЃС‚РєР° РєСЌС€Р° Superfetch</h3>
-            <h4>РЈРґР°Р»РµРЅРёРµ С„Р°Р№Р»РѕРІ РѕРїС‚РёРјРёР·Р°С†РёРё</h4>
+            <h3>Метод 2: Очистка кэша Superfetch</h3>
+            <h4>Удаление файлов оптимизации</h4>
             <ol>
-                <li>РћС‚РєСЂРѕР№С‚Рµ РєРѕРјР°РЅРґРЅСѓСЋ СЃС‚СЂРѕРєСѓ РѕС‚ РёРјРµРЅРё Р°РґРјРёРЅРёСЃС‚СЂР°С‚РѕСЂР°</li>
-                <li>Р’РІРµРґРёС‚Рµ: net stop sysmain</li>
-                <li>Р’РІРµРґРёС‚Рµ: del /q /f /s "C:\Windows\Prefetch\*.*"</li>
-                <li>Р’РІРµРґРёС‚Рµ: del /q /f /s "C:\Windows\Temp\*.*"</li>
-                <li>Р’РІРµРґРёС‚Рµ: net start sysmain</li>
+                <li>Откройте командную строку от имени администратора</li>
+                <li>Введите: net stop sysmain</li>
+                <li>Введите: del /q /f /s "C:\Windows\Prefetch\*.*"</li>
+                <li>Введите: del /q /f /s "C:\Windows\Temp\*.*"</li>
+                <li>Введите: net start sysmain</li>
             </ol>
 
-            <h3>РњРµС‚РѕРґ 3: РћС‚РєР»СЋС‡РµРЅРёРµ Р±С‹СЃС‚СЂРѕР№ Р·Р°РіСЂСѓР·РєРё</h3>
-            <h4>РќР°СЃС‚СЂРѕР№РєРё РїРёС‚Р°РЅРёСЏ</h4>
+            <h3>Метод 3: Отключение быстрой загрузки</h3>
+            <h4>Настройки питания</h4>
             <ol>
-                <li>РћС‚РєСЂРѕР№С‚Рµ "РџР°СЂР°РјРµС‚СЂС‹" в†’ "РЎРёСЃС‚РµРјР°" в†’ "РџРёС‚Р°РЅРёРµ Рё СЃРїСЏС‰РёР№ СЂРµР¶РёРј"</li>
-                <li>Р’С‹Р±РµСЂРёС‚Рµ "Р”РѕРїРѕР»РЅРёС‚РµР»СЊРЅС‹Рµ РїР°СЂР°РјРµС‚СЂС‹ РїРёС‚Р°РЅРёСЏ"</li>
-                <li>РќР°Р¶РјРёС‚Рµ "Р”РµР№СЃС‚РІРёСЏ РєРЅРѕРїРѕРє РїРёС‚Р°РЅРёСЏ"</li>
-                <li>РЎРЅРёРјРёС‚Рµ РіР°Р»РѕС‡РєСѓ "Р’РєР»СЋС‡РёС‚СЊ Р±С‹СЃС‚СЂС‹Р№ Р·Р°РїСѓСЃРє"</li>
-                <li>РЎРѕС…СЂР°РЅРёС‚Рµ РёР·РјРµРЅРµРЅРёСЏ</li>
+                <li>Откройте "Параметры" > "Система" > "Питание и спящий режим"</li>
+                <li>Выберите "Дополнительные параметры питания"</li>
+                <li>Нажмите "Действия кнопок питания"</li>
+                <li>Снимите галочку "Включить быстрый запуск"</li>
+                <li>Сохраните изменения</li>
             </ol>
 
-            <h3>РњРµС‚РѕРґ 4: РСЃРїСЂР°РІР»РµРЅРёРµ СЃРёСЃС‚РµРјРЅС‹С… С„Р°Р№Р»РѕРІ</h3>
-            <h4>SFC Рё DISM</h4>
+            <h3>Метод 4: Исправление системных файлов</h3>
+            <h4>SFC и DISM</h4>
             <ol>
-                <li>РћС‚РєСЂРѕР№С‚Рµ РєРѕРјР°РЅРґРЅСѓСЋ СЃС‚СЂРѕРєСѓ РѕС‚ РёРјРµРЅРё Р°РґРјРёРЅРёСЃС‚СЂР°С‚РѕСЂР°</li>
-                <li>Р’РІРµРґРёС‚Рµ: sfc /scannow</li>
-                <li>Р”РѕР¶РґРёС‚РµСЃСЊ Р·Р°РІРµСЂС€РµРЅРёСЏ</li>
-                <li>Р’РІРµРґРёС‚Рµ: DISM /Online /Cleanup-Image /RestoreHealth</li>
-                <li>РџРµСЂРµР·Р°РіСЂСѓР·РёС‚Рµ СЃРёСЃС‚РµРјСѓ</li>
+                <li>Откройте командную строку от имени администратора</li>
+                <li>Введите: sfc /scannow</li>
+                <li>Дождитесь завершения</li>
+                <li>Введите: DISM /Online /Cleanup-Image /RestoreHealth</li>
+                <li>Перезагрузите систему</li>
             </ol>
 
-            <h3>РњРµС‚РѕРґ 5: РћС‡РёСЃС‚РєР° Р°РІС‚РѕР·Р°РіСЂСѓР·РєРё</h3>
-            <h4>РЈРґР°Р»РµРЅРёРµ РЅРµРЅСѓР¶РЅС‹С… РїСЂРѕРіСЂР°РјРј</h4>
+            <h3>Метод 5: Очистка автозагрузки</h3>
+            <h4>Удаление ненужных программ</h4>
             <ol>
-                <li>РћС‚РєСЂРѕР№С‚Рµ msconfig</li>
-                <li>РџРµСЂРµР№РґРёС‚Рµ РЅР° РІРєР»Р°РґРєСѓ "РђРІС‚РѕР·Р°РіСЂСѓР·РєР°"</li>
-                <li>РћС‚РєР»СЋС‡РёС‚Рµ РїРѕРґРѕР·СЂРёС‚РµР»СЊРЅС‹Рµ РїСЂРѕРіСЂР°РјРјС‹</li>
-                <li>РџРµСЂРµР·Р°РіСЂСѓР·РёС‚Рµ СЃРёСЃС‚РµРјСѓ</li>
-                <li>РџСЂРѕРІРµСЂСЊС‚Рµ РЅР°РіСЂСѓР·РєСѓ</li>
+                <li>Откройте msconfig</li>
+                <li>Перейдите на вкладку "Автозагрузка"</li>
+                <li>Отключите подозрительные программы</li>
+                <li>Перезагрузите систему</li>
+                <li>Проверьте нагрузку</li>
             </ol>
 
-            <h2>РЎРїРµС†РёС„РёС‡РµСЃРєРёРµ СЃР»СѓС‡Р°Рё</h2>
-            <p>Р РµС€РµРЅРёСЏ РґР»СЏ СЂР°СЃРїСЂРѕСЃС‚СЂР°РЅРµРЅРЅС‹С… СЃС†РµРЅР°СЂРёРµРІ.</p>
-            <h3>РџСЂРѕР±Р»РµРјР° РЅР° SSD</h3>
+            <h2>Специфические случаи</h2>
+            <p>Решения для распространенных сценариев.</p>
+            <h3>Проблема на SSD</h3>
             <ul>
-                <li>SysMain РЅРµ РЅСѓР¶РµРЅ РґР»СЏ SSD</li>
-                <li>РћС‚РєР»СЋС‡РёС‚Рµ СЃР»СѓР¶Р±Сѓ РїРѕР»РЅРѕСЃС‚СЊСЋ</li>
-                <li>Р’РєР»СЋС‡РёС‚Рµ TRIM</li>
-                <li>Р РµРіСѓР»СЏСЂРЅРѕ РґРµС„СЂР°РіРјРµРЅС‚РёСЂСѓР№С‚Рµ (РѕРїС‚РёРјРёР·Р°С†РёСЏ)</li>
+                <li>SysMain не нужен для SSD</li>
+                <li>Отключите службу полностью</li>
+                <li>Включите TRIM</li>
+                <li>Регулярно дефрагментируйте (оптимизация)</li>
             </ul>
 
-            <h3>РџСЂРѕР±Р»РµРјР° РїРѕСЃР»Рµ РѕР±РЅРѕРІР»РµРЅРёСЏ</h3>
+            <h3>Проблема после обновления</h3>
             <ul>
-                <li>РћС‚РєР°С‚РёС‚Рµ РѕР±РЅРѕРІР»РµРЅРёРµ</li>
-                <li>РћС‡РёСЃС‚РёС‚Рµ РєСЌС€ Superfetch</li>
-                <li>РџРµСЂРµСѓСЃС‚Р°РЅРѕРІРёС‚Рµ РѕР±РЅРѕРІР»РµРЅРёРµ</li>
-                <li>Р—Р°РїСѓСЃС‚РёС‚Рµ СѓСЃС‚СЂР°РЅРµРЅРёРµ РЅРµРёСЃРїСЂР°РІРЅРѕСЃС‚РµР№</li>
+                <li>Откатите обновление</li>
+                <li>Очистите кэш Superfetch</li>
+                <li>Переустановите обновление</li>
+                <li>Запустите устранение неисправностей</li>
             </ul>
 
-            <h3>РџСЂРѕР±Р»РµРјР° СЃ HDD</h3>
+            <h3>Проблема с HDD</h3>
             <ul>
-                <li>SysMain РїРѕР»РµР·РµРЅ РґР»СЏ HDD</li>
-                <li>РћС‡РёСЃС‚РёС‚Рµ РєСЌС€ РІРјРµСЃС‚Рѕ РѕС‚РєР»СЋС‡РµРЅРёСЏ</li>
-                <li>РџСЂРѕРІРµСЂСЊС‚Рµ РЅР°СЃС‚СЂРѕР№РєРё СЃР»СѓР¶Р±С‹</li>
-                <li>Р РµРіСѓР»СЏСЂРЅРѕ РґРµС„СЂР°РіРјРµРЅС‚РёСЂСѓР№С‚Рµ РґРёСЃРє</li>
+                <li>SysMain полезен для HDD</li>
+                <li>Очистите кэш вместо отключения</li>
+                <li>Проверьте настройки службы</li>
+                <li>Регулярно дефрагментируйте диск</li>
             </ul>
 
-            <h2>РџСЂРѕС„РёР»Р°РєС‚РёРєР°</h2>
-            <p>РљР°Рє РёР·Р±РµР¶Р°С‚СЊ РІС‹СЃРѕРєРѕР№ РЅР°РіСЂСѓР·РєРё РѕС‚ SysMain.</p>
-            <h3>Р РµРіСѓР»СЏСЂРЅРѕРµ РѕР±СЃР»СѓР¶РёРІР°РЅРёРµ</h3>
+            <h2>Профилактика</h2>
+            <p>Как избежать высокой нагрузки от SysMain.</p>
+            <h3>Регулярное обслуживание</h3>
             <ul>
-                <li><strong>SSD РґРёСЃРєРё:</strong> РћС‚РєР»СЋС‡РёС‚Рµ SysMain</li>
-                <li><strong>HDD РґРёСЃРєРё:</strong> РћСЃС‚Р°РІСЊС‚Рµ РІРєР»СЋС‡РµРЅРЅС‹Рј</li>
-                <li><strong>Р§РёСЃС‚РєР°:</strong> Р РµРіСѓР»СЏСЂРЅРѕ РѕС‡РёС‰Р°Р№С‚Рµ РєСЌС€</li>
-                <li><strong>РћР±РЅРѕРІР»РµРЅРёСЏ:</strong> РЈСЃС‚Р°РЅР°РІР»РёРІР°Р№С‚Рµ РѕР±РЅРѕРІР»РµРЅРёСЏ</li>
+                <li><strong>SSD диски:</strong> Отключите SysMain</li>
+                <li><strong>HDD диски:</strong> Оставьте включенным</li>
+                <li><strong>Чистка:</strong> Регулярно очищайте кэш</li>
+                <li><strong>Обновления:</strong> Устанавливайте обновления</li>
             </ul>
 
-            <h3>РћРїС‚РёРјРёР·Р°С†РёСЏ СЃРёСЃС‚РµРјС‹</h3>
+            <h3>Оптимизация системы</h3>
             <ul>
-                <li>РћС‚РєР»СЋС‡РёС‚Рµ Р±С‹СЃС‚СЂСѓСЋ Р·Р°РіСЂСѓР·РєСѓ</li>
-                <li>РћС‡РёСЃС‚РёС‚Рµ Р°РІС‚РѕР·Р°РіСЂСѓР·РєСѓ</li>
-                <li>РџСЂРѕРІРµСЂСЊС‚Рµ РЅР° РІРёСЂСѓСЃС‹</li>
-                <li>РЎР»РµРґРёС‚Рµ Р·Р° РЅР°РіСЂСѓР·РєРѕР№ СЃРёСЃС‚РµРјС‹</li>
+                <li>Отключите быструю загрузку</li>
+                <li>Очистите автозагрузку</li>
+                <li>Проверьте на вирусы</li>
+                <li>Следите за нагрузкой системы</li>
             </ul>
 
             <div class="pro-tips">
-                <h4>РџРѕР»РµР·РЅС‹Рµ СЃРѕРІРµС‚С‹</h4>
+                <h4>Полезные советы</h4>
                 <div class="tip-item">
                     <i class="fas fa-lightbulb"></i>
-                    <span>РќР° SSD РґРёСЃРєР°С… SysMain Р»СѓС‡С€Рµ РѕС‚РєР»СЋС‡РёС‚СЊ</span>
+                    <span>На SSD дисках SysMain лучше отключить</span>
                 </div>
                 <div class="tip-item">
                     <i class="fas fa-lightbulb"></i>
-                    <span>Р РµРіСѓР»СЏСЂРЅРѕ РѕС‡РёС‰Р°Р№С‚Рµ РєСЌС€ Superfetch</span>
+                    <span>Регулярно очищайте кэш Superfetch</span>
                 </div>
                 <div class="tip-item">
                     <i class="fas fa-lightbulb"></i>
-                    <span>РћС‚РєР»СЋС‡Р°Р№С‚Рµ Р±С‹СЃС‚СЂСѓСЋ Р·Р°РіСЂСѓР·РєСѓ РїСЂРё РїСЂРѕР±Р»РµРјР°С…</span>
+                    <span>Отключайте быструю загрузку при проблемах</span>
                 </div>
                 <div class="tip-item">
                     <i class="fas fa-lightbulb"></i>
-                    <span>РњРѕРЅРёС‚РѕСЂСЊС‚Рµ РЅР°РіСЂСѓР·РєСѓ СЃРёСЃС‚РµРјС‹ РІ Р”РёСЃРїРµС‚С‡РµСЂРµ Р·Р°РґР°С‡</span>
+                    <span>Мониторьте нагрузку системы в Диспетчере задач</span>
                 </div>
             </div>
 
-            <h2>РљРѕРіРґР° РЅСѓР¶РЅР° РїРѕРјРѕС‰СЊ СЃРїРµС†РёР°Р»РёСЃС‚Р°</h2>
-            <p>РџСЂРёР·РЅР°РєРё СЃРµСЂСЊРµР·РЅС‹С… РїСЂРѕР±Р»РµРј.</p>
-            <h3>РљСЂРёС‚РёС‡РµСЃРєРёРµ СЃР»СѓС‡Р°Рё</h3>
+            <h2>Когда нужна помощь специалиста</h2>
+            <p>Признаки серьезных проблем.</p>
+            <h3>Критические случаи</h3>
             <ul>
-                <li>РЎРёСЃС‚РµРјР° РЅРµ Р·Р°РіСЂСѓР¶Р°РµС‚СЃСЏ</li>
-                <li>РџРѕРІСЂРµР¶РґРµРЅС‹ СЃРёСЃС‚РµРјРЅС‹Рµ С„Р°Р№Р»С‹</li>
-                <li>РџРѕС‚РµСЂСЏ РґР°РЅРЅС‹С…</li>
-                <li>РќРµРѕР±С…РѕРґРёРјР° Р·Р°РјРµРЅР° РґРёСЃРєР°</li>
+                <li>Система не загружается</li>
+                <li>Повреждены системные файлы</li>
+                <li>Потеря данных</li>
+                <li>Необходима замена диска</li>
             </ul>
 
-            <h3>Р§С‚Рѕ РїСЂРѕРІРµСЂРёС‚СЊ РІ СЃРµСЂРІРёСЃРµ</h3>
+            <h3>Что проверить в сервисе</h3>
             <ul>
-                <li>РўРёРї РЅР°РєРѕРїРёС‚РµР»СЏ (SSD/HDD)</li>
-                <li>Р Р°Р±РѕС‚РѕСЃРїРѕСЃРѕР±РЅРѕСЃС‚СЊ РґРёСЃРєР°</li>
-                <li>РЎРѕРІРјРµСЃС‚РёРјРѕСЃС‚СЊ РѕР±РѕСЂСѓРґРѕРІР°РЅРёСЏ</li>
-                <li>Р’РѕР·РјРѕР¶РЅРѕСЃС‚СЊ РІРѕСЃСЃС‚Р°РЅРѕРІР»РµРЅРёСЏ</li>
+                <li>Тип накопителя (SSD/HDD)</li>
+                <li>Работоспособность диска</li>
+                <li>Совместимость оборудования</li>
+                <li>Возможность восстановления</li>
             </ul>
 
-            <h2>Р—Р°РєР»СЋС‡РµРЅРёРµ</h2>
-            <p>Р’С‹СЃРѕРєР°СЏ РЅР°РіСЂСѓР·РєР° РѕС‚ СЃР»СѓР¶Р±С‹ SysMain РѕР±С‹С‡РЅРѕ СЃРІСЏР·Р°РЅР° СЃ РѕСЃРѕР±РµРЅРЅРѕСЃС‚СЏРјРё SSD РґРёСЃРєРѕРІ РёР»Рё РїРѕРІСЂРµР¶РґРµРЅРЅС‹РјРё С„Р°Р№Р»Р°РјРё. Р’ Р±РѕР»СЊС€РёРЅСЃС‚РІРµ СЃР»СѓС‡Р°РµРІ РµРµ РјРѕР¶РЅРѕ СЂРµС€РёС‚СЊ РѕС‚РєР»СЋС‡РµРЅРёРµРј СЃР»СѓР¶Р±С‹ РёР»Рё РѕС‡РёСЃС‚РєРѕР№ РєСЌС€Р°. РќР°С‡РЅРёС‚Рµ СЃ РїСЂРѕРІРµСЂРєРё С‚РёРїР° РґРёСЃРєР°, Р·Р°С‚РµРј РѕС‚РєР»СЋС‡РёС‚Рµ SysMain РґР»СЏ SSD. Р•СЃР»Рё СЃР°РјРѕСЃС‚РѕСЏС‚РµР»СЊРЅС‹Рµ РїРѕРїС‹С‚РєРё РЅРµ СѓРІРµРЅС‡Р°Р»РёСЃСЊ СѓСЃРїРµС…РѕРј, РѕР±СЂР°С‚РёС‚РµСЃСЊ Рє СЃРїРµС†РёР°Р»РёСЃС‚Р°Рј РёР»Рё РїРѕРґРґРµСЂР¶РєРµ Microsoft.</p>
+            <h2>Заключение</h2>
+            <p>Высокая нагрузка от службы SysMain обычно связана с особенностями SSD дисков или поврежденными файлами. В большинстве случаев ее можно решить отключением службы или очисткой кэша. Начните с проверки типа диска, затем отключите SysMain для SSD. Если самостоятельные попытки не увенчались успехом, обратитесь к специалистам или поддержке Microsoft.</p>
         </div>
     </main>
 
     <footer class="footer">
         <div class="container">
             <div class="footer__content">
-                <p>&copy; 2024 Repairo. Р’СЃРµ РїСЂР°РІР° Р·Р°С‰РёС‰РµРЅС‹.</p>
+                <p>&copy; 2024 Repairo. Все права защищены.</p>
             </div>
         </div>
     </footer>
@@ -289,3 +567,9 @@
     <script src="../cookie-consent.js"></script>
 </body>
 </html>
+
+
+
+
+
+

@@ -4,9 +4,8 @@
 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>РќРѕСѓС‚Р±СѓРє РІРєР»СЋС‡Р°РµС‚СЃСЏ РїСЂРё РїРѕРґРєР»СЋС‡РµРЅРёРё Р·Р°СЂСЏРґРєРё РєР°Рє РѕС‚РєР»СЋС‡РёС‚СЊ | Р РµС€РµРЅРёРµ РїСЂРѕР±Р»РµРјС‹</title>
-    <meta name="description" content="{{ description }}">
-    <meta name="description" content="РќРѕСѓС‚Р±СѓРє РІРєР»СЋС‡Р°РµС‚СЃСЏ РїСЂРё РїРѕРґРєР»СЋС‡РµРЅРёРё Р·Р°СЂСЏРґРєРё РєР°Рє РѕС‚РєР»СЋС‡РёС‚СЊ. РџСЂРёС‡РёРЅС‹ Р°РІС‚РѕРјР°С‚РёС‡РµСЃРєРѕРіРѕ РІРєР»СЋС‡РµРЅРёСЏ Рё СЃРїРѕСЃРѕР±С‹ РЅР°СЃС‚СЂРѕР№РєРё РїРѕРІРµРґРµРЅРёСЏ РїСЂРё РїРѕРґРєР»СЋС‡РµРЅРёРё РїРёС‚Р°РЅРёСЏ.">
+  <title>Ноутбук включается при подключении зарядки как отключить | Р</title>
+    <meta name="description" content="">
 
   <link rel="stylesheet" href="../styles.css" />
   <link rel="stylesheet" href="../styles-header.css" />
@@ -25,221 +24,500 @@
     table { width: 100%; border-collapse: collapse; margin: 20px 0; }
     th, td { border: 1px solid var(--border); padding: 8px; text-align: left; }
     th { background: var(--background-light); }
+    .highlight { background: #f5f7fa; border-left: 4px solid #2d9cdb; padding: 10px 15px; margin: 20px 0; }
+    .faq-section ul { margin-left: 1em; }
+    .block-section { margin-bottom: 2em; }
     @media (max-width: 768px) {
       .guide-content h2 { font-size: 1.4rem; margin-top: 25px; }
       .guide-image-block { padding: 12px; margin: 15px 0; }
       table, th, td { font-size: 0.95rem; }
     }
-  </style>
+    /* Р“РѕСЂРёР·РѕРЅС‚Р°Р»СЊРЅС‹Р№ Р±Р°РЅРЅРµСЂ-РєР°СЂС‚РѕС‡РєР° */
+    .ym-hero-banner {
+      width: 100%;
+      max-width: 600px;
+      min-height: 140px;
+      border-radius: 16px;
+      background: #ffffff;
+      border: 1px solid #e5e7eb;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 4px 16px rgba(15, 23, 42, 0.08);
+      overflow: hidden;
+      box-sizing: border-box;
+      margin: 40px auto;
+    }
 
+    /* РљРѕРЅС‚РµР№РЅРµСЂ РґР»СЏ РёР·РѕР±СЂР°Р¶РµРЅРёР№ */
+    .ym-hero-images {
+      display: flex;
+      height: 120px;
+      overflow: hidden;
+    }
+
+    .ym-hero-image {
+      flex: 1;
+      min-width: 0;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      border-right: 1px solid #e5e7eb;
+      background: #f8f9fa;
+    }
+
+    .ym-hero-image:last-child {
+      border-right: none;
+    }
+
+    .ym-hero-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      transition: transform 0.3s ease;
+      background: #f8f9fa;
+    }
+
+    .ym-hero-image:hover img {
+      transform: scale(1.02);
+    }
+
+    /* РџСЂР°РІР°СЏ С‡Р°СЃС‚СЊ: РєРѕРЅС‚РµРЅС‚ */
+    .ym-hero-content {
+      padding: 16px 18px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 8px;
+    }
+
+    /* РќР°Р·РІР°РЅРёРµ С‚РѕРІР°СЂР° */
+    .ym-hero-title {
+      font-size: 14px;
+      font-weight: 600;
+      color: #111827;
+      line-height: 1.3;
+      margin: 0 0 4px 0;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    /* Р РµР№С‚РёРЅРі */
+    .ym-hero-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+    }
+
+    .ym-hero-rating {
+      font-size: 13px;
+      font-weight: 500;
+      color: #111827;
+      background: #f9fafb;
+      border-radius: 999px;
+      padding: 4px 10px;
+    }
+
+    .ym-hero-rating-count {
+      color: #6b7280;
+    }
+
+    /* Р¤РёРѕР»РµС‚РѕРІР°СЏ РєРЅРѕРїРєР° */
+    .ym-hero-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 9px 16px;
+      border-radius: 999px;
+      border: none;
+      background: #6a00ff;
+      color: #ffffff;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 2px 6px rgba(88, 28, 135, 0.35);
+      transition: background 0.15s ease, transform 0.15s ease,
+                  box-shadow 0.15s ease;
+    }
+    .ym-hero-button::after {
+      content: "в†’";
+      margin-left: 6px;
+      font-size: 14px;
+    }
+    .ym-hero-button:hover {
+      background: #7c3aed;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 10px rgba(88, 28, 135, 0.45);
+    }
+
+    /* Р®СЂРёРґРёС‡РµСЃРєРёР№ Р±Р»РѕРє */
+    .ym-hero-legal {
+      margin-top: 6px;
+      max-width: 600px;
+      font-size: 11px;
+      line-height: 1.3;
+      color: #6b7280;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* РђРґР°РїС‚РёРІ */
+    @media (max-width: 480px) {
+      .ym-hero-banner {
+        max-width: 100%;
+        margin: 20px 0;
+      }
+      .ym-hero-images {
+        height: 100px;
+      }
+      .ym-hero-content {
+        padding: 12px 12px;
+      }
+      .ym-hero-title {
+        font-size: 13px;
+      }
+      .ym-hero-button {
+        font-size: 13px;
+        padding: 8px 14px;
+      }
+      .ym-hero-legal {
+        font-size: 10px;
+      }
+    }
+    /* Telegram СЂРµРєР»Р°РјРЅС‹Р№ Р±Р°РЅРЅРµСЂ */
+    .telegram-banner {
+      display: flex;
+      justify-content: center;
+      text-decoration: none;
+      color: inherit;
+      width: 100%;
+      margin: 40px 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    .telegram-banner-container {
+      width: 100%;
+      max-width: 500px;
+      min-height: 120px;
+      border-radius: 16px;
+      background: linear-gradient(135deg, #0088cc 0%, #005f8f 100%);
+      border: 1px solid #005f8f;
+      display: flex;
+      align-items: center;
+      padding: 20px;
+      box-shadow: 0 4px 16px rgba(0, 136, 204, 0.2);
+      overflow: hidden;
+      box-sizing: border-box;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .telegram-banner-container:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0, 136, 204, 0.3);
+    }
+
+    .telegram-logo {
+      width: 60px;
+      height: 60px;
+      min-width: 60px;
+      background: #ffffff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 20px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .telegram-logo svg {
+      width: 32px;
+      height: 32px;
+      fill: #0088cc;
+    }
+
+    .telegram-content {
+      flex: 1;
+      color: #ffffff;
+    }
+
+    .telegram-title {
+      font-size: 16px;
+      font-weight: 600;
+      margin: 0 0 8px 0;
+      line-height: 1.3;
+    }
+
+    .telegram-subtitle {
+      font-size: 14px;
+      opacity: 0.9;
+      margin: 0 0 12px 0;
+      line-height: 1.4;
+    }
+
+    .telegram-button {
+      display: inline-flex;
+      align-items: center;
+      padding: 8px 16px;
+      background: #ffffff;
+      color: #0088cc;
+      border-radius: 20px;
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background 0.2s ease, transform 0.2s ease;
+    }
+
+    .telegram-button:hover {
+      background: #f0f8ff;
+      transform: scale(1.05);
+    }
+
+    .telegram-button svg {
+      width: 16px;
+      height: 16px;
+      margin-left: 6px;
+      fill: #0088cc;
+    }
+
+    /* РђРґР°РїС‚РёРІ РґР»СЏ РјРѕР±РёР»СЊРЅС‹С… */
+    @media (max-width: 480px) {
+      .telegram-banner-container {
+        max-width: 100%;
+        margin: 20px 0;
+        padding: 15px;
+        min-height: 100px;
+      }
+      .telegram-logo {
+        width: 50px;
+        height: 50px;
+        min-width: 50px;
+        margin-right: 15px;
+      }
+      .telegram-logo svg {
+        width: 26px;
+        height: 26px;
+      }
+      .telegram-title {
+        font-size: 14px;
+      }
+      .telegram-subtitle {
+        font-size: 12px;
+      }
+      .telegram-button {
+        font-size: 12px;
+        padding: 6px 12px;
+      }
+    }
+
+
+
+  </style>
+  <script async src="https://timeweb.cloud/api/v1/cloud-ai/agents/3cc03620-d051-4d8d-b5af-f7b6cd083a35/embed.js?collapsed=true"></script>
 </head>
 <body>
-    <header class="header">
-        <div class="container">
-            <div class="header__inner">
-                <a href="../index.html" class="logo">
-                    <span class="logo__icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12 15L7 10H17L12 15Z" fill="currentColor"/>
-                            <path d="M12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3ZM12 19C8.13401 19 5 15.866 5 12C5 8.13401 8.13401 5 12 5C15.866 5 19 8.13401 19 12C19 15.866 15.866 19 12 19Z" fill="currentColor"/>
-                        </svg>
-                    </span>
-                    <span class="logo__text">Repairo</span>
-                </a>
-                <nav class="nav">
-                    <ul class="nav__list">
-                       <li><a href="../tv.html" class="nav__link">РўРµР»РµРІРёР·РѕСЂС‹</a></li>
-                        <li><a href="../auto-electronics.html" class="nav__link">РђРІС‚РѕСЌР»РµРєС‚СЂРѕРЅРёРєР°</a></li>
-                        <li><a href="../consoles.html" class="nav__link">РџСЂРёСЃС‚Р°РІРєРё</a></li>
-                        <li><a href="../laptops.html" class="nav__link">РќРѕСѓС‚Р±СѓРєРё</a></li>
-                        <li><a href="../smartphones.html" class="nav__link">РЎРјР°СЂС‚С„РѕРЅС‹</a></li>
-                        <li><a href="../index.html#categories" class="nav__link">Р’СЃРµ РєР°С‚РµРіРѕСЂРёРё</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
-    </header>
+  <header class="header">
+    <div class="container">
+      <div class="header__inner">
+        <a href="../index.html" class="logo">
+          <span class="logo__icon"></span>
+          <span class="logo__text">GeoExpert</span>
+        </a>
+        <nav class="nav">
+          <ul class="nav__list">
+            <li><a href="../cameras.html" class="nav__link">РљР°РјРµСЂС‹</a></li>
+            <li><a href="../drones.html" class="nav__link">Р”СЂРѕРЅС‹</a></li>
+            <li><a href="../workflow.html" class="nav__link">Workflow</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
 
     <main class="container">
         <div class="guide-content">
-            <h1>РќРѕСѓС‚Р±СѓРє РІРєР»СЋС‡Р°РµС‚СЃСЏ РїСЂРё РїРѕРґРєР»СЋС‡РµРЅРёРё Р·Р°СЂСЏРґРєРё: РєР°Рє РѕС‚РєР»СЋС‡РёС‚СЊ</h1>
-            <p>РњРЅРѕРіРёРµ РїРѕР»СЊР·РѕРІР°С‚РµР»Рё СЃС‚Р°Р»РєРёРІР°СЋС‚СЃСЏ СЃ РїСЂРѕР±Р»РµРјРѕР№, РєРѕРіРґР° РЅРѕСѓС‚Р±СѓРє Р°РІС‚РѕРјР°С‚РёС‡РµСЃРєРё РІРєР»СЋС‡Р°РµС‚СЃСЏ РїСЂРё РїРѕРґРєР»СЋС‡РµРЅРёРё Р·Р°СЂСЏРґРЅРѕРіРѕ СѓСЃС‚СЂРѕР№СЃС‚РІР°. Р’ СЌС‚РѕРј СЂСѓРєРѕРІРѕРґСЃС‚РІРµ РјС‹ СЂР°Р·Р±РµСЂРµРј РїСЂРёС‡РёРЅС‹ СЌС‚РѕР№ РїСЂРѕР±Р»РµРјС‹ Рё СЃРїРѕСЃРѕР±С‹ РµРµ СЂРµС€РµРЅРёСЏ РґР»СЏ СЂР°Р·РЅС‹С… РјРѕРґРµР»РµР№ РЅРѕСѓС‚Р±СѓРєРѕРІ.</p>
+            <h1>Ноутбук включается при подключении зарядки: как отключить</h1>
+            <p>Многие пользователи сталкиваются с проблемой, когда ноутбук автоматически включается при подключении зарядного устройства. В этом руководстве мы разберем причины этой проблемы и способы ее решения для разных моделей ноутбуков.</p>
 
-            <h2>РџРѕС‡РµРјСѓ РЅРѕСѓС‚Р±СѓРє РІРєР»СЋС‡Р°РµС‚СЃСЏ РїСЂРё РїРѕРґРєР»СЋС‡РµРЅРёРё Р·Р°СЂСЏРґРєРё</h2>
-            <p>РђРІС‚РѕРјР°С‚РёС‡РµСЃРєРѕРµ РІРєР»СЋС‡РµРЅРёРµ РїСЂРё РїРѕРґРєР»СЋС‡РµРЅРёРё РїРёС‚Р°РЅРёСЏ - СЌС‚Рѕ РІСЃС‚СЂРѕРµРЅРЅР°СЏ С„СѓРЅРєС†РёСЏ Р±РµР·РѕРїР°СЃРЅРѕСЃС‚Рё Рё СѓРґРѕР±СЃС‚РІР°.</p>
-            <h3>РџСЂРёС‡РёРЅС‹ РІРєР»СЋС‡РµРЅРёСЏ</h3>
+            <h2>Почему ноутбук включается при подключении зарядки</h2>
+            <p>Автоматическое включение при подключении питания - это встроенная функция безопасности и удобства.</p>
+            <h3>Причины включения</h3>
             <ul>
-                <li><strong>Р—Р°С‰РёС‚Р° РѕС‚ РіР»СѓР±РѕРєРѕРіРѕ СЂР°Р·СЂСЏРґР°:</strong> РќРѕСѓС‚Р±СѓРє РІРєР»СЋС‡Р°РµС‚СЃСЏ РґР»СЏ Р·Р°СЂСЏРґРєРё, РµСЃР»Рё Р±Р°С‚Р°СЂРµСЏ СЃРёР»СЊРЅРѕ СЂР°Р·СЂСЏР¶РµРЅР°</li>
-                <li><strong>РќР°СЃС‚СЂРѕР№РєРё BIOS:</strong> Р’ РЅРµРєРѕС‚РѕСЂС‹С… РјРѕРґРµР»СЏС… СЌС‚Рѕ РїРѕРІРµРґРµРЅРёРµ РІРєР»СЋС‡РµРЅРѕ РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ</li>
-                <li><strong>ACPI РЅР°СЃС‚СЂРѕР№РєРё:</strong> РЎРёСЃС‚РµРјР° СѓРїСЂР°РІР»РµРЅРёСЏ РїРёС‚Р°РЅРёРµРј Р°РІС‚РѕРјР°С‚РёС‡РµСЃРєРё СЂРµР°РіРёСЂСѓРµС‚ РЅР° РїРѕРґРєР»СЋС‡РµРЅРёРµ</li>
-                <li><strong>РђРІР°СЂРёР№РЅРѕРµ РІРѕСЃСЃС‚Р°РЅРѕРІР»РµРЅРёРµ:</strong> РџРѕСЃР»Рµ РІРЅРµР·Р°РїРЅРѕРіРѕ РѕС‚РєР»СЋС‡РµРЅРёСЏ РїРёС‚Р°РЅРёСЏ</li>
+                <li><strong>Защита от глубокого разряда:</strong> Ноутбук включается для зарядки, если батарея сильно разряжена</li>
+                <li><strong>Настройки BIOS:</strong> В некоторых моделях это поведение включено по умолчанию</li>
+                <li><strong>ACPI настройки:</strong> Система управления питанием автоматически реагирует на подключение</li>
+                <li><strong>Аварийное восстановление:</strong> После внезапного отключения питания</li>
             </ul>
 
-            <h3>РљРѕРіРґР° СЌС‚Рѕ РЅРѕСЂРјР°Р»СЊРЅРѕ</h3>
+            <h3>Когда это нормально</h3>
             <ul>
-                <li>Р‘Р°С‚Р°СЂРµСЏ РїРѕР»РЅРѕСЃС‚СЊСЋ СЂР°Р·СЂСЏР¶РµРЅР° (РјРµРЅРµРµ 5%)</li>
-                <li>РќРѕСѓС‚Р±СѓРє Р±С‹Р» РІС‹РєР»СЋС‡РµРЅ РёР·-Р·Р° РЅРёР·РєРѕРіРѕ Р·Р°СЂСЏРґР°</li>
-                <li>Р’РєР»СЋС‡РµРЅР° С„СѓРЅРєС†РёСЏ "Р’РєР»СЋС‡РµРЅРёРµ РїСЂРё РїРѕРґРєР»СЋС‡РµРЅРёРё Р·Р°СЂСЏРґРєРё"</li>
+                <li>Батарея полностью разряжена (менее 5%)</li>
+                <li>Ноутбук был выключен из-за низкого заряда</li>
+                <li>Включена функция "Включение при подключении зарядки"</li>
             </ul>
 
-            <h2>РљР°Рє РѕС‚РєР»СЋС‡РёС‚СЊ Р°РІС‚РѕРјР°С‚РёС‡РµСЃРєРѕРµ РІРєР»СЋС‡РµРЅРёРµ</h2>
-            <p>РЎРїРѕСЃРѕР±С‹ СЂРµС€РµРЅРёСЏ РїСЂРѕР±Р»РµРјС‹ РІ Р·Р°РІРёСЃРёРјРѕСЃС‚Рё РѕС‚ СЃРёС‚СѓР°С†РёРё.</p>
-            <h3>РњРµС‚РѕРґ 1: РќР°СЃС‚СЂРѕР№РєРё Windows</h3>
-            <h4>РџР»Р°РЅ СЌР»РµРєС‚СЂРѕРїРёС‚Р°РЅРёСЏ</h4>
+            <h2>Как отключить автоматическое включение</h2>
+            <p>Способы решения проблемы в зависимости от ситуации.</p>
+            <h3>Метод 1: Настройки Windows</h3>
+            <h4>План электропитания</h4>
             <ol>
-                <li>РћС‚РєСЂРѕР№С‚Рµ "РџР°РЅРµР»СЊ СѓРїСЂР°РІР»РµРЅРёСЏ" в†’ "Р­Р»РµРєС‚СЂРѕРїРёС‚Р°РЅРёРµ"</li>
-                <li>Р’С‹Р±РµСЂРёС‚Рµ Р°РєС‚РёРІРЅС‹Р№ РїР»Р°РЅ РїРёС‚Р°РЅРёСЏ</li>
-                <li>РќР°Р¶РјРёС‚Рµ "РР·РјРµРЅРёС‚СЊ РїР°СЂР°РјРµС‚СЂС‹ РїР»Р°РЅР°"</li>
-                <li>Р’С‹Р±РµСЂРёС‚Рµ "РР·РјРµРЅРёС‚СЊ РґРѕРїРѕР»РЅРёС‚РµР»СЊРЅС‹Рµ РїР°СЂР°РјРµС‚СЂС‹ РїРёС‚Р°РЅРёСЏ"</li>
-                <li>Р Р°Р·РІРµСЂРЅРёС‚Рµ "РџРёС‚Р°РЅРёРµ РєРЅРѕРїРѕРє Рё РєСЂС‹С€РєРё"</li>
-                <li>РЈСЃС‚Р°РЅРѕРІРёС‚Рµ "РџСЂРё РЅР°Р¶Р°С‚РёРё РєРЅРѕРїРєРё РїРёС‚Р°РЅРёСЏ" в†’ "РќРёС‡РµРіРѕ РЅРµ РґРµР»Р°С‚СЊ"</li>
-                <li>Р”Р»СЏ "РџСЂРё Р·Р°РєСЂС‹С‚РёРё РєСЂС‹С€РєРё" в†’ "РќРёС‡РµРіРѕ РЅРµ РґРµР»Р°С‚СЊ"</li>
+                <li>Откройте "Панель управления" > "Электропитание"</li>
+                <li>Выберите активный план питания</li>
+                <li>Нажмите "Изменить параметры плана"</li>
+                <li>Выберите "Изменить дополнительные параметры питания"</li>
+                <li>Разверните "Питание кнопок и крышки"</li>
+                <li>Установите "При нажатии кнопки питания" > "Ничего не делать"</li>
+                <li>Для "При закрытии крышки" > "Ничего не делать"</li>
             </ol>
 
-            <h4>РќР°СЃС‚СЂРѕР№РєРё РІ РџР°СЂР°РјРµС‚СЂС‹</h4>
+            <h4>Настройки в Параметры</h4>
             <ol>
-                <li>РћС‚РєСЂРѕР№С‚Рµ "РџР°СЂР°РјРµС‚СЂС‹" в†’ "РЎРёСЃС‚РµРјР°" в†’ "РџРёС‚Р°РЅРёРµ Рё СЃРїСЏС‰РёР№ СЂРµР¶РёРј"</li>
-                <li>Р’ СЂР°Р·РґРµР»Рµ "РЎРІСЏР·Р°РЅРЅС‹Рµ РїР°СЂР°РјРµС‚СЂС‹" РЅР°Р¶РјРёС‚Рµ "Р”РѕРїРѕР»РЅРёС‚РµР»СЊРЅС‹Рµ РїР°СЂР°РјРµС‚СЂС‹ РїРёС‚Р°РЅРёСЏ"</li>
-                <li>РЎР»РµРґСѓР№С‚Рµ С€Р°РіР°Рј РІС‹С€Рµ</li>
+                <li>Откройте "Параметры" > "Система" > "Питание и спящий режим"</li>
+                <li>В разделе "Связанные параметры" нажмите "Дополнительные параметры питания"</li>
+                <li>Следуйте шагам выше</li>
             </ol>
 
-            <h3>РњРµС‚РѕРґ 2: РќР°СЃС‚СЂРѕР№РєРё BIOS/UEFI</h3>
-            <h4>Р’С…РѕРґ РІ BIOS</h4>
-            <p>РџРµСЂРµР·Р°РіСЂСѓР·РёС‚Рµ РЅРѕСѓС‚Р±СѓРє Рё РІРѕР№РґРёС‚Рµ РІ BIOS (РѕР±С‹С‡РЅРѕ Del, F2, F10 РёР»Рё Esc)</p>
+            <h3>Метод 2: Настройки BIOS/UEFI</h3>
+            <h4>Вход в BIOS</h4>
+            <p>Перезагрузите ноутбук и войдите в BIOS (обычно Del, F2, F10 или Esc)</p>
 
-            <h4>РќР°СЃС‚СЂРѕР№РєРё РїРёС‚Р°РЅРёСЏ</h4>
+            <h4>Настройки питания</h4>
             <ul>
-                <li>РќР°Р№РґРёС‚Рµ СЂР°Р·РґРµР» Power Management РёР»Рё Advanced</li>
-                <li>РћС‚РєР»СЋС‡РёС‚Рµ РѕРїС†РёСЋ "Power on when AC attached" РёР»Рё Р°РЅР°Р»РѕРіРёС‡РЅСѓСЋ</li>
-                <li>РЈСЃС‚Р°РЅРѕРІРёС‚Рµ "AC Power Loss" РІ "Power Off" РёР»Рё "Last State"</li>
-                <li>РЎРѕС…СЂР°РЅРёС‚Рµ РёР·РјРµРЅРµРЅРёСЏ Рё РІС‹Р№РґРёС‚Рµ</li>
+                <li>Найдите раздел Power Management или Advanced</li>
+                <li>Отключите опцию "Power on when AC attached" или аналогичную</li>
+                <li>Установите "AC Power Loss" в "Power Off" или "Last State"</li>
+                <li>Сохраните изменения и выйдите</li>
             </ul>
 
-            <h3>РњРµС‚РѕРґ 3: Р РµРµСЃС‚СЂ Windows</h3>
-            <p>Р”Р»СЏ РѕРїС‹С‚РЅС‹С… РїРѕР»СЊР·РѕРІР°С‚РµР»РµР№:</p>
+            <h3>Метод 3: Реестр Windows</h3>
+            <p>Для опытных пользователей:</p>
             <ol>
-                <li>РќР°Р¶РјРёС‚Рµ Win + R, РІРІРµРґРёС‚Рµ "regedit"</li>
-                <li>РџРµСЂРµР№РґРёС‚Рµ Рє HKEY_CURRENT_USER\Control Panel\PowerCfg</li>
-                <li>РќР°Р№РґРёС‚Рµ РёР»Рё СЃРѕР·РґР°Р№С‚Рµ DWORD Р·РЅР°С‡РµРЅРёРµ "ACSettingIndex"</li>
-                <li>РЈСЃС‚Р°РЅРѕРІРёС‚Рµ Р·РЅР°С‡РµРЅРёРµ 0</li>
-                <li>РџРµСЂРµР·Р°РіСЂСѓР·РёС‚Рµ СЃРёСЃС‚РµРјСѓ</li>
+                <li>Нажмите Win + R, введите "regedit"</li>
+                <li>Перейдите к HKEY_CURRENT_USER\Control Panel\PowerCfg</li>
+                <li>Найдите или создайте DWORD значение "ACSettingIndex"</li>
+                <li>Установите значение 0</li>
+                <li>Перезагрузите систему</li>
             </ol>
 
-            <h2>РћСЃРѕР±РµРЅРЅРѕСЃС‚Рё СЂР°Р·РЅС‹С… РјРѕРґРµР»РµР№</h2>
-            <p>РќР°СЃС‚СЂРѕР№РєРё РјРѕРіСѓС‚ РѕС‚Р»РёС‡Р°С‚СЊСЃСЏ РІ Р·Р°РІРёСЃРёРјРѕСЃС‚Рё РѕС‚ РїСЂРѕРёР·РІРѕРґРёС‚РµР»СЏ.</p>
+            <h2>Особенности разных моделей</h2>
+            <p>Настройки могут отличаться в зависимости от производителя.</p>
             <h3>Lenovo ThinkPad</h3>
             <ul>
-                <li>Р’ BIOS: Config в†’ Power в†’ "Power On with AC Attach" в†’ Disabled</li>
-                <li>Р’ Windows: РСЃРїРѕР»СЊР·СѓР№С‚Рµ СЃС‚Р°РЅРґР°СЂС‚РЅС‹Рµ РЅР°СЃС‚СЂРѕР№РєРё РїРёС‚Р°РЅРёСЏ</li>
+                <li>В BIOS: Config > Power > "Power On with AC Attach" > Disabled</li>
+                <li>В Windows: Используйте стандартные настройки питания</li>
             </ul>
 
             <h3>Dell Inspiron/Latitude</h3>
             <ul>
-                <li>Р’ BIOS: Power Management в†’ "AC Recovery" в†’ "Power Off"</li>
-                <li>РџСЂРѕРІРµСЂСЊС‚Рµ РЅР°СЃС‚СЂРѕР№РєРё РІ Dell Power Manager</li>
+                <li>В BIOS: Power Management > "AC Recovery" > "Power Off"</li>
+                <li>Проверьте настройки в Dell Power Manager</li>
             </ul>
 
             <h3>HP Pavilion/EliteBook</h3>
             <ul>
-                <li>Р’ BIOS: Advanced в†’ "Power-On Options" в†’ "Allow power on" в†’ Disabled</li>
-                <li>РСЃРїРѕР»СЊР·СѓР№С‚Рµ HP Power Assistant</li>
+                <li>В BIOS: Advanced > "Power-On Options" > "Allow power on" > Disabled</li>
+                <li>Используйте HP Power Assistant</li>
             </ul>
 
             <h3>ASUS</h3>
             <ul>
-                <li>Р’ BIOS: Advanced в†’ APM в†’ "Power on by PCI-E" в†’ Disabled</li>
-                <li>Р’ ASUS Power4Gear РїСЂРѕРІРµСЂСЊС‚Рµ РЅР°СЃС‚СЂРѕР№РєРё</li>
+                <li>В BIOS: Advanced > APM > "Power on by PCI-E" > Disabled</li>
+                <li>В ASUS Power4Gear проверьте настройки</li>
             </ul>
 
-            <h2>РљРѕРіРґР° РЅРµ СЃС‚РѕРёС‚ РѕС‚РєР»СЋС‡Р°С‚СЊ</h2>
-            <p>Р’ РЅРµРєРѕС‚РѕСЂС‹С… СЃР»СѓС‡Р°СЏС… Р°РІС‚РѕРјР°С‚РёС‡РµСЃРєРѕРµ РІРєР»СЋС‡РµРЅРёРµ РїРѕР»РµР·РЅРѕ.</p>
-            <h3>Р РµРєРѕРјРµРЅРґСѓРµС‚СЃСЏ РѕСЃС‚Р°РІРёС‚СЊ</h3>
+            <h2>Когда не стоит отключать</h2>
+            <p>В некоторых случаях автоматическое включение полезно.</p>
+            <h3>Рекомендуется оставить</h3>
             <ul>
-                <li>РќРѕСѓС‚Р±СѓРє РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ РєР°Рє РґРѕРјР°С€РЅРёР№ РџРљ</li>
-                <li>Р§Р°СЃС‚С‹Рµ РїРµСЂРµР±РѕРё СЃ РїРёС‚Р°РЅРёРµРј</li>
-                <li>РќРµРѕР±С…РѕРґРёРјРѕСЃС‚СЊ СѓРґР°Р»РµРЅРЅРѕРіРѕ РґРѕСЃС‚СѓРїР°</li>
-                <li>РЎР»Р°Р±Р°СЏ Р±Р°С‚Р°СЂРµСЏ (РЅСѓР¶РґР°РµС‚СЃСЏ РІ РїРѕСЃС‚РѕСЏРЅРЅРѕР№ Р·Р°СЂСЏРґРєРµ)</li>
+                <li>Ноутбук используется как домашний ПК</li>
+                <li>Частые перебои с питанием</li>
+                <li>Необходимость удаленного доступа</li>
+                <li>Слабая батарея (нуждается в постоянной зарядке)</li>
             </ul>
 
-            <h3>Р РёСЃРєРё РѕС‚РєР»СЋС‡РµРЅРёСЏ</h3>
+            <h3>Риски отключения</h3>
             <ul>
-                <li>РќРѕСѓС‚Р±СѓРє РјРѕР¶РµС‚ РЅРµ РІРєР»СЋС‡РёС‚СЊСЃСЏ РїСЂРё РЅРµРѕР±С…РѕРґРёРјРѕСЃС‚Рё</li>
-                <li>РџРѕС‚РµСЂСЏ РґР°РЅРЅС‹С… РїСЂРё РІРЅРµР·Р°РїРЅРѕРј РѕС‚РєР»СЋС‡РµРЅРёРё</li>
-                <li>РџСЂРѕР±Р»РµРјС‹ СЃ РІРѕСЃСЃС‚Р°РЅРѕРІР»РµРЅРёРµРј РїРѕСЃР»Рµ СЃР±РѕСЏ РїРёС‚Р°РЅРёСЏ</li>
+                <li>Ноутбук может не включиться при необходимости</li>
+                <li>Потеря данных при внезапном отключении</li>
+                <li>Проблемы с восстановлением после сбоя питания</li>
             </ul>
 
-            <h2>Р”РѕРїРѕР»РЅРёС‚РµР»СЊРЅС‹Рµ СЂРµС€РµРЅРёСЏ</h2>
-            <p>РђР»СЊС‚РµСЂРЅР°С‚РёРІРЅС‹Рµ СЃРїРѕСЃРѕР±С‹ СЂРµС€РµРЅРёСЏ РїСЂРѕР±Р»РµРјС‹.</p>
-            <h3>РСЃРїРѕР»СЊР·РѕРІР°РЅРёРµ UPS</h3>
-            <p>РСЃС‚РѕС‡РЅРёРє Р±РµСЃРїРµСЂРµР±РѕР№РЅРѕРіРѕ РїРёС‚Р°РЅРёСЏ РїСЂРµРґРѕС‚РІСЂР°С‚РёС‚ РІРЅРµР·Р°РїРЅС‹Рµ РѕС‚РєР»СЋС‡РµРЅРёСЏ.</p>
+            <h2>Дополнительные решения</h2>
+            <p>Альтернативные способы решения проблемы.</p>
+            <h3>Использование UPS</h3>
+            <p>Источник бесперебойного питания предотвратит внезапные отключения.</p>
 
-            <h3>РџСЂРѕРіСЂР°РјРјРЅРѕРµ СѓРїСЂР°РІР»РµРЅРёРµ</h3>
+            <h3>Программное управление</h3>
             <ul>
-                <li><strong>Auto Power-on & Shut-down:</strong> РџСЂРѕРіСЂР°РјРјР° РґР»СЏ СѓРїСЂР°РІР»РµРЅРёСЏ РїРёС‚Р°РЅРёРµРј</li>
-                <li><strong>PowerToys:</strong> Р”Р»СЏ Windows 10/11</li>
-                <li><strong>РЎС‚РѕСЂРѕРЅРЅРёРµ СѓС‚РёР»РёС‚С‹:</strong> РћС‚ РїСЂРѕРёР·РІРѕРґРёС‚РµР»СЏ РЅРѕСѓС‚Р±СѓРєР°</li>
+                <li><strong>Auto Power-on & Shut-down:</strong> Программа для управления питанием</li>
+                <li><strong>PowerToys:</strong> Для Windows 10/11</li>
+                <li><strong>Сторонние утилиты:</strong> От производителя ноутбука</li>
             </ul>
 
-            <h3>РђРїРїР°СЂР°С‚РЅС‹Рµ СЂРµС€РµРЅРёСЏ</h3>
+            <h3>Аппаратные решения</h3>
             <ul>
-                <li>РЈРјРЅР°СЏ СЂРѕР·РµС‚РєР° СЃ С‚Р°Р№РјРµСЂРѕРј</li>
-                <li>Р’РЅРµС€РЅРёР№ РєРѕРЅС‚СЂРѕР»Р»РµСЂ РїРёС‚Р°РЅРёСЏ</li>
-                <li>РњРѕРґРёС„РёРєР°С†РёСЏ Р·Р°СЂСЏРґРєРё (РЅРµ СЂРµРєРѕРјРµРЅРґСѓРµС‚СЃСЏ)</li>
+                <li>Умная розетка с таймером</li>
+                <li>Внешний контроллер питания</li>
+                <li>Модификация зарядки (не рекомендуется)</li>
             </ul>
 
             <div class="pro-tips">
-                <h4>РџРѕР»РµР·РЅС‹Рµ СЃРѕРІРµС‚С‹</h4>
+                <h4>Полезные советы</h4>
                 <div class="tip-item">
                     <i class="fas fa-lightbulb"></i>
-                    <span>РџСЂРѕРІРµСЂСЊС‚Рµ РЅР°СЃС‚СЂРѕР№РєРё РІ BIOS РІ РїРµСЂРІСѓСЋ РѕС‡РµСЂРµРґСЊ</span>
+                    <span>Проверьте настройки в BIOS в первую очередь</span>
                 </div>
                 <div class="tip-item">
                     <i class="fas fa-lightbulb"></i>
-                    <span>РЎРѕР·РґР°Р№С‚Рµ СЂРµР·РµСЂРІРЅСѓСЋ РєРѕРїРёСЋ РЅР°СЃС‚СЂРѕРµРє BIOS РїРµСЂРµРґ РёР·РјРµРЅРµРЅРёСЏРјРё</span>
+                    <span>Создайте резервную копию настроек BIOS перед изменениями</span>
                 </div>
                 <div class="tip-item">
                     <i class="fas fa-lightbulb"></i>
-                    <span>Р•СЃР»Рё РїСЂРѕР±Р»РµРјР° РїРѕСЏРІРёР»Р°СЃСЊ РЅРµРґР°РІРЅРѕ, РїСЂРѕРІРµСЂСЊС‚Рµ РѕР±РЅРѕРІР»РµРЅРёСЏ Windows</span>
+                    <span>Если проблема появилась недавно, проверьте обновления Windows</span>
                 </div>
                 <div class="tip-item">
                     <i class="fas fa-lightbulb"></i>
-                    <span>РўРµСЃС‚РёСЂСѓР№С‚Рµ РёР·РјРµРЅРµРЅРёСЏ РїРѕСЃР»Рµ РєР°Р¶РґРѕРіРѕ С€Р°РіР°</span>
+                    <span>Тестируйте изменения после каждого шага</span>
                 </div>
             </div>
 
-            <h2>Р”РёР°РіРЅРѕСЃС‚РёРєР° РїСЂРѕР±Р»РµРјС‹</h2>
-            <p>Р•СЃР»Рё РЅР°СЃС‚СЂРѕР№РєРё РЅРµ РїРѕРјРѕРіР°СЋС‚, РїСЂРѕРІРµСЂСЊС‚Рµ РѕР±РѕСЂСѓРґРѕРІР°РЅРёРµ.</p>
-            <h3>РџСЂРѕРІРµСЂРєР° Р·Р°СЂСЏРґРєРё</h3>
+            <h2>Диагностика проблемы</h2>
+            <p>Если настройки не помогают, проверьте оборудование.</p>
+            <h3>Проверка зарядки</h3>
             <ul>
-                <li>РСЃРїРѕР»СЊР·СѓР№С‚Рµ РјСѓР»СЊС‚РёРјРµС‚СЂ РґР»СЏ РїСЂРѕРІРµСЂРєРё РЅР°РїСЂСЏР¶РµРЅРёСЏ</li>
-                <li>РџРѕРїСЂРѕР±СѓР№С‚Рµ РґСЂСѓРіСѓСЋ Р·Р°СЂСЏРґРєСѓ</li>
-                <li>РџСЂРѕРІРµСЂСЊС‚Рµ СЂР°Р·СЉРµРј РЅР° РЅРѕСѓС‚Р±СѓРєРµ</li>
+                <li>Используйте мультиметр для проверки напряжения</li>
+                <li>Попробуйте другую зарядку</li>
+                <li>Проверьте разъем на ноутбуке</li>
             </ul>
 
-            <h3>РџСЂРѕРІРµСЂРєР° Р±Р°С‚Р°СЂРµРё</h3>
+            <h3>Проверка батареи</h3>
             <ul>
-                <li>РР·РІР»РµРєРёС‚Рµ Р±Р°С‚Р°СЂРµСЋ (РµСЃР»Рё СЃСЉРµРјРЅР°СЏ)</li>
-                <li>РџСЂРѕС‚РµСЃС‚РёСЂСѓР№С‚Рµ Р±РµР· Р±Р°С‚Р°СЂРµРё</li>
-                <li>РџСЂРѕРІРµСЂСЊС‚Рµ РёРЅРґРёРєР°С‚РѕСЂ Р·Р°СЂСЏРґР°</li>
+                <li>Извлеките батарею (если съемная)</li>
+                <li>Протестируйте без батареи</li>
+                <li>Проверьте индикатор заряда</li>
             </ul>
 
-            <h3>РљРѕРіРґР° РѕР±СЂР°С‰Р°С‚СЊСЃСЏ РІ СЃРµСЂРІРёСЃ</h3>
+            <h3>Когда обращаться в сервис</h3>
             <ul>
-                <li>РџСЂРѕР±Р»РµРјР° РЅРµ СЂРµС€Р°РµС‚СЃСЏ РЅР°СЃС‚СЂРѕР№РєР°РјРё</li>
-                <li>РџРѕРІСЂРµР¶РґРµРЅ СЂР°Р·СЉРµРј РїРёС‚Р°РЅРёСЏ</li>
-                <li>РџРѕРґРѕР·СЂРµРЅРёРµ РЅР° РЅРµРёСЃРїСЂР°РІРЅРѕСЃС‚СЊ РїР»Р°С‚С‹</li>
-                <li>РќРѕСѓС‚Р±СѓРє РІРєР»СЋС‡Р°РµС‚СЃСЏ СЃР°РјРѕРїСЂРѕРёР·РІРѕР»СЊРЅРѕ</li>
+                <li>Проблема не решается настройками</li>
+                <li>Поврежден разъем питания</li>
+                <li>Подозрение на неисправность платы</li>
+                <li>Ноутбук включается самопроизвольно</li>
             </ul>
 
-            <h2>Р—Р°РєР»СЋС‡РµРЅРёРµ</h2>
-            <p>РђРІС‚РѕРјР°С‚РёС‡РµСЃРєРѕРµ РІРєР»СЋС‡РµРЅРёРµ РЅРѕСѓС‚Р±СѓРєР° РїСЂРё РїРѕРґРєР»СЋС‡РµРЅРёРё Р·Р°СЂСЏРґРєРё РѕР±С‹С‡РЅРѕ Р»РµРіРєРѕ РѕС‚РєР»СЋС‡Р°РµС‚СЃСЏ С‡РµСЂРµР· РЅР°СЃС‚СЂРѕР№РєРё BIOS РёР»Рё Windows. Р•СЃР»Рё РїСЂРѕР±Р»РµРјР° persists РїРѕСЃР»Рµ РІСЃРµС… РЅР°СЃС‚СЂРѕРµРє, РІРѕР·РјРѕР¶РЅРѕ, РµСЃС‚СЊ Р°РїРїР°СЂР°С‚РЅР°СЏ РЅРµРёСЃРїСЂР°РІРЅРѕСЃС‚СЊ, С‚СЂРµР±СѓСЋС‰Р°СЏ РѕР±СЂР°С‰РµРЅРёСЏ РІ СЃРµСЂРІРёСЃ. РџРѕРјРЅРёС‚Рµ, С‡С‚Рѕ РІ РЅРµРєРѕС‚РѕСЂС‹С… СЃР»СѓС‡Р°СЏС… СЌС‚Р° С„СѓРЅРєС†РёСЏ РїРѕР»РµР·РЅР° РґР»СЏ Р·Р°С‰РёС‚С‹ РѕС‚ РіР»СѓР±РѕРєРѕРіРѕ СЂР°Р·СЂСЏРґР° Р±Р°С‚Р°СЂРµРё.</p>
+            <h2>Заключение</h2>
+            <p>Автоматическое включение ноутбука при подключении зарядки обычно легко отключается через настройки BIOS или Windows. Если проблема persists после всех настроек, возможно, есть аппаратная неисправность, требующая обращения в сервис. Помните, что в некоторых случаях эта функция полезна для защиты от глубокого разряда батареи.</p>
         </div>
     </main>
 
     <footer class="footer">
         <div class="container">
             <div class="footer__content">
-                <p>&copy; 2024 Repairo. Р’СЃРµ РїСЂР°РІР° Р·Р°С‰РёС‰РµРЅС‹.</p>
+                <p>&copy; 2024 Repairo. Все права защищены.</p>
             </div>
         </div>
     </footer>
@@ -248,3 +526,9 @@
     <script src="../cookie-consent.js"></script>
 </body>
 </html>
+
+
+
+
+
+

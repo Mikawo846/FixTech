@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>РўРµСЃС‚ Cookie Banner</title>
+    <title>Тест Cookie Banner</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -40,32 +40,32 @@
 </head>
 <body>
     <div class="container">
-        <h1>РўРµСЃС‚ Cookie Banner</h1>
+        <h1>Тест Cookie Banner</h1>
         
         <div class="info">
-            <h3>РРЅС„РѕСЂРјР°С†РёСЏ Рѕ С‚РµСЃС‚Рµ:</h3>
-            <p>Р­С‚Р° СЃС‚СЂР°РЅРёС†Р° РїСЂРѕРІРµСЂСЏРµС‚ СЂР°Р±РѕС‚Сѓ cookie-Р±Р°РЅРЅРµСЂР°.</p>
+            <h3>Информация о тесте:</h3>
+            <p>Эта страница проверяет работу cookie-баннера.</p>
             <ul>
-                <li>Р•СЃР»Рё РІС‹ РІРїРµСЂРІС‹Рµ Р·Р°С…РѕРґРёС‚Рµ РЅР° СЃР°Р№С‚, РґРѕР»Р¶РµРЅ РїРѕСЏРІРёС‚СЊСЃСЏ Р±Р°РЅРЅРµСЂ СЃ РїСЂРѕСЃСЊР±РѕР№ РїСЂРёРЅСЏС‚СЊ cookies</li>
-                <li>РџРѕСЃР»Рµ РїСЂРёРЅСЏС‚РёСЏ Р±Р°РЅРЅРµСЂ РґРѕР»Р¶РµРЅ РёСЃС‡РµР·РЅСѓС‚СЊ Рё Р±РѕР»СЊС€Рµ РЅРµ РїРѕСЏРІР»СЏС‚СЊСЃСЏ</li>
-                <li>Cookie СЃРѕС…СЂР°РЅСЏРµС‚СЃСЏ РЅР° 365 РґРЅРµР№</li>
+                <li>Если вы впервые заходите на сайт, должен появиться баннер с просьбой принять cookies</li>
+                <li>После принятия баннер должен исчезнуть и больше не появляться</li>
+                <li>Cookie сохраняется на 365 дней</li>
             </ul>
         </div>
 
         <div class="status" id="cookie-status">
-            РџСЂРѕРІРµСЂРєР° СЃС‚Р°С‚СѓСЃР° cookie...
+            Проверка статуса cookie...
         </div>
 
         <div class="status" id="banner-status">
-            РџСЂРѕРІРµСЂРєР° РЅР°Р»РёС‡РёСЏ Р±Р°РЅРЅРµСЂР°...
+            Проверка наличия баннера...
         </div>
 
         <div style="margin-top: 30px; text-align: center;">
             <button onclick="checkCookieStatus()" style="padding: 10px 20px; background: #2196F3; color: white; border: none; border-radius: 5px; cursor: pointer;">
-                РџСЂРѕРІРµСЂРёС‚СЊ СЃС‚Р°С‚СѓСЃ
+                Проверить статус
             </button>
             <button onclick="clearTestCookie()" style="padding: 10px 20px; background: #f44336; color: white; border: none; border-radius: 5px; cursor: pointer; margin-left: 10px;">
-                РЈРґР°Р»РёС‚СЊ С‚РµСЃС‚РѕРІС‹Р№ cookie
+                Удалить тестовый cookie
             </button>
         </div>
     </div>
@@ -74,11 +74,11 @@
         function checkCookieStatus() {
             const hasConsent = document.cookie.includes('cookie_consent=all');
             document.getElementById('cookie-status').innerHTML = 
-                'Cookie consent: ' + (hasConsent ? 'РќРђР™Р”Р•Рќ (РїСЂРёРЅСЏС‚)' : 'РќР• РќРђР™Р”Р•Рќ');
+                'Cookie consent: ' + (hasConsent ? 'НАЙДЕН (принят)' : 'НЕ НАЙДЕН');
             
             const banner = document.getElementById('cookie-banner');
             document.getElementById('banner-status').innerHTML = 
-                'Banner СЌР»РµРјРµРЅС‚: ' + (banner ? 'РќРђР™Р”Р•Рќ РІ DOM' : 'РќР• РќРђР™Р”Р•Рќ РІ DOM');
+                'Banner элемент: ' + (banner ? 'НАЙДЕН в DOM' : 'НЕ НАЙДЕН в DOM');
         }
 
         function clearTestCookie() {
@@ -87,10 +87,10 @@
             location.reload();
         }
 
-        // РџСЂРѕРІРµСЂСЏРµРј СЃС‚Р°С‚СѓСЃ РєР°Р¶РґС‹Рµ 2 СЃРµРєСѓРЅРґС‹
+        // Проверяем статус каждые 2 секунды
         setInterval(checkCookieStatus, 2000);
         
-        // РџРµСЂРІРѕРЅР°С‡Р°Р»СЊРЅР°СЏ РїСЂРѕРІРµСЂРєР°
+        // Первоначальная проверка
         setTimeout(checkCookieStatus, 1000);
     </script>
 
@@ -98,3 +98,5 @@
     <script src="cookie-consent.js"></script>
 </body>
 </html>
+
+

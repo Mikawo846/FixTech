@@ -1,271 +1,194 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" data-theme="light">
 <head>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Repairo - Remaster Final Fantasy XVI: РјРёС„С‹, СЂРµР°Р»СЊРЅРѕСЃС‚СЊ Рё РѕР¶РёРґР°РЅРёСЏ</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Repairo - Remaster Final Fantasy XVI: мифы, реальность и ожидания</title>
     <meta name="description" content="{{ description }}">
-    <meta name="description" content="РџРѕРґСЂРѕР±РЅС‹Р№ Р°РЅР°Р»РёР· СЃР»СѓС…РѕРІ Рё СѓС‚РµС‡РµРє Рѕ РІРѕР·РјРѕР¶РЅРѕРј СЂРµРјР°СЃС‚РµСЂРµ РёР»Рё СЂР°СЃС€РёСЂРµРЅРЅРѕРј РёР·РґР°РЅРёРё Final Fantasy XVI. Р Р°Р·Р±РѕСЂ РїРµСЂСЃРїРµРєС‚РёРІ PS5 Pro, РІРµСЂСЃРёР№ РґР»СЏ Xbox Рё РЅРѕРІРѕРіРѕ РєРѕРЅС‚РµРЅС‚Р°.">
 
-    <style>
-        :root {
-            --gradient-start: #f5f7a0;
-            --gradient-end: #8df1c0;
-            --main-bg: #ffffff;
-            --text-color: #333333;
-            --text-light: #666666;
-            --border-color: #e0e0e0;
-            --shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-            --radius: 8px;
-            --nav-height: 60px;
-            --glass-bg: rgba(255, 255, 255, 0.25);
-            --glass-border: 1px solid rgba(255, 255, 255, 0.18);
-            --glass-blur: blur(10px);
-        }
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="../styles-header.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    .guide-content { line-height: 1.7; color: var(--text); }
+    .guide-content h2 { color: var(--primary); margin-top: 30px; margin-bottom: 15px; font-size: 1.5rem; }
+    .guide-content h3 { color: var(--primary-dark); margin-top: 25px; margin-bottom: 12px; font-size: 1.2rem; }
+    .guide-image-block { margin: 20px 0; padding: 15px; background: var(--background); border-radius: var(--border-radius); border: 1px solid var(--border); text-align: center; }
+    .guide-image-block img { max-width: 100%; height: auto; border-radius: 6px; border: 1px solid var(--border); }
+    .image-caption { margin-top: 10px; font-size: 0.85rem; color: var(--text-light); font-style: italic; }
+    .pro-tips { background: rgba(3, 74, 79, 0.05); padding: 15px; border-radius: 6px; margin: 20px 0; }
+    .pro-tips h4 { color: var(--primary); margin-top: 0; margin-bottom: 12px; font-size: 1.1rem; }
+    .tip-item { display: flex; gap: 8px; margin-bottom: 8px; align-items: flex-start; }
+    table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+    th, td { border: 1px solid var(--border); padding: 8px; text-align: left; }
+    th { background: var(--background-light); }
+    .highlight { background: #f5f7fa; border-left: 4px solid #2d9cdb; padding: 10px 15px; margin: 20px 0; }
+    .faq-section ul { margin-left: 1em; }
+    .block-section { margin-bottom: 2em; }
+    @media (max-width: 768px) {
+      .guide-content h2 { font-size: 1.4rem; margin-top: 25px; }
+      .guide-image-block { padding: 12px; margin: 15px 0; }
+      table, th, td { font-size: 0.95rem; }
+    }
+    /* Р“РѕСЂРёР·РѕРЅС‚Р°Р»СЊРЅС‹Р№ Р±Р°РЅРЅРµСЂ-РєР°СЂС‚РѕС‡РєР° */
+    .ym-hero-banner {
+      width: 100%;
+      max-width: 600px;
+      min-height: 140px;
+      border-radius: 16px;
+      background: #ffffff;
+      border: 1px solid #e5e7eb;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 4px 16px rgba(15, 23, 42, 0.08);
+      overflow: hidden;
+      box-sizing: border-box;
+      margin: 40px auto;
+    }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    /* РљРѕРЅС‚РµР№РЅРµСЂ РґР»СЏ РёР·РѕР±СЂР°Р¶РµРЅРёР№ */
+    .ym-hero-images {
+      display: flex;
+      height: 120px;
+      overflow: hidden;
+    }
 
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: var(--main-bg);
-            color: var(--text-color);
-            line-height: 1.6;
-            padding-top: var(--nav-height);
-        }
+    .ym-hero-image {
+      flex: 1;
+      min-width: 0;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      border-right: 1px solid #e5e7eb;
+      background: #f8f9fa;
+    }
 
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
+    .ym-hero-image:last-child {
+      border-right: none;
+    }
 
-        .container {
-            width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 15px;
-        }
+    .ym-hero-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      transition: transform 0.3s ease;
+      background: #f8f9fa;
+    }
 
-        header {
-            background: var(--glass-bg);
-            backdrop-filter: var(--glass-blur);
-            -webkit-backdrop-filter: var(--glass-blur);
-            border-bottom: var(--glass-border);
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 100;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
+    .ym-hero-image:hover img {
+      transform: scale(1.02);
+    }
 
-        .header-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: var(--nav-height);
-            position: relative;
-        }
+    /* РџСЂР°РІР°СЏ С‡Р°СЃС‚СЊ: РєРѕРЅС‚РµРЅС‚ */
+    .ym-hero-content {
+      padding: 16px 18px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 8px;
+    }
 
-        .header-image {
-            position: absolute;
-            left: 15px;
-            z-index: 1;
-        }
+    /* РќР°Р·РІР°РЅРёРµ С‚РѕРІР°СЂР° */
+    .ym-hero-title {
+      font-size: 14px;
+      font-weight: 600;
+      color: #111827;
+      line-height: 1.3;
+      margin: 0 0 4px 0;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
 
-        .header-image img {
-            height: 40px;
-            width: auto;
-            object-fit: contain;
-        }
+    /* Р РµР№С‚РёРЅРі */
+    .ym-hero-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+    }
 
-        .logo {
-            font-size: 24px;
-            font-weight: bold;
-            color: var(--text-color);
-            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
+    .ym-hero-rating {
+      font-size: 13px;
+      font-weight: 500;
+      color: #111827;
+      background: #f9fafb;
+      border-radius: 999px;
+      padding: 4px 10px;
+    }
 
-        .logo__text {
-            font-size: 24px;
-            font-weight: bold;
-            color: var(--text-color);
-            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-        }
+    .ym-hero-rating-count {
+      color: #6b7280;
+    }
 
-        .back-btn {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            font-weight: 600;
-            color: var(--text-color);
-            transition: color 0.3s;
-        }
+    /* Р¤РёРѕР»РµС‚РѕРІР°СЏ РєРЅРѕРїРєР° */
+    .ym-hero-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 9px 16px;
+      border-radius: 999px;
+      border: none;
+      background: #6a00ff;
+      color: #ffffff;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 2px 6px rgba(88, 28, 135, 0.35);
+      transition: background 0.15s ease, transform 0.15s ease,
+                  box-shadow 0.15s ease;
+    }
+    .ym-hero-button::after {
+      content: "в†’";
+      margin-left: 6px;
+      font-size: 14px;
+    }
+    .ym-hero-button:hover {
+      background: #7c3aed;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 10px rgba(88, 28, 135, 0.45);
+    }
 
-        .back-btn:hover {
-            color: var(--gradient-end);
-        }
+    /* Р®СЂРёРґРёС‡РµСЃРєРёР№ Р±Р»РѕРє */
+    .ym-hero-legal {
+      margin-top: 6px;
+      max-width: 600px;
+      font-size: 11px;
+      line-height: 1.3;
+      color: #6b7280;
+      margin-left: auto;
+      margin-right: auto;
+    }
 
-        .back-btn::before {
-            content: "в†ђ";
-            font-size: 20px;
-        }
-
-        .article {
-            padding: 40px 0;
-        }
-
-        .article-header {
-            margin-bottom: 30px;
-            text-align: center;
-        }
-
-        .article-title {
-            font-size: 32px;
-            margin-bottom: 15px;
-            line-height: 1.3;
-        }
-
-        .article-meta {
-            color: var(--text-light);
-            font-size: 14px;
-            margin-bottom: 20px;
-        }
-
-        .article-image {
-            width: 100%;
-            max-height: 500px;
-            object-fit: cover;
-            border-radius: var(--radius);
-            margin-bottom: 30px;
-            box-shadow: var(--shadow);
-        }
-
-        .article-content {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .article-content p {
-            margin-bottom: 20px;
-            font-size: 18px;
-            line-height: 1.7;
-        }
-
-        .article-content h2,
-        .article-content h3 {
-            margin: 30px 0 20px;
-            line-height: 1.4;
-        }
-
-        .article-content h2 {
-            font-size: 28px;
-            border-bottom: 2px solid var(--border-color);
-            padding-bottom: 10px;
-        }
-
-        .article-content h3 {
-            font-size: 24px;
-        }
-
-        .article-content img {
-            max-width: 100%;
-            height: auto;
-            border-radius: var(--radius);
-            margin: 25px 0;
-            box-shadow: var(--shadow);
-        }
-
-        .button {
-            display: inline-block;
-            padding: 12px 24px;
-            border-radius: 50px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s;
-            border: none;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-            background: linear-gradient(90deg, var(--gradient-start), var(--gradient-end));
-            color: var(--text-color);
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-        }
-
-        .button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
-        }
-
-        footer {
-            background: #f5f5f5;
-            padding: 50px 0 20px;
-            border-top: 1px solid var(--border-color);
-        }
-
-        .footer-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 30px;
-            margin-bottom: 30px;
-        }
-
-        .footer-column h3 {
-            font-size: 18px;
-            margin-bottom: 15px;
-            color: var(--text-color);
-            font-weight: 600;
-        }
-
-        .footer-column ul {
-            list-style: none;
-        }
-
-        .footer-column li {
-            margin-bottom: 10px;
-        }
-
-        .footer-column a {
-            color: var(--text-light);
-            transition: color 0.3s;
-        }
-
-        .footer-column a:hover {
-            color: var(--gradient-end);
-        }
-
-        .footer-bottom {
-            text-align: center;
-            padding-top: 20px;
-            border-top: 1px solid var(--border-color);
-            color: var(--text-light);
-            font-size: 14px;
-        }
-
-        @media (max-width: 768px) {
-            .article-title {
-                font-size: 26px;
-            }
-
-            .article-content p {
-                font-size: 16px;
-            }
-
-            .article-content h2 {
-                font-size: 24px;
-            }
-
-            .article-content h3 {
-                font-size: 20px;
-            }
-        }
+    /* РђРґР°РїС‚РёРІ */
+    @media (max-width: 480px) {
+      .ym-hero-banner {
+        max-width: 100%;
+        margin: 20px 0;
+      }
+      .ym-hero-images {
+        height: 100px;
+      }
+      .ym-hero-content {
+        padding: 12px 12px;
+      }
+      .ym-hero-title {
+        font-size: 13px;
+      }
+      .ym-hero-button {
+        font-size: 13px;
+        padding: 8px 14px;
+      }
+      .ym-hero-legal {
+        font-size: 10px;
+      }
+    }
     /* Telegram СЂРµРєР»Р°РјРЅС‹Р№ Р±Р°РЅРЅРµСЂ */
     .telegram-banner {
       display: flex;
@@ -369,27 +292,22 @@
         padding: 15px;
         min-height: 100px;
       }
-
       .telegram-logo {
         width: 50px;
         height: 50px;
         min-width: 50px;
         margin-right: 15px;
       }
-
       .telegram-logo svg {
         width: 26px;
         height: 26px;
       }
-
       .telegram-title {
         font-size: 14px;
       }
-
       .telegram-subtitle {
         font-size: 12px;
       }
-
       .telegram-button {
         font-size: 12px;
         padding: 6px 12px;
@@ -397,71 +315,78 @@
     }
 
 
-    </style>
+
+  </style>
   <script async src="https://timeweb.cloud/api/v1/cloud-ai/agents/3cc03620-d051-4d8d-b5af-f7b6cd083a35/embed.js?collapsed=true"></script>
 </head>
-
 <body>
-    <header>
-        <div class="container header-container">
-            <div class="header-image">
-                <img src="https://i.postimg.cc/q7H0JS0t/8d9ca2d0-7483-40bd-b92d-73c88a196afb-removebg-preview.png" alt="Header Image">
-            </div>
-            <a href="../articles.html" class="logo">
-                <span class="logo__text">Repairo</span>
-            </a>
-        </div>
-    </header>
+  <header class="header">
+    <div class="container">
+      <div class="header__inner">
+        <a href="../index.html" class="logo">
+          <span class="logo__icon"></span>
+          <span class="logo__text">GeoExpert</span>
+        </a>
+        <nav class="nav">
+          <ul class="nav__list">
+            <li><a href="../cameras.html" class="nav__link">РљР°РјРµСЂС‹</a></li>
+            <li><a href="../drones.html" class="nav__link">Р”СЂРѕРЅС‹</a></li>
+            <li><a href="../workflow.html" class="nav__link">Workflow</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
 
     <main class="article">
         <div class="container">
             <article>
                 <div class="article-header">
-                    <h1 class="article-title">Remaster Final Fantasy XVI: РјРёС„С‹, СЂРµР°Р»СЊРЅРѕСЃС‚СЊ Рё С‡С‚Рѕ РёР·РІРµСЃС‚РЅРѕ РЅР° РґР°РЅРЅС‹Р№ РјРѕРјРµРЅС‚</h1>
+                    <h1 class="article-title">Remaster Final Fantasy XVI: мифы, реальность и что известно на данный момент</h1>
 
-                    <!-- Р’РђР–РќРћ: РћРґРЅРѕ РµРґРёРЅСЃС‚РІРµРЅРЅРѕРµ РёР·РѕР±СЂР°Р¶РµРЅРёРµ СЃРІРµСЂС…Сѓ РЅР°Рґ С‚РµРєСЃС‚РѕРј -->
+                    <!-- ВАЖНО: Одно единственное изображение сверху над текстом -->
                     <img src="https://i7.imageban.ru/out/2026/02/04/de58f1e19e5bdfbbd0f8256728870a9b.jpg"
-                         alt="Final Fantasy XVI РљР»Р°Р№РІ Р РѕСЃС„РёР»Рґ"
+                         alt="Final Fantasy XVI Клайв Росфилд"
                          class="article-image">
                 </div>
 
-                <div class="article-meta">РёР·РѕР±СЂР°Р¶РµРЅРёРµ: Square Enix</div>
+                <div class="article-meta">изображение: Square Enix</div>
 
                 <div class="article-content">
-                    <p>РЎ РјРѕРјРµРЅС‚Р° СЂРµР»РёР·Р° Final Fantasy XVI РїСЂРѕС€Р»Рѕ СѓР¶Рµ РґРѕСЃС‚Р°С‚РѕС‡РЅРѕ РІСЂРµРјРµРЅРё, С‡С‚РѕР±С‹ СЃС‚СЂР°СЃС‚Рё РїРѕ РїРѕРІРѕРґСѓ Р±РѕРµРІРѕР№ СЃРёСЃС‚РµРјС‹ Рё СЃСЋР¶РµС‚Р° СѓР»РµРіР»РёСЃСЊ, Р° СЃРѕРѕР±С‰РµСЃС‚РІРѕ РЅР°С‡Р°Р»Рѕ Р·Р°РґР°РІР°С‚СЊСЃСЏ РІРѕРїСЂРѕСЃРѕРј: В«Р§С‚Рѕ РґР°Р»СЊС€Рµ?В». Р’ РёРЅРґСѓСЃС‚СЂРёРё, РіРґРµ СЂРµРјР°СЃС‚РµСЂС‹ Рё РїРµСЂРµРёР·РґР°РЅРёСЏ РІС‹С…РѕРґСЏС‚ СЃРїСѓСЃС‚СЏ РІСЃРµРіРѕ РїР°СЂСѓ Р»РµС‚ РїРѕСЃР»Рµ РѕСЂРёРіРёРЅР°Р»Р° (РІСЃРїРѕРјРЅРёРј The Last of Us Part II Remastered РёР»Рё Horizon Zero Dawn Remastered), СЃР»СѓС…Рё Рѕ РѕР±РЅРѕРІР»РµРЅРЅРѕР№ РІРµСЂСЃРёРё РїСЂРёРєР»СЋС‡РµРЅРёР№ РљР»Р°Р№РІР° Р РѕСЃС„РёР»РґР° Р·РІСѓС‡Р°С‚ РЅРµ РєР°Рє С„Р°РЅС‚Р°СЃС‚РёРєР°, Р° РєР°Рє РІРїРѕР»РЅРµ РѕР¶РёРґР°РµРјС‹Р№ С€Р°Рі Square Enix. РћСЃРѕР±РµРЅРЅРѕ РЅР° С„РѕРЅРµ СЃСѓС‰РµСЃС‚РІРѕРІР°РЅРёСЏ PlayStation 5 Pro Рё Р°РєС‚РёРІРЅС‹С… СЂР°Р·РіРѕРІРѕСЂРѕРІ Рѕ РІС‹С…РѕРґРµ РёРіСЂС‹ РЅР° РЅРѕРІС‹Рµ РїР»Р°С‚С„РѕСЂРјС‹.</p>
+                    <p>С момента релиза Final Fantasy XVI прошло уже достаточно времени, чтобы страсти по поводу боевой системы и сюжета улеглись, а сообщество начало задаваться вопросом: «Что дальше?». В индустрии, где ремастеры и переиздания выходят спустя всего пару лет после оригинала (вспомним The Last of Us Part II Remastered или Horizon Zero Dawn Remastered), слухи о обновленной версии приключений Клайва Росфилда звучат не как фантастика, а как вполне ожидаемый шаг Square Enix. Особенно на фоне существования PlayStation 5 Pro и активных разговоров о выходе игры на новые платформы.</p>
 
-                    <h2 id="step-1">РќСѓР¶РµРЅ Р»Рё РІРѕРѕР±С‰Рµ СЂРµРјР°СЃС‚РµСЂ РёРіСЂРµ 2023 РіРѕРґР°?</h2>
-                    <p>РџРµСЂРІС‹Р№ РІРѕРїСЂРѕСЃ, РєРѕС‚РѕСЂС‹Р№ РІРѕР·РЅРёРєР°РµС‚ Сѓ СЃРєРµРїС‚РёРєРѕРІ: Р·Р°С‡РµРј СѓР»СѓС‡С€Р°С‚СЊ С‚Рѕ, С‡С‚Рѕ Рё С‚Р°Рє РІС‹РіР»СЏРґРёС‚ РєР°Рє РѕРґРЅР° РёР· СЃР°РјС‹С… РєСЂР°СЃРёРІС‹С… РёРіСЂ РїРѕРєРѕР»РµРЅРёСЏ? РћС‚РІРµС‚ РєСЂРѕРµС‚СЃСЏ РІ С‚РµС…РЅРёС‡РµСЃРєРѕР№ С‡Р°СЃС‚Рё. РћСЂРёРіРёРЅР°Р»СЊРЅР°СЏ Final Fantasy XVI, РЅРµСЃРјРѕС‚СЂСЏ РЅР° РІРµР»РёРєРѕР»РµРїРЅС‹Р№ Р°СЂС‚-РґРёР·Р°Р№РЅ Рё СЌРїРёС‡РµСЃРєРёРµ Р±РёС‚РІС‹ Р­Р№РєРѕРЅРѕРІ, СЃС‚СЂР°РґР°Р»Р° РѕС‚ С‚РµС…РЅРёС‡РµСЃРєРёС… РєРѕРјРїСЂРѕРјРёСЃСЃРѕРІ. Р РµР¶РёРј В«РџСЂРѕРёР·РІРѕРґРёС‚РµР»СЊРЅРѕСЃС‚РёВ» РЅР° Р±Р°Р·РѕРІРѕР№ PS5 С‡Р°СЃС‚Рѕ РЅРµ СѓРґРµСЂР¶РёРІР°Р» СЃС‚Р°Р±РёР»СЊРЅС‹Рµ 60 РєР°РґСЂРѕРІ РІ СЃРµРєСѓРЅРґСѓ Рё СЃРёР»СЊРЅРѕ СЃРЅРёР¶Р°Р» СЂР°Р·СЂРµС€РµРЅРёРµ (РёРЅРѕРіРґР° РґРѕ 720p РІ Р±РѕСЋ), Р° СЂРµР¶РёРј В«РљР°С‡РµСЃС‚РІР°В» РѕРіСЂР°РЅРёС‡РёРІР°Р»СЃСЏ 30 РєР°РґСЂР°РјРё.</p>
-                    <p>РџРѕС‚РµРЅС†РёР°Р»СЊРЅС‹Р№ В«RemasterВ» РёР»Рё, С‡С‚Рѕ Р±РѕР»РµРµ РІРµСЂРѕСЏС‚РЅРѕ, В«Ultimate EditionВ» РґР»СЏ PS5 Pro, РїСЂРёР·РІР°РЅ СѓСЃС‚СЂР°РЅРёС‚СЊ РёРјРµРЅРЅРѕ СЌС‚Рё РЅРµРґРѕСЃС‚Р°С‚РєРё. РРіСЂРѕРєРё С…РѕС‚СЏС‚ РІРёРґРµС‚СЊ Р’Р°Р»РёСЃС‚РµСЋ РІ РЅР°С‚РёРІРЅРѕРј 4K РїСЂРё 60 fps, СЃ СѓР»СѓС‡С€РµРЅРЅРѕР№ С‚СЂР°СЃСЃРёСЂРѕРІРєРѕР№ Р»СѓС‡РµР№, РєРѕС‚РѕСЂР°СЏ РІ РѕСЂРёРіРёРЅР°Р»Рµ Р±С‹Р»Р°, РЅРѕ РёСЃРїРѕР»СЊР·РѕРІР°Р»Р°СЃСЊ РѕС‡РµРЅСЊ РѕРіСЂР°РЅРёС‡РµРЅРЅРѕ. РўРµС…РЅРѕР»РѕРіРёСЏ PSSR (PlayStation Spectral Super Resolution) РЅР° РЅРѕРІРѕР№ РєРѕРЅСЃРѕР»Рё Sony РјРѕР¶РµС‚ СЃС‚Р°С‚СЊ С‚РµРј СЃР°РјС‹Рј РєР»СЋС‡РѕРј, РєРѕС‚РѕСЂС‹Р№ РЅР°РєРѕРЅРµС† СЂР°СЃРєСЂРѕРµС‚ РІРёР·СѓР°Р»СЊРЅС‹Р№ РїРѕС‚РµРЅС†РёР°Р» РґРІРёР¶РєР° Creative Business Unit III.</p>
+                    <h2 id="step-1">Нужен ли вообще ремастер игре 2023 года?</h2>
+                    <p>Первый вопрос, который возникает у скептиков: зачем улучшать то, что и так выглядит как одна из самых красивых игр поколения? Ответ кроется в технической части. Оригинальная Final Fantasy XVI, несмотря на великолепный арт-дизайн и эпические битвы Эйконов, страдала от технических компромиссов. Режим «Производительности» на базовой PS5 часто не удерживал стабильные 60 кадров в секунду и сильно снижал разрешение (иногда до 720p в бою), а режим «Качества» ограничивался 30 кадрами.</p>
+                    <p>Потенциальный «Remaster» или, что более вероятно, «Ultimate Edition» для PS5 Pro, призван устранить именно эти недостатки. Игроки хотят видеть Валистею в нативном 4K при 60 fps, с улучшенной трассировкой лучей, которая в оригинале была, но использовалась очень ограниченно. Технология PSSR (PlayStation Spectral Super Resolution) на новой консоли Sony может стать тем самым ключом, который наконец раскроет визуальный потенциал движка Creative Business Unit III.</p>
 
-                    <h2 id="step-2">Р§С‚Рѕ РјРѕР¶РµС‚ РІРѕР№С‚Рё РІ В«РџРѕР»РЅРѕРµ РёР·РґР°РЅРёРµВ»?</h2>
-                    <p>РСЃС‚РѕСЂРёСЏ Square Enix РїРѕРєР°Р·С‹РІР°РµС‚, С‡С‚Рѕ РѕРЅРё Р»СЋР±СЏС‚ РїРµСЂРµРёР·РґР°РІР°С‚СЊ СЃРІРѕРё С…РёС‚С‹ РїРѕРґ РЅРѕРІС‹РјРё РёРјРµРЅР°РјРё: International, Royal Edition, Intergrade. Р•СЃР»Рё РѕР±РЅРѕРІР»РµРЅРЅР°СЏ РІРµСЂСЃРёСЏ Final Fantasy XVI РґРµР№СЃС‚РІРёС‚РµР»СЊРЅРѕ РЅР°С…РѕРґРёС‚СЃСЏ РІ СЂР°Р·СЂР°Р±РѕС‚РєРµ, Р»РѕРіРёС‡РЅРѕ РѕР¶РёРґР°С‚СЊ РЅРµ РїСЂРѕСЃС‚Рѕ РїРѕРґС‚СЏРЅСѓС‚С‹Рµ С‚РµРєСЃС‚СѓСЂС‹.</p>
+                    <h2 id="step-2">Что может войти в «Полное издание»?</h2>
+                    <p>История Square Enix показывает, что они любят переиздавать свои хиты под новыми именами: International, Royal Edition, Intergrade. Если обновленная версия Final Fantasy XVI действительно находится в разработке, логично ожидать не просто подтянутые текстуры.</p>
 
-                    <h3>РРЅС‚РµРіСЂР°С†РёСЏ DLC Рё РЅРѕРІС‹Р№ РєРѕРЅС‚РµРЅС‚</h3>
-                    <p>Р”РІР° РІС‹С€РµРґС€РёС… РґРѕРїРѕР»РЅРµРЅРёСЏ вЂ” В«Echoes of the FallenВ» Рё В«The Rising TideВ» вЂ” СЂР°СЃС€РёСЂРёР»Рё Р»РѕСЂ Рё РґРѕР±Р°РІРёР»Рё РЅРѕРІС‹Рµ РёСЃРїС‹С‚Р°РЅРёСЏ, РЅРѕ РјРЅРѕРіРёРµ С„Р°РЅР°С‚С‹ Р¶Р°Р»РѕРІР°Р»РёСЃСЊ РЅР° РёС… РѕС‚РѕСЂРІР°РЅРЅРѕСЃС‚СЊ РѕС‚ РѕСЃРЅРѕРІРЅРѕРіРѕ СЃСЋР¶РµС‚Р° (РѕРЅРё РґРѕСЃС‚СѓРїРЅС‹ С‚РѕР»СЊРєРѕ РїРµСЂРµРґ С„РёРЅР°Р»СЊРЅРѕР№ Р±РёС‚РІРѕР№). Р’ РїРµСЂРµРёР·РґР°РЅРёРё СЂР°Р·СЂР°Р±РѕС‚С‡РёРєРё РјРѕРіР»Рё Р±С‹ Р±РѕР»РµРµ Р±РµСЃС€РѕРІРЅРѕ РёРЅС‚РµРіСЂРёСЂРѕРІР°С‚СЊ СЌС‚Рё РєРІРµСЃС‚С‹ РІ РїРѕРІРµСЃС‚РІРѕРІР°РЅРёРµ, РІРѕР·РјРѕР¶РЅРѕ, РёР·РјРµРЅРёРІ РїРµР№СЃРёРЅРі (С‚РµРјРї) РёРіСЂС‹, РєРѕС‚РѕСЂС‹Р№ С‡Р°СЃС‚Рѕ РєСЂРёС‚РёРєРѕРІР°Р»Рё Р·Р° РїСЂРѕРІРёСЃР°РЅРёСЏ РјРµР¶РґСѓ СЌРїРёС‡РµСЃРєРёРјРё РјРѕРјРµРЅС‚Р°РјРё.</p>
+                    <h3>Интеграция DLC и новый контент</h3>
+                    <p>Два вышедших дополнения — «Echoes of the Fallen» и «The Rising Tide» — расширили лор и добавили новые испытания, но многие фанаты жаловались на их оторванность от основного сюжета (они доступны только перед финальной битвой). В переиздании разработчики могли бы более бесшовно интегрировать эти квесты в повествование, возможно, изменив пейсинг (темп) игры, который часто критиковали за провисания между эпическими моментами.</p>
 
-                    <h3>РќРѕРІС‹Рµ РёРіСЂРѕРІС‹Рµ РјРµС…Р°РЅРёРєРё</h3>
-                    <p>Р’СЃРїРѕРјРЅРёРј Final Fantasy XV Royal Edition, РіРґРµ РґРѕР±Р°РІРёР»Рё РІРѕР·РјРѕР¶РЅРѕСЃС‚СЊ СѓРїСЂР°РІР»СЏС‚СЊ Р»РѕРґРєРѕР№, РЅРѕРІС‹Рµ РєР°С‚СЃС†РµРЅС‹ Рё СЂР°СЃС€РёСЂРµРЅРЅС‹Р№ С„РёРЅР°Р»СЊРЅС‹Р№ РґР°РЅР¶. Р’ СЃР»СѓС‡Р°Рµ СЃ XVI, С„Р°РЅР°С‚С‹ РјРµС‡С‚Р°СЋС‚ Рѕ СЂР°СЃС€РёСЂРµРЅРёРё СЂРѕР»РµРІС‹С… СЌР»РµРјРµРЅС‚РѕРІ: Р±РѕР»РµРµ РіР»СѓР±РѕРєРѕР№ СЃРёСЃС‚РµРјРµ РєСЂР°С„С‚Р°, Р·РЅР°С‡РёРјС‹С… С…Р°СЂР°РєС‚РµСЂРёСЃС‚РёРєР°С… СЌРєРёРїРёСЂРѕРІРєРё (Р° РЅРµ РїСЂРѕСЃС‚Рѕ В«+5 Рє Р°С‚Р°РєРµВ») Рё, РІРѕР·РјРѕР¶РЅРѕ, РЅРѕРІС‹С… СЃРїРѕСЃРѕР±РЅРѕСЃС‚СЏС… Р­Р№РєРѕРЅРѕРІ, РєРѕС‚РѕСЂС‹Рµ РЅРµ РІРѕС€Р»Рё РІ РѕСЂРёРіРёРЅР°Р». РўР°РєР¶Рµ РЅРµ СѓС‚РёС…Р°СЋС‚ СЃР»СѓС…Рё Рѕ РІРѕР·РјРѕР¶РЅРѕРј РёРіСЂР°Р±РµР»СЊРЅРѕРј СЌРїРёР·РѕРґРµ Р·Р° РЎРёРґР° РёР»Рё Р”Р¶РёР»Р», С‡С‚Рѕ СЃС‚Р°Р»Рѕ Р±С‹ СЃРёР»СЊРЅРµР№С€РёРј Р°СЂРіСѓРјРµРЅС‚РѕРј РґР»СЏ РїРѕРІС‚РѕСЂРЅРѕР№ РїРѕРєСѓРїРєРё.</p>
+                    <h3>Новые игровые механики</h3>
+                    <p>Вспомним Final Fantasy XV Royal Edition, где добавили возможность управлять лодкой, новые катсцены и расширенный финальный данж. В случае с XVI, фанаты мечтают о расширении ролевых элементов: более глубокой системе крафта, значимых характеристиках экипировки (а не просто «+5 к атаке») и, возможно, новых способностях Эйконов, которые не вошли в оригинал. Также не утихают слухи о возможном играбельном эпизоде за Сида или Джилл, что стало бы сильнейшим аргументом для повторной покупки.</p>
 
-                    <h2 id="step-3">Р¤Р°РєС‚РѕСЂ Xbox Рё РЅРѕРІРѕР№ Р°СѓРґРёС‚РѕСЂРёРё</h2>
-                    <p>РЎР°РјС‹Р№ РіСЂРѕРјРєРёР№ СЃР»СѓС…, РєРѕС‚РѕСЂС‹Р№ С†РёСЂРєСѓР»РёСЂСѓРµС‚ РІ СЃРµС‚Рё РІРµСЃСЊ 2025 Рё РЅР°С‡Р°Р»Рѕ 2026 РіРѕРґР° вЂ” СЌС‚Рѕ РІС‹С…РѕРґ Final Fantasy XVI РЅР° Xbox Series X|S. РџСЂРѕРґСЋСЃРµСЂ РќР°РѕРєРё Р™РѕС€РёРґР° (Yoshi-P) РЅРµРѕРґРЅРѕРєСЂР°С‚РЅРѕ РЅР°РјРµРєР°Р» РЅР° Р¶РµР»Р°РЅРёРµ СЂР°СЃС€РёСЂРёС‚СЊ Р°СѓРґРёС‚РѕСЂРёСЋ РёРіСЂС‹. Р РµР»РёР· В«RemasterВ» РёР»Рё В«Complete EditionВ» СЃС‚Р°Р» Р±С‹ РёРґРµР°Р»СЊРЅС‹Рј РјРѕРјРµРЅС‚РѕРј РґР»СЏ С‚РѕРіРѕ, С‡С‚РѕР±С‹ РЅР°РєРѕРЅРµС† РІС‹РїСѓСЃС‚РёС‚СЊ РёРіСЂСѓ РЅР° РїР»Р°С‚С„РѕСЂРјРµ Microsoft.</p>
-<p>Р­С‚Рѕ СЃС‚Р°РЅРґР°СЂС‚РЅР°СЏ РїСЂР°РєС‚РёРєР°: СЌРєСЃРєР»СЋР·РёРІРЅРѕСЃС‚СЊ Sony Р·Р°РєР°РЅС‡РёРІР°РµС‚СЃСЏ, Рё РёР·РґР°С‚РµР»СЊ РІС‹РїСѓСЃРєР°РµС‚ В«РјР°РєСЃРёРјР°Р»СЊРЅСѓСЋВ» РІРµСЂСЃРёСЋ РёРіСЂС‹ СЃСЂР°Р·Сѓ РЅР° РІСЃРµС… РїР»Р°С‚С„РѕСЂРјР°С…, РІРєР»СЋС‡Р°СЏ РџРљ Рё Xbox. Р”Р»СЏ РІР»Р°РґРµР»СЊС†РµРІ Xbox СЌС‚Рѕ Р±СѓРґРµС‚ РЅРµ РїСЂРѕСЃС‚Рѕ В«СЃС‚Р°СЂР°СЏ РёРіСЂР°В», Р° СЃСЂР°Р·Сѓ Р»СѓС‡С€Р°СЏ РµС‘ РІРµСЂСЃРёСЏ СЃРѕ РІСЃРµРјРё РїР°С‚С‡Р°РјРё Рё РґРѕРїРѕР»РЅРµРЅРёСЏРјРё. РўР°РєРѕР№ С…РѕРґ РїРѕР·РІРѕР»РёР» Р±С‹ Square Enix РѕС‚Р±РёС‚СЊ Р·Р°С‚СЂР°С‚С‹ РЅР° СЂР°Р·СЂР°Р±РѕС‚РєСѓ РґРІРёР¶РєР° Рё РєРѕРјРїРµРЅСЃРёСЂРѕРІР°С‚СЊ РЅРµ СЃР°РјС‹Рµ РІС‹СЃРѕРєРёРµ РїСЂРѕРґР°Р¶Рё РѕСЂРёРіРёРЅР°Р»Р° (РїРѕ СЃСЂР°РІРЅРµРЅРёСЋ СЃ Р·Р°РІС‹С€РµРЅРЅС‹РјРё РѕР¶РёРґР°РЅРёСЏРјРё РёРЅРІРµСЃС‚РѕСЂРѕРІ).</p>
+                    <h2 id="step-3">Фактор Xbox и новой аудитории</h2>
+                    <p>Самый громкий слух, который циркулирует в сети весь 2025 и начало 2026 года — это выход Final Fantasy XVI на Xbox Series X|S. Продюсер Наоки Йошида (Yoshi-P) неоднократно намекал на желание расширить аудиторию игры. Релиз «Remaster» или «Complete Edition» стал бы идеальным моментом для того, чтобы наконец выпустить игру на платформе Microsoft.</p>
+<p>Это стандартная практика: эксклюзивность Sony заканчивается, и издатель выпускает «максимальную» версию игры сразу на всех платформах, включая ПК и Xbox. Для владельцев Xbox это будет не просто «старая игра», а сразу лучшая её версия со всеми патчами и дополнениями. Такой ход позволил бы Square Enix отбить затраты на разработку движка и компенсировать не самые высокие продажи оригинала (по сравнению с завышенными ожиданиями инвесторов).</p>
 
-                    <h2 id="step-4">Р”РІРёР¶РѕРє Рё С‚РµС…РЅРёС‡РµСЃРєРёРµ СЃР»РѕР¶РЅРѕСЃС‚Рё</h2>
-                    <p>РРЅС‚РµСЂРµСЃРЅС‹Р№ РјРѕРјРµРЅС‚ РєР°СЃР°РµС‚СЃСЏ РґРІРёР¶РєР°. Final Fantasy XVI РЅРµ РёСЃРїРѕР»СЊР·СѓРµС‚ Luminous Engine (РєР°Рє FF15) РёР»Рё Unreal Engine 4/5 (РєР°Рє FF7 Remake/Rebirth). РћРЅР° РїРѕСЃС‚СЂРѕРµРЅР° РЅР° СЃРёР»СЊРЅРѕ РјРѕРґРёС„РёС†РёСЂРѕРІР°РЅРЅРѕРј РїСЂРѕРїСЂРёРµС‚Р°СЂРЅРѕРј РґРІРёР¶РєРµ, РєРѕС‚РѕСЂС‹Р№ РёСЃРїРѕР»СЊР·РѕРІР°Р»СЃСЏ РґР»СЏ FF14, РЅРѕ РїРµСЂРµРїРёСЃР°РЅРЅРѕРј РїРѕРґ РЅСѓР¶РґС‹ СЌРєС€РµРЅР°. Р­С‚Рѕ СѓСЃР»РѕР¶РЅСЏРµС‚ РїСЂРѕС†РµСЃСЃ РїРѕСЂС‚РёСЂРѕРІР°РЅРёСЏ Рё В«СЂРµРјР°СЃС‚РµСЂРёРЅРіР°В», С‚Р°Рє РєР°Рє С‚РµС…РЅРѕР»РѕРіРёРё РјР°СЃС€С‚Р°Р±РёСЂРѕРІР°РЅРёСЏ Рё С‚СЂР°СЃСЃРёСЂРѕРІРєРё РЅСѓР¶РЅРѕ РІРЅРµРґСЂСЏС‚СЊ РІСЂСѓС‡РЅСѓСЋ, Р±РµР· РіРѕС‚РѕРІС‹С… РїР»Р°РіРёРЅРѕРІ, РґРѕСЃС‚СѓРїРЅС‹С… РІ UE5.</p>
-                    <p>РўРµРј РЅРµ РјРµРЅРµРµ, РѕРїС‹С‚ РєРѕРјР°РЅРґС‹ СЃ РџРљ-РІРµСЂСЃРёРµР№, РІС‹С€РµРґС€РµР№ РїРѕР·Р¶Рµ РєРѕРЅСЃРѕР»СЊРЅРѕР№, РґР°Р» РёРј РЅРµРѕР±С…РѕРґРёРјСѓСЋ Р±Р°Р·Сѓ. Р•СЃР»Рё СЂРµРјР°СЃС‚РµСЂ Р±СѓРґРµС‚, РѕРЅ РЅР°РІРµСЂРЅСЏРєР° Р±СѓРґРµС‚ Р±Р°Р·РёСЂРѕРІР°С‚СЊСЃСЏ РЅР° РјР°РєСЃРёРјР°Р»СЊРЅС‹С… РЅР°СЃС‚СЂРѕР№РєР°С… РџРљ-РІРµСЂСЃРёРё, Р°РґР°РїС‚РёСЂРѕРІР°РЅРЅС‹С… РїРѕРґ Р¶РµР»РµР·Рѕ РєРѕРЅСЃРѕР»РµР№ В«ProВ» РІРµСЂСЃРёР№.</p>
+                    <h2 id="step-4">Движок и технические сложности</h2>
+                    <p>Интересный момент касается движка. Final Fantasy XVI не использует Luminous Engine (как FF15) или Unreal Engine 4/5 (как FF7 Remake/Rebirth). Она построена на сильно модифицированном проприетарном движке, который использовался для FF14, но переписанном под нужды экшена. Это усложняет процесс портирования и «ремастеринга», так как технологии масштабирования и трассировки нужно внедрять вручную, без готовых плагинов, доступных в UE5.</p>
+                    <p>Тем не менее, опыт команды с ПК-версией, вышедшей позже консольной, дал им необходимую базу. Если ремастер будет, он наверняка будет базироваться на максимальных настройках ПК-версии, адаптированных под железо консолей «Pro» версий.</p>
 
-                    <h2 id="step-5">РЎС‚СЂР°С‚РµРіРёСЏ Square Enix: РјРµРЅСЊС€Рµ РёРіСЂ, Р±РѕР»СЊС€Рµ РєР°С‡РµСЃС‚РІР°</h2>
-                    <p>Р’ РїРѕСЃР»РµРґРЅРёРµ РіРѕРґС‹ Square Enix СЃРјРµРЅРёР»Р° СЃС‚СЂР°С‚РµРіРёСЋ, РѕС‚РєР°Р·Р°РІС€РёСЃСЊ РѕС‚ РІС‹РїСѓСЃРєР° РјРЅРѕР¶РµСЃС‚РІР° СЃСЂРµРґРЅРёС… РїСЂРѕРµРєС‚РѕРІ РІ РїРѕР»СЊР·Сѓ РїРѕРґРґРµСЂР¶РєРё РєСЂСѓРїРЅС‹С… С„СЂР°РЅС€РёР·. РџРѕРґРґРµСЂР¶РєР° Р¶РёР·РЅРё Final Fantasy XVI С‡РµСЂРµР· РїРµСЂРµРёР·РґР°РЅРёРµ РёРґРµР°Р»СЊРЅРѕ РІРїРёСЃС‹РІР°РµС‚СЃСЏ РІ СЌС‚РѕС‚ РїР»Р°РЅ. Р’РјРµСЃС‚Рѕ С‚РѕРіРѕ С‡С‚РѕР±С‹ СЃСЂР°Р·Сѓ Р±СЂРѕСЃР°С‚СЊ РєРѕРјР°РЅРґСѓ РЅР° FF17 (РєРѕС‚РѕСЂР°СЏ, Р±РµР·СѓСЃР»РѕРІРЅРѕ, СѓР¶Рµ РІ РїСЂРµ-РїСЂРѕРґР°РєС€РµРЅРµ), РёР·РґР°С‚РµР»СЊ РјРѕР¶РµС‚ РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ СЂРµСЃСѓСЂСЃС‹ РґР»СЏ РїРѕР»РёСЂРѕРІРєРё СЃСѓС‰РµСЃС‚РІСѓСЋС‰РµРіРѕ С…РёС‚Р°, РїРѕРґРґРµСЂР¶РёРІР°СЏ РёРЅС‚РµСЂРµСЃ Рє Р±СЂРµРЅРґСѓ РґРѕ РІС‹С…РѕРґР° С‚СЂРµС‚СЊРµР№ С‡Р°СЃС‚Рё СЂРµРјРµР№РєР° FF7.</p>
+                    <h2 id="step-5">Стратегия Square Enix: меньше игр, больше качества</h2>
+                    <p>В последние годы Square Enix сменила стратегию, отказавшись от выпуска множества средних проектов в пользу поддержки крупных франшиз. Поддержка жизни Final Fantasy XVI через переиздание идеально вписывается в этот план. Вместо того чтобы сразу бросать команду на FF17 (которая, безусловно, уже в пре-продакшене), издатель может использовать ресурсы для полировки существующего хита, поддерживая интерес к бренду до выхода третьей части ремейка FF7.</p>
 
-                    <h2 id="step-6">РџСЂРѕРіРЅРѕР·: РєРѕРіРґР° Р¶РґР°С‚СЊ Р°РЅРѕРЅСЃР°?</h2>
-                    <p>Р•СЃР»Рё СЃР»РµРґРѕРІР°С‚СЊ Р»РѕРіРёРєРµ РёРЅРґСѓСЃС‚СЂРёРё, Р°РЅРѕРЅСЃ СЂР°СЃС€РёСЂРµРЅРЅРѕРіРѕ РёР·РґР°РЅРёСЏ С‡Р°С‰Рµ РІСЃРµРіРѕ РїСЂРѕРёСЃС…РѕРґРёС‚ РЅР° РєСЂСѓРїРЅС‹С… Р»РµС‚РЅРёС… РїСЂРµР·РµРЅС‚Р°С†РёСЏС… (Summer Game Fest) РёР»Рё РЅР° The Game Awards. РЈС‡РёС‚С‹РІР°СЏ, С‡С‚Рѕ РёРіСЂРµ СЃРєРѕСЂРѕ РёСЃРїРѕР»РЅРёС‚СЃСЏ С‚СЂРё РіРѕРґР°, С‚Р°Р№РјРёРЅРі РґР»СЏ В«Definitive EditionВ» РїРѕРґС…РѕРґРёС‚ РёРґРµР°Р»СЊРЅРѕ. Р­С‚Рѕ РїРѕР·РІРѕР»РёС‚ РїСЂРѕРґР°С‚СЊ РёРіСЂСѓ РїРѕ РІС‚РѕСЂРѕРјСѓ РєСЂСѓРіСѓ С‚РµРј, РєС‚Рѕ РїСЂРѕРїСѓСЃС‚РёР» РµС‘ РЅР° СЃС‚Р°СЂС‚Рµ, Рё РїСЂРёРІР»РµС‡СЊ С‚РµС…, РєС‚Рѕ Р¶РґР°Р» В«Р»СѓС‡С€РµР№ РІРµСЂСЃРёРёВ».</p>
+                    <h2 id="step-6">Прогноз: когда ждать анонса?</h2>
+                    <p>Если следовать логике индустрии, анонс расширенного издания чаще всего происходит на крупных летних презентациях (Summer Game Fest) или на The Game Awards. Учитывая, что игре скоро исполнится три года, тайминг для «Definitive Edition» подходит идеально. Это позволит продать игру по второму кругу тем, кто пропустил её на старте, и привлечь тех, кто ждал «лучшей версии».</p>
 
-                    <h2 id="step-7">Р—Р°РєР»СЋС‡РµРЅРёРµ</h2>
-                    <p>РќР°Р·С‹РІР°С‚СЊ РїРѕС‚РµРЅС†РёР°Р»СЊРЅРѕРµ РїРµСЂРµРёР·РґР°РЅРёРµ Final Fantasy XVI РіСЂРѕРјРєРёРј СЃР»РѕРІРѕРј В«RemasterВ» С‚РµС…РЅРёС‡РµСЃРєРё РјРѕР¶РµС‚ Р±С‹С‚СЊ РЅРµРІРµСЂРЅРѕ, С‚Р°Рє РєР°Рє РёРіСЂР° РЅРµ СѓСЃРїРµР»Р° СѓСЃС‚Р°СЂРµС‚СЊ. РЎРєРѕСЂРµРµ РІСЃРµРіРѕ, РЅР°СЃ Р¶РґС‘С‚ С„РѕСЂРјР°С‚ В«DirectorвЂ™s CutВ». РћРґРЅР°РєРѕ СЃСѓС‚СЊ РѕС‚ СЌС‚РѕРіРѕ РЅРµ РјРµРЅСЏРµС‚СЃСЏ: РёРіСЂРѕРєРё Р¶Р°Р¶РґСѓС‚ РёСЃРїСЂР°РІР»РµРЅРЅРѕР№ РїСЂРѕРёР·РІРѕРґРёС‚РµР»СЊРЅРѕСЃС‚Рё, СЂР°СЃС€РёСЂРµРЅРЅРѕРіРѕ РєРѕРЅС‚РµРЅС‚Р° Рё РІС‹С…РѕРґР° Р·Р° РїСЂРµРґРµР»С‹ СЌРєРѕСЃРёСЃС‚РµРјС‹ PlayStation. РћСЃС‚Р°С‘С‚СЃСЏ Р»РёС€СЊ Р¶РґР°С‚СЊ РѕС„РёС†РёР°Р»СЊРЅС‹С… РЅРѕРІРѕСЃС‚РµР№ РѕС‚ Square Enix, РєРѕС‚РѕСЂС‹Рµ, СЃСѓРґСЏ РїРѕ РїР»РѕС‚РЅРѕСЃС‚Рё СЃР»СѓС…РѕРІ, СѓР¶Рµ РЅРµ Р·Р° РіРѕСЂР°РјРё.</p>
+                    <h2 id="step-7">Заключение</h2>
+                    <p>Называть потенциальное переиздание Final Fantasy XVI громким словом «Remaster» технически может быть неверно, так как игра не успела устареть. Скорее всего, нас ждёт формат «Director’s Cut». Однако суть от этого не меняется: игроки жаждут исправленной производительности, расширенного контента и выхода за пределы экосистемы PlayStation. Остаётся лишь ждать официальных новостей от Square Enix, которые, судя по плотности слухов, уже не за горами.</p>
 </div>
 
-        <!-- Telegram СЂРµРєР»Р°РјРЅС‹Р№ Р±Р°РЅРЅРµСЂ -->
+        <!-- Telegram рекламный баннер -->
         <a href="https://t.me/RepairoRU" target="_blank" rel="noopener noreferrer" class="telegram-banner">
           <div class="telegram-banner-container">
             <div class="telegram-logo">
@@ -470,10 +395,10 @@
               </svg>
             </div>
             <div class="telegram-content">
-              <div class="telegram-title">РќРѕРІРѕСЃС‚Рё РёР· РјРёСЂР° С‚РµС…РЅРѕР»РѕРіРёР№</div>
-              <div class="telegram-subtitle">Р’ РЅР°С€РµРј РЅРѕРІРѕРј Telegram-РєР°РЅР°Р»Рµ. РџРѕРґРїРёСЃС‹РІР°Р№С‚РµСЃСЊ Рё Р±СѓРґСЊС‚Рµ РІ С‡РёСЃР»Рµ РїРµСЂРІС‹С…!</div>
+              <div class="telegram-title">Новости из мира технологий</div>
+              <div class="telegram-subtitle">В нашем новом Telegram-канале. Подписывайтесь и будьте в числе первых!</div>
               <div class="telegram-button">
-                РџРѕРґРїРёСЃР°С‚СЊСЃСЏ
+                Подписаться
                 <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.56c-.21 2.22-1.12 7.58-1.58 10.06-.19 1.07-.57 1.43-.94 1.46-.8.07-1.4-.52-2.17-1.03-1.21-.79-1.89-1.28-3.06-2.05-1.35-.87-.47-1.35.3-2.13.2-.21 3.71-3.39 3.77-3.68.01-.04.01-.18-.07-.26s-.2-.05-.29-.03c-.12.03-2.11 1.34-5.95 3.93-.56.38-1.07.57-1.53.56-.5-.01-1.47-.28-2.19-.51-.88-.28-1.58-.43-1.52-.91.03-.25.38-.51 1.04-.78 4.07-1.77 6.78-2.94 8.13-3.51 3.88-1.62 4.68-1.9 5.19-1.91.12 0 .37.03.54.17.14.12.18.28.2.44-.01.06 0 .11-.01.17z"/>
                 </svg>
@@ -499,45 +424,45 @@
                         </span>
                         <span class="logo__text">Repairo</span>
                     </a>
-                    <p class="footer__text">РџРѕРјРѕРіР°РµРј СЂРµРјРѕРЅС‚РёСЂРѕРІР°С‚СЊ СЌР»РµРєС‚СЂРѕРЅРёРєСѓ СЃ 2024 РіРѕРґР°</p>
+                    <p class="footer__text">Помогаем ремонтировать электронику с 2024 года</p>
                 </div>
                 <div class="footer__col">
-                    <h3 class="footer__title">Р Р°Р·РґРµР»С‹</h3>
+                    <h3 class="footer__title">Разделы</h3>
                     <ul class="footer__links">
-                        <li><a href="../index.html" class="footer__link">Р“Р»Р°РІРЅР°СЏ</a></li>
-                        <li><a href="../index.html#categories" class="footer__link">Р’СЃРµ РіР°Р№РґС‹</a></li>
-                        <li><a href="../contacts.html" class="footer__link">РљРѕРЅС‚Р°РєС‚С‹</a></li>
+                        <li><a href="../index.html" class="footer__link">Главная</a></li>
+                        <li><a href="../index.html#categories" class="footer__link">Все гайды</a></li>
+                        <li><a href="../contacts.html" class="footer__link">Контакты</a></li>
                     </ul>
                 </div>
                 <div class="footer__col">
-                    <h3 class="footer__title">РљР°С‚РµРіРѕСЂРёРё</h3>
+                    <h3 class="footer__title">Категории</h3>
                     <ul class="footer__links">
-                        <li><a href="../tv.html" class="nav__link">РўРµР»РµРІРёР·РѕСЂС‹</a></li>
-                        <li><a href="../cameras.html" class="nav__link">Р¤РѕС‚РѕР°РїРїР°СЂР°С‚С‹</a></li>
-                        <li><a href="../consoles.html" class="nav__link">РџСЂРёСЃС‚Р°РІРєРё</a></li>
-                        <li><a href="../laptops.html" class="nav__link">РќРѕСѓС‚Р±СѓРєРё</a></li>
-                        <li><a href="../smartphones.html" class="nav__link">РЎРјР°СЂС‚С„РѕРЅС‹</a></li>
-                        <li><a href="../small-appliances.html" class="nav__link">РњРµР»РєР°СЏ С‚РµС…РЅРёРєР°</a></li>
-                        <li><a href="../large-appliances.html" class="nav__link">Р‘С‹С‚РѕРІР°СЏ С‚РµС…РЅРёРєР°</a></li>
-                        <li><a href="../auto-electronics.html" class="nav__link">РђРІС‚Рѕ-Р­Р»РµРєС‚СЂРѕРЅРёРєР°</a></li>
+                        <li><a href="../tv.html" class="nav__link">Телевизоры</a></li>
+                        <li><a href="../cameras.html" class="nav__link">Фотоаппараты</a></li>
+                        <li><a href="../consoles.html" class="nav__link">Приставки</a></li>
+                        <li><a href="../laptops.html" class="nav__link">Ноутбуки</a></li>
+                        <li><a href="../smartphones.html" class="nav__link">Смартфоны</a></li>
+                        <li><a href="../small-appliances.html" class="nav__link">Мелкая техника</a></li>
+                        <li><a href="../large-appliances.html" class="nav__link">Бытовая техника</a></li>
+                        <li><a href="../auto-electronics.html" class="nav__link">Авто-Электроника</a></li>
                     </ul>
                 </div>
                 <div class="footer__col">
-                    <h3 class="footer__title">РљРѕРЅС‚Р°РєС‚С‹</h3>
+                    <h3 class="footer__title">Контакты</h3>
                     <ul class="footer__links">
                         <li><a href="https://t.me/RepairoRU" class="footer__link"><i class="fab fa-telegram"></i> Telegram</a></li>
-                        <li><span class="footer__link">РќР°С€Р° РїРѕС‡С‚Р°: repairo.info@mail.ru</span></li>
+                        <li><span class="footer__link">Наша почта: repairo.info@mail.ru</span></li>
                     </ul>
                 </div>
             </div>
             <div class="footer__bottom">
                 <p class="disclaimer">
-    РђРґРјРёРЅРёСЃС‚СЂР°С†РёСЏ СЃР°Р№С‚Р° РЅРµ РЅРµСЃС‘С‚ РѕС‚РІРµС‚СЃС‚РІРµРЅРЅРѕСЃС‚Рё Р·Р° РІРѕР·РјРѕР¶РЅС‹Рµ РїРѕРІСЂРµР¶РґРµРЅРёСЏ С‚РµС…РЅРёРєРё
-    Рё РёРЅС‹Рµ РїРѕСЃР»РµРґСЃС‚РІРёСЏ, РІРѕР·РЅРёРєС€РёРµ РІ СЂРµР·СѓР»СЊС‚Р°С‚Рµ СЃР°РјРѕСЃС‚РѕСЏС‚РµР»СЊРЅРѕРіРѕ СЂРµРјРѕРЅС‚Р° РїРѕ
-    РјР°С‚РµСЂРёР°Р»Р°Рј Рё РёРЅСЃС‚СЂСѓРєС†РёСЏРј, СЂР°Р·РјРµС‰С‘РЅРЅС‹Рј РЅР° СЃР°Р№С‚Рµ. Р’СЃРµ СЂР°Р±РѕС‚С‹ РІС‹ РІС‹РїРѕР»РЅСЏРµС‚Рµ
-    РЅР° СЃРІРѕР№ СЃС‚СЂР°С… Рё СЂРёСЃРє.
+    Администрация сайта не несёт ответственности за возможные повреждения техники
+    и иные последствия, возникшие в результате самостоятельного ремонта по
+    материалам и инструкциям, размещённым на сайте. Все работы вы выполняете
+    на свой страх и риск.
     </p>
-                <p class="footer__copyright">В© 2026 Repairo. Р’СЃРµ РїСЂР°РІР° Р·Р°С‰РёС‰РµРЅС‹.</p>
+                <p class="footer__copyright">© 2026 Repairo. Все права защищены.</p>
             </div>
         </div>
     </footer>
@@ -546,50 +471,50 @@
 {
   "@context": "https://schema.org",
   "@type": "HowTo",
-  "name": "Remaster Final Fantasy XVI: С‡С‚Рѕ РёР·РІРµСЃС‚РЅРѕ",
-  "description": "РџРѕРґСЂРѕР±РЅС‹Р№ Р°РЅР°Р»РёР· СЃР»СѓС…РѕРІ Рё СѓС‚РµС‡РµРє Рѕ РІРѕР·РјРѕР¶РЅРѕРј СЂРµРјР°СЃС‚РµСЂРµ РёР»Рё СЂР°СЃС€РёСЂРµРЅРЅРѕРј РёР·РґР°РЅРёРё Final Fantasy XVI. Р Р°Р·Р±РѕСЂ РїРµСЂСЃРїРµРєС‚РёРІ PS5 Pro, РІРµСЂСЃРёР№ РґР»СЏ Xbox Рё РЅРѕРІРѕРіРѕ РєРѕРЅС‚РµРЅС‚Р°.",
+  "name": "Remaster Final Fantasy XVI: что известно",
+  "description": "Подробный анализ слухов и утечек о возможном ремастере или расширенном издании Final Fantasy XVI. Разбор перспектив PS5 Pro, версий для Xbox и нового контента.",
   "totalTime": "PT30M",
   "step": [
     {
       "@type": "HowToStep",
-      "name": "РќСѓР¶РµРЅ Р»Рё СЂРµРјР°СЃС‚РµСЂ",
-      "text": "РќСѓР¶РµРЅ Р»Рё РІРѕРѕР±С‰Рµ СЂРµРјР°СЃС‚РµСЂ РёРіСЂРµ 2023 РіРѕРґР°?",
+      "name": "Нужен ли ремастер",
+      "text": "Нужен ли вообще ремастер игре 2023 года?",
       "url": "#step-1"
     },
     {
       "@type": "HowToStep",
-      "name": "РЎРѕСЃС‚Р°РІ РџРѕР»РЅРѕРіРѕ РёР·РґР°РЅРёСЏ",
-      "text": "Р§С‚Рѕ РјРѕР¶РµС‚ РІРѕР№С‚Рё РІ РџРѕР»РЅРѕРµ РёР·РґР°РЅРёРµ?",
+      "name": "Состав Полного издания",
+      "text": "Что может войти в Полное издание?",
       "url": "#step-2"
     },
     {
       "@type": "HowToStep",
-      "name": "Р’РµСЂСЃРёСЏ РґР»СЏ Xbox",
-      "text": "Р¤Р°РєС‚РѕСЂ Xbox Рё РЅРѕРІРѕР№ Р°СѓРґРёС‚РѕСЂРёРё",
+      "name": "Версия для Xbox",
+      "text": "Фактор Xbox и новой аудитории",
       "url": "#step-3"
     },
     {
       "@type": "HowToStep",
-      "name": "РўРµС…РЅРёС‡РµСЃРєРёРµ СЃР»РѕР¶РЅРѕСЃС‚Рё",
-      "text": "Р”РІРёР¶РѕРє Рё С‚РµС…РЅРёС‡РµСЃРєРёРµ СЃР»РѕР¶РЅРѕСЃС‚Рё",
+      "name": "Технические сложности",
+      "text": "Движок и технические сложности",
       "url": "#step-4"
     },
     {
       "@type": "HowToStep",
-      "name": "РЎС‚СЂР°С‚РµРіРёСЏ Square Enix",
-      "text": "РЎС‚СЂР°С‚РµРіРёСЏ Square Enix: РјРµРЅСЊС€Рµ РёРіСЂ, Р±РѕР»СЊС€Рµ РєР°С‡РµСЃС‚РІР°",
+      "name": "Стратегия Square Enix",
+      "text": "Стратегия Square Enix: меньше игр, больше качества",
       "url": "#step-5"
     },
     {
       "@type": "HowToStep",
-      "name": "РџСЂРѕРіРЅРѕР· РІС‹С…РѕРґР°",
-      "text": "РџСЂРѕРіРЅРѕР·: РєРѕРіРґР° Р¶РґР°С‚СЊ Р°РЅРѕРЅСЃР°?",
+      "name": "Прогноз выхода",
+      "text": "Прогноз: когда ждать анонса?",
       "url": "#step-6"
     },
     {
       "@type": "HowToStep",
-      "name": "Р—Р°РєР»СЋС‡РµРЅРёРµ",
-      "text": "Р—Р°РєР»СЋС‡РµРЅРёРµ",
+      "name": "Заключение",
+      "text": "Заключение",
       "url": "#step-7"
     }
   ],
@@ -600,4 +525,6 @@
 <script src="../cookie-consent.js"></script>
 </body>
 </html>
+
+
 

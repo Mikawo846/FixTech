@@ -4,71 +4,34 @@
 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>РќР°СЃС‚СЂРѕР№РєРё РєРѕРЅС„РёРґРµРЅС†РёР°Р»СЊРЅРѕСЃС‚Рё Windows 11 РЅР° РЅРѕСѓС‚Р±СѓРєРµ | Р’Р°Р¶РЅС‹Рµ РїР°СЂР°РјРµС‚СЂС‹ Р±РµР·РѕРїР°СЃРЅРѕСЃС‚Рё</title>
-    <meta name="description" content="{{ description }}">
-    <meta name="description" content="РџРѕС€Р°РіРѕРІР°СЏ РёРЅСЃС‚СЂСѓРєС†РёСЏ: РљР°РєРёРµ РЅР°СЃС‚СЂРѕР№РєРё РєРѕРЅС„РёРґРµРЅС†РёР°Р»СЊРЅРѕСЃС‚Рё Windows 11 РІР°Р¶РЅРѕ РІРєР»СЋС‡РёС‚СЊ РЅР° РЅРѕСѓС‚Р±СѓРєРµ. РџРѕР»РЅРѕРµ СЂСѓРєРѕРІРѕРґСЃС‚РІРѕ РїРѕ Р·Р°С‰РёС‚Рµ Р»РёС‡РЅС‹С… РґР°РЅРЅС‹С… Рё РїСЂРёРІР°С‚РЅРѕСЃС‚Рё РІ Windows 11.">
+  <title>Настройки конфиденциальности Windows 11 на ноутбуке | Важные</title>
+    <meta name="description" content="">
 
   <link rel="stylesheet" href="../styles.css" />
   <link rel="stylesheet" href="../styles-header.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-
   <style>
     .guide-content { line-height: 1.7; color: var(--text); }
-    .guide-content h2 { color: var(--primary); margin-top: 30px; margin-bottom: 15px; font-size: 1.6rem; }
-    .guide-content h3 { color: var(--primary-dark); margin-top: 25px; margin-bottom: 12px; font-size: 1.25rem; }
+    .guide-content h2 { color: var(--primary); margin-top: 30px; margin-bottom: 15px; font-size: 1.5rem; }
+    .guide-content h3 { color: var(--primary-dark); margin-top: 25px; margin-bottom: 12px; font-size: 1.2rem; }
     .guide-image-block { margin: 20px 0; padding: 15px; background: var(--background); border-radius: var(--border-radius); border: 1px solid var(--border); text-align: center; }
     .guide-image-block img { max-width: 100%; height: auto; border-radius: 6px; border: 1px solid var(--border); }
     .image-caption { margin-top: 10px; font-size: 0.85rem; color: var(--text-light); font-style: italic; }
-    table { width: 100%; border-collapse: collapse; margin: 20px 0; }
-    th, td { border: 1px solid var(--border); padding: 8px; text-align: left; vertical-align: top; }
-    th { background: var(--background-light); }
-    code { background: rgba(0,0,0,0.04); padding: 1px 4px; border-radius: 3px; }
-    ul, ol { padding-left: 18px; }
-    .check-section { padding: 15px; border-radius: 6px; border: 1px dashed var(--border); margin: 18px 0; background: rgba(0,0,0,0.01); }
-    .check-title { font-weight: 600; margin-bottom: 8px; }
     .pro-tips { background: rgba(3, 74, 79, 0.05); padding: 15px; border-radius: 6px; margin: 20px 0; }
     .pro-tips h4 { color: var(--primary); margin-top: 0; margin-bottom: 12px; font-size: 1.1rem; }
     .tip-item { display: flex; gap: 8px; margin-bottom: 8px; align-items: flex-start; }
-    .ok { color: #0a8f3c; font-weight: 600; }
-    .warn { color: #c97a00; font-weight: 600; }
-    .bad { color: #c62828; font-weight: 600; }
-    .alert-box { padding: 20px; border-radius: 8px; margin: 25px 0; }
-    .alert-danger { background: rgba(198, 40, 40, 0.1); border-left: 4px solid #c62828; }
-    .alert-warning { background: rgba(201, 122, 0, 0.1); border-left: 4px solid #c97a00; }
-    .alert-success { background: rgba(10, 143, 60, 0.1); border-left: 4px solid #0a8f3c; }
-    .alert-info { background: rgba(3, 74, 79, 0.1); border-left: 4px solid var(--primary); }
-    .settings-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin: 20px 0; }
-    .setting-card { padding: 20px; border-radius: 8px; background: var(--background); border: 1px solid var(--border); }
-    .setting-card h4 { color: var(--primary-dark); margin-top: 0; margin-bottom: 15px; }
-    .setting-card .priority { display: inline-block; padding: 4px 8px; border-radius: 4px; font-size: 0.85rem; font-weight: 600; margin-bottom: 10px; }
-    .priority-critical { background: rgba(198, 40, 40, 0.2); color: #c62828; }
-    .priority-high { background: rgba(201, 122, 0, 0.2); color: #c97a00; }
-    .priority-medium { background: rgba(3, 74, 79, 0.2); color: var(--primary); }
-    .priority-low { background: rgba(10, 143, 60, 0.2); color: #0a8f3c; }
-    .step-by-step { counter-reset: step-counter; }
-    .step-by-step .step-item { position: relative; padding-left: 50px; margin-bottom: 20px; }
-    .step-by-step .step-item::before { counter-increment: step-counter; content: counter(step-counter); position: absolute; left: 0; top: 0; width: 35px; height: 35px; background: var(--primary); color: white; text-align: center; line-height: 35px; border-radius: 50%; font-weight: bold; }
-    .privacy-checklist { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin: 20px 0; }
-    .checklist-item { padding: 12px; border-radius: 6px; background: var(--background); border: 1px solid var(--border); }
-    .checklist-item input { margin-right: 8px; }
-    .checklist-item label { font-weight: 500; }
+    table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+    th, td { border: 1px solid var(--border); padding: 8px; text-align: left; }
+    th { background: var(--background-light); }
+    .highlight { background: #f5f7fa; border-left: 4px solid #2d9cdb; padding: 10px 15px; margin: 20px 0; }
+    .faq-section ul { margin-left: 1em; }
+    .block-section { margin-bottom: 2em; }
     @media (max-width: 768px) {
       .guide-content h2 { font-size: 1.4rem; margin-top: 25px; }
       .guide-image-block { padding: 12px; margin: 15px 0; }
       table, th, td { font-size: 0.95rem; }
-      .settings-grid { grid-template-columns: 1fr; }
-      .privacy-checklist { grid-template-columns: 1fr; }
     }
-    /* РЇРЅРґРµРєСЃ РњР°СЂРєРµС‚ СЂРµРєР»Р°РјРЅС‹Р№ Р±Р°РЅРЅРµСЂ */
-    .ym-hero-link {
-      display: block;
-      text-decoration: none;
-      color: inherit;
-      max-width: 100%;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    }
-
     /* Р“РѕСЂРёР·РѕРЅС‚Р°Р»СЊРЅС‹Р№ Р±Р°РЅРЅРµСЂ-РєР°СЂС‚РѕС‡РєР° */
     .ym-hero-banner {
       width: 100%;
@@ -120,63 +83,257 @@
       transform: scale(1.02);
     }
 
-    /* РўРµРєСЃС‚РѕРІР°СЏ С‡Р°СЃС‚СЊ Р±Р°РЅРЅРµСЂР° */
+    /* РџСЂР°РІР°СЏ С‡Р°СЃС‚СЊ: РєРѕРЅС‚РµРЅС‚ */
     .ym-hero-content {
-      padding: 12px 16px;
-      text-align: center;
+      padding: 16px 18px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 8px;
     }
 
+    /* РќР°Р·РІР°РЅРёРµ С‚РѕРІР°СЂР° */
     .ym-hero-title {
-      font-size: 13px;
+      font-size: 14px;
       font-weight: 600;
-      color: #1f2937;
+      color: #111827;
+      line-height: 1.3;
       margin: 0 0 4px 0;
-      line-height: 1.3;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
     }
 
-    .ym-hero-desc {
-      font-size: 11px;
+    /* Р РµР№С‚РёРЅРі */
+    .ym-hero-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+    }
+
+    .ym-hero-rating {
+      font-size: 13px;
+      font-weight: 500;
+      color: #111827;
+      background: #f9fafb;
+      border-radius: 999px;
+      padding: 4px 10px;
+    }
+
+    .ym-hero-rating-count {
       color: #6b7280;
-      margin: 0;
-      line-height: 1.3;
     }
 
+    /* Р¤РёРѕР»РµС‚РѕРІР°СЏ РєРЅРѕРїРєР° */
+    .ym-hero-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 9px 16px;
+      border-radius: 999px;
+      border: none;
+      background: #6a00ff;
+      color: #ffffff;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 2px 6px rgba(88, 28, 135, 0.35);
+      transition: background 0.15s ease, transform 0.15s ease,
+                  box-shadow 0.15s ease;
+    }
+    .ym-hero-button::after {
+      content: "в†’";
+      margin-left: 6px;
+      font-size: 14px;
+    }
+    .ym-hero-button:hover {
+      background: #7c3aed;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 10px rgba(88, 28, 135, 0.45);
+    }
+
+    /* Р®СЂРёРґРёС‡РµСЃРєРёР№ Р±Р»РѕРє */
+    .ym-hero-legal {
+      margin-top: 6px;
+      max-width: 600px;
+      font-size: 11px;
+      line-height: 1.3;
+      color: #6b7280;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* РђРґР°РїС‚РёРІ */
     @media (max-width: 480px) {
       .ym-hero-banner {
-        min-height: 120px;
+        max-width: 100%;
+        margin: 20px 0;
       }
       .ym-hero-images {
         height: 100px;
       }
-      .ym-hero-title {
-        font-size: 12px;
+      .ym-hero-content {
+        padding: 12px 12px;
       }
-      .ym-hero-desc {
+      .ym-hero-title {
+        font-size: 13px;
+      }
+      .ym-hero-button {
+        font-size: 13px;
+        padding: 8px 14px;
+      }
+      .ym-hero-legal {
         font-size: 10px;
       }
     }
+    /* Telegram СЂРµРєР»Р°РјРЅС‹Р№ Р±Р°РЅРЅРµСЂ */
+    .telegram-banner {
+      display: flex;
+      justify-content: center;
+      text-decoration: none;
+      color: inherit;
+      width: 100%;
+      margin: 40px 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    .telegram-banner-container {
+      width: 100%;
+      max-width: 500px;
+      min-height: 120px;
+      border-radius: 16px;
+      background: linear-gradient(135deg, #0088cc 0%, #005f8f 100%);
+      border: 1px solid #005f8f;
+      display: flex;
+      align-items: center;
+      padding: 20px;
+      box-shadow: 0 4px 16px rgba(0, 136, 204, 0.2);
+      overflow: hidden;
+      box-sizing: border-box;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .telegram-banner-container:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0, 136, 204, 0.3);
+    }
+
+    .telegram-logo {
+      width: 60px;
+      height: 60px;
+      min-width: 60px;
+      background: #ffffff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 20px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .telegram-logo svg {
+      width: 32px;
+      height: 32px;
+      fill: #0088cc;
+    }
+
+    .telegram-content {
+      flex: 1;
+      color: #ffffff;
+    }
+
+    .telegram-title {
+      font-size: 16px;
+      font-weight: 600;
+      margin: 0 0 8px 0;
+      line-height: 1.3;
+    }
+
+    .telegram-subtitle {
+      font-size: 14px;
+      opacity: 0.9;
+      margin: 0 0 12px 0;
+      line-height: 1.4;
+    }
+
+    .telegram-button {
+      display: inline-flex;
+      align-items: center;
+      padding: 8px 16px;
+      background: #ffffff;
+      color: #0088cc;
+      border-radius: 20px;
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background 0.2s ease, transform 0.2s ease;
+    }
+
+    .telegram-button:hover {
+      background: #f0f8ff;
+      transform: scale(1.05);
+    }
+
+    .telegram-button svg {
+      width: 16px;
+      height: 16px;
+      margin-left: 6px;
+      fill: #0088cc;
+    }
+
+    /* РђРґР°РїС‚РёРІ РґР»СЏ РјРѕР±РёР»СЊРЅС‹С… */
+    @media (max-width: 480px) {
+      .telegram-banner-container {
+        max-width: 100%;
+        margin: 20px 0;
+        padding: 15px;
+        min-height: 100px;
+      }
+      .telegram-logo {
+        width: 50px;
+        height: 50px;
+        min-width: 50px;
+        margin-right: 15px;
+      }
+      .telegram-logo svg {
+        width: 26px;
+        height: 26px;
+      }
+      .telegram-title {
+        font-size: 14px;
+      }
+      .telegram-subtitle {
+        font-size: 12px;
+      }
+      .telegram-button {
+        font-size: 12px;
+        padding: 6px 12px;
+      }
+    }
+
+
+
   </style>
+  <script async src="https://timeweb.cloud/api/v1/cloud-ai/agents/3cc03620-d051-4d8d-b5af-f7b6cd083a35/embed.js?collapsed=true"></script>
 </head>
 <body>
-
   <header class="header">
     <div class="container">
       <div class="header__inner">
         <a href="../index.html" class="logo">
-          <img src="../logo.svg" alt="Repairo" width="40" height="40">
-          <span>Repairo</span>
+          <span class="logo__icon"></span>
+          <span class="logo__text">GeoExpert</span>
         </a>
         <nav class="nav">
-          <a href="../index.html">Р“Р»Р°РІРЅР°СЏ</a>
-          <a href="../laptops.html">РќРѕСѓС‚Р±СѓРєРё</a>
-          <a href="../smartphones.html">РЎРјР°СЂС‚С„РѕРЅС‹</a>
-          <a href="../consoles.html">РљРѕРЅСЃРѕР»Рё</a>
-          <a href="../cameras.html">Р¤РѕС‚РѕР°РїРїР°СЂР°С‚С‹</a>
-          <a href="../tv.html">РўРµР»РµРІРёР·РѕСЂС‹</a>
+          <ul class="nav__list">
+            <li><a href="../cameras.html" class="nav__link">РљР°РјРµСЂС‹</a></li>
+            <li><a href="../drones.html" class="nav__link">Р”СЂРѕРЅС‹</a></li>
+            <li><a href="../workflow.html" class="nav__link">Workflow</a></li>
+          </ul>
         </nav>
-        <button class="theme-toggle" aria-label="РџРµСЂРµРєР»СЋС‡РёС‚СЊ С‚РµРјСѓ">
-          <i class="fas fa-moon"></i>
-        </button>
       </div>
     </div>
   </header>
@@ -184,369 +341,361 @@
   <main class="main">
     <div class="container">
       <div class="guide-content">
-        <h1>РќР°СЃС‚СЂРѕР№РєРё РєРѕРЅС„РёРґРµРЅС†РёР°Р»СЊРЅРѕСЃС‚Рё Windows 11 РЅР° РЅРѕСѓС‚Р±СѓРєРµ</h1>
+        <h1>Настройки конфиденциальности Windows 11 на ноутбуке</h1>
         
-        <p>Windows 11 СЃРѕР±РёСЂР°РµС‚ РјРЅРѕР¶РµСЃС‚РІРѕ РґР°РЅРЅС‹С… Рѕ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏС…, РЅРѕ РїРѕР·РІРѕР»СЏРµС‚ РєРѕРЅС‚СЂРѕР»РёСЂРѕРІР°С‚СЊ СЌС‚Сѓ СЃР±РѕСЂРєСѓ С‡РµСЂРµР· РЅР°СЃС‚СЂРѕР№РєРё РєРѕРЅС„РёРґРµРЅС†РёР°Р»СЊРЅРѕСЃС‚Рё. РџСЂР°РІРёР»СЊРЅР°СЏ РєРѕРЅС„РёРіСѓСЂР°С†РёСЏ СЌС‚РёС… РїР°СЂР°РјРµС‚СЂРѕРІ РѕСЃРѕР±РµРЅРЅРѕ РІР°Р¶РЅР° РґР»СЏ РЅРѕСѓС‚Р±СѓРєРѕРІ, РєРѕС‚РѕСЂС‹Рµ С‡Р°СЃС‚Рѕ РёСЃРїРѕР»СЊР·СѓСЋС‚СЃСЏ РІ СЂР°Р·РЅС‹С… РјРµСЃС‚Р°С… Рё СЃРѕРґРµСЂР¶Р°С‚ Р»РёС‡РЅСѓСЋ РёРЅС„РѕСЂРјР°С†РёСЋ. Р’ СЌС‚РѕРј СЂСѓРєРѕРІРѕРґСЃС‚РІРµ РјС‹ СЂР°Р·Р±РµСЂРµРј РєР»СЋС‡РµРІС‹Рµ РЅР°СЃС‚СЂРѕР№РєРё РєРѕРЅС„РёРґРµРЅС†РёР°Р»СЊРЅРѕСЃС‚Рё, РєРѕС‚РѕСЂС‹Рµ РЅРµРѕР±С…РѕРґРёРјРѕ РІРєР»СЋС‡РёС‚СЊ.</p>
+        <p>Windows 11 собирает множество данных о пользователях, но позволяет контролировать эту сборку через настройки конфиденциальности. Правильная конфигурация этих параметров особенно важна для ноутбуков, которые часто используются в разных местах и содержат личную информацию. В этом руководстве мы разберем ключевые настройки конфиденциальности, которые необходимо включить.</p>
 
         <div class="guide-image-block">
-          <img src="https://avatars.mds.yandex.net/get-shedevrum/16419046/img_44137e6537b611f097f70ecdb250e1a9/orig" alt="РќР°СЃС‚СЂРѕР№РєРё РєРѕРЅС„РёРґРµРЅС†РёР°Р»СЊРЅРѕСЃС‚Рё Windows 11 РЅР° РЅРѕСѓС‚Р±СѓРєРµ">
-          <div class="image-caption">РџР°РЅРµР»СЊ РЅР°СЃС‚СЂРѕРµРє РєРѕРЅС„РёРґРµРЅС†РёР°Р»СЊРЅРѕСЃС‚Рё Windows 11</div>
+          <img src="https://avatars.mds.yandex.net/get-shedevrum/16419046/img_44137e6537b611f097f70ecdb250e1a9/orig" alt="Настройки конфиденциальности Windows 11 на ноутбуке">
+          <div class="image-caption">Панель настроек конфиденциальности Windows 11</div>
         </div>
 
         <div class="alert-info">
-          <h4><i class="fas fa-info-circle"></i> РџРѕС‡РµРјСѓ РІР°Р¶РЅС‹ РЅР°СЃС‚СЂРѕР№РєРё РєРѕРЅС„РёРґРµРЅС†РёР°Р»СЊРЅРѕСЃС‚Рё</h4>
-          <p>Windows 11 РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ СЃРѕР±РёСЂР°РµС‚ РґР°РЅРЅС‹Рµ Рѕ РёСЃРїРѕР»СЊР·РѕРІР°РЅРёРё СЃРёСЃС‚РµРјС‹, РјРµСЃС‚РѕРїРѕР»РѕР¶РµРЅРёРё, РїСЂРёР»РѕР¶РµРЅРёСЏС… Рё РґСЂСѓРіСѓСЋ Р»РёС‡РЅСѓСЋ РёРЅС„РѕСЂРјР°С†РёСЋ. РџСЂР°РІРёР»СЊРЅР°СЏ РЅР°СЃС‚СЂРѕР№РєР° Р·Р°С‰РёС‚РёС‚ РІР°С€Сѓ РїСЂРёРІР°С‚РЅРѕСЃС‚СЊ Рё РїСЂРµРґРѕС‚РІСЂР°С‚РёС‚ РЅРµР¶РµР»Р°С‚РµР»СЊРЅСѓСЋ РїРµСЂРµРґР°С‡Сѓ РґР°РЅРЅС‹С… Microsoft Рё С‚СЂРµС‚СЊРёРј Р»РёС†Р°Рј.</p>
+          <h4><i class="fas fa-info-circle"></i> Почему важны настройки конфиденциальности</h4>
+          <p>Windows 11 по умолчанию собирает данные о использовании системы, местоположении, приложениях и другую личную информацию. Правильная настройка защитит вашу приватность и предотвратит нежелательную передачу данных Microsoft и третьим лицам.</p>
         </div>
 
-        <h2>РљСЂРёС‚РёС‡РµСЃРєРё РІР°Р¶РЅС‹Рµ РЅР°СЃС‚СЂРѕР№РєРё РєРѕРЅС„РёРґРµРЅС†РёР°Р»СЊРЅРѕСЃС‚Рё</h2>
+        <h2>Критически важные настройки конфиденциальности</h2>
 
-        <h3>1. РћР±С‰РёРµ РїР°СЂР°РјРµС‚СЂС‹ РєРѕРЅС„РёРґРµРЅС†РёР°Р»СЊРЅРѕСЃС‚Рё</h3>
+        <h3>1. Общие параметры конфиденциальности</h3>
 
         <div class="settings-grid">
           <div class="setting-card">
-            <h4><i class="fas fa-shield-alt"></i> Р”РёР°РіРЅРѕСЃС‚РёС‡РµСЃРєРёРµ РґР°РЅРЅС‹Рµ</h4>
-            <span class="priority priority-critical">РљСЂРёС‚РёС‡РµСЃРєРё РІР°Р¶РЅРѕ</span>
-            <p>Windows РѕС‚РїСЂР°РІР»СЏРµС‚ РѕС‚С‡РµС‚С‹ РѕР± РёСЃРїРѕР»СЊР·РѕРІР°РЅРёРё СЃРёСЃС‚РµРјС‹ Рё РѕС€РёР±РєР°С… РІ Microsoft.</p>
+            <h4><i class="fas fa-shield-alt"></i> Диагностические данные</h4>
+            <span class="priority priority-critical">Критически важно</span>
+            <p>Windows отправляет отчеты об использовании системы и ошибках в Microsoft.</p>
             <div class="check-section">
-              <div class="check-title">Р РµРєРѕРјРµРЅРґСѓРµРјС‹Рµ РЅР°СЃС‚СЂРѕР№РєРё:</div>
+              <div class="check-title">Рекомендуемые настройки:</div>
               <ul>
-                <li><strong>РћС‚РїСЂР°РІРєР° РґРёР°РіРЅРѕСЃС‚РёС‡РµСЃРєРёС… РґР°РЅРЅС‹С…</strong> в†’ "РўСЂРµР±СѓРµРјС‹Рµ"</li>
-                <li><strong>РћС‚РєР»СЋС‡РёС‚Рµ РѕС‚РїСЂР°РІРєСѓ РґРѕРїРѕР»РЅРёС‚РµР»СЊРЅС‹С… РґР°РЅРЅС‹С…</strong></li>
-                <li><strong>РћС‚РєР»СЋС‡РёС‚Рµ РѕС‚Р·С‹РІС‹</strong> Рё РїСЂРµРґР»РѕР¶РµРЅРёСЏ</li>
+                <li><strong>Отправка диагностических данных</strong> > "Требуемые"</li>
+                <li><strong>Отключите отправку дополнительных данных</strong></li>
+                <li><strong>Отключите отзывы</strong> и предложения</li>
               </ul>
             </div>
           </div>
           <div class="setting-card">
-            <h4><i class="fas fa-history"></i> Р–СѓСЂРЅР°Р» Р°РєС‚РёРІРЅРѕСЃС‚Рё</h4>
-            <span class="priority priority-high">Р’С‹СЃРѕРєРёР№ РїСЂРёРѕСЂРёС‚РµС‚</span>
-            <p>Windows РѕС‚СЃР»РµР¶РёРІР°РµС‚ РІСЃРµ РІР°С€Рё РґРµР№СЃС‚РІРёСЏ РЅР° РєРѕРјРїСЊСЋС‚РµСЂРµ РґР»СЏ СЃРѕР·РґР°РЅРёСЏ РІСЂРµРјРµРЅРЅРѕР№ С€РєР°Р»С‹.</p>
+            <h4><i class="fas fa-history"></i> Журнал активности</h4>
+            <span class="priority priority-high">Высокий приоритет</span>
+            <p>Windows отслеживает все ваши действия на компьютере для создания временной шкалы.</p>
             <div class="check-section">
-              <div class="check-title">РќР°СЃС‚СЂРѕР№РєРё Р¶СѓСЂРЅР°Р»Р°:</div>
+              <div class="check-title">Настройки журнала:</div>
               <ul>
-                <li><strong>РҐСЂР°РЅРµРЅРёРµ Р¶СѓСЂРЅР°Р»Р° Р°РєС‚РёРІРЅРѕСЃС‚Рё</strong> в†’ "РћС‚РєР»СЋС‡РµРЅРѕ"</li>
-                <li><strong>РЎРёРЅС…СЂРѕРЅРёР·Р°С†РёСЏ РјРµР¶РґСѓ СѓСЃС‚СЂРѕР№СЃС‚РІР°РјРё</strong> в†’ "РћС‚РєР»СЋС‡РµРЅРѕ"</li>
-                <li><strong>РћС‡РёСЃС‚РєР° СЃСѓС‰РµСЃС‚РІСѓСЋС‰РµРіРѕ Р¶СѓСЂРЅР°Р»Р°</strong></li>
+                <li><strong>Хранение журнала активности</strong> > "Отключено"</li>
+                <li><strong>Синхронизация между устройствами</strong> > "Отключено"</li>
+                <li><strong>Очистка существующего журнала</strong></li>
               </ul>
             </div>
           </div>
         </div>
 
-        <h3>2. Р Р°Р·СЂРµС€РµРЅРёСЏ РґР»СЏ РїСЂРёР»РѕР¶РµРЅРёР№</h3>
+        <h3>2. Разрешения для приложений</h3>
 
         <div class="alert-warning">
-          <h4><i class="fas fa-exclamation-triangle"></i> Р’РЅРёРјР°РЅРёРµ РЅР° СЂР°Р·СЂРµС€РµРЅРёСЏ!</h4>
-          <p>РџСЂРёР»РѕР¶РµРЅРёСЏ РјРѕРіСѓС‚ Р·Р°РїСЂР°С€РёРІР°С‚СЊ РґРѕСЃС‚СѓРї Рє РєР°РјРµСЂРµ, РјРёРєСЂРѕС„РѕРЅСѓ, РјРµСЃС‚РѕРїРѕР»РѕР¶РµРЅРёСЋ Рё РґСЂСѓРіРёРј С‡СѓРІСЃС‚РІРёС‚РµР»СЊРЅС‹Рј РґР°РЅРЅС‹Рј. РљРѕРЅС‚СЂРѕР»РёСЂСѓР№С‚Рµ СЌС‚Рё СЂР°Р·СЂРµС€РµРЅРёСЏ С‚С‰Р°С‚РµР»СЊРЅРѕ.</p>
+          <h4><i class="fas fa-exclamation-triangle"></i> Внимание на разрешения!</h4>
+          <p>Приложения могут запрашивать доступ к камере, микрофону, местоположению и другим чувствительным данным. Контролируйте эти разрешения тщательно.</p>
         </div>
 
         <div class="settings-grid">
           <div class="setting-card">
-            <h4><i class="fas fa-camera"></i> Р”РѕСЃС‚СѓРї Рє РєР°РјРµСЂРµ</h4>
-            <span class="priority priority-critical">РљСЂРёС‚РёС‡РµСЃРєРё РІР°Р¶РЅРѕ</span>
-            <p>РљРѕРЅС‚СЂРѕР»РёСЂСѓР№С‚Рµ, РєР°РєРёРµ РїСЂРёР»РѕР¶РµРЅРёСЏ РјРѕРіСѓС‚ РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ РІРµР±-РєР°РјРµСЂСѓ.</p>
+            <h4><i class="fas fa-camera"></i> Доступ к камере</h4>
+            <span class="priority priority-critical">Критически важно</span>
+            <p>Контролируйте, какие приложения могут использовать веб-камеру.</p>
             <div class="check-section">
-              <div class="check-title">Р РµРєРѕРјРµРЅРґР°С†РёРё:</div>
+              <div class="check-title">Рекомендации:</div>
               <ul>
-                <li><strong>Р”РѕСЃС‚СѓРї Рє РєР°РјРµСЂРµ</strong> в†’ "РћС‚РєР»СЋС‡РµРЅРѕ" РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ</li>
-                <li><strong>Р Р°Р·СЂРµС€Р°Р№С‚Рµ С‚РѕР»СЊРєРѕ РґРѕРІРµСЂРµРЅРЅС‹Рј РїСЂРёР»РѕР¶РµРЅРёСЏРј</strong> (Skype, Zoom)</li>
-                <li><strong>РћС‚РєР»СЋС‡РёС‚Рµ "Р Р°Р·СЂРµС€РёС‚СЊ РїСЂРёР»РѕР¶РµРЅРёСЏРј РґРѕСЃС‚СѓРї Рє РєР°РјРµСЂРµ"</strong></li>
-                <li><strong>РСЃРїРѕР»СЊР·СѓР№С‚Рµ С„РёР·РёС‡РµСЃРєСѓСЋ РєСЂС‹С€РєСѓ</strong> РґР»СЏ РІРµР±-РєР°РјРµСЂС‹</li>
+                <li><strong>Доступ к камере</strong> > "Отключено" по умолчанию</li>
+                <li><strong>Разрешайте только доверенным приложениям</strong> (Skype, Zoom)</li>
+                <li><strong>Отключите "Разрешить приложениям доступ к камере"</strong></li>
+                <li><strong>Используйте физическую крышку</strong> для веб-камеры</li>
               </ul>
             </div>
           </div>
           <div class="setting-card">
-            <h4><i class="fas fa-microphone"></i> Р”РѕСЃС‚СѓРї Рє РјРёРєСЂРѕС„РѕРЅСѓ</h4>
-            <span class="priority priority-critical">РљСЂРёС‚РёС‡РµСЃРєРё РІР°Р¶РЅРѕ</span>
-            <p>Р—Р°С‰РёС‚РёС‚Рµ СЃРµР±СЏ РѕС‚ РїСЂРѕСЃР»СѓС€РёРІР°РЅРёСЏ С‡РµСЂРµР· РјРёРєСЂРѕС„РѕРЅ.</p>
+            <h4><i class="fas fa-microphone"></i> Доступ к микрофону</h4>
+            <span class="priority priority-critical">Критически важно</span>
+            <p>Защитите себя от прослушивания через микрофон.</p>
             <div class="check-section">
-              <div class="check-title">РќР°СЃС‚СЂРѕР№РєРё РјРёРєСЂРѕС„РѕРЅР°:</div>
+              <div class="check-title">Настройки микрофона:</div>
               <ul>
-                <li><strong>Р”РѕСЃС‚СѓРї Рє РјРёРєСЂРѕС„РѕРЅСѓ</strong> в†’ "РћС‚РєР»СЋС‡РµРЅРѕ" РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ</li>
-                <li><strong>Р Р°Р·СЂРµС€Р°Р№С‚Рµ С‚РѕР»СЊРєРѕ РЅРµРѕР±С…РѕРґРёРјС‹Рј РїСЂРёР»РѕР¶РµРЅРёСЏРј</strong></li>
-                <li><strong>РћС‚РєР»СЋС‡РёС‚Рµ РіРѕР»РѕСЃРѕРІСѓСЋ Р°РєС‚РёРІР°С†РёСЋ</strong> Cortana</li>
-                <li><strong>РџСЂРѕРІРµСЂСЏР№С‚Рµ РёРЅРґРёРєР°С‚РѕСЂ</strong> РёСЃРїРѕР»СЊР·РѕРІР°РЅРёСЏ РјРёРєСЂРѕС„РѕРЅР°</li>
+                <li><strong>Доступ к микрофону</strong> > "Отключено" по умолчанию</li>
+                <li><strong>Разрешайте только необходимым приложениям</strong></li>
+                <li><strong>Отключите голосовую активацию</strong> Cortana</li>
+                <li><strong>Проверяйте индикатор</strong> использования микрофона</li>
               </ul>
             </div>
           </div>
         </div>
 
-        <h3>3. РњРµСЃС‚РѕРїРѕР»РѕР¶РµРЅРёРµ Рё РѕС‚СЃР»РµР¶РёРІР°РЅРёРµ</h3>
+        <h3>3. Местоположение и отслеживание</h3>
 
         <div class="settings-grid">
           <div class="setting-card">
-            <h4><i class="fas fa-map-marker-alt"></i> РЎР»СѓР¶Р±С‹ РѕРїСЂРµРґРµР»РµРЅРёСЏ РјРµСЃС‚РѕРїРѕР»РѕР¶РµРЅРёСЏ</h4>
-            <span class="priority priority-high">Р’С‹СЃРѕРєРёР№ РїСЂРёРѕСЂРёС‚РµС‚</span>
-            <p>Windows РјРѕР¶РµС‚ РѕС‚СЃР»РµР¶РёРІР°С‚СЊ РІР°С€Рµ РіРµРѕРіСЂР°С„РёС‡РµСЃРєРѕРµ РїРѕР»РѕР¶РµРЅРёРµ.</p>
+            <h4><i class="fas fa-map-marker-alt"></i> Службы определения местоположения</h4>
+            <span class="priority priority-high">Высокий приоритет</span>
+            <p>Windows может отслеживать ваше географическое положение.</p>
             <div class="check-section">
-              <div class="check-title">РќР°СЃС‚СЂРѕР№РєРё РјРµСЃС‚РѕРїРѕР»РѕР¶РµРЅРёСЏ:</div>
+              <div class="check-title">Настройки местоположения:</div>
               <ul>
-                <li><strong>Р”РѕСЃС‚СѓРї Рє РјРµСЃС‚РѕРїРѕР»РѕР¶РµРЅРёСЋ</strong> в†’ "РћС‚РєР»СЋС‡РµРЅРѕ"</li>
-                <li><strong>Р Р°Р·СЂРµС€РёС‚Рµ С‚РѕР»СЊРєРѕ РєР°СЂС‚Р°Рј</strong> Рё РЅР°РІРёРіР°С†РёРѕРЅРЅС‹Рј РїСЂРёР»РѕР¶РµРЅРёСЏРј</li>
-                <li><strong>РћС‚РєР»СЋС‡РёС‚Рµ РёСЃС‚РѕСЂРёСЋ РјРµСЃС‚РѕРїРѕР»РѕР¶РµРЅРёР№</strong></li>
-                <li><strong>РћС‡РёСЃС‚РёС‚Рµ СЃРѕС…СЂР°РЅРµРЅРЅСѓСЋ РёСЃС‚РѕСЂРёСЋ</strong></li>
+                <li><strong>Доступ к местоположению</strong> > "Отключено"</li>
+                <li><strong>Разрешите только картам</strong> и навигационным приложениям</li>
+                <li><strong>Отключите историю местоположений</strong></li>
+                <li><strong>Очистите сохраненную историю</strong></li>
               </ul>
             </div>
           </div>
           <div class="setting-card">
-            <h4><i class="fas fa-search"></i> РџРѕРёСЃРє РЅР° СѓСЃС‚СЂРѕР№СЃС‚РІРµ</h4>
-            <span class="priority priority-medium">РЎСЂРµРґРЅРёР№ РїСЂРёРѕСЂРёС‚РµС‚</span>
-            <p>РџРѕР·РІРѕР»СЏРµС‚ РЅР°С…РѕРґРёС‚СЊ РЅРѕСѓС‚Р±СѓРє РїСЂРё РїРѕС‚РµСЂРµ, РЅРѕ РїРµСЂРµРґР°РµС‚ РґР°РЅРЅС‹Рµ Рѕ РјРµСЃС‚РѕРїРѕР»РѕР¶РµРЅРёРё.</p>
+            <h4><i class="fas fa-search"></i> Поиск на устройстве</h4>
+            <span class="priority priority-medium">Средний приоритет</span>
+            <p>Позволяет находить ноутбук при потере, но передает данные о местоположении.</p>
             <div class="check-section">
-              <div class="check-title">Р РµС€РµРЅРёРµ:</div>
+              <div class="check-title">Решение:</div>
               <ul>
-                <li><strong>Р’РєР»СЋС‡РёС‚Рµ С‚РѕР»СЊРєРѕ РґР»СЏ РЅРѕСѓС‚Р±СѓРєРѕРІ</strong> СЃ РІС‹СЃРѕРєРёРј СЂРёСЃРєРѕРј СѓС‚РµСЂРё</li>
-                <li><strong>РСЃРїРѕР»СЊР·СѓР№С‚Рµ Р°Р»СЊС‚РµСЂРЅР°С‚РёРІС‹</strong> вЂ” Prey, Find My Device</li>
-                <li><strong>РћС†РµРЅРёС‚Рµ СЂРёСЃРєРё</strong> вЂ” РїСЂРёРІР°С‚РЅРѕСЃС‚СЊ vs Р±РµР·РѕРїР°СЃРЅРѕСЃС‚СЊ</li>
+                <li><strong>Включите только для ноутбуков</strong> с высоким риском утери</li>
+                <li><strong>Используйте альтернативы</strong> — Prey, Find My Device</li>
+                <li><strong>Оцените риски</strong> — приватность vs безопасность</li>
               </ul>
             </div>
           </div>
         </div>
 
-        <h2>РќР°СЃС‚СЂРѕР№РєРё СЃР±РѕСЂР° РґР°РЅРЅС‹С… Рё С‚РµР»РµРјРµС‚СЂРёРё</h2>
+        <h2>Настройки сбора данных и телеметрии</h2>
 
-        <h3>РЈРїСЂР°РІР»РµРЅРёРµ РґРёР°РіРЅРѕСЃС‚РёРєРѕР№ Рё РѕС‚Р·С‹РІР°РјРё</h3>
+        <h3>Управление диагностикой и отзывами</h3>
 
         <div class="step-by-step">
           <div class="step-item">
-            <h4>РћС‚РєСЂРѕР№С‚Рµ РЅР°СЃС‚СЂРѕР№РєРё РґРёР°РіРЅРѕСЃС‚РёРєРё</h4>
-            <p>РџР°СЂР°РјРµС‚СЂС‹ в†’ РљРѕРЅС„РёРґРµРЅС†РёР°Р»СЊРЅРѕСЃС‚СЊ Рё Р±РµР·РѕРїР°СЃРЅРѕСЃС‚СЊ в†’ Р”РёР°РіРЅРѕСЃС‚РёРєР° Рё РѕС‚Р·С‹РІС‹</p>
+            <h4>Откройте настройки диагностики</h4>
+            <p>Параметры > Конфиденциальность и безопасность > Диагностика и отзывы</p>
           </div>
           <div class="step-item">
-            <h4>Р’С‹Р±РµСЂРёС‚Рµ РјРёРЅРёРјР°Р»СЊРЅС‹Р№ СѓСЂРѕРІРµРЅСЊ</h4>
-            <p>РЈСЃС‚Р°РЅРѕРІРёС‚Рµ "РўСЂРµР±СѓРµРјС‹Рµ РґРёР°РіРЅРѕСЃС‚РёС‡РµСЃРєРёРµ РґР°РЅРЅС‹Рµ" РІРјРµСЃС‚Рѕ "РџРѕР»РЅС‹Рµ" РёР»Рё "Р”РѕРїРѕР»РЅРёС‚РµР»СЊРЅС‹Рµ"</p>
+            <h4>Выберите минимальный уровень</h4>
+            <p>Установите "Требуемые диагностические данные" вместо "Полные" или "Дополнительные"</p>
           </div>
           <div class="step-item">
-            <h4>РћС‚РєР»СЋС‡РёС‚Рµ РѕС‚РїСЂР°РІРєСѓ РѕС‚Р·С‹РІРѕРІ</h4>
-            <p>РЎРЅРёРјРёС‚Рµ РіР°Р»РѕС‡РєРё СЃ "РћС‚РїСЂР°РІРєР° РѕС‚Р·С‹РІРѕРІ Рѕ Windows" Рё "РџСЂРµРґР»РѕР¶РµРЅРёСЏ Рё РїСЂРµРґР»РѕР¶РµРЅРёСЏ"</p>
+            <h4>Отключите отправку отзывов</h4>
+            <p>Снимите галочки с "Отправка отзывов о Windows" и "Предложения и предложения"</p>
           </div>
           <div class="step-item">
-            <h4>РќР°СЃС‚СЂРѕР№С‚Рµ РЅР°СЃС‚СЂР°РёРІР°РµРјСѓСЋ РґРёР°РіРЅРѕСЃС‚РёРєСѓ</h4>
-            <p>РћС‚РєР»СЋС‡РёС‚Рµ СЃР±РѕСЂ РґР°РЅРЅС‹С… Рѕ РїСЂРѕСЃРјРѕС‚СЂРµ РІРµР±-СЃС‚СЂР°РЅРёС†, РїСЂРёР»РѕР¶РµРЅРёСЏС… Рё СѓСЃС‚СЂРѕР№СЃС‚РІР°С…</p>
+            <h4>Настройте настраиваемую диагностику</h4>
+            <p>Отключите сбор данных о просмотре веб-страниц, приложениях и устройствах</p>
           </div>
         </div>
 
-        <h3>РЈРїСЂР°РІР»РµРЅРёРµ СЂРµРєР»Р°РјРѕР№ Рё РѕС‚СЃР»РµР¶РёРІР°РЅРёРµРј</h3>
+        <h3>Управление рекламой и отслеживанием</h3>
 
         <div class="pro-tips">
-          <h4>РќР°СЃС‚СЂРѕР№РєРё СЂРµРєР»Р°РјС‹:</h4>
+          <h4>Настройки рекламы:</h4>
           <ul>
-            <li><strong>РРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ СЂРµРєР»Р°РјС‹</strong> в†’ "РћС‚РєР»СЋС‡РёС‚СЊ"</li>
-            <li><strong>РћС‚СЃР»РµР¶РёРІР°РЅРёРµ СЂРµРєР»Р°РјРѕРґР°С‚РµР»СЏРјРё</strong> в†’ "РћС‚РєР»СЋС‡РёС‚СЊ"</li>
-            <li><strong>РџРµСЂСЃРѕРЅР°Р»РёР·РёСЂРѕРІР°РЅРЅР°СЏ СЂРµРєР»Р°РјР°</strong> в†’ "РћС‚РєР»СЋС‡РёС‚СЊ"</li>
-            <li><strong>РЈРїСЂР°РІР»РµРЅРёРµ РїСЂРёР»РѕР¶РµРЅРёСЏРјРё</strong> в†’ РѕС‚РєР»СЋС‡РёС‚Рµ РґРѕСЃС‚СѓРї Рє СЂРµРєР»Р°РјРЅРѕРјСѓ ID</li>
+            <li><strong>Идентификатор рекламы</strong> > "Отключить"</li>
+            <li><strong>Отслеживание рекламодателями</strong> > "Отключить"</li>
+            <li><strong>Персонализированная реклама</strong> > "Отключить"</li>
+            <li><strong>Управление приложениями</strong> > отключите доступ к рекламному ID</li>
           </ul>
         </div>
 
-        <h2>РљРѕРЅС„РёРґРµРЅС†РёР°Р»СЊРЅРѕСЃС‚СЊ Р±СЂР°СѓР·РµСЂР° Microsoft Edge</h2>
+        <h2>Конфиденциальность браузера Microsoft Edge</h2>
 
-        <h3>РќР°СЃС‚СЂРѕР№РєРё РѕС‚СЃР»РµР¶РёРІР°РЅРёСЏ РІ Edge</h3>
+        <h3>Настройки отслеживания в Edge</h3>
 
         <div class="check-section">
-          <div class="check-title">РџР°СЂР°РјРµС‚СЂС‹ РєРѕРЅС„РёРґРµРЅС†РёР°Р»СЊРЅРѕСЃС‚Рё Edge:</div>
+          <div class="check-title">Параметры конфиденциальности Edge:</div>
           <ul>
-            <li><strong>РџСЂРµРґРѕС‚РІСЂР°С‰РµРЅРёРµ РѕС‚СЃР»РµР¶РёРІР°РЅРёСЏ</strong> в†’ "РЎС‚СЂРѕРіРёР№"</li>
-            <li><strong>РћС‚РїСЂР°РІРєР° РґР°РЅРЅС‹С… "Do Not Track"</strong> в†’ РІРєР»СЋС‡РёС‚СЊ</li>
-            <li><strong>Р‘Р»РѕРєРёСЂРѕРІРєР° С‚СЂРµРєРµСЂРѕРІ</strong> в†’ "РЎС‚СЂРѕРіРёР№"</li>
-            <li><strong>РЎРµСЂРІРёСЃС‹ Microsoft</strong> в†’ РѕС‚РєР»СЋС‡РёС‚СЊ СЃР±РѕСЂ РґР°РЅРЅС‹С…</li>
+            <li><strong>Предотвращение отслеживания</strong> > "Строгий"</li>
+            <li><strong>Отправка данных "Do Not Track"</strong> > включить</li>
+            <li><strong>Блокировка трекеров</strong> > "Строгий"</li>
+            <li><strong>Сервисы Microsoft</strong> > отключить сбор данных</li>
           </ul>
         </div>
 
-        <h3>РќР°СЃС‚СЂРѕР№РєРё СЃРёРЅС…СЂРѕРЅРёР·Р°С†РёРё</h3>
+        <h3>Настройки синхронизации</h3>
 
         <div class="alert-warning">
-          <h4><i class="fas fa-sync"></i> Р’РЅРёРјР°РЅРёРµ РЅР° СЃРёРЅС…СЂРѕРЅРёР·Р°С†РёСЋ!</h4>
-          <p>Edge СЃРёРЅС…СЂРѕРЅРёР·РёСЂСѓРµС‚ Р·Р°РєР»Р°РґРєРё, РёСЃС‚РѕСЂРёСЋ Рё РїР°СЂРѕР»Рё СЃ РѕР±Р»Р°РєРѕРј Microsoft. РќР°СЃС‚СЂРѕР№С‚Рµ С‚РѕР»СЊРєРѕ РЅРµРѕР±С…РѕРґРёРјС‹Рµ СЌР»РµРјРµРЅС‚С‹.</p>
+          <h4><i class="fas fa-sync"></i> Внимание на синхронизацию!</h4>
+          <p>Edge синхронизирует закладки, историю и пароли с облаком Microsoft. Настройте только необходимые элементы.</p>
         </div>
 
         <div class="pro-tips">
-          <h4>Р РµРєРѕРјРµРЅРґР°С†РёРё РїРѕ СЃРёРЅС…СЂРѕРЅРёР·Р°С†РёРё:</h4>
+          <h4>Рекомендации по синхронизации:</h4>
           <ul>
-            <li><strong>РЎРёРЅС…СЂРѕРЅРёР·РёСЂСѓР№С‚Рµ С‚РѕР»СЊРєРѕ Р·Р°РєР»Р°РґРєРё</strong> Рё РЅР°СЃС‚СЂРѕР№РєРё</li>
-            <li><strong>РћС‚РєР»СЋС‡РёС‚Рµ СЃРёРЅС…СЂРѕРЅРёР·Р°С†РёСЋ РёСЃС‚РѕСЂРёРё</strong> Рё РѕС‚РєСЂС‹С‚С‹С… РІРєР»Р°РґРѕРє</li>
-            <li><strong>РСЃРїРѕР»СЊР·СѓР№С‚Рµ РїР°СЂРѕР»СЊ</strong> РґР»СЏ СЃРёРЅС…СЂРѕРЅРёР·Р°С†РёРё</li>
-            <li><strong>Р РµРіСѓР»СЏСЂРЅРѕ РїСЂРѕРІРµСЂСЏР№С‚Рµ</strong> СЃРёРЅС…СЂРѕРЅРёР·РёСЂРѕРІР°РЅРЅС‹Рµ РґР°РЅРЅС‹Рµ</li>
+            <li><strong>Синхронизируйте только закладки</strong> и настройки</li>
+            <li><strong>Отключите синхронизацию истории</strong> и открытых вкладок</li>
+            <li><strong>Используйте пароль</strong> для синхронизации</li>
+            <li><strong>Регулярно проверяйте</strong> синхронизированные данные</li>
           </ul>
         </div>
 
-        <h2>Р—Р°С‰РёС‚Р° РѕС‚ РІСЂРµРґРѕРЅРѕСЃРЅС‹С… РїСЂРѕРіСЂР°РјРј Рё С„РёС€РёРЅРіР°</h2>
+        <h2>Защита от вредоносных программ и фишинга</h2>
 
-        <h3>РќР°СЃС‚СЂРѕР№РєРё Р±РµР·РѕРїР°СЃРЅРѕСЃС‚Рё Windows Defender</h3>
+        <h3>Настройки безопасности Windows Defender</h3>
 
         <div class="settings-grid">
           <div class="setting-card">
-            <h4><i class="fas fa-shield-virus"></i> Р—Р°С‰РёС‚Р° РІ СЂРµР°Р»СЊРЅРѕРј РІСЂРµРјРµРЅРё</h4>
-            <span class="priority priority-critical">РљСЂРёС‚РёС‡РµСЃРєРё РІР°Р¶РЅРѕ</span>
-            <p>РћР±РµСЃРїРµС‡РёРІР°РµС‚ РїРѕСЃС‚РѕСЏРЅРЅСѓСЋ Р·Р°С‰РёС‚Сѓ РѕС‚ РІСЂРµРґРѕРЅРѕСЃРЅС‹С… РїСЂРѕРіСЂР°РјРј.</p>
+            <h4><i class="fas fa-shield-virus"></i> Защита в реальном времени</h4>
+            <span class="priority priority-critical">Критически важно</span>
+            <p>Обеспечивает постоянную защиту от вредоносных программ.</p>
             <div class="check-section">
-              <div class="check-title">РћР±СЏР·Р°С‚РµР»СЊРЅС‹Рµ РЅР°СЃС‚СЂРѕР№РєРё:</div>
+              <div class="check-title">Обязательные настройки:</div>
               <ul>
-                <li><strong>Р—Р°С‰РёС‚Р° РІ СЂРµР°Р»СЊРЅРѕРј РІСЂРµРјРµРЅРё</strong> в†’ РІРєР»СЋС‡РµРЅР°</li>
-                <li><strong>РћР±Р»Р°С‡РЅР°СЏ Р·Р°С‰РёС‚Р°</strong> в†’ РІРєР»СЋС‡РµРЅР°</li>
-                <li><strong>РљРѕРЅС‚СЂРѕР»РёСЂСѓРµРјС‹Р№ РґРѕСЃС‚СѓРї Рє РїР°РїРєР°Рј</strong> в†’ РІРєР»СЋС‡РµРЅ</li>
-                <li><strong>РџРѕРІРµРґРµРЅС‡РµСЃРєР°СЏ Р±Р»РѕРєРёСЂРѕРІРєР°</strong> в†’ РІРєР»СЋС‡РµРЅР°</li>
+                <li><strong>Защита в реальном времени</strong> > включена</li>
+                <li><strong>Облачная защита</strong> > включена</li>
+                <li><strong>Контролируемый доступ к папкам</strong> > включен</li>
+                <li><strong>Поведенческая блокировка</strong> > включена</li>
               </ul>
             </div>
           </div>
           <div class="setting-card">
-            <h4><i class="fas fa-filter"></i> Р¤РёР»СЊС‚СЂР°С†РёСЏ SmartScreen</h4>
-            <span class="priority priority-high">Р’С‹СЃРѕРєРёР№ РїСЂРёРѕСЂРёС‚РµС‚</span>
-            <p>Р—Р°С‰РёС‰Р°РµС‚ РѕС‚ С„РёС€РёРЅРіРѕРІС‹С… СЃР°Р№С‚РѕРІ Рё РІСЂРµРґРѕРЅРѕСЃРЅС‹С… Р·Р°РіСЂСѓР·РѕРє.</p>
+            <h4><i class="fas fa-filter"></i> Фильтрация SmartScreen</h4>
+            <span class="priority priority-high">Высокий приоритет</span>
+            <p>Защищает от фишинговых сайтов и вредоносных загрузок.</p>
             <div class="check-section">
-              <div class="check-title">РќР°СЃС‚СЂРѕР№РєРё SmartScreen:</div>
+              <div class="check-title">Настройки SmartScreen:</div>
               <ul>
-                <li><strong>РџСЂРѕРІРµСЂРєР° РїСЂРёР»РѕР¶РµРЅРёР№ Рё С„Р°Р№Р»РѕРІ</strong> в†’ РІРєР»СЋС‡РµРЅР°</li>
-                <li><strong>SmartScreen РІ Microsoft Edge</strong> в†’ РІРєР»СЋС‡РµРЅ</li>
-                <li><strong>РџСЂРѕРІРµСЂРєР° URL-Р°РґСЂРµСЃРѕРІ</strong> в†’ РІРєР»СЋС‡РµРЅР°</li>
+                <li><strong>Проверка приложений и файлов</strong> > включена</li>
+                <li><strong>SmartScreen в Microsoft Edge</strong> > включен</li>
+                <li><strong>Проверка URL-адресов</strong> > включена</li>
               </ul>
             </div>
           </div>
         </div>
 
-        <h2>РЈРїСЂР°РІР»РµРЅРёРµ РѕР±РЅРѕРІР»РµРЅРёСЏРјРё Рё РґРѕСЃС‚Р°РІРєРѕР№ РџРћ</h2>
+        <h2>Управление обновлениями и доставкой ПО</h2>
 
-        <h3>РќР°СЃС‚СЂРѕР№РєРё РѕР±РЅРѕРІР»РµРЅРёСЏ Windows</h3>
+        <h3>Настройки обновления Windows</h3>
 
         <div class="pro-tips">
-          <h4>РћРїС‚РёРјРёР·Р°С†РёСЏ РѕР±РЅРѕРІР»РµРЅРёР№:</h4>
+          <h4>Оптимизация обновлений:</h4>
           <ul>
-            <li><strong>РђРІС‚РѕРјР°С‚РёС‡РµСЃРєРёРµ РѕР±РЅРѕРІР»РµРЅРёСЏ</strong> в†’ РІРєР»СЋС‡РёС‚СЊ РґР»СЏ Р±РµР·РѕРїР°СЃРЅРѕСЃС‚Рё</li>
-            <li><strong>РџР°СЂР°РјРµС‚СЂС‹ РґРѕСЃС‚Р°РІРєРё</strong> в†’ РѕС‚РєР»СЋС‡РёС‚СЊ "Р—Р°РіСЂСѓР·РєР° РёР· РґСЂСѓРіРёС… РџРљ"</li>
-            <li><strong>РџР»Р°РЅРёСЂРѕРІР°РЅРёРµ РїРµСЂРµР·Р°РіСЂСѓР·РѕРє</strong> в†’ РЅР°СЃС‚СЂРѕРёС‚СЊ СѓРґРѕР±РЅРѕРµ РІСЂРµРјСЏ</li>
-            <li><strong>РћС‚Р»РѕР¶РµРЅРЅС‹Рµ РѕР±РЅРѕРІР»РµРЅРёСЏ РєР°С‡РµСЃС‚РІР°</strong> в†’ РґРѕ 7 РґРЅРµР№</li>
+            <li><strong>Автоматические обновления</strong> > включить для безопасности</li>
+            <li><strong>Параметры доставки</strong> > отключить "Загрузка из других ПК"</li>
+            <li><strong>Планирование перезагрузок</strong> > настроить удобное время</li>
+            <li><strong>Отложенные обновления качества</strong> > до 7 дней</li>
           </ul>
         </div>
 
-        <h3>РЈРїСЂР°РІР»РµРЅРёРµ РїСЂРµРґСѓСЃС‚Р°РЅРѕРІР»РµРЅРЅС‹РјРё РїСЂРёР»РѕР¶РµРЅРёСЏРјРё</h3>
+        <h3>Управление предустановленными приложениями</h3>
 
         <div class="alert-info">
-          <h4><i class="fas fa-th"></i> РЈРґР°Р»РµРЅРёРµ РЅРµРЅСѓР¶РЅС‹С… РїСЂРёР»РѕР¶РµРЅРёР№</h4>
-          <p>Windows 11 РїСЂРµРґСѓСЃС‚Р°РЅР°РІР»РёРІР°РµС‚ РјРЅРѕР¶РµСЃС‚РІРѕ РїСЂРёР»РѕР¶РµРЅРёР№, РєРѕС‚РѕСЂС‹Рµ СЃРѕР±РёСЂР°СЋС‚ РґР°РЅРЅС‹Рµ. РЈРґР°Р»РёС‚Рµ РЅРµРЅСѓР¶РЅС‹Рµ.</p>
+          <h4><i class="fas fa-th"></i> Удаление ненужных приложений</h4>
+          <p>Windows 11 предустанавливает множество приложений, которые собирают данные. Удалите ненужные.</p>
         </div>
 
         <div class="check-section">
-          <div class="check-title">РџСЂРёР»РѕР¶РµРЅРёСЏ РґР»СЏ СѓРґР°Р»РµРЅРёСЏ РёР»Рё РѕС‚РєР»СЋС‡РµРЅРёСЏ:</div>
+          <div class="check-title">Приложения для удаления или отключения:</div>
           <ul>
-            <li><strong>Xbox Game Bar</strong> вЂ” РµСЃР»Рё РЅРµ РёРіСЂР°РµС‚Рµ</li>
-            <li><strong>Cortana</strong> вЂ” РіРѕР»РѕСЃРѕРІРѕР№ РїРѕРјРѕС‰РЅРёРє Microsoft</li>
-            <li><strong>News Рё Interest</strong> вЂ” РЅРѕРІРѕСЃС‚РЅР°СЏ Р»РµРЅС‚Р°</li>
-            <li><strong>Tips</strong> вЂ” СЃРѕРІРµС‚С‹ РїРѕ РёСЃРїРѕР»СЊР·РѕРІР°РЅРёСЋ Windows</li>
-            <li><strong>Microsoft Solitaire Collection</strong> вЂ” РёРіСЂС‹ Xbox</li>
+            <li><strong>Xbox Game Bar</strong> — если не играете</li>
+            <li><strong>Cortana</strong> — голосовой помощник Microsoft</li>
+            <li><strong>News и Interest</strong> — новостная лента</li>
+            <li><strong>Tips</strong> — советы по использованию Windows</li>
+            <li><strong>Microsoft Solitaire Collection</strong> — игры Xbox</li>
           </ul>
         </div>
 
-        <h2>РџСЂРѕРІРµСЂРєР° РєРѕРЅС„РёРґРµРЅС†РёР°Р»СЊРЅРѕСЃС‚Рё: С‡РµРє-Р»РёСЃС‚</h2>
+        <h2>Проверка конфиденциальности: чек-лист</h2>
 
-        <h3>РћР±СЏР·Р°С‚РµР»СЊРЅС‹Рµ РЅР°СЃС‚СЂРѕР№РєРё РґР»СЏ РјР°РєСЃРёРјР°Р»СЊРЅРѕР№ РїСЂРёРІР°С‚РЅРѕСЃС‚Рё</h3>
+        <h3>Обязательные настройки для максимальной приватности</h3>
 
         <div class="privacy-checklist">
           <div class="checklist-item">
             <input type="checkbox" id="diag1" checked>
-            <label for="diag1">Р”РёР°РіРЅРѕСЃС‚РёС‡РµСЃРєРёРµ РґР°РЅРЅС‹Рµ в†’ "РўСЂРµР±СѓРµРјС‹Рµ"</label>
+            <label for="diag1">Диагностические данные > "Требуемые"</label>
           </div>
           <div class="checklist-item">
             <input type="checkbox" id="activity1" checked>
-            <label for="activity1">Р–СѓСЂРЅР°Р» Р°РєС‚РёРІРЅРѕСЃС‚Рё в†’ "РћС‚РєР»СЋС‡РµРЅРѕ"</label>
+            <label for="activity1">Журнал активности > "Отключено"</label>
           </div>
           <div class="checklist-item">
             <input type="checkbox" id="camera1" checked>
-            <label for="camera1">Р”РѕСЃС‚СѓРї Рє РєР°РјРµСЂРµ в†’ "РћС‚РєР»СЋС‡РµРЅРѕ"</label>
+            <label for="camera1">Доступ к камере > "Отключено"</label>
           </div>
           <div class="checklist-item">
             <input type="checkbox" id="mic1" checked>
-            <label for="mic1">Р”РѕСЃС‚СѓРї Рє РјРёРєСЂРѕС„РѕРЅСѓ в†’ "РћС‚РєР»СЋС‡РµРЅРѕ"</label>
+            <label for="mic1">Доступ к микрофону > "Отключено"</label>
           </div>
           <div class="checklist-item">
             <input type="checkbox" id="location1" checked>
-            <label for="location1">РњРµСЃС‚РѕРїРѕР»РѕР¶РµРЅРёРµ в†’ "РћС‚РєР»СЋС‡РµРЅРѕ"</label>
+            <label for="location1">Местоположение > "Отключено"</label>
           </div>
           <div class="checklist-item">
             <input type="checkbox" id="ad1" checked>
-            <label for="ad1">РРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ СЂРµРєР»Р°РјС‹ в†’ "РћС‚РєР»СЋС‡РµРЅ"</label>
+            <label for="ad1">Идентификатор рекламы > "Отключен"</label>
           </div>
           <div class="checklist-item">
             <input type="checkbox" id="feedback1" checked>
-            <label for="feedback1">РћС‚РїСЂР°РІРєР° РѕС‚Р·С‹РІРѕРІ в†’ "РћС‚РєР»СЋС‡РµРЅР°"</label>
+            <label for="feedback1">Отправка отзывов > "Отключена"</label>
           </div>
           <div class="checklist-item">
             <input type="checkbox" id="delivery1" checked>
-            <label for="delivery1">Р”РѕСЃС‚Р°РІРєР° РѕР±РЅРѕРІР»РµРЅРёР№ в†’ "РўРѕР»СЊРєРѕ РёР· РРЅС‚РµСЂРЅРµС‚Р°"</label>
+            <label for="delivery1">Доставка обновлений > "Только из Интернета"</label>
           </div>
         </div>
 
-        <h2>Р”РѕРїРѕР»РЅРёС‚РµР»СЊРЅС‹Рµ РёРЅСЃС‚СЂСѓРјРµРЅС‚С‹ РґР»СЏ РїСЂРёРІР°С‚РЅРѕСЃС‚Рё</h2>
+        <h2>Дополнительные инструменты для приватности</h2>
 
-        <h3>РЎС‚РѕСЂРѕРЅРЅРёРµ РїСЂРѕРіСЂР°РјРјС‹ РґР»СЏ СѓСЃРёР»РµРЅРёСЏ Р·Р°С‰РёС‚С‹</h3>
+        <h3>Сторонние программы для усиления защиты</h3>
 
         <div class="pro-tips">
-          <h4>Р РµРєРѕРјРµРЅРґСѓРµРјС‹Рµ РёРЅСЃС‚СЂСѓРјРµРЅС‚С‹:</h4>
+          <h4>Рекомендуемые инструменты:</h4>
           <ul>
-            <li><strong>O&O ShutUp10</strong> вЂ” Р±РµСЃРїР»Р°С‚РЅР°СЏ РЅР°СЃС‚СЂРѕР№РєР° РїСЂРёРІР°С‚РЅРѕСЃС‚Рё Windows</li>
-            <li><strong>W10Privacy</strong> вЂ” РјРѕС‰РЅС‹Р№ РёРЅСЃС‚СЂСѓРјРµРЅС‚ РєРѕРЅС„РёРґРµРЅС†РёР°Р»СЊРЅРѕСЃС‚Рё</li>
-            <li><strong>Privacy.sexy</strong> вЂ” РѕС‚РєСЂС‹С‚С‹Р№ РёРЅСЃС‚СЂСѓРјРµРЅС‚ РґР»СЏ РЅР°СЃС‚СЂРѕР№РєРё РїСЂРёРІР°С‚РЅРѕСЃС‚Рё</li>
-            <li><strong>Blackbird</strong> вЂ” РєРѕРјРїР»РµРєСЃРЅР°СЏ Р·Р°С‰РёС‚Р° Рё РѕРїС‚РёРјРёР·Р°С†РёСЏ</li>
+            <li><strong>O&O ShutUp10</strong> — бесплатная настройка приватности Windows</li>
+            <li><strong>W10Privacy</strong> — мощный инструмент конфиденциальности</li>
+            <li><strong>Privacy.sexy</strong> — открытый инструмент для настройки приватности</li>
+            <li><strong>Blackbird</strong> — комплексная защита и оптимизация</li>
           </ul>
         </div>
 
-        <h3>РђР»СЊС‚РµСЂРЅР°С‚РёРІРЅС‹Рµ Р±СЂР°СѓР·РµСЂС‹</h3>
+        <h3>Альтернативные браузеры</h3>
 
         <div class="alert-success">
-          <h4><i class="fas fa-globe"></i> Р‘РѕР»РµРµ РїСЂРёРІР°С‚РЅС‹Рµ Р±СЂР°СѓР·РµСЂС‹:</h4>
+          <h4><i class="fas fa-globe"></i> Более приватные браузеры:</h4>
           <ul>
-            <li><strong>Mozilla Firefox</strong> вЂ” СѓСЃРёР»РµРЅРЅР°СЏ Р·Р°С‰РёС‚Р° РѕС‚ РѕС‚СЃР»РµР¶РёРІР°РЅРёСЏ</li>
-            <li><strong>Brave</strong> вЂ” РІСЃС‚СЂРѕРµРЅРЅР°СЏ Р±Р»РѕРєРёСЂРѕРІРєР° СЂРµРєР»Р°РјС‹ Рё С‚СЂРµРєРµСЂРѕРІ</li>
-            <li><strong>Tor Browser</strong> вЂ” РјР°РєСЃРёРјР°Р»СЊРЅР°СЏ Р°РЅРѕРЅРёРјРЅРѕСЃС‚СЊ</li>
-            <li><strong>Vivaldi</strong> вЂ” РЅР°СЃС‚СЂР°РёРІР°РµРјР°СЏ РїСЂРёРІР°С‚РЅРѕСЃС‚СЊ</li>
+            <li><strong>Mozilla Firefox</strong> — усиленная защита от отслеживания</li>
+            <li><strong>Brave</strong> — встроенная блокировка рекламы и трекеров</li>
+            <li><strong>Tor Browser</strong> — максимальная анонимность</li>
+            <li><strong>Vivaldi</strong> — настраиваемая приватность</li>
           </ul>
         </div>
 
-        <h2>Р РµРіСѓР»СЏСЂРЅРѕРµ РѕР±СЃР»СѓР¶РёРІР°РЅРёРµ РЅР°СЃС‚СЂРѕРµРє</h2>
+        <h2>Регулярное обслуживание настроек</h2>
 
-        <h3>РџРµСЂРёРѕРґРёС‡РµСЃРєР°СЏ РїСЂРѕРІРµСЂРєР° РєРѕРЅС„РёРґРµРЅС†РёР°Р»СЊРЅРѕСЃС‚Рё</h3>
+        <h3>Периодическая проверка конфиденциальности</h3>
 
         <div class="check-section">
-          <div class="check-title">Р•Р¶РµРјРµСЃСЏС‡РЅС‹Рµ РїСЂРѕРІРµСЂРєРё:</div>
+          <div class="check-title">Ежемесячные проверки:</div>
           <ul>
-            <li><strong>РџСЂРѕСЃРјРѕС‚СЂРёС‚Рµ СЂР°Р·СЂРµС€РµРЅРёСЏ РїСЂРёР»РѕР¶РµРЅРёР№</strong> вЂ” СѓРґР°Р»РёС‚Рµ РЅРµРЅСѓР¶РЅС‹Рµ</li>
-            <li><strong>РџСЂРѕРІРµСЂСЊС‚Рµ РёСЃС‚РѕСЂРёСЋ РјРµСЃС‚РѕРїРѕР»РѕР¶РµРЅРёР№</strong> вЂ” РѕС‡РёСЃС‚РёС‚Рµ РїСЂРё РЅРµРѕР±С…РѕРґРёРјРѕСЃС‚Рё</li>
-            <li><strong>РћР±РЅРѕРІРёС‚Рµ РЅР°СЃС‚СЂРѕР№РєРё РґРёР°РіРЅРѕСЃС‚РёРєРё</strong> вЂ” РїРѕСЃР»Рµ РѕР±РЅРѕРІР»РµРЅРёР№ Windows</li>
-            <li><strong>РџСЂРѕРІРµСЂСЊС‚Рµ СЃРёРЅС…СЂРѕРЅРёР·Р°С†РёСЋ</strong> вЂ” Р°РєРєР°СѓРЅС‚РѕРІ Рё Р±СЂР°СѓР·РµСЂРѕРІ</li>
-            <li><strong>РћС‡РёСЃС‚РёС‚Рµ С‚РµР»РµРјРµС‚СЂРёСЋ</strong> вЂ” СЃ РїРѕРјРѕС‰СЊСЋ СЃРїРµС†РёР°Р»РёР·РёСЂРѕРІР°РЅРЅС‹С… СѓС‚РёР»РёС‚</li>
+            <li><strong>Просмотрите разрешения приложений</strong> — удалите ненужные</li>
+            <li><strong>Проверьте историю местоположений</strong> — очистите при необходимости</li>
+            <li><strong>Обновите настройки диагностики</strong> — после обновлений Windows</li>
+            <li><strong>Проверьте синхронизацию</strong> — аккаунтов и браузеров</li>
+            <li><strong>Очистите телеметрию</strong> — с помощью специализированных утилит</li>
           </ul>
         </div>
 
-        <h3>РњРѕРЅРёС‚РѕСЂРёРЅРі Р°РєС‚РёРІРЅРѕСЃС‚Рё СЃРёСЃС‚РµРјС‹</h3>
+        <h3>Мониторинг активности системы</h3>
 
         <div class="pro-tips">
-          <h4>РРЅСЃС‚СЂСѓРјРµРЅС‚С‹ РјРѕРЅРёС‚РѕСЂРёРЅРіР°:</h4>
+          <h4>Инструменты мониторинга:</h4>
           <ul>
-            <li><strong>Р”РёСЃРїРµС‚С‡РµСЂ Р·Р°РґР°С‡</strong> вЂ” РїСЂРѕРІРµСЂРєР° СЃРµС‚РµРІРѕР№ Р°РєС‚РёРІРЅРѕСЃС‚Рё</li>
-            <li><strong>Р РµСЃСѓСЂСЃРЅС‹Р№ РјРѕРЅРёС‚РѕСЂ</strong> вЂ” Р°РЅР°Р»РёР· РїРѕРґРєР»СЋС‡РµРЅРёР№</li>
-            <li><strong>Wireshark</strong> вЂ” РґРµС‚Р°Р»СЊРЅС‹Р№ Р°РЅР°Р»РёР· СЃРµС‚РµРІРѕРіРѕ С‚СЂР°С„РёРєР°</li>
-            <li><strong>Process Explorer</strong> вЂ” РјРѕРЅРёС‚РѕСЂРёРЅРі РїСЂРѕС†РµСЃСЃРѕРІ</li>
+            <li><strong>Диспетчер задач</strong> — проверка сетевой активности</li>
+            <li><strong>Ресурсный монитор</strong> — анализ подключений</li>
+            <li><strong>Wireshark</strong> — детальный анализ сетевого трафика</li>
+            <li><strong>Process Explorer</strong> — мониторинг процессов</li>
           </ul>
         </div>
 
-        <h2>Р—Р°РєР»СЋС‡РµРЅРёРµ</h2>
+        <h2>Заключение</h2>
 
-        <p>РџСЂР°РІРёР»СЊРЅР°СЏ РЅР°СЃС‚СЂРѕР№РєР° РєРѕРЅС„РёРґРµРЅС†РёР°Р»СЊРЅРѕСЃС‚Рё Windows 11 РєСЂРёС‚РёС‡РµСЃРєРё РІР°Р¶РЅР° РґР»СЏ Р·Р°С‰РёС‚С‹ Р»РёС‡РЅС‹С… РґР°РЅРЅС‹С… РЅР° РЅРѕСѓС‚Р±СѓРєРµ. РЎР»РµРґСѓСЏ СЂРµРєРѕРјРµРЅРґР°С†РёСЏРј РёР· СЌС‚РѕРіРѕ СЂСѓРєРѕРІРѕРґСЃС‚РІР°, РІС‹ СЃРјРѕР¶РµС‚Рµ Р·РЅР°С‡РёС‚РµР»СЊРЅРѕ СѓРјРµРЅСЊС€РёС‚СЊ СЃР±РѕСЂ РґР°РЅРЅС‹С… Рё РїРѕРІС‹СЃРёС‚СЊ СѓСЂРѕРІРµРЅСЊ РїСЂРёРІР°С‚РЅРѕСЃС‚Рё.</p>
+        <p>Правильная настройка конфиденциальности Windows 11 критически важна для защиты личных данных на ноутбуке. Следуя рекомендациям из этого руководства, вы сможете значительно уменьшить сбор данных и повысить уровень приватности.</p>
 
-        <p>РџРѕРјРЅРёС‚Рµ, С‡С‚Рѕ РєРѕРЅС„РёРґРµРЅС†РёР°Р»СЊРЅРѕСЃС‚СЊ вЂ” СЌС‚Рѕ РЅРµ СЂР°Р·РѕРІР°СЏ РЅР°СЃС‚СЂРѕР№РєР°, Р° РїРѕСЃС‚РѕСЏРЅРЅС‹Р№ РїСЂРѕС†РµСЃСЃ. Р РµРіСѓР»СЏСЂРЅРѕ РїСЂРѕРІРµСЂСЏР№С‚Рµ СЂР°Р·СЂРµС€РµРЅРёСЏ РїСЂРёР»РѕР¶РµРЅРёР№, РѕР±РЅРѕРІР»СЏР№С‚Рµ РЅР°СЃС‚СЂРѕР№РєРё РїРѕСЃР»Рµ РѕР±РЅРѕРІР»РµРЅРёР№ СЃРёСЃС‚РµРјС‹ Рё РёСЃРїРѕР»СЊР·СѓР№С‚Рµ РґРѕРїРѕР»РЅРёС‚РµР»СЊРЅС‹Рµ РёРЅСЃС‚СЂСѓРјРµРЅС‚С‹ РґР»СЏ СѓСЃРёР»РµРЅРёСЏ Р·Р°С‰РёС‚С‹.</p>
+        <p>Помните, что конфиденциальность — это не разовая настройка, а постоянный процесс. Регулярно проверяйте разрешения приложений, обновляйте настройки после обновлений системы и используйте дополнительные инструменты для усиления защиты.</p>
 
-        <p>Р‘Р°Р»Р°РЅСЃ РјРµР¶РґСѓ СѓРґРѕР±СЃС‚РІРѕРј Рё РїСЂРёРІР°С‚РЅРѕСЃС‚СЊСЋ РёРЅРґРёРІРёРґСѓР°Р»РµРЅ, РЅРѕ Р±Р°Р·РѕРІС‹Рµ РЅР°СЃС‚СЂРѕР№РєРё Р±РµР·РѕРїР°СЃРЅРѕСЃС‚Рё РґРѕР»Р¶РЅС‹ Р±С‹С‚СЊ РІРєР»СЋС‡РµРЅС‹ Сѓ РєР°Р¶РґРѕРіРѕ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ. Р’Р°С€Р° Р»РёС‡РЅР°СЏ РёРЅС„РѕСЂРјР°С†РёСЏ СЃС‚РѕРёС‚ С‚РѕРіРѕ, С‡С‚РѕР±С‹ СѓРґРµР»РёС‚СЊ РІСЂРµРјСЏ РµРµ Р·Р°С‰РёС‚Рµ.</p>
+        <p>Баланс между удобством и приватностью индивидуален, но базовые настройки безопасности должны быть включены у каждого пользователя. Ваша личная информация стоит того, чтобы уделить время ее защите.</p>
 
-        <!-- РЇРЅРґРµРєСЃ РњР°СЂРєРµС‚ СЂРµРєР»Р°РјРЅС‹Р№ Р±Р°РЅРЅРµСЂ -->
-        <a href="https://market.yandex.ru/search?text=РІРµР±-РєР°РјРµСЂР°%20СЃ%20РєСЂС‹С€РєРѕР№%20РґР»СЏ%20РЅРѕСѓС‚Р±СѓРєР°&local-offers-first=0" class="ym-hero-link" target="_blank" rel="noopener noreferrer">
-          <div class="ym-hero-banner">
-            <div class="ym-hero-images">
-              <div class="ym-hero-image">
-                <img src="https://avatars.mds.yandex.net/get-market-ugc/12573871/2a0000018f2a5a8b8c0b7d9d9c4b6c5c/orig" alt="Р’РµР±-РєР°РјРµСЂР° СЃ РєСЂС‹С€РєРѕР№">
+        <!-- Яндекс Маркет рекламный баннер -->
+                <img src="https://avatars.mds.yandex.net/get-market-ugc/12573871/2a0000018f2a5a8b8c0b7d9d9c4b6c5c/orig" alt="Веб-камера с крышкой">
               </div>
-              <div class="ym-hero-image">
-                <img src="https://avatars.mds.yandex.net/get-market-ugc/15377961/2a0000018f2a5a8b8c0b7d9d9c4b6c5d/orig" alt="Р—Р°С‰РёС‚РЅС‹Р№ СЌРєСЂР°РЅ РґР»СЏ РЅРѕСѓС‚Р±СѓРєР°">
+                <img src="https://avatars.mds.yandex.net/get-market-ugc/15377961/2a0000018f2a5a8b8c0b7d9d9c4b6c5d/orig" alt="Защитный экран для ноутбука">
               </div>
             </div>
-            <div class="ym-hero-content">
-              <div class="ym-hero-title">РђРєСЃРµСЃСЃСѓР°СЂС‹ РґР»СЏ РїСЂРёРІР°С‚РЅРѕСЃС‚Рё</div>
-              <div class="ym-hero-desc">Р’РµР±-РєР°РјРµСЂС‹ СЃ РєСЂС‹С€РєР°РјРё Рё Р·Р°С‰РёС‚РЅС‹Рµ СЌРєСЂР°РЅС‹ РґР»СЏ РЅРѕСѓС‚Р±СѓРєРѕРІ</div>
             </div>
           </div>
         </a>
@@ -560,24 +709,24 @@
       <div class="footer__content">
         <div class="footer__section">
           <h4>Repairo</h4>
-          <p>Р­РєСЃРїРµСЂС‚РЅС‹Рµ СЂСѓРєРѕРІРѕРґСЃС‚РІР° РїРѕ СЂРµРјРѕРЅС‚Сѓ Рё РѕР±СЃР»СѓР¶РёРІР°РЅРёСЋ С‚РµС…РЅРёРєРё</p>
+          <p>Экспертные руководства по ремонту и обслуживанию техники</p>
         </div>
         <div class="footer__section">
-          <h4>Р Р°Р·РґРµР»С‹</h4>
+          <h4>Разделы</h4>
           <ul>
-            <li><a href="../laptops.html">РќРѕСѓС‚Р±СѓРєРё</a></li>
-            <li><a href="../smartphones.html">РЎРјР°СЂС‚С„РѕРЅС‹</a></li>
-            <li><a href="../consoles.html">РљРѕРЅСЃРѕР»Рё</a></li>
-            <li><a href="../cameras.html">Р¤РѕС‚РѕР°РїРїР°СЂР°С‚С‹</a></li>
+            <li><a href="../laptops.html">Ноутбуки</a></li>
+            <li><a href="../smartphones.html">Смартфоны</a></li>
+            <li><a href="../consoles.html">Консоли</a></li>
+            <li><a href="../cameras.html">Фотоаппараты</a></li>
           </ul>
         </div>
         <div class="footer__section">
-          <h4>РљРѕРЅС‚Р°РєС‚С‹</h4>
+          <h4>Контакты</h4>
           <p>support@repairo.ru</p>
         </div>
       </div>
       <div class="footer__bottom">
-        <p>&copy; 2024 Repairo. Р’СЃРµ РїСЂР°РІР° Р·Р°С‰РёС‰РµРЅС‹.</p>
+        <p>&copy; 2024 Repairo. Все права защищены.</p>
       </div>
     </div>
   </footer>
@@ -587,3 +736,9 @@
 
 </body>
 </html>
+
+
+
+
+
+

@@ -1,74 +1,376 @@
 <!DOCTYPE html>
 <html lang="ru" data-theme="light">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>РўРµСЃС‚ Cookie Р‘Р°РЅРЅРµСЂР° - Repairo</title>
-    
-    <link rel="stylesheet" href="./styles.css?v=2.1">
-    <link rel="stylesheet" href="./styles-header.css">
-    <link rel="stylesheet" href="./cookie-override.css?v=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Тест Cookie Баннера - Repairo</title>
+    <meta name="description" content="{{ description }}">
+
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="../styles-header.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    .guide-content { line-height: 1.7; color: var(--text); }
+    .guide-content h2 { color: var(--primary); margin-top: 30px; margin-bottom: 15px; font-size: 1.5rem; }
+    .guide-content h3 { color: var(--primary-dark); margin-top: 25px; margin-bottom: 12px; font-size: 1.2rem; }
+    .guide-image-block { margin: 20px 0; padding: 15px; background: var(--background); border-radius: var(--border-radius); border: 1px solid var(--border); text-align: center; }
+    .guide-image-block img { max-width: 100%; height: auto; border-radius: 6px; border: 1px solid var(--border); }
+    .image-caption { margin-top: 10px; font-size: 0.85rem; color: var(--text-light); font-style: italic; }
+    .pro-tips { background: rgba(3, 74, 79, 0.05); padding: 15px; border-radius: 6px; margin: 20px 0; }
+    .pro-tips h4 { color: var(--primary); margin-top: 0; margin-bottom: 12px; font-size: 1.1rem; }
+    .tip-item { display: flex; gap: 8px; margin-bottom: 8px; align-items: flex-start; }
+    table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+    th, td { border: 1px solid var(--border); padding: 8px; text-align: left; }
+    th { background: var(--background-light); }
+    .highlight { background: #f5f7fa; border-left: 4px solid #2d9cdb; padding: 10px 15px; margin: 20px 0; }
+    .faq-section ul { margin-left: 1em; }
+    .block-section { margin-bottom: 2em; }
+    @media (max-width: 768px) {
+      .guide-content h2 { font-size: 1.4rem; margin-top: 25px; }
+      .guide-image-block { padding: 12px; margin: 15px 0; }
+      table, th, td { font-size: 0.95rem; }
+    }
+    /* Р“РѕСЂРёР·РѕРЅС‚Р°Р»СЊРЅС‹Р№ Р±Р°РЅРЅРµСЂ-РєР°СЂС‚РѕС‡РєР° */
+    .ym-hero-banner {
+      width: 100%;
+      max-width: 600px;
+      min-height: 140px;
+      border-radius: 16px;
+      background: #ffffff;
+      border: 1px solid #e5e7eb;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 4px 16px rgba(15, 23, 42, 0.08);
+      overflow: hidden;
+      box-sizing: border-box;
+      margin: 40px auto;
+    }
+
+    /* РљРѕРЅС‚РµР№РЅРµСЂ РґР»СЏ РёР·РѕР±СЂР°Р¶РµРЅРёР№ */
+    .ym-hero-images {
+      display: flex;
+      height: 120px;
+      overflow: hidden;
+    }
+
+    .ym-hero-image {
+      flex: 1;
+      min-width: 0;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      border-right: 1px solid #e5e7eb;
+      background: #f8f9fa;
+    }
+
+    .ym-hero-image:last-child {
+      border-right: none;
+    }
+
+    .ym-hero-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      transition: transform 0.3s ease;
+      background: #f8f9fa;
+    }
+
+    .ym-hero-image:hover img {
+      transform: scale(1.02);
+    }
+
+    /* РџСЂР°РІР°СЏ С‡Р°СЃС‚СЊ: РєРѕРЅС‚РµРЅС‚ */
+    .ym-hero-content {
+      padding: 16px 18px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 8px;
+    }
+
+    /* РќР°Р·РІР°РЅРёРµ С‚РѕРІР°СЂР° */
+    .ym-hero-title {
+      font-size: 14px;
+      font-weight: 600;
+      color: #111827;
+      line-height: 1.3;
+      margin: 0 0 4px 0;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    /* Р РµР№С‚РёРЅРі */
+    .ym-hero-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+    }
+
+    .ym-hero-rating {
+      font-size: 13px;
+      font-weight: 500;
+      color: #111827;
+      background: #f9fafb;
+      border-radius: 999px;
+      padding: 4px 10px;
+    }
+
+    .ym-hero-rating-count {
+      color: #6b7280;
+    }
+
+    /* Р¤РёРѕР»РµС‚РѕРІР°СЏ РєРЅРѕРїРєР° */
+    .ym-hero-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 9px 16px;
+      border-radius: 999px;
+      border: none;
+      background: #6a00ff;
+      color: #ffffff;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 2px 6px rgba(88, 28, 135, 0.35);
+      transition: background 0.15s ease, transform 0.15s ease,
+                  box-shadow 0.15s ease;
+    }
+    .ym-hero-button::after {
+      content: "в†’";
+      margin-left: 6px;
+      font-size: 14px;
+    }
+    .ym-hero-button:hover {
+      background: #7c3aed;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 10px rgba(88, 28, 135, 0.45);
+    }
+
+    /* Р®СЂРёРґРёС‡РµСЃРєРёР№ Р±Р»РѕРє */
+    .ym-hero-legal {
+      margin-top: 6px;
+      max-width: 600px;
+      font-size: 11px;
+      line-height: 1.3;
+      color: #6b7280;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* РђРґР°РїС‚РёРІ */
+    @media (max-width: 480px) {
+      .ym-hero-banner {
+        max-width: 100%;
+        margin: 20px 0;
+      }
+      .ym-hero-images {
+        height: 100px;
+      }
+      .ym-hero-content {
+        padding: 12px 12px;
+      }
+      .ym-hero-title {
+        font-size: 13px;
+      }
+      .ym-hero-button {
+        font-size: 13px;
+        padding: 8px 14px;
+      }
+      .ym-hero-legal {
+        font-size: 10px;
+      }
+    }
+    /* Telegram СЂРµРєР»Р°РјРЅС‹Р№ Р±Р°РЅРЅРµСЂ */
+    .telegram-banner {
+      display: flex;
+      justify-content: center;
+      text-decoration: none;
+      color: inherit;
+      width: 100%;
+      margin: 40px 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    .telegram-banner-container {
+      width: 100%;
+      max-width: 500px;
+      min-height: 120px;
+      border-radius: 16px;
+      background: linear-gradient(135deg, #0088cc 0%, #005f8f 100%);
+      border: 1px solid #005f8f;
+      display: flex;
+      align-items: center;
+      padding: 20px;
+      box-shadow: 0 4px 16px rgba(0, 136, 204, 0.2);
+      overflow: hidden;
+      box-sizing: border-box;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .telegram-banner-container:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0, 136, 204, 0.3);
+    }
+
+    .telegram-logo {
+      width: 60px;
+      height: 60px;
+      min-width: 60px;
+      background: #ffffff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 20px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .telegram-logo svg {
+      width: 32px;
+      height: 32px;
+      fill: #0088cc;
+    }
+
+    .telegram-content {
+      flex: 1;
+      color: #ffffff;
+    }
+
+    .telegram-title {
+      font-size: 16px;
+      font-weight: 600;
+      margin: 0 0 8px 0;
+      line-height: 1.3;
+    }
+
+    .telegram-subtitle {
+      font-size: 14px;
+      opacity: 0.9;
+      margin: 0 0 12px 0;
+      line-height: 1.4;
+    }
+
+    .telegram-button {
+      display: inline-flex;
+      align-items: center;
+      padding: 8px 16px;
+      background: #ffffff;
+      color: #0088cc;
+      border-radius: 20px;
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background 0.2s ease, transform 0.2s ease;
+    }
+
+    .telegram-button:hover {
+      background: #f0f8ff;
+      transform: scale(1.05);
+    }
+
+    .telegram-button svg {
+      width: 16px;
+      height: 16px;
+      margin-left: 6px;
+      fill: #0088cc;
+    }
+
+    /* РђРґР°РїС‚РёРІ РґР»СЏ РјРѕР±РёР»СЊРЅС‹С… */
+    @media (max-width: 480px) {
+      .telegram-banner-container {
+        max-width: 100%;
+        margin: 20px 0;
+        padding: 15px;
+        min-height: 100px;
+      }
+      .telegram-logo {
+        width: 50px;
+        height: 50px;
+        min-width: 50px;
+        margin-right: 15px;
+      }
+      .telegram-logo svg {
+        width: 26px;
+        height: 26px;
+      }
+      .telegram-title {
+        font-size: 14px;
+      }
+      .telegram-subtitle {
+        font-size: 12px;
+      }
+      .telegram-button {
+        font-size: 12px;
+        padding: 6px 12px;
+      }
+    }
+
+
+
+  </style>
+  <script async src="https://timeweb.cloud/api/v1/cloud-ai/agents/3cc03620-d051-4d8d-b5af-f7b6cd083a35/embed.js?collapsed=true"></script>
 </head>
 <body>
-    <header class="header">
-        <div class="container">
-            <div class="header__inner">
-                <a href="index.html" class="logo">
-                    <span class="logo__icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12 15L7 10H17L12 15Z" fill="currentColor"/>
-                            <path d="M12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3ZM12 19C8.13401 19 5 15.866 5 12C5 8.13401 8.13401 5 12 5C15.866 5 19 8.13401 19 12C19 15.866 15.866 19 12 19Z" fill="currentColor"/>
-                        </svg>
-                    </span>
-                    <span class="logo__text">Repairo</span>
-                </a>
-                <nav class="nav">
-                    <ul class="nav__list">
-                        <li class="nav__item"><a href="index.html" class="nav__link">Р“Р»Р°РІРЅР°СЏ</a></li>
-                        <li class="nav__item"><a href="index.html#categories" class="nav__link">Р’СЃРµ РєР°С‚РµРіРѕСЂРёРё</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
-    </header>
+  <header class="header">
+    <div class="container">
+      <div class="header__inner">
+        <a href="../index.html" class="logo">
+          <span class="logo__icon"></span>
+          <span class="logo__text">GeoExpert</span>
+        </a>
+        <nav class="nav">
+          <ul class="nav__list">
+            <li><a href="../cameras.html" class="nav__link">РљР°РјРµСЂС‹</a></li>
+            <li><a href="../drones.html" class="nav__link">Р”СЂРѕРЅС‹</a></li>
+            <li><a href="../workflow.html" class="nav__link">Workflow</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
 
     <main class="main-content">
         <div class="container">
             <div class="page-content">
-                <h1>РўРµСЃС‚ СЃС‚СЂР°РЅРёС†С‹ Cookie Р‘Р°РЅРЅРµСЂР°</h1>
-                <p>Р­С‚Рѕ С‚РµСЃС‚РѕРІР°СЏ СЃС‚СЂР°РЅРёС†Р° РґР»СЏ РґРµРјРѕРЅСЃС‚СЂР°С†РёРё СЂР°Р±РѕС‚С‹ РЅРѕРІРѕРіРѕ РІСЃРїР»С‹РІР°СЋС‰РµРіРѕ СѓРІРµРґРѕРјР»РµРЅРёСЏ Рѕ С„Р°Р№Р»Р°С… cookie.</p>
-                <p>Р‘Р°РЅРЅРµСЂ РґРѕР»Р¶РµРЅ РїРѕСЏРІРёС‚СЊСЃСЏ С‡РµСЂРµР· 1 СЃРµРєСѓРЅРґСѓ РїРѕСЃР»Рµ Р·Р°РіСЂСѓР·РєРё СЃС‚СЂР°РЅРёС†С‹ РєР°Рє РІСЃРїР»С‹РІР°СЋС‰РµРµ СѓРІРµРґРѕРјР»РµРЅРёРµ СЃРЅРёР·Сѓ.</p>
+                <h1>Тест страницы Cookie Баннера</h1>
+                <p>Это тестовая страница для демонстрации работы нового всплывающего уведомления о файлах cookie.</p>
+                <p>Баннер должен появиться через 1 секунду после загрузки страницы как всплывающее уведомление снизу.</p>
                 
-                <h2>РћСЃРѕР±РµРЅРЅРѕСЃС‚Рё РЅРѕРІРѕРіРѕ Р±Р°РЅРЅРµСЂР°:</h2>
+                <h2>Особенности нового баннера:</h2>
                 <ul>
-                    <li>РџРѕСЏРІР»СЏРµС‚СЃСЏ РЅР° РєР°Р¶РґРѕР№ СЃС‚СЂР°РЅРёС†Рµ РїСЂРё Р·Р°РіСЂСѓР·РєРµ</li>
-                    <li>РЎРѕРІСЂРµРјРµРЅРЅС‹Р№ РґРёР·Р°Р№РЅ СЃ РіСЂР°РґРёРµРЅС‚РѕРј Рё Р°РЅРёРјР°С†РёРµР№</li>
-                    <li>Р’СЃРїР»С‹РІР°СЋС‰РµРµ СѓРІРµРґРѕРјР»РµРЅРёРµ СЃРЅРёР·Сѓ РїРѕ С†РµРЅС‚СЂСѓ</li>
-                    <li>РђРґР°РїС‚РёРІРЅС‹Р№ РґРёР·Р°Р№РЅ РґР»СЏ РјРѕР±РёР»СЊРЅС‹С… СѓСЃС‚СЂРѕР№СЃС‚РІ</li>
-                    <li>РџР»Р°РІРЅР°СЏ Р°РЅРёРјР°С†РёСЏ РїРѕСЏРІР»РµРЅРёСЏ Рё РёСЃС‡РµР·РЅРѕРІРµРЅРёСЏ</li>
+                    <li>Появляется на каждой странице при загрузке</li>
+                    <li>Современный дизайн с градиентом и анимацией</li>
+                    <li>Всплывающее уведомление снизу по центру</li>
+                    <li>Адаптивный дизайн для мобильных устройств</li>
+                    <li>Плавная анимация появления и исчезновения</li>
                 </ul>
 
-                <h2>РЎС‚Р°С‚СѓСЃ СЃРёСЃС‚РµРј Р°РЅР°Р»РёС‚РёРєРё:</h2>
+                <h2>Статус систем аналитики:</h2>
                 <div id="status-container">
-                    <div id="cookie-status" class="status-info">РџСЂРѕРІРµСЂРєР° СЃС‚Р°С‚СѓСЃР° cookie...</div>
-                    <div id="yandex-status" class="status-info">РџСЂРѕРІРµСЂРєР° РЇРЅРґРµРєСЃ.РњРµС‚СЂРёРєРё...</div>
-                    <div id="google-status" class="status-info">РџСЂРѕРІРµСЂРєР° Google Analytics...</div>
+                    <div id="cookie-status" class="status-info">Проверка статуса cookie...</div>
+                    <div id="yandex-status" class="status-info">Проверка Яндекс.Метрики...</div>
+                    <div id="google-status" class="status-info">Проверка Google Analytics...</div>
                 </div>
                 
-                <h2>Р”РµР№СЃС‚РІРёСЏ:</h2>
-                <button onclick="checkStatus()">РћР±РЅРѕРІРёС‚СЊ СЃС‚Р°С‚СѓСЃ</button>
-                <button onclick="clearAllCookies()">РћС‡РёСЃС‚РёС‚СЊ РІСЃРµ cookie</button>
-                <button onclick="testAnalytics()">РўРµСЃС‚РёСЂРѕРІР°С‚СЊ Р°РЅР°Р»РёС‚РёРєСѓ</button>
-                <button onclick="forceLoadAnalytics()">Р—Р°РіСЂСѓР·РёС‚СЊ Р°РЅР°Р»РёС‚РёРєСѓ РїСЂРёРЅСѓРґРёС‚РµР»СЊРЅРѕ</button>
+                <h2>Действия:</h2>
+                <button onclick="checkStatus()">Обновить статус</button>
+                <button onclick="clearAllCookies()">Очистить все cookie</button>
+                <button onclick="testAnalytics()">Тестировать аналитику</button>
+                <button onclick="forceLoadAnalytics()">Загрузить аналитику принудительно</button>
                 
-                <h2>РћС‚Р»Р°РґРѕС‡РЅР°СЏ РёРЅС„РѕСЂРјР°С†РёСЏ:</h2>
-                <pre id="debug-info">Р—Р°РіСЂСѓР·РєР°...</pre>
+                <h2>Отладочная информация:</h2>
+                <pre id="debug-info">Загрузка...</pre>
 
-                <p>РћР±РЅРѕРІРёС‚Рµ СЃС‚СЂР°РЅРёС†Сѓ, С‡С‚РѕР±С‹ СѓРІРёРґРµС‚СЊ Р±Р°РЅРЅРµСЂ СЃРЅРѕРІР°.</p>
+                <p>Обновите страницу, чтобы увидеть баннер снова.</p>
             </div>
         </div>
     </main>
@@ -87,7 +389,7 @@
     </style>
     
     <script>
-        // Р¤СѓРЅРєС†РёРё РґР»СЏ СЂР°Р±РѕС‚С‹ СЃ cookie
+        // Функции для работы с cookie
         function getCookie(name) {
             const value = `; ${document.cookie}`;
             const parts = value.split(`; ${name}=`);
@@ -100,38 +402,38 @@
         }
 
         function checkStatus() {
-            console.log('РџСЂРѕРІРµСЂРєР° СЃС‚Р°С‚СѓСЃР° СЃРёСЃС‚РµРј...');
+            console.log('Проверка статуса систем...');
             
-            // РџСЂРѕРІРµСЂРєР° cookie СЃРѕРіР»Р°СЃРёСЏ
+            // Проверка cookie согласия
             const cookieConsent = getCookie('cookie_consent');
             const cookieStatus = document.getElementById('cookie-status');
             
             if (cookieConsent) {
                 cookieStatus.className = 'status-success';
-                cookieStatus.textContent = `вњ“ Cookie СЃРѕРіР»Р°СЃРёРµ РїРѕР»СѓС‡РµРЅРѕ: ${cookieConsent}`;
+                cookieStatus.textContent = `? Cookie согласие получено: ${cookieConsent}`;
             } else {
                 cookieStatus.className = 'status-error';
-                cookieStatus.textContent = 'вњ— Cookie СЃРѕРіР»Р°СЃРёРµ РЅРµ РїРѕР»СѓС‡РµРЅРѕ';
+                cookieStatus.textContent = '? Cookie согласие не получено';
             }
 
-            // РџСЂРѕРІРµСЂРєР° РЇРЅРґРµРєСЃ.РњРµС‚СЂРёРєРё
+            // Проверка Яндекс.Метрики
             const yandexStatus = document.getElementById('yandex-status');
             if (typeof window.ym !== 'undefined') {
                 yandexStatus.className = 'status-success';
-                yandexStatus.textContent = 'вњ“ РЇРЅРґРµРєСЃ.РњРµС‚СЂРёРєР° Р·Р°РіСЂСѓР¶РµРЅР° (ID: 106225686)';
+                yandexStatus.textContent = '? Яндекс.Метрика загружена (ID: 106225686)';
             } else {
                 yandexStatus.className = 'status-error';
-                yandexStatus.textContent = 'вњ— РЇРЅРґРµРєСЃ.РњРµС‚СЂРёРєР° РЅРµ Р·Р°РіСЂСѓР¶РµРЅР°';
+                yandexStatus.textContent = '? Яндекс.Метрика не загружена';
             }
 
-            // РџСЂРѕРІРµСЂРєР° Google Analytics
+            // Проверка Google Analytics
             const googleStatus = document.getElementById('google-status');
             if (typeof window.gtag !== 'undefined') {
                 googleStatus.className = 'status-success';
-                googleStatus.textContent = 'вњ“ Google Analytics Р·Р°РіСЂСѓР¶РµРЅ (ID: G-YE88Y994NX)';
+                googleStatus.textContent = '? Google Analytics загружен (ID: G-YE88Y994NX)';
             } else {
                 googleStatus.className = 'status-error';
-                googleStatus.textContent = 'вњ— Google Analytics РЅРµ Р·Р°РіСЂСѓР¶РµРЅ';
+                googleStatus.textContent = '? Google Analytics не загружен';
             }
 
             updateDebugInfo();
@@ -139,14 +441,14 @@
 
         function updateDebugInfo() {
             const debugInfo = {
-                'РўРµРєСѓС‰РёР№ URL': window.location.href,
+                'Текущий URL': window.location.href,
                 'User Agent': navigator.userAgent,
-                'Cookie СЃРѕРіР»Р°СЃРёРµ': getCookie('cookie_consent'),
-                'Р’СЃРµ cookie': document.cookie,
-                'РЇРЅРґРµРєСЃ.РњРµС‚СЂРёРєР° (ym)': typeof window.ym !== 'undefined',
+                'Cookie согласие': getCookie('cookie_consent'),
+                'Все cookie': document.cookie,
+                'Яндекс.Метрика (ym)': typeof window.ym !== 'undefined',
                 'Google Analytics (gtag)': typeof window.gtag !== 'undefined',
                 'DataLayer': typeof window.dataLayer !== 'undefined',
-                'Р’СЂРµРјСЏ': new Date().toISOString()
+                'Время': new Date().toISOString()
             };
             
             document.getElementById('debug-info').textContent = JSON.stringify(debugInfo, null, 2);
@@ -160,50 +462,50 @@
             deleteCookie('_gid');
             deleteCookie('_ym_isad');
             deleteCookie('_ym_visorc');
-            console.log('Р’СЃРµ cookie РѕС‡РёС‰РµРЅС‹');
+            console.log('Все cookie очищены');
             checkStatus();
         }
 
         function testAnalytics() {
-            console.log('РўРµСЃС‚РёСЂРѕРІР°РЅРёРµ СЃРёСЃС‚РµРј Р°РЅР°Р»РёС‚РёРєРё...');
+            console.log('Тестирование систем аналитики...');
             
             if (typeof window.ym !== 'undefined') {
                 try {
                     window.ym(106225686, 'hit', window.location.href, {
-                        title: 'РўРµСЃС‚РѕРІР°СЏ СЃС‚СЂР°РЅРёС†Р° - ' + document.title,
+                        title: 'Тестовая страница - ' + document.title,
                         referer: document.referrer
                     });
-                    console.log('вњ“ РЇРЅРґРµРєСЃ.РњРµС‚СЂРёРєР°: hit РѕС‚РїСЂР°РІР»РµРЅ СѓСЃРїРµС€РЅРѕ');
+                    console.log('? Яндекс.Метрика: hit отправлен успешно');
                 } catch (e) {
-                    console.error('вњ— РћС€РёР±РєР° РЇРЅРґРµРєСЃ.РњРµС‚СЂРёРєРё:', e);
+                    console.error('? Ошибка Яндекс.Метрики:', e);
                 }
             } else {
-                console.log('вњ— РЇРЅРґРµРєСЃ.РњРµС‚СЂРёРєР° РЅРµ РґРѕСЃС‚СѓРїРЅР°');
+                console.log('? Яндекс.Метрика не доступна');
             }
             
             if (typeof window.gtag !== 'undefined') {
                 try {
                     window.gtag('event', 'page_view', {
-                        page_title: 'РўРµСЃС‚РѕРІР°СЏ СЃС‚СЂР°РЅРёС†Р° - ' + document.title,
+                        page_title: 'Тестовая страница - ' + document.title,
                         page_location: window.location.href
                     });
                     window.gtag('event', 'test_event', {
                         'event_category': 'debug',
                         'event_label': 'manual_test'
                     });
-                    console.log('вњ“ Google Analytics: СЃРѕР±С‹С‚РёСЏ РѕС‚РїСЂР°РІР»РµРЅС‹ СѓСЃРїРµС€РЅРѕ');
+                    console.log('? Google Analytics: события отправлены успешно');
                 } catch (e) {
-                    console.error('вњ— РћС€РёР±РєР° Google Analytics:', e);
+                    console.error('? Ошибка Google Analytics:', e);
                 }
             } else {
-                console.log('вњ— Google Analytics РЅРµ РґРѕСЃС‚СѓРїРµРЅ');
+                console.log('? Google Analytics не доступен');
             }
         }
 
         function forceLoadAnalytics() {
-            console.log('РџСЂРёРЅСѓРґРёС‚РµР»СЊРЅР°СЏ Р·Р°РіСЂСѓР·РєР° Р°РЅР°Р»РёС‚РёРєРё...');
+            console.log('Принудительная загрузка аналитики...');
             
-            // Р—Р°РіСЂСѓР·РєР° РЇРЅРґРµРєСЃ.РњРµС‚СЂРёРєРё
+            // Загрузка Яндекс.Метрики
             (function(m,e,t,r,i,k,a){
                 m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
                 m[i].l=1*new Date();
@@ -222,7 +524,7 @@
                 });
             }
 
-            // Р—Р°РіСЂСѓР·РєР° Google Analytics
+            // Загрузка Google Analytics
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
@@ -235,15 +537,17 @@
             gaScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-YE88Y994NX';
             document.head.appendChild(gaScript);
             
-            console.log('РђРЅР°Р»РёС‚РёРєР° Р·Р°РіСЂСѓР¶РµРЅР°, РїСЂРѕРІРµСЂРєР° С‡РµСЂРµР· 2 СЃРµРєСѓРЅРґС‹...');
+            console.log('Аналитика загружена, проверка через 2 секунды...');
             setTimeout(checkStatus, 2000);
         }
 
-        // РРЅРёС†РёР°Р»РёР·Р°С†РёСЏ РїСЂРё Р·Р°РіСЂСѓР·РєРµ СЃС‚СЂР°РЅРёС†С‹
+        // Инициализация при загрузке страницы
         document.addEventListener('DOMContentLoaded', function() {
             setTimeout(checkStatus, 1000);
-            setInterval(checkStatus, 10000); // РћР±РЅРѕРІР»СЏС‚СЊ СЃС‚Р°С‚СѓСЃ РєР°Р¶РґС‹Рµ 10 СЃРµРєСѓРЅРґ
+            setInterval(checkStatus, 10000); // Обновлять статус каждые 10 секунд
         });
     </script>
 </body>
 </html>
+
+

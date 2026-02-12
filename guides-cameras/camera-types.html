@@ -2,93 +2,36 @@
 <html lang="ru" data-theme="light">
 <head>
 
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Р Р°Р·РЅРёС†Р° РјРµР¶РґСѓ Р·РµСЂРєР°Р»СЊРЅС‹РјРё (DSLR), Р±РµР·Р·РµСЂРєР°Р»СЊРЅС‹РјРё (Mirrorless) Рё РєРѕРјРїР°РєС‚РЅС‹РјРё РєР°РјРµСЂР°РјРё | Repairo</title>
-    <meta name="description" content="{{ description }}">
-    <meta name="description" content="РџРѕС€Р°РіРѕРІР°СЏ РёРЅСЃС‚СЂСѓРєС†РёСЏ: Р Р°Р·РЅРёС†Р° РјРµР¶РґСѓ Р·РµСЂРєР°Р»СЊРЅС‹РјРё (DSLR), Р±РµР·Р·РµСЂРєР°Р»СЊРЅС‹РјРё (Mirrorless) Рё РєРѕРјРїР°РєС‚РЅС‹РјРё РєР°РјРµСЂР°РјРё. Р•СЃР»Рё РїР»Р°РЅРёСЂСѓРµС‚Рµ СЃРЅРёРјР°С‚СЊ РІРёРґРµРѕ, РІС‹Р±РёСЂР°Р№С‚Рµ Р±РµР·Р·РµСЂРєР°...">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Разница между зеркальными (DSLR), беззеркальными (Mirrorless</title>
+    <meta name="description" content="">
 
-    <link rel="stylesheet" href="../styles.css" />
-    <link rel="stylesheet" href="../styles-header.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-    <style>
-      .guide-content {
-        line-height: 1.7;
-        color: var(--text);
-      }
-      .guide-content h2 {
-        color: var(--primary);
-        margin-top: 30px;
-        margin-bottom: 15px;
-        font-size: 1.5rem;
-      }
-      .compare-table {
-        width: 100%;
-        border-collapse: collapse;
-        margin: 20px 0;
-      }
-      .compare-table th,
-      .compare-table td {
-        border: 1px solid var(--border);
-        padding: 10px 15px;
-        text-align: left;
-      }
-      .compare-table th {
-        background: var(--background-alt);
-      }
-      .recommend-box {
-        background: rgba(3, 74, 79, 0.1);
-        border-left: 4px solid var(--primary);
-        padding: 12px;
-        margin: 15px 0;
-        display: flex;
-        gap: 12px;
-        align-items: flex-start;
-        border-radius: 4px;
-      }
-      .recommend-box i {
-        font-size: 1.2rem;
-        color: var(--primary);
-        margin-top: 2px;
-      }
-      .pro-tips {
-        background: rgba(3, 74, 79, 0.05);
-        padding: 15px;
-        border-radius: 6px;
-        margin: 20px 0;
-      }
-      .pro-tips h4 {
-        color: var(--primary);
-        margin-top: 0;
-        margin-bottom: 12px;
-        font-size: 1.1rem;
-      }
-      .tip-item {
-        display: flex;
-        gap: 8px;
-        margin-bottom: 8px;
-        align-items: flex-start;
-      }
-      @media (max-width: 768px) {
-        .guide-content h2 {
-          font-size: 1.4rem;
-          margin-top: 25px;
-        }
-        .compare-table th,
-        .compare-table td {
-          padding: 8px 10px;
-        }
-      }
-    /* РЇРЅРґРµРєСЃ РњР°СЂРєРµС‚ СЂРµРєР»Р°РјРЅС‹Р№ Р±Р°РЅРЅРµСЂ */
-    .ym-hero-link {
-      display: block;
-      text-decoration: none;
-      color: inherit;
-      max-width: 100%;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="../styles-header.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    .guide-content { line-height: 1.7; color: var(--text); }
+    .guide-content h2 { color: var(--primary); margin-top: 30px; margin-bottom: 15px; font-size: 1.5rem; }
+    .guide-content h3 { color: var(--primary-dark); margin-top: 25px; margin-bottom: 12px; font-size: 1.2rem; }
+    .guide-image-block { margin: 20px 0; padding: 15px; background: var(--background); border-radius: var(--border-radius); border: 1px solid var(--border); text-align: center; }
+    .guide-image-block img { max-width: 100%; height: auto; border-radius: 6px; border: 1px solid var(--border); }
+    .image-caption { margin-top: 10px; font-size: 0.85rem; color: var(--text-light); font-style: italic; }
+    .pro-tips { background: rgba(3, 74, 79, 0.05); padding: 15px; border-radius: 6px; margin: 20px 0; }
+    .pro-tips h4 { color: var(--primary); margin-top: 0; margin-bottom: 12px; font-size: 1.1rem; }
+    .tip-item { display: flex; gap: 8px; margin-bottom: 8px; align-items: flex-start; }
+    table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+    th, td { border: 1px solid var(--border); padding: 8px; text-align: left; }
+    th { background: var(--background-light); }
+    .highlight { background: #f5f7fa; border-left: 4px solid #2d9cdb; padding: 10px 15px; margin: 20px 0; }
+    .faq-section ul { margin-left: 1em; }
+    .block-section { margin-bottom: 2em; }
+    @media (max-width: 768px) {
+      .guide-content h2 { font-size: 1.4rem; margin-top: 25px; }
+      .guide-image-block { padding: 12px; margin: 15px 0; }
+      table, th, td { font-size: 0.95rem; }
     }
-
     /* Р“РѕСЂРёР·РѕРЅС‚Р°Р»СЊРЅС‹Р№ Р±Р°РЅРЅРµСЂ-РєР°СЂС‚РѕС‡РєР° */
     .ym-hero-banner {
       width: 100%;
@@ -201,13 +144,11 @@
       transition: background 0.15s ease, transform 0.15s ease,
                   box-shadow 0.15s ease;
     }
-
     .ym-hero-button::after {
       content: "в†’";
       margin-left: 6px;
       font-size: 14px;
     }
-
     .ym-hero-button:hover {
       background: #7c3aed;
       transform: translateY(-1px);
@@ -231,24 +172,19 @@
         max-width: 100%;
         margin: 20px 0;
       }
-
       .ym-hero-images {
         height: 100px;
       }
-
       .ym-hero-content {
         padding: 12px 12px;
       }
-
       .ym-hero-title {
         font-size: 13px;
       }
-
       .ym-hero-button {
         font-size: 13px;
         padding: 8px 14px;
       }
-
       .ym-hero-legal {
         font-size: 10px;
       }
@@ -356,27 +292,22 @@
         padding: 15px;
         min-height: 100px;
       }
-
       .telegram-logo {
         width: 50px;
         height: 50px;
         min-width: 50px;
         margin-right: 15px;
       }
-
       .telegram-logo svg {
         width: 26px;
         height: 26px;
       }
-
       .telegram-title {
         font-size: 14px;
       }
-
       .telegram-subtitle {
         font-size: 12px;
       }
-
       .telegram-button {
         font-size: 12px;
         padding: 6px 12px;
@@ -385,7 +316,7 @@
 
 
 
-    </style>
+  </style>
   <script async src="https://timeweb.cloud/api/v1/cloud-ai/agents/3cc03620-d051-4d8d-b5af-f7b6cd083a35/embed.js?collapsed=true"></script>
 </head>
 <body>
@@ -394,14 +325,13 @@
       <div class="header__inner">
         <a href="../index.html" class="logo">
           <span class="logo__icon"></span>
-          <span class="logo__text">Repairo</span>
+          <span class="logo__text">GeoExpert</span>
         </a>
         <nav class="nav">
           <ul class="nav__list">
-            <li><a href="../cameras.html" class="nav__link">Р¤РѕС‚РѕР°РїРїР°СЂР°С‚С‹</a></li>
-            <li><a href="../tv.html" class="nav__link">РўРµР»РµРІРёР·РѕСЂС‹</a></li>
-            <li><a href="../laptops.html" class="nav__link">РќРѕСѓС‚Р±СѓРєРё</a></li>
-            <li><a href="../smartphones.html" class="nav__link">РЎРјР°СЂС‚С„РѕРЅС‹</a></li>
+            <li><a href="../cameras.html" class="nav__link">РљР°РјРµСЂС‹</a></li>
+            <li><a href="../drones.html" class="nav__link">Р”СЂРѕРЅС‹</a></li>
+            <li><a href="../workflow.html" class="nav__link">Workflow</a></li>
           </ul>
         </nav>
       </div>
@@ -411,152 +341,139 @@
   <section class="guide-page">
     <div class="container">
       <div class="breadcrumbs">
-        <a href="../index.html">Р“Р»Р°РІРЅР°СЏ</a>
+        <a href="../index.html">Главная</a>
         <i class="fas fa-chevron-right"></i>
-        <a href="../cameras.html">Р¤РѕС‚РѕР°РїРїР°СЂР°С‚С‹</a>
+        <a href="../cameras.html">Фотоаппараты</a>
         <i class="fas fa-chevron-right"></i>
-        <span>Р Р°Р·РЅРёС†Р° РјРµР¶РґСѓ Р·РµСЂРєР°Р»СЊРЅС‹РјРё (DSLR), Р±РµР·Р·РµСЂРєР°Р»СЊРЅС‹РјРё (Mirrorless) Рё РєРѕРјРїР°РєС‚РЅС‹РјРё РєР°РјРµСЂР°РјРё</span>
+        <span>Разница между зеркальными (DSLR), беззеркальными (Mirrorless) и компактными камерами</span>
       </div>
-      <h1 class="section__title">Р Р°Р·РЅРёС†Р° РјРµР¶РґСѓ Р·РµСЂРєР°Р»СЊРЅС‹РјРё (DSLR), Р±РµР·Р·РµСЂРєР°Р»СЊРЅС‹РјРё (Mirrorless) Рё РєРѕРјРїР°РєС‚РЅС‹РјРё РєР°РјРµСЂР°РјРё</h1>
+      <h1 class="section__title">Разница между зеркальными (DSLR), беззеркальными (Mirrorless) и компактными камерами</h1>
       <div class="guide-meta">
-        <span><i class="fas fa-camera"></i> РћР±Р·РѕСЂ С‚РёРїРѕРІ РєР°РјРµСЂ</span>
+        <span><i class="fas fa-camera"></i> Обзор типов камер</span>
       </div>
       <div class="guide-image-block">
                 <img src="https://avatars.mds.yandex.net/get-shedevrum/15247318/img_a2f357a42cb111f0b42ece263fd3d7f5/orig">
             </div>
       <div class="guide-content">
-        <!-- РЇРЅРґРµРєСЃ РњР°СЂРєРµС‚ СЂРµРєР»Р°РјРЅС‹Р№ Р±Р»РѕРє -->
+        <!-- Яндекс Маркет рекламный блок -->
         <a href="https://market.yandex.ru/catalog--bytovaia-tekhnika/54419/list?hid=198118&rs=eJwzUvjEKMvBILDwEKsEg8Kzbh6Nw4dZNS4D8c7lFhp9c1-wAQC3uAwP&clid=14635360&refid=rbck8fgamv681iu59go3iqxwddedl4x9&erid=5jtCeReNx12oajxS2bzShmZ&mclid=1003&distr_type=7&utm_source=partner_network&pp=900&utm_medium=link_list&utm_campaign=14635360"
            target="_blank"
            rel="noopener noreferrer sponsored"
-           class="ym-hero-link">
-          <div class="ym-hero-banner">
-            <div class="ym-hero-images">
-              <div class="ym-hero-image">
                 <img src="https://avatars.mds.yandex.net/get-mpic/14770882/2a00000197f4dbee777f8afddccaf44faa53/optimize"
-                     alt="Р Р°СЃРїСЂРѕРґР°Р¶Р° Р±С‹С‚РѕРІРѕР№ СЌР»РµРєС‚СЂРѕРЅРёРєРё 1">
+                     alt="Распродажа бытовой электроники 1">
               </div>
-              <div class="ym-hero-image">
                 <img src="https://avatars.mds.yandex.net/get-mpic/15580298/img_id8867318964670654684.jpeg/optimize"
-                     alt="Р Р°СЃРїСЂРѕРґР°Р¶Р° Р±С‹С‚РѕРІРѕР№ СЌР»РµРєС‚СЂРѕРЅРёРєРё 2">
+                     alt="Распродажа бытовой электроники 2">
               </div>
-              <div class="ym-hero-image">
                 <img src="https://avatars.mds.yandex.net/get-mpic/10096780/2a000001953b534fed2494e0b30fadd9b458/optimize"
-                     alt="Р Р°СЃРїСЂРѕРґР°Р¶Р° Р±С‹С‚РѕРІРѕР№ СЌР»РµРєС‚СЂРѕРЅРёРєРё 3">
+                     alt="Распродажа бытовой электроники 3">
               </div>
             </div>
-            <div class="ym-hero-content">
-              <h3 class="ym-hero-title">Р Р°СЃРїСЂРѕРґР°Р¶Р° Р±С‹С‚РѕРІРѕР№ СЌР»РµРєС‚СЂРѕРЅРёРєРё РЅР° РЇРЅРґРµРєСЃ РњР°СЂРєРµС‚Рµ</h3>
-              <div class="ym-hero-top">
-                <div class="ym-hero-rating">
-                  в­ђ Р’С‹РіРѕРґРЅС‹Рµ РїСЂРµРґР»РѕР¶РµРЅРёСЏ
-                  <span class="ym-hero-rating-count">РЎРєРёРґРєРё РґРѕ 50%</span>
+                  ? Выгодные предложения
                 </div>
               </div>
-              <button class="ym-hero-button">Р—Р° СЃРєРёРґРєР°РјРё</button>
             </div>
           </div>
-          <div class="ym-hero-legal">
-            Р РµРєР»Р°РјР°. РћРћРћ "РЇРќР”Р•РљРЎ", РРќРќ 7736207543. clid: 14635360, erid: 5jtCeReNx12oajxS2bzShmZ
+            Реклама. ООО "ЯНДЕКС", ИНН 7736207543. clid: 14635360, erid: 5jtCeReNx12oajxS2bzShmZ
           </div>
         </a>
-        <h2>РћСЃРЅРѕРІРЅС‹Рµ С‚РёРїС‹ С„РѕС‚РѕР°РїРїР°СЂР°С‚РѕРІ</h2>
+        <h2>Основные типы фотоаппаратов</h2>
         <table class="compare-table">
           <thead>
             <tr>
-              <th>РўРёРї РєР°РјРµСЂС‹</th>
-              <th>РћРїРёСЃР°РЅРёРµ</th>
-              <th>РџР»СЋСЃС‹</th>
-              <th>РњРёРЅСѓСЃС‹</th>
+              <th>Тип камеры</th>
+              <th>Описание</th>
+              <th>Плюсы</th>
+              <th>Минусы</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td><b>Р—РµСЂРєР°Р»СЊРЅС‹Рµ (DSLR)</b></td>
-              <td>РљР°РјРµСЂС‹ СЃ Р·РµСЂРєР°Р»РѕРј Рё РѕРїС‚РёС‡РµСЃРєРёРј РІРёРґРѕРёСЃРєР°С‚РµР»РµРј. РЎРІРµС‚ РїСЂРѕС…РѕРґРёС‚ С‡РµСЂРµР· РѕР±СЉРµРєС‚РёРІ, РѕС‚СЂР°Р¶Р°РµС‚СЃСЏ Р·РµСЂРєР°Р»РѕРј РІ РІРёРґРѕРёСЃРєР°С‚РµР»СЊ.</td>
+              <td><b>Зеркальные (DSLR)</b></td>
+              <td>Камеры с зеркалом и оптическим видоискателем. Свет проходит через объектив, отражается зеркалом в видоискатель.</td>
               <td>
-                - РћС‚Р»РёС‡РЅРѕРµ РєР°С‡РµСЃС‚РІРѕ РёР·РѕР±СЂР°Р¶РµРЅРёСЏ<br/>
-                - Р‘С‹СЃС‚СЂС‹Р№ Рё С‚РѕС‡РЅС‹Р№ Р°РІС‚РѕС„РѕРєСѓСЃ С‡РµСЂРµР· РІРёРґРѕРёСЃРєР°С‚РµР»СЊ<br/>
-                - Р‘РѕР»СЊС€РѕР№ РІС‹Р±РѕСЂ РѕР±СЉРµРєС‚РёРІРѕРІ Рё Р°РєСЃРµСЃСЃСѓР°СЂРѕРІ<br/>
-                - Р”РѕР»РіР°СЏ СЂР°Р±РѕС‚Р° РѕС‚ Р°РєРєСѓРјСѓР»СЏС‚РѕСЂР°
+                - Отличное качество изображения<br/>
+                - Быстрый и точный автофокус через видоискатель<br/>
+                - Большой выбор объективов и аксессуаров<br/>
+                - Долгая работа от аккумулятора
               </td>
               <td>
-                - Р‘РѕР»СЊС€РѕР№ Рё С‚СЏР¶С‘Р»С‹Р№ РєРѕСЂРїСѓСЃ<br/>
-                - РњРµС…Р°РЅРёР·Рј Р·РµСЂРєР°Р»Р° СѓРІРµР»РёС‡РёРІР°РµС‚ РІРёР±СЂР°С†РёРё Рё С€СѓРј<br/>
-                - РњРµРЅРµРµ РєРѕРјРїР°РєС‚РЅС‹ Рё РјРѕР±РёР»СЊРЅС‹
-              </td>
-            </tr>
-            <tr>
-              <td><b>Р‘РµР·Р·РµСЂРєР°Р»СЊРЅС‹Рµ (Mirrorless)</b></td>
-              <td>РљР°РјРµСЂС‹ Р±РµР· Р·РµСЂРєР°Р»Р°, СЃ СЌР»РµРєС‚СЂРѕРЅРЅС‹Рј РІРёРґРѕРёСЃРєР°С‚РµР»РµРј РёР»Рё С‚РѕР»СЊРєРѕ СЌРєСЂР°РЅРѕРј. РЎРІРµС‚ СЃСЂР°Р·Сѓ РїРѕРїР°РґР°РµС‚ РЅР° РјР°С‚СЂРёС†Сѓ.</td>
-              <td>
-                - РљРѕРјРїР°РєС‚РЅРµРµ Рё Р»РµРіС‡Рµ DSLR<br/>
-                - Р‘С‹СЃС‚СЂС‹Р№ Р°РІС‚РѕС„РѕРєСѓСЃ СЃ С‚РµС…РЅРѕР»РѕРіРёРµР№ С„Р°Р·РѕРІРѕР№ РґРµС‚РµРєС†РёРё РЅР° РјР°С‚СЂРёС†Рµ<br/>
-                - Р’РѕР·РјРѕР¶РЅРѕСЃС‚СЊ РІРёРґРµРѕСЃСЉС‘РјРєРё РІС‹СЃРѕРєРѕРіРѕ РєР°С‡РµСЃС‚РІР°<br/>
-                - Р­Р»РµРєС‚СЂРѕРЅРЅС‹Р№ РІРёРґРѕРёСЃРєР°С‚РµР»СЊ СЃ РѕС‚РѕР±СЂР°Р¶РµРЅРёРµРј РЅР°СЃС‚СЂРѕРµРє РІ СЂРµР°Р»СЊРЅРѕРј РІСЂРµРјРµРЅРё
-              </td>
-              <td>
-                - РњРµРЅСЊС€РµРµ РІСЂРµРјСЏ СЂР°Р±РѕС‚С‹ РѕС‚ Р°РєРєСѓРјСѓР»СЏС‚РѕСЂР°<br/>
-                - Р­Р»РµРєС‚СЂРѕРЅРЅС‹Р№ РІРёРґРѕРёСЃРєР°С‚РµР»СЊ РјРѕР¶РµС‚ РёРјРµС‚СЊ Р·Р°РґРµСЂР¶РєСѓ Рё С€СѓРј<br/>
-                - РњРµРЅСЊС€РёР№ РІС‹Р±РѕСЂ РѕРїС‚РёРєРё (РЅРѕ Р±С‹СЃС‚СЂРѕ СЂР°СЃС‚С‘С‚)
+                - Большой и тяжёлый корпус<br/>
+                - Механизм зеркала увеличивает вибрации и шум<br/>
+                - Менее компактны и мобильны
               </td>
             </tr>
             <tr>
-              <td><b>РљРѕРјРїР°РєС‚РЅС‹Рµ РєР°РјРµСЂС‹</b></td>
-              <td>РњР°Р»РµРЅСЊРєРёРµ РєР°РјРµСЂС‹ СЃ С„РёРєСЃРёСЂРѕРІР°РЅРЅС‹Рј РѕР±СЉРµРєС‚РёРІРѕРј, С‡Р°СЃС‚Рѕ СЃ РјРµРЅСЊС€РµР№ РјР°С‚СЂРёС†РµР№.</td>
+              <td><b>Беззеркальные (Mirrorless)</b></td>
+              <td>Камеры без зеркала, с электронным видоискателем или только экраном. Свет сразу попадает на матрицу.</td>
               <td>
-                - РћС‡РµРЅСЊ РєРѕРјРїР°РєС‚РЅС‹Рµ Рё Р»С‘РіРєРёРµ<br/>
-                - РџСЂРѕСЃС‚С‹ РІ РёСЃРїРѕР»СЊР·РѕРІР°РЅРёРё<br/>
-                - Р§Р°СЃС‚Рѕ РёРјРµСЋС‚ РІСЃС‚СЂРѕРµРЅРЅС‹Р№ Р·СѓРј Рё Р°РІС‚РѕРјР°С‚РёС‡РµСЃРєРёРµ СЂРµР¶РёРјС‹
+                - Компактнее и легче DSLR<br/>
+                - Быстрый автофокус с технологией фазовой детекции на матрице<br/>
+                - Возможность видеосъёмки высокого качества<br/>
+                - Электронный видоискатель с отображением настроек в реальном времени
               </td>
               <td>
-                - РћРіСЂР°РЅРёС‡РµРЅРЅС‹Рµ РІРѕР·РјРѕР¶РЅРѕСЃС‚Рё СЂСѓС‡РЅС‹С… РЅР°СЃС‚СЂРѕРµРє<br/>
-                - РњРµРЅСЊС€РµРµ РєР°С‡РµСЃС‚РІРѕ РёР·РѕР±СЂР°Р¶РµРЅРёСЏ<br/>
-                - Р¤РёРєСЃРёСЂРѕРІР°РЅРЅС‹Р№ РѕР±СЉРµРєС‚РёРІ, РѕС‚СЃСѓС‚СЃС‚РІРёРµ СЃРјРµРЅРЅРѕР№ РѕРїС‚РёРєРё
+                - Меньшее время работы от аккумулятора<br/>
+                - Электронный видоискатель может иметь задержку и шум<br/>
+                - Меньший выбор оптики (но быстро растёт)
+              </td>
+            </tr>
+            <tr>
+              <td><b>Компактные камеры</b></td>
+              <td>Маленькие камеры с фиксированным объективом, часто с меньшей матрицей.</td>
+              <td>
+                - Очень компактные и лёгкие<br/>
+                - Просты в использовании<br/>
+                - Часто имеют встроенный зум и автоматические режимы
+              </td>
+              <td>
+                - Ограниченные возможности ручных настроек<br/>
+                - Меньшее качество изображения<br/>
+                - Фиксированный объектив, отсутствие сменной оптики
               </td>
             </tr>
           </tbody>
         </table>
-        <h2>РљРѕРіРґР° РєР°РєСѓСЋ РєР°РјРµСЂСѓ РІС‹Р±СЂР°С‚СЊ?</h2>
+        <h2>Когда какую камеру выбрать?</h2>
 <ul>
-          <li><b>DSLR:</b> РґР»СЏ С‚РµС…, РєС‚Рѕ С†РµРЅРёС‚ РєР°С‡РµСЃС‚РІРѕ, С€РёСЂРѕРєРёР№ РІС‹Р±РѕСЂ РѕР±СЉРµРєС‚РёРІРѕРІ Рё РїСЂРёРІС‹Рє Рє РєР»Р°СЃСЃРёС‡РµСЃРєРѕРјСѓ СѓРїСЂР°РІР»РµРЅРёСЋ.</li>
-          <li><b>Р‘РµР·Р·РµСЂРєР°Р»СЊРЅС‹Рµ:</b> РґР»СЏ С‚РµС…, РєС‚Рѕ С…РѕС‡РµС‚ РєРѕРјРїР°РєС‚РЅРѕСЃС‚СЊ, СЃРѕРІСЂРµРјРµРЅРЅС‹Рµ С‚РµС…РЅРѕР»РѕРіРёРё Рё РІС‹СЃРѕРєРѕРµ РєР°С‡РµСЃС‚РІРѕ, РѕСЃРѕР±РµРЅРЅРѕ РґР»СЏ РІРёРґРµРѕ.</li>
-          <li><b>РљРѕРјРїР°РєС‚РЅС‹Рµ:</b> РґР»СЏ РїСЂРѕСЃС‚С‹С… Р·Р°РґР°С‡, РїСѓС‚РµС€РµСЃС‚РІРёР№, Р±С‹СЃС‚СЂРѕРіРѕ С„РѕС‚Рѕ Р±РµР· СЃР»РѕР¶РЅС‹С… РЅР°СЃС‚СЂРѕРµРє.</li>
+          <li><b>DSLR:</b> для тех, кто ценит качество, широкий выбор объективов и привык к классическому управлению.</li>
+          <li><b>Беззеркальные:</b> для тех, кто хочет компактность, современные технологии и высокое качество, особенно для видео.</li>
+          <li><b>Компактные:</b> для простых задач, путешествий, быстрого фото без сложных настроек.</li>
         </ul>
         <div class="recommend-box">
           <i class="fas fa-info-circle"></i>
           <div>
-            <strong>РЎРѕРІРµС‚:</strong> Р’С‹Р±РёСЂР°Р№С‚Рµ РєР°РјРµСЂСѓ РёСЃС…РѕРґСЏ РёР· СЃРІРѕРёС… Р·Р°РґР°С‡, Р±СЋРґР¶РµС‚Р° Рё РїСЂРµРґРїРѕС‡С‚РµРЅРёР№ РїРѕ СЂР°Р·РјРµСЂСѓ Рё С„СѓРЅРєС†РёРѕРЅР°Р»Сѓ. Р‘РµР·Р·РµСЂРєР°Р»СЊРЅС‹Рµ РєР°РјРµСЂС‹ СЃРµР№С‡Р°СЃ Р°РєС‚РёРІРЅРѕ СЂР°Р·РІРёРІР°СЋС‚СЃСЏ Рё РїРѕРґС…РѕРґСЏС‚ Р±РѕР»СЊС€РёРЅСЃС‚РІСѓ РїРѕР»СЊР·РѕРІР°С‚РµР»РµР№.
+            <strong>Совет:</strong> Выбирайте камеру исходя из своих задач, бюджета и предпочтений по размеру и функционалу. Беззеркальные камеры сейчас активно развиваются и подходят большинству пользователей.
           </div>
         </div>
         <div class="pro-tips">
-          <h4>рџ”№ РџСЂРѕС„РµСЃСЃРёРѕРЅР°Р»СЊРЅС‹Рµ СЃРѕРІРµС‚С‹</h4>
+          <h4>?? Профессиональные советы</h4>
           <div class="tip-item">
             <i class="fas fa-lightbulb"></i>
-            <p>Р•СЃР»Рё РїР»Р°РЅРёСЂСѓРµС‚Рµ СЃРЅРёРјР°С‚СЊ РІРёРґРµРѕ, РІС‹Р±РёСЂР°Р№С‚Рµ Р±РµР·Р·РµСЂРєР°Р»СЊРЅС‹Рµ РєР°РјРµСЂС‹ СЃ С…РѕСЂРѕС€РµР№ СЃС‚Р°Р±РёР»РёР·Р°С†РёРµР№ Рё Р°РІС‚РѕС„РѕРєСѓСЃРѕРј.</p>
+            <p>Если планируете снимать видео, выбирайте беззеркальные камеры с хорошей стабилизацией и автофокусом.</p>
           </div>
           <div class="tip-item">
             <i class="fas fa-lightbulb"></i>
-            <p>Р”Р»СЏ РїРѕСЂС‚СЂРµС‚РѕРІ Рё СЃС‚СѓРґРёР№РЅРѕР№ СЃСЉС‘РјРєРё DSLR СЃ РѕРїС‚РёС‡РµСЃРєРёРј РІРёРґРѕРёСЃРєР°С‚РµР»РµРј РѕСЃС‚Р°СЋС‚СЃСЏ РєР»Р°СЃСЃРёРєРѕР№.</p>
+            <p>Для портретов и студийной съёмки DSLR с оптическим видоискателем остаются классикой.</p>
           </div>
           <div class="tip-item">
             <i class="fas fa-lightbulb"></i>
-            <p>РљРѕРјРїР°РєС‚РЅС‹Рµ РєР°РјРµСЂС‹ С…РѕСЂРѕС€Рё РґР»СЏ РїРѕРІСЃРµРґРЅРµРІРЅС‹С… СЃРЅРёРјРєРѕРІ Рё РїСѓС‚РµС€РµСЃС‚РІРёР№, РЅРѕ Р±С‹СЃС‚СЂРѕ РѕРіСЂР°РЅРёС‡РёРІР°СЋС‚ С‚РІРѕСЂС‡РµСЃРєРёРµ РІРѕР·РјРѕР¶РЅРѕСЃС‚Рё.</p>
+            <p>Компактные камеры хороши для повседневных снимков и путешествий, но быстро ограничивают творческие возможности.</p>
           </div>
         </div>
-        <h2>Р§Р°СЃС‚Рѕ Р·Р°РґР°РІР°РµРјС‹Рµ РІРѕРїСЂРѕСЃС‹</h2>
+        <h2>Часто задаваемые вопросы</h2>
         <ul>
-          <li><b>Р§С‚Рѕ Р»СѓС‡С€Рµ РґР»СЏ РЅРѕРІРёС‡РєР°?</b> вЂ“ Р‘РµР·Р·РµСЂРєР°Р»СЊРЅР°СЏ РєР°РјРµСЂР° Р·Р° СЃС‡С‘С‚ РїСЂРѕСЃС‚РѕС‚С‹ Рё РєРѕРјРїР°РєС‚РЅРѕСЃС‚Рё.</li>
-          <li><b>РњРѕР¶РЅРѕ Р»Рё РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ РѕР±СЉРµРєС‚РёРІС‹ DSLR РЅР° Р±РµР·Р·РµСЂРєР°Р»РєР°С…?</b> вЂ“ Р§РµСЂРµР· Р°РґР°РїС‚РµСЂС‹, РЅРѕ СЃ РѕРіСЂР°РЅРёС‡РµРЅРёСЏРјРё.</li>
-          <li><b>РљРѕРјРїР°РєС‚РЅР°СЏ РєР°РјРµСЂР° РјРѕР¶РµС‚ Р·Р°РјРµРЅРёС‚СЊ Р±РµР·Р·РµСЂРєР°Р»РєСѓ?</b> вЂ“ РќРµС‚, РїРѕ РєР°С‡РµСЃС‚РІСѓ Рё РІРѕР·РјРѕР¶РЅРѕСЃС‚СЏРј Р±РµР·Р·РµСЂРєР°Р»РєРё РїСЂРµРІРѕСЃС…РѕРґСЏС‚ РєРѕРјРїР°РєС‚С‹.</li>
+          <li><b>Что лучше для новичка?</b> – Беззеркальная камера за счёт простоты и компактности.</li>
+          <li><b>Можно ли использовать объективы DSLR на беззеркалках?</b> – Через адаптеры, но с ограничениями.</li>
+          <li><b>Компактная камера может заменить беззеркалку?</b> – Нет, по качеству и возможностям беззеркалки превосходят компакты.</li>
         </ul>
-        <h2>рџ“Њ РС‚РѕРі</h2>
+        <h2>?? Итог</h2>
         <p>
-          Р—РµСЂРєР°Р»СЊРЅС‹Рµ, Р±РµР·Р·РµСЂРєР°Р»СЊРЅС‹Рµ Рё РєРѕРјРїР°РєС‚РЅС‹Рµ РєР°РјРµСЂС‹ РёРјРµСЋС‚ СЃРІРѕРё СЃРёР»СЊРЅС‹Рµ Рё СЃР»Р°Р±С‹Рµ СЃС‚РѕСЂРѕРЅС‹. Р’С‹Р±РёСЂР°Р№С‚Рµ РєР°РјРµСЂСѓ, РёСЃС…РѕРґСЏ РёР· Р·Р°РґР°С‡, Р±СЋРґР¶РµС‚Р° Рё СѓРґРѕР±СЃС‚РІР°. Р‘РµР·Р·РµСЂРєР°Р»СЊРЅС‹Рµ РєР°РјРµСЂС‹ СЃРµРіРѕРґРЅСЏ вЂ“ РѕРїС‚РёРјР°Р»СЊРЅС‹Р№ РІС‹Р±РѕСЂ РґР»СЏ Р±РѕР»СЊС€РёРЅСЃС‚РІР° РїРѕР»СЊР·РѕРІР°С‚РµР»РµР№ Р±Р»Р°РіРѕРґР°СЂСЏ СЃРѕС‡РµС‚Р°РЅРёСЋ РєР°С‡РµСЃС‚РІР°, РєРѕРјРїР°РєС‚РЅРѕСЃС‚Рё Рё СЃРѕРІСЂРµРјРµРЅРЅС‹С… С„СѓРЅРєС†РёР№.
+          Зеркальные, беззеркальные и компактные камеры имеют свои сильные и слабые стороны. Выбирайте камеру, исходя из задач, бюджета и удобства. Беззеркальные камеры сегодня – оптимальный выбор для большинства пользователей благодаря сочетанию качества, компактности и современных функций.
         </p>
 </div>
 
-        <!-- Telegram СЂРµРєР»Р°РјРЅС‹Р№ Р±Р°РЅРЅРµСЂ -->
+        <!-- Telegram рекламный баннер -->
         <a href="https://t.me/RepairoRU" target="_blank" rel="noopener noreferrer" class="telegram-banner">
           <div class="telegram-banner-container">
             <div class="telegram-logo">
@@ -565,10 +482,10 @@
               </svg>
             </div>
             <div class="telegram-content">
-              <div class="telegram-title">РќРѕРІРѕСЃС‚Рё РёР· РјРёСЂР° С‚РµС…РЅРѕР»РѕРіРёР№</div>
-              <div class="telegram-subtitle">Р’ РЅР°С€РµРј РЅРѕРІРѕРј Telegram-РєР°РЅР°Р»Рµ. РџРѕРґРїРёСЃС‹РІР°Р№С‚РµСЃСЊ Рё Р±СѓРґСЊС‚Рµ РІ С‡РёСЃР»Рµ РїРµСЂРІС‹С…!</div>
+              <div class="telegram-title">Новости из мира технологий</div>
+              <div class="telegram-subtitle">В нашем новом Telegram-канале. Подписывайтесь и будьте в числе первых!</div>
               <div class="telegram-button">
-                РџРѕРґРїРёСЃР°С‚СЊСЃСЏ
+                Подписаться
                 <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.56c-.21 2.22-1.12 7.58-1.58 10.06-.19 1.07-.57 1.43-.94 1.46-.8.07-1.4-.52-2.17-1.03-1.21-.79-1.89-1.28-3.06-2.05-1.35-.87-.47-1.35.3-2.13.2-.21 3.71-3.39 3.77-3.68.01-.04.01-.18-.07-.26s-.2-.05-.29-.03c-.12.03-2.11 1.34-5.95 3.93-.56.38-1.07.57-1.53.56-.5-.01-1.47-.28-2.19-.51-.88-.28-1.58-.43-1.52-.91.03-.25.38-.51 1.04-.78 4.07-1.77 6.78-2.94 8.13-3.51 3.88-1.62 4.68-1.9 5.19-1.91.12 0 .37.03.54.17.14.12.18.28.2.44-.01.06 0 .11-.01.17z"/>
                 </svg>
@@ -593,45 +510,45 @@
                         </span>
                         <span class="logo__text">Repairo</span>
                     </a>
-                    <p class="footer__text">РџРѕРјРѕРіР°РµРј СЂРµРјРѕРЅС‚РёСЂРѕРІР°С‚СЊ СЌР»РµРєС‚СЂРѕРЅРёРєСѓ СЃ 2024 РіРѕРґР°</p>
+                    <p class="footer__text">Помогаем ремонтировать электронику с 2024 года</p>
                 </div>
                 <div class="footer__col">
-                    <h3 class="footer__title">Р Р°Р·РґРµР»С‹</h3>
+                    <h3 class="footer__title">Разделы</h3>
                     <ul class="footer__links">
-                        <li><a href="../index.html" class="footer__link">Р“Р»Р°РІРЅР°СЏ</a></li>
-                        <li><a href="../index.html#categories" class="footer__link">Р’СЃРµ РіР°Р№РґС‹</a></li>
-                        <li><a href="../contacts.html" class="footer__link">РљРѕРЅС‚Р°РєС‚С‹</a></li>
+                        <li><a href="../index.html" class="footer__link">Главная</a></li>
+                        <li><a href="../index.html#categories" class="footer__link">Все гайды</a></li>
+                        <li><a href="../contacts.html" class="footer__link">Контакты</a></li>
                     </ul>
                 </div>
                 <div class="footer__col">
-                    <h3 class="footer__title">РљР°С‚РµРіРѕСЂРёРё</h3>
+                    <h3 class="footer__title">Категории</h3>
                     <ul class="footer__links">
-                        <li><a href="../tv.html" class="nav__link">РўРµР»РµРІРёР·РѕСЂС‹</a></li>
-                        <li><a href="../cameras.html" class="nav__link">Р¤РѕС‚РѕР°РїРїР°СЂР°С‚С‹</a></li>
-                        <li><a href="../consoles.html" class="nav__link">РџСЂРёСЃС‚Р°РІРєРё</a></li>
-                        <li><a href="../laptops.html" class="nav__link">РќРѕСѓС‚Р±СѓРєРё</a></li>
-                        <li><a href="../smartphones.html" class="nav__link">РЎРјР°СЂС‚С„РѕРЅС‹</a></li>
-                        <li><a href="../small-appliances.html" class="nav__link">РњРµР»РєР°СЏ С‚РµС…РЅРёРєР°</a></li>
-                        <li><a href="../large-appliances.html" class="nav__link">Р‘С‹С‚РѕРІР°СЏ С‚РµС…РЅРёРєР°</a></li>
-                        <li><a href="../auto-electronics.html" class="nav__link">РђРІС‚Рѕ-Р­Р»РµРєС‚СЂРѕРЅРёРєР°</a></li>
+                        <li><a href="../tv.html" class="nav__link">Телевизоры</a></li>
+                        <li><a href="../cameras.html" class="nav__link">Фотоаппараты</a></li>
+                        <li><a href="../consoles.html" class="nav__link">Приставки</a></li>
+                        <li><a href="../laptops.html" class="nav__link">Ноутбуки</a></li>
+                        <li><a href="../smartphones.html" class="nav__link">Смартфоны</a></li>
+                        <li><a href="../small-appliances.html" class="nav__link">Мелкая техника</a></li>
+                        <li><a href="../large-appliances.html" class="nav__link">Бытовая техника</a></li>
+                        <li><a href="../auto-electronics.html" class="nav__link">Авто-Электроника</a></li>
                     </ul>
                 </div>
                 <div class="footer__col">
-                    <h3 class="footer__title">РљРѕРЅС‚Р°РєС‚С‹</h3>
+                    <h3 class="footer__title">Контакты</h3>
                     <ul class="footer__links">
                         <li><a href="https://t.me/RepairoRU" class="footer__link"><i class="fab fa-telegram"></i> Telegram</a></li>
-                        <li><span class="footer__link">РќР°С€Р° РїРѕС‡С‚Р°: repairo.info@mail.ru</span></li>
+                        <li><span class="footer__link">Наша почта: repairo.info@mail.ru</span></li>
                     </ul>
                 </div>
             </div>
             <div class="footer__bottom">
                 <p class="disclaimer">
-    РђРґРјРёРЅРёСЃС‚СЂР°С†РёСЏ СЃР°Р№С‚Р° РЅРµ РЅРµСЃС‘С‚ РѕС‚РІРµС‚СЃС‚РІРµРЅРЅРѕСЃС‚Рё Р·Р° РІРѕР·РјРѕР¶РЅС‹Рµ РїРѕРІСЂРµР¶РґРµРЅРёСЏ С‚РµС…РЅРёРєРё
-    Рё РёРЅС‹Рµ РїРѕСЃР»РµРґСЃС‚РІРёСЏ, РІРѕР·РЅРёРєС€РёРµ РІ СЂРµР·СѓР»СЊС‚Р°С‚Рµ СЃР°РјРѕСЃС‚РѕСЏС‚РµР»СЊРЅРѕРіРѕ СЂРµРјРѕРЅС‚Р° РїРѕ
-    РјР°С‚РµСЂРёР°Р»Р°Рј Рё РёРЅСЃС‚СЂСѓРєС†РёСЏРј, СЂР°Р·РјРµС‰С‘РЅРЅС‹Рј РЅР° СЃР°Р№С‚Рµ. Р’СЃРµ СЂР°Р±РѕС‚С‹ РІС‹ РІС‹РїРѕР»РЅСЏРµС‚Рµ
-    РЅР° СЃРІРѕР№ СЃС‚СЂР°С… Рё СЂРёСЃРє.
+    Администрация сайта не несёт ответственности за возможные повреждения техники
+    и иные последствия, возникшие в результате самостоятельного ремонта по
+    материалам и инструкциям, размещённым на сайте. Все работы вы выполняете
+    на свой страх и риск.
     </p>
-                <p class="footer__copyright">В© 2026 Repairo. Р’СЃРµ РїСЂР°РІР° Р·Р°С‰РёС‰РµРЅС‹.</p>
+                <p class="footer__copyright">© 2026 Repairo. Все права защищены.</p>
             </div>
         </div>
     </footer>
@@ -642,32 +559,32 @@
 {
   "@context": "https://schema.org",
   "@type": "HowTo",
-  "name": "Р Р°Р·РЅРёС†Р° РјРµР¶РґСѓ Р·РµСЂРєР°Р»СЊРЅС‹РјРё (DSLR), Р±РµР·Р·РµСЂРєР°Р»СЊРЅС‹РјРё (Mirrorless) Рё РєРѕРјРїР°РєС‚РЅС‹РјРё РєР°РјРµСЂР°РјРё",
-  "description": "РџРѕС€Р°РіРѕРІР°СЏ РёРЅСЃС‚СЂСѓРєС†РёСЏ: Р Р°Р·РЅРёС†Р° РјРµР¶РґСѓ Р·РµСЂРєР°Р»СЊРЅС‹РјРё (DSLR), Р±РµР·Р·РµСЂРєР°Р»СЊРЅС‹РјРё (Mirrorless) Рё РєРѕРјРїР°РєС‚РЅС‹РјРё РєР°РјРµСЂР°РјРё. Р•СЃР»Рё РїР»Р°РЅРёСЂСѓРµС‚Рµ СЃРЅРёРјР°С‚СЊ РІРёРґРµРѕ, РІС‹Р±РёСЂР°Р№С‚Рµ Р±РµР·Р·РµСЂРєР°...",
+  "name": "Разница между зеркальными (DSLR), беззеркальными (Mirrorless) и компактными камерами",
+  "description": "Пошаговая инструкция: Разница между зеркальными (DSLR), беззеркальными (Mirrorless) и компактными камерами. Если планируете снимать видео, выбирайте беззерка...",
   "totalTime": "PT30M",
   "step": [
     {
       "@type": "HowToStep",
-      "name": "РћСЃРЅРѕРІРЅС‹Рµ С‚РёРїС‹ С„РѕС‚РѕР°РїРїР°СЂР°С‚РѕРІ",
-      "text": "РћСЃРЅРѕРІРЅС‹Рµ С‚РёРїС‹ С„РѕС‚РѕР°РїРїР°СЂР°С‚РѕРІ",
+      "name": "Основные типы фотоаппаратов",
+      "text": "Основные типы фотоаппаратов",
       "url": "#step-1"
     },
     {
       "@type": "HowToStep",
-      "name": "РљРѕРіРґР° РєР°РєСѓСЋ РєР°РјРµСЂСѓ РІС‹Р±СЂР°С‚СЊ?",
-      "text": "РљРѕРіРґР° РєР°РєСѓСЋ РєР°РјРµСЂСѓ РІС‹Р±СЂР°С‚СЊ?",
+      "name": "Когда какую камеру выбрать?",
+      "text": "Когда какую камеру выбрать?",
       "url": "#step-2"
     },
     {
       "@type": "HowToStep",
-      "name": "Р§Р°СЃС‚Рѕ Р·Р°РґР°РІР°РµРјС‹Рµ РІРѕРїСЂРѕСЃС‹",
-      "text": "Р§Р°СЃС‚Рѕ Р·Р°РґР°РІР°РµРјС‹Рµ РІРѕРїСЂРѕСЃС‹",
+      "name": "Часто задаваемые вопросы",
+      "text": "Часто задаваемые вопросы",
       "url": "#step-3"
     },
     {
       "@type": "HowToStep",
-      "name": "рџ“Њ РС‚РѕРі",
-      "text": "рџ“Њ РС‚РѕРі",
+      "name": "?? Итог",
+      "text": "?? Итог",
       "url": "#step-4"
     }
   ],
@@ -678,4 +595,8 @@
 <script src="../cookie-consent.js"></script>
 </body>
 </html>
+
+
+
+
 

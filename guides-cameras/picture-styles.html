@@ -2,40 +2,36 @@
 <html lang="ru" data-theme="light">
 <head>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>РќР°СЃС‚СЂРѕР№РєР° Picture Control / Creative Style (Canon, Nikon, Sony) | Repairo</title>
-    <meta name="description" content="{{ description }}">
-    <meta name="description" content="РџРѕС€Р°РіРѕРІР°СЏ РёРЅСЃС‚СЂСѓРєС†РёСЏ: РќР°СЃС‚СЂРѕР№РєР° Picture Control / Creative Style (Canon, Nikon, Sony). РЎРѕР·РґР°Р№С‚Рµ РїРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєРёР№ РїСЂРѕС„РёР»СЊ РґР»СЏ С‡Р°СЃС‚Рѕ РїРѕРІС‚РѕСЂСЏСЋС‰РёС…СЃСЏ Р·Р°РґР°С‡ (РЅР°РїСЂРё...">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Настройка Picture Control / Creative Style (Canon, Nikon, So</title>
+    <meta name="description" content="">
 
-    <link rel="stylesheet" href="../styles.css">
-    <link rel="stylesheet" href="../styles-header.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        .guide-content { line-height: 1.7; color: var(--text);}
-        .guide-content h2 { color: var(--primary); margin-top: 30px; margin-bottom: 15px; font-size: 1.5rem;}
-        .brand-table { width: 100%; border-collapse: collapse; margin: 25px 0;}
-        .brand-table th, .brand-table td { border: 1px solid var(--border); padding: 8px 12px; text-align: left;}
-        .brand-table th { background: var(--background-alt);}
-        .recommend-box { background: rgba(3, 74, 79, 0.1); border-left: 4px solid var(--primary); padding: 12px; margin: 15px 0; display: flex; gap: 12px; align-items: flex-start; border-radius: 4px;}
-        .recommend-box i { font-size: 1.2rem; color: var(--primary); margin-top: 2px;}
-        .pro-tips { background: rgba(3, 74, 79, 0.05); padding: 15px; border-radius: 6px; margin: 20px 0;}
-        .pro-tips h4 { color: var(--primary); margin-top: 0; margin-bottom: 12px; font-size: 1.1rem;}
-        .tip-item { display: flex; gap: 8px; margin-bottom: 8px; align-items: flex-start;}
-        @media (max-width: 768px) {
-            .guide-content h2 { font-size: 1.4rem; margin-top: 25px;}
-            .brand-table th, .brand-table td { padding: 6px 8px;}
-        }
-    /* РЇРЅРґРµРєСЃ РњР°СЂРєРµС‚ СЂРµРєР»Р°РјРЅС‹Р№ Р±Р°РЅРЅРµСЂ */
-    .ym-hero-link {
-      display: block;
-      text-decoration: none;
-      color: inherit;
-      max-width: 100%;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="../styles-header.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    .guide-content { line-height: 1.7; color: var(--text); }
+    .guide-content h2 { color: var(--primary); margin-top: 30px; margin-bottom: 15px; font-size: 1.5rem; }
+    .guide-content h3 { color: var(--primary-dark); margin-top: 25px; margin-bottom: 12px; font-size: 1.2rem; }
+    .guide-image-block { margin: 20px 0; padding: 15px; background: var(--background); border-radius: var(--border-radius); border: 1px solid var(--border); text-align: center; }
+    .guide-image-block img { max-width: 100%; height: auto; border-radius: 6px; border: 1px solid var(--border); }
+    .image-caption { margin-top: 10px; font-size: 0.85rem; color: var(--text-light); font-style: italic; }
+    .pro-tips { background: rgba(3, 74, 79, 0.05); padding: 15px; border-radius: 6px; margin: 20px 0; }
+    .pro-tips h4 { color: var(--primary); margin-top: 0; margin-bottom: 12px; font-size: 1.1rem; }
+    .tip-item { display: flex; gap: 8px; margin-bottom: 8px; align-items: flex-start; }
+    table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+    th, td { border: 1px solid var(--border); padding: 8px; text-align: left; }
+    th { background: var(--background-light); }
+    .highlight { background: #f5f7fa; border-left: 4px solid #2d9cdb; padding: 10px 15px; margin: 20px 0; }
+    .faq-section ul { margin-left: 1em; }
+    .block-section { margin-bottom: 2em; }
+    @media (max-width: 768px) {
+      .guide-content h2 { font-size: 1.4rem; margin-top: 25px; }
+      .guide-image-block { padding: 12px; margin: 15px 0; }
+      table, th, td { font-size: 0.95rem; }
     }
-
     /* Р“РѕСЂРёР·РѕРЅС‚Р°Р»СЊРЅС‹Р№ Р±Р°РЅРЅРµСЂ-РєР°СЂС‚РѕС‡РєР° */
     .ym-hero-banner {
       width: 100%;
@@ -148,13 +144,11 @@
       transition: background 0.15s ease, transform 0.15s ease,
                   box-shadow 0.15s ease;
     }
-
     .ym-hero-button::after {
       content: "в†’";
       margin-left: 6px;
       font-size: 14px;
     }
-
     .ym-hero-button:hover {
       background: #7c3aed;
       transform: translateY(-1px);
@@ -178,24 +172,19 @@
         max-width: 100%;
         margin: 20px 0;
       }
-
       .ym-hero-images {
         height: 100px;
       }
-
       .ym-hero-content {
         padding: 12px 12px;
       }
-
       .ym-hero-title {
         font-size: 13px;
       }
-
       .ym-hero-button {
         font-size: 13px;
         padding: 8px 14px;
       }
-
       .ym-hero-legal {
         font-size: 10px;
       }
@@ -303,27 +292,22 @@
         padding: 15px;
         min-height: 100px;
       }
-
       .telegram-logo {
         width: 50px;
         height: 50px;
         min-width: 50px;
         margin-right: 15px;
       }
-
       .telegram-logo svg {
         width: 26px;
         height: 26px;
       }
-
       .telegram-title {
         font-size: 14px;
       }
-
       .telegram-subtitle {
         font-size: 12px;
       }
-
       .telegram-button {
         font-size: 12px;
         padding: 6px 12px;
@@ -332,163 +316,149 @@
 
 
 
-    </style>
+  </style>
   <script async src="https://timeweb.cloud/api/v1/cloud-ai/agents/3cc03620-d051-4d8d-b5af-f7b6cd083a35/embed.js?collapsed=true"></script>
 </head>
 <body>
-    <header class="header">
-        <div class="container">
-            <div class="header__inner">
-                <a href="../index.html" class="logo">
-                    <span class="logo__icon"></span>
-                    <span class="logo__text">Repairo</span>
-                </a>
-                <nav class="nav">
-                    <ul class="nav__list">
-                        <li><a href="../cameras.html" class="nav__link">Р¤РѕС‚РѕР°РїРїР°СЂР°С‚С‹</a></li>
-                        <li><a href="../tv.html" class="nav__link">РўРµР»РµРІРёР·РѕСЂС‹</a></li>
-                        <li><a href="../laptops.html" class="nav__link">РќРѕСѓС‚Р±СѓРєРё</a></li>
-                        <li><a href="../smartphones.html" class="nav__link">РЎРјР°СЂС‚С„РѕРЅС‹</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
-    </header>
+  <header class="header">
+    <div class="container">
+      <div class="header__inner">
+        <a href="../index.html" class="logo">
+          <span class="logo__icon"></span>
+          <span class="logo__text">GeoExpert</span>
+        </a>
+        <nav class="nav">
+          <ul class="nav__list">
+            <li><a href="../cameras.html" class="nav__link">РљР°РјРµСЂС‹</a></li>
+            <li><a href="../drones.html" class="nav__link">Р”СЂРѕРЅС‹</a></li>
+            <li><a href="../workflow.html" class="nav__link">Workflow</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
     <section class="guide-page">
         <div class="container">
             <div class="breadcrumbs">
-                <a href="../index.html">Р“Р»Р°РІРЅР°СЏ</a>
+                <a href="../index.html">Главная</a>
                 <i class="fas fa-chevron-right"></i>
-                <a href="../cameras.html">Р¤РѕС‚РѕР°РїРїР°СЂР°С‚С‹</a>
+                <a href="../cameras.html">Фотоаппараты</a>
                 <i class="fas fa-chevron-right"></i>
-                <span>РќР°СЃС‚СЂРѕР№РєР° Picture Control / Creative Style (Canon, Nikon, Sony)</span>
+                <span>Настройка Picture Control / Creative Style (Canon, Nikon, Sony)</span>
             </div>
-            <h1 class="section__title">РќР°СЃС‚СЂРѕР№РєР° Picture Control / Creative Style (Canon, Nikon, Sony)</h1>
+            <h1 class="section__title">Настройка Picture Control / Creative Style (Canon, Nikon, Sony)</h1>
             <div class="guide-meta">
-                <span><i class="fas fa-sliders-h"></i> РџСЂР°РєС‚РёС‡РµСЃРєРёР№ РіР°Р№Рґ</span>
+                <span><i class="fas fa-sliders-h"></i> Практический гайд</span>
             </div>
             <div class="guide-image-block">
                 <img src="https://avatars.mds.yandex.net/get-shedevrum/14537874/img_786e7d5f2cb311f08f837a2185b4a86a/orig">
             </div>
             <div class="guide-content">
-        <!-- РЇРЅРґРµРєСЃ РњР°СЂРєРµС‚ СЂРµРєР»Р°РјРЅС‹Р№ Р±Р»РѕРє -->
+        <!-- Яндекс Маркет рекламный блок -->
         <a href="https://market.yandex.ru/catalog--bytovaia-tekhnika/54419/list?hid=198118&rs=eJwzUvjEKMvBILDwEKsEg8Kzbh6Nw4dZNS4D8c7lFhp9c1-wAQC3uAwP&clid=14635360&refid=rbck8fgamv681iu59go3iqxwddedl4x9&erid=5jtCeReNx12oajxS2bzShmZ&mclid=1003&distr_type=7&utm_source=partner_network&pp=900&utm_medium=link_list&utm_campaign=14635360"
            target="_blank"
            rel="noopener noreferrer sponsored"
-           class="ym-hero-link">
-          <div class="ym-hero-banner">
-            <div class="ym-hero-images">
-              <div class="ym-hero-image">
                 <img src="https://avatars.mds.yandex.net/get-mpic/14770882/2a00000197f4dbee777f8afddccaf44faa53/optimize"
-                     alt="Р Р°СЃРїСЂРѕРґР°Р¶Р° Р±С‹С‚РѕРІРѕР№ СЌР»РµРєС‚СЂРѕРЅРёРєРё 1">
+                     alt="Распродажа бытовой электроники 1">
               </div>
-              <div class="ym-hero-image">
                 <img src="https://avatars.mds.yandex.net/get-mpic/15580298/img_id8867318964670654684.jpeg/optimize"
-                     alt="Р Р°СЃРїСЂРѕРґР°Р¶Р° Р±С‹С‚РѕРІРѕР№ СЌР»РµРєС‚СЂРѕРЅРёРєРё 2">
+                     alt="Распродажа бытовой электроники 2">
               </div>
-              <div class="ym-hero-image">
                 <img src="https://avatars.mds.yandex.net/get-mpic/10096780/2a000001953b534fed2494e0b30fadd9b458/optimize"
-                     alt="Р Р°СЃРїСЂРѕРґР°Р¶Р° Р±С‹С‚РѕРІРѕР№ СЌР»РµРєС‚СЂРѕРЅРёРєРё 3">
+                     alt="Распродажа бытовой электроники 3">
               </div>
             </div>
-            <div class="ym-hero-content">
-              <h3 class="ym-hero-title">Р Р°СЃРїСЂРѕРґР°Р¶Р° Р±С‹С‚РѕРІРѕР№ СЌР»РµРєС‚СЂРѕРЅРёРєРё РЅР° РЇРЅРґРµРєСЃ РњР°СЂРєРµС‚Рµ</h3>
-              <div class="ym-hero-top">
-                <div class="ym-hero-rating">
-                  в­ђ Р’С‹РіРѕРґРЅС‹Рµ РїСЂРµРґР»РѕР¶РµРЅРёСЏ
-                  <span class="ym-hero-rating-count">РЎРєРёРґРєРё РґРѕ 50%</span>
+                  ? Выгодные предложения
                 </div>
               </div>
-              <button class="ym-hero-button">Р—Р° СЃРєРёРґРєР°РјРё</button>
             </div>
           </div>
-          <div class="ym-hero-legal">
-            Р РµРєР»Р°РјР°. РћРћРћ "РЇРќР”Р•РљРЎ", РРќРќ 7736207543. clid: 14635360, erid: 5jtCeReNx12oajxS2bzShmZ
+            Реклама. ООО "ЯНДЕКС", ИНН 7736207543. clid: 14635360, erid: 5jtCeReNx12oajxS2bzShmZ
           </div>
         </a>
-                <h2>Р§С‚Рѕ С‚Р°РєРѕРµ Picture Control / Creative Style?</h2>
+                <h2>Что такое Picture Control / Creative Style?</h2>
                 <ul>
-                    <li><strong>Picture Control (Nikon)</strong>, <strong>Picture Style (Canon)</strong> Рё <strong>Creative Style (Sony)</strong> - СЌС‚Рѕ РЅР°Р±РѕСЂС‹ РїСЂРµРґСѓСЃС‚Р°РЅРѕРІРѕРє РѕР±СЂР°Р±РѕС‚РєРё РёР·РѕР±СЂР°Р¶РµРЅРёСЏ РІРЅСѓС‚СЂРё РєР°РјРµСЂС‹.</li>
-                    <li>РћРЅРё СѓРїСЂР°РІР»СЏСЋС‚ С‚Р°РєРёРјРё РїР°СЂР°РјРµС‚СЂР°РјРё, РєР°Рє РЅР°СЃС‹С‰РµРЅРЅРѕСЃС‚СЊ, РєРѕРЅС‚СЂР°СЃС‚, СЂРµР·РєРѕСЃС‚СЊ, РѕС‚С‚РµРЅРѕРє Рё РёРЅРѕРіРґР° С†РІРµС‚РѕРІРѕР№ С‚РѕРЅ.</li>
-                    <li>Р­С‚Рё РїСЂРѕС„РёР»Рё РІР»РёСЏСЋС‚ РЅР° РёС‚РѕРіРѕРІС‹Р№ РІРёРґ JPEG-С„Р°Р№Р»РѕРІ Рё РѕС‚РѕР±СЂР°Р¶РµРЅРёРµ РЅР° СЌРєСЂР°РЅРµ, Р° РїСЂРё СЃСЉРµРјРєРµ РІ RAW СЃРѕС…СЂР°РЅСЏСЋС‚СЃСЏ РєР°Рє "РїРѕРґСЃРєР°Р·РєР°" РґР»СЏ РєРѕРЅРІРµСЂС‚РµСЂР°.</li>
+                    <li><strong>Picture Control (Nikon)</strong>, <strong>Picture Style (Canon)</strong> и <strong>Creative Style (Sony)</strong> - это наборы предустановок обработки изображения внутри камеры.</li>
+                    <li>Они управляют такими параметрами, как насыщенность, контраст, резкость, оттенок и иногда цветовой тон.</li>
+                    <li>Эти профили влияют на итоговый вид JPEG-файлов и отображение на экране, а при съемке в RAW сохраняются как "подсказка" для конвертера.</li>
                 </ul>
-                <h2>Р“РґРµ РЅР°Р№С‚Рё Рё РєР°Рє РІС‹Р±СЂР°С‚СЊ СЃС‚РёР»СЊ?</h2>
+                <h2>Где найти и как выбрать стиль?</h2>
 <table class="brand-table">
                     <thead>
                         <tr>
-                            <th>Р‘СЂРµРЅРґ</th>
-                            <th>РќР°Р·РІР°РЅРёРµ С„СѓРЅРєС†РёРё</th>
-                            <th>Р“РґРµ РёСЃРєР°С‚СЊ</th>
+                            <th>Бренд</th>
+                            <th>Название функции</th>
+                            <th>Где искать</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td>Canon</td>
                             <td>Picture Style</td>
-                            <td>РњРµРЅСЋ РєР°РјРµСЂС‹ в†’ Р Р°Р·РґРµР» "Picture Style" РёР»Рё "РЎС‚РёР»СЊ РёР·РѕР±СЂР°Р¶РµРЅРёСЏ"</td>
+                            <td>Меню камеры > Раздел "Picture Style" или "Стиль изображения"</td>
                         </tr>
                         <tr>
                             <td>Nikon</td>
                             <td>Picture Control</td>
-                            <td>РњРµРЅСЋ СЃСЉРµРјРєРё в†’ "РЈРїСЂР°РІР»РµРЅРёРµ Picture Control" РёР»Рё "Picture Control"</td>
+                            <td>Меню съемки > "Управление Picture Control" или "Picture Control"</td>
                         </tr>
                         <tr>
                             <td>Sony</td>
                             <td>Creative Style</td>
-                            <td>РњРµРЅСЋ РєР°РјРµСЂС‹ в†’ "Creative Style" РёР»Рё "РўРІРѕСЂС‡РµСЃРєРёР№ СЃС‚РёР»СЊ"</td>
+                            <td>Меню камеры > "Creative Style" или "Творческий стиль"</td>
                         </tr>
                     </tbody>
                 </table>
-                <h2>РћСЃРЅРѕРІРЅС‹Рµ РїСЂРѕС„РёР»Рё Рё РёС… РЅР°Р·РЅР°С‡РµРЅРёРµ</h2>
+                <h2>Основные профили и их назначение</h2>
                 <ul>
-                    <li><strong>РЎС‚Р°РЅРґР°СЂС‚РЅС‹Р№ (Standard/РЎС‚Р°РЅРґР°СЂС‚):</strong> СѓРЅРёРІРµСЂСЃР°Р»СЊРЅС‹Р№, СЃР±Р°Р»Р°РЅСЃРёСЂРѕРІР°РЅРЅС‹Р№ РїСЂРѕС„РёР»СЊ РґР»СЏ Р±РѕР»СЊС€РёРЅСЃС‚РІР° СЃСЋР¶РµС‚РѕРІ.</li>
-                    <li><strong>РџРѕСЂС‚СЂРµС‚ (Portrait):</strong> РјСЏРіРєРёРµ С‚РѕРЅР° РєРѕР¶Рё, СЃРЅРёР¶РµРЅРЅР°СЏ СЂРµР·РєРѕСЃС‚СЊ Рё РєРѕРЅС‚СЂР°СЃС‚.</li>
-                    <li><strong>РџРµР№Р·Р°Р¶ (Landscape):</strong> РїРѕРІС‹С€РµРЅРЅР°СЏ РЅР°СЃС‹С‰РµРЅРЅРѕСЃС‚СЊ Рё РєРѕРЅС‚СЂР°СЃС‚, СЏСЂРєР°СЏ Р·РµР»РµРЅСЊ Рё РЅРµР±Рѕ.</li>
-                    <li><strong>РќРµР№С‚СЂР°Р»СЊРЅС‹Р№ (Neutral):</strong> РјРёРЅРёРјР°Р»СЊРЅР°СЏ РѕР±СЂР°Р±РѕС‚РєР°, РїРѕРґС…РѕРґРёС‚ РґР»СЏ РїРѕСЃР»РµРґСѓСЋС‰РµР№ РєРѕСЂСЂРµРєС†РёРё РЅР° РџРљ.</li>
-                    <li><strong>РЇСЂРєРёР№/Vivid:</strong> РјР°РєСЃРёРјР°Р»СЊРЅР°СЏ РЅР°СЃС‹С‰РµРЅРЅРѕСЃС‚СЊ Рё РєРѕРЅС‚СЂР°СЃС‚ РґР»СЏ СЃРѕС‡РЅС‹С… СЃСЋР¶РµС‚РѕРІ.</li>
-                    <li><strong>РњРѕРЅРѕС…СЂРѕРј (Monochrome):</strong> С‡РµСЂРЅРѕ-Р±РµР»Р°СЏ СЃСЉРµРјРєР° СЃ РІРѕР·РјРѕР¶РЅРѕСЃС‚СЊСЋ РЅР°СЃС‚СЂРѕР№РєРё С‚РѕРЅРёСЂРѕРІР°РЅРёСЏ.</li>
-                    <li><strong>РџРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєРёР№ (Custom):</strong> РІС‹ РјРѕР¶РµС‚Рµ СЃРѕР·РґР°С‚СЊ Рё СЃРѕС…СЂР°РЅРёС‚СЊ СЃРІРѕР№ СЃС‚РёР»СЊ СЃ РёРЅРґРёРІРёРґСѓР°Р»СЊРЅС‹РјРё РЅР°СЃС‚СЂРѕР№РєР°РјРё.</li>
+                    <li><strong>Стандартный (Standard/Стандарт):</strong> универсальный, сбалансированный профиль для большинства сюжетов.</li>
+                    <li><strong>Портрет (Portrait):</strong> мягкие тона кожи, сниженная резкость и контраст.</li>
+                    <li><strong>Пейзаж (Landscape):</strong> повышенная насыщенность и контраст, яркая зелень и небо.</li>
+                    <li><strong>Нейтральный (Neutral):</strong> минимальная обработка, подходит для последующей коррекции на ПК.</li>
+                    <li><strong>Яркий/Vivid:</strong> максимальная насыщенность и контраст для сочных сюжетов.</li>
+                    <li><strong>Монохром (Monochrome):</strong> черно-белая съемка с возможностью настройки тонирования.</li>
+                    <li><strong>Пользовательский (Custom):</strong> вы можете создать и сохранить свой стиль с индивидуальными настройками.</li>
                 </ul>
-                <h2>РљР°Рє РЅР°СЃС‚СЂР°РёРІР°С‚СЊ РїР°СЂР°РјРµС‚СЂС‹ СЃС‚РёР»СЏ?</h2>
+                <h2>Как настраивать параметры стиля?</h2>
                 <ul>
-                    <li>Р’ РєР°Р¶РґРѕРј РїСЂРѕС„РёР»Рµ РјРѕР¶РЅРѕ РІСЂСѓС‡РЅСѓСЋ РёР·РјРµРЅРёС‚СЊ СЂРµР·РєРѕСЃС‚СЊ, РєРѕРЅС‚СЂР°СЃС‚, РЅР°СЃС‹С‰РµРЅРЅРѕСЃС‚СЊ, РѕС‚С‚РµРЅРѕРє (Рё РёРЅРѕРіРґР° РґСЂСѓРіРёРµ РїР°СЂР°РјРµС‚СЂС‹).</li>
-                    <li>Р”Р»СЏ РїРѕСЂС‚СЂРµС‚РѕРІ СѓРјРµРЅСЊС€Р°Р№С‚Рµ СЂРµР·РєРѕСЃС‚СЊ Рё РєРѕРЅС‚СЂР°СЃС‚, РґР»СЏ РїРµР№Р·Р°Р¶РµР№ - СѓРІРµР»РёС‡РёРІР°Р№С‚Рµ РЅР°СЃС‹С‰РµРЅРЅРѕСЃС‚СЊ Рё С‡РµС‚РєРѕСЃС‚СЊ.</li>
-                    <li>Р­РєСЃРїРµСЂРёРјРµРЅС‚РёСЂСѓР№С‚Рµ: РёР·РјРµРЅРµРЅРёСЏ СЃСЂР°Р·Сѓ РІРёРґРЅС‹ РЅР° СЌРєСЂР°РЅРµ РєР°РјРµСЂС‹.</li>
+                    <li>В каждом профиле можно вручную изменить резкость, контраст, насыщенность, оттенок (и иногда другие параметры).</li>
+                    <li>Для портретов уменьшайте резкость и контраст, для пейзажей - увеличивайте насыщенность и четкость.</li>
+                    <li>Экспериментируйте: изменения сразу видны на экране камеры.</li>
                 </ul>
                 <div class="recommend-box">
                     <i class="fas fa-info-circle"></i>
                     <div>
-                        <strong>РЎРѕРІРµС‚:</strong> Р”Р»СЏ РјР°РєСЃРёРјР°Р»СЊРЅРѕР№ РіРёР±РєРѕСЃС‚Рё СЃРЅРёРјР°Р№С‚Рµ РІ RAW: СЃС‚РёР»СЊ РІР»РёСЏРµС‚ С‚РѕР»СЊРєРѕ РЅР° РїСЂРµРґРїСЂРѕСЃРјРѕС‚СЂ Рё JPEG. Р”Р»СЏ Р±С‹СЃС‚СЂРѕР№ РїСѓР±Р»РёРєР°С†РёРё РёР»Рё РїРµС‡Р°С‚Рё РёСЃРїРѕР»СЊР·СѓР№С‚Рµ РїРѕРґС…РѕРґСЏС‰РёР№ РїСЂРѕС„РёР»СЊ.
+                        <strong>Совет:</strong> Для максимальной гибкости снимайте в RAW: стиль влияет только на предпросмотр и JPEG. Для быстрой публикации или печати используйте подходящий профиль.
                     </div>
                 </div>
                 <div class="pro-tips">
-                    <h4>рџ”№ РџСЂРѕС„РµСЃСЃРёРѕРЅР°Р»СЊРЅС‹Рµ СЃРѕРІРµС‚С‹</h4>
+                    <h4>?? Профессиональные советы</h4>
                     <div class="tip-item">
                         <i class="fas fa-lightbulb"></i>
-                        <p>РЎРѕР·РґР°Р№С‚Рµ РїРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєРёР№ РїСЂРѕС„РёР»СЊ РґР»СЏ С‡Р°СЃС‚Рѕ РїРѕРІС‚РѕСЂСЏСЋС‰РёС…СЃСЏ Р·Р°РґР°С‡ (РЅР°РїСЂРёРјРµСЂ, "РЎС‚СѓРґРёСЏ", "РЈР»РёС†Р°", "Р’РµС‡РµСЂ").</p>
+                        <p>Создайте пользовательский профиль для часто повторяющихся задач (например, "Студия", "Улица", "Вечер").</p>
                     </div>
                     <div class="tip-item">
                         <i class="fas fa-lightbulb"></i>
-                        <p>Р”Р»СЏ РІРёРґРµРѕ РЅР° Sony С‡Р°СЃС‚Рѕ РІС‹Р±РёСЂР°СЋС‚ РїСЂРѕС„РёР»СЊ "Neutral" РёР»Рё "Flat" РґР»СЏ РїРѕСЃР»РµРґСѓСЋС‰РµР№ С†РІРµС‚РѕРєРѕСЂСЂРµРєС†РёРё.</p>
+                        <p>Для видео на Sony часто выбирают профиль "Neutral" или "Flat" для последующей цветокоррекции.</p>
                     </div>
                     <div class="tip-item">
                         <i class="fas fa-lightbulb"></i>
-                        <p>Р РµРіСѓР»СЏСЂРЅРѕ СЃР±СЂР°СЃС‹РІР°Р№С‚Рµ РЅР°СЃС‚СЂРѕР№РєРё, РµСЃР»Рё СЌРєСЃРїРµСЂРёРјРµРЅС‚РёСЂСѓРµС‚Рµ - СЌС‚Рѕ РїРѕРјРѕР¶РµС‚ РёР·Р±РµР¶Р°С‚СЊ РЅРµРѕР¶РёРґР°РЅРЅС‹С… СЂРµР·СѓР»СЊС‚Р°С‚РѕРІ РЅР° РІР°Р¶РЅС‹С… СЃСЉРµРјРєР°С….</p>
+                        <p>Регулярно сбрасывайте настройки, если экспериментируете - это поможет избежать неожиданных результатов на важных съемках.</p>
                     </div>
                 </div>
-                <h2>Р§Р°СЃС‚Рѕ Р·Р°РґР°РІР°РµРјС‹Рµ РІРѕРїСЂРѕСЃС‹</h2>
+                <h2>Часто задаваемые вопросы</h2>
                 <ul>
-                    <li><strong>Р’Р»РёСЏРµС‚ Р»Рё Picture Control/Style РЅР° RAW?</strong> - РќРµС‚, С‚РѕР»СЊРєРѕ РЅР° РїСЂРµРґРїСЂРѕСЃРјРѕС‚СЂ Рё JPEG. РќРѕ РїСЂРѕС„РёР»СЊ СЃРѕС…СЂР°РЅСЏРµС‚СЃСЏ РІ РјРµС‚Р°РґР°РЅРЅС‹С… Рё РјРѕР¶РµС‚ Р±С‹С‚СЊ РїСЂРёРјРµРЅС‘РЅ РІ С„РёСЂРјРµРЅРЅС‹С… РєРѕРЅРІРµСЂС‚РµСЂР°С….</li>
-                    <li><strong>РњРѕР¶РЅРѕ Р»Рё СЃРєР°С‡Р°С‚СЊ РЅРѕРІС‹Рµ СЃС‚РёР»Рё?</strong> - Р”Р»СЏ Canon Рё Nikon РґРѕСЃС‚СѓРїРЅС‹ РґРѕРїРѕР»РЅРёС‚РµР»СЊРЅС‹Рµ РїСЂРѕС„РёР»Рё РЅР° РѕС„РёС†РёР°Р»СЊРЅС‹С… СЃР°Р№С‚Р°С….</li>
-                    <li><strong>Р§С‚Рѕ РІС‹Р±СЂР°С‚СЊ РґР»СЏ РїРµС‡Р°С‚Рё?</strong> - Р›СѓС‡С€Рµ РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ "Standard" РёР»Рё "Portrait", Р° РґР»СЏ РїРѕСЃР»РµРґСѓСЋС‰РµР№ РѕР±СЂР°Р±РѕС‚РєРё - "Neutral".</li>
+                    <li><strong>Влияет ли Picture Control/Style на RAW?</strong> - Нет, только на предпросмотр и JPEG. Но профиль сохраняется в метаданных и может быть применён в фирменных конвертерах.</li>
+                    <li><strong>Можно ли скачать новые стили?</strong> - Для Canon и Nikon доступны дополнительные профили на официальных сайтах.</li>
+                    <li><strong>Что выбрать для печати?</strong> - Лучше использовать "Standard" или "Portrait", а для последующей обработки - "Neutral".</li>
                 </ul>
-                <h2>рџ“Њ РС‚РѕРі</h2>
+                <h2>?? Итог</h2>
                 <p>
-                    Picture Control / Creative Style - РјРѕС‰РЅС‹Р№ РёРЅСЃС‚СЂСѓРјРµРЅС‚ РґР»СЏ СѓРїСЂР°РІР»РµРЅРёСЏ С†РІРµС‚РѕРј Рё С…Р°СЂР°РєС‚РµСЂРѕРј СЃРЅРёРјРєР° РїСЂСЏРјРѕ РІ РєР°РјРµСЂРµ. РСЃРїРѕР»СЊР·СѓР№С‚Рµ СЃС‚Р°РЅРґР°СЂС‚РЅС‹Рµ РїСЂРѕС„РёР»Рё РґР»СЏ СЂР°Р·РЅС‹С… СЃСЋР¶РµС‚РѕРІ РёР»Рё СЃРѕР·РґР°Р№С‚Рµ СЃРІРѕР№ СЃС‚РёР»СЊ РґР»СЏ СѓРЅРёРєР°Р»СЊРЅРѕРіРѕ СЂРµР·СѓР»СЊС‚Р°С‚Р°.
+                    Picture Control / Creative Style - мощный инструмент для управления цветом и характером снимка прямо в камере. Используйте стандартные профили для разных сюжетов или создайте свой стиль для уникального результата.
                 </p>
 </div>
 
-        <!-- Telegram СЂРµРєР»Р°РјРЅС‹Р№ Р±Р°РЅРЅРµСЂ -->
+        <!-- Telegram рекламный баннер -->
         <a href="https://t.me/RepairoRU" target="_blank" rel="noopener noreferrer" class="telegram-banner">
           <div class="telegram-banner-container">
             <div class="telegram-logo">
@@ -497,10 +467,10 @@
               </svg>
             </div>
             <div class="telegram-content">
-              <div class="telegram-title">РќРѕРІРѕСЃС‚Рё РёР· РјРёСЂР° С‚РµС…РЅРѕР»РѕРіРёР№</div>
-              <div class="telegram-subtitle">Р’ РЅР°С€РµРј РЅРѕРІРѕРј Telegram-РєР°РЅР°Р»Рµ. РџРѕРґРїРёСЃС‹РІР°Р№С‚РµСЃСЊ Рё Р±СѓРґСЊС‚Рµ РІ С‡РёСЃР»Рµ РїРµСЂРІС‹С…!</div>
+              <div class="telegram-title">Новости из мира технологий</div>
+              <div class="telegram-subtitle">В нашем новом Telegram-канале. Подписывайтесь и будьте в числе первых!</div>
               <div class="telegram-button">
-                РџРѕРґРїРёСЃР°С‚СЊСЃСЏ
+                Подписаться
                 <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.56c-.21 2.22-1.12 7.58-1.58 10.06-.19 1.07-.57 1.43-.94 1.46-.8.07-1.4-.52-2.17-1.03-1.21-.79-1.89-1.28-3.06-2.05-1.35-.87-.47-1.35.3-2.13.2-.21 3.71-3.39 3.77-3.68.01-.04.01-.18-.07-.26s-.2-.05-.29-.03c-.12.03-2.11 1.34-5.95 3.93-.56.38-1.07.57-1.53.56-.5-.01-1.47-.28-2.19-.51-.88-.28-1.58-.43-1.52-.91.03-.25.38-.51 1.04-.78 4.07-1.77 6.78-2.94 8.13-3.51 3.88-1.62 4.68-1.9 5.19-1.91.12 0 .37.03.54.17.14.12.18.28.2.44-.01.06 0 .11-.01.17z"/>
                 </svg>
@@ -525,45 +495,45 @@
                         </span>
                         <span class="logo__text">Repairo</span>
                     </a>
-                    <p class="footer__text">РџРѕРјРѕРіР°РµРј СЂРµРјРѕРЅС‚РёСЂРѕРІР°С‚СЊ СЌР»РµРєС‚СЂРѕРЅРёРєСѓ СЃ 2024 РіРѕРґР°</p>
+                    <p class="footer__text">Помогаем ремонтировать электронику с 2024 года</p>
                 </div>
                 <div class="footer__col">
-                    <h3 class="footer__title">Р Р°Р·РґРµР»С‹</h3>
+                    <h3 class="footer__title">Разделы</h3>
                     <ul class="footer__links">
-                        <li><a href="../index.html" class="footer__link">Р“Р»Р°РІРЅР°СЏ</a></li>
-                        <li><a href="../index.html#categories" class="footer__link">Р’СЃРµ РіР°Р№РґС‹</a></li>
-                        <li><a href="../contacts.html" class="footer__link">РљРѕРЅС‚Р°РєС‚С‹</a></li>
+                        <li><a href="../index.html" class="footer__link">Главная</a></li>
+                        <li><a href="../index.html#categories" class="footer__link">Все гайды</a></li>
+                        <li><a href="../contacts.html" class="footer__link">Контакты</a></li>
                     </ul>
                 </div>
                 <div class="footer__col">
-                    <h3 class="footer__title">РљР°С‚РµРіРѕСЂРёРё</h3>
+                    <h3 class="footer__title">Категории</h3>
                     <ul class="footer__links">
-                        <li><a href="../tv.html" class="nav__link">РўРµР»РµРІРёР·РѕСЂС‹</a></li>
-                        <li><a href="../cameras.html" class="nav__link">Р¤РѕС‚РѕР°РїРїР°СЂР°С‚С‹</a></li>
-                        <li><a href="../consoles.html" class="nav__link">РџСЂРёСЃС‚Р°РІРєРё</a></li>
-                        <li><a href="../laptops.html" class="nav__link">РќРѕСѓС‚Р±СѓРєРё</a></li>
-                        <li><a href="../smartphones.html" class="nav__link">РЎРјР°СЂС‚С„РѕРЅС‹</a></li>
-                        <li><a href="../small-appliances.html" class="nav__link">РњРµР»РєР°СЏ С‚РµС…РЅРёРєР°</a></li>
-                        <li><a href="../large-appliances.html" class="nav__link">Р‘С‹С‚РѕРІР°СЏ С‚РµС…РЅРёРєР°</a></li>
-                        <li><a href="../auto-electronics.html" class="nav__link">РђРІС‚Рѕ-Р­Р»РµРєС‚СЂРѕРЅРёРєР°</a></li>
+                        <li><a href="../tv.html" class="nav__link">Телевизоры</a></li>
+                        <li><a href="../cameras.html" class="nav__link">Фотоаппараты</a></li>
+                        <li><a href="../consoles.html" class="nav__link">Приставки</a></li>
+                        <li><a href="../laptops.html" class="nav__link">Ноутбуки</a></li>
+                        <li><a href="../smartphones.html" class="nav__link">Смартфоны</a></li>
+                        <li><a href="../small-appliances.html" class="nav__link">Мелкая техника</a></li>
+                        <li><a href="../large-appliances.html" class="nav__link">Бытовая техника</a></li>
+                        <li><a href="../auto-electronics.html" class="nav__link">Авто-Электроника</a></li>
                     </ul>
                 </div>
                 <div class="footer__col">
-                    <h3 class="footer__title">РљРѕРЅС‚Р°РєС‚С‹</h3>
+                    <h3 class="footer__title">Контакты</h3>
                     <ul class="footer__links">
                         <li><a href="https://t.me/RepairoRU" class="footer__link"><i class="fab fa-telegram"></i> Telegram</a></li>
-                        <li><span class="footer__link">РќР°С€Р° РїРѕС‡С‚Р°: repairo.info@mail.ru</span></li>
+                        <li><span class="footer__link">Наша почта: repairo.info@mail.ru</span></li>
                     </ul>
                 </div>
             </div>
             <div class="footer__bottom">
                 <p class="disclaimer">
-    РђРґРјРёРЅРёСЃС‚СЂР°С†РёСЏ СЃР°Р№С‚Р° РЅРµ РЅРµСЃС‘С‚ РѕС‚РІРµС‚СЃС‚РІРµРЅРЅРѕСЃС‚Рё Р·Р° РІРѕР·РјРѕР¶РЅС‹Рµ РїРѕРІСЂРµР¶РґРµРЅРёСЏ С‚РµС…РЅРёРєРё
-    Рё РёРЅС‹Рµ РїРѕСЃР»РµРґСЃС‚РІРёСЏ, РІРѕР·РЅРёРєС€РёРµ РІ СЂРµР·СѓР»СЊС‚Р°С‚Рµ СЃР°РјРѕСЃС‚РѕСЏС‚РµР»СЊРЅРѕРіРѕ СЂРµРјРѕРЅС‚Р° РїРѕ
-    РјР°С‚РµСЂРёР°Р»Р°Рј Рё РёРЅСЃС‚СЂСѓРєС†РёСЏРј, СЂР°Р·РјРµС‰С‘РЅРЅС‹Рј РЅР° СЃР°Р№С‚Рµ. Р’СЃРµ СЂР°Р±РѕС‚С‹ РІС‹ РІС‹РїРѕР»РЅСЏРµС‚Рµ
-    РЅР° СЃРІРѕР№ СЃС‚СЂР°С… Рё СЂРёСЃРє.
+    Администрация сайта не несёт ответственности за возможные повреждения техники
+    и иные последствия, возникшие в результате самостоятельного ремонта по
+    материалам и инструкциям, размещённым на сайте. Все работы вы выполняете
+    на свой страх и риск.
     </p>
-                <p class="footer__copyright">В© 2026 Repairo. Р’СЃРµ РїСЂР°РІР° Р·Р°С‰РёС‰РµРЅС‹.</p>
+                <p class="footer__copyright">© 2026 Repairo. Все права защищены.</p>
             </div>
         </div>
     </footer>
@@ -574,44 +544,44 @@
 {
   "@context": "https://schema.org",
   "@type": "HowTo",
-  "name": "РќР°СЃС‚СЂРѕР№РєР° Picture Control / Creative Style (Canon, Nikon, Sony)",
-  "description": "РџРѕС€Р°РіРѕРІР°СЏ РёРЅСЃС‚СЂСѓРєС†РёСЏ: РќР°СЃС‚СЂРѕР№РєР° Picture Control / Creative Style (Canon, Nikon, Sony). РЎРѕР·РґР°Р№С‚Рµ РїРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєРёР№ РїСЂРѕС„РёР»СЊ РґР»СЏ С‡Р°СЃС‚Рѕ РїРѕРІС‚РѕСЂСЏСЋС‰РёС…СЃСЏ Р·Р°РґР°С‡ (РЅР°РїСЂРё...",
+  "name": "Настройка Picture Control / Creative Style (Canon, Nikon, Sony)",
+  "description": "Пошаговая инструкция: Настройка Picture Control / Creative Style (Canon, Nikon, Sony). Создайте пользовательский профиль для часто повторяющихся задач (напри...",
   "totalTime": "PT30M",
   "step": [
     {
       "@type": "HowToStep",
-      "name": "Р§С‚Рѕ С‚Р°РєРѕРµ Picture Control / Creative Style?",
-      "text": "Р§С‚Рѕ С‚Р°РєРѕРµ Picture Control / Creative Style?",
+      "name": "Что такое Picture Control / Creative Style?",
+      "text": "Что такое Picture Control / Creative Style?",
       "url": "#step-1"
     },
     {
       "@type": "HowToStep",
-      "name": "Р“РґРµ РЅР°Р№С‚Рё Рё РєР°Рє РІС‹Р±СЂР°С‚СЊ СЃС‚РёР»СЊ?",
-      "text": "Р“РґРµ РЅР°Р№С‚Рё Рё РєР°Рє РІС‹Р±СЂР°С‚СЊ СЃС‚РёР»СЊ?",
+      "name": "Где найти и как выбрать стиль?",
+      "text": "Где найти и как выбрать стиль?",
       "url": "#step-2"
     },
     {
       "@type": "HowToStep",
-      "name": "РћСЃРЅРѕРІРЅС‹Рµ РїСЂРѕС„РёР»Рё Рё РёС… РЅР°Р·РЅР°С‡РµРЅРёРµ",
-      "text": "РћСЃРЅРѕРІРЅС‹Рµ РїСЂРѕС„РёР»Рё Рё РёС… РЅР°Р·РЅР°С‡РµРЅРёРµ",
+      "name": "Основные профили и их назначение",
+      "text": "Основные профили и их назначение",
       "url": "#step-3"
     },
     {
       "@type": "HowToStep",
-      "name": "РљР°Рє РЅР°СЃС‚СЂР°РёРІР°С‚СЊ РїР°СЂР°РјРµС‚СЂС‹ СЃС‚РёР»СЏ?",
-      "text": "РљР°Рє РЅР°СЃС‚СЂР°РёРІР°С‚СЊ РїР°СЂР°РјРµС‚СЂС‹ СЃС‚РёР»СЏ?",
+      "name": "Как настраивать параметры стиля?",
+      "text": "Как настраивать параметры стиля?",
       "url": "#step-4"
     },
     {
       "@type": "HowToStep",
-      "name": "Р§Р°СЃС‚Рѕ Р·Р°РґР°РІР°РµРјС‹Рµ РІРѕРїСЂРѕСЃС‹",
-      "text": "Р§Р°СЃС‚Рѕ Р·Р°РґР°РІР°РµРјС‹Рµ РІРѕРїСЂРѕСЃС‹",
+      "name": "Часто задаваемые вопросы",
+      "text": "Часто задаваемые вопросы",
       "url": "#step-5"
     },
     {
       "@type": "HowToStep",
-      "name": "рџ“Њ РС‚РѕРі",
-      "text": "рџ“Њ РС‚РѕРі",
+      "name": "?? Итог",
+      "text": "?? Итог",
       "url": "#step-6"
     }
   ],
@@ -622,4 +592,8 @@
 <script src="../cookie-consent.js"></script>
 </body>
 </html>
+
+
+
+
 

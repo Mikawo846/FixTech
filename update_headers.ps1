@@ -1,0 +1,492 @@
+$directory = "."
+$files = Get-ChildItem -Path $directory -Filter "*.html" -Recurse
+
+$headerTemplate = @"
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{TITLE}</title>
+    <meta name="description" content="{DESCRIPTION}">
+
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="../styles-header.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    .guide-content { line-height: 1.7; color: var(--text); }
+    .guide-content h2 { color: var(--primary); margin-top: 30px; margin-bottom: 15px; font-size: 1.5rem; }
+    .guide-content h3 { color: var(--primary-dark); margin-top: 25px; margin-bottom: 12px; font-size: 1.2rem; }
+    .guide-image-block { margin: 20px 0; padding: 15px; background: var(--background); border-radius: var(--border-radius); border: 1px solid var(--border); text-align: center; }
+    .guide-image-block img { max-width: 100%; height: auto; border-radius: 6px; border: 1px solid var(--border); }
+    .image-caption { margin-top: 10px; font-size: 0.85rem; color: var(--text-light); font-style: italic; }
+    .pro-tips { background: rgba(3, 74, 79, 0.05); padding: 15px; border-radius: 6px; margin: 20px 0; }
+    .pro-tips h4 { color: var(--primary); margin-top: 0; margin-bottom: 12px; font-size: 1.1rem; }
+    .tip-item { display: flex; gap: 8px; margin-bottom: 8px; align-items: flex-start; }
+    table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+    th, td { border: 1px solid var(--border); padding: 8px; text-align: left; }
+    th { background: var(--background-light); }
+    .highlight { background: #f5f7fa; border-left: 4px solid #2d9cdb; padding: 10px 15px; margin: 20px 0; }
+    .faq-section ul { margin-left: 1em; }
+    .block-section { margin-bottom: 2em; }
+    @media (max-width: 768px) {
+      .guide-content h2 { font-size: 1.4rem; margin-top: 25px; }
+      .guide-image-block { padding: 12px; margin: 15px 0; }
+      table, th, td { font-size: 0.95rem; }
+    }
+    /* Горизонтальный баннер-карточка */
+    .ym-hero-banner {
+      width: 100%;
+      max-width: 600px;
+      min-height: 140px;
+      border-radius: 16px;
+      background: #ffffff;
+      border: 1px solid #e5e7eb;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 4px 16px rgba(15, 23, 42, 0.08);
+      overflow: hidden;
+      box-sizing: border-box;
+      margin: 40px auto;
+    }
+
+    /* Контейнер для изображений */
+    .ym-hero-images {
+      display: flex;
+      height: 120px;
+      overflow: hidden;
+    }
+
+    .ym-hero-image {
+      flex: 1;
+      min-width: 0;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      border-right: 1px solid #e5e7eb;
+      background: #f8f9fa;
+    }
+
+    .ym-hero-image:last-child {
+      border-right: none;
+    }
+
+    .ym-hero-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      transition: transform 0.3s ease;
+      background: #f8f9fa;
+    }
+
+    .ym-hero-image:hover img {
+      transform: scale(1.02);
+    }
+
+    /* Правая часть: контент */
+    .ym-hero-content {
+      padding: 16px 18px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 8px;
+    }
+
+    /* Название товара */
+    .ym-hero-title {
+      font-size: 14px;
+      font-weight: 600;
+      color: #111827;
+      line-height: 1.3;
+      margin: 0 0 4px 0;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    /* Рейтинг */
+    .ym-hero-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+    }
+
+    .ym-hero-rating {
+      font-size: 13px;
+      font-weight: 500;
+      color: #111827;
+      background: #f9fafb;
+      border-radius: 999px;
+      padding: 4px 10px;
+    }
+
+    .ym-hero-rating-count {
+      color: #6b7280;
+    }
+
+    /* Фиолетовая кнопка */
+    .ym-hero-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 9px 16px;
+      border-radius: 999px;
+      border: none;
+      background: #6a00ff;
+      color: #ffffff;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 2px 6px rgba(88, 28, 135, 0.35);
+      transition: background 0.15s ease, transform 0.15s ease,
+                  box-shadow 0.15s ease;
+    }
+    .ym-hero-button::after {
+      content: "→";
+      margin-left: 6px;
+      font-size: 14px;
+    }
+    .ym-hero-button:hover {
+      background: #7c3aed;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 10px rgba(88, 28, 135, 0.45);
+    }
+
+    /* Юридический блок */
+    .ym-hero-legal {
+      margin-top: 6px;
+      max-width: 600px;
+      font-size: 11px;
+      line-height: 1.3;
+      color: #6b7280;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* Адаптив */
+    @media (max-width: 480px) {
+      .ym-hero-banner {
+        max-width: 100%;
+        margin: 20px 0;
+      }
+      .ym-hero-images {
+        height: 100px;
+      }
+      .ym-hero-content {
+        padding: 12px 12px;
+      }
+      .ym-hero-title {
+        font-size: 13px;
+      }
+      .ym-hero-button {
+        font-size: 13px;
+        padding: 8px 14px;
+      }
+      .ym-hero-legal {
+        font-size: 10px;
+      }
+    }
+    /* Telegram рекламный баннер */
+    .telegram-banner {
+      display: flex;
+      justify-content: center;
+      text-decoration: none;
+      color: inherit;
+      width: 100%;
+      margin: 40px 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    .telegram-banner-container {
+      width: 100%;
+      max-width: 500px;
+      min-height: 120px;
+      border-radius: 16px;
+      background: linear-gradient(135deg, #0088cc 0%, #005f8f 100%);
+      border: 1px solid #005f8f;
+      display: flex;
+      align-items: center;
+      padding: 20px;
+      box-shadow: 0 4px 16px rgba(0, 136, 204, 0.2);
+      overflow: hidden;
+      box-sizing: border-box;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .telegram-banner-container:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0, 136, 204, 0.3);
+    }
+
+    .telegram-logo {
+      width: 60px;
+      height: 60px;
+      min-width: 60px;
+      background: #ffffff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 20px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .telegram-logo svg {
+      width: 32px;
+      height: 32px;
+      fill: #0088cc;
+    }
+
+    .telegram-content {
+      flex: 1;
+      color: #ffffff;
+    }
+
+    .telegram-title {
+      font-size: 16px;
+      font-weight: 600;
+      margin: 0 0 8px 0;
+      line-height: 1.3;
+    }
+
+    .telegram-subtitle {
+      font-size: 14px;
+      opacity: 0.9;
+      margin: 0 0 12px 0;
+      line-height: 1.4;
+    }
+
+    .telegram-button {
+      display: inline-flex;
+      align-items: center;
+      padding: 8px 16px;
+      background: #ffffff;
+      color: #0088cc;
+      border-radius: 20px;
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background 0.2s ease, transform 0.2s ease;
+    }
+
+    .telegram-button:hover {
+      background: #f0f8ff;
+      transform: scale(1.05);
+    }
+
+    .telegram-button svg {
+      width: 16px;
+      height: 16px;
+      margin-left: 6px;
+      fill: #0088cc;
+    }
+
+    /* Адаптив для мобильных */
+    @media (max-width: 480px) {
+      .telegram-banner-container {
+        max-width: 100%;
+        margin: 20px 0;
+        padding: 15px;
+        min-height: 100px;
+      }
+      .telegram-logo {
+        width: 50px;
+        height: 50px;
+        min-width: 50px;
+        margin-right: 15px;
+      }
+      .telegram-logo svg {
+        width: 26px;
+        height: 26px;
+      }
+      .telegram-title {
+        font-size: 14px;
+      }
+      .telegram-subtitle {
+        font-size: 12px;
+      }
+      .telegram-button {
+        font-size: 12px;
+        padding: 6px 12px;
+      }
+    }
+
+
+
+  </style>
+  <script async src="https://timeweb.cloud/api/v1/cloud-ai/agents/3cc03620-d051-4d8d-b5af-f7b6cd083a35/embed.js?collapsed=true"></script>
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="header__inner">
+        <a href="../index.html" class="logo">
+          <span class="logo__icon"></span>
+          <span class="logo__text">GeoExpert</span>
+        </a>
+        <nav class="nav">
+          <ul class="nav__list">
+            <li><a href="../cameras.html" class="nav__link">Камеры</a></li>
+            <li><a href="../drones.html" class="nav__link">Дроны</a></li>
+            <li><a href="../workflow.html" class="nav__link">Workflow</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+"@
+
+$footerTemplate = @"
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__col footer__col--logo">
+                    <a href="../index.html" class="footer-logo">
+                        <span class="logo__icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 15L7 10H17L12 15Z" fill="currentColor"/>
+                                <path d="M12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3ZM12 19C8.13401 19 5 15.866 5 12C5 8.13401 8.13401 5 12 5C15.866 5 19 8.13401 19 12C19 15.866 15.866 19 12 19Z" fill="currentColor"/>
+                            </svg>
+                        </span>
+                        <span class="logo__text">Repairo</span>
+                    </a>
+                    <p class="footer__text">Помогаем ремонтировать электронику с 2024 года</p>
+                </div>
+                <div class="footer__col">
+                    <h3 class="footer__title">Разделы</h3>
+                    <ul class="footer__links">
+                        <li><a href="../index.html" class="footer__link">Главная</a></li>
+                        <li><a href="../index.html#categories" class="footer__link">Все гайды</a></li>
+                        <li><a href="../contacts.html" class="footer__link">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="footer__col">
+                    <h3 class="footer__title">Категории</h3>
+                    <ul class="footer__links">
+                        <li><a href="../tv.html" class="nav__link">Телевизоры</a></li>
+                        <li><a href="../cameras.html" class="nav__link">Фотоаппараты</a></li>
+                        <li><a href="../consoles.html" class="nav__link">Приставки</a></li>
+                        <li><a href="../laptops.html" class="nav__link">Ноутбуки</a></li>
+                        <li><a href="../smartphones.html" class="nav__link">Смартфоны</a></li>
+                        <li><a href="../small-appliances.html" class="nav__link">Мелкая техника</a></li>
+                        <li><a href="../large-appliances.html" class="nav__link">Бытовая техника</a></li>
+                        <li><a href="../auto-electronics.html" class="nav__link">Авто-Электроника</a></li>
+                    </ul>
+                </div>
+                <div class="footer__col">
+                    <h3 class="footer__title">Контакты</h3>
+                    <ul class="footer__links">
+                        <li><a href="https://t.me/RepairoRU" class="footer__link"><i class="fab fa-telegram"></i> Telegram</a></li>
+                        <li><span class="footer__link">Наша почта: repairo.info@mail.ru</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p class="disclaimer">
+    Администрация сайта не несёт ответственности за возможные повреждения техники
+    и иные последствия, возникшие в результате самостоятельного ремонта по
+    материалам и инструкциям, размещённым на сайте. Все работы вы выполняете
+    на свой страх и риск.
+    </p>
+                <p class="footer__copyright">© 2026 Repairo. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+    <!-- Cookie Consent Banner -->
+    <script src="../script.js"></script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "{TITLE}",
+  "description": "{DESCRIPTION}",
+  "totalTime": "PT30M",
+  "step": [
+    {
+      "@type": "HowToStep",
+      "name": "Введение: почему Cyberpunk 2077 может тормозить на PS5 после патчей?",
+      "text": "Введение: почему Cyberpunk 2077 может тормозить на PS5 после патчей?",
+      "url": "#step-1"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Таблица: основные причины лагов и просадок FPS в Cyberpunk 2077 на PS5 после обновлений",
+      "text": "Таблица: основные причины лагов и просадок FPS в Cyberpunk 2077 на PS5 после обновлений",
+      "url": "#step-2"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Пошаговая инструкция: что делать, если Cyberpunk 2077 тормозит на PS5 после обновления",
+      "text": "Пошаговая инструкция: что делать, если Cyberpunk 2077 тормозит на PS5 после обновления",
+      "url": "#step-3"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Таблица: сравнение режимов графики и FPS в Cyberpunk 2077 на PS5",
+      "text": "Таблица: сравнение режимов графики и FPS в Cyberpunk 2077 на PS5",
+      "url": "#step-4"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Отзывы игроков и тесты Digital Foundry",
+      "text": "Отзывы игроков и тесты Digital Foundry",
+      "url": "#step-5"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Лайфхаки и советы по оптимизации Cyberpunk 2077 на PS5",
+      "text": "Лайфхаки и советы по оптимизации Cyberpunk 2077 на PS5",
+      "url": "#step-6"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "FAQ – часто задаваемые вопросы о тормозах Cyberpunk 2077 на PS5",
+      "text": "FAQ – часто задаваемые вопросы о тормозах Cyberpunk 2077 на PS5",
+      "url": "#step-7"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Пошаговая инструкция: как восстановить базу данных PS5",
+      "text": "Пошаговая инструкция: как восстановить базу данных PS5",
+      "url": "#step-8"
+    }
+  ],
+  "image": "https://repairo.ru/https://mc.yandex.ru/watch/106225686"
+}
+</script>
+<!-- Cookie Consent Script -->
+<script src="../cookie-consent.js"></script>
+</body>
+</html>
+"@
+
+foreach ($file in $files) {
+    $content = Get-Content -Path $file.FullName -Raw -Encoding Default
+    # Extract title
+    if ($content -match '<title>(.*?)<\/title>') {
+        $title = $matches[1]
+    }
+    # Extract description
+    if ($content -match '<meta name="description" content="([^"]*)"') {
+        $description = $matches[1]
+    }
+    # Replace in header
+    $newHeader = $headerTemplate -replace '{TITLE}', $title -replace '{DESCRIPTION}', $description
+    # Replace in footer
+    $newFooter = $footerTemplate -replace '{TITLE}', $title -replace '{DESCRIPTION}', $description
+    # Find old header and footer
+    $oldHeaderPattern = '<!DOCTYPE html>.*?</header>'
+    $oldFooterPattern = '<footer>.*</html>'
+    $content = [regex]::Replace($content, $oldHeaderPattern, $newHeader, [System.Text.RegularExpressions.RegexOptions]::Singleline)
+    $content = [regex]::Replace($content, $oldFooterPattern, $newFooter, [System.Text.RegularExpressions.RegexOptions]::Singleline)
+    # Write back
+    Set-Content -Path $file.FullName -Value $content
+}

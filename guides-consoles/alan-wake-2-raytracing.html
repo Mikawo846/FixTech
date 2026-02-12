@@ -4,9 +4,8 @@
 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>РћРїС‚РёРјР°Р»СЊРЅС‹Рµ РЅР°СЃС‚СЂРѕР№РєРё Ray Tracing РІ Alan Wake 2 | Р­РєСЃРїРµСЂС‚РЅС‹Р№ РјРµРіР°РіР°Р№Рґ</title>
-    <meta name="description" content="{{ description }}">
-    <meta name="description" content="РџРѕС€Р°РіРѕРІР°СЏ РёРЅСЃС‚СЂСѓРєС†РёСЏ: РћРїС‚РёРјР°Р»СЊРЅС‹Рµ РЅР°СЃС‚СЂРѕР№РєРё Ray Tracing РІ Alan Wake 2. Alan Wake 2 вЂ” РѕРґРЅР° РёР· СЃР°РјС‹С… С‚РµС…РЅРѕР»РѕРіРёС‡РЅС‹С… РёРіСЂ РїРѕСЃР»РµРґРЅРёС… Р»РµС‚, РіРґРµ С‚СЂР°СЃСЃРёСЂРѕРІРєР° Р»СѓС‡.... РЎ...">
+  <title>Оптимальные настройки Ray Tracing в Alan Wake 2 | Экспертный</title>
+    <meta name="description" content="">
 
   <link rel="stylesheet" href="../styles.css" />
   <link rel="stylesheet" href="../styles-header.css" />
@@ -22,30 +21,17 @@
     .pro-tips { background: rgba(3, 74, 79, 0.05); padding: 15px; border-radius: 6px; margin: 20px 0; }
     .pro-tips h4 { color: var(--primary); margin-top: 0; margin-bottom: 12px; font-size: 1.1rem; }
     .tip-item { display: flex; gap: 8px; margin-bottom: 8px; align-items: flex-start; }
-    .warning-block {
-      background: #fff3e0;
-      border-left: 5px solid #ff9100;
-      padding: 15px 18px;
-      margin: 22px 0;
-      border-radius: 7px;
-    }
     table { width: 100%; border-collapse: collapse; margin: 20px 0; }
     th, td { border: 1px solid var(--border); padding: 8px; text-align: left; }
     th { background: var(--background-light); }
+    .highlight { background: #f5f7fa; border-left: 4px solid #2d9cdb; padding: 10px 15px; margin: 20px 0; }
+    .faq-section ul { margin-left: 1em; }
+    .block-section { margin-bottom: 2em; }
     @media (max-width: 768px) {
       .guide-content h2 { font-size: 1.4rem; margin-top: 25px; }
       .guide-image-block { padding: 12px; margin: 15px 0; }
       table, th, td { font-size: 0.95rem; }
     }
-    /* РЇРЅРґРµРєСЃ РњР°СЂРєРµС‚ СЂРµРєР»Р°РјРЅС‹Р№ Р±Р°РЅРЅРµСЂ */
-    .ym-hero-link {
-      display: block;
-      text-decoration: none;
-      color: inherit;
-      max-width: 100%;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    }
-
     /* Р“РѕСЂРёР·РѕРЅС‚Р°Р»СЊРЅС‹Р№ Р±Р°РЅРЅРµСЂ-РєР°СЂС‚РѕС‡РєР° */
     .ym-hero-banner {
       width: 100%;
@@ -158,13 +144,11 @@
       transition: background 0.15s ease, transform 0.15s ease,
                   box-shadow 0.15s ease;
     }
-
     .ym-hero-button::after {
       content: "в†’";
       margin-left: 6px;
       font-size: 14px;
     }
-
     .ym-hero-button:hover {
       background: #7c3aed;
       transform: translateY(-1px);
@@ -188,24 +172,19 @@
         max-width: 100%;
         margin: 20px 0;
       }
-
       .ym-hero-images {
         height: 100px;
       }
-
       .ym-hero-content {
         padding: 12px 12px;
       }
-
       .ym-hero-title {
         font-size: 13px;
       }
-
       .ym-hero-button {
         font-size: 13px;
         padding: 8px 14px;
       }
-
       .ym-hero-legal {
         font-size: 10px;
       }
@@ -313,27 +292,22 @@
         padding: 15px;
         min-height: 100px;
       }
-
       .telegram-logo {
         width: 50px;
         height: 50px;
         min-width: 50px;
         margin-right: 15px;
       }
-
       .telegram-logo svg {
         width: 26px;
         height: 26px;
       }
-
       .telegram-title {
         font-size: 14px;
       }
-
       .telegram-subtitle {
         font-size: 12px;
       }
-
       .telegram-button {
         font-size: 12px;
         padding: 6px 12px;
@@ -351,15 +325,13 @@
       <div class="header__inner">
         <a href="../index.html" class="logo">
           <span class="logo__icon"></span>
-          <span class="logo__text">Repairo</span>
+          <span class="logo__text">GeoExpert</span>
         </a>
         <nav class="nav">
           <ul class="nav__list">
-            <li><a href="../tv.html" class="nav__link">РўРµР»РµРІРёР·РѕСЂС‹</a></li>
-            <li><a href="../cameras.html" class="nav__link">Р¤РѕС‚РѕР°РїРїР°СЂР°С‚С‹</a></li>
-            <li><a href="../consoles.html" class="nav__link">РџСЂРёСЃС‚Р°РІРєРё</a></li>
-            <li><a href="../laptops.html" class="nav__link">РќРѕСѓС‚Р±СѓРєРё</a></li>
-            <li><a href="../smartphones.html" class="nav__link">РЎРјР°СЂС‚С„РѕРЅС‹</a></li>
+            <li><a href="../cameras.html" class="nav__link">РљР°РјРµСЂС‹</a></li>
+            <li><a href="../drones.html" class="nav__link">Р”СЂРѕРЅС‹</a></li>
+            <li><a href="../workflow.html" class="nav__link">Workflow</a></li>
           </ul>
         </nav>
       </div>
@@ -369,138 +341,125 @@
   <section class="guide-page">
     <div class="container">
       <div class="breadcrumbs">
-        <a href="../index.html">Р“Р»Р°РІРЅР°СЏ</a>
+        <a href="../index.html">Главная</a>
         <i class="fas fa-chevron-right"></i>
-        <a href="../consoles.html">РџСЂРёСЃС‚Р°РІРєРё</a>
+        <a href="../consoles.html">Приставки</a>
         <i class="fas fa-chevron-right"></i>
-        <span>РћРїС‚РёРјР°Р»СЊРЅС‹Рµ РЅР°СЃС‚СЂРѕР№РєРё Ray Tracing РІ Alan Wake 2</span>
+        <span>Оптимальные настройки Ray Tracing в Alan Wake 2</span>
       </div>
 
-      <h1 class="section__title">РћРїС‚РёРјР°Р»СЊРЅС‹Рµ РЅР°СЃС‚СЂРѕР№РєРё Ray Tracing РІ Alan Wake 2</h1>
+      <h1 class="section__title">Оптимальные настройки Ray Tracing в Alan Wake 2</h1>
 
       <div class="guide-meta">
-        <span><i class="fas fa-lightbulb"></i> Р­РєСЃРїРµСЂС‚РЅС‹Р№ РіРёРґ: Ray Tracing РІ Alan Wake 2, СЂРµР¶РёРјС‹ RTX, DLSS Ray Reconstruction, РїСЂРѕРёР·РІРѕРґРёС‚РµР»СЊРЅРѕСЃС‚СЊ, СЃРѕРІРµС‚С‹, FAQ, С‚Р°Р±Р»РёС†С‹, РёР»Р»СЋСЃС‚СЂР°С†РёСЏ.</span>
+        <span><i class="fas fa-lightbulb"></i> Экспертный гид: Ray Tracing в Alan Wake 2, режимы RTX, DLSS Ray Reconstruction, производительность, советы, FAQ, таблицы, иллюстрация.</span>
       </div>
 
       <div class="guide-image-block">
         <img src="https://avatars.mds.yandex.net/get-shedevrum/15240802/img_7db935e13c8011f0837b4e4a591835e2/orig" alt="Ray Tracing Alan Wake 2">
         <div class="image-caption">
-          РћРїС‚РёРјР°Р»СЊРЅС‹Рµ РЅР°СЃС‚СЂРѕР№РєРё Ray Tracing РІ Alan Wake 2: Р±Р°Р»Р°РЅСЃ РєР°С‡РµСЃС‚РІР° Рё РїСЂРѕРёР·РІРѕРґРёС‚РµР»СЊРЅРѕСЃС‚Рё, DLSS Ray Reconstruction, С‚РµСЃС‚С‹ RTX 4000/5000 Рё СЃРѕРІРµС‚С‹ РґР»СЏ СЃС‚Р°Р±РёР»СЊРЅРѕРіРѕ FPS.
+          Оптимальные настройки Ray Tracing в Alan Wake 2: баланс качества и производительности, DLSS Ray Reconstruction, тесты RTX 4000/5000 и советы для стабильного FPS.
         </div>
       </div>
 
       <div class="guide-content">
-        <!-- РЇРЅРґРµРєСЃ РњР°СЂРєРµС‚ СЂРµРєР»Р°РјРЅС‹Р№ Р±Р»РѕРє -->
+        <!-- Яндекс Маркет рекламный блок -->
         <a href="https://market.yandex.ru/catalog--bytovaia-tekhnika/54419/list?hid=198118&rs=eJwzUvjEKMvBILDwEKsEg8Kzbh6Nw4dZNS4D8c7lFhp9c1-wAQC3uAwP&clid=14635360&refid=rbck8fgamv681iu59go3iqxwddedl4x9&erid=5jtCeReNx12oajxS2bzShmZ&mclid=1003&distr_type=7&utm_source=partner_network&pp=900&utm_medium=link_list&utm_campaign=14635360"
            target="_blank"
            rel="noopener noreferrer sponsored"
-           class="ym-hero-link">
-          <div class="ym-hero-banner">
-            <div class="ym-hero-images">
-              <div class="ym-hero-image">
                 <img src="https://avatars.mds.yandex.net/get-mpic/14770882/2a00000197f4dbee777f8afddccaf44faa53/optimize"
-                     alt="Р Р°СЃРїСЂРѕРґР°Р¶Р° Р±С‹С‚РѕРІРѕР№ СЌР»РµРєС‚СЂРѕРЅРёРєРё 1">
+                     alt="Распродажа бытовой электроники 1">
               </div>
-              <div class="ym-hero-image">
                 <img src="https://avatars.mds.yandex.net/get-mpic/15580298/img_id8867318964670654684.jpeg/optimize"
-                     alt="Р Р°СЃРїСЂРѕРґР°Р¶Р° Р±С‹С‚РѕРІРѕР№ СЌР»РµРєС‚СЂРѕРЅРёРєРё 2">
+                     alt="Распродажа бытовой электроники 2">
               </div>
-              <div class="ym-hero-image">
                 <img src="https://avatars.mds.yandex.net/get-mpic/10096780/2a000001953b534fed2494e0b30fadd9b458/optimize"
-                     alt="Р Р°СЃРїСЂРѕРґР°Р¶Р° Р±С‹С‚РѕРІРѕР№ СЌР»РµРєС‚СЂРѕРЅРёРєРё 3">
+                     alt="Распродажа бытовой электроники 3">
               </div>
             </div>
-            <div class="ym-hero-content">
-              <h3 class="ym-hero-title">Р Р°СЃРїСЂРѕРґР°Р¶Р° Р±С‹С‚РѕРІРѕР№ СЌР»РµРєС‚СЂРѕРЅРёРєРё РЅР° РЇРЅРґРµРєСЃ РњР°СЂРєРµС‚Рµ</h3>
-              <div class="ym-hero-top">
-                <div class="ym-hero-rating">
-                  в­ђ Р’С‹РіРѕРґРЅС‹Рµ РїСЂРµРґР»РѕР¶РµРЅРёСЏ
-                  <span class="ym-hero-rating-count">РЎРєРёРґРєРё РґРѕ 50%</span>
+                  ? Выгодные предложения
                 </div>
               </div>
-              <button class="ym-hero-button">Р—Р° СЃРєРёРґРєР°РјРё</button>
             </div>
           </div>
-          <div class="ym-hero-legal">
-            Р РµРєР»Р°РјР°. РћРћРћ "РЇРќР”Р•РљРЎ", РРќРќ 7736207543. clid: 14635360, erid: 5jtCeReNx12oajxS2bzShmZ
+            Реклама. ООО "ЯНДЕКС", ИНН 7736207543. clid: 14635360, erid: 5jtCeReNx12oajxS2bzShmZ
           </div>
         </a>
 
-        <h2>Р’РІРµРґРµРЅРёРµ: РїРѕС‡РµРјСѓ Ray Tracing РІР°Р¶РµРЅ РґР»СЏ Alan Wake 2?</h2>
+        <h2>Введение: почему Ray Tracing важен для Alan Wake 2?</h2>
         <p>
-          Alan Wake 2 вЂ” РѕРґРЅР° РёР· СЃР°РјС‹С… С‚РµС…РЅРѕР»РѕРіРёС‡РЅС‹С… РёРіСЂ РїРѕСЃР»РµРґРЅРёС… Р»РµС‚, РіРґРµ С‚СЂР°СЃСЃРёСЂРѕРІРєР° Р»СѓС‡РµР№ (Ray Tracing) РІР»РёСЏРµС‚ РЅРµ С‚РѕР»СЊРєРѕ РЅР° РѕС‚СЂР°Р¶РµРЅРёСЏ, РЅРѕ Рё РЅР° РіР»РѕР±Р°Р»СЊРЅРѕРµ РѕСЃРІРµС‰РµРЅРёРµ, С‚РµРЅРё, РїСЂРѕР·СЂР°С‡РЅС‹Рµ РјР°С‚РµСЂРёР°Р»С‹ Рё РґР°Р¶Рµ Р°С‚РјРѕСЃС„РµСЂРЅС‹Рµ СЌС„С„РµРєС‚С‹. РРјРµРЅРЅРѕ Ray Tracing СЃРѕР·РґР°С‘С‚ РєРёРЅРµРјР°С‚РѕРіСЂР°С„РёС‡РЅСѓСЋ РєР°СЂС‚РёРЅРєСѓ СЃ РіР»СѓР±РѕРєРёРјРё С‚РµРЅСЏРјРё, СЂРµР°Р»РёСЃС‚РёС‡РЅС‹РјРё Р±Р»РёРєР°РјРё Рё РјСЏРіРєРёРј СЃРІРµС‚РѕРј, С‡С‚Рѕ РѕСЃРѕР±РµРЅРЅРѕ Р·Р°РјРµС‚РЅРѕ РІ С‚С‘РјРЅС‹С… Р»РµСЃР°С…, РїРѕРјРµС‰РµРЅРёСЏС… Рё РїСЂРё РїРѕРіРѕРґРЅС‹С… РёР·РјРµРЅРµРЅРёСЏС….
+          Alan Wake 2 — одна из самых технологичных игр последних лет, где трассировка лучей (Ray Tracing) влияет не только на отражения, но и на глобальное освещение, тени, прозрачные материалы и даже атмосферные эффекты. Именно Ray Tracing создаёт кинематографичную картинку с глубокими тенями, реалистичными бликами и мягким светом, что особенно заметно в тёмных лесах, помещениях и при погодных изменениях.
         </p>
 
-        <h2>РўР°Р±Р»РёС†Р°: СЂРµР¶РёРјС‹ Ray Tracing РІ Alan Wake 2</h2>
+        <h2>Таблица: режимы Ray Tracing в Alan Wake 2</h2>
 <table>
           <thead>
             <tr>
-              <th>Р РµР¶РёРј</th>
-              <th>РћРїРёСЃР°РЅРёРµ</th>
-              <th>РўСЂРµР±РѕРІР°РЅРёСЏ Рє GPU</th>
-              <th>РћСЃРѕР±РµРЅРЅРѕСЃС‚Рё</th>
+              <th>Режим</th>
+              <th>Описание</th>
+              <th>Требования к GPU</th>
+              <th>Особенности</th>
             </tr>
           </thead>
           <tbody>
             <tr>
               <td>RT Low</td>
-              <td>Р‘Р°Р·РѕРІС‹Рµ RT-РѕС‚СЂР°Р¶РµРЅРёСЏ Рё С‚РµРЅРё</td>
+              <td>Базовые RT-отражения и тени</td>
               <td>RTX 3070/4060, RX 7800 XT</td>
-              <td>РњРёРЅРёРјР°Р»СЊРЅР°СЏ РЅР°РіСЂСѓР·РєР°, СЌС„С„РµРєС‚ Р·Р°РјРµС‚РµРЅ С‚РѕР»СЊРєРѕ РІ РїРѕРјРµС‰РµРЅРёСЏС…</td>
+              <td>Минимальная нагрузка, эффект заметен только в помещениях</td>
             </tr>
             <tr>
               <td>RT Medium</td>
-              <td>RT-РѕС‚СЂР°Р¶РµРЅРёСЏ, С‚РµРЅРё, С‡Р°СЃС‚РёС‡РЅРѕРµ GI</td>
+              <td>RT-отражения, тени, частичное GI</td>
               <td>RTX 3080/4070, RX 7900 XT</td>
-              <td>Р‘Р°Р»Р°РЅСЃ РєР°С‡РµСЃС‚РІР° Рё РїСЂРѕРёР·РІРѕРґРёС‚РµР»СЊРЅРѕСЃС‚Рё, РїРѕРґС…РѕРґРёС‚ РґР»СЏ 1440p</td>
+              <td>Баланс качества и производительности, подходит для 1440p</td>
             </tr>
             <tr>
               <td>RT High</td>
-              <td>РџРѕР»РЅРѕРµ RT-РѕСЃРІРµС‰РµРЅРёРµ, РѕС‚СЂР°Р¶РµРЅРёСЏ, С‚РµРЅРё, GI</td>
+              <td>Полное RT-освещение, отражения, тени, GI</td>
               <td>RTX 4080/4090</td>
-              <td>РњР°РєСЃРёРјР°Р»СЊРЅР°СЏ РґРµС‚Р°Р»РёР·Р°С†РёСЏ, РІС‹СЃРѕРєР°СЏ РЅР°РіСЂСѓР·РєР°, СЂРµРєРѕРјРµРЅРґСѓРµС‚СЃСЏ DLSS</td>
+              <td>Максимальная детализация, высокая нагрузка, рекомендуется DLSS</td>
             </tr>
             <tr>
               <td>RT Ultra</td>
-              <td>Path Tracing, РїСЂРѕР·СЂР°С‡РЅС‹Рµ РѕС‚СЂР°Р¶РµРЅРёСЏ, СЂР°СЃС€РёСЂРµРЅРЅРѕРµ GI</td>
+              <td>Path Tracing, прозрачные отражения, расширенное GI</td>
               <td>RTX 4090/5000+</td>
-              <td>РўСЂРµР±СѓРµС‚ DLSS Ray Reconstruction, С„РѕС‚РѕСЂРµР°Р»РёР·Рј, РѕРіСЂРѕРјРЅР°СЏ РЅР°РіСЂСѓР·РєР°</td>
+              <td>Требует DLSS Ray Reconstruction, фотореализм, огромная нагрузка</td>
             </tr>
           </tbody>
         </table>
 
-        <h2>РџРѕС€Р°РіРѕРІР°СЏ РёРЅСЃС‚СЂСѓРєС†РёСЏ: РєР°Рє РІРєР»СЋС‡РёС‚СЊ Рё РЅР°СЃС‚СЂРѕРёС‚СЊ Ray Tracing РІ Alan Wake 2</h2>
+        <h2>Пошаговая инструкция: как включить и настроить Ray Tracing в Alan Wake 2</h2>
         <ol>
           <li>
-            <b>РћС‚РєСЂРѕР№С‚Рµ РјРµРЅСЋ РЅР°СЃС‚СЂРѕРµРє РіСЂР°С„РёРєРё РІ Alan Wake 2</b>.
+            <b>Откройте меню настроек графики в Alan Wake 2</b>.
           </li>
           <li>
-            <b>Р’С‹Р±РµСЂРёС‚Рµ СЂРµР¶РёРј РјР°СЃС€С‚Р°Р±РёСЂРѕРІР°РЅРёСЏ СЂР°Р·СЂРµС€РµРЅРёСЏ: DLSS (СЂРµРєРѕРјРµРЅРґСѓРµС‚СЃСЏ), FSR 2 вЂ” РґР»СЏ РІРёРґРµРѕРєР°СЂС‚ AMD</b>.
+            <b>Выберите режим масштабирования разрешения: DLSS (рекомендуется), FSR 2 — для видеокарт AMD</b>.
           </li>
           <li>
-            <b>Р’РєР»СЋС‡РёС‚Рµ DLSS Ray Reconstruction (РґР»СЏ RTX 4000+)</b> вЂ” СЌС‚Рѕ СЃРЅРёР·РёС‚ С€СѓРј Рё Р°СЂС‚РµС„Р°РєС‚С‹ РїСЂРё РІС‹СЃРѕРєРѕРј СѓСЂРѕРІРЅРµ RT.
+            <b>Включите DLSS Ray Reconstruction (для RTX 4000+)</b> — это снизит шум и артефакты при высоком уровне RT.
           </li>
           <li>
-            <b>Р’С‹Р±РµСЂРёС‚Рµ СѓСЂРѕРІРµРЅСЊ Ray Tracing:</b>
+            <b>Выберите уровень Ray Tracing:</b>
             <ul>
-              <li><b>Low/Medium</b> вЂ” РґР»СЏ RTX 3070/4060, RX 7800 XT, 1080p/1440p.</li>
-              <li><b>High</b> вЂ” РґР»СЏ RTX 4080/4090, 1440p/4K, РѕР±СЏР·Р°С‚РµР»СЊРЅРѕ СЃ DLSS Quality/Performance.</li>
-              <li><b>Ultra</b> вЂ” С‚РѕР»СЊРєРѕ РґР»СЏ RTX 4090/5000+, 4K, DLSS Ray Reconstruction РІРєР»СЋС‡С‘РЅ.</li>
+              <li><b>Low/Medium</b> — для RTX 3070/4060, RX 7800 XT, 1080p/1440p.</li>
+              <li><b>High</b> — для RTX 4080/4090, 1440p/4K, обязательно с DLSS Quality/Performance.</li>
+              <li><b>Ultra</b> — только для RTX 4090/5000+, 4K, DLSS Ray Reconstruction включён.</li>
             </ul>
           </li>
           <li>
-            <b>РџСЂРѕРІРµСЂСЊС‚Рµ РїСЂРѕРёР·РІРѕРґРёС‚РµР»СЊРЅРѕСЃС‚СЊ:</b>
+            <b>Проверьте производительность:</b>
             <ul>
-              <li>Р•СЃР»Рё FPS РЅРёР¶Рµ 60 вЂ” СЃРЅРёР·СЊС‚Рµ RT РґРѕ Medium РёР»Рё РІРєР»СЋС‡РёС‚Рµ DLSS Performance.</li>
-              <li>Р”Р»СЏ СЃС‚Р°Р±РёР»СЊРЅС‹С… 60+ FPS РІ 4K СЃ RT Ultra С‚СЂРµР±СѓРµС‚СЃСЏ RTX 4090 Рё РІС‹С€Рµ.</li>
+              <li>Если FPS ниже 60 — снизьте RT до Medium или включите DLSS Performance.</li>
+              <li>Для стабильных 60+ FPS в 4K с RT Ultra требуется RTX 4090 и выше.</li>
             </ul>
           </li>
           <li>
-            <b>Р’РєР»СЋС‡РёС‚Рµ РІРµСЂС‚РёРєР°Р»СЊРЅСѓСЋ СЃРёРЅС…СЂРѕРЅРёР·Р°С†РёСЋ (V-Sync) Рё VRR (РµСЃР»Рё РїРѕРґРґРµСЂР¶РёРІР°РµС‚СЃСЏ РјРѕРЅРёС‚РѕСЂРѕРј)</b> РґР»СЏ РјРёРЅРёРјРёР·Р°С†РёРё СЂР°Р·СЂС‹РІРѕРІ РєР°РґСЂРѕРІ.
+            <b>Включите вертикальную синхронизацию (V-Sync) и VRR (если поддерживается монитором)</b> для минимизации разрывов кадров.
           </li>
         </ol>
 
-        <h2>РўР°Р±Р»РёС†Р°: РІР»РёСЏРЅРёРµ Ray Tracing РЅР° РїСЂРѕРёР·РІРѕРґРёС‚РµР»СЊРЅРѕСЃС‚СЊ (РїРѕ С‚РµСЃС‚Р°Рј Digital Foundry, Overclockers, GameGPU)</h2>
+        <h2>Таблица: влияние Ray Tracing на производительность (по тестам Digital Foundry, Overclockers, GameGPU)</h2>
         <table>
           <thead>
             <tr>
@@ -515,167 +474,167 @@
           <tbody>
             <tr>
               <td>RTX 4090 (4K)</td>
-              <td>130вЂ“160 FPS</td>
-              <td>90вЂ“110 FPS</td>
-              <td>65вЂ“80 FPS</td>
-              <td>32вЂ“45 FPS</td>
+              <td>130–160 FPS</td>
+              <td>90–110 FPS</td>
+              <td>65–80 FPS</td>
+              <td>32–45 FPS</td>
               <td>134 FPS (Ultra RT)</td>
             </tr>
             <tr>
               <td>RTX 4080 (4K)</td>
-              <td>110вЂ“130 FPS</td>
-              <td>70вЂ“90 FPS</td>
-              <td>55вЂ“65 FPS</td>
-              <td>22вЂ“35 FPS</td>
+              <td>110–130 FPS</td>
+              <td>70–90 FPS</td>
+              <td>55–65 FPS</td>
+              <td>22–35 FPS</td>
               <td>104 FPS (Ultra RT)</td>
             </tr>
             <tr>
               <td>RTX 4070 Ti (1440p)</td>
-              <td>120вЂ“140 FPS</td>
-              <td>80вЂ“100 FPS</td>
-              <td>55вЂ“70 FPS</td>
-              <td>17вЂ“30 FPS</td>
+              <td>120–140 FPS</td>
+              <td>80–100 FPS</td>
+              <td>55–70 FPS</td>
+              <td>17–30 FPS</td>
               <td>82 FPS (Ultra RT)</td>
             </tr>
             <tr>
               <td>RTX 3070 (1440p)</td>
-              <td>80вЂ“100 FPS</td>
-              <td>50вЂ“65 FPS</td>
-              <td>35вЂ“45 FPS</td>
-              <td>10вЂ“18 FPS</td>
+              <td>80–100 FPS</td>
+              <td>50–65 FPS</td>
+              <td>35–45 FPS</td>
+              <td>10–18 FPS</td>
               <td>45 FPS (Medium RT)</td>
             </tr>
             <tr>
               <td>RTX 3060 (1080p)</td>
-              <td>70вЂ“90 FPS</td>
-              <td>35вЂ“50 FPS</td>
-              <td>25вЂ“35 FPS</td>
+              <td>70–90 FPS</td>
+              <td>35–50 FPS</td>
+              <td>25–35 FPS</td>
               <td>~10 FPS</td>
               <td>30 FPS (Low RT)</td>
             </tr>
             <tr>
               <td>RX 7800 XT (1440p, FSR2)</td>
-              <td>80вЂ“100 FPS</td>
-              <td>45вЂ“60 FPS</td>
-              <td>30вЂ“40 FPS</td>
-              <td>вЂ”</td>
-              <td>вЂ”</td>
+              <td>80–100 FPS</td>
+              <td>45–60 FPS</td>
+              <td>30–40 FPS</td>
+              <td>—</td>
+              <td>—</td>
             </tr>
           </tbody>
         </table>
 
-        <h2>РЎСЂР°РІРЅРµРЅРёРµ: Ray Tracing vs Path Tracing РІ Alan Wake 2</h2>
+        <h2>Сравнение: Ray Tracing vs Path Tracing в Alan Wake 2</h2>
         <table>
           <thead>
             <tr>
-              <th>РџР°СЂР°РјРµС‚СЂ</th>
+              <th>Параметр</th>
               <th>Ray Tracing</th>
               <th>Path Tracing</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td>РћСЃРІРµС‰РµРЅРёРµ</td>
-              <td>RTGI, РѕС‚СЂР°Р¶РµРЅРёСЏ, С‚РµРЅРё</td>
-              <td>РџРѕР»РЅРѕРµ РіР»РѕР±Р°Р»СЊРЅРѕРµ РѕСЃРІРµС‰РµРЅРёРµ, РјР°РєСЃРёРјР°Р»СЊРЅР°СЏ СЂРµР°Р»РёСЃС‚РёС‡РЅРѕСЃС‚СЊ</td>
+              <td>Освещение</td>
+              <td>RTGI, отражения, тени</td>
+              <td>Полное глобальное освещение, максимальная реалистичность</td>
             </tr>
             <tr>
-              <td>РџСЂРѕРёР·РІРѕРґРёС‚РµР»СЊРЅРѕСЃС‚СЊ</td>
-              <td>Р’С‹СЃРѕРєР°СЏ (РЅР° С‚РѕРїРѕРІС‹С… GPU)</td>
-              <td>РћРіСЂРѕРјРЅР°СЏ РЅР°РіСЂСѓР·РєР°, С‚РѕР»СЊРєРѕ RTX 4090+</td>
+              <td>Производительность</td>
+              <td>Высокая (на топовых GPU)</td>
+              <td>Огромная нагрузка, только RTX 4090+</td>
             </tr>
             <tr>
-              <td>Р’Р»РёСЏРЅРёРµ РЅР° FPS</td>
-              <td>РЎРЅРёР¶РµРЅРёРµ РЅР° 30вЂ“50%</td>
-              <td>РЎРЅРёР¶РµРЅРёРµ РЅР° 60вЂ“80%</td>
+              <td>Влияние на FPS</td>
+              <td>Снижение на 30–50%</td>
+              <td>Снижение на 60–80%</td>
             </tr>
             <tr>
-              <td>Р’РёР·СѓР°Р»СЊРЅС‹Р№ СЌС„С„РµРєС‚</td>
-              <td>РљРёРЅРµРјР°С‚РѕРіСЂР°С„РёС‡РЅРѕ, РЅРѕ РЅРµ РІСЃРµРіРґР° С„РѕС‚РѕСЂРµР°Р»РёСЃС‚РёС‡РЅРѕ</td>
-              <td>РњР°РєСЃРёРјР°Р»СЊРЅРѕ "Р¶РёРІРѕР№" СЃРІРµС‚, РЅРѕ РјРѕРіСѓС‚ Р±С‹С‚СЊ Р±Р°РіРё СЃ С‚РµРЅСЏРјРё</td>
+              <td>Визуальный эффект</td>
+              <td>Кинематографично, но не всегда фотореалистично</td>
+              <td>Максимально "живой" свет, но могут быть баги с тенями</td>
             </tr>
             <tr>
-              <td>Р РµРєРѕРјРµРЅРґР°С†РёСЏ</td>
-              <td>Р”Р»СЏ Р±РѕР»СЊС€РёРЅСЃС‚РІР° РїРѕР»СЊР·РѕРІР°С‚РµР»РµР№</td>
-              <td>РўРѕР»СЊРєРѕ РґР»СЏ СЌРЅС‚СѓР·РёР°СЃС‚РѕРІ Рё С‚РµСЃС‚РѕРІ</td>
+              <td>Рекомендация</td>
+              <td>Для большинства пользователей</td>
+              <td>Только для энтузиастов и тестов</td>
             </tr>
           </tbody>
         </table>
 
-        <h2>Р›Р°Р№С„С…Р°РєРё Рё СЃРѕРІРµС‚С‹ РїРѕ РѕРїС‚РёРјРёР·Р°С†РёРё Ray Tracing РІ Alan Wake 2</h2>
+        <h2>Лайфхаки и советы по оптимизации Ray Tracing в Alan Wake 2</h2>
         <div class="pro-tips">
-          <h4>рџ”№ РџСЂР°РєС‚РёС‡РµСЃРєРёРµ СЃРѕРІРµС‚С‹</h4>
+          <h4>?? Практические советы</h4>
           <div class="tip-item">
             <i class="fas fa-lightbulb"></i>
-            <p>Р”Р»СЏ РјР°РєСЃРёРјР°Р»СЊРЅРѕРіРѕ РєР°С‡РµСЃС‚РІР° Рё РјРёРЅРёРјР°Р»СЊРЅРѕРіРѕ С€СѓРјР° РёСЃРїРѕР»СЊР·СѓР№С‚Рµ DLSS 3.5 Ray Reconstruction (RTX 4000+), РѕРЅ СЃСѓС‰РµСЃС‚РІРµРЅРЅРѕ СѓР»СѓС‡С€Р°РµС‚ RT Ultra Рё Path Tracing.</p>
+            <p>Для максимального качества и минимального шума используйте DLSS 3.5 Ray Reconstruction (RTX 4000+), он существенно улучшает RT Ultra и Path Tracing.</p>
           </div>
           <div class="tip-item">
             <i class="fas fa-lightbulb"></i>
-            <p>Р•СЃР»Рё FPS РЅРёР¶Рµ 60 РґР°Р¶Рµ СЃ DLSS, СЃРЅРёР¶Р°Р№С‚Рµ RT РґРѕ Medium РёР»Рё РѕС‚РєР»СЋС‡Р°Р№С‚Рµ Path Tracing вЂ” РІРёР·СѓР°Р»СЊРЅР°СЏ СЂР°Р·РЅРёС†Р° РјРёРЅРёРјР°Р»СЊРЅР°, Р° РїСЂРѕРёР·РІРѕРґРёС‚РµР»СЊРЅРѕСЃС‚СЊ СЂР°СЃС‚С‘С‚.</p>
+            <p>Если FPS ниже 60 даже с DLSS, снижайте RT до Medium или отключайте Path Tracing — визуальная разница минимальна, а производительность растёт.</p>
           </div>
           <div class="tip-item">
             <i class="fas fa-lightbulb"></i>
-            <p>Р’РєР»СЋС‡Р°Р№С‚Рµ V-Sync Рё VRR РґР»СЏ РїСЂРµРґРѕС‚РІСЂР°С‰РµРЅРёСЏ СЂР°Р·СЂС‹РІРѕРІ РєР°РґСЂРѕРІ, РѕСЃРѕР±РµРЅРЅРѕ РЅР° РјРѕРЅРёС‚РѕСЂР°С… 120/144 Р“С†.</p>
+            <p>Включайте V-Sync и VRR для предотвращения разрывов кадров, особенно на мониторах 120/144 Гц.</p>
           </div>
           <div class="tip-item">
             <i class="fas fa-lightbulb"></i>
-            <p>Р’ С‚СЏР¶С‘Р»С‹С… СЃС†РµРЅР°С… (Р»РµСЃ, РґРѕР¶РґСЊ, РѕСЃРІРµС‰РµРЅРёРµ С„РѕРЅР°СЂС‘Рј) RT High/Ultra РјРѕР¶РµС‚ РІС‹Р·С‹РІР°С‚СЊ РїСЂРѕСЃР°РґРєРё вЂ” РёСЃРїРѕР»СЊР·СѓР№С‚Рµ DLSS Performance.</p>
+            <p>В тяжёлых сценах (лес, дождь, освещение фонарём) RT High/Ultra может вызывать просадки — используйте DLSS Performance.</p>
           </div>
           <div class="tip-item">
             <i class="fas fa-lightbulb"></i>
-            <p>РќР° РІРёРґРµРѕРєР°СЂС‚Р°С… AMD РёСЃРїРѕР»СЊР·СѓР№С‚Рµ FSR 2 Рё RT Medium вЂ” Path Tracing РЅРµРґРѕСЃС‚СѓРїРµРЅ, Р° High/Ultra RT СЃРёР»СЊРЅРѕ СЃРЅРёР¶Р°РµС‚ FPS.</p>
+            <p>На видеокартах AMD используйте FSR 2 и RT Medium — Path Tracing недоступен, а High/Ultra RT сильно снижает FPS.</p>
           </div>
         </div>
 
-        <h2>FAQ вЂ“ С‡Р°СЃС‚Рѕ Р·Р°РґР°РІР°РµРјС‹Рµ РІРѕРїСЂРѕСЃС‹ Рѕ Ray Tracing РІ Alan Wake 2</h2>
+        <h2>FAQ – часто задаваемые вопросы о Ray Tracing в Alan Wake 2</h2>
         <ul>
           <li>
-            <strong>РќСѓР¶РЅРѕ Р»Рё РІРєР»СЋС‡Р°С‚СЊ Path Tracing РІ Alan Wake 2?</strong><br>
-            РќРµС‚, С‚РѕР»СЊРєРѕ РµСЃР»Рё Сѓ РІР°СЃ RTX 4090+ Рё РІС‹ С…РѕС‚РёС‚Рµ СѓРІРёРґРµС‚СЊ РјР°РєСЃРёРјСѓРј РіСЂР°С„РёРєРё вЂ” РґР»СЏ РѕР±С‹С‡РЅРѕР№ РёРіСЂС‹ РґРѕСЃС‚Р°С‚РѕС‡РЅРѕ RT High/Ultra СЃ DLSS.
+            <strong>Нужно ли включать Path Tracing в Alan Wake 2?</strong><br>
+            Нет, только если у вас RTX 4090+ и вы хотите увидеть максимум графики — для обычной игры достаточно RT High/Ultra с DLSS.
           </li>
           <li>
-            <strong>DLSS Ray Reconstruction СЂРµР°Р»СЊРЅРѕ СѓР»СѓС‡С€Р°РµС‚ РєР°СЂС‚РёРЅРєСѓ?</strong><br>
-            Р”Р°, РѕСЃРѕР±РµРЅРЅРѕ РЅР° Ultra RT Рё Path Tracing вЂ” РјРµРЅСЊС€Рµ С€СѓРјР°, С‡РёС‰Рµ РѕС‚СЂР°Р¶РµРЅРёСЏ, Р»СѓС‡С€Рµ РґРµС‚Р°Р»РёР·Р°С†РёСЏ.
+            <strong>DLSS Ray Reconstruction реально улучшает картинку?</strong><br>
+            Да, особенно на Ultra RT и Path Tracing — меньше шума, чище отражения, лучше детализация.
           </li>
           <li>
-            <strong>РњРѕР¶РЅРѕ Р»Рё РёРіСЂР°С‚СЊ СЃ RT РЅР° RTX 3070/4060?</strong><br>
-            Р”Р°, РЅРѕ С‚РѕР»СЊРєРѕ РЅР° Medium Рё СЃ DLSS Quality/Performance, РІ 1080p/1440p.
+            <strong>Можно ли играть с RT на RTX 3070/4060?</strong><br>
+            Да, но только на Medium и с DLSS Quality/Performance, в 1080p/1440p.
           </li>
           <li>
-            <strong>РџРѕС‡РµРјСѓ РїР°РґР°РµС‚ FPS РїСЂРё RT Ultra?</strong><br>
-            РћРіСЂРѕРјРЅР°СЏ РЅР°РіСЂСѓР·РєР° РЅР° GPU, РѕСЃРѕР±РµРЅРЅРѕ Р±РµР· DLSS. РСЃРїРѕР»СЊР·СѓР№С‚Рµ Ray Reconstruction Рё СЃРЅРёР¶Р°Р№С‚Рµ RT РґРѕ High/Medium.
+            <strong>Почему падает FPS при RT Ultra?</strong><br>
+            Огромная нагрузка на GPU, особенно без DLSS. Используйте Ray Reconstruction и снижайте RT до High/Medium.
           </li>
           <li>
-            <strong>РљР°РєРѕР№ RT-РїСЂРѕС„РёР»СЊ РІС‹Р±СЂР°С‚СЊ РґР»СЏ Р±Р°Р»Р°РЅСЃР°?</strong><br>
-            RT Medium РёР»Рё High СЃ DLSS Quality вЂ” Р»СѓС‡С€РёР№ Р±Р°Р»Р°РЅСЃ РґР»СЏ 1440p/4K РЅР° RTX 4000/5000.
+            <strong>Какой RT-профиль выбрать для баланса?</strong><br>
+            RT Medium или High с DLSS Quality — лучший баланс для 1440p/4K на RTX 4000/5000.
           </li>
           <li>
-            <strong>Р•СЃС‚СЊ Р»Рё СЃРјС‹СЃР» РІ RT РЅР° РІРёРґРµРѕРєР°СЂС‚Р°С… AMD?</strong><br>
-            РўРѕР»СЊРєРѕ РЅР° Medium, СЃ FSR 2. Path Tracing Рё Ultra RT РЅРµРґРѕСЃС‚СѓРїРЅС‹ РёР»Рё РЅРµРёРіСЂР°Р±РµР»СЊРЅС‹.
+            <strong>Есть ли смысл в RT на видеокартах AMD?</strong><br>
+            Только на Medium, с FSR 2. Path Tracing и Ultra RT недоступны или неиграбельны.
           </li>
         </ul>
 
         <div class="warning-block">
-          <strong>Р’РЅРёРјР°РЅРёРµ!</strong> Ultra Ray Tracing Рё Path Tracing С‚СЂРµР±СѓСЋС‚ RTX 4090/5000+ Рё DLSS Ray Reconstruction. РќР° РјРµРЅРµРµ РјРѕС‰РЅС‹С… GPU РёСЃРїРѕР»СЊР·СѓР№С‚Рµ RT Medium/High Рё DLSS Performance РґР»СЏ СЃС‚Р°Р±РёР»СЊРЅРѕРіРѕ FPS!
+          <strong>Внимание!</strong> Ultra Ray Tracing и Path Tracing требуют RTX 4090/5000+ и DLSS Ray Reconstruction. На менее мощных GPU используйте RT Medium/High и DLSS Performance для стабильного FPS!
         </div>
 
-        <h2>РџРѕС€Р°РіРѕРІР°СЏ РёРЅСЃС‚СЂСѓРєС†РёСЏ: РєР°Рє РїРѕРІС‹СЃРёС‚СЊ FPS СЃ Ray Tracing РІ Alan Wake 2</h2>
+        <h2>Пошаговая инструкция: как повысить FPS с Ray Tracing в Alan Wake 2</h2>
         <ol>
-          <li>Р’РєР»СЋС‡РёС‚Рµ DLSS/FSR 2 РІ СЂРµР¶РёРјРµ Performance РёР»Рё Balanced.</li>
-          <li>РЎРЅРёР·СЊС‚Рµ Ray Tracing РґРѕ Medium РёР»Рё РѕС‚РєР»СЋС‡РёС‚Рµ Path Tracing.</li>
-          <li>РџРѕРЅРёР·СЊС‚Рµ РѕР±СЉС‘РјРЅРѕРµ РѕСЃРІРµС‰РµРЅРёРµ Рё РѕС‚СЂР°Р¶РµРЅРёСЏ РЅР° СЌРєСЂР°РЅРµ (SSR) РґРѕ Medium/Low.</li>
-          <li>РћС‚РєР»СЋС‡РёС‚Рµ Motion Blur Рё Film Grain РґР»СЏ РїРѕРІС‹С€РµРЅРёСЏ С‡С‘С‚РєРѕСЃС‚Рё.</li>
-          <li>Р’РєР»СЋС‡РёС‚Рµ V-Sync Рё VRR РґР»СЏ РїР»Р°РІРЅРѕСЃС‚Рё.</li>
-          <li>РЎР»РµРґРёС‚Рµ Р·Р° С‚РµРјРїРµСЂР°С‚СѓСЂРѕР№ GPU вЂ” Alan Wake 2 СЃРёР»СЊРЅРѕ РЅР°РіСЂСѓР¶Р°РµС‚ РІРёРґРµРѕРєР°СЂС‚Сѓ.</li>
+          <li>Включите DLSS/FSR 2 в режиме Performance или Balanced.</li>
+          <li>Снизьте Ray Tracing до Medium или отключите Path Tracing.</li>
+          <li>Понизьте объёмное освещение и отражения на экране (SSR) до Medium/Low.</li>
+          <li>Отключите Motion Blur и Film Grain для повышения чёткости.</li>
+          <li>Включите V-Sync и VRR для плавности.</li>
+          <li>Следите за температурой GPU — Alan Wake 2 сильно нагружает видеокарту.</li>
         </ol>
 
-        <h2>рџ“Њ РС‚РѕРі: РѕРїС‚РёРјР°Р»СЊРЅС‹Рµ РЅР°СЃС‚СЂРѕР№РєРё Ray Tracing РІ Alan Wake 2</h2>
+        <h2>?? Итог: оптимальные настройки Ray Tracing в Alan Wake 2</h2>
         <p>
-          Р”Р»СЏ Р±РѕР»СЊС€РёРЅСЃС‚РІР° РёРіСЂРѕРєРѕРІ РѕРїС‚РёРјР°Р»СЊРЅС‹Р№ Р±Р°Р»Р°РЅСЃ вЂ” Ray Tracing Medium РёР»Рё High, DLSS 3.5 Ray Reconstruction (РґР»СЏ RTX 4000+), СЂРµР¶РёРј DLSS Quality РёР»Рё Performance, РѕС‚РєР»СЋС‡С‘РЅРЅС‹Р№ Path Tracing. РќР° RTX 4090+ РјРѕР¶РЅРѕ РїРѕРїСЂРѕР±РѕРІР°С‚СЊ Ultra RT Рё Path Tracing, РЅРѕ С‚РѕР»СЊРєРѕ СЃ DLSS Рё Ray Reconstruction. РќР° AMD вЂ” С‚РѕР»СЊРєРѕ RT Medium СЃ FSR 2. РќРµ Р·Р°Р±С‹РІР°Р№С‚Рµ РїСЂРѕ V-Sync Рё VRR РґР»СЏ РїР»Р°РІРЅРѕСЃС‚Рё, Рё СЃРЅРёР¶Р°Р№С‚Рµ RT РІ С‚СЏР¶С‘Р»С‹С… СЃС†РµРЅР°С…. Alan Wake 2 вЂ” СЌС‚Р°Р»РѕРЅ Ray Tracing, РЅРѕ С‚СЂРµР±СѓРµС‚ РјРѕС‰РЅРѕРіРѕ Р¶РµР»РµР·Р° Рё РіСЂР°РјРѕС‚РЅРѕР№ РЅР°СЃС‚СЂРѕР№РєРё.
+          Для большинства игроков оптимальный баланс — Ray Tracing Medium или High, DLSS 3.5 Ray Reconstruction (для RTX 4000+), режим DLSS Quality или Performance, отключённый Path Tracing. На RTX 4090+ можно попробовать Ultra RT и Path Tracing, но только с DLSS и Ray Reconstruction. На AMD — только RT Medium с FSR 2. Не забывайте про V-Sync и VRR для плавности, и снижайте RT в тяжёлых сценах. Alan Wake 2 — эталон Ray Tracing, но требует мощного железа и грамотной настройки.
         </p>
 </div>
 
-        <!-- Telegram СЂРµРєР»Р°РјРЅС‹Р№ Р±Р°РЅРЅРµСЂ -->
+        <!-- Telegram рекламный баннер -->
         <a href="https://t.me/RepairoRU" target="_blank" rel="noopener noreferrer" class="telegram-banner">
           <div class="telegram-banner-container">
             <div class="telegram-logo">
@@ -684,10 +643,10 @@
               </svg>
             </div>
             <div class="telegram-content">
-              <div class="telegram-title">РќРѕРІРѕСЃС‚Рё РёР· РјРёСЂР° С‚РµС…РЅРѕР»РѕРіРёР№</div>
-              <div class="telegram-subtitle">Р’ РЅР°С€РµРј РЅРѕРІРѕРј Telegram-РєР°РЅР°Р»Рµ. РџРѕРґРїРёСЃС‹РІР°Р№С‚РµСЃСЊ Рё Р±СѓРґСЊС‚Рµ РІ С‡РёСЃР»Рµ РїРµСЂРІС‹С…!</div>
+              <div class="telegram-title">Новости из мира технологий</div>
+              <div class="telegram-subtitle">В нашем новом Telegram-канале. Подписывайтесь и будьте в числе первых!</div>
               <div class="telegram-button">
-                РџРѕРґРїРёСЃР°С‚СЊСЃСЏ
+                Подписаться
                 <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.56c-.21 2.22-1.12 7.58-1.58 10.06-.19 1.07-.57 1.43-.94 1.46-.8.07-1.4-.52-2.17-1.03-1.21-.79-1.89-1.28-3.06-2.05-1.35-.87-.47-1.35.3-2.13.2-.21 3.71-3.39 3.77-3.68.01-.04.01-.18-.07-.26s-.2-.05-.29-.03c-.12.03-2.11 1.34-5.95 3.93-.56.38-1.07.57-1.53.56-.5-.01-1.47-.28-2.19-.51-.88-.28-1.58-.43-1.52-.91.03-.25.38-.51 1.04-.78 4.07-1.77 6.78-2.94 8.13-3.51 3.88-1.62 4.68-1.9 5.19-1.91.12 0 .37.03.54.17.14.12.18.28.2.44-.01.06 0 .11-.01.17z"/>
                 </svg>
@@ -712,45 +671,45 @@
                         </span>
                         <span class="logo__text">Repairo</span>
                     </a>
-                    <p class="footer__text">РџРѕРјРѕРіР°РµРј СЂРµРјРѕРЅС‚РёСЂРѕРІР°С‚СЊ СЌР»РµРєС‚СЂРѕРЅРёРєСѓ СЃ 2024 РіРѕРґР°</p>
+                    <p class="footer__text">Помогаем ремонтировать электронику с 2024 года</p>
                 </div>
                 <div class="footer__col">
-                    <h3 class="footer__title">Р Р°Р·РґРµР»С‹</h3>
+                    <h3 class="footer__title">Разделы</h3>
                     <ul class="footer__links">
-                        <li><a href="../index.html" class="footer__link">Р“Р»Р°РІРЅР°СЏ</a></li>
-                        <li><a href="../index.html#categories" class="footer__link">Р’СЃРµ РіР°Р№РґС‹</a></li>
-                        <li><a href="../contacts.html" class="footer__link">РљРѕРЅС‚Р°РєС‚С‹</a></li>
+                        <li><a href="../index.html" class="footer__link">Главная</a></li>
+                        <li><a href="../index.html#categories" class="footer__link">Все гайды</a></li>
+                        <li><a href="../contacts.html" class="footer__link">Контакты</a></li>
                     </ul>
                 </div>
                 <div class="footer__col">
-                    <h3 class="footer__title">РљР°С‚РµРіРѕСЂРёРё</h3>
+                    <h3 class="footer__title">Категории</h3>
                     <ul class="footer__links">
-                        <li><a href="../tv.html" class="nav__link">РўРµР»РµРІРёР·РѕСЂС‹</a></li>
-                        <li><a href="../cameras.html" class="nav__link">Р¤РѕС‚РѕР°РїРїР°СЂР°С‚С‹</a></li>
-                        <li><a href="../consoles.html" class="nav__link">РџСЂРёСЃС‚Р°РІРєРё</a></li>
-                        <li><a href="../laptops.html" class="nav__link">РќРѕСѓС‚Р±СѓРєРё</a></li>
-                        <li><a href="../smartphones.html" class="nav__link">РЎРјР°СЂС‚С„РѕРЅС‹</a></li>
-                        <li><a href="../small-appliances.html" class="nav__link">РњРµР»РєР°СЏ С‚РµС…РЅРёРєР°</a></li>
-                        <li><a href="../large-appliances.html" class="nav__link">Р‘С‹С‚РѕРІР°СЏ С‚РµС…РЅРёРєР°</a></li>
-                        <li><a href="../auto-electronics.html" class="nav__link">РђРІС‚Рѕ-Р­Р»РµРєС‚СЂРѕРЅРёРєР°</a></li>
+                        <li><a href="../tv.html" class="nav__link">Телевизоры</a></li>
+                        <li><a href="../cameras.html" class="nav__link">Фотоаппараты</a></li>
+                        <li><a href="../consoles.html" class="nav__link">Приставки</a></li>
+                        <li><a href="../laptops.html" class="nav__link">Ноутбуки</a></li>
+                        <li><a href="../smartphones.html" class="nav__link">Смартфоны</a></li>
+                        <li><a href="../small-appliances.html" class="nav__link">Мелкая техника</a></li>
+                        <li><a href="../large-appliances.html" class="nav__link">Бытовая техника</a></li>
+                        <li><a href="../auto-electronics.html" class="nav__link">Авто-Электроника</a></li>
                     </ul>
                 </div>
                 <div class="footer__col">
-                    <h3 class="footer__title">РљРѕРЅС‚Р°РєС‚С‹</h3>
+                    <h3 class="footer__title">Контакты</h3>
                     <ul class="footer__links">
                         <li><a href="https://t.me/RepairoRU" class="footer__link"><i class="fab fa-telegram"></i> Telegram</a></li>
-                        <li><span class="footer__link">РќР°С€Р° РїРѕС‡С‚Р°: repairo.info@mail.ru</span></li>
+                        <li><span class="footer__link">Наша почта: repairo.info@mail.ru</span></li>
                     </ul>
                 </div>
             </div>
             <div class="footer__bottom">
                 <p class="disclaimer">
-    РђРґРјРёРЅРёСЃС‚СЂР°С†РёСЏ СЃР°Р№С‚Р° РЅРµ РЅРµСЃС‘С‚ РѕС‚РІРµС‚СЃС‚РІРµРЅРЅРѕСЃС‚Рё Р·Р° РІРѕР·РјРѕР¶РЅС‹Рµ РїРѕРІСЂРµР¶РґРµРЅРёСЏ С‚РµС…РЅРёРєРё
-    Рё РёРЅС‹Рµ РїРѕСЃР»РµРґСЃС‚РІРёСЏ, РІРѕР·РЅРёРєС€РёРµ РІ СЂРµР·СѓР»СЊС‚Р°С‚Рµ СЃР°РјРѕСЃС‚РѕСЏС‚РµР»СЊРЅРѕРіРѕ СЂРµРјРѕРЅС‚Р° РїРѕ
-    РјР°С‚РµСЂРёР°Р»Р°Рј Рё РёРЅСЃС‚СЂСѓРєС†РёСЏРј, СЂР°Р·РјРµС‰С‘РЅРЅС‹Рј РЅР° СЃР°Р№С‚Рµ. Р’СЃРµ СЂР°Р±РѕС‚С‹ РІС‹ РІС‹РїРѕР»РЅСЏРµС‚Рµ
-    РЅР° СЃРІРѕР№ СЃС‚СЂР°С… Рё СЂРёСЃРє.
+    Администрация сайта не несёт ответственности за возможные повреждения техники
+    и иные последствия, возникшие в результате самостоятельного ремонта по
+    материалам и инструкциям, размещённым на сайте. Все работы вы выполняете
+    на свой страх и риск.
     </p>
-                <p class="footer__copyright">В© 2026 Repairo. Р’СЃРµ РїСЂР°РІР° Р·Р°С‰РёС‰РµРЅС‹.</p>
+                <p class="footer__copyright">© 2026 Repairo. Все права защищены.</p>
             </div>
         </div>
     </footer>
@@ -761,56 +720,56 @@
 {
   "@context": "https://schema.org",
   "@type": "HowTo",
-  "name": "РћРїС‚РёРјР°Р»СЊРЅС‹Рµ РЅР°СЃС‚СЂРѕР№РєРё Ray Tracing РІ Alan Wake 2",
-  "description": "РџРѕС€Р°РіРѕРІР°СЏ РёРЅСЃС‚СЂСѓРєС†РёСЏ: РћРїС‚РёРјР°Р»СЊРЅС‹Рµ РЅР°СЃС‚СЂРѕР№РєРё Ray Tracing РІ Alan Wake 2. Alan Wake 2 вЂ” РѕРґРЅР° РёР· СЃР°РјС‹С… С‚РµС…РЅРѕР»РѕРіРёС‡РЅС‹С… РёРіСЂ РїРѕСЃР»РµРґРЅРёС… Р»РµС‚, РіРґРµ С‚СЂР°СЃСЃРёСЂРѕРІРєР° Р»СѓС‡.... РЎ...",
+  "name": "Оптимальные настройки Ray Tracing в Alan Wake 2",
+  "description": "Пошаговая инструкция: Оптимальные настройки Ray Tracing в Alan Wake 2. Alan Wake 2 — одна из самых технологичных игр последних лет, где трассировка луч.... С...",
   "totalTime": "PT30M",
   "step": [
     {
       "@type": "HowToStep",
-      "name": "Р’РІРµРґРµРЅРёРµ: РїРѕС‡РµРјСѓ Ray Tracing РІР°Р¶РµРЅ РґР»СЏ Alan Wake 2?",
-      "text": "Р’РІРµРґРµРЅРёРµ: РїРѕС‡РµРјСѓ Ray Tracing РІР°Р¶РµРЅ РґР»СЏ Alan Wake 2?",
+      "name": "Введение: почему Ray Tracing важен для Alan Wake 2?",
+      "text": "Введение: почему Ray Tracing важен для Alan Wake 2?",
       "url": "#step-1"
     },
     {
       "@type": "HowToStep",
-      "name": "РўР°Р±Р»РёС†Р°: СЂРµР¶РёРјС‹ Ray Tracing РІ Alan Wake 2",
-      "text": "РўР°Р±Р»РёС†Р°: СЂРµР¶РёРјС‹ Ray Tracing РІ Alan Wake 2",
+      "name": "Таблица: режимы Ray Tracing в Alan Wake 2",
+      "text": "Таблица: режимы Ray Tracing в Alan Wake 2",
       "url": "#step-2"
     },
     {
       "@type": "HowToStep",
-      "name": "РџРѕС€Р°РіРѕРІР°СЏ РёРЅСЃС‚СЂСѓРєС†РёСЏ: РєР°Рє РІРєР»СЋС‡РёС‚СЊ Рё РЅР°СЃС‚СЂРѕРёС‚СЊ Ray Tracing РІ Alan Wake 2",
-      "text": "РџРѕС€Р°РіРѕРІР°СЏ РёРЅСЃС‚СЂСѓРєС†РёСЏ: РєР°Рє РІРєР»СЋС‡РёС‚СЊ Рё РЅР°СЃС‚СЂРѕРёС‚СЊ Ray Tracing РІ Alan Wake 2",
+      "name": "Пошаговая инструкция: как включить и настроить Ray Tracing в Alan Wake 2",
+      "text": "Пошаговая инструкция: как включить и настроить Ray Tracing в Alan Wake 2",
       "url": "#step-3"
     },
     {
       "@type": "HowToStep",
-      "name": "РўР°Р±Р»РёС†Р°: РІР»РёСЏРЅРёРµ Ray Tracing РЅР° РїСЂРѕРёР·РІРѕРґРёС‚РµР»СЊРЅРѕСЃС‚СЊ (РїРѕ С‚РµСЃС‚Р°Рј Digital Foundry, Overclockers, GameGPU)",
-      "text": "РўР°Р±Р»РёС†Р°: РІР»РёСЏРЅРёРµ Ray Tracing РЅР° РїСЂРѕРёР·РІРѕРґРёС‚РµР»СЊРЅРѕСЃС‚СЊ (РїРѕ С‚РµСЃС‚Р°Рј Digital Foundry, Overclockers, GameGPU)",
+      "name": "Таблица: влияние Ray Tracing на производительность (по тестам Digital Foundry, Overclockers, GameGPU)",
+      "text": "Таблица: влияние Ray Tracing на производительность (по тестам Digital Foundry, Overclockers, GameGPU)",
       "url": "#step-4"
     },
     {
       "@type": "HowToStep",
-      "name": "РЎСЂР°РІРЅРµРЅРёРµ: Ray Tracing vs Path Tracing РІ Alan Wake 2",
-      "text": "РЎСЂР°РІРЅРµРЅРёРµ: Ray Tracing vs Path Tracing РІ Alan Wake 2",
+      "name": "Сравнение: Ray Tracing vs Path Tracing в Alan Wake 2",
+      "text": "Сравнение: Ray Tracing vs Path Tracing в Alan Wake 2",
       "url": "#step-5"
     },
     {
       "@type": "HowToStep",
-      "name": "Р›Р°Р№С„С…Р°РєРё Рё СЃРѕРІРµС‚С‹ РїРѕ РѕРїС‚РёРјРёР·Р°С†РёРё Ray Tracing РІ Alan Wake 2",
-      "text": "Р›Р°Р№С„С…Р°РєРё Рё СЃРѕРІРµС‚С‹ РїРѕ РѕРїС‚РёРјРёР·Р°С†РёРё Ray Tracing РІ Alan Wake 2",
+      "name": "Лайфхаки и советы по оптимизации Ray Tracing в Alan Wake 2",
+      "text": "Лайфхаки и советы по оптимизации Ray Tracing в Alan Wake 2",
       "url": "#step-6"
     },
     {
       "@type": "HowToStep",
-      "name": "FAQ вЂ“ С‡Р°СЃС‚Рѕ Р·Р°РґР°РІР°РµРјС‹Рµ РІРѕРїСЂРѕСЃС‹ Рѕ Ray Tracing РІ Alan Wake 2",
-      "text": "FAQ вЂ“ С‡Р°СЃС‚Рѕ Р·Р°РґР°РІР°РµРјС‹Рµ РІРѕРїСЂРѕСЃС‹ Рѕ Ray Tracing РІ Alan Wake 2",
+      "name": "FAQ – часто задаваемые вопросы о Ray Tracing в Alan Wake 2",
+      "text": "FAQ – часто задаваемые вопросы о Ray Tracing в Alan Wake 2",
       "url": "#step-7"
     },
     {
       "@type": "HowToStep",
-      "name": "РџРѕС€Р°РіРѕРІР°СЏ РёРЅСЃС‚СЂСѓРєС†РёСЏ: РєР°Рє РїРѕРІС‹СЃРёС‚СЊ FPS СЃ Ray Tracing РІ Alan Wake 2",
-      "text": "РџРѕС€Р°РіРѕРІР°СЏ РёРЅСЃС‚СЂСѓРєС†РёСЏ: РєР°Рє РїРѕРІС‹СЃРёС‚СЊ FPS СЃ Ray Tracing РІ Alan Wake 2",
+      "name": "Пошаговая инструкция: как повысить FPS с Ray Tracing в Alan Wake 2",
+      "text": "Пошаговая инструкция: как повысить FPS с Ray Tracing в Alan Wake 2",
       "url": "#step-8"
     }
   ],
@@ -821,4 +780,8 @@
 <script src="../cookie-consent.js"></script>
 </body>
 </html>
+
+
+
+
 

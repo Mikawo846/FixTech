@@ -4,61 +4,34 @@
 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>РљСѓРґР° РґРµР»Р°С‚СЊ СЂРµР·РµСЂРІРЅС‹Рµ РєРѕРїРёРё: РѕР±Р»Р°РєРѕ РёР»Рё РІРЅРµС€РЅРёР№ РґРёСЃРє | РЎСЂР°РІРЅРµРЅРёРµ Рё СЂРµРєРѕРјРµРЅРґР°С†РёРё</title>
-    <meta name="description" content="{{ description }}">
-    <meta name="description" content="РџРѕС€Р°РіРѕРІР°СЏ РёРЅСЃС‚СЂСѓРєС†РёСЏ: Р§С‚Рѕ РІС‹Р±СЂР°С‚СЊ РґР»СЏ Р±СЌРєР°РїР° РЅРѕСѓС‚Р±СѓРєР°: РѕР±Р»Р°РєРѕ, РІРЅРµС€РЅРёР№ РґРёСЃРє РёР»Рё РёС… РєРѕРјР±РёРЅР°С†РёСЋ. РџРѕРґСЂРѕР±РЅРѕРµ СЃСЂР°РІРЅРµРЅРёРµ РѕР±Р»Р°С‡РЅС‹С… С…СЂР°РЅРёР»РёС‰ Рё С„РёР·РёС‡РµСЃРєРёС… РЅР°РєРѕРїРёС‚РµР»РµР№ РґР»СЏ СЂРµР·РµСЂРІРЅРѕРіРѕ РєРѕРїРёСЂРѕРІР°РЅРёСЏ.">
+  <title>Куда делать резервные копии: облако или внешний диск | Сравн</title>
+    <meta name="description" content="">
 
   <link rel="stylesheet" href="../styles.css" />
   <link rel="stylesheet" href="../styles-header.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-
   <style>
     .guide-content { line-height: 1.7; color: var(--text); }
-    .guide-content h2 { color: var(--primary); margin-top: 30px; margin-bottom: 15px; font-size: 1.6rem; }
-    .guide-content h3 { color: var(--primary-dark); margin-top: 25px; margin-bottom: 12px; font-size: 1.25rem; }
+    .guide-content h2 { color: var(--primary); margin-top: 30px; margin-bottom: 15px; font-size: 1.5rem; }
+    .guide-content h3 { color: var(--primary-dark); margin-top: 25px; margin-bottom: 12px; font-size: 1.2rem; }
     .guide-image-block { margin: 20px 0; padding: 15px; background: var(--background); border-radius: var(--border-radius); border: 1px solid var(--border); text-align: center; }
     .guide-image-block img { max-width: 100%; height: auto; border-radius: 6px; border: 1px solid var(--border); }
     .image-caption { margin-top: 10px; font-size: 0.85rem; color: var(--text-light); font-style: italic; }
-    table { width: 100%; border-collapse: collapse; margin: 20px 0; }
-    th, td { border: 1px solid var(--border); padding: 8px; text-align: left; vertical-align: top; }
-    th { background: var(--background-light); }
-    code { background: rgba(0,0,0,0.04); padding: 1px 4px; border-radius: 3px; }
-    ul, ol { padding-left: 18px; }
-    .check-section { padding: 15px; border-radius: 6px; border: 1px dashed var(--border); margin: 18px 0; background: rgba(0,0,0,0.01); }
-    .check-title { font-weight: 600; margin-bottom: 8px; }
     .pro-tips { background: rgba(3, 74, 79, 0.05); padding: 15px; border-radius: 6px; margin: 20px 0; }
     .pro-tips h4 { color: var(--primary); margin-top: 0; margin-bottom: 12px; font-size: 1.1rem; }
     .tip-item { display: flex; gap: 8px; margin-bottom: 8px; align-items: flex-start; }
-    .ok { color: #0a8f3c; font-weight: 600; }
-    .warn { color: #c97a00; font-weight: 600; }
-    .bad { color: #c62828; font-weight: 600; }
-    .comparison-table { width: 100%; border-collapse: collapse; margin: 20px 0; }
-    .comparison-table th { background: var(--primary); color: white; padding: 12px; text-align: center; }
-    .comparison-table td { padding: 10px; text-align: center; }
-    .comparison-table .feature-col { text-align: left; font-weight: 600; }
-    .pros-cons { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 20px 0; }
-    .pros, .cons { padding: 15px; border-radius: 6px; }
-    .pros { background: rgba(10, 143, 60, 0.1); border-left: 4px solid #0a8f3c; }
-    .cons { background: rgba(198, 40, 40, 0.1); border-left: 4px solid #c62828; }
-    .pros h4, .cons h4 { margin-top: 0; }
-    .recommendation { background: rgba(3, 74, 79, 0.1); padding: 20px; border-radius: 8px; border: 2px solid var(--primary); margin: 25px 0; }
-    .recommendation h4 { color: var(--primary); margin-top: 0; margin-bottom: 10px; }
+    table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+    th, td { border: 1px solid var(--border); padding: 8px; text-align: left; }
+    th { background: var(--background-light); }
+    .highlight { background: #f5f7fa; border-left: 4px solid #2d9cdb; padding: 10px 15px; margin: 20px 0; }
+    .faq-section ul { margin-left: 1em; }
+    .block-section { margin-bottom: 2em; }
     @media (max-width: 768px) {
       .guide-content h2 { font-size: 1.4rem; margin-top: 25px; }
       .guide-image-block { padding: 12px; margin: 15px 0; }
       table, th, td { font-size: 0.95rem; }
-      .pros-cons { grid-template-columns: 1fr; }
     }
-    /* РЇРЅРґРµРєСЃ РњР°СЂРєРµС‚ СЂРµРєР»Р°РјРЅС‹Р№ Р±Р°РЅРЅРµСЂ */
-    .ym-hero-link {
-      display: block;
-      text-decoration: none;
-      color: inherit;
-      max-width: 100%;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    }
-
     /* Р“РѕСЂРёР·РѕРЅС‚Р°Р»СЊРЅС‹Р№ Р±Р°РЅРЅРµСЂ-РєР°СЂС‚РѕС‡РєР° */
     .ym-hero-banner {
       width: 100%;
@@ -110,63 +83,257 @@
       transform: scale(1.02);
     }
 
-    /* РўРµРєСЃС‚РѕРІР°СЏ С‡Р°СЃС‚СЊ Р±Р°РЅРЅРµСЂР° */
+    /* РџСЂР°РІР°СЏ С‡Р°СЃС‚СЊ: РєРѕРЅС‚РµРЅС‚ */
     .ym-hero-content {
-      padding: 12px 16px;
-      text-align: center;
+      padding: 16px 18px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 8px;
     }
 
+    /* РќР°Р·РІР°РЅРёРµ С‚РѕРІР°СЂР° */
     .ym-hero-title {
-      font-size: 13px;
+      font-size: 14px;
       font-weight: 600;
-      color: #1f2937;
+      color: #111827;
+      line-height: 1.3;
       margin: 0 0 4px 0;
-      line-height: 1.3;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
     }
 
-    .ym-hero-desc {
-      font-size: 11px;
+    /* Р РµР№С‚РёРЅРі */
+    .ym-hero-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+    }
+
+    .ym-hero-rating {
+      font-size: 13px;
+      font-weight: 500;
+      color: #111827;
+      background: #f9fafb;
+      border-radius: 999px;
+      padding: 4px 10px;
+    }
+
+    .ym-hero-rating-count {
       color: #6b7280;
-      margin: 0;
-      line-height: 1.3;
     }
 
+    /* Р¤РёРѕР»РµС‚РѕРІР°СЏ РєРЅРѕРїРєР° */
+    .ym-hero-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 9px 16px;
+      border-radius: 999px;
+      border: none;
+      background: #6a00ff;
+      color: #ffffff;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 2px 6px rgba(88, 28, 135, 0.35);
+      transition: background 0.15s ease, transform 0.15s ease,
+                  box-shadow 0.15s ease;
+    }
+    .ym-hero-button::after {
+      content: "в†’";
+      margin-left: 6px;
+      font-size: 14px;
+    }
+    .ym-hero-button:hover {
+      background: #7c3aed;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 10px rgba(88, 28, 135, 0.45);
+    }
+
+    /* Р®СЂРёРґРёС‡РµСЃРєРёР№ Р±Р»РѕРє */
+    .ym-hero-legal {
+      margin-top: 6px;
+      max-width: 600px;
+      font-size: 11px;
+      line-height: 1.3;
+      color: #6b7280;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* РђРґР°РїС‚РёРІ */
     @media (max-width: 480px) {
       .ym-hero-banner {
-        min-height: 120px;
+        max-width: 100%;
+        margin: 20px 0;
       }
       .ym-hero-images {
         height: 100px;
       }
-      .ym-hero-title {
-        font-size: 12px;
+      .ym-hero-content {
+        padding: 12px 12px;
       }
-      .ym-hero-desc {
+      .ym-hero-title {
+        font-size: 13px;
+      }
+      .ym-hero-button {
+        font-size: 13px;
+        padding: 8px 14px;
+      }
+      .ym-hero-legal {
         font-size: 10px;
       }
     }
+    /* Telegram СЂРµРєР»Р°РјРЅС‹Р№ Р±Р°РЅРЅРµСЂ */
+    .telegram-banner {
+      display: flex;
+      justify-content: center;
+      text-decoration: none;
+      color: inherit;
+      width: 100%;
+      margin: 40px 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    .telegram-banner-container {
+      width: 100%;
+      max-width: 500px;
+      min-height: 120px;
+      border-radius: 16px;
+      background: linear-gradient(135deg, #0088cc 0%, #005f8f 100%);
+      border: 1px solid #005f8f;
+      display: flex;
+      align-items: center;
+      padding: 20px;
+      box-shadow: 0 4px 16px rgba(0, 136, 204, 0.2);
+      overflow: hidden;
+      box-sizing: border-box;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .telegram-banner-container:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0, 136, 204, 0.3);
+    }
+
+    .telegram-logo {
+      width: 60px;
+      height: 60px;
+      min-width: 60px;
+      background: #ffffff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 20px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .telegram-logo svg {
+      width: 32px;
+      height: 32px;
+      fill: #0088cc;
+    }
+
+    .telegram-content {
+      flex: 1;
+      color: #ffffff;
+    }
+
+    .telegram-title {
+      font-size: 16px;
+      font-weight: 600;
+      margin: 0 0 8px 0;
+      line-height: 1.3;
+    }
+
+    .telegram-subtitle {
+      font-size: 14px;
+      opacity: 0.9;
+      margin: 0 0 12px 0;
+      line-height: 1.4;
+    }
+
+    .telegram-button {
+      display: inline-flex;
+      align-items: center;
+      padding: 8px 16px;
+      background: #ffffff;
+      color: #0088cc;
+      border-radius: 20px;
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background 0.2s ease, transform 0.2s ease;
+    }
+
+    .telegram-button:hover {
+      background: #f0f8ff;
+      transform: scale(1.05);
+    }
+
+    .telegram-button svg {
+      width: 16px;
+      height: 16px;
+      margin-left: 6px;
+      fill: #0088cc;
+    }
+
+    /* РђРґР°РїС‚РёРІ РґР»СЏ РјРѕР±РёР»СЊРЅС‹С… */
+    @media (max-width: 480px) {
+      .telegram-banner-container {
+        max-width: 100%;
+        margin: 20px 0;
+        padding: 15px;
+        min-height: 100px;
+      }
+      .telegram-logo {
+        width: 50px;
+        height: 50px;
+        min-width: 50px;
+        margin-right: 15px;
+      }
+      .telegram-logo svg {
+        width: 26px;
+        height: 26px;
+      }
+      .telegram-title {
+        font-size: 14px;
+      }
+      .telegram-subtitle {
+        font-size: 12px;
+      }
+      .telegram-button {
+        font-size: 12px;
+        padding: 6px 12px;
+      }
+    }
+
+
+
   </style>
+  <script async src="https://timeweb.cloud/api/v1/cloud-ai/agents/3cc03620-d051-4d8d-b5af-f7b6cd083a35/embed.js?collapsed=true"></script>
 </head>
 <body>
-
   <header class="header">
     <div class="container">
       <div class="header__inner">
         <a href="../index.html" class="logo">
-          <img src="../logo.svg" alt="Repairo" width="40" height="40">
-          <span>Repairo</span>
+          <span class="logo__icon"></span>
+          <span class="logo__text">GeoExpert</span>
         </a>
         <nav class="nav">
-          <a href="../index.html">Р“Р»Р°РІРЅР°СЏ</a>
-          <a href="../laptops.html">РќРѕСѓС‚Р±СѓРєРё</a>
-          <a href="../smartphones.html">РЎРјР°СЂС‚С„РѕРЅС‹</a>
-          <a href="../consoles.html">РљРѕРЅСЃРѕР»Рё</a>
-          <a href="../cameras.html">Р¤РѕС‚РѕР°РїРїР°СЂР°С‚С‹</a>
-          <a href="../tv.html">РўРµР»РµРІРёР·РѕСЂС‹</a>
+          <ul class="nav__list">
+            <li><a href="../cameras.html" class="nav__link">РљР°РјРµСЂС‹</a></li>
+            <li><a href="../drones.html" class="nav__link">Р”СЂРѕРЅС‹</a></li>
+            <li><a href="../workflow.html" class="nav__link">Workflow</a></li>
+          </ul>
         </nav>
-        <button class="theme-toggle" aria-label="РџРµСЂРµРєР»СЋС‡РёС‚СЊ С‚РµРјСѓ">
-          <i class="fas fa-moon"></i>
-        </button>
       </div>
     </div>
   </header>
@@ -174,87 +341,87 @@
   <main class="main">
     <div class="container">
       <div class="guide-content">
-        <h1>РљСѓРґР° РґРµР»Р°С‚СЊ СЂРµР·РµСЂРІРЅС‹Рµ РєРѕРїРёРё: РѕР±Р»Р°РєРѕ РёР»Рё РІРЅРµС€РЅРёР№ РґРёСЃРє</h1>
+        <h1>Куда делать резервные копии: облако или внешний диск</h1>
         
-        <p>Р’С‹Р±РѕСЂ РјРµСЃС‚Р° РґР»СЏ С…СЂР°РЅРµРЅРёСЏ СЂРµР·РµСЂРІРЅС‹С… РєРѕРїРёР№ вЂ” РѕРґРЅРѕ РёР· РІР°Р¶РЅРµР№С€РёС… СЂРµС€РµРЅРёР№ РїСЂРё РЅР°СЃС‚СЂРѕР№РєРµ Р±СЌРєР°РїР° РЅРѕСѓС‚Р±СѓРєР°. РљР°Р¶РґС‹Р№ РІР°СЂРёР°РЅС‚ РёРјРµРµС‚ СЃРІРѕРё РїСЂРµРёРјСѓС‰РµСЃС‚РІР° Рё РЅРµРґРѕСЃС‚Р°С‚РєРё. Р”Р°РІР°Р№С‚Рµ РїРѕРґСЂРѕР±РЅРѕ СЂР°Р·Р±РµСЂРµРј, С‡С‚Рѕ Р»СѓС‡С€Рµ РІС‹Р±СЂР°С‚СЊ: РѕР±Р»Р°С‡РЅРѕРµ С…СЂР°РЅРёР»РёС‰Рµ, РІРЅРµС€РЅРёР№ Р¶РµСЃС‚РєРёР№ РґРёСЃРє РёР»Рё РёС… РєРѕРјР±РёРЅР°С†РёСЋ.</p>
+        <p>Выбор места для хранения резервных копий — одно из важнейших решений при настройке бэкапа ноутбука. Каждый вариант имеет свои преимущества и недостатки. Давайте подробно разберем, что лучше выбрать: облачное хранилище, внешний жесткий диск или их комбинацию.</p>
 
         <div class="guide-image-block">
-          <img src="https://avatars.mds.yandex.net/get-shedevrum/15247318/img_bb8da9b637b611f0a65652d8e6a785d9/orig" alt="РЎСЂР°РІРЅРµРЅРёРµ РѕР±Р»Р°С‡РЅРѕРіРѕ С…СЂР°РЅРёР»РёС‰Р° Рё РІРЅРµС€РЅРµРіРѕ РґРёСЃРєР° РґР»СЏ Р±СЌРєР°РїР°">
-          <div class="image-caption">РћР±Р»Р°С‡РЅРѕРµ С…СЂР°РЅРёР»РёС‰Рµ vs РІРЅРµС€РЅРёР№ РґРёСЃРє РґР»СЏ СЂРµР·РµСЂРІРЅС‹С… РєРѕРїРёР№</div>
+          <img src="https://avatars.mds.yandex.net/get-shedevrum/15247318/img_bb8da9b637b611f0a65652d8e6a785d9/orig" alt="Сравнение облачного хранилища и внешнего диска для бэкапа">
+          <div class="image-caption">Облачное хранилище vs внешний диск для резервных копий</div>
         </div>
 
-        <h2>Р’РЅРµС€РЅРёРµ РЅР°РєРѕРїРёС‚РµР»Рё: HDD, SSD Рё С„Р»РµС€РєРё</h2>
+        <h2>Внешние накопители: HDD, SSD и флешки</h2>
 
-        <h3>Р’РЅРµС€РЅРёРµ Р¶РµСЃС‚РєРёРµ РґРёСЃРєРё (HDD)</h3>
+        <h3>Внешние жесткие диски (HDD)</h3>
         
         <div class="pros-cons">
           <div class="pros">
-            <h4><i class="fas fa-plus-circle"></i> РџСЂРµРёРјСѓС‰РµСЃС‚РІР°</h4>
+            <h4><i class="fas fa-plus-circle"></i> Преимущества</h4>
             <ul>
-              <li><strong>Р‘РѕР»СЊС€РѕР№ РѕР±СЉРµРј</strong> вЂ” РґРѕ 10 РўР‘ РїРѕ РґРѕСЃС‚СѓРїРЅРѕР№ С†РµРЅРµ</li>
-              <li><strong>Р’С‹СЃРѕРєР°СЏ СЃРєРѕСЂРѕСЃС‚СЊ Р·Р°РїРёСЃРё</strong> вЂ” Р±С‹СЃС‚СЂРµРµ РёРЅС‚РµСЂРЅРµС‚Р°</li>
-              <li><strong>РћРґРЅРѕРєСЂР°С‚РЅР°СЏ РѕРїР»Р°С‚Р°</strong> вЂ” РЅРµС‚ РµР¶РµРјРµСЃСЏС‡РЅС‹С… РїР»Р°С‚РµР¶РµР№</li>
-              <li><strong>РџРѕР»РЅС‹Р№ РєРѕРЅС‚СЂРѕР»СЊ</strong> вЂ” РґР°РЅРЅС‹Рµ РІСЃРµРіРґР° РїРѕРґ СЂСѓРєРѕР№</li>
-              <li><strong>Р Р°Р±РѕС‚Р°РµС‚ Р±РµР· РёРЅС‚РµСЂРЅРµС‚Р°</strong> вЂ” РґРѕСЃС‚СѓРї РІ Р»СЋР±РѕР№ РјРѕРјРµРЅС‚</li>
+              <li><strong>Большой объем</strong> — до 10 ТБ по доступной цене</li>
+              <li><strong>Высокая скорость записи</strong> — быстрее интернета</li>
+              <li><strong>Однократная оплата</strong> — нет ежемесячных платежей</li>
+              <li><strong>Полный контроль</strong> — данные всегда под рукой</li>
+              <li><strong>Работает без интернета</strong> — доступ в любой момент</li>
             </ul>
           </div>
           <div class="cons">
-            <h4><i class="fas fa-minus-circle"></i> РќРµРґРѕСЃС‚Р°С‚РєРё</h4>
+            <h4><i class="fas fa-minus-circle"></i> Недостатки</h4>
             <ul>
-              <li><strong>Р РёСЃРє РїРѕР»РѕРјРєРё</strong> вЂ” РјРµС…Р°РЅРёС‡РµСЃРєРёРµ РєРѕРјРїРѕРЅРµРЅС‚С‹</li>
-              <li><strong>РЈРіСЂРѕР·Р° РєСЂР°Р¶Рё</strong> вЂ” С„РёР·РёС‡РµСЃРєРѕРµ С…СЂР°РЅРµРЅРёРµ</li>
-              <li><strong>РћРіСЂР°РЅРёС‡РµРЅРЅР°СЏ РїРѕСЂС‚Р°С‚РёРІРЅРѕСЃС‚СЊ</strong> вЂ” РЅСѓР¶РЅРѕ РЅРѕСЃРёС‚СЊ СЃ СЃРѕР±РѕР№</li>
-              <li><strong>Р РёСЃРє РїРѕРІСЂРµР¶РґРµРЅРёСЏ</strong> вЂ” РїСЂРё РїР°РґРµРЅРёСЏС… РёР»Рё СѓРґР°СЂР°С…</li>
-              <li><strong>РўСЂРµР±СѓРµС‚ РїРѕРґРєР»СЋС‡РµРЅРёСЏ</strong> вЂ” РЅСѓР¶РµРЅ USB-РїРѕСЂС‚</li>
+              <li><strong>Риск поломки</strong> — механические компоненты</li>
+              <li><strong>Угроза кражи</strong> — физическое хранение</li>
+              <li><strong>Ограниченная портативность</strong> — нужно носить с собой</li>
+              <li><strong>Риск повреждения</strong> — при падениях или ударах</li>
+              <li><strong>Требует подключения</strong> — нужен USB-порт</li>
             </ul>
           </div>
         </div>
 
-        <h3>Р’РЅРµС€РЅРёРµ SSD-РЅР°РєРѕРїРёС‚РµР»Рё</h3>
+        <h3>Внешние SSD-накопители</h3>
 
         <div class="pros-cons">
           <div class="pros">
-            <h4><i class="fas fa-plus-circle"></i> РџСЂРµРёРјСѓС‰РµСЃС‚РІР°</h4>
+            <h4><i class="fas fa-plus-circle"></i> Преимущества</h4>
             <ul>
-              <li><strong>Р’С‹СЃРѕРєР°СЏ СЃРєРѕСЂРѕСЃС‚СЊ</strong> вЂ” С‡С‚РµРЅРёРµ/Р·Р°РїРёСЃСЊ РІ СЂР°Р·С‹ Р±С‹СЃС‚СЂРµРµ HDD</li>
-              <li><strong>РќР°РґРµР¶РЅРѕСЃС‚СЊ</strong> вЂ” РЅРµС‚ РґРІРёР¶СѓС‰РёС…СЃСЏ С‡Р°СЃС‚РµР№</li>
-              <li><strong>РљРѕРјРїР°РєС‚РЅРѕСЃС‚СЊ</strong> вЂ” РјР°Р»РµРЅСЊРєРёР№ СЂР°Р·РјРµСЂ Рё РІРµСЃ</li>
-              <li><strong>РќРёР·РєРѕРµ СЌРЅРµСЂРіРѕРїРѕС‚СЂРµР±Р»РµРЅРёРµ</strong> вЂ” РЅРµ СЂР°Р·СЂСЏР¶Р°РµС‚ РЅРѕСѓС‚Р±СѓРє</li>
-              <li><strong>РўРёС…Р°СЏ СЂР°Р±РѕС‚Р°</strong> вЂ” РЅРµС‚ С€СѓРјР° РѕС‚ РІСЂР°С‰РµРЅРёСЏ РґРёСЃРєР°</li>
+              <li><strong>Высокая скорость</strong> — чтение/запись в разы быстрее HDD</li>
+              <li><strong>Надежность</strong> — нет движущихся частей</li>
+              <li><strong>Компактность</strong> — маленький размер и вес</li>
+              <li><strong>Низкое энергопотребление</strong> — не разряжает ноутбук</li>
+              <li><strong>Тихая работа</strong> — нет шума от вращения диска</li>
             </ul>
           </div>
           <div class="cons">
-            <h4><i class="fas fa-minus-circle"></i> РќРµРґРѕСЃС‚Р°С‚РєРё</h4>
+            <h4><i class="fas fa-minus-circle"></i> Недостатки</h4>
             <ul>
-              <li><strong>Р’С‹СЃРѕРєР°СЏ С†РµРЅР°</strong> вЂ” РґРѕСЂРѕР¶Рµ HDD Р·Р° С‚РѕС‚ Р¶Рµ РѕР±СЉРµРј</li>
-              <li><strong>РћРіСЂР°РЅРёС‡РµРЅРЅС‹Р№ РѕР±СЉРµРј</strong> вЂ” РѕР±С‹С‡РЅРѕ РґРѕ 4 РўР‘</li>
-              <li><strong>РћРіСЂР°РЅРёС‡РµРЅРЅС‹Р№ СЂРµСЃСѓСЂСЃ Р·Р°РїРёСЃРё</strong> вЂ” РёР·РЅРѕСЃ СЏС‡РµРµРє РїР°РјСЏС‚Рё</li>
+              <li><strong>Высокая цена</strong> — дороже HDD за тот же объем</li>
+              <li><strong>Ограниченный объем</strong> — обычно до 4 ТБ</li>
+              <li><strong>Ограниченный ресурс записи</strong> — износ ячеек памяти</li>
             </ul>
           </div>
         </div>
 
-        <h2>РћР±Р»Р°С‡РЅС‹Рµ С…СЂР°РЅРёР»РёС‰Р°</h2>
+        <h2>Облачные хранилища</h2>
 
         <h3>OneDrive (Microsoft)</h3>
 
         <div class="pros-cons">
           <div class="pros">
-            <h4><i class="fas fa-plus-circle"></i> РџСЂРµРёРјСѓС‰РµСЃС‚РІР°</h4>
+            <h4><i class="fas fa-plus-circle"></i> Преимущества</h4>
             <ul>
-              <li><strong>РРЅС‚РµРіСЂР°С†РёСЏ СЃ Windows</strong> вЂ” РІСЃС‚СЂРѕРµРЅРЅР°СЏ СЃРёРЅС…СЂРѕРЅРёР·Р°С†РёСЏ</li>
-              <li><strong>РђРІС‚РѕРјР°С‚РёС‡РµСЃРєРѕРµ СЂРµР·РµСЂРІРёСЂРѕРІР°РЅРёРµ</strong> вЂ” РїР°РїРєРё Desktop, Documents</li>
-              <li><strong>5 Р“Р‘ Р±РµСЃРїР»Р°С‚РЅРѕ</strong> вЂ” Р±Р°Р·РѕРІС‹Р№ С‚Р°СЂРёС„</li>
-              <li><strong>Р’РµСЂСЃРёРё С„Р°Р№Р»РѕРІ</strong> вЂ” С…СЂР°РЅРёС‚ РїСЂРµРґС‹РґСѓС‰РёРµ РІРµСЂСЃРёРё</li>
-              <li><strong>Р”РѕСЃС‚СѓРї СЃ Р»СЋР±РѕРіРѕ СѓСЃС‚СЂРѕР№СЃС‚РІР°</strong> вЂ” РІРµР±, РјРѕР±РёР»СЊРЅС‹Рµ РїСЂРёР»РѕР¶РµРЅРёСЏ</li>
+              <li><strong>Интеграция с Windows</strong> — встроенная синхронизация</li>
+              <li><strong>Автоматическое резервирование</strong> — папки Desktop, Documents</li>
+              <li><strong>5 ГБ бесплатно</strong> — базовый тариф</li>
+              <li><strong>Версии файлов</strong> — хранит предыдущие версии</li>
+              <li><strong>Доступ с любого устройства</strong> — веб, мобильные приложения</li>
             </ul>
           </div>
           <div class="cons">
-            <h4><i class="fas fa-minus-circle"></i> РќРµРґРѕСЃС‚Р°С‚РєРё</h4>
+            <h4><i class="fas fa-minus-circle"></i> Недостатки</h4>
             <ul>
-              <li><strong>РџР»Р°С‚РЅС‹Рµ С‚Р°СЂРёС„С‹</strong> вЂ” РѕС‚ 100в‚Ѕ/РјРµСЃСЏС† Р·Р° 100 Р“Р‘</li>
-              <li><strong>Р—Р°РІРёСЃРёРјРѕСЃС‚СЊ РѕС‚ РёРЅС‚РµСЂРЅРµС‚Р°</strong> вЂ” Р±РµР· СЃРµС‚Рё РЅРµС‚ РґРѕСЃС‚СѓРїР°</li>
-              <li><strong>РћРіСЂР°РЅРёС‡РµРЅРЅР°СЏ СЃРєРѕСЂРѕСЃС‚СЊ</strong> вЂ” Р·Р°РІРёСЃРёС‚ РѕС‚ РїРѕРґРєР»СЋС‡РµРЅРёСЏ</li>
-              <li><strong>РљРѕРЅС„РёРґРµРЅС†РёР°Р»СЊРЅРѕСЃС‚СЊ</strong> вЂ” РґР°РЅРЅС‹Рµ РЅР° СЃРµСЂРІРµСЂР°С… Microsoft</li>
+              <li><strong>Платные тарифы</strong> — от 100?/месяц за 100 ГБ</li>
+              <li><strong>Зависимость от интернета</strong> — без сети нет доступа</li>
+              <li><strong>Ограниченная скорость</strong> — зависит от подключения</li>
+              <li><strong>Конфиденциальность</strong> — данные на серверах Microsoft</li>
             </ul>
           </div>
         </div>
@@ -263,202 +430,194 @@
 
         <div class="pros-cons">
           <div class="pros">
-            <h4><i class="fas fa-plus-circle"></i> РџСЂРµРёРјСѓС‰РµСЃС‚РІР°</h4>
+            <h4><i class="fas fa-plus-circle"></i> Преимущества</h4>
             <ul>
-              <li><strong>15 Р“Р‘ Р±РµСЃРїР»Р°С‚РЅРѕ</strong> вЂ” Р±РѕР»СЊС€Рµ С‡РµРј Сѓ РєРѕРЅРєСѓСЂРµРЅС‚РѕРІ</li>
-              <li><strong>РРЅС‚РµРіСЂР°С†РёСЏ СЃ Google</strong> вЂ” Docs, Sheets, Photos</li>
-              <li><strong>РњРѕС‰РЅС‹Р№ РїРѕРёСЃРє</strong> вЂ” РЅР°С…РѕРґРёС‚ С„Р°Р№Р»С‹ РїРѕ СЃРѕРґРµСЂР¶РёРјРѕРјСѓ</li>
-              <li><strong>РЎРѕРІРјРµСЃС‚РЅР°СЏ СЂР°Р±РѕС‚Р°</strong> вЂ” СѓРґРѕР±РЅС‹Р№ РѕР±РјРµРЅ С„Р°Р№Р»Р°РјРё</li>
-              <li><strong>РђРІС‚РѕСЃРѕС…СЂР°РЅРµРЅРёРµ СЃ Android</strong> вЂ” С„РѕС‚Рѕ Рё РІРёРґРµРѕ</li>
+              <li><strong>15 ГБ бесплатно</strong> — больше чем у конкурентов</li>
+              <li><strong>Интеграция с Google</strong> — Docs, Sheets, Photos</li>
+              <li><strong>Мощный поиск</strong> — находит файлы по содержимому</li>
+              <li><strong>Совместная работа</strong> — удобный обмен файлами</li>
+              <li><strong>Автосохранение с Android</strong> — фото и видео</li>
             </ul>
           </div>
           <div class="cons">
-            <h4><i class="fas fa-minus-circle"></i> РќРµРґРѕСЃС‚Р°С‚РєРё</h4>
+            <h4><i class="fas fa-minus-circle"></i> Недостатки</h4>
             <ul>
-              <li><strong>Р”РѕСЂРѕРіРёРµ С‚Р°СЂРёС„С‹</strong> вЂ” РѕС‚ 170в‚Ѕ/РјРµСЃСЏС† Р·Р° 100 Р“Р‘</li>
-              <li><strong>РЎР»РѕР¶РЅР°СЏ РЅР°РІРёРіР°С†РёСЏ</strong> вЂ” РјРЅРѕРіРѕ С„СѓРЅРєС†РёР№</li>
-              <li><strong>Р РµРєР»Р°РјР°</strong> вЂ” РЅР° Р±РµСЃРїР»Р°С‚РЅС‹С… С‚Р°СЂРёС„Р°С…</li>
+              <li><strong>Дорогие тарифы</strong> — от 170?/месяц за 100 ГБ</li>
+              <li><strong>Сложная навигация</strong> — много функций</li>
+              <li><strong>Реклама</strong> — на бесплатных тарифах</li>
             </ul>
           </div>
         </div>
 
-        <h3>РЇРЅРґРµРєСЃ.Р”РёСЃРє</h3>
+        <h3>Яндекс.Диск</h3>
 
         <div class="pros-cons">
           <div class="pros">
-            <h4><i class="fas fa-plus-circle"></i> РџСЂРµРёРјСѓС‰РµСЃС‚РІР°</h4>
+            <h4><i class="fas fa-plus-circle"></i> Преимущества</h4>
             <ul>
-              <li><strong>РЎРµСЂРІРµСЂС‹ РІ Р РѕСЃСЃРёРё</strong> вЂ” СЃРѕРѕС‚РІРµС‚СЃС‚РІСѓРµС‚ Р·Р°РєРѕРЅРѕРґР°С‚РµР»СЊСЃС‚РІСѓ</li>
-              <li><strong>10 Р“Р‘ Р±РµСЃРїР»Р°С‚РЅРѕ</strong> вЂ” С‰РµРґСЂС‹Р№ СЃС‚Р°СЂС‚РѕРІС‹Р№ С‚Р°СЂРёС„</li>
-              <li><strong>РРЅС‚РµРіСЂР°С†РёСЏ СЃ РџРѕС‡С‚РѕР№</strong> вЂ” СѓРґРѕР±РЅР°СЏ РѕС‚РїСЂР°РІРєР° С„Р°Р№Р»РѕРІ</li>
-              <li><strong>Р‘С‹СЃС‚СЂС‹Рµ СЃРµСЂРІРµСЂС‹</strong> вЂ” С…РѕСЂРѕС€Р°СЏ СЃРєРѕСЂРѕСЃС‚СЊ РІ Р Р¤</li>
-              <li><strong>РђРІС‚РѕР·Р°РіСЂСѓР·РєР°</strong> вЂ” СЃ РјРѕР±РёР»СЊРЅС‹С… СѓСЃС‚СЂРѕР№СЃС‚РІ</li>
+              <li><strong>Серверы в России</strong> — соответствует законодательству</li>
+              <li><strong>10 ГБ бесплатно</strong> — щедрый стартовый тариф</li>
+              <li><strong>Интеграция с Почтой</strong> — удобная отправка файлов</li>
+              <li><strong>Быстрые серверы</strong> — хорошая скорость в РФ</li>
+              <li><strong>Автозагрузка</strong> — с мобильных устройств</li>
             </ul>
           </div>
           <div class="cons">
-            <h4><i class="fas fa-minus-circle"></i> РќРµРґРѕСЃС‚Р°С‚РєРё</h4>
+            <h4><i class="fas fa-minus-circle"></i> Недостатки</h4>
             <ul>
-              <li><strong>РњРµРЅСЊС€Рµ С„СѓРЅРєС†РёР№</strong> вЂ” С‡РµРј Сѓ Р·Р°РїР°РґРЅС‹С… РєРѕРЅРєСѓСЂРµРЅС‚РѕРІ</li>
-              <li><strong>РћРіСЂР°РЅРёС‡РµРЅРЅР°СЏ РёРЅС‚РµРіСЂР°С†РёСЏ</strong> вЂ” СЃ Windows</li>
+              <li><strong>Меньше функций</strong> — чем у западных конкурентов</li>
+              <li><strong>Ограниченная интеграция</strong> — с Windows</li>
             </ul>
           </div>
         </div>
 
-        <h2>РЎСЂР°РІРЅРёС‚РµР»СЊРЅР°СЏ С‚Р°Р±Р»РёС†Р°</h2>
+        <h2>Сравнительная таблица</h2>
 
         <table class="comparison-table">
           <tr>
-            <th class="feature-col">РљСЂРёС‚РµСЂРёР№</th>
-            <th>Р’РЅРµС€РЅРёР№ HDD</th>
-            <th>Р’РЅРµС€РЅРёР№ SSD</th>
-            <th>РћР±Р»Р°РєРѕ</th>
+            <th class="feature-col">Критерий</th>
+            <th>Внешний HDD</th>
+            <th>Внешний SSD</th>
+            <th>Облако</th>
           </tr>
           <tr>
-            <td class="feature-col">РЎС‚РѕРёРјРѕСЃС‚СЊ С…СЂР°РЅРµРЅРёСЏ</td>
-            <td class="ok">РќРёР·РєР°СЏ</td>
-            <td class="warn">РЎСЂРµРґРЅСЏСЏ</td>
-            <td class="bad">Р’С‹СЃРѕРєР°СЏ (РµР¶РµРјРµСЃСЏС‡РЅР°СЏ)</td>
+            <td class="feature-col">Стоимость хранения</td>
+            <td class="ok">Низкая</td>
+            <td class="warn">Средняя</td>
+            <td class="bad">Высокая (ежемесячная)</td>
           </tr>
           <tr>
-            <td class="feature-col">РЎРєРѕСЂРѕСЃС‚СЊ РґРѕСЃС‚СѓРїР°</td>
-            <td class="ok">Р’С‹СЃРѕРєР°СЏ</td>
-            <td class="ok">РћС‡РµРЅСЊ РІС‹СЃРѕРєР°СЏ</td>
-            <td class="warn">Р—Р°РІРёСЃРёС‚ РѕС‚ РёРЅС‚РµСЂРЅРµС‚Р°</td>
+            <td class="feature-col">Скорость доступа</td>
+            <td class="ok">Высокая</td>
+            <td class="ok">Очень высокая</td>
+            <td class="warn">Зависит от интернета</td>
           </tr>
           <tr>
-            <td class="feature-col">РќР°РґРµР¶РЅРѕСЃС‚СЊ</td>
-            <td class="warn">РЎСЂРµРґРЅСЏСЏ</td>
-            <td class="ok">Р’С‹СЃРѕРєР°СЏ</td>
-            <td class="ok">РћС‡РµРЅСЊ РІС‹СЃРѕРєР°СЏ</td>
+            <td class="feature-col">Надежность</td>
+            <td class="warn">Средняя</td>
+            <td class="ok">Высокая</td>
+            <td class="ok">Очень высокая</td>
           </tr>
           <tr>
-            <td class="feature-col">Р”РѕСЃС‚СѓРїРЅРѕСЃС‚СЊ</td>
-            <td class="warn">РўРѕР»СЊРєРѕ РїСЂРё РїРѕРґРєР»СЋС‡РµРЅРёРё</td>
-            <td class="warn">РўРѕР»СЊРєРѕ РїСЂРё РїРѕРґРєР»СЋС‡РµРЅРёРё</td>
-            <td class="ok">РР· Р»СЋР±РѕР№ С‚РѕС‡РєРё РјРёСЂР°</td>
+            <td class="feature-col">Доступность</td>
+            <td class="warn">Только при подключении</td>
+            <td class="warn">Только при подключении</td>
+            <td class="ok">Из любой точки мира</td>
           </tr>
           <tr>
-            <td class="feature-col">РљРѕРЅС‚СЂРѕР»СЊ РґР°РЅРЅС‹С…</td>
-            <td class="ok">РџРѕР»РЅС‹Р№</td>
-            <td class="ok">РџРѕР»РЅС‹Р№</td>
-            <td class="warn">РћРіСЂР°РЅРёС‡РµРЅРЅС‹Р№</td>
+            <td class="feature-col">Контроль данных</td>
+            <td class="ok">Полный</td>
+            <td class="ok">Полный</td>
+            <td class="warn">Ограниченный</td>
           </tr>
           <tr>
-            <td class="feature-col">РњР°СЃС€С‚Р°Р±РёСЂСѓРµРјРѕСЃС‚СЊ</td>
-            <td class="bad">РћРіСЂР°РЅРёС‡РµРЅР°</td>
-            <td class="bad">РћРіСЂР°РЅРёС‡РµРЅР°</td>
-            <td class="ok">РќРµРѕРіСЂР°РЅРёС‡РµРЅРЅР°СЏ</td>
+            <td class="feature-col">Масштабируемость</td>
+            <td class="bad">Ограничена</td>
+            <td class="bad">Ограничена</td>
+            <td class="ok">Неограниченная</td>
           </tr>
         </table>
 
-        <h2>РћРїС‚РёРјР°Р»СЊРЅС‹Рµ СЃС†РµРЅР°СЂРёРё РёСЃРїРѕР»СЊР·РѕРІР°РЅРёСЏ</h2>
+        <h2>Оптимальные сценарии использования</h2>
 
-        <h3>Р”Р»СЏ РґРѕРјР° Рё РѕС„РёСЃР°</h3>
+        <h3>Для дома и офиса</h3>
         
         <div class="recommendation">
-          <h4><i class="fas fa-home"></i> Р РµРєРѕРјРµРЅРґР°С†РёСЏ: Р’РЅРµС€РЅРёР№ HDD + РѕР±Р»Р°С‡РЅРѕРµ С…СЂР°РЅРёР»РёС‰Рµ</h4>
-          <p>РСЃРїРѕР»СЊР·СѓР№С‚Рµ РІРЅРµС€РЅРёР№ РґРёСЃРє РґР»СЏ СЂРµРіСѓР»СЏСЂРЅС‹С… Р±СЌРєР°РїРѕРІ СЃРёСЃС‚РµРјС‹ Рё Р±РѕР»СЊС€РёС… С„Р°Р№Р»РѕРІ, Р° РѕР±Р»Р°РєРѕ вЂ” РґР»СЏ РІР°Р¶РЅС‹С… РґРѕРєСѓРјРµРЅС‚РѕРІ Рё СЃРёРЅС…СЂРѕРЅРёР·Р°С†РёРё РјРµР¶РґСѓ СѓСЃС‚СЂРѕР№СЃС‚РІР°РјРё.</p>
+          <h4><i class="fas fa-home"></i> Рекомендация: Внешний HDD + облачное хранилище</h4>
+          <p>Используйте внешний диск для регулярных бэкапов системы и больших файлов, а облако — для важных документов и синхронизации между устройствами.</p>
         </div>
 
-        <h3>Р”Р»СЏ РїСѓС‚РµС€РµСЃС‚РІРёР№ Рё РєРѕРјР°РЅРґРёСЂРѕРІРѕРє</h3>
+        <h3>Для путешествий и командировок</h3>
 
         <div class="recommendation">
-          <h4><i class="fas fa-plane"></i> Р РµРєРѕРјРµРЅРґР°С†РёСЏ: Р’РЅРµС€РЅРёР№ SSD + РѕР±Р»Р°С‡РЅРѕРµ С…СЂР°РЅРёР»РёС‰Рµ</h4>
-          <p>РљРѕРјРїР°РєС‚РЅС‹Р№ SSD РґР»СЏ Р±С‹СЃС‚СЂС‹С… Р±СЌРєР°РїРѕРІ РІ РґРѕСЂРѕРіРµ, РѕР±Р»Р°РєРѕ вЂ” РґР»СЏ РґРѕСЃС‚СѓРїР° Рє РІР°Р¶РЅС‹Рј С„Р°Р№Р»Р°Рј РёР· Р»СЋР±РѕР№ С‚РѕС‡РєРё РјРёСЂР°.</p>
+          <h4><i class="fas fa-plane"></i> Рекомендация: Внешний SSD + облачное хранилище</h4>
+          <p>Компактный SSD для быстрых бэкапов в дороге, облако — для доступа к важным файлам из любой точки мира.</p>
         </div>
 
-        <h3>Р”Р»СЏ С„РѕС‚РѕРіСЂР°С„РѕРІ Рё РІРёРґРµРѕРіСЂР°С„РѕРІ</h3>
+        <h3>Для фотографов и видеографов</h3>
 
         <div class="recommendation">
-          <h4><i class="fas fa-camera"></i> Р РµРєРѕРјРµРЅРґР°С†РёСЏ: Р’РЅРµС€РЅРёР№ HDD + СЃРїРµС†РёР°Р»РёР·РёСЂРѕРІР°РЅРЅРѕРµ РѕР±Р»Р°РєРѕ</h4>
-          <p>Р‘РѕР»СЊС€РѕР№ HDD РґР»СЏ С…СЂР°РЅРµРЅРёСЏ RAW-С„Р°Р№Р»РѕРІ Рё РІРёРґРµРѕ, РѕР±Р»Р°С‡РЅРѕРµ С…СЂР°РЅРёР»РёС‰Рµ СЃ РЅРµРѕРіСЂР°РЅРёС‡РµРЅРЅС‹Рј РѕР±СЉРµРјРѕРј С„РѕС‚РѕРіСЂР°С„РёР№ (Google Photos).</p>
+          <h4><i class="fas fa-camera"></i> Рекомендация: Внешний HDD + специализированное облако</h4>
+          <p>Большой HDD для хранения RAW-файлов и видео, облачное хранилище с неограниченным объемом фотографий (Google Photos).</p>
         </div>
 
-        <h3>Р”Р»СЏ СЃС‚СѓРґРµРЅС‚РѕРІ Рё Р±СЋРґР¶РµС‚РЅС‹С… РїРѕР»СЊР·РѕРІР°С‚РµР»РµР№</h3>
+        <h3>Для студентов и бюджетных пользователей</h3>
 
         <div class="recommendation">
-          <h4><i class="fas fa-graduation-cap"></i> Р РµРєРѕРјРµРЅРґР°С†РёСЏ: Р‘РµСЃРїР»Р°С‚РЅРѕРµ РѕР±Р»Р°РєРѕ + РЅРµРґРѕСЂРѕРіРѕР№ С„Р»РµС€-РЅР°РєРѕРїРёС‚РµР»СЊ</h4>
-          <p>РСЃРїРѕР»СЊР·СѓР№С‚Рµ Р±РµСЃРїР»Р°С‚РЅС‹Рµ С‚Р°СЂРёС„С‹ РѕР±Р»Р°С‡РЅС‹С… СЃРµСЂРІРёСЃРѕРІ Рё USB-С„Р»РµС€РєСѓ РґР»СЏ СЃР°РјС‹С… РІР°Р¶РЅС‹С… РґРѕРєСѓРјРµРЅС‚РѕРІ.</p>
+          <h4><i class="fas fa-graduation-cap"></i> Рекомендация: Бесплатное облако + недорогой флеш-накопитель</h4>
+          <p>Используйте бесплатные тарифы облачных сервисов и USB-флешку для самых важных документов.</p>
         </div>
 
-        <h2>РџСЂР°РІРёР»Рѕ 3-2-1 РґР»СЏ РјР°РєСЃРёРјР°Р»СЊРЅРѕР№ Р·Р°С‰РёС‚С‹</h2>
+        <h2>Правило 3-2-1 для максимальной защиты</h2>
 
         <div class="pro-tips">
-          <h4>Р—РѕР»РѕС‚РѕР№ СЃС‚Р°РЅРґР°СЂС‚ СЂРµР·РµСЂРІРЅРѕРіРѕ РєРѕРїРёСЂРѕРІР°РЅРёСЏ:</h4>
+          <h4>Золотой стандарт резервного копирования:</h4>
           <ul>
-            <li><strong>3 РєРѕРїРёРё</strong> вЂ” РѕСЂРёРіРёРЅР°Р» + 2 СЂРµР·РµСЂРІРЅС‹Рµ РєРѕРїРёРё</li>
-            <li><strong>2 С‚РёРїР° РЅРѕСЃРёС‚РµР»РµР№</strong> вЂ” Р»РѕРєР°Р»СЊРЅС‹Р№ + РѕР±Р»Р°С‡РЅС‹Р№</li>
-            <li><strong>1 РєРѕРїРёСЏ РІ РґСЂСѓРіРѕРј РјРµСЃС‚Рµ</strong> вЂ” Р·Р°С‰РёС‚Р° РѕС‚ РєСЂР°Р¶Рё/РїРѕР¶Р°СЂР°</li>
+            <li><strong>3 копии</strong> — оригинал + 2 резервные копии</li>
+            <li><strong>2 типа носителей</strong> — локальный + облачный</li>
+            <li><strong>1 копия в другом месте</strong> — защита от кражи/пожара</li>
           </ul>
         </div>
 
-        <h3>РџСЂРёРјРµСЂ СЂРµР°Р»РёР·Р°С†РёРё РїСЂР°РІРёР»Р° 3-2-1:</h3>
+        <h3>Пример реализации правила 3-2-1:</h3>
 
         <div class="check-section">
-          <div class="check-title">Р’Р°С€Рё С‚СЂРё РєРѕРїРёРё РґР°РЅРЅС‹С…:</div>
+          <div class="check-title">Ваши три копии данных:</div>
           <ol>
-            <li><strong>РћСЃРЅРѕРІРЅР°СЏ РєРѕРїРёСЏ</strong> вЂ” РЅР° РЅРѕСѓС‚Р±СѓРєРµ</li>
-            <li><strong>Р›РѕРєР°Р»СЊРЅС‹Р№ Р±СЌРєР°Рї</strong> вЂ” РЅР° РІРЅРµС€РЅРµРј HDD/SSD</li>
-            <li><strong>РћР±Р»Р°С‡РЅС‹Р№ Р±СЌРєР°Рї</strong> вЂ” РІ OneDrive/Google Drive</li>
+            <li><strong>Основная копия</strong> — на ноутбуке</li>
+            <li><strong>Локальный бэкап</strong> — на внешнем HDD/SSD</li>
+            <li><strong>Облачный бэкап</strong> — в OneDrive/Google Drive</li>
           </ol>
         </div>
 
-        <h2>РџСЂР°РєС‚РёС‡РµСЃРєРёРµ СЃРѕРІРµС‚С‹ РїРѕ РІС‹Р±РѕСЂСѓ</h2>
+        <h2>Практические советы по выбору</h2>
 
-        <h3>РљРѕРіРґР° РІС‹Р±РёСЂР°С‚СЊ РІРЅРµС€РЅРёР№ РґРёСЃРє:</h3>
-
-        <ul>
-          <li>РќСѓР¶РЅРѕ С…СЂР°РЅРёС‚СЊ Р±РѕР»СЊС€РёРµ РѕР±СЉРµРјС‹ РґР°РЅРЅС‹С… (Р±РѕР»РµРµ 1 РўР‘)</li>
-          <li>РўСЂРµР±СѓРµС‚СЃСЏ Р±С‹СЃС‚СЂР°СЏ СЃРєРѕСЂРѕСЃС‚СЊ РїРµСЂРµРґР°С‡Рё С„Р°Р№Р»РѕРІ</li>
-          <li>Р•СЃС‚СЊ РѕРіСЂР°РЅРёС‡РµРЅРёСЏ РїРѕ Р±СЋРґР¶РµС‚Сѓ (РѕРґРЅРѕРєСЂР°С‚РЅР°СЏ РѕРїР»Р°С‚Р°)</li>
-          <li>Р Р°Р±РѕС‚Р°РµС‚Рµ РІ РјРµСЃС‚Р°С… СЃ РїР»РѕС…РёРј РёРЅС‚РµСЂРЅРµС‚РѕРј</li>
-          <li>РҐСЂР°РЅРёС‚Рµ РєРѕРЅС„РёРґРµРЅС†РёР°Р»СЊРЅС‹Рµ РґР°РЅРЅС‹Рµ</li>
-        </ul>
-
-        <h3>РљРѕРіРґР° РІС‹Р±РёСЂР°С‚СЊ РѕР±Р»Р°РєРѕ:</h3>
+        <h3>Когда выбирать внешний диск:</h3>
 
         <ul>
-          <li>РќСѓР¶РµРЅ РґРѕСЃС‚СѓРї Рє С„Р°Р№Р»Р°Рј СЃ СЂР°Р·РЅС‹С… СѓСЃС‚СЂРѕР№СЃС‚РІ</li>
-            <li>Р Р°Р±РѕС‚Р°РµС‚Рµ РІ РєРѕРјР°РЅРґРµ Рё РґРµР»РёС‚РµСЃСЊ С„Р°Р№Р»Р°РјРё</li>
-            <li>Р§Р°СЃС‚Рѕ РїСѓС‚РµС€РµСЃС‚РІСѓРµС‚Рµ</li>
-            <li>РҐРѕС‚РёС‚Рµ Р°РІС‚РѕРјР°С‚РёС‡РµСЃРєСѓСЋ СЃРёРЅС…СЂРѕРЅРёР·Р°С†РёСЋ</li>
-            <li>Р“РѕС‚РѕРІС‹ РїР»Р°С‚РёС‚СЊ Р·Р° СѓРґРѕР±СЃС‚РІРѕ</li>
+          <li>Нужно хранить большие объемы данных (более 1 ТБ)</li>
+          <li>Требуется быстрая скорость передачи файлов</li>
+          <li>Есть ограничения по бюджету (однократная оплата)</li>
+          <li>Работаете в местах с плохим интернетом</li>
+          <li>Храните конфиденциальные данные</li>
         </ul>
 
-        <h2>РљРѕРјР±РёРЅРёСЂРѕРІР°РЅРЅС‹Р№ РїРѕРґС…РѕРґ вЂ” Р»СѓС‡С€РµРµ СЂРµС€РµРЅРёРµ</h2>
+        <h3>Когда выбирать облако:</h3>
 
-        <p>РРґРµР°Р»СЊРЅР°СЏ СЃС‚СЂР°С‚РµРіРёСЏ СЂРµР·РµСЂРІРЅРѕРіРѕ РєРѕРїРёСЂРѕРІР°РЅРёСЏ РёСЃРїРѕР»СЊР·СѓРµС‚ РїСЂРµРёРјСѓС‰РµСЃС‚РІР° РѕР±РѕРёС… РІР°СЂРёР°РЅС‚РѕРІ:</p>
+        <ul>
+          <li>Нужен доступ к файлам с разных устройств</li>
+            <li>Работаете в команде и делитесь файлами</li>
+            <li>Часто путешествуете</li>
+            <li>Хотите автоматическую синхронизацию</li>
+            <li>Готовы платить за удобство</li>
+        </ul>
+
+        <h2>Комбинированный подход — лучшее решение</h2>
+
+        <p>Идеальная стратегия резервного копирования использует преимущества обоих вариантов:</p>
 
         <div class="pro-tips">
-          <h4>Р РµРєРѕРјРµРЅРґСѓРµРјР°СЏ СЃС…РµРјР°:</h4>
+          <h4>Рекомендуемая схема:</h4>
           <ul>
-            <li><strong>Р•Р¶РµРґРЅРµРІРЅС‹Рµ РґРѕРєСѓРјРµРЅС‚С‹</strong> вЂ” Р°РІС‚РѕРјР°С‚РёС‡РµСЃРєР°СЏ СЃРёРЅС…СЂРѕРЅРёР·Р°С†РёСЏ РІ РѕР±Р»Р°РєРѕ</li>
-            <li><strong>Р•Р¶РµРЅРµРґРµР»СЊРЅС‹Рµ Р±СЌРєР°РїС‹</strong> вЂ” РїРѕР»РЅС‹Р№ РѕР±СЂР°Р· СЃРёСЃС‚РµРјС‹ РЅР° РІРЅРµС€РЅРёР№ РґРёСЃРє</li>
-            <li><strong>Р’Р°Р¶РЅС‹Рµ РїСЂРѕРµРєС‚С‹</strong> вЂ” РєРѕРїРёСЏ РІ РѕР±Р»Р°РєРµ + РЅР° РІРЅРµС€РЅРµРј РґРёСЃРєРµ</li>
-            <li><strong>РњРµРґРёР°С„Р°Р№Р»С‹</strong> вЂ” РІРЅРµС€РЅРёР№ РґРёСЃРє + РІС‹Р±РѕСЂРѕС‡РЅРѕ РІ РѕР±Р»Р°РєРѕ</li>
+            <li><strong>Ежедневные документы</strong> — автоматическая синхронизация в облако</li>
+            <li><strong>Еженедельные бэкапы</strong> — полный образ системы на внешний диск</li>
+            <li><strong>Важные проекты</strong> — копия в облаке + на внешнем диске</li>
+            <li><strong>Медиафайлы</strong> — внешний диск + выборочно в облако</li>
           </ul>
         </div>
 
-        <h2>Р—Р°РєР»СЋС‡РµРЅРёРµ</h2>
+        <h2>Заключение</h2>
 
-        <p>Р’С‹Р±РѕСЂ РјРµР¶РґСѓ РѕР±Р»Р°РєРѕРј Рё РІРЅРµС€РЅРёРј РґРёСЃРєРѕРј РЅРµ РґРѕР»Р¶РµРЅ Р±С‹С‚СЊ РІР·Р°РёРјРѕРёСЃРєР»СЋС‡Р°СЋС‰РёРј. РЎР°РјС‹Р№ РЅР°РґРµР¶РЅС‹Р№ РїРѕРґС…РѕРґ вЂ” РєРѕРјР±РёРЅР°С†РёСЏ РѕР±РѕРёС… РјРµС‚РѕРґРѕРІ. Р’РЅРµС€РЅРёР№ РґРёСЃРє РѕР±РµСЃРїРµС‡РёРІР°РµС‚ Р±С‹СЃС‚СЂС‹Р№ РґРѕСЃС‚СѓРї Рё Р±РѕР»СЊС€РѕР№ РѕР±СЉРµРј РїРѕ СЂР°Р·СѓРјРЅРѕР№ С†РµРЅРµ, Р° РѕР±Р»Р°РєРѕ РіР°СЂР°РЅС‚РёСЂСѓРµС‚ РґРѕСЃС‚СѓРїРЅРѕСЃС‚СЊ РёР· Р»СЋР±РѕР№ С‚РѕС‡РєРё РјРёСЂР° Рё Р·Р°С‰РёС‚Сѓ РѕС‚ С„РёР·РёС‡РµСЃРєРёС… РїРѕРІСЂРµР¶РґРµРЅРёР№.</p>
+        <p>Выбор между облаком и внешним диском не должен быть взаимоисключающим. Самый надежный подход — комбинация обоих методов. Внешний диск обеспечивает быстрый доступ и большой объем по разумной цене, а облако гарантирует доступность из любой точки мира и защиту от физических повреждений.</p>
 
-        <p>РќР°С‡РЅРёС‚Рµ СЃ РѕС†РµРЅРєРё РІР°С€РёС… РїРѕС‚СЂРµР±РЅРѕСЃС‚РµР№ Рё Р±СЋРґР¶РµС‚Р°, Р·Р°С‚РµРј РІС‹Р±РµСЂРёС‚Рµ РѕРїС‚РёРјР°Р»СЊРЅСѓСЋ РєРѕРјР±РёРЅР°С†РёСЋ. Р“Р»Р°РІРЅРѕРµ вЂ” РЅР°С‡РЅРёС‚Рµ РґРµР»Р°С‚СЊ СЂРµР·РµСЂРІРЅС‹Рµ РєРѕРїРёРё СЂРµРіСѓР»СЏСЂРЅРѕ, РЅРµР·Р°РІРёСЃРёРјРѕ РѕС‚ РІС‹Р±СЂР°РЅРЅРѕРіРѕ РјРµС‚РѕРґР°.</p>
+        <p>Начните с оценки ваших потребностей и бюджета, затем выберите оптимальную комбинацию. Главное — начните делать резервные копии регулярно, независимо от выбранного метода.</p>
 
-        <!-- РЇРЅРґРµРєСЃ РњР°СЂРєРµС‚ СЂРµРєР»Р°РјРЅС‹Р№ Р±Р°РЅРЅРµСЂ -->
-        <a href="https://market.yandex.ru/search?text=РІРЅРµС€РЅРёР№%20Р¶РµСЃС‚РєРёР№%20РґРёСЃРє%20ssd%20РґР»СЏ%20Р±СЌРєР°РїР°&local-offers-first=0" class="ym-hero-link" target="_blank" rel="noopener noreferrer">
-          <div class="ym-hero-banner">
-            <div class="ym-hero-images">
-              <div class="ym-hero-image">
-                <img src="https://avatars.mds.yandex.net/get-market-ugc/12573871/2a0000018f2a5a8b8c0b7d9d9c4b6c5c/orig" alt="Р’РЅРµС€РЅРёР№ SSD РґР»СЏ Р±СЌРєР°РїР°">
+        <!-- Яндекс Маркет рекламный баннер -->
+                <img src="https://avatars.mds.yandex.net/get-market-ugc/12573871/2a0000018f2a5a8b8c0b7d9d9c4b6c5c/orig" alt="Внешний SSD для бэкапа">
               </div>
-              <div class="ym-hero-image">
-                <img src="https://avatars.mds.yandex.net/get-market-ugc/15377961/2a0000018f2a5a8b8c0b7d9d9c4b6c5d/orig" alt="Р’РЅРµС€РЅРёР№ HDD РґР»СЏ СЂРµР·РµСЂРІРЅРѕРіРѕ РєРѕРїРёСЂРѕРІР°РЅРёСЏ">
+                <img src="https://avatars.mds.yandex.net/get-market-ugc/15377961/2a0000018f2a5a8b8c0b7d9d9c4b6c5d/orig" alt="Внешний HDD для резервного копирования">
               </div>
             </div>
-            <div class="ym-hero-content">
-              <div class="ym-hero-title">Р’РЅРµС€РЅРёРµ РґРёСЃРєРё РґР»СЏ СЂРµР·РµСЂРІРЅРѕРіРѕ РєРѕРїРёСЂРѕРІР°РЅРёСЏ</div>
-              <div class="ym-hero-desc">SSD Рё HDD РЅР°РєРѕРїРёС‚РµР»Рё РґР»СЏ РЅР°РґРµР¶РЅРѕРіРѕ С…СЂР°РЅРµРЅРёСЏ РІР°С€РёС… РґР°РЅРЅС‹С…</div>
             </div>
           </div>
         </a>
@@ -472,24 +631,24 @@
       <div class="footer__content">
         <div class="footer__section">
           <h4>Repairo</h4>
-          <p>Р­РєСЃРїРµСЂС‚РЅС‹Рµ СЂСѓРєРѕРІРѕРґСЃС‚РІР° РїРѕ СЂРµРјРѕРЅС‚Сѓ Рё РѕР±СЃР»СѓР¶РёРІР°РЅРёСЋ С‚РµС…РЅРёРєРё</p>
+          <p>Экспертные руководства по ремонту и обслуживанию техники</p>
         </div>
         <div class="footer__section">
-          <h4>Р Р°Р·РґРµР»С‹</h4>
+          <h4>Разделы</h4>
           <ul>
-            <li><a href="../laptops.html">РќРѕСѓС‚Р±СѓРєРё</a></li>
-            <li><a href="../smartphones.html">РЎРјР°СЂС‚С„РѕРЅС‹</a></li>
-            <li><a href="../consoles.html">РљРѕРЅСЃРѕР»Рё</a></li>
-            <li><a href="../cameras.html">Р¤РѕС‚РѕР°РїРїР°СЂР°С‚С‹</a></li>
+            <li><a href="../laptops.html">Ноутбуки</a></li>
+            <li><a href="../smartphones.html">Смартфоны</a></li>
+            <li><a href="../consoles.html">Консоли</a></li>
+            <li><a href="../cameras.html">Фотоаппараты</a></li>
           </ul>
         </div>
         <div class="footer__section">
-          <h4>РљРѕРЅС‚Р°РєС‚С‹</h4>
+          <h4>Контакты</h4>
           <p>support@repairo.ru</p>
         </div>
       </div>
       <div class="footer__bottom">
-        <p>&copy; 2024 Repairo. Р’СЃРµ РїСЂР°РІР° Р·Р°С‰РёС‰РµРЅС‹.</p>
+        <p>&copy; 2024 Repairo. Все права защищены.</p>
       </div>
     </div>
   </footer>
@@ -499,3 +658,9 @@
 
 </body>
 </html>
+
+
+
+
+
+

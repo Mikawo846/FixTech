@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>РџСЂРѕСЃС‚Р°СЏ РџСЂРѕРІРµСЂРєР° Cookie</title>
+    <title>Простая Проверка Cookie</title>
     <style>
         body { font-family: Arial, sans-serif; margin: 20px; }
         .test-box { border: 2px solid #007bff; padding: 20px; margin: 10px 0; border-radius: 8px; }
@@ -15,24 +15,24 @@
     </style>
 </head>
 <body>
-    <h1>рџ§Є РџСЂРѕСЃС‚Р°СЏ РџСЂРѕРІРµСЂРєР° Cookie РЎРёСЃС‚РµРјС‹</h1>
+    <h1>?? Простая Проверка Cookie Системы</h1>
     
     <div class="test-box">
-        <h2>рџ“Љ РўРµРєСѓС‰РёР№ РЎС‚Р°С‚СѓСЃ</h2>
+        <h2>?? Текущий Статус</h2>
         <div id="status-display"></div>
-        <button onclick="updateStatus()">РћР±РЅРѕРІРёС‚СЊ СЃС‚Р°С‚СѓСЃ</button>
+        <button onclick="updateStatus()">Обновить статус</button>
     </div>
 
     <div class="test-box">
-        <h2>рџЋ® РЈРїСЂР°РІР»РµРЅРёРµ</h2>
-        <button onclick="testBanner()">РџРѕРєР°Р·Р°С‚СЊ Р±Р°РЅРЅРµСЂ</button>
-        <button onclick="acceptCookie()">РџСЂРёРЅСЏС‚СЊ cookie</button>
-        <button onclick="clearCookies()">РћС‡РёСЃС‚РёС‚СЊ cookie</button>
-        <button onclick="testAnalytics()">РўРµСЃС‚РёСЂРѕРІР°С‚СЊ Р°РЅР°Р»РёС‚РёРєСѓ</button>
+        <h2>?? Управление</h2>
+        <button onclick="testBanner()">Показать баннер</button>
+        <button onclick="acceptCookie()">Принять cookie</button>
+        <button onclick="clearCookies()">Очистить cookie</button>
+        <button onclick="testAnalytics()">Тестировать аналитику</button>
     </div>
 
     <div class="test-box">
-        <h2>рџ“‹ Р›РѕРі СЃРѕР±С‹С‚РёР№</h2>
+        <h2>?? Лог событий</h2>
         <div id="event-log"></div>
     </div>
 
@@ -56,88 +56,88 @@
             
             display.innerHTML = `
                 <div class="status ${hasConsent ? 'success' : 'error'}">
-                    рџЌЄ Cookie СЃРѕРіР»Р°СЃРёРµ: ${hasConsent ? 'РџРћР›РЈР§Р•РќРћ' : 'РћРўРЎРЈРўРЎРўР’РЈР•Рў'}
+                    ?? Cookie согласие: ${hasConsent ? 'ПОЛУЧЕНО' : 'ОТСУТСТВУЕТ'}
                 </div>
                 <div class="status ${hasBanner ? 'success' : 'error'}">
-                    рџ“ў Р‘Р°РЅРЅРµСЂ: ${hasBanner ? 'Р•РЎРўР¬ Р’ DOM' : 'РћРўРЎРЈРўРЎРўР’РЈР•Рў'}
+                    ?? Баннер: ${hasBanner ? 'ЕСТЬ В DOM' : 'ОТСУТСТВУЕТ'}
                 </div>
                 <div class="status ${hasYandex ? 'success' : 'error'}">
-                    рџ“Љ РЇРЅРґРµРєСЃ.РњРµС‚СЂРёРєР°: ${hasYandex ? 'Р—РђР“Р РЈР–Р•РќРђ' : 'РќР• Р—РђР“Р РЈР–Р•РќРђ'}
+                    ?? Яндекс.Метрика: ${hasYandex ? 'ЗАГРУЖЕНА' : 'НЕ ЗАГРУЖЕНА'}
                 </div>
                 <div class="status ${hasGoogle ? 'success' : 'error'}">
-                    рџ“€ Google Analytics: ${hasGoogle ? 'Р—РђР“Р РЈР–Р•Рќ' : 'РќР• Р—РђР“Р РЈР–Р•Рќ'}
+                    ?? Google Analytics: ${hasGoogle ? 'ЗАГРУЖЕН' : 'НЕ ЗАГРУЖЕН'}
                 </div>
             `;
             
-            log('РЎС‚Р°С‚СѓСЃ РѕР±РЅРѕРІР»РµРЅ', 'info');
+            log('Статус обновлен', 'info');
         }
 
         function testBanner() {
-            log('РџРѕРїС‹С‚РєР° РїРѕРєР°Р·Р°С‚СЊ Р±Р°РЅРЅРµСЂ...', 'info');
+            log('Попытка показать баннер...', 'info');
             if (typeof showCookieBanner === 'function') {
                 showCookieBanner();
                 setTimeout(() => {
                     const banner = document.getElementById('cookie-banner');
                     if (banner) {
-                        log('Р‘Р°РЅРЅРµСЂ СѓСЃРїРµС€РЅРѕ СЃРѕР·РґР°РЅ Рё РїРѕРєР°Р·Р°РЅ', 'success');
+                        log('Баннер успешно создан и показан', 'success');
                     } else {
-                        log('РћС€РёР±РєР°: Р±Р°РЅРЅРµСЂ РЅРµ СЃРѕР·РґР°РЅ', 'error');
+                        log('Ошибка: баннер не создан', 'error');
                     }
                 }, 500);
             } else {
-                log('РћС€РёР±РєР°: С„СѓРЅРєС†РёСЏ showCookieBanner РЅРµ РЅР°Р№РґРµРЅР°', 'error');
+                log('Ошибка: функция showCookieBanner не найдена', 'error');
             }
         }
 
         function acceptCookie() {
-            log('РџРѕРїС‹С‚РєР° РїСЂРёРЅСЏС‚СЊ cookie...', 'info');
+            log('Попытка принять cookie...', 'info');
             const button = document.getElementById('cookie-accept');
             if (button) {
                 button.click();
-                log('РљР»РёРє РЅР° РєРЅРѕРїРєСѓ "РџСЂРёРЅСЏС‚СЊ" РІС‹РїРѕР»РЅРµРЅ', 'success');
+                log('Клик на кнопку "Принять" выполнен', 'success');
                 setTimeout(() => {
                     const hasConsent = document.cookie.includes('cookie_consent=all');
                     if (hasConsent) {
-                        log('Cookie СѓСЃРїРµС€РЅРѕ СЃРѕС…СЂР°РЅРµРЅС‹', 'success');
+                        log('Cookie успешно сохранены', 'success');
                     } else {
-                        log('РћС€РёР±РєР°: cookie РЅРµ СЃРѕС…СЂР°РЅРµРЅС‹', 'error');
+                        log('Ошибка: cookie не сохранены', 'error');
                     }
                     updateStatus();
                 }, 500);
             } else {
-                log('РћС€РёР±РєР°: РєРЅРѕРїРєР° "РџСЂРёРЅСЏС‚СЊ" РЅРµ РЅР°Р№РґРµРЅР°', 'error');
+                log('Ошибка: кнопка "Принять" не найдена', 'error');
             }
         }
 
         function clearCookies() {
-            log('РћС‡РёСЃС‚РєР° РІСЃРµС… cookie...', 'info');
+            log('Очистка всех cookie...', 'info');
             document.cookie = 'cookie_consent=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
             document.cookie = '_ym_uid=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
             document.cookie = '_ga=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
-            log('Cookie РѕС‡РёС‰РµРЅС‹', 'success');
+            log('Cookie очищены', 'success');
             
-            // РЈРґР°Р»СЏРµРј Р±Р°РЅРЅРµСЂ
+            // Удаляем баннер
             const banner = document.getElementById('cookie-banner');
             if (banner) {
                 banner.remove();
-                log('Р‘Р°РЅРЅРµСЂ СѓРґР°Р»РµРЅ РёР· DOM', 'success');
+                log('Баннер удален из DOM', 'success');
             }
             
             setTimeout(updateStatus, 100);
         }
 
         function testAnalytics() {
-            log('РўРµСЃС‚РёСЂРѕРІР°РЅРёРµ Р°РЅР°Р»РёС‚РёРєРё...', 'info');
+            log('Тестирование аналитики...', 'info');
             
             if (typeof window.ym !== 'undefined') {
                 try {
                     window.ym(106225686, 'hit', window.location.href);
-                    log('РЇРЅРґРµРєСЃ.РњРµС‚СЂРёРєР°: hit РѕС‚РїСЂР°РІР»РµРЅ', 'success');
+                    log('Яндекс.Метрика: hit отправлен', 'success');
                 } catch (e) {
-                    log(`РЇРЅРґРµРєСЃ.РњРµС‚СЂРёРєР° РѕС€РёР±РєР°: ${e.message}`, 'error');
+                    log(`Яндекс.Метрика ошибка: ${e.message}`, 'error');
                 }
             } else {
-                log('РЇРЅРґРµРєСЃ.РњРµС‚СЂРёРєР° РЅРµ Р·Р°РіСЂСѓР¶РµРЅР°', 'error');
+                log('Яндекс.Метрика не загружена', 'error');
             }
             
             if (typeof window.gtag !== 'undefined') {
@@ -146,23 +146,25 @@
                         'event_category': 'debug',
                         'event_label': 'simple_test'
                     });
-                    log('Google Analytics: СЃРѕР±С‹С‚РёРµ РѕС‚РїСЂР°РІР»РµРЅРѕ', 'success');
+                    log('Google Analytics: событие отправлено', 'success');
                 } catch (e) {
-                    log(`Google Analytics РѕС€РёР±РєР°: ${e.message}`, 'error');
+                    log(`Google Analytics ошибка: ${e.message}`, 'error');
                 }
             } else {
-                log('Google Analytics РЅРµ Р·Р°РіСЂСѓР¶РµРЅ', 'error');
+                log('Google Analytics не загружен', 'error');
             }
         }
 
-        // РРЅРёС†РёР°Р»РёР·Р°С†РёСЏ
+        // Инициализация
         setTimeout(() => {
-            log('РЎС‚СЂР°РЅРёС†Р° Р·Р°РіСЂСѓР¶РµРЅР°, РЅР°С‡РёРЅР°СЋ РїСЂРѕРІРµСЂРєСѓ...', 'info');
+            log('Страница загружена, начинаю проверку...', 'info');
             updateStatus();
             
-            // РђРІС‚РѕРѕР±РЅРѕРІР»РµРЅРёРµ СЃС‚Р°С‚СѓСЃР° РєР°Р¶РґС‹Рµ 3 СЃРµРєСѓРЅРґС‹
+            // Автообновление статуса каждые 3 секунды
             setInterval(updateStatus, 3000);
         }, 1000);
     </script>
 </body>
 </html>
+
+

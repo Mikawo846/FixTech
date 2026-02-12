@@ -1,271 +1,194 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" data-theme="light">
 <head>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Repairo - Р‘РµСЃРїР»Р°С‚РЅС‹Рµ РёРіСЂС‹ РІ Epic Games Store РЅР° СЃРµРЅС‚СЏР±СЂСЊ: С‡С‚Рѕ СЂР°Р·РґР°СЋС‚ РІ СЌС‚РѕРј РјРµСЃСЏС†Рµ</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Repairo - Бесплатные игры в Epic Games Store на сентябрь: что раздают в этом месяце</title>
     <meta name="description" content="{{ description }}">
-    <meta name="description" content="РџРѕР»РЅС‹Р№ СЃРїРёСЃРѕРє Р±РµСЃРїР»Р°С‚РЅС‹С… РёРіСЂ РІ Epic Games Store РЅР° СЃРµРЅС‚СЏР±СЂСЊ 2023 РіРѕРґР°. РћР±Р·РѕСЂ Spelldrifter, 911 Operator, Soulstice Рё РґСЂСѓРіРёС… РїСЂРѕРµРєС‚РѕРІ, РєРѕС‚РѕСЂС‹Рµ РјРѕР¶РЅРѕ Р·Р°Р±СЂР°С‚СЊ РЅР°РІСЃРµРіРґР°.">
 
-    <style>
-        :root {
-            --gradient-start: #f5f7a0;
-            --gradient-end: #8df1c0;
-            --main-bg: #ffffff;
-            --text-color: #333333;
-            --text-light: #666666;
-            --border-color: #e0e0e0;
-            --shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-            --radius: 8px;
-            --nav-height: 60px;
-            --glass-bg: rgba(255, 255, 255, 0.25);
-            --glass-border: 1px solid rgba(255, 255, 255, 0.18);
-            --glass-blur: blur(10px);
-        }
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="../styles-header.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    .guide-content { line-height: 1.7; color: var(--text); }
+    .guide-content h2 { color: var(--primary); margin-top: 30px; margin-bottom: 15px; font-size: 1.5rem; }
+    .guide-content h3 { color: var(--primary-dark); margin-top: 25px; margin-bottom: 12px; font-size: 1.2rem; }
+    .guide-image-block { margin: 20px 0; padding: 15px; background: var(--background); border-radius: var(--border-radius); border: 1px solid var(--border); text-align: center; }
+    .guide-image-block img { max-width: 100%; height: auto; border-radius: 6px; border: 1px solid var(--border); }
+    .image-caption { margin-top: 10px; font-size: 0.85rem; color: var(--text-light); font-style: italic; }
+    .pro-tips { background: rgba(3, 74, 79, 0.05); padding: 15px; border-radius: 6px; margin: 20px 0; }
+    .pro-tips h4 { color: var(--primary); margin-top: 0; margin-bottom: 12px; font-size: 1.1rem; }
+    .tip-item { display: flex; gap: 8px; margin-bottom: 8px; align-items: flex-start; }
+    table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+    th, td { border: 1px solid var(--border); padding: 8px; text-align: left; }
+    th { background: var(--background-light); }
+    .highlight { background: #f5f7fa; border-left: 4px solid #2d9cdb; padding: 10px 15px; margin: 20px 0; }
+    .faq-section ul { margin-left: 1em; }
+    .block-section { margin-bottom: 2em; }
+    @media (max-width: 768px) {
+      .guide-content h2 { font-size: 1.4rem; margin-top: 25px; }
+      .guide-image-block { padding: 12px; margin: 15px 0; }
+      table, th, td { font-size: 0.95rem; }
+    }
+    /* Р“РѕСЂРёР·РѕРЅС‚Р°Р»СЊРЅС‹Р№ Р±Р°РЅРЅРµСЂ-РєР°СЂС‚РѕС‡РєР° */
+    .ym-hero-banner {
+      width: 100%;
+      max-width: 600px;
+      min-height: 140px;
+      border-radius: 16px;
+      background: #ffffff;
+      border: 1px solid #e5e7eb;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 4px 16px rgba(15, 23, 42, 0.08);
+      overflow: hidden;
+      box-sizing: border-box;
+      margin: 40px auto;
+    }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    /* РљРѕРЅС‚РµР№РЅРµСЂ РґР»СЏ РёР·РѕР±СЂР°Р¶РµРЅРёР№ */
+    .ym-hero-images {
+      display: flex;
+      height: 120px;
+      overflow: hidden;
+    }
 
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: var(--main-bg);
-            color: var(--text-color);
-            line-height: 1.6;
-            padding-top: var(--nav-height);
-        }
+    .ym-hero-image {
+      flex: 1;
+      min-width: 0;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      border-right: 1px solid #e5e7eb;
+      background: #f8f9fa;
+    }
 
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
+    .ym-hero-image:last-child {
+      border-right: none;
+    }
 
-        .container {
-            width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 15px;
-        }
+    .ym-hero-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      transition: transform 0.3s ease;
+      background: #f8f9fa;
+    }
 
-        header {
-            background: var(--glass-bg);
-            backdrop-filter: var(--glass-blur);
-            -webkit-backdrop-filter: var(--glass-blur);
-            border-bottom: var(--glass-border);
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 100;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
+    .ym-hero-image:hover img {
+      transform: scale(1.02);
+    }
 
-        .header-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: var(--nav-height);
-            position: relative;
-        }
+    /* РџСЂР°РІР°СЏ С‡Р°СЃС‚СЊ: РєРѕРЅС‚РµРЅС‚ */
+    .ym-hero-content {
+      padding: 16px 18px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 8px;
+    }
 
-        .header-image {
-            position: absolute;
-            left: 15px;
-            z-index: 1;
-        }
+    /* РќР°Р·РІР°РЅРёРµ С‚РѕРІР°СЂР° */
+    .ym-hero-title {
+      font-size: 14px;
+      font-weight: 600;
+      color: #111827;
+      line-height: 1.3;
+      margin: 0 0 4px 0;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
 
-        .header-image img {
-            height: 40px;
-            width: auto;
-            object-fit: contain;
-        }
+    /* Р РµР№С‚РёРЅРі */
+    .ym-hero-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+    }
 
-        .logo {
-            font-size: 24px;
-            font-weight: bold;
-            color: var(--text-color);
-            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
+    .ym-hero-rating {
+      font-size: 13px;
+      font-weight: 500;
+      color: #111827;
+      background: #f9fafb;
+      border-radius: 999px;
+      padding: 4px 10px;
+    }
 
-        .logo__text {
-            font-size: 24px;
-            font-weight: bold;
-            color: var(--text-color);
-            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-        }
+    .ym-hero-rating-count {
+      color: #6b7280;
+    }
 
-        .back-btn {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            font-weight: 600;
-            color: var(--text-color);
-            transition: color 0.3s;
-        }
+    /* Р¤РёРѕР»РµС‚РѕРІР°СЏ РєРЅРѕРїРєР° */
+    .ym-hero-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 9px 16px;
+      border-radius: 999px;
+      border: none;
+      background: #6a00ff;
+      color: #ffffff;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 2px 6px rgba(88, 28, 135, 0.35);
+      transition: background 0.15s ease, transform 0.15s ease,
+                  box-shadow 0.15s ease;
+    }
+    .ym-hero-button::after {
+      content: "в†’";
+      margin-left: 6px;
+      font-size: 14px;
+    }
+    .ym-hero-button:hover {
+      background: #7c3aed;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 10px rgba(88, 28, 135, 0.45);
+    }
 
-        .back-btn:hover {
-            color: var(--gradient-end);
-        }
+    /* Р®СЂРёРґРёС‡РµСЃРєРёР№ Р±Р»РѕРє */
+    .ym-hero-legal {
+      margin-top: 6px;
+      max-width: 600px;
+      font-size: 11px;
+      line-height: 1.3;
+      color: #6b7280;
+      margin-left: auto;
+      margin-right: auto;
+    }
 
-        .back-btn::before {
-            content: "в†ђ";
-            font-size: 20px;
-        }
-
-        .article {
-            padding: 40px 0;
-        }
-
-        .article-header {
-            margin-bottom: 30px;
-            text-align: center;
-        }
-
-        .article-title {
-            font-size: 32px;
-            margin-bottom: 15px;
-            line-height: 1.3;
-        }
-
-        .article-meta {
-            color: var(--text-light);
-            font-size: 14px;
-            margin-bottom: 20px;
-        }
-
-        .article-image {
-            width: 100%;
-            max-height: 500px;
-            object-fit: cover;
-            border-radius: var(--radius);
-            margin-bottom: 30px;
-            box-shadow: var(--shadow);
-        }
-
-        .article-content {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .article-content p {
-            margin-bottom: 20px;
-            font-size: 18px;
-            line-height: 1.7;
-        }
-
-        .article-content h2,
-        .article-content h3 {
-            margin: 30px 0 20px;
-            line-height: 1.4;
-        }
-
-        .article-content h2 {
-            font-size: 28px;
-            border-bottom: 2px solid var(--border-color);
-            padding-bottom: 10px;
-        }
-
-        .article-content h3 {
-            font-size: 24px;
-        }
-
-        .article-content img {
-            max-width: 100%;
-            height: auto;
-            border-radius: var(--radius);
-            margin: 25px 0;
-            box-shadow: var(--shadow);
-        }
-
-        .button {
-            display: inline-block;
-            padding: 12px 24px;
-            border-radius: 50px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s;
-            border: none;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-            background: linear-gradient(90deg, var(--gradient-start), var(--gradient-end));
-            color: var(--text-color);
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-        }
-
-        .button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
-        }
-
-        footer {
-            background: #f5f5f5;
-            padding: 50px 0 20px;
-            border-top: 1px solid var(--border-color);
-        }
-
-        .footer-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 30px;
-            margin-bottom: 30px;
-        }
-
-        .footer-column h3 {
-            font-size: 18px;
-            margin-bottom: 15px;
-            color: var(--text-color);
-            font-weight: 600;
-        }
-
-        .footer-column ul {
-            list-style: none;
-        }
-
-        .footer-column li {
-            margin-bottom: 10px;
-        }
-
-        .footer-column a {
-            color: var(--text-light);
-            transition: color 0.3s;
-        }
-
-        .footer-column a:hover {
-            color: var(--gradient-end);
-        }
-
-        .footer-bottom {
-            text-align: center;
-            padding-top: 20px;
-            border-top: 1px solid var(--border-color);
-            color: var(--text-light);
-            font-size: 14px;
-        }
-
-        @media (max-width: 768px) {
-            .article-title {
-                font-size: 26px;
-            }
-
-            .article-content p {
-                font-size: 16px;
-            }
-
-            .article-content h2 {
-                font-size: 24px;
-            }
-
-            .article-content h3 {
-                font-size: 20px;
-            }
-        }
+    /* РђРґР°РїС‚РёРІ */
+    @media (max-width: 480px) {
+      .ym-hero-banner {
+        max-width: 100%;
+        margin: 20px 0;
+      }
+      .ym-hero-images {
+        height: 100px;
+      }
+      .ym-hero-content {
+        padding: 12px 12px;
+      }
+      .ym-hero-title {
+        font-size: 13px;
+      }
+      .ym-hero-button {
+        font-size: 13px;
+        padding: 8px 14px;
+      }
+      .ym-hero-legal {
+        font-size: 10px;
+      }
+    }
     /* Telegram СЂРµРєР»Р°РјРЅС‹Р№ Р±Р°РЅРЅРµСЂ */
     .telegram-banner {
       display: flex;
@@ -369,27 +292,22 @@
         padding: 15px;
         min-height: 100px;
       }
-
       .telegram-logo {
         width: 50px;
         height: 50px;
         min-width: 50px;
         margin-right: 15px;
       }
-
       .telegram-logo svg {
         width: 26px;
         height: 26px;
       }
-
       .telegram-title {
         font-size: 14px;
       }
-
       .telegram-subtitle {
         font-size: 12px;
       }
-
       .telegram-button {
         font-size: 12px;
         padding: 6px 12px;
@@ -397,57 +315,64 @@
     }
 
 
-    </style>
+
+  </style>
   <script async src="https://timeweb.cloud/api/v1/cloud-ai/agents/3cc03620-d051-4d8d-b5af-f7b6cd083a35/embed.js?collapsed=true"></script>
 </head>
-
 <body>
-    <header>
-        <div class="container header-container">
-            <div class="header-image">
-                <img src="https://i.postimg.cc/q7H0JS0t/8d9ca2d0-7483-40bd-b92d-73c88a196afb-removebg-preview.png" alt="Header Image">
-            </div>
-            <a href="../articles.html" class="logo">
-                <span class="logo__text">Repairo</span>
-            </a>
-        </div>
-    </header>
+  <header class="header">
+    <div class="container">
+      <div class="header__inner">
+        <a href="../index.html" class="logo">
+          <span class="logo__icon"></span>
+          <span class="logo__text">GeoExpert</span>
+        </a>
+        <nav class="nav">
+          <ul class="nav__list">
+            <li><a href="../cameras.html" class="nav__link">РљР°РјРµСЂС‹</a></li>
+            <li><a href="../drones.html" class="nav__link">Р”СЂРѕРЅС‹</a></li>
+            <li><a href="../workflow.html" class="nav__link">Workflow</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
 
     <main class="article">
         <div class="container">
             <article>
                 <div class="article-header">
-                    <h1 class="article-title">Р‘РµСЃРїР»Р°С‚РЅС‹Рµ РёРіСЂС‹ РІ Epic Games Store РЅР° СЃРµРЅС‚СЏР±СЂСЊ: С‚Р°РєС‚РёРєР°, СЃРїР°СЃРµРЅРёРµ Р¶РёР·РЅРµР№ Рё РіРѕР»РѕРІРѕР»РѕРјРєРё</h1>
+                    <h1 class="article-title">Бесплатные игры в Epic Games Store на сентябрь: тактика, спасение жизней и головоломки</h1>
 
-                    <!-- Р’РђР–РќРћ: РћРґРЅРѕ РµРґРёРЅСЃС‚РІРµРЅРЅРѕРµ РёР·РѕР±СЂР°Р¶РµРЅРёРµ СЃРІРµСЂС…Сѓ РЅР°Рґ С‚РµРєСЃС‚РѕРј -->
+                    <!-- ВАЖНО: Одно единственное изображение сверху над текстом -->
                     <img src="https://i2.imageban.ru/out/2026/02/04/9c531e063b99db2b6c776f8ec688ec65.jpg"
                          alt="Epic Games Store free games"
                          class="article-image">
                 </div>
 
-                <div class="article-meta">РёР·РѕР±СЂР°Р¶РµРЅРёРµ: РєРѕР»Р»Р°Р¶ РёР· РѕС‚РєСЂС‹С‚С‹С… РёСЃС‚РѕС‡РЅРёРєРѕРІ</div>
+                <div class="article-meta">изображение: коллаж из открытых источников</div>
 
                 <div class="article-content">
-                    <p>РЎРµРЅС‚СЏР±СЂСЊ 2023 РіРѕРґР° РІ Epic Games Store РѕРєР°Р·Р°Р»СЃСЏ РЅР°СЃС‹С‰РµРЅРЅС‹Рј РЅР° СЂР°Р·РЅРѕР¶Р°РЅСЂРѕРІС‹Рµ РїРѕРґР°СЂРєРё. РџРѕСЃР»Рµ Р·Р°РІРµСЂС€РµРЅРёСЏ Р»РµС‚Р° Epic Games РїСЂРѕРґРѕР»Р¶Р°РµС‚ СЃРІРѕСЋ С‚СЂР°РґРёС†РёСЋ РµР¶РµРЅРµРґРµР»СЊРЅС‹С… СЂР°Р·РґР°С‡, РїСЂРµРґР»Р°РіР°СЏ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏРј РїРѕРїРѕР»РЅРёС‚СЊ Р±РёР±Р»РёРѕС‚РµРєСѓ РїСЂРѕРµРєС‚Р°РјРё, РєРѕС‚РѕСЂС‹Рµ Р»РµРіРєРѕ РјРѕРіР»Рё РїСЂРѕР№С‚Рё РјРёРјРѕ СЂР°РґР°СЂРѕРІ, РЅРѕ РѕРїСЂРµРґРµР»РµРЅРЅРѕ Р·Р°СЃР»СѓР¶РёРІР°СЋС‚ РІРЅРёРјР°РЅРёСЏ. Р’ СЌС‚РѕРј РјРµСЃСЏС†Рµ РіРµР№РјРµСЂС‹ СЃРјРѕРіСѓС‚ РїСЂРёРјРµСЂРёС‚СЊ РЅР° СЃРµР±СЏ СЂРѕР»СЊ РґРёСЃРїРµС‚С‡РµСЂР° СЃР»СѓР¶Р±С‹ СЃРїР°СЃРµРЅРёСЏ, РѕСЃРІРѕРёС‚СЊ РіРёР±СЂРёРґ РєР°СЂС‚РѕС‡РЅРѕР№ РёРіСЂС‹ Рё С‚Р°РєС‚РёРєРё, Р° С‚Р°РєР¶Рµ РїРѕРіСЂСѓР·РёС‚СЊСЃСЏ РІ С‚СЂРѕРіР°С‚РµР»СЊРЅС‹Рµ РіРѕР»РѕРІРѕР»РѕРјРєРё Рё РґРёРЅР°РјРёС‡РЅС‹Р№ СЃР»СЌС€РµСЂ.</p>
+                    <p>Сентябрь 2023 года в Epic Games Store оказался насыщенным на разножанровые подарки. После завершения лета Epic Games продолжает свою традицию еженедельных раздач, предлагая пользователям пополнить библиотеку проектами, которые легко могли пройти мимо радаров, но определенно заслуживают внимания. В этом месяце геймеры смогут примерить на себя роль диспетчера службы спасения, освоить гибрид карточной игры и тактики, а также погрузиться в трогательные головоломки и динамичный слэшер.</p>
 
-                    <h2 id="step-1">РќР°С‡Р°Р»Рѕ РјРµСЃСЏС†Р°: Cave Story+ Рё Spelldrifter</h2>
-                    <p>РњРµСЃСЏС† СЃС‚Р°СЂС‚РѕРІР°Р» СЃ СЂР°Р·РґР°С‡Рё РЅР°СЃС‚РѕСЏС‰РµР№ РєР»Р°СЃСЃРёРєРё РёРЅРґРё-СЃС†РµРЅС‹ вЂ” <strong>Cave Story+</strong> (РґРѕСЃС‚СѓРїРЅР° РґРѕ 7 СЃРµРЅС‚СЏР±СЂСЏ). Р­С‚Рѕ СѓР»СѓС‡С€РµРЅРЅР°СЏ РІРµСЂСЃРёСЏ Р»РµРіРµРЅРґР°СЂРЅРѕРіРѕ РїР»Р°С‚С„РѕСЂРјРµСЂР°, РєРѕС‚РѕСЂС‹Р№ С‡Р°СЃС‚Рѕ РЅР°Р·С‹РІР°СЋС‚ В«РґРµРґСѓС€РєРѕР№ РёРЅРґРё-РёРіСЂВ». Р•СЃР»Рё РІС‹ Р»СЋР±РёС‚Рµ РјРµС‚СЂРѕРёРґРІР°РЅРёРё, РїРёРєСЃРµР»СЊ-Р°СЂС‚ Рё С‚СЂРѕРіР°С‚РµР»СЊРЅС‹Рµ РёСЃС‚РѕСЂРёРё РїСЂРѕ СЂРѕР±РѕС‚РѕРІ, СЌС‚РѕС‚ РїСЂРѕРµРєС‚ РѕР±СЏР·Р°С‚РµР»РµРЅ Рє РѕР·РЅР°РєРѕРјР»РµРЅРёСЋ.</p>
-                    <p>РЎ 7 РїРѕ 14 СЃРµРЅС‚СЏР±СЂСЏ СЌСЃС‚Р°С„РµС‚Сѓ РїРµСЂРµС…РІР°С‚С‹РІР°РµС‚ <strong>Spelldrifter</strong>. Р­С‚Рѕ РЅРµРѕР±С‹С‡РЅС‹Р№ РіРёР±СЂРёРґ РїРѕС€Р°РіРѕРІРѕР№ С‚Р°РєС‚РёС‡РµСЃРєРѕР№ СЂРѕР»РµРІРѕР№ РёРіСЂС‹ Рё РєР°СЂС‚РѕС‡РЅРѕР№ СЃС‚СЂР°С‚РµРіРёРё (CCG). Р“Р»Р°РІРЅР°СЏ С„РёС€РєР° РёРіСЂС‹ вЂ” СЃРёСЃС‚РµРјР° Tick System, РіРґРµ РІСЂРµРјСЏ Рё РѕС‡РµСЂРµРґРЅРѕСЃС‚СЊ С…РѕРґРѕРІ Р·Р°РІРёСЃСЏС‚ РѕС‚ С‚РѕРіРѕ, РєР°РєРёРµ РєР°СЂС‚С‹ РІС‹ СЂР°Р·С‹РіСЂС‹РІР°РµС‚Рµ. Р­С‚Рѕ Р·Р°СЃС‚Р°РІР»СЏРµС‚ РґСѓРјР°С‚СЊ РЅРµ С‚РѕР»СЊРєРѕ Рѕ С‚РѕРј, <em>С‡С‚Рѕ</em> СЃРґРµР»Р°С‚СЊ, РЅРѕ Рё <em>РєРѕРіРґР°</em> СЌС‚Рѕ СЃРґРµР»Р°С‚СЊ, С‡С‚РѕР±С‹ РїРµСЂРµС…РІР°С‚РёС‚СЊ РёРЅРёС†РёР°С‚РёРІСѓ Сѓ РІСЂР°РіР°. Р’РёР·СѓР°Р»СЊРЅС‹Р№ СЃС‚РёР»СЊ РЅР°РїРѕРјРёРЅР°РµС‚ РєР»Р°СЃСЃРёС‡РµСЃРєРѕРµ С„СЌРЅС‚РµР·Рё, Р° РіРµР№РјРїР»РµР№ Р±СЂРѕСЃРёС‚ РІС‹Р·РѕРІ РґР°Р¶Рµ РѕРїС‹С‚РЅС‹Рј С‚Р°РєС‚РёРєР°Рј.</p>
+                    <h2 id="step-1">Начало месяца: Cave Story+ и Spelldrifter</h2>
+                    <p>Месяц стартовал с раздачи настоящей классики инди-сцены — <strong>Cave Story+</strong> (доступна до 7 сентября). Это улучшенная версия легендарного платформера, который часто называют «дедушкой инди-игр». Если вы любите метроидвании, пиксель-арт и трогательные истории про роботов, этот проект обязателен к ознакомлению.</p>
+                    <p>С 7 по 14 сентября эстафету перехватывает <strong>Spelldrifter</strong>. Это необычный гибрид пошаговой тактической ролевой игры и карточной стратегии (CCG). Главная фишка игры — система Tick System, где время и очередность ходов зависят от того, какие карты вы разыгрываете. Это заставляет думать не только о том, <em>что</em> сделать, но и <em>когда</em> это сделать, чтобы перехватить инициативу у врага. Визуальный стиль напоминает классическое фэнтези, а геймплей бросит вызов даже опытным тактикам.</p>
 
-                    <h2 id="step-2">РЎРµСЂРµРґРёРЅР° СЃРµРЅС‚СЏР±СЂСЏ: С‚СЏР¶РµР»С‹Рµ Р±СѓРґРЅРё РґРёСЃРїРµС‚С‡РµСЂР°</h2>
-                    <p>РЎ 14 РїРѕ 21 СЃРµРЅС‚СЏР±СЂСЏ РёРіСЂРѕРєРё СЃРјРѕРіСѓС‚ Р·Р°Р±СЂР°С‚СЊ <strong>911 Operator</strong>. Р­С‚Рѕ СЃРёРјСѓР»СЏС‚РѕСЂ РґРёСЃРїРµС‚С‡РµСЂР° СЌРєСЃС‚СЂРµРЅРЅС‹С… СЃР»СѓР¶Р±, РєРѕС‚РѕСЂС‹Р№ РјРѕР¶РµС‚ РѕРєР°Р·Р°С‚СЊСЃСЏ РіРѕСЂР°Р·РґРѕ Р±РѕР»РµРµ РЅР°РїСЂСЏР¶РµРЅРЅС‹Рј, С‡РµРј Р»СЋР±РѕР№ СЌРєС€РµРЅ. Р’Р°С€Р° Р·Р°РґР°С‡Р° вЂ” РїСЂРёРЅРёРјР°С‚СЊ Р·РІРѕРЅРєРё РѕС‚ РіСЂР°Р¶РґР°РЅ, С„РёР»СЊС‚СЂРѕРІР°С‚СЊ Р»РѕР¶РЅС‹Рµ РІС‹Р·РѕРІС‹, РґР°РІР°С‚СЊ СЃРѕРІРµС‚С‹ РїРѕ РѕРєР°Р·Р°РЅРёСЋ РїРµСЂРІРѕР№ РїРѕРјРѕС‰Рё Рё СЂР°СЃРїСЂРµРґРµР»СЏС‚СЊ СЌРєРёРїР°Р¶Рё РїРѕР»РёС†РёРё, СЃРєРѕСЂРѕР№ Рё РїРѕР¶Р°СЂРЅС‹С… РїРѕ РєР°СЂС‚Рµ РіРѕСЂРѕРґР°.</p>
-                    <p>РРЅС‚РµСЂРµСЃРЅР°СЏ РѕСЃРѕР±РµРЅРЅРѕСЃС‚СЊ РёРіСЂС‹ вЂ” РІРѕР·РјРѕР¶РЅРѕСЃС‚СЊ Р·Р°РіСЂСѓР·РёС‚СЊ РєР°СЂС‚Сѓ Р»СЋР±РѕРіРѕ СЂРµР°Р»СЊРЅРѕРіРѕ РіРѕСЂРѕРґР° (РІРєР»СЋС‡Р°СЏ РІР°С€ СЂРѕРґРЅРѕР№) Рё СЂР°Р±РѕС‚Р°С‚СЊ РЅР° Р·РЅР°РєРѕРјС‹С… СѓР»РёС†Р°С…. РРіСЂР° С‡Р°СЃС‚Рѕ СЃС‚Р°РІРёС‚ РїРµСЂРµРґ СЃР»РѕР¶РЅС‹РјРё РјРѕСЂР°Р»СЊРЅС‹РјРё РґРёР»РµРјРјР°РјРё: РѕС‚РїСЂР°РІРёС‚СЊ РµРґРёРЅСЃС‚РІРµРЅРЅСѓСЋ СЃРІРѕР±РѕРґРЅСѓСЋ СЃРєРѕСЂСѓСЋ Рє СЂРµР±РµРЅРєСѓ СЃ С‚РµРјРїРµСЂР°С‚СѓСЂРѕР№ РёР»Рё Рє РјРµСЃС‚Сѓ РјР°СЃСЃРѕРІРѕРіРѕ Р”РўРџ? Р РµС€РµРЅРёСЏ РЅСѓР¶РЅРѕ РїСЂРёРЅРёРјР°С‚СЊ Р·Р° СЃРµРєСѓРЅРґС‹, Рё РїРѕСЃР»РµРґСЃС‚РІРёСЏ РјРѕРіСѓС‚ Р±С‹С‚СЊ С„Р°С‚Р°Р»СЊРЅС‹РјРё.</p>
+                    <h2 id="step-2">Середина сентября: тяжелые будни диспетчера</h2>
+                    <p>С 14 по 21 сентября игроки смогут забрать <strong>911 Operator</strong>. Это симулятор диспетчера экстренных служб, который может оказаться гораздо более напряженным, чем любой экшен. Ваша задача — принимать звонки от граждан, фильтровать ложные вызовы, давать советы по оказанию первой помощи и распределять экипажи полиции, скорой и пожарных по карте города.</p>
+                    <p>Интересная особенность игры — возможность загрузить карту любого реального города (включая ваш родной) и работать на знакомых улицах. Игра часто ставит перед сложными моральными дилеммами: отправить единственную свободную скорую к ребенку с температурой или к месту массового ДТП? Решения нужно принимать за секунды, и последствия могут быть фатальными.</p>
 
-                    <h2 id="step-3">РљРѕРЅРµС† РјРµСЃСЏС†Р°: РіРѕР»РѕРІРѕР»РѕРјРєРё Рё СЃР»СЌС€РµСЂС‹</h2>
-                    <p>РЎ 21 РїРѕ 28 СЃРµРЅС‚СЏР±СЂСЏ РЅР°СЃ Р¶РґРµС‚ РґРІРѕР№РЅР°СЏ СЂР°Р·РґР°С‡Р° РёРЅРґРё-РёРіСЂ. <strong>Out of Line</strong> вЂ” СЌС‚Рѕ РєСЂР°СЃРёРІС‹Р№ СЂРёСЃРѕРІР°РЅРЅС‹Р№ РїР°Р·Р»-РїР»Р°С‚С„РѕСЂРјРµСЂ Рѕ РїСЂРёРєР»СЋС‡РµРЅРёСЏС… РјР°Р»РµРЅСЊРєРѕРіРѕ РјР°Р»СЊС‡РёРєР° РЎР°РЅР°, РєРѕС‚РѕСЂС‹Р№ РїС‹С‚Р°РµС‚СЃСЏ СЃР±РµР¶Р°С‚СЊ СЃ С„Р°Р±СЂРёРєРё. Р“Р»Р°РІРЅР°СЏ РјРµС…Р°РЅРёРєР° Р·Р°РІСЏР·Р°РЅР° РЅР° РёСЃРїРѕР»СЊР·РѕРІР°РЅРёРё РєРѕРїСЊСЏ, РєРѕС‚РѕСЂРѕРµ РїРѕРјРѕРіР°РµС‚ РїСЂРµРѕРґРѕР»РµРІР°С‚СЊ РїСЂРµРїСЏС‚СЃС‚РІРёСЏ. Р’С‚РѕСЂР°СЏ РёРіСЂР°, <strong>The Forest Quartet</strong>, вЂ” СЌС‚Рѕ РјСѓР·С‹РєР°Р»СЊРЅР°СЏ РіРѕР»РѕРІРѕР»РѕРјРєР° Рѕ РїСЂРёР·СЂР°РєРµ РІРѕРєР°Р»РёСЃС‚РєРё, РєРѕС‚РѕСЂР°СЏ РїС‹С‚Р°РµС‚СЃСЏ РІРѕСЃСЃС‚Р°РЅРѕРІРёС‚СЊ РіР°СЂРјРѕРЅРёСЋ РІ СЃРІРѕРµР№ РґР¶Р°Р·РѕРІРѕР№ РіСЂСѓРїРїРµ, РїСѓС‚РµС€РµСЃС‚РІСѓСЏ РїРѕ СЂР°Р·СѓРјР°Рј РѕСЃС‚Р°Р»СЊРЅС‹С… СѓС‡Р°СЃС‚РЅРёРєРѕРІ.</p>
-<p>Р—Р°РІРµСЂС€РёС‚СЃСЏ СЃРµРЅС‚СЏР±СЂСЊ (СЃ 28 СЃРµРЅС‚СЏР±СЂСЏ РїРѕ 5 РѕРєС‚СЏР±СЂСЏ) СЂР°Р·РґР°С‡РµР№ РґРІСѓС… СЃРѕРІРµСЂС€РµРЅРЅРѕ СЂР°Р·РЅС‹С… РїСЂРѕРµРєС‚РѕРІ. <strong>Model Builder</strong> вЂ” СЂР°СЃСЃР»Р°Р±Р»СЏСЋС‰РёР№ СЃРёРјСѓР»СЏС‚РѕСЂ РґР»СЏ С‚РµС…, РєС‚Рѕ Р»СЋР±РёС‚ СЃРѕР±РёСЂР°С‚СЊ Рё РєСЂР°СЃРёС‚СЊ РјР°СЃС€С‚Р°Р±РЅС‹Рµ РјРѕРґРµР»Рё С‚РµС…РЅРёРєРё, РЅРѕ РЅРµ С…РѕС‡РµС‚ РІРѕР·РёС‚СЊСЃСЏ СЃ РєР»РµРµРј Рё РєСЂР°СЃРєРѕР№ РІ СЂРµР°Р»СЊРЅРѕСЃС‚Рё. Рђ РІРѕС‚ <strong>Soulstice</strong> вЂ” СЌС‚Рѕ РїРѕР»РЅР°СЏ РїСЂРѕС‚РёРІРѕРїРѕР»РѕР¶РЅРѕСЃС‚СЊ: РјСЂР°С‡РЅС‹Р№, РґРёРЅР°РјРёС‡РЅС‹Р№ СЃР»СЌС€РµСЂ РІ РґСѓС…Рµ Devil May Cry Рё Berserk, РіРґРµ РІС‹ СѓРїСЂР°РІР»СЏРµС‚Рµ СЃСЂР°Р·Сѓ РґРІСѓРјСЏ РіРµСЂРѕРёРЅСЏРјРё вЂ” РІРѕРёС‚РµР»СЊРЅРёС†РµР№ Р‘СЂРёР°СЂ Рё РµС‘ РїСЂРёР·СЂР°С‡РЅРѕР№ СЃРµСЃС‚СЂРѕР№ Р›СЋС‚, СЃСЂР°Р¶Р°СЏСЃСЊ СЃ РѕСЂРґР°РјРё С‡СѓРґРѕРІРёС‰ РІ СЂР°Р·СЂСѓС€РµРЅРЅРѕРј РіРѕСЂРѕРґРµ.</p>
+                    <h2 id="step-3">Конец месяца: головоломки и слэшеры</h2>
+                    <p>С 21 по 28 сентября нас ждет двойная раздача инди-игр. <strong>Out of Line</strong> — это красивый рисованный пазл-платформер о приключениях маленького мальчика Сана, который пытается сбежать с фабрики. Главная механика завязана на использовании копья, которое помогает преодолевать препятствия. Вторая игра, <strong>The Forest Quartet</strong>, — это музыкальная головоломка о призраке вокалистки, которая пытается восстановить гармонию в своей джазовой группе, путешествуя по разумам остальных участников.</p>
+<p>Завершится сентябрь (с 28 сентября по 5 октября) раздачей двух совершенно разных проектов. <strong>Model Builder</strong> — расслабляющий симулятор для тех, кто любит собирать и красить масштабные модели техники, но не хочет возиться с клеем и краской в реальности. А вот <strong>Soulstice</strong> — это полная противоположность: мрачный, динамичный слэшер в духе Devil May Cry и Berserk, где вы управляете сразу двумя героинями — воительницей Бриар и её призрачной сестрой Лют, сражаясь с ордами чудовищ в разрушенном городе.</p>
 
-                    <h2 id="step-4">РљР°Рє Р·Р°Р±РёСЂР°С‚СЊ РёРіСЂС‹ Рё РїРѕС‡РµРјСѓ СЌС‚Рѕ СЃС‚РѕРёС‚ РґРµР»Р°С‚СЊ</h2>
-                    <p>РќР°РїРѕРјРёРЅР°РµРј, С‡С‚Рѕ РґР»СЏ РїРѕР»СѓС‡РµРЅРёСЏ РёРіСЂ РґРѕСЃС‚Р°С‚РѕС‡РЅРѕ РёРјРµС‚СЊ Р°РєРєР°СѓРЅС‚ РІ Epic Games Store. РџРѕСЃР»Рµ С‚РѕРіРѕ РєР°Рє РІС‹ РЅР°Р¶РјРµС‚Рµ РєРЅРѕРїРєСѓ В«РџРѕР»СѓС‡РёС‚СЊВ», РёРіСЂР° РЅР°РІСЃРµРіРґР° РѕСЃС‚Р°РµС‚СЃСЏ РІ РІР°С€РµР№ Р±РёР±Р»РёРѕС‚РµРєРµ, РґР°Р¶Рµ РµСЃР»Рё РІС‹ РЅРµ Р±СѓРґРµС‚Рµ РµС‘ СЃСЂР°Р·Сѓ СЃРєР°С‡РёРІР°С‚СЊ. Р­С‚Рѕ РѕС‚Р»РёС‡РЅР°СЏ РІРѕР·РјРѕР¶РЅРѕСЃС‚СЊ СЃРѕР±СЂР°С‚СЊ РєРѕР»Р»РµРєС†РёСЋ Р»РµРіР°Р»СЊРЅС‹С… РёРіСЂ Р±РµР· Р·Р°С‚СЂР°С‚. Р Р°Р·РґР°С‡Рё РѕР±РЅРѕРІР»СЏСЋС‚СЃСЏ РєР°Р¶РґС‹Р№ С‡РµС‚РІРµСЂРі РІ 18:00 РїРѕ РјРѕСЃРєРѕРІСЃРєРѕРјСѓ РІСЂРµРјРµРЅРё.</p>
-<p>РЎРµРЅС‚СЏР±СЂСЊСЃРєР°СЏ РїРѕРґР±РѕСЂРєР° РїРѕР»СѓС‡РёР»Р°СЃСЊ СЃР±Р°Р»Р°РЅСЃРёСЂРѕРІР°РЅРЅРѕР№: Р·РґРµСЃСЊ РµСЃС‚СЊ Рё РЅР°РїСЂСЏР¶РµРЅРЅР°СЏ С‚Р°РєС‚РёРєР°, Рё СЂРµР»Р°РєСЃ, Рё СЌРєС€РµРЅ. Р”Р°Р¶Рµ РµСЃР»Рё РєР°РєРѕР№-С‚Рѕ Р¶Р°РЅСЂ РІР°Рј РЅРµ Р±Р»РёР·РѕРє, СЂРµРєРѕРјРµРЅРґСѓРµРј РґРѕР±Р°РІР»СЏС‚СЊ РёРіСЂС‹ РЅР° Р°РєРєР°СѓРЅС‚ вЂ” РІРєСѓСЃС‹ РјРѕРіСѓС‚ РёР·РјРµРЅРёС‚СЊСЃСЏ, Р° Р±РµСЃРїР»Р°С‚РЅР°СЏ Р»РёС†РµРЅР·РёСЏ Р»РёС€РЅРµР№ РЅРµ Р±СѓРґРµС‚.</p>
+                    <h2 id="step-4">Как забирать игры и почему это стоит делать</h2>
+                    <p>Напоминаем, что для получения игр достаточно иметь аккаунт в Epic Games Store. После того как вы нажмете кнопку «Получить», игра навсегда остается в вашей библиотеке, даже если вы не будете её сразу скачивать. Это отличная возможность собрать коллекцию легальных игр без затрат. Раздачи обновляются каждый четверг в 18:00 по московскому времени.</p>
+<p>Сентябрьская подборка получилась сбалансированной: здесь есть и напряженная тактика, и релакс, и экшен. Даже если какой-то жанр вам не близок, рекомендуем добавлять игры на аккаунт — вкусы могут измениться, а бесплатная лицензия лишней не будет.</p>
                 </div>
 
-        <!-- Telegram СЂРµРєР»Р°РјРЅС‹Р№ Р±Р°РЅРЅРµСЂ -->
+        <!-- Telegram рекламный баннер -->
         <a href="https://t.me/RepairoRU" target="_blank" rel="noopener noreferrer" class="telegram-banner">
           <div class="telegram-banner-container">
             <div class="telegram-logo">
@@ -456,10 +381,10 @@
               </svg>
             </div>
             <div class="telegram-content">
-              <div class="telegram-title">РќРѕРІРѕСЃС‚Рё РёР· РјРёСЂР° С‚РµС…РЅРѕР»РѕРіРёР№</div>
-              <div class="telegram-subtitle">Р’ РЅР°С€РµРј РЅРѕРІРѕРј Telegram-РєР°РЅР°Р»Рµ. РџРѕРґРїРёСЃС‹РІР°Р№С‚РµСЃСЊ Рё Р±СѓРґСЊС‚Рµ РІ С‡РёСЃР»Рµ РїРµСЂРІС‹С…!</div>
+              <div class="telegram-title">Новости из мира технологий</div>
+              <div class="telegram-subtitle">В нашем новом Telegram-канале. Подписывайтесь и будьте в числе первых!</div>
               <div class="telegram-button">
-                РџРѕРґРїРёСЃР°С‚СЊСЃСЏ
+                Подписаться
                 <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.56c-.21 2.22-1.12 7.58-1.58 10.06-.19 1.07-.57 1.43-.94 1.46-.8.07-1.4-.52-2.17-1.03-1.21-.79-1.89-1.28-3.06-2.05-1.35-.87-.47-1.35.3-2.13.2-.21 3.71-3.39 3.77-3.68.01-.04.01-.18-.07-.26s-.2-.05-.29-.03c-.12.03-2.11 1.34-5.95 3.93-.56.38-1.07.57-1.53.56-.5-.01-1.47-.28-2.19-.51-.88-.28-1.58-.43-1.52-.91.03-.25.38-.51 1.04-.78 4.07-1.77 6.78-2.94 8.13-3.51 3.88-1.62 4.68-1.9 5.19-1.91.12 0 .37.03.54.17.14.12.18.28.2.44-.01.06 0 .11-.01.17z"/>
                 </svg>
@@ -485,45 +410,45 @@
                         </span>
                         <span class="logo__text">Repairo</span>
                     </a>
-                    <p class="footer__text">РџРѕРјРѕРіР°РµРј СЂРµРјРѕРЅС‚РёСЂРѕРІР°С‚СЊ СЌР»РµРєС‚СЂРѕРЅРёРєСѓ СЃ 2024 РіРѕРґР°</p>
+                    <p class="footer__text">Помогаем ремонтировать электронику с 2024 года</p>
                 </div>
                 <div class="footer__col">
-                    <h3 class="footer__title">Р Р°Р·РґРµР»С‹</h3>
+                    <h3 class="footer__title">Разделы</h3>
                     <ul class="footer__links">
-                        <li><a href="../index.html" class="footer__link">Р“Р»Р°РІРЅР°СЏ</a></li>
-                        <li><a href="../index.html#categories" class="footer__link">Р’СЃРµ РіР°Р№РґС‹</a></li>
-                        <li><a href="../contacts.html" class="footer__link">РљРѕРЅС‚Р°РєС‚С‹</a></li>
+                        <li><a href="../index.html" class="footer__link">Главная</a></li>
+                        <li><a href="../index.html#categories" class="footer__link">Все гайды</a></li>
+                        <li><a href="../contacts.html" class="footer__link">Контакты</a></li>
                     </ul>
                 </div>
                 <div class="footer__col">
-                    <h3 class="footer__title">РљР°С‚РµРіРѕСЂРёРё</h3>
+                    <h3 class="footer__title">Категории</h3>
                     <ul class="footer__links">
-                        <li><a href="../tv.html" class="nav__link">РўРµР»РµРІРёР·РѕСЂС‹</a></li>
-                        <li><a href="../cameras.html" class="nav__link">Р¤РѕС‚РѕР°РїРїР°СЂР°С‚С‹</a></li>
-                        <li><a href="../consoles.html" class="nav__link">РџСЂРёСЃС‚Р°РІРєРё</a></li>
-                        <li><a href="../laptops.html" class="nav__link">РќРѕСѓС‚Р±СѓРєРё</a></li>
-                        <li><a href="../smartphones.html" class="nav__link">РЎРјР°СЂС‚С„РѕРЅС‹</a></li>
-                        <li><a href="../small-appliances.html" class="nav__link">РњРµР»РєР°СЏ С‚РµС…РЅРёРєР°</a></li>
-                        <li><a href="../large-appliances.html" class="nav__link">Р‘С‹С‚РѕРІР°СЏ С‚РµС…РЅРёРєР°</a></li>
-                        <li><a href="../auto-electronics.html" class="nav__link">РђРІС‚Рѕ-Р­Р»РµРєС‚СЂРѕРЅРёРєР°</a></li>
+                        <li><a href="../tv.html" class="nav__link">Телевизоры</a></li>
+                        <li><a href="../cameras.html" class="nav__link">Фотоаппараты</a></li>
+                        <li><a href="../consoles.html" class="nav__link">Приставки</a></li>
+                        <li><a href="../laptops.html" class="nav__link">Ноутбуки</a></li>
+                        <li><a href="../smartphones.html" class="nav__link">Смартфоны</a></li>
+                        <li><a href="../small-appliances.html" class="nav__link">Мелкая техника</a></li>
+                        <li><a href="../large-appliances.html" class="nav__link">Бытовая техника</a></li>
+                        <li><a href="../auto-electronics.html" class="nav__link">Авто-Электроника</a></li>
                     </ul>
                 </div>
                 <div class="footer__col">
-                    <h3 class="footer__title">РљРѕРЅС‚Р°РєС‚С‹</h3>
+                    <h3 class="footer__title">Контакты</h3>
                     <ul class="footer__links">
                         <li><a href="https://t.me/RepairoRU" class="footer__link"><i class="fab fa-telegram"></i> Telegram</a></li>
-                        <li><span class="footer__link">РќР°С€Р° РїРѕС‡С‚Р°: repairo.info@mail.ru</span></li>
+                        <li><span class="footer__link">Наша почта: repairo.info@mail.ru</span></li>
                     </ul>
                 </div>
             </div>
             <div class="footer__bottom">
                 <p class="disclaimer">
-    РђРґРјРёРЅРёСЃС‚СЂР°С†РёСЏ СЃР°Р№С‚Р° РЅРµ РЅРµСЃС‘С‚ РѕС‚РІРµС‚СЃС‚РІРµРЅРЅРѕСЃС‚Рё Р·Р° РІРѕР·РјРѕР¶РЅС‹Рµ РїРѕРІСЂРµР¶РґРµРЅРёСЏ С‚РµС…РЅРёРєРё
-    Рё РёРЅС‹Рµ РїРѕСЃР»РµРґСЃС‚РІРёСЏ, РІРѕР·РЅРёРєС€РёРµ РІ СЂРµР·СѓР»СЊС‚Р°С‚Рµ СЃР°РјРѕСЃС‚РѕСЏС‚РµР»СЊРЅРѕРіРѕ СЂРµРјРѕРЅС‚Р° РїРѕ
-    РјР°С‚РµСЂРёР°Р»Р°Рј Рё РёРЅСЃС‚СЂСѓРєС†РёСЏРј, СЂР°Р·РјРµС‰С‘РЅРЅС‹Рј РЅР° СЃР°Р№С‚Рµ. Р’СЃРµ СЂР°Р±РѕС‚С‹ РІС‹ РІС‹РїРѕР»РЅСЏРµС‚Рµ
-    РЅР° СЃРІРѕР№ СЃС‚СЂР°С… Рё СЂРёСЃРє.
+    Администрация сайта не несёт ответственности за возможные повреждения техники
+    и иные последствия, возникшие в результате самостоятельного ремонта по
+    материалам и инструкциям, размещённым на сайте. Все работы вы выполняете
+    на свой страх и риск.
     </p>
-                <p class="footer__copyright">В© 2026 Repairo. Р’СЃРµ РїСЂР°РІР° Р·Р°С‰РёС‰РµРЅС‹.</p>
+                <p class="footer__copyright">© 2026 Repairo. Все права защищены.</p>
             </div>
         </div>
     </footer>
@@ -532,32 +457,32 @@
 {
   "@context": "https://schema.org",
   "@type": "HowTo",
-  "name": "Р‘РµСЃРїР»Р°С‚РЅС‹Рµ РёРіСЂС‹ РІ Epic Games Store РЅР° СЃРµРЅС‚СЏР±СЂСЊ",
-  "description": "РџРѕР»РЅС‹Р№ СЃРїРёСЃРѕРє Р±РµСЃРїР»Р°С‚РЅС‹С… РёРіСЂ РІ Epic Games Store РЅР° СЃРµРЅС‚СЏР±СЂСЊ 2023 РіРѕРґР°. РћР±Р·РѕСЂ Spelldrifter, 911 Operator, Soulstice Рё РґСЂСѓРіРёС… РїСЂРѕРµРєС‚РѕРІ, РєРѕС‚РѕСЂС‹Рµ РјРѕР¶РЅРѕ Р·Р°Р±СЂР°С‚СЊ РЅР°РІСЃРµРіРґР°.",
+  "name": "Бесплатные игры в Epic Games Store на сентябрь",
+  "description": "Полный список бесплатных игр в Epic Games Store на сентябрь 2023 года. Обзор Spelldrifter, 911 Operator, Soulstice и других проектов, которые можно забрать навсегда.",
   "totalTime": "PT30M",
   "step": [
     {
       "@type": "HowToStep",
-      "name": "РќР°С‡Р°Р»Рѕ РјРµСЃСЏС†Р°",
-      "text": "РќР°С‡Р°Р»Рѕ РјРµСЃСЏС†Р°: Cave Story+ Рё Spelldrifter",
+      "name": "Начало месяца",
+      "text": "Начало месяца: Cave Story+ и Spelldrifter",
       "url": "#step-1"
     },
     {
       "@type": "HowToStep",
-      "name": "РЎРµСЂРµРґРёРЅР° РјРµСЃСЏС†Р°",
-      "text": "РЎРµСЂРµРґРёРЅР° СЃРµРЅС‚СЏР±СЂСЏ: С‚СЏР¶РµР»С‹Рµ Р±СѓРґРЅРё РґРёСЃРїРµС‚С‡РµСЂР°",
+      "name": "Середина месяца",
+      "text": "Середина сентября: тяжелые будни диспетчера",
       "url": "#step-2"
     },
     {
       "@type": "HowToStep",
-      "name": "РљРѕРЅРµС† РјРµСЃСЏС†Р°",
-      "text": "РљРѕРЅРµС† РјРµСЃСЏС†Р°: РіРѕР»РѕРІРѕР»РѕРјРєРё Рё СЃР»СЌС€РµСЂС‹",
+      "name": "Конец месяца",
+      "text": "Конец месяца: головоломки и слэшеры",
       "url": "#step-3"
     },
     {
       "@type": "HowToStep",
-      "name": "РљР°Рє Р·Р°Р±РёСЂР°С‚СЊ",
-      "text": "РљР°Рє Р·Р°Р±РёСЂР°С‚СЊ РёРіСЂС‹ Рё РїРѕС‡РµРјСѓ СЌС‚Рѕ СЃС‚РѕРёС‚ РґРµР»Р°С‚СЊ",
+      "name": "Как забирать",
+      "text": "Как забирать игры и почему это стоит делать",
       "url": "#step-4"
     }
   ],
@@ -568,4 +493,6 @@
 <script src="../cookie-consent.js"></script>
 </body>
 </html>
+
+
 

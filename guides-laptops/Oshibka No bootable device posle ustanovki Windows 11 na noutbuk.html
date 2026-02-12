@@ -4,9 +4,8 @@
 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>РћС€РёР±РєР° No bootable device РїРѕСЃР»Рµ СѓСЃС‚Р°РЅРѕРІРєРё Windows 11 РЅР° РЅРѕСѓС‚Р±СѓРє | Р РµС€РµРЅРёРµ РїСЂРѕР±Р»РµРјС‹</title>
-    <meta name="description" content="{{ description }}">
-    <meta name="description" content="РћС€РёР±РєР° No bootable device РїРѕСЃР»Рµ СѓСЃС‚Р°РЅРѕРІРєРё Windows 11 РЅР° РЅРѕСѓС‚Р±СѓРє. РџСЂРёС‡РёРЅС‹ РѕС‚СЃСѓС‚СЃС‚РІРёСЏ Р·Р°РіСЂСѓР·РѕС‡РЅРѕРіРѕ СѓСЃС‚СЂРѕР№СЃС‚РІР° РїРѕСЃР»Рµ СѓСЃС‚Р°РЅРѕРІРєРё Рё СЃРїРѕСЃРѕР±С‹ РёСЃРїСЂР°РІР»РµРЅРёСЏ РїСЂРѕР±Р»РµРј СЃ Р·Р°РіСЂСѓР·РєРѕР№ РЅР° РЅРѕСѓС‚Р±СѓРєРµ.">
+  <title>Ошибка No bootable device после установки Windows 11 на ноут</title>
+    <meta name="description" content="">
 
   <link rel="stylesheet" href="../styles.css" />
   <link rel="stylesheet" href="../styles-header.css" />
@@ -25,154 +24,433 @@
     table { width: 100%; border-collapse: collapse; margin: 20px 0; }
     th, td { border: 1px solid var(--border); padding: 8px; text-align: left; }
     th { background: var(--background-light); }
+    .highlight { background: #f5f7fa; border-left: 4px solid #2d9cdb; padding: 10px 15px; margin: 20px 0; }
+    .faq-section ul { margin-left: 1em; }
+    .block-section { margin-bottom: 2em; }
     @media (max-width: 768px) {
       .guide-content h2 { font-size: 1.4rem; margin-top: 25px; }
       .guide-image-block { padding: 12px; margin: 15px 0; }
       table, th, td { font-size: 0.95rem; }
     }
-  </style>
+    /* Р“РѕСЂРёР·РѕРЅС‚Р°Р»СЊРЅС‹Р№ Р±Р°РЅРЅРµСЂ-РєР°СЂС‚РѕС‡РєР° */
+    .ym-hero-banner {
+      width: 100%;
+      max-width: 600px;
+      min-height: 140px;
+      border-radius: 16px;
+      background: #ffffff;
+      border: 1px solid #e5e7eb;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 4px 16px rgba(15, 23, 42, 0.08);
+      overflow: hidden;
+      box-sizing: border-box;
+      margin: 40px auto;
+    }
 
+    /* РљРѕРЅС‚РµР№РЅРµСЂ РґР»СЏ РёР·РѕР±СЂР°Р¶РµРЅРёР№ */
+    .ym-hero-images {
+      display: flex;
+      height: 120px;
+      overflow: hidden;
+    }
+
+    .ym-hero-image {
+      flex: 1;
+      min-width: 0;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      border-right: 1px solid #e5e7eb;
+      background: #f8f9fa;
+    }
+
+    .ym-hero-image:last-child {
+      border-right: none;
+    }
+
+    .ym-hero-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      transition: transform 0.3s ease;
+      background: #f8f9fa;
+    }
+
+    .ym-hero-image:hover img {
+      transform: scale(1.02);
+    }
+
+    /* РџСЂР°РІР°СЏ С‡Р°СЃС‚СЊ: РєРѕРЅС‚РµРЅС‚ */
+    .ym-hero-content {
+      padding: 16px 18px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 8px;
+    }
+
+    /* РќР°Р·РІР°РЅРёРµ С‚РѕРІР°СЂР° */
+    .ym-hero-title {
+      font-size: 14px;
+      font-weight: 600;
+      color: #111827;
+      line-height: 1.3;
+      margin: 0 0 4px 0;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    /* Р РµР№С‚РёРЅРі */
+    .ym-hero-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+    }
+
+    .ym-hero-rating {
+      font-size: 13px;
+      font-weight: 500;
+      color: #111827;
+      background: #f9fafb;
+      border-radius: 999px;
+      padding: 4px 10px;
+    }
+
+    .ym-hero-rating-count {
+      color: #6b7280;
+    }
+
+    /* Р¤РёРѕР»РµС‚РѕРІР°СЏ РєРЅРѕРїРєР° */
+    .ym-hero-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 9px 16px;
+      border-radius: 999px;
+      border: none;
+      background: #6a00ff;
+      color: #ffffff;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 2px 6px rgba(88, 28, 135, 0.35);
+      transition: background 0.15s ease, transform 0.15s ease,
+                  box-shadow 0.15s ease;
+    }
+    .ym-hero-button::after {
+      content: "в†’";
+      margin-left: 6px;
+      font-size: 14px;
+    }
+    .ym-hero-button:hover {
+      background: #7c3aed;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 10px rgba(88, 28, 135, 0.45);
+    }
+
+    /* Р®СЂРёРґРёС‡РµСЃРєРёР№ Р±Р»РѕРє */
+    .ym-hero-legal {
+      margin-top: 6px;
+      max-width: 600px;
+      font-size: 11px;
+      line-height: 1.3;
+      color: #6b7280;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* РђРґР°РїС‚РёРІ */
+    @media (max-width: 480px) {
+      .ym-hero-banner {
+        max-width: 100%;
+        margin: 20px 0;
+      }
+      .ym-hero-images {
+        height: 100px;
+      }
+      .ym-hero-content {
+        padding: 12px 12px;
+      }
+      .ym-hero-title {
+        font-size: 13px;
+      }
+      .ym-hero-button {
+        font-size: 13px;
+        padding: 8px 14px;
+      }
+      .ym-hero-legal {
+        font-size: 10px;
+      }
+    }
+    /* Telegram СЂРµРєР»Р°РјРЅС‹Р№ Р±Р°РЅРЅРµСЂ */
+    .telegram-banner {
+      display: flex;
+      justify-content: center;
+      text-decoration: none;
+      color: inherit;
+      width: 100%;
+      margin: 40px 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    .telegram-banner-container {
+      width: 100%;
+      max-width: 500px;
+      min-height: 120px;
+      border-radius: 16px;
+      background: linear-gradient(135deg, #0088cc 0%, #005f8f 100%);
+      border: 1px solid #005f8f;
+      display: flex;
+      align-items: center;
+      padding: 20px;
+      box-shadow: 0 4px 16px rgba(0, 136, 204, 0.2);
+      overflow: hidden;
+      box-sizing: border-box;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .telegram-banner-container:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0, 136, 204, 0.3);
+    }
+
+    .telegram-logo {
+      width: 60px;
+      height: 60px;
+      min-width: 60px;
+      background: #ffffff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 20px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .telegram-logo svg {
+      width: 32px;
+      height: 32px;
+      fill: #0088cc;
+    }
+
+    .telegram-content {
+      flex: 1;
+      color: #ffffff;
+    }
+
+    .telegram-title {
+      font-size: 16px;
+      font-weight: 600;
+      margin: 0 0 8px 0;
+      line-height: 1.3;
+    }
+
+    .telegram-subtitle {
+      font-size: 14px;
+      opacity: 0.9;
+      margin: 0 0 12px 0;
+      line-height: 1.4;
+    }
+
+    .telegram-button {
+      display: inline-flex;
+      align-items: center;
+      padding: 8px 16px;
+      background: #ffffff;
+      color: #0088cc;
+      border-radius: 20px;
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background 0.2s ease, transform 0.2s ease;
+    }
+
+    .telegram-button:hover {
+      background: #f0f8ff;
+      transform: scale(1.05);
+    }
+
+    .telegram-button svg {
+      width: 16px;
+      height: 16px;
+      margin-left: 6px;
+      fill: #0088cc;
+    }
+
+    /* РђРґР°РїС‚РёРІ РґР»СЏ РјРѕР±РёР»СЊРЅС‹С… */
+    @media (max-width: 480px) {
+      .telegram-banner-container {
+        max-width: 100%;
+        margin: 20px 0;
+        padding: 15px;
+        min-height: 100px;
+      }
+      .telegram-logo {
+        width: 50px;
+        height: 50px;
+        min-width: 50px;
+        margin-right: 15px;
+      }
+      .telegram-logo svg {
+        width: 26px;
+        height: 26px;
+      }
+      .telegram-title {
+        font-size: 14px;
+      }
+      .telegram-subtitle {
+        font-size: 12px;
+      }
+      .telegram-button {
+        font-size: 12px;
+        padding: 6px 12px;
+      }
+    }
+
+
+
+  </style>
+  <script async src="https://timeweb.cloud/api/v1/cloud-ai/agents/3cc03620-d051-4d8d-b5af-f7b6cd083a35/embed.js?collapsed=true"></script>
 </head>
 <body>
-    <header class="header">
-        <div class="container">
-            <div class="header__inner">
-                <a href="../index.html" class="logo">
-                    <span class="logo__icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12 15L7 10H17L12 15Z" fill="currentColor"/>
-                            <path d="M12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3ZM12 19C8.13401 19 5 15.866 5 12C5 8.13401 8.13401 5 12 5C15.866 5 19 8.13401 19 12C19 15.866 15.866 19 12 19Z" fill="currentColor"/>
-                        </svg>
-                    </span>
-                    <span class="logo__text">Repairo</span>
-                </a>
-                <nav class="nav">
-                    <ul class="nav__list">
-                       <li><a href="../tv.html" class="nav__link">РўРµР»РµРІРёР·РѕСЂС‹</a></li>
-                        <li><a href="../auto-electronics.html" class="nav__link">РђРІС‚РѕСЌР»РµРєС‚СЂРѕРЅРёРєР°</a></li>
-                        <li><a href="../consoles.html" class="nav__link">РџСЂРёСЃС‚Р°РІРєРё</a></li>
-                        <li><a href="../laptops.html" class="nav__link">РќРѕСѓС‚Р±СѓРєРё</a></li>
-                        <li><a href="../smartphones.html" class="nav__link">РЎРјР°СЂС‚С„РѕРЅС‹</a></li>
-                        <li><a href="../index.html#categories" class="nav__link">Р’СЃРµ РєР°С‚РµРіРѕСЂРёРё</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
-    </header>
+  <header class="header">
+    <div class="container">
+      <div class="header__inner">
+        <a href="../index.html" class="logo">
+          <span class="logo__icon"></span>
+          <span class="logo__text">GeoExpert</span>
+        </a>
+        <nav class="nav">
+          <ul class="nav__list">
+            <li><a href="../cameras.html" class="nav__link">РљР°РјРµСЂС‹</a></li>
+            <li><a href="../drones.html" class="nav__link">Р”СЂРѕРЅС‹</a></li>
+            <li><a href="../workflow.html" class="nav__link">Workflow</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
 
     <main class="container">
         <div class="guide-content">
-            <h1>РћС€РёР±РєР° No bootable device РїРѕСЃР»Рµ СѓСЃС‚Р°РЅРѕРІРєРё Windows 11 РЅР° РЅРѕСѓС‚Р±СѓРє</h1>
-            <p>РћС€РёР±РєР° "No bootable device" РїРѕСЃР»Рµ СѓСЃС‚Р°РЅРѕРІРєРё Windows 11 РЅР° РЅРѕСѓС‚Р±СѓРє СѓРєР°Р·С‹РІР°РµС‚ РЅР° РѕС‚СЃСѓС‚СЃС‚РІРёРµ Р·Р°РіСЂСѓР·РѕС‡РЅРѕРіРѕ СѓСЃС‚СЂРѕР№СЃС‚РІР°. Р’ СЌС‚РѕРј РїРѕРґСЂРѕР±РЅРѕРј СЂСѓРєРѕРІРѕРґСЃС‚РІРµ РјС‹ СЂР°Р·Р±РµСЂРµРј РїСЂРёС‡РёРЅС‹ СЌС‚РѕР№ РѕС€РёР±РєРё Рё СЌС„С„РµРєС‚РёРІРЅС‹Рµ СЃРїРѕСЃРѕР±С‹ РµРµ РёСЃРїСЂР°РІР»РµРЅРёСЏ.</p>
+            <h1>Ошибка No bootable device после установки Windows 11 на ноутбук</h1>
+            <p>Ошибка "No bootable device" после установки Windows 11 на ноутбук указывает на отсутствие загрузочного устройства. В этом подробном руководстве мы разберем причины этой ошибки и эффективные способы ее исправления.</p>
 
-            <h2>Р§С‚Рѕ РѕР·РЅР°С‡Р°РµС‚ No bootable device</h2>
-            <p>BIOS РЅРµ РЅР°С…РѕРґРёС‚ СѓСЃС‚СЂРѕР№СЃС‚РІРѕ, СЃ РєРѕС‚РѕСЂРѕРіРѕ РјРѕР¶РЅРѕ Р·Р°РіСЂСѓР·РёС‚СЊ РѕРїРµСЂР°С†РёРѕРЅРЅСѓСЋ СЃРёСЃС‚РµРјСѓ.</p>
-            <h3>РўРµС…РЅРёС‡РµСЃРєРѕРµ РѕР±СЉСЏСЃРЅРµРЅРёРµ</h3>
+            <h2>Что означает No bootable device</h2>
+            <p>BIOS не находит устройство, с которого можно загрузить операционную систему.</p>
+            <h3>Техническое объяснение</h3>
             <ul>
-                <li><strong>РџСЂРёС‡РёРЅР°:</strong> РћС‚СЃСѓС‚СЃС‚РІРёРµ Р·Р°РіСЂСѓР·РѕС‡РЅРѕРіРѕ РґРёСЃРєР° РёР»Рё РїРѕРІСЂРµР¶РґРµРЅРёРµ Р·Р°РіСЂСѓР·С‡РёРєР°</li>
-                <li><strong>Р’Р»РёСЏРЅРёРµ:</strong> РЎРёСЃС‚РµРјР° РЅРµ Р·Р°РіСЂСѓР¶Р°РµС‚СЃСЏ РїРѕСЃР»Рµ СѓСЃС‚Р°РЅРѕРІРєРё</li>
-                <li><strong>Р§Р°СЃС‚Рѕ СЃРІСЏР·Р°РЅРѕ:</strong> РЎ СѓСЃС‚Р°РЅРѕРІРєРѕР№ РёР»Рё РЅР°СЃС‚СЂРѕР№РєР°РјРё</li>
-                <li><strong>Р РµР·СѓР»СЊС‚Р°С‚:</strong> Р§РµСЂРЅС‹Р№ СЌРєСЂР°РЅ СЃ РѕС€РёР±РєРѕР№</li>
+                <li><strong>Причина:</strong> Отсутствие загрузочного диска или повреждение загрузчика</li>
+                <li><strong>Влияние:</strong> Система не загружается после установки</li>
+                <li><strong>Часто связано:</strong> С установкой или настройками</li>
+                <li><strong>Результат:</strong> Черный экран с ошибкой</li>
             </ul>
 
-            <h3>Р’Р»РёСЏРЅРёРµ РЅР° СЃРёСЃС‚РµРјСѓ</h3>
+            <h3>Влияние на систему</h3>
             <ul>
-                <li>РќРµ СѓРґР°РµС‚СЃСЏ Р·Р°РіСЂСѓР·РёС‚СЊ Windows</li>
-                <li>РЈСЃС‚Р°РЅРѕРІРєР° РїСЂРѕС€Р»Р° СѓСЃРїРµС€РЅРѕ, РЅРѕ Р·Р°РіСЂСѓР·РєР° РЅРµРІРѕР·РјРѕР¶РЅР°</li>
-                <li>РќРµРѕР±С…РѕРґРёРјРѕСЃС‚СЊ РІРѕСЃСЃС‚Р°РЅРѕРІР»РµРЅРёСЏ</li>
-                <li>РџРѕС‚РµСЂСЏ РґРѕСЃС‚СѓРїР° Рє СѓСЃС‚Р°РЅРѕРІР»РµРЅРЅРѕР№ СЃРёСЃС‚РµРјРµ</li>
+                <li>Не удается загрузить Windows</li>
+                <li>Установка прошла успешно, но загрузка невозможна</li>
+                <li>Необходимость восстановления</li>
+                <li>Потеря доступа к установленной системе</li>
             </ul>
 
-            <h2>Р Р°СЃРїСЂРѕСЃС‚СЂР°РЅРµРЅРЅС‹Рµ РїСЂРёС‡РёРЅС‹</h2>
-            <p>РџРѕС‡РµРјСѓ РІРѕР·РЅРёРєР°РµС‚ РѕС€РёР±РєР° No bootable device РїРѕСЃР»Рµ СѓСЃС‚Р°РЅРѕРІРєРё Windows 11.</p>
-            <h3>РџСЂРѕР±Р»РµРјС‹ СЃ СѓСЃС‚Р°РЅРѕРІРєРѕР№</h3>
+            <h2>Распространенные причины</h2>
+            <p>Почему возникает ошибка No bootable device после установки Windows 11.</p>
+            <h3>Проблемы с установкой</h3>
             <ul>
-                <li><strong>РќРµРїСЂР°РІРёР»СЊРЅР°СЏ СѓСЃС‚Р°РЅРѕРІРєР°:</strong> Р—Р°РіСЂСѓР·С‡РёРє РЅРµ СЃРѕР·РґР°РЅ</li>
-                <li><strong>РћС‚РєР»СЋС‡РµРЅРёРµ С„Р»РµС€РєРё:</strong> Р Р°РЅРѕ РёР·РІР»РµРєР»Рё СѓСЃС‚Р°РЅРѕРІРѕС‡РЅС‹Р№ РЅРѕСЃРёС‚РµР»СЊ</li>
-                <li><strong>РџРѕРІСЂРµР¶РґРµРЅРЅР°СЏ СѓСЃС‚Р°РЅРѕРІРєР°:</strong> Р¤Р°Р№Р»С‹ РїРѕРІСЂРµР¶РґРµРЅС‹</li>
-                <li><strong>РќРµСЃРѕРІРјРµСЃС‚РёРјС‹Р№ РґРёСЃРє:</strong> Р”РёСЃРє РЅРµ РїРѕРґРґРµСЂР¶РёРІР°РµС‚ Р·Р°РіСЂСѓР·РєСѓ</li>
+                <li><strong>Неправильная установка:</strong> Загрузчик не создан</li>
+                <li><strong>Отключение флешки:</strong> Рано извлекли установочный носитель</li>
+                <li><strong>Поврежденная установка:</strong> Файлы повреждены</li>
+                <li><strong>Несовместимый диск:</strong> Диск не поддерживает загрузку</li>
             </ul>
 
-            <h3>РќР°СЃС‚СЂРѕР№РєРё BIOS</h3>
+            <h3>Настройки BIOS</h3>
             <ul>
-                <li><strong>РџРѕСЂСЏРґРѕРє Р·Р°РіСЂСѓР·РєРё:</strong> Р”РёСЃРє РЅРµ РІ СЃРїРёСЃРєРµ</li>
-                <li><strong>UEFI/Legacy:</strong> РќРµРїСЂР°РІРёР»СЊРЅС‹Р№ СЂРµР¶РёРј</li>
-                <li><strong>Secure Boot:</strong> РљРѕРЅС„Р»РёРєС‚ СЃ Р·Р°РіСЂСѓР·С‡РёРєРѕРј</li>
-                <li><strong>РЎР±СЂРѕСЃ РЅР°СЃС‚СЂРѕРµРє:</strong> BIOS СЃР±СЂРѕС€РµРЅ РїРѕСЃР»Рµ СѓСЃС‚Р°РЅРѕРІРєРё</li>
+                <li><strong>Порядок загрузки:</strong> Диск не в списке</li>
+                <li><strong>UEFI/Legacy:</strong> Неправильный режим</li>
+                <li><strong>Secure Boot:</strong> Конфликт с загрузчиком</li>
+                <li><strong>Сброс настроек:</strong> BIOS сброшен после установки</li>
             </ul>
 
-            <h3>РџРѕРІСЂРµР¶РґРµРЅРёРµ РґР°РЅРЅС‹С…</h3>
+            <h3>Повреждение данных</h3>
             <ul>
-                <li><strong>BCD РїРѕРІСЂРµР¶РґРµРЅ:</strong> РњР°РіР°Р·РёРЅ РєРѕРЅС„РёРіСѓСЂР°С†РёРё Р·Р°РіСЂСѓР·РєРё</li>
-                <li><strong>MBR/EFI:</strong> Р—Р°РіСЂСѓР·РѕС‡РЅС‹Рµ СЃРµРєС‚РѕСЂР° РїРѕРІСЂРµР¶РґРµРЅС‹</li>
-                <li><strong>Р¤Р°Р№Р»С‹ Windows:</strong> РЎРёСЃС‚РµРјРЅС‹Рµ С„Р°Р№Р»С‹ РїРѕРІСЂРµР¶РґРµРЅС‹</li>
-                <li><strong>РџРµСЂРµРіСЂРµРІ:</strong> РџРѕРІСЂРµР¶РґРµРЅРёРµ РѕС‚ С‚РµРјРїРµСЂР°С‚СѓСЂС‹</li>
+                <li><strong>BCD поврежден:</strong> Магазин конфигурации загрузки</li>
+                <li><strong>MBR/EFI:</strong> Загрузочные сектора повреждены</li>
+                <li><strong>Файлы Windows:</strong> Системные файлы повреждены</li>
+                <li><strong>Перегрев:</strong> Повреждение от температуры</li>
             </ul>
 
-            <h2>Р”РёР°РіРЅРѕСЃС‚РёРєР° РѕС€РёР±РєРё</h2>
-            <p>РљР°Рє РѕРїСЂРµРґРµР»РёС‚СЊ РїСЂРёС‡РёРЅСѓ РѕС€РёР±РєРё No bootable device.</p>
-            <h3>РџСЂРѕРІРµСЂРєР° РІ BIOS</h3>
-            <h4>РћР±РЅР°СЂСѓР¶РµРЅРёРµ РґРёСЃРєР°</h4>
+            <h2>Диагностика ошибки</h2>
+            <p>Как определить причину ошибки No bootable device.</p>
+            <h3>Проверка в BIOS</h3>
+            <h4>Обнаружение диска</h4>
             <ol>
-                <li>РџРµСЂРµР·Р°РіСЂСѓР·РёС‚Рµ РЅРѕСѓС‚Р±СѓРє</li>
-                <li>Р’РѕР№РґРёС‚Рµ РІ BIOS (Del, F2 РёР»Рё F10)</li>
-                <li>РџСЂРѕРІРµСЂСЊС‚Рµ СЃРїРёСЃРѕРє РґРёСЃРєРѕРІ</li>
-                <li>Р•СЃР»Рё РґРёСЃРє РµСЃС‚СЊ, РїСЂРѕРІРµСЂСЊС‚Рµ РїРѕСЂСЏРґРѕРє Р·Р°РіСЂСѓР·РєРё</li>
+                <li>Перезагрузите ноутбук</li>
+                <li>Войдите в BIOS (Del, F2 или F10)</li>
+                <li>Проверьте список дисков</li>
+                <li>Если диск есть, проверьте порядок загрузки</li>
             </ol>
 
-            <h4>РџРѕСЂСЏРґРѕРє Р·Р°РіСЂСѓР·РєРё</h4>
+            <h4>Порядок загрузки</h4>
             <ol>
-                <li>Р’ СЂР°Р·РґРµР»Рµ Boot РїРѕСЃРјРѕС‚СЂРёС‚Рµ РїРѕСЂСЏРґРѕРє</li>
-                <li>РЈР±РµРґРёС‚РµСЃСЊ, С‡С‚Рѕ СЃРёСЃС‚РµРјРЅС‹Р№ РґРёСЃРє РїРµСЂРІС‹Р№</li>
-                <li>РџСЂРѕРІРµСЂСЊС‚Рµ РЅР°СЃС‚СЂРѕР№РєРё UEFI/Legacy</li>
-                <li>РЎРѕС…СЂР°РЅРёС‚Рµ РёР·РјРµРЅРµРЅРёСЏ</li>
+                <li>В разделе Boot посмотрите порядок</li>
+                <li>Убедитесь, что системный диск первый</li>
+                <li>Проверьте настройки UEFI/Legacy</li>
+                <li>Сохраните изменения</li>
             </ol>
 
-            <h3>РџСЂРѕРІРµСЂРєР° СѓСЃС‚Р°РЅРѕРІРєРё</h3>
+            <h3>Проверка установки</h3>
             <ol>
-                <li>Р—Р°РіСЂСѓР·РёС‚РµСЃСЊ СЃ СѓСЃС‚Р°РЅРѕРІРѕС‡РЅРѕР№ С„Р»РµС€РєРё</li>
-                <li>Р’С‹Р±РµСЂРёС‚Рµ "Р’РѕСЃСЃС‚Р°РЅРѕРІР»РµРЅРёРµ СЃРёСЃС‚РµРјС‹"</li>
-                <li>РџРѕРїСЂРѕР±СѓР№С‚Рµ Р°РІС‚РѕРјР°С‚РёС‡РµСЃРєРѕРµ РІРѕСЃСЃС‚Р°РЅРѕРІР»РµРЅРёРµ</li>
-                <li>РџСЂРѕРІРµСЂСЊС‚Рµ, Р·Р°РіСЂСѓР¶Р°РµС‚СЃСЏ Р»Рё СЃРёСЃС‚РµРјР°</li>
+                <li>Загрузитесь с установочной флешки</li>
+                <li>Выберите "Восстановление системы"</li>
+                <li>Попробуйте автоматическое восстановление</li>
+                <li>Проверьте, загружается ли система</li>
             </ol>
 
-            <h2>Р РµС€РµРЅРёРµ РїСЂРѕР±Р»РµРјС‹</h2>
-            <p>РњРµС‚РѕРґС‹ РёСЃРїСЂР°РІР»РµРЅРёСЏ РѕС€РёР±РєРё No bootable device.</p>
-            <h3>РњРµС‚РѕРґ 1: РќР°СЃС‚СЂРѕР№РєРё BIOS</h3>
-            <h4>РџРѕСЂСЏРґРѕРє Р·Р°РіСЂСѓР·РєРё</h4>
+            <h2>Решение проблемы</h2>
+            <p>Методы исправления ошибки No bootable device.</p>
+            <h3>Метод 1: Настройки BIOS</h3>
+            <h4>Порядок загрузки</h4>
             <ol>
-                <li>Р’РѕР№РґРёС‚Рµ РІ BIOS</li>
-                <li>РџРµСЂРµР№РґРёС‚Рµ Рє РЅР°СЃС‚СЂРѕР№РєР°Рј Р·Р°РіСЂСѓР·РєРё</li>
-                <li>РЈСЃС‚Р°РЅРѕРІРёС‚Рµ СЃРёСЃС‚РµРјРЅС‹Р№ РґРёСЃРє РїРµСЂРІС‹Рј</li>
-                <li>РћС‚РєР»СЋС‡РёС‚Рµ Secure Boot (РµСЃР»Рё РЅСѓР¶РЅРѕ)</li>
-                <li>РЎРѕС…СЂР°РЅРёС‚Рµ Рё РІС‹Р№РґРёС‚Рµ</li>
+                <li>Войдите в BIOS</li>
+                <li>Перейдите к настройкам загрузки</li>
+                <li>Установите системный диск первым</li>
+                <li>Отключите Secure Boot (если нужно)</li>
+                <li>Сохраните и выйдите</li>
             </ol>
 
-            <h3>РњРµС‚РѕРґ 2: Р’РѕСЃСЃС‚Р°РЅРѕРІР»РµРЅРёРµ Р·Р°РіСЂСѓР·С‡РёРєР°</h3>
-            <h4>РђРІС‚РѕРјР°С‚РёС‡РµСЃРєРѕРµ РІРѕСЃСЃС‚Р°РЅРѕРІР»РµРЅРёРµ</h4>
+            <h3>Метод 2: Восстановление загрузчика</h3>
+            <h4>Автоматическое восстановление</h4>
             <ol>
-                <li>Р—Р°РіСЂСѓР·РёС‚РµСЃСЊ СЃ СѓСЃС‚Р°РЅРѕРІРѕС‡РЅРѕР№ С„Р»РµС€РєРё</li>
-                <li>Р’С‹Р±РµСЂРёС‚Рµ "Р’РѕСЃСЃС‚Р°РЅРѕРІР»РµРЅРёРµ СЃРёСЃС‚РµРјС‹"</li>
-                <li>РќР°Р¶РјРёС‚Рµ "РџРѕРёСЃРє Рё СѓСЃС‚СЂР°РЅРµРЅРёРµ РЅРµРёСЃРїСЂР°РІРЅРѕСЃС‚РµР№"</li>
-                <li>Р’С‹Р±РµСЂРёС‚Рµ "Р’РѕСЃСЃС‚Р°РЅРѕРІР»РµРЅРёРµ РїСЂРё Р·Р°РіСЂСѓР·РєРµ"</li>
-                <li>Р”РѕР¶РґРёС‚РµСЃСЊ Р·Р°РІРµСЂС€РµРЅРёСЏ</li>
+                <li>Загрузитесь с установочной флешки</li>
+                <li>Выберите "Восстановление системы"</li>
+                <li>Нажмите "Поиск и устранение неисправностей"</li>
+                <li>Выберите "Восстановление при загрузке"</li>
+                <li>Дождитесь завершения</li>
             </ol>
 
-            <h3>РњРµС‚РѕРґ 3: РџРµСЂРµСЃС‚СЂРѕРµРЅРёРµ BCD</h3>
-            <h4>РљРѕРјР°РЅРґРЅР°СЏ СЃС‚СЂРѕРєР°</h4>
+            <h3>Метод 3: Перестроение BCD</h3>
+            <h4>Командная строка</h4>
             <ol>
-                <li>Р’ РјРµРЅСЋ РІРѕСЃСЃС‚Р°РЅРѕРІР»РµРЅРёСЏ РІС‹Р±РµСЂРёС‚Рµ "РљРѕРјР°РЅРґРЅР°СЏ СЃС‚СЂРѕРєР°"</li>
-                <li>Р’РІРµРґРёС‚Рµ: bootrec /fixmbr</li>
+                <li>В меню восстановления выберите "Командная строка"</li>
+                <li>Введите: bootrec /fixmbr</li>
                 <li>bootrec /fixboot</li>
                 <li>bootrec /rebuildbcd</li>
                 <li>exit</li>
-                <li>РџРµСЂРµР·Р°РіСЂСѓР·РёС‚Рµ СЃРёСЃС‚РµРјСѓ</li>
+                <li>Перезагрузите систему</li>
             </ol>
 
-            <h3>РњРµС‚РѕРґ 4: Р’РѕСЃСЃС‚Р°РЅРѕРІР»РµРЅРёРµ EFI</h3>
-            <h4>Р”Р»СЏ UEFI СЃРёСЃС‚РµРј</h4>
+            <h3>Метод 4: Восстановление EFI</h3>
+            <h4>Для UEFI систем</h4>
             <ol>
-                <li>Р’ РєРѕРјР°РЅРґРЅРѕР№ СЃС‚СЂРѕРєРµ РІРІРµРґРёС‚Рµ: diskpart</li>
+                <li>В командной строке введите: diskpart</li>
                 <li>list disk</li>
                 <li>select disk X</li>
                 <li>list partition</li>
@@ -181,106 +459,106 @@
                 <li>bcdboot C:\Windows /s Z: /f UEFI</li>
             </ol>
 
-            <h3>РњРµС‚РѕРґ 5: РџСЂРѕРІРµСЂРєР° РґРёСЃРєР°</h3>
-            <h4>РСЃРїСЂР°РІР»РµРЅРёРµ РѕС€РёР±РѕРє</h4>
+            <h3>Метод 5: Проверка диска</h3>
+            <h4>Исправление ошибок</h4>
             <ol>
-                <li>Р’ РєРѕРјР°РЅРґРЅРѕР№ СЃС‚СЂРѕРєРµ РІРІРµРґРёС‚Рµ: chkdsk C: /f /r</li>
-                <li>Р”РѕР¶РґРёС‚РµСЃСЊ Р·Р°РІРµСЂС€РµРЅРёСЏ РїСЂРѕРІРµСЂРєРё</li>
-                <li>Р•СЃР»Рё РѕС€РёР±РєРё РЅР°Р№РґРµРЅС‹, РґРёСЃРє РїРѕРІСЂРµР¶РґРµРЅ</li>
-                <li>РџРѕРїСЂРѕР±СѓР№С‚Рµ РІРѕСЃСЃС‚Р°РЅРѕРІРёС‚СЊ Р·Р°РіСЂСѓР·С‡РёРє</li>
+                <li>В командной строке введите: chkdsk C: /f /r</li>
+                <li>Дождитесь завершения проверки</li>
+                <li>Если ошибки найдены, диск поврежден</li>
+                <li>Попробуйте восстановить загрузчик</li>
             </ol>
 
-            <h2>РЎРїРµС†РёС„РёС‡РµСЃРєРёРµ СЃР»СѓС‡Р°Рё</h2>
-            <p>Р РµС€РµРЅРёСЏ РґР»СЏ СЂР°СЃРїСЂРѕСЃС‚СЂР°РЅРµРЅРЅС‹С… СЃС†РµРЅР°СЂРёРµРІ.</p>
-            <h3>РћС€РёР±РєР° РїРѕСЃР»Рµ С‡РёСЃС‚РѕР№ СѓСЃС‚Р°РЅРѕРІРєРё</h3>
+            <h2>Специфические случаи</h2>
+            <p>Решения для распространенных сценариев.</p>
+            <h3>Ошибка после чистой установки</h3>
             <ul>
-                <li>РџСЂРѕРІРµСЂСЊС‚Рµ РїРѕСЂСЏРґРѕРє Р·Р°РіСЂСѓР·РєРё РІ BIOS</li>
-                <li>Р’РѕСЃСЃС‚Р°РЅРѕРІРёС‚Рµ BCD</li>
-                <li>РЈР±РµРґРёС‚РµСЃСЊ РІ UEFI СЂРµР¶РёРјРµ</li>
-                <li>РџРµСЂРµСѓСЃС‚Р°РЅРѕРІРёС‚Рµ Windows</li>
+                <li>Проверьте порядок загрузки в BIOS</li>
+                <li>Восстановите BCD</li>
+                <li>Убедитесь в UEFI режиме</li>
+                <li>Переустановите Windows</li>
             </ul>
 
-            <h3>РћС€РёР±РєР° СЃ SSD</h3>
+            <h3>Ошибка с SSD</h3>
             <ul>
-                <li>Р’РєР»СЋС‡РёС‚Рµ AHCI РІ BIOS</li>
-                <li>РћР±РЅРѕРІРёС‚Рµ firmware SSD</li>
-                <li>РџРµСЂРµСЃС‚СЂРѕРёС‚Рµ BCD</li>
-                <li>РџСЂРѕРІРµСЂСЊС‚Рµ SATA СЂРµР¶РёРј</li>
+                <li>Включите AHCI в BIOS</li>
+                <li>Обновите firmware SSD</li>
+                <li>Перестроите BCD</li>
+                <li>Проверьте SATA режим</li>
             </ul>
 
-            <h3>РћС€РёР±РєР° РїРѕСЃР»Рµ РѕР±РЅРѕРІР»РµРЅРёСЏ</h3>
+            <h3>Ошибка после обновления</h3>
             <ul>
-                <li>РћС‚РєР°С‚РёС‚Рµ РѕР±РЅРѕРІР»РµРЅРёРµ</li>
-                <li>Р’РѕСЃСЃС‚Р°РЅРѕРІРёС‚Рµ Р·Р°РіСЂСѓР·С‡РёРє</li>
-                <li>РЎР±СЂРѕСЃСЊС‚Рµ РЅР°СЃС‚СЂРѕР№РєРё BIOS</li>
-                <li>Р—Р°РїСѓСЃС‚РёС‚Рµ РІРѕСЃСЃС‚Р°РЅРѕРІР»РµРЅРёРµ</li>
+                <li>Откатите обновление</li>
+                <li>Восстановите загрузчик</li>
+                <li>Сбросьте настройки BIOS</li>
+                <li>Запустите восстановление</li>
             </ul>
 
-            <h2>РџСЂРѕС„РёР»Р°РєС‚РёРєР°</h2>
-            <p>РљР°Рє РёР·Р±РµР¶Р°С‚СЊ РѕС€РёР±РєРё No bootable device.</p>
-            <h3>Р РµРіСѓР»СЏСЂРЅРѕРµ РѕР±СЃР»СѓР¶РёРІР°РЅРёРµ</h3>
+            <h2>Профилактика</h2>
+            <p>Как избежать ошибки No bootable device.</p>
+            <h3>Регулярное обслуживание</h3>
             <ul>
-                <li><strong>РћР±РЅРѕРІР»РµРЅРёСЏ:</strong> РЈСЃС‚Р°РЅР°РІР»РёРІР°Р№С‚Рµ РѕР±РЅРѕРІР»РµРЅРёСЏ BIOS</li>
-                <li><strong>РђРЅС‚РёРІРёСЂСѓСЃ:</strong> Р—Р°С‰РёС‚Р° РѕС‚ РІСЂРµРґРѕРЅРѕСЃРЅРѕРіРѕ РџРћ</li>
-                <li><strong>Р РµР·РµСЂРІРЅС‹Рµ РєРѕРїРёРё:</strong> РЎРѕР·РґР°РІР°Р№С‚Рµ РѕР±СЂР°Р·С‹ СЃРёСЃС‚РµРјС‹</li>
-                <li><strong>Р§РёСЃС‚РєР°:</strong> РћС‡РёС‰Р°Р№С‚Рµ РѕС‚ РїС‹Р»Рё</li>
+                <li><strong>Обновления:</strong> Устанавливайте обновления BIOS</li>
+                <li><strong>Антивирус:</strong> Защита от вредоносного ПО</li>
+                <li><strong>Резервные копии:</strong> Создавайте образы системы</li>
+                <li><strong>Чистка:</strong> Очищайте от пыли</li>
             </ul>
 
-            <h3>Р‘РµР·РѕРїР°СЃРЅРѕСЃС‚СЊ СѓСЃС‚Р°РЅРѕРІРєРё</h3>
+            <h3>Безопасность установки</h3>
             <ul>
-                <li>РќРµ РёР·РІР»РµРєР°Р№С‚Рµ С„Р»РµС€РєСѓ РґРѕ Р·Р°РІРµСЂС€РµРЅРёСЏ СѓСЃС‚Р°РЅРѕРІРєРё</li>
-                <li>РџСЂРѕРІРµСЂСЏР№С‚Рµ РЅР°СЃС‚СЂРѕР№РєРё BIOS РїРµСЂРµРґ СѓСЃС‚Р°РЅРѕРІРєРѕР№</li>
-                <li>РСЃРїРѕР»СЊР·СѓР№С‚Рµ РЅР°РґРµР¶РЅС‹Рµ РёСЃС‚РѕС‡РЅРёРєРё Windows</li>
-                <li>РЎРѕР·РґР°РІР°Р№С‚Рµ С‚РѕС‡РєРё РІРѕСЃСЃС‚Р°РЅРѕРІР»РµРЅРёСЏ</li>
+                <li>Не извлекайте флешку до завершения установки</li>
+                <li>Проверяйте настройки BIOS перед установкой</li>
+                <li>Используйте надежные источники Windows</li>
+                <li>Создавайте точки восстановления</li>
             </ul>
 
             <div class="pro-tips">
-                <h4>РџРѕР»РµР·РЅС‹Рµ СЃРѕРІРµС‚С‹</h4>
+                <h4>Полезные советы</h4>
                 <div class="tip-item">
                     <i class="fas fa-lightbulb"></i>
-                    <span>РџСЂРѕРІРµСЂСЏР№С‚Рµ РїРѕСЂСЏРґРѕРє Р·Р°РіСЂСѓР·РєРё РІ BIOS</span>
+                    <span>Проверяйте порядок загрузки в BIOS</span>
                 </div>
                 <div class="tip-item">
                     <i class="fas fa-lightbulb"></i>
-                    <span>РСЃРїРѕР»СЊР·СѓР№С‚Рµ Р°РІС‚РѕРјР°С‚РёС‡РµСЃРєРѕРµ РІРѕСЃСЃС‚Р°РЅРѕРІР»РµРЅРёРµ Windows</span>
+                    <span>Используйте автоматическое восстановление Windows</span>
                 </div>
                 <div class="tip-item">
                     <i class="fas fa-lightbulb"></i>
-                    <span>РЎРѕР·РґР°РІР°Р№С‚Рµ СЂРµР·РµСЂРІРЅС‹Рµ РєРѕРїРёРё РїРµСЂРµРґ СѓСЃС‚Р°РЅРѕРІРєРѕР№</span>
+                    <span>Создавайте резервные копии перед установкой</span>
                 </div>
                 <div class="tip-item">
                     <i class="fas fa-lightbulb"></i>
-                    <span>Р•СЃР»Рё РїСЂРѕР±Р»РµРјР° РїРѕРІС‚РѕСЂСЏРµС‚СЃСЏ, РѕР±СЂР°С‚РёС‚РµСЃСЊ РІ РїРѕРґРґРµСЂР¶РєСѓ Microsoft</span>
+                    <span>Если проблема повторяется, обратитесь в поддержку Microsoft</span>
                 </div>
             </div>
 
-            <h2>РљРѕРіРґР° РЅСѓР¶РЅР° РїРѕРјРѕС‰СЊ СЃРїРµС†РёР°Р»РёСЃС‚Р°</h2>
-            <p>РџСЂРёР·РЅР°РєРё СЃРµСЂСЊРµР·РЅС‹С… РїСЂРѕР±Р»РµРј.</p>
-            <h3>РљСЂРёС‚РёС‡РµСЃРєРёРµ СЃР»СѓС‡Р°Рё</h3>
+            <h2>Когда нужна помощь специалиста</h2>
+            <p>Признаки серьезных проблем.</p>
+            <h3>Критические случаи</h3>
             <ul>
-                <li>Р”РёСЃРє РЅРµ РѕР±РЅР°СЂСѓР¶РёРІР°РµС‚СЃСЏ РІ BIOS</li>
-                <li>РџРѕРІСЂРµР¶РґРµРЅРёРµ РјР°С‚РµСЂРёРЅСЃРєРѕР№ РїР»Р°С‚С‹</li>
-                <li>РџРѕС‚РµСЂСЏ РІСЃРµС… РґР°РЅРЅС‹С…</li>
-                <li>РќРµРѕР±С…РѕРґРёРјР° Р·Р°РјРµРЅР° РѕР±РѕСЂСѓРґРѕРІР°РЅРёСЏ</li>
+                <li>Диск не обнаруживается в BIOS</li>
+                <li>Повреждение материнской платы</li>
+                <li>Потеря всех данных</li>
+                <li>Необходима замена оборудования</li>
             </ul>
 
-            <h3>Р§С‚Рѕ РїСЂРѕРІРµСЂРёС‚СЊ РІ СЃРµСЂРІРёСЃРµ</h3>
+            <h3>Что проверить в сервисе</h3>
             <ul>
-                <li>Р Р°Р±РѕС‚РѕСЃРїРѕСЃРѕР±РЅРѕСЃС‚СЊ Р¶РµСЃС‚РєРѕРіРѕ РґРёСЃРєР°</li>
-                <li>Р¦РµР»РѕСЃС‚РЅРѕСЃС‚СЊ РїРѕРґРєР»СЋС‡РµРЅРёР№</li>
-                <li>РЎРѕРІРјРµСЃС‚РёРјРѕСЃС‚СЊ РѕР±РѕСЂСѓРґРѕРІР°РЅРёСЏ</li>
-                <li>Р’РѕР·РјРѕР¶РЅРѕСЃС‚СЊ РІРѕСЃСЃС‚Р°РЅРѕРІР»РµРЅРёСЏ</li>
+                <li>Работоспособность жесткого диска</li>
+                <li>Целостность подключений</li>
+                <li>Совместимость оборудования</li>
+                <li>Возможность восстановления</li>
             </ul>
 
-            <h2>Р—Р°РєР»СЋС‡РµРЅРёРµ</h2>
-            <p>РћС€РёР±РєР° "No bootable device" РїРѕСЃР»Рµ СѓСЃС‚Р°РЅРѕРІРєРё Windows 11 РѕР±С‹С‡РЅРѕ СЃРІСЏР·Р°РЅР° СЃ РЅРµРїСЂР°РІРёР»СЊРЅС‹РјРё РЅР°СЃС‚СЂРѕР№РєР°РјРё BIOS РёР»Рё РїРѕРІСЂРµР¶РґРµРЅРёРµРј Р·Р°РіСЂСѓР·С‡РёРєР°. Р’ Р±РѕР»СЊС€РёРЅСЃС‚РІРµ СЃР»СѓС‡Р°РµРІ РµРµ РјРѕР¶РЅРѕ СЂРµС€РёС‚СЊ РЅР°СЃС‚СЂРѕР№РєРѕР№ РїРѕСЂСЏРґРєР° Р·Р°РіСЂСѓР·РєРё РёР»Рё РІРѕСЃСЃС‚Р°РЅРѕРІР»РµРЅРёРµРј BCD. РќР°С‡РЅРёС‚Рµ СЃ BIOS, Р·Р°С‚РµРј РёСЃРїРѕР»СЊР·СѓР№С‚Рµ РІРѕСЃСЃС‚Р°РЅРѕРІР»РµРЅРёРµ РїСЂРё Р·Р°РіСЂСѓР·РєРµ. Р•СЃР»Рё СЃР°РјРѕСЃС‚РѕСЏС‚РµР»СЊРЅС‹Рµ РїРѕРїС‹С‚РєРё РЅРµ СѓРІРµРЅС‡Р°Р»РёСЃСЊ СѓСЃРїРµС…РѕРј, РѕР±СЂР°С‚РёС‚РµСЃСЊ Рє СЃРїРµС†РёР°Р»РёСЃС‚Р°Рј РёР»Рё РїРѕРґРґРµСЂР¶РєРµ Microsoft.</p>
+            <h2>Заключение</h2>
+            <p>Ошибка "No bootable device" после установки Windows 11 обычно связана с неправильными настройками BIOS или повреждением загрузчика. В большинстве случаев ее можно решить настройкой порядка загрузки или восстановлением BCD. Начните с BIOS, затем используйте восстановление при загрузке. Если самостоятельные попытки не увенчались успехом, обратитесь к специалистам или поддержке Microsoft.</p>
         </div>
     </main>
 
     <footer class="footer">
         <div class="container">
             <div class="footer__content">
-                <p>&copy; 2024 Repairo. Р’СЃРµ РїСЂР°РІР° Р·Р°С‰РёС‰РµРЅС‹.</p>
+                <p>&copy; 2024 Repairo. Все права защищены.</p>
             </div>
         </div>
     </footer>
@@ -289,3 +567,9 @@
     <script src="../cookie-consent.js"></script>
 </body>
 </html>
+
+
+
+
+
+

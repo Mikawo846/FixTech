@@ -1,96 +1,391 @@
 <!DOCTYPE html>
 <html lang="ru" data-theme="light">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>РЎРѕРіР»Р°С€РµРЅРёРµ РѕР± РёСЃРїРѕР»СЊР·РѕРІР°РЅРёРё С„Р°Р№Р»РѕРІ cookie - Repairo</title>
-    <meta name="description" content="РЎРѕРіР»Р°С€РµРЅРёРµ РѕР± РёСЃРїРѕР»СЊР·РѕРІР°РЅРёРё С„Р°Р№Р»РѕРІ cookie РЅР° СЃР°Р№С‚Рµ repairo.ru. РЈР·РЅР°Р№С‚Рµ, РєР°Рє РјС‹ РёСЃРїРѕР»СЊР·СѓРµРј cookie Рё Р°РЅР°Р»РёС‚РёС‡РµСЃРєРёРµ СЃРµСЂРІРёСЃС‹.">
-    
-    <script async src="https://timeweb.cloud/api/v1/cloud-ai/agents/3cc03620-d051-4d8d-b5af-f7b6cd083a35/embed.js?collapsed=true"></script>
-    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-    
-    <link rel="stylesheet" href="./styles.css">
-    <link rel="stylesheet" href="./styles-header.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Соглашение об использовании файлов cookie - Repairo</title>
+    <meta name="description" content="Соглашение об использовании файлов cookie на сайте repairo.ru. Узнайте, как мы используем cookie и аналитические сервисы.">
+
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="../styles-header.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    .guide-content { line-height: 1.7; color: var(--text); }
+    .guide-content h2 { color: var(--primary); margin-top: 30px; margin-bottom: 15px; font-size: 1.5rem; }
+    .guide-content h3 { color: var(--primary-dark); margin-top: 25px; margin-bottom: 12px; font-size: 1.2rem; }
+    .guide-image-block { margin: 20px 0; padding: 15px; background: var(--background); border-radius: var(--border-radius); border: 1px solid var(--border); text-align: center; }
+    .guide-image-block img { max-width: 100%; height: auto; border-radius: 6px; border: 1px solid var(--border); }
+    .image-caption { margin-top: 10px; font-size: 0.85rem; color: var(--text-light); font-style: italic; }
+    .pro-tips { background: rgba(3, 74, 79, 0.05); padding: 15px; border-radius: 6px; margin: 20px 0; }
+    .pro-tips h4 { color: var(--primary); margin-top: 0; margin-bottom: 12px; font-size: 1.1rem; }
+    .tip-item { display: flex; gap: 8px; margin-bottom: 8px; align-items: flex-start; }
+    table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+    th, td { border: 1px solid var(--border); padding: 8px; text-align: left; }
+    th { background: var(--background-light); }
+    .highlight { background: #f5f7fa; border-left: 4px solid #2d9cdb; padding: 10px 15px; margin: 20px 0; }
+    .faq-section ul { margin-left: 1em; }
+    .block-section { margin-bottom: 2em; }
+    @media (max-width: 768px) {
+      .guide-content h2 { font-size: 1.4rem; margin-top: 25px; }
+      .guide-image-block { padding: 12px; margin: 15px 0; }
+      table, th, td { font-size: 0.95rem; }
+    }
+    /* Р“РѕСЂРёР·РѕРЅС‚Р°Р»СЊРЅС‹Р№ Р±Р°РЅРЅРµСЂ-РєР°СЂС‚РѕС‡РєР° */
+    .ym-hero-banner {
+      width: 100%;
+      max-width: 600px;
+      min-height: 140px;
+      border-radius: 16px;
+      background: #ffffff;
+      border: 1px solid #e5e7eb;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 4px 16px rgba(15, 23, 42, 0.08);
+      overflow: hidden;
+      box-sizing: border-box;
+      margin: 40px auto;
+    }
+
+    /* РљРѕРЅС‚РµР№РЅРµСЂ РґР»СЏ РёР·РѕР±СЂР°Р¶РµРЅРёР№ */
+    .ym-hero-images {
+      display: flex;
+      height: 120px;
+      overflow: hidden;
+    }
+
+    .ym-hero-image {
+      flex: 1;
+      min-width: 0;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      border-right: 1px solid #e5e7eb;
+      background: #f8f9fa;
+    }
+
+    .ym-hero-image:last-child {
+      border-right: none;
+    }
+
+    .ym-hero-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      transition: transform 0.3s ease;
+      background: #f8f9fa;
+    }
+
+    .ym-hero-image:hover img {
+      transform: scale(1.02);
+    }
+
+    /* РџСЂР°РІР°СЏ С‡Р°СЃС‚СЊ: РєРѕРЅС‚РµРЅС‚ */
+    .ym-hero-content {
+      padding: 16px 18px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 8px;
+    }
+
+    /* РќР°Р·РІР°РЅРёРµ С‚РѕРІР°СЂР° */
+    .ym-hero-title {
+      font-size: 14px;
+      font-weight: 600;
+      color: #111827;
+      line-height: 1.3;
+      margin: 0 0 4px 0;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    /* Р РµР№С‚РёРЅРі */
+    .ym-hero-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+    }
+
+    .ym-hero-rating {
+      font-size: 13px;
+      font-weight: 500;
+      color: #111827;
+      background: #f9fafb;
+      border-radius: 999px;
+      padding: 4px 10px;
+    }
+
+    .ym-hero-rating-count {
+      color: #6b7280;
+    }
+
+    /* Р¤РёРѕР»РµС‚РѕРІР°СЏ РєРЅРѕРїРєР° */
+    .ym-hero-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 9px 16px;
+      border-radius: 999px;
+      border: none;
+      background: #6a00ff;
+      color: #ffffff;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 2px 6px rgba(88, 28, 135, 0.35);
+      transition: background 0.15s ease, transform 0.15s ease,
+                  box-shadow 0.15s ease;
+    }
+    .ym-hero-button::after {
+      content: "в†’";
+      margin-left: 6px;
+      font-size: 14px;
+    }
+    .ym-hero-button:hover {
+      background: #7c3aed;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 10px rgba(88, 28, 135, 0.45);
+    }
+
+    /* Р®СЂРёРґРёС‡РµСЃРєРёР№ Р±Р»РѕРє */
+    .ym-hero-legal {
+      margin-top: 6px;
+      max-width: 600px;
+      font-size: 11px;
+      line-height: 1.3;
+      color: #6b7280;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* РђРґР°РїС‚РёРІ */
+    @media (max-width: 480px) {
+      .ym-hero-banner {
+        max-width: 100%;
+        margin: 20px 0;
+      }
+      .ym-hero-images {
+        height: 100px;
+      }
+      .ym-hero-content {
+        padding: 12px 12px;
+      }
+      .ym-hero-title {
+        font-size: 13px;
+      }
+      .ym-hero-button {
+        font-size: 13px;
+        padding: 8px 14px;
+      }
+      .ym-hero-legal {
+        font-size: 10px;
+      }
+    }
+    /* Telegram СЂРµРєР»Р°РјРЅС‹Р№ Р±Р°РЅРЅРµСЂ */
+    .telegram-banner {
+      display: flex;
+      justify-content: center;
+      text-decoration: none;
+      color: inherit;
+      width: 100%;
+      margin: 40px 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    .telegram-banner-container {
+      width: 100%;
+      max-width: 500px;
+      min-height: 120px;
+      border-radius: 16px;
+      background: linear-gradient(135deg, #0088cc 0%, #005f8f 100%);
+      border: 1px solid #005f8f;
+      display: flex;
+      align-items: center;
+      padding: 20px;
+      box-shadow: 0 4px 16px rgba(0, 136, 204, 0.2);
+      overflow: hidden;
+      box-sizing: border-box;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .telegram-banner-container:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0, 136, 204, 0.3);
+    }
+
+    .telegram-logo {
+      width: 60px;
+      height: 60px;
+      min-width: 60px;
+      background: #ffffff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 20px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .telegram-logo svg {
+      width: 32px;
+      height: 32px;
+      fill: #0088cc;
+    }
+
+    .telegram-content {
+      flex: 1;
+      color: #ffffff;
+    }
+
+    .telegram-title {
+      font-size: 16px;
+      font-weight: 600;
+      margin: 0 0 8px 0;
+      line-height: 1.3;
+    }
+
+    .telegram-subtitle {
+      font-size: 14px;
+      opacity: 0.9;
+      margin: 0 0 12px 0;
+      line-height: 1.4;
+    }
+
+    .telegram-button {
+      display: inline-flex;
+      align-items: center;
+      padding: 8px 16px;
+      background: #ffffff;
+      color: #0088cc;
+      border-radius: 20px;
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background 0.2s ease, transform 0.2s ease;
+    }
+
+    .telegram-button:hover {
+      background: #f0f8ff;
+      transform: scale(1.05);
+    }
+
+    .telegram-button svg {
+      width: 16px;
+      height: 16px;
+      margin-left: 6px;
+      fill: #0088cc;
+    }
+
+    /* РђРґР°РїС‚РёРІ РґР»СЏ РјРѕР±РёР»СЊРЅС‹С… */
+    @media (max-width: 480px) {
+      .telegram-banner-container {
+        max-width: 100%;
+        margin: 20px 0;
+        padding: 15px;
+        min-height: 100px;
+      }
+      .telegram-logo {
+        width: 50px;
+        height: 50px;
+        min-width: 50px;
+        margin-right: 15px;
+      }
+      .telegram-logo svg {
+        width: 26px;
+        height: 26px;
+      }
+      .telegram-title {
+        font-size: 14px;
+      }
+      .telegram-subtitle {
+        font-size: 12px;
+      }
+      .telegram-button {
+        font-size: 12px;
+        padding: 6px 12px;
+      }
+    }
+
+
+
+  </style>
+  <script async src="https://timeweb.cloud/api/v1/cloud-ai/agents/3cc03620-d051-4d8d-b5af-f7b6cd083a35/embed.js?collapsed=true"></script>
 </head>
 <body>
-   <header class="header">
-  <div class="container">
-    <div class="header__inner">
-      <a href="index.html" class="logo">
-        <span class="logo__icon">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12 15L7 10H17L12 15Z" fill="currentColor"/>
-            <path d="M12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3ZM12 19C8.13401 19 5 15.866 5 12C5 8.13401 8.13401 5 12 5C15.866 5 19 8.13401 19 12C19 15.866 15.866 19 12 19Z" fill="currentColor"/>
-          </svg>
-        </span>
-        <span class="logo__text">Repairo</span>
-      </a>
-      <nav class="nav">
-        <ul class="nav__list">
-                    <li class="nav__item"><a href="tv.html" class="nav__link">РўРµР»РµРІРёР·РѕСЂС‹</a></li>
-                    <li class="nav__item"><a href="auto-electronics.html" class="nav__link">РђРІС‚РѕСЌР»РµРєС‚СЂРѕРЅРёРєР°</a></li>
-                    <li class="nav__item"><a href="consoles.html" class="nav__link">РџСЂРёСЃС‚Р°РІРєРё</a></li>
-                    <li class="nav__item"><a href="laptops.html" class="nav__link">РќРѕСѓС‚Р±СѓРєРё</a></li>
-                    <li class="nav__item"><a href="smartphones.html" class="nav__link">РЎРјР°СЂС‚С„РѕРЅС‹</a></li>
-                    <li class="nav__item"><a href="index.html#categories" class="nav__link">Р’СЃРµ РєР°С‚РµРіРѕСЂРёРё</a></li>
-                </ul>
-            </nav>
-        </div>
+  <header class="header">
+    <div class="container">
+      <div class="header__inner">
+        <a href="../index.html" class="logo">
+          <span class="logo__icon"></span>
+          <span class="logo__text">GeoExpert</span>
+        </a>
+        <nav class="nav">
+          <ul class="nav__list">
+            <li><a href="../cameras.html" class="nav__link">РљР°РјРµСЂС‹</a></li>
+            <li><a href="../drones.html" class="nav__link">Р”СЂРѕРЅС‹</a></li>
+            <li><a href="../workflow.html" class="nav__link">Workflow</a></li>
+          </ul>
+        </nav>
+      </div>
     </div>
-</header>
+  </header>
 
     <main class="main-content">
         <div class="container">
             <div class="page-content">
                 <nav class="breadcrumb">
-                    <a href="index.html">Р“Р»Р°РІРЅР°СЏ</a>
+                    <a href="index.html">Главная</a>
                     <span class="breadcrumb-separator">/</span>
-                    <span class="breadcrumb-current">РЎРѕРіР»Р°С€РµРЅРёРµ РѕР± РёСЃРїРѕР»СЊР·РѕРІР°РЅРёРё С„Р°Р№Р»РѕРІ cookie</span>
+                    <span class="breadcrumb-current">Соглашение об использовании файлов cookie</span>
                 </nav>
 
-                <h1>РЎРѕРіР»Р°С€РµРЅРёРµ РѕР± РёСЃРїРѕР»СЊР·РѕРІР°РЅРёРё С„Р°Р№Р»РѕРІ cookie</h1>
+                <h1>Соглашение об использовании файлов cookie</h1>
 
-                <p>РќР°СЃС‚РѕСЏС‰РµРµ РЎРѕРіР»Р°С€РµРЅРёРµ РѕР± РёСЃРїРѕР»СЊР·РѕРІР°РЅРёРё С„Р°Р№Р»РѕРІ cookie (РґР°Р»РµРµ вЂ” В«РЎРѕРіР»Р°С€РµРЅРёРµВ») РѕРїРёСЃС‹РІР°РµС‚, РєР°РєРёРµ С„Р°Р№Р»С‹ cookie Рё Р°РЅР°Р»РѕРіРёС‡РЅС‹Рµ С‚РµС…РЅРѕР»РѕРіРёРё РјРѕРіСѓС‚ РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊСЃСЏ РЅР° СЃР°Р№С‚Рµ repairo.ru (РґР°Р»РµРµ вЂ” В«РЎР°Р№С‚В»), Р° С‚Р°РєР¶Рµ РґР»СЏ РєР°РєРёС… С†РµР»РµР№ СЌС‚Рѕ РґРµР»Р°РµС‚СЃСЏ.</p>
+                <p>Настоящее Соглашение об использовании файлов cookie (далее — «Соглашение») описывает, какие файлы cookie и аналогичные технологии могут использоваться на сайте repairo.ru (далее — «Сайт»), а также для каких целей это делается.</p>
 
-                <h2>Р§С‚Рѕ С‚Р°РєРѕРµ С„Р°Р№Р»С‹ cookie</h2>
-                <p>Р¤Р°Р№Р»С‹ cookie вЂ” СЌС‚Рѕ РЅРµР±РѕР»СЊС€РёРµ С‚РµРєСЃС‚РѕРІС‹Рµ С„Р°Р№Р»С‹, РєРѕС‚РѕСЂС‹Рµ СЃРѕС…СЂР°РЅСЏСЋС‚СЃСЏ РЅР° СѓСЃС‚СЂРѕР№СЃС‚РІРµ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ РїСЂРё РїРѕСЃРµС‰РµРЅРёРё РЎР°Р№С‚Р°. РћРЅРё РїРѕР·РІРѕР»СЏСЋС‚ СЂР°СЃРїРѕР·РЅР°РІР°С‚СЊ Р±СЂР°СѓР·РµСЂ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ, СЃРѕС…СЂР°РЅСЏС‚СЊ РЅР°СЃС‚СЂРѕР№РєРё Рё СЃРѕР±РёСЂР°С‚СЊ РѕР±РµР·Р»РёС‡РµРЅРЅСѓСЋ СЃС‚Р°С‚РёСЃС‚РёРєСѓ Рѕ РїРѕСЃРµС‰РµРЅРёРё СЃС‚СЂР°РЅРёС†.</p>
+                <h2>Что такое файлы cookie</h2>
+                <p>Файлы cookie — это небольшие текстовые файлы, которые сохраняются на устройстве пользователя при посещении Сайта. Они позволяют распознавать браузер пользователя, сохранять настройки и собирать обезличенную статистику о посещении страниц.</p>
 
-                <h2>РљР°РєРёРµ cookie РёСЃРїРѕР»СЊР·СѓСЋС‚СЃСЏ РЅР° РЎР°Р№С‚Рµ</h2>
-                <p>РќР° РЎР°Р№С‚Рµ РјРѕРіСѓС‚ РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊСЃСЏ СЃР»РµРґСѓСЋС‰РёРµ РєР°С‚РµРіРѕСЂРёРё С„Р°Р№Р»РѕРІ cookie:</p>
+                <h2>Какие cookie используются на Сайте</h2>
+                <p>На Сайте могут использоваться следующие категории файлов cookie:</p>
                 <ul>
-                  <li><strong>РўРµС…РЅРёС‡РµСЃРєРёРµ (РѕР±СЏР·Р°С‚РµР»СЊРЅС‹Рµ) cookie</strong> вЂ” РѕР±РµСЃРїРµС‡РёРІР°СЋС‚ Р±Р°Р·РѕРІСѓСЋ Рё Р±РµР·РѕРїР°СЃРЅСѓСЋ СЂР°Р±РѕС‚Сѓ РЎР°Р№С‚Р°.</li>
-                  <li><strong>РђРЅР°Р»РёС‚РёС‡РµСЃРєРёРµ cookie</strong> вЂ” РїРѕРјРѕРіР°СЋС‚ РїРѕР»СѓС‡Р°С‚СЊ СЃС‚Р°С‚РёСЃС‚РёРєСѓ Рѕ РїРѕСЃРµС‰РµРЅРёСЏС… Рё РёСЃРїРѕР»СЊР·РѕРІР°РЅРёРё РЎР°Р№С‚Р° (РЅР°РїСЂРёРјРµСЂ, С‡РµСЂРµР· СЃРµСЂРІРёСЃС‹ РІРµР±вЂ‘Р°РЅР°Р»РёС‚РёРєРё РЇРЅРґРµРєСЃ.РњРµС‚СЂРёРєР° Рё Google Analytics).</li>
+                  <li><strong>Технические (обязательные) cookie</strong> — обеспечивают базовую и безопасную работу Сайта.</li>
+                  <li><strong>Аналитические cookie</strong> — помогают получать статистику о посещениях и использовании Сайта (например, через сервисы веб?аналитики Яндекс.Метрика и Google Analytics).</li>
                 </ul>
 
-                <h2>РљР°Рє РјС‹ РёСЃРїРѕР»СЊР·СѓРµРј cookie</h2>
-                <p>Р¤Р°Р№Р»С‹ cookie РјРѕРіСѓС‚ РїСЂРёРјРµРЅСЏС‚СЊСЃСЏ РґР»СЏ:</p>
+                <h2>Как мы используем cookie</h2>
+                <p>Файлы cookie могут применяться для:</p>
                 <ul>
-                  <li>Р°РЅР°Р»РёР·Р° РїРѕСЃРµС‰Р°РµРјРѕСЃС‚Рё Рё СѓР»СѓС‡С€РµРЅРёСЏ СЂР°Р±РѕС‚С‹ РЎР°Р№С‚Р°;</li>
-                  <li>РѕС†РµРЅРєРё СЌС„С„РµРєС‚РёРІРЅРѕСЃС‚Рё СЂР°Р·РјРµС‰С‘РЅРЅРѕРіРѕ РєРѕРЅС‚РµРЅС‚Р° Рё РїР°СЂС‚РЅС‘СЂСЃРєРёС… СЃСЃС‹Р»РѕРє, РІРєР»СЋС‡Р°СЏ СЃСЃС‹Р»РєРё РЅР° СЃРµСЂРІРёСЃ РЇРЅРґРµРєСЃ.РњР°СЂРєРµС‚;</li>
-                  <li>СЃРѕС…СЂР°РЅРµРЅРёСЏ РѕС‚РґРµР»СЊРЅС‹С… РЅР°СЃС‚СЂРѕРµРє РѕС‚РѕР±СЂР°Р¶РµРЅРёСЏ РЎР°Р№С‚Р°.</li>
+                  <li>анализа посещаемости и улучшения работы Сайта;</li>
+                  <li>оценки эффективности размещённого контента и партнёрских ссылок, включая ссылки на сервис Яндекс.Маркет;</li>
+                  <li>сохранения отдельных настроек отображения Сайта.</li>
                 </ul>
 
-                <h2>РЎС‚РѕСЂРѕРЅРЅРёРµ СЃРµСЂРІРёСЃС‹</h2>
-                <p>Р”Р»СЏ СЃР±РѕСЂР° СЃС‚Р°С‚РёСЃС‚РёРєРё Рё Р°РЅР°Р»РёР·Р° РјС‹ РјРѕР¶РµРј РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ СЃС‚РѕСЂРѕРЅРЅРёРµ СЃРµСЂРІРёСЃС‹, С‚Р°РєРёРµ РєР°Рє РЇРЅРґРµРєСЃ.РњРµС‚СЂРёРєР° Рё Google Analytics, РєРѕС‚РѕСЂС‹Рµ СѓСЃС‚Р°РЅР°РІР»РёРІР°СЋС‚ СЃРІРѕРё cookie Рё РѕР±СЂР°Р±Р°С‚С‹РІР°СЋС‚ РґР°РЅРЅС‹Рµ РІ СЃРѕРѕС‚РІРµС‚СЃС‚РІРёРё СЃРѕ СЃРІРѕРёРјРё РїРѕР»РёС‚РёРєР°РјРё РєРѕРЅС„РёРґРµРЅС†РёР°Р»СЊРЅРѕСЃС‚Рё.</p>
-                <p>РџРѕРґСЂРѕР±РЅРµРµ РѕР± РѕР±СЂР°Р±РѕС‚РєРµ РґР°РЅРЅС‹С… РјРѕР¶РЅРѕ СѓР·РЅР°С‚СЊ РІ РґРѕРєСѓРјРµРЅС‚Р°С… СЌС‚РёС… СЃРµСЂРІРёСЃРѕРІ:</p>
+                <h2>Сторонние сервисы</h2>
+                <p>Для сбора статистики и анализа мы можем использовать сторонние сервисы, такие как Яндекс.Метрика и Google Analytics, которые устанавливают свои cookie и обрабатывают данные в соответствии со своими политиками конфиденциальности.</p>
+                <p>Подробнее об обработке данных можно узнать в документах этих сервисов:</p>
                 <ul>
-                  <li><a href="https://yandex.ru/legal/confidential" target="_blank" rel="noopener noreferrer">РџРѕР»РёС‚РёРєР° РєРѕРЅС„РёРґРµРЅС†РёР°Р»СЊРЅРѕСЃС‚Рё РЇРЅРґРµРєСЃР°</a></li>
-                  <li><a href="https://policies.google.com/privacy?hl=ru" target="_blank" rel="noopener noreferrer">РџРѕР»РёС‚РёРєР° РєРѕРЅС„РёРґРµРЅС†РёР°Р»СЊРЅРѕСЃС‚Рё Google</a></li>
+                  <li><a href="https://yandex.ru/legal/confidential" target="_blank" rel="noopener noreferrer">Политика конфиденциальности Яндекса</a></li>
+                  <li><a href="https://policies.google.com/privacy?hl=ru" target="_blank" rel="noopener noreferrer">Политика конфиденциальности Google</a></li>
                 </ul>
 
-                <h2>РЎРѕРіР»Р°СЃРёРµ РЅР° РёСЃРїРѕР»СЊР·РѕРІР°РЅРёРµ cookie</h2>
-                <p>РџСЂРё РїРµСЂРІРѕРј РїРѕСЃРµС‰РµРЅРёРё РЎР°Р№С‚Р° РїРѕР»СЊР·РѕРІР°С‚РµР»СЋ РѕС‚РѕР±СЂР°Р¶Р°РµС‚СЃСЏ СѓРІРµРґРѕРјР»РµРЅРёРµ (Р±Р°РЅРЅРµСЂ) СЃ РёРЅС„РѕСЂРјР°С†РёРµР№ РѕР± РёСЃРїРѕР»СЊР·РѕРІР°РЅРёРё С„Р°Р№Р»РѕРІ cookie Рё СЃСЃС‹Р»РєРѕР№ РЅР° РЅР°СЃС‚РѕСЏС‰РµРµ РЎРѕРіР»Р°С€РµРЅРёРµ. РџСЂРѕРґРѕР»Р¶Р°СЏ РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ РЎР°Р№С‚ РїРѕСЃР»Рµ РѕС‚РѕР±СЂР°Р¶РµРЅРёСЏ Р±Р°РЅРЅРµСЂР°, РЅР°Р¶РёРјР°СЏ РєРЅРѕРїРєСѓ В«РџСЂРёРЅСЏС‚СЊВ» РёР»Рё РїСЂРѕРґРѕР»Р¶Р°СЏ РїСЂРѕСЃРјРѕС‚СЂ СЃС‚СЂР°РЅРёС†, РїРѕР»СЊР·РѕРІР°С‚РµР»СЊ РїРѕРґС‚РІРµСЂР¶РґР°РµС‚ СЃРІРѕС‘ СЃРѕРіР»Р°СЃРёРµ РЅР° РёСЃРїРѕР»СЊР·РѕРІР°РЅРёРµ С„Р°Р№Р»РѕРІ cookie РІ СЃРѕРѕС‚РІРµС‚СЃС‚РІРёРё СЃ РЅР°СЃС‚РѕСЏС‰РёРј РЎРѕРіР»Р°С€РµРЅРёРµРј.</p>
-                <p>Р•СЃР»Рё РїРѕР»СЊР·РѕРІР°С‚РµР»СЊ РЅРµ СЃРѕРіР»Р°СЃРµРЅ СЃ РёСЃРїРѕР»СЊР·РѕРІР°РЅРёРµРј С„Р°Р№Р»РѕРІ cookie, РѕРЅ РјРѕР¶РµС‚ РѕРіСЂР°РЅРёС‡РёС‚СЊ РёР»Рё РѕС‚РєР»СЋС‡РёС‚СЊ РёС… РІ РЅР°СЃС‚СЂРѕР№РєР°С… Р±СЂР°СѓР·РµСЂР° Р»РёР±Рѕ РїРѕРєРёРЅСѓС‚СЊ РЎР°Р№С‚.</p>
+                <h2>Согласие на использование cookie</h2>
+                <p>При первом посещении Сайта пользователю отображается уведомление (баннер) с информацией об использовании файлов cookie и ссылкой на настоящее Соглашение. Продолжая использовать Сайт после отображения баннера, нажимая кнопку «Принять» или продолжая просмотр страниц, пользователь подтверждает своё согласие на использование файлов cookie в соответствии с настоящим Соглашением.</p>
+                <p>Если пользователь не согласен с использованием файлов cookie, он может ограничить или отключить их в настройках браузера либо покинуть Сайт.</p>
 
-                <h2>РљР°Рє РѕС‚РєР»СЋС‡РёС‚СЊ cookie</h2>
-                <p>РџРѕР»СЊР·РѕРІР°С‚РµР»СЊ РјРѕР¶РµС‚ СѓРґР°Р»РёС‚СЊ СЃРѕС…СЂР°РЅС‘РЅРЅС‹Рµ С„Р°Р№Р»С‹ cookie Рё Р·Р°РїСЂРµС‚РёС‚СЊ РёС… РёСЃРїРѕР»СЊР·РѕРІР°РЅРёРµ, РёР·РјРµРЅРёРІ РЅР°СЃС‚СЂРѕР№РєРё Р±СЂР°СѓР·РµСЂР°. РљРѕРЅРєСЂРµС‚РЅС‹Рµ РёРЅСЃС‚СЂСѓРєС†РёРё РѕР±С‹С‡РЅРѕ РґРѕСЃС‚СѓРїРЅС‹ РІ СЂР°Р·РґРµР»Рµ В«РЎРїСЂР°РІРєР°В» РёСЃРїРѕР»СЊР·СѓРµРјРѕРіРѕ Р±СЂР°СѓР·РµСЂР°. Р‘Р»РѕРєРёСЂРѕРІР°РЅРёРµ РЅРµРєРѕС‚РѕСЂС‹С… РІРёРґРѕРІ С„Р°Р№Р»РѕРІ cookie РјРѕР¶РµС‚ РїРѕРІР»РёСЏС‚СЊ РЅР° РєРѕСЂСЂРµРєС‚РЅРѕСЃС‚СЊ СЂР°Р±РѕС‚С‹ РѕС‚РґРµР»СЊРЅС‹С… С„СѓРЅРєС†РёР№ РЎР°Р№С‚Р°.</p>
+                <h2>Как отключить cookie</h2>
+                <p>Пользователь может удалить сохранённые файлы cookie и запретить их использование, изменив настройки браузера. Конкретные инструкции обычно доступны в разделе «Справка» используемого браузера. Блокирование некоторых видов файлов cookie может повлиять на корректность работы отдельных функций Сайта.</p>
 
-                <h2>РР·РјРµРЅРµРЅРёСЏ РЎРѕРіР»Р°С€РµРЅРёСЏ</h2>
-                <p>РќР°СЃС‚РѕСЏС‰РµРµ РЎРѕРіР»Р°С€РµРЅРёРµ РјРѕР¶РµС‚ РїРµСЂРёРѕРґРёС‡РµСЃРєРё РѕР±РЅРѕРІР»СЏС‚СЊСЃСЏ, РІ С‚РѕРј С‡РёСЃР»Рµ РїСЂРё РёР·РјРµРЅРµРЅРёРё РёСЃРїРѕР»СЊР·СѓРµРјС‹С… СЃРµСЂРІРёСЃРѕРІ Р°РЅР°Р»РёС‚РёРєРё РёР»Рё С‚СЂРµР±РѕРІР°РЅРёР№ Р·Р°РєРѕРЅРѕРґР°С‚РµР»СЊСЃС‚РІР°. РќРѕРІР°СЏ СЂРµРґР°РєС†РёСЏ РІСЃС‚СѓРїР°РµС‚ РІ СЃРёР»Сѓ СЃ РјРѕРјРµРЅС‚Р° РµС‘ СЂР°Р·РјРµС‰РµРЅРёСЏ РЅР° РЎР°Р№С‚Рµ repairo.ru.</p>
+                <h2>Изменения Соглашения</h2>
+                <p>Настоящее Соглашение может периодически обновляться, в том числе при изменении используемых сервисов аналитики или требований законодательства. Новая редакция вступает в силу с момента её размещения на Сайте repairo.ru.</p>
             </div>
         </div>
     </main>
@@ -108,44 +403,44 @@
                         </span>
                         <span class="logo__text">Repairo</span>
                     </a>
-                    <p class="footer__text">РџРѕРјРѕРіР°РµРј СЂРµРјРѕРЅС‚РёСЂРѕРІР°С‚СЊ СЌР»РµРєС‚СЂРѕРЅРёРєСѓ СЃ 2024 РіРѕРґР°</p>
+                    <p class="footer__text">Помогаем ремонтировать электронику с 2024 года</p>
                 </div>
                 <div class="footer__col">
-                    <h3 class="footer__title">Р Р°Р·РґРµР»С‹</h3>
+                    <h3 class="footer__title">Разделы</h3>
                     <ul class="footer__links">
-                        <li><a href="index.html" class="footer__link">Р“Р»Р°РІРЅР°СЏ</a></li>
-                        <li><a href="index.html#categories" class="footer__link">Р’СЃРµ РіР°Р№РґС‹</a></li>
-                        <li><a href="contacts.html" class="footer__link">РљРѕРЅС‚Р°РєС‚С‹</a></li>
-                        <li><a href="cookie-agreement.html" class="footer__link">РЎРѕРіР»Р°С€РµРЅРёРµ РѕР± РёСЃРїРѕР»СЊР·РѕРІР°РЅРёРё С„Р°Р№Р»РѕРІ cookie</a></li>
+                        <li><a href="index.html" class="footer__link">Главная</a></li>
+                        <li><a href="index.html#categories" class="footer__link">Все гайды</a></li>
+                        <li><a href="contacts.html" class="footer__link">Контакты</a></li>
+                        <li><a href="cookie-agreement.html" class="footer__link">Соглашение об использовании файлов cookie</a></li>
                     </ul>
                 </div>
                 <div class="footer__col">
-                    <h3 class="footer__title">РљР°С‚РµРіРѕСЂРёРё</h3>
+                    <h3 class="footer__title">Категории</h3>
                     <ul class="footer__links">
-                        <li><a href="tv.html" class="nav__link">РўРµР»РµРІРёР·РѕСЂС‹</a></li>
-                        <li><a href="cameras.html" class="nav__link">Р¤РѕС‚РѕР°РїРїР°СЂР°С‚С‹</a></li>
-                        <li><a href="consoles.html" class="nav__link">РџСЂРёСЃС‚Р°РІРєРё</a></li>
-                        <li><a href="laptops.html" class="nav__link">РќРѕСѓС‚Р±СѓРєРё</a></li>
-                        <li><a href="smartphones.html" class="nav__link">РЎРјР°СЂС‚С„РѕРЅС‹</a></li>
-                        <li><a href="auto-electronics.html" class="nav__link">РђРІС‚Рѕ-Р­Р»РµРєС‚СЂРѕРЅРёРєР°</a></li>
+                        <li><a href="tv.html" class="nav__link">Телевизоры</a></li>
+                        <li><a href="cameras.html" class="nav__link">Фотоаппараты</a></li>
+                        <li><a href="consoles.html" class="nav__link">Приставки</a></li>
+                        <li><a href="laptops.html" class="nav__link">Ноутбуки</a></li>
+                        <li><a href="smartphones.html" class="nav__link">Смартфоны</a></li>
+                        <li><a href="auto-electronics.html" class="nav__link">Авто-Электроника</a></li>
                     </ul>
                 </div>
                 <div class="footer__col">
-                    <h3 class="footer__title">РљРѕРЅС‚Р°РєС‚С‹</h3>
+                    <h3 class="footer__title">Контакты</h3>
                     <ul class="footer__links">
                         <li><a href="https://t.me/RepairoRU" class="footer__link"><i class="fab fa-telegram"></i> Telegram</a></li>
-                        <li><span class="footer__link">РќР°С€Р° РїРѕС‡С‚Р°: repairo.info@mail.ru</span></li>
+                        <li><span class="footer__link">Наша почта: repairo.info@mail.ru</span></li>
                     </ul>
                 </div>
             </div>
             <div class="footer__bottom">
                 <p class="disclaimer">
-    РђРґРјРёРЅРёСЃС‚СЂР°С†РёСЏ СЃР°Р№С‚Р° РЅРµ РЅРµСЃС‘С‚ РѕС‚РІРµС‚СЃС‚РІРµРЅРЅРѕСЃС‚Рё Р·Р° РІРѕР·РјРѕР¶РЅС‹Рµ РїРѕРІСЂРµР¶РґРµРЅРёСЏ С‚РµС…РЅРёРєРё
-    Рё РёРЅС‹Рµ РїРѕСЃР»РµРґСЃС‚РІРёСЏ, РІРѕР·РЅРёРєС€РёРµ РІ СЂРµР·СѓР»СЊС‚Р°С‚Рµ СЃР°РјРѕСЃС‚РѕСЏС‚РµР»СЊРЅРѕРіРѕ СЂРµРјРѕРЅС‚Р° РїРѕ
-    РјР°С‚РµСЂРёР°Р»Р°Рј Рё РёРЅСЃС‚СЂСѓРєС†РёСЏРј, СЂР°Р·РјРµС‰С‘РЅРЅС‹Рј РЅР° СЃР°Р№С‚Рµ. Р’СЃРµ СЂР°Р±РѕС‚С‹ РІС‹ РІС‹РїРѕР»РЅСЏРµС‚Рµ
-    РЅР° СЃРІРѕР№ СЃС‚СЂР°С… Рё СЂРёСЃРє.
+    Администрация сайта не несёт ответственности за возможные повреждения техники
+    и иные последствия, возникшие в результате самостоятельного ремонта по
+    материалам и инструкциям, размещённым на сайте. Все работы вы выполняете
+    на свой страх и риск.
     </p>
-                <p class="footer__copyright">В© 2026 Repairo. Р’СЃРµ РїСЂР°РІР° Р·Р°С‰РёС‰РµРЅС‹.</p>
+                <p class="footer__copyright">© 2026 Repairo. Все права защищены.</p>
             </div>
         </div>
     </footer>
@@ -164,4 +459,6 @@
     </script>
 </body>
 </html>
+
+
 

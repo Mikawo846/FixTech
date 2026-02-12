@@ -4,9 +4,8 @@
 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>MIDI РєР»Р°РІРёР°С‚СѓСЂР° РІРёРґРЅР° РІ РґРёСЃРїРµС‚С‡РµСЂРµ СѓСЃС‚СЂРѕР№СЃС‚РІ РЅРѕ РЅРµ РІ РїСЂРѕРіСЂР°РјРјР°С… РЅР° РЅРѕСѓС‚Р±СѓРєРµ | Р­РєСЃРїРµСЂС‚РЅС‹Р№ РјРµРіР°РіР°Р№Рґ</title>
-    <meta name="description" content="{{ description }}">
-    <meta name="description" content="РџРѕС€Р°РіРѕРІР°СЏ РёРЅСЃС‚СЂСѓРєС†РёСЏ: MIDI РєР»Р°РІРёР°С‚СѓСЂР° РІРёРґРЅР° РІ РґРёСЃРїРµС‚С‡РµСЂРµ СѓСЃС‚СЂРѕР№СЃС‚РІ РЅРѕ РЅРµ РІ РїСЂРѕРіСЂР°РјРјР°С… РЅР° РЅРѕСѓС‚Р±СѓРєРµ вЂ” Р­РєСЃРїРµСЂС‚РЅС‹Р№ РјРµРіР°РіР°Р№Рґ. РџСЂРёС‡РёРЅС‹: РґСЂР°Р№РІРµСЂС‹, РЅР°СЃС‚СЂРѕР№РєРё, РєРѕРЅС„Р»РёРєС‚С‹. Р РµС€РµРЅРёСЏ: СѓСЃС‚Р°РЅРѕРІРєР° РґСЂР°Р№РІРµСЂРѕРІ, РІС‹Р±РѕСЂ СѓСЃС‚СЂРѕР№СЃС‚РІР°, СЃР±СЂРѕСЃ РЅР°СЃС‚СЂРѕРµРє.">
+  <title>MIDI клавиатура видна в диспетчере устройств но не в програм</title>
+    <meta name="description" content="">
 
   <link rel="stylesheet" href="../styles.css" />
   <link rel="stylesheet" href="../styles-header.css" />
@@ -14,36 +13,25 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <style>
     .guide-content { line-height: 1.7; color: var(--text); }
-    .guide-content h2 { color: var(--primary); margin-top: 30px; margin-bottom: 15px; font-size: 1.6rem; }
-    .guide-content h3 { color: var(--primary-dark); margin-top: 25px; margin-bottom: 12px; font-size: 1.25rem; }
+    .guide-content h2 { color: var(--primary); margin-top: 30px; margin-bottom: 15px; font-size: 1.5rem; }
+    .guide-content h3 { color: var(--primary-dark); margin-top: 25px; margin-bottom: 12px; font-size: 1.2rem; }
     .guide-image-block { margin: 20px 0; padding: 15px; background: var(--background); border-radius: var(--border-radius); border: 1px solid var(--border); text-align: center; }
     .guide-image-block img { max-width: 100%; height: auto; border-radius: 6px; border: 1px solid var(--border); }
     .image-caption { margin-top: 10px; font-size: 0.85rem; color: var(--text-light); font-style: italic; }
-    .pro-tips { background: rgba(3, 74, 79, 0.05); padding: 18px; border-radius: 8px; margin: 25px 0; }
-    .pro-tips h4 { color: var(--primary); margin-top: 0; margin-bottom: 12px; font-size: 1.15rem; }
-    .tip-item { display: flex; gap: 10px; margin-bottom: 10px; align-items: flex-start; }
-    .tip-item i { margin-top: 3px; }
+    .pro-tips { background: rgba(3, 74, 79, 0.05); padding: 15px; border-radius: 6px; margin: 20px 0; }
+    .pro-tips h4 { color: var(--primary); margin-top: 0; margin-bottom: 12px; font-size: 1.1rem; }
+    .tip-item { display: flex; gap: 8px; margin-bottom: 8px; align-items: flex-start; }
     table { width: 100%; border-collapse: collapse; margin: 20px 0; }
-    th, td { border: 1px solid var(--border); padding: 8px; text-align: left; vertical-align: top; }
+    th, td { border: 1px solid var(--border); padding: 8px; text-align: left; }
     th { background: var(--background-light); }
-    code { background: var(--background-light); padding: 2px 4px; border-radius: 4px; font-size: 0.9em; }
-    ul, ol { margin-left: 18px; }
+    .highlight { background: #f5f7fa; border-left: 4px solid #2d9cdb; padding: 10px 15px; margin: 20px 0; }
+    .faq-section ul { margin-left: 1em; }
+    .block-section { margin-bottom: 2em; }
     @media (max-width: 768px) {
       .guide-content h2 { font-size: 1.4rem; margin-top: 25px; }
-      .guide-content h3 { font-size: 1.15rem; }
       .guide-image-block { padding: 12px; margin: 15px 0; }
       table, th, td { font-size: 0.95rem; }
     }
-
-    /* РЇРЅРґРµРєСЃ РњР°СЂРєРµС‚ СЂРµРєР»Р°РјРЅС‹Р№ Р±Р°РЅРЅРµСЂ */
-    .ym-hero-link {
-      display: block;
-      text-decoration: none;
-      color: inherit;
-      max-width: 100%;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    }
-
     /* Р“РѕСЂРёР·РѕРЅС‚Р°Р»СЊРЅС‹Р№ Р±Р°РЅРЅРµСЂ-РєР°СЂС‚РѕС‡РєР° */
     .ym-hero-banner {
       width: 100%;
@@ -119,338 +107,563 @@
     }
 
     /* Р РµР№С‚РёРЅРі */
-    .ym-hero-rating {
+    .ym-hero-top {
       display: flex;
       align-items: center;
-      gap: 4px;
-      font-size: 12px;
+      justify-content: space-between;
+      gap: 8px;
+    }
+
+    .ym-hero-rating {
+      font-size: 13px;
+      font-weight: 500;
+      color: #111827;
+      background: #f9fafb;
+      border-radius: 999px;
+      padding: 4px 10px;
+    }
+
+    .ym-hero-rating-count {
       color: #6b7280;
     }
 
-    .ym-hero-stars {
-      display: flex;
-      gap: 1px;
-    }
-
-    .ym-hero-star {
-      width: 12px;
-      height: 12px;
-      fill: #fbbf24;
-    }
-
-    .ym-hero-reviews {
-      font-size: 11px;
-      color: #9ca3af;
-    }
-
-    /* Р¦РµРЅР° */
-    .ym-hero-price {
-      font-size: 16px;
-      font-weight: 700;
-      color: #111827;
-      margin: 0;
-    }
-
-    /* РљРЅРѕРїРєР° */
+    /* Р¤РёРѕР»РµС‚РѕРІР°СЏ РєРЅРѕРїРєР° */
     .ym-hero-button {
-      background: #007bff;
-      color: #ffffff;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 9px 16px;
+      border-radius: 999px;
       border: none;
-      padding: 8px 12px;
-      border-radius: 6px;
-      font-size: 12px;
-      font-weight: 500;
+      background: #6a00ff;
+      color: #ffffff;
+      font-size: 14px;
+      font-weight: 600;
       cursor: pointer;
-      transition: background 0.2s ease;
-      text-align: center;
-      text-decoration: none;
-      display: inline-block;
+      box-shadow: 0 2px 6px rgba(88, 28, 135, 0.35);
+      transition: background 0.15s ease, transform 0.15s ease,
+                  box-shadow 0.15s ease;
     }
-
+    .ym-hero-button::after {
+      content: "в†’";
+      margin-left: 6px;
+      font-size: 14px;
+    }
     .ym-hero-button:hover {
-      background: #0056b3;
+      background: #7c3aed;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 10px rgba(88, 28, 135, 0.45);
     }
 
-    /* РђРґР°РїС‚РёРІРЅРѕСЃС‚СЊ */
-    @media (max-width: 768px) {
+    /* Р®СЂРёРґРёС‡РµСЃРєРёР№ Р±Р»РѕРє */
+    .ym-hero-legal {
+      margin-top: 6px;
+      max-width: 600px;
+      font-size: 11px;
+      line-height: 1.3;
+      color: #6b7280;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* РђРґР°РїС‚РёРІ */
+    @media (max-width: 480px) {
       .ym-hero-banner {
-        flex-direction: row;
-        min-height: auto;
+        max-width: 100%;
+        margin: 20px 0;
       }
-
       .ym-hero-images {
-        width: 120px;
-        height: auto;
-        flex-shrink: 0;
+        height: 100px;
       }
-
       .ym-hero-content {
-        flex: 1;
-        padding: 12px 16px;
+        padding: 12px 12px;
       }
-
       .ym-hero-title {
         font-size: 13px;
       }
-
-      .ym-hero-price {
-        font-size: 15px;
-      }
-
       .ym-hero-button {
-        padding: 6px 10px;
-        font-size: 11px;
+        font-size: 13px;
+        padding: 8px 14px;
+      }
+      .ym-hero-legal {
+        font-size: 10px;
+      }
+    }
+    /* Telegram СЂРµРєР»Р°РјРЅС‹Р№ Р±Р°РЅРЅРµСЂ */
+    .telegram-banner {
+      display: flex;
+      justify-content: center;
+      text-decoration: none;
+      color: inherit;
+      width: 100%;
+      margin: 40px 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    .telegram-banner-container {
+      width: 100%;
+      max-width: 500px;
+      min-height: 120px;
+      border-radius: 16px;
+      background: linear-gradient(135deg, #0088cc 0%, #005f8f 100%);
+      border: 1px solid #005f8f;
+      display: flex;
+      align-items: center;
+      padding: 20px;
+      box-shadow: 0 4px 16px rgba(0, 136, 204, 0.2);
+      overflow: hidden;
+      box-sizing: border-box;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .telegram-banner-container:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0, 136, 204, 0.3);
+    }
+
+    .telegram-logo {
+      width: 60px;
+      height: 60px;
+      min-width: 60px;
+      background: #ffffff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 20px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .telegram-logo svg {
+      width: 32px;
+      height: 32px;
+      fill: #0088cc;
+    }
+
+    .telegram-content {
+      flex: 1;
+      color: #ffffff;
+    }
+
+    .telegram-title {
+      font-size: 16px;
+      font-weight: 600;
+      margin: 0 0 8px 0;
+      line-height: 1.3;
+    }
+
+    .telegram-subtitle {
+      font-size: 14px;
+      opacity: 0.9;
+      margin: 0 0 12px 0;
+      line-height: 1.4;
+    }
+
+    .telegram-button {
+      display: inline-flex;
+      align-items: center;
+      padding: 8px 16px;
+      background: #ffffff;
+      color: #0088cc;
+      border-radius: 20px;
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background 0.2s ease, transform 0.2s ease;
+    }
+
+    .telegram-button:hover {
+      background: #f0f8ff;
+      transform: scale(1.05);
+    }
+
+    .telegram-button svg {
+      width: 16px;
+      height: 16px;
+      margin-left: 6px;
+      fill: #0088cc;
+    }
+
+    /* РђРґР°РїС‚РёРІ РґР»СЏ РјРѕР±РёР»СЊРЅС‹С… */
+    @media (max-width: 480px) {
+      .telegram-banner-container {
+        max-width: 100%;
+        margin: 20px 0;
+        padding: 15px;
+        min-height: 100px;
+      }
+      .telegram-logo {
+        width: 50px;
+        height: 50px;
+        min-width: 50px;
+        margin-right: 15px;
+      }
+      .telegram-logo svg {
+        width: 26px;
+        height: 26px;
+      }
+      .telegram-title {
+        font-size: 14px;
+      }
+      .telegram-subtitle {
+        font-size: 12px;
+      }
+      .telegram-button {
+        font-size: 12px;
+        padding: 6px 12px;
       }
     }
 
-    /* РЎРєСЂС‹С‚С‹Р№ Р±Р°РЅРЅРµСЂ РґР»СЏ РґРµСЃРєС‚РѕРїР° */
-    @media (min-width: 769px) {
-      .ym-hero-link {
-        display: none !important;
-      }
-    }
+
+
   </style>
   <script async src="https://timeweb.cloud/api/v1/cloud-ai/agents/3cc03620-d051-4d8d-b5af-f7b6cd083a35/embed.js?collapsed=true"></script>
 </head>
 <body>
-  <header>
-    <div class="header-content">
-      <a href="/" class="logo">
-        <i class="fas fa-tools"></i>
-        FixTech
-      </a>
-      <nav class="nav-links">
-        <a href="/">Р“Р»Р°РІРЅР°СЏ</a>
-        <a href="/articles">Р’СЃРµ СЃС‚Р°С‚СЊРё</a>
-        <a href="/smartphones">РЎРјР°СЂС‚С„РѕРЅС‹</a>
-        <a href="/laptops">РќРѕСѓС‚Р±СѓРєРё</a>
-        <a href="/tv">РўРµР»РµРІРёР·РѕСЂС‹</a>
-        <a href="/cameras">РљР°РјРµСЂС‹</a>
-        <a href="/consoles">РљРѕРЅСЃРѕР»Рё</a>
-        <a href="/auto-electronics">РђРІС‚РѕСЌР»РµРєС‚СЂРѕРЅРёРєР°</a>
-        <a href="/small-appliances">РњРµР»РєР°СЏ С‚РµС…РЅРёРєР°</a>
-        <a href="/large-appliances">РљСЂСѓРїРЅР°СЏ С‚РµС…РЅРёРєР°</a>
-      </nav>
-      <div class="search-container">
-        <input type="text" id="search-input" placeholder="РџРѕРёСЃРє РїРѕ СЃР°Р№С‚Сѓ..." />
-        <button id="search-button"><i class="fas fa-search"></i></button>
+  <header class="header">
+    <div class="container">
+      <div class="header__inner">
+        <a href="../index.html" class="logo">
+          <span class="logo__icon"></span>
+          <span class="logo__text">GeoExpert</span>
+        </a>
+        <nav class="nav">
+          <ul class="nav__list">
+            <li><a href="../cameras.html" class="nav__link">РљР°РјРµСЂС‹</a></li>
+            <li><a href="../drones.html" class="nav__link">Р”СЂРѕРЅС‹</a></li>
+            <li><a href="../workflow.html" class="nav__link">Workflow</a></li>
+          </ul>
+        </nav>
       </div>
     </div>
   </header>
 
   <main class="guide-container">
     <div class="guide-content">
-      <h1>MIDI РєР»Р°РІРёР°С‚СѓСЂР° РІРёРґРЅР° РІ РґРёСЃРїРµС‚С‡РµСЂРµ СѓСЃС‚СЂРѕР№СЃС‚РІ РЅРѕ РЅРµ РІ РїСЂРѕРіСЂР°РјРјР°С… РЅР° РЅРѕСѓС‚Р±СѓРєРµ</h1>
-      <p>РљРѕРіРґР° MIDI РєР»Р°РІРёР°С‚СѓСЂР° РѕС‚РѕР±СЂР°Р¶Р°РµС‚СЃСЏ РІ РґРёСЃРїРµС‚С‡РµСЂРµ СѓСЃС‚СЂРѕР№СЃС‚РІ Windows, РЅРѕ РЅРµ СЂР°СЃРїРѕР·РЅР°РµС‚СЃСЏ РІ РјСѓР·С‹РєР°Р»СЊРЅРѕРј РџРћ, РїСЂРѕР±Р»РµРјР° РѕР±С‹С‡РЅРѕ СЃРІСЏР·Р°РЅР° СЃ РґСЂР°Р№РІРµСЂР°РјРё РёР»Рё РЅР°СЃС‚СЂРѕР№РєР°РјРё MIDI. Р’ СЌС‚РѕРј СЌРєСЃРїРµСЂС‚РЅРѕРј РјРµРіР°РіР°Р№РґРµ РјС‹ СЂР°Р·Р±РµСЂРµРј РІСЃРµ РїСЂРёС‡РёРЅС‹ РѕС‚СЃСѓС‚СЃС‚РІРёСЏ СЂР°СЃРїРѕР·РЅР°РІР°РЅРёСЏ MIDI РєР»Р°РІРёР°С‚СѓСЂС‹ РІ РїСЂРѕРіСЂР°РјРјР°С… Рё РїСЂРµРґРѕСЃС‚Р°РІРёРј СЂРµС€РµРЅРёСЏ РґР»СЏ РєРѕСЂСЂРµРєС‚РЅРѕР№ СЂР°Р±РѕС‚С‹.</p>
+      <h1>MIDI клавиатура видна в диспетчере устройств но не в программах на ноутбуке</h1>
+      <p>Когда MIDI клавиатура отображается в диспетчере устройств Windows, но не распознается в музыкальном ПО, проблема обычно связана с драйверами или настройками MIDI. В этом экспертном мегагайде мы разберем все причины отсутствия распознавания MIDI клавиатуры в программах и предоставим решения для корректной работы.</p>
 
-      <h2>РџСЂРёР·РЅР°РєРё РїСЂРѕР±Р»РµРјС‹</h2>
+      <h2>Признаки проблемы</h2>
       <ul>
-        <li>РљР»Р°РІРёР°С‚СѓСЂР° РІРёРґРЅР° РІ РґРёСЃРїРµС‚С‡РµСЂРµ СѓСЃС‚СЂРѕР№СЃС‚РІ</li>
-        <li>РќРµ РѕС‚РѕР±СЂР°Р¶Р°РµС‚СЃСЏ РІ DAW (FL Studio, Ableton)</li>
-        <li>РќРµ СЂР°Р±РѕС‚Р°РµС‚ РІ MIDI СЂРµРґР°РєС‚РѕСЂР°С…</li>
-        <li>Р Р°Р±РѕС‚Р°РµС‚ РЅР° РґСЂСѓРіРёС… РєРѕРјРїСЊСЋС‚РµСЂР°С…</li>
-        <li>USB РїРѕСЂС‚ СЂР°Р±РѕС‚Р°РµС‚ СЃ РґСЂСѓРіРёРјРё СѓСЃС‚СЂРѕР№СЃС‚РІР°РјРё</li>
+        <li>Клавиатура видна в диспетчере устройств</li>
+        <li>Не отображается в DAW (FL Studio, Ableton)</li>
+        <li>Не работает в MIDI редакторах</li>
+        <li>Работает на других компьютерах</li>
+        <li>USB порт работает с другими устройствами</li>
       </ul>
 
-      <h2>РћСЃРЅРѕРІРЅС‹Рµ РїСЂРёС‡РёРЅС‹</h2>
+      <h2>Основные причины</h2>
       <table>
         <tr>
-          <th>РџСЂРёС‡РёРЅР°</th>
-          <th>Р’РµСЂРѕСЏС‚РЅРѕСЃС‚СЊ</th>
-          <th>РҐР°СЂР°РєС‚РµСЂРЅС‹Рµ РїСЂРёР·РЅР°РєРё</th>
+          <th>Причина</th>
+          <th>Вероятность</th>
+          <th>Характерные признаки</th>
         </tr>
         <tr>
-          <td>Р”СЂР°Р№РІРµСЂС‹ MIDI</td>
+          <td>Драйверы MIDI</td>
           <td>40%</td>
-          <td>Р Р°Р±РѕС‚Р°РµС‚ РїРѕСЃР»Рµ СѓСЃС‚Р°РЅРѕРІРєРё РґСЂР°Р№РІРµСЂРѕРІ</td>
+          <td>Работает после установки драйверов</td>
         </tr>
         <tr>
-          <td>РќР°СЃС‚СЂРѕР№РєРё MIDI РІ РџРћ</td>
+          <td>Настройки MIDI в ПО</td>
           <td>30%</td>
-          <td>Р Р°Р±РѕС‚Р°РµС‚ РїРѕСЃР»Рµ РІС‹Р±РѕСЂР° СѓСЃС‚СЂРѕР№СЃС‚РІР°</td>
+          <td>Работает после выбора устройства</td>
         </tr>
         <tr>
-          <td>РљРѕРЅС„Р»РёРєС‚ USB</td>
+          <td>Конфликт USB</td>
           <td>15%</td>
-          <td>Р Р°Р±РѕС‚Р°РµС‚ РїРѕСЃР»Рµ СЃР±СЂРѕСЃР° USB</td>
+          <td>Работает после сброса USB</td>
         </tr>
         <tr>
-          <td>РќРµСЃРѕРІРјРµСЃС‚РёРјРѕСЃС‚СЊ РџРћ</td>
+          <td>Несовместимость ПО</td>
           <td>10%</td>
-          <td>Р Р°Р±РѕС‚Р°РµС‚ РІ РґСЂСѓРіРѕРј РџРћ</td>
+          <td>Работает в другом ПО</td>
         </tr>
         <tr>
-          <td>РќР°СЃС‚СЂРѕР№РєРё Windows</td>
+          <td>Настройки Windows</td>
           <td>4%</td>
-          <td>Р Р°Р±РѕС‚Р°РµС‚ РїРѕСЃР»Рµ СЃР±СЂРѕСЃР°</td>
+          <td>Работает после сброса</td>
         </tr>
         <tr>
-          <td>РџРѕРІСЂРµР¶РґРµРЅРёРµ</td>
+          <td>Повреждение</td>
           <td>1%</td>
-          <td>РќРµ СЂР°Р±РѕС‚Р°РµС‚ РЅРёРіРґРµ</td>
+          <td>Не работает нигде</td>
         </tr>
       </table>
 
-      <h2>Р”РёР°РіРЅРѕСЃС‚РёРєР° РїСЂРѕР±Р»РµРјС‹</h2>
-      <h3>MIDI РѕРєРЅРµ Windows</h3>
+      <h2>Диагностика проблемы</h2>
+      <h3>MIDI окне Windows</h3>
       <ol>
-        <li>Win + R в†’ midi</li>
-        <li>РџСЂРѕРІРµСЂСЊС‚Рµ СЃРїРёСЃРѕРє MIDI СѓСЃС‚СЂРѕР№СЃС‚РІ</li>
-        <li>Р•СЃР»Рё РєР»Р°РІРёР°С‚СѓСЂР° РµСЃС‚СЊ - РїСЂРѕР±Р»РµРјР° РІ РџРћ</li>
+        <li>Win + R > midi</li>
+        <li>Проверьте список MIDI устройств</li>
+        <li>Если клавиатура есть - проблема в ПО</li>
       </ol>
 
-      <h3>РўРµСЃС‚РёСЂРѕРІР°РЅРёРµ РІ DAW</h3>
+      <h3>Тестирование в DAW</h3>
       <ol>
-        <li>FL Studio, Ableton в†’ РќР°СЃС‚СЂРѕР№РєРё MIDI</li>
-        <li>РџРѕСЃРјРѕС‚СЂРёС‚Рµ РґРѕСЃС‚СѓРїРЅС‹Рµ СѓСЃС‚СЂРѕР№СЃС‚РІР°</li>
-        <li>Р•СЃР»Рё РЅРµС‚ РєР»Р°РІРёР°С‚СѓСЂС‹ - РїСЂРѕРІРµСЂСЊС‚Рµ РґСЂР°Р№РІРµСЂС‹</li>
+        <li>FL Studio, Ableton > Настройки MIDI</li>
+        <li>Посмотрите доступные устройства</li>
+        <li>Если нет клавиатуры - проверьте драйверы</li>
       </ol>
 
-      <h2>Р РµС€РµРЅРёРµ 1: РЈСЃС‚Р°РЅРѕРІРєР° РґСЂР°Р№РІРµСЂРѕРІ</h2>
-      <h3>Р”СЂР°Р№РІРµСЂС‹ РѕС‚ РїСЂРѕРёР·РІРѕРґРёС‚РµР»СЏ</h3>
+      <h2>Решение 1: Установка драйверов</h2>
+      <h3>Драйверы от производителя</h3>
       <ol>
-        <li>Akai, M-Audio, Novation Рё С‚.Рґ.</li>
-        <li>РЎРєР°С‡Р°Р№С‚Рµ РґСЂР°Р№РІРµСЂС‹ СЃ СЃР°Р№С‚Р° РїСЂРѕРёР·РІРѕРґРёС‚РµР»СЏ</li>
-        <li>РЈСЃС‚Р°РЅРѕРІРёС‚Рµ РёС…</li>
-        <li>РџРµСЂРµР·Р°РіСЂСѓР·РёС‚Рµ РєРѕРјРїСЊСЋС‚РµСЂ</li>
+        <li>Akai, M-Audio, Novation и т.д.</li>
+        <li>Скачайте драйверы с сайта производителя</li>
+        <li>Установите их</li>
+        <li>Перезагрузите компьютер</li>
       </ol>
 
       <h3>ASIO4ALL</h3>
       <ol>
-        <li>РЎРєР°С‡Р°Р№С‚Рµ ASIO4ALL</li>
-        <li>РЈСЃС‚Р°РЅРѕРІРёС‚Рµ Рё РЅР°СЃС‚СЂРѕР№С‚Рµ</li>
-        <li>Р­С‚Рѕ РјРѕР¶РµС‚ РїРѕРјРѕС‡СЊ СЃ MIDI</li>
+        <li>Скачайте ASIO4ALL</li>
+        <li>Установите и настройте</li>
+        <li>Это может помочь с MIDI</li>
       </ol>
 
-      <h2>Р РµС€РµРЅРёРµ 2: РќР°СЃС‚СЂРѕР№РєРё MIDI РІ РџРћ</h2>
+      <h2>Решение 2: Настройки MIDI в ПО</h2>
       <h3>FL Studio</h3>
       <ol>
-        <li>Options в†’ MIDI Settings</li>
-        <li>Controller type в†’ Р’С‹Р±РµСЂРёС‚Рµ РєР»Р°РІРёР°С‚СѓСЂСѓ</li>
-        <li>Enabled в†’ Р’РєР»СЋС‡РµРЅРѕ</li>
+        <li>Options > MIDI Settings</li>
+        <li>Controller type > Выберите клавиатуру</li>
+        <li>Enabled > Включено</li>
       </ol>
 
       <h3>Ableton Live</h3>
       <ol>
-        <li>Preferences в†’ MIDI</li>
-        <li>Input в†’ Р’РєР»СЋС‡РёС‚Рµ РєР»Р°РІРёР°С‚СѓСЂСѓ</li>
-        <li>Track в†’ РќР°Р·РЅР°С‡СЊС‚Рµ С‚СЂРµРє</li>
+        <li>Preferences > MIDI</li>
+        <li>Input > Включите клавиатуру</li>
+        <li>Track > Назначьте трек</li>
       </ol>
 
-      <h2>Р РµС€РµРЅРёРµ 3: РЎР±СЂРѕСЃ USB</h2>
-      <h3>РЈРґР°Р»РµРЅРёРµ РєРѕРЅС‚СЂРѕР»Р»РµСЂРѕРІ</h3>
+      <h2>Решение 3: Сброс USB</h2>
+      <h3>Удаление контроллеров</h3>
       <ol>
-        <li>Р”РёСЃРїРµС‚С‡РµСЂ СѓСЃС‚СЂРѕР№СЃС‚РІ в†’ USB РєРѕРЅС‚СЂРѕР»Р»РµСЂС‹</li>
-        <li>РЈРґР°Р»РёС‚Рµ РІСЃРµ СѓРЅРёРІРµСЂСЃР°Р»СЊРЅС‹Рµ РїРѕСЃР»РµРґРѕРІР°С‚РµР»СЊРЅС‹Рµ С€РёРЅС‹</li>
-        <li>РџРµСЂРµР·Р°РіСЂСѓР·РёС‚Рµ РєРѕРјРїСЊСЋС‚РµСЂ</li>
+        <li>Диспетчер устройств > USB контроллеры</li>
+        <li>Удалите все универсальные последовательные шины</li>
+        <li>Перезагрузите компьютер</li>
       </ol>
 
-      <h3>РџРµСЂРµРїРѕРґРєР»СЋС‡РµРЅРёРµ</h3>
+      <h3>Переподключение</h3>
       <ol>
-        <li>РћС‚РєР»СЋС‡РёС‚Рµ РєР»Р°РІРёР°С‚СѓСЂСѓ</li>
-        <li>РџРѕРґРѕР¶РґРёС‚Рµ 30 СЃРµРєСѓРЅРґ</li>
-        <li>РџРѕРґРєР»СЋС‡РёС‚Рµ Р·Р°РЅРѕРІРѕ</li>
+        <li>Отключите клавиатуру</li>
+        <li>Подождите 30 секунд</li>
+        <li>Подключите заново</li>
       </ol>
 
-      <h2>Р РµС€РµРЅРёРµ 4: РќР°СЃС‚СЂРѕР№РєРё Windows</h2>
-      <h3>MIDI СѓСЃС‚СЂРѕР№СЃС‚РІР°</h3>
+      <h2>Решение 4: Настройки Windows</h2>
+      <h3>MIDI устройства</h3>
       <ol>
-        <li>РџР°РЅРµР»СЊ СѓРїСЂР°РІР»РµРЅРёСЏ в†’ РЈСЃС‚СЂРѕР№СЃС‚РІР° Рё Р·РІСѓРє</li>
-        <li>РЈРїСЂР°РІР»РµРЅРёРµ Р°СѓРґРёРѕСѓСЃС‚СЂРѕР№СЃС‚РІР°РјРё</li>
-        <li>Р’РєР»Р°РґРєР° MIDI в†’ РЎРІРѕР№СЃС‚РІР°</li>
+        <li>Панель управления > Устройства и звук</li>
+        <li>Управление аудиоустройствами</li>
+        <li>Вкладка MIDI > Свойства</li>
       </ol>
 
-      <h3>Р”РёСЃРїРµС‚С‡РµСЂ СѓСЃС‚СЂРѕР№СЃС‚РІ</h3>
+      <h3>Диспетчер устройств</h3>
       <ol>
-        <li>devmgmt.msc в†’ Р—РІСѓРєРѕРІС‹Рµ СѓСЃС‚СЂРѕР№СЃС‚РІР°</li>
-        <li>РЈР±РµРґРёС‚РµСЃСЊ, С‡С‚Рѕ MIDI СѓСЃС‚СЂРѕР№СЃС‚РІР° РІРєР»СЋС‡РµРЅС‹</li>
+        <li>devmgmt.msc > Звуковые устройства</li>
+        <li>Убедитесь, что MIDI устройства включены</li>
       </ol>
 
-      <h2>Р РµС€РµРЅРёРµ 5: РљРѕРЅС„Р»РёРєС‚С‹ РїСЂРѕРіСЂР°РјРј</h2>
-      <h3>Р—Р°РєСЂС‹С‚РёРµ РґСЂСѓРіРёС… РџРћ</h3>
+      <h2>Решение 5: Конфликты программ</h2>
+      <h3>Закрытие других ПО</h3>
       <ol>
-        <li>Р—Р°РєСЂРѕР№С‚Рµ РІСЃРµ РјСѓР·С‹РєР°Р»СЊРЅРѕРµ РџРћ</li>
-        <li>РћСЃС‚Р°РІСЊС‚Рµ С‚РѕР»СЊРєРѕ РѕРґРЅСѓ DAW</li>
-        <li>РџРѕРїСЂРѕР±СѓР№С‚Рµ РїРѕРґРєР»СЋС‡РёС‚СЊ РєР»Р°РІРёР°С‚СѓСЂСѓ</li>
+        <li>Закройте все музыкальное ПО</li>
+        <li>Оставьте только одну DAW</li>
+        <li>Попробуйте подключить клавиатуру</li>
       </ol>
 
-      <h2>Р РµС€РµРЅРёРµ 6: РЎР±СЂРѕСЃ РЅР°СЃС‚СЂРѕРµРє</h2>
-      <h3>РќР°СЃС‚СЂРѕР№РєРё DAW</h3>
+      <h2>Решение 6: Сброс настроек</h2>
+      <h3>Настройки DAW</h3>
       <ol>
-        <li>РЈРґР°Р»РёС‚Рµ С„Р°Р№Р» РЅР°СЃС‚СЂРѕРµРє DAW</li>
+        <li>Удалите файл настроек DAW</li>
         <li>%APPDATA%\Image-Line\FL Studio</li>
-        <li>РџРµСЂРµР·Р°РїСѓСЃС‚РёС‚Рµ РїСЂРѕРіСЂР°РјРјСѓ</li>
+        <li>Перезапустите программу</li>
       </ol>
 
       <div class="pro-tips">
-        <h4><i class="fas fa-lightbulb"></i> РџСЂРѕС„РµСЃСЃРёРѕРЅР°Р»СЊРЅС‹Рµ СЃРѕРІРµС‚С‹</h4>
+        <h4><i class="fas fa-lightbulb"></i> Профессиональные советы</h4>
         <div class="tip-item">
           <i class="fas fa-tools"></i>
-          <span>Р’СЃРµРіРґР° СѓСЃС‚Р°РЅР°РІР»РёРІР°Р№С‚Рµ РѕС„РёС†РёР°Р»СЊРЅС‹Рµ РґСЂР°Р№РІРµСЂС‹ MIDI РєР»Р°РІРёР°С‚СѓСЂС‹</span>
+          <span>Всегда устанавливайте официальные драйверы MIDI клавиатуры</span>
         </div>
         <div class="tip-item">
           <i class="fas fa-music"></i>
-          <span>РџСЂРѕРІРµСЂСЏР№С‚Рµ РЅР°СЃС‚СЂРѕР№РєРё MIDI РІ РєР°Р¶РґРѕР№ DAW РѕС‚РґРµР»СЊРЅРѕ</span>
+          <span>Проверяйте настройки MIDI в каждой DAW отдельно</span>
         </div>
         <div class="tip-item">
           <i class="fas fa-plug"></i>
-          <span>РџРѕРґРєР»СЋС‡Р°Р№С‚Рµ MIDI РєР»Р°РІРёР°С‚СѓСЂСѓ РЅР°РїСЂСЏРјСѓСЋ Рє USB РїРѕСЂС‚Сѓ РЅРѕСѓС‚Р±СѓРєР°</span>
+          <span>Подключайте MIDI клавиатуру напрямую к USB порту ноутбука</span>
         </div>
         <div class="tip-item">
           <i class="fas fa-sync-alt"></i>
-          <span>РћР±РЅРѕРІР»СЏР№С‚Рµ РґСЂР°Р№РІРµСЂС‹ РїРѕСЃР»Рµ РѕР±РЅРѕРІР»РµРЅРёР№ Windows</span>
+          <span>Обновляйте драйверы после обновлений Windows</span>
         </div>
       </div>
 
-      <h2>Р Р°СЃС€РёСЂРµРЅРЅС‹Рµ СЂРµС€РµРЅРёСЏ</h2>
-      <h3>Р’РѕСЃСЃС‚Р°РЅРѕРІР»РµРЅРёРµ СЃРёСЃС‚РµРјС‹</h3>
+      <h2>Расширенные решения</h2>
+      <h3>Восстановление системы</h3>
       <ol>
-        <li>Win + R в†’ rstrui</li>
-        <li>Р’С‹Р±РµСЂРёС‚Рµ С‚РѕС‡РєСѓ РІРѕСЃСЃС‚Р°РЅРѕРІР»РµРЅРёСЏ</li>
-        <li>Р’РѕСЃСЃС‚Р°РЅРѕРІРёС‚Рµ РґРѕ РїРѕСЏРІР»РµРЅРёСЏ РїСЂРѕР±Р»РµРјС‹</li>
+        <li>Win + R > rstrui</li>
+        <li>Выберите точку восстановления</li>
+        <li>Восстановите до появления проблемы</li>
       </ol>
 
-      <h3>Р§РёСЃС‚Р°СЏ СѓСЃС‚Р°РЅРѕРІРєР° Windows</h3>
+      <h3>Чистая установка Windows</h3>
       <ol>
-        <li>Р•СЃР»Рё РЅРёС‡РµРіРѕ РЅРµ РїРѕРјРѕРіР°РµС‚</li>
-        <li>РџРµСЂРµСѓСЃС‚Р°РЅРѕРІРёС‚Рµ Windows</li>
-        <li>РЈСЃС‚Р°РЅРѕРІРёС‚Рµ РґСЂР°Р№РІРµСЂС‹ Р·Р°РЅРѕРІРѕ</li>
+        <li>Если ничего не помогает</li>
+        <li>Переустановите Windows</li>
+        <li>Установите драйверы заново</li>
       </ol>
 
-      <h2>Р§Р°СЃС‚С‹Рµ РІРѕРїСЂРѕСЃС‹</h2>
-      <h3>РџРѕС‡РµРјСѓ РєР»Р°РІРёР°С‚СѓСЂР° РЅРµ РІРёРґРЅР° РІ DAW?</h3>
-      <p>РќРµ РІС‹Р±СЂР°РЅР° РІ РЅР°СЃС‚СЂРѕР№РєР°С… MIDI РёР»Рё РѕС‚СЃСѓС‚СЃС‚РІСѓСЋС‚ РґСЂР°Р№РІРµСЂС‹. РџСЂРѕРІРµСЂСЊС‚Рµ РЅР°СЃС‚СЂРѕР№РєРё Рё СѓСЃС‚Р°РЅРѕРІРёС‚Рµ РґСЂР°Р№РІРµСЂС‹.</p>
+      <h2>Частые вопросы</h2>
+      <h3>Почему клавиатура не видна в DAW?</h3>
+      <p>Не выбрана в настройках MIDI или отсутствуют драйверы. Проверьте настройки и установите драйверы.</p>
 
-      <h3>РљР»Р°РІРёР°С‚СѓСЂР° СЂР°Р±РѕС‚Р°РµС‚ РІ Windows, РЅРѕ РЅРµ РІ РџРћ?</h3>
-      <p>РџСЂРѕР±Р»РµРјР° РІ РЅР°СЃС‚СЂРѕР№РєР°С… РїСЂРѕРіСЂР°РјРјС‹. Р’С‹Р±РµСЂРёС‚Рµ РєР»Р°РІРёР°С‚СѓСЂСѓ РІ РЅР°СЃС‚СЂРѕР№РєР°С… MIDI.</p>
+      <h3>Клавиатура работает в Windows, но не в ПО?</h3>
+      <p>Проблема в настройках программы. Выберите клавиатуру в настройках MIDI.</p>
 
-      <h3>Р§С‚Рѕ РґРµР»Р°С‚СЊ, РµСЃР»Рё РєР»Р°РІРёР°С‚СѓСЂР° РґРµСЂРіР°РµС‚СЃСЏ?</h3>
-      <p>РќРёР·РєР°СЏ Р·Р°РґРµСЂР¶РєР° РёР»Рё Р±СѓС„РµСЂ. РЈРІРµР»РёС‡СЊС‚Рµ Р±СѓС„РµСЂ РІ РЅР°СЃС‚СЂРѕР№РєР°С… Р°СѓРґРёРѕ.</p>
+      <h3>Что делать, если клавиатура дергается?</h3>
+      <p>Низкая задержка или буфер. Увеличьте буфер в настройках аудио.</p>
 
-      <h2>РљРѕРіРґР° РЅСѓР¶РЅР° Р·Р°РјРµРЅР°</h2>
+      <h2>Когда нужна замена</h2>
       <ul>
-        <li>РљР»Р°РІРёР°С‚СѓСЂР° РЅРµ СЂР°Р±РѕС‚Р°РµС‚ РЅРё РІ РѕРґРЅРѕРј РџРћ</li>
-        <li>РџРѕРІСЂРµР¶РґРµРЅС‹ USB СЂР°Р·СЉРµРј РёР»Рё РєР°Р±РµР»СЊ</li>
-        <li>РќРµСЃРѕРІРјРµСЃС‚РёРјР° СЃ РІР°С€РµР№ РІРµСЂСЃРёРµР№ Windows</li>
-        <li>Р’СЃРµ СЂРµС€РµРЅРёСЏ РЅРµ РїРѕРјРѕРіР»Рё</li>
+        <li>Клавиатура не работает ни в одном ПО</li>
+        <li>Повреждены USB разъем или кабель</li>
+        <li>Несовместима с вашей версией Windows</li>
+        <li>Все решения не помогли</li>
       </ul>
 
-      <p>Р’ Р±РѕР»СЊС€РёРЅСЃС‚РІРµ СЃР»СѓС‡Р°РµРІ РїСЂРѕР±Р»РµРјР° СЂРµС€Р°РµС‚СЃСЏ СѓСЃС‚Р°РЅРѕРІРєРѕР№ РґСЂР°Р№РІРµСЂРѕРІ Рё РЅР°СЃС‚СЂРѕР№РєРѕР№ MIDI РІ РїСЂРѕРіСЂР°РјРјР°С…. РќР°С‡РЅРёС‚Рµ СЃ РїСЂРѕРІРµСЂРєРё РЅР°СЃС‚СЂРѕРµРє MIDI РІ РІР°С€РµР№ DAW.</p>
+      <p>В большинстве случаев проблема решается установкой драйверов и настройкой MIDI в программах. Начните с проверки настроек MIDI в вашей DAW.</p>
     </div>
   </main>
 
-  <footer>
-    <div class="footer-content">
-      <p>&copy; 2024 FixTech. Р’СЃРµ РїСЂР°РІР° Р·Р°С‰РёС‰РµРЅС‹.</p>
-      <div class="footer-links">
-        <a href="/privacy">РљРѕРЅС„РёРґРµРЅС†РёР°Р»СЊРЅРѕСЃС‚СЊ</a>
-        <a href="/terms">РЈСЃР»РѕРІРёСЏ РёСЃРїРѕР»СЊР·РѕРІР°РЅРёСЏ</a>
-        <a href="/contact">РљРѕРЅС‚Р°РєС‚С‹</a>
-      </div>
-    </div>
-  </footer>
+      <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__col footer__col--logo">
+                    <a href="../index.html" class="footer-logo">
+                        <span class="logo__icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 15L7 10H17L12 15Z" fill="currentColor"/>
+                                <path d="M12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3ZM12 19C8.13401 19 5 15.866 5 12C5 8.13401 8.13401 5 12 5C15.866 5 19 8.13401 19 12C19 15.866 15.866 19 12 19Z" fill="currentColor"/>
+                            </svg>
+                        </span>
+                        <span class="logo__text">Repairo</span>
+                    </a>
+                    <p class="footer__text">Помогаем ремонтировать электронику с 2024 года</p>
+                </div>
+                <div class="footer__col">
+                    <h3 class="footer__title">Разделы</h3>
+                    <ul class="footer__links">
+                        <li><a href="../index.html" class="footer__link">Главная</a></li>
+                        <li><a href="../index.html#categories" class="footer__link">Все гайды</a></li>
+                        <li><a href="../contacts.html" class="footer__link">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="footer__col">
+                    <h3 class="footer__title">Категории</h3>
+                    <ul class="footer__links">
+                        <li><a href="../tv.html" class="nav__link">Телевизоры</a></li>
+                        <li><a href="../cameras.html" class="nav__link">Фотоаппараты</a></li>
+                        <li><a href="../consoles.html" class="nav__link">Приставки</a></li>
+                        <li><a href="../laptops.html" class="nav__link">Ноутбуки</a></li>
+                        <li><a href="../smartphones.html" class="nav__link">Смартфоны</a></li>
+                        <li><a href="../small-appliances.html" class="nav__link">Мелкая техника</a></li>
+                        <li><a href="../large-appliances.html" class="nav__link">Бытовая техника</a></li>
+                        <li><a href="../auto-electronics.html" class="nav__link">Авто-Электроника</a></li>
+                    </ul>
+                </div>
+                <div class="footer__col">
+                    <h3 class="footer__title">Контакты</h3>
+                    <ul class="footer__links">
+                        <li><a href="https://t.me/RepairoRU" class="footer__link"><i class="fab fa-telegram"></i> Telegram</a></li>
+                        <li><span class="footer__link">Наша почта: repairo.info@mail.ru</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p class="disclaimer">
+    Администрация сайта не несёт ответственности за возможные повреждения техники
+    и иные последствия, возникшие в результате самостоятельного ремонта по
+    материалам и инструкциям, размещённым на сайте. Все работы вы выполняете
+    на свой страх и риск.
+    </p>
+                <p class="footer__copyright">© 2026 Repairo. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+    <!-- Cookie Consent Banner -->
+    <script src="../script.js"></script>
 
-  <script src="../script.js"></script>
-  <script src="../search.js"></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "MIDI клавиатура видна в диспетчере устройств но не в программах на ноутбуке | Экспертный мегагайд",
+  "description": "",
+  "totalTime": "PT30M",
+  "step": [
+    {
+      "@type": "HowToStep",
+      "name": "Введение: почему Cyberpunk 2077 может тормозить на PS5 после патчей?",
+      "text": "Введение: почему Cyberpunk 2077 может тормозить на PS5 после патчей?",
+      "url": "#step-1"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Таблица: основные причины лагов и просадок FPS в Cyberpunk 2077 на PS5 после обновлений",
+      "text": "Таблица: основные причины лагов и просадок FPS в Cyberpunk 2077 на PS5 после обновлений",
+      "url": "#step-2"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Пошаговая инструкция: что делать, если Cyberpunk 2077 тормозит на PS5 после обновления",
+      "text": "Пошаговая инструкция: что делать, если Cyberpunk 2077 тормозит на PS5 после обновления",
+      "url": "#step-3"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Таблица: сравнение режимов графики и FPS в Cyberpunk 2077 на PS5",
+      "text": "Таблица: сравнение режимов графики и FPS в Cyberpunk 2077 на PS5",
+      "url": "#step-4"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Отзывы игроков и тесты Digital Foundry",
+      "text": "Отзывы игроков и тесты Digital Foundry",
+      "url": "#step-5"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Лайфхаки и советы по оптимизации Cyberpunk 2077 на PS5",
+      "text": "Лайфхаки и советы по оптимизации Cyberpunk 2077 на PS5",
+      "url": "#step-6"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "FAQ – часто задаваемые вопросы о тормозах Cyberpunk 2077 на PS5",
+      "text": "FAQ – часто задаваемые вопросы о тормозах Cyberpunk 2077 на PS5",
+      "url": "#step-7"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Пошаговая инструкция: как восстановить базу данных PS5",
+      "text": "Пошаговая инструкция: как восстановить базу данных PS5",
+      "url": "#step-8"
+    }
+  ],
+  "image": "https://repairo.ru/https://mc.yandex.ru/watch/106225686"
+}
+</script>
+<!-- Cookie Consent Script -->
+<script src="../cookie-consent.js"></script>
 </body>
 </html>
+
+
+
+
+
+

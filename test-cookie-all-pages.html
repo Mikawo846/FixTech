@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>РўРµСЃС‚ Cookie Banner РЅР° РІСЃРµС… СЃС‚СЂР°РЅРёС†Р°С…</title>
+    <title>Тест Cookie Banner на всех страницах</title>
     <style>
         body { font-family: Arial, sans-serif; padding: 20px; }
         .test-section { margin: 20px 0; padding: 15px; border: 1px solid #ddd; }
@@ -11,27 +11,27 @@
     </style>
 </head>
 <body>
-    <h1>РўРµСЃС‚РёСЂРѕРІР°РЅРёРµ Cookie Banner</h1>
+    <h1>Тестирование Cookie Banner</h1>
     
     <div class="test-section">
-        <h2>РўРµРєСѓС‰РёР№ СЃС‚Р°С‚СѓСЃ:</h2>
+        <h2>Текущий статус:</h2>
         <p>URL: <span id="current-url"></span></p>
         <p>Cookie consent: <span id="consent-status"></span></p>
-        <p>Р’СЃРµ РєСѓРєРё: <span id="all-cookies"></span></p>
+        <p>Все куки: <span id="all-cookies"></span></p>
     </div>
     
     <div class="test-section">
-        <h2>РЈРїСЂР°РІР»РµРЅРёРµ:</h2>
-        <button onclick="clearCookieConsent()">РћС‡РёСЃС‚РёС‚СЊ consent cookie</button>
-        <button onclick="checkCookieStatus()">РџСЂРѕРІРµСЂРёС‚СЊ СЃС‚Р°С‚СѓСЃ</button>
-        <button onclick="forceShowBanner()">РџСЂРёРЅСѓРґРёС‚РµР»СЊРЅРѕ РїРѕРєР°Р·Р°С‚СЊ Р±Р°РЅРЅРµСЂ</button>
+        <h2>Управление:</h2>
+        <button onclick="clearCookieConsent()">Очистить consent cookie</button>
+        <button onclick="checkCookieStatus()">Проверить статус</button>
+        <button onclick="forceShowBanner()">Принудительно показать баннер</button>
     </div>
     
     <div class="test-section">
-        <h2>РРЅС„РѕСЂРјР°С†РёСЏ:</h2>
-        <p>Р­С‚Р° СЃС‚СЂР°РЅРёС†Р° РґР»СЏ С‚РµСЃС‚РёСЂРѕРІР°РЅРёСЏ СЂР°Р±РѕС‚С‹ cookie banner.</p>
-        <p>Р•СЃР»Рё Р±Р°РЅРЅРµСЂ РЅРµ РїРѕРєР°Р·С‹РІР°РµС‚СЃСЏ, СЃРєРѕСЂРµРµ РІСЃРµРіРѕ РІС‹ СѓР¶Рµ РґР°РІР°Р»Рё СЃРѕРіР»Р°СЃРёРµ СЂР°РЅРµРµ.</p>
-        <p>РќР°Р¶РјРёС‚Рµ "РћС‡РёСЃС‚РёС‚СЊ consent cookie" С‡С‚РѕР±С‹ СЃР±СЂРѕСЃРёС‚СЊ СЃРѕРіР»Р°СЃРёРµ Рё СѓРІРёРґРµС‚СЊ Р±Р°РЅРЅРµСЂ СЃРЅРѕРІР°.</p>
+        <h2>Информация:</h2>
+        <p>Эта страница для тестирования работы cookie banner.</p>
+        <p>Если баннер не показывается, скорее всего вы уже давали согласие ранее.</p>
+        <p>Нажмите "Очистить consent cookie" чтобы сбросить согласие и увидеть баннер снова.</p>
     </div>
 
     <script>
@@ -50,30 +50,32 @@
 
         function clearCookieConsent() {
             document.cookie = 'cookie_consent=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
-            alert('Cookie consent РѕС‡РёС‰РµРЅ! РћР±РЅРѕРІРёС‚Рµ СЃС‚СЂР°РЅРёС†Сѓ С‡С‚РѕР±С‹ СѓРІРёРґРµС‚СЊ Р±Р°РЅРЅРµСЂ.');
+            alert('Cookie consent очищен! Обновите страницу чтобы увидеть баннер.');
             checkCookieStatus();
         }
 
         function checkCookieStatus() {
             document.getElementById('current-url').textContent = window.location.href;
-            document.getElementById('consent-status').textContent = getCookie('cookie_consent') || 'РЅРµ РЅР°Р№РґРµРЅ';
-            document.getElementById('all-cookies').textContent = document.cookie || 'РЅРµС‚ РєСѓРє';
+            document.getElementById('consent-status').textContent = getCookie('cookie_consent') || 'не найден';
+            document.getElementById('all-cookies').textContent = document.cookie || 'нет кук';
         }
 
         function forceShowBanner() {
-            // РРјРїРѕСЂС‚РёСЂСѓРµРј С„СѓРЅРєС†РёСЋ РёР· РѕСЃРЅРѕРІРЅРѕРіРѕ СЃРєСЂРёРїС‚Р°
+            // Импортируем функцию из основного скрипта
             if (typeof showCookieBanner === 'function') {
                 showCookieBanner();
             } else {
-                alert('Р¤СѓРЅРєС†РёСЏ showCookieBanner РЅРµ РЅР°Р№РґРµРЅР°. РЈР±РµРґРёС‚РµСЃСЊ С‡С‚Рѕ cookie-consent.js Р·Р°РіСЂСѓР¶РµРЅ.');
+                alert('Функция showCookieBanner не найдена. Убедитесь что cookie-consent.js загружен.');
             }
         }
 
-        // РџСЂРѕРІРµСЂСЏРµРј СЃС‚Р°С‚СѓСЃ РїСЂРё Р·Р°РіСЂСѓР·РєРµ
+        // Проверяем статус при загрузке
         checkCookieStatus();
     </script>
 
-    <!-- РџРѕРґРєР»СЋС‡Р°РµРј РѕСЃРЅРѕРІРЅРѕР№ СЃРєСЂРёРїС‚ cookie -->
+    <!-- Подключаем основной скрипт cookie -->
     <script src="cookie-consent.js"></script>
 </body>
 </html>
+
+

@@ -4,61 +4,34 @@
 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Р’РёСЂСѓСЃ-РІС‹РјРѕРіР°С‚РµР»СЊ С€РёС„СЂСѓРµС‚ С„Р°Р№Р»С‹ | Р§С‚Рѕ РґРµР»Р°С‚СЊ Рё РєР°Рє РјРёРЅРёРјРёР·РёСЂРѕРІР°С‚СЊ РїРѕС‚РµСЂРё</title>
-    <meta name="description" content="{{ description }}">
-    <meta name="description" content="РџРѕС€Р°РіРѕРІР°СЏ РёРЅСЃС‚СЂСѓРєС†РёСЏ: Р§С‚Рѕ РґРµР»Р°С‚СЊ, РµСЃР»Рё РЅРѕСѓС‚Р±СѓРє С€РёС„СЂСѓРµС‚ С„Р°Р№Р»С‹ РёР·-Р·Р° РІРёСЂСѓСЃР°-РІС‹РјРѕРіР°С‚РµР»СЏ Рё РєР°Рє РјРёРЅРёРјРёР·РёСЂРѕРІР°С‚СЊ РїРѕС‚РµСЂРё. РџРѕР»РЅРѕРµ СЂСѓРєРѕРІРѕРґСЃС‚РІРѕ РїРѕ Р±РѕСЂСЊР±Рµ СЃ РїСЂРѕРіСЂР°РјРјР°РјРё-РІС‹РјРѕРіР°С‚РµР»СЏРјРё Рё РІРѕСЃСЃС‚Р°РЅРѕРІР»РµРЅРёСЋ РґР°РЅРЅС‹С….">
+  <title>Вирус-вымогатель шифрует файлы | Что делать и как минимизиро</title>
+    <meta name="description" content="">
 
   <link rel="stylesheet" href="../styles.css" />
   <link rel="stylesheet" href="../styles-header.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-
   <style>
     .guide-content { line-height: 1.7; color: var(--text); }
-    .guide-content h2 { color: var(--primary); margin-top: 30px; margin-bottom: 15px; font-size: 1.6rem; }
-    .guide-content h3 { color: var(--primary-dark); margin-top: 25px; margin-bottom: 12px; font-size: 1.25rem; }
+    .guide-content h2 { color: var(--primary); margin-top: 30px; margin-bottom: 15px; font-size: 1.5rem; }
+    .guide-content h3 { color: var(--primary-dark); margin-top: 25px; margin-bottom: 12px; font-size: 1.2rem; }
     .guide-image-block { margin: 20px 0; padding: 15px; background: var(--background); border-radius: var(--border-radius); border: 1px solid var(--border); text-align: center; }
     .guide-image-block img { max-width: 100%; height: auto; border-radius: 6px; border: 1px solid var(--border); }
     .image-caption { margin-top: 10px; font-size: 0.85rem; color: var(--text-light); font-style: italic; }
-    table { width: 100%; border-collapse: collapse; margin: 20px 0; }
-    th, td { border: 1px solid var(--border); padding: 8px; text-align: left; vertical-align: top; }
-    th { background: var(--background-light); }
-    code { background: rgba(0,0,0,0.04); padding: 1px 4px; border-radius: 3px; }
-    ul, ol { padding-left: 18px; }
-    .check-section { padding: 15px; border-radius: 6px; border: 1px dashed var(--border); margin: 18px 0; background: rgba(0,0,0,0.01); }
-    .check-title { font-weight: 600; margin-bottom: 8px; }
     .pro-tips { background: rgba(3, 74, 79, 0.05); padding: 15px; border-radius: 6px; margin: 20px 0; }
     .pro-tips h4 { color: var(--primary); margin-top: 0; margin-bottom: 12px; font-size: 1.1rem; }
     .tip-item { display: flex; gap: 8px; margin-bottom: 8px; align-items: flex-start; }
-    .ok { color: #0a8f3c; font-weight: 600; }
-    .warn { color: #c97a00; font-weight: 600; }
-    .bad { color: #c62828; font-weight: 600; }
-    .alert-box { padding: 20px; border-radius: 8px; margin: 25px 0; }
-    .alert-danger { background: rgba(198, 40, 40, 0.1); border-left: 4px solid #c62828; }
-    .alert-warning { background: rgba(201, 122, 0, 0.1); border-left: 4px solid #c97a00; }
-    .alert-success { background: rgba(10, 143, 60, 0.1); border-left: 4px solid #0a8f3c; }
-    .alert-info { background: rgba(3, 74, 79, 0.1); border-left: 4px solid var(--primary); }
-    .emergency-steps { background: rgba(198, 40, 40, 0.15); padding: 20px; border-radius: 8px; border: 2px solid #c62828; margin: 25px 0; }
-    .emergency-steps h4 { color: #c62828; margin-top: 0; margin-bottom: 15px; }
-    .step-number { display: inline-block; width: 30px; height: 30px; background: #c62828; color: white; text-align: center; line-height: 30px; border-radius: 50%; margin-right: 10px; font-weight: bold; }
-    .ransomware-types { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; margin: 20px 0; }
-    .ransomware-type { padding: 15px; border-radius: 6px; background: var(--background); border: 1px solid var(--border); }
-    .ransomware-type h4 { color: var(--primary-dark); margin-top: 0; margin-bottom: 8px; }
+    table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+    th, td { border: 1px solid var(--border); padding: 8px; text-align: left; }
+    th { background: var(--background-light); }
+    .highlight { background: #f5f7fa; border-left: 4px solid #2d9cdb; padding: 10px 15px; margin: 20px 0; }
+    .faq-section ul { margin-left: 1em; }
+    .block-section { margin-bottom: 2em; }
     @media (max-width: 768px) {
       .guide-content h2 { font-size: 1.4rem; margin-top: 25px; }
       .guide-image-block { padding: 12px; margin: 15px 0; }
       table, th, td { font-size: 0.95rem; }
-      .ransomware-types { grid-template-columns: 1fr; }
     }
-    /* РЇРЅРґРµРєСЃ РњР°СЂРєРµС‚ СЂРµРєР»Р°РјРЅС‹Р№ Р±Р°РЅРЅРµСЂ */
-    .ym-hero-link {
-      display: block;
-      text-decoration: none;
-      color: inherit;
-      max-width: 100%;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    }
-
     /* Р“РѕСЂРёР·РѕРЅС‚Р°Р»СЊРЅС‹Р№ Р±Р°РЅРЅРµСЂ-РєР°СЂС‚РѕС‡РєР° */
     .ym-hero-banner {
       width: 100%;
@@ -110,63 +83,257 @@
       transform: scale(1.02);
     }
 
-    /* РўРµРєСЃС‚РѕРІР°СЏ С‡Р°СЃС‚СЊ Р±Р°РЅРЅРµСЂР° */
+    /* РџСЂР°РІР°СЏ С‡Р°СЃС‚СЊ: РєРѕРЅС‚РµРЅС‚ */
     .ym-hero-content {
-      padding: 12px 16px;
-      text-align: center;
+      padding: 16px 18px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 8px;
     }
 
+    /* РќР°Р·РІР°РЅРёРµ С‚РѕРІР°СЂР° */
     .ym-hero-title {
-      font-size: 13px;
+      font-size: 14px;
       font-weight: 600;
-      color: #1f2937;
+      color: #111827;
+      line-height: 1.3;
       margin: 0 0 4px 0;
-      line-height: 1.3;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
     }
 
-    .ym-hero-desc {
-      font-size: 11px;
+    /* Р РµР№С‚РёРЅРі */
+    .ym-hero-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+    }
+
+    .ym-hero-rating {
+      font-size: 13px;
+      font-weight: 500;
+      color: #111827;
+      background: #f9fafb;
+      border-radius: 999px;
+      padding: 4px 10px;
+    }
+
+    .ym-hero-rating-count {
       color: #6b7280;
-      margin: 0;
-      line-height: 1.3;
     }
 
+    /* Р¤РёРѕР»РµС‚РѕРІР°СЏ РєРЅРѕРїРєР° */
+    .ym-hero-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 9px 16px;
+      border-radius: 999px;
+      border: none;
+      background: #6a00ff;
+      color: #ffffff;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 2px 6px rgba(88, 28, 135, 0.35);
+      transition: background 0.15s ease, transform 0.15s ease,
+                  box-shadow 0.15s ease;
+    }
+    .ym-hero-button::after {
+      content: "в†’";
+      margin-left: 6px;
+      font-size: 14px;
+    }
+    .ym-hero-button:hover {
+      background: #7c3aed;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 10px rgba(88, 28, 135, 0.45);
+    }
+
+    /* Р®СЂРёРґРёС‡РµСЃРєРёР№ Р±Р»РѕРє */
+    .ym-hero-legal {
+      margin-top: 6px;
+      max-width: 600px;
+      font-size: 11px;
+      line-height: 1.3;
+      color: #6b7280;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* РђРґР°РїС‚РёРІ */
     @media (max-width: 480px) {
       .ym-hero-banner {
-        min-height: 120px;
+        max-width: 100%;
+        margin: 20px 0;
       }
       .ym-hero-images {
         height: 100px;
       }
-      .ym-hero-title {
-        font-size: 12px;
+      .ym-hero-content {
+        padding: 12px 12px;
       }
-      .ym-hero-desc {
+      .ym-hero-title {
+        font-size: 13px;
+      }
+      .ym-hero-button {
+        font-size: 13px;
+        padding: 8px 14px;
+      }
+      .ym-hero-legal {
         font-size: 10px;
       }
     }
+    /* Telegram СЂРµРєР»Р°РјРЅС‹Р№ Р±Р°РЅРЅРµСЂ */
+    .telegram-banner {
+      display: flex;
+      justify-content: center;
+      text-decoration: none;
+      color: inherit;
+      width: 100%;
+      margin: 40px 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    .telegram-banner-container {
+      width: 100%;
+      max-width: 500px;
+      min-height: 120px;
+      border-radius: 16px;
+      background: linear-gradient(135deg, #0088cc 0%, #005f8f 100%);
+      border: 1px solid #005f8f;
+      display: flex;
+      align-items: center;
+      padding: 20px;
+      box-shadow: 0 4px 16px rgba(0, 136, 204, 0.2);
+      overflow: hidden;
+      box-sizing: border-box;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .telegram-banner-container:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0, 136, 204, 0.3);
+    }
+
+    .telegram-logo {
+      width: 60px;
+      height: 60px;
+      min-width: 60px;
+      background: #ffffff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 20px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .telegram-logo svg {
+      width: 32px;
+      height: 32px;
+      fill: #0088cc;
+    }
+
+    .telegram-content {
+      flex: 1;
+      color: #ffffff;
+    }
+
+    .telegram-title {
+      font-size: 16px;
+      font-weight: 600;
+      margin: 0 0 8px 0;
+      line-height: 1.3;
+    }
+
+    .telegram-subtitle {
+      font-size: 14px;
+      opacity: 0.9;
+      margin: 0 0 12px 0;
+      line-height: 1.4;
+    }
+
+    .telegram-button {
+      display: inline-flex;
+      align-items: center;
+      padding: 8px 16px;
+      background: #ffffff;
+      color: #0088cc;
+      border-radius: 20px;
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background 0.2s ease, transform 0.2s ease;
+    }
+
+    .telegram-button:hover {
+      background: #f0f8ff;
+      transform: scale(1.05);
+    }
+
+    .telegram-button svg {
+      width: 16px;
+      height: 16px;
+      margin-left: 6px;
+      fill: #0088cc;
+    }
+
+    /* РђРґР°РїС‚РёРІ РґР»СЏ РјРѕР±РёР»СЊРЅС‹С… */
+    @media (max-width: 480px) {
+      .telegram-banner-container {
+        max-width: 100%;
+        margin: 20px 0;
+        padding: 15px;
+        min-height: 100px;
+      }
+      .telegram-logo {
+        width: 50px;
+        height: 50px;
+        min-width: 50px;
+        margin-right: 15px;
+      }
+      .telegram-logo svg {
+        width: 26px;
+        height: 26px;
+      }
+      .telegram-title {
+        font-size: 14px;
+      }
+      .telegram-subtitle {
+        font-size: 12px;
+      }
+      .telegram-button {
+        font-size: 12px;
+        padding: 6px 12px;
+      }
+    }
+
+
+
   </style>
+  <script async src="https://timeweb.cloud/api/v1/cloud-ai/agents/3cc03620-d051-4d8d-b5af-f7b6cd083a35/embed.js?collapsed=true"></script>
 </head>
 <body>
-
   <header class="header">
     <div class="container">
       <div class="header__inner">
         <a href="../index.html" class="logo">
-          <img src="../logo.svg" alt="Repairo" width="40" height="40">
-          <span>Repairo</span>
+          <span class="logo__icon"></span>
+          <span class="logo__text">GeoExpert</span>
         </a>
         <nav class="nav">
-          <a href="../index.html">Р“Р»Р°РІРЅР°СЏ</a>
-          <a href="../laptops.html">РќРѕСѓС‚Р±СѓРєРё</a>
-          <a href="../smartphones.html">РЎРјР°СЂС‚С„РѕРЅС‹</a>
-          <a href="../consoles.html">РљРѕРЅСЃРѕР»Рё</a>
-          <a href="../cameras.html">Р¤РѕС‚РѕР°РїРїР°СЂР°С‚С‹</a>
-          <a href="../tv.html">РўРµР»РµРІРёР·РѕСЂС‹</a>
+          <ul class="nav__list">
+            <li><a href="../cameras.html" class="nav__link">РљР°РјРµСЂС‹</a></li>
+            <li><a href="../drones.html" class="nav__link">Р”СЂРѕРЅС‹</a></li>
+            <li><a href="../workflow.html" class="nav__link">Workflow</a></li>
+          </ul>
         </nav>
-        <button class="theme-toggle" aria-label="РџРµСЂРµРєР»СЋС‡РёС‚СЊ С‚РµРјСѓ">
-          <i class="fas fa-moon"></i>
-        </button>
       </div>
     </div>
   </header>
@@ -174,257 +341,249 @@
   <main class="main">
     <div class="container">
       <div class="guide-content">
-        <h1>Р’РёСЂСѓСЃ-РІС‹РјРѕРіР°С‚РµР»СЊ С€РёС„СЂСѓРµС‚ С„Р°Р№Р»С‹: С‡С‚Рѕ РґРµР»Р°С‚СЊ Рё РєР°Рє РјРёРЅРёРјРёР·РёСЂРѕРІР°С‚СЊ РїРѕС‚РµСЂРё</h1>
+        <h1>Вирус-вымогатель шифрует файлы: что делать и как минимизировать потери</h1>
         
-        <p>РћР±РЅР°СЂСѓР¶РµРЅРёРµ РІРёСЂСѓСЃР°-РІС‹РјРѕРіР°С‚РµР»СЏ РЅР° РЅРѕСѓС‚Р±СѓРєРµ вЂ” РѕРґРЅР° РёР· СЃР°РјС‹С… СЃС‚СЂР°С€РЅС‹С… СЃРёС‚СѓР°С†РёР№ РґР»СЏ Р»СЋР±РѕРіРѕ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ. Р¤Р°Р№Р»С‹ СЃС‚Р°РЅРѕРІСЏС‚СЃСЏ РЅРµРґРѕСЃС‚СѓРїРЅС‹РјРё, Р° Р·Р»РѕСѓРјС‹С€Р»РµРЅРЅРёРєРё С‚СЂРµР±СѓСЋС‚ РІС‹РєСѓРї Р·Р° РёС… СЂР°СЃС€РёС„СЂРѕРІРєСѓ. Р’ СЌС‚РѕР№ РёРЅСЃС‚СЂСѓРєС†РёРё РјС‹ РїРѕРґСЂРѕР±РЅРѕ СЂР°Р·Р±РµСЂРµРј, С‡С‚Рѕ РґРµР»Р°С‚СЊ РІ С‚Р°РєРѕР№ СЃРёС‚СѓР°С†РёРё Рё РєР°Рє РјРёРЅРёРјРёР·РёСЂРѕРІР°С‚СЊ РїРѕС‚РµСЂРё РґР°РЅРЅС‹С….</p>
+        <p>Обнаружение вируса-вымогателя на ноутбуке — одна из самых страшных ситуаций для любого пользователя. Файлы становятся недоступными, а злоумышленники требуют выкуп за их расшифровку. В этой инструкции мы подробно разберем, что делать в такой ситуации и как минимизировать потери данных.</p>
 
         <div class="guide-image-block">
-          <img src="https://avatars.mds.yandex.net/get-shedevrum/15377961/img_9c83113e37b611f0a4318e338d696586/orig" alt="РќРѕСѓС‚Р±СѓРє С€РёС„СЂСѓРµС‚ С„Р°Р№Р»С‹ РІРёСЂСѓСЃ РІС‹РјРѕРіР°С‚РµР»СЊ">
-          <div class="image-caption">РџСЂРёРјРµСЂ СЃРѕРѕР±С‰РµРЅРёСЏ РѕС‚ РїСЂРѕРіСЂР°РјРјС‹-РІС‹РјРѕРіР°С‚РµР»СЏ</div>
+          <img src="https://avatars.mds.yandex.net/get-shedevrum/15377961/img_9c83113e37b611f0a4318e338d696586/orig" alt="Ноутбук шифрует файлы вирус вымогатель">
+          <div class="image-caption">Пример сообщения от программы-вымогателя</div>
         </div>
 
         <div class="emergency-steps">
-          <h4><i class="fas fa-exclamation-triangle"></i> РџР•Р Р’Р«Р• Р”Р•Р™РЎРўР’РРЇ (РќР•РњР•Р”Р›Р•РќРќРћ!)</h4>
+          <h4><i class="fas fa-exclamation-triangle"></i> ПЕРВЫЕ ДЕЙСТВИЯ (НЕМЕДЛЕННО!)</h4>
           <ol>
-            <li><span class="step-number">1</span> <strong>РќРµРјРµРґР»РµРЅРЅРѕ РѕС‚РєР»СЋС‡РёС‚Рµ РЅРѕСѓС‚Р±СѓРє РѕС‚ РёРЅС‚РµСЂРЅРµС‚Р°</strong> (РІС‹С‚Р°С‰РёС‚Рµ Ethernet-РєР°Р±РµР»СЊ, РѕС‚РєР»СЋС‡РёС‚Рµ Wi-Fi)</li>
-            <li><span class="step-number">2</span> <strong>РќРµ РІС‹РєР»СЋС‡Р°Р№С‚Рµ РєРѕРјРїСЊСЋС‚РµСЂ</strong> вЂ” СЌС‚Рѕ РјРѕР¶РµС‚ РѕСЃС‚Р°РЅРѕРІРёС‚СЊ РїСЂРѕС†РµСЃСЃ С€РёС„СЂРѕРІР°РЅРёСЏ</li>
-            <li><span class="step-number">3</span> <strong>РЎРґРµР»Р°Р№С‚Рµ С„РѕС‚Рѕ/СЃРєСЂРёРЅС€РѕС‚</strong> СЃРѕРѕР±С‰РµРЅРёСЏ РІС‹РјРѕРіР°С‚РµР»СЏ РґР»СЏ РїРѕСЃР»РµРґСѓСЋС‰РµРіРѕ Р°РЅР°Р»РёР·Р°</li>
-            <li><span class="step-number">4</span> <strong>РќРµ РїР»Р°С‚РёС‚Рµ РІС‹РєСѓРї</strong> вЂ” РЅРµС‚ РіР°СЂР°РЅС‚РёРё РїРѕР»СѓС‡РµРЅРёСЏ СЂР°СЃС€РёС„СЂРѕРІС‰РёРєР°</li>
-            <li><span class="step-number">5</span> <strong>РќРµ СѓРґР°Р»СЏР№С‚Рµ Р·Р°С€РёС„СЂРѕРІР°РЅРЅС‹Рµ С„Р°Р№Р»С‹</strong> вЂ” РѕРЅРё РјРѕРіСѓС‚ РїРѕРЅР°РґРѕР±РёС‚СЊСЃСЏ РґР»СЏ РІРѕСЃСЃС‚Р°РЅРѕРІР»РµРЅРёСЏ</li>
+            <li><span class="step-number">1</span> <strong>Немедленно отключите ноутбук от интернета</strong> (вытащите Ethernet-кабель, отключите Wi-Fi)</li>
+            <li><span class="step-number">2</span> <strong>Не выключайте компьютер</strong> — это может остановить процесс шифрования</li>
+            <li><span class="step-number">3</span> <strong>Сделайте фото/скриншот</strong> сообщения вымогателя для последующего анализа</li>
+            <li><span class="step-number">4</span> <strong>Не платите выкуп</strong> — нет гарантии получения расшифровщика</li>
+            <li><span class="step-number">5</span> <strong>Не удаляйте зашифрованные файлы</strong> — они могут понадобиться для восстановления</li>
           </ol>
         </div>
 
-        <h2>РљР°Рє СЂР°СЃРїРѕР·РЅР°С‚СЊ РІРёСЂСѓСЃ-РІС‹РјРѕРіР°С‚РµР»СЊ</h2>
+        <h2>Как распознать вирус-вымогатель</h2>
 
-        <h3>РћСЃРЅРѕРІРЅС‹Рµ РїСЂРёР·РЅР°РєРё:</h3>
+        <h3>Основные признаки:</h3>
 
         <div class="alert-warning">
-          <h4><i class="fas fa-exclamation-triangle"></i> РЎРёРјРїС‚РѕРјС‹ Р·Р°СЂР°Р¶РµРЅРёСЏ:</h4>
+          <h4><i class="fas fa-exclamation-triangle"></i> Симптомы заражения:</h4>
           <ul>
-            <li>Р¤Р°Р№Р»С‹ РёРјРµСЋС‚ СЃС‚СЂР°РЅРЅС‹Рµ СЂР°СЃС€РёСЂРµРЅРёСЏ (.locked, .crypt, .encrypted, .crypted Рё С‚.Рґ.)</li>
-            <li>РРјРµРЅР° С„Р°Р№Р»РѕРІ РёР·РјРµРЅРµРЅС‹ (РґРѕР±Р°РІР»РµРЅС‹ С†РёС„СЂС‹, СЃРёРјРІРѕР»С‹)</li>
-            <li>РџРѕСЏРІР»СЏСЋС‚СЃСЏ С‚РµРєСЃС‚РѕРІС‹Рµ С„Р°Р№Р»С‹ СЃ С‚СЂРµР±РѕРІР°РЅРёСЏРјРё РІС‹РєСѓРїР°</li>
-            <li>РћР±РѕРё СЂР°Р±РѕС‡РµРіРѕ СЃС‚РѕР»Р° РёР·РјРµРЅРµРЅС‹ РЅР° СЃРѕРѕР±С‰РµРЅРёРµ Рѕ С€РёС„СЂРѕРІР°РЅРёРё</li>
-            <li>РџСЂРѕРіСЂР°РјРјС‹ РЅРµ РѕС‚РєСЂС‹РІР°СЋС‚ С„Р°Р№Р»С‹ РёР»Рё РІС‹РґР°СЋС‚ РѕС€РёР±РєРё</li>
-            <li>Р’С‹СЃРѕРєР°СЏ Р·Р°РіСЂСѓР·РєР° РїСЂРѕС†РµСЃСЃРѕСЂР° Рё РґРёСЃРєР°</li>
+            <li>Файлы имеют странные расширения (.locked, .crypt, .encrypted, .crypted и т.д.)</li>
+            <li>Имена файлов изменены (добавлены цифры, символы)</li>
+            <li>Появляются текстовые файлы с требованиями выкупа</li>
+            <li>Обои рабочего стола изменены на сообщение о шифровании</li>
+            <li>Программы не открывают файлы или выдают ошибки</li>
+            <li>Высокая загрузка процессора и диска</li>
           </ul>
         </div>
 
-        <h3>Р Р°СЃРїСЂРѕСЃС‚СЂР°РЅРµРЅРЅС‹Рµ С‚РёРїС‹ РІРёСЂСѓСЃРѕРІ-РІС‹РјРѕРіР°С‚РµР»РµР№:</h3>
+        <h3>Распространенные типы вирусов-вымогателей:</h3>
 
         <div class="ransomware-types">
           <div class="ransomware-type">
             <h4>WannaCry</h4>
-            <p>РћРґРёРЅ РёР· СЃР°РјС‹С… РёР·РІРµСЃС‚РЅС‹С… РІРёСЂСѓСЃРѕРІ, Р°С‚Р°РєРѕРІР°Р» Р±РѕР»СЊРЅРёС†С‹ Рё РѕСЂРіР°РЅРёР·Р°С†РёРё РїРѕ РІСЃРµРјСѓ РјРёСЂСѓ.</p>
+            <p>Один из самых известных вирусов, атаковал больницы и организации по всему миру.</p>
           </div>
           <div class="ransomware-type">
             <h4>CryptoLocker</h4>
-            <p>РљР»Р°СЃСЃРёС‡РµСЃРєРёР№ РІС‹РјРѕРіР°С‚РµР»СЊ, С€РёС„СЂСѓРµС‚ Р»РёС‡РЅС‹Рµ С„Р°Р№Р»С‹ Рё С‚СЂРµР±СѓРµС‚ РѕРїР»Р°С‚Сѓ РІ Bitcoin.</p>
+            <p>Классический вымогатель, шифрует личные файлы и требует оплату в Bitcoin.</p>
           </div>
           <div class="ransomware-type">
             <h4>Petya/NotPetya</h4>
-            <p>РЁРёС„СЂСѓРµС‚ РЅРµ С‚РѕР»СЊРєРѕ С„Р°Р№Р»С‹, РЅРѕ Рё Р·Р°РіСЂСѓР·РѕС‡РЅСѓСЋ СЃРµРєС‚РѕСЂР° РґРёСЃРєР°.</p>
+            <p>Шифрует не только файлы, но и загрузочную сектора диска.</p>
           </div>
           <div class="ransomware-type">
             <h4>Ryuk</h4>
-            <p>РќР°С†РµР»РµРЅ РЅР° РєРѕСЂРїРѕСЂР°С‚РёРІРЅС‹Рµ СЃРµС‚Рё, С‚СЂРµР±СѓРµС‚ РѕРіСЂРѕРјРЅС‹Рµ РІС‹РєСѓРїС‹.</p>
+            <p>Нацелен на корпоративные сети, требует огромные выкупы.</p>
           </div>
         </div>
 
-        <h2>РџРѕС€Р°РіРѕРІС‹Р№ РїР»Р°РЅ РґРµР№СЃС‚РІРёР№</h2>
+        <h2>Пошаговый план действий</h2>
 
-        <h3>РЁР°Рі 1: РР·РѕР»СЏС†РёСЏ СЃРёСЃС‚РµРјС‹</h3>
+        <h3>Шаг 1: Изоляция системы</h3>
 
         <div class="check-section">
-          <div class="check-title">Р”РµР№СЃС‚РІРёСЏ РґР»СЏ РёР·РѕР»СЏС†РёРё:</div>
+          <div class="check-title">Действия для изоляции:</div>
           <ol>
-            <li><strong>РћС‚РєР»СЋС‡РёС‚Рµ РёРЅС‚РµСЂРЅРµС‚</strong> вЂ” С„РёР·РёС‡РµСЃРєРё РѕС‚РєР»СЋС‡РёС‚Рµ РІСЃРµ СЃРµС‚РµРІС‹Рµ РїРѕРґРєР»СЋС‡РµРЅРёСЏ</li>
-            <li><strong>РћС‚РєР»СЋС‡РёС‚Рµ РІРЅРµС€РЅРёРµ СѓСЃС‚СЂРѕР№СЃС‚РІР°</strong> вЂ” С„Р»РµС€РєРё, РІРЅРµС€РЅРёРµ РґРёСЃРєРё, СЃРјР°СЂС‚С„РѕРЅС‹</li>
-            <li><strong>РќРµ РїРµСЂРµР·Р°РіСЂСѓР¶Р°Р№С‚Рµ РєРѕРјРїСЊСЋС‚РµСЂ</strong> вЂ” СЌС‚Рѕ РјРѕР¶РµС‚ Р°РєС‚РёРІРёСЂРѕРІР°С‚СЊ РґРѕРїРѕР»РЅРёС‚РµР»СЊРЅС‹Рµ РєРѕРјРїРѕРЅРµРЅС‚С‹ РІРёСЂСѓСЃР°</li>
-            <li><strong>Р—Р°РїРёС€РёС‚Рµ РёРЅС„РѕСЂРјР°С†РёСЋ</strong> вЂ” СЃС„РѕС‚РѕРіСЂР°С„РёСЂСѓР№С‚Рµ РІСЃРµ СЃРѕРѕР±С‰РµРЅРёСЏ Рё С‚СЂРµР±РѕРІР°РЅРёСЏ</li>
+            <li><strong>Отключите интернет</strong> — физически отключите все сетевые подключения</li>
+            <li><strong>Отключите внешние устройства</strong> — флешки, внешние диски, смартфоны</li>
+            <li><strong>Не перезагружайте компьютер</strong> — это может активировать дополнительные компоненты вируса</li>
+            <li><strong>Запишите информацию</strong> — сфотографируйте все сообщения и требования</li>
           </ol>
         </div>
 
-        <h3>РЁР°Рі 2: РћС†РµРЅРєР° СЃРёС‚СѓР°С†РёРё</h3>
+        <h3>Шаг 2: Оценка ситуации</h3>
 
         <div class="pro-tips">
-          <h4>Р§С‚Рѕ РЅСѓР¶РЅРѕ РѕРїСЂРµРґРµР»РёС‚СЊ:</h4>
+          <h4>Что нужно определить:</h4>
           <ul>
-            <li><strong>РљР°РєРѕР№ С‚РёРї РІРёСЂСѓСЃР°</strong> вЂ” РїРѕ СЂР°СЃС€РёСЂРµРЅРёСЏРј С„Р°Р№Р»РѕРІ Рё СЃРѕРѕР±С‰РµРЅРёСЋ</li>
-            <li><strong>РљР°РєРёРµ С„Р°Р№Р»С‹ Р·Р°С€РёС„СЂРѕРІР°РЅС‹</strong> вЂ” РїСЂРѕРІРµСЂСЊС‚Рµ СЂР°Р·РЅС‹Рµ РїР°РїРєРё</li>
-            <li><strong>Р•СЃС‚СЊ Р»Рё СЂРµР·РµСЂРІРЅС‹Рµ РєРѕРїРёРё</strong> вЂ” РїСЂРѕРІРµСЂСЊС‚Рµ РІРЅРµС€РЅРёРµ РґРёСЃРєРё, РѕР±Р»Р°РєРѕ</li>
-            <li><strong>Р Р°Р±РѕС‚Р°РµС‚ Р»Рё СЃРёСЃС‚РµРјР°</strong> вЂ” РјРѕР¶РµС‚Рµ Р»Рё РІС‹ Р·Р°РїСѓСЃРєР°С‚СЊ РїСЂРѕРіСЂР°РјРјС‹</li>
+            <li><strong>Какой тип вируса</strong> — по расширениям файлов и сообщению</li>
+            <li><strong>Какие файлы зашифрованы</strong> — проверьте разные папки</li>
+            <li><strong>Есть ли резервные копии</strong> — проверьте внешние диски, облако</li>
+            <li><strong>Работает ли система</strong> — можете ли вы запускать программы</li>
           </ul>
         </div>
 
-        <h3>РЁР°Рі 3: РџРѕРёСЃРє СЂРµС€РµРЅРёР№ РґР»СЏ СЂР°СЃС€РёС„СЂРѕРІРєРё</h3>
+        <h3>Шаг 3: Поиск решений для расшифровки</h3>
 
         <div class="alert-info">
-          <h4><i class="fas fa-search"></i> Р“РґРµ РёСЃРєР°С‚СЊ Р±РµСЃРїР»Р°С‚РЅС‹Рµ СЂР°СЃС€РёС„СЂРѕРІС‰РёРєРё:</h4>
+          <h4><i class="fas fa-search"></i> Где искать бесплатные расшифровщики:</h4>
           <ul>
-            <li><strong>No More Ransom Project</strong> вЂ” nomoreransom.org</li>
-            <li><strong>Avast Decryption Tools</strong> вЂ” Р±РµСЃРїР»Р°С‚РЅС‹Рµ СѓС‚РёР»РёС‚С‹ РѕС‚ Avast</li>
-            <li><strong>Emsisoft Decrypter</strong> вЂ” РёРЅСЃС‚СЂСѓРјРµРЅС‚С‹ РґР»СЏ РєРѕРЅРєСЂРµС‚РЅС‹С… РІРёСЂСѓСЃРѕРІ</li>
-            <li><strong>Kaspersky Ransomware Decryption Tools</strong> вЂ” СѓС‚РёР»РёС‚С‹ РѕС‚ Р›Р°Р±РѕСЂР°С‚РѕСЂРёРё РљР°СЃРїРµСЂСЃРєРѕРіРѕ</li>
+            <li><strong>No More Ransom Project</strong> — nomoreransom.org</li>
+            <li><strong>Avast Decryption Tools</strong> — бесплатные утилиты от Avast</li>
+            <li><strong>Emsisoft Decrypter</strong> — инструменты для конкретных вирусов</li>
+            <li><strong>Kaspersky Ransomware Decryption Tools</strong> — утилиты от Лаборатории Касперского</li>
           </ul>
         </div>
 
-        <h2>Р’РѕСЃСЃС‚Р°РЅРѕРІР»РµРЅРёРµ РґР°РЅРЅС‹С…</h2>
+        <h2>Восстановление данных</h2>
 
-        <h3>РњРµС‚РѕРґ 1: Р РµР·РµСЂРІРЅС‹Рµ РєРѕРїРёРё</h3>
+        <h3>Метод 1: Резервные копии</h3>
 
         <div class="alert-success">
-          <h4><i class="fas fa-check-circle"></i> Р›СѓС‡С€РёР№ РІР°СЂРёР°РЅС‚ РІРѕСЃСЃС‚Р°РЅРѕРІР»РµРЅРёСЏ:</h4>
-          <p>Р•СЃР»Рё Сѓ РІР°СЃ РµСЃС‚СЊ Р°РєС‚СѓР°Р»СЊРЅС‹Рµ СЂРµР·РµСЂРІРЅС‹Рµ РєРѕРїРёРё, СЌС‚Рѕ СЃР°РјС‹Р№ РЅР°РґРµР¶РЅС‹Р№ СЃРїРѕСЃРѕР± РІРѕСЃСЃС‚Р°РЅРѕРІР»РµРЅРёСЏ РґР°РЅРЅС‹С….</p>
+          <h4><i class="fas fa-check-circle"></i> Лучший вариант восстановления:</h4>
+          <p>Если у вас есть актуальные резервные копии, это самый надежный способ восстановления данных.</p>
         </div>
 
         <div class="check-section">
-          <div class="check-title">РџРѕСЂСЏРґРѕРє РІРѕСЃСЃС‚Р°РЅРѕРІР»РµРЅРёСЏ РёР· Р±СЌРєР°РїР°:</div>
+          <div class="check-title">Порядок восстановления из бэкапа:</div>
           <ol>
-            <li><strong>РџРѕР»РЅРѕСЃС‚СЊСЋ РѕС‡РёСЃС‚РёС‚Рµ СЃРёСЃС‚РµРјСѓ</strong> РѕС‚ РІРёСЂСѓСЃР°</li>
-            <li><strong>РџРµСЂРµСѓСЃС‚Р°РЅРѕРІРёС‚Рµ Windows</strong> РЅР° С‡РёСЃС‚С‹Р№ РґРёСЃРє</li>
-            <li><strong>РЈСЃС‚Р°РЅРѕРІРёС‚Рµ Р°РЅС‚РёРІРёСЂСѓСЃ</strong> Рё РѕР±РЅРѕРІРёС‚Рµ РµРіРѕ</li>
-            <li><strong>Р’РѕСЃСЃС‚Р°РЅРѕРІРёС‚Рµ С„Р°Р№Р»С‹</strong> РёР· СЂРµР·РµСЂРІРЅРѕР№ РєРѕРїРёРё</li>
-            <li><strong>РџСЂРѕРІРµСЂСЊС‚Рµ РІРѕСЃСЃС‚Р°РЅРѕРІР»РµРЅРЅС‹Рµ С„Р°Р№Р»С‹</strong> РЅР° РІРёСЂСѓСЃС‹</li>
+            <li><strong>Полностью очистите систему</strong> от вируса</li>
+            <li><strong>Переустановите Windows</strong> на чистый диск</li>
+            <li><strong>Установите антивирус</strong> и обновите его</li>
+            <li><strong>Восстановите файлы</strong> из резервной копии</li>
+            <li><strong>Проверьте восстановленные файлы</strong> на вирусы</li>
           </ol>
         </div>
 
-        <h3>РњРµС‚РѕРґ 2: РўРµРЅРµРІС‹Рµ РєРѕРїРёРё Windows</h3>
+        <h3>Метод 2: Теневые копии Windows</h3>
 
-        <p>Windows СЃРѕР·РґР°РµС‚ С‚РµРЅРµРІС‹Рµ РєРѕРїРёРё С„Р°Р№Р»РѕРІ, РєРѕС‚РѕСЂС‹Рµ РјРѕРіСѓС‚ СЃРѕРґРµСЂР¶Р°С‚СЊ РЅРµР·Р°С€РёС„СЂРѕРІР°РЅРЅС‹Рµ РІРµСЂСЃРёРё.</p>
+        <p>Windows создает теневые копии файлов, которые могут содержать незашифрованные версии.</p>
 
         <div class="pro-tips">
-          <h4>РљР°Рє РІРѕСЃСЃС‚Р°РЅРѕРІРёС‚СЊ РёР· С‚РµРЅРµРІС‹С… РєРѕРїРёР№:</h4>
+          <h4>Как восстановить из теневых копий:</h4>
           <ol>
-            <li>Р©РµР»РєРЅРёС‚Рµ РїСЂР°РІРѕР№ РєРЅРѕРїРєРѕР№ РјС‹С€Рё РїРѕ Р·Р°С€РёС„СЂРѕРІР°РЅРЅРѕРјСѓ С„Р°Р№Р»Сѓ</li>
-            <li>Р’С‹Р±РµСЂРёС‚Рµ <strong>"РЎРІРѕР№СЃС‚РІР°"</strong> в†’ <strong>"РџСЂРµРґС‹РґСѓС‰РёРµ РІРµСЂСЃРёРё"</strong></li>
-            <li>Р’С‹Р±РµСЂРёС‚Рµ РґРѕСЃС‚СѓРїРЅСѓСЋ РІРµСЂСЃРёСЋ С„Р°Р№Р»Р° РґРѕ С€РёС„СЂРѕРІР°РЅРёСЏ</li>
-            <li>РќР°Р¶РјРёС‚Рµ <strong>"Р’РѕСЃСЃС‚Р°РЅРѕРІРёС‚СЊ"</strong></li>
+            <li>Щелкните правой кнопкой мыши по зашифрованному файлу</li>
+            <li>Выберите <strong>"Свойства"</strong> > <strong>"Предыдущие версии"</strong></li>
+            <li>Выберите доступную версию файла до шифрования</li>
+            <li>Нажмите <strong>"Восстановить"</strong></li>
           </ol>
         </div>
 
-        <h3>РњРµС‚РѕРґ 3: РџСЂРѕРіСЂР°РјРјС‹ РґР»СЏ РІРѕСЃСЃС‚Р°РЅРѕРІР»РµРЅРёСЏ С„Р°Р№Р»РѕРІ</h3>
+        <h3>Метод 3: Программы для восстановления файлов</h3>
 
         <div class="alert-warning">
-          <h4><i class="fas fa-info-circle"></i> Р’Р°Р¶РЅРѕ:</h4>
-          <p>Р­С‚Рё РїСЂРѕРіСЂР°РјРјС‹ РјРѕРіСѓС‚ РІРѕСЃСЃС‚Р°РЅРѕРІРёС‚СЊ С‚РѕР»СЊРєРѕ СѓРґР°Р»РµРЅРЅС‹Рµ С„Р°Р№Р»С‹, Р° РЅРµ Р·Р°С€РёС„СЂРѕРІР°РЅРЅС‹Рµ. РќРѕ РёРЅРѕРіРґР° РІРёСЂСѓСЃС‹ СЃРЅР°С‡Р°Р»Р° РєРѕРїРёСЂСѓСЋС‚ С„Р°Р№Р»С‹, Р° РїРѕС‚РѕРј С€РёС„СЂСѓСЋС‚ РѕСЂРёРіРёРЅР°Р»С‹.</p>
+          <h4><i class="fas fa-info-circle"></i> Важно:</h4>
+          <p>Эти программы могут восстановить только удаленные файлы, а не зашифрованные. Но иногда вирусы сначала копируют файлы, а потом шифруют оригиналы.</p>
         </div>
 
         <ul>
-          <li><strong>Recuva</strong> вЂ” Р±РµСЃРїР»Р°С‚РЅР°СЏ РїСЂРѕРіСЂР°РјРјР° РґР»СЏ РІРѕСЃСЃС‚Р°РЅРѕРІР»РµРЅРёСЏ</li>
-          <li><strong>PhotoRec</strong> вЂ” РјРѕС‰РЅС‹Р№ РёРЅСЃС‚СЂСѓРјРµРЅС‚ РґР»СЏ РІРѕСЃСЃС‚Р°РЅРѕРІР»РµРЅРёСЏ СЂР°Р·Р»РёС‡РЅС‹С… С„Р°Р№Р»РѕРІ</li>
-          <li><strong>TestDisk</strong> вЂ” РІРѕСЃСЃС‚Р°РЅР°РІР»РёРІР°РµС‚ СЂР°Р·РґРµР»С‹ Рё С„Р°Р№Р»С‹</li>
+          <li><strong>Recuva</strong> — бесплатная программа для восстановления</li>
+          <li><strong>PhotoRec</strong> — мощный инструмент для восстановления различных файлов</li>
+          <li><strong>TestDisk</strong> — восстанавливает разделы и файлы</li>
         </ul>
 
-        <h2>РћС‡РёСЃС‚РєР° СЃРёСЃС‚РµРјС‹ РѕС‚ РІРёСЂСѓСЃР°</h2>
+        <h2>Очистка системы от вируса</h2>
 
-        <h3>Р’Р°СЂРёР°РЅС‚ 1: РџРѕР»РЅР°СЏ РїРµСЂРµСѓСЃС‚Р°РЅРѕРІРєР° Windows</h3>
+        <h3>Вариант 1: Полная переустановка Windows</h3>
 
         <div class="alert-success">
-          <h4><i class="fas fa-thumbs-up"></i> Р РµРєРѕРјРµРЅРґСѓРµРјС‹Р№ РјРµС‚РѕРґ:</h4>
-          <p>РџРѕР»РЅР°СЏ РїРµСЂРµСѓСЃС‚Р°РЅРѕРІРєР° СЃРёСЃС‚РµРјС‹ РіР°СЂР°РЅС‚РёСЂСѓРµС‚ РїРѕР»РЅРѕРµ СѓРґР°Р»РµРЅРёРµ РІРёСЂСѓСЃР°.</p>
+          <h4><i class="fas fa-thumbs-up"></i> Рекомендуемый метод:</h4>
+          <p>Полная переустановка системы гарантирует полное удаление вируса.</p>
         </div>
 
         <div class="check-section">
-          <div class="check-title">РџРѕСЂСЏРґРѕРє РїРµСЂРµСѓСЃС‚Р°РЅРѕРІРєРё:</div>
+          <div class="check-title">Порядок переустановки:</div>
           <ol>
-            <li><strong>РЎРѕР·РґР°Р№С‚Рµ Р·Р°РіСЂСѓР·РѕС‡РЅСѓСЋ С„Р»РµС€РєСѓ</strong> СЃ Windows</li>
-            <li><strong>РЎРґРµР»Р°Р№С‚Рµ СЂРµР·РµСЂРІРЅСѓСЋ РєРѕРїРёСЋ</strong> РІР°Р¶РЅС‹С… РґР°РЅРЅС‹С… (РµСЃР»Рё РІРѕР·РјРѕР¶РЅРѕ)</li>
-            <li><strong>РћС‚С„РѕСЂРјР°С‚РёСЂСѓР№С‚Рµ СЃРёСЃС‚РµРјРЅС‹Р№ РґРёСЃРє</strong> РїСЂРё СѓСЃС‚Р°РЅРѕРІРєРµ</li>
-            <li><strong>РЈСЃС‚Р°РЅРѕРІРёС‚Рµ С‡РёСЃС‚СѓСЋ Windows</strong></li>
-            <li><strong>РЈСЃС‚Р°РЅРѕРІРёС‚Рµ РІСЃРµ РґСЂР°Р№РІРµСЂС‹</strong> Рё РїСЂРѕРіСЂР°РјРјС‹</li>
-            <li><strong>РќР°СЃС‚СЂРѕР№С‚Рµ Р·Р°С‰РёС‚Сѓ</strong> РїРµСЂРµРґ РІРѕСЃСЃС‚Р°РЅРѕРІР»РµРЅРёРµРј РґР°РЅРЅС‹С…</li>
+            <li><strong>Создайте загрузочную флешку</strong> с Windows</li>
+            <li><strong>Сделайте резервную копию</strong> важных данных (если возможно)</li>
+            <li><strong>Отформатируйте системный диск</strong> при установке</li>
+            <li><strong>Установите чистую Windows</strong></li>
+            <li><strong>Установите все драйверы</strong> и программы</li>
+            <li><strong>Настройте защиту</strong> перед восстановлением данных</li>
           </ol>
         </div>
 
-        <h3>Р’Р°СЂРёР°РЅС‚ 2: РСЃРїРѕР»СЊР·РѕРІР°РЅРёРµ Р°РЅС‚РёРІРёСЂСѓСЃРЅС‹С… СѓС‚РёР»РёС‚</h3>
+        <h3>Вариант 2: Использование антивирусных утилит</h3>
 
         <div class="pro-tips">
-          <h4>РЎРїРµС†РёР°Р»РёР·РёСЂРѕРІР°РЅРЅС‹Рµ СѓС‚РёР»РёС‚С‹ РґР»СЏ СѓРґР°Р»РµРЅРёСЏ РІС‹РјРѕРіР°С‚РµР»РµР№:</h4>
+          <h4>Специализированные утилиты для удаления вымогателей:</h4>
           <ul>
-            <li><strong>Kaspersky Virus Removal Tool</strong> вЂ” Р±РµСЃРїР»Р°С‚РЅР°СЏ СѓС‚РёР»РёС‚Р°</li>
-            <li><strong>Dr.Web CureIt!</strong> вЂ” СЃРєР°РЅРµСЂ РѕС‚ Dr.Web</li>
-            <li><strong>Malwarebytes Anti-Malware</strong> вЂ” РјРѕС‰РЅС‹Р№ Р°РЅС‚Рё-РјР°Р»РІР°СЂ</li>
-            <li><strong>HitmanPro</strong> вЂ” СЃРєР°РЅРµСЂ РІС‚РѕСЂРѕРіРѕ РјРЅРµРЅРёСЏ</li>
+            <li><strong>Kaspersky Virus Removal Tool</strong> — бесплатная утилита</li>
+            <li><strong>Dr.Web CureIt!</strong> — сканер от Dr.Web</li>
+            <li><strong>Malwarebytes Anti-Malware</strong> — мощный анти-малвар</li>
+            <li><strong>HitmanPro</strong> — сканер второго мнения</li>
           </ul>
         </div>
 
-        <h2>РџСЂРѕС„РёР»Р°РєС‚РёРєР° Рё Р·Р°С‰РёС‚Р° РІ Р±СѓРґСѓС‰РµРј</h2>
+        <h2>Профилактика и защита в будущем</h2>
 
-        <h3>РћР±СЏР·Р°С‚РµР»СЊРЅС‹Рµ РјРµСЂС‹ Р·Р°С‰РёС‚С‹:</h3>
+        <h3>Обязательные меры защиты:</h3>
 
         <div class="alert-info">
-          <h4><i class="fas fa-shield-alt"></i> РљРѕРјРїР»РµРєСЃРЅР°СЏ Р·Р°С‰РёС‚Р°:</h4>
+          <h4><i class="fas fa-shield-alt"></i> Комплексная защита:</h4>
           <ul>
-            <li><strong>Р РµРіСѓР»СЏСЂРЅС‹Рµ СЂРµР·РµСЂРІРЅС‹Рµ РєРѕРїРёРё</strong> вЂ” РїРѕ РїСЂР°РІРёР»Сѓ 3-2-1</li>
-            <li><strong>РћР±РЅРѕРІР»РµРЅРЅР°СЏ СЃРёСЃС‚РµРјР°</strong> вЂ” РІСЃРµ РїР°С‚С‡Рё Р±РµР·РѕРїР°СЃРЅРѕСЃС‚Рё</li>
-            <li><strong>РљР°С‡РµСЃС‚РІРµРЅРЅС‹Р№ Р°РЅС‚РёРІРёСЂСѓСЃ</strong> СЃ Р·Р°С‰РёС‚РѕР№ РѕС‚ РІС‹РјРѕРіР°С‚РµР»РµР№</li>
-            <li><strong>РћС‚РєР»СЋС‡РµРЅРёРµ macros</strong> РІ Office РґРѕРєСѓРјРµРЅС‚Р°С…</li>
-            <li><strong>РћРіСЂР°РЅРёС‡РµРЅРёРµ РїСЂР°РІ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ</strong> вЂ” СЂР°Р±РѕС‚Р°Р№С‚Рµ РїРѕРґ СЃС‚Р°РЅРґР°СЂС‚РЅРѕР№ СѓС‡РµС‚РЅРѕР№ Р·Р°РїРёСЃСЊСЋ</li>
+            <li><strong>Регулярные резервные копии</strong> — по правилу 3-2-1</li>
+            <li><strong>Обновленная система</strong> — все патчи безопасности</li>
+            <li><strong>Качественный антивирус</strong> с защитой от вымогателей</li>
+            <li><strong>Отключение macros</strong> в Office документах</li>
+            <li><strong>Ограничение прав пользователя</strong> — работайте под стандартной учетной записью</li>
           </ul>
         </div>
 
-        <h3>РќР°СЃС‚СЂРѕР№РєР° Р·Р°С‰РёС‚С‹ РѕС‚ РїСЂРѕРіСЂР°РјРј-РІС‹РјРѕРіР°С‚РµР»РµР№:</h3>
+        <h3>Настройка защиты от программ-вымогателей:</h3>
 
         <div class="check-section">
-          <div class="check-title">РќР°СЃС‚СЂРѕР№РєРё Windows Defender:</div>
+          <div class="check-title">Настройки Windows Defender:</div>
           <ol>
-            <li>РћС‚РєСЂРѕР№С‚Рµ <strong>Р¦РµРЅС‚СЂ Р±РµР·РѕРїР°СЃРЅРѕСЃС‚Рё Р—Р°С‰РёС‚РЅРёРєР° Windows</strong></li>
-            <li>РџРµСЂРµР№РґРёС‚Рµ РІ <strong>"Р—Р°С‰РёС‚Р° РѕС‚ РІРёСЂСѓСЃРѕРІ Рё СѓРіСЂРѕР·"</strong></li>
-            <li>Р’РєР»СЋС‡РёС‚Рµ <strong>"РљРѕРЅС‚СЂРѕР»РёСЂСѓРµРјС‹Р№ РґРѕСЃС‚СѓРї Рє РїР°РїРєР°Рј"</strong></li>
-            <li>Р”РѕР±Р°РІСЊС‚Рµ Р·Р°С‰РёС‰РµРЅРЅС‹Рµ РїР°РїРєРё (Р”РѕРєСѓРјРµРЅС‚С‹, Р Р°Р±РѕС‡РёР№ СЃС‚РѕР»)</li>
-            <li>Р’РєР»СЋС‡РёС‚Рµ <strong>"РћР±Р»Р°С‡РЅР°СЏ Р·Р°С‰РёС‚Р°"</strong></li>
+            <li>Откройте <strong>Центр безопасности Защитника Windows</strong></li>
+            <li>Перейдите в <strong>"Защита от вирусов и угроз"</strong></li>
+            <li>Включите <strong>"Контролируемый доступ к папкам"</strong></li>
+            <li>Добавьте защищенные папки (Документы, Рабочий стол)</li>
+            <li>Включите <strong>"Облачная защита"</strong></li>
           </ol>
         </div>
 
-        <h2>Р§РµРіРѕ РќР•Р›Р¬Р—РЇ РґРµР»Р°С‚СЊ РїСЂРё Р°С‚Р°РєРµ РІС‹РјРѕРіР°С‚РµР»СЏ</h2>
+        <h2>Чего НЕЛЬЗЯ делать при атаке вымогателя</h2>
 
         <div class="alert-danger">
-          <h4><i class="fas fa-ban"></i> РљР°С‚РµРіРѕСЂРёС‡РµСЃРєРё Р·Р°РїСЂРµС‰РµРЅРѕ:</h4>
+          <h4><i class="fas fa-ban"></i> Категорически запрещено:</h4>
           <ul>
-            <li><strong>РџР»Р°С‚РёС‚СЊ РІС‹РєСѓРї</strong> вЂ” РЅРµС‚ РіР°СЂР°РЅС‚РёРё РїРѕР»СѓС‡РµРЅРёСЏ РєР»СЋС‡Р°, РІС‹ РїРѕРґРґРµСЂР¶РёС‚Рµ РєРёР±РµСЂРїСЂРµСЃС‚СѓРїРЅРёРєРѕРІ</li>
-            <li><strong>Р’С‹РєР»СЋС‡Р°С‚СЊ РєРѕРјРїСЊСЋС‚РµСЂ</strong> вЂ” РјРѕР¶РµС‚ РѕСЃС‚Р°РЅРѕРІРёС‚СЊ РїСЂРѕС†РµСЃСЃ С€РёС„СЂРѕРІР°РЅРёСЏ РЅР° РїРѕР»РїСѓС‚Рё</li>
-            <li><strong>РџРѕРґРєР»СЋС‡Р°С‚СЊ РІРЅРµС€РЅРёРµ РґРёСЃРєРё</strong> вЂ” РІРёСЂСѓСЃ РјРѕР¶РµС‚ Р·Р°С€РёС„СЂРѕРІР°С‚СЊ Рё РёС…</li>
-            <li><strong>РџС‹С‚Р°С‚СЊСЃСЏ СЂР°СЃС€РёС„СЂРѕРІР°С‚СЊ СЃР°РјРѕСЃС‚РѕСЏС‚РµР»СЊРЅРѕ</strong> вЂ” Р±РµР· СЃРїРµС†РёР°Р»СЊРЅС‹С… РёРЅСЃС‚СЂСѓРјРµРЅС‚РѕРІ РЅРµРІРѕР·РјРѕР¶РЅРѕ</li>
-            <li><strong>РСЃРїРѕР»СЊР·РѕРІР°С‚СЊ СЃРѕРјРЅРёС‚РµР»СЊРЅС‹Рµ РїСЂРѕРіСЂР°РјРјС‹</strong> вЂ” РјРѕРіСѓС‚ СЃРѕРґРµСЂР¶Р°С‚СЊ РґРѕРїРѕР»РЅРёС‚РµР»СЊРЅС‹Р№ РІСЂРµРґРѕРЅРѕСЃРЅС‹Р№ РєРѕРґ</li>
+            <li><strong>Платить выкуп</strong> — нет гарантии получения ключа, вы поддержите киберпреступников</li>
+            <li><strong>Выключать компьютер</strong> — может остановить процесс шифрования на полпути</li>
+            <li><strong>Подключать внешние диски</strong> — вирус может зашифровать и их</li>
+            <li><strong>Пытаться расшифровать самостоятельно</strong> — без специальных инструментов невозможно</li>
+            <li><strong>Использовать сомнительные программы</strong> — могут содержать дополнительный вредоносный код</li>
           </ul>
         </div>
 
-        <h2>РљРѕРіРґР° РѕР±СЂР°С‰Р°С‚СЊСЃСЏ Рє СЃРїРµС†РёР°Р»РёСЃС‚Р°Рј</h3>
+        <h2>Когда обращаться к специалистам</h3>
 
         <div class="pro-tips">
-          <h4>РџСЂРёР·РЅР°РєРё РЅРµРѕР±С…РѕРґРёРјРѕСЃС‚Рё РїСЂРѕС„РµСЃСЃРёРѕРЅР°Р»СЊРЅРѕР№ РїРѕРјРѕС‰Рё:</h4>
+          <h4>Признаки необходимости профессиональной помощи:</h4>
           <ul>
-            <li>Р—Р°С€РёС„СЂРѕРІР°РЅС‹ РєСЂРёС‚РёС‡РµСЃРєРё РІР°Р¶РЅС‹Рµ РґР°РЅРЅС‹Рµ Р±РµР· Р±СЌРєР°РїР°</li>
-            <li>Р’РёСЂСѓСЃ Р°С‚Р°РєРѕРІР°Р» РєРѕСЂРїРѕСЂР°С‚РёРІРЅСѓСЋ СЃРµС‚СЊ</li>
-            <li>РќРµ СѓРґР°Р»РѕСЃСЊ РЅР°Р№С‚Рё Р±РµСЃРїР»Р°С‚РЅС‹Р№ СЂР°СЃС€РёС„СЂРѕРІС‰РёРє</li>
-            <li>РЎРёСЃС‚РµРјР° РїРѕР»РЅРѕСЃС‚СЊСЋ Р·Р°Р±Р»РѕРєРёСЂРѕРІР°РЅР°</li>
-            <li>РўСЂРµР±СѓРµС‚СЃСЏ СЌРєСЃРїРµСЂС‚РёР·Р° РґР»СЏ СЂР°СЃСЃР»РµРґРѕРІР°РЅРёСЏ РёРЅС†РёРґРµРЅС‚Р°</li>
+            <li>Зашифрованы критически важные данные без бэкапа</li>
+            <li>Вирус атаковал корпоративную сеть</li>
+            <li>Не удалось найти бесплатный расшифровщик</li>
+            <li>Система полностью заблокирована</li>
+            <li>Требуется экспертиза для расследования инцидента</li>
           </ul>
         </div>
 
-        <h2>Р—Р°РєР»СЋС‡РµРЅРёРµ</h2>
+        <h2>Заключение</h2>
 
-        <p>РђС‚Р°РєР° РІРёСЂСѓСЃР°-РІС‹РјРѕРіР°С‚РµР»СЏ вЂ” СЌС‚Рѕ СЃРµСЂСЊРµР·РЅР°СЏ РїСЂРѕР±Р»РµРјР°, РЅРѕ РїР°РЅРёРєРѕРІР°С‚СЊ РЅРµ СЃС‚РѕРёС‚. Р“Р»Р°РІРЅРѕРµ вЂ” РґРµР№СЃС‚РІРѕРІР°С‚СЊ Р±С‹СЃС‚СЂРѕ Рё РїСЂР°РІРёР»СЊРЅРѕ. РћС‚РєР»СЋС‡РёС‚Рµ СЃРёСЃС‚РµРјСѓ РѕС‚ СЃРµС‚Рё, РѕС†РµРЅРёС‚Рµ СЃРёС‚СѓР°С†РёСЋ Рё РёС‰РёС‚Рµ РїСЂРѕС„РµСЃСЃРёРѕРЅР°Р»СЊРЅС‹Рµ СЂРµС€РµРЅРёСЏ РґР»СЏ СЂР°СЃС€РёС„СЂРѕРІРєРё.</p>
+        <p>Атака вируса-вымогателя — это серьезная проблема, но паниковать не стоит. Главное — действовать быстро и правильно. Отключите систему от сети, оцените ситуацию и ищите профессиональные решения для расшифровки.</p>
 
-        <p>Р›СѓС‡С€РёР№ СЃРїРѕСЃРѕР± Р±РѕСЂСЊР±С‹ СЃ РїСЂРѕРіСЂР°РјРјР°РјРё-РІС‹РјРѕРіР°С‚РµР»СЏРјРё вЂ” СЌС‚Рѕ РїСЂРѕС„РёР»Р°РєС‚РёРєР°. Р РµРіСѓР»СЏСЂРЅС‹Рµ СЂРµР·РµСЂРІРЅС‹Рµ РєРѕРїРёРё, РѕР±РЅРѕРІР»РµРЅРЅР°СЏ СЃРёСЃС‚РµРјР° Рё РєР°С‡РµСЃС‚РІРµРЅРЅС‹Р№ Р°РЅС‚РёРІРёСЂСѓСЃ Р·Р°С‰РёС‚СЏС‚ РІР°С€Рё РґР°РЅРЅС‹Рµ РѕС‚ Р±РѕР»СЊС€РёРЅСЃС‚РІР° СѓРіСЂРѕР·.</p>
+        <p>Лучший способ борьбы с программами-вымогателями — это профилактика. Регулярные резервные копии, обновленная система и качественный антивирус защитят ваши данные от большинства угроз.</p>
 
-        <p>РџРѕРјРЅРёС‚Рµ: РґР°Р¶Рµ РµСЃР»Рё РІС‹ РЅРµ СЃРјРѕРіР»Рё РІРѕСЃСЃС‚Р°РЅРѕРІРёС‚СЊ С„Р°Р№Р»С‹, РІР°С€ РѕРїС‹С‚ РїРѕРјРѕР¶РµС‚ РёР·Р±РµР¶Р°С‚СЊ РїРѕРґРѕР±РЅС‹С… РїСЂРѕР±Р»РµРј РІ Р±СѓРґСѓС‰РµРј. РРЅРІРµСЃС‚РёС†РёРё РІ РєР°С‡РµСЃС‚РІРµРЅРЅСѓСЋ Р·Р°С‰РёС‚Сѓ РІСЃРµРіРґР° РѕРєСѓРїР°СЋС‚СЃСЏ.</p>
+        <p>Помните: даже если вы не смогли восстановить файлы, ваш опыт поможет избежать подобных проблем в будущем. Инвестиции в качественную защиту всегда окупаются.</p>
 
-        <!-- РЇРЅРґРµРєСЃ РњР°СЂРєРµС‚ СЂРµРєР»Р°РјРЅС‹Р№ Р±Р°РЅРЅРµСЂ -->
-        <a href="https://market.yandex.ru/search?text=Р°РЅС‚РёРІРёСЂСѓСЃ%20Р·Р°С‰РёС‚Р°%20РѕС‚%20РІС‹РјРѕРіР°С‚РµР»РµР№&local-offers-first=0" class="ym-hero-link" target="_blank" rel="noopener noreferrer">
-          <div class="ym-hero-banner">
-            <div class="ym-hero-images">
-              <div class="ym-hero-image">
-                <img src="https://avatars.mds.yandex.net/get-market-ugc/12573871/2a0000018f2a5a8b8c0b7d9d9c4b6c5c/orig" alt="РђРЅС‚РёРІРёСЂСѓСЃ СЃ Р·Р°С‰РёС‚РѕР№ РѕС‚ РІС‹РјРѕРіР°С‚РµР»РµР№">
+        <!-- Яндекс Маркет рекламный баннер -->
+                <img src="https://avatars.mds.yandex.net/get-market-ugc/12573871/2a0000018f2a5a8b8c0b7d9d9c4b6c5c/orig" alt="Антивирус с защитой от вымогателей">
               </div>
-              <div class="ym-hero-image">
-                <img src="https://avatars.mds.yandex.net/get-market-ugc/15377961/2a0000018f2a5a8b8c0b7d9d9c4b6c5d/orig" alt="Р’РЅРµС€РЅРёР№ РґРёСЃРє РґР»СЏ СЂРµР·РµСЂРІРЅС‹С… РєРѕРїРёР№">
+                <img src="https://avatars.mds.yandex.net/get-market-ugc/15377961/2a0000018f2a5a8b8c0b7d9d9c4b6c5d/orig" alt="Внешний диск для резервных копий">
               </div>
             </div>
-            <div class="ym-hero-content">
-              <div class="ym-hero-title">Р—Р°С‰РёС‚Р° РѕС‚ РІРёСЂСѓСЃРѕРІ-РІС‹РјРѕРіР°С‚РµР»РµР№</div>
-              <div class="ym-hero-desc">РђРЅС‚РёРІРёСЂСѓСЃС‹ Рё РІРЅРµС€РЅРёРµ РґРёСЃРєРё РґР»СЏ РєРѕРјРїР»РµРєСЃРЅРѕР№ Р·Р°С‰РёС‚С‹ РґР°РЅРЅС‹С…</div>
             </div>
           </div>
         </a>
@@ -438,24 +597,24 @@
       <div class="footer__content">
         <div class="footer__section">
           <h4>Repairo</h4>
-          <p>Р­РєСЃРїРµСЂС‚РЅС‹Рµ СЂСѓРєРѕРІРѕРґСЃС‚РІР° РїРѕ СЂРµРјРѕРЅС‚Сѓ Рё РѕР±СЃР»СѓР¶РёРІР°РЅРёСЋ С‚РµС…РЅРёРєРё</p>
+          <p>Экспертные руководства по ремонту и обслуживанию техники</p>
         </div>
         <div class="footer__section">
-          <h4>Р Р°Р·РґРµР»С‹</h4>
+          <h4>Разделы</h4>
           <ul>
-            <li><a href="../laptops.html">РќРѕСѓС‚Р±СѓРєРё</a></li>
-            <li><a href="../smartphones.html">РЎРјР°СЂС‚С„РѕРЅС‹</a></li>
-            <li><a href="../consoles.html">РљРѕРЅСЃРѕР»Рё</a></li>
-            <li><a href="../cameras.html">Р¤РѕС‚РѕР°РїРїР°СЂР°С‚С‹</a></li>
+            <li><a href="../laptops.html">Ноутбуки</a></li>
+            <li><a href="../smartphones.html">Смартфоны</a></li>
+            <li><a href="../consoles.html">Консоли</a></li>
+            <li><a href="../cameras.html">Фотоаппараты</a></li>
           </ul>
         </div>
         <div class="footer__section">
-          <h4>РљРѕРЅС‚Р°РєС‚С‹</h4>
+          <h4>Контакты</h4>
           <p>support@repairo.ru</p>
         </div>
       </div>
       <div class="footer__bottom">
-        <p>&copy; 2024 Repairo. Р’СЃРµ РїСЂР°РІР° Р·Р°С‰РёС‰РµРЅС‹.</p>
+        <p>&copy; 2024 Repairo. Все права защищены.</p>
       </div>
     </div>
   </footer>
@@ -465,3 +624,9 @@
 
 </body>
 </html>
+
+
+
+
+
+

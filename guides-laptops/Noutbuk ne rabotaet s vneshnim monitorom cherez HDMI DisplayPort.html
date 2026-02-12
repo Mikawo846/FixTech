@@ -4,9 +4,8 @@
 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>РќРѕСѓС‚Р±СѓРє РЅРµ СЂР°Р±РѕС‚Р°РµС‚ СЃ РІРЅРµС€РЅРёРј РјРѕРЅРёС‚РѕСЂРѕРј С‡РµСЂРµР· HDMI DisplayPort | Р­РєСЃРїРµСЂС‚РЅС‹Р№ РјРµРіР°РіР°Р№Рґ</title>
-    <meta name="description" content="{{ description }}">
-    <meta name="description" content="РџРѕС€Р°РіРѕРІР°СЏ РёРЅСЃС‚СЂСѓРєС†РёСЏ: РќРѕСѓС‚Р±СѓРє РЅРµ СЂР°Р±РѕС‚Р°РµС‚ СЃ РІРЅРµС€РЅРёРј РјРѕРЅРёС‚РѕСЂРѕРј С‡РµСЂРµР· HDMI DisplayPort вЂ” Р­РєСЃРїРµСЂС‚РЅС‹Р№ РјРµРіР°РіР°Р№Рґ. РџСЂРёС‡РёРЅС‹: РґСЂР°Р№РІРµСЂС‹, РЅР°СЃС‚СЂРѕР№РєРё, РєР°Р±РµР»СЊ. Р РµС€РµРЅРёСЏ: РѕР±РЅРѕРІР»РµРЅРёРµ, РїРµСЂРµРєР»СЋС‡РµРЅРёРµ, Р·Р°РјРµРЅР°.">
+  <title>Ноутбук не работает с внешним монитором через HDMI DisplayPo</title>
+    <meta name="description" content="">
 
   <link rel="stylesheet" href="../styles.css" />
   <link rel="stylesheet" href="../styles-header.css" />
@@ -14,36 +13,25 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <style>
     .guide-content { line-height: 1.7; color: var(--text); }
-    .guide-content h2 { color: var(--primary); margin-top: 30px; margin-bottom: 15px; font-size: 1.6rem; }
-    .guide-content h3 { color: var(--primary-dark); margin-top: 25px; margin-bottom: 12px; font-size: 1.25rem; }
+    .guide-content h2 { color: var(--primary); margin-top: 30px; margin-bottom: 15px; font-size: 1.5rem; }
+    .guide-content h3 { color: var(--primary-dark); margin-top: 25px; margin-bottom: 12px; font-size: 1.2rem; }
     .guide-image-block { margin: 20px 0; padding: 15px; background: var(--background); border-radius: var(--border-radius); border: 1px solid var(--border); text-align: center; }
     .guide-image-block img { max-width: 100%; height: auto; border-radius: 6px; border: 1px solid var(--border); }
     .image-caption { margin-top: 10px; font-size: 0.85rem; color: var(--text-light); font-style: italic; }
-    .pro-tips { background: rgba(3, 74, 79, 0.05); padding: 18px; border-radius: 8px; margin: 25px 0; }
-    .pro-tips h4 { color: var(--primary); margin-top: 0; margin-bottom: 12px; font-size: 1.15rem; }
-    .tip-item { display: flex; gap: 10px; margin-bottom: 10px; align-items: flex-start; }
-    .tip-item i { margin-top: 3px; }
+    .pro-tips { background: rgba(3, 74, 79, 0.05); padding: 15px; border-radius: 6px; margin: 20px 0; }
+    .pro-tips h4 { color: var(--primary); margin-top: 0; margin-bottom: 12px; font-size: 1.1rem; }
+    .tip-item { display: flex; gap: 8px; margin-bottom: 8px; align-items: flex-start; }
     table { width: 100%; border-collapse: collapse; margin: 20px 0; }
-    th, td { border: 1px solid var(--border); padding: 8px; text-align: left; vertical-align: top; }
+    th, td { border: 1px solid var(--border); padding: 8px; text-align: left; }
     th { background: var(--background-light); }
-    code { background: var(--background-light); padding: 2px 4px; border-radius: 4px; font-size: 0.9em; }
-    ul, ol { margin-left: 18px; }
+    .highlight { background: #f5f7fa; border-left: 4px solid #2d9cdb; padding: 10px 15px; margin: 20px 0; }
+    .faq-section ul { margin-left: 1em; }
+    .block-section { margin-bottom: 2em; }
     @media (max-width: 768px) {
       .guide-content h2 { font-size: 1.4rem; margin-top: 25px; }
-      .guide-content h3 { font-size: 1.15rem; }
       .guide-image-block { padding: 12px; margin: 15px 0; }
       table, th, td { font-size: 0.95rem; }
     }
-
-    /* РЇРЅРґРµРєСЃ РњР°СЂРєРµС‚ СЂРµРєР»Р°РјРЅС‹Р№ Р±Р°РЅРЅРµСЂ */
-    .ym-hero-link {
-      display: block;
-      text-decoration: none;
-      color: inherit;
-      max-width: 100%;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    }
-
     /* Р“РѕСЂРёР·РѕРЅС‚Р°Р»СЊРЅС‹Р№ Р±Р°РЅРЅРµСЂ-РєР°СЂС‚РѕС‡РєР° */
     .ym-hero-banner {
       width: 100%;
@@ -119,336 +107,561 @@
     }
 
     /* Р РµР№С‚РёРЅРі */
-    .ym-hero-rating {
+    .ym-hero-top {
       display: flex;
       align-items: center;
-      gap: 4px;
-      font-size: 12px;
+      justify-content: space-between;
+      gap: 8px;
+    }
+
+    .ym-hero-rating {
+      font-size: 13px;
+      font-weight: 500;
+      color: #111827;
+      background: #f9fafb;
+      border-radius: 999px;
+      padding: 4px 10px;
+    }
+
+    .ym-hero-rating-count {
       color: #6b7280;
     }
 
-    .ym-hero-stars {
-      display: flex;
-      gap: 1px;
-    }
-
-    .ym-hero-star {
-      width: 12px;
-      height: 12px;
-      fill: #fbbf24;
-    }
-
-    .ym-hero-reviews {
-      font-size: 11px;
-      color: #9ca3af;
-    }
-
-    /* Р¦РµРЅР° */
-    .ym-hero-price {
-      font-size: 16px;
-      font-weight: 700;
-      color: #111827;
-      margin: 0;
-    }
-
-    /* РљРЅРѕРїРєР° */
+    /* Р¤РёРѕР»РµС‚РѕРІР°СЏ РєРЅРѕРїРєР° */
     .ym-hero-button {
-      background: #007bff;
-      color: #ffffff;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 9px 16px;
+      border-radius: 999px;
       border: none;
-      padding: 8px 12px;
-      border-radius: 6px;
-      font-size: 12px;
-      font-weight: 500;
+      background: #6a00ff;
+      color: #ffffff;
+      font-size: 14px;
+      font-weight: 600;
       cursor: pointer;
-      transition: background 0.2s ease;
-      text-align: center;
-      text-decoration: none;
-      display: inline-block;
+      box-shadow: 0 2px 6px rgba(88, 28, 135, 0.35);
+      transition: background 0.15s ease, transform 0.15s ease,
+                  box-shadow 0.15s ease;
     }
-
+    .ym-hero-button::after {
+      content: "в†’";
+      margin-left: 6px;
+      font-size: 14px;
+    }
     .ym-hero-button:hover {
-      background: #0056b3;
+      background: #7c3aed;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 10px rgba(88, 28, 135, 0.45);
     }
 
-    /* РђРґР°РїС‚РёРІРЅРѕСЃС‚СЊ */
-    @media (max-width: 768px) {
+    /* Р®СЂРёРґРёС‡РµСЃРєРёР№ Р±Р»РѕРє */
+    .ym-hero-legal {
+      margin-top: 6px;
+      max-width: 600px;
+      font-size: 11px;
+      line-height: 1.3;
+      color: #6b7280;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* РђРґР°РїС‚РёРІ */
+    @media (max-width: 480px) {
       .ym-hero-banner {
-        flex-direction: row;
-        min-height: auto;
+        max-width: 100%;
+        margin: 20px 0;
       }
-
       .ym-hero-images {
-        width: 120px;
-        height: auto;
-        flex-shrink: 0;
+        height: 100px;
       }
-
       .ym-hero-content {
-        flex: 1;
-        padding: 12px 16px;
+        padding: 12px 12px;
       }
-
       .ym-hero-title {
         font-size: 13px;
       }
-
-      .ym-hero-price {
-        font-size: 15px;
-      }
-
       .ym-hero-button {
-        padding: 6px 10px;
-        font-size: 11px;
+        font-size: 13px;
+        padding: 8px 14px;
+      }
+      .ym-hero-legal {
+        font-size: 10px;
+      }
+    }
+    /* Telegram СЂРµРєР»Р°РјРЅС‹Р№ Р±Р°РЅРЅРµСЂ */
+    .telegram-banner {
+      display: flex;
+      justify-content: center;
+      text-decoration: none;
+      color: inherit;
+      width: 100%;
+      margin: 40px 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    .telegram-banner-container {
+      width: 100%;
+      max-width: 500px;
+      min-height: 120px;
+      border-radius: 16px;
+      background: linear-gradient(135deg, #0088cc 0%, #005f8f 100%);
+      border: 1px solid #005f8f;
+      display: flex;
+      align-items: center;
+      padding: 20px;
+      box-shadow: 0 4px 16px rgba(0, 136, 204, 0.2);
+      overflow: hidden;
+      box-sizing: border-box;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .telegram-banner-container:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0, 136, 204, 0.3);
+    }
+
+    .telegram-logo {
+      width: 60px;
+      height: 60px;
+      min-width: 60px;
+      background: #ffffff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 20px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .telegram-logo svg {
+      width: 32px;
+      height: 32px;
+      fill: #0088cc;
+    }
+
+    .telegram-content {
+      flex: 1;
+      color: #ffffff;
+    }
+
+    .telegram-title {
+      font-size: 16px;
+      font-weight: 600;
+      margin: 0 0 8px 0;
+      line-height: 1.3;
+    }
+
+    .telegram-subtitle {
+      font-size: 14px;
+      opacity: 0.9;
+      margin: 0 0 12px 0;
+      line-height: 1.4;
+    }
+
+    .telegram-button {
+      display: inline-flex;
+      align-items: center;
+      padding: 8px 16px;
+      background: #ffffff;
+      color: #0088cc;
+      border-radius: 20px;
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background 0.2s ease, transform 0.2s ease;
+    }
+
+    .telegram-button:hover {
+      background: #f0f8ff;
+      transform: scale(1.05);
+    }
+
+    .telegram-button svg {
+      width: 16px;
+      height: 16px;
+      margin-left: 6px;
+      fill: #0088cc;
+    }
+
+    /* РђРґР°РїС‚РёРІ РґР»СЏ РјРѕР±РёР»СЊРЅС‹С… */
+    @media (max-width: 480px) {
+      .telegram-banner-container {
+        max-width: 100%;
+        margin: 20px 0;
+        padding: 15px;
+        min-height: 100px;
+      }
+      .telegram-logo {
+        width: 50px;
+        height: 50px;
+        min-width: 50px;
+        margin-right: 15px;
+      }
+      .telegram-logo svg {
+        width: 26px;
+        height: 26px;
+      }
+      .telegram-title {
+        font-size: 14px;
+      }
+      .telegram-subtitle {
+        font-size: 12px;
+      }
+      .telegram-button {
+        font-size: 12px;
+        padding: 6px 12px;
       }
     }
 
-    /* РЎРєСЂС‹С‚С‹Р№ Р±Р°РЅРЅРµСЂ РґР»СЏ РґРµСЃРєС‚РѕРїР° */
-    @media (min-width: 769px) {
-      .ym-hero-link {
-        display: none !important;
-      }
-    }
+
+
   </style>
   <script async src="https://timeweb.cloud/api/v1/cloud-ai/agents/3cc03620-d051-4d8d-b5af-f7b6cd083a35/embed.js?collapsed=true"></script>
 </head>
 <body>
-  <header>
-    <div class="header-content">
-      <a href="/" class="logo">
-        <i class="fas fa-tools"></i>
-        FixTech
-      </a>
-      <nav class="nav-links">
-        <a href="/">Р“Р»Р°РІРЅР°СЏ</a>
-        <a href="/articles">Р’СЃРµ СЃС‚Р°С‚СЊРё</a>
-        <a href="/smartphones">РЎРјР°СЂС‚С„РѕРЅС‹</a>
-        <a href="/laptops">РќРѕСѓС‚Р±СѓРєРё</a>
-        <a href="/tv">РўРµР»РµРІРёР·РѕСЂС‹</a>
-        <a href="/cameras">РљР°РјРµСЂС‹</a>
-        <a href="/consoles">РљРѕРЅСЃРѕР»Рё</a>
-        <a href="/auto-electronics">РђРІС‚РѕСЌР»РµРєС‚СЂРѕРЅРёРєР°</a>
-        <a href="/small-appliances">РњРµР»РєР°СЏ С‚РµС…РЅРёРєР°</a>
-        <a href="/large-appliances">РљСЂСѓРїРЅР°СЏ С‚РµС…РЅРёРєР°</a>
-      </nav>
-      <div class="search-container">
-        <input type="text" id="search-input" placeholder="РџРѕРёСЃРє РїРѕ СЃР°Р№С‚Сѓ..." />
-        <button id="search-button"><i class="fas fa-search"></i></button>
+  <header class="header">
+    <div class="container">
+      <div class="header__inner">
+        <a href="../index.html" class="logo">
+          <span class="logo__icon"></span>
+          <span class="logo__text">GeoExpert</span>
+        </a>
+        <nav class="nav">
+          <ul class="nav__list">
+            <li><a href="../cameras.html" class="nav__link">РљР°РјРµСЂС‹</a></li>
+            <li><a href="../drones.html" class="nav__link">Р”СЂРѕРЅС‹</a></li>
+            <li><a href="../workflow.html" class="nav__link">Workflow</a></li>
+          </ul>
+        </nav>
       </div>
     </div>
   </header>
 
   <main class="guide-container">
     <div class="guide-content">
-      <h1>РќРѕСѓС‚Р±СѓРє РЅРµ СЂР°Р±РѕС‚Р°РµС‚ СЃ РІРЅРµС€РЅРёРј РјРѕРЅРёС‚РѕСЂРѕРј С‡РµСЂРµР· HDMI DisplayPort</h1>
-      <p>РљРѕРіРґР° РЅРѕСѓС‚Р±СѓРє РЅРµ СЂР°Р±РѕС‚Р°РµС‚ СЃ РІРЅРµС€РЅРёРј РјРѕРЅРёС‚РѕСЂРѕРј С‡РµСЂРµР· HDMI РёР»Рё DisplayPort, РїСЂРѕР±Р»РµРјР° СЃРІСЏР·Р°РЅР° СЃ РґСЂР°Р№РІРµСЂР°РјРё РёР»Рё РЅР°СЃС‚СЂРѕР№РєР°РјРё. Р’ СЌС‚РѕРј СЌРєСЃРїРµСЂС‚РЅРѕРј РјРµРіР°РіР°Р№РґРµ РјС‹ СЂР°Р·Р±РµСЂРµРј РІСЃРµ РїСЂРёС‡РёРЅС‹ РѕС‚СЃСѓС‚СЃС‚РІРёСЏ СЃРёРіРЅР°Р»Р° РЅР° РІРЅРµС€РЅРµРј РґРёСЃРїР»РµРµ Рё РїСЂРµРґРѕСЃС‚Р°РІРёРј СЂРµС€РµРЅРёСЏ РґР»СЏ РїРѕРґРєР»СЋС‡РµРЅРёСЏ.</p>
+      <h1>Ноутбук не работает с внешним монитором через HDMI DisplayPort</h1>
+      <p>Когда ноутбук не работает с внешним монитором через HDMI или DisplayPort, проблема связана с драйверами или настройками. В этом экспертном мегагайде мы разберем все причины отсутствия сигнала на внешнем дисплее и предоставим решения для подключения.</p>
 
-      <h2>РџСЂРёР·РЅР°РєРё РїСЂРѕР±Р»РµРјС‹</h2>
+      <h2>Признаки проблемы</h2>
       <ul>
-        <li>Р’РЅРµС€РЅРёР№ РјРѕРЅРёС‚РѕСЂ РЅРµ РїРѕРєР°Р·С‹РІР°РµС‚ РёР·РѕР±СЂР°Р¶РµРЅРёРµ</li>
-        <li>HDMI/DisplayPort РЅРµ СЂР°Р±РѕС‚Р°РµС‚</li>
-        <li>Р Р°Р±РѕС‚Р°РµС‚ РЅР° РґСЂСѓРіРѕРј РЅРѕСѓС‚Р±СѓРєРµ</li>
-        <li>Р’СЃС‚СЂРѕРµРЅРЅС‹Р№ СЌРєСЂР°РЅ СЂР°Р±РѕС‚Р°РµС‚</li>
-        <li>РљР°Р±РµР»СЊ Рё РјРѕРЅРёС‚РѕСЂ РёСЃРїСЂР°РІРЅС‹</li>
+        <li>Внешний монитор не показывает изображение</li>
+        <li>HDMI/DisplayPort не работает</li>
+        <li>Работает на другом ноутбуке</li>
+        <li>Встроенный экран работает</li>
+        <li>Кабель и монитор исправны</li>
       </ul>
 
-      <h2>РћСЃРЅРѕРІРЅС‹Рµ РїСЂРёС‡РёРЅС‹</h2>
+      <h2>Основные причины</h2>
       <table>
         <tr>
-          <th>РџСЂРёС‡РёРЅР°</th>
-          <th>Р’РµСЂРѕСЏС‚РЅРѕСЃС‚СЊ</th>
-          <th>РҐР°СЂР°РєС‚РµСЂРЅС‹Рµ РїСЂРёР·РЅР°РєРё</th>
+          <th>Причина</th>
+          <th>Вероятность</th>
+          <th>Характерные признаки</th>
         </tr>
         <tr>
-          <td>Р”СЂР°Р№РІРµСЂС‹ GPU</td>
+          <td>Драйверы GPU</td>
           <td>40%</td>
-          <td>Р Р°Р±РѕС‚Р°РµС‚ РїРѕСЃР»Рµ РѕР±РЅРѕРІР»РµРЅРёСЏ</td>
+          <td>Работает после обновления</td>
         </tr>
         <tr>
-          <td>РќР°СЃС‚СЂРѕР№РєРё РіСЂР°С„РёРєРё</td>
+          <td>Настройки графики</td>
           <td>25%</td>
-          <td>Р Р°Р±РѕС‚Р°РµС‚ РїРѕСЃР»Рµ РїРµСЂРµРєР»СЋС‡РµРЅРёСЏ</td>
+          <td>Работает после переключения</td>
         </tr>
         <tr>
-          <td>РџРѕРІСЂРµР¶РґРµРЅРЅС‹Р№ РїРѕСЂС‚</td>
+          <td>Поврежденный порт</td>
           <td>15%</td>
-          <td>Р Р°Р±РѕС‚Р°РµС‚ СЃ РґСЂСѓРіРёРј РїРѕСЂС‚РѕРј</td>
+          <td>Работает с другим портом</td>
         </tr>
         <tr>
-          <td>BIOS РЅР°СЃС‚СЂРѕР№РєРё</td>
+          <td>BIOS настройки</td>
           <td>10%</td>
-          <td>Р Р°Р±РѕС‚Р°РµС‚ РїРѕСЃР»Рµ СЃР±СЂРѕСЃР°</td>
+          <td>Работает после сброса</td>
         </tr>
         <tr>
-          <td>РљР°Р±РµР»СЊ/Р°РґР°РїС‚РµСЂ</td>
+          <td>Кабель/адаптер</td>
           <td>8%</td>
-          <td>Р Р°Р±РѕС‚Р°РµС‚ СЃ РґСЂСѓРіРёРј РєР°Р±РµР»РµРј</td>
+          <td>Работает с другим кабелем</td>
         </tr>
         <tr>
-          <td>РџРѕРІСЂРµР¶РґРµРЅРёРµ GPU</td>
+          <td>Повреждение GPU</td>
           <td>2%</td>
-          <td>РќРµ СЂР°Р±РѕС‚Р°РµС‚ РїРѕСЃР»Рµ РІСЃРµС… СЂРµС€РµРЅРёР№</td>
+          <td>Не работает после всех решений</td>
         </tr>
       </table>
 
-      <h2>Р”РёР°РіРЅРѕСЃС‚РёРєР° РїСЂРѕР±Р»РµРјС‹</h2>
-      <h3>РџСЂРѕРІРµСЂРєР° РїРѕРґРєР»СЋС‡РµРЅРёСЏ</h3>
+      <h2>Диагностика проблемы</h2>
+      <h3>Проверка подключения</h3>
       <ol>
-        <li>Win + P в†’ Р’С‹Р±РµСЂРёС‚Рµ СЂРµР¶РёРј РѕС‚РѕР±СЂР°Р¶РµРЅРёСЏ</li>
-        <li>РџРѕРїСЂРѕР±СѓР№С‚Рµ "Р Р°СЃС€РёСЂРёС‚СЊ" РёР»Рё "Р”СѓР±Р»РёСЂРѕРІР°С‚СЊ"</li>
-        <li>РџРѕСЃРјРѕС‚СЂРёС‚Рµ РїР°СЂР°РјРµС‚СЂС‹ РґРёСЃРїР»РµСЏ</li>
+        <li>Win + P > Выберите режим отображения</li>
+        <li>Попробуйте "Расширить" или "Дублировать"</li>
+        <li>Посмотрите параметры дисплея</li>
       </ol>
 
-      <h3>Р”РёСЃРїРµС‚С‡РµСЂ СѓСЃС‚СЂРѕР№СЃС‚РІ</h3>
+      <h3>Диспетчер устройств</h3>
       <ol>
-        <li>devmgmt.msc в†’ Р”РёСЃРїР»РµРё</li>
-        <li>РџСЂРѕРІРµСЂСЊС‚Рµ СЃС‚Р°С‚СѓСЃ Р°РґР°РїС‚РµСЂРѕРІ</li>
-        <li>РћР±РЅРѕРІРёС‚Рµ РґСЂР°Р№РІРµСЂС‹</li>
+        <li>devmgmt.msc > Дисплеи</li>
+        <li>Проверьте статус адаптеров</li>
+        <li>Обновите драйверы</li>
       </ol>
 
-      <h2>Р РµС€РµРЅРёРµ 1: РћР±РЅРѕРІР»РµРЅРёРµ РґСЂР°Р№РІРµСЂРѕРІ</h2>
+      <h2>Решение 1: Обновление драйверов</h2>
       <h3>NVIDIA</h3>
       <ol>
-        <li>GeForce Experience в†’ Р”СЂР°Р№РІРµСЂС‹</li>
-        <li>РћР±РЅРѕРІРёС‚СЊ РґРѕ РїРѕСЃР»РµРґРЅРёС… РІРµСЂСЃРёР№</li>
-        <li>РџРµСЂРµР·Р°РіСЂСѓР·РёС‚СЊ РєРѕРјРїСЊСЋС‚РµСЂ</li>
+        <li>GeForce Experience > Драйверы</li>
+        <li>Обновить до последних версий</li>
+        <li>Перезагрузить компьютер</li>
       </ol>
 
       <h3>AMD</h3>
       <ol>
-        <li>AMD Radeon Software в†’ РћР±РЅРѕРІР»РµРЅРёСЏ</li>
-        <li>РЈСЃС‚Р°РЅРѕРІРёС‚СЊ РїРѕСЃР»РµРґРЅРёРµ РґСЂР°Р№РІРµСЂС‹</li>
+        <li>AMD Radeon Software > Обновления</li>
+        <li>Установить последние драйверы</li>
       </ol>
 
-      <h2>Р РµС€РµРЅРёРµ 2: РќР°СЃС‚СЂРѕР№РєРё РґРёСЃРїР»РµСЏ</h2>
-      <h3>Windows РЅР°СЃС‚СЂРѕР№РєРё</h3>
+      <h2>Решение 2: Настройки дисплея</h2>
+      <h3>Windows настройки</h3>
       <ol>
-        <li>РџР°СЂР°РјРµС‚СЂС‹ в†’ РЎРёСЃС‚РµРјР° в†’ Р”РёСЃРїР»РµР№</li>
-        <li>РћР±РЅР°СЂСѓР¶РёС‚СЊ РґРёСЃРїР»РµР№</li>
-        <li>РќР°СЃС‚СЂРѕРёС‚СЊ СЂР°Р·СЂРµС€РµРЅРёРµ</li>
+        <li>Параметры > Система > Дисплей</li>
+        <li>Обнаружить дисплей</li>
+        <li>Настроить разрешение</li>
       </ol>
 
-      <h3>Р“РѕСЂСЏС‡РёРµ РєР»Р°РІРёС€Рё</h3>
+      <h3>Горячие клавиши</h3>
       <ol>
-        <li>Win + P в†’ Р’С‹Р±СЂР°С‚СЊ СЂРµР¶РёРј</li>
-        <li>Fn + F8 (Р·Р°РІРёСЃРёС‚ РѕС‚ РјРѕРґРµР»Рё)</li>
-        <li>РџРµСЂРµРєР»СЋС‡РёС‚СЊ РЅР° РІРЅРµС€РЅРёР№ РґРёСЃРїР»РµР№</li>
+        <li>Win + P > Выбрать режим</li>
+        <li>Fn + F8 (зависит от модели)</li>
+        <li>Переключить на внешний дисплей</li>
       </ol>
 
-      <h2>Р РµС€РµРЅРёРµ 3: РџРµСЂРµРєР»СЋС‡РµРЅРёРµ РіСЂР°С„РёРєРё</h2>
+      <h2>Решение 3: Переключение графики</h2>
       <h3>NVIDIA Control Panel</h3>
       <ol>
-        <li>РќР°СЃС‚СЂРѕРёС‚СЊ РїР°СЂР°РјРµС‚СЂС‹ СЃС‚РµСЂРµРѕ в†’ РЈСЃС‚Р°РЅРѕРІРёС‚СЊ РєРѕРЅС„РёРіСѓСЂР°С†РёСЋ</li>
-        <li>Р’С‹Р±СЂР°С‚СЊ NVIDIA РґР»СЏ РІРЅРµС€РЅРµРіРѕ РґРёСЃРїР»РµСЏ</li>
+        <li>Настроить параметры стерео > Установить конфигурацию</li>
+        <li>Выбрать NVIDIA для внешнего дисплея</li>
       </ol>
 
       <h3>AMD Radeon Settings</h3>
       <ol>
-        <li>РЎРёСЃС‚РµРјР° в†’ РџРµСЂРµРєР»СЋС‡РµРЅРёРµ РіСЂР°С„РёРєРё</li>
-        <li>Р”РѕР±Р°РІРёС‚СЊ РїСЂРёР»РѕР¶РµРЅРёРµ</li>
-        <li>Р’С‹СЃРѕРєРѕРїСЂРѕРёР·РІРѕРґРёС‚РµР»СЊРЅР°СЏ РґР»СЏ РІРЅРµС€РЅРµРіРѕ</li>
+        <li>Система > Переключение графики</li>
+        <li>Добавить приложение</li>
+        <li>Высокопроизводительная для внешнего</li>
       </ol>
 
-      <h2>Р РµС€РµРЅРёРµ 4: BIOS РЅР°СЃС‚СЂРѕР№РєРё</h3>
+      <h2>Решение 4: BIOS настройки</h3>
       <h3>Graphics Mode</h3>
       <ol>
-        <li>Р’РѕР№С‚Рё РІ BIOS</li>
-        <li>РќР°Р№С‚Рё Graphics Settings</li>
-        <li>Р’РєР»СЋС‡РёС‚СЊ РІРЅРµС€РЅРёР№ РґРёСЃРїР»РµР№</li>
-        <li>РЈСЃС‚Р°РЅРѕРІРёС‚СЊ Discrete Graphics</li>
+        <li>Войти в BIOS</li>
+        <li>Найти Graphics Settings</li>
+        <li>Включить внешний дисплей</li>
+        <li>Установить Discrete Graphics</li>
       </ol>
 
-      <h2>Р РµС€РµРЅРёРµ 5: РџСЂРѕРІРµСЂРєР° РѕР±РѕСЂСѓРґРѕРІР°РЅРёСЏ</h2>
-      <h3>РљР°Р±РµР»СЊ</h3>
+      <h2>Решение 5: Проверка оборудования</h2>
+      <h3>Кабель</h3>
       <ol>
-        <li>РџСЂРѕРІРµСЂРёС‚СЊ РєР°Р±РµР»СЊ РЅР° РґСЂСѓРіРѕРј СѓСЃС‚СЂРѕР№СЃС‚РІРµ</li>
-        <li>РџРѕРїСЂРѕР±РѕРІР°С‚СЊ РґСЂСѓРіРѕР№ РєР°Р±РµР»СЊ</li>
-        <li>РСЃРїРѕР»СЊР·РѕРІР°С‚СЊ Р°РґР°РїС‚РµСЂ РµСЃР»Рё РЅСѓР¶РЅРѕ</li>
+        <li>Проверить кабель на другом устройстве</li>
+        <li>Попробовать другой кабель</li>
+        <li>Использовать адаптер если нужно</li>
       </ol>
 
-      <h3>РџРѕСЂС‚</h3>
+      <h3>Порт</h3>
       <ol>
-        <li>РџРѕРїСЂРѕР±РѕРІР°С‚СЊ РґСЂСѓРіРѕР№ РїРѕСЂС‚</li>
-        <li>РћС‡РёСЃС‚РёС‚СЊ РїРѕСЂС‚ РѕС‚ РїС‹Р»Рё</li>
-        <li>РџСЂРѕРІРµСЂРёС‚СЊ РЅР° РјРµС…Р°РЅРёС‡РµСЃРєРёРµ РїРѕРІСЂРµР¶РґРµРЅРёСЏ</li>
+        <li>Попробовать другой порт</li>
+        <li>Очистить порт от пыли</li>
+        <li>Проверить на механические повреждения</li>
       </ol>
 
-      <h2>Р РµС€РµРЅРёРµ 6: Р’РѕСЃСЃС‚Р°РЅРѕРІР»РµРЅРёРµ СЃРёСЃС‚РµРјС‹</h2>
-      <h3>РўРѕС‡РєР° РІРѕСЃСЃС‚Р°РЅРѕРІР»РµРЅРёСЏ</h3>
+      <h2>Решение 6: Восстановление системы</h2>
+      <h3>Точка восстановления</h3>
       <ol>
-        <li>Win + R в†’ rstrui</li>
-        <li>Р’С‹Р±РµСЂРёС‚Рµ С‚РѕС‡РєСѓ РґРѕ РїСЂРѕР±Р»РµРјС‹</li>
-        <li>Р’РѕСЃСЃС‚Р°РЅРѕРІРёС‚Рµ СЃРёСЃС‚РµРјСѓ</li>
+        <li>Win + R > rstrui</li>
+        <li>Выберите точку до проблемы</li>
+        <li>Восстановите систему</li>
       </ol>
 
       <div class="pro-tips">
-        <h4><i class="fas fa-lightbulb"></i> РџСЂРѕС„РµСЃСЃРёРѕРЅР°Р»СЊРЅС‹Рµ СЃРѕРІРµС‚С‹</h4>
+        <h4><i class="fas fa-lightbulb"></i> Профессиональные советы</h4>
         <div class="tip-item">
           <i class="fas fa-tools"></i>
-          <span>Р’СЃРµРіРґР° РѕР±РЅРѕРІР»СЏР№С‚Рµ РґСЂР°Р№РІРµСЂС‹ GPU РїРµСЂРµРґ РїРѕРґРєР»СЋС‡РµРЅРёРµРј РІРЅРµС€РЅРµРіРѕ РјРѕРЅРёС‚РѕСЂР°</span>
+          <span>Всегда обновляйте драйверы GPU перед подключением внешнего монитора</span>
         </div>
         <div class="tip-item">
           <i class="fas fa-desktop"></i>
-          <span>РСЃРїРѕР»СЊР·СѓР№С‚Рµ Win + P РґР»СЏ Р±С‹СЃС‚СЂРѕРіРѕ РїРµСЂРµРєР»СЋС‡РµРЅРёСЏ СЂРµР¶РёРјРѕРІ РѕС‚РѕР±СЂР°Р¶РµРЅРёСЏ</span>
+          <span>Используйте Win + P для быстрого переключения режимов отображения</span>
         </div>
         <div class="tip-item">
           <i class="fas fa-cog"></i>
-          <span>РџСЂРѕРІРµСЂСЏР№С‚Рµ BIOS РЅР°СЃС‚СЂРѕР№РєРё РґР»СЏ РІРєР»СЋС‡РµРЅРёСЏ РІРЅРµС€РЅРµРіРѕ РґРёСЃРїР»РµСЏ</span>
+          <span>Проверяйте BIOS настройки для включения внешнего дисплея</span>
         </div>
         <div class="tip-item">
           <i class="fas fa-plug"></i>
-          <span>РСЃРїРѕР»СЊР·СѓР№С‚Рµ РєР°С‡РµСЃС‚РІРµРЅРЅС‹Рµ РєР°Р±РµР»Рё Рё Р°РґР°РїС‚РµСЂС‹</span>
+          <span>Используйте качественные кабели и адаптеры</span>
         </div>
       </div>
 
-      <h2>Р Р°СЃС€РёСЂРµРЅРЅС‹Рµ СЂРµС€РµРЅРёСЏ</h2>
-      <h3>Р§РёСЃС‚Р°СЏ СѓСЃС‚Р°РЅРѕРІРєР° РґСЂР°Р№РІРµСЂРѕРІ</h3>
+      <h2>Расширенные решения</h2>
+      <h3>Чистая установка драйверов</h3>
       <ol>
-        <li>РЈРґР°Р»РёС‚СЊ СЃС‚Р°СЂС‹Рµ РґСЂР°Р№РІРµСЂС‹</li>
+        <li>Удалить старые драйверы</li>
         <li>DDU (Display Driver Uninstaller)</li>
-        <li>РЈСЃС‚Р°РЅРѕРІРёС‚СЊ СЃРІРµР¶РёРµ РґСЂР°Р№РІРµСЂС‹</li>
+        <li>Установить свежие драйверы</li>
       </ol>
 
-      <h3>Р—Р°РјРµРЅР° РїРѕСЂС‚Р°</h3>
+      <h3>Замена порта</h3>
       <ol>
-        <li>Р•СЃР»Рё РїРѕСЂС‚ РїРѕРІСЂРµР¶РґРµРЅ</li>
-        <li>РћР±СЂР°С‚РёС‚РµСЃСЊ РІ СЃРµСЂРІРёСЃ</li>
-        <li>Р—Р°РјРµРЅРёС‚Рµ РјР°С‚РµСЂРёРЅСЃРєСѓСЋ РїР»Р°С‚Сѓ</li>
+        <li>Если порт поврежден</li>
+        <li>Обратитесь в сервис</li>
+        <li>Замените материнскую плату</li>
       </ol>
 
-      <h2>Р§Р°СЃС‚С‹Рµ РІРѕРїСЂРѕСЃС‹</h2>
-      <h3>РџРѕС‡РµРјСѓ РЅРѕСѓС‚Р±СѓРє РЅРµ РІРёРґРёС‚ РІРЅРµС€РЅРёР№ РјРѕРЅРёС‚РѕСЂ?</h3>
-      <p>РќРµРїСЂР°РІРёР»СЊРЅС‹Рµ РґСЂР°Р№РІРµСЂС‹ РёР»Рё РЅР°СЃС‚СЂРѕР№РєРё. РћР±РЅРѕРІРёС‚Рµ РґСЂР°Р№РІРµСЂС‹ Рё РїСЂРѕРІРµСЂСЊС‚Рµ РїРѕРґРєР»СЋС‡РµРЅРёРµ.</p>
+      <h2>Частые вопросы</h2>
+      <h3>Почему ноутбук не видит внешний монитор?</h3>
+      <p>Неправильные драйверы или настройки. Обновите драйверы и проверьте подключение.</p>
 
-      <h3>РњРѕР¶РЅРѕ Р»Рё РїРѕРґРєР»СЋС‡РёС‚СЊ С‡РµСЂРµР· HDMI?</h3>
-      <p>Р”Р°, РЅРѕ РЅСѓР¶РµРЅ СЃРѕРѕС‚РІРµС‚СЃС‚РІСѓСЋС‰РёР№ РїРѕСЂС‚ РЅР° РЅРѕСѓС‚Р±СѓРєРµ Рё РјРѕРЅРёС‚РѕСЂРµ.</p>
+      <h3>Можно ли подключить через HDMI?</h3>
+      <p>Да, но нужен соответствующий порт на ноутбуке и мониторе.</p>
 
-      <h3>Р§С‚Рѕ РґРµР»Р°С‚СЊ, РµСЃР»Рё РїРѕСЂС‚ РЅРµ СЂР°Р±РѕС‚Р°РµС‚?</h3>
-      <p>РџРѕРїСЂРѕР±СѓР№С‚Рµ РґСЂСѓРіРѕР№ РїРѕСЂС‚ РёР»Рё РёСЃРїРѕР»СЊР·СѓР№С‚Рµ Р°РґР°РїС‚РµСЂ.</p>
+      <h3>Что делать, если порт не работает?</h3>
+      <p>Попробуйте другой порт или используйте адаптер.</p>
 
-      <h2>РљРѕРіРґР° РЅСѓР¶РЅР° Р·Р°РјРµРЅР°</h2>
+      <h2>Когда нужна замена</h2>
       <ul>
-        <li>РџРѕСЂС‚ С„РёР·РёС‡РµСЃРєРё РїРѕРІСЂРµР¶РґРµРЅ</li>
-        <li>GPU РЅРµРёСЃРїСЂР°РІРЅР°</li>
-        <li>Р’СЃРµ СЂРµС€РµРЅРёСЏ РЅРµ РїРѕРјРѕРіР»Рё</li>
+        <li>Порт физически поврежден</li>
+        <li>GPU неисправна</li>
+        <li>Все решения не помогли</li>
       </ul>
 
-      <p>Р’ Р±РѕР»СЊС€РёРЅСЃС‚РІРµ СЃР»СѓС‡Р°РµРІ РїСЂРѕР±Р»РµРјР° СЂРµС€Р°РµС‚СЃСЏ РѕР±РЅРѕРІР»РµРЅРёРµРј РґСЂР°Р№РІРµСЂРѕРІ Рё РїСЂР°РІРёР»СЊРЅС‹РјРё РЅР°СЃС‚СЂРѕР№РєР°РјРё. РќР°С‡РЅРёС‚Рµ СЃ РѕР±РЅРѕРІР»РµРЅРёСЏ РґСЂР°Р№РІРµСЂРѕРІ GPU.</p>
+      <p>В большинстве случаев проблема решается обновлением драйверов и правильными настройками. Начните с обновления драйверов GPU.</p>
     </div>
   </main>
 
-  <footer>
-    <div class="footer-content">
-      <p>&copy; 2024 FixTech. Р’СЃРµ РїСЂР°РІР° Р·Р°С‰РёС‰РµРЅС‹.</p>
-      <div class="footer-links">
-        <a href="/privacy">РљРѕРЅС„РёРґРµРЅС†РёР°Р»СЊРЅРѕСЃС‚СЊ</a>
-        <a href="/terms">РЈСЃР»РѕРІРёСЏ РёСЃРїРѕР»СЊР·РѕРІР°РЅРёСЏ</a>
-        <a href="/contact">РљРѕРЅС‚Р°РєС‚С‹</a>
-      </div>
-    </div>
-  </footer>
+      <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__col footer__col--logo">
+                    <a href="../index.html" class="footer-logo">
+                        <span class="logo__icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 15L7 10H17L12 15Z" fill="currentColor"/>
+                                <path d="M12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3ZM12 19C8.13401 19 5 15.866 5 12C5 8.13401 8.13401 5 12 5C15.866 5 19 8.13401 19 12C19 15.866 15.866 19 12 19Z" fill="currentColor"/>
+                            </svg>
+                        </span>
+                        <span class="logo__text">Repairo</span>
+                    </a>
+                    <p class="footer__text">Помогаем ремонтировать электронику с 2024 года</p>
+                </div>
+                <div class="footer__col">
+                    <h3 class="footer__title">Разделы</h3>
+                    <ul class="footer__links">
+                        <li><a href="../index.html" class="footer__link">Главная</a></li>
+                        <li><a href="../index.html#categories" class="footer__link">Все гайды</a></li>
+                        <li><a href="../contacts.html" class="footer__link">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="footer__col">
+                    <h3 class="footer__title">Категории</h3>
+                    <ul class="footer__links">
+                        <li><a href="../tv.html" class="nav__link">Телевизоры</a></li>
+                        <li><a href="../cameras.html" class="nav__link">Фотоаппараты</a></li>
+                        <li><a href="../consoles.html" class="nav__link">Приставки</a></li>
+                        <li><a href="../laptops.html" class="nav__link">Ноутбуки</a></li>
+                        <li><a href="../smartphones.html" class="nav__link">Смартфоны</a></li>
+                        <li><a href="../small-appliances.html" class="nav__link">Мелкая техника</a></li>
+                        <li><a href="../large-appliances.html" class="nav__link">Бытовая техника</a></li>
+                        <li><a href="../auto-electronics.html" class="nav__link">Авто-Электроника</a></li>
+                    </ul>
+                </div>
+                <div class="footer__col">
+                    <h3 class="footer__title">Контакты</h3>
+                    <ul class="footer__links">
+                        <li><a href="https://t.me/RepairoRU" class="footer__link"><i class="fab fa-telegram"></i> Telegram</a></li>
+                        <li><span class="footer__link">Наша почта: repairo.info@mail.ru</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p class="disclaimer">
+    Администрация сайта не несёт ответственности за возможные повреждения техники
+    и иные последствия, возникшие в результате самостоятельного ремонта по
+    материалам и инструкциям, размещённым на сайте. Все работы вы выполняете
+    на свой страх и риск.
+    </p>
+                <p class="footer__copyright">© 2026 Repairo. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+    <!-- Cookie Consent Banner -->
+    <script src="../script.js"></script>
 
-  <script src="../script.js"></script>
-  <script src="../search.js"></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "Ноутбук не работает с внешним монитором через HDMI DisplayPort | Экспертный мегагайд",
+  "description": "",
+  "totalTime": "PT30M",
+  "step": [
+    {
+      "@type": "HowToStep",
+      "name": "Введение: почему Cyberpunk 2077 может тормозить на PS5 после патчей?",
+      "text": "Введение: почему Cyberpunk 2077 может тормозить на PS5 после патчей?",
+      "url": "#step-1"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Таблица: основные причины лагов и просадок FPS в Cyberpunk 2077 на PS5 после обновлений",
+      "text": "Таблица: основные причины лагов и просадок FPS в Cyberpunk 2077 на PS5 после обновлений",
+      "url": "#step-2"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Пошаговая инструкция: что делать, если Cyberpunk 2077 тормозит на PS5 после обновления",
+      "text": "Пошаговая инструкция: что делать, если Cyberpunk 2077 тормозит на PS5 после обновления",
+      "url": "#step-3"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Таблица: сравнение режимов графики и FPS в Cyberpunk 2077 на PS5",
+      "text": "Таблица: сравнение режимов графики и FPS в Cyberpunk 2077 на PS5",
+      "url": "#step-4"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Отзывы игроков и тесты Digital Foundry",
+      "text": "Отзывы игроков и тесты Digital Foundry",
+      "url": "#step-5"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Лайфхаки и советы по оптимизации Cyberpunk 2077 на PS5",
+      "text": "Лайфхаки и советы по оптимизации Cyberpunk 2077 на PS5",
+      "url": "#step-6"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "FAQ – часто задаваемые вопросы о тормозах Cyberpunk 2077 на PS5",
+      "text": "FAQ – часто задаваемые вопросы о тормозах Cyberpunk 2077 на PS5",
+      "url": "#step-7"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Пошаговая инструкция: как восстановить базу данных PS5",
+      "text": "Пошаговая инструкция: как восстановить базу данных PS5",
+      "url": "#step-8"
+    }
+  ],
+  "image": "https://repairo.ru/https://mc.yandex.ru/watch/106225686"
+}
+</script>
+<!-- Cookie Consent Script -->
+<script src="../cookie-consent.js"></script>
 </body>
 </html>
+
+
+
+
+
+

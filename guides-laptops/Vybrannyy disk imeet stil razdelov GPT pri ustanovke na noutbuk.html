@@ -4,9 +4,8 @@
 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Р’С‹Р±СЂР°РЅРЅС‹Р№ РґРёСЃРє РёРјРµРµС‚ СЃС‚РёР»СЊ СЂР°Р·РґРµР»РѕРІ GPT РїСЂРё СѓСЃС‚Р°РЅРѕРІРєРµ РЅР° РЅРѕСѓС‚Р±СѓРєРµ | Р РµС€РµРЅРёРµ РїСЂРѕР±Р»РµРјС‹</title>
-    <meta name="description" content="{{ description }}">
-    <meta name="description" content="Р’С‹Р±СЂР°РЅРЅС‹Р№ РґРёСЃРє РёРјРµРµС‚ СЃС‚РёР»СЊ СЂР°Р·РґРµР»РѕРІ GPT РїСЂРё СѓСЃС‚Р°РЅРѕРІРєРµ РЅР° РЅРѕСѓС‚Р±СѓРєРµ. РџСЂРёС‡РёРЅС‹ GPT СЃС‚РёР»СЏ СЂР°Р·РґРµР»РѕРІ Рё СЃРїРѕСЃРѕР±С‹ РёСЃРїСЂР°РІР»РµРЅРёСЏ РїСЂРѕР±Р»РµРј СЃ СѓСЃС‚Р°РЅРѕРІРєРѕР№ Windows РЅР° РЅРѕСѓС‚Р±СѓРєРµ.">
+  <title>Выбранный диск имеет стиль разделов GPT при установке на ноу</title>
+    <meta name="description" content="">
 
   <link rel="stylesheet" href="../styles.css" />
   <link rel="stylesheet" href="../styles-header.css" />
@@ -25,140 +24,419 @@
     table { width: 100%; border-collapse: collapse; margin: 20px 0; }
     th, td { border: 1px solid var(--border); padding: 8px; text-align: left; }
     th { background: var(--background-light); }
+    .highlight { background: #f5f7fa; border-left: 4px solid #2d9cdb; padding: 10px 15px; margin: 20px 0; }
+    .faq-section ul { margin-left: 1em; }
+    .block-section { margin-bottom: 2em; }
     @media (max-width: 768px) {
       .guide-content h2 { font-size: 1.4rem; margin-top: 25px; }
       .guide-image-block { padding: 12px; margin: 15px 0; }
       table, th, td { font-size: 0.95rem; }
     }
-  </style>
+    /* Р“РѕСЂРёР·РѕРЅС‚Р°Р»СЊРЅС‹Р№ Р±Р°РЅРЅРµСЂ-РєР°СЂС‚РѕС‡РєР° */
+    .ym-hero-banner {
+      width: 100%;
+      max-width: 600px;
+      min-height: 140px;
+      border-radius: 16px;
+      background: #ffffff;
+      border: 1px solid #e5e7eb;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 4px 16px rgba(15, 23, 42, 0.08);
+      overflow: hidden;
+      box-sizing: border-box;
+      margin: 40px auto;
+    }
 
+    /* РљРѕРЅС‚РµР№РЅРµСЂ РґР»СЏ РёР·РѕР±СЂР°Р¶РµРЅРёР№ */
+    .ym-hero-images {
+      display: flex;
+      height: 120px;
+      overflow: hidden;
+    }
+
+    .ym-hero-image {
+      flex: 1;
+      min-width: 0;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      border-right: 1px solid #e5e7eb;
+      background: #f8f9fa;
+    }
+
+    .ym-hero-image:last-child {
+      border-right: none;
+    }
+
+    .ym-hero-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      transition: transform 0.3s ease;
+      background: #f8f9fa;
+    }
+
+    .ym-hero-image:hover img {
+      transform: scale(1.02);
+    }
+
+    /* РџСЂР°РІР°СЏ С‡Р°СЃС‚СЊ: РєРѕРЅС‚РµРЅС‚ */
+    .ym-hero-content {
+      padding: 16px 18px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 8px;
+    }
+
+    /* РќР°Р·РІР°РЅРёРµ С‚РѕРІР°СЂР° */
+    .ym-hero-title {
+      font-size: 14px;
+      font-weight: 600;
+      color: #111827;
+      line-height: 1.3;
+      margin: 0 0 4px 0;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    /* Р РµР№С‚РёРЅРі */
+    .ym-hero-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+    }
+
+    .ym-hero-rating {
+      font-size: 13px;
+      font-weight: 500;
+      color: #111827;
+      background: #f9fafb;
+      border-radius: 999px;
+      padding: 4px 10px;
+    }
+
+    .ym-hero-rating-count {
+      color: #6b7280;
+    }
+
+    /* Р¤РёРѕР»РµС‚РѕРІР°СЏ РєРЅРѕРїРєР° */
+    .ym-hero-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 9px 16px;
+      border-radius: 999px;
+      border: none;
+      background: #6a00ff;
+      color: #ffffff;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 2px 6px rgba(88, 28, 135, 0.35);
+      transition: background 0.15s ease, transform 0.15s ease,
+                  box-shadow 0.15s ease;
+    }
+    .ym-hero-button::after {
+      content: "в†’";
+      margin-left: 6px;
+      font-size: 14px;
+    }
+    .ym-hero-button:hover {
+      background: #7c3aed;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 10px rgba(88, 28, 135, 0.45);
+    }
+
+    /* Р®СЂРёРґРёС‡РµСЃРєРёР№ Р±Р»РѕРє */
+    .ym-hero-legal {
+      margin-top: 6px;
+      max-width: 600px;
+      font-size: 11px;
+      line-height: 1.3;
+      color: #6b7280;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* РђРґР°РїС‚РёРІ */
+    @media (max-width: 480px) {
+      .ym-hero-banner {
+        max-width: 100%;
+        margin: 20px 0;
+      }
+      .ym-hero-images {
+        height: 100px;
+      }
+      .ym-hero-content {
+        padding: 12px 12px;
+      }
+      .ym-hero-title {
+        font-size: 13px;
+      }
+      .ym-hero-button {
+        font-size: 13px;
+        padding: 8px 14px;
+      }
+      .ym-hero-legal {
+        font-size: 10px;
+      }
+    }
+    /* Telegram СЂРµРєР»Р°РјРЅС‹Р№ Р±Р°РЅРЅРµСЂ */
+    .telegram-banner {
+      display: flex;
+      justify-content: center;
+      text-decoration: none;
+      color: inherit;
+      width: 100%;
+      margin: 40px 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    .telegram-banner-container {
+      width: 100%;
+      max-width: 500px;
+      min-height: 120px;
+      border-radius: 16px;
+      background: linear-gradient(135deg, #0088cc 0%, #005f8f 100%);
+      border: 1px solid #005f8f;
+      display: flex;
+      align-items: center;
+      padding: 20px;
+      box-shadow: 0 4px 16px rgba(0, 136, 204, 0.2);
+      overflow: hidden;
+      box-sizing: border-box;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .telegram-banner-container:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0, 136, 204, 0.3);
+    }
+
+    .telegram-logo {
+      width: 60px;
+      height: 60px;
+      min-width: 60px;
+      background: #ffffff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 20px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .telegram-logo svg {
+      width: 32px;
+      height: 32px;
+      fill: #0088cc;
+    }
+
+    .telegram-content {
+      flex: 1;
+      color: #ffffff;
+    }
+
+    .telegram-title {
+      font-size: 16px;
+      font-weight: 600;
+      margin: 0 0 8px 0;
+      line-height: 1.3;
+    }
+
+    .telegram-subtitle {
+      font-size: 14px;
+      opacity: 0.9;
+      margin: 0 0 12px 0;
+      line-height: 1.4;
+    }
+
+    .telegram-button {
+      display: inline-flex;
+      align-items: center;
+      padding: 8px 16px;
+      background: #ffffff;
+      color: #0088cc;
+      border-radius: 20px;
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background 0.2s ease, transform 0.2s ease;
+    }
+
+    .telegram-button:hover {
+      background: #f0f8ff;
+      transform: scale(1.05);
+    }
+
+    .telegram-button svg {
+      width: 16px;
+      height: 16px;
+      margin-left: 6px;
+      fill: #0088cc;
+    }
+
+    /* РђРґР°РїС‚РёРІ РґР»СЏ РјРѕР±РёР»СЊРЅС‹С… */
+    @media (max-width: 480px) {
+      .telegram-banner-container {
+        max-width: 100%;
+        margin: 20px 0;
+        padding: 15px;
+        min-height: 100px;
+      }
+      .telegram-logo {
+        width: 50px;
+        height: 50px;
+        min-width: 50px;
+        margin-right: 15px;
+      }
+      .telegram-logo svg {
+        width: 26px;
+        height: 26px;
+      }
+      .telegram-title {
+        font-size: 14px;
+      }
+      .telegram-subtitle {
+        font-size: 12px;
+      }
+      .telegram-button {
+        font-size: 12px;
+        padding: 6px 12px;
+      }
+    }
+
+
+
+  </style>
+  <script async src="https://timeweb.cloud/api/v1/cloud-ai/agents/3cc03620-d051-4d8d-b5af-f7b6cd083a35/embed.js?collapsed=true"></script>
 </head>
 <body>
-    <header class="header">
-        <div class="container">
-            <div class="header__inner">
-                <a href="../index.html" class="logo">
-                    <span class="logo__icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12 15L7 10H17L12 15Z" fill="currentColor"/>
-                            <path d="M12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3ZM12 19C8.13401 19 5 15.866 5 12C5 8.13401 8.13401 5 12 5C15.866 5 19 8.13401 19 12C19 15.866 15.866 19 12 19Z" fill="currentColor"/>
-                        </svg>
-                    </span>
-                    <span class="logo__text">Repairo</span>
-                </a>
-                <nav class="nav">
-                    <ul class="nav__list">
-                       <li><a href="../tv.html" class="nav__link">РўРµР»РµРІРёР·РѕСЂС‹</a></li>
-                        <li><a href="../auto-electronics.html" class="nav__link">РђРІС‚РѕСЌР»РµРєС‚СЂРѕРЅРёРєР°</a></li>
-                        <li><a href="../consoles.html" class="nav__link">РџСЂРёСЃС‚Р°РІРєРё</a></li>
-                        <li><a href="../laptops.html" class="nav__link">РќРѕСѓС‚Р±СѓРєРё</a></li>
-                        <li><a href="../smartphones.html" class="nav__link">РЎРјР°СЂС‚С„РѕРЅС‹</a></li>
-                        <li><a href="../index.html#categories" class="nav__link">Р’СЃРµ РєР°С‚РµРіРѕСЂРёРё</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
-    </header>
+  <header class="header">
+    <div class="container">
+      <div class="header__inner">
+        <a href="../index.html" class="logo">
+          <span class="logo__icon"></span>
+          <span class="logo__text">GeoExpert</span>
+        </a>
+        <nav class="nav">
+          <ul class="nav__list">
+            <li><a href="../cameras.html" class="nav__link">РљР°РјРµСЂС‹</a></li>
+            <li><a href="../drones.html" class="nav__link">Р”СЂРѕРЅС‹</a></li>
+            <li><a href="../workflow.html" class="nav__link">Workflow</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
 
     <main class="container">
         <div class="guide-content">
-            <h1>Р’С‹Р±СЂР°РЅРЅС‹Р№ РґРёСЃРє РёРјРµРµС‚ СЃС‚РёР»СЊ СЂР°Р·РґРµР»РѕРІ GPT РїСЂРё СѓСЃС‚Р°РЅРѕРІРєРµ РЅР° РЅРѕСѓС‚Р±СѓРєРµ</h1>
-            <p>РЎРѕРѕР±С‰РµРЅРёРµ "Р’С‹Р±СЂР°РЅРЅС‹Р№ РґРёСЃРє РёРјРµРµС‚ СЃС‚РёР»СЊ СЂР°Р·РґРµР»РѕРІ GPT" РїСЂРё СѓСЃС‚Р°РЅРѕРІРєРµ Windows СѓРєР°Р·С‹РІР°РµС‚ РЅР° РёСЃРїРѕР»СЊР·РѕРІР°РЅРёРµ GPT С‚Р°Р±Р»РёС†С‹ СЂР°Р·РґРµР»РѕРІ. Р’ СЌС‚РѕРј РїРѕРґСЂРѕР±РЅРѕРј СЂСѓРєРѕРІРѕРґСЃС‚РІРµ РјС‹ СЂР°Р·Р±РµСЂРµРј РїСЂРёС‡РёРЅС‹ СЌС‚РѕРіРѕ СЃРѕРѕР±С‰РµРЅРёСЏ Рё СЌС„С„РµРєС‚РёРІРЅС‹Рµ СЃРїРѕСЃРѕР±С‹ РµРіРѕ РёСЃРїСЂР°РІР»РµРЅРёСЏ РґР»СЏ РЅРѕСѓС‚Р±СѓРєРѕРІ.</p>
+            <h1>Выбранный диск имеет стиль разделов GPT при установке на ноутбуке</h1>
+            <p>Сообщение "Выбранный диск имеет стиль разделов GPT" при установке Windows указывает на использование GPT таблицы разделов. В этом подробном руководстве мы разберем причины этого сообщения и эффективные способы его исправления для ноутбуков.</p>
 
-            <h2>Р§С‚Рѕ РѕР·РЅР°С‡Р°РµС‚ GPT СЃС‚РёР»СЊ СЂР°Р·РґРµР»РѕРІ</h2>
-            <p>GPT (GUID Partition Table) - СЃРѕРІСЂРµРјРµРЅРЅС‹Р№ СЃС‚Р°РЅРґР°СЂС‚ СЂР°Р·РјРµС‚РєРё РґРёСЃРєРѕРІ, Р·Р°РјРµРЅСЏСЋС‰РёР№ MBR.</p>
-            <h3>РўРµС…РЅРёС‡РµСЃРєРѕРµ РѕР±СЉСЏСЃРЅРµРЅРёРµ</h3>
+            <h2>Что означает GPT стиль разделов</h2>
+            <p>GPT (GUID Partition Table) - современный стандарт разметки дисков, заменяющий MBR.</p>
+            <h3>Техническое объяснение</h3>
             <ul>
-                <li><strong>GPT:</strong> GUID Partition Table - С‚Р°Р±Р»РёС†Р° СЂР°Р·РґРµР»РѕРІ GUID</li>
-                <li><strong>MBR:</strong> Master Boot Record - СѓСЃС‚Р°СЂРµРІС€РёР№ СЃС‚Р°РЅРґР°СЂС‚</li>
-                <li><strong>РџСЂРµРёРјСѓС‰РµСЃС‚РІР° GPT:</strong> РџРѕРґРґРµСЂР¶РєР° Р±РѕР»СЊС€РёС… РґРёСЃРєРѕРІ, Р±РѕР»СЊС€Рµ СЂР°Р·РґРµР»РѕРІ</li>
-                <li><strong>РЎРѕРІРјРµСЃС‚РёРјРѕСЃС‚СЊ:</strong> РўСЂРµР±СѓРµС‚ UEFI СЂРµР¶РёРјР° Р·Р°РіСЂСѓР·РєРё</li>
+                <li><strong>GPT:</strong> GUID Partition Table - таблица разделов GUID</li>
+                <li><strong>MBR:</strong> Master Boot Record - устаревший стандарт</li>
+                <li><strong>Преимущества GPT:</strong> Поддержка больших дисков, больше разделов</li>
+                <li><strong>Совместимость:</strong> Требует UEFI режима загрузки</li>
             </ul>
 
-            <h3>Р’Р»РёСЏРЅРёРµ РЅР° СѓСЃС‚Р°РЅРѕРІРєСѓ</h3>
+            <h3>Влияние на установку</h3>
             <ul>
-                <li>Windows 11 С‚СЂРµР±СѓРµС‚ GPT РґР»СЏ СѓСЃС‚Р°РЅРѕРІРєРё</li>
-                <li>MBR РґРёСЃРєРё РјРѕРіСѓС‚ РІС‹Р·РІР°С‚СЊ РїСЂРѕР±Р»РµРјС‹</li>
-                <li>РќРµРѕР±С…РѕРґРёРј UEFI СЂРµР¶РёРј</li>
-                <li>РЎРѕРІРјРµСЃС‚РёРјРѕСЃС‚СЊ СЃ Legacy BIOS</li>
+                <li>Windows 11 требует GPT для установки</li>
+                <li>MBR диски могут вызвать проблемы</li>
+                <li>Необходим UEFI режим</li>
+                <li>Совместимость с Legacy BIOS</li>
             </ul>
 
-            <h2>Р Р°СЃРїСЂРѕСЃС‚СЂР°РЅРµРЅРЅС‹Рµ РїСЂРёС‡РёРЅС‹</h2>
-            <p>РџРѕС‡РµРјСѓ РїРѕСЏРІР»СЏРµС‚СЃСЏ СЃРѕРѕР±С‰РµРЅРёРµ Рѕ GPT СЃС‚РёР»Рµ СЂР°Р·РґРµР»РѕРІ.</p>
-            <h3>Р”РёСЃРє СѓР¶Рµ СЂР°Р·Р±РёС‚ РЅР° GPT</h3>
+            <h2>Распространенные причины</h2>
+            <p>Почему появляется сообщение о GPT стиле разделов.</p>
+            <h3>Диск уже разбит на GPT</h3>
             <ul>
-                <li><strong>РЎРѕРІСЂРµРјРµРЅРЅС‹Рµ РґРёСЃРєРё:</strong> РќРѕРІС‹Рµ РґРёСЃРєРё С‡Р°СЃС‚Рѕ РїРѕСЃС‚Р°РІР»СЏСЋС‚СЃСЏ СЃ GPT</li>
-                <li><strong>РџСЂРµРґС‹РґСѓС‰Р°СЏ СѓСЃС‚Р°РЅРѕРІРєР°:</strong> Windows 11 СѓР¶Рµ СѓСЃС‚Р°РЅРѕРІР»РµРЅР° СЃ GPT</li>
-                <li><strong>Р”СЂСѓРіРёРµ РћРЎ:</strong> Linux РёР»Рё macOS РёСЃРїРѕР»СЊР·СѓСЋС‚ GPT</li>
-                <li><strong>Р’РЅРµС€РЅРёРµ РґРёСЃРєРё:</strong> USB РґРёСЃРєРё С‡Р°СЃС‚Рѕ РёРјРµСЋС‚ GPT</li>
+                <li><strong>Современные диски:</strong> Новые диски часто поставляются с GPT</li>
+                <li><strong>Предыдущая установка:</strong> Windows 11 уже установлена с GPT</li>
+                <li><strong>Другие ОС:</strong> Linux или macOS используют GPT</li>
+                <li><strong>Внешние диски:</strong> USB диски часто имеют GPT</li>
             </ul>
 
-            <h3>РџСЂРѕР±Р»РµРјС‹ СЃ СѓСЃС‚Р°РЅРѕРІРєРѕР№</h3>
+            <h3>Проблемы с установкой</h3>
             <ul>
-                <li><strong>Legacy СЂРµР¶РёРј:</strong> Р—Р°РіСЂСѓР·РєР° РІ BIOS СЂРµР¶РёРјРµ</li>
-                <li><strong>CSM РІРєР»СЋС‡РµРЅ:</strong> Compatibility Support Module</li>
-                <li><strong>РЎС‚Р°СЂС‹Р№ СѓСЃС‚Р°РЅРѕРІС‰РёРє:</strong> РСЃРїРѕР»СЊР·РѕРІР°РЅРёРµ СЃС‚Р°СЂРѕР№ РІРµСЂСЃРёРё Windows</li>
-                <li><strong>РџРѕРІСЂРµР¶РґРµРЅРЅР°СЏ С‚Р°Р±Р»РёС†Р°:</strong> РћС€РёР±РєРё РІ С‚Р°Р±Р»РёС†Рµ СЂР°Р·РґРµР»РѕРІ</li>
+                <li><strong>Legacy режим:</strong> Загрузка в BIOS режиме</li>
+                <li><strong>CSM включен:</strong> Compatibility Support Module</li>
+                <li><strong>Старый установщик:</strong> Использование старой версии Windows</li>
+                <li><strong>Поврежденная таблица:</strong> Ошибки в таблице разделов</li>
             </ul>
 
-            <h3>РђРїРїР°СЂР°С‚РЅС‹Рµ РїСЂРѕР±Р»РµРјС‹</h3>
+            <h3>Аппаратные проблемы</h3>
             <ul>
-                <li><strong>BIOS РЅР°СЃС‚СЂРѕР№РєРё:</strong> РќРµРїСЂР°РІРёР»СЊРЅС‹Рµ РїР°СЂР°РјРµС‚СЂС‹</li>
-                <li><strong>Р”РёСЃРє РїРѕРІСЂРµР¶РґРµРЅ:</strong> Р¤РёР·РёС‡РµСЃРєРёРµ РґРµС„РµРєС‚С‹</li>
-                <li><strong>РќРµСЃРѕРІРјРµСЃС‚РёРјРѕСЃС‚СЊ:</strong> Р”РёСЃРє РЅРµ РїРѕРґРґРµСЂР¶РёРІР°РµС‚ GPT</li>
-                <li><strong>РљРѕРЅС‚СЂРѕР»Р»РµСЂ:</strong> РџСЂРѕР±Р»РµРјС‹ СЃ SATA РєРѕРЅС‚СЂРѕР»Р»РµСЂРѕРј</li>
+                <li><strong>BIOS настройки:</strong> Неправильные параметры</li>
+                <li><strong>Диск поврежден:</strong> Физические дефекты</li>
+                <li><strong>Несовместимость:</strong> Диск не поддерживает GPT</li>
+                <li><strong>Контроллер:</strong> Проблемы с SATA контроллером</li>
             </ul>
 
-            <h2>Р”РёР°РіРЅРѕСЃС‚РёРєР° РїСЂРѕР±Р»РµРјС‹</h2>
-            <p>РљР°Рє РѕРїСЂРµРґРµР»РёС‚СЊ СЃС‚РёР»СЊ СЂР°Р·РґРµР»РѕРІ РґРёСЃРєР°.</p>
-            <h3>РџСЂРѕРІРµСЂРєР° РІ СѓСЃС‚Р°РЅРѕРІС‰РёРєРµ Windows</h3>
-            <h4>Р’Рѕ РІСЂРµРјСЏ СѓСЃС‚Р°РЅРѕРІРєРё</h4>
+            <h2>Диагностика проблемы</h2>
+            <p>Как определить стиль разделов диска.</p>
+            <h3>Проверка в установщике Windows</h3>
+            <h4>Во время установки</h4>
             <ol>
-                <li>Р—Р°РіСЂСѓР·РёС‚РµСЃСЊ СЃ СѓСЃС‚Р°РЅРѕРІРѕС‡РЅРѕР№ С„Р»РµС€РєРё</li>
-                <li>Р’С‹Р±РµСЂРёС‚Рµ СЏР·С‹Рє Рё РЅР°Р¶РјРёС‚Рµ "Р”Р°Р»РµРµ"</li>
-                <li>Р’С‹Р±РµСЂРёС‚Рµ "РЈСЃС‚Р°РЅРѕРІРєР°" в†’ "РџРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєР°СЏ"</li>
-                <li>РџРѕСЃРјРѕС‚СЂРёС‚Рµ РЅР° СЂР°Р·РґРµР»С‹ РґРёСЃРєР°</li>
-                <li>GPT РґРёСЃРєРё РїРѕРєР°Р·С‹РІР°СЋС‚ EFI СЂР°Р·РґРµР»</li>
+                <li>Загрузитесь с установочной флешки</li>
+                <li>Выберите язык и нажмите "Далее"</li>
+                <li>Выберите "Установка" > "Пользовательская"</li>
+                <li>Посмотрите на разделы диска</li>
+                <li>GPT диски показывают EFI раздел</li>
             </ol>
 
-            <h4>РџСЂРѕРІРµСЂРєР° РІ РєРѕРјР°РЅРґРЅРѕР№ СЃС‚СЂРѕРєРµ</h4>
+            <h4>Проверка в командной строке</h4>
             <ol>
-                <li>Р’ СѓСЃС‚Р°РЅРѕРІС‰РёРєРµ РЅР°Р¶РјРёС‚Рµ Shift + F10</li>
-                <li>Р’РІРµРґРёС‚Рµ: diskpart</li>
+                <li>В установщике нажмите Shift + F10</li>
+                <li>Введите: diskpart</li>
                 <li>list disk</li>
-                <li>РџРѕСЃРјРѕС‚СЂРёС‚Рµ СЃС‚РѕР»Р±РµС† "Gpt" - * РѕР·РЅР°С‡Р°РµС‚ GPT</li>
+                <li>Посмотрите столбец "Gpt" - * означает GPT</li>
             </ol>
 
-            <h3>РџСЂРѕРІРµСЂРєР° BIOS</h3>
+            <h3>Проверка BIOS</h3>
             <ol>
-                <li>РџРµСЂРµР·Р°РіСЂСѓР·РёС‚Рµ РЅРѕСѓС‚Р±СѓРє</li>
-                <li>Р’РѕР№РґРёС‚Рµ РІ BIOS (Del, F2 РёР»Рё F10)</li>
-                <li>РџСЂРѕРІРµСЂСЊС‚Рµ СЂРµР¶РёРј Р·Р°РіСЂСѓР·РєРё: UEFI РёР»Рё Legacy</li>
-                <li>РџСЂРѕРІРµСЂСЊС‚Рµ СЃС‚Р°С‚СѓСЃ Secure Boot</li>
-                <li>РџСЂРѕРІРµСЂСЊС‚Рµ РїРѕСЂСЏРґРѕРє Р·Р°РіСЂСѓР·РєРё</li>
+                <li>Перезагрузите ноутбук</li>
+                <li>Войдите в BIOS (Del, F2 или F10)</li>
+                <li>Проверьте режим загрузки: UEFI или Legacy</li>
+                <li>Проверьте статус Secure Boot</li>
+                <li>Проверьте порядок загрузки</li>
             </ol>
 
-            <h2>Р РµС€РµРЅРёРµ РїСЂРѕР±Р»РµРјС‹</h2>
-            <p>РњРµС‚РѕРґС‹ РёСЃРїСЂР°РІР»РµРЅРёСЏ РїСЂРѕР±Р»РµРјС‹ СЃ GPT СЃС‚РёР»РµРј СЂР°Р·РґРµР»РѕРІ.</p>
-            <h3>РњРµС‚РѕРґ 1: Р’РєР»СЋС‡РµРЅРёРµ UEFI СЂРµР¶РёРјР°</h3>
-            <h4>РќР°СЃС‚СЂРѕР№РєРё BIOS</h4>
+            <h2>Решение проблемы</h2>
+            <p>Методы исправления проблемы с GPT стилем разделов.</p>
+            <h3>Метод 1: Включение UEFI режима</h3>
+            <h4>Настройки BIOS</h4>
             <ol>
-                <li>Р’РѕР№РґРёС‚Рµ РІ BIOS</li>
-                <li>РќР°Р№РґРёС‚Рµ СЂР°Р·РґРµР» Boot</li>
-                <li>Р’РєР»СЋС‡РёС‚Рµ UEFI СЂРµР¶РёРј (РѕС‚РєР»СЋС‡РёС‚Рµ Legacy/CSM)</li>
-                <li>Р’РєР»СЋС‡РёС‚Рµ Secure Boot</li>
-                <li>РЎРѕС…СЂР°РЅРёС‚Рµ РёР·РјРµРЅРµРЅРёСЏ</li>
+                <li>Войдите в BIOS</li>
+                <li>Найдите раздел Boot</li>
+                <li>Включите UEFI режим (отключите Legacy/CSM)</li>
+                <li>Включите Secure Boot</li>
+                <li>Сохраните изменения</li>
             </ol>
 
-            <h3>РњРµС‚РѕРґ 2: РљРѕРЅРІРµСЂС‚Р°С†РёСЏ РґРёСЃРєР°</h3>
-            <h4>РР· MBR РІ GPT</h4>
+            <h3>Метод 2: Конвертация диска</h3>
+            <h4>Из MBR в GPT</h4>
             <ol>
-                <li>РЎРѕР·РґР°Р№С‚Рµ СЂРµР·РµСЂРІРЅСѓСЋ РєРѕРїРёСЋ РґР°РЅРЅС‹С…</li>
-                <li>Р—Р°РіСЂСѓР·РёС‚РµСЃСЊ СЃ СѓСЃС‚Р°РЅРѕРІРѕС‡РЅРѕР№ С„Р»РµС€РєРё</li>
-                <li>РќР°Р¶РјРёС‚Рµ Shift + F10 РґР»СЏ РєРѕРјР°РЅРґРЅРѕР№ СЃС‚СЂРѕРєРё</li>
-                <li>Р’РІРµРґРёС‚Рµ: diskpart</li>
+                <li>Создайте резервную копию данных</li>
+                <li>Загрузитесь с установочной флешки</li>
+                <li>Нажмите Shift + F10 для командной строки</li>
+                <li>Введите: diskpart</li>
                 <li>list disk</li>
-                <li>select disk X (РЅРѕРјРµСЂ РґРёСЃРєР°)</li>
+                <li>select disk X (номер диска)</li>
                 <li>clean</li>
                 <li>convert gpt</li>
                 <li>create partition efi size=100</li>
@@ -168,127 +446,127 @@
                 <li>exit</li>
             </ol>
 
-            <h3>РњРµС‚РѕРґ 3: Р§РёСЃС‚Р°СЏ СѓСЃС‚Р°РЅРѕРІРєР°</h3>
-            <h4>РЈРґР°Р»РµРЅРёРµ РІСЃРµС… СЂР°Р·РґРµР»РѕРІ</h4>
+            <h3>Метод 3: Чистая установка</h3>
+            <h4>Удаление всех разделов</h4>
             <ol>
-                <li>Р—Р°РіСЂСѓР·РёС‚РµСЃСЊ СЃ СѓСЃС‚Р°РЅРѕРІРѕС‡РЅРѕР№ С„Р»РµС€РєРё</li>
-                <li>Р’С‹Р±РµСЂРёС‚Рµ "РЈСЃС‚Р°РЅРѕРІРєР°" в†’ "РџРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєР°СЏ"</li>
-                <li>РЈРґР°Р»РёС‚Рµ РІСЃРµ СЂР°Р·РґРµР»С‹ РЅР° СЃРёСЃС‚РµРјРЅРѕРј РґРёСЃРєРµ</li>
-                <li>Windows Р°РІС‚РѕРјР°С‚РёС‡РµСЃРєРё СЃРѕР·РґР°СЃС‚ GPT СЂР°Р·РґРµР»С‹</li>
-                <li>РЈСЃС‚Р°РЅРѕРІРёС‚Рµ Windows</li>
+                <li>Загрузитесь с установочной флешки</li>
+                <li>Выберите "Установка" > "Пользовательская"</li>
+                <li>Удалите все разделы на системном диске</li>
+                <li>Windows автоматически создаст GPT разделы</li>
+                <li>Установите Windows</li>
             </ol>
 
-            <h3>РњРµС‚РѕРґ 4: РСЃРїРѕР»СЊР·РѕРІР°РЅРёРµ MBR2GPT</h3>
-            <h4>РРЅСЃС‚СЂСѓРјРµРЅС‚ Microsoft</h4>
+            <h3>Метод 4: Использование MBR2GPT</h3>
+            <h4>Инструмент Microsoft</h4>
             <ol>
-                <li>Р—Р°РіСЂСѓР·РёС‚РµСЃСЊ РІ СЃСѓС‰РµСЃС‚РІСѓСЋС‰СѓСЋ Windows</li>
-                <li>РћС‚РєСЂРѕР№С‚Рµ РєРѕРјР°РЅРґРЅСѓСЋ СЃС‚СЂРѕРєСѓ РѕС‚ РёРјРµРЅРё Р°РґРјРёРЅРёСЃС‚СЂР°С‚РѕСЂР°</li>
-                <li>Р’РІРµРґРёС‚Рµ: mbr2gpt /validate /disk:X</li>
-                <li>Р•СЃР»Рё РІР°Р»РёРґР°С†РёСЏ РїСЂРѕС€Р»Р°: mbr2gpt /convert /disk:X</li>
-                <li>РџРµСЂРµР·Р°РіСЂСѓР·РёС‚Рµ СЃРёСЃС‚РµРјСѓ</li>
+                <li>Загрузитесь в существующую Windows</li>
+                <li>Откройте командную строку от имени администратора</li>
+                <li>Введите: mbr2gpt /validate /disk:X</li>
+                <li>Если валидация прошла: mbr2gpt /convert /disk:X</li>
+                <li>Перезагрузите систему</li>
             </ol>
 
-            <h3>РњРµС‚РѕРґ 5: РџСЂРѕРІРµСЂРєР° РґРёСЃРєР°</h3>
+            <h3>Метод 5: Проверка диска</h3>
             <h4>CHKDSK</h4>
             <ol>
-                <li>Р—Р°РіСЂСѓР·РёС‚РµСЃСЊ СЃ С„Р»РµС€РєРё</li>
-                <li>РќР°Р¶РјРёС‚Рµ Shift + F10</li>
-                <li>Р’РІРµРґРёС‚Рµ: chkdsk C: /f /r</li>
-                <li>Р”РѕР¶РґРёС‚РµСЃСЊ Р·Р°РІРµСЂС€РµРЅРёСЏ</li>
-                <li>РџРѕРїСЂРѕР±СѓР№С‚Рµ СѓСЃС‚Р°РЅРѕРІРёС‚СЊ Windows</li>
+                <li>Загрузитесь с флешки</li>
+                <li>Нажмите Shift + F10</li>
+                <li>Введите: chkdsk C: /f /r</li>
+                <li>Дождитесь завершения</li>
+                <li>Попробуйте установить Windows</li>
             </ol>
 
-            <h2>РЎРїРµС†РёС„РёС‡РµСЃРєРёРµ СЃР»СѓС‡Р°Рё</h2>
-            <p>Р РµС€РµРЅРёСЏ РґР»СЏ СЂР°СЃРїСЂРѕСЃС‚СЂР°РЅРµРЅРЅС‹С… СЃС†РµРЅР°СЂРёРµРІ.</p>
-            <h3>РћС€РёР±РєР° РЅР° СЃС‚Р°СЂРѕРј РЅРѕСѓС‚Р±СѓРєРµ</h3>
+            <h2>Специфические случаи</h2>
+            <p>Решения для распространенных сценариев.</p>
+            <h3>Ошибка на старом ноутбуке</h3>
             <ul>
-                <li>РџСЂРѕРІРµСЂСЊС‚Рµ РїРѕРґРґРµСЂР¶РєСѓ UEFI РІ BIOS</li>
-                <li>РћР±РЅРѕРІРёС‚Рµ BIOS РґРѕ РїРѕСЃР»РµРґРЅРµР№ РІРµСЂСЃРёРё</li>
-                <li>Р Р°СЃСЃРјРѕС‚СЂРёС‚Рµ Р·Р°РјРµРЅСѓ РґРёСЃРєР°</li>
-                <li>РЈСЃС‚Р°РЅРѕРІРёС‚Рµ Windows 10 РІРјРµСЃС‚Рѕ 11</li>
+                <li>Проверьте поддержку UEFI в BIOS</li>
+                <li>Обновите BIOS до последней версии</li>
+                <li>Рассмотрите замену диска</li>
+                <li>Установите Windows 10 вместо 11</li>
             </ul>
 
-            <h3>РћС€РёР±РєР° СЃ РІРЅРµС€РЅРёРј РґРёСЃРєРѕРј</h3>
+            <h3>Ошибка с внешним диском</h3>
             <ul>
-                <li>Р’РЅРµС€РЅРёРµ РґРёСЃРєРё С‡Р°СЃС‚Рѕ РёРјРµСЋС‚ GPT</li>
-                <li>РџРѕРїСЂРѕР±СѓР№С‚Рµ РґСЂСѓРіРѕР№ USB РїРѕСЂС‚</li>
-                <li>РџСЂРѕС‚РµСЃС‚РёСЂСѓР№С‚Рµ РЅР° РґСЂСѓРіРѕРј РєРѕРјРїСЊСЋС‚РµСЂРµ</li>
-                <li>Р¤РѕСЂРјР°С‚РёСЂСѓР№С‚Рµ РґРёСЃРє РїСЂРё РЅРµРѕР±С…РѕРґРёРјРѕСЃС‚Рё</li>
+                <li>Внешние диски часто имеют GPT</li>
+                <li>Попробуйте другой USB порт</li>
+                <li>Протестируйте на другом компьютере</li>
+                <li>Форматируйте диск при необходимости</li>
             </ul>
 
-            <h3>РћС€РёР±РєР° РїРѕСЃР»Рµ РєРѕРЅРІРµСЂС‚Р°С†РёРё</h3>
+            <h3>Ошибка после конвертации</h3>
             <ul>
-                <li>РџСЂРѕРІРµСЂСЊС‚Рµ РїСЂР°РІРёР»СЊРЅРѕСЃС‚СЊ РєРѕРЅРІРµСЂС‚Р°С†РёРё</li>
-                <li>РЈРґР°Р»РёС‚Рµ РІСЃРµ СЂР°Р·РґРµР»С‹ Рё СЃРѕР·РґР°Р№С‚Рµ Р·Р°РЅРѕРІРѕ</li>
-                <li>РСЃРїРѕР»СЊР·СѓР№С‚Рµ diskpart РґР»СЏ СЃРѕР·РґР°РЅРёСЏ СЂР°Р·РґРµР»РѕРІ</li>
-                <li>РџРѕРїСЂРѕР±СѓР№С‚Рµ С‡РёСЃС‚СѓСЋ СѓСЃС‚Р°РЅРѕРІРєСѓ</li>
+                <li>Проверьте правильность конвертации</li>
+                <li>Удалите все разделы и создайте заново</li>
+                <li>Используйте diskpart для создания разделов</li>
+                <li>Попробуйте чистую установку</li>
             </ul>
 
-            <h2>РџСЂРѕС„РёР»Р°РєС‚РёРєР°</h2>
-            <p>РљР°Рє РёР·Р±РµР¶Р°С‚СЊ РїСЂРѕР±Р»РµРј СЃ GPT СЃС‚РёР»РµРј СЂР°Р·РґРµР»РѕРІ.</p>
-            <h3>РџРѕРґРіРѕС‚РѕРІРєР° РґРёСЃРєР°</h3>
+            <h2>Профилактика</h2>
+            <p>Как избежать проблем с GPT стилем разделов.</p>
+            <h3>Подготовка диска</h3>
             <ul>
-                <li><strong>Р РµР·РµСЂРІРЅС‹Рµ РєРѕРїРёРё:</strong> РЎРѕС…СЂР°РЅРёС‚Рµ РІР°Р¶РЅС‹Рµ РґР°РЅРЅС‹Рµ</li>
-                <li><strong>РџСЂРѕРІРµСЂРєР° BIOS:</strong> РЈР±РµРґРёС‚РµСЃСЊ РІ UEFI СЂРµР¶РёРјРµ</li>
-                <li><strong>Р§РёСЃС‚Р°СЏ СѓСЃС‚Р°РЅРѕРІРєР°:</strong> РЈРґР°Р»РёС‚Рµ РІСЃРµ СЂР°Р·РґРµР»С‹ РїРµСЂРµРґ СѓСЃС‚Р°РЅРѕРІРєРѕР№</li>
-                <li><strong>РЎРѕРІСЂРµРјРµРЅРЅС‹Рµ РґРёСЃРєРё:</strong> РСЃРїРѕР»СЊР·СѓР№С‚Рµ РґРёСЃРєРё СЃ GPT</li>
+                <li><strong>Резервные копии:</strong> Сохраните важные данные</li>
+                <li><strong>Проверка BIOS:</strong> Убедитесь в UEFI режиме</li>
+                <li><strong>Чистая установка:</strong> Удалите все разделы перед установкой</li>
+                <li><strong>Современные диски:</strong> Используйте диски с GPT</li>
             </ul>
 
-            <h3>Р‘РµР·РѕРїР°СЃРЅРѕСЃС‚СЊ СѓСЃС‚Р°РЅРѕРІРєРё</h3>
+            <h3>Безопасность установки</h3>
             <ul>
-                <li>Р—Р°РіСЂСѓР¶Р°Р№С‚Рµ Windows С‚РѕР»СЊРєРѕ СЃ РѕС„РёС†РёР°Р»СЊРЅРѕРіРѕ СЃР°Р№С‚Р°</li>
-                <li>РџСЂРѕРІРµСЂСЏР№С‚Рµ СЃРѕРІРјРµСЃС‚РёРјРѕСЃС‚СЊ РѕР±РѕСЂСѓРґРѕРІР°РЅРёСЏ</li>
-                <li>РћР±РЅРѕРІР»СЏР№С‚Рµ BIOS РїРµСЂРµРґ СѓСЃС‚Р°РЅРѕРІРєРѕР№</li>
-                <li>РЎР»РµРґРёС‚Рµ Р·Р° РЅР°СЃС‚СЂРѕР№РєР°РјРё Р·Р°РіСЂСѓР·РєРё</li>
+                <li>Загружайте Windows только с официального сайта</li>
+                <li>Проверяйте совместимость оборудования</li>
+                <li>Обновляйте BIOS перед установкой</li>
+                <li>Следите за настройками загрузки</li>
             </ul>
 
             <div class="pro-tips">
-                <h4>РџРѕР»РµР·РЅС‹Рµ СЃРѕРІРµС‚С‹</h4>
+                <h4>Полезные советы</h4>
                 <div class="tip-item">
                     <i class="fas fa-lightbulb"></i>
-                    <span>GPT - СЃРѕРІСЂРµРјРµРЅРЅС‹Р№ СЃС‚Р°РЅРґР°СЂС‚ РґР»СЏ РЅРѕРІС‹С… РґРёСЃРєРѕРІ</span>
+                    <span>GPT - современный стандарт для новых дисков</span>
                 </div>
                 <div class="tip-item">
                     <i class="fas fa-lightbulb"></i>
-                    <span>Windows 11 С‚СЂРµР±СѓРµС‚ UEFI Рё GPT РґР»СЏ СѓСЃС‚Р°РЅРѕРІРєРё</span>
+                    <span>Windows 11 требует UEFI и GPT для установки</span>
                 </div>
                 <div class="tip-item">
                     <i class="fas fa-lightbulb"></i>
-                    <span>Р’СЃРµРіРґР° РґРµР»Р°Р№С‚Рµ СЂРµР·РµСЂРІРЅС‹Рµ РєРѕРїРёРё РїРµСЂРµРґ РёР·РјРµРЅРµРЅРёРµРј СЂР°Р·РґРµР»РѕРІ</span>
+                    <span>Всегда делайте резервные копии перед изменением разделов</span>
                 </div>
                 <div class="tip-item">
                     <i class="fas fa-lightbulb"></i>
-                    <span>Р•СЃР»Рё РґРёСЃРє СЃС‚Р°СЂС‹Р№, СЂР°СЃСЃРјРѕС‚СЂРёС‚Рµ РµРіРѕ Р·Р°РјРµРЅСѓ</span>
+                    <span>Если диск старый, рассмотрите его замену</span>
                 </div>
             </div>
 
-            <h2>РљРѕРіРґР° РЅСѓР¶РЅР° РїРѕРјРѕС‰СЊ СЃРїРµС†РёР°Р»РёСЃС‚Р°</h2>
-            <p>РџСЂРёР·РЅР°РєРё СЃРµСЂСЊРµР·РЅС‹С… РїСЂРѕР±Р»РµРј.</p>
-            <h3>РљСЂРёС‚РёС‡РµСЃРєРёРµ СЃР»СѓС‡Р°Рё</h3>
+            <h2>Когда нужна помощь специалиста</h2>
+            <p>Признаки серьезных проблем.</p>
+            <h3>Критические случаи</h3>
             <ul>
-                <li>BIOS РЅРµ РїРѕРґРґРµСЂР¶РёРІР°РµС‚ UEFI</li>
-                <li>Р”РёСЃРє С„РёР·РёС‡РµСЃРєРё РїРѕРІСЂРµР¶РґРµРЅ</li>
-                <li>РџРѕС‚РµСЂСЏ РґР°РЅРЅС‹С… РїРѕСЃР»Рµ РєРѕРЅРІРµСЂС‚Р°С†РёРё</li>
-                <li>РќРµРѕР±С…РѕРґРёРјР° Р·Р°РјРµРЅР° РѕР±РѕСЂСѓРґРѕРІР°РЅРёСЏ</li>
+                <li>BIOS не поддерживает UEFI</li>
+                <li>Диск физически поврежден</li>
+                <li>Потеря данных после конвертации</li>
+                <li>Необходима замена оборудования</li>
             </ul>
 
-            <h3>Р§С‚Рѕ РїСЂРѕРІРµСЂРёС‚СЊ РІ СЃРµСЂРІРёСЃРµ</h3>
+            <h3>Что проверить в сервисе</h3>
             <ul>
-                <li>РЎРѕРІРјРµСЃС‚РёРјРѕСЃС‚СЊ РѕР±РѕСЂСѓРґРѕРІР°РЅРёСЏ</li>
-                <li>РќР°СЃС‚СЂРѕР№РєРё BIOS</li>
-                <li>Р¦РµР»РѕСЃС‚РЅРѕСЃС‚СЊ РґРёСЃРєР°</li>
-                <li>Р’РѕР·РјРѕР¶РЅРѕСЃС‚СЊ РІРѕСЃСЃС‚Р°РЅРѕРІР»РµРЅРёСЏ РґР°РЅРЅС‹С…</li>
+                <li>Совместимость оборудования</li>
+                <li>Настройки BIOS</li>
+                <li>Целостность диска</li>
+                <li>Возможность восстановления данных</li>
             </ul>
 
-            <h2>Р—Р°РєР»СЋС‡РµРЅРёРµ</h2>
-            <p>РЎРѕРѕР±С‰РµРЅРёРµ "Р’С‹Р±СЂР°РЅРЅС‹Р№ РґРёСЃРє РёРјРµРµС‚ СЃС‚РёР»СЊ СЂР°Р·РґРµР»РѕРІ GPT" РѕР±С‹С‡РЅРѕ СѓРєР°Р·С‹РІР°РµС‚ РЅР° С‚Рѕ, С‡С‚Рѕ РґРёСЃРє РїСЂР°РІРёР»СЊРЅРѕ РїРѕРґРіРѕС‚РѕРІР»РµРЅ РґР»СЏ Windows 11. Р•СЃР»Рё СѓСЃС‚Р°РЅРѕРІРєР° РЅРµ РїСЂРѕС…РѕРґРёС‚, РїСЂРѕРІРµСЂСЊС‚Рµ РЅР°СЃС‚СЂРѕР№РєРё BIOS Рё СЂРµР¶РёРј Р·Р°РіСЂСѓР·РєРё. Р’ Р±РѕР»СЊС€РёРЅСЃС‚РІРµ СЃР»СѓС‡Р°РµРІ РїСЂРѕР±Р»РµРјР° СЂРµС€Р°РµС‚СЃСЏ РІРєР»СЋС‡РµРЅРёРµРј UEFI СЂРµР¶РёРјР°. РќР°С‡РЅРёС‚Рµ СЃ РїСЂРѕРІРµСЂРєРё BIOS, Р·Р°С‚РµРј РїРµСЂРµС…РѕРґРёС‚Рµ Рє С‡РёСЃС‚РѕР№ СѓСЃС‚Р°РЅРѕРІРєРµ. Р•СЃР»Рё СЃР°РјРѕСЃС‚РѕСЏС‚РµР»СЊРЅС‹Рµ РїРѕРїС‹С‚РєРё РЅРµ СѓРІРµРЅС‡Р°Р»РёСЃСЊ СѓСЃРїРµС…РѕРј, РѕР±СЂР°С‚РёС‚РµСЃСЊ Рє СЃРїРµС†РёР°Р»РёСЃС‚Р°Рј РґР»СЏ РїСЂРѕС„РµСЃСЃРёРѕРЅР°Р»СЊРЅРѕР№ РїРѕРјРѕС‰Рё.</p>
+            <h2>Заключение</h2>
+            <p>Сообщение "Выбранный диск имеет стиль разделов GPT" обычно указывает на то, что диск правильно подготовлен для Windows 11. Если установка не проходит, проверьте настройки BIOS и режим загрузки. В большинстве случаев проблема решается включением UEFI режима. Начните с проверки BIOS, затем переходите к чистой установке. Если самостоятельные попытки не увенчались успехом, обратитесь к специалистам для профессиональной помощи.</p>
         </div>
     </main>
 
     <footer class="footer">
         <div class="container">
             <div class="footer__content">
-                <p>&copy; 2024 Repairo. Р’СЃРµ РїСЂР°РІР° Р·Р°С‰РёС‰РµРЅС‹.</p>
+                <p>&copy; 2024 Repairo. Все права защищены.</p>
             </div>
         </div>
     </footer>
@@ -297,3 +575,9 @@
     <script src="../cookie-consent.js"></script>
 </body>
 </html>
+
+
+
+
+
+

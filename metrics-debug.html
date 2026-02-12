@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Р”РµС‚Р°Р»СЊРЅР°СЏ РџСЂРѕРІРµСЂРєР° РњРµС‚СЂРёРє - Repairo</title>
+    <title>Детальная Проверка Метрик - Repairo</title>
     <style>
         body { font-family: Arial, sans-serif; margin: 20px; line-height: 1.6; }
         .status { padding: 15px; margin: 10px 0; border-radius: 8px; border-left: 4px solid; }
@@ -25,85 +25,85 @@
     </style>
 </head>
 <body>
-    <h1>рџ”Ќ Р”РµС‚Р°Р»СЊРЅР°СЏ РџСЂРѕРІРµСЂРєР° РќР°СЃС‚СЂРѕРµРє РњРµС‚СЂРёРє</h1>
+    <h1>?? Детальная Проверка Настроек Метрик</h1>
     
     <div class="info">
-        <strong>Р¦РµР»СЊ РїСЂРѕРІРµСЂРєРё:</strong> РЈР±РµРґРёС‚СЊСЃСЏ, С‡С‚Рѕ РЇРЅРґРµРєСЃ.РњРµС‚СЂРёРєР° Рё Google Analytics РєРѕСЂСЂРµРєС‚РЅРѕ РїРѕРґРєР»СЋС‡Р°СЋС‚СЃСЏ РїРѕСЃР»Рµ СЃРѕРіР»Р°СЃРёСЏ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ Рё РёСЃРїРѕР»СЊР·СѓСЋС‚ РїСЂР°РІРёР»СЊРЅС‹Рµ ID СЃС‡РµС‚С‡РёРєРѕРІ.
+        <strong>Цель проверки:</strong> Убедиться, что Яндекс.Метрика и Google Analytics корректно подключаются после согласия пользователя и используют правильные ID счетчиков.
     </div>
 
     <div class="grid">
         <div class="card">
-            <h3>рџ“Љ РЎС‚Р°С‚СѓСЃ РЎРёСЃС‚РµРј</h3>
+            <h3>?? Статус Систем</h3>
             <div id="system-status">
-                <div id="cookie-status" class="status info">РџСЂРѕРІРµСЂРєР° cookie...</div>
-                <div id="consent-status" class="status info">РџСЂРѕРІРµСЂРєР° СЃРѕРіР»Р°СЃРёСЏ...</div>
-                <div id="loading-status" class="status info">РџСЂРѕРІРµСЂРєР° Р·Р°РіСЂСѓР·РєРё...</div>
+                <div id="cookie-status" class="status info">Проверка cookie...</div>
+                <div id="consent-status" class="status info">Проверка согласия...</div>
+                <div id="loading-status" class="status info">Проверка загрузки...</div>
             </div>
         </div>
         
         <div class="card">
-            <h3>рџЋЇ ID РЎС‡РµС‚С‡РёРєРѕРІ</h3>
+            <h3>?? ID Счетчиков</h3>
             <div id="counter-ids">
-                <p><strong>РЇРЅРґРµРєСЃ.РњРµС‚СЂРёРєР°:</strong> <span class="metric-id">106225686</span></p>
+                <p><strong>Яндекс.Метрика:</strong> <span class="metric-id">106225686</span></p>
                 <p><strong>Google Analytics:</strong> <span class="metric-id">G-YE88Y994NX</span></p>
-                <div id="id-verification" class="status info">РџСЂРѕРІРµСЂРєР° ID...</div>
+                <div id="id-verification" class="status info">Проверка ID...</div>
             </div>
         </div>
     </div>
 
     <div class="card">
-        <h3>рџ”§ Р”РµС‚Р°Р»СЊРЅР°СЏ РџСЂРѕРІРµСЂРєР° РњРµС‚СЂРёРє</h3>
+        <h3>?? Детальная Проверка Метрик</h3>
         <div id="detailed-status">
-            <div id="yandex-detailed" class="status info">РџСЂРѕРІРµСЂРєР° РЇРЅРґРµРєСЃ.РњРµС‚СЂРёРєРё...</div>
-            <div id="google-detailed" class="status info">РџСЂРѕРІРµСЂРєР° Google Analytics...</div>
+            <div id="yandex-detailed" class="status info">Проверка Яндекс.Метрики...</div>
+            <div id="google-detailed" class="status info">Проверка Google Analytics...</div>
         </div>
     </div>
 
     <div class="card">
-        <h3>рџЊђ РЎРµС‚РµРІС‹Рµ Р—Р°РїСЂРѕСЃС‹</h3>
-        <div id="network-status" class="status info">РђРЅР°Р»РёР· СЃРµС‚РµРІС‹С… Р·Р°РїСЂРѕСЃРѕРІ...</div>
-        <button onclick="checkNetworkRequests()">РџСЂРѕРІРµСЂРёС‚СЊ СЃРµС‚РµРІС‹Рµ Р·Р°РїСЂРѕСЃС‹</button>
+        <h3>?? Сетевые Запросы</h3>
+        <div id="network-status" class="status info">Анализ сетевых запросов...</div>
+        <button onclick="checkNetworkRequests()">Проверить сетевые запросы</button>
     </div>
 
     <div class="card">
-        <h3>рџЋ® РЈРїСЂР°РІР»РµРЅРёРµ РўРµСЃС‚РёСЂРѕРІР°РЅРёРµРј</h3>
-        <button onclick="fullCheck()">рџ”„ РџРѕР»РЅР°СЏ РїСЂРѕРІРµСЂРєР°</button>
-        <button onclick="simulateNewUser()">рџ‘¤ РЎРёРјСѓР»РёСЂРѕРІР°С‚СЊ РЅРѕРІРѕРіРѕ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ</button>
-        <button onclick="forceConsent()">вњ… РџСЂРёРЅСѓРґРёС‚РµР»СЊРЅРѕ РґР°С‚СЊ СЃРѕРіР»Р°СЃРёРµ</button>
-        <button onclick="testMetrics()">рџ“Љ РўРµСЃС‚РёСЂРѕРІР°С‚СЊ РјРµС‚СЂРёРєРё</button>
-        <button onclick="clearAllData()" class="secondary">рџ—‘пёЏ РћС‡РёСЃС‚РёС‚СЊ РІСЃРµ РґР°РЅРЅС‹Рµ</button>
+        <h3>?? Управление Тестированием</h3>
+        <button onclick="fullCheck()">?? Полная проверка</button>
+        <button onclick="simulateNewUser()">?? Симулировать нового пользователя</button>
+        <button onclick="forceConsent()">? Принудительно дать согласие</button>
+        <button onclick="testMetrics()">?? Тестировать метрики</button>
+        <button onclick="clearAllData()" class="secondary">??? Очистить все данные</button>
     </div>
 
     <div class="card">
-        <h3>рџ“‹ РџРѕС€Р°РіРѕРІР°СЏ РРЅСЃС‚СЂСѓРєС†РёСЏ</h3>
+        <h3>?? Пошаговая Инструкция</h3>
         <div class="step">
-            <h4>РЁР°Рі 1: РџСЂРѕРІРµСЂРєР° РЅР°С‡Р°Р»СЊРЅРѕРіРѕ СЃРѕСЃС‚РѕСЏРЅРёСЏ</h4>
-            <p>РЈР±РµРґРёС‚РµСЃСЊ, С‡С‚Рѕ РјРµС‚СЂРёРєРё РќР• Р·Р°РіСЂСѓР¶РµРЅС‹ Р±РµР· СЃРѕРіР»Р°СЃРёСЏ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ</p>
+            <h4>Шаг 1: Проверка начального состояния</h4>
+            <p>Убедитесь, что метрики НЕ загружены без согласия пользователя</p>
         </div>
         <div class="step">
-            <h4>РЁР°Рі 2: Р”Р°С‡Р° СЃРѕРіР»Р°СЃРёСЏ</h4>
-            <p>РќР°Р¶РјРёС‚Рµ "РџСЂРёРЅСЏС‚СЊ" РІ Р±Р°РЅРЅРµСЂРµ cookie РёР»Рё РёСЃРїРѕР»СЊР·СѓР№С‚Рµ РєРЅРѕРїРєСѓ "РџСЂРёРЅСѓРґРёС‚РµР»СЊРЅРѕ РґР°С‚СЊ СЃРѕРіР»Р°СЃРёРµ"</p>
+            <h4>Шаг 2: Дача согласия</h4>
+            <p>Нажмите "Принять" в баннере cookie или используйте кнопку "Принудительно дать согласие"</p>
         </div>
         <div class="step">
-            <h4>РЁР°Рі 3: РџСЂРѕРІРµСЂРєР° Р·Р°РіСЂСѓР·РєРё</h4>
-            <p>РЈР±РµРґРёС‚РµСЃСЊ, С‡С‚Рѕ РјРµС‚СЂРёРєРё Р·Р°РіСЂСѓР¶РµРЅС‹ Рё СЂР°Р±РѕС‚Р°СЋС‚ РєРѕСЂСЂРµРєС‚РЅРѕ</p>
+            <h4>Шаг 3: Проверка загрузки</h4>
+            <p>Убедитесь, что метрики загружены и работают корректно</p>
         </div>
         <div class="step">
-            <h4>РЁР°Рі 4: РўРµСЃС‚РёСЂРѕРІР°РЅРёРµ</h4>
-            <p>РћС‚РїСЂР°РІСЊС‚Рµ С‚РµСЃС‚РѕРІС‹Рµ СЃРѕР±С‹С‚РёСЏ РІ СЃРёСЃС‚РµРјС‹ Р°РЅР°Р»РёС‚РёРєРё</p>
+            <h4>Шаг 4: Тестирование</h4>
+            <p>Отправьте тестовые события в системы аналитики</p>
         </div>
     </div>
 
     <div class="card">
-        <h3>рџ”Ќ РћС‚Р»Р°РґРѕС‡РЅР°СЏ РРЅС„РѕСЂРјР°С†РёСЏ</h3>
-        <pre id="debug-info">Р—Р°РіСЂСѓР·РєР° РѕС‚Р»Р°РґРѕС‡РЅРѕР№ РёРЅС„РѕСЂРјР°С†РёРё...</pre>
+        <h3>?? Отладочная Информация</h3>
+        <pre id="debug-info">Загрузка отладочной информации...</pre>
     </div>
 
-    <!-- Cookie Banner (РєР°Рє РЅР° РѕСЃРЅРѕРІРЅРѕРј СЃР°Р№С‚Рµ) -->
+    <!-- Cookie Banner (как на основном сайте) -->
     <script src="cookie-consent.js"></script>
     
     <script>
-        // Р Р°СЃС€РёСЂРµРЅРЅС‹Рµ С„СѓРЅРєС†РёРё РїСЂРѕРІРµСЂРєРё
+        // Расширенные функции проверки
         function getCookie(name) {
             const value = `; ${document.cookie}`;
             const parts = value.split(`; ${name}=`);
@@ -129,112 +129,112 @@
         }
 
         function checkSystemStatus() {
-            console.log('рџ”Ќ РџСЂРѕРІРµСЂРєР° СЃРёСЃС‚РµРјРЅРѕРіРѕ СЃС‚Р°С‚СѓСЃР°...');
+            console.log('?? Проверка системного статуса...');
             
-            // РџСЂРѕРІРµСЂРєР° cookie
+            // Проверка cookie
             const cookieConsent = getCookie('cookie_consent');
             if (cookieConsent) {
-                updateStatus('cookie-status', 'success', `вњ“ Cookie СЃРѕРіР»Р°СЃРёРµ РїРѕР»СѓС‡РµРЅРѕ: ${cookieConsent}`);
+                updateStatus('cookie-status', 'success', `? Cookie согласие получено: ${cookieConsent}`);
             } else {
-                updateStatus('cookie-status', 'error', 'вњ— Cookie СЃРѕРіР»Р°СЃРёРµ РЅРµ РїРѕР»СѓС‡РµРЅРѕ');
+                updateStatus('cookie-status', 'error', '? Cookie согласие не получено');
             }
 
-            // РџСЂРѕРІРµСЂРєР° СЃРѕРіР»Р°СЃРёСЏ
+            // Проверка согласия
             if (cookieConsent === 'all') {
-                updateStatus('consent-status', 'success', 'вњ“ РџРѕР»РЅРѕРµ СЃРѕРіР»Р°СЃРёРµ РЅР° РёСЃРїРѕР»СЊР·РѕРІР°РЅРёРµ cookie РїРѕР»СѓС‡РµРЅРѕ');
+                updateStatus('consent-status', 'success', '? Полное согласие на использование cookie получено');
             } else if (cookieConsent) {
-                updateStatus('consent-status', 'warning', `вљ  Р§Р°СЃС‚РёС‡РЅРѕРµ СЃРѕРіР»Р°СЃРёРµ: ${cookieConsent}`);
+                updateStatus('consent-status', 'warning', `? Частичное согласие: ${cookieConsent}`);
             } else {
-                updateStatus('consent-status', 'error', 'вњ— РЎРѕРіР»Р°СЃРёРµ РЅРµ РїРѕР»СѓС‡РµРЅРѕ');
+                updateStatus('consent-status', 'error', '? Согласие не получено');
             }
 
-            // РџСЂРѕРІРµСЂРєР° Р·Р°РіСЂСѓР·РєРё СЃРєСЂРёРїС‚РѕРІ
+            // Проверка загрузки скриптов
             const ymLoaded = typeof window.ym !== 'undefined';
             const gtagLoaded = typeof window.gtag !== 'undefined';
             
             if (ymLoaded && gtagLoaded) {
-                updateStatus('loading-status', 'success', 'вњ“ Р’СЃРµ СЃРєСЂРёРїС‚С‹ Р°РЅР°Р»РёС‚РёРєРё Р·Р°РіСЂСѓР¶РµРЅС‹');
+                updateStatus('loading-status', 'success', '? Все скрипты аналитики загружены');
             } else if (ymLoaded || gtagLoaded) {
-                updateStatus('loading-status', 'warning', `вљ  Р§Р°СЃС‚РёС‡РЅР°СЏ Р·Р°РіСЂСѓР·РєР°: РЇРњ=${ymLoaded}, GA=${gtagLoaded}`);
+                updateStatus('loading-status', 'warning', `? Частичная загрузка: ЯМ=${ymLoaded}, GA=${gtagLoaded}`);
             } else {
-                updateStatus('loading-status', 'error', 'вњ— РЎРєСЂРёРїС‚С‹ Р°РЅР°Р»РёС‚РёРєРё РЅРµ Р·Р°РіСЂСѓР¶РµРЅС‹');
+                updateStatus('loading-status', 'error', '? Скрипты аналитики не загружены');
             }
         }
 
         function checkCounterIDs() {
-            console.log('рџЋЇ РџСЂРѕРІРµСЂРєР° ID СЃС‡РµС‚С‡РёРєРѕРІ...');
+            console.log('?? Проверка ID счетчиков...');
             
             const expectedYandexID = '106225686';
             const expectedGoogleID = 'G-YE88Y994NX';
             
-            // РџСЂРѕРІРµСЂРєР° РЇРЅРґРµРєСЃ.РњРµС‚СЂРёРєРё
+            // Проверка Яндекс.Метрики
             if (typeof window.ym !== 'undefined') {
                 try {
-                    // РџРѕРїС‹С‚РєР° РїРѕР»СѓС‡РёС‚СЊ РёРЅС„РѕСЂРјР°С†РёСЋ Рѕ СЃС‡РµС‚С‡РёРєРµ
-                    updateStatus('id-verification', 'success', `вњ“ РЇРЅРґРµРєСЃ.РњРµС‚СЂРёРєР° СЃ ID ${expectedYandexID} РёРЅРёС†РёР°Р»РёР·РёСЂРѕРІР°РЅР°`);
+                    // Попытка получить информацию о счетчике
+                    updateStatus('id-verification', 'success', `? Яндекс.Метрика с ID ${expectedYandexID} инициализирована`);
                 } catch (e) {
-                    updateStatus('id-verification', 'error', `вњ— РћС€РёР±РєР° РїСЂРѕРІРµСЂРєРё РЇРЅРґРµРєСЃ.РњРµС‚СЂРёРєРё: ${e.message}`);
+                    updateStatus('id-verification', 'error', `? Ошибка проверки Яндекс.Метрики: ${e.message}`);
                 }
             } else {
-                updateStatus('id-verification', 'error', 'вњ— РЇРЅРґРµРєСЃ.РњРµС‚СЂРёРєР° РЅРµ Р·Р°РіСЂСѓР¶РµРЅР°');
+                updateStatus('id-verification', 'error', '? Яндекс.Метрика не загружена');
             }
 
-            // РџСЂРѕРІРµСЂРєР° Google Analytics
+            // Проверка Google Analytics
             if (typeof window.gtag !== 'undefined') {
                 try {
-                    updateStatus('id-verification', 'success', `вњ“ Google Analytics СЃ ID ${expectedGoogleID} РёРЅРёС†РёР°Р»РёР·РёСЂРѕРІР°РЅ`);
+                    updateStatus('id-verification', 'success', `? Google Analytics с ID ${expectedGoogleID} инициализирован`);
                 } catch (e) {
-                    updateStatus('id-verification', 'error', `вњ— РћС€РёР±РєР° РїСЂРѕРІРµСЂРєРё Google Analytics: ${e.message}`);
+                    updateStatus('id-verification', 'error', `? Ошибка проверки Google Analytics: ${e.message}`);
                 }
             }
         }
 
         function detailedMetricsCheck() {
-            console.log('рџ“Љ Р”РµС‚Р°Р»СЊРЅР°СЏ РїСЂРѕРІРµСЂРєР° РјРµС‚СЂРёРє...');
+            console.log('?? Детальная проверка метрик...');
             
-            // РЇРЅРґРµРєСЃ.РњРµС‚СЂРёРєР° РґРµС‚Р°Р»СЊРЅР°СЏ РїСЂРѕРІРµСЂРєР°
+            // Яндекс.Метрика детальная проверка
             if (typeof window.ym !== 'undefined') {
                 try {
                     const yandexStatus = [];
-                    yandexStatus.push('вњ“ РћР±СЉРµРєС‚ ym РґРѕСЃС‚СѓРїРµРЅ');
-                    yandexStatus.push(`вњ“ РЎС‡РµС‚С‡РёРє: 106225686`);
+                    yandexStatus.push('? Объект ym доступен');
+                    yandexStatus.push(`? Счетчик: 106225686`);
                     
-                    // РџСЂРѕРІРµСЂРєР° РјРµС‚РѕРґРѕРІ
+                    // Проверка методов
                     if (typeof window.ym === 'function') {
-                        yandexStatus.push('вњ“ ym СЏРІР»СЏРµС‚СЃСЏ С„СѓРЅРєС†РёРµР№');
+                        yandexStatus.push('? ym является функцией');
                     }
                     
                     updateStatus('yandex-detailed', 'success', yandexStatus.join(' | '));
                 } catch (e) {
-                    updateStatus('yandex-detailed', 'error', `вњ— РћС€РёР±РєР° РЇРЅРґРµРєСЃ.РњРµС‚СЂРёРєРё: ${e.message}`);
+                    updateStatus('yandex-detailed', 'error', `? Ошибка Яндекс.Метрики: ${e.message}`);
                 }
             } else {
-                updateStatus('yandex-detailed', 'error', 'вњ— РЇРЅРґРµРєСЃ.РњРµС‚СЂРёРєР° РЅРµ РґРѕСЃС‚СѓРїРЅР°');
+                updateStatus('yandex-detailed', 'error', '? Яндекс.Метрика не доступна');
             }
 
-            // Google Analytics РґРµС‚Р°Р»СЊРЅР°СЏ РїСЂРѕРІРµСЂРєР°
+            // Google Analytics детальная проверка
             if (typeof window.gtag !== 'undefined') {
                 try {
                     const googleStatus = [];
-                    googleStatus.push('вњ“ РћР±СЉРµРєС‚ gtag РґРѕСЃС‚СѓРїРµРЅ');
-                    googleStatus.push('вњ“ РЎС‡РµС‚С‡РёРє: G-YE88Y994NX');
+                    googleStatus.push('? Объект gtag доступен');
+                    googleStatus.push('? Счетчик: G-YE88Y994NX');
                     
                     if (typeof window.dataLayer !== 'undefined') {
-                        googleStatus.push('вњ“ DataLayer РґРѕСЃС‚СѓРїРµРЅ');
-                        googleStatus.push(`вњ“ РЎРѕР±С‹С‚РёР№ РІ DataLayer: ${window.dataLayer.length}`);
+                        googleStatus.push('? DataLayer доступен');
+                        googleStatus.push(`? Событий в DataLayer: ${window.dataLayer.length}`);
                     }
                     
                     updateStatus('google-detailed', 'success', googleStatus.join(' | '));
                 } catch (e) {
-                    updateStatus('google-detailed', 'error', `вњ— РћС€РёР±РєР° Google Analytics: ${e.message}`);
+                    updateStatus('google-detailed', 'error', `? Ошибка Google Analytics: ${e.message}`);
                 }
             } else {
-                updateStatus('google-detailed', 'error', 'вњ— Google Analytics РЅРµ РґРѕСЃС‚СѓРїРµРЅ');
+                updateStatus('google-detailed', 'error', '? Google Analytics не доступен');
             }
         }
 
         function checkNetworkRequests() {
-            console.log('рџЊђ РџСЂРѕРІРµСЂРєР° СЃРµС‚РµРІС‹С… Р·Р°РїСЂРѕСЃРѕРІ...');
+            console.log('?? Проверка сетевых запросов...');
             
             const requests = [];
             const scripts = document.scripts;
@@ -250,10 +250,10 @@
             }
             
             if (requests.length > 0) {
-                const message = `вњ“ РќР°Р№РґРµРЅРѕ ${requests.length} СЃРєСЂРёРїС‚РѕРІ Р°РЅР°Р»РёС‚РёРєРё: ${requests.map(r => r.src.split('/').pop()).join(', ')}`;
+                const message = `? Найдено ${requests.length} скриптов аналитики: ${requests.map(r => r.src.split('/').pop()).join(', ')}`;
                 updateStatus('network-status', 'success', message);
             } else {
-                updateStatus('network-status', 'error', 'вњ— РЎРєСЂРёРїС‚С‹ Р°РЅР°Р»РёС‚РёРєРё РЅРµ РЅР°Р№РґРµРЅС‹ РІ DOM');
+                updateStatus('network-status', 'error', '? Скрипты аналитики не найдены в DOM');
             }
             
             return requests;
@@ -261,37 +261,37 @@
 
         function updateDebugInfo() {
             const debugInfo = {
-                'Р’СЂРµРјСЏ РїСЂРѕРІРµСЂРєРё': new Date().toISOString(),
-                'URL СЃС‚СЂР°РЅРёС†С‹': window.location.href,
+                'Время проверки': new Date().toISOString(),
+                'URL страницы': window.location.href,
                 'User Agent': navigator.userAgent,
-                'Cookie СЃРѕРіР»Р°СЃРёРµ': getCookie('cookie_consent'),
-                'Р’СЃРµ cookie': document.cookie,
-                'РЇРЅРґРµРєСЃ.РњРµС‚СЂРёРєР° (ym)': typeof window.ym !== 'undefined',
+                'Cookie согласие': getCookie('cookie_consent'),
+                'Все cookie': document.cookie,
+                'Яндекс.Метрика (ym)': typeof window.ym !== 'undefined',
                 'Google Analytics (gtag)': typeof window.gtag !== 'undefined',
                 'DataLayer': typeof window.dataLayer !== 'undefined',
-                'DataLayer СЂР°Р·РјРµСЂ': typeof window.dataLayer !== 'undefined' ? window.dataLayer.length : 'N/A',
-                'РЎС‡РµС‚С‡РёРєРё РІ DOM': document.querySelectorAll('script[src*="yandex"], script[src*="google"]').length,
-                'IP Р°РґСЂРµСЃ (Р·Р°РіСЂСѓР·РєР°)': 'РџСЂРѕРІРµСЂСЏРµС‚СЃСЏ...',
-                'Р“РµРѕР»РѕРєР°С†РёСЏ': 'РџСЂРѕРІРµСЂСЏРµС‚СЃСЏ...'
+                'DataLayer размер': typeof window.dataLayer !== 'undefined' ? window.dataLayer.length : 'N/A',
+                'Счетчики в DOM': document.querySelectorAll('script[src*="yandex"], script[src*="google"]').length,
+                'IP адрес (загрузка)': 'Проверяется...',
+                'Геолокация': 'Проверяется...'
             };
             
             document.getElementById('debug-info').textContent = JSON.stringify(debugInfo, null, 2);
             
-            // РџРѕРїС‹С‚РєР° РїРѕР»СѓС‡РёС‚СЊ IP (С‚РѕР»СЊРєРѕ РґР»СЏ РґРµРјРѕРЅСЃС‚СЂР°С†РёРё)
+            // Попытка получить IP (только для демонстрации)
             fetch('https://api.ipify.org?format=json')
                 .then(response => response.json())
                 .then(data => {
-                    debugInfo['IP Р°РґСЂРµСЃ'] = data.ip;
+                    debugInfo['IP адрес'] = data.ip;
                     document.getElementById('debug-info').textContent = JSON.stringify(debugInfo, null, 2);
                 })
                 .catch(() => {
-                    debugInfo['IP Р°РґСЂРµСЃ'] = 'РќРµ СѓРґР°Р»РѕСЃСЊ РѕРїСЂРµРґРµР»РёС‚СЊ';
+                    debugInfo['IP адрес'] = 'Не удалось определить';
                     document.getElementById('debug-info').textContent = JSON.stringify(debugInfo, null, 2);
                 });
         }
 
         function fullCheck() {
-            console.log('рџ”„ Р—Р°РїСѓСЃРє РїРѕР»РЅРѕР№ РїСЂРѕРІРµСЂРєРё...');
+            console.log('?? Запуск полной проверки...');
             checkSystemStatus();
             checkCounterIDs();
             detailedMetricsCheck();
@@ -300,31 +300,31 @@
         }
 
         function simulateNewUser() {
-            console.log('рџ‘¤ РЎРёРјСѓР»СЏС†РёСЏ РЅРѕРІРѕРіРѕ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ...');
+            console.log('?? Симуляция нового пользователя...');
             deleteCookie('cookie_consent');
             deleteCookie('_ym_uid');
             deleteCookie('_ym_d');
             deleteCookie('_ga');
             deleteCookie('_gid');
             
-            // РџРµСЂРµР·Р°РіСЂСѓР·РєР° СЃС‚СЂР°РЅРёС†С‹ РґР»СЏ СЃРёРјСѓР»СЏС†РёРё
+            // Перезагрузка страницы для симуляции
             setTimeout(() => {
                 window.location.reload();
             }, 1000);
         }
 
         function forceConsent() {
-            console.log('вњ… РџСЂРёРЅСѓРґРёС‚РµР»СЊРЅРѕРµ СЃРѕРіР»Р°СЃРёРµ...');
+            console.log('? Принудительное согласие...');
             setCookie('cookie_consent', 'all', 365);
             
-            // РЎРєСЂС‹С‚СЊ Р±Р°РЅРЅРµСЂ РµСЃР»Рё РѕРЅ РІРёРґРµРЅ
+            // Скрыть баннер если он виден
             const banner = document.getElementById('cookie-banner');
             if (banner) {
                 banner.style.opacity = '0';
                 banner.style.visibility = 'hidden';
             }
             
-            // Р—Р°РіСЂСѓР·РёС‚СЊ Р°РЅР°Р»РёС‚РёРєСѓ
+            // Загрузить аналитику
             if (typeof loadAnalytics === 'function') {
                 loadAnalytics();
             }
@@ -333,35 +333,35 @@
         }
 
         function testMetrics() {
-            console.log('рџ“Љ РўРµСЃС‚РёСЂРѕРІР°РЅРёРµ РјРµС‚СЂРёРє...');
+            console.log('?? Тестирование метрик...');
             
-            // РўРµСЃС‚ РЇРЅРґРµРєСЃ.РњРµС‚СЂРёРєРё
+            // Тест Яндекс.Метрики
             if (typeof window.ym !== 'undefined') {
                 try {
                     window.ym(106225686, 'hit', window.location.href, {
-                        title: 'РўРµСЃС‚ РјРµС‚СЂРёРє - Р”РµС‚Р°Р»СЊРЅР°СЏ РїСЂРѕРІРµСЂРєР°',
+                        title: 'Тест метрик - Детальная проверка',
                         referer: document.referrer
                     });
-                    console.log('вњ“ РЇРЅРґРµРєСЃ.РњРµС‚СЂРёРєР°: hit РѕС‚РїСЂР°РІР»РµРЅ');
+                    console.log('? Яндекс.Метрика: hit отправлен');
                 } catch (e) {
-                    console.error('вњ— РћС€РёР±РєР° РЇРЅРґРµРєСЃ.РњРµС‚СЂРёРєРё:', e);
+                    console.error('? Ошибка Яндекс.Метрики:', e);
                 }
             }
             
-            // РўРµСЃС‚ Google Analytics
+            // Тест Google Analytics
             if (typeof window.gtag !== 'undefined') {
                 try {
                     window.gtag('event', 'page_view', {
-                        page_title: 'РўРµСЃС‚ РјРµС‚СЂРёРє - Р”РµС‚Р°Р»СЊРЅР°СЏ РїСЂРѕРІРµСЂРєР°',
+                        page_title: 'Тест метрик - Детальная проверка',
                         page_location: window.location.href
                     });
                     window.gtag('event', 'test_metrics', {
                         'event_category': 'debug',
                         'event_label': 'detailed_check'
                     });
-                    console.log('вњ“ Google Analytics: СЃРѕР±С‹С‚РёСЏ РѕС‚РїСЂР°РІР»РµРЅС‹');
+                    console.log('? Google Analytics: события отправлены');
                 } catch (e) {
-                    console.error('вњ— РћС€РёР±РєР° Google Analytics:', e);
+                    console.error('? Ошибка Google Analytics:', e);
                 }
             }
             
@@ -369,7 +369,7 @@
         }
 
         function clearAllData() {
-            console.log('рџ—‘пёЏ РћС‡РёСЃС‚РєР° РІСЃРµС… РґР°РЅРЅС‹С…...');
+            console.log('??? Очистка всех данных...');
             deleteCookie('cookie_consent');
             deleteCookie('_ym_uid');
             deleteCookie('_ym_d');
@@ -381,13 +381,15 @@
             setTimeout(fullCheck, 500);
         }
 
-        // РРЅРёС†РёР°Р»РёР·Р°С†РёСЏ
+        // Инициализация
         document.addEventListener('DOMContentLoaded', function() {
             setTimeout(fullCheck, 1000);
             
-            // РђРІС‚РѕРѕР±РЅРѕРІР»РµРЅРёРµ РєР°Р¶РґС‹Рµ 10 СЃРµРєСѓРЅРґ
+            // Автообновление каждые 10 секунд
             setInterval(fullCheck, 10000);
         });
     </script>
 </body>
 </html>
+
+

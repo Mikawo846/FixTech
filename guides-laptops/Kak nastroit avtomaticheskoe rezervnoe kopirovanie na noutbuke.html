@@ -4,49 +4,34 @@
 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>РђРІС‚РѕРјР°С‚РёС‡РµСЃРєРѕРµ СЂРµР·РµСЂРІРЅРѕРµ РєРѕРїРёСЂРѕРІР°РЅРёРµ РЅР° РЅРѕСѓС‚Р±СѓРєРµ | РџРѕС€Р°РіРѕРІР°СЏ РёРЅСЃС‚СЂСѓРєС†РёСЏ</title>
-    <meta name="description" content="{{ description }}">
-    <meta name="description" content="РџРѕС€Р°РіРѕРІР°СЏ РёРЅСЃС‚СЂСѓРєС†РёСЏ: РљР°Рє РЅР°СЃС‚СЂРѕРёС‚СЊ Р°РІС‚РѕРјР°С‚РёС‡РµСЃРєРѕРµ СЂРµР·РµСЂРІРЅРѕРµ РєРѕРїРёСЂРѕРІР°РЅРёРµ С„Р°Р№Р»РѕРІ Рё СЃРёСЃС‚РµРјС‹ РЅР° РЅРѕСѓС‚Р±СѓРєРµ. РџРѕР»РЅРѕРµ СЂСѓРєРѕРІРѕРґСЃС‚РІРѕ РїРѕ СЃРѕР·РґР°РЅРёСЋ Р±СЌРєР°РїРѕРІ РІ Windows 10/11, РёСЃРїРѕР»СЊР·РѕРІР°РЅРёСЋ РІСЃС‚СЂРѕРµРЅРЅС‹С… Рё СЃС‚РѕСЂРѕРЅРЅРёС… РїСЂРѕРіСЂР°РјРј.">
+  <title>Автоматическое резервное копирование на ноутбуке | Пошаговая</title>
+    <meta name="description" content="">
 
   <link rel="stylesheet" href="../styles.css" />
   <link rel="stylesheet" href="../styles-header.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-
   <style>
     .guide-content { line-height: 1.7; color: var(--text); }
-    .guide-content h2 { color: var(--primary); margin-top: 30px; margin-bottom: 15px; font-size: 1.6rem; }
-    .guide-content h3 { color: var(--primary-dark); margin-top: 25px; margin-bottom: 12px; font-size: 1.25rem; }
+    .guide-content h2 { color: var(--primary); margin-top: 30px; margin-bottom: 15px; font-size: 1.5rem; }
+    .guide-content h3 { color: var(--primary-dark); margin-top: 25px; margin-bottom: 12px; font-size: 1.2rem; }
     .guide-image-block { margin: 20px 0; padding: 15px; background: var(--background); border-radius: var(--border-radius); border: 1px solid var(--border); text-align: center; }
     .guide-image-block img { max-width: 100%; height: auto; border-radius: 6px; border: 1px solid var(--border); }
     .image-caption { margin-top: 10px; font-size: 0.85rem; color: var(--text-light); font-style: italic; }
-    table { width: 100%; border-collapse: collapse; margin: 20px 0; }
-    th, td { border: 1px solid var(--border); padding: 8px; text-align: left; vertical-align: top; }
-    th { background: var(--background-light); }
-    code { background: rgba(0,0,0,0.04); padding: 1px 4px; border-radius: 3px; }
-    ul, ol { padding-left: 18px; }
-    .check-section { padding: 15px; border-radius: 6px; border: 1px dashed var(--border); margin: 18px 0; background: rgba(0,0,0,0.01); }
-    .check-title { font-weight: 600; margin-bottom: 8px; }
     .pro-tips { background: rgba(3, 74, 79, 0.05); padding: 15px; border-radius: 6px; margin: 20px 0; }
     .pro-tips h4 { color: var(--primary); margin-top: 0; margin-bottom: 12px; font-size: 1.1rem; }
     .tip-item { display: flex; gap: 8px; margin-bottom: 8px; align-items: flex-start; }
-    .ok { color: #0a8f3c; font-weight: 600; }
-    .warn { color: #c97a00; font-weight: 600; }
-    .bad { color: #c62828; font-weight: 600; }
+    table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+    th, td { border: 1px solid var(--border); padding: 8px; text-align: left; }
+    th { background: var(--background-light); }
+    .highlight { background: #f5f7fa; border-left: 4px solid #2d9cdb; padding: 10px 15px; margin: 20px 0; }
+    .faq-section ul { margin-left: 1em; }
+    .block-section { margin-bottom: 2em; }
     @media (max-width: 768px) {
       .guide-content h2 { font-size: 1.4rem; margin-top: 25px; }
       .guide-image-block { padding: 12px; margin: 15px 0; }
       table, th, td { font-size: 0.95rem; }
     }
-    /* РЇРЅРґРµРєСЃ РњР°СЂРєРµС‚ СЂРµРєР»Р°РјРЅС‹Р№ Р±Р°РЅРЅРµСЂ */
-    .ym-hero-link {
-      display: block;
-      text-decoration: none;
-      color: inherit;
-      max-width: 100%;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    }
-
     /* Р“РѕСЂРёР·РѕРЅС‚Р°Р»СЊРЅС‹Р№ Р±Р°РЅРЅРµСЂ-РєР°СЂС‚РѕС‡РєР° */
     .ym-hero-banner {
       width: 100%;
@@ -98,63 +83,257 @@
       transform: scale(1.02);
     }
 
-    /* РўРµРєСЃС‚РѕРІР°СЏ С‡Р°СЃС‚СЊ Р±Р°РЅРЅРµСЂР° */
+    /* РџСЂР°РІР°СЏ С‡Р°СЃС‚СЊ: РєРѕРЅС‚РµРЅС‚ */
     .ym-hero-content {
-      padding: 12px 16px;
-      text-align: center;
+      padding: 16px 18px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 8px;
     }
 
+    /* РќР°Р·РІР°РЅРёРµ С‚РѕРІР°СЂР° */
     .ym-hero-title {
-      font-size: 13px;
+      font-size: 14px;
       font-weight: 600;
-      color: #1f2937;
+      color: #111827;
+      line-height: 1.3;
       margin: 0 0 4px 0;
-      line-height: 1.3;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
     }
 
-    .ym-hero-desc {
-      font-size: 11px;
+    /* Р РµР№С‚РёРЅРі */
+    .ym-hero-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+    }
+
+    .ym-hero-rating {
+      font-size: 13px;
+      font-weight: 500;
+      color: #111827;
+      background: #f9fafb;
+      border-radius: 999px;
+      padding: 4px 10px;
+    }
+
+    .ym-hero-rating-count {
       color: #6b7280;
-      margin: 0;
-      line-height: 1.3;
     }
 
+    /* Р¤РёРѕР»РµС‚РѕРІР°СЏ РєРЅРѕРїРєР° */
+    .ym-hero-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 9px 16px;
+      border-radius: 999px;
+      border: none;
+      background: #6a00ff;
+      color: #ffffff;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 2px 6px rgba(88, 28, 135, 0.35);
+      transition: background 0.15s ease, transform 0.15s ease,
+                  box-shadow 0.15s ease;
+    }
+    .ym-hero-button::after {
+      content: "в†’";
+      margin-left: 6px;
+      font-size: 14px;
+    }
+    .ym-hero-button:hover {
+      background: #7c3aed;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 10px rgba(88, 28, 135, 0.45);
+    }
+
+    /* Р®СЂРёРґРёС‡РµСЃРєРёР№ Р±Р»РѕРє */
+    .ym-hero-legal {
+      margin-top: 6px;
+      max-width: 600px;
+      font-size: 11px;
+      line-height: 1.3;
+      color: #6b7280;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* РђРґР°РїС‚РёРІ */
     @media (max-width: 480px) {
       .ym-hero-banner {
-        min-height: 120px;
+        max-width: 100%;
+        margin: 20px 0;
       }
       .ym-hero-images {
         height: 100px;
       }
-      .ym-hero-title {
-        font-size: 12px;
+      .ym-hero-content {
+        padding: 12px 12px;
       }
-      .ym-hero-desc {
+      .ym-hero-title {
+        font-size: 13px;
+      }
+      .ym-hero-button {
+        font-size: 13px;
+        padding: 8px 14px;
+      }
+      .ym-hero-legal {
         font-size: 10px;
       }
     }
+    /* Telegram СЂРµРєР»Р°РјРЅС‹Р№ Р±Р°РЅРЅРµСЂ */
+    .telegram-banner {
+      display: flex;
+      justify-content: center;
+      text-decoration: none;
+      color: inherit;
+      width: 100%;
+      margin: 40px 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    .telegram-banner-container {
+      width: 100%;
+      max-width: 500px;
+      min-height: 120px;
+      border-radius: 16px;
+      background: linear-gradient(135deg, #0088cc 0%, #005f8f 100%);
+      border: 1px solid #005f8f;
+      display: flex;
+      align-items: center;
+      padding: 20px;
+      box-shadow: 0 4px 16px rgba(0, 136, 204, 0.2);
+      overflow: hidden;
+      box-sizing: border-box;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .telegram-banner-container:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0, 136, 204, 0.3);
+    }
+
+    .telegram-logo {
+      width: 60px;
+      height: 60px;
+      min-width: 60px;
+      background: #ffffff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 20px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .telegram-logo svg {
+      width: 32px;
+      height: 32px;
+      fill: #0088cc;
+    }
+
+    .telegram-content {
+      flex: 1;
+      color: #ffffff;
+    }
+
+    .telegram-title {
+      font-size: 16px;
+      font-weight: 600;
+      margin: 0 0 8px 0;
+      line-height: 1.3;
+    }
+
+    .telegram-subtitle {
+      font-size: 14px;
+      opacity: 0.9;
+      margin: 0 0 12px 0;
+      line-height: 1.4;
+    }
+
+    .telegram-button {
+      display: inline-flex;
+      align-items: center;
+      padding: 8px 16px;
+      background: #ffffff;
+      color: #0088cc;
+      border-radius: 20px;
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background 0.2s ease, transform 0.2s ease;
+    }
+
+    .telegram-button:hover {
+      background: #f0f8ff;
+      transform: scale(1.05);
+    }
+
+    .telegram-button svg {
+      width: 16px;
+      height: 16px;
+      margin-left: 6px;
+      fill: #0088cc;
+    }
+
+    /* РђРґР°РїС‚РёРІ РґР»СЏ РјРѕР±РёР»СЊРЅС‹С… */
+    @media (max-width: 480px) {
+      .telegram-banner-container {
+        max-width: 100%;
+        margin: 20px 0;
+        padding: 15px;
+        min-height: 100px;
+      }
+      .telegram-logo {
+        width: 50px;
+        height: 50px;
+        min-width: 50px;
+        margin-right: 15px;
+      }
+      .telegram-logo svg {
+        width: 26px;
+        height: 26px;
+      }
+      .telegram-title {
+        font-size: 14px;
+      }
+      .telegram-subtitle {
+        font-size: 12px;
+      }
+      .telegram-button {
+        font-size: 12px;
+        padding: 6px 12px;
+      }
+    }
+
+
+
   </style>
+  <script async src="https://timeweb.cloud/api/v1/cloud-ai/agents/3cc03620-d051-4d8d-b5af-f7b6cd083a35/embed.js?collapsed=true"></script>
 </head>
 <body>
-
   <header class="header">
     <div class="container">
       <div class="header__inner">
         <a href="../index.html" class="logo">
-          <img src="../logo.svg" alt="Repairo" width="40" height="40">
-          <span>Repairo</span>
+          <span class="logo__icon"></span>
+          <span class="logo__text">GeoExpert</span>
         </a>
         <nav class="nav">
-          <a href="../index.html">Р“Р»Р°РІРЅР°СЏ</a>
-          <a href="../laptops.html">РќРѕСѓС‚Р±СѓРєРё</a>
-          <a href="../smartphones.html">РЎРјР°СЂС‚С„РѕРЅС‹</a>
-          <a href="../consoles.html">РљРѕРЅСЃРѕР»Рё</a>
-          <a href="../cameras.html">Р¤РѕС‚РѕР°РїРїР°СЂР°С‚С‹</a>
-          <a href="../tv.html">РўРµР»РµРІРёР·РѕСЂС‹</a>
+          <ul class="nav__list">
+            <li><a href="../cameras.html" class="nav__link">РљР°РјРµСЂС‹</a></li>
+            <li><a href="../drones.html" class="nav__link">Р”СЂРѕРЅС‹</a></li>
+            <li><a href="../workflow.html" class="nav__link">Workflow</a></li>
+          </ul>
         </nav>
-        <button class="theme-toggle" aria-label="РџРµСЂРµРєР»СЋС‡РёС‚СЊ С‚РµРјСѓ">
-          <i class="fas fa-moon"></i>
-        </button>
       </div>
     </div>
   </header>
@@ -162,225 +341,217 @@
   <main class="main">
     <div class="container">
       <div class="guide-content">
-        <h1>РђРІС‚РѕРјР°С‚РёС‡РµСЃРєРѕРµ СЂРµР·РµСЂРІРЅРѕРµ РєРѕРїРёСЂРѕРІР°РЅРёРµ РЅР° РЅРѕСѓС‚Р±СѓРєРµ</h1>
+        <h1>Автоматическое резервное копирование на ноутбуке</h1>
         
-        <p>Р РµР·РµСЂРІРЅРѕРµ РєРѕРїРёСЂРѕРІР°РЅРёРµ вЂ” СЌС‚Рѕ РїСЂРѕС†РµСЃСЃ СЃРѕР·РґР°РЅРёСЏ РєРѕРїРёР№ РІР°Р¶РЅС‹С… С„Р°Р№Р»РѕРІ Рё СЃРёСЃС‚РµРјС‹ РґР»СЏ Р·Р°С‰РёС‚С‹ РѕС‚ РїРѕС‚РµСЂРё РґР°РЅРЅС‹С…. РќР° РЅРѕСѓС‚Р±СѓРєР°С… Р°РІС‚РѕРјР°С‚РёС‡РµСЃРєРёР№ Р±СЌРєР°Рї РѕСЃРѕР±РµРЅРЅРѕ РІР°Р¶РµРЅ РёР·-Р·Р° РјРѕР±РёР»СЊРЅРѕСЃС‚Рё СѓСЃС‚СЂРѕР№СЃС‚РІР° Рё СЂРёСЃРєРѕРІ РїРѕС‚РµСЂРё РёР»Рё РїРѕРІСЂРµР¶РґРµРЅРёСЏ.</p>
+        <p>Резервное копирование — это процесс создания копий важных файлов и системы для защиты от потери данных. На ноутбуках автоматический бэкап особенно важен из-за мобильности устройства и рисков потери или повреждения.</p>
 
         <div class="guide-image-block">
-          <img src="https://avatars.mds.yandex.net/get-shedevrum/16500899/img_1ef695d237b711f08c82d27cdd667232/orig" alt="РђРІС‚РѕРјР°С‚РёС‡РµСЃРєРѕРµ СЂРµР·РµСЂРІРЅРѕРµ РєРѕРїРёСЂРѕРІР°РЅРёРµ РЅР° РЅРѕСѓС‚Р±СѓРєРµ">
-          <div class="image-caption">РРЅС‚РµСЂС„РµР№СЃ Р°РІС‚РѕРјР°С‚РёС‡РµСЃРєРѕРіРѕ СЂРµР·РµСЂРІРЅРѕРіРѕ РєРѕРїРёСЂРѕРІР°РЅРёСЏ РІ Windows</div>
+          <img src="https://avatars.mds.yandex.net/get-shedevrum/16500899/img_1ef695d237b711f08c82d27cdd667232/orig" alt="Автоматическое резервное копирование на ноутбуке">
+          <div class="image-caption">Интерфейс автоматического резервного копирования в Windows</div>
         </div>
 
-        <h2>Р—Р°С‡РµРј РЅСѓР¶РЅРѕ Р°РІС‚РѕРјР°С‚РёС‡РµСЃРєРѕРµ СЂРµР·РµСЂРІРЅРѕРµ РєРѕРїРёСЂРѕРІР°РЅРёРµ</h2>
+        <h2>Зачем нужно автоматическое резервное копирование</h2>
         
         <ul>
-          <li><strong>Р—Р°С‰РёС‚Р° РѕС‚ Р°РїРїР°СЂР°С‚РЅС‹С… СЃР±РѕРµРІ</strong> вЂ” РїРѕР»РѕРјРєР° Р¶РµСЃС‚РєРѕРіРѕ РґРёСЃРєР° РёР»Рё SSD</li>
-          <li><strong>РџСЂРµРґРѕС‚РІСЂР°С‰РµРЅРёРµ РїРѕС‚РµСЂРё РґР°РЅРЅС‹С…</strong> РїСЂРё РєСЂР°Р¶Рµ РёР»Рё СѓС‚РµСЂРµ РЅРѕСѓС‚Р±СѓРєР°</li>
-          <li><strong>Р’РѕСЃСЃС‚Р°РЅРѕРІР»РµРЅРёРµ РїРѕСЃР»Рµ РІРёСЂСѓСЃРѕРІ</strong> Рё РїСЂРѕРіСЂР°РјРјРЅС‹С… СЃР±РѕРµРІ</li>
-          <li><strong>РЎРѕС…СЂР°РЅРµРЅРёРµ РІР°Р¶РЅС‹С… РґРѕРєСѓРјРµРЅС‚РѕРІ</strong> РІ СЃР»СѓС‡Р°Рµ СЃР»СѓС‡Р°Р№РЅРѕРіРѕ СѓРґР°Р»РµРЅРёСЏ</li>
-          <li><strong>Р‘С‹СЃС‚СЂРѕРµ РІРѕСЃСЃС‚Р°РЅРѕРІР»РµРЅРёРµ СЂР°Р±РѕС‚С‹</strong> РїРѕСЃР»Рµ СЃРµСЂСЊРµР·РЅС‹С… РїСЂРѕР±Р»РµРј</li>
+          <li><strong>Защита от аппаратных сбоев</strong> — поломка жесткого диска или SSD</li>
+          <li><strong>Предотвращение потери данных</strong> при краже или утере ноутбука</li>
+          <li><strong>Восстановление после вирусов</strong> и программных сбоев</li>
+          <li><strong>Сохранение важных документов</strong> в случае случайного удаления</li>
+          <li><strong>Быстрое восстановление работы</strong> после серьезных проблем</li>
         </ul>
 
-        <h2>Р’СЃС‚СЂРѕРµРЅРЅС‹Рµ СЃСЂРµРґСЃС‚РІР° Windows РґР»СЏ Р°РІС‚РѕРјР°С‚РёС‡РµСЃРєРѕРіРѕ Р±СЌРєР°РїР°</h2>
+        <h2>Встроенные средства Windows для автоматического бэкапа</h2>
 
-        <h3>1. РСЃС‚РѕСЂРёСЏ С„Р°Р№Р»РѕРІ (File History)</h3>
+        <h3>1. История файлов (File History)</h3>
         
-        <p>РСЃС‚РѕСЂРёСЏ С„Р°Р№Р»РѕРІ вЂ” СЌС‚Рѕ РІСЃС‚СЂРѕРµРЅРЅР°СЏ С„СѓРЅРєС†РёСЏ Windows РґР»СЏ Р°РІС‚РѕРјР°С‚РёС‡РµСЃРєРѕРіРѕ СЂРµР·РµСЂРІРЅРѕРіРѕ РєРѕРїРёСЂРѕРІР°РЅРёСЏ РїРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєРёС… С„Р°Р№Р»РѕРІ.</p>
+        <p>История файлов — это встроенная функция Windows для автоматического резервного копирования пользовательских файлов.</p>
 
         <div class="check-section">
-          <div class="check-title">РќР°СЃС‚СЂРѕР№РєР° РСЃС‚РѕСЂРёРё С„Р°Р№Р»РѕРІ:</div>
+          <div class="check-title">Настройка Истории файлов:</div>
           <ol>
-            <li>РџРѕРґРєР»СЋС‡РёС‚Рµ РІРЅРµС€РЅРёР№ Р¶РµСЃС‚РєРёР№ РґРёСЃРє РёР»Рё USB-РЅР°РєРѕРїРёС‚РµР»СЊ</li>
-            <li>РћС‚РєСЂРѕР№С‚Рµ <strong>РџР°РЅРµР»СЊ СѓРїСЂР°РІР»РµРЅРёСЏ</strong> в†’ <strong>РСЃС‚РѕСЂРёСЏ С„Р°Р№Р»РѕРІ</strong></li>
-            <li>РќР°Р¶РјРёС‚Рµ <strong>"Р’РєР»СЋС‡РёС‚СЊ"</strong></li>
-            <li>Р’С‹Р±РµСЂРёС‚Рµ РґРёСЃРє РґР»СЏ СЂРµР·РµСЂРІРЅС‹С… РєРѕРїРёР№</li>
-            <li>РќР°СЃС‚СЂРѕР№С‚Рµ СЂР°СЃРїРёСЃР°РЅРёРµ (СЂРµРєРѕРјРµРЅРґСѓРµС‚СЃСЏ РµР¶РµРґРЅРµРІРЅРѕ)</li>
-            <li>Р’С‹Р±РµСЂРёС‚Рµ РїР°РїРєРё РґР»СЏ Р±СЌРєР°РїР° (Р”РѕРєСѓРјРµРЅС‚С‹, РР·РѕР±СЂР°Р¶РµРЅРёСЏ, РњСѓР·С‹РєР° Рё С‚.Рґ.)</li>
+            <li>Подключите внешний жесткий диск или USB-накопитель</li>
+            <li>Откройте <strong>Панель управления</strong> > <strong>История файлов</strong></li>
+            <li>Нажмите <strong>"Включить"</strong></li>
+            <li>Выберите диск для резервных копий</li>
+            <li>Настройте расписание (рекомендуется ежедневно)</li>
+            <li>Выберите папки для бэкапа (Документы, Изображения, Музыка и т.д.)</li>
           </ol>
         </div>
 
         <div class="pro-tips">
-          <h4>РџСЂРµРёРјСѓС‰РµСЃС‚РІР° РСЃС‚РѕСЂРёРё С„Р°Р№Р»РѕРІ:</h4>
+          <h4>Преимущества Истории файлов:</h4>
           <div class="tip-item">
-            <span class="ok">вњ“</span>
-            <span>РђРІС‚РѕРјР°С‚РёС‡РµСЃРєРё СЃРѕР·РґР°РµС‚ РІРµСЂСЃРёРё С„Р°Р№Р»РѕРІ РїСЂРё РёР·РјРµРЅРµРЅРёСЏС…</span>
+            <span class="ok">?</span>
+            <span>Автоматически создает версии файлов при изменениях</span>
           </div>
           <div class="tip-item">
-            <span class="ok">вњ“</span>
-            <span>РџРѕР·РІРѕР»СЏРµС‚ РІРѕСЃСЃС‚Р°РЅРѕРІРёС‚СЊ РїСЂРµРґС‹РґСѓС‰РёРµ РІРµСЂСЃРёРё С„Р°Р№Р»РѕРІ</span>
+            <span class="ok">?</span>
+            <span>Позволяет восстановить предыдущие версии файлов</span>
           </div>
           <div class="tip-item">
-            <span class="ok">вњ“</span>
-            <span>РќРµ С‚СЂРµР±СѓРµС‚ СѓСЃС‚Р°РЅРѕРІРєРё РґРѕРїРѕР»РЅРёС‚РµР»СЊРЅРѕРіРѕ РџРћ</span>
+            <span class="ok">?</span>
+            <span>Не требует установки дополнительного ПО</span>
           </div>
         </div>
 
-        <h3>2. Р РµР·РµСЂРІРЅР°СЏ РєРѕРїРёСЏ Рё РІРѕСЃСЃС‚Р°РЅРѕРІР»РµРЅРёРµ Windows</h3>
+        <h3>2. Резервная копия и восстановление Windows</h3>
 
-        <p>Р‘РѕР»РµРµ РјРѕС‰РЅС‹Р№ РёРЅСЃС‚СЂСѓРјРµРЅС‚ РґР»СЏ СЃРѕР·РґР°РЅРёСЏ РїРѕР»РЅРѕРіРѕ РѕР±СЂР°Р·Р° СЃРёСЃС‚РµРјС‹.</p>
+        <p>Более мощный инструмент для создания полного образа системы.</p>
 
         <div class="check-section">
-          <div class="check-title">РќР°СЃС‚СЂРѕР№РєР° СЃРёСЃС‚РµРјРЅРѕРіРѕ Р±СЌРєР°РїР°:</div>
+          <div class="check-title">Настройка системного бэкапа:</div>
           <ol>
-            <li>РћС‚РєСЂРѕР№С‚Рµ <strong>РџР°РЅРµР»СЊ СѓРїСЂР°РІР»РµРЅРёСЏ</strong> в†’ <strong>Р РµР·РµСЂРІРЅР°СЏ РєРѕРїРёСЏ Рё РІРѕСЃСЃС‚Р°РЅРѕРІР»РµРЅРёРµ</strong></li>
-            <li>РќР°Р¶РјРёС‚Рµ <strong>"РЎРѕР·РґР°РЅРёРµ РѕР±СЂР°Р·Р° СЃРёСЃС‚РµРјС‹"</strong></li>
-            <li>Р’С‹Р±РµСЂРёС‚Рµ РјРµСЃС‚Рѕ СЃРѕС…СЂР°РЅРµРЅРёСЏ (РІРЅРµС€РЅРёР№ РґРёСЃРє)</li>
-            <li>Р’С‹Р±РµСЂРёС‚Рµ РґРёСЃРєРё РґР»СЏ РІРєР»СЋС‡РµРЅРёСЏ РІ СЂРµР·РµСЂРІРЅСѓСЋ РєРѕРїРёСЋ</li>
-            <li>РќР°СЃС‚СЂРѕР№С‚Рµ СЂР°СЃРїРёСЃР°РЅРёРµ Р°РІС‚РѕРјР°С‚РёС‡РµСЃРєРѕРіРѕ СЃРѕР·РґР°РЅРёСЏ</li>
+            <li>Откройте <strong>Панель управления</strong> > <strong>Резервная копия и восстановление</strong></li>
+            <li>Нажмите <strong>"Создание образа системы"</strong></li>
+            <li>Выберите место сохранения (внешний диск)</li>
+            <li>Выберите диски для включения в резервную копию</li>
+            <li>Настройте расписание автоматического создания</li>
           </ol>
         </div>
 
-        <h3>3. OneDrive Р°РІС‚РѕРјР°С‚РёС‡РµСЃРєР°СЏ СЃРёРЅС…СЂРѕРЅРёР·Р°С†РёСЏ</h3>
+        <h3>3. OneDrive автоматическая синхронизация</h3>
 
-        <p>РћР±Р»Р°С‡РЅРѕРµ С…СЂР°РЅРёР»РёС‰Рµ Microsoft СЃ Р°РІС‚РѕРјР°С‚РёС‡РµСЃРєРѕР№ СЃРёРЅС…СЂРѕРЅРёР·Р°С†РёРµР№.</p>
+        <p>Облачное хранилище Microsoft с автоматической синхронизацией.</p>
 
         <div class="check-section">
-          <div class="check-title">РќР°СЃС‚СЂРѕР№РєР° OneDrive:</div>
+          <div class="check-title">Настройка OneDrive:</div>
           <ol>
-            <li>Р’РѕР№РґРёС‚Рµ РІ СѓС‡РµС‚РЅСѓСЋ Р·Р°РїРёСЃСЊ Microsoft</li>
-            <li>РћС‚РєСЂРѕР№С‚Рµ РџСЂРѕРІРѕРґРЅРёРє Рё РЅР°Р№РґРёС‚Рµ РїР°РїРєСѓ OneDrive</li>
-            <li>РџРµСЂРµРјРµСЃС‚РёС‚Рµ РІР°Р¶РЅС‹Рµ РїР°РїРєРё (Р Р°Р±РѕС‡РёР№ СЃС‚РѕР», Р”РѕРєСѓРјРµРЅС‚С‹) РІ OneDrive</li>
-            <li>РќР°СЃС‚СЂРѕР№С‚Рµ Р°РІС‚РѕРјР°С‚РёС‡РµСЃРєСѓСЋ Р·Р°РіСЂСѓР·РєСѓ С„Р°Р№Р»РѕРІ РІ РѕР±Р»Р°РєРѕ</li>
-            <li>РџСЂРѕРІРµСЂСЊС‚Рµ СЃС‚Р°С‚СѓСЃ СЃРёРЅС…СЂРѕРЅРёР·Р°С†РёРё РІ РѕР±Р»Р°СЃС‚Рё СѓРІРµРґРѕРјР»РµРЅРёР№</li>
+            <li>Войдите в учетную запись Microsoft</li>
+            <li>Откройте Проводник и найдите папку OneDrive</li>
+            <li>Переместите важные папки (Рабочий стол, Документы) в OneDrive</li>
+            <li>Настройте автоматическую загрузку файлов в облако</li>
+            <li>Проверьте статус синхронизации в области уведомлений</li>
           </ol>
         </div>
 
-        <h2>РЎС‚РѕСЂРѕРЅРЅРёРµ РїСЂРѕРіСЂР°РјРјС‹ РґР»СЏ Р°РІС‚РѕРјР°С‚РёС‡РµСЃРєРѕРіРѕ Р±СЌРєР°РїР°</h2>
+        <h2>Сторонние программы для автоматического бэкапа</h2>
 
         <h3>1. Acronis True Image</h3>
         
-        <p>РџСЂРѕС„РµСЃСЃРёРѕРЅР°Р»СЊРЅРѕРµ СЂРµС€РµРЅРёРµ РґР»СЏ СЂРµР·РµСЂРІРЅРѕРіРѕ РєРѕРїРёСЂРѕРІР°РЅРёСЏ СЃ РјРЅРѕР¶РµСЃС‚РІРѕРј С„СѓРЅРєС†РёР№.</p>
+        <p>Профессиональное решение для резервного копирования с множеством функций.</p>
 
         <div class="pro-tips">
-          <h4>РћСЃРЅРѕРІРЅС‹Рµ РІРѕР·РјРѕР¶РЅРѕСЃС‚Рё:</h4>
+          <h4>Основные возможности:</h4>
           <ul>
-            <li>РЎРѕР·РґР°РЅРёРµ РїРѕР»РЅРѕРіРѕ РѕР±СЂР°Р·Р° СЃРёСЃС‚РµРјС‹</li>
-            <li>РРЅРєСЂРµРјРµРЅС‚Р°Р»СЊРЅС‹Рµ Рё РґРёС„С„РµСЂРµРЅС†РёР°Р»СЊРЅС‹Рµ Р±СЌРєР°РїС‹</li>
-            <li>РћР±Р»Р°С‡РЅРѕРµ С…СЂР°РЅРёР»РёС‰Рµ Acronis Cloud</li>
-            <li>Р—Р°С‰РёС‚Р° РѕС‚ РїСЂРѕРіСЂР°РјРј-РІС‹РјРѕРіР°С‚РµР»РµР№</li>
-            <li>РљР»РѕРЅРёСЂРѕРІР°РЅРёРµ РґРёСЃРєРѕРІ</li>
+            <li>Создание полного образа системы</li>
+            <li>Инкрементальные и дифференциальные бэкапы</li>
+            <li>Облачное хранилище Acronis Cloud</li>
+            <li>Защита от программ-вымогателей</li>
+            <li>Клонирование дисков</li>
           </ul>
         </div>
 
         <h3>2. Macrium Reflect</h3>
 
-        <p>РќР°РґРµР¶РЅР°СЏ РїСЂРѕРіСЂР°РјРјР° СЃ Р±РµСЃРїР»Р°С‚РЅРѕР№ РІРµСЂСЃРёРµР№ РґР»СЏ РґРѕРјР°С€РЅРёС… РїРѕР»СЊР·РѕРІР°С‚РµР»РµР№.</p>
+        <p>Надежная программа с бесплатной версией для домашних пользователей.</p>
 
         <h3>3. EaseUS Todo Backup</h3>
 
-        <p>РџСЂРѕСЃС‚РѕР№ РІ РёСЃРїРѕР»СЊР·РѕРІР°РЅРёРё РёРЅСЃС‚СЂСѓРјРµРЅС‚ СЃ РёРЅС‚СѓРёС‚РёРІРЅС‹Рј РёРЅС‚РµСЂС„РµР№СЃРѕРј.</p>
+        <p>Простой в использовании инструмент с интуитивным интерфейсом.</p>
 
-        <h2>РћРїС‚РёРјР°Р»СЊРЅР°СЏ СЃС‚СЂР°С‚РµРіРёСЏ СЂРµР·РµСЂРІРЅРѕРіРѕ РєРѕРїРёСЂРѕРІР°РЅРёСЏ</h2>
+        <h2>Оптимальная стратегия резервного копирования</h2>
 
-        <h3>РџСЂР°РІРёР»Рѕ 3-2-1</h3>
+        <h3>Правило 3-2-1</h3>
         
-        <p>Р—РѕР»РѕС‚РѕР№ СЃС‚Р°РЅРґР°СЂС‚ СЂРµР·РµСЂРІРЅРѕРіРѕ РєРѕРїРёСЂРѕРІР°РЅРёСЏ:</p>
+        <p>Золотой стандарт резервного копирования:</p>
         
         <ul>
-          <li><strong>3 РєРѕРїРёРё</strong> РґР°РЅРЅС‹С… (РѕСЂРёРіРёРЅР°Р» + 2 Р±СЌРєР°РїР°)</li>
-          <li><strong>2 СЂР°Р·РЅС‹С… С‚РёРїР°</strong> РЅРѕСЃРёС‚РµР»РµР№ (РІРЅСѓС‚СЂРµРЅРЅРёР№ РґРёСЃРє + РІРЅРµС€РЅРёР№)</li>
-          <li><strong>1 РєРѕРїРёСЏ</strong> РІ РґСЂСѓРіРѕРј РјРµСЃС‚Рµ (РѕР±Р»Р°РєРѕ РёР»Рё РґСЂСѓРіРѕР№ РѕС„РёСЃ)</li>
+          <li><strong>3 копии</strong> данных (оригинал + 2 бэкапа)</li>
+          <li><strong>2 разных типа</strong> носителей (внутренний диск + внешний)</li>
+          <li><strong>1 копия</strong> в другом месте (облако или другой офис)</li>
         </ul>
 
-        <h3>Р РµРєРѕРјРµРЅРґСѓРµРјРѕРµ СЂР°СЃРїРёСЃР°РЅРёРµ</h3>
+        <h3>Рекомендуемое расписание</h3>
 
         <table>
           <tr>
-            <th>РўРёРї РґР°РЅРЅС‹С…</th>
-            <th>Р§Р°СЃС‚РѕС‚Р° Р±СЌРєР°РїР°</th>
-            <th>РњРµСЃС‚Рѕ С…СЂР°РЅРµРЅРёСЏ</th>
+            <th>Тип данных</th>
+            <th>Частота бэкапа</th>
+            <th>Место хранения</th>
           </tr>
           <tr>
-            <td>Р Р°Р±РѕС‡РёРµ РґРѕРєСѓРјРµРЅС‚С‹</td>
-            <td>Р•Р¶РµРґРЅРµРІРЅРѕ</td>
-            <td>OneDrive + РІРЅРµС€РЅРёР№ РґРёСЃРє</td>
+            <td>Рабочие документы</td>
+            <td>Ежедневно</td>
+            <td>OneDrive + внешний диск</td>
           </tr>
           <tr>
-            <td>Р›РёС‡РЅС‹Рµ С„Р°Р№Р»С‹</td>
-            <td>Р•Р¶РµРЅРµРґРµР»СЊРЅРѕ</td>
-            <td>Р’РЅРµС€РЅРёР№ РґРёСЃРє</td>
+            <td>Личные файлы</td>
+            <td>Еженедельно</td>
+            <td>Внешний диск</td>
           </tr>
           <tr>
-            <td>РћР±СЂР°Р· СЃРёСЃС‚РµРјС‹</td>
-            <td>Р•Р¶РµРјРµСЃСЏС‡РЅРѕ</td>
-            <td>Р’РЅРµС€РЅРёР№ РґРёСЃРє</td>
+            <td>Образ системы</td>
+            <td>Ежемесячно</td>
+            <td>Внешний диск</td>
           </tr>
           <tr>
-            <td>Р’Р°Р¶РЅС‹Рµ РїСЂРѕРµРєС‚С‹</td>
-            <td>РќРµРїСЂРµСЂС‹РІРЅРѕ</td>
-            <td>РћР±Р»Р°РєРѕ + Р»РѕРєР°Р»СЊРЅС‹Р№ РґРёСЃРє</td>
+            <td>Важные проекты</td>
+            <td>Непрерывно</td>
+            <td>Облако + локальный диск</td>
           </tr>
         </table>
 
-        <h2>РџСЂРѕРІРµСЂРєР° Рё РІРѕСЃСЃС‚Р°РЅРѕРІР»РµРЅРёРµ Р±СЌРєР°РїРѕРІ</h2>
+        <h2>Проверка и восстановление бэкапов</h2>
 
-        <h3>Р РµРіСѓР»СЏСЂРЅР°СЏ РїСЂРѕРІРµСЂРєР°</h3>
+        <h3>Регулярная проверка</h3>
         
         <div class="check-section">
-          <div class="check-title">Р§С‚Рѕ РїСЂРѕРІРµСЂСЏС‚СЊ РµР¶РµРјРµСЃСЏС‡РЅРѕ:</div>
+          <div class="check-title">Что проверять ежемесячно:</div>
           <ul>
-            <li>Р”РѕСЃС‚СѓРїРЅРѕСЃС‚СЊ СЂРµР·РµСЂРІРЅС‹С… РєРѕРїРёР№</li>
-            <li>Р¦РµР»РѕСЃС‚РЅРѕСЃС‚СЊ С„Р°Р№Р»РѕРІ</li>
-            <li>РЎРєРѕСЂРѕСЃС‚СЊ РІРѕСЃСЃС‚Р°РЅРѕРІР»РµРЅРёСЏ</li>
-            <li>РЎРІРѕР±РѕРґРЅРѕРµ РјРµСЃС‚Рѕ РЅР° РЅРѕСЃРёС‚РµР»СЏС…</li>
+            <li>Доступность резервных копий</li>
+            <li>Целостность файлов</li>
+            <li>Скорость восстановления</li>
+            <li>Свободное место на носителях</li>
           </ul>
         </div>
 
-        <h3>РџСЂРѕС†РµСЃСЃ РІРѕСЃСЃС‚Р°РЅРѕРІР»РµРЅРёСЏ</h3>
+        <h3>Процесс восстановления</h3>
 
         <div class="pro-tips">
-          <h4>Р’РѕСЃСЃС‚Р°РЅРѕРІР»РµРЅРёРµ С„Р°Р№Р»РѕРІ:</h4>
+          <h4>Восстановление файлов:</h4>
           <ol>
-            <li>РћРїСЂРµРґРµР»РёС‚Рµ С‚РёРї РїРѕС‚РµСЂРё (РѕС‚РґРµР»СЊРЅС‹Рµ С„Р°Р№Р»С‹ РёР»Рё РІСЃСЏ СЃРёСЃС‚РµРјР°)</li>
-            <li>Р’С‹Р±РµСЂРёС‚Рµ РїРѕРґС…РѕРґСЏС‰СѓСЋ СЂРµР·РµСЂРІРЅСѓСЋ РєРѕРїРёСЋ</li>
-            <li>РСЃРїРѕР»СЊР·СѓР№С‚Рµ СЃРѕРѕС‚РІРµС‚СЃС‚РІСѓСЋС‰РµРµ СЃСЂРµРґСЃС‚РІРѕ РІРѕСЃСЃС‚Р°РЅРѕРІР»РµРЅРёСЏ</li>
-            <li>РџСЂРѕРІРµСЂСЊС‚Рµ С†РµР»РѕСЃС‚РЅРѕСЃС‚СЊ РІРѕСЃСЃС‚Р°РЅРѕРІР»РµРЅРЅС‹С… РґР°РЅРЅС‹С…</li>
-            <li>РћР±РЅРѕРІРёС‚Рµ РЅР°СЃС‚СЂРѕР№РєРё Р±СЌРєР°РїР° РµСЃР»Рё РЅРµРѕР±С…РѕРґРёРјРѕ</li>
+            <li>Определите тип потери (отдельные файлы или вся система)</li>
+            <li>Выберите подходящую резервную копию</li>
+            <li>Используйте соответствующее средство восстановления</li>
+            <li>Проверьте целостность восстановленных данных</li>
+            <li>Обновите настройки бэкапа если необходимо</li>
           </ol>
         </div>
 
-        <h2>Р Р°СЃРїСЂРѕСЃС‚СЂР°РЅРµРЅРЅС‹Рµ РѕС€РёР±РєРё Рё РєР°Рє РёС… РёР·Р±РµР¶Р°С‚СЊ</h2>
+        <h2>Распространенные ошибки и как их избежать</h2>
 
         <div class="tip-item">
-          <span class="bad">вњ—</span>
-          <span><strong>РРіРЅРѕСЂРёСЂРѕРІР°РЅРёРµ Р°РІС‚РѕРјР°С‚РёС‡РµСЃРєРёС… РЅР°СЃС‚СЂРѕРµРє</strong> вЂ” РІСЃРµРіРґР° РІРєР»СЋС‡Р°Р№С‚Рµ Р°РІС‚РѕРјР°С‚РёС‡РµСЃРєРѕРµ СЂР°СЃРїРёСЃР°РЅРёРµ</span>
+          <span class="bad">?</span>
+          <span><strong>Игнорирование автоматических настроек</strong> — всегда включайте автоматическое расписание</span>
         </div>
         
         <div class="tip-item">
-          <span class="bad">вњ—</span>
-          <span><strong>РҐСЂР°РЅРµРЅРёРµ РІСЃРµС… РєРѕРїРёР№ РІ РѕРґРЅРѕРј РјРµСЃС‚Рµ</strong> вЂ” РёСЃРїРѕР»СЊР·СѓР№С‚Рµ СЂР°Р·РЅС‹Рµ РЅРѕСЃРёС‚РµР»Рё</span>
+          <span class="bad">?</span>
+          <span><strong>Хранение всех копий в одном месте</strong> — используйте разные носители</span>
         </div>
         
         <div class="tip-item">
-          <span class="bad">вњ—</span>
-          <span><strong>РћС‚СЃСѓС‚СЃС‚РІРёРµ РїСЂРѕРІРµСЂРєРё Р±СЌРєР°РїРѕРІ</strong> вЂ” СЂРµРіСѓР»СЏСЂРЅРѕ С‚РµСЃС‚РёСЂСѓР№С‚Рµ РІРѕСЃСЃС‚Р°РЅРѕРІР»РµРЅРёРµ</span>
+          <span class="bad">?</span>
+          <span><strong>Отсутствие проверки бэкапов</strong> — регулярно тестируйте восстановление</span>
         </div>
         
         <div class="tip-item">
-          <span class="bad">вњ—</span>
-          <span><strong>РќРµРґРѕСЃС‚Р°С‚РѕС‡РЅРѕ РјРµСЃС‚Р° РЅР° РЅРѕСЃРёС‚РµР»СЏС…</strong> вЂ” СЃР»РµРґРёС‚Рµ Р·Р° СЃРІРѕР±РѕРґРЅС‹Рј РїСЂРѕСЃС‚СЂР°РЅСЃС‚РІРѕРј</span>
+          <span class="bad">?</span>
+          <span><strong>Недостаточно места на носителях</strong> — следите за свободным пространством</span>
         </div>
 
-        <h2>Р—Р°РєР»СЋС‡РµРЅРёРµ</h2>
+        <h2>Заключение</h2>
 
-        <p>РђРІС‚РѕРјР°С‚РёС‡РµСЃРєРѕРµ СЂРµР·РµСЂРІРЅРѕРµ РєРѕРїРёСЂРѕРІР°РЅРёРµ РЅР° РЅРѕСѓС‚Р±СѓРєРµ вЂ” СЌС‚Рѕ РЅРµ СЂРѕСЃРєРѕС€СЊ, Р° РЅРµРѕР±С…РѕРґРёРјРѕСЃС‚СЊ. РќР°СЃС‚СЂРѕР№С‚Рµ Р±СЌРєР°Рї СЃРµРіРѕРґРЅСЏ, С‡С‚РѕР±С‹ РёР·Р±РµР¶Р°С‚СЊ РїРѕС‚РµСЂРё РІР°Р¶РЅС‹С… РґР°РЅРЅС‹С… Р·Р°РІС‚СЂР°. РСЃРїРѕР»СЊР·СѓР№С‚Рµ РєРѕРјР±РёРЅР°С†РёСЋ РІСЃС‚СЂРѕРµРЅРЅС‹С… СЃСЂРµРґСЃС‚РІ Windows Рё РѕР±Р»Р°С‡РЅС‹С… СЃРµСЂРІРёСЃРѕРІ РґР»СЏ РјР°РєСЃРёРјР°Р»СЊРЅРѕР№ Р·Р°С‰РёС‚С‹.</p>
+        <p>Автоматическое резервное копирование на ноутбуке — это не роскошь, а необходимость. Настройте бэкап сегодня, чтобы избежать потери важных данных завтра. Используйте комбинацию встроенных средств Windows и облачных сервисов для максимальной защиты.</p>
 
-        <p>РџРѕРјРЅРёС‚Рµ: Р»СѓС‡С€РёР№ Р±СЌРєР°Рї вЂ” С‚РѕС‚, РєРѕС‚РѕСЂС‹Р№ СЂР°Р±РѕС‚Р°РµС‚ Р°РІС‚РѕРјР°С‚РёС‡РµСЃРєРё Рё РЅРµ С‚СЂРµР±СѓРµС‚ РІР°С€РµРіРѕ РїРѕСЃС‚РѕСЏРЅРЅРѕРіРѕ РІРЅРёРјР°РЅРёСЏ.</p>
+        <p>Помните: лучший бэкап — тот, который работает автоматически и не требует вашего постоянного внимания.</p>
 
-        <!-- РЇРЅРґРµРєСЃ РњР°СЂРєРµС‚ СЂРµРєР»Р°РјРЅС‹Р№ Р±Р°РЅРЅРµСЂ -->
-        <a href="https://market.yandex.ru/search?text=РІРЅРµС€РЅРёР№%20Р¶РµСЃС‚РєРёР№%20РґРёСЃРє%20РґР»СЏ%20Р±СЌРєР°РїР°&local-offers-first=0" class="ym-hero-link" target="_blank" rel="noopener noreferrer">
-          <div class="ym-hero-banner">
-            <div class="ym-hero-images">
-              <div class="ym-hero-image">
-                <img src="https://avatars.mds.yandex.net/get-market-ugc/12573871/2a0000018f2a5a8b8c0b7d9d9c4b6c5c/orig" alt="Р’РЅРµС€РЅРёР№ Р¶РµСЃС‚РєРёР№ РґРёСЃРє РґР»СЏ Р±СЌРєР°РїР°">
+        <!-- Яндекс Маркет рекламный баннер -->
+                <img src="https://avatars.mds.yandex.net/get-market-ugc/12573871/2a0000018f2a5a8b8c0b7d9d9c4b6c5c/orig" alt="Внешний жесткий диск для бэкапа">
               </div>
-              <div class="ym-hero-image">
-                <img src="https://avatars.mds.yandex.net/get-market-ugc/15377961/2a0000018f2a5a8b8c0b7d9d9c4b6c5d/orig" alt="SSD РґР»СЏ СЂРµР·РµСЂРІРЅРѕРіРѕ РєРѕРїРёСЂРѕРІР°РЅРёСЏ">
+                <img src="https://avatars.mds.yandex.net/get-market-ugc/15377961/2a0000018f2a5a8b8c0b7d9d9c4b6c5d/orig" alt="SSD для резервного копирования">
               </div>
             </div>
-            <div class="ym-hero-content">
-              <div class="ym-hero-title">Р’РЅРµС€РЅРёРµ РґРёСЃРєРё РґР»СЏ СЂРµР·РµСЂРІРЅРѕРіРѕ РєРѕРїРёСЂРѕРІР°РЅРёСЏ</div>
-              <div class="ym-hero-desc">РќР°РґРµР¶РЅС‹Рµ РЅР°РєРѕРїРёС‚РµР»Рё РґР»СЏ Р°РІС‚РѕРјР°С‚РёС‡РµСЃРєРѕРіРѕ Р±СЌРєР°РїР° РІР°С€РёС… РґР°РЅРЅС‹С…</div>
             </div>
           </div>
         </a>
@@ -394,24 +565,24 @@
       <div class="footer__content">
         <div class="footer__section">
           <h4>Repairo</h4>
-          <p>Р­РєСЃРїРµСЂС‚РЅС‹Рµ СЂСѓРєРѕРІРѕРґСЃС‚РІР° РїРѕ СЂРµРјРѕРЅС‚Сѓ Рё РѕР±СЃР»СѓР¶РёРІР°РЅРёСЋ С‚РµС…РЅРёРєРё</p>
+          <p>Экспертные руководства по ремонту и обслуживанию техники</p>
         </div>
         <div class="footer__section">
-          <h4>Р Р°Р·РґРµР»С‹</h4>
+          <h4>Разделы</h4>
           <ul>
-            <li><a href="../laptops.html">РќРѕСѓС‚Р±СѓРєРё</a></li>
-            <li><a href="../smartphones.html">РЎРјР°СЂС‚С„РѕРЅС‹</a></li>
-            <li><a href="../consoles.html">РљРѕРЅСЃРѕР»Рё</a></li>
-            <li><a href="../cameras.html">Р¤РѕС‚РѕР°РїРїР°СЂР°С‚С‹</a></li>
+            <li><a href="../laptops.html">Ноутбуки</a></li>
+            <li><a href="../smartphones.html">Смартфоны</a></li>
+            <li><a href="../consoles.html">Консоли</a></li>
+            <li><a href="../cameras.html">Фотоаппараты</a></li>
           </ul>
         </div>
         <div class="footer__section">
-          <h4>РљРѕРЅС‚Р°РєС‚С‹</h4>
+          <h4>Контакты</h4>
           <p>support@repairo.ru</p>
         </div>
       </div>
       <div class="footer__bottom">
-        <p>&copy; 2024 Repairo. Р’СЃРµ РїСЂР°РІР° Р·Р°С‰РёС‰РµРЅС‹.</p>
+        <p>&copy; 2024 Repairo. Все права защищены.</p>
       </div>
     </div>
   </footer>
@@ -421,3 +592,9 @@
 
 </body>
 </html>
+
+
+
+
+
+
