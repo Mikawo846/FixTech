@@ -1,9 +1,9 @@
-п»ї<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>пїЅпїЅпїЅпїЅ Cookie Banner пїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ</title>
+    <title>Тест Cookie Banner на всех страницах</title>
     <style>
         body { font-family: Arial, sans-serif; padding: 20px; }
         .test-section { margin: 20px 0; padding: 15px; border: 1px solid #ddd; }
@@ -11,27 +11,27 @@
     </style>
 </head>
 <body>
-    <h1>пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ Cookie Banner</h1>
+    <h1>Тестирование Cookie Banner</h1>
     
     <div class="test-section">
-        <h2>пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ:</h2>
+        <h2>Текущий статус:</h2>
         <p>URL: <span id="current-url"></span></p>
         <p>Cookie consent: <span id="consent-status"></span></p>
-        <p>пїЅпїЅпїЅ пїЅпїЅпїЅпїЅ: <span id="all-cookies"></span></p>
+        <p>Все куки: <span id="all-cookies"></span></p>
     </div>
     
     <div class="test-section">
-        <h2>пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ:</h2>
-        <button onclick="clearCookieConsent()">пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ consent cookie</button>
-        <button onclick="checkCookieStatus()">пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ</button>
-        <button onclick="forceShowBanner()">пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ</button>
+        <h2>Управление:</h2>
+        <button onclick="clearCookieConsent()">Очистить consent cookie</button>
+        <button onclick="checkCookieStatus()">Проверить статус</button>
+        <button onclick="forceShowBanner()">Принудительно показать баннер</button>
     </div>
     
     <div class="test-section">
-        <h2>пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ:</h2>
-        <p>пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ cookie banner.</p>
-        <p>пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ.</p>
-        <p>пїЅпїЅпїЅпїЅпїЅпїЅпїЅ "пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ consent cookie" пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ.</p>
+        <h2>Информация:</h2>
+        <p>Эта страница для тестирования работы cookie banner.</p>
+        <p>Если баннер не показывается, скорее всего вы уже давали согласие ранее.</p>
+        <p>Нажмите "Очистить consent cookie" чтобы сбросить согласие и увидеть баннер снова.</p>
     </div>
 
     <script>
@@ -50,30 +50,30 @@
 
         function clearCookieConsent() {
             document.cookie = 'cookie_consent=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
-            alert('Cookie consent пїЅпїЅпїЅпїЅпїЅпїЅ! пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ.');
+            alert('Cookie consent очищен! Обновите страницу чтобы увидеть баннер.');
             checkCookieStatus();
         }
 
         function checkCookieStatus() {
             document.getElementById('current-url').textContent = window.location.href;
-            document.getElementById('consent-status').textContent = getCookie('cookie_consent') || 'пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ';
-            document.getElementById('all-cookies').textContent = document.cookie || 'пїЅпїЅпїЅ пїЅпїЅпїЅ';
+            document.getElementById('consent-status').textContent = getCookie('cookie_consent') || 'не найден';
+            document.getElementById('all-cookies').textContent = document.cookie || 'нет кук';
         }
 
         function forceShowBanner() {
-            // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+            // Импортируем функцию из основного скрипта
             if (typeof showCookieBanner === 'function') {
                 showCookieBanner();
             } else {
-                alert('пїЅпїЅпїЅпїЅпїЅпїЅпїЅ showCookieBanner пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ. пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ cookie-consent.js пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ.');
+                alert('Функция showCookieBanner не найдена. Убедитесь что cookie-consent.js загружен.');
             }
         }
 
-        // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+        // Проверяем статус при загрузке
         checkCookieStatus();
     </script>
 
-    <!-- пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ cookie -->
+    <!-- Подключаем основной скрипт cookie -->
     <script src="cookie-consent.js"></script>
 </body>
 </html>

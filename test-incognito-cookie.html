@@ -1,9 +1,9 @@
-п»ї<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>пїЅпїЅпїЅпїЅ Cookie Banner пїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ</title>
+    <title>Тест Cookie Banner в режиме инкогнито</title>
     <link rel="stylesheet" href="./styles.css">
     <link rel="stylesheet" href="./cookie-override.css">
     <style>
@@ -50,33 +50,33 @@
 </head>
 <body>
     <div class="test-info">
-        <h2>?? пїЅпїЅпїЅпїЅ Cookie Banner пїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ</h2>
-        <p>пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ cookie-пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ/пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ.</p>
-        <p><strong>пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ:</strong></p>
+        <h2>?? Тест Cookie Banner в режиме инкогнито</h2>
+        <p>Эта страница предназначена для проверки работы cookie-баннера в режиме инкогнито/приватном режиме.</p>
+        <p><strong>Инструкции:</strong></p>
         <ol>
-            <li>пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ - пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ</li>
-            <li>пїЅпїЅпїЅпїЅпїЅпїЅпїЅ cookie - пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ</li>
-            <li>пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ - пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ</li>
-            <li>пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ</li>
+            <li>Откройте эту страницу в обычном режиме - баннер должен появиться</li>
+            <li>Примите cookie - баннер должен исчезнуть</li>
+            <li>Откройте эту же страницу в режиме инкогнито - баннер должен снова появиться</li>
+            <li>Проверьте консоль браузера для отладочной информации</li>
         </ol>
     </div>
 
     <div class="debug-info">
-        <h3>?? пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ</h3>
+        <h3>?? Отладочная информация</h3>
         <div id="debug-output"></div>
     </div>
 
     <div style="margin: 20px 0;">
-        <button onclick="checkCookieStatus()">пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ cookie</button>
-        <button onclick="clearAllCookies()">пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ cookie</button>
-        <button onclick="forceShowBanner()">пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ</button>
-        <button onclick="testIncognitoMode()">пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ</button>
+        <button onclick="checkCookieStatus()">Проверить статус cookie</button>
+        <button onclick="clearAllCookies()">Очистить все cookie</button>
+        <button onclick="forceShowBanner()">Принудительно показать баннер</button>
+        <button onclick="testIncognitoMode()">Тест режима инкогнито</button>
     </div>
 
     <div id="status-output"></div>
 
     <script>
-        // пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+        // Функции для тестирования
         function updateDebugInfo() {
             const debugOutput = document.getElementById('debug-output');
             const info = {
@@ -90,7 +90,7 @@
 
             let html = '<ul>';
             for (const [key, value] of Object.entries(info)) {
-                html += `<li><strong>${key}:</strong> ${value || '(пїЅпїЅпїЅпїЅпїЅ)'}</li>`;
+                html += `<li><strong>${key}:</strong> ${value || '(пусто)'}</li>`;
             }
             html += '</ul>';
             debugOutput.innerHTML = html;
@@ -103,7 +103,7 @@
             statusDiv.textContent = `[${new Date().toLocaleTimeString()}] ${message}`;
             statusOutput.appendChild(statusDiv);
             
-            // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+            // Автоматически удалять старые сообщения
             if (statusOutput.children.length > 5) {
                 statusOutput.removeChild(statusOutput.firstChild);
             }
@@ -112,9 +112,9 @@
         function checkCookieStatus() {
             const consentCookie = getCookie('cookie_consent');
             if (consentCookie) {
-                showStatus(`пїЅпїЅпїЅпїЅпїЅпїЅ cookie пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ: ${consentCookie}`, 'success');
+                showStatus(`Найден cookie согласия: ${consentCookie}`, 'success');
             } else {
-                showStatus('Cookie пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ', 'warning');
+                showStatus('Cookie согласия не найден', 'warning');
             }
             updateDebugInfo();
         }
@@ -124,63 +124,63 @@
                 document.cookie = c.replace(/^ +/, "").replace(/=.*/, "=;expires=" + new Date().toUTCString() + ";path=/"); 
             });
             
-            // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ sessionStorage
+            // Очистить sessionStorage
             try {
                 sessionStorage.clear();
-                showStatus('SessionStorage пїЅпїЅпїЅпїЅпїЅпїЅ', 'success');
+                showStatus('SessionStorage очищен', 'success');
             } catch (e) {
-                showStatus('пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ sessionStorage: ' + e.message, 'error');
+                showStatus('Ошибка очистки sessionStorage: ' + e.message, 'error');
             }
             
-            showStatus('пїЅпїЅпїЅ cookie пїЅпїЅпїЅпїЅпїЅпїЅпїЅ', 'success');
+            showStatus('Все cookie очищены', 'success');
             updateDebugInfo();
         }
 
         function forceShowBanner() {
-            // пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ
+            // Удаляем существующий баннер если есть
             const existingBanner = document.getElementById('cookie-banner');
             if (existingBanner) {
                 existingBanner.remove();
             }
             
-            // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
+            // Показываем баннер
             if (typeof showCookieBanner === 'function') {
                 showCookieBanner();
-                showStatus('пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ', 'success');
+                showStatus('Баннер принудительно показан', 'success');
             } else {
-                showStatus('пїЅпїЅпїЅпїЅпїЅпїЅпїЅ showCookieBanner пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ', 'error');
+                showStatus('Функция showCookieBanner не найдена', 'error');
             }
         }
 
         function testIncognitoMode() {
             try {
-                // пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ cookie
+                // Пробуем установить тестовый cookie
                 document.cookie = 'test_incognito=1; max-age=60';
                 const cookiesEnabled = document.cookie.indexOf('test_incognito=') !== -1;
                 
-                // пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ cookie
+                // Очищаем тестовый cookie
                 document.cookie = 'test_incognito=1; max-age=-1';
                 
                 if (cookiesEnabled) {
-                    showStatus('Cookie пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ - пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ', 'success');
+                    showStatus('Cookie работают - обычный режим', 'success');
                 } else {
-                    showStatus('Cookie пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ - пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ', 'warning');
+                    showStatus('Cookie не работают - режим инкогнито или блокировка', 'warning');
                 }
             } catch (e) {
-                showStatus('пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ cookie: ' + e.message, 'error');
+                showStatus('Ошибка проверки cookie: ' + e.message, 'error');
             }
         }
 
-        // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+        // Инициализация при загрузке страницы
         document.addEventListener('DOMContentLoaded', function() {
             updateDebugInfo();
-            showStatus('пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ cookie пїЅпїЅпїЅпїЅпїЅпїЅ', 'info');
+            showStatus('Страница загружена, проверьте cookie баннер', 'info');
             
-            // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ debug info пїЅпїЅпїЅпїЅпїЅпїЅ 5 пїЅпїЅпїЅпїЅпїЅпїЅ
+            // Обновляем debug info каждые 5 секунд
             setInterval(updateDebugInfo, 5000);
         });
 
-        // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ console.log пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+        // Перехватываем console.log для отображения в интерфейсе
         const originalLog = console.log;
         console.log = function(...args) {
             originalLog.apply(console, args);

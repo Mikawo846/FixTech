@@ -1,9 +1,9 @@
-п»ї<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>пїЅпїЅпїЅпїЅ Cookie Banner</title>
+    <title>Тест Cookie Banner</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -40,32 +40,32 @@
 </head>
 <body>
     <div class="container">
-        <h1>пїЅпїЅпїЅпїЅ Cookie Banner</h1>
+        <h1>Тест Cookie Banner</h1>
         
         <div class="info">
-            <h3>пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅ:</h3>
-            <p>пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ cookie-пїЅпїЅпїЅпїЅпїЅпїЅпїЅ.</p>
+            <h3>Информация о тесте:</h3>
+            <p>Эта страница проверяет работу cookie-баннера.</p>
             <ul>
-                <li>пїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ cookies</li>
-                <li>пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ</li>
-                <li>Cookie пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ 365 пїЅпїЅпїЅпїЅ</li>
+                <li>Если вы впервые заходите на сайт, должен появиться баннер с просьбой принять cookies</li>
+                <li>После принятия баннер должен исчезнуть и больше не появляться</li>
+                <li>Cookie сохраняется на 365 дней</li>
             </ul>
         </div>
 
         <div class="status" id="cookie-status">
-            пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ cookie...
+            Проверка статуса cookie...
         </div>
 
         <div class="status" id="banner-status">
-            пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ...
+            Проверка наличия баннера...
         </div>
 
         <div style="margin-top: 30px; text-align: center;">
             <button onclick="checkCookieStatus()" style="padding: 10px 20px; background: #2196F3; color: white; border: none; border-radius: 5px; cursor: pointer;">
-                пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
+                Проверить статус
             </button>
             <button onclick="clearTestCookie()" style="padding: 10px 20px; background: #f44336; color: white; border: none; border-radius: 5px; cursor: pointer; margin-left: 10px;">
-                пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ cookie
+                Удалить тестовый cookie
             </button>
         </div>
     </div>
@@ -74,11 +74,11 @@
         function checkCookieStatus() {
             const hasConsent = document.cookie.includes('cookie_consent=all');
             document.getElementById('cookie-status').innerHTML = 
-                'Cookie consent: ' + (hasConsent ? 'пїЅпїЅпїЅпїЅпїЅпїЅ (пїЅпїЅпїЅпїЅпїЅпїЅ)' : 'пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ');
+                'Cookie consent: ' + (hasConsent ? 'НАЙДЕН (принят)' : 'НЕ НАЙДЕН');
             
             const banner = document.getElementById('cookie-banner');
             document.getElementById('banner-status').innerHTML = 
-                'Banner пїЅпїЅпїЅпїЅпїЅпїЅпїЅ: ' + (banner ? 'пїЅпїЅпїЅпїЅпїЅпїЅ пїЅ DOM' : 'пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅ DOM');
+                'Banner элемент: ' + (banner ? 'НАЙДЕН в DOM' : 'НЕ НАЙДЕН в DOM');
         }
 
         function clearTestCookie() {
@@ -87,10 +87,10 @@
             location.reload();
         }
 
-        // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ 2 пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+        // Проверяем статус каждые 2 секунды
         setInterval(checkCookieStatus, 2000);
         
-        // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+        // Первоначальная проверка
         setTimeout(checkCookieStatus, 1000);
     </script>
 

@@ -1,9 +1,9 @@
-п»ї<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>пїЅпїЅпїЅпїЅпїЅпїЅпїЅ Cookie Banner</title>
+    <title>Отладка Cookie Banner</title>
     <style>
         body { font-family: Arial, sans-serif; padding: 20px; }
         .debug { background: #f0f0f0; padding: 10px; margin: 10px 0; border-radius: 5px; }
@@ -11,23 +11,23 @@
     </style>
 </head>
 <body>
-    <h1>пїЅпїЅпїЅпїЅпїЅпїЅпїЅ Cookie Banner</h1>
+    <h1>Отладка Cookie Banner</h1>
     
     <div class="debug">
-        <h3>пїЅпїЅпїЅпїЅпїЅпїЅпїЅ Cookie:</h3>
+        <h3>Текущие Cookie:</h3>
         <div id="cookie-list"></div>
     </div>
     
     <div class="debug">
-        <h3>пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ:</h3>
-        <button onclick="showCookies()">пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ cookie</button>
-        <button onclick="clearCookie()">пїЅпїЅпїЅпїЅпїЅпїЅпїЅ cookie_consent</button>
-        <button onclick="testBanner()">пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ</button>
-        <button onclick="checkScript()">пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ</button>
+        <h3>Действия:</h3>
+        <button onclick="showCookies()">Показать cookie</button>
+        <button onclick="clearCookie()">Удалить cookie_consent</button>
+        <button onclick="testBanner()">Тестировать баннер</button>
+        <button onclick="checkScript()">Проверить скрипт</button>
     </div>
     
     <div class="debug">
-        <h3>пїЅпїЅпїЅпїЅпїЅпїЅпїЅ:</h3>
+        <h3>Консоль:</h3>
         <div id="console"></div>
     </div>
 
@@ -43,7 +43,7 @@
             cookieList.innerHTML = '';
             
             if (cookies.length === 1 && cookies[0] === '') {
-                cookieList.innerHTML = 'пїЅпїЅпїЅ cookie';
+                cookieList.innerHTML = 'Нет cookie';
             } else {
                 cookies.forEach(cookie => {
                     const [name, value] = cookie.trim().split('=');
@@ -54,59 +54,59 @@
         
         function clearCookie() {
             document.cookie = 'cookie_consent=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
-            log('Cookie cookie_consent пїЅпїЅпїЅпїЅпїЅпїЅ');
+            log('Cookie cookie_consent удален');
             showCookies();
         }
         
         function testBanner() {
             if (typeof createCookieBanner === 'function') {
-                log('пїЅпїЅпїЅпїЅпїЅпїЅпїЅ createCookieBanner пїЅпїЅпїЅпїЅпїЅпїЅпїЅ');
+                log('Функция createCookieBanner найдена');
                 createCookieBanner();
                 setTimeout(() => {
                     const banner = document.getElementById('cookie-banner');
                     if (banner) {
-                        log('пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ: ' + banner.id);
-                        log('пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ: ' + banner.style.cssText.substring(0, 100) + '...');
+                        log('Баннер создан: ' + banner.id);
+                        log('Стили баннера: ' + banner.style.cssText.substring(0, 100) + '...');
                     } else {
-                        log('пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ');
+                        log('Баннер НЕ найден после создания');
                     }
                 }, 100);
             } else {
-                log('пїЅпїЅпїЅпїЅпїЅпїЅпїЅ createCookieBanner пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ');
+                log('Функция createCookieBanner НЕ найдена');
             }
         }
         
         function checkScript() {
-            log('пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ...');
+            log('Проверка загрузки скрипта...');
             const scripts = document.getElementsByTagName('script');
             let cookieScriptFound = false;
             
             for (let script of scripts) {
                 if (script.src && script.src.includes('cookie-consent.js')) {
-                    log('пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ: ' + script.src);
+                    log('Найден скрипт: ' + script.src);
                     cookieScriptFound = true;
                 }
             }
             
             if (!cookieScriptFound) {
-                log('пїЅпїЅпїЅпїЅпїЅпїЅ cookie-consent.js пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ');
+                log('Скрипт cookie-consent.js НЕ найден');
             }
             
-            // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+            // Проверяем глобальные функции
             if (typeof getCookie === 'function') {
-                log('пїЅпїЅпїЅпїЅпїЅпїЅпїЅ getCookie пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ');
+                log('Функция getCookie доступна');
             } else {
-                log('пїЅпїЅпїЅпїЅпїЅпїЅпїЅ getCookie пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ');
+                log('Функция getCookie НЕ доступна');
             }
             
             if (typeof initCookieConsent === 'function') {
-                log('пїЅпїЅпїЅпїЅпїЅпїЅпїЅ initCookieConsent пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ');
+                log('Функция initCookieConsent доступна');
             } else {
-                log('пїЅпїЅпїЅпїЅпїЅпїЅпїЅ initCookieConsent пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ');
+                log('Функция initCookieConsent НЕ доступна');
             }
         }
         
-        // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ cookie пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+        // Автоматически показываем cookie при загрузке
         showCookies();
         setTimeout(checkScript, 1000);
     </script>

@@ -1,9 +1,9 @@
-п»ї<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ Cookie</title>
+    <title>Простая Проверка Cookie</title>
     <style>
         body { font-family: Arial, sans-serif; margin: 20px; }
         .test-box { border: 2px solid #007bff; padding: 20px; margin: 10px 0; border-radius: 8px; }
@@ -15,24 +15,24 @@
     </style>
 </head>
 <body>
-    <h1>?? пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ Cookie пїЅпїЅпїЅпїЅпїЅпїЅпїЅ</h1>
+    <h1>?? Простая Проверка Cookie Системы</h1>
     
     <div class="test-box">
-        <h2>?? пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ</h2>
+        <h2>?? Текущий Статус</h2>
         <div id="status-display"></div>
-        <button onclick="updateStatus()">пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ</button>
+        <button onclick="updateStatus()">Обновить статус</button>
     </div>
 
     <div class="test-box">
-        <h2>?? пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ</h2>
-        <button onclick="testBanner()">пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ</button>
-        <button onclick="acceptCookie()">пїЅпїЅпїЅпїЅпїЅпїЅпїЅ cookie</button>
-        <button onclick="clearCookies()">пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ cookie</button>
-        <button onclick="testAnalytics()">пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ</button>
+        <h2>?? Управление</h2>
+        <button onclick="testBanner()">Показать баннер</button>
+        <button onclick="acceptCookie()">Принять cookie</button>
+        <button onclick="clearCookies()">Очистить cookie</button>
+        <button onclick="testAnalytics()">Тестировать аналитику</button>
     </div>
 
     <div class="test-box">
-        <h2>?? пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ</h2>
+        <h2>?? Лог событий</h2>
         <div id="event-log"></div>
     </div>
 
@@ -56,88 +56,88 @@
             
             display.innerHTML = `
                 <div class="status ${hasConsent ? 'success' : 'error'}">
-                    ?? Cookie пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ: ${hasConsent ? 'пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ' : 'пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ'}
+                    ?? Cookie согласие: ${hasConsent ? 'ПОЛУЧЕНО' : 'ОТСУТСТВУЕТ'}
                 </div>
                 <div class="status ${hasBanner ? 'success' : 'error'}">
-                    ?? пїЅпїЅпїЅпїЅпїЅпїЅ: ${hasBanner ? 'пїЅпїЅпїЅпїЅ пїЅ DOM' : 'пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ'}
+                    ?? Баннер: ${hasBanner ? 'ЕСТЬ В DOM' : 'ОТСУТСТВУЕТ'}
                 </div>
                 <div class="status ${hasYandex ? 'success' : 'error'}">
-                    ?? пїЅпїЅпїЅпїЅпїЅпїЅ.пїЅпїЅпїЅпїЅпїЅпїЅпїЅ: ${hasYandex ? 'пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ' : 'пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ'}
+                    ?? Яндекс.Метрика: ${hasYandex ? 'ЗАГРУЖЕНА' : 'НЕ ЗАГРУЖЕНА'}
                 </div>
                 <div class="status ${hasGoogle ? 'success' : 'error'}">
-                    ?? Google Analytics: ${hasGoogle ? 'пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ' : 'пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ'}
+                    ?? Google Analytics: ${hasGoogle ? 'ЗАГРУЖЕН' : 'НЕ ЗАГРУЖЕН'}
                 </div>
             `;
             
-            log('пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ', 'info');
+            log('Статус обновлен', 'info');
         }
 
         function testBanner() {
-            log('пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ...', 'info');
+            log('Попытка показать баннер...', 'info');
             if (typeof showCookieBanner === 'function') {
                 showCookieBanner();
                 setTimeout(() => {
                     const banner = document.getElementById('cookie-banner');
                     if (banner) {
-                        log('пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ', 'success');
+                        log('Баннер успешно создан и показан', 'success');
                     } else {
-                        log('пїЅпїЅпїЅпїЅпїЅпїЅ: пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ', 'error');
+                        log('Ошибка: баннер не создан', 'error');
                     }
                 }, 500);
             } else {
-                log('пїЅпїЅпїЅпїЅпїЅпїЅ: пїЅпїЅпїЅпїЅпїЅпїЅпїЅ showCookieBanner пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ', 'error');
+                log('Ошибка: функция showCookieBanner не найдена', 'error');
             }
         }
 
         function acceptCookie() {
-            log('пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ cookie...', 'info');
+            log('Попытка принять cookie...', 'info');
             const button = document.getElementById('cookie-accept');
             if (button) {
                 button.click();
-                log('пїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ "пїЅпїЅпїЅпїЅпїЅпїЅпїЅ" пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ', 'success');
+                log('Клик на кнопку "Принять" выполнен', 'success');
                 setTimeout(() => {
                     const hasConsent = document.cookie.includes('cookie_consent=all');
                     if (hasConsent) {
-                        log('Cookie пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ', 'success');
+                        log('Cookie успешно сохранены', 'success');
                     } else {
-                        log('пїЅпїЅпїЅпїЅпїЅпїЅ: cookie пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ', 'error');
+                        log('Ошибка: cookie не сохранены', 'error');
                     }
                     updateStatus();
                 }, 500);
             } else {
-                log('пїЅпїЅпїЅпїЅпїЅпїЅ: пїЅпїЅпїЅпїЅпїЅпїЅ "пїЅпїЅпїЅпїЅпїЅпїЅпїЅ" пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ', 'error');
+                log('Ошибка: кнопка "Принять" не найдена', 'error');
             }
         }
 
         function clearCookies() {
-            log('пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ cookie...', 'info');
+            log('Очистка всех cookie...', 'info');
             document.cookie = 'cookie_consent=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
             document.cookie = '_ym_uid=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
             document.cookie = '_ga=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
-            log('Cookie пїЅпїЅпїЅпїЅпїЅпїЅпїЅ', 'success');
+            log('Cookie очищены', 'success');
             
-            // пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
+            // Удаляем баннер
             const banner = document.getElementById('cookie-banner');
             if (banner) {
                 banner.remove();
-                log('пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ DOM', 'success');
+                log('Баннер удален из DOM', 'success');
             }
             
             setTimeout(updateStatus, 100);
         }
 
         function testAnalytics() {
-            log('пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ...', 'info');
+            log('Тестирование аналитики...', 'info');
             
             if (typeof window.ym !== 'undefined') {
                 try {
                     window.ym(106225686, 'hit', window.location.href);
-                    log('пїЅпїЅпїЅпїЅпїЅпїЅ.пїЅпїЅпїЅпїЅпїЅпїЅпїЅ: hit пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ', 'success');
+                    log('Яндекс.Метрика: hit отправлен', 'success');
                 } catch (e) {
-                    log(`пїЅпїЅпїЅпїЅпїЅпїЅ.пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ: ${e.message}`, 'error');
+                    log(`Яндекс.Метрика ошибка: ${e.message}`, 'error');
                 }
             } else {
-                log('пїЅпїЅпїЅпїЅпїЅпїЅ.пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ', 'error');
+                log('Яндекс.Метрика не загружена', 'error');
             }
             
             if (typeof window.gtag !== 'undefined') {
@@ -146,21 +146,21 @@
                         'event_category': 'debug',
                         'event_label': 'simple_test'
                     });
-                    log('Google Analytics: пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ', 'success');
+                    log('Google Analytics: событие отправлено', 'success');
                 } catch (e) {
-                    log(`Google Analytics пїЅпїЅпїЅпїЅпїЅпїЅ: ${e.message}`, 'error');
+                    log(`Google Analytics ошибка: ${e.message}`, 'error');
                 }
             } else {
-                log('Google Analytics пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ', 'error');
+                log('Google Analytics не загружен', 'error');
             }
         }
 
-        // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+        // Инициализация
         setTimeout(() => {
-            log('пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ...', 'info');
+            log('Страница загружена, начинаю проверку...', 'info');
             updateStatus();
             
-            // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ 3 пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+            // Автообновление статуса каждые 3 секунды
             setInterval(updateStatus, 3000);
         }, 1000);
     </script>
