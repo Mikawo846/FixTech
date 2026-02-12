@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+п»ї<!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Отладка Cookie Banner</title>
+    <title>пїЅпїЅпїЅпїЅпїЅпїЅпїЅ Cookie Banner</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -60,23 +60,23 @@
 </head>
 <body>
     <div class="container">
-        <h1>Отладка Cookie Banner</h1>
+        <h1>пїЅпїЅпїЅпїЅпїЅпїЅпїЅ Cookie Banner</h1>
         
         <div id="debug-info" class="debug">
-            Инициализация...
+            пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ...
         </div>
 
         <div style="margin: 20px 0;">
-            <button onclick="clearAllCookies()">Удалить все cookies</button>
-            <button onclick="forceShowBanner()">Принудительно показать баннер</button>
-            <button onclick="checkCookies()">Проверить cookies</button>
-            <button onclick="location.reload()">Перезагрузить страницу</button>
+            <button onclick="clearAllCookies()">пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ cookies</button>
+            <button onclick="forceShowBanner()">пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ</button>
+            <button onclick="checkCookies()">пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ cookies</button>
+            <button onclick="location.reload()">пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ</button>
         </div>
 
         <div id="manual-controls">
-            <h3>Ручное управление:</h3>
-            <button onclick="createManualBanner()">Создать баннер вручную</button>
-            <button onclick="removeManualBanner()" class="danger">Удалить баннер</button>
+            <h3>пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ:</h3>
+            <button onclick="createManualBanner()">пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ</button>
+            <button onclick="removeManualBanner()" class="danger">пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ</button>
         </div>
     </div>
 
@@ -94,21 +94,21 @@
             document.cookie.split(";").forEach(function(c) { 
                 document.cookie = c.replace(/^ +/, "").replace(/=.*/, "=;expires=" + new Date().toUTCString() + ";path=/"); 
             });
-            log('Все cookies удалены', 'success');
+            log('пїЅпїЅпїЅ cookies пїЅпїЅпїЅпїЅпїЅпїЅпїЅ', 'success');
         }
 
         function checkCookies() {
-            log(`Текущие cookies: ${document.cookie}`);
+            log(`пїЅпїЅпїЅпїЅпїЅпїЅпїЅ cookies: ${document.cookie}`);
             const consentCookie = document.cookie.split(';').find(c => c.trim().startsWith('cookie_consent='));
-            log(`Cookie consent найден: ${!!consentCookie}`, consentCookie ? 'success' : 'error');
+            log(`Cookie consent пїЅпїЅпїЅпїЅпїЅпїЅ: ${!!consentCookie}`, consentCookie ? 'success' : 'error');
         }
 
         function forceShowBanner() {
             if (typeof showCookieBanner === 'function') {
                 showCookieBanner();
-                log('Попытка показать баннер через функцию showCookieBanner()');
+                log('пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ showCookieBanner()');
             } else {
-                log('Функция showCookieBanner не найдена!', 'error');
+                log('пїЅпїЅпїЅпїЅпїЅпїЅпїЅ showCookieBanner пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ!', 'error');
             }
         }
 
@@ -137,9 +137,9 @@
             `;
             banner.innerHTML = `
                 <div style="flex: 1; margin-right: 20px;">
-                    На сайте repairo.ru используются файлы cookie для статистики и улучшения работы сайта.
-                    Продолжая пользоваться сайтом, вы соглашаетесь с использованием cookie.
-                    Подробнее — в <a href="cookie-agreement.html" target="_blank">Соглашении об использовании файлов cookie</a>.
+                    пїЅпїЅ пїЅпїЅпїЅпїЅпїЅ repairo.ru пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ cookie пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ.
+                    пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ cookie.
+                    пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅ <a href="cookie-agreement.html" target="_blank">пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ cookie</a>.
                 </div>
                 <button onclick="acceptManualCookie()" style="
                     background: #007bff !important;
@@ -149,19 +149,19 @@
                     border-radius: 8px !important;
                     cursor: pointer !important;
                     font-size: 14px !important;
-                ">Принять</button>
+                ">пїЅпїЅпїЅпїЅпїЅпїЅпїЅ</button>
             `;
             document.body.appendChild(banner);
-            log('Баннер создан вручную', 'success');
+            log('пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ', 'success');
         }
 
         function removeManualBanner() {
             const banner = document.getElementById('cookie-banner');
             if (banner) {
                 banner.remove();
-                log('Баннер удален', 'success');
+                log('пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ', 'success');
             } else {
-                log('Баннер не найден', 'error');
+                log('пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ', 'error');
             }
         }
 
@@ -169,20 +169,20 @@
             const date = new Date();
             date.setTime(date.getTime() + (365 * 24 * 60 * 60 * 1000));
             document.cookie = `cookie_consent=all; expires=${date.toUTCString()}; path=/; SameSite=Lax`;
-            log('Cookie consent установлен вручную', 'success');
+            log('Cookie consent пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ', 'success');
             removeManualBanner();
         }
 
-        // Начальная проверка
+        // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
         setTimeout(() => {
-            log('Начало отладки...');
+            log('пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ...');
             checkCookies();
             
             if (typeof initCookieConsent === 'function') {
-                log('Функция initCookieConsent найдена');
+                log('пїЅпїЅпїЅпїЅпїЅпїЅпїЅ initCookieConsent пїЅпїЅпїЅпїЅпїЅпїЅпїЅ');
                 initCookieConsent();
             } else {
-                log('Функция initCookieConsent НЕ найдена!', 'error');
+                log('пїЅпїЅпїЅпїЅпїЅпїЅпїЅ initCookieConsent пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ!', 'error');
             }
         }, 1000);
     </script>
